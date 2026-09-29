@@ -1,34 +1,61 @@
 # Atlas myšlení
 
-Interaktivní český atlas filozofie pro střední školy. Samostatná HTML aplikace, mapa antického Středomoří, životní osy, profily, společné výklady a tematické cesty. Světlé i tmavé černobílé rozhraní.
+Interaktivní atlas filozofie pro střední školy. Od Thaléta, který spadl do studny, protože se díval na hvězdy, až po filozofy dneška.
+
+Atlas vzniká jako závěrečná práce pedagogického minima a jako pomůcka, kterou si studenti mohou projít ve třídě i doma. Nechce jen předat učivo. Chce ukázat, že lidé před námi řešili stejné otázky jako my: čemu věřit, co je v mé moci, kolik je dost, jak žít s druhými. A dát studentovi prostor, aby si na ně začal odpovídat sám.
+
+## Co v atlasu student najde
+
+- **Mapu a čas.** Posuvníkem roku projíždí dějiny; na mapě vidí, kdo právě žije, a pod ní celé životy filozofů. Na první pohled pozná, kdo s kým žil, kdo se od koho učil a kolik let je od sebe dělí.
+- **Lidi a jejich příběhy.** Sókratés, který nic nenapsal a přesto změnil filozofii. Epiktétos, otrok, který učil svobodě. Marcus Aurelius, císař, který si psal poznámky sám pro sebe.
+- **Velké otázky.** Každá otázka je rozhovor napříč staletími: nejdřív odpovídá student, potom filozofové.
+- **Cesty.** Dvacetiminutové interaktivní průchody: příběh, vlastní pokus, setkání s filozofem, silná námitka, nový případ a pozdější návrat.
+- **Můj deník.** Soukromé místo pro vlastní stanoviska. Nikdo je nehodnotí; student v nich postupně vidí svou vlastní filozofii.
+
+## Stav
+
+Projekt právě prochází restartem. Dosavadní prototyp (jeden soubor HTML, antika) je v `docs/archiv/` jako verze 9 a dá se otevřít přímo v prohlížeči. Nová verze vzniká jako statický web v [Astru](https://astro.build) podle plánu v [`docs/plan.md`](docs/plan.md).
+
+| Fáze | Obsah | Stav |
+| --- | --- | --- |
+| F0 Základ | Archiv, pravidla projektu, průvodce stylem, první skilly, architektura celé filozofie | probíhá |
+| F1 Design a kostra | Vizuální návrh, web v Astru s daty prototypu | čeká |
+| F2 Vertikální řez antiky | Mapa a čas v2, portréty, tři cesty, deník, zkoušení se studenty | čeká |
 
 ## Spuštění
 
-Otevři `atlas-antika.html` v prohlížeči. Není potřeba sestavení ani instalace závislostí. Odpovědi studentů zůstávají pouze v otevřeném dokumentu a po obnovení mizí.
+Zatím: otevři `docs/archiv/atlas-antika.html` v prohlížeči.
 
-Volitelně lze ze složky projektu spustit `python3 -m http.server 8000` a otevřít `http://localhost:8000/atlas-antika.html`.
+Od fáze F1 (potřebuješ [Node.js](https://nodejs.org) 22 nebo novější):
 
-## Obsah repozitáře
+```bash
+npm install
+npm run dev     # atlas poběží na http://localhost:4321
+```
 
-- `atlas-antika.html` — současná aplikace se všemi vloženými styly, skripty a obrazovými podklady.
-- `atlas-harmonogram-rozsirovani-a-prompty.md` — aktuální stav a pořadí další práce.
-- `atlas-mysleni-koncepce-a-prompty.md` — záměr a výchozí koncepce.
-- `Plány hodin/` — všechny dosavadní scénáře, plány, interakční zadání, mapa učiva a revize.
-- `skills/` — přesné kopie pěti projektových skillů včetně referencí a přidružených souborů. Nejsou to závislosti aplikace; jejich pouhá přítomnost neinstaluje plugin.
-- `overeni/B1-R4-2026-09-29/` — archiv skutečně provedených technických kontrol, jejich původních skriptů a čtyř prohlédnutých snímků.
-- `docs/import-2026-09-29.json` — kontrolní součty importovaných projektových souborů.
-- `AGENTS.md` — pravidla práce s projektem pro další vývoj.
+Web zatím běží jen lokálně; zveřejnění na GitHub Pages přijde později.
 
-## Stav při importu 29. 9. 2026
+## Uspořádání repozitáře
 
-Existují cesty „Co mám ve svých rukou?“, „Kolik je dost?“ a B1 „Kdy mám dobrý důvod věřit?“. B1 je zrevidováno. Dalším obsahovým krokem je R1 pro B4 — Předsókratici; B4 zde nebyl zahájen. Doložené zkoušení B1 se studenty zatím chybí.
+```text
+CLAUDE.md          pravidla projektu (pro lidi i pro Clauda)
+docs/plan.md       kritika prototypu, architektura a plán vývoje
+docs/styl.md       průvodce tónem: jak v atlasu psát
+docs/rozhodnuti.md zásadní rozhodnutí a jejich důvody
+docs/archiv/       prototyp v9 a jeho plánovací dokumenty
+skills/            postupy pro opakovanou práci (ověřování, revize…)
+```
 
-Import zachycuje aktuální znění všech 14 dokumentů projektu, včetně HTML v11 a harmonogramu v5, pět skillů a dostupné podklady technické revize. Dřívější verze dokumentů nejsou rekonstruovány jako fiktivní git historie. Původní soubory zůstávají zachované.
+Od fáze F1 přibude `src/` s obsahem, daty a komponentami a `ucitel/` s podklady pro hodiny.
 
-## Další práce
+## Jak se na atlasu pracuje
 
-Hlavní pracovní repozitář po importu: https://github.com/czempi123/atlas. Při další práci vycházet z aktuálního obsahu tohoto repozitáře. Na začátku dalšího úkolu načíst aktuální větev a harmonogram; neobnovovat automaticky starší kopii z chatu. Obsahové změny vést přes scénář → interakce → implementace → revize. Každou ucelenou změnu uložit commitem s uvedením skutečně provedeného ověření. Učitelské dokumenty zůstávají mimo studentskou aplikaci.
+Každý obsahový celek projde čtyřmi kroky: podklady s ověřenými zdroji → psaní přímo do atlasu → revize → schválení autorem. Podrobnosti jsou v `CLAUDE.md` a v plánu.
 
-Automatická obousměrná synchronizace s dřívějšími kopiemi není nastavená. GitHub Pages ani jiné veřejné nasazení není součástí importu.
+## Licence
 
-Licence projektu nebyla dosud zvolena. Licenční a zdrojové informace vložených cizích podkladů zůstávají zachované v původních souborech.
+- **Texty, data a obrazová úprava:** [CC BY-NC-SA 4.0](LICENSE-OBSAH.md). Atlas smíš používat, sdílet a upravovat pro výuku a další nekomerční účely, pokud uvedeš autora a upravenou verzi sdílíš pod stejnou licencí. Prodávat ho nelze.
+- **Zdrojový kód:** [MIT](LICENSE).
+- **Převzaté obrázky** mají vlastní licence, uvedené u každého obrázku.
+
+Autor: Vojtěch Czempka
