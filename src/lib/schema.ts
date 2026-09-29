@@ -1,0 +1,227 @@
+// Schémata dat Atlasu myšlení (src/data/*.yaml).
+// Sdílí je stavba webu (src/lib/data.ts) i kontroly (tests/data).
+// Letopočty jsou celá čísla: záporná = př. n. l., kladná = n. l. Rok nula neexistuje.
+import { z } from 'astro/zod';
+
+const idVzor = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+export const Id = z.string().regex(idVzor, 'id: malá písmena bez diakritiky, číslice a pomlčky');
+
+/** Letopočet; nula se odmítne už tady. */
+export const Rok = z
+  .number()
+  .int()
+  .refine((r) => r !== 0, { message: 'Rok nula neexistuje (po 1 př. n. l. následuje 1 n. l.)' });
+
+/** Datum narození nebo úmrtí. */
+export const Datum = z
+  .object({
+    rok: Rok,
+    /** přibližné datum, ve studentském textu „asi“ */
+    priblizne: z.boolean().optional(),
+    /** prameny dávají jen horní mez („nejpozději“, např. zemřel před rokem 399 př. n. l.) */
+    nejpozdeji: z.boolean().optional(),
+    /** rozpětí, které udávají prameny, pokud je rok odhadem uprostřed */
+    rozmezi: z.tuple([Rok, Rok]).optional(),
+  })
+  .strict();
+
+export const RoleMista = z.enum(['narozeni', 'studium', 'pusobeni', 'pobyt', 'exil', 'tazeni', 'smrt']);
+
+export const PobytNaMiste = z
+  .object({
+    misto: Id,
+    role: RoleMista,
+    /** jednorázová událost (narození, bitva, smrt) */
+    rok: Rok.optional(),
+    od: Rok.optional(),
+    do: Rok.optional(),
+    priblizne: z.boolean().optional(),
+    zdroj: Id,
+  })
+  .strict();
+
+export const Hloubka = z.enum(['medailonek', 'profil', 'portret']);
+export const Tradice = z.enum(['zapadni', 'cinska', 'indicka', 'islamska', 'zidovska', 'africka']);
+export const Linie = z.enum(['autenticita', 'stoicismus', 'vira-a-rozum', 'spolecnost', 'veda']);
+
+/** Ikony atributů odpovídají symbolům v public/ikony/atributy.svg (docs/design/atributy-ikony.json). */
+export const IkonaAtributu = z.enum([
+  'cup', 'cave', 'scales', 'lantern', 'scroll', 'helmet', 'dove', 'sprig', 'orbit', 'ship',
+  'crutch', 'sprout', 'heart', 'axes', 'star', 'hammer', 'pen', 'keys', 'hourglass', 'lens', 'laurel',
+]);
+
+export const Atribut = z
+  .object({
+    ikona: IkonaAtributu,
+    /** český název atributu („kalich“) */
+    nazev: z.string().min(2),
+    /** odpověď na „Proč …?“ */
+    proc: z.string().min(10),
+    zdroj: Id,
+  })
+  .strict();
+
+export const Osoba = z
+  .object({
+    id: Id,
+    /** závazná česká podoba jména */
+    jmeno: z.string().min(2),
+    /** jméno v 2. pádě pro věty typu „Proč …?“ a „Co udělal …“ */
+    jmeno2: z.string().min(2).optional(),
+    narozen: Datum.optional(),
+    zemrel: Datum.optional(),
+    /** jen když prameny nedávají narození ani úmrtí, ale dobu činnosti */
+    aktivni: z
+      .object({ od: Rok, do: Rok.optional(), priblizne: z.boolean().optional() })
+      .strict()
+      .optional(),
+    obdobi: z.number().int().min(1).max(8),
+    hloubka: Hloubka,
+    tradice: Tradice.default('zapadni'),
+    smery: z.array(Id).default([]),
+    otazky: z.array(z.number().int().min(1).max(10)).default([]),
+    linie: z.array(Linie).default([]),
+    mista: z.array(PobytNaMiste).default([]),
+    /** jedna věta: kdo to byl */
+    kdo: z.string().min(10),
+    /** jedna věta: proč si ho pamatujeme */
+    proc: z.string().min(10),
+    atribut: Atribut.optional(),
+    obrazek: Id.optional(),
+    zdroje: z.array(Id).min(1, 'Každá osoba potřebuje aspoň jeden pramen'),
+  })
+  .strict();
+
+export const Misto = z
+  .object({
+    id: Id,
+    nazev: z.string(),
+    /** dobový název, pokud se liší */
+    dobovy: z.string().optional(),
+    /** dnešní místo a stát */
+    dnes: z.string(),
+    /** [zeměpisná délka, šířka] ve stupních */
+    souradnice: z.tuple([z.number().min(-180).max(180), z.number().min(-90).max(90)]),
+    pleiades: z.string().regex(/^\d+$/).optional(),
+    /** ostrov nebo krajina místo města */
+    oblast: z.boolean().optional(),
+  })
+  .strict();
+
+export const TypVztahu = z.enum(['ucitel', 'znali-se', 'vliv-textem', 'polemika']);
+
+export const Vztah = z
+  .object({
+    od: Id,
+    k: Id,
+    /** ucitel: od = učitel, k = žák; vliv-textem: od působil na k; polemika: od polemizoval s k */
+    typ: TypVztahu,
+    /** tradovaný vztah (antická tradice, kterou odborné prameny nepotvrzují jistě) */
+    tradovany: z.boolean().optional(),
+    poznamka: z.string().optional(),
+    zdroj: Id,
+  })
+  .strict();
+
+export const Udalost = z
+  .object({
+    id: Id,
+    nazev: z.string(),
+    od: Rok,
+    do: Rok.optional(),
+    obdobi: z.array(z.number().int().min(1).max(8)).min(1),
+    misto: Id.optional(),
+    /** kotva = dějinná událost pro posuvník; zivot = událost z života lidí v atlasu */
+    druh: z.enum(['kotva', 'zivot']),
+    zdroj: Id,
+  })
+  .strict();
+
+export const Obdobi = z
+  .object({
+    id: z.number().int().min(1).max(8),
+    slug: Id,
+    nazev: z.string(),
+    kratce: z.string(),
+    okno: z.object({ od: Rok, do: Rok }).strict(),
+    pigment: z.string(),
+    /** CSS proměnná barvy období */
+    barva: z.string().regex(/^--period-[1-8]$/),
+    ornament: z.object({ index: z.number().int().min(0).max(7), nazev: z.string() }).strict(),
+    mapa: z
+      .object({
+        popis: z.string(),
+        stred: z.tuple([z.number(), z.number()]),
+        meritko: z.number().positive(),
+        rovnobezky: z.tuple([z.number(), z.number()]),
+        /** výřez převzatý ze schváleného návrhu, nebo návrh k doladění v P4 */
+        stav: z.enum(['schvaleny', 'navrh']),
+      })
+      .strict(),
+  })
+  .strict();
+
+export const Pramen = z
+  .object({
+    id: Id,
+    druh: z.enum(['encyklopedie', 'pramen', 'monografie', 'data']),
+    nazev: z.string(),
+    autor: z.string().optional(),
+    dilo: z.string().optional(),
+    url: z.url().optional(),
+    /** datum ověření */
+    overeno: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    poznamka: z.string().optional(),
+  })
+  .strict();
+
+export const Citat = z
+  .object({
+    id: Id,
+    /** kdo citát vyslovil nebo napsal (id osoby) */
+    osoba: Id,
+    /** údaj pod citátem: autor díla, dílo, místo */
+    autor: z.string(),
+    dilo: z.string(),
+    misto: z.string(),
+    cesky: z.string(),
+    original: z.string().optional(),
+    preklad: z
+      .object({
+        druh: z.enum(['vlastni', 'publikovany']),
+        prekladatel: z.string().optional(),
+        podle: z.string(),
+      })
+      .strict(),
+    zdroj: Id,
+  })
+  .strict();
+
+export const Obrazek = z
+  .object({
+    id: Id,
+    soubor: z.string(),
+    popisek: z.string(),
+    autor: z.string(),
+    instituce: z.string().optional(),
+    licence: z.string().min(2, 'Obrázek bez licence nesmí do atlasu'),
+    url: z.url(),
+  })
+  .strict();
+
+export const Zdroje = z
+  .object({
+    prameny: z.array(Pramen),
+    citaty: z.array(Citat).default([]),
+    obrazky: z.array(Obrazek).default([]),
+  })
+  .strict();
+
+export type TOsoba = z.infer<typeof Osoba>;
+export type TMisto = z.infer<typeof Misto>;
+export type TVztah = z.infer<typeof Vztah>;
+export type TUdalost = z.infer<typeof Udalost>;
+export type TObdobi = z.infer<typeof Obdobi>;
+export type TZdroje = z.infer<typeof Zdroje>;
+export type TCitat = z.infer<typeof Citat>;
+export type TDatum = z.infer<typeof Datum>;
