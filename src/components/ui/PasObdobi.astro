@@ -1,0 +1,135 @@
+---
+// Pás období: osm segmentů bez mezer. Pozadí segmentu je gradient, který na hranách přechází
+// do poloviční směsi se sousedem; ornament období je maskovaný do ztracena k okrajům.
+// Varianty: velky (Domů, 250 px) a maly (přepínač na mapě, 28 px, aktivní období širší).
+import { data } from '../../lib/data';
+import { ornamenty } from '../../lib/ornamenty.js';
+import { rozpeti } from '../../lib/casy';
+
+interface Props {
+  varianta?: 'velky' | 'maly';
+  aktivni?: number;
+  /** odkaz pro segment (období bez odkazu se vykreslí jako prostý text) */
+  odkaz?: (id: number) => string | undefined;
+  nadpis?: string;
+}
+const { varianta = 'velky', aktivni, odkaz, nadpis = 'Osm období' } = Astro.props;
+const obdobi = data.obdobi;
+const plate = (n: number) => `var(--period-${n}-plate)`;
+const mix = (a: number, b: number) => `color-mix(in srgb, ${plate(a)} 50%, ${plate(b)})`;
+const pozadi = (n: number) => {
+  const zac = n > 1 ? mix(n - 1, n) : plate(n);
+  const kon = n < 8 ? mix(n, n + 1) : plate(n);
+  return `linear-gradient(90deg, ${zac} 0%, ${plate(n)} 22%, ${plate(n)} 78%, ${kon} 100%)`;
+};
+const okno = (o: (typeof obdobi)[number]) => rozpeti(o.okno.od, o.okno.do, o.id === 8);
+---
+{varianta === 'velky' ? (
+  <nav class="pas pas--velky" aria-label={nadpis}>
+    <ol>
+      {obdobi.map((o) => {
+        const orn = ornamenty.orn(o.id - 1);
+        const href = odkaz?.(o.id);
+        const Tag = href ? 'a' : 'div';
+        return (
+          <li style={`--pozadi:${pozadi(o.id)}; --na-desce: var(--period-${o.id}-on-plate)`}>
+            <Tag class="segment" href={href} aria-current={aktivni === o.id ? 'true' : undefined}>
+              <svg class="ornament" viewBox="0 0 160 128" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <path d={orn.solid} fill="currentColor" opacity="0.26" />
+                <path d={orn.line} fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.62" />
+              </svg>
+              <span class="popis">
+                <span class="cislo t-nadtitulek">{o.id}</span>
+                <span class="nazev">{o.nazev}</span>
+                <span class="okno t-letopocet">{okno(o)}</span>
+              </span>
+            </Tag>
+          </li>
+        );
+      })}
+    </ol>
+  </nav>
+) : (
+  <div class="pas pas--maly" role="img" aria-label={`Období ${aktivni}: ${obdobi.find((o) => o.id === aktivni)?.nazev ?? ''}`}>
+    {obdobi.map((o) => (
+      <span
+        class:list={['mseg', { 'mseg--aktivni': aktivni === o.id }]}
+        style={`--pozadi:${pozadi(o.id)}; --na-desce: var(--period-${o.id}-on-plate)`}
+      >
+        <svg viewBox={`0 0 ${aktivni === o.id ? 180 : 60} 26`} preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d={ornamenty.mini(o.id - 1, aktivni === o.id ? 180 : 60)} fill="none" stroke="currentColor" stroke-width="1" opacity="0.55" />
+        </svg>
+        <span class="mseg__text t-letopocet">{aktivni === o.id ? `${o.id} · ${o.kratce}` : o.id}</span>
+      </span>
+    ))}
+  </div>
+)}
+
+<style>
+  .pas--velky ol {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(132px, 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: var(--r-xs);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+  .pas--velky li { scroll-snap-align: start; }
+  .segment {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    background: var(--pozadi);
+    color: var(--na-desce);
+    text-decoration: none;
+    transition: filter var(--pohyb-rychle);
+  }
+  a.segment:hover { filter: brightness(1.08); }
+  a.segment:focus-visible { outline-offset: -4px; outline-color: var(--na-desce); }
+  .segment[aria-current] { box-shadow: inset 0 -4px 0 var(--na-desce); }
+  .ornament {
+    width: 100%;
+    height: 128px;
+    flex: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 24%, #000 76%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 24%, #000 76%, transparent);
+  }
+  .popis {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-1);
+    padding: var(--s-3) var(--s-4) var(--s-4);
+  }
+  .nazev { font-size: 19px; line-height: 1.15; text-wrap: balance; }
+  .okno { font-size: var(--fs-popisek); opacity: 0.92; margin-top: auto; }
+
+  .pas--maly {
+    display: flex;
+    height: 28px;
+    border-radius: var(--r-xs);
+    overflow: hidden;
+  }
+  .mseg {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    background: var(--pozadi);
+    color: var(--na-desce);
+  }
+  .mseg--aktivni { flex: 3.2 1 0; box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .mseg svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .mseg__text {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+</style>

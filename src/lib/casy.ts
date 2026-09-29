@@ -39,14 +39,19 @@ export function zivot(o: Pick<TOsoba, 'narozen' | 'zemrel' | 'aktivni'>): string
     return `${cast(n)}${NBSP}př.${NBSP}n.${NBSP}l. – ${cast(z)}${NBSP}n.${NBSP}l.`;
   }
   if (n) return `nar. ${n.priblizne ? `asi${NBSP}` : ''}${rok(n.rok)}`;
-  if (z) return `${z.nejpozdeji ? `zemřel před${NBSP}` : `zem. ${z.priblizne ? `asi${NBSP}` : ''}`}${rok(z.rok)}`;
+  if (z) return `zem. ${z.nejpozdeji ? `před${NBSP}` : z.priblizne ? `asi${NBSP}` : ''}${rok(z.rok)}`;
   if (a) {
-    const asi = a.priblizne ? `asi${NBSP}` : '';
-    if (a.do === undefined) return `působil ${asi}kolem ${rok(a.od)}`;
-    const era = a.do < 0 ? `${NBSP}př.${NBSP}n.${NBSP}l.` : `${NBSP}n.${NBSP}l.`;
-    return a.od < 0 === a.do < 0 ? `působil ${asi}${Math.abs(a.od)}–${Math.abs(a.do)}${era}` : `působil ${asi}${rok(a.od)} – ${rok(a.do)}`;
+    if (a.do === undefined) return `činnost kolem ${rok(a.od)}`;
+    return `činnost ${a.priblizne ? `asi${NBSP}` : ''}${rozpeti(a.od, a.do)}`;
   }
   return '';
+}
+
+/** Rozpětí let: „650–300 př. n. l.“, „350 př. n. l. – 550 n. l.“, „1945–dnes“ (dnes = rok 2026 a dál). */
+export function rozpeti(od: number, do_: number, dnes = false): string {
+  if (od < 0 && do_ < 0) return `${-od}–${-do_}${NBSP}př.${NBSP}n.${NBSP}l.`;
+  if (od < 0) return `${rok(od)} – ${rok(do_)}`;
+  return `${od}–${dnes ? 'dnes' : do_}`;
 }
 
 /** Hrubý interval života pro osy: [od, do], nebo null, když data chybí. */

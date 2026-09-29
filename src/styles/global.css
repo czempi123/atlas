@@ -1,0 +1,134 @@
+/* Základní styly Atlasu myšlení: čtenářský papír, patková typografie, fokus jen z klávesnice. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--paper);
+  scroll-padding-top: calc(var(--hlavicka) + var(--s-4));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-text);
+  line-height: var(--lh-text);
+  font-optical-sizing: auto;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  hanging-punctuation: first;
+}
+
+img, svg { display: block; max-width: 100%; }
+button, input, textarea, select { font: inherit; color: inherit; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+p { margin: 0 0 var(--s-4); text-wrap: pretty; }
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection { background: var(--period-1-soft); color: var(--ink); }
+
+/* Typografické třídy podle tokenů */
+.t-display-1 { font-size: var(--fs-display-1); line-height: var(--lh-display-1); letter-spacing: var(--ls-display-1); }
+.t-display-2 { font-size: var(--fs-display-2); line-height: var(--lh-display-2); letter-spacing: var(--ls-display-2); }
+.t-h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); letter-spacing: var(--ls-h1); }
+.t-h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); letter-spacing: var(--ls-h2); }
+.t-h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); }
+.t-perex { font-size: var(--fs-perex); line-height: var(--lh-perex); color: var(--ink-2); }
+.t-ovladani-l { font-family: var(--font-sans); font-size: var(--fs-ovladani-l); line-height: var(--lh-ovladani-l); font-weight: 600; }
+.t-ovladani { font-family: var(--font-sans); font-size: var(--fs-ovladani); line-height: var(--lh-ovladani); font-weight: 500; }
+.t-popisek { font-family: var(--font-sans); font-size: var(--fs-popisek); line-height: var(--lh-popisek); color: var(--muted); }
+.t-nadtitulek {
+  font-family: var(--font-sans);
+  font-size: var(--fs-nadtitulek);
+  line-height: var(--lh-nadtitulek);
+  letter-spacing: var(--ls-nadtitulek);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.t-letopocet { font-family: var(--font-sans); font-variant-numeric: tabular-nums lining-nums; }
+
+em, i { font-style: italic; }
+h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
+
+/* Rozvržení */
+.stranka {
+  width: 100%;
+  max-width: var(--max-sirka);
+  margin-inline: auto;
+  padding-inline: var(--okraj);
+}
+.ctenarsky { max-width: var(--ctenarsky-sloupec); }
+
+.vizualne-skryte {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.preskocit {
+  position: absolute;
+  left: var(--s-4);
+  top: -100px;
+  z-index: 100;
+  padding: var(--s-3) var(--s-4);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--r-sm);
+}
+.preskocit:focus { top: var(--s-2); }
+
+/* Barva období pro podstrom: nastav --obdobi-* přes třídu .obdobi-N */
+.obdobi-1 { --pc: var(--period-1); --pc-tint: var(--period-1-tint); --pc-soft: var(--period-1-soft); --pc-plate: var(--period-1-plate); --pc-on-plate: var(--period-1-on-plate); }
+.obdobi-2 { --pc: var(--period-2); --pc-tint: var(--period-2-tint); --pc-soft: var(--period-2-soft); --pc-plate: var(--period-2-plate); --pc-on-plate: var(--period-2-on-plate); }
+.obdobi-3 { --pc: var(--period-3); --pc-tint: var(--period-3-tint); --pc-soft: var(--period-3-soft); --pc-plate: var(--period-3-plate); --pc-on-plate: var(--period-3-on-plate); }
+.obdobi-4 { --pc: var(--period-4); --pc-tint: var(--period-4-tint); --pc-soft: var(--period-4-soft); --pc-plate: var(--period-4-plate); --pc-on-plate: var(--period-4-on-plate); }
+.obdobi-5 { --pc: var(--period-5); --pc-tint: var(--period-5-tint); --pc-soft: var(--period-5-soft); --pc-plate: var(--period-5-plate); --pc-on-plate: var(--period-5-on-plate); }
+.obdobi-6 { --pc: var(--period-6); --pc-tint: var(--period-6-tint); --pc-soft: var(--period-6-soft); --pc-plate: var(--period-6-plate); --pc-on-plate: var(--period-6-on-plate); }
+.obdobi-7 { --pc: var(--period-7); --pc-tint: var(--period-7-tint); --pc-soft: var(--period-7-soft); --pc-plate: var(--period-7-plate); --pc-on-plate: var(--period-7-on-plate); }
+.obdobi-8 { --pc: var(--period-8); --pc-tint: var(--period-8-tint); --pc-soft: var(--period-8-soft); --pc-plate: var(--period-8-plate); --pc-on-plate: var(--period-8-on-plate); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

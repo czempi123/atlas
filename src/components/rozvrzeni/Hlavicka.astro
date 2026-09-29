@@ -1,0 +1,117 @@
+---
+// Stálá hlavička. Notebook: logo, čtyři vstupy (aktivní podtržený inkoustem), hledání s klávesou /,
+// Můj deník, přepínač režimu. Telefon: název nebo „‹ Zpět na …“, hledání a režim; vstupy ve spodní liště.
+import Ikona from '../ui/Ikona.astro';
+import PrepinacRezimu from './PrepinacRezimu.astro';
+import Hledani from '../ostrovy/Hledani.svelte';
+
+export type Sekce = 'domu' | 'mapa' | 'otazky' | 'lide' | 'denik' | undefined;
+interface Props {
+  sekce?: Sekce;
+  titulek?: string;
+  zpet?: { href: string; text: string };
+}
+const { sekce, titulek = 'Atlas myšlení', zpet } = Astro.props;
+const vstupy = [
+  { id: 'domu', href: '/', text: 'Domů' },
+  { id: 'mapa', href: '/mapa/', text: 'Mapa a čas' },
+  { id: 'otazky', href: '/otazky/', text: 'Otázky' },
+  { id: 'lide', href: '/lide/', text: 'Lidé a směry' },
+] as const;
+---
+<header class="hlavicka" data-pagefind-ignore>
+  <div class="hlavicka__vnitrek stranka">
+    <div class="telefon-vlevo">
+      {zpet ? (
+        <a class="zpet t-ovladani" href={zpet.href}><Ikona id="zpet" velikost={20} /><span>Zpět na {zpet.text}</span></a>
+      ) : (
+        <a class="logo" href="/"><Ikona id="globus" velikost={24} /><span>{titulek}</span></a>
+      )}
+    </div>
+    <a class="logo logo--notebook" href="/" aria-label="Atlas myšlení, domů">
+      <Ikona id="globus" velikost={26} /><span>Atlas myšlení</span>
+    </a>
+    <nav class="vstupy" aria-label="Hlavní navigace">
+      <ul>
+        {vstupy.map((v) => (
+          <li><a class="t-ovladani" href={v.href} aria-current={sekce === v.id ? 'page' : undefined}>{v.text}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="nastroje">
+      <Hledani client:load />
+      <a class="denik t-ovladani" href="/denik/" aria-current={sekce === 'denik' ? 'page' : undefined}>
+        <Ikona id="denik" velikost={20} /><span>Můj deník</span>
+      </a>
+      <PrepinacRezimu />
+    </div>
+  </div>
+</header>
+
+<style>
+  .hlavicka {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: color-mix(in srgb, var(--paper) 94%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hlavicka__vnitrek {
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    height: var(--hlavicka);
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--dotyk);
+    font-family: var(--font-serif);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .zpet {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    min-height: var(--dotyk);
+    margin-left: -6px;
+    text-decoration: none;
+  }
+  .telefon-vlevo { flex: 1; min-width: 0; overflow: hidden; }
+  .logo--notebook, .vstupy, .denik { display: none; }
+  .nastroje { display: flex; align-items: center; gap: var(--s-1); }
+
+  @media (min-width: 900px) {
+    .telefon-vlevo { display: none; }
+    .logo--notebook { display: inline-flex; font-size: 24px; }
+    .vstupy { display: block; flex: 1; }
+    .vstupy ul { display: flex; gap: var(--s-2); margin: 0 0 0 var(--s-6); padding: 0; list-style: none; }
+    .vstupy a {
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--dotyk);
+      padding: 0 var(--s-2);
+      color: var(--ink-2);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+    }
+    .vstupy a:hover { color: var(--ink); }
+    .vstupy a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--ink); }
+    .denik {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-2);
+      min-height: var(--dotyk);
+      padding: 0 var(--s-3);
+      color: var(--ink-2);
+      text-decoration: none;
+    }
+    .denik:hover, .denik[aria-current='page'] { color: var(--ink); }
+    .nastroje { gap: var(--s-2); }
+  }
+</style>

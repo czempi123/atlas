@@ -1,0 +1,33 @@
+---
+// Citát z pramene: Newsreader, linka nad i pod, pod ním autor, dílo, místo.
+// Znění a údaje bere z src/data/zdroje.yaml, aby každý citát měl ověřený pramen a překlad.
+import { citatyPodleId } from '../../lib/data';
+
+interface Props { id: string; velky?: boolean }
+const { id, velky = false } = Astro.props;
+const c = citatyPodleId.get(id);
+if (!c) throw new Error(`Citát „${id}“ není v zdroje.yaml`);
+---
+<figure class:list={['citat', { 'citat--velky': velky }]}>
+  <blockquote><p>„{c.cesky}“</p></blockquote>
+  <figcaption class="t-popisek">{c.autor}, <cite>{c.dilo}</cite> {c.misto}</figcaption>
+</figure>
+
+<style>
+  .citat {
+    margin: var(--s-7) 0;
+    padding: var(--s-5) 0 var(--s-4);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  blockquote { margin: 0; }
+  blockquote p {
+    margin: 0 0 var(--s-3);
+    font-size: var(--fs-perex);
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+  .citat--velky blockquote p { font-size: var(--fs-citat); line-height: var(--lh-citat); }
+  figcaption { color: var(--muted); }
+  cite { font-style: italic; }
+</style>

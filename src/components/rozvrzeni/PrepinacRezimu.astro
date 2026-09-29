@@ -1,0 +1,51 @@
+---
+// Přepínač světlého a tmavého režimu. Výchozí je nastavení systému; ruční volba se uloží
+// do localStorage (klíč atlas-rezim) a nastaví data-theme na <html> (skript v Zakladni.astro).
+import Ikona from '../ui/Ikona.astro';
+---
+<button class="rezim" type="button" data-prepinac-rezimu aria-label="Přepnout na tmavý režim">
+  <Ikona id="mesic" velikost={20} class="rezim__mesic" />
+  <Ikona id="slunce" velikost={20} class="rezim__slunce" />
+</button>
+
+<script>
+  const KLIC = 'atlas-rezim';
+  const koren = document.documentElement;
+  const tmavySystem = window.matchMedia('(prefers-color-scheme: dark)');
+  const jeTmavy = () => koren.dataset.theme === 'dark' || (koren.dataset.theme !== 'light' && tmavySystem.matches);
+  const popis = () => {
+    for (const b of document.querySelectorAll<HTMLButtonElement>('[data-prepinac-rezimu]')) {
+      b.setAttribute('aria-label', jeTmavy() ? 'Přepnout na světlý režim' : 'Přepnout na tmavý režim');
+      b.dataset.tmavy = String(jeTmavy());
+    }
+  };
+  for (const b of document.querySelectorAll<HTMLButtonElement>('[data-prepinac-rezimu]')) {
+    b.addEventListener('click', () => {
+      const novy = jeTmavy() ? 'light' : 'dark';
+      koren.dataset.theme = novy;
+      try { localStorage.setItem(KLIC, novy); } catch { /* soukromé okno: volba platí jen do zavření */ }
+      popis();
+    });
+  }
+  tmavySystem.addEventListener('change', popis);
+  popis();
+</script>
+
+<style>
+  .rezim {
+    display: grid;
+    place-items: center;
+    width: var(--dotyk);
+    height: var(--dotyk);
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: var(--r-full);
+    background: none;
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+  .rezim:hover { color: var(--ink); border-color: var(--rule); }
+  .rezim :global(.rezim__slunce) { display: none; }
+  .rezim[data-tmavy='true'] :global(.rezim__slunce) { display: block; }
+  .rezim[data-tmavy='true'] :global(.rezim__mesic) { display: none; }
+</style>

@@ -1,0 +1,13 @@
+---
+// Ikona ze sady SVG symbolů. Atributy: public/ikony/atributy.svg, ovládání: public/ikony/ui.svg.
+interface Props {
+  id: string;
+  sada?: 'atributy' | 'ui';
+  velikost?: number;
+  class?: string;
+}
+const { id, sada = 'ui', velikost = 24, class: trida } = Astro.props;
+---
+<svg class={trida} width={velikost} height={velikost} aria-hidden="true" focusable="false">
+  <use href={`/ikony/${sada}.svg#${id}`} />
+</svg>

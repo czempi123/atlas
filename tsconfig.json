@@ -3,6 +3,6 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist", "docs/archiv", "docs/design"],
   "compilerOptions": {
-    "types": ["vite/client"]
+    "types": ["vite/client", "node"]
   }
 }

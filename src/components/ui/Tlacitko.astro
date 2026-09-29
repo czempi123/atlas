@@ -1,0 +1,57 @@
+---
+// Tlačítka: hlavní (inkoust), vedlejší (obrys inkoustu), tiché (obrys linky), textový odkaz.
+interface Props {
+  href?: string;
+  varianta?: 'hlavni' | 'vedlejsi' | 'tiche' | 'odkaz';
+  typ?: 'button' | 'submit';
+  ikona?: string;
+  class?: string;
+  [k: string]: unknown;
+}
+const { href, varianta = 'hlavni', typ = 'button', ikona, class: trida, ...zbytek } = Astro.props;
+import Ikona from './Ikona.astro';
+const Tag = href ? 'a' : 'button';
+---
+<Tag
+  class:list={['tlacitko', `tlacitko--${varianta}`, trida]}
+  href={href}
+  type={href ? undefined : typ}
+  {...zbytek}
+>
+  <span><slot /></span>
+  {ikona && <Ikona id={ikona} velikost={20} />}
+</Tag>
+
+<style>
+  .tlacitko {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-2);
+    min-height: 48px;
+    padding: 0 var(--s-5);
+    border-radius: var(--r-sm);
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani-l);
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background var(--pohyb-rychle), border-color var(--pohyb-rychle), color var(--pohyb-rychle);
+  }
+  .tlacitko--hlavni { background: var(--ink); color: var(--paper); border: 1.5px solid var(--ink); min-height: 52px; }
+  .tlacitko--hlavni:hover { background: var(--ink-2); border-color: var(--ink-2); }
+  .tlacitko--vedlejsi { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .tlacitko--vedlejsi:hover { background: var(--sunk); }
+  .tlacitko--tiche { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+  .tlacitko--tiche:hover { border-color: var(--muted); }
+  .tlacitko--odkaz {
+    min-height: var(--dotyk);
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+</style>

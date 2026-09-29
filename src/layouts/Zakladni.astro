@@ -1,0 +1,69 @@
+---
+// Základní rozvržení všech stránek: hlavička, drobečky, obsah, spodní lišta na telefonu.
+import '../styles/tokens.css';
+import '../styles/global.css';
+import Pisma from '../components/rozvrzeni/Pisma.astro';
+import Hlavicka, { type Sekce } from '../components/rozvrzeni/Hlavicka.astro';
+import SpodniLista from '../components/rozvrzeni/SpodniLista.astro';
+import Drobecky from '../components/rozvrzeni/Drobecky.astro';
+
+interface Props {
+  titulek: string;
+  popis?: string;
+  sekce?: Sekce;
+  drobecky?: { text: string; href?: string }[];
+  zpet?: { href: string; text: string };
+  /** telefonní titulek v horní liště (výchozí: Atlas myšlení) */
+  kratkyTitulek?: string;
+  /** stránka, kterou má Pagefind indexovat */
+  hledat?: boolean;
+}
+const { titulek, popis = 'Interaktivní atlas filozofie pro střední školy: lidé, otázky, mapa a čas.', sekce, drobecky, zpet, kratkyTitulek, hledat = true } = Astro.props;
+const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atlas myšlení`;
+---
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{plnyTitulek}</title>
+    <meta name="description" content={popis} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#17140F" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      // Ruční volba režimu (atlas-rezim) má přednost před nastavením systému; nastaví se před vykreslením.
+      try {
+        const r = localStorage.getItem('atlas-rezim');
+        if (r === 'light' || r === 'dark') document.documentElement.dataset.theme = r;
+      } catch (e) {}
+    </script>
+    <Pisma />
+  </head>
+  <body>
+    <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
+    <Hlavicka sekce={sekce} zpet={zpet} titulek={kratkyTitulek} />
+    {drobecky && <Drobecky cesta={drobecky} />}
+    <main id="obsah" tabindex="-1" data-pagefind-body={hledat ? '' : undefined}>
+      <slot />
+    </main>
+    <footer class="paticka stranka t-popisek" data-pagefind-ignore>
+      <p>Atlas myšlení · Vojtěch Czempka · texty a data CC BY-NC-SA 4.0, kód MIT</p>
+    </footer>
+    <SpodniLista sekce={sekce} />
+  </body>
+</html>
+
+<style>
+  main { display: block; outline: none; }
+  .paticka {
+    margin-top: var(--s-9);
+    padding-top: var(--s-5);
+    padding-bottom: calc(var(--spodni-lista) + var(--s-6));
+    border-top: 1px solid var(--rule);
+  }
+  @media (min-width: 900px) {
+    .paticka { padding-bottom: var(--s-6); }
+  }
+</style>
