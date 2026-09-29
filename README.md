@@ -14,40 +14,49 @@ Atlas vzniká jako závěrečná práce pedagogického minima a jako pomůcka, k
 
 ## Stav
 
-Projekt právě prochází restartem. Dosavadní prototyp (jeden soubor HTML, antika) je v `docs/archiv/` jako verze 9 a dá se otevřít přímo v prohlížeči. Nová verze vzniká jako statický web v [Astru](https://astro.build) podle plánu v [`docs/plan.md`](docs/plan.md).
+Nová verze vzniká jako statický web v [Astru](https://astro.build) podle plánu v [`docs/plan.md`](docs/plan.md). Hotová je kostra: design systém, ověřená data období 1 a 2, šablona osobnosti na Sókratovi, stránky Domů, Lidé a směry, Otázky, Můj deník a statický podklad Mapy a času. Dosavadní prototyp (jeden soubor HTML) je v `docs/archiv/` jako verze 9.
 
 | Fáze | Obsah | Stav |
 | --- | --- | --- |
 | F0 Základ | Archiv, pravidla projektu, průvodce stylem, první skilly, [architektura celé filozofie](docs/architektura.md) | hotovo |
-| F1 Design a kostra | Vizuální návrh, web v Astru s daty prototypu | na řadě |
+| F1 Design a kostra | Vizuální návrh, web v Astru s ověřenými daty období 1–2 a šablonou na Sókratovi | ke schválení |
 | F2 Vertikální řez antiky | Mapa a čas v2, portréty, tři cesty, deník, zkoušení se studenty | čeká |
 
 ## Spuštění
 
-Zatím: otevři `docs/archiv/atlas-antika.html` v prohlížeči.
-
-Od fáze F1 (potřebuješ [Node.js](https://nodejs.org) 22 nebo novější):
+Potřebuješ [Node.js](https://nodejs.org) 22.12 nebo novější.
 
 ```bash
-npm install
-npm run dev     # atlas poběží na http://localhost:4321
+npm install          # jednou, stáhne závislosti
+npm run dev          # atlas poběží na http://localhost:4321 a obnovuje se při každé změně
+npm run build        # sestaví web do složky dist/ včetně vyhledávání (Pagefind)
+npm run preview      # spustí sestavený web; jen tady funguje hledání
+npm test             # kontroly dat a testy v prohlížeči (390 a 1440 px, světlý i tmavý režim)
 ```
 
-Web zatím běží jen lokálně; zveřejnění na GitHub Pages přijde později.
+Testy v prohlížeči potřebují jednou `npx playwright install chromium`. Ve vývojovém režimu (`npm run dev`) jsou u Sókrata vidět i osnovy nenapsaných kapitol; v sestaveném webu nejsou. Web zatím běží jen lokálně.
 
 ## Uspořádání repozitáře
 
 ```text
-CLAUDE.md          pravidla projektu (pro lidi i pro Clauda)
-docs/plan.md       kritika prototypu, technika a plán vývoje
+CLAUDE.md            pravidla projektu (pro lidi i pro Clauda)
+docs/plan.md         kritika prototypu, technika a plán vývoje
 docs/architektura.md období, velké otázky, cesty a osobnosti
-docs/styl.md       průvodce tónem: jak v atlasu psát
-docs/rozhodnuti.md zásadní rozhodnutí a jejich důvody
-docs/archiv/       prototyp v9 a jeho plánovací dokumenty
-skills/            postupy pro opakovanou práci (ověřování, revize…)
+docs/design.md       design systém (barvy, písma, komponenty) a podklady v docs/design/
+docs/styl.md         průvodce tónem: jak v atlasu psát
+docs/rozhodnuti.md   zásadní rozhodnutí a jejich důvody
+docs/podklady/       ověřené podklady, co zbývá ověřit, návrhy atributů
+docs/archiv/         prototyp v9 a jeho plánovací dokumenty
+skills/              postupy pro opakovanou práci (ověřování, revize…)
+src/data/            lidé, místa, vztahy, události, období a prameny (YAML)
+src/content/         texty: osobnosti, směry, otázky, cesty… (MDX a Markdown)
+src/components/      komponenty (ui/, rozvržení, osobnost/, ostrovy ve Svelte)
+src/lib/             schémata dat, kontroly, letopočty, mapa, deník
+src/styles/          design tokeny a základní styly
+tests/               kontroly dat (Vitest) a průchody v prohlížeči (Playwright)
 ```
 
-Od fáze F1 přibude `src/` s obsahem, daty a komponentami a `ucitel/` s podklady pro hodiny.
+Později přibude `ucitel/` s podklady pro hodiny.
 
 ## Jak se na atlasu pracuje
 

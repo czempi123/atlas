@@ -2,6 +2,17 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 29. 9. 2026: Založení projektu v Astru (P2)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Astro 7 (statický výstup), Svelte 5 pro ostrovy, MDX, TypeScript; kontroly dat ve Vitestu, průchody v Playwrightu s axe | Aktuální stabilní verze k 29. 9. 2026; axe ověřuje kontrast a přístupnost na skutečných stránkách |
+| Datové soubory v `src/data/*.yaml` nejsou Astro kolekce, ale mají vlastní schémata (`src/lib/schema.ts`) a kontroly (`src/lib/kontroly.ts`), které zastaví sestavení | Jedno místo pravdy pro build i testy; chyba v datech se nedostane ke studentům |
+| Adresa osobnosti je podle id osoby v datech: `/osobnost/sokrates/` (ne `socrates`) | ID v datech i v adrese jsou česky a stejná |
+| Nejisté roky: `priblizne`, `nejpozdeji`, `rozmezi`; když prameny nedávají narození ani úmrtí, jen `aktivni` | Data nesmí tvrdit víc než prameny; co nejde ověřit, je v `docs/podklady/k-overeni.md` |
+| Atributy navržené Claudem jdou do dat až po schválení autorem; do té doby je kontrola vede jako čekající (`src/lib/cekajici.ts`) | Atribut je trvalý znak osobnosti na mapě i v kartách |
+| Osnova nenapsaných kapitol je ve frontmatteru a zobrazuje se jen při `npm run dev` | Autor vidí plán, student ne |
+
 ## 29. 9. 2026: Vizuální návrh (P1)
 
 | Rozhodnutí | Důvod |

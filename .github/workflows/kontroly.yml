@@ -1,0 +1,42 @@
+# Sestavení a kontroly Atlasu myšlení. Web se nenasazuje (zatím běží jen lokálně).
+name: Sestavení a kontroly
+
+on:
+  push:
+    branches: [main, restart, 'mapa-*']
+  pull_request:
+
+jobs:
+  kontroly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalace závislostí
+        run: npm ci
+      - name: Kontroly dat a kontrastu tokenů
+        run: npx vitest run
+      - name: Kontrola typů
+        run: npx astro check
+      - name: Sestavení a vyhledávací index
+        run: npm run build
+      - name: Prohlížeč pro testy
+        run: npx playwright install --with-deps chromium
+      - name: Testy v prohlížeči (390 a 1440 px, světlý i tmavý režim, kontrast, odkazy)
+        run: npx playwright test
+        env:
+          CI: true
+          PW_BEZ_BUILDU: 1
+      - name: Snímky obrazovky a zpráva
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snimky-a-zprava
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 14
