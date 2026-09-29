@@ -2,6 +2,16 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 29. 9. 2026: Architektura celé filozofie (P3, brána F0)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Osm období, deset velkých otázek, 35 cest a závěrečná cesta „Jak být sám sebou?“ podle `docs/architektura.md` | Schváleno autorem jako závazný plán obsahu |
+| Bez samostatné linie „Česká stopa“; místo ní linie Stoicismus napříč dějinami, Seneca jako portrét, cesty 33 a 34 a Stoický týden | Autor chce stoicismu dát víc prostoru; čeští filozofové zůstávají tam, kde nesou cestu |
+| Religionistika je součástí atlasu jako vrstva Náboženství světa (10 stránek, mapa) a cesta 35 | RVP G ji spojuje s filozofií v celku Úvod do filozofie a religionistiky; využití v ZSV |
+| Nefilozofové s přesahem (Frankl, William James, Darwin, Freud, Durkheim, Weber, Gándhí, Stockdale, Beck) mají profil nebo medailonek | Nesou příběh nebo myšlenku důležitou pro filozofii |
+| Cílová škola je gymnázium; mapování přímo na RVP G bez konkrétního ŠVP | Autor zatím neučí a chce učit na gymnáziu |
+
 ## 29. 9. 2026: Restart projektu (F0)
 
 | Rozhodnutí | Důvod |

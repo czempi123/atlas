@@ -95,7 +95,7 @@ Co zůstává z původní koncepce beze změny: zpětná vazba hodnotí důvody,
 
 ## Informační architektura a typy stránek
 
-Atlas má pět stálých vstupů v hlavní navigaci (Domů, Mapa a čas, Otázky, Lidé a směry, Můj deník) a deset typů stránek, které sdílejí stejné stavební bloky. Vyhledávání, tmavý režim a režim pro třídu jsou dostupné odkudkoli.
+Atlas má pět stálých vstupů v hlavní navigaci (Domů, Mapa a čas, Otázky, Lidé a směry, Můj deník) a jedenáct typů stránek, které sdílejí stejné stavební bloky. Vyhledávání, tmavý režim a režim pro třídu jsou dostupné odkudkoli.
 
 | Typ stránky | Adresa (příklad) | Hlavní úloha | Z čeho se skládá |
 | --- | --- | --- | --- |
@@ -109,6 +109,7 @@ Atlas má pět stálých vstupů v hlavní navigaci (Domů, Mapa a čas, Otázky
 | Myšlenkový pokus | `/pokus/gyguv-prsten` | Jedna situace, kterou lze měnit a znovu posoudit | Scéna, volba, změna podmínky, co řekli filozofové |
 | Pojem | `/pojem/ataraxia` | Krátké vysvětlení jednoho slova | Definice lidsky, původ slova, příklad, kde se objevuje; také jako vyskakovací bublina v textu |
 | Můj deník | `/denik` | Soukromý prostor studenta | Moje stanoviska, rozepsané cesty, návraty, sbírka potkaných filozofů, export |
+| Náboženství | /nabozenstvi/buddhismus | Úvod do religionistiky podle RVP G | Příběh vzniku, hlavní myšlenky a praxe, šíření na mapě, vazby na filozofy a otázku 9 |
 
 ### Šablona osobnosti ve třech hloubkách
 
@@ -443,4 +444,4 @@ Rozhodnuto 29. 9. 2026; všech pět rozhodnutí je promítnutých do plánu vý�
 | Rozsah tradic | Západní filozofie jako páteř, okna do dalších tradic | Platí pro P3 a plány období |
 | Licence | Nekomerční: texty CC BY-NC-SA 4.0, kód MIT | Jiní učitelé mohou atlas používat a upravovat, ne ho prodávat |
 
-Tento dokument je uložený jako `docs/plan.md`; živá verze k připomínkám je v Claude Docs.
+P0 proběhl ve složce Atlas na tvém Macu; tento plán je uložený jako `docs/plan.md`.

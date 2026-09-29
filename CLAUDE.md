@@ -1,8 +1,8 @@
 # Atlas myšlení: pravidla projektu
 
-Interaktivní atlas filozofie pro středoškoláky (15–19 let), od antiky po současnost. Slouží ve třídě i k samostudiu doma. Kromě učiva má předávat lásku k filozofii, odvahu hledat vlastní odpovědi, poctivost k sobě a ohled na druhé. Páteří je západní filozofie s okny do islámské, židovské, indické a čínské tradice. Autor a pedagog: Vojtěch Czempka.
+Interaktivní atlas filozofie pro středoškoláky (15–19 let), od antiky po současnost. Slouží ve třídě i k samostudiu doma. Kromě učiva má předávat lásku k filozofii, odvahu hledat vlastní odpovědi, poctivost k sobě a ohled na druhé. Páteří je západní filozofie s okny do islámské, židovské, indické a čínské tradice; součástí je úvod do religionistiky podle RVP G a stoicismus má zvláštní váhu. Autor a pedagog: Vojtěch Czempka.
 
-Než začneš pracovat, přečti si `docs/plan.md` (architektura a plán) a `docs/styl.md` (tón). Zásadní rozhodnutí jsou v `docs/rozhodnuti.md`; nové zapiš tamtéž.
+Než začneš pracovat, přečti si `docs/plan.md` (plán a technika), `docs/architektura.md` (období, velké otázky, cesty, osobnosti) a `docs/styl.md` (tón). Zásadní rozhodnutí jsou v `docs/rozhodnuti.md`; nové zapiš tamtéž.
 
 ## Jak píšeme pro studenty
 

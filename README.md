@@ -18,8 +18,8 @@ Projekt právě prochází restartem. Dosavadní prototyp (jeden soubor HTML, an
 
 | Fáze | Obsah | Stav |
 | --- | --- | --- |
-| F0 Základ | Archiv, pravidla projektu, průvodce stylem, první skilly, architektura celé filozofie | probíhá |
-| F1 Design a kostra | Vizuální návrh, web v Astru s daty prototypu | čeká |
+| F0 Základ | Archiv, pravidla projektu, průvodce stylem, první skilly, [architektura celé filozofie](docs/architektura.md) | hotovo |
+| F1 Design a kostra | Vizuální návrh, web v Astru s daty prototypu | na řadě |
 | F2 Vertikální řez antiky | Mapa a čas v2, portréty, tři cesty, deník, zkoušení se studenty | čeká |
 
 ## Spuštění
@@ -39,7 +39,8 @@ Web zatím běží jen lokálně; zveřejnění na GitHub Pages přijde později
 
 ```text
 CLAUDE.md          pravidla projektu (pro lidi i pro Clauda)
-docs/plan.md       kritika prototypu, architektura a plán vývoje
+docs/plan.md       kritika prototypu, technika a plán vývoje
+docs/architektura.md období, velké otázky, cesty a osobnosti
 docs/styl.md       průvodce tónem: jak v atlasu psát
 docs/rozhodnuti.md zásadní rozhodnutí a jejich důvody
 docs/archiv/       prototyp v9 a jeho plánovací dokumenty
