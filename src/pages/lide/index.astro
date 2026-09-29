@@ -1,0 +1,128 @@
+---
+// Lidé a směry: lidé podle období a hloubky zpracování, se směry a mincemi atributů.
+import { getCollection } from 'astro:content';
+import Zakladni from '../../layouts/Zakladni.astro';
+import Mince from '../../components/ui/Mince.astro';
+import { data } from '../../lib/data';
+import { zivot, interval, rozpeti } from '../../lib/casy';
+
+const smery = (await getCollection('smery')).sort((a, b) => a.data.poradi - b.data.poradi);
+const osobnosti = new Map((await getCollection('osobnosti')).map((o) => [o.data.osoba, o.id]));
+const nazevSmeru = new Map(smery.map((s) => [s.id, s.data.nazev]));
+const obdobi = data.obdobi.filter((o) => data.lide.some((l) => l.obdobi === o.id));
+const podleNarozeni = (a: (typeof data.lide)[number], b: (typeof data.lide)[number]) =>
+  (interval(a)?.[0] ?? a.narozen?.rok ?? a.aktivni?.od ?? 9999) - (interval(b)?.[0] ?? b.narozen?.rok ?? b.aktivni?.od ?? 9999);
+const HLOUBKY = [
+  { id: 'portret', nazev: 'Portréty' },
+  { id: 'profil', nazev: 'Profily' },
+  { id: 'medailonek', nazev: 'Další lidé' },
+] as const;
+---
+<Zakladni titulek="Lidé a směry" sekce="lide" drobecky={[{ text: 'Lidé a směry' }]} kratkyTitulek="Lidé a směry">
+  <div class="stranka">
+    <header class="hlavicka-stranky">
+      <h1 class="t-h1">Lidé a směry</h1>
+      <p class="t-perex">Filozofové nežili v knihách. Učili se jeden od druhého, přeli se, psali si a někdy se za své myšlenky nechali poslat do vyhnanství. Tady je najdeš podle doby, ve které žili.</p>
+    </header>
+
+    {obdobi.map((o) => {
+      const lide = data.lide.filter((l) => l.obdobi === o.id).sort(podleNarozeni);
+      const smeryObdobi = smery.filter((s) => s.data.obdobi.includes(o.id));
+      return (
+        <section class={`obdobi obdobi-${o.id}`} id={`obdobi-${o.id}`} aria-labelledby={`obdobi-${o.id}-nazev`}>
+          <div class="obdobi__hlavicka">
+            <p class="t-nadtitulek cislo">Období {o.id}</p>
+            <h2 class="t-h2" id={`obdobi-${o.id}-nazev`}>{o.nazev}</h2>
+            <p class="t-ovladani okno">{rozpeti(o.okno.od, o.okno.do, o.id === 8)} · {o.mapa.popis}</p>
+          </div>
+          <ul class="smery" aria-label="Směry">
+            {smeryObdobi.map((s) => {
+              const pocet = lide.filter((l) => l.smery.includes(s.id)).length;
+              return <li class="t-ovladani">{s.data.nazev}{pocet > 0 && <span class="pocet"> {pocet}</span>}</li>;
+            })}
+          </ul>
+          {HLOUBKY.map((h) => {
+            const skupina = lide.filter((l) => l.hloubka === h.id);
+            if (!skupina.length) return null;
+            return (
+              <div class={`skupina skupina--${h.id}`}>
+                <h3 class="t-ovladani-l">{h.nazev}</h3>
+                <ul class="karty">
+                  {skupina.map((l) => {
+                    const stranka = osobnosti.has(l.id) ? `/osobnost/${osobnosti.get(l.id)}/` : undefined;
+                    const Tag = stranka ? 'a' : 'div';
+                    return (
+                      <li id={l.id}>
+                        <Tag class:list={['karta', { 'karta--odkaz': stranka }]} href={stranka}>
+                          <Mince osoba={l} varianta="tint" velikost={h.id === 'medailonek' ? 36 : h.id === 'profil' ? 44 : 60} />
+                          <span class="karta__text">
+                            <span class="karta__jmeno">{l.jmeno}</span>
+                            <span class="t-popisek karta__roky">{zivot(l)}{l.smery.length > 0 && <> · {l.smery.map((s) => nazevSmeru.get(s)).join(', ')}</>}</span>
+                            <span class="karta__kdo">{l.kdo}</span>
+                            {h.id === 'portret' && l.atribut && <span class="t-popisek karta__proc">Proč {l.atribut.nazev}? {l.atribut.proc}</span>}
+                          </span>
+                        </Tag>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </section>
+      );
+    })}
+  </div>
+</Zakladni>
+
+<style>
+  .hlavicka-stranky { padding: var(--s-6) 0 var(--s-5); max-width: var(--ctenarsky-sloupec); }
+  h1 { margin-bottom: var(--s-4); }
+  .obdobi { margin-top: var(--s-8); padding-top: var(--s-5); border-top: 4px solid var(--pc); }
+  .cislo { margin: 0 0 var(--s-2); color: var(--pc); }
+  .okno { margin: var(--s-2) 0 0; color: var(--ink-2); }
+  .smery { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: var(--s-5) 0 var(--s-6); padding: 0; list-style: none; }
+  .smery li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 var(--s-3);
+    border: 1px solid var(--pc-soft);
+    border-radius: var(--r-full);
+    background: var(--surface);
+    color: var(--ink);
+  }
+  .pocet { margin-left: 6px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .skupina { margin-top: var(--s-6); }
+  .skupina h3 { margin-bottom: var(--s-3); }
+  .karty { display: grid; gap: var(--s-3); margin: 0; padding: 0; list-style: none; }
+  .karta {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-4);
+    height: 100%;
+    padding: var(--s-4);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    text-decoration: none;
+  }
+  .karta--odkaz { border-color: var(--pc); }
+  .karta--odkaz:hover { background: var(--pc-tint); }
+  .karta--odkaz .karta__jmeno { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+  .karta__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .karta__jmeno { font-size: 21px; line-height: 1.25; }
+  .skupina--portret .karta__jmeno { font-size: var(--fs-h3); }
+  .karta__kdo { font-size: 16px; line-height: 1.45; color: var(--ink-2); margin-top: var(--s-1); }
+  .karta__proc { margin-top: var(--s-2); }
+  .skupina--medailonek .karta { padding: var(--s-3); border-color: transparent; background: none; border-bottom: 1px solid var(--rule); border-radius: 0; }
+  .skupina--medailonek .karta__jmeno { font-size: 19px; }
+  .skupina--medailonek .karta__kdo { font-size: 15px; }
+  @media (min-width: 700px) {
+    .karty { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1100px) {
+    .skupina--portret .karty { grid-template-columns: repeat(3, 1fr); }
+    .skupina--profil .karty, .skupina--medailonek .karty { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>

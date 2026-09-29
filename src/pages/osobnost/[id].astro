@@ -1,0 +1,139 @@
+---
+// Šablona osobnosti (portrét, profil): hlavička s deskou a atributem → příběh v kapitolách →
+// doba a lidé (z dat) → velké myšlenky → zkus to žít → kam dál → prameny.
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Zakladni from '../../layouts/Zakladni.astro';
+import Deska from '../../components/ui/Deska.astro';
+import Prameny from '../../components/osobnost/Prameny.astro';
+import { osoba as najdiOsobu, obdobiPodleId, mistaPodleId, data } from '../../lib/data';
+import { zivot } from '../../lib/casy';
+
+export async function getStaticPaths() {
+  const vse = await getCollection('osobnosti');
+  return vse.map((zaznam) => ({ params: { id: zaznam.id }, props: { zaznam } }));
+}
+interface Props { zaznam: CollectionEntry<'osobnosti'> }
+const { zaznam } = Astro.props;
+const { Content } = await render(zaznam);
+const fm = zaznam.data;
+const osoba = najdiOsobu(fm.osoba);
+const obdobi = obdobiPodleId.get(osoba.obdobi)!;
+const rodiste = osoba.mista.find((m) => m.role === 'narozeni' || m.role === 'pusobeni');
+const misto = rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
+const vztahy = data.vztahy.filter((v) => v.od === osoba.id || v.k === osoba.id);
+const citatyNaStrance = [fm.citat, ...[...(zaznam.body ?? '').matchAll(/<Citat id="([^"]+)"/g)].map((m) => m[1])].filter(Boolean) as string[];
+const prameny = [
+  ...osoba.zdroje,
+  ...osoba.mista.map((m) => m.zdroj),
+  ...vztahy.map((v) => v.zdroj),
+  ...(osoba.atribut ? [osoba.atribut.zdroj] : []),
+  ...citatyNaStrance.map((id) => data.zdroje.citaty.find((c) => c.id === id)!.zdroj),
+];
+const dev = import.meta.env.DEV;
+---
+<Zakladni
+  titulek={osoba.jmeno}
+  popis={`${osoba.jmeno} (${zivot(osoba)}): ${osoba.kdo}`}
+  sekce="lide"
+  zpet={{ href: '/lide/', text: 'Lidé a směry' }}
+  drobecky={[
+    { text: 'Lidé a směry', href: '/lide/' },
+    { text: obdobi.nazev, href: `/lide/#obdobi-${obdobi.id}` },
+    { text: osoba.jmeno },
+  ]}
+>
+  <article class={`osobnost stranka obdobi-${osoba.obdobi}`} data-navsteva={`/osobnost/${zaznam.id}/`} data-nazev={osoba.jmeno}>
+    <header class="osobnost__hlavicka">
+      <div class="osobnost__titulek">
+        <p class="t-nadtitulek nadtitulek">{fm.nadtitulek}</p>
+        <h1 class="t-display-2">{fm.titulek}.<br /><em>{fm.pointa}</em></h1>
+        <p class="data t-ovladani">
+          <span class="t-letopocet">{zivot(osoba)}</span>
+          {misto && <> · {misto}</>}
+          {' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a>
+        </p>
+      </div>
+      <div class="osobnost__deska">
+        <Deska osoba={osoba}>
+          {osoba.atribut && (
+            <span class="proc"><strong>Proč {osoba.atribut.nazev}?</strong> {osoba.atribut.proc}</span>
+          )}
+        </Deska>
+      </div>
+    </header>
+
+    <nav class="kapitoly" aria-label="Kapitoly" data-pagefind-ignore>
+      <ol>
+        {fm.kapitoly.map((k) => (
+          <li class:list={{ osnova: k.stav === 'osnova' }}>
+            <span class="t-letopocet cislo">{k.cislo}</span>
+            {k.stav === 'hotovo' ? <a href={`#${k.kotva}`}>{k.nazev}</a> : <span>{k.nazev}</span>}
+          </li>
+        ))}
+      </ol>
+    </nav>
+
+    <div class="obsah">
+      <Content osoba={osoba} />
+    </div>
+
+    {dev && fm.kapitoly.filter((k) => k.stav === 'osnova').length > 0 && (
+      <aside class="osnova-autor" data-pagefind-ignore>
+        <p class="t-nadtitulek">Jen ve vývojovém režimu · osnova kapitol pro P7</p>
+        {fm.kapitoly.filter((k) => k.stav === 'osnova').map((k) => (
+          <p><strong>{k.cislo} {k.nazev}:</strong> {k.osnova}</p>
+        ))}
+      </aside>
+    )}
+
+    <div class="ctenarsky">
+      <Prameny prameny={prameny} citaty={citatyNaStrance} />
+    </div>
+  </article>
+</Zakladni>
+
+<script>
+  import { zaznamenejNavstevu } from '../../lib/denik';
+  const a = document.querySelector<HTMLElement>('[data-navsteva]');
+  if (a) zaznamenejNavstevu(a.dataset.navsteva!, a.dataset.nazev!);
+</script>
+
+<style>
+  .osobnost__hlavicka {
+    display: grid;
+    gap: var(--s-6);
+    padding-top: var(--s-5);
+  }
+  .nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
+  h1 { margin-bottom: var(--s-5); }
+  h1 em { color: var(--ink-2); }
+  .data { color: var(--ink-2); margin: 0; }
+  .data a { color: inherit; }
+  .osobnost__deska { max-width: 420px; }
+  @media (max-width: 899px) {
+    .osobnost__deska :global(.deska__plocha) { aspect-ratio: 16 / 10 !important; }
+  }
+  .proc { display: block; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+  .proc strong { color: var(--ink); font-weight: 600; }
+  .kapitoly { margin: var(--s-7) 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .kapitoly ol { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: 0; padding: var(--s-2) 0; list-style: none; font-family: var(--font-sans); font-size: var(--fs-ovladani); }
+  .kapitoly li { display: flex; align-items: center; gap: var(--s-2); min-height: var(--dotyk); }
+  .kapitoly .cislo { color: var(--pc); font-weight: 600; }
+  .kapitoly a { text-decoration: none; font-weight: 500; }
+  .kapitoly a:hover { text-decoration: underline; }
+  .kapitoly .osnova { color: var(--muted); }
+  .kapitoly .osnova .cislo { color: var(--muted); }
+  .obsah :global(.uvod) { margin-top: var(--s-6); font-size: var(--fs-perex); line-height: var(--lh-perex); }
+  .osnova-autor {
+    margin: var(--s-8) 0;
+    padding: var(--s-5);
+    border: 2px dashed var(--muted);
+    border-radius: var(--r-md);
+    font-family: var(--font-sans);
+    font-size: 15px;
+  }
+  @media (min-width: 900px) {
+    .osobnost__hlavicka { grid-template-columns: 1fr 380px; align-items: end; gap: var(--s-8); padding-top: var(--s-7); }
+    .osobnost__deska { justify-self: end; width: 100%; }
+  }
+</style>

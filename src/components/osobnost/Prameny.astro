@@ -1,0 +1,41 @@
+---
+// Rozbalovací Prameny na konci stránky: odkud je každé tvrzení, citát a údaj.
+import { pramenyPodleId, citatyPodleId } from '../../lib/data';
+
+interface Props { prameny: string[]; citaty?: string[] }
+const { prameny, citaty = [] } = Astro.props;
+const seznam = [...new Set(prameny)].map((id) => pramenyPodleId.get(id)!).filter(Boolean);
+const cit = citaty.map((id) => citatyPodleId.get(id)!).filter(Boolean);
+---
+<details class="prameny">
+  <summary class="t-ovladani-l">Prameny</summary>
+  <div class="prameny__obsah t-popisek">
+    {cit.length > 0 && (
+      <>
+        <h3 class="t-ovladani">Citáty a překlady</h3>
+        <ul>
+          {cit.map((c) => (
+            <li>{c.autor}, <cite>{c.dilo}</cite> {c.misto}: {c.preklad.druh === 'vlastni' ? `vlastní převod podle ${c.preklad.podle}` : `přeložil ${c.preklad.prekladatel}`}.</li>
+          ))}
+        </ul>
+      </>
+    )}
+    <h3 class="t-ovladani">Životopisné údaje, místa a vztahy</h3>
+    <ul>
+      {seznam.map((p) => (
+        <li>
+          {p.autor && `${p.autor}: `}{p.url ? <a href={p.url} rel="noopener">{p.nazev}</a> : p.nazev}{p.dilo && <>, <cite>{p.dilo}</cite></>}.
+        </li>
+      ))}
+    </ul>
+  </div>
+</details>
+
+<style>
+  .prameny { margin: var(--s-8) 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  summary { min-height: var(--dotyk); display: flex; align-items: center; cursor: pointer; }
+  .prameny__obsah { padding-bottom: var(--s-5); color: var(--ink-2); }
+  h3 { margin: var(--s-4) 0 var(--s-2); color: var(--ink); }
+  ul { margin: 0; padding-left: var(--s-5); }
+  li { margin-bottom: var(--s-1); }
+</style>

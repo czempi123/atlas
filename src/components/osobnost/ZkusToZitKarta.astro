@@ -1,0 +1,25 @@
+---
+// Zkus to žít: karta v tintu období s jednou týdenní výzvou a tlačítkem „Přijmout výzvu“.
+import ZkusToZit from '../ostrovy/ZkusToZit.svelte';
+
+interface Props { id: string; nazev: string; delka?: string; odkaz: string }
+const { id, nazev, delka = 'jeden týden', odkaz } = Astro.props;
+---
+<section class="zkus" id="zkus-to-zit" aria-labelledby="zkus-titulek">
+  <p class="t-nadtitulek zkus__nad">Zkus to žít · {delka}</p>
+  <h2 class="t-h2" id="zkus-titulek">{nazev}</h2>
+  <div class="ctenarsky zkus__text"><slot /></div>
+  <ZkusToZit client:visible id={id} nazev={nazev} odkaz={odkaz} />
+</section>
+
+<style>
+  .zkus {
+    margin: var(--s-9) 0;
+    padding: var(--s-6) var(--s-5);
+    border-radius: var(--r-md);
+    background: var(--pc-tint);
+  }
+  .zkus__nad { margin: 0 0 var(--s-2); color: var(--ink-2); }
+  .zkus__text { margin: var(--s-4) 0 var(--s-5); }
+  @media (min-width: 900px) { .zkus { padding: var(--s-7) var(--s-8); } }
+</style>

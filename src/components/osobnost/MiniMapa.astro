@@ -1,0 +1,71 @@
+---
+// Výřez mapy s místy, kde osoba žila, bojovala a zemřela. Podklad se počítá při sestavení z Natural Earth.
+import type { TOsoba } from '../../lib/schema';
+import { mistaPodleId } from '../../lib/data';
+import { podklad, VYREZY_OBDOBI_1, type Vyrez } from '../../lib/mapa';
+import { rok as fmtRok } from '../../lib/casy';
+
+interface Props { osoba: TOsoba; vyrez?: Vyrez }
+const { osoba, vyrez = VYREZY_OBDOBI_1.mini } = Astro.props;
+const p = podklad(vyrez);
+const ROLE: Record<string, string> = {
+  narozeni: 'narození', studium: 'studia', pusobeni: 'působení', pobyt: 'pobyt', exil: 'vyhnanství', tazeni: 'válečné tažení', smrt: 'smrt',
+};
+// Místa sloučená podle id, s rolemi a roky.
+const body = new Map<string, { nazev: string; xy: [number, number]; popis: string[] }>();
+for (const m of osoba.mista) {
+  const misto = mistaPodleId.get(m.misto)!;
+  const rok = m.rok ?? m.od;
+  const popis = `${ROLE[m.role]}${rok !== undefined ? ` ${fmtRok(rok)}` : ''}`;
+  const b = body.get(m.misto) ?? { nazev: misto.nazev, xy: p.bod(misto.souradnice), popis: [] };
+  b.popis.push(popis);
+  body.set(m.misto, b);
+}
+const vidimne = [...body.values()].filter((b) => b.xy[0] > 0 && b.xy[0] < vyrez.sirka && b.xy[1] > 0 && b.xy[1] < vyrez.vyska);
+---
+<figure class={`minimapa obdobi-${osoba.obdobi}`}>
+  <svg viewBox={`0 0 ${vyrez.sirka} ${vyrez.vyska}`} role="img" aria-label={`Mapa: ${vidimne.map((b) => `${b.nazev} (${b.popis.join(', ')})`).join('; ')}`}>
+    <rect width={vyrez.sirka} height={vyrez.vyska} class="more" />
+    <path d={p.sit} class="sit" />
+    <path d={p.pevnina} class="svit svit--1" />
+    <path d={p.pevnina} class="svit svit--2" />
+    <path d={p.pevnina} class="pevnina" />
+    {vidimne.map((b) => (
+      <g transform={`translate(${b.xy[0]} ${b.xy[1]})`}>
+        <circle r="6" class="bod" />
+        <text x={b.xy[0] > vyrez.sirka * 0.6 ? -11 : 11} y="-2" class="nazev" text-anchor={b.xy[0] > vyrez.sirka * 0.6 ? 'end' : 'start'}>{b.nazev}</text>
+        <text y="-2" class="role" text-anchor={b.xy[0] > vyrez.sirka * 0.6 ? 'end' : 'start'}>
+          {b.popis.map((radek) => <tspan x={b.xy[0] > vyrez.sirka * 0.6 ? -11 : 11} dy="1.2em">{radek}</tspan>)}
+        </text>
+      </g>
+    ))}
+    <g transform={`translate(16 ${vyrez.vyska - 18})`} class="meritko">
+      <path d={`M0 0h${p.meritko.px}`} />
+      <text y="-6">{p.meritko.km} km</text>
+    </g>
+  </svg>
+  <figcaption class="t-popisek">Podklad: Natural Earth.</figcaption>
+</figure>
+
+<style>
+  .minimapa { margin: 0; }
+  svg { width: 100%; height: auto; border-radius: var(--r-xs); }
+  .more { fill: var(--map-sea); }
+  .sit { fill: none; stroke: var(--map-sea-line); stroke-width: 0.6; opacity: 0.7; }
+  .svit { fill: none; stroke: var(--map-sea-line); stroke-linejoin: round; }
+  .svit--1 { stroke-width: 16; opacity: var(--map-glow-1); }
+  .svit--2 { stroke-width: 7; opacity: var(--map-glow-2); }
+  .pevnina { fill: var(--map-land); stroke: var(--map-coast); stroke-width: 0.9; stroke-linejoin: round; }
+  .bod { fill: var(--pc); stroke: var(--surface); stroke-width: 2; }
+  .nazev { font-family: var(--font-sans); font-size: 15px; font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--map-land); stroke-width: 4px; stroke-linejoin: round; }
+  .role { font-family: var(--font-sans); font-size: 13px; fill: var(--ink-2); paint-order: stroke; stroke: var(--map-land); stroke-width: 4px; stroke-linejoin: round; }
+  .meritko path { stroke: var(--ink-2); stroke-width: 2; }
+  .meritko text { font-family: var(--font-sans); font-size: 12px; fill: var(--ink-2); }
+  figcaption { margin-top: var(--s-2); }
+  /* Na telefonu se SVG zmenší zhruba na 70 %, popisky proto zvětšíme. */
+  @media (max-width: 700px) {
+    .nazev { font-size: 21px; }
+    .role { font-size: 18px; }
+    .meritko text { font-size: 17px; }
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+// Kapitola portrétu: číslo, krátký název a titulek s pointou v kurzívě.
+interface Props { cislo: string; kotva: string; nazev: string }
+const { cislo, kotva, nazev } = Astro.props;
+---
+<section class="kapitola" id={kotva} aria-labelledby={`${kotva}-titulek`}>
+  <p class="t-nadtitulek kapitola__cislo"><span class="t-letopocet">{cislo}</span> · {nazev}</p>
+  <h2 class="t-h1 kapitola__titulek" id={`${kotva}-titulek`}><slot name="titulek" /></h2>
+  <div class="ctenarsky"><slot /></div>
+</section>
+
+<style>
+  .kapitola { margin: var(--s-9) 0 var(--s-7); }
+  .kapitola__cislo { margin: 0 0 var(--s-3); color: var(--pc); }
+  .kapitola__titulek { margin-bottom: var(--s-6); max-width: 14ch; }
+  @media (min-width: 900px) { .kapitola__titulek { max-width: 18ch; } }
+</style>

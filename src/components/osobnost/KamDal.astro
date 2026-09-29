@@ -1,0 +1,43 @@
+---
+// Kam dál: dvě až čtyři pokračování, vždy s jasným cílem.
+import Ikona from '../ui/Ikona.astro';
+interface Props { odkazy: { href: string; nadtitulek: string; text: string }[] }
+const { odkazy } = Astro.props;
+---
+<nav class="kamdal" aria-labelledby="kam-dal">
+  <h2 class="t-h2" id="kam-dal">Kam dál</h2>
+  <ul>
+    {odkazy.map((o) => (
+      <li>
+        <a href={o.href}>
+          <span class="t-nadtitulek">{o.nadtitulek}</span>
+          <span class="text">{o.text}</span>
+          <Ikona id="dal" velikost={22} class="sipka" />
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .kamdal { margin: var(--s-9) 0; padding-top: var(--s-7); border-top: 1px solid var(--ink); }
+  h2 { margin-bottom: var(--s-5); }
+  ul { display: grid; gap: var(--s-3); margin: 0; padding: 0; list-style: none; }
+  a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-1);
+    min-height: 88px;
+    padding: var(--s-4) var(--s-8) var(--s-4) var(--s-5);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    text-decoration: none;
+  }
+  a:hover { border-color: var(--muted); }
+  .t-nadtitulek { color: var(--muted); }
+  .text { font-size: var(--fs-perex); line-height: 1.3; }
+  a :global(.sipka) { position: absolute; right: var(--s-5); top: 50%; translate: 0 -50%; }
+  @media (min-width: 900px) { ul { grid-template-columns: repeat(3, 1fr); } }
+</style>

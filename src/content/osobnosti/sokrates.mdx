@@ -1,0 +1,110 @@
+---
+osoba: sokrates
+nadtitulek: Athénský filozof · Sókratův portrét
+titulek: Sókratés
+pointa: Muž, který se ptal.
+citat: obrana-38a
+kapitoly:
+  - cislo: "01"
+    kotva: delfy
+    nazev: Věštba z Delf
+    stav: hotovo
+  - cislo: "02"
+    kotva: muz-z-agory
+    nazev: Muž z agory
+    stav: osnova
+    osnova: "Sókratův den na athénském tržišti: koho zastavoval a jak se ptal (elenchos na příkladu z Lachéta nebo Euthyfróna). Proč za ním chodili mladí Athéňané, Alkibiadés a Platón. Podklady: Platón, Obrana 23c; Symposion. Napíše se v P7."
+  - cislo: "03"
+    kotva: ustup-od-delia
+    nazev: Ústup od Délia
+    stav: osnova
+    osnova: "Sókratés jako voják: Potidaia 432, Délion 424, Amfipolis 422. Alkibiadovo vyprávění o klidném ústupu od Délia (Symposion 219e–221b). Odvaha jako otázka, kterou si Sókratés kladl i v rozhovorech. Napíše se v P7."
+  - cislo: "04"
+    kotva: soud
+    nazev: Soud
+    stav: osnova
+    osnova: "Proces roku 399 př. n. l.: obžaloba z bezbožnosti a kažení mládeže, Obrana, hlasování a trest. Proč nenavrhl vyhnanství (Kritón 52c). Ověřit podrobnosti obžaloby a počty hlasů (atlas-overeni). Napíše se v P7."
+  - cislo: "05"
+    kotva: posledni-den
+    nazev: Poslední den
+    stav: osnova
+    osnova: "Kritón přemlouvá k útěku, Sókratés odmítá (Kritón). Poslední rozhovor o duši a číše jedu (Faidón 117a–118a). Vazba na atribut kalich. Napíše se v P7."
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import NejdrivSam from '../../components/ostrovy/NejdrivSam.svelte';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+
+<div class="uvod ctenarsky">
+
+Sókratés nenapsal ani řádek. Chodil po athénském tržišti, zastavoval generály, politiky i řemeslníky a ptal se jich na věci, kterým podle sebe rozuměli: Co je odvaha? Co je spravedlnost? Většinou zjistili, že to nevědí.
+
+Někteří mu za to byli vděční. Jiní ho za to nakonec poslali na smrt.
+
+</div>
+
+<div class="ctenarsky"><Citat id="obrana-38a" velky /></div>
+
+<Kapitola cislo="01" kotva="delfy" nazev="Věštba z Delf">
+  <Fragment slot="titulek">Nikdo není <em>moudřejší.</em></Fragment>
+
+Sókratův přítel Chairefón byl prudký člověk: do čeho se pustil, do toho šel celý. Jednou se vydal do Delf a zeptal se věštírny, jestli je někdo moudřejší než Sókratés. Pýthie odpověděla, že nikdo.
+
+Když se to Sókratés dozvěděl, nevěděl, co si s tím počít. O sobě věděl, že moudrý není, ve velkém ani v malém. Bůh ale přece lhát nemůže. Rozhodl se tedy věštbu prověřit: najde někoho moudřejšího a vrátí se s ním jako s protipříkladem.
+
+Šel za politikem, o kterém všichni říkali, že je moudrý. Pak za básníky. Nakonec za řemeslníky. Všude narazil na totéž: lidé opravdu něčemu rozuměli, ale mysleli si, že rozumějí i všemu ostatnímu.
+
+<Citat id="obrana-21d" />
+
+Tak pochopil, co věštba myslela. Jeho moudrost je jen v tom, že ví, co neví. Z hledání protipříkladu se stalo jeho celoživotní řemeslo. A nakonec i důvod, proč ho Athény poslaly na smrt.
+
+<NejdrivSam client:visible id="sokrates-kdo-je-moudry" otazka="Koho považuješ za moudrého člověka? Podle čeho to poznáš?" tlacitko="Porovnat se Sókratem" odkaz="/osobnost/sokrates/#delfy">
+
+Sókratés by se tě nejdřív zeptal, jestli ten člověk ví, kde jeho vědění končí. Politik, básníci i řemeslníci něčemu opravdu rozuměli. Mýlili se v tom, že si mysleli, že rozumějí všemu.
+
+Podívej se na svou odpověď. Napsal jsi znak, podle kterého moudrost poznáš, nebo jen jméno? Poznal bys podle něj moudrého člověka, kterého vůbec neznáš?
+
+</NejdrivSam>
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Z Athén vycházel skoro jen do války. Třikrát: k Potidaii, k Déliu a k Amfipoli.
+
+</DobaALide>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Poznání">
+    <Fragment slot="titulek">Moudrost začíná slovem <em>nevím.</em></Fragment>
+
+Kdo si myslí, že už ví, přestane se ptát. Sókratés považoval poctivé přiznání nevědomosti za začátek každého hledání. Proto se tolik vyptával: chtěl, aby spolu s druhými došli dál, než by došel každý sám.
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Etika">
+    <Fragment slot="titulek">Nikdo nedělá zlo <em>dobrovolně.</em></Fragment>
+
+Podle Sókrata nikdo nedělá špatné věci proto, že chce být špatný. Dělá je, protože se mýlí v tom, co je pro něj dobré. Kdyby to byla pravda, byla by nejlepší výchovou trpělivá otázka, ne trest.
+
+*Souhlasíš? Stačí jedna chvíle, kdy člověk ví, co je správné, a stejně to neudělá.*
+
+<MojeStanovisko client:visible id="sokrates-nikdo-nedela-zlo" otazka="Dělá člověk zlo jen proto, že se mýlí? Co si myslíš ty?" odkaz="/osobnost/sokrates/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="sokrates-rozhovor" nazev="Jeden sokratovský rozhovor" odkaz="/osobnost/sokrates/#zkus-to-zit">
+
+Zeptej se kamaráda na něco, o čem je pevně přesvědčený. Třeba: Co je podle tebe opravdové přátelství? Neoponuj. Jen se ptej dál: Platí to vždycky? A co když…? Na konci si zapiš, na co jste přišli oba.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/mapa/', nadtitulek: 'Mapa a čas', text: 'Kdo žil v Athénách a kolem Egejského moře' },
+  { href: '/lide/#obdobi-1', nadtitulek: 'Lidé a směry', text: 'Sókratovi žáci, přátelé a protivníci' },
+  { href: '/otazky/#jak-poznam-pravdu', nadtitulek: 'Velká otázka 7', text: 'Jak poznám, co je pravda?' },
+]} />

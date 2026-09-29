@@ -1,0 +1,90 @@
+---
+// Mini osa se současníky: pruhy celých životů lidí z téhož období, kteří žili zároveň s osobou.
+// Generuje se z lide.yaml; řádky jsou seznam, takže je čte i čtečka obrazovky.
+import type { TOsoba } from '../../lib/schema';
+import { data } from '../../lib/data';
+import { interval, zivot, rok as fmtRok } from '../../lib/casy';
+
+interface Props { osoba: TOsoba; max?: number }
+const { osoba, max = 12 } = Astro.props;
+const [n, z] = interval(osoba)!;
+const soucasnici = data.lide
+  .filter((o) => o.id !== osoba.id && o.narozen && o.zemrel)
+  .map((o) => ({ o, i: interval(o)! }))
+  .filter(({ i }) => i[0] <= z && i[1] >= n)
+  // nejdřív ti, kdo mají k osobě vztah, pak podle délky společného života
+  .map((x) => ({
+    ...x,
+    vztah: data.vztahy.some((v) => (v.od === osoba.id && v.k === x.o.id) || (v.k === osoba.id && v.od === x.o.id)),
+    spolecne: Math.min(z, x.i[1]) - Math.max(n, x.i[0]),
+  }))
+  .sort((a, b) => Number(b.vztah) - Number(a.vztah) || b.spolecne - a.spolecne)
+  .slice(0, max)
+  .sort((a, b) => a.i[0] - b.i[0]);
+const radky = [{ o: osoba, i: [n, z] as [number, number], ja: true }, ...soucasnici.map((s) => ({ ...s, ja: false }))].sort((a, b) => a.i[0] - b.i[0]);
+const od = Math.floor((Math.min(...radky.map((r) => r.i[0])) - 10) / 50) * 50;
+const do_ = Math.ceil((Math.max(...radky.map((r) => r.i[1])) + 10) / 50) * 50;
+const pct = (r: number) => ((r - od) / (do_ - od)) * 100;
+const znacky: number[] = [];
+for (let r = od; r <= do_; r += 50) znacky.push(r);
+---
+<figure class={`osa obdobi-${osoba.obdobi}`}>
+  <div class="osa__mrizka" aria-hidden="true">
+    {znacky.map((r) => <span class="osa__znacka t-letopocet" style={`left:${pct(r)}%`}>{r === 0 ? '' : Math.abs(r)}</span>)}
+  </div>
+  <ol class="osa__radky">
+    {radky.map((r) => (
+      <li class:list={['osa__radek', { 'osa__radek--ja': r.ja }]}>
+        <span class="osa__jmeno">
+          <span class="jmeno">{r.o.jmeno}</span>
+          <span class="t-popisek">{zivot(r.o)}</span>
+        </span>
+        <span class="osa__draha">
+          <span class="osa__pruh" style={`left:${pct(r.i[0])}%; width:${Math.max(pct(r.i[1]) - pct(r.i[0]), 0.8)}%`}></span>
+        </span>
+      </li>
+    ))}
+  </ol>
+  <figcaption class="t-popisek">{do_ <= 0 ? 'Letopočty před naším letopočtem, osa' : 'Osa'} po 50 letech. Zvýrazněný pás je {osoba.jmeno2 ?? osoba.jmeno} život ({fmtRok(n)} až {fmtRok(z)}).</figcaption>
+</figure>
+
+<style>
+  .osa { margin: 0; --jmena: 38%; }
+  .osa__mrizka {
+    position: relative;
+    height: 20px;
+    margin-left: var(--jmena);
+    border-bottom: 1px solid var(--rule);
+  }
+  .osa__znacka {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .osa__radky { margin: 0; padding: 0; list-style: none; }
+  .osa__radek {
+    display: grid;
+    grid-template-columns: var(--jmena) 1fr;
+    align-items: center;
+    min-height: 34px;
+    border-bottom: 1px solid color-mix(in srgb, var(--rule) 60%, transparent);
+  }
+  .osa__radek--ja { background: var(--pc-tint); }
+  .osa__jmeno { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--s-2); padding: var(--s-1) var(--s-2) var(--s-1) 0; }
+  .osa__radek--ja .osa__jmeno { padding-left: var(--s-2); }
+  .jmeno { font-size: 16px; line-height: 1.25; }
+  .osa__radek--ja .jmeno { font-weight: 600; }
+  .osa__draha { position: relative; height: 10px; }
+  .osa__pruh {
+    position: absolute;
+    top: 2px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--pc);
+  }
+  .osa__radek--ja .osa__pruh { top: 0; height: 10px; box-shadow: 0 0 0 2px var(--pc-tint), 0 0 0 3px var(--pc); }
+  figcaption { margin-top: var(--s-3); }
+  @media (min-width: 700px) { .osa { --jmena: 30%; } }
+</style>

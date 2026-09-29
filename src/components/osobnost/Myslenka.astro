@@ -1,0 +1,24 @@
+---
+// Jedna velká myšlenka: disciplína, číslo, titulek s pointou v kurzívě, výklad.
+interface Props { cislo: number; disciplina: string }
+const { cislo, disciplina } = Astro.props;
+---
+<article class="myslenka">
+  <p class="t-nadtitulek myslenka__nad"><span class="t-letopocet">{cislo}</span> · {disciplina}</p>
+  <h3 class="t-h3 myslenka__titulek"><slot name="titulek" /></h3>
+  <slot />
+</article>
+
+<style>
+  .myslenka {
+    display: flex;
+    flex-direction: column;
+    padding: var(--s-5);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    background: var(--surface);
+  }
+  .myslenka__nad { margin: 0 0 var(--s-2); color: var(--pc); }
+  .myslenka__titulek { margin-bottom: var(--s-4); }
+  .myslenka :global(p:last-of-type) { margin-bottom: 0; }
+</style>

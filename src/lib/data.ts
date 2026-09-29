@@ -38,18 +38,22 @@ export function vztahyOsoby(id: string): { vztah: TVztah; druhy: TOsoba; smer: '
     .map((v) => ({ vztah: v, druhy: osoba(v.od === id ? v.k : v.od), smer: v.od === id ? 'od' : 'k' }));
 }
 
-/** Řetězy učitel → žák od dané osoby dál (Sókratés → Platón → Aristotelés). */
-export function kdoNavazoval(id: string, hloubka = 4): TOsoba[][] {
-  const zaci = (x: string) => data.vztahy.filter((v) => v.od === x && (v.typ === 'ucitel' || v.typ === 'vliv-textem'));
-  const retezy: TOsoba[][] = [];
-  const projdi = (x: string, cesta: TOsoba[]) => {
-    const dalsi = zaci(x).filter((v) => !cesta.some((c) => c.id === v.k));
-    if (!dalsi.length || cesta.length > hloubka) {
-      if (cesta.length > 2) retezy.push(cesta);
+/**
+ * Řetězy učitel → žák od dané osoby dál (Sókratés → Platón → Aristotelés).
+ * Ukazují se jen řetězy, které vedou k profilu či portrétu, nebo mají aspoň čtyři články.
+ */
+export function kdoNavazoval(id: string, hloubka = 4): { lide: TOsoba[]; tradovany: boolean[] }[] {
+  const zaci = (x: string) => data.vztahy.filter((v) => v.od === x && v.typ === 'ucitel');
+  const retezy: { lide: TOsoba[]; tradovany: boolean[] }[] = [];
+  const projdi = (x: string, lide: TOsoba[], trad: boolean[]) => {
+    const dalsi = zaci(x).filter((v) => !lide.some((c) => c.id === v.k));
+    if (!dalsi.length || lide.length > hloubka) {
+      const posledni = lide[lide.length - 1];
+      if (lide.length >= 4 || (lide.length === 3 && posledni.hloubka !== 'medailonek')) retezy.push({ lide, tradovany: trad });
       return;
     }
-    for (const v of dalsi) projdi(v.k, [...cesta, osoba(v.k)]);
+    for (const v of dalsi) projdi(v.k, [...lide, osoba(v.k)], [...trad, !!v.tradovany]);
   };
-  projdi(id, [osoba(id)]);
+  projdi(id, [osoba(id)], []);
   return retezy;
 }

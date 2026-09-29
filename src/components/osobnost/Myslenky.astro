@@ -1,0 +1,16 @@
+---
+// Velké myšlenky osobnosti: obal pro dvě až tři karty Myslenka.
+interface Props { titulek?: string }
+const { titulek = 'Dvě velké myšlenky' } = Astro.props;
+---
+<section class="myslenky" aria-labelledby="myslenky">
+  <h2 class="t-h2" id="myslenky">{titulek}</h2>
+  <div class="myslenky__mrizka"><slot /></div>
+</section>
+
+<style>
+  .myslenky { margin: var(--s-9) 0; padding-top: var(--s-7); border-top: 1px solid var(--ink); }
+  h2 { margin-bottom: var(--s-6); }
+  .myslenky__mrizka { display: grid; gap: var(--s-5); }
+  @media (min-width: 900px) { .myslenky__mrizka { grid-template-columns: 1fr 1fr; } }
+</style>

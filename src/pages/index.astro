@@ -1,0 +1,108 @@
+---
+// Domů: pozvání k otázce, jeden jasný začátek, pás období a tři vstupy.
+import Zakladni from '../layouts/Zakladni.astro';
+import PasObdobi from '../components/ui/PasObdobi.astro';
+import Tlacitko from '../components/ui/Tlacitko.astro';
+import Ikona from '../components/ui/Ikona.astro';
+import Mince from '../components/ui/Mince.astro';
+import Pokracuj from '../components/ostrovy/Pokracuj.svelte';
+import { osoba } from '../lib/data';
+
+const sokrates = osoba('sokrates');
+const sLidmi = new Set(['1', '2']);
+const vstupy = [
+  { href: '/mapa/', ikona: 'mapa', nazev: 'Mapa a čas', text: 'Kdo žil kdy, kde a s kým. Na mapě jsou jen ti, kdo ve zvoleném roce žijí.' },
+  { href: '/otazky/', ikona: 'otazky', nazev: 'Otázky', text: 'Deset otázek, na které každá doba odpovídá po svém. Začni tou, která tě pálí.' },
+  { href: '/lide/', ikona: 'lide', nazev: 'Lidé a směry', text: 'Filozofové jako lidé: jejich příběhy, přátelé, učitelé a spory.' },
+];
+---
+<Zakladni titulek="Atlas myšlení" sekce="domu">
+  <section class="uvod stranka">
+    <p class="t-nadtitulek nadtitulek">Atlas myšlení · filozofie od Thaléta po dnešek</p>
+    <h1 class="t-display-1">Velké otázky mají <em>dlouhé dějiny.</em></h1>
+    <p class="t-perex perex">Lidé se dva a půl tisíce let ptají, jak žít, co je skutečné a komu věřit. Poznej je jako lidi, ne jako jména z učebnice. A pak si odpověz sám.</p>
+    <div class="akce">
+      <Tlacitko href="/osobnost/sokrates/" ikona="dal">Začni se Sókratem</Tlacitko>
+      <Tlacitko href="/mapa/" varianta="vedlejsi">Mapa a čas</Tlacitko>
+    </div>
+    <Pokracuj client:idle />
+  </section>
+
+  <section class="obdobi stranka" aria-labelledby="osm-obdobi">
+    <div class="sekce-hlavicka">
+      <h2 class="t-h2" id="osm-obdobi">Osm období</h2>
+      <p class="t-popisek">Každá doba má svou barvu. Najdeš ji na mapě, na ose i u lidí.</p>
+    </div>
+    <PasObdobi varianta="velky" odkaz={(id) => (sLidmi.has(String(id)) ? `/lide/#obdobi-${id}` : undefined)} />
+  </section>
+
+  <section class="rozcestnik stranka" aria-labelledby="tri-vstupy">
+    <h2 class="vizualne-skryte" id="tri-vstupy">Kudy do atlasu</h2>
+    <ul>
+      {vstupy.map((v) => (
+        <li>
+          <a href={v.href}>
+            <Ikona id={v.ikona} velikost={28} />
+            <span class="t-h3">{v.nazev}</span>
+            <span class="t-popisek text">{v.text}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="pribeh stranka obdobi-1" aria-labelledby="pribeh">
+    <a class="pribeh__karta" href="/osobnost/sokrates/#delfy">
+      <Mince osoba={sokrates} varianta="sel" velikost={64} />
+      <span class="pribeh__text">
+        <span class="t-nadtitulek pribeh__nad">Příběh na začátek</span>
+        <span class="t-h2" id="pribeh">Nikdo není <em>moudřejší.</em></span>
+        <span class="t-perex">Věštírna v Delfách prohlásila, že nikdo není moudřejší než Sókratés. Sókratés o sobě věděl, že moudrý není. Tak se ji rozhodl vyvrátit.</span>
+      </span>
+    </a>
+  </section>
+</Zakladni>
+
+<style>
+  .uvod { padding-top: var(--s-8); padding-bottom: var(--s-8); }
+  .nadtitulek { margin: 0 0 var(--s-5); color: var(--period-1); }
+  h1 { max-width: 11ch; margin-bottom: var(--s-6); }
+  h1 em { color: var(--ink-2); }
+  .perex { max-width: 36ch; margin-bottom: var(--s-6); }
+  .akce { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+  .sekce-hlavicka { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-2) var(--s-5); margin-bottom: var(--s-4); }
+  .sekce-hlavicka p { margin: 0; }
+  .obdobi { margin-bottom: var(--s-8); }
+  .rozcestnik ul { display: grid; gap: var(--s-4); margin: 0; padding: 0; list-style: none; }
+  .rozcestnik a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    height: 100%;
+    padding: var(--s-5);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    text-decoration: none;
+  }
+  .rozcestnik a:hover { border-color: var(--muted); }
+  .rozcestnik .text { color: var(--ink-2); font-size: 15px; }
+  .pribeh { margin-top: var(--s-8); }
+  .pribeh__karta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-5);
+    padding: var(--s-6) var(--s-5);
+    border-radius: var(--r-md);
+    background: var(--pc-tint);
+    text-decoration: none;
+  }
+  .pribeh__text { display: flex; flex-direction: column; gap: var(--s-3); max-width: 46ch; }
+  .pribeh__nad { color: var(--ink-2); }
+  .pribeh__karta:hover .t-h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  @media (min-width: 900px) {
+    .uvod { padding-top: var(--s-10); }
+    .rozcestnik ul { grid-template-columns: repeat(3, 1fr); }
+    .pribeh__karta { flex-direction: row; align-items: flex-start; padding: var(--s-7) var(--s-8); }
+  }
+</style>

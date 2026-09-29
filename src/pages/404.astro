@@ -1,0 +1,16 @@
+---
+import Zakladni from '../layouts/Zakladni.astro';
+import Tlacitko from '../components/ui/Tlacitko.astro';
+---
+<Zakladni titulek="Stránka nenalezena" hledat={false}>
+  <div class="stranka ctenarsky chyba">
+    <h1 class="t-h1">Tady nic <em>není.</em></h1>
+    <p class="t-perex">Tahle stránka v atlasu neexistuje. Zkus hledání, nebo se vrať domů.</p>
+    <Tlacitko href="/">Domů</Tlacitko>
+  </div>
+</Zakladni>
+
+<style>
+  .chyba { padding-top: var(--s-9); }
+  h1 { margin-bottom: var(--s-4); }
+</style>

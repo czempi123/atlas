@@ -1,0 +1,113 @@
+---
+// Blok „Doba a lidé“: generuje se z dat (lide, vztahy, mista), takže se nikdy nerozejde s mapou.
+// Mini osa se současníky, výřez mapy, učitelé a žáci, známí a kdo navazoval.
+import type { TOsoba, TVztah } from '../../lib/schema';
+import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
+import { zivot } from '../../lib/casy';
+import Mince from '../ui/Mince.astro';
+import MiniOsa from './MiniOsa.astro';
+import MiniMapa from './MiniMapa.astro';
+
+interface Props { osoba: TOsoba }
+const { osoba } = Astro.props;
+const vztahy = vztahyOsoby(osoba.id);
+const role = (v: TVztah, smer: 'od' | 'k') => {
+  switch (v.typ) {
+    case 'ucitel': return smer === 'od' ? 'žák' : 'učitel';
+    case 'znali-se': return 'znali se';
+    case 'vliv-textem': return smer === 'od' ? 'navázal na jeho texty' : 'četl jeho texty';
+    case 'polemika': return smer === 'od' ? 'polemizoval s ním' : 'polemizoval s ním';
+  }
+};
+const zaci = vztahy.filter((x) => x.vztah.typ === 'ucitel' && x.smer === 'od');
+const ucitele = vztahy.filter((x) => x.vztah.typ === 'ucitel' && x.smer === 'k');
+const ostatni = vztahy.filter((x) => x.vztah.typ !== 'ucitel');
+const retezy = kdoNavazoval(osoba.id);
+const skupiny = [
+  { nazev: 'Učitelé', lide: ucitele },
+  { nazev: 'Žáci', lide: zaci },
+  { nazev: 'Znali se a přeli se', lide: ostatni },
+].filter((s) => s.lide.length);
+const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 'teckovana', 'vliv-textem': 'carkovana', polemika: 'vlnovka' };
+---
+<section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide">
+  <p class="t-nadtitulek nadtitulek">Doba a lidé</p>
+  <h2 class="t-h2" id="doba-a-lide">S kým {osoba.jmeno} žil</h2>
+  <div class="doba__uvod ctenarsky"><slot /></div>
+
+  <div class="doba__mrizka">
+    <div class="doba__osa">
+      <h3 class="t-ovladani-l">Současníci</h3>
+      <MiniOsa osoba={osoba} />
+    </div>
+    <div class="doba__mapa">
+      <h3 class="t-ovladani-l">Kde žil</h3>
+      <MiniMapa osoba={osoba} />
+    </div>
+  </div>
+
+  <div class="doba__vztahy">
+    {skupiny.map((s) => (
+      <div>
+        <h3 class="t-ovladani-l">{s.nazev}</h3>
+        <ul class="lide">
+          {s.lide.map(({ vztah, druhy, smer }) => (
+            <li>
+              <Mince osoba={druhy} varianta="tint" velikost={40} />
+              <span class="lide__text">
+                <span class="lide__jmeno">{druhy.jmeno}</span>
+                <span class="t-popisek">
+                  <span class={`cara cara--${TYP_CARY[vztah.typ]}`} aria-hidden="true"></span>
+                  {role(vztah, smer)}{vztah.poznamka ? ` · ${vztah.poznamka}` : ''} · {zivot(druhy)}
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  {retezy.length > 0 && (
+    <div class="navazovali">
+      <h3 class="t-ovladani-l">Kdo navazoval</h3>
+      <ul>
+        {retezy.map((r) => (
+          <li>{r.lide.map((o, i) => <>{i > 0 && <span class:list={['sipka', { 'sipka--tradice': r.tradovany[i - 1] }]} title={r.tradovany[i - 1] ? 'učitel a žák podle tradice' : 'učitel a žák'}>{r.tradovany[i - 1] ? '⇢' : '→'}</span>}<span class:list={{ ja: o.id === osoba.id }}>{o.jmeno}</span></>)}</li>
+        ))}
+      </ul>
+      {retezy.some((r) => r.tradovany.some(Boolean)) && <p class="t-popisek legenda">Čárkovaná šipka ⇢: učitel a žák podle antické tradice.</p>}
+    </div>
+  )}
+</section>
+
+<style>
+  .doba {
+    margin: var(--s-9) 0;
+    padding: var(--s-7) 0 var(--s-6);
+    border-top: 1px solid var(--ink);
+  }
+  .nadtitulek { margin: 0 0 var(--s-2); color: var(--pc); }
+  .doba__uvod { margin: var(--s-4) 0 var(--s-6); }
+  .doba__mrizka { display: grid; gap: var(--s-6); }
+  h3 { margin: 0 0 var(--s-3); }
+  .doba__vztahy { display: grid; gap: var(--s-6); margin-top: var(--s-7); }
+  .lide { margin: 0; padding: 0; list-style: none; }
+  .lide li { display: flex; align-items: center; gap: var(--s-3); padding: var(--s-2) 0; border-bottom: 1px solid var(--rule); }
+  .lide__text { display: flex; flex-direction: column; }
+  .lide__jmeno { font-size: 19px; line-height: 1.3; }
+  .cara { display: inline-block; width: 22px; margin-right: 6px; vertical-align: middle; border-top: 2px solid var(--pc); }
+  .cara--teckovana { border-top-style: dotted; }
+  .cara--carkovana { border-top-style: dashed; }
+  .cara--vlnovka { border-top-style: double; border-top-width: 3px; }
+  .navazovali { margin-top: var(--s-7); }
+  .navazovali ul { margin: 0; padding: 0; list-style: none; }
+  .navazovali li { display: flex; flex-wrap: wrap; align-items: baseline; row-gap: var(--s-1); padding: var(--s-2) 0; border-bottom: 1px solid var(--rule); font-size: 19px; }
+  .sipka { margin: 0 var(--s-2); color: var(--pc); font-family: var(--font-sans); }
+  .ja { font-weight: 600; }
+  .legenda { margin-top: var(--s-2); }
+  @media (min-width: 900px) {
+    .doba__mrizka { grid-template-columns: 7fr 5fr; align-items: start; }
+    .doba__vztahy { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
