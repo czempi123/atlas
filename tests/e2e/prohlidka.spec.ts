@@ -57,6 +57,8 @@ for (const s of STRANKY) {
         const popis = axe.violations.map((v) => `${v.id}: ${v.help}\n  ${v.nodes.slice(0, 5).map((n) => `${n.target.join(' ')} ${n.failureSummary?.split('\n')[1] ?? ''}`).join('\n  ')}`);
         expect(popis, popis.join('\n')).toEqual([]);
 
+        // Na celostránkovém snímku by pevná spodní lišta visela uprostřed; ukážeme ji na konci stránky.
+        await page.addStyleTag({ content: 'nav.lista { position: static !important; } .paticka { padding-bottom: 24px !important; }' });
         await page.screenshot({ path: `test-results/snimky/${s.nazev}-${sirka}-${rezim === 'light' ? 'svetly' : 'tmavy'}.png`, fullPage: true });
       });
     }
