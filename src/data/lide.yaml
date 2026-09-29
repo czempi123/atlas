@@ -1,0 +1,833 @@
+# Lidé Atlasu myšlení. Závazná podoba jmen je tady.
+# Roky: záporné = př. n. l. Rok nula neexistuje. priblizne = „asi“, nejpozdeji = prameny dávají jen horní mez.
+# Každý rok a místo má pramen (zdroj u místa, zdroje u osoby); rozbor v docs/podklady/data-obdobi-1-2.md.
+# Co ověřit nešlo, tady chybí a je v docs/podklady/k-overeni.md.
+
+# ─── Období 1: Počátky a klasické Řecko ───────────────────────────────────────
+
+- id: sokrates
+  jmeno: Sókratés
+  jmeno2: Sókrata
+  narozen: { rok: -469 }
+  zemrel: { rok: -399 }
+  obdobi: 1
+  hloubka: portret
+  otazky: [7, 1]
+  linie: [autenticita]
+  mista:
+    - { misto: athenes, role: narozeni, rok: -469, zdroj: sep-socrates }
+    - { misto: potidaia, role: tazeni, rok: -432, zdroj: sep-socrates }
+    - { misto: delion, role: tazeni, rok: -424, zdroj: sep-socrates }
+    - { misto: amfipolis, role: tazeni, rok: -422, zdroj: sep-socrates }
+    - { misto: athenes, role: smrt, rok: -399, zdroj: sep-socrates }
+  kdo: Athénský filozof, který nenapsal ani řádek a celý život se lidí vyptával, co je odvaha, spravedlnost a dobro.
+  proc: Ukázal, že moudrost začíná přiznáním, že nevím.
+  atribut:
+    ikona: cup
+    nazev: kalich
+    proc: Když ho Athény odsoudily, vypil ve vězení číši jedu. Mohl utéct, ale neutekl.
+    zdroj: platon-faidon
+  zdroje: [sep-socrates, platon-obrana, platon-kriton, platon-faidon]
+
+- id: platon
+  jmeno: Platón
+  jmeno2: Platóna
+  narozen: { rok: -427, priblizne: true }
+  zemrel: { rok: -347 }
+  obdobi: 1
+  hloubka: portret
+  smery: [akademie]
+  otazky: [6, 8, 2]
+  linie: [spolecnost]
+  mista:
+    - { misto: athenes, role: narozeni, zdroj: britannica-plato }
+    - { misto: athenes, role: pusobeni, zdroj: britannica-plato }
+    - { misto: syrakusy, role: pobyt, do: -361, zdroj: sep-archytas }
+    - { misto: athenes, role: smrt, rok: -347, zdroj: britannica-plato }
+  kdo: Sókratův žák, který v Athénách založil Akademii a psal filozofii jako rozhovory.
+  proc: Tvrdil, že za proměnlivým světem, který vidíme, stojí neměnné ideje.
+  atribut:
+    ikona: cave
+    nazev: jeskyně
+    proc: Přirovnal nás k vězňům, kteří mají stíny na zdi za skutečnost.
+    zdroj: platon-ustava
+  zdroje: [sep-plato, britannica-plato, sep-archytas, platon-ustava]
+
+- id: aristoteles
+  jmeno: Aristotelés
+  jmeno2: Aristotela
+  narozen: { rok: -384 }
+  zemrel: { rok: -322 }
+  obdobi: 1
+  hloubka: portret
+  smery: [peripatetici]
+  otazky: [1, 6, 10]
+  linie: [veda, spolecnost]
+  mista:
+    - { misto: stageira, role: narozeni, rok: -384, zdroj: sep-aristotle }
+    - { misto: athenes, role: studium, od: -367, do: -347, priblizne: true, zdroj: sep-aristotle }
+    - { misto: assos, role: pobyt, od: -347, do: -344, priblizne: true, zdroj: sep-aristotle }
+    - { misto: lesbos, role: pobyt, od: -344, do: -343, priblizne: true, zdroj: sep-aristotle }
+    - { misto: pella, role: pusobeni, od: -343, do: -341, priblizne: true, zdroj: sep-aristotle }
+    - { misto: athenes, role: pusobeni, od: -335, do: -323, zdroj: sep-aristotle }
+    - { misto: chalkis, role: smrt, rok: -322, zdroj: sep-aristotle }
+  kdo: Platónův žák, vychovatel mladého Alexandra Makedonského a zakladatel školy v Lykeiu.
+  proc: Zkoumal skoro všechno, od logiky po živočichy, a učil, že ctnost je střed mezi dvěma krajnostmi.
+  atribut:
+    ikona: scales
+    nazev: váhy
+    proc: Ctnost je střed mezi dvěma krajnostmi.
+    zdroj: sep-aristotle-ethics
+  zdroje: [sep-aristotle, sep-aristotle-ethics]
+
+- id: thales
+  jmeno: Thalés
+  jmeno2: Thaléta
+  narozen: { rok: -620, priblizne: true }
+  zemrel: { rok: -546, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  smery: [miletska-skola]
+  otazky: [6]
+  linie: [veda]
+  mista:
+    - { misto: miletos, role: narozeni, zdroj: iep-thales }
+  kdo: Myslitel z Milétu, kterého už Aristotelés pokládal za prvního filozofa.
+  proc: Hledal přírodní vysvětlení světa místo mýtu; počátkem všeho mu byla voda.
+  zdroje: [iep-thales]
+
+- id: pythagoras
+  jmeno: Pýthagorás
+  jmeno2: Pýthagory
+  narozen: { rok: -570, priblizne: true }
+  zemrel: { rok: -490, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  smery: [pythagorejci]
+  otazky: [5]
+  mista:
+    - { misto: samos, role: narozeni, zdroj: sep-pythagoras }
+    - { misto: kroton, role: pusobeni, od: -530, do: -510, priblizne: true, zdroj: sep-pythagoras }
+    - { misto: metapontion, role: smrt, rok: -490, priblizne: true, zdroj: sep-pythagoras }
+  kdo: Myslitel ze Samu, který v jižní Itálii založil společenství s přísnými pravidly života.
+  proc: Učil, že duše po smrti přechází do dalšího těla.
+  zdroje: [sep-pythagoras]
+
+- id: herakleitos
+  jmeno: Hérakleitos
+  jmeno2: Hérakleita
+  aktivni: { od: -500, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  otazky: [5]
+  mista:
+    - { misto: efesos, role: pusobeni, zdroj: sep-heraclitus }
+  kdo: Myslitel z Efesu, který psal v úsečných a záhadných větách.
+  proc: Viděl svět jako ustavičnou proměnu, v níž vládne skrytý řád.
+  zdroje: [sep-heraclitus]
+
+- id: parmenides
+  jmeno: Parmenidés
+  jmeno2: Parmenida
+  narozen: { rok: -515, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  smery: [eleate]
+  otazky: [6]
+  mista:
+    - { misto: elea, role: narozeni, zdroj: sep-parmenides }
+  kdo: Myslitel z Eleje v jižní Itálii, který svou filozofii napsal jako báseň.
+  proc: Tvrdil, že co skutečně je, nevzniká ani nezaniká.
+  zdroje: [sep-parmenides]
+
+- id: demokritos
+  jmeno: Démokritos
+  jmeno2: Démokrita
+  narozen: { rok: -460, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  smery: [atomiste]
+  otazky: [6]
+  linie: [veda]
+  mista:
+    - { misto: abdera, role: pusobeni, zdroj: sep-democritus }
+  kdo: Myslitel z Abdér, žák a spolupracovník Leukippův.
+  proc: Učil, že všechno se skládá z nedělitelných atomů a prázdna.
+  zdroje: [sep-democritus]
+
+- id: protagoras
+  jmeno: Prótagorás
+  jmeno2: Prótagory
+  narozen: { rok: -490, priblizne: true }
+  zemrel: { rok: -420, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  smery: [sofiste]
+  otazky: [7]
+  mista:
+    - { misto: abdera, role: narozeni, zdroj: iep-protagoras }
+    - { misto: athenes, role: pusobeni, zdroj: iep-protagoras }
+    - { misto: thurioi, role: pusobeni, rok: -444, zdroj: iep-protagoras }
+  kdo: Nejslavnější sofista, učitel, kterému Periklés svěřil sepsání zákonů pro novou osadu Thurioi.
+  proc: Tvrdil, že člověk je měřítkem všech věcí.
+  zdroje: [iep-protagoras]
+
+- id: zenon-z-eleje
+  jmeno: Zénón z Eleje
+  jmeno2: Zénóna z Eleje
+  narozen: { rok: -490, priblizne: true }
+  obdobi: 1
+  hloubka: profil
+  smery: [eleate]
+  otazky: [6, 7]
+  mista:
+    - { misto: elea, role: narozeni, zdroj: sep-zeno-elea }
+  kdo: Mladší druh Parmenidův z Eleje.
+  proc: Proslavil se paradoxy o pohybu, třeba o Achilleovi, který nedohoní želvu.
+  zdroje: [sep-zeno-elea]
+
+- id: anaximandros
+  jmeno: Anaximandros
+  jmeno2: Anaximandra
+  narozen: { rok: -610, priblizne: true }
+  zemrel: { rok: -546, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [miletska-skola]
+  mista:
+    - { misto: miletos, role: narozeni, zdroj: iep-anaximander }
+  kdo: Myslitel z Milétu, o generaci mladší než Thalés.
+  proc: Počátkem všeho mu bylo neomezené (apeiron) a nakreslil první mapu světa.
+  zdroje: [iep-anaximander]
+
+- id: anaximenes
+  jmeno: Anaximenés
+  jmeno2: Anaximena
+  zemrel: { rok: -528, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [miletska-skola]
+  mista:
+    - { misto: miletos, role: narozeni, zdroj: iep-anaximenes }
+  kdo: Myslitel z Milétu, druh a snad i žák Anaximandrův.
+  proc: Za počátek všeho pokládal vzduch.
+  zdroje: [iep-anaximenes]
+
+- id: xenofanes
+  jmeno: Xenofanés
+  jmeno2: Xenofana
+  aktivni: { od: -540, do: -537 }
+  obdobi: 1
+  hloubka: medailonek
+  otazky: [9]
+  linie: [vira-a-rozum]
+  mista:
+    - { misto: kolofon, role: narozeni, zdroj: sep-xenophanes }
+    - { misto: elea, role: exil, zdroj: sep-xenophanes }
+  kdo: Básník a myslitel z Kolofónu, který po vyhnání dlouhá léta putoval řeckým světem.
+  proc: Vysmíval se představě bohů, kteří vypadají a jednají jako lidé.
+  zdroje: [sep-xenophanes]
+
+- id: empedokles
+  jmeno: Empedoklés
+  jmeno2: Empedokla
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: akragas, role: narozeni, zdroj: sep-empedocles }
+  kdo: Myslitel a básník ze sicilského Akragantu.
+  proc: Učil, že svět tvoří čtyři kořeny (země, voda, vzduch, oheň), které spojuje Láska a rozděluje Svár.
+  zdroje: [sep-empedocles]
+
+- id: anaxagoras
+  jmeno: Anaxagorás
+  jmeno2: Anaxagory
+  narozen: { rok: -500, priblizne: true }
+  zemrel: { rok: -428, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  linie: [veda]
+  mista:
+    - { misto: klazomenai, role: narozeni, zdroj: sep-anaxagoras }
+    - { misto: athenes, role: pusobeni, do: -436, zdroj: sep-anaxagoras }
+    - { misto: lampsakos, role: exil, zdroj: sep-anaxagoras }
+    - { misto: lampsakos, role: smrt, rok: -428, priblizne: true, zdroj: sep-anaxagoras }
+  kdo: Myslitel z Klazomen, přítel athénského státníka Perikla.
+  proc: Tvrdil, že svět uspořádal rozum (nús) a že Slunce je rozžhavený kámen; za to ho v Athénách obžalovali.
+  zdroje: [sep-anaxagoras]
+
+- id: gorgias
+  jmeno: Gorgiás
+  jmeno2: Gorgia
+  narozen: { rok: -483, priblizne: true }
+  zemrel: { rok: -375, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [sofiste]
+  mista:
+    - { misto: leontinoi, role: narozeni, zdroj: iep-gorgias }
+    - { misto: athenes, role: pobyt, rok: -427, zdroj: iep-gorgias }
+    - { misto: larisa, role: smrt, zdroj: iep-gorgias }
+  kdo: Sofista a učitel řečnictví ze sicilských Leontín.
+  proc: Roku 427 př. n. l. přijel do Athén jako vyslanec a ohromil je svou výmluvností.
+  zdroje: [iep-gorgias]
+
+- id: aspasie
+  jmeno: Aspasie
+  jmeno2: Aspasie
+  aktivni: { od: -445, do: -429 }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: miletos, role: narozeni, zdroj: britannica-aspasia }
+    - { misto: athenes, role: pusobeni, od: -445, do: -429, priblizne: true, zdroj: britannica-aspasia }
+  kdo: Vzdělaná žena z Milétu, družka athénského státníka Perikla.
+  proc: Sókratův žák Aischinés o ní napsal dialog, který nese její jméno.
+  zdroje: [britannica-aspasia]
+
+- id: konfucius
+  jmeno: Konfucius
+  jmeno2: Konfucia
+  narozen: { rok: -551, priblizne: true }
+  zemrel: { rok: -479, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  tradice: cinska
+  otazky: [1, 8]
+  kdo: Čínský učitel a úředník, jehož výroky zapsali žáci.
+  proc: Učil, že dobrý život a dobrá společnost stojí na výchově, úctě a lidskosti.
+  zdroje: [sep-confucius]
+
+- id: xenofon
+  jmeno: Xenofón
+  jmeno2: Xenofónta
+  narozen: { rok: -430, priblizne: true }
+  zemrel: { rok: -350, nejpozdeji: true }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: athenes, role: narozeni, zdroj: britannica-xenophon }
+  kdo: Athéňan, Sókratův žák, voják a spisovatel.
+  proc: Vedl ústup deseti tisíc řeckých vojáků z Persie a popsal ho v knize Anabasis.
+  atribut:
+    ikona: helmet
+    nazev: přilba
+    proc: Vedl ústup deseti tisíc řeckých vojáků.
+    zdroj: britannica-xenophon
+  zdroje: [britannica-xenophon, sep-socrates]
+
+- id: archytas
+  jmeno: Archytás
+  jmeno2: Archyta
+  narozen: { rok: -420, priblizne: true, rozmezi: [-435, -410] }
+  zemrel: { rok: -355, priblizne: true, rozmezi: [-360, -350] }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [pythagorejci]
+  mista:
+    - { misto: tarent, role: pusobeni, zdroj: sep-archytas }
+  kdo: Pythagorejský filozof, matematik a státník z Tarentu.
+  proc: Roku 361 př. n. l. poslal loď, která vysvobodila Platóna ze Syrákús.
+  atribut:
+    ikona: dove
+    nazev: holubice
+    proc: Vypráví se, že sestrojil létající dřevěnou holubici.
+    zdroj: gellius-x-12
+  zdroje: [sep-archytas, gellius-x-12]
+
+- id: isokrates
+  jmeno: Isokratés
+  jmeno2: Isokrata
+  narozen: { rok: -436 }
+  zemrel: { rok: -338 }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: athenes, role: narozeni, rok: -436, zdroj: britannica-isocrates }
+    - { misto: athenes, role: smrt, rok: -338, zdroj: britannica-isocrates }
+  kdo: Athénský řečník a učitel, který vedl vlastní školu řečnictví.
+  proc: Vzdělání pro něj znamenalo naučit se dobře mluvit o věcech obce.
+  atribut:
+    ikona: scroll
+    nazev: svitek
+    proc: Učil řečnictví.
+    zdroj: britannica-isocrates
+  zdroje: [britannica-isocrates]
+
+- id: eudoxos
+  jmeno: Eudoxos
+  jmeno2: Eudoxa
+  narozen: { rok: -408, priblizne: true }
+  zemrel: { rok: -355, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  linie: [veda]
+  mista:
+    - { misto: knidos, role: narozeni, zdroj: mactutor-eudoxus }
+    - { misto: tarent, role: studium, zdroj: mactutor-eudoxus }
+    - { misto: athenes, role: pobyt, zdroj: mactutor-eudoxus }
+    - { misto: kyzikos, role: pusobeni, zdroj: mactutor-eudoxus }
+  kdo: Matematik a astronom z Knidu, žák Archytův.
+  proc: Navrhl první model nebe ze soustředných sfér.
+  atribut:
+    ikona: orbit
+    nazev: nebeské sféry
+    proc: Navrhl první model nebe ze soustředných sfér.
+    zdroj: mactutor-eudoxus
+  zdroje: [mactutor-eudoxus]
+
+- id: aristippos
+  jmeno: Aristippos
+  jmeno2: Aristippa
+  narozen: { rok: -435, priblizne: true }
+  aktivni: { od: -399, do: -355, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [kyrenaici]
+  mista:
+    - { misto: kyrene, role: narozeni, zdroj: sep-cyrenaics }
+    - { misto: athenes, role: pobyt, zdroj: sep-cyrenaics }
+    - { misto: syrakusy, role: pobyt, zdroj: sep-cyrenaics }
+  kdo: Sókratův druh z Kyrény, zakladatel kyrénské školy.
+  proc: Za cíl života pokládal příjemný prožitek.
+  atribut:
+    ikona: ship
+    nazev: loď
+    proc: Po ztroskotání našel v písku geometrické obrazce a poznal, že je mezi vzdělanými lidmi.
+    zdroj: vitruvius-vi
+  zdroje: [sep-cyrenaics, vitruvius-vi]
+
+- id: antisthenes
+  jmeno: Antisthenés
+  jmeno2: Antisthena
+  narozen: { rok: -446, priblizne: true }
+  zemrel: { rok: -366, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [kynismus]
+  mista:
+    - { misto: athenes, role: pusobeni, zdroj: iep-antisthenes }
+  kdo: Athéňan, nejdřív žák řečníka Gorgia, pak Sókratův druh, který byl u jeho smrti.
+  proc: Ze Sókratova příkladu udělal skromný a tvrdý způsob života, na který navázali kynikové.
+  zdroje: [iep-antisthenes]
+
+- id: chairefon
+  jmeno: Chairefón
+  jmeno2: Chairefónta
+  zemrel: { rok: -399, nejpozdeji: true }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: athenes, role: pusobeni, zdroj: platon-obrana }
+    - { misto: delfy, role: pobyt, zdroj: platon-obrana }
+  kdo: Sókratův přítel od mládí, prudký člověk, který do všeho šel celý.
+  proc: Zeptal se věštírny v Delfách, jestli je někdo moudřejší než Sókratés.
+  zdroje: [platon-obrana]
+
+- id: kriton
+  jmeno: Kritón
+  jmeno2: Kritóna
+  narozen: { rok: -469, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: athenes, role: pusobeni, zdroj: platon-obrana }
+  kdo: Sókratův vrstevník a přítel ze stejného athénského obvodu.
+  proc: Přemlouval Sókrata ve vězení k útěku a byl u něj v poslední den.
+  zdroje: [platon-obrana, platon-kriton, platon-faidon]
+
+- id: alkibiades
+  jmeno: Alkibiadés
+  jmeno2: Alkibiada
+  narozen: { rok: -450, priblizne: true }
+  zemrel: { rok: -404 }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: athenes, role: narozeni, zdroj: britannica-alcibiades }
+    - { misto: potidaia, role: tazeni, rok: -432, zdroj: britannica-alcibiades }
+    - { misto: delion, role: tazeni, rok: -424, zdroj: britannica-alcibiades }
+  kdo: Athénský politik a vojevůdce, svěřenec Periklův.
+  proc: U Potidaie mu Sókratés zachránil život a při ústupu od Délia Alkibiadés chránil Sókrata.
+  zdroje: [britannica-alcibiades, platon-symposion]
+
+- id: aristofanes
+  jmeno: Aristofanés
+  jmeno2: Aristofana
+  narozen: { rok: -450, priblizne: true }
+  zemrel: { rok: -388, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  mista:
+    - { misto: athenes, role: pusobeni, zdroj: britannica-aristophanes }
+  kdo: Největší autor athénských komedií.
+  proc: V komedii Oblaka (423 př. n. l.) zesměšnil Sókrata.
+  zdroje: [britannica-aristophanes, sep-socrates]
+
+- id: speusippos
+  jmeno: Speusippos
+  jmeno2: Speusippa
+  narozen: { rok: -410, priblizne: true }
+  zemrel: { rok: -339, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [akademie]
+  mista:
+    - { misto: athenes, role: pusobeni, od: -347, do: -339, priblizne: true, zdroj: sep-speusippus }
+  kdo: Athéňan, syn Platónovy sestry.
+  proc: Po Platónově smrti osm let vedl Akademii.
+  zdroje: [sep-speusippus]
+
+- id: xenokrates
+  jmeno: Xenokratés
+  jmeno2: Xenokrata
+  narozen: { rok: -396, priblizne: true }
+  zemrel: { rok: -314, priblizne: true }
+  obdobi: 1
+  hloubka: medailonek
+  smery: [akademie]
+  mista:
+    - { misto: chalkedon, role: narozeni, zdroj: sep-xenocrates }
+    - { misto: athenes, role: pusobeni, od: -339, do: -314, priblizne: true, zdroj: sep-xenocrates }
+  kdo: Filozof z Chalkédonu, Platónův žák.
+  proc: Pětadvacet let vedl Akademii.
+  zdroje: [sep-xenocrates]
+
+# ─── Období 2: Helenismus a Řím ───────────────────────────────────────────────
+
+- id: diogenes
+  jmeno: Diogenés
+  jmeno2: Diogena
+  narozen: { rok: -404, priblizne: true }
+  zemrel: { rok: -323 }
+  obdobi: 2
+  hloubka: portret
+  smery: [kynismus]
+  otazky: [1]
+  linie: [autenticita]
+  mista:
+    - { misto: sinope, role: narozeni, zdroj: iep-diogenes }
+    - { misto: athenes, role: pusobeni, zdroj: iep-diogenes }
+    - { misto: korinth, role: pobyt, zdroj: iep-diogenes }
+  kdo: Filozof ze Sinópy, který žil na ulici a vysmíval se tomu, čemu ostatní slepě věřili.
+  proc: Ukazoval na sobě, že ke šťastnému životu stačí velmi málo.
+  atribut:
+    ikona: lantern
+    nazev: lucerna
+    proc: Za bílého dne hledal s lucernou člověka.
+    zdroj: iep-diogenes
+  zdroje: [iep-diogenes, iep-cynics]
+
+- id: epikuros
+  jmeno: Epikúros
+  jmeno2: Epikúra
+  narozen: { rok: -341 }
+  zemrel: { rok: -270 }
+  obdobi: 2
+  hloubka: portret
+  smery: [epikureismus]
+  otazky: [1, 3]
+  mista:
+    - { misto: samos, role: pobyt, do: -321, zdroj: sep-epicurus }
+    - { misto: kolofon, role: pobyt, od: -321, zdroj: sep-epicurus }
+    - { misto: mytilena, role: pusobeni, od: -311, priblizne: true, zdroj: sep-epicurus }
+    - { misto: lampsakos, role: pusobeni, zdroj: sep-epicurus }
+    - { misto: athenes, role: pusobeni, od: -306, do: -270, zdroj: sep-epicurus }
+    - { misto: athenes, role: smrt, rok: -270, zdroj: sep-epicurus }
+  kdo: Filozof, který v Athénách založil školu, jíž se říkalo Zahrada.
+  proc: Učil, že k dobrému životu stačí přátelé, prostá jídla a klidná mysl bez strachu ze smrti.
+  atribut:
+    ikona: sprout
+    nazev: výhonek
+    proc: Jeho škole se říkalo Zahrada.
+    zdroj: sep-epicurus
+  zdroje: [sep-epicurus]
+
+- id: seneca
+  jmeno: Seneca
+  jmeno2: Seneky
+  narozen: { rok: -1, priblizne: true }
+  zemrel: { rok: 65 }
+  obdobi: 2
+  hloubka: portret
+  smery: [stoicismus]
+  otazky: [3, 1]
+  linie: [stoicismus]
+  mista:
+    - { misto: corduba, role: narozeni, zdroj: sep-seneca }
+    - { misto: rim, role: pusobeni, zdroj: sep-seneca }
+    - { misto: korsika, role: exil, od: 41, do: 49, zdroj: sep-seneca }
+    - { misto: rim, role: pusobeni, od: 49, do: 65, zdroj: sep-seneca }
+    - { misto: rim, role: smrt, rok: 65, zdroj: sep-seneca }
+  kdo: Římský stoik a spisovatel, vychovatel a později rádce císaře Nerona.
+  proc: Psal dopisy a úvahy o tom, jak nakládat s časem, hněvem a strachem ze smrti.
+  atribut:
+    ikona: hourglass
+    nazev: přesýpací hodiny
+    proc: Psal o tom, že nemáme málo času, jen ho hodně promarníme.
+    zdroj: seneca-brevitate
+  zdroje: [sep-seneca, seneca-brevitate]
+
+- id: epiktetos
+  jmeno: Epiktétos
+  jmeno2: Epiktéta
+  narozen: { rok: 55, priblizne: true }
+  zemrel: { rok: 135, priblizne: true }
+  obdobi: 2
+  hloubka: portret
+  smery: [stoicismus]
+  otazky: [4]
+  linie: [stoicismus]
+  mista:
+    - { misto: hierapolis, role: narozeni, zdroj: sep-epictetus }
+    - { misto: rim, role: pobyt, zdroj: sep-epictetus }
+    - { misto: nikopolis, role: pusobeni, zdroj: sep-epictetus }
+  kdo: Otrok z Hierapole, který se stal nejslavnějším učitelem stoicismu své doby.
+  proc: Rozlišil, co je v naší moci a co ne.
+  atribut:
+    ikona: crutch
+    nazev: berla
+    proc: Byl chromý otrok, a přesto svobodný uvnitř.
+    zdroj: sep-epictetus
+  zdroje: [sep-epictetus]
+
+- id: marcus-aurelius
+  jmeno: Marcus Aurelius
+  jmeno2: Marca Aurelia
+  narozen: { rok: 121 }
+  zemrel: { rok: 180 }
+  obdobi: 2
+  hloubka: portret
+  smery: [stoicismus]
+  otazky: [1, 4]
+  linie: [stoicismus]
+  mista:
+    - { misto: rim, role: narozeni, rok: 121, zdroj: britannica-marcus }
+    - { misto: rim, role: pusobeni, od: 161, do: 180, zdroj: sep-marcus-aurelius }
+  kdo: Římský císař, který si psal filozofické zápisky sám pro sebe.
+  proc: Jeho Hovory k sobě patří k nejčtenějším knihám stoicismu.
+  atribut:
+    ikona: laurel
+    nazev: vavřín
+    proc: Filozof na císařském trůnu.
+    zdroj: sep-marcus-aurelius
+  zdroje: [sep-marcus-aurelius, britannica-marcus]
+
+- id: zenon-z-kitia
+  jmeno: Zénón z Kitia
+  jmeno2: Zénóna z Kitia
+  narozen: { rok: -335, priblizne: true }
+  zemrel: { rok: -263, priblizne: true }
+  obdobi: 2
+  hloubka: profil
+  smery: [stoicismus]
+  otazky: [1]
+  linie: [stoicismus]
+  mista:
+    - { misto: kition, role: narozeni, zdroj: britannica-zeno-citium }
+    - { misto: athenes, role: pusobeni, od: -312, priblizne: true, zdroj: britannica-zeno-citium }
+  kdo: Myslitel z Kitia na Kypru, zakladatel stoické školy v Athénách.
+  proc: Stoikové mají jméno podle malovaného sloupoví, Stoa Poikilé, kde učil.
+  zdroje: [britannica-zeno-citium, iep-cynics, sep-stoicism]
+
+- id: chrysippos
+  jmeno: Chrýsippos
+  jmeno2: Chrýsippa
+  narozen: { rok: -280, priblizne: true }
+  zemrel: { rok: -207, priblizne: true }
+  obdobi: 2
+  hloubka: profil
+  smery: [stoicismus]
+  otazky: [4]
+  linie: [stoicismus]
+  mista:
+    - { misto: soloi, role: narozeni, zdroj: iep-chrysippus }
+    - { misto: athenes, role: pusobeni, od: -230, do: -207, priblizne: true, zdroj: iep-chrysippus }
+  kdo: Filozof ze Sol, třetí vůdce stoické školy.
+  proc: Stoickou nauku dotáhl do soustavy a vybudoval stoickou logiku.
+  zdroje: [iep-chrysippus, sep-stoicism]
+
+- id: pyrrhon
+  jmeno: Pyrrhón
+  jmeno2: Pyrrhóna
+  narozen: { rok: -362, priblizne: true, rozmezi: [-365, -360] }
+  zemrel: { rok: -272, priblizne: true, rozmezi: [-275, -270] }
+  obdobi: 2
+  hloubka: profil
+  smery: [skepticismus]
+  otazky: [7]
+  mista:
+    - { misto: elida, role: narozeni, zdroj: sep-pyrrho }
+  kdo: Filozof z Élidy; vypráví se, že s Alexandrem Velikým došel až do Indie.
+  proc: Učil zdržet se soudu o tom, jaké věci doopravdy jsou, a tak dojít klidu.
+  zdroje: [sep-pyrrho]
+
+- id: lucretius
+  jmeno: Lucretius
+  jmeno2: Lucretia
+  narozen: { rok: -95, priblizne: true }
+  zemrel: { rok: -55, priblizne: true }
+  obdobi: 2
+  hloubka: profil
+  smery: [epikureismus]
+  otazky: [3]
+  kdo: Římský básník, autor básně O přírodě.
+  proc: Ve verších vyložil Epikúrovo učení o atomech a o tom, proč se nebát smrti.
+  zdroje: [sep-lucretius]
+
+- id: cicero
+  jmeno: Cicero
+  jmeno2: Cicerona
+  narozen: { rok: -106 }
+  zemrel: { rok: -43 }
+  obdobi: 2
+  hloubka: profil
+  otazky: [8]
+  linie: [spolecnost]
+  mista:
+    - { misto: rim, role: pusobeni, zdroj: iep-cicero }
+  kdo: Římský řečník a politik, konzul roku 63 př. n. l.
+  proc: Řeckou filozofii převyprávěl latinsky a zpřístupnil ji Římanům.
+  zdroje: [iep-cicero]
+
+- id: hypatia
+  jmeno: Hypatia
+  jmeno2: Hypatie
+  narozen: { rok: 370, priblizne: true }
+  zemrel: { rok: 415 }
+  obdobi: 2
+  hloubka: profil
+  smery: [novoplatonismus]
+  linie: [veda]
+  mista:
+    - { misto: alexandrie, role: pusobeni, zdroj: bea-hypatia }
+    - { misto: alexandrie, role: smrt, rok: 415, zdroj: bea-hypatia }
+  kdo: Matematička, astronomka a filozofka z Alexandrie, dcera matematika Theóna.
+  proc: Učila filozofii a matematiku a zemřela rukou rozvášněného davu.
+  zdroje: [bea-hypatia]
+
+- id: plotinos
+  jmeno: Plótínos
+  jmeno2: Plótína
+  narozen: { rok: 204 }
+  zemrel: { rok: 270 }
+  obdobi: 2
+  hloubka: profil
+  smery: [novoplatonismus]
+  otazky: [6, 9]
+  mista:
+    - { misto: alexandrie, role: studium, od: 232, do: 243, priblizne: true, zdroj: sep-plotinus }
+    - { misto: rim, role: pusobeni, od: 244, do: 270, zdroj: sep-plotinus }
+  kdo: Filozof z Egypta, který přes pětadvacet let učil v Římě.
+  proc: Učil, že všechno vychází z jediného zdroje, Jednoho, a duše se k němu může vrátit.
+  zdroje: [sep-plotinus]
+
+- id: krates
+  jmeno: Kratés
+  jmeno2: Kratéta
+  narozen: { rok: -350, priblizne: true }
+  zemrel: { rok: -301, priblizne: true }
+  obdobi: 2
+  hloubka: medailonek
+  smery: [kynismus]
+  kdo: Kynický filozof, Diogenův žák.
+  proc: Jeho posluchačem byl Zénón z Kitia, zakladatel stoicismu.
+  zdroje: [britannica-crates]
+
+- id: hipparchia
+  jmeno: Hipparchia
+  jmeno2: Hipparchie
+  obdobi: 2
+  hloubka: medailonek
+  smery: [kynismus]
+  mista:
+    - { misto: maroneia, role: narozeni, zdroj: iep-cynics }
+  kdo: Z Maróneie, první známá filozofka kynické školy.
+  proc: Z bohaté rodiny odešla za Kratétem a žila s ním jako kynička.
+  zdroje: [britannica-crates, iep-cynics]
+
+- id: kleanthes
+  jmeno: Kleanthés
+  jmeno2: Kleantha
+  narozen: { rok: -331, priblizne: true }
+  zemrel: { rok: -232, priblizne: true }
+  obdobi: 2
+  hloubka: medailonek
+  smery: [stoicismus]
+  linie: [stoicismus]
+  mista:
+    - { misto: assos, role: narozeni, zdroj: britannica-cleanthes }
+    - { misto: athenes, role: pusobeni, od: -263, do: -232, priblizne: true, zdroj: britannica-cleanthes }
+  kdo: Stoik z Assu, Zénónův nástupce v čele školy.
+  proc: Napsal Hymnus na Dia, báseň o rozumném řádu, který prostupuje svět.
+  zdroje: [britannica-cleanthes, sep-stoicism]
+
+- id: musonius-rufus
+  jmeno: Musonius Rufus
+  jmeno2: Musonia Rufa
+  narozen: { rok: 30, nejpozdeji: true }
+  zemrel: { rok: 101, nejpozdeji: true }
+  obdobi: 2
+  hloubka: medailonek
+  smery: [stoicismus]
+  linie: [stoicismus]
+  mista:
+    - { misto: volsinii, role: narozeni, zdroj: iep-musonius }
+    - { misto: rim, role: pusobeni, zdroj: iep-musonius }
+    - { misto: gyaros, role: exil, od: 65, zdroj: iep-musonius }
+  kdo: Římský stoik, kterého Nero poslal do vyhnanství na pustý ostrov Gyaros.
+  proc: Byl učitelem Epiktétovým.
+  zdroje: [iep-musonius]
+
+- id: theofrastos
+  jmeno: Theofrastos
+  jmeno2: Theofrasta
+  narozen: { rok: -371, priblizne: true }
+  zemrel: { rok: -287, priblizne: true }
+  obdobi: 2
+  hloubka: medailonek
+  smery: [peripatetici]
+  linie: [veda]
+  mista:
+    - { misto: eresos, role: narozeni, rok: -371, priblizne: true, zdroj: sep-theophrastus }
+    - { misto: assos, role: pobyt, zdroj: sep-theophrastus }
+    - { misto: athenes, role: pusobeni, od: -323, do: -287, priblizne: true, zdroj: sep-theophrastus }
+  kdo: Filozof z Eresu na Lesbu, Aristotelův spolupracovník a nástupce v čele Lykeia.
+  proc: Napsal první velká díla o rostlinách.
+  atribut:
+    ikona: sprig
+    nazev: rostlina
+    proc: Napsal první velké dílo o rostlinách; říká se mu otec botaniky.
+    zdroj: sep-theophrastus
+  zdroje: [sep-theophrastus]
+
+- id: karneades
+  jmeno: Karneadés
+  jmeno2: Karneada
+  narozen: { rok: -214 }
+  zemrel: { rok: -129, priblizne: true }
+  obdobi: 2
+  hloubka: medailonek
+  smery: [akademie, skepticismus]
+  mista:
+    - { misto: kyrene, role: narozeni, zdroj: sep-carneades }
+    - { misto: athenes, role: pusobeni, zdroj: sep-carneades }
+    - { misto: rim, role: pobyt, rok: -155, zdroj: sep-carneades }
+  kdo: Skeptický filozof z Kyrény, který vedl Platónovu Akademii.
+  proc: Vypráví se, že v Římě jeden den hájil spravedlnost a druhý den mluvil proti ní.
+  zdroje: [sep-carneades]
+
+- id: filon-alexandrijsky
+  jmeno: Filón Alexandrijský
+  jmeno2: Filóna Alexandrijského
+  obdobi: 2
+  hloubka: medailonek
+  tradice: zidovska
+  otazky: [9]
+  linie: [vira-a-rozum]
+  mista:
+    - { misto: alexandrie, role: pusobeni, zdroj: sep-philo }
+    - { misto: rim, role: pobyt, zdroj: sep-philo }
+  kdo: Židovský filozof z Alexandrie, který v Římě u císaře Caliguly hájil své souvěrce.
+  proc: Vykládal Mojžíšovy knihy pomocí řecké filozofie.
+  zdroje: [sep-philo]

@@ -1,0 +1,42 @@
+# Vztahy mezi lidmi. Typ: ucitel (od = učitel, k = žák), znali-se, vliv-textem (od působil na k), polemika (od polemizoval s k).
+# tradovany: true = vztah, který podává antická tradice a odborné prameny ho neberou jako jistý.
+# Současnost dvou lidí sama nedokazuje, že se znali.
+
+# Sókratés a jeho okruh
+- { od: sokrates, k: platon, typ: ucitel, zdroj: sep-plato }
+- { od: sokrates, k: xenofon, typ: ucitel, zdroj: sep-socrates }
+- { od: sokrates, k: antisthenes, typ: ucitel, zdroj: iep-antisthenes }
+- { od: sokrates, k: aristippos, typ: ucitel, zdroj: sep-cyrenaics }
+- { od: sokrates, k: chairefon, typ: znali-se, poznamka: "přítel od mládí", zdroj: platon-obrana }
+- { od: sokrates, k: kriton, typ: znali-se, poznamka: "vrstevník a přítel", zdroj: platon-obrana }
+- { od: sokrates, k: alkibiades, typ: znali-se, poznamka: "spolu u Potidaie a Délia", zdroj: britannica-alcibiades }
+- { od: aristofanes, k: sokrates, typ: polemika, poznamka: "zesměšnil ho v Oblacích", zdroj: sep-socrates }
+
+# Akademie a Lykeion
+- { od: platon, k: aristoteles, typ: ucitel, zdroj: sep-aristotle }
+- { od: platon, k: speusippos, typ: ucitel, poznamka: "synovec a nástupce v čele Akademie", zdroj: sep-speusippus }
+- { od: platon, k: xenokrates, typ: ucitel, zdroj: sep-xenocrates }
+- { od: platon, k: archytas, typ: znali-se, poznamka: "Archytás ho roku 361 př. n. l. vysvobodil ze Syrákús", zdroj: sep-archytas }
+- { od: platon, k: eudoxos, typ: znali-se, poznamka: "Eudoxos poslouchal Platónovy přednášky", zdroj: mactutor-eudoxus }
+- { od: archytas, k: eudoxos, typ: ucitel, zdroj: mactutor-eudoxus }
+- { od: aristoteles, k: theofrastos, typ: znali-se, poznamka: "spolupracovník a nástupce v čele Lykeia", zdroj: sep-theophrastus }
+
+# Předsókratici
+- { od: thales, k: anaximandros, typ: ucitel, tradovany: true, zdroj: iep-thales }
+- { od: anaximandros, k: anaximenes, typ: ucitel, tradovany: true, zdroj: iep-anaximenes }
+- { od: parmenides, k: zenon-z-eleje, typ: ucitel, tradovany: true, poznamka: "mladší druh", zdroj: sep-zeno-elea }
+
+# Od Sókrata ke kynikům a stoikům
+- { od: gorgias, k: antisthenes, typ: ucitel, zdroj: iep-antisthenes }
+- { od: antisthenes, k: diogenes, typ: ucitel, tradovany: true, zdroj: iep-antisthenes }
+- { od: diogenes, k: krates, typ: ucitel, zdroj: britannica-crates }
+- { od: krates, k: hipparchia, typ: znali-se, poznamka: "manželé", zdroj: britannica-crates }
+- { od: krates, k: zenon-z-kitia, typ: ucitel, zdroj: britannica-zeno-citium }
+- { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "vypráví se, že Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: iep-cynics }
+- { od: zenon-z-kitia, k: kleanthes, typ: ucitel, zdroj: britannica-cleanthes }
+- { od: kleanthes, k: chrysippos, typ: ucitel, zdroj: iep-chrysippus }
+
+# Římští stoikové a epikurejci
+- { od: musonius-rufus, k: epiktetos, typ: ucitel, zdroj: sep-epictetus }
+- { od: epiktetos, k: marcus-aurelius, typ: vliv-textem, zdroj: sep-marcus-aurelius }
+- { od: epikuros, k: lucretius, typ: vliv-textem, zdroj: sep-lucretius }

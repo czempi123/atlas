@@ -1,0 +1,84 @@
+# Osm období atlasu (docs/architektura.md, oddíl Osm období; barvy a ornamenty docs/design.md).
+# okno = časové okno (okna se na okrajích překrývají); rok 2026 u období 8 znamená „dnes“.
+# mapa: střed [délka, šířka], měřítko projekce geoConicConformal pro výřez 1032 × 456 px (notebook),
+# stav schvaleny = výřez ze schváleného návrhu P1, navrh = výchozí návrh k doladění v P4.
+
+- id: 1
+  slug: pocatky-a-klasicke-recko
+  nazev: Počátky a klasické Řecko
+  kratce: Řecko
+  okno: { od: -650, do: -300 }
+  pigment: terakota
+  barva: --period-1
+  ornament: { index: 0, nazev: meandr a amfora }
+  mapa: { popis: "Egejské moře, Iónie, Velké Řecko", stred: [21.6, 38.2], meritko: 3050, rovnobezky: [35, 41], stav: schvaleny }
+
+- id: 2
+  slug: helenismus-a-rim
+  nazev: Helenismus a Řím
+  kratce: Helenismus a Řím
+  okno: { od: -350, do: 550 }
+  pigment: tyrský purpur
+  barva: --period-2
+  ornament: { index: 1, nazev: mozaika a oblouk }
+  mapa: { popis: Středomoří, stred: [18, 37.5], meritko: 1150, rovnobezky: [30, 45], stav: navrh }
+
+- id: 3
+  slug: stredovek
+  nazev: Středověk
+  kratce: Středověk
+  okno: { od: 400, do: 1450 }
+  pigment: lapis lazuli
+  barva: --period-3
+  ornament: { index: 2, nazev: gotická okna a rozeta }
+  mapa: { popis: "Evropa, Blízký východ, severní Afrika, Al-Andalus", stred: [16, 40], meritko: 720, rovnobezky: [30, 55], stav: navrh }
+
+- id: 4
+  slug: renesance-a-rany-novovek
+  nazev: Renesance a raný novověk
+  kratce: Renesance
+  okno: { od: 1400, do: 1700 }
+  pigment: olovnato-cínová žluť
+  barva: --period-4
+  ornament: { index: 3, nazev: perspektivní mřížka }
+  mapa: { popis: "Itálie, Francie, Nizozemí, Anglie", stred: [6, 47], meritko: 1300, rovnobezky: [40, 55], stav: navrh }
+
+- id: 5
+  slug: osvicenstvi
+  nazev: Osvícenství
+  kratce: Osvícenství
+  okno: { od: 1680, do: 1800 }
+  pigment: pruská modř
+  barva: --period-5
+  ornament: { index: 4, nazev: paprsky světla }
+  mapa: { popis: "Západní a střední Evropa, Severní Amerika", stred: [5, 49], meritko: 1300, rovnobezky: [42, 56], stav: navrh }
+
+- id: 6
+  slug: 19-stoleti
+  nazev: 19. století
+  kratce: 19. století
+  okno: { od: 1780, do: 1900 }
+  pigment: smaragdová zeleň
+  barva: --period-6
+  ornament: { index: 5, nazev: ozubená kola a koleje }
+  mapa: { popis: "Evropa a Nová Anglie", stred: [2, 49], meritko: 950, rovnobezky: [40, 56], stav: navrh }
+
+- id: 7
+  slug: 20-stoleti-krize-a-hledani
+  nazev: "20. století: krize a hledání"
+  kratce: 20. století
+  okno: { od: 1880, do: 1960 }
+  pigment: kadmiová červeň
+  barva: --period-7
+  ornament: { index: 6, nazev: konstruktivistické tvary }
+  mapa: { popis: "Evropa a Severní Amerika", stred: [-30, 45], meritko: 460, rovnobezky: [35, 55], stav: navrh }
+
+- id: 8
+  slug: po-valce-a-dnes
+  nazev: Po válce a dnes
+  kratce: Dnes
+  okno: { od: 1945, do: 2026 }
+  pigment: dioxazinová fialová
+  barva: --period-8
+  ornament: { index: 7, nazev: síť bodů a uzlů }
+  mapa: { popis: Celý svět, stred: [10, 30], meritko: 190, rovnobezky: [20, 50], stav: navrh }

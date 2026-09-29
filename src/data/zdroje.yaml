@@ -1,0 +1,103 @@
+# Prameny, citáty a obrázky Atlasu myšlení.
+# Každé tvrzení v datech odkazuje na pramen (pole zdroj/zdroje). Ověřeno skillem atlas-overeni.
+# Postup a rozpory jsou v docs/podklady/data-obdobi-1-2.md, co ověřit nešlo, v docs/podklady/k-overeni.md.
+
+prameny:
+  # Stanford Encyclopedia of Philosophy
+  - { id: sep-socrates, druh: encyklopedie, nazev: "Socrates", autor: "Debra Nails, S. Sara Monoson", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/socrates/", overeno: 2026-09-29, poznamka: "Oddíl 3: chronologie (469–399, Potidaia 432, Délion 424, Amfipolis 422, Oblaka 423, proces 399)." }
+  - { id: sep-plato, druh: encyklopedie, nazev: "Plato", autor: "Richard Kraut", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/plato/", overeno: 2026-09-29, poznamka: "Uvádí 429?–347; učitel Sókratés, žák Aristotelés, Syrákúsy." }
+  - { id: sep-aristotle-ethics, druh: encyklopedie, nazev: "Aristotle's Ethics", autor: "Richard Kraut", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/aristotle-ethics/", overeno: 2026-09-29, poznamka: "Nauka o středu (EN 1106a26–b28)." }
+  - { id: sep-aristotle, druh: encyklopedie, nazev: "Aristotle", autor: "Christopher Shields", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/aristotle/", overeno: 2026-09-29, poznamka: "Oddíl Life: Stageira 384, Akademie do 347, Assos, Lesbos, Pella, Lykeion 335, Chalkis 322." }
+  - { id: sep-pythagoras, druh: encyklopedie, nazev: "Pythagoras", autor: "Carl Huffman", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/pythagoras/", overeno: 2026-09-29 }
+  - { id: sep-heraclitus, druh: encyklopedie, nazev: "Heraclitus", autor: "Daniel W. Graham", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/heraclitus/", overeno: 2026-09-29 }
+  - { id: sep-parmenides, druh: encyklopedie, nazev: "Parmenides", autor: "John Palmer", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/parmenides/", overeno: 2026-09-29 }
+  - { id: sep-zeno-elea, druh: encyklopedie, nazev: "Zeno of Elea", autor: "John Palmer", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/zeno-elea/", overeno: 2026-09-29 }
+  - { id: sep-democritus, druh: encyklopedie, nazev: "Democritus", autor: "Sylvia Berryman", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/democritus/", overeno: 2026-09-29 }
+  - { id: sep-xenophanes, druh: encyklopedie, nazev: "Xenophanes", autor: "James Lesher", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/xenophanes/", overeno: 2026-09-29 }
+  - { id: sep-empedocles, druh: encyklopedie, nazev: "Empedocles", autor: "Richard Parry", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/empedocles/", overeno: 2026-09-29 }
+  - { id: sep-anaxagoras, druh: encyklopedie, nazev: "Anaxagoras", autor: "Patricia Curd", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/anaxagoras/", overeno: 2026-09-29 }
+  - { id: sep-confucius, druh: encyklopedie, nazev: "Confucius", autor: "Mark Csikszentmihalyi", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/confucius/", overeno: 2026-09-29 }
+  - { id: sep-archytas, druh: encyklopedie, nazev: "Archytas", autor: "Carl Huffman", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/archytas/", overeno: 2026-09-29, poznamka: "Narozen 435–410, zemřel 360–350; záchrana Platóna 361." }
+  - { id: sep-speusippus, druh: encyklopedie, nazev: "Speusippus", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/speusippus/", overeno: 2026-09-29 }
+  - { id: sep-xenocrates, druh: encyklopedie, nazev: "Xenocrates", autor: "Russell Dancy, Giulia De Cesaris", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/xenocrates/", overeno: 2026-09-29 }
+  - { id: sep-theophrastus, druh: encyklopedie, nazev: "Theophrastus", autor: "Katerina Ierodiakonou", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/theophrastus/", overeno: 2026-09-29 }
+  - { id: sep-cyrenaics, druh: encyklopedie, nazev: "The Cyrenaics", autor: "Voula Tsouna", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/cyrenaics/", overeno: 2026-09-29 }
+  - { id: sep-epicurus, druh: encyklopedie, nazev: "Epicurus", autor: "David Konstan", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epicurus/", overeno: 2026-09-29 }
+  - { id: sep-seneca, druh: encyklopedie, nazev: "Seneca", autor: "Katja Vogt", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/seneca/", overeno: 2026-09-29 }
+  - { id: sep-epictetus, druh: encyklopedie, nazev: "Epictetus", autor: "Margaret Graver", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epictetus/", overeno: 2026-09-29 }
+  - { id: sep-marcus-aurelius, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "Rachana Kamtekar", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/marcus-aurelius/", overeno: 2026-09-29 }
+  - { id: sep-stoicism, druh: encyklopedie, nazev: "Stoicism", autor: "Dirk Baltzly", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/stoicism/", overeno: 2026-09-29 }
+  - { id: sep-pyrrho, druh: encyklopedie, nazev: "Pyrrho", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/pyrrho/", overeno: 2026-09-29 }
+  - { id: sep-lucretius, druh: encyklopedie, nazev: "Lucretius", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/lucretius/", overeno: 2026-09-29 }
+  - { id: sep-plotinus, druh: encyklopedie, nazev: "Plotinus", autor: "Paul Kalligas", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/plotinus/", overeno: 2026-09-29 }
+  - { id: sep-carneades, druh: encyklopedie, nazev: "Carneades", autor: "James Allen", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/carneades/", overeno: 2026-09-29 }
+  - { id: sep-philo, druh: encyklopedie, nazev: "Philo of Alexandria", autor: "Carlos Lévy", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/philo/", overeno: 2026-09-29 }
+
+  # Internet Encyclopedia of Philosophy
+  - { id: iep-thales, druh: encyklopedie, nazev: "Thales of Miletus", autor: "Patricia O'Grady", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/thales/", overeno: 2026-09-29, poznamka: "Studna (Platón, Theaitétos 174a), lisy na olivy (Aristotelés, Politika 1259a), Anaximandros jako jeho žák." }
+  - { id: iep-anaximander, druh: encyklopedie, nazev: "Anaximander", autor: "Dirk L. Couprie", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/anaximander/", overeno: 2026-09-29 }
+  - { id: iep-anaximenes, druh: encyklopedie, nazev: "Anaximenes", autor: "Daniel W. Graham", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/anaximenes/", overeno: 2026-09-29 }
+  - { id: iep-protagoras, druh: encyklopedie, nazev: "Protagoras", autor: "Carol Poster", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/protagor/", overeno: 2026-09-29 }
+  - { id: iep-gorgias, druh: encyklopedie, nazev: "Gorgias", autor: "C. Francis Higgins", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/gorgias/", overeno: 2026-09-29 }
+  - { id: iep-antisthenes, druh: encyklopedie, nazev: "Antisthenes", autor: "Julie Piering", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/antisthenes/", overeno: 2026-09-29 }
+  - { id: iep-diogenes, druh: encyklopedie, nazev: "Diogenes of Sinope", autor: "Julie Piering", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/diogenes-of-sinope/", overeno: 2026-09-29 }
+  - { id: iep-cynics, druh: encyklopedie, nazev: "Cynics", autor: "Julie Piering", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/cynics/", overeno: 2026-09-29 }
+  - { id: iep-chrysippus, druh: encyklopedie, nazev: "Chrysippus", autor: "Jeremy Kirby", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/chrysippus/", overeno: 2026-09-29 }
+  - { id: iep-cicero, druh: encyklopedie, nazev: "Marcus Tullius Cicero", autor: "Edward Clayton", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/cicero/", overeno: 2026-09-29 }
+  - { id: iep-musonius, druh: encyklopedie, nazev: "Musonius Rufus", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/2013/04", overeno: 2026-09-29 }
+
+  # Další odborné přehledy
+  - { id: britannica-xenophon, druh: encyklopedie, nazev: "Xenophon", autor: "Christopher J. Tuplin", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Xenophon", overeno: 2026-09-29 }
+  - { id: britannica-plato, druh: encyklopedie, nazev: "Plato", autor: "Constance C. Meinwald", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Plato", overeno: 2026-09-29, poznamka: "Narozen 428/427 př. n. l. v Athénách, zemřel 348/347 v Athénách; zakladatel Akademie." }
+  - { id: britannica-isocrates, druh: encyklopedie, nazev: "Isocrates", autor: "George Law Cawkwell", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Isocrates", overeno: 2026-09-29 }
+  - { id: britannica-aspasia, druh: encyklopedie, nazev: "Aspasia", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Aspasia", overeno: 2026-09-29 }
+  - { id: britannica-alcibiades, druh: encyklopedie, nazev: "Alcibiades", autor: "Russell Meiggs", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Alcibiades-Athenian-politician-and-general", overeno: 2026-09-29 }
+  - { id: britannica-aristophanes, druh: encyklopedie, nazev: "Aristophanes", autor: "Oliver Taplin", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Aristophanes", overeno: 2026-09-29 }
+  - { id: britannica-marcus, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "John Anthony Crook", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Marcus-Aurelius-Roman-emperor", overeno: 2026-09-29 }
+  - { id: britannica-zeno-citium, druh: encyklopedie, nazev: "Zeno of Citium", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Zeno-of-Citium", overeno: 2026-09-29 }
+  - { id: britannica-crates, druh: encyklopedie, nazev: "Crates of Thebes", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Crates-of-Thebes", overeno: 2026-09-29 }
+  - { id: britannica-cleanthes, druh: encyklopedie, nazev: "Cleanthes", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Cleanthes", overeno: 2026-09-29 }
+  - { id: britannica-peloponnesian-war, druh: encyklopedie, nazev: "Peloponnesian War", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/event/Peloponnesian-War", overeno: 2026-09-29 }
+  - { id: britannica-greco-persian-wars, druh: encyklopedie, nazev: "Greco-Persian Wars", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/event/Greco-Persian-Wars", overeno: 2026-09-29 }
+  - { id: britannica-alexander, druh: encyklopedie, nazev: "Alexander the Great", autor: "Frank W. Walbank", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Alexander-the-Great", overeno: 2026-09-29 }
+  - { id: britannica-romulus-augustulus, druh: encyklopedie, nazev: "Romulus Augustulus", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Romulus-Augustulus", overeno: 2026-09-29 }
+  - { id: mactutor-eudoxus, druh: encyklopedie, nazev: "Eudoxus of Cnidus", autor: "J. J. O'Connor, E. F. Robertson", dilo: MacTutor History of Mathematics, url: "https://mathshistory.st-andrews.ac.uk/Biographies/Eudoxus/", overeno: 2026-09-29 }
+  - { id: bea-hypatia, druh: encyklopedie, nazev: "Hypatia", autor: "Naomi Pasachoff, Jay M. Pasachoff", dilo: "Biographical Encyclopedia of Astronomers (Springer 2007)", url: "https://mathshistory.st-andrews.ac.uk/BEA/hypatia_bea.pdf", overeno: 2026-09-29 }
+
+  # Primární texty
+  - { id: platon-obrana, druh: pramen, nazev: "Obrana Sókratova", autor: Platón, dilo: "Apology, angl. B. Jowett (Project Gutenberg 1656)", url: "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm", overeno: 2026-09-29, poznamka: "20e–23b věštba a zkoušení moudrých (21a Chairefón, 21d politik), 28e Potidaia, Amfipolis, Délion, 33d Kritón, 38a nezkoumaný život." }
+  - { id: platon-kriton, druh: pramen, nazev: "Kritón", autor: Platón, dilo: "Crito, angl. B. Jowett (Project Gutenberg 1657)", url: "https://www.gutenberg.org/files/1657/1657-h/1657-h.htm", overeno: 2026-09-29, poznamka: "Kritón přemlouvá k útěku (44b–46a); z Athén vycházel jen do války a jednou na Isthmus (52b); u soudu mohl navrhnout vyhnanství (52c)." }
+  - { id: platon-faidon, druh: pramen, nazev: "Faidón", autor: Platón, dilo: "Phaedo, angl. B. Jowett (Project Gutenberg 1658)", url: "https://www.gutenberg.org/files/1658/1658-h/1658-h.htm", overeno: 2026-09-29, poznamka: "Poslední den a smrt (117a–118a); Kritón je přítomen." }
+  - { id: platon-symposion, druh: pramen, nazev: "Symposion", autor: Platón, dilo: "Symposium, angl. B. Jowett (Project Gutenberg 1600)", url: "https://www.gutenberg.org/files/1600/1600-h/1600-h.htm", overeno: 2026-09-29, poznamka: "Alkibiadés o Sókratovi u Potidaie a při ústupu od Délia (219e–221b)." }
+  - { id: platon-ustava, druh: pramen, nazev: "Ústava VII", autor: Platón, dilo: "Republic, angl. B. Jowett (MIT Internet Classics Archive)", url: "http://classics.mit.edu/Plato/republic.8.vii.html", overeno: 2026-09-29, poznamka: "Podobenství o jeskyni (514a–515c)." }
+  - { id: vitruvius-vi, druh: pramen, nazev: "O architektuře VI, předmluva 1", autor: Vitruvius, dilo: "De architectura (LacusCurtius, angl. překlad)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Vitruvius/6*.html", overeno: 2026-09-29, poznamka: "Aristippos ztroskotá u Rhodu a v písku uvidí geometrické obrazce." }
+  - { id: gellius-x-12, druh: pramen, nazev: "Attické noci X, 12", autor: Aulus Gellius, dilo: "Noctes Atticae (LacusCurtius, angl. J. C. Rolfe)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Gellius/10*.html", overeno: 2026-09-29, poznamka: "Archytova dřevěná holubice podle Favorina." }
+  - { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života 1, 3", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-09-29, poznamka: "Non exiguum temporis habemus, sed multum perdidimus." }
+
+citaty:
+  - id: obrana-38a
+    osoba: sokrates
+    autor: Platón
+    dilo: Obrana Sókratova
+    misto: 38a
+    cesky: "Život, který nezkoumáme, nestojí za to, aby ho člověk žil."
+    original: "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad B. Jowetta („the unexamined life is not worth living“)"
+    zdroj: platon-obrana
+  - id: obrana-21d
+    osoba: sokrates
+    autor: Platón
+    dilo: Obrana Sókratova
+    misto: 21d
+    cesky: "Tenhle člověk si myslí, že něco ví, a neví. Já nevím, ale ani si nemyslím, že vím."
+    original: "οὗτος μὲν οἴεταί τι εἰδέναι οὐκ εἰδώς, ἐγὼ δέ, ὥσπερ οὖν οὐκ οἶδα, οὐδὲ οἴομαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad B. Jowetta („he knows nothing, and thinks that he knows; I neither know nor think that I know“)"
+    zdroj: platon-obrana
+
+# Zatím žádný obrázek: Wikimedia Commons nebyl při založení projektu dostupný.
+# Deska do té doby ukazuje minci s atributem (docs/design.md, oddíl Obrázky).
+obrazky: []

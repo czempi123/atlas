@@ -1,0 +1,57 @@
+# Místa Atlasu myšlení. Souřadnice [délka, šířka] ve stupních.
+# Města ze schváleného podkladu mapy (docs/design/mapa-podklad.mjs) mají souřadnice převzaté odtud;
+# ostatní jsou přibližné polohy antických lokalit. ID z Pleiad se doplní (docs/podklady/k-overeni.md).
+
+# Řecko a Egejské moře
+- { id: athenes, nazev: Athény, dnes: "Atény, Řecko", souradnice: [23.727, 37.984] }
+- { id: korinth, nazev: Korinth, dnes: "Korint, Řecko", souradnice: [22.88, 37.906] }
+- { id: delfy, nazev: Delfy, dnes: "Delfy, Řecko", souradnice: [22.50, 38.48] }
+- { id: delion, nazev: Délion, dnes: "u Dilesi, Řecko", souradnice: [23.64, 38.36] }
+- { id: potidaia, nazev: Potidaia, dnes: "Nea Potidea, Řecko", souradnice: [23.33, 40.19] }
+- { id: amfipolis, nazev: Amfipolis, dnes: "Amfipoli, Řecko", souradnice: [23.85, 40.82] }
+- { id: stageira, nazev: Stageira, dnes: "u Olympiady, Řecko", souradnice: [23.75, 40.53] }
+- { id: pella, nazev: Pella, dnes: "Pella, Řecko", souradnice: [22.52, 40.76] }
+- { id: abdera, nazev: Abdéra, dnes: "Avdira, Řecko", souradnice: [24.98, 40.95] }
+- { id: maroneia, nazev: Maróneia, dnes: "Maronia, Řecko", souradnice: [25.52, 40.87] }
+- { id: chalkis, nazev: Chalkis, dnes: "Chalkida, Řecko", souradnice: [23.60, 38.46] }
+- { id: elida, nazev: Élis, dnes: "Ilida, Řecko", souradnice: [21.38, 37.89] }
+- { id: larisa, nazev: Larisa, dnes: "Larisa, Řecko", souradnice: [22.42, 39.64] }
+- { id: lesbos, nazev: Lesbos, dnes: "Lesbos, Řecko", souradnice: [26.30, 39.20], oblast: true }
+- { id: eresos, nazev: Eresos, dnes: "Eresos, Lesbos, Řecko", souradnice: [25.93, 39.17] }
+- { id: mytilena, nazev: Mytiléna, dnes: "Mytilini, Lesbos, Řecko", souradnice: [26.55, 39.11] }
+- { id: samos, nazev: Samos, dnes: "Samos, Řecko", souradnice: [26.93, 37.69], oblast: true }
+- { id: gyaros, nazev: Gyaros, dnes: "Gyaros, Řecko", souradnice: [24.72, 37.61], oblast: true }
+- { id: nikopolis, nazev: Nikopolis, dnes: "u Prevezy, Řecko", souradnice: [20.73, 39.01] }
+
+# Malá Asie a Černé moře
+- { id: miletos, nazev: Milétos, dnes: "u Balatu, Turecko", souradnice: [27.28, 37.53] }
+- { id: efesos, nazev: Efesos, dnes: "u Selçuku, Turecko", souradnice: [27.34, 37.94] }
+- { id: knidos, nazev: Knidos, dnes: "Datça, Turecko", souradnice: [27.37, 36.69] }
+- { id: assos, nazev: Assos, dnes: "Behramkale, Turecko", souradnice: [26.34, 39.49] }
+- { id: kolofon, nazev: Kolofón, dnes: "u Değirmendere, Turecko", souradnice: [27.14, 38.10] }
+- { id: klazomenai, nazev: Klazomeny, dnes: "u Urly, Turecko", souradnice: [26.77, 38.36] }
+- { id: lampsakos, nazev: Lampsakos, dnes: "Lapseki, Turecko", souradnice: [26.69, 40.35] }
+- { id: kyzikos, nazev: Kyzikos, dnes: "u Erdeku, Turecko", souradnice: [27.89, 40.39] }
+- { id: chalkedon, nazev: Chalkédón, dnes: "Kadıköy (Istanbul), Turecko", souradnice: [29.03, 40.99] }
+- { id: sinope, nazev: Sinópé, dnes: "Sinop, Turecko", souradnice: [35.15, 42.02] }
+- { id: soloi, nazev: Soloi, dnes: "u Mersinu, Turecko", souradnice: [34.54, 36.74] }
+- { id: hierapolis, nazev: Hierapolis, dnes: "Pamukkale, Turecko", souradnice: [29.13, 37.93] }
+- { id: kition, nazev: Kition, dnes: "Larnaka, Kypr", souradnice: [33.63, 34.92] }
+
+# Itálie a Sicílie
+- { id: elea, nazev: Elea, dnes: "Velia, Itálie", souradnice: [15.15, 40.16] }
+- { id: tarent, nazev: Tarent, dobovy: Taras, dnes: "Taranto, Itálie", souradnice: [17.24, 40.47] }
+- { id: kroton, nazev: Krotón, dnes: "Crotone, Itálie", souradnice: [17.13, 39.08] }
+- { id: metapontion, nazev: Metapontion, dnes: "Metaponto, Itálie", souradnice: [16.82, 40.38] }
+- { id: thurioi, nazev: Thurioi, dnes: "u Sibari, Itálie", souradnice: [16.49, 39.72] }
+- { id: syrakusy, nazev: Syrákúsy, dnes: "Syrakusy, Itálie", souradnice: [15.29, 37.07] }
+- { id: leontinoi, nazev: Leontínoi, dnes: "Lentini, Itálie", souradnice: [15.00, 37.29] }
+- { id: akragas, nazev: Akragás, dnes: "Agrigento, Itálie", souradnice: [13.58, 37.29] }
+- { id: rim, nazev: Řím, dnes: "Řím, Itálie", souradnice: [12.48, 41.89] }
+- { id: volsinii, nazev: Volsinie, dobovy: Volsinii, dnes: "Bolsena, Itálie", souradnice: [11.99, 42.64] }
+- { id: korsika, nazev: Korsika, dnes: "Korsika, Francie", souradnice: [9.10, 42.15], oblast: true }
+
+# Afrika a západ
+- { id: kyrene, nazev: Kyréné, dnes: "Šaḥḥát, Libye", souradnice: [21.86, 32.82] }
+- { id: alexandrie, nazev: Alexandrie, dnes: "Alexandrie, Egypt", souradnice: [29.92, 31.20] }
+- { id: corduba, nazev: Corduba, dnes: "Córdoba, Španělsko", souradnice: [-4.78, 37.88] }
