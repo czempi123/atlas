@@ -212,7 +212,7 @@ Období vznikají chronologicky, protože na sebe navazuje mapa, časová osa i 
 
 | Fáze | Kdy (orientačně) | Obsah |
 | --- | --- | --- |
-| F2 řez antiky | listopad 2026 | Cesty 1, 5, 6 přepsané; portréty Sókrata a Epiktéta, převzatý Marcus; profily Platóna, Diogena a Epikúra; stránky otázek 1 a 7 |
+| F2 řez antiky | listopad 2026 | Cesty 1, 5, 6 přepsané; portréty Sókrata a Epiktéta, Marcus napsaný znovu podle nového stylu; profily Platóna, Diogena a Epikúra; stránky otázek 1 a 7 |
 | F3 celá antika | prosinec 2026 až leden 2027 | Cesty 2, 3, 4, 7, 8, 33, 34; portrét Seneky a zbylé portréty a profily období 1–2; Stoický týden; pokusy období 1–2; stránky „Co je filozofie?“, „Co je náboženství?“, judaismus, buddhismus, čínská tradice; skill `atlas-obdobi` |
 | F4 období 3–8 | únor až prosinec 2027 | Jedno období za 6–8 týdnů v pořadí středověk, renesance, osvícenství, 19. století, 20. století, dnes, vždy i se stránkami náboženství, která do období patří; po 7. období závěrečná cesta „Jak být sám sebou?“ |
 | F5 obsahová vrstva | průběžně od F3 | Příběh týdne z portrétů, pokusy jako začátky hodin, Argumentační klamy a manipulace, kartičky ke sdílení |

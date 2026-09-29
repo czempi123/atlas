@@ -2,6 +2,19 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 29. 9. 2026: Vizuální návrh (P1)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vizuální návrh čtyř obrazovek schválen; závazná pravidla a tokeny jsou v `docs/design.md` | Jednotný vizuální jazyk pro všechny stránky místo dvou stylů z prototypu |
+| Výchozí barevnost A · Papír a pigment, světlý i tmavý režim; varianta B zůstává zdokumentovaná jako alternativa | Teplý „muzejní“ papír a pigmenty období; autor si zvlášť oblíbil tmavou paletu |
+| Písma Newsreader a Instrument Sans, uložená lokálně | Plná čeština, časopisecký charakter, funguje offline; Instrument Sans místo Interu kvůli výraznějšímu charakteru |
+| Osobnosti se místo iniciál zobrazují mincí s atributem z příběhu a vždy s vysvětlením „Proč?“ | Iniciály splývaly (Sókratés, Seneca, Spinoza) a působily jako výplň |
+| Období tvoří souvislý pás s plynulými přechody barev a ornamentem každé doby | Dějiny mají působit jako tok, ne jako řada obdélníků |
+| Pruhy v řece životů mají barvu období, žijící plnou a ostatní vybledlou; směr ukazuje štítek | Méně barev na mapě, čitelnější „kdo žije teď“ |
+| Pořadí dalších kroků: P2 (založení Astra) a teprve potom P4 (Mapa a čas v2) | P4 staví na datech, komponentách a tokenech z P2 |
+| Projekt v Astru se zakládá od nuly; obsah prototypu v9 (27 myslitelů, Marcus) se nepřenáší, slouží jen jako inspirace. Data se ověřují znovu, první šablonou osobnosti je Sókratés | Prototyp v9 je nedotažený, jeho obsah neodpovídá novému tónu a nebyl ověřený |
+
 ## 29. 9. 2026: Architektura celé filozofie (P3, brána F0)
 
 | Rozhodnutí | Důvod |

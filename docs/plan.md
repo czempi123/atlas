@@ -351,11 +351,11 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 
 | Prompt | Krok | Model · úsilí | Proč tento model | Stav |
 | --- | --- | --- | --- | --- |
-| P0 | Základ: archiv, README, CLAUDE.md, styl, skilly vlny 1 | Opus 5.5 · high | Pravidla projektu ovlivní vše další | Plné znění níže |
-| P1 | Vizuální návrh čtyř obrazovek | Opus 5.5 · high | Vkus, konzistence a práce s českou typografií | Plné znění níže |
-| P2 | Založení projektu v Astru a přenos dat | Opus 5.5 · high | Dlouhá souvislá implementace s ověřením | Plné znění níže |
-| P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Po P0 |
-| P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Po P2 |
+| P0 | Základ: archiv, README, CLAUDE.md, styl, skilly vlny 1 | Opus 5.5 · high | Pravidla projektu ovlivní vše další | Hotovo 29. 9. 2026 |
+| P1 | Vizuální návrh čtyř obrazovek | Opus 5.5 · high | Vkus, konzistence a práce s českou typografií | Hotovo 29. 9. 2026, `docs/design.md` |
+| P2 | Založení projektu v Astru a přenos dat | Opus 5.5 · high (xhigh při zaseknutí) | Dlouhá souvislá implementace s ověřením | **Další krok**, plné znění níže (aktualizováno po P1) |
+| P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Hotovo 29. 9. 2026, `docs/architektura.md` |
+| P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Po P2, plné znění níže |
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high | Základ všech cest, musí být přístupný a testovaný | Po P1 a P2, se skillem `atlas-komponenta` |
 | P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Se skillem `atlas-overeni` |
 | P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Se skillem `atlas-osobnost` |
@@ -387,6 +387,8 @@ Všechno ulož jedním commitem s popisem změn. Na konci mi v pár větách ře
 
 ### P1: Vizuální návrh
 
+Hotovo 29. 9. 2026: schválený návrh a tokeny jsou v `docs/design.md`, obrazovky na plátně (odkaz v design.md). Znění ponechané pro záznam.
+
 ```text
 Navrhni vizuální podobu Atlasu myšlení, interaktivního atlasu filozofie pro středoškoláky. Vycházej z docs/plan.md (oddíly o informační architektuře, mapě a čase a vizuálním jazyce) a z profilu Marca Aurelia v docs/archiv/atlas-antika.html, jehož časopisecký styl je výchozí inspirací.
 
@@ -401,18 +403,56 @@ Odevzdej návrh k posouzení a seznam design tokenů (barvy, písma, velikosti, 
 
 ### P2: Založení projektu a přenos dat
 
+Doporučeně v Claude Code (nebo v Coworku s připojenou složkou Atlas), Opus 5.5, úsilí high. Projekt v Astru se zakládá od nuly; prototyp v9 (`docs/archiv/atlas-antika.html`) je nedotažený a slouží jen jako inspirace. Počítej s delší prací, klidně ve dvou sezeních; druhé sezení začni větou „Pokračuj v P2 podle docs/plan.md, stav najdeš v gitu“.
+
 ```text
-Pracuješ v repozitáři atlas. Přečti CLAUDE.md, docs/plan.md (oddíly o technologii a obsahovém modelu) a schválené design tokeny v docs/design.md.
+Pracuješ v repozitáři atlas. Přečti CLAUDE.md, docs/plan.md (oddíly o technologii, informační architektuře a obsahovém modelu), docs/architektura.md a docs/design.md včetně podkladů ve složce docs/design/.
 
-Založ nový projekt: Astro se statickým výstupem, TypeScript, Svelte pro interaktivní ostrovy, content collections se schématy pro osobnosti, směry, období, otázky, cesty, pokusy, pojmy a příběhy a datové soubory lide, vztahy, mista, udalosti a zdroje podle plánu.
+Založ ve větvi restart nový projekt: Astro se statickým výstupem, TypeScript, Svelte pro interaktivní ostrovy. Content collections se schématy pro osobnosti, směry, období, otázky, cesty, pokusy, pojmy, příběhy a náboženství; datové soubory lide, vztahy, mista, udalosti, obdobi a zdroje v src/data.
 
-Přenes data všech 27 myslitelů z docs/archiv/atlas-antika.html do lide.yaml a mista.yaml a doplň typované vztahy, které z archivu plynou. Portrét Marca Aurelia přenes jako první MDX stránku osobnosti, aby se šablona ověřila na skutečném obsahu. Obrázky ulož jako soubory s licencí v zdroje.yaml.
+Design:
+1. Převeď tokeny z docs/design.md do src/styles/tokens.css jako CSS proměnné, varianta A ve světlém i tmavém režimu. Tmavý režim podle nastavení systému i ručního přepínače, volbu ulož v localStorage.
+2. Písma Newsreader a Instrument Sans přes balíčky @fontsource, jen latin a latin-ext, bez Google Fonts.
+3. Ikony atributů z docs/design/atributy-ikony.json jako jeden SVG soubor se symboly.
+4. Komponenty podle oddílu Komponenty: Mince (atribut), Deska (duotónová plocha pro obraz), PásObdobí (velký a malý, ornamenty z docs/design/ornamenty.js), Tlačítko, Citát. Hlavička, spodní lišta na telefonu a drobečková navigace podle oddílu Navigace a rozvržení.
 
-Připrav základní layout podle design tokenů, stránky Domů, Lidé a směry a šablonu osobnosti. Mapu zatím jen jako statický podklad. Nastav vyhledávání Pagefind, lokálně uložená písma, ikony jen použité.
+Data a obsah (projekt začíná od nuly; prototyp v9 v docs/archiv/ ber jen jako inspiraci, nic z něj nepřebírej doslova):
+5. Založ lide.yaml, mista.yaml, vztahy.yaml a udalosti.yaml pro období 1 a 2 podle kostry osobností v docs/architektura.md (portréty, profily, vybrané medailonky). Roky, místa s rolí a časem pobytu i vztahy ověř skillem atlas-overeni a pramen zapiš do zdroje.yaml. Co nejde ověřit, do dat nedávej a zapiš do docs/podklady/k-overeni.md.
+6. Atributy: u lidí z tabulky v docs/design.md je převezmi i s větou „proč“. Pro ostatní profily a portréty navrhni atribut do docs/podklady/atributy.md k mému schválení; do dat je zatím nedávej.
+7. obdobi.yaml podle architektury: osm období s časovým oknem, výřezem mapy, barvou a ornamentem.
+8. Šablonu osobnosti ověř na Sókratovi: úvod, kapitola 01 Delfy, Doba a lidé (generovaná z dat), Dvě velké myšlenky, Zkus to žít a Kam dál podle docs/podklady/texty-z-navrhu-p1.md. Kapitoly 02–05 nech jen jako osnovu; napíšou se v P7. Citáty ověř a doplň český překlad do zdroje.yaml.
 
-Přidej automatické kontroly: schéma dat, existující odkazy, žádný rok nula, narození před úmrtím, licence ke každému obrázku, a základní test v Playwrightu. Nastav GitHub Actions pro sestavení a kontroly; web zatím nenasazuj, běží jen lokálně.
+Stránky: Domů, Lidé a směry, šablona osobnosti (Sókratés) a Mapa a čas zatím jen jako statický podklad (podle docs/design/mapa-podklad.mjs). Nastav vyhledávání Pagefind.
 
-Ověř sestavení a prohlédni výsledek v prohlížeči na notebooku i telefonu ve světlém i tmavém režimu. Pracuj ve větvi restart, commituj po ucelených krocích a na konci mi pošli snímky obrazovek a návod, jak web spustit.
+Kontroly: schéma dat, existující odkazy, žádný rok nula, narození před úmrtím, učitel starší než žák, licence u každého obrázku, atribut u každého profilu a portrétu. Test v Playwrightu projde Domů, Lidé a směry a Sókrata na 390 a 1440 px ve světlém i tmavém režimu a ověří kontrast. GitHub Actions pro sestavení a kontroly; web nenasazuj.
+
+Commituj po ucelených krocích česky, nic neposílej na GitHub. Na konci mi pošli snímky obou šířek v obou režimech, návod, jak web spustit, a seznam toho, co se od docs/design.md odchýlilo a proč.
+```
+
+### P4: Mapa a čas v2
+
+Až po dokončení P2. Doporučeně v Claude Code, Opus 5.5, úsilí high; když se zasekne na časové logice nebo výkonu, přepni na xhigh.
+
+```text
+Pracuješ v repozitáři atlas ve větvi mapa-v2 (vytvoř ji z restart). Přečti CLAUDE.md, v docs/plan.md oddíl „Mapa a čas pro celé dějiny“, v docs/design.md oddíl „Mapa a čas“, docs/design/mapa-podklad.mjs a data v src/data.
+
+Postav Mapu a čas jako Svelte ostrov na stránce /mapa. Adresa nese rok, období a vybraného člověka (/mapa?rok=-360&osoba=platon), takže se dá sdílet a tlačítko Zpět funguje.
+
+Musí umět:
+1. Mapa: d3-geo a Natural Earth (world-atlas, land 10m, jen polygony regionu), výřez a projekce podle období z obdobi.yaml, styl podle design.md (vodní linky u pobřeží, jemná síť poledníků, dobové názvy krajin a moří, měřítko). Geometrii pro každý výřez předpočítej při sestavení, ne v prohlížeči. Při změně období se kamera plynule přesune, při omezeném pohybu skočí.
+2. Jen žijící: člověk je na mapě od roku narození do roku úmrtí včetně, rok nula neexistuje. Pozici určují místa s rolí a časem (kde v daném roce byl). Víc lidí na jednom místě tvoří shluk s mincemi, který se po kliknutí rozbalí. Kdo je mimo výřez, má štítek se šipkou u okraje. Když vybraný člověk zemře, zmizí s krátkou zprávou „Platón zemřel roku 347 př. n. l.“
+3. Posuvník roku po jednom roce, šipkami po deseti, klávesnicí i dotykem; nad ním dějinné kotvy z udalosti.yaml.
+4. Řeka životů pod mapou: pruhy celých životů v okně kolem zvoleného roku, žijící v barvě období, ostatní vybledlí, svislá čára roku navazující na posuvník. Oblouky vztahů: plná čára učitel a žák, tečkovaná znali se, čárkovaná vliv textem, polemika vlastním tvarem. Klik na pruh vybere člověka i na mapě.
+5. Přepínač období jako malý pás období se závorkou okna řeky a značkou roku; přehled celých 2 600 let s hustotou myslitelů pro rychlý skok.
+6. Karta člověka: medailonek z dat, věk ve zvoleném roce, kde právě je, atribut s „proč“, vztahy s poznámkou („zemřel před 39 lety“), Změř vzdálenost mezi dvěma lidmi (správně přes chybějící rok nula).
+7. Volitelný stín odkazu (výchozí vypnutý) a karta „Mezitím jinde“, když pro rok existují data.
+8. Rozvržení: na notebooku mapa, posuvník, řeka i karta najednou bez posouvání při 1440 × 900 i 1280 × 800; na telefonu mapa nahoře a spodní list se záložkami Člověk a Řeka životů.
+
+Přístupnost: každá osoba i pruh jsou ovladatelné klávesnicí, řeka má textovou alternativu (seznam žijících ve zvoleném roce), kontrast podle design.md. Výkon: plynulé posouvání roku na slabším telefonu.
+
+Testy: jednotkové pro věk, „žije v roce“, vzdálenost mezi lidmi a přechod přes rok nula; Playwright pro roky -399, -360, -323 a 121 na 390 a 1440 px ve světlém i tmavém režimu, se snímky.
+
+Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně data, která pro mapu chybějí) a počkej na odpověď. Pak implementuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky a seznam toho, co zůstalo na později.
 ```
 
 ## Plán etap
@@ -422,7 +462,7 @@ Nejdřív jeden kompletní „vertikální řez“ antiky (všechny typy stráne
 | Fáze | Výstup | Brána na konci |
 | --- | --- | --- |
 | F0 Základ (říjen, 1 týden) | P0 a P3: archiv, README, CLAUDE.md, průvodce stylem, skilly vlny 1, architektura celé filozofie | Schválíš období, velké otázky a pravidla tónu |
-| F1 Design a kostra (říjen, 2 týdny) | P1 a P2: schválený vizuální návrh, web v Astru s 27 mysliteli a Marcem, zatím lokálně | Web běží na tvém počítači a vypadá podle návrhu |
+| F1 Design a kostra (říjen, 2 týdny) | P1 a P2: schválený vizuální návrh, web v Astru s ověřenými daty období 1–2 a šablonou na Sókratovi, zatím lokálně | Web běží na tvém počítači a vypadá podle návrhu |
 | F2 Vertikální řez antiky (listopad, 4 týdny) | Mapa a čas v2, první bloky, skilly vlny 2, stránka období, portréty Sókrata a Epiktéta, profily Platóna, Diogena a Epikúra, tři přepsané cesty, dvě velké otázky, deník | Vyzkoušeno se studenty a opraveno; doklad pro závěrečnou práci |
 | F3 Celá antika (prosinec až leden) | Předsókratici, Platón, Aristotelés, helenismus, Řím; skill `atlas-obdobi` | Souhrnná revize období (P11) |
 | F4 Další období (2027) | Středověk, renesance, novověk, osvícenství, 19. a 20. století, současnost; každé jako jeden cyklus | U každého období revize a jedna skutečná hodina |
