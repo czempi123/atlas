@@ -2,6 +2,15 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 30. 9. 2026: Schválení P2 (brána F1)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kostra webu z P2 schválena a sloučena do hlavní větve; dotažení vzhledu pokračuje průběžně v dalších krocích | Web běží na autorově počítači a odpovídá návrhu |
+| Diogenés se v datech narodil asi 412 př. n. l. (rozmezí 412–403) | Víc pramenů: Diogenés Laertios VI, 76–79 a Routledge Encyclopedia of Philosophy proti IEP (404) |
+| Citáty z Platónovy Obrany zůstávají ve vlastním převodu | Rozhodnutí autora; Novotného překlad se nepřebírá |
+| Atributy všech profilů a portrétů období 1 a 2 schváleny (`docs/podklady/atributy.md`), 14 nových ikon | Mince na mapě a v kartách potřebují atribut u každého profilu a portrétu |
+
 ## 29. 9. 2026: Založení projektu v Astru (P2)
 
 | Rozhodnutí | Důvod |

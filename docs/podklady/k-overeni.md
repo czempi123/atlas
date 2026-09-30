@@ -29,13 +29,12 @@
 | Kritón | úmrtí | Obrana 33d: Sókratův vrstevník. | Ponechat. |
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
 | Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
-| Diogenés | rok narození, místo smrti | IEP: asi 404–323; Diogenés Laertios VI, 76 nechává umřít téměř devadesátiletého (tedy asi 412); o místě smrti jsou dvě verze. | V datech IEP (asi 404). Návrh P1 uváděl 412. **Rozhodnutí autora.** |
 | Epikúros | místo narození | SEP: athénský občan, vyrůstal na Samu. | V datech jen pobyt na Samu do 321. |
 | Epiktétos | roky v Římě a v Níkopoli | SEP: Domitianův edikt roku 89; SEP „Stoicism“: 93. | Po rozhodnutí doplnit `do`/`od`. **Rozpor pramenů.** |
 | Marcus Aurelius | místo smrti, Carnuntum | Britannica: zemřel ve Vindoboně nebo v Sirmiu; Carnuntum a Granua jsou v nadpisech knih Hovorů (I a II/III), stránka je nepodala. | Doplnit Carnuntum z Hovorů (vydání Haines, Loeb) po ověření. |
 | Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
 | Cicero | místo narození (Arpinum), studia v Athénách a na Rhodu, vyhnanství, smrt u Formií | IEP stránka nepodala. | Doplnit z Plútarchova Cicerona. |
-| Plótínos | místo narození a smrti | SEP: „rodák z Egypta“; místo smrti neuvedeno (tradice: Kampánie). | Doplnit z Porfyria, Život Plótínův 2. |
+| Plótínos | místo narození | Místo smrti doplněno (Minturnae v Kampánii, Porfyrios, Život Plótínův 2). Lykopolis uvádí až Eunapios, ne Porfyrios. | Doplnit Lykopolis, pokud stačí Eunapios. |
 | Kratés, Hipparchia | místa a data | Britannica: Kratés asi 350–301 (akmé 4. st.); o Hipparchii jen Maróneia. | Ponechat. |
 | Filón Alexandrijský | roky | SEP: „mezi koncem 1. st. př. n. l. a polovinou 1. st. n. l.“; poselstvo ke Caligulovi po nepokojích roku 38. | Ponechat bez roků. |
 | Pyrrhón | tažení s Alexandrem | SEP: „údajně“ doprovázel Alexandra do Indie. | V datech jen jako „vypráví se“ v textu, bez místa. |
@@ -59,7 +58,7 @@
 
 ## Citáty a překlady
 
-- **Obrana 38a a 21d** mají v `zdroje.yaml` vlastní převod podle řeckého textu a Jowettova překladu. Český překlad Františka Novotného (Platón, *Spisy I*, OIKOYMENH) jsem online nenašel. Doporučuji porovnat oba citáty s Novotného zněním a rozhodnout, zda ho převzít (s údajem o překladateli), nebo ponechat vlastní převod.
+- **Obrana 38a a 21d:** autor 30. 9. 2026 rozhodl, že zůstává vlastní převod (zapsáno v `zdroje.yaml`). Novotného překlad se nepřebírá.
 - **Kapitola 01 Delfy** odkazuje na Obranu 20e–22e; čísla stran jsem ověřil přes SEP (20e–23b) a Jowettův překlad bez Stephanova číslování. Při revizi (P10) zkontrolovat po odstavcích proti řeckému vydání (Burnet, OCT).
 
 ## Obrázky

@@ -38,7 +38,7 @@ Celkem 49 osob, 46 míst, 29 vztahů, 15 událostí. Lao-c’, Buddha, Čuang-c�
 | 14 | Kleanthés 331/330–232/231, v čele Stoy 263–232; Chrýsippos asi 280–207, v čele od 230 | přibližný fakt | Britannica Cleanthes; IEP Chrysippus (Kirby) | posloupnost Zénón → Kleanthés → Chrýsippos |
 | 15 | Karneadés 214–129/8, v Římě 155, dvě řeči o spravedlnosti | doložený fakt; řeči „podle tradice“ | SEP Carneades (Allen) | pobyt v Římě 155; ve větě „Vypráví se“ |
 | 16 | Hypatia asi 370–415, Alexandrie, dcera Theóna, zabita davem | přibližný / doložený fakt | BEA (Pasachoff), s. o Hypatii | 2 místa |
-| 17 | Plótínos 204–270, u Ammónia v Alexandrii od 28 let 11 let, v Římě od konce 244 | doložený fakt | SEP Plotinus (Kalligas) | studium 232–243, Řím 244–270 |
+| 17 | Plótínos 204–270, u Ammónia v Alexandrii od 28 let 11 let, v Římě od konce 244, zemřel na statku přítele u Minturn v Kampánii | doložený fakt | SEP Plotinus (Kalligas); Porfyrios, Život Plótínův 2 | studium 232–243, Řím 244–269, smrt Minturnae 270 |
 
 ## Citáty
 
@@ -50,7 +50,7 @@ Celkem 49 osob, 46 míst, 29 vztahů, 15 událostí. Lao-c’, Buddha, Čuang-c�
 ## Rozpory a rozhodnutí
 
 - **Platón:** SEP „429?“, Britannica 428/427. V datech **asi 427**: je to tradiční údaj a drží věk 67 let v roce 360 př. n. l. z testovacího scénáře P4.
-- **Diogenés:** IEP asi 404, Diogenés Laertios (skoro devadesátiletý roku 323) asi 412; návrh P1 uváděl 412. V datech **asi 404** podle odborného hesla; rozhoduje autor (k-overeni.md).
+- **Diogenés:** rozhodnuto 30. 9. 2026 podle počtu pramenů. Pro asi 412: Diogenés Laertios VI, 76–79 (skoro devadesátiletý roku 323) a Routledge Encyclopedia of Philosophy (Branham: 412/403–324/321). Pro asi 404: IEP (Piering). Britannica rok narození neuvádí. V datech **asi 412** s rozmezím 412–403 z REP. Místo smrti Korinth: obě verze (Diogenés Laertios VI, 77 podle Démétria; IEP: v domě Xeniada) se v místě shodují.
 - **Epiktétos a Domitianův edikt:** SEP Epictetus 89, SEP Stoicism 93. V datech zatím bez roku odchodu z Říma.
 - **Theofrastos a Aristotelés:** SEP je popisuje jako spolupracovníky, ne učitele a žáka. Ve vztazích **znali-se** s poznámkou „spolupracovník a nástupce“.
 - **Pýthagorás:** SEP (Huffman): nic nenasvědčuje tomu, že by jeho sláva stála na matematice, a pro důkaz Pýthagorovy věty „není ani špetka dokladů“. Proto ve větě „proč“ stěhování duší, ne věta o trojúhelníku.
@@ -58,6 +58,6 @@ Celkem 49 osob, 46 míst, 29 vztahů, 15 událostí. Lao-c’, Buddha, Čuang-c�
 
 ## Otevřené otázky pro autora
 
-- Datování Diogena (404, nebo 412)?
 - Přidat Alexandra Velikého jako medailonek (nese cestu 4 a Diogenův příběh)?
-- Převzít Novotného překlad Obrany, nebo ponechat vlastní převod?
+
+Rozhodnuto 30. 9. 2026: Diogenés asi 412 (viz Rozpory), citáty z Obrany ve vlastním převodu, atributy období 1 a 2 schválené (docs/podklady/atributy.md).
