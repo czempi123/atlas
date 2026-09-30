@@ -2,6 +2,13 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 30. 9. 2026: Schválení P4
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Mapa a čas v2 schválena a sloučena do hlavní větve | Autor: „naprosto úžasné“ |
+| Další krok je P5 (prvních šest bloků knihovny) se skillem `atlas-komponenta`, v novém chatu projektu | Pořadí podle plánu etap F2; každý krok v novém chatu šetří kontext, souvislost nese repozitář a dokumenty |
+
 ## 30. 9. 2026: Mapa a čas v2 (P4)
 
 | Rozhodnutí | Důvod |

@@ -355,8 +355,8 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P1 | Vizuální návrh čtyř obrazovek | Opus 5.5 · high | Vkus, konzistence a práce s českou typografií | Hotovo 29. 9. 2026, `docs/design.md` |
 | P2 | Založení projektu v Astru a přenos dat | Opus 5.5 · high (xhigh při zaseknutí) | Dlouhá souvislá implementace s ověřením | Hotovo 29. 9. 2026, schváleno 30. 9. 2026 (brána F1) |
 | P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Hotovo 29. 9. 2026, `docs/architektura.md` |
-| P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo 30. 9. 2026 ve větvi `mapa-v2`, čeká na schválení |
-| P5 | Knihovna bloků, prvních šest | Opus 5.5 · high | Základ všech cest, musí být přístupný a testovaný | Po P1 a P2, se skillem `atlas-komponenta` |
+| P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
+| P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Další krok, plné znění níže; skill `atlas-komponenta` připraven 30. 9. 2026 |
 | P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Se skillem `atlas-overeni` |
 | P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Se skillem `atlas-osobnost` |
 | P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Se skillem `atlas-cesta` |
@@ -431,7 +431,7 @@ Commituj po ucelených krocích česky, nic neposílej na GitHub. Na konci mi po
 
 ### P4: Mapa a čas v2
 
-**Stav 30. 9. 2026:** hotovo ve větvi `mapa-v2`, čeká na schválení autorem. Rozhodnutí v `docs/rozhodnuti.md`, prameny k novým datům v `docs/podklady/mapa-a-cas.md`, co zůstalo na později, v oddílu „Po P4“ níže.
+**Stav 30. 9. 2026:** hotovo a schváleno autorem, sloučeno do hlavní větve. Rozhodnutí v `docs/rozhodnuti.md`, prameny k novým datům v `docs/podklady/mapa-a-cas.md`, co zůstalo na později, v oddílu „Po P4“ níže.
 
 Až po dokončení P2. Doporučeně v Claude Code, Opus 5.5, úsilí high; když se zasekne na časové logice nebo výkonu, přepni na xhigh.
 
@@ -466,6 +466,32 @@ Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně data, která p
 - Lucretius nemá doložené místo, na mapě chybí (v řece je).
 - Plynulé posouvání roku ověřit na skutečném starším telefonu (měřeno jen se zpomaleným procesorem v Chromiu).
 - Tlačítko „cesta“ v kartě člověka, až budou hotové cesty.
+
+### P5: Knihovna bloků, prvních šest
+
+Další krok po P4. Doporučeně v Claude Code ve složce Atlas na Macu (změny pak vznikají rovnou v tvém repozitáři), nebo v Coworku v novém chatu projektu; Opus 5.5, úsilí high, při zaseknutí xhigh. Před spuštěním musí být v účtu uložený skill `atlas-komponenta` (zdrojová verze ve `skills/atlas-komponenta/`).
+
+```text
+Pracuješ v repozitáři atlas ve složce Atlas na mém Macu. Hlavní větev main obsahuje schválenou Mapu a čas (P4); založ z ní větev bloky-v1. Když k mému počítači nemáš terminál, pracuj v kopii repozitáře a hotovou větev mi na konci předej jako git bundle do složky Atlas s jedním příkazem, jak ji načíst.
+
+Přečti CLAUDE.md, docs/styl.md, v docs/plan.md oddíly „Pedagogické pilíře“ a „Mechanismy učení a obsahová složka“, v docs/design.md oddíly Komponenty a Přístupnost a hotové ostrovy v src/components/ostrovy (NejdrivSam, MojeStanovisko, ZkusToZit) i src/lib/denik.ts. Postupuj podle skillu atlas-komponenta.
+
+Postav prvních šest bloků knihovny jako Svelte ostrovy, které autor vloží do MDX jedním řádkem:
+1. Příběh: krátká scéna s volitelným obrazem (deska v barvě období, když obraz chybí) a popiskem; bez interakce, ale se stejnou typografií jako profil.
+2. Volba s důvodem: karty A–D, nepovinné pole „Proč právě tohle?“, ke každé možnosti vlastní zpětná vazba „Tvůj tah: …“ a oddíl „Co udělal …“ podle docs/design.md.
+3. Odkryj: vlastní pokus, pak modelové odpovědi a sebekontrola. Sjednoť ho s dnešním Nejdřív sám (Sókratův profil musí dál fungovat beze změny textu).
+4. Změň jednu věc: myšlenkový pokus s přepínačem podmínky; student rozhoduje znovu a vidí, jak se jeho odpověď posunula.
+5. Spor: student se postaví na škálu mezi dva filozofy, přečte si jejich nejsilnější argumenty a může se přesunout; zapíše se první i konečná poloha.
+6. Kdo žil dřív?: odhad pořadí nebo vzdálenosti dvou lidí z dat, pak odhalení s „Žili současně … / Dělí je …“ ze src/lib/cas-mapy.ts a odkazem do /mapa na správný rok.
+
+Pro všechny bloky: zpětná vazba hodnotí důvody, ne souhlas; nic se neboduje. Odpovědi, které mají smysl pro deník, se uloží přes src/lib/denik.ts a vydrží obnovení stránky. Ovládání klávesnicí a dotykem, cíle aspoň 44 px, omezený pohyb, světlý i tmavý režim, kontrast AA.
+
+Ukázky: stránka /dilna/bloky/ mimo navigaci a hledání (noindex), kde je každý blok na skutečném ověřeném obsahu období 1 (Sókratés, Platón, Diogenés); nový obsah, který by potřeboval ověření, nevymýšlej a zapiš jako potřebu do docs/podklady/k-overeni.md. Do docs/design.md doplň API každého bloku a krátký návod, jak ho vložit do MDX (bude ho potřebovat skill atlas-cesta).
+
+Testy: jednotkové pro logiku bloků (vyhodnocení, posun odpovědi, uložení), Playwright pro každý blok na 390 a 1440 px ve světlém i tmavém režimu s axe, ovládáním klávesnicí, obnovením stránky a se snímky; celé npm test musí projít.
+
+Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně API bloků a co z bloků patří do deníku) a počkej na odpověď. Pak implementuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky a seznam toho, co zůstalo na později.
+```
 
 ## Plán etap
 
