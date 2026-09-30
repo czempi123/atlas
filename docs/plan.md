@@ -469,6 +469,8 @@ Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně data, která p
 
 ### P5: Knihovna bloků, prvních šest
 
+**Stav 30. 9. 2026:** hotovo ve větvi `bloky-v1`, čeká na schválení autorem. Ukázky na `/dilna/bloky/`, API a návod pro MDX v `docs/design.md` › Bloky, rozhodnutí v `docs/rozhodnuti.md`, potřeby ověření v `docs/podklady/k-overeni.md` › Obsah bloků. Co zůstalo na později, je v oddílu „Po P5“ níže.
+
 Další krok po P4. Doporučeně v Claude Code ve složce Atlas na Macu (změny pak vznikají rovnou v tvém repozitáři), nebo v Coworku v novém chatu projektu; Opus 5.5, úsilí high, při zaseknutí xhigh. Před spuštěním musí být v účtu uložený skill `atlas-komponenta` (zdrojová verze ve `skills/atlas-komponenta/`).
 
 ```text
@@ -492,6 +494,16 @@ Testy: jednotkové pro logiku bloků (vyhodnocení, posun odpovědi, uložení),
 
 Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně API bloků a co z bloků patří do deníku) a počkej na odpověď. Pak implementuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky a seznam toho, co zůstalo na později.
 ```
+
+### Po P5: co zůstalo na později
+
+- Ověřit Diogenovu stranu Sporu (Diogenés Laertios VI, 53) a Sókratovy důvody z Kritóna (`atlas-overeni`); potom Spor smí z dílny ven.
+- Režim třídy u bloků: zpětná vazba až na pokyn učitele, jeden podnět na obrazovce, QR kód.
+- Deník: řadit a seskupit zápisy podle druhu (`druh` už se ukládá), u Sporu ukázat posun graficky, „Zkus to žít“ s poznámkou, jak dopadlo.
+- Příběh s obrazem: první obraz s ověřenou licencí (Wikimedia Commons), později poslech s přepisem.
+- Kdo žil dřív?: varianta se třemi a více lidmi (seřaď na ose) a lidé jen s dobou činnosti (bez narození a úmrtí).
+- Zbylé bloky knihovny: Dialog, Úryvek s otázkou, Slož argument, Kdo to řekl?, Návrat.
+- Skill `atlas-cesta` napsat podle `docs/design.md` › Bloky.
 
 ## Plán etap
 

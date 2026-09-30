@@ -108,9 +108,195 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 - **Deska:** duotónová plocha pro fotografii (busta, freska, rukopis) v barvách `--period-N-plate` / `--period-N-on-plate`, vždy s popiskem pod obrazem a licencí v Pramenech.
 - **Pás období:** osm segmentů bez mezer; pozadí každého segmentu je gradient, který na hranách přechází do poloviční směsi se sousedem; ornament období je maskovaný do ztracena k okrajům. Varianty: velký (Domů, 250 px), malý přepínač (mapa, 26–28 px, aktivní období širší).
 - **Volba s důvodem:** karty možností A–D (min. 60 px), vybraná má okraj 2 px a tint období; pole „Proč právě tohle?“ nepovinné; zpětná vazba v tintu období s titulkem „Tvůj tah: …“ a oddílem „Co udělal …“.
-- **Nejdřív sám:** povrchová karta s nadtitulkem v barvě období, otázkou v Newsreaderu, polem a tlačítkem „Porovnat…“.
+- **Odkryj (dříve Nejdřív sám):** povrchová karta s nadtitulkem v barvě období, otázkou v Newsreaderu, polem a tlačítkem „Porovnat…“; po odkrytí srovnání v tintu období, modelové odpovědi a sebekontrola. API v oddílu Bloky.
 - **Zkus to žít:** karta v tintu období, jedno hlavní tlačítko „Přijmout výzvu“.
 - **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a).
+
+## Bloky
+
+Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem, ukázky jsou na stránce `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
+
+### Jak blok vložit do MDX
+
+1. Na začátek MDX jeden import (cestu uprav podle hloubky souboru):
+   ```mdx
+   import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../components/bloky';
+   ```
+2. Volba s důvodem, Změň jednu věc a Spor mají obsah v YAML v `src/content/bloky/<id>.yaml` (schéma `src/lib/bloky-schema.ts`). Do MDX pak stačí `<Volba id="<id>" />`. Příběh, Odkryj a Kdo žil dřív? se píšou přímo v MDX.
+3. `client:visible` ani odkaz zpět z deníku nepiš. Doplní je obal v `src/components/bloky/`; odkaz je stránka a kotva `#<id>`.
+4. `id` je malými písmeny bez diakritiky, s pomlčkami a na celém webu jedinečné (`sokrates-utek`, `cesta1-jak-zjistit`). Podle něj se ukládá odpověď. Když ho později změníš, studentům zmizí rozpracovaný stav.
+5. V textech YAML funguje `*kurzíva*` a prázdný řádek dělí odstavce. Jména lidí se berou z `lide.yaml` podle id; v textu je piš v podobě z dat.
+6. Historická tvrzení v bloku musí stát na pramenech v `zdroje` (id ze `zdroje.yaml`). Co ještě čeká na ověření, zapiš do `kOvereni`. Takový blok smí být jen v dílně, jinde zastaví sestavení.
+7. Zpětná vazba vysvětluje důvod a ptá se dál. Nikdy „správně“ nebo „špatně“, nikdy hodnocení názoru; nic se neboduje.
+
+Sestavení zkontroluje schéma, druh bloku, osoby a prameny (`src/components/bloky/_kontrola.ts`, test `tests/data/bloky.test.ts`).
+
+### Co se ukládá
+
+Vše jen v prohlížeči, v záznamu `atlas-denik` (`src/lib/denik.ts`). Bez localStorage bloky fungují do zavření stránky.
+
+| Blok | Do deníku (Moje odpovědi) | Jen stav bloku (vydrží obnovení, je v exportu) |
+| --- | --- | --- |
+| Příběh | nic | nic |
+| Volba s důvodem | „B · text možnosti. Proč: …“ | vybraná karta, důvod, potvrzeno |
+| Odkryj | vlastní pokus | odkryto, zaškrtnutá sebekontrola, rozepsaná odpověď |
+| Změň jednu věc | „Na začátku: … Podmínka: … (posun)“ | základní rozhodnutí, odpověď v každé podmínce, zapnutá podmínka |
+| Spor | „Na začátku: spíš Platón. Po argumentech: uprostřed. Co mě posunulo: …“ | první a konečná poloha, důvod |
+| Kdo žil dřív? | nic (fakt, ne názor) | odhad, odkryto |
+
+„Začít znovu“ smaže stav bloku i jeho zápis v deníku.
+
+### Příběh
+
+Scéna se stejnou typografií jako profil a deska v barvě období: obraz, když je v `zdroje.yaml`, jinak ornament a mince s atributem osoby. Bez JavaScriptu (komponenta Astro, ne ostrov).
+
+```mdx
+<Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Nikdo není *moudřejší.*" popisek="Delfy. Tady se Chairefón zeptal věštírny na Sókrata.">
+
+Text scény v odstavcích…
+
+</Pribeh>
+```
+
+| Vlastnost | Povinná | Význam |
+| --- | --- | --- |
+| `popisek` | ano | popisek pod deskou |
+| `osoba` | ne* | id v `lide.yaml`: barva období, mince, výchozí obraz |
+| `obdobi` | ne* | 1–8, když scéna nepatří k jedné osobě (*jedno z `osoba`/`obdobi` je nutné) |
+| `obrazek` | ne | id obrázku v `zdroje.yaml` (licence povinná) |
+| `nadtitulek`, `titulek` | ne | titulek s pointou v `*kurzívě*` |
+| `id` | ne | kotva scény |
+
+### Volba s důvodem
+
+Karty A–D (radiogroup, šipky), nepovinné „Proč právě tohle?“, tlačítko „Tohle je můj tah“. Pak zpětná vazba „Tvůj tah: …“ v tintu období, oddíl „Co udělal …“ a rozbalovací „Co kdybys zvolil jinak?“ se zpětnou vazbou ostatních tahů.
+
+```mdx
+<Volba id="cesta1-jak-zjistit" />
+```
+
+```yaml
+# src/content/bloky/cesta1-jak-zjistit.yaml
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah            # nepovinné (výchozí „Co uděláš?“)
+scena: Chairefón se vrátil z Delf…   # nepovinné
+otazka: Co uděláš, abys zjistil, jestli má věštírna pravdu?
+moznosti:                       # 2–4
+  - text: Zeptám se věštírny znovu, jinými slovy.
+    tah: zeptat se znovu        # → „Tvůj tah: zeptat se znovu.“
+    zpetna: Dostaneš jen další odpověď ze stejného zdroje…
+  - text: Najdu lidi, kteří mají pověst moudrých, a vyzkouším je.
+    tah: hledat protipříklad
+    jeho: true                  # tuhle cestu zvolil filozof (právě jedna, když je coUdelal)
+    zpetna: …
+coUdelal:                       # nepovinné
+  osoba: sokrates               # nadpis „Co udělal Sókratés“ z dat
+  stejne: Šel stejnou cestou jako ty…
+  jinak: Šel jinou cestou: …
+zdroje: [platon-obrana]
+```
+
+### Odkryj
+
+Vlastní pokus, pak srovnání, volitelně modelové odpovědi a sebekontrola (zaškrtávací věty, nic se nesčítá). Po odkrytí jde odpověď připsat nebo upravit. `NejdrivSam.svelte` zůstává jako starší jméno téhož bloku kvůli hotovým stránkám.
+
+```mdx
+<Odkryj
+  id="sokrates-kdo-je-moudry"
+  otazka="Koho považuješ za moudrého člověka? Podle čeho to poznáš?"
+  tlacitko="Porovnat se Sókratem"
+  modelove={[{ text: 'Moudrý je ten, kdo pozná, kde jeho vědění končí.', komentar: 'Znak, podle kterého…' }]}
+  sebekontrola={['Napsal jsem znak, podle kterého moudrost poznám, ne jen jméno.']}
+>
+
+Srovnání s filozofem v odstavcích…
+
+</Odkryj>
+```
+
+| Vlastnost | Povinná | Význam |
+| --- | --- | --- |
+| `id`, `otazka` | ano | otázka se ukládá do deníku |
+| `tlacitko` | ne | výchozí „Odkrýt“; lépe „Porovnat se Sókratem“ |
+| `nadtitulek` | ne | výchozí „Než budeš číst dál“ |
+| `modelove` | ne | `[{ text, komentar? }]`, nadpis „Jak se dá odpovědět“ |
+| `sebekontrola` | ne | věty, které si student zaškrtne |
+| `obdobi` | ne | barva, když ji blok nemá převzít ze stránky |
+
+### Změň jednu věc
+
+Scéna a rozhodnutí; pak přepínač podmínky (čipy, 1–3), v každé podmínce nové rozhodnutí a „Předtím → Teď“ se zpětnou vazbou pro posun, nebo pro stejnou odpověď. Po první změně oddíl „Co udělal …“.
+
+```mdx
+<ZmenJednuVec id="utek-z-vezeni" />
+```
+
+```yaml
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: Představ si, že tě soud odsoudil k smrti…
+otazka: Utečeš?
+moznosti:                       # 2–4, stejné pro všechny podmínky
+  - { id: uteku, text: Uteču. }
+  - { id: zustanu, text: Zůstanu. }
+podminky:                       # 1–3
+  - id: spravedlivy
+    prepinac: Rozsudek je spravedlivý      # text čipu
+    zmena: Teď si představ, že soud byl poctivý…
+    posun: Rozhoduje tedy pro tebe, jestli…    # titulek „Tvoje odpověď se posunula.“ doplní blok
+    stejne: Na tom, jestli je rozsudek spravedlivý, tvé rozhodnutí nestojí…
+coUdelal: { osoba: sokrates, text: Sókratés utéct mohl, ale neutekl… }   # nepovinné
+zdroje: [platon-kriton, platon-faidon]
+```
+
+### Spor
+
+Otázka a postoje obou stran; škála s pěti polohami („Platón“, „spíš Platón“, „uprostřed“, „spíš Diogenés“, „Diogenés“; radiogroup, šipky, body 44 px). Po „Tady stojím“ se otevřou argumenty obou stran, student se může přesunout a připsat, co ho posunulo nebo udrželo. Zpětnou vazbu k posunu píše blok sám (`zpetnaSporu` v `src/lib/bloky.ts`), nikdy neříká, kdo má pravdu.
+
+```mdx
+<Spor id="platon-diogenes-skutecnost" />
+```
+
+```yaml
+druh: spor
+obdobi: 1
+otazka: Co je skutečnější, to, co vidíš, nebo to, co pochopíš?
+strany:                         # právě dvě různé osoby; jména z dat
+  - osoba: platon
+    postoj: To, co pochopím.
+    argumenty: [Za proměnlivým světem, který vidíme, stojí neměnné ideje., …]   # 1–3, nejsilnější verze
+  - osoba: diogenes
+    postoj: To, co vidím.
+    argumenty: […]
+zdroje: [platon-ustava]
+kOvereni: [ … ]                 # dokud není prázdné, jen v dílně
+```
+
+### Kdo žil dřív?
+
+Odhad pořadí (A / B / Žili ve stejné době), nebo vzdálenosti (Žili současně / Minuli se a posuvník let). Po „Odhalit“ se ukáže věta „Žili současně … / Dělí je …“ a věta o věku (`src/lib/cas-mapy.ts`), malá osa se dvěma životy a odkaz „Ukázat na mapě v roce …“. Mapa se otevře u současníků v posledním společném roce, jinak v roce úmrtí staršího, s vybraným člověkem a srovnáním. Odhad se jen popíše vedle skutečnosti.
+
+```mdx
+<KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
+<KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" maxLet={200} />
+```
+
+| Vlastnost | Povinná | Význam |
+| --- | --- | --- |
+| `a`, `b` | ano | id dvou lidí s roky v `lide.yaml` |
+| `druh` | ne | `poradi` (výchozí) nebo `vzdalenost` |
+| `otazka` | ne | vlastní znění otázky |
+| `maxLet` | ne | horní mez posuvníku (výchozí 600) |
+| `id` | ne | výchozí `kdo-<a>-<b>-<druh>` |
+
+### Společné pro všechny bloky
+
+- Karta `.blok` (povrch, okraj `--rule`, zaoblení `md`), nadtitulek v barvě období, otázka `t-h3`; styly v `global.css` › Interaktivní bloky.
+- Karty možností jsou nativní přepínače v popiscích (šipky, mezerník, dotyk), cíle aspoň 44 px (karty 56–60).
+- Po odkrytí jde fokus na zpětnou vazbu (`aria-live="polite"`), po „Začít znovu“ na první volbu.
+- Blok funguje bez JavaScriptu jen jako text; interaktivní část se hydratuje, až je vidět.
 
 ## Mapa a čas
 

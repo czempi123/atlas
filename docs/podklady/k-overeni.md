@@ -54,3 +54,16 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 ## Obrázky
 
 - Wikimedia Commons nebyl při zakládání dostupný, proto atlas zatím žádný obrázek nemá a desky ukazují minci s atributem. Kandidát pro Sókrata: římská mramorová busta z Louvru; ověřit autora fotografie, licenci a inventární číslo.
+
+## Obsah bloků (P5)
+
+30. 9. 2026. Ukázky na `/dilna/bloky/` stojí jen na ověřeném obsahu. Tohle bloky potřebují, aby mohly do cest a profilů:
+
+| Blok | Co chybí | Kde hledat | Stav |
+| --- | --- | --- | --- |
+| Spor Platón × Diogenés (`src/content/bloky/platon-diogenes-skutecnost.yaml`) | Diogenova strana: anekdota o stolu a „stolovosti“ (Platón mluví o idejích, Diogenés vidí stůl, ne stolovost), český převod a přesné místo | Diogenés Laertios VI, 53 (vydání Hicks, Loeb; český překlad Diogenés Laertios, *Životy, názory a výroky proslulých filozofů*) | blok je v `kOvereni`, jen v dílně |
+| Tentýž Spor | Platónův nejsilnější argument pro ideje vlastními slovy (zatím jen teze z `lide.yaml`) | Ústava VI–VII (úsečka, jeskyně), Faidón 74a–75b (rovnost sama) | tamtéž |
+| Změň jednu věc „Útěk z vězení“ | Sókratovy vlastní důvody, proč neutekl, pro oddíl „Co udělal Sókratés“ | Platón, Kritón 45a–46a (Kritónova nabídka), 50a–54d (řeč Zákonů) | v bloku zatím jen ověřený fakt z atributu |
+| Změň jednu věc (další ukázka) | Gygův prsten jako klasický pokus pro cestu 2 | Platón, Ústava II, 359c–360d | nezačato |
+| Odkryj „Koho považuješ za moudrého?“ | Modelové odpovědi a sebekontrola jsou autorské (nejde o historická tvrzení); projít revizí (`atlas-revize`) před vložením do profilu | — | jen v dílně |
+| Kdo žil dřív? | Nic; roky jsou z dat | — | hotovo |
