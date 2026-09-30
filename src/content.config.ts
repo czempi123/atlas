@@ -4,6 +4,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { Blok } from './lib/bloky-schema';
 
 const id = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 const obdobi = z.number().int().min(1).max(8);
@@ -87,4 +88,10 @@ const nabozenstvi = defineCollection({
   schema: z.object({ nazev: z.string(), poradi: z.number().int(), obdobi: z.array(obdobi).default([]) }),
 });
 
-export const collections = { osobnosti, smery, obdobi: obdobiTexty, otazky, cesty, pokusy, pojmy, pribehy, nabozenstvi };
+/** Obsah interaktivních bloků (Volba, Změň jednu věc, Spor); do MDX se vkládají jedním řádkem podle id. */
+const bloky = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.yaml', base: './src/content/bloky' }),
+  schema: Blok,
+});
+
+export const collections = { osobnosti, smery, obdobi: obdobiTexty, otazky, cesty, pokusy, pojmy, pribehy, nabozenstvi, bloky };

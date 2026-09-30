@@ -1,0 +1,21 @@
+# Spor · Platón × Diogenés: co je skutečnější, to, co vidím, nebo to, co pochopím?
+# Platónova strana je z ověřených dat (lide.yaml: ideje, jeskyně; Ústava).
+# Diogenova strana (Diogenés Laertios VI, 53: stůl a „stolovost“) čeká na ověření; do té doby jen v dílně.
+druh: spor
+obdobi: 1
+nadtitulek: Spor
+otazka: Co je skutečnější, to, co vidíš, nebo to, co pochopíš?
+strany:
+  - osoba: platon
+    postoj: To, co pochopím.
+    argumenty:
+      - Za proměnlivým světem, který vidíme, stojí neměnné ideje.
+      - Jsme jako vězni v jeskyni, kteří celý život hledí na stíny na zdi a mají je za skutečnost.
+  - osoba: diogenes
+    postoj: To, co vidím.
+    argumenty:
+      - Diogenův argument se doplní po ověření (Diogenés Laertios VI, 53).
+zdroje: [platon-ustava, sep-plato, iep-diogenes]
+kOvereni:
+  - "Diogenova strana: anekdota o stolu a „stolovosti“ (Diogenés Laertios VI, 53), český převod a místo."
+  - "Platónova strana: nejsilnější argument pro ideje vlastními slovy (Ústava VI–VII, Faidón); zatím jen teze z dat."

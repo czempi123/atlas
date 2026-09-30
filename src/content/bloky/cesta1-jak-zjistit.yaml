@@ -1,0 +1,39 @@
+# Volba s důvodem · cesta 1 „Kdy mám dobrý důvod věřit?“, krok 2 (texty ze schváleného návrhu P1).
+# Podklad: Platón, Obrana Sókratova 20e–22e (Chairefón v Delfách, Sókratés prověřuje věštbu).
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: >-
+  Chairefón se vrátil z Delf s odpovědí: nikdo není moudřejší než Sókratés.
+  Sókratés o sobě přitom ví, že žádnou velkou moudrost nemá. Věštírně ale Athéňané věří.
+  Mluví přece za boha Apollóna.
+otazka: Co uděláš, abys zjistil, jestli má věštírna pravdu?
+moznosti:
+  - text: Zeptám se věštírny znovu, jinými slovy.
+    tah: zeptat se znovu
+    zpetna: >-
+      Dostaneš jen další odpověď ze stejného zdroje. Když se zdroj může mýlit, opakovaná otázka to neodhalí.
+      Co by muselo platit, abys věštírně mohl věřit bez prověřování?
+  - text: Najdu lidi, kteří mají pověst moudrých, a vyzkouším je.
+    tah: hledat protipříklad
+    jeho: true
+    zpetna: >-
+      Tvrzení „nikdo není moudřejší“ nepotvrdí ani tisíc lidí, kteří s ním souhlasí. Vyvrátit ho ale může jediný člověk.
+      Když hledáš, co by tvrzení vyvrátilo, zkoušíš ho nejpoctivěji, jak to jde.
+  - text: Uvěřím. Věštírna mluví za boha a bůh nelže.
+    tah: věřit autoritě
+    zpetna: >-
+      Autorita je dobrý důvod, ale jen tak silný, jak spolehlivý je zdroj. Jak bys poznal, že se věštírna tentokrát nemýlí?
+      A co když odpověděla správně, jen jí nerozumíš?
+  - text: Zeptám se přátel, co si o mně myslí.
+    tah: zeptat se přátel
+    zpetna: >-
+      Přátelé tě znají, ale mají tě rádi. Patnáct lidí, kteří souhlasí, může opakovat jedinou domněnku.
+      Co by muselo platit, aby jejich souhlas něco dokazoval?
+coUdelal:
+  osoba: sokrates
+  stejne: >-
+    Šel stejnou cestou jako ty. Vydal se za lidmi s pověstí moudrých, aby věštírně přinesl protipříklad.
+  jinak: >-
+    Šel jinou cestou: vydal se za lidmi s pověstí moudrých, aby věštírně přinesl protipříklad.
+zdroje: [platon-obrana, sep-socrates]
