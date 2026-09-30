@@ -37,7 +37,12 @@ async function bezPresahu(page: Page) {
 async function snimek(page: Page, blok: Locator, nazev: string, sirka: number, rezim: string) {
   // Pevná hlavička by na snímku prvku mohla překrýt jeho horní okraj.
   await page.addStyleTag({ content: 'header.hlavicka, nav.lista { visibility: hidden !important; }' });
-  await blok.screenshot({ path: `test-results/snimky/blok-${nazev}-${sirka}-${rezim === 'light' ? 'svetly' : 'tmavy'}.png`, animations: 'disabled' });
+  // Snímek celé stránky oříznutý na blok: snímek prvku delšího než okno Chromium dole zaplní pozadím.
+  const r = await blok.evaluate((e) => {
+    const b = e.getBoundingClientRect();
+    return { x: b.x + scrollX, y: b.y + scrollY, width: b.width, height: b.height };
+  });
+  await page.screenshot({ path: `test-results/snimky/blok-${nazev}-${sirka}-${rezim === 'light' ? 'svetly' : 'tmavy'}.png`, fullPage: true, clip: r, animations: 'disabled' });
 }
 
 async function obnov(page: Page) {
