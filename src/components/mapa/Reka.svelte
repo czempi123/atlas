@@ -84,11 +84,14 @@
 
   let seznam = $state(false);
   let telo: HTMLDivElement | undefined = $state();
+  let vyskaTela = $state(0);
   let aktivniIndex = $state(0);
 
   // Posun, aby byl vidět vybraný člověk (nebo první žijící) po změně výběru či okna.
   $effect(() => {
     void okno;
+    // i když se řeka právě ukázala (na telefonu v záložce)
+    if (!vyskaTela) return;
     const v = vybrany;
     const cil = v && indexPodleId.has(v) ? indexPodleId.get(v)! : untrack(() => radky.findIndex(({ o }) => zijeVRoce(o, rok)));
     if (!telo || cil < 0) return;
@@ -148,7 +151,7 @@
       </ul>
     </div>
   {:else}
-    <div class="reka__telo" bind:this={telo}>
+    <div class="reka__telo" bind:this={telo} bind:clientHeight={vyskaTela}>
       <div class="reka__obsah" style:height="{radky.length * radek}px">
         <svg class="oblouky" viewBox="0 0 {W} {Math.max(1, radky.length * radek)}" preserveAspectRatio="none" aria-hidden="true">
           {#each oblouky as ob}
@@ -245,7 +248,7 @@
   .radek__jmeno span { overflow: hidden; text-overflow: ellipsis; }
   .radek__jmeno small { font-size: 10.5px; color: var(--muted); font-variant-numeric: lining-nums; }
   .radek--vybrany .radek__jmeno span { font-weight: 600; }
-  .radek__cas { position: relative; }
+  .radek__cas { position: relative; grid-column: 2; }
   .pruh {
     position: absolute;
     top: 0;

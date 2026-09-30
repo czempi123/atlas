@@ -87,7 +87,7 @@
           <path d={siroky ? o.ornament.siroky : o.ornament.uzky} fill="none" stroke="currentColor" stroke-width="1" opacity="0.55" />
         </svg>
         <span class="mseg__text">{siroky ? `${o.id} · ${o.kratce}` : o.id}</span>
-        <span class="vh">{siroky ? '' : o.nazev}</span>
+        <span class="vizualne-skryte">{siroky ? '' : o.nazev}</span>
         {#if siroky}
           <span class="zavorka" style:left="{zavorka.l * 100}%" style:width="{(zavorka.p - zavorka.l) * 100}%" aria-hidden="true"></span>
           <span class="znacka" style:left="{znacka * 100}%" aria-hidden="true"></span>
@@ -116,7 +116,7 @@
         <line x1={x(rok)} x2={x(rok)} y1="0" y2="70" stroke="var(--ink)" stroke-width="2" vector-effect="non-scaling-stroke" />
       </svg>
       <div class="prehled__osa" aria-hidden="true">
-        <span>{rokText(dejiny[0])}</span><span>1 n. l.</span><span>dnes</span>
+        <span>{rokText(dejiny[0])}</span><span class="prehled__prelom" style:left="{(x(1) / W) * 100}%">1 n. l.</span><span>dnes</span>
       </div>
       <ul class="prehled__stoleti" aria-label="Skok na rok">
         {#each stoleti as r}
@@ -198,7 +198,8 @@
   }
   .prehled__nadpis { margin: 0 0 var(--s-2); font-size: 13px; color: var(--muted); }
   .prehled__graf { width: 100%; height: 70px; cursor: pointer; }
-  .prehled__osa { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+  .prehled__prelom { position: absolute; translate: -50% 0; }
+  .prehled__osa { position: relative; display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
   .prehled__stoleti { display: flex; flex-wrap: wrap; gap: 4px; margin: var(--s-3) 0 0; padding: 0; list-style: none; }
   .prehled__stoleti button {
     min-height: 32px;
@@ -211,5 +212,4 @@
     cursor: pointer;
   }
   .prehled__stoleti button[aria-current] { border-color: var(--ink); font-weight: 600; }
-  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 </style>

@@ -98,6 +98,9 @@ test('klávesnice: odkaz Přeskočit na obsah a hledání klávesou /', async ({
 test('Nejdřív sám: odpověď se odkryje až po pokusu a uloží do deníku', async ({ page }) => {
   await page.goto('/osobnost/sokrates/');
   const blok = page.locator('section.karta').first();
+  // Ostrov se hydratuje, až je vidět; bez čekání by klik mohl přijít dřív než skript.
+  await blok.scrollIntoViewIfNeeded();
+  await page.waitForSelector('astro-island[component-url*="NejdrivSam"]:not([ssr])', { state: 'attached' });
   await expect(blok.getByRole('region', { name: 'Srovnání' })).toHaveCount(0);
   await blok.locator('textarea').fill('Moudrý je ten, kdo umí přiznat chybu.');
   await blok.getByRole('button', { name: 'Porovnat se Sókratem' }).click();

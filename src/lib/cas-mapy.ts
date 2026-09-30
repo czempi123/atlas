@@ -97,7 +97,6 @@ function zivotu(n: number): string {
 /** Ukončí větu tečkou, pokud už nekončí zkratkou s tečkou („př. n. l.“). */
 const tecka = (s: string) => (s.endsWith('.') ? s : `${s}.`);
 const tvar = (o: { zena?: boolean }, muz: string, zena: string) => (o.zena ? zena : muz);
-const jmeno2 = (o: OsobaMapy) => o.jmeno2 ?? o.jmeno;
 
 /** „rok 399 př. n. l.“ pro věty. */
 export function rokVeVete(r: number): string {
