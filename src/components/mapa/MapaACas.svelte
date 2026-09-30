@@ -77,7 +77,8 @@
   });
 
   // ── Adresa ─────────────────────────────────────────────────────────────────
-  let posledniZapis = 0;
+  // První změna po načtení vždy založí nový záznam historie (i když přijde do 800 ms od načtení).
+  let posledniZapis = -Infinity;
   let odlozenyZapis: ReturnType<typeof setTimeout> | undefined;
   function zapisAdresy(rezim: 'push' | 'replace' | 'auto' | 'tah') {
     clearTimeout(odlozenyZapis);
