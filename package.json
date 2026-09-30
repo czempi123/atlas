@@ -16,7 +16,6 @@
     "check:data": "vitest run",
     "test": "vitest run && playwright test",
     "test:e2e": "playwright test",
-    "mapa": "node scripts/mapa-podklad.mjs",
     "ikony": "node scripts/ikony.mjs"
   },
   "dependencies": {

@@ -431,6 +431,8 @@ Commituj po ucelených krocích česky, nic neposílej na GitHub. Na konci mi po
 
 ### P4: Mapa a čas v2
 
+**Stav 30. 9. 2026:** hotovo ve větvi `mapa-v2`, čeká na schválení autorem. Rozhodnutí v `docs/rozhodnuti.md`, prameny k novým datům v `docs/podklady/mapa-a-cas.md`, co zůstalo na později, v oddílu „Po P4“ níže.
+
 Až po dokončení P2. Doporučeně v Claude Code, Opus 5.5, úsilí high; když se zasekne na časové logice nebo výkonu, přepni na xhigh.
 
 ```text
@@ -454,6 +456,16 @@ Testy: jednotkové pro věk, „žije v roce“, vzdálenost mezi lidmi a přech
 
 Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně data, která pro mapu chybějí) a počkej na odpověď. Pak implementuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky a seznam toho, co zůstalo na později.
 ```
+
+### Po P4: co zůstalo na později
+
+- Výřezy období 3–8 doladit a schválit, až přibudou lidé; stejně tak telefonní výřezy období 2–8 (odvozené z notebookového).
+- Hispánie, Sýrie a další římské provincie do `krajiny.yaml` po ověření; ID z Pleiad k místům (web Pleiades blokuje automatický přístup).
+- „Mezitím jinde“ s vloženou mapkou Číny a Indie, až budou v datech Buddha, Lao-c’ a další (`docs/podklady/k-overeni.md`).
+- Chybějící pobyty s časem (Platónovy cesty na Sicílii a založení Akademie, Xenokratés v Akademii, Epiktétos v Římě a Níkopoli), aby mapa přesněji ukazovala, kde kdo byl.
+- Lucretius nemá doložené místo, na mapě chybí (v řece je).
+- Plynulé posouvání roku ověřit na skutečném starším telefonu (měřeno jen se zpomaleným procesorem v Chromiu).
+- Tlačítko „cesta“ v kartě člověka, až budou hotové cesty.
 
 ## Plán etap
 

@@ -2,6 +2,22 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 30. 9. 2026: Mapa a čas v2 (P4)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| U lidí bez přesných dat stačí rámcový odhad s „asi“ (Hérakleitos, Démokritos, Empedoklés, Zénón z Eleje, Xenofanés, Filón…); kde prameny dávají jen dolní mez, platí „zemřel po roce …“ (`nejdrive`) | Autor: je normální, že u někoho přesně nevíme; na mapu a do řeky je stačí zařadit rámcově. Prameny v `docs/podklady/mapa-a-cas.md` |
+| Kde člověk v daném roce je: pobyt s časem, jinak od 18 let působiště bez času, jinak rodiště; místo smrti jen v roce úmrtí. Chybí-li začátek pobytu, nedomýšlí se (Platón v Syrákúsách jen v roce návratu 361) | Mapa nesmí tvrdit víc, než říkají prameny |
+| Krajiny a moře: dobový název a v závorce dnešní, pokud se liší (`src/data/krajiny.yaml`) | Rozhodnutí autora |
+| Období 3–8 jsou v pásu období vidět, ale ztlumená a zatím se na ně nepřepíná; posuvník končí rokem 550 | Zatím v nich nejsou lidé; kód je umí, zapnou se samy, jakmile přibudou data |
+| „Mezitím jinde“: malá karta na mapě s lidmi z jiných tradic, kteří žijí daleko mimo podklad (zatím Konfucius) | Autor chce vhled i mimo západní páteř |
+| Události ze životů mají pole `osoby`; karta člověka ukáže, co ho v daném roce potkalo | Autor souhlasil |
+| Stín odkazu: zesnulý se ukáže vybledle, dokud žije někdo, s kým ho přímo spojuje zapsaný vztah; tradované vztahy mají slabší čáru, polemika vlnovku | Autor souhlasil |
+| Karta člověka je u každého; tlačítko Otevřít portrét se ukáže, jakmile má člověk stránku, jinak odkaz do Lidé a směry | Portrét dostane časem každý, přidávají se postupně |
+| Okno řeky 240 let na notebooku a 160 na telefonu; stopa posuvníku ukazuje totéž okno, takže jezdec navazuje na čáru roku v řece | Autor souhlasil s oknem; stejné měřítko drží čáru roku souvislou |
+| Geometrie mapy se předpočítá při sestavení pro každé období a výřez (`/mapa/podklad/N-notebook.json`), pobřeží 10m jen u detailního výřezu, u velkých 50m, body bližší než 0,9 px se vynechají | Do prohlížeče nejde d3-geo ani celý Natural Earth; jeden výřez má 40–130 kB před kompresí |
+| Výřez období 2 rozšířen (střed 15° v. d., 38,5° s. š., měřítko 900), aby obsáhl Cordubu i Pontus Euxinus; zůstává ve stavu návrh | Původní návrh neukazoval Senecovo rodiště ani Galii |
+
 ## 30. 9. 2026: Schválení P2 (brána F1)
 
 | Rozhodnutí | Důvod |
