@@ -1,0 +1,82 @@
+---
+layout: ../../../layouts/Dilna.astro
+titulek: Bloky
+perex: Šest interaktivních bloků na skutečném obsahu období 1. Každý se do MDX vkládá jedním řádkem; návod a API jsou v docs/design.md › Bloky.
+---
+import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../../components/bloky';
+
+<section class="ukazka" id="pribeh-ukazka" aria-labelledby="h-pribeh">
+<h2 class="t-h2" id="h-pribeh">1 · Příběh</h2>
+<p class="ukazka__popis">Scéna s deskou v barvě období. Bez obrazu ukazuje ornament a minci s atributem osoby.</p>
+<pre class="kod"><code>{`<Pribeh osoba="sokrates" nadtitulek="Delfy" titulek="Nikdo není *moudřejší.*" popisek="…">text scény</Pribeh>`}</code></pre>
+
+<Pribeh osoba="sokrates" nadtitulek="Delfy" titulek="Nikdo není *moudřejší.*" popisek="Delfy. Tady se Chairefón zeptal věštírny na Sókrata.">
+
+Sókratův přítel Chairefón byl prudký člověk: do čeho se pustil, do toho šel celý. Jednou se vydal do Delf a zeptal se věštírny, jestli je někdo moudřejší než Sókratés. Pýthie odpověděla, že nikdo.
+
+Když se to Sókratés dozvěděl, nevěděl, co si s tím počít. O sobě věděl, že moudrý není, ve velkém ani v malém. Bůh ale přece lhát nemůže. Rozhodl se tedy věštbu prověřit.
+
+</Pribeh>
+</section>
+
+<section class="ukazka" id="volba-ukazka" aria-labelledby="h-volba">
+<h2 class="t-h2" id="h-volba">2 · Volba s důvodem</h2>
+<p class="ukazka__popis">Obsah v src/content/bloky/cesta1-jak-zjistit.yaml. Do deníku jde zvolený tah a důvod.</p>
+<pre class="kod"><code>{`<Volba id="cesta1-jak-zjistit" />`}</code></pre>
+
+<Volba id="cesta1-jak-zjistit" />
+</section>
+
+<section class="ukazka" id="odkryj-ukazka" aria-labelledby="h-odkryj">
+<h2 class="t-h2" id="h-odkryj">3 · Odkryj</h2>
+<p class="ukazka__popis">Dřívější Nejdřív sám, rozšířený o modelové odpovědi a sebekontrolu. Do deníku jde vlastní pokus.</p>
+<pre class="kod"><code>{`<Odkryj id="dilna-kdo-je-moudry" otazka="…" tlacitko="Porovnat se Sókratem"
+  modelove={[{ text: '…', komentar: '…' }]} sebekontrola={['…']}>srovnání</Odkryj>`}</code></pre>
+
+<Odkryj
+  id="dilna-kdo-je-moudry"
+  obdobi={1}
+  otazka="Koho považuješ za moudrého člověka? Podle čeho to poznáš?"
+  tlacitko="Porovnat se Sókratem"
+  modelove={[
+    { text: 'Moje babička. Hodně toho zažila a málokdy se splete.', komentar: 'Jméno a zkušenost. Zkušenost moudrosti pomáhá. Sókratés ale potkal zkušené politiky i řemeslníky, a přesto si mysleli, že rozumějí i tomu, čemu nerozuměli.' },
+    { text: 'Moudrý je ten, kdo pozná, kde jeho vědění končí, a řekne: tohle nevím.', komentar: 'Znak, podle kterého moudrost poznáš i u člověka, kterého vůbec neznáš. Přesně tohle Sókratés u lidí zkoušel.' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem znak, podle kterého moudrost poznám, ne jen jméno.',
+    'Podle mého znaku bych poznal moudrého člověka, i kdybych ho vůbec neznal.',
+  ]}
+>
+
+Sókratés by se tě nejdřív zeptal, jestli ten člověk ví, kde jeho vědění končí. Politik, básníci i řemeslníci něčemu opravdu rozuměli. Mýlili se v tom, že si mysleli, že rozumějí všemu.
+
+</Odkryj>
+</section>
+
+<section class="ukazka" id="zmena-ukazka" aria-labelledby="h-zmena">
+<h2 class="t-h2" id="h-zmena">4 · Změň jednu věc</h2>
+<p class="ukazka__popis">Obsah v src/content/bloky/utek-z-vezeni.yaml. Do deníku jde první rozhodnutí a každé další s posunem.</p>
+<pre class="kod"><code>{`<ZmenJednuVec id="utek-z-vezeni" />`}</code></pre>
+
+<ZmenJednuVec id="utek-z-vezeni" />
+</section>
+
+<section class="ukazka" id="spor-ukazka" aria-labelledby="h-spor">
+<h2 class="t-h2" id="h-spor">5 · Spor</h2>
+<p class="ukazka__popis">Obsah v src/content/bloky/platon-diogenes-skutecnost.yaml. Do deníku jde první i konečná poloha.</p>
+<p class="poznamka-autorovi">Diogenova strana čeká na ověření (Diogenés Laertios VI, 53; docs/podklady/k-overeni.md). Dokud má blok v YAML seznam kOvereni, smí být jen v dílně: jinde zastaví sestavení.</p>
+<pre class="kod"><code>{`<Spor id="platon-diogenes-skutecnost" />`}</code></pre>
+
+<Spor id="platon-diogenes-skutecnost" />
+</section>
+
+<section class="ukazka" id="kdo-ukazka" aria-labelledby="h-kdo">
+<h2 class="t-h2" id="h-kdo">6 · Kdo žil dřív?</h2>
+<p class="ukazka__popis">Roky, věty a odkaz do Mapy a času se počítají z dat. Do deníku nejde nic, odhad vydrží obnovení stránky.</p>
+<pre class="kod"><code>{`<KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
+<KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />`}</code></pre>
+
+<KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
+
+<KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" maxLet={200} />
+</section>

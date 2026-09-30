@@ -16,10 +16,10 @@ podminky:
     prepinac: Rozsudek je spravedlivý
     zmena: Teď si představ, že soud byl poctivý a ty jsi opravdu udělal to, z čeho tě viní.
     posun: >-
-      Tvoje odpověď se posunula. Rozhoduje tedy pro tebe, jestli je rozsudek spravedlivý.
+      Rozhoduje tedy pro tebe, jestli je rozsudek spravedlivý.
       Kdo to ale má posoudit, když soudíš sám sebe?
     stejne: >-
-      Tvoje odpověď zůstala stejná. Na tom, jestli je rozsudek spravedlivý, tvé rozhodnutí nestojí.
+      Na tom, jestli je rozsudek spravedlivý, tvé rozhodnutí nestojí.
       Na čem tedy stojí?
   - id: pratele
     prepinac: Přátelé by za útěk pykali

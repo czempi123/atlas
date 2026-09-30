@@ -1,0 +1,50 @@
+---
+// Dílna: stránky pro autora s ukázkami bloků. Mimo navigaci, hledání i vyhledávače.
+import Zakladni from './Zakladni.astro';
+
+interface Props { frontmatter: { titulek: string; perex?: string } }
+const { frontmatter } = Astro.props;
+---
+<Zakladni titulek={frontmatter.titulek} hledat={false} noindex drobecky={[{ text: 'Dílna' }, { text: frontmatter.titulek }]}>
+  <div class="stranka dilna obdobi-1">
+    <header class="dilna__hlava ctenarsky">
+      <p class="t-nadtitulek dilna__nadtitulek">Dílna · jen pro autora</p>
+      <h1 class="t-h1">{frontmatter.titulek}</h1>
+      {frontmatter.perex && <p class="t-perex">{frontmatter.perex}</p>}
+    </header>
+    <slot />
+  </div>
+</Zakladni>
+
+<style>
+  .dilna__hlava { padding: var(--s-6) 0 var(--s-4); }
+  .dilna__nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
+  .dilna h1 { margin-bottom: var(--s-4); }
+  .dilna :global(.ukazka) { margin-top: var(--s-9); padding-top: var(--s-6); border-top: 1px solid var(--rule); }
+  .dilna :global(.ukazka > h2) { margin-bottom: var(--s-3); }
+  .dilna :global(.ukazka__popis) { max-width: var(--ctenarsky-sloupec); font-family: var(--font-sans); font-size: var(--fs-ovladani); line-height: var(--lh-ovladani); color: var(--ink-2); }
+  .dilna :global(.kod) {
+    max-width: 100%;
+    margin: 0 0 var(--s-4);
+    padding: var(--s-3) var(--s-4);
+    overflow-x: auto;
+    border-radius: var(--r-sm);
+    background: var(--sunk);
+    color: var(--ink);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .dilna :global(.kod code) { font: inherit; }
+  .dilna :global(.poznamka-autorovi) {
+    max-width: var(--ctenarsky-sloupec);
+    padding: var(--s-3) var(--s-4);
+    border-left: 3px solid var(--muted);
+    background: var(--sunk);
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    line-height: var(--lh-ovladani);
+  }
+</style>

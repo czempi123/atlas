@@ -8,15 +8,23 @@ import { ornamenty } from '../../lib/ornamenty.js';
 import Mince from './Mince.astro';
 
 interface Props {
-  osoba: TOsoba;
+  /** osoba: dává barvu období, minci s atributem a výchozí obraz */
+  osoba?: TOsoba;
+  /** období, když deska nepatří k osobě (např. scéna v Příběhu) */
+  obdobi?: number;
+  /** id obrázku v zdroje.yaml; přebije obraz osoby */
+  obrazek?: string;
   pomer?: string;
   class?: string;
 }
-const { osoba, pomer = '4 / 5', class: trida } = Astro.props;
-const obrazek = osoba.obrazek ? data.zdroje.obrazky.find((o) => o.id === osoba.obrazek) : undefined;
-const orn = ornamenty.orn(osoba.obdobi - 1);
+const { osoba, obdobi: obdobiProp, obrazek: obrazekId, pomer = '4 / 5', class: trida } = Astro.props;
+const obdobi = osoba?.obdobi ?? obdobiProp ?? 1;
+const idObrazku = obrazekId ?? osoba?.obrazek;
+const obrazek = idObrazku ? data.zdroje.obrazky.find((o) => o.id === idObrazku) : undefined;
+if (idObrazku && !obrazek) throw new Error(`Obrázek „${idObrazku}“ není v zdroje.yaml`);
+const orn = ornamenty.orn(obdobi - 1);
 ---
-<figure class:list={['deska', `obdobi-${osoba.obdobi}`, trida]}>
+<figure class:list={['deska', `obdobi-${obdobi}`, trida]}>
   <div class="deska__plocha" style={`aspect-ratio:${pomer}`}>
     {obrazek ? (
       <img src={`/${obrazek.soubor}`} alt={obrazek.popisek} loading="lazy" />
@@ -26,7 +34,7 @@ const orn = ornamenty.orn(osoba.obdobi - 1);
           <path d={orn.solid} fill="currentColor" opacity="0.14" />
           <path d={orn.line} fill="none" stroke="currentColor" stroke-width="1" opacity="0.35" />
         </svg>
-        <Mince osoba={osoba} varianta="ring" velikost={88} class="deska__mince" />
+        {osoba && <Mince osoba={osoba} varianta="ring" velikost={88} class="deska__mince" />}
       </>
     )}
   </div>

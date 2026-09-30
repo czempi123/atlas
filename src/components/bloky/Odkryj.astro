@@ -1,0 +1,33 @@
+---
+// Odkryj: vlastní pokus → srovnání, modelové odpovědi a sebekontrola. Srovnání se píše dovnitř.
+// Použití v MDX:
+// <Odkryj id="sokrates-kdo-je-moudry" otazka="Koho považuješ za moudrého člověka?" tlacitko="Porovnat se Sókratem"
+//   modelove={[{ text: '…', komentar: '…' }]} sebekontrola={['…']}>
+//   Srovnání s filozofem…
+// </Odkryj>
+import Ostrov from '../ostrovy/Odkryj.svelte';
+import { odkazNaBlok } from './_kontrola';
+
+interface Props {
+  id: string;
+  otazka: string;
+  nadtitulek?: string;
+  tlacitko?: string;
+  modelove?: { text: string; komentar?: string }[];
+  sebekontrola?: string[];
+  /** barva období, když ji blok nemá převzít ze stránky */
+  obdobi?: number;
+}
+const { id, otazka, nadtitulek, tlacitko, modelove, sebekontrola, obdobi } = Astro.props;
+---
+<Ostrov
+  client:visible
+  id={id}
+  otazka={otazka}
+  nadtitulek={nadtitulek}
+  tlacitko={tlacitko}
+  modelove={modelove}
+  sebekontrola={sebekontrola}
+  obdobi={obdobi}
+  odkaz={odkazNaBlok(Astro.url.pathname, id)}
+><slot /></Ostrov>

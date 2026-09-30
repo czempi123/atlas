@@ -19,8 +19,10 @@ interface Props {
   hledat?: boolean;
   /** celoobrazovkový nástroj (Mapa a čas): bez drobečků a patičky, obsah vyplní okno */
   aplikace?: boolean;
+  /** stránka pro autora (dílna): vyhledávače ji neindexují */
+  noindex?: boolean;
 }
-const { titulek, popis = 'Interaktivní atlas filozofie pro střední školy: lidé, otázky, mapa a čas.', sekce, drobecky, zpet, kratkyTitulek, hledat = true, aplikace = false } = Astro.props;
+const { titulek, popis = 'Interaktivní atlas filozofie pro střední školy: lidé, otázky, mapa a čas.', sekce, drobecky, zpet, kratkyTitulek, hledat = true, aplikace = false, noindex = false } = Astro.props;
 const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atlas myšlení`;
 ---
 <!doctype html>
@@ -30,6 +32,7 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{plnyTitulek}</title>
     <meta name="description" content={popis} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#17140F" media="(prefers-color-scheme: dark)" />

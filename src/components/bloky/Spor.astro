@@ -1,0 +1,16 @@
+---
+// Spor dvou filozofů na škále. Obsah je v src/content/bloky/<id>.yaml (druh: spor).
+// Použití v MDX: <Spor id="platon-diogenes-skutecnost" />
+import Ostrov from '../ostrovy/Spor.svelte';
+import { nactiBlok, odkazNaBlok, proOstrov } from './_kontrola';
+import { osoba } from '../../lib/data';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const blok = await nactiBlok(id, 'spor', Astro.url.pathname);
+const lide = blok.strany.map((s) => {
+  const o = osoba(s.osoba);
+  return { jmeno: o.jmeno, obdobi: o.obdobi };
+}) as [{ jmeno: string; obdobi: number }, { jmeno: string; obdobi: number }];
+---
+<Ostrov client:visible id={id} blok={proOstrov(blok)} lide={lide} odkaz={odkazNaBlok(Astro.url.pathname, id)} />

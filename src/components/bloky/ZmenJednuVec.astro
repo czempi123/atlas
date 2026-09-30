@@ -1,0 +1,13 @@
+---
+// Změň jednu věc. Obsah je v src/content/bloky/<id>.yaml (druh: zmena).
+// Použití v MDX: <ZmenJednuVec id="utek-z-vezeni" />
+import Ostrov from '../ostrovy/ZmenJednuVec.svelte';
+import { nactiBlok, odkazNaBlok, proOstrov } from './_kontrola';
+import { osoba } from '../../lib/data';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const blok = await nactiBlok(id, 'zmena', Astro.url.pathname);
+const f = blok.coUdelal ? osoba(blok.coUdelal.osoba) : undefined;
+---
+<Ostrov client:visible id={id} blok={proOstrov(blok)} filozof={f && { jmeno: f.jmeno, zena: f.zena }} odkaz={odkazNaBlok(Astro.url.pathname, id)} />
