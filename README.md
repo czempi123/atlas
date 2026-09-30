@@ -19,7 +19,7 @@ Nová verze vzniká jako statický web v [Astru](https://astro.build) podle plá
 | Fáze | Obsah | Stav |
 | --- | --- | --- |
 | F0 Základ | Archiv, pravidla projektu, průvodce stylem, první skilly, [architektura celé filozofie](docs/architektura.md) | hotovo |
-| F1 Design a kostra | Vizuální návrh, web v Astru s ověřenými daty období 1–2 a šablonou na Sókratovi | ke schválení |
+| F1 Design a kostra | Vizuální návrh, web v Astru s ověřenými daty období 1–2 a šablonou na Sókratovi | hotovo |
 | F2 Vertikální řez antiky | Mapa a čas v2, portréty, tři cesty, deník, zkoušení se studenty | čeká |
 
 ## Spuštění
