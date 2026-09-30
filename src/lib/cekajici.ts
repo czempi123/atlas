@@ -1,6 +1,4 @@
 // Profily a portréty, jejichž atribut navrhl Claude a čeká na schválení autorem
 // (docs/podklady/atributy.md). Po schválení přesuň atribut do lide.yaml a osobu odtud smaž.
-export const cekajiciAtributy = [
-  'thales', 'pythagoras', 'herakleitos', 'parmenides', 'demokritos', 'protagoras', 'zenon-z-eleje',
-  'zenon-z-kitia', 'chrysippos', 'pyrrhon', 'lucretius', 'cicero', 'hypatia', 'plotinos',
-];
+// Všechny návrhy období 1 a 2 schválil autor 30. 9. 2026.
+export const cekajiciAtributy: string[] = [];

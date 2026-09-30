@@ -2,6 +2,7 @@
 // Sdílí je stavba webu (src/lib/data.ts) i kontroly (tests/data).
 // Letopočty jsou celá čísla: záporná = př. n. l., kladná = n. l. Rok nula neexistuje.
 import { z } from 'astro/zod';
+import ikony from '../../docs/design/atributy-ikony.json';
 
 const idVzor = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const Id = z.string().regex(idVzor, 'id: malá písmena bez diakritiky, číslice a pomlčky');
@@ -44,11 +45,8 @@ export const Hloubka = z.enum(['medailonek', 'profil', 'portret']);
 export const Tradice = z.enum(['zapadni', 'cinska', 'indicka', 'islamska', 'zidovska', 'africka']);
 export const Linie = z.enum(['autenticita', 'stoicismus', 'vira-a-rozum', 'spolecnost', 'veda']);
 
-/** Ikony atributů odpovídají symbolům v public/ikony/atributy.svg (docs/design/atributy-ikony.json). */
-export const IkonaAtributu = z.enum([
-  'cup', 'cave', 'scales', 'lantern', 'scroll', 'helmet', 'dove', 'sprig', 'orbit', 'ship',
-  'crutch', 'sprout', 'heart', 'axes', 'star', 'hammer', 'pen', 'keys', 'hourglass', 'lens', 'laurel',
-]);
+/** Ikony atributů: klíče z docs/design/atributy-ikony.json, ze kterého vzniká public/ikony/atributy.svg. */
+export const IkonaAtributu = z.enum(Object.keys(ikony) as [string, ...string[]]);
 
 export const Atribut = z
   .object({

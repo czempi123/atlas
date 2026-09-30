@@ -94,6 +94,11 @@
     - { misto: miletos, role: narozeni, zdroj: iep-thales }
   kdo: Myslitel z Milétu, kterého už Aristotelés pokládal za prvního filozofa.
   proc: Hledal přírodní vysvětlení světa místo mýtu; počátkem všeho mu byla voda.
+  atribut:
+    ikona: well
+    nazev: studna
+    proc: Vypráví se, že se tak zahleděl do hvězd, že spadl do studny.
+    zdroj: iep-thales
   zdroje: [iep-thales]
 
 - id: pythagoras
@@ -111,6 +116,11 @@
     - { misto: metapontion, role: smrt, rok: -490, priblizne: true, zdroj: sep-pythagoras }
   kdo: Myslitel ze Samu, který v jižní Itálii založil společenství s přísnými pravidly života.
   proc: Učil, že duše po smrti přechází do dalšího těla.
+  atribut:
+    ikona: puppy
+    nazev: štěně
+    proc: Vypráví se, že v kňučení bitého štěněte poznal hlas zemřelého přítele. Věřil, že duše přechází z těla do těla.
+    zdroj: sep-pythagoras
   zdroje: [sep-pythagoras]
 
 - id: herakleitos
@@ -124,6 +134,11 @@
     - { misto: efesos, role: pusobeni, zdroj: sep-heraclitus }
   kdo: Myslitel z Efesu, který psal v úsečných a záhadných větách.
   proc: Viděl svět jako ustavičnou proměnu, v níž vládne skrytý řád.
+  atribut:
+    ikona: river
+    nazev: řeka
+    proc: Do téže řeky nelze vstoupit dvakrát.
+    zdroj: sep-heraclitus
   zdroje: [sep-heraclitus]
 
 - id: parmenides
@@ -138,6 +153,11 @@
     - { misto: elea, role: narozeni, zdroj: sep-parmenides }
   kdo: Myslitel z Eleje v jižní Itálii, který svou filozofii napsal jako báseň.
   proc: Tvrdil, že co skutečně je, nevzniká ani nezaniká.
+  atribut:
+    ikona: gate
+    nazev: brána
+    proc: Ve své básni vypráví, jak projel branou Noci a Dne k bohyni, která ho poučila, co skutečně je.
+    zdroj: sep-parmenides
   zdroje: [sep-parmenides]
 
 - id: demokritos
@@ -153,6 +173,11 @@
     - { misto: abdera, role: pusobeni, zdroj: sep-democritus }
   kdo: Myslitel z Abdér, žák a spolupracovník Leukippův.
   proc: Učil, že všechno se skládá z nedělitelných atomů a prázdna.
+  atribut:
+    ikona: atoms
+    nazev: zrnka
+    proc: Všechno se skládá z drobných nedělitelných částic a prázdna mezi nimi.
+    zdroj: sep-democritus
   zdroje: [sep-democritus]
 
 - id: protagoras
@@ -170,6 +195,11 @@
     - { misto: thurioi, role: pusobeni, rok: -444, zdroj: iep-protagoras }
   kdo: Nejslavnější sofista, učitel, kterému Periklés svěřil sepsání zákonů pro novou osadu Thurioi.
   proc: Tvrdil, že člověk je měřítkem všech věcí.
+  atribut:
+    ikona: ruler
+    nazev: měřítko
+    proc: Člověk je měřítkem všech věcí.
+    zdroj: iep-protagoras
   zdroje: [iep-protagoras]
 
 - id: zenon-z-eleje
@@ -184,6 +214,11 @@
     - { misto: elea, role: narozeni, zdroj: sep-zeno-elea }
   kdo: Mladší druh Parmenidův z Eleje.
   proc: Proslavil se paradoxy o pohybu, třeba o Achilleovi, který nedohoní želvu.
+  atribut:
+    ikona: tortoise
+    nazev: želva
+    proc: Tvrdil, že rychlý Achilleus nikdy nedohoní pomalou želvu.
+    zdroj: sep-zeno-elea
   zdroje: [sep-zeno-elea]
 
 - id: anaximandros
@@ -498,7 +533,7 @@
 - id: diogenes
   jmeno: Diogenés
   jmeno2: Diogena
-  narozen: { rok: -404, priblizne: true }
+  narozen: { rok: -412, priblizne: true, rozmezi: [-412, -403] }
   zemrel: { rok: -323 }
   obdobi: 2
   hloubka: portret
@@ -509,6 +544,7 @@
     - { misto: sinope, role: narozeni, zdroj: iep-diogenes }
     - { misto: athenes, role: pusobeni, zdroj: iep-diogenes }
     - { misto: korinth, role: pobyt, zdroj: iep-diogenes }
+    - { misto: korinth, role: smrt, rok: -323, zdroj: dl-vi-76 }
   kdo: Filozof ze Sinópy, který žil na ulici a vysmíval se tomu, čemu ostatní slepě věřili.
   proc: Ukazoval na sobě, že ke šťastnému životu stačí velmi málo.
   atribut:
@@ -516,7 +552,7 @@
     nazev: lucerna
     proc: Za bílého dne hledal s lucernou člověka.
     zdroj: iep-diogenes
-  zdroje: [iep-diogenes, iep-cynics]
+  zdroje: [iep-diogenes, iep-cynics, dl-vi-76, rep-diogenes]
 
 - id: epikuros
   jmeno: Epikúros
@@ -628,6 +664,11 @@
     - { misto: athenes, role: pusobeni, od: -312, priblizne: true, zdroj: britannica-zeno-citium }
   kdo: Myslitel z Kitia na Kypru, zakladatel stoické školy v Athénách.
   proc: Stoikové mají jméno podle malovaného sloupoví, Stoa Poikilé, kde učil.
+  atribut:
+    ikona: stoa
+    nazev: sloupoví
+    proc: Učil v malovaném sloupoví, Stoa Poikilé; podle něj mají stoikové jméno.
+    zdroj: britannica-zeno-citium
   zdroje: [britannica-zeno-citium, iep-cynics, sep-stoicism]
 
 - id: chrysippos
@@ -645,7 +686,12 @@
     - { misto: athenes, role: pusobeni, od: -230, do: -207, priblizne: true, zdroj: iep-chrysippus }
   kdo: Filozof ze Sol, třetí vůdce stoické školy.
   proc: Stoickou nauku dotáhl do soustavy a vybudoval stoickou logiku.
-  zdroje: [iep-chrysippus, sep-stoicism]
+  atribut:
+    ikona: cylinder
+    nazev: válec
+    proc: "Svobodu vysvětloval na válci: někdo ho postrčí, ale jak se kutálí, záleží na jeho tvaru."
+    zdroj: cicero-de-fato
+  zdroje: [iep-chrysippus, sep-stoicism, cicero-de-fato]
 
 - id: pyrrhon
   jmeno: Pyrrhón
@@ -660,7 +706,12 @@
     - { misto: elida, role: narozeni, zdroj: sep-pyrrho }
   kdo: Filozof z Élidy; vypráví se, že s Alexandrem Velikým došel až do Indie.
   proc: Učil zdržet se soudu o tom, jaké věci doopravdy jsou, a tak dojít klidu.
-  zdroje: [sep-pyrrho]
+  atribut:
+    ikona: pig
+    nazev: prasátko
+    proc: "Vypráví se, že za bouře na lodi ukázal na prasátko, které klidně žralo: takový klid má mít moudrý."
+    zdroj: dl-ix-68
+  zdroje: [sep-pyrrho, dl-ix-68]
 
 - id: lucretius
   jmeno: Lucretius
@@ -673,7 +724,12 @@
   otazky: [3]
   kdo: Římský básník, autor básně O přírodě.
   proc: Ve verších vyložil Epikúrovo učení o atomech a o tom, proč se nebát smrti.
-  zdroje: [sep-lucretius]
+  atribut:
+    ikona: mirror
+    nazev: zrcadlo
+    proc: Čas před naším narozením je zrcadlo času po smrti; ten první nás neděsí.
+    zdroj: lucretius-iii
+  zdroje: [sep-lucretius, lucretius-iii]
 
 - id: cicero
   jmeno: Cicero
@@ -688,6 +744,11 @@
     - { misto: rim, role: pusobeni, zdroj: iep-cicero }
   kdo: Římský řečník a politik, konzul roku 63 př. n. l.
   proc: Řeckou filozofii převyprávěl latinsky a zpřístupnil ji Římanům.
+  atribut:
+    ikona: podium
+    nazev: řečnická tribuna
+    proc: Proslul jako řečník a politik; filozofii psal, když ho násilím vyřadili z politiky.
+    zdroj: iep-cicero
   zdroje: [iep-cicero]
 
 - id: hypatia
@@ -704,7 +765,12 @@
     - { misto: alexandrie, role: smrt, rok: 415, zdroj: bea-hypatia }
   kdo: Matematička, astronomka a filozofka z Alexandrie, dcera matematika Theóna.
   proc: Učila filozofii a matematiku a zemřela rukou rozvášněného davu.
-  zdroje: [bea-hypatia]
+  atribut:
+    ikona: astrolabe
+    nazev: astroláb
+    proc: Učila astronomii a matematiku; její žák Synésios s její pomocí navrhl astroláb.
+    zdroj: synesius-astrolab
+  zdroje: [bea-hypatia, synesius-astrolab]
 
 - id: plotinos
   jmeno: Plótínos
@@ -717,10 +783,16 @@
   otazky: [6, 9]
   mista:
     - { misto: alexandrie, role: studium, od: 232, do: 243, priblizne: true, zdroj: sep-plotinus }
-    - { misto: rim, role: pusobeni, od: 244, do: 270, zdroj: sep-plotinus }
+    - { misto: rim, role: pusobeni, od: 244, do: 269, zdroj: sep-plotinus }
+    - { misto: minturnae, role: smrt, rok: 270, zdroj: porfyrios-plotinos }
   kdo: Filozof z Egypta, který přes pětadvacet let učil v Římě.
   proc: Učil, že všechno vychází z jediného zdroje, Jednoho, a duše se k němu může vrátit.
-  zdroje: [sep-plotinus]
+  atribut:
+    ikona: frame
+    nazev: prázdný rám
+    proc: "Odmítl se nechat portrétovat: nestačí prý, že musí nosit obraz, do kterého ho uzavřela příroda?"
+    zdroj: porfyrios-plotinos
+  zdroje: [sep-plotinus, porfyrios-plotinos]
 
 - id: krates
   jmeno: Kratés
