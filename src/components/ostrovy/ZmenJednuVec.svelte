@@ -43,10 +43,14 @@
     ulozStavBloku(id, { zaklad, podminky: odpovedi, aktivni });
   }
 
-  function rozhodni() {
+  let prepinace = $state<HTMLElement>();
+  async function rozhodni() {
     if (!navrhZaklad) return;
     zaklad = navrhZaklad;
     ulozStav();
+    // Tlačítko zmizí; fokus přejde na přepínač podmínek, ať klávesnice nezůstane na začátku stránky.
+    await tick();
+    prepinace?.querySelector('input')?.focus();
   }
 
   function prepni(pid: string) {
@@ -64,7 +68,7 @@
     oblast?.focus();
   }
 
-  function znovu() {
+  async function znovu() {
     zaklad = null;
     navrhZaklad = null;
     navrhPodminka = null;
@@ -72,6 +76,8 @@
     aktivni = null;
     smazStavBloku(id);
     smazZapis(id);
+    await tick();
+    document.getElementById(id)?.querySelector<HTMLElement>('input, textarea')?.focus();
   }
 </script>
 
@@ -109,7 +115,7 @@
 
     <fieldset class="prepinac">
       <legend class="t-ovladani-l">Změň jednu věc</legend>
-      <div class="podminky">
+      <div class="podminky" bind:this={prepinace}>
         {#each blok.podminky as p (p.id)}
           <label class={['cip', aktivni === p.id && 'cip--zapnuty']}>
             <input class="vizualne-skryte" type="radio" name={`${id}-podminka`} value={p.id} checked={aktivni === p.id} onchange={() => prepni(p.id)} />

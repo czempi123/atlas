@@ -3,7 +3,7 @@
 // obraz, když ho máme (s popiskem a licencí v zdroje.yaml), jinak ornament a mince s atributem osoby.
 // Bez JavaScriptu; nic se neukládá.
 // Použití v MDX:
-// <Pribeh osoba="sokrates" nadtitulek="Delfy" titulek="Odpověď *z Delf*" popisek="Delfy, Apollónova věštírna.">
+// <Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Odpověď *z Delf*" popisek="Delfy, Apollónova věštírna.">
 //   Text scény v odstavcích…
 // </Pribeh>
 import Deska from '../ui/Deska.astro';
@@ -11,6 +11,8 @@ import { osoba as najdiOsobu } from '../../lib/data';
 import { radek } from '../../lib/bloky';
 
 interface Props {
+  /** kotva scény (volitelná) */
+  id?: string;
   /** id osoby v lide.yaml: barva období, mince s atributem a výchozí obraz */
   osoba?: string;
   /** období (1–8), když scéna nepatří k jedné osobě */
@@ -23,12 +25,12 @@ interface Props {
   /** popisek pod deskou */
   popisek: string;
 }
-const { osoba: osobaId, obdobi: obdobiProp, obrazek, nadtitulek, titulek, popisek } = Astro.props;
+const { id, osoba: osobaId, obdobi: obdobiProp, obrazek, nadtitulek, titulek, popisek } = Astro.props;
 const osoba = osobaId ? najdiOsobu(osobaId) : undefined;
 const obdobi = osoba?.obdobi ?? obdobiProp;
 if (!obdobi) throw new Error('Příběh potřebuje osobu nebo období.');
 ---
-<section class:list={['pribeh', `obdobi-${obdobi}`]}>
+<section class:list={['pribeh', `obdobi-${obdobi}`]} id={id}>
   <div class="pribeh__deska">
     <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} pomer="4 / 3">{popisek}</Deska>
   </div>

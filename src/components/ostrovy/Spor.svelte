@@ -55,13 +55,15 @@
     oblast?.focus();
   }
 
-  function znovu() {
+  async function znovu() {
     navrh = null;
     prvni = null;
     konecna = null;
     duvod = '';
     smazStavBloku(id);
     smazZapis(id);
+    await tick();
+    document.getElementById(id)?.querySelector<HTMLElement>('input, textarea')?.focus();
   }
 </script>
 
@@ -82,7 +84,7 @@
       {/each}
     </div>
     <p class="skala__stav t-ovladani" aria-hidden="true">
-      {#if navrh !== null}Stojíš: <strong>{popisPolohy(navrh, A, B)}</strong>{#if zacatek && prvni !== null && prvni !== navrh} · začal jsi: {popisPolohy(prvni, A, B)}{/if}{:else}Vyber místo na škále.{/if}
+      {#if navrh !== null}Stojíš: <strong>{popisPolohy(navrh, A, B)}</strong>{#if zacatek && prvni !== null && prvni !== navrh}{' · '}začal jsi: {popisPolohy(prvni, A, B)}{/if}{:else}Vyber místo na škále.{/if}
     </p>
   </fieldset>
 {/snippet}

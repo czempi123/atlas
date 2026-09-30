@@ -97,7 +97,7 @@ test('klávesnice: odkaz Přeskočit na obsah a hledání klávesou /', async ({
 
 test('Nejdřív sám: odpověď se odkryje až po pokusu a uloží do deníku', async ({ page }) => {
   await page.goto('/osobnost/sokrates/');
-  const blok = page.locator('section.karta').first();
+  const blok = page.locator('#sokrates-kdo-je-moudry');
   // Ostrov se hydratuje, až je vidět; bez čekání by klik mohl přijít dřív než skript.
   await blok.scrollIntoViewIfNeeded();
   await page.waitForSelector('astro-island[component-url*="NejdrivSam"]:not([ssr])', { state: 'attached' });

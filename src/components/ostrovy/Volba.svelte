@@ -41,12 +41,14 @@
     oblast?.focus();
   }
 
-  function znovu() {
+  async function znovu() {
     vyber = null;
     proc = '';
     potvrzeno = false;
     smazStavBloku(id);
     smazZapis(id);
+    await tick();
+    document.getElementById(id)?.querySelector<HTMLElement>('input, textarea')?.focus();
   }
 </script>
 

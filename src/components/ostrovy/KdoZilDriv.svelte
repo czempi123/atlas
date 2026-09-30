@@ -64,12 +64,14 @@
     oblast?.focus();
   }
 
-  function znovu() {
+  async function znovu() {
     poradi = null;
     potkali = null;
     pocetLet = 50;
     odkryto = false;
     smazStavBloku(id);
+    await tick();
+    document.getElementById(id)?.querySelector<HTMLElement>('input, textarea')?.focus();
   }
 
   const volbyPoradi: { hodnota: OdhadPoradi; text: string }[] = [
