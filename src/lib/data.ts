@@ -6,6 +6,7 @@ import vztahy from '../data/vztahy.yaml?raw';
 import udalosti from '../data/udalosti.yaml?raw';
 import obdobi from '../data/obdobi.yaml?raw';
 import zdroje from '../data/zdroje.yaml?raw';
+import krajiny from '../data/krajiny.yaml?raw';
 import { vsechnyKontroly } from './kontroly';
 import { cekajiciAtributy } from './cekajici';
 import type { TOsoba, TVztah } from './schema';
@@ -14,7 +15,7 @@ const smery = Object.keys(import.meta.glob('../content/smery/*.{md,mdx}')).map((
   p.split('/').pop()!.replace(/\.mdx?$/, ''),
 );
 
-const vysledek = vsechnyKontroly({ lide, mista, vztahy, udalosti, obdobi, zdroje }, { smery }, cekajiciAtributy);
+const vysledek = vsechnyKontroly({ lide, mista, vztahy, udalosti, obdobi, zdroje, krajiny }, { smery }, cekajiciAtributy);
 if (vysledek.chyby.length) {
   throw new Error(`Data atlasu neprošla kontrolou:\n- ${vysledek.chyby.join('\n- ')}`);
 }

@@ -5,6 +5,7 @@
 # Řecko a Egejské moře
 - { id: athenes, nazev: Athény, dnes: "Atény, Řecko", souradnice: [23.727, 37.984] }
 - { id: korinth, nazev: Korinth, dnes: "Korint, Řecko", souradnice: [22.88, 37.906] }
+- { id: theby, nazev: Théby, dnes: "Théva, Řecko", souradnice: [23.32, 38.32] }
 - { id: delfy, nazev: Delfy, dnes: "Delfy, Řecko", souradnice: [22.50, 38.48] }
 - { id: delion, nazev: Délion, dnes: "u Dilesi, Řecko", souradnice: [23.64, 38.36] }
 - { id: potidaia, nazev: Potidaia, dnes: "Nea Potidea, Řecko", souradnice: [23.33, 40.19] }
@@ -56,3 +57,7 @@
 - { id: kyrene, nazev: Kyréné, dnes: "Šaḥḥát, Libye", souradnice: [21.86, 32.82] }
 - { id: alexandrie, nazev: Alexandrie, dnes: "Alexandrie, Egypt", souradnice: [29.92, 31.20] }
 - { id: corduba, nazev: Corduba, dnes: "Córdoba, Španělsko", souradnice: [-4.78, 37.88] }
+
+# Čína (okno „Mezitím jinde“)
+- { id: zou, nazev: Zou, dnes: "Cou-čcheng, Šan-tung, Čína", souradnice: [116.97, 35.40] }
+- { id: lu, nazev: Lu, dnes: "Čchü-fu, Šan-tung, Čína", souradnice: [116.99, 35.60], oblast: true }

@@ -22,7 +22,7 @@ export function rok(r: number, sLetopoctem: 'vzdy' | 'jen-pnl' = 'vzdy'): string
 
 function cast(d: TDatum | undefined, predpona = true): string {
   if (!d) return '?';
-  const asi = d.priblizne ? `asi${NBSP}` : d.nejpozdeji && predpona ? `před${NBSP}` : '';
+  const asi = d.priblizne ? `asi${NBSP}` : d.nejpozdeji && predpona ? `před${NBSP}` : d.nejdrive && predpona ? `po${NBSP}` : '';
   return asi + String(Math.abs(d.rok));
 }
 
@@ -33,13 +33,13 @@ export function zivot(o: Pick<TOsoba, 'narozen' | 'zemrel' | 'aktivni'>): string
     const stejnaEra = (n.rok < 0) === (z.rok < 0);
     if (stejnaEra) {
       const era = z.rok < 0 ? `${NBSP}př.${NBSP}n.${NBSP}l.` : `${NBSP}n.${NBSP}l.`;
-      const zText = z.nejpozdeji ? `před${NBSP}${Math.abs(z.rok)}` : `${z.priblizne && !n.priblizne ? `asi${NBSP}` : ''}${Math.abs(z.rok)}`;
+      const zText = z.nejpozdeji ? `před${NBSP}${Math.abs(z.rok)}` : z.nejdrive ? `po${NBSP}${Math.abs(z.rok)}` : `${z.priblizne && !n.priblizne ? `asi${NBSP}` : ''}${Math.abs(z.rok)}`;
       return `${cast(n)}–${zText}${era}`;
     }
     return `${cast(n)}${NBSP}př.${NBSP}n.${NBSP}l. – ${cast(z)}${NBSP}n.${NBSP}l.`;
   }
   if (n) return `nar. ${n.priblizne ? `asi${NBSP}` : ''}${rok(n.rok)}`;
-  if (z) return `zem. ${z.nejpozdeji ? `před${NBSP}` : z.priblizne ? `asi${NBSP}` : ''}${rok(z.rok)}`;
+  if (z) return `zem. ${z.nejpozdeji ? `před${NBSP}` : z.nejdrive ? `po${NBSP}` : z.priblizne ? `asi${NBSP}` : ''}${rok(z.rok)}`;
   if (a) {
     if (a.do === undefined) return `činnost kolem ${rok(a.od)}`;
     return `činnost ${a.priblizne ? `asi${NBSP}` : ''}${rozpeti(a.od, a.do)}`;

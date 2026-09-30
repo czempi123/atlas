@@ -3,8 +3,8 @@
 import { parse } from 'yaml';
 import type { z } from 'astro/zod';
 import {
-  Obdobi, Osoba, Misto, Udalost, Vztah, Zdroje,
-  type TMisto, type TObdobi, type TOsoba, type TUdalost, type TVztah, type TZdroje,
+  Obdobi, Osoba, Misto, Udalost, Vztah, Zdroje, Krajina,
+  type TKrajina, type TMisto, type TObdobi, type TOsoba, type TUdalost, type TVztah, type TZdroje,
 } from './schema';
 
 export interface SurovaData {
@@ -14,6 +14,8 @@ export interface SurovaData {
   udalosti: string;
   obdobi: string;
   zdroje: string;
+  /** popisky krajin a moří (nepovinné kvůli starším testům) */
+  krajiny?: string;
 }
 
 export interface Data {
@@ -23,6 +25,7 @@ export interface Data {
   udalosti: TUdalost[];
   obdobi: TObdobi[];
   zdroje: TZdroje;
+  krajiny: TKrajina[];
 }
 
 export interface Kontext {
@@ -59,10 +62,11 @@ export function nactiData(s: SurovaData): { data: Data; chyby: string[] } {
   const vztahy = nactiPole('vztahy.yaml', s.vztahy, Vztah, chyby);
   const udalosti = nactiPole('udalosti.yaml', s.udalosti, Udalost, chyby);
   const obdobi = nactiPole('obdobi.yaml', s.obdobi, Obdobi, chyby);
+  const krajiny = s.krajiny ? nactiPole('krajiny.yaml', s.krajiny, Krajina, chyby) : [];
   const zr = Zdroje.safeParse(parse(s.zdroje));
   if (!zr.success) chyby.push(...naformatuj('zdroje.yaml', zr.error));
   const zdroje: TZdroje = zr.success ? zr.data : { prameny: [], citaty: [], obrazky: [] };
-  return { data: { lide, mista, vztahy, udalosti, obdobi, zdroje }, chyby };
+  return { data: { lide, mista, vztahy, udalosti, obdobi, zdroje, krajiny }, chyby };
 }
 
 function duplicity(soubor: string, ids: string[], chyby: string[]) {
@@ -118,7 +122,14 @@ export function kontrolaOdkazu(d: Data, k: Kontext = {}): string[] {
     const kde = `udalosti.yaml ${u.id}`;
     if (u.misto && !mista.has(u.misto)) chyby.push(`${kde}: místo „${u.misto}“ není v mista.yaml`);
     u.obdobi.forEach((n) => obdobi.has(n) || chyby.push(`${kde}: období ${n} není v obdobi.yaml`));
+    for (const o of u.osoby) if (!lide.has(o)) chyby.push(`${kde}: osoba „${o}“ není v lide.yaml`);
     pramen(kde, u.zdroj);
+  }
+  duplicity('krajiny.yaml', d.krajiny.map((k) => k.id), chyby);
+  for (const k of d.krajiny) {
+    const kde = `krajiny.yaml ${k.id}`;
+    k.obdobi.forEach((n) => obdobi.has(n) || chyby.push(`${kde}: období ${n} není v obdobi.yaml`));
+    pramen(kde, k.zdroj);
   }
   for (const c of d.zdroje.citaty) {
     const kde = `zdroje.yaml citát ${c.id}`;
@@ -159,6 +170,7 @@ export function kontrolaCasu(d: Data): string[] {
     const z = o.zemrel?.rok;
     if (n !== undefined && z !== undefined && !(n < z)) chyby.push(`${o.id}: narození (${n}) musí být před úmrtím (${z})`);
     if (o.aktivni?.do !== undefined && o.aktivni.do < o.aktivni.od) chyby.push(`${o.id}: aktivní „do“ je před „od“`);
+    if (o.zemrel?.nejdrive && o.zemrel.nejpozdeji) chyby.push(`${o.id}: úmrtí nemůže být zároveň „nejdříve“ i „nejpozději“`);
     for (const r of [o.narozen?.rozmezi, o.zemrel?.rozmezi]) if (r && r[0] > r[1]) chyby.push(`${o.id}: rozmezí je obrácené`);
     for (const m of o.mista) {
       const kde = `${o.id} (${m.misto}, ${m.role})`;

@@ -1,22 +1,23 @@
 # Dějinné kotvy a události ze životů lidí v atlasu. Roky: záporné = př. n. l.
+# osoby = lidé z lide.yaml, kterých se událost týká (karta člověka na mapě ji ukáže v jejich životě).
 
 # Období 1
 - { id: perske-valky, nazev: Řecko-perské války, od: -492, do: -449, obdobi: [1], druh: kotva, zdroj: britannica-greco-persian-wars }
 - { id: marathon, nazev: Bitva u Marathónu, od: -490, obdobi: [1], druh: kotva, zdroj: britannica-greco-persian-wars }
 - { id: salamina, nazev: Bitva u Salamíny, od: -480, obdobi: [1], druh: kotva, zdroj: britannica-greco-persian-wars }
 - { id: peloponneska-valka, nazev: Peloponéská válka, od: -431, do: -404, obdobi: [1], druh: kotva, zdroj: britannica-peloponnesian-war }
-- { id: potidaia, nazev: Tažení k Potidaii, od: -432, obdobi: [1], misto: potidaia, druh: zivot, zdroj: sep-socrates }
-- { id: oblaka, nazev: Aristofanova Oblaka, od: -423, obdobi: [1], misto: athenes, druh: zivot, zdroj: sep-socrates }
-- { id: delion, nazev: Bitva u Délia, od: -424, obdobi: [1], misto: delion, druh: zivot, zdroj: sep-socrates }
-- { id: amfipolis, nazev: Bitva u Amfipole, od: -422, obdobi: [1], misto: amfipolis, druh: zivot, zdroj: sep-socrates }
-- { id: proces-sokrata, nazev: Sókratův proces, od: -399, obdobi: [1], misto: athenes, druh: kotva, zdroj: sep-socrates }
+- { id: potidaia, nazev: Tažení k Potidaii, od: -432, obdobi: [1], misto: potidaia, osoby: [sokrates, alkibiades], druh: zivot, zdroj: sep-socrates }
+- { id: oblaka, nazev: Aristofanova Oblaka, od: -423, obdobi: [1], misto: athenes, osoby: [aristofanes, sokrates], druh: zivot, zdroj: sep-socrates }
+- { id: delion, nazev: Bitva u Délia, od: -424, obdobi: [1], misto: delion, osoby: [sokrates, alkibiades], druh: zivot, zdroj: sep-socrates }
+- { id: amfipolis, nazev: Bitva u Amfipole, od: -422, obdobi: [1], misto: amfipolis, osoby: [sokrates], druh: zivot, zdroj: sep-socrates }
+- { id: proces-sokrata, nazev: Sókratův proces, od: -399, obdobi: [1], misto: athenes, osoby: [sokrates], druh: kotva, zdroj: sep-socrates }
 
 # Období 1 a 2
 - { id: alexandrova-tazeni, nazev: Tažení Alexandra Velikého, od: -334, do: -323, obdobi: [1, 2], druh: kotva, zdroj: britannica-alexander }
 
 # Období 2
-- { id: epikurova-zahrada, nazev: Epikúros zakládá v Athénách Zahradu, od: -306, obdobi: [2], misto: athenes, druh: zivot, zdroj: sep-epicurus }
-- { id: karneades-v-rime, nazev: Filozofické poselstvo v Římě, od: -155, obdobi: [2], misto: rim, druh: zivot, zdroj: sep-carneades }
-- { id: seneca-na-korsice, nazev: Seneca ve vyhnanství na Korsice, od: 41, do: 49, obdobi: [2], misto: korsika, druh: zivot, zdroj: sep-seneca }
-- { id: marcus-cisarem, nazev: Marcus Aurelius císařem, od: 161, do: 180, obdobi: [2], misto: rim, druh: kotva, zdroj: sep-marcus-aurelius }
+- { id: epikurova-zahrada, nazev: Epikúros zakládá v Athénách Zahradu, od: -306, obdobi: [2], misto: athenes, osoby: [epikuros], druh: zivot, zdroj: sep-epicurus }
+- { id: karneades-v-rime, nazev: Filozofické poselstvo v Římě, od: -155, obdobi: [2], misto: rim, osoby: [karneades], druh: zivot, zdroj: sep-carneades }
+- { id: seneca-na-korsice, nazev: Seneca ve vyhnanství na Korsice, od: 41, do: 49, obdobi: [2], misto: korsika, osoby: [seneca], druh: zivot, zdroj: sep-seneca }
+- { id: marcus-cisarem, nazev: Marcus Aurelius císařem, od: 161, do: 180, obdobi: [2], misto: rim, osoby: [marcus-aurelius], druh: kotva, zdroj: sep-marcus-aurelius }
 - { id: konec-zapadorimske-rise, nazev: Sesazení posledního západořímského císaře, od: 476, obdobi: [2, 3], druh: kotva, zdroj: britannica-romulus-augustulus }

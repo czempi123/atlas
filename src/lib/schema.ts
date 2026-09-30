@@ -21,6 +21,8 @@ export const Datum = z
     priblizne: z.boolean().optional(),
     /** prameny dávají jen horní mez („nejpozději“, např. zemřel před rokem 399 př. n. l.) */
     nejpozdeji: z.boolean().optional(),
+    /** prameny dávají jen dolní mez: v tom roce ještě žil („zemřel po roce …“) */
+    nejdrive: z.boolean().optional(),
     /** rozpětí, které udávají prameny, pokud je rok odhadem uprostřed */
     rozmezi: z.tuple([Rok, Rok]).optional(),
   })
@@ -106,6 +108,19 @@ export const Misto = z
   })
   .strict();
 
+/** Popisek krajiny nebo moře na mapě: dobový název, případně dnešní v závorce. */
+export const Krajina = z
+  .object({
+    id: Id,
+    nazev: z.string().min(2),
+    dnes: z.string().optional(),
+    druh: z.enum(['more', 'krajina']),
+    obdobi: z.array(z.number().int().min(1).max(8)).min(1),
+    souradnice: z.tuple([z.number().min(-180).max(180), z.number().min(-90).max(90)]),
+    zdroj: Id,
+  })
+  .strict();
+
 export const TypVztahu = z.enum(['ucitel', 'znali-se', 'vliv-textem', 'polemika']);
 
 export const Vztah = z
@@ -129,6 +144,8 @@ export const Udalost = z
     do: Rok.optional(),
     obdobi: z.array(z.number().int().min(1).max(8)).min(1),
     misto: Id.optional(),
+    /** lidé z lide.yaml, kterých se událost týká */
+    osoby: z.array(Id).default([]),
     /** kotva = dějinná událost pro posuvník; zivot = událost z života lidí v atlasu */
     druh: z.enum(['kotva', 'zivot']),
     zdroj: Id,
@@ -217,6 +234,7 @@ export const Zdroje = z
 
 export type TOsoba = z.infer<typeof Osoba>;
 export type TMisto = z.infer<typeof Misto>;
+export type TKrajina = z.infer<typeof Krajina>;
 export type TVztah = z.infer<typeof Vztah>;
 export type TUdalost = z.infer<typeof Udalost>;
 export type TObdobi = z.infer<typeof Obdobi>;

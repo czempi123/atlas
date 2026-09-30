@@ -126,6 +126,8 @@
 - id: herakleitos
   jmeno: Hérakleitos
   jmeno2: Hérakleita
+  narozen: { rok: -540, priblizne: true }
+  zemrel: { rok: -480, priblizne: true }
   aktivni: { od: -500, priblizne: true }
   obdobi: 1
   hloubka: profil
@@ -139,12 +141,13 @@
     nazev: řeka
     proc: Do téže řeky nelze vstoupit dvakrát.
     zdroj: sep-heraclitus
-  zdroje: [sep-heraclitus]
+  zdroje: [sep-heraclitus, britannica-heraclitus]
 
 - id: parmenides
   jmeno: Parmenidés
   jmeno2: Parmenida
   narozen: { rok: -515, priblizne: true }
+  zemrel: { rok: -450, nejdrive: true }
   obdobi: 1
   hloubka: profil
   smery: [eleate]
@@ -164,6 +167,7 @@
   jmeno: Démokritos
   jmeno2: Démokrita
   narozen: { rok: -460, priblizne: true }
+  zemrel: { rok: -370, priblizne: true }
   obdobi: 1
   hloubka: profil
   smery: [atomiste]
@@ -178,7 +182,7 @@
     nazev: zrnka
     proc: Všechno se skládá z drobných nedělitelných částic a prázdna mezi nimi.
     zdroj: sep-democritus
-  zdroje: [sep-democritus]
+  zdroje: [sep-democritus, britannica-democritus]
 
 - id: protagoras
   jmeno: Prótagorás
@@ -206,6 +210,7 @@
   jmeno: Zénón z Eleje
   jmeno2: Zénóna z Eleje
   narozen: { rok: -490, priblizne: true }
+  zemrel: { rok: -430, priblizne: true }
   obdobi: 1
   hloubka: profil
   smery: [eleate]
@@ -219,7 +224,7 @@
     nazev: želva
     proc: Tvrdil, že rychlý Achilleus nikdy nedohoní pomalou želvu.
     zdroj: sep-zeno-elea
-  zdroje: [sep-zeno-elea]
+  zdroje: [sep-zeno-elea, britannica-zeno-elea]
 
 - id: anaximandros
   jmeno: Anaximandros
@@ -239,6 +244,7 @@
   jmeno: Anaximenés
   jmeno2: Anaximena
   zemrel: { rok: -528, priblizne: true }
+  aktivni: { od: -550, priblizne: true }
   obdobi: 1
   hloubka: medailonek
   smery: [miletska-skola]
@@ -251,6 +257,8 @@
 - id: xenofanes
   jmeno: Xenofanés
   jmeno2: Xenofana
+  narozen: { rok: -560, priblizne: true }
+  zemrel: { rok: -478, priblizne: true }
   aktivni: { od: -540, do: -537 }
   obdobi: 1
   hloubka: medailonek
@@ -261,18 +269,20 @@
     - { misto: elea, role: exil, zdroj: sep-xenophanes }
   kdo: Básník a myslitel z Kolofónu, který po vyhnání dlouhá léta putoval řeckým světem.
   proc: Vysmíval se představě bohů, kteří vypadají a jednají jako lidé.
-  zdroje: [sep-xenophanes]
+  zdroje: [sep-xenophanes, britannica-xenophanes]
 
 - id: empedokles
   jmeno: Empedoklés
   jmeno2: Empedokla
+  narozen: { rok: -490, priblizne: true }
+  zemrel: { rok: -430, priblizne: true }
   obdobi: 1
   hloubka: medailonek
   mista:
     - { misto: akragas, role: narozeni, zdroj: sep-empedocles }
   kdo: Myslitel a básník ze sicilského Akragantu.
   proc: Učil, že svět tvoří čtyři kořeny (země, voda, vzduch, oheň), které spojuje Láska a rozděluje Svár.
-  zdroje: [sep-empedocles]
+  zdroje: [sep-empedocles, britannica-empedocles]
 
 - id: anaxagoras
   jmeno: Anaxagorás
@@ -329,6 +339,10 @@
   hloubka: medailonek
   tradice: cinska
   otazky: [1, 8]
+  mista:
+    - { misto: zou, role: narozeni, zdroj: sep-confucius }
+    - { misto: lu, role: pusobeni, zdroj: sep-confucius }
+    - { misto: lu, role: smrt, rok: -479, priblizne: true, zdroj: sep-confucius }
   kdo: Čínský učitel a úředník, jehož výroky zapsali žáci.
   proc: Učil, že dobrý život a dobrá společnost stojí na výchově, úctě a lidskosti.
   zdroje: [sep-confucius]
@@ -415,6 +429,7 @@
   jmeno: Aristippos
   jmeno2: Aristippa
   narozen: { rok: -435, priblizne: true }
+  zemrel: { rok: -355, priblizne: true }
   aktivni: { od: -399, do: -355, priblizne: true }
   obdobi: 1
   hloubka: medailonek
@@ -449,6 +464,7 @@
 - id: chairefon
   jmeno: Chairefón
   jmeno2: Chairefónta
+  narozen: { rok: -470, priblizne: true }
   zemrel: { rok: -399, nejpozdeji: true }
   obdobi: 1
   hloubka: medailonek
@@ -463,6 +479,7 @@
   jmeno: Kritón
   jmeno2: Kritóna
   narozen: { rok: -469, priblizne: true }
+  zemrel: { rok: -399, nejdrive: true }
   obdobi: 1
   hloubka: medailonek
   mista:
@@ -802,13 +819,17 @@
   obdobi: 2
   hloubka: medailonek
   smery: [kynismus]
+  mista:
+    - { misto: theby, role: narozeni, zdroj: britannica-crates }
+    - { misto: athenes, role: pusobeni, zdroj: britannica-zeno-citium }
   kdo: Kynický filozof, Diogenův žák.
   proc: Jeho posluchačem byl Zénón z Kitia, zakladatel stoicismu.
-  zdroje: [britannica-crates]
+  zdroje: [britannica-crates, britannica-zeno-citium]
 
 - id: hipparchia
   jmeno: Hipparchia
   jmeno2: Hipparchie
+  aktivni: { od: -330, do: -300, priblizne: true }
   obdobi: 2
   hloubka: medailonek
   smery: [kynismus]
@@ -892,6 +913,8 @@
 - id: filon-alexandrijsky
   jmeno: Filón Alexandrijský
   jmeno2: Filóna Alexandrijského
+  narozen: { rok: -15, priblizne: true, rozmezi: [-15, -10] }
+  zemrel: { rok: 50, priblizne: true, rozmezi: [45, 50] }
   obdobi: 2
   hloubka: medailonek
   tradice: zidovska
@@ -902,4 +925,4 @@
     - { misto: rim, role: pobyt, zdroj: sep-philo }
   kdo: Židovský filozof z Alexandrie, který v Římě u císaře Caliguly hájil své souvěrce.
   proc: Vykládal Mojžíšovy knihy pomocí řecké filozofie.
-  zdroje: [sep-philo]
+  zdroje: [sep-philo, britannica-philo]

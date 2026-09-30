@@ -14,7 +14,7 @@ const koren = join(import.meta.dirname, '../..');
 const cti = (s: string) => readFileSync(join(koren, 'src/data', s), 'utf8');
 const surova: SurovaData = {
   lide: cti('lide.yaml'), mista: cti('mista.yaml'), vztahy: cti('vztahy.yaml'),
-  udalosti: cti('udalosti.yaml'), obdobi: cti('obdobi.yaml'), zdroje: cti('zdroje.yaml'),
+  udalosti: cti('udalosti.yaml'), obdobi: cti('obdobi.yaml'), zdroje: cti('zdroje.yaml'), krajiny: cti('krajiny.yaml'),
 };
 const { data, chyby: chybySchematu } = nactiData(surova);
 const smery = readdirSync(join(koren, 'src/content/smery')).filter((f) => /^[^_].*\.mdx?$/.test(f)).map((f) => f.replace(/\.mdx?$/, ''));

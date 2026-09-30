@@ -15,18 +15,10 @@
 
 ## Chybějící roky a místa u lidí, kteří v datech jsou
 
+Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, Xenofana, Empedokla, Aristippa, Chairefónta, Kritóna, Hipparchii a Filóna a místa Kratéta a Konfucia jsou od P4 v datech; rozbor v `docs/podklady/mapa-a-cas.md`.
+
 | Osoba | Co chybí | Co uvádějí prameny | Návrh |
 | --- | --- | --- | --- |
-| Hérakleitos | narození a úmrtí | SEP: „činný kolem roku 500 př. n. l.“; tradiční 535–475 je odvozené z akmé (Diogenés Laertios IX, 1). | Zatím jen `aktivni: -500`. Pro řeku životů v P4 rozhodnout, zda ukázat odhad. |
-| Parmenidés | úmrtí | SEP: „narozen kolem 515“, činný v 1. pol. 5. st. | Doplnit odhad jen se souhlasem autora. |
-| Démokritos | úmrtí | SEP: „narozen kolem 460“; tradice ho nechává žít velmi dlouho (návrh P1: 370). | Dohledat v Taylor, *The Atomists* (1999). |
-| Zénón z Eleje | úmrtí | SEP: narozen kolem 490 (podle Platónova Parmenida). | Ponechat bez úmrtí. |
-| Anaximenés | narození | IEP: „zemřel kolem 528“. | Ponechat. |
-| Xenofanés | narození a úmrtí | SEP: akmé 540–537; žil přes 92 let (vlastní verše). | Zatím `aktivni`. |
-| Empedoklés | roky | SEP: narozen „na počátku 5. st.“, zemřel v 60 letech. | Dohledat datování (tradice: asi 495–435). |
-| Aristippos | úmrtí | SEP: narozen kolem 435, činný 399–355. | Zatím `aktivni: -399…-355`; návrh P1 „435–356“ je odhad. |
-| Chairefón | narození | Obrana 21a: v době procesu už nežil. | V datech jen „zemřel nejpozději 399 př. n. l.“. |
-| Kritón | úmrtí | Obrana 33d: Sókratův vrstevník. | Ponechat. |
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
 | Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
 | Epikúros | místo narození | SEP: athénský občan, vyrůstal na Samu. | V datech jen pobyt na Samu do 321. |
@@ -35,14 +27,12 @@
 | Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
 | Cicero | místo narození (Arpinum), studia v Athénách a na Rhodu, vyhnanství, smrt u Formií | IEP stránka nepodala. | Doplnit z Plútarchova Cicerona. |
 | Plótínos | místo narození | Místo smrti doplněno (Minturnae v Kampánii, Porfyrios, Život Plótínův 2). Lykopolis uvádí až Eunapios, ne Porfyrios. | Doplnit Lykopolis, pokud stačí Eunapios. |
-| Kratés, Hipparchia | místa a data | Britannica: Kratés asi 350–301 (akmé 4. st.); o Hipparchii jen Maróneia. | Ponechat. |
-| Filón Alexandrijský | roky | SEP: „mezi koncem 1. st. př. n. l. a polovinou 1. st. n. l.“; poselstvo ke Caligulovi po nepokojích roku 38. | Ponechat bez roků. |
 | Pyrrhón | tažení s Alexandrem | SEP: „údajně“ doprovázel Alexandra do Indie. | V datech jen jako „vypráví se“ v textu, bez místa. |
 
 ## Místa
 
 - **Souřadnice** míst mimo schválený podklad mapy jsou přibližné polohy lokalit. Web Pleiades (pleiades.stoa.org) při zakládání projektu blokoval automatický přístup, proto v `mista.yaml` zatím chybí ID z Pleiad. Doplnit při P4 (Mapa a čas v2), kdy se budou kontrolovat všechny značky na mapě.
-- Místo pro **Konfucia** (stát Zou jižně od Lu, dnešní Šan-tung) jsem nezaložil; okna do jiných tradic dostanou vloženou mapku až v P4.
+- Místa **Konfucia** (Zou, Lu) doplněna v P4 (docs/podklady/mapa-a-cas.md).
 
 ## Vztahy, které v datech nejsou
 

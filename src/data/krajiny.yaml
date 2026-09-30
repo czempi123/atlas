@@ -1,0 +1,29 @@
+# Názvy krajin a moří na mapě. nazev = dobový název (podoba z české tradice), dnes = dnešní název nebo poloha,
+# pokud se liší. Souřadnice [délka, šířka] udávají střed popisku. obdobi = výřezy, ve kterých se popisek ukáže.
+# Rozbor a prameny: docs/podklady/mapa-a-cas.md.
+
+# Období 1: Počátky a klasické Řecko
+- { id: egejske-more, nazev: Egejské moře, druh: more, obdobi: [1], souradnice: [25.1, 38.9], zdroj: britannica-ionia }
+- { id: ionske-more, nazev: Iónské moře, druh: more, obdobi: [1], souradnice: [18.6, 38.0], zdroj: britannica-magna-graecia }
+- { id: stredozemni-more-1, nazev: Středozemní moře, druh: more, obdobi: [1], souradnice: [22.6, 35.6], zdroj: britannica-cyrenaica }
+- { id: propontis, nazev: Propontis, dnes: Marmarské moře, druh: more, obdobi: [1], souradnice: [28.0, 40.72], zdroj: britannica-marmara }
+- { id: pontos-euxeinos, nazev: Pontos Euxeinos, dnes: Černé moře, druh: more, obdobi: [1], souradnice: [32.5, 42.9], zdroj: britannica-black-sea }
+- { id: makedonie, nazev: Makedonie, druh: krajina, obdobi: [1], souradnice: [22.0, 40.95], zdroj: sep-aristotle }
+- { id: thrakie, nazev: Thrákie, druh: krajina, obdobi: [1], souradnice: [25.9, 41.35], zdroj: britannica-crates }
+- { id: ionie, nazev: Iónie, dnes: západ Turecka, druh: krajina, obdobi: [1], souradnice: [28.3, 38.5], zdroj: britannica-ionia }
+- { id: attika, nazev: Attika, druh: krajina, obdobi: [1], souradnice: [24.25, 38.3], zdroj: sep-socrates }
+- { id: peloponnesos, nazev: Peloponnésos, druh: krajina, obdobi: [1], souradnice: [22.1, 37.45], zdroj: britannica-peloponnesian-war }
+- { id: velke-recko, nazev: Velké Řecko, dnes: jižní Itálie, druh: krajina, obdobi: [1], souradnice: [16.2, 39.45], zdroj: britannica-magna-graecia }
+- { id: sicilie, nazev: Sicílie, druh: krajina, obdobi: [1, 2], souradnice: [14.2, 37.6], zdroj: sep-archytas }
+- { id: kreta, nazev: Kréta, druh: krajina, obdobi: [1], souradnice: [24.9, 35.25], zdroj: britannica-greco-persian-wars }
+- { id: kyrenaika, nazev: Kyrenaika, dnes: východ Libye, druh: krajina, obdobi: [1, 2], souradnice: [22.0, 32.3], zdroj: britannica-cyrenaica }
+
+# Období 2: Helenismus a Řím
+- { id: stredozemni-more-2, nazev: Středozemní moře, druh: more, obdobi: [2], souradnice: [18.5, 35.0], zdroj: britannica-cyrenaica }
+- { id: pontus-euxinus, nazev: Pontus Euxinus, dnes: Černé moře, druh: more, obdobi: [2], souradnice: [34.0, 43.2], zdroj: britannica-black-sea }
+- { id: egejske-more-2, nazev: Egejské moře, druh: more, obdobi: [2], souradnice: [25.0, 38.6], zdroj: britannica-ionia }
+- { id: galie, nazev: Galie, dnes: Francie, druh: krajina, obdobi: [2], souradnice: [2.5, 46.8], zdroj: britannica-gaul }
+- { id: italie, nazev: Itálie, druh: krajina, obdobi: [2], souradnice: [13.4, 42.6], zdroj: sep-seneca }
+- { id: recko, nazev: Řecko, druh: krajina, obdobi: [2], souradnice: [21.9, 39.6], zdroj: sep-epicurus }
+- { id: asie, nazev: Asie, dnes: západ Turecka, druh: krajina, obdobi: [2], souradnice: [29.2, 38.9], zdroj: britannica-asia-provincie }
+- { id: egypt, nazev: Egypt, druh: krajina, obdobi: [2], souradnice: [30.5, 27.5], zdroj: sep-plotinus }
