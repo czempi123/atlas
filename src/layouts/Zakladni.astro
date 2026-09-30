@@ -17,8 +17,10 @@ interface Props {
   kratkyTitulek?: string;
   /** stránka, kterou má Pagefind indexovat */
   hledat?: boolean;
+  /** celoobrazovkový nástroj (Mapa a čas): bez drobečků a patičky, obsah vyplní okno */
+  aplikace?: boolean;
 }
-const { titulek, popis = 'Interaktivní atlas filozofie pro střední školy: lidé, otázky, mapa a čas.', sekce, drobecky, zpet, kratkyTitulek, hledat = true } = Astro.props;
+const { titulek, popis = 'Interaktivní atlas filozofie pro střední školy: lidé, otázky, mapa a čas.', sekce, drobecky, zpet, kratkyTitulek, hledat = true, aplikace = false } = Astro.props;
 const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atlas myšlení`;
 ---
 <!doctype html>
@@ -45,18 +47,21 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
     <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
     <Hlavicka sekce={sekce} zpet={zpet} titulek={kratkyTitulek} />
     {drobecky && <Drobecky cesta={drobecky} />}
-    <main id="obsah" tabindex="-1" data-pagefind-body={hledat ? '' : undefined}>
+    <main id="obsah" tabindex="-1" data-pagefind-body={hledat ? '' : undefined} class:list={{ aplikace }}>
       <slot />
     </main>
-    <footer class="paticka stranka t-popisek" data-pagefind-ignore>
-      <p>Atlas myšlení · Vojtěch Czempka · texty a data CC BY-NC-SA 4.0, kód MIT</p>
-    </footer>
+    {!aplikace && (
+      <footer class="paticka stranka t-popisek" data-pagefind-ignore>
+        <p>Atlas myšlení · Vojtěch Czempka · texty a data CC BY-NC-SA 4.0, kód MIT</p>
+      </footer>
+    )}
     <SpodniLista sekce={sekce} />
   </body>
 </html>
 
 <style>
   main { display: block; outline: none; }
+  main.aplikace { overflow: hidden; }
   .paticka {
     margin-top: var(--s-9);
     padding-top: var(--s-5);

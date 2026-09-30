@@ -21,7 +21,7 @@
   pigment: tyrský purpur
   barva: --period-2
   ornament: { index: 1, nazev: mozaika a oblouk }
-  mapa: { popis: Středomoří, stred: [18, 37.5], meritko: 1150, rovnobezky: [30, 45], stav: navrh }
+  mapa: { popis: Středomoří, stred: [15, 38.5], meritko: 900, rovnobezky: [30, 45], stav: navrh }
 
 - id: 3
   slug: stredovek

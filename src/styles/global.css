@@ -132,3 +132,13 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Text jen pro čtečky obrazovky */
+.vh {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

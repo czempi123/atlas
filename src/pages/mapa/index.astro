@@ -1,128 +1,23 @@
 ---
-// Mapa a čas: zatím statický podklad období 1 podle schváleného návrhu (docs/design/mapa-podklad.mjs).
-// Interaktivní mapa s posuvníkem roku a řekou životů vznikne v P4.
+// Mapa a čas: interaktivní ostrov (mapa, posuvník roku, řeka životů, karta člověka).
+// Stav nese adresa: /mapa/?rok=-360&osoba=platon. Podklad mapy se předpočítá při sestavení
+// (src/pages/mapa/podklad/[soubor].json.ts), data se sem vloží jako kompaktní výtah.
+import { getCollection } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
-import PasObdobi from '../../components/ui/PasObdobi.astro';
-import { data, mistaPodleId } from '../../lib/data';
-import { podklad, VYREZY_OBDOBI_1, type Vyrez } from '../../lib/mapa';
+import MapaACas from '../../components/mapa/MapaACas.svelte';
+import { vstupMapy } from '../../lib/mapa-vstup-build';
 
-const obdobi = 1;
-// Místa, kde žili nebo působili lidé období 1.
-const idMist = new Set(data.lide.filter((l) => l.obdobi === obdobi).flatMap((l) => l.mista.map((m) => m.misto)));
-const mista = [...idMist].map((id) => mistaPodleId.get(id)!).filter((m) => !m.oblast);
-const pocetLidi = (id: string) => new Set(data.lide.filter((l) => l.obdobi === obdobi && l.mista.some((m) => m.misto === id)).map((l) => l.id)).size;
-const KRAJINY: { text: string; ll: [number, number]; more?: boolean }[] = [
-  { text: 'Egejské moře', ll: [25.1, 38.9], more: true },
-  { text: 'Iónské moře', ll: [18.6, 38.0], more: true },
-  { text: 'Středozemní moře', ll: [22.6, 34.6], more: true },
-  { text: 'Makedonie', ll: [22.3, 40.95] },
-  { text: 'Iónie', ll: [28.1, 38.3] },
-  { text: 'Attika', ll: [24.2, 38.35] },
-  { text: 'Velké Řecko', ll: [16.0, 39.05] },
-  { text: 'Sicílie', ll: [14.2, 37.55] },
-  { text: 'Kréta', ll: [24.9, 35.2] },
-];
-const vyrezy: [string, Vyrez][] = [['notebook', VYREZY_OBDOBI_1.notebook], ['telefon', VYREZY_OBDOBI_1.telefon]];
-const mapy = vyrezy.map(([nazev, v]) => {
-  const p = podklad(v);
-  const uvnitr = (xy: [number, number]) => xy[0] > 8 && xy[0] < v.sirka - 8 && xy[1] > 8 && xy[1] < v.vyska - 8;
-  // Popisky bez překryvů: důležitější místa (víc lidí) dostanou místo první, vpravo, jinak vlevo; jinak jen bod.
-  const obsazeno: [number, number, number, number][] = [];
-  const volno = (r: [number, number, number, number]) => r[0] >= 0 && r[2] <= v.sirka && !obsazeno.some((o) => r[0] < o[2] && r[2] > o[0] && r[1] < o[3] && r[3] > o[1]);
-  const krajiny = KRAJINY.map((k) => ({ ...k, xy: p.bod(k.ll) })).filter((k) => uvnitr(k.xy));
-  for (const k of krajiny) {
-    const w = k.text.length * (k.more ? 7.5 : 9);
-    obsazeno.push([k.xy[0] - w / 2, k.xy[1] - 12, k.xy[0] + w / 2, k.xy[1] + 3]);
-  }
-  const body = mista
-    .map((m) => ({ m, xy: p.bod(m.souradnice), n: pocetLidi(m.id) }))
-    .filter((b) => uvnitr(b.xy))
-    .sort((a, b) => b.n - a.n)
-    .map((b) => {
-      const sirka = b.m.nazev.length * 7 + 4;
-      const vpravo: [number, number, number, number] = [b.xy[0] + 6, b.xy[1] - 9, b.xy[0] + 8 + sirka, b.xy[1] + 5];
-      const vlevo: [number, number, number, number] = [b.xy[0] - 8 - sirka, b.xy[1] - 9, b.xy[0] - 6, b.xy[1] + 5];
-      const strana = volno(vpravo) ? 'vpravo' : volno(vlevo) ? 'vlevo' : null;
-      if (strana) obsazeno.push(strana === 'vpravo' ? vpravo : vlevo);
-      obsazeno.push([b.xy[0] - 5, b.xy[1] - 5, b.xy[0] + 5, b.xy[1] + 5]);
-      return { ...b, strana };
-    });
-  return {
-    nazev, v, p, body, krajiny,
-  };
-});
+const osobnosti = (await getCollection('osobnosti')).map((o) => o.data.osoba);
+const vstup = vstupMapy(osobnosti);
 ---
-<Zakladni titulek="Mapa a čas" sekce="mapa" drobecky={[{ text: 'Mapa a čas' }, { text: 'Počátky a klasické Řecko' }]} kratkyTitulek="Mapa a čas">
-  <div class="stranka obdobi-1">
-    <header class="hlava">
-      <h1 class="t-h2">Mapa a čas</h1>
-      <p class="t-ovladani">Období 1 · Počátky a klasické Řecko · 650–300 př. n. l.</p>
-    </header>
-    <PasObdobi varianta="maly" aktivni={1} />
-
-    {mapy.map(({ nazev, v, p, body, krajiny }) => (
-      <figure class={`mapa mapa--${nazev}`}>
-        <svg viewBox={`0 0 ${v.sirka} ${v.vyska}`} role="img" aria-labelledby={`mapa-${nazev}-popis`}>
-          <title id={`mapa-${nazev}-popis`}>Mapa Egejského moře, Iónie a Velkého Řecka s místy, kde žili myslitelé období 1: {body.map((b) => b.m.nazev).join(', ')}.</title>
-          <rect width={v.sirka} height={v.vyska} class="more" />
-          <path d={p.sit} class="sit" />
-          <path d={p.pevnina} class="svit svit--1" />
-          <path d={p.pevnina} class="svit svit--2" />
-          <path d={p.pevnina} class="pevnina" />
-          {krajiny.map((k) => (
-            <text x={k.xy[0]} y={k.xy[1]} class:list={['krajina', { 'krajina--more': k.more }]} text-anchor="middle">{k.more ? k.text : k.text.toUpperCase()}</text>
-          ))}
-          {body.map((b) => (
-            <g transform={`translate(${b.xy[0]} ${b.xy[1]})`}>
-              <circle r={b.n > 3 ? 6 : 4.5} class="bod" />
-              <title>{b.m.nazev}</title>
-              {b.strana && <text x={b.strana === 'vpravo' ? 8 : -8} y="4" text-anchor={b.strana === 'vpravo' ? 'start' : 'end'} class="mesto">{b.m.nazev}</text>}
-            </g>
-          ))}
-          <g transform={`translate(18 ${v.vyska - 20})`} class="meritko">
-            <path d={`M0 0h${p.meritko.px}`} />
-            <text y="-7">{p.meritko.km} km</text>
-          </g>
-          <text x={v.sirka - 14} y={v.vyska - 14} text-anchor="end" class="zdroj">Podklad: Natural Earth</text>
-        </svg>
-      </figure>
-    ))}
-
-    <section class="legenda" aria-labelledby="mista-nadpis">
-      <h2 class="t-ovladani-l" id="mista-nadpis">Místa na mapě</h2>
-      <ul>
-        {mista.sort((a, b) => pocetLidi(b.id) - pocetLidi(a.id) || a.nazev.localeCompare(b.nazev, 'cs')).map((m) => (
-          <li><span class="jmeno">{m.nazev}</span> <span class="t-popisek">{m.dnes} · {pocetLidi(m.id)} {pocetLidi(m.id) === 1 ? 'člověk' : pocetLidi(m.id) < 5 ? 'lidé' : 'lidí'}</span></li>
-        ))}
-      </ul>
-    </section>
-  </div>
+<Zakladni
+  titulek="Mapa a čas"
+  popis="Kdo žil s kým, kdo po kom a jak daleko od sebe: mapa myslitelů, posuvník roku a řeka životů."
+  sekce="mapa"
+  kratkyTitulek="Mapa a čas"
+  hledat={false}
+  aplikace
+>
+  <h1 class="vh">Mapa a čas</h1>
+  <MapaACas client:load {vstup} />
 </Zakladni>
-
-<style>
-  .hlava { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-5); padding: var(--s-4) 0; }
-  .hlava p { margin: 0; color: var(--ink-2); }
-  .mapa { margin: var(--s-4) 0 0; }
-  .mapa svg { width: 100%; height: auto; border-radius: var(--r-xs); }
-  .mapa--notebook { display: none; }
-  @media (min-width: 900px) {
-    .mapa--notebook { display: block; }
-    .mapa--telefon { display: none; }
-  }
-  .more { fill: var(--map-sea); }
-  .sit { fill: none; stroke: var(--map-sea-line); stroke-width: 0.6; opacity: 0.7; }
-  .svit { fill: none; stroke: var(--map-sea-line); stroke-linejoin: round; }
-  .svit--1 { stroke-width: 16; opacity: var(--map-glow-1); }
-  .svit--2 { stroke-width: 7; opacity: var(--map-glow-2); }
-  .pevnina { fill: var(--map-land); stroke: var(--map-coast); stroke-width: 0.9; stroke-linejoin: round; }
-  .krajina { font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: 0.16em; fill: var(--muted); }
-  .krajina--more { font-family: var(--font-serif); font-style: italic; font-size: 16px; font-weight: 400; letter-spacing: 0.02em; }
-  .bod { fill: var(--pc); stroke: var(--surface); stroke-width: 1.5; }
-  .mesto { font-family: var(--font-sans); font-size: 12px; font-weight: 500; fill: var(--ink); paint-order: stroke; stroke: var(--map-land); stroke-width: 3.5px; stroke-linejoin: round; }
-  .meritko path { stroke: var(--ink-2); stroke-width: 2; }
-  .meritko text, .zdroj { font-family: var(--font-sans); font-size: 11px; fill: var(--ink-2); }
-  .legenda { margin-top: var(--s-6); }
-  .legenda ul { columns: 16rem; margin: var(--s-3) 0 0; padding: 0; list-style: none; }
-  .legenda li { break-inside: avoid; padding: var(--s-1) 0; }
-  .jmeno { font-size: 17px; }
-</style>
