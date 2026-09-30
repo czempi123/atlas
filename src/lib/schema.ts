@@ -68,6 +68,8 @@ export const Osoba = z
     jmeno: z.string().min(2),
     /** jméno v 2. pádě pro věty typu „Proč …?“ a „Co udělal …“ */
     jmeno2: z.string().min(2).optional(),
+    /** žena (kvůli tvarům „je jí“, „zemřela“) */
+    zena: z.boolean().optional(),
     narozen: Datum.optional(),
     zemrel: Datum.optional(),
     /** jen když prameny nedávají narození ani úmrtí, ale dobu činnosti */

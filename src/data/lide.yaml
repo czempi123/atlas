@@ -320,6 +320,7 @@
 - id: aspasie
   jmeno: Aspasie
   jmeno2: Aspasie
+  zena: true
   aktivni: { od: -445, do: -429 }
   obdobi: 1
   hloubka: medailonek
@@ -771,6 +772,7 @@
 - id: hypatia
   jmeno: Hypatia
   jmeno2: Hypatie
+  zena: true
   narozen: { rok: 370, priblizne: true }
   zemrel: { rok: 415 }
   obdobi: 2
@@ -829,6 +831,7 @@
 - id: hipparchia
   jmeno: Hipparchia
   jmeno2: Hipparchie
+  zena: true
   aktivni: { od: -330, do: -300, priblizne: true }
   obdobi: 2
   hloubka: medailonek
