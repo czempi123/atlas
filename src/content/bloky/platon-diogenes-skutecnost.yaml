@@ -1,21 +1,28 @@
 # Spor · Platón × Diogenés: co je skutečnější, to, co vidím, nebo to, co pochopím?
-# Platónova strana je z ověřených dat (lide.yaml: ideje, jeskyně; Ústava).
-# Diogenova strana (Diogenés Laertios VI, 53: stůl a „stolovost“) čeká na ověření; do té doby jen v dílně.
+# Podklady: docs/podklady/spor-platon-diogenes.md (Diogenés Laertios VI, 53; Platón, Ústava VII).
 druh: spor
 obdobi: 1
 nadtitulek: Spor
+scena: >-
+  Vypráví se, že Platón jednou vykládal o idejích a mluvil o „stolovosti“ a „pohárovosti“:
+  o tom, co dělá každý stůl stolem a každý pohár pohárem. Diogenés ho poslouchal a pak se ozval.
 otazka: Co je skutečnější, to, co vidíš, nebo to, co pochopíš?
 strany:
   - osoba: platon
     postoj: To, co pochopím.
     argumenty:
-      - Za proměnlivým světem, který vidíme, stojí neměnné ideje.
-      - Jsme jako vězni v jeskyni, kteří celý život hledí na stíny na zdi a mají je za skutečnost.
+      - >-
+        Stůl se jednou rozpadne a pohár se rozbije. Za proměnlivým světem, který vidíme, stojí neměnné ideje.
+        Kdo je nepochopí, je jako vězeň v jeskyni, který celý život hledí na stíny na zdi a má je za skutečnost.
+      - >-
+        Na Diogenovu námitku prý Platón odpověděl: „Oči, kterými se vidí stůl a pohár, máš.
+        Rozum, kterým se vidí stolovost a pohárovost, nemáš.“
   - osoba: diogenes
     postoj: To, co vidím.
     argumenty:
-      - Diogenův argument se doplní po ověření (Diogenés Laertios VI, 53).
-zdroje: [platon-ustava, sep-plato, iep-diogenes]
-kOvereni:
-  - "Diogenova strana: anekdota o stolu a „stolovosti“ (Diogenés Laertios VI, 53), český převod a místo."
-  - "Platónova strana: nejsilnější argument pro ideje vlastními slovy (Ústava VI–VII, Faidón); zatím jen teze z dat."
+      - >-
+        „Stůl a pohár vidím, Platóne. Stolovost a pohárovost ale nikde.“
+      - >-
+        Diogenés se vysmíval tomu, čemu ostatní slepě věřili. Na vlastním životě ukazoval, že ke šťastnému životu
+        stačí velmi málo. Co nejde ukázat ani vyzkoušet, o to nemá cenu se přít.
+zdroje: [dl-vi-53, platon-ustava, sep-plato, iep-diogenes]
