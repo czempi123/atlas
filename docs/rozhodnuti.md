@@ -13,6 +13,8 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | Citáty celku 1 jsou vlastní převody z řeckého textu; publikované české překlady se nepřebírají | Autor |
 | Fotografie busty Sókrata z Louvru (Eric Gaba, CC BY-SA 2.5) je na desce Sókratovy stránky; autor a licence jsou v Pramenech (oddíl Obrázky), mince s kalichem se přesunula k popisku „Proč kalich?“ | Autor ověřil licenci na Commons; CC BY-SA vyžaduje uvedení autora a licence; bez mince by „Proč kalich?“ ztratilo obraz |
 | Příběh nepřebírá portrét osoby, jen obraz předaný přímo | Popisek Příběhu patří k místu scény (Delfy), ne k bustě |
+| Stránka osobnosti má středovou osu: text a bloky v jednom čtenářském sloupci uprostřed, přes celou šířku jen hlavička a oddíly na mřížce (Doba a lidé, Myšlenky, Zkus to žít, Kam dál) | Autor: na notebooku se střídaly čtyři šířky zarovnané vlevo a stránka působila nesourodě |
+| Testy v prohlížeči běží na portu 4322 | Na 4321 bývá spuštěné `npm run dev`; testy se k němu připojily a hledání i kontrola odkazů selhaly |
 
 ## 1. 10. 2026: Schválení P5
 

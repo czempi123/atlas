@@ -135,6 +135,15 @@ const dev = import.meta.env.DEV;
   .kapitoly .osnova { color: var(--muted); }
   .kapitoly .osnova .cislo { color: var(--muted); }
   .obsah :global(.uvod) { margin-top: var(--s-6); font-size: var(--fs-perex); line-height: var(--lh-perex); }
+  /* Středová osa: text, kapitoly i bloky v jednom čtecím sloupci uprostřed; široké oddíly
+     (Doba a lidé, Myšlenky, Zkus to žít, Kam dál) se rozprostřou přes celou šířku stránky. */
+  .osobnost :global(.ctenarsky),
+  .osobnost :global(.blok-sloupec),
+  .osobnost :global(.kapitola) { max-width: var(--ctenarsky-sloupec); margin-inline: auto; }
+  .osobnost :global(.kapitola .ctenarsky) { max-width: none; }
+  /* Text uvnitř širokých oddílů zůstává u jejich levého okraje, pod nadpisem. */
+  .osobnost :global(.doba .ctenarsky),
+  .osobnost :global(.zkus .ctenarsky) { margin-inline: 0; }
   .osnova-autor {
     margin: var(--s-8) 0;
     padding: var(--s-5);
