@@ -2,6 +2,15 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Schválení celku 1 a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 1 „Jak poznám, co je pravda?“ schválen a sloučen do hlavní větve (lokálně, bez GitHubu) | Autor: „můžeme se opět posunout o krok dál“ |
+| Ve Sporu v kroku 5 dostal Prótagorás odpověď na sebevyvrácení místo argumentu o obcích; bez dalšího ověřování | Autor: jdeme primárně po pointě, ne po stoprocentní historické věrohodnosti, i když ji chceme maximálně zachovat. Výklad se podává jako výklad, historická fakta dál jen z podkladů |
+| Skill `atlas-cesta` doplněn o poučení z revize (shrnutí drží rozdíly pramene, text drží souvislost bez bloků, Spor bez ohlášeného vítěze a s odpovědí obou stran, hlas na stránce otázky se pozná, závěrečné pravidlo s `rozbalene`) | Ať se chyby celku 1 neopakují |
+| Celek 2 „Jak mám žít?“: velká otázka 1, cesta 6 „Kolik je dost?“, profil Epikúra a profil Diogena jako protihlas; stoici na stránce otázky, celek s Epiktétem (cesta 5) hned potom. Další krok P6, zadání v `docs/plan.md` | Autor vybral z navržených možností; oba myslitelé žijí s málem, každý z jiného důvodu, a to dává Spor |
+
 ## 1. 10. 2026: Revize celku 1 (P10)
 
 | Rozhodnutí | Důvod |
