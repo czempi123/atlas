@@ -80,5 +80,5 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Nikiás jako generál (Lachés, rámec) | Dialog ho jako velitele nepředstavuje, Thúkydida jsem neotevřel. | Ve studentském textu ho nenazývat velitelem, nebo doložit z Thúkydida. |
 | Dramatické datum dialogu Prótagorás | Neověřeno; pro text není potřeba. | Neuvádět rok setkání. |
 | Velikost poroty a počty hlasů u Diogena Laertia II, 41–42 | Prameny se rozcházejí, velikost poroty se jen dovozuje. | Ve studentském textu jen Obrana 36a (třicet hlasů). |
-| 2. pád Pýthagorás, Anaxagorás | V datech „Pýthagory“, „Anaxagory“; u Prótagora autor rozhodl pro „Prótagora“ (vzor pán). Příručku ÚJČ nástroj otevřít nemohl. | Rozhodnout, zda sjednotit na „Pýthagora“, „Anaxagora“. |
-| Obrázek Sókrata | Commons nedostupný (viz Obrázky). | Potvrdit licenci, stáhnout soubor. |
+| ~~2. pád Pýthagorás, Anaxagorás~~ | **Vyřízeno 1. 10.:** autor rozhodl pro vzor pán, v datech Pýthagora, Anaxagora. | — |
+| Obrázek Sókrata | Autor 1. 10. potvrdil licenci na Commons; soubor musí stáhnout sám (nástroje na Commons nedosáhnou). | Uložit do `public/obrazky/sokrates-louvre.jpg`, pak zapsat do dat. |

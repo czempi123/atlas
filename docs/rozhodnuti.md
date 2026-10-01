@@ -2,6 +2,17 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Podklady k celku 1 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Řecká jména na -ás se skloňují podle vzoru pán: Prótagora, Pýthagora, Anaxagora, Gorgia, Archyta | Autor; jednotně v `lide.yaml` (`jmeno2`) |
+| Sókratův portrét: kapitola 02 stojí na Lachétovi, kapitola 04 začíná setkáním s Euthyfrónem; Euthyfrónovo dilema zazní v portrétu i na stránce velké otázky 9 | Lachés vede přímo k ústupu od Délia, Euthyfrón k soudu; dilema patří k otázce víry i k Sókratovu způsobu ptaní |
+| Spor Sókratés × Prótagorás v cestě 1 se bere z Platónova Theaitéta a podává se jako spor, který si představil Platón | Skutečný záznam jejich hádky o pravdě neexistuje; Prótagorás je v dialogu už mrtvý |
+| Nový případ k cestě 1: šaty z roku 2015 (modročerné, nebo bílozlaté?) | Vnímání se liší jako Prótagorův vítr, a přitom existuje ověřitelná odpověď |
+| Citáty celku 1 jsou vlastní převody z řeckého textu; publikované české překlady se nepřebírají | Autor |
+| Fotografie busty Sókrata z Louvru (Eric Gaba, CC BY-SA 2.5) se použije; autor a licence budou v Pramenech stránky | Autor ověřil licenci na Commons |
+
 ## 1. 10. 2026: Schválení P5
 
 | Rozhodnutí | Důvod |

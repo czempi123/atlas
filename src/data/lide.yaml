@@ -103,7 +103,7 @@
 
 - id: pythagoras
   jmeno: Pýthagorás
-  jmeno2: Pýthagory
+  jmeno2: Pýthagora
   narozen: { rok: -570, priblizne: true }
   zemrel: { rok: -490, priblizne: true }
   obdobi: 1
@@ -286,7 +286,7 @@
 
 - id: anaxagoras
   jmeno: Anaxagorás
-  jmeno2: Anaxagory
+  jmeno2: Anaxagora
   narozen: { rok: -500, priblizne: true }
   zemrel: { rok: -428, priblizne: true }
   obdobi: 1

@@ -4,7 +4,7 @@ Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 7, cesta 1 „Kdy mám dobrý 
 
 **Jak se ověřovalo.** Platóna, Diogena Laertia, Plútarcha a Aristotela jsem četl v řeckém textu a anglickém překladu z PerseusDL (repozitář `canonical-greekLit`, soubory TEI se Stephanovým a Bekkerovým číslováním): Platón ve vydání J. Burneta (OCT) s překlady H. N. Fowlera (Euthyfrón, Obrana, Kritón, Faidón, Theaitétos) a W. R. M. Lamba (Lachés, Symposion, Prótagorás, Menón), Diogenés Laertios v Hicksově vydání (Loeb 1925), Plútarchos v Perrinově, Aristotelés v Tredennickově. Webové rozhraní Perseus a Scaife robotům zakazuje přístup, proto přímé odkazy vedou na zdrojové soubory na GitHubu. Výklad a životní data podle SEP. Všechny české převody citátů jsou **vlastní**, z řeckého textu; publikované české překlady (F. Novotný, A. Kolář) jsem neměl v ruce.
 
-**Skloňování.** Prótagorás, 2. pád Prótagora (vzor pán, stejně jako Archyta, Gorgia). Opraveno v `lide.yaml` podle autora.
+**Skloňování.** Jména na -ás podle vzoru pán: Prótagorás, 2. pád Prótagora (stejně Pýthagora, Anaxagora, Archyta, Gorgia). Rozhodl autor, sjednoceno v `lide.yaml`.
 
 ## Nejsilnější příběhy
 
@@ -222,9 +222,9 @@ Do `zdroje.yaml` (pole `obrazky`) jsem busta nezapsal: test vyžaduje soubor v `
 
 ## Otevřené otázky pro autora
 
-- **Kapitola 02:** Lachés jako jádro, Euthyfrón otevírá kapitolu 04 (schváleno 1. 10.). Euthyfrónovo dilema (10a) je silné; chceš ho v portrétu, nebo až na stránce otázky 9 (Je Bůh?)?
+- ~~Euthyfrónovo dilema~~ **Rozhodnuto 1. 10.:** zazní dvakrát, v portrétu (kapitola 04, setkání před soudem) i na stránce velké otázky 9 „Je Bůh?“. Podklad: Euthyfrón 10a (`platon-euthyfron`).
 - **Spor v cestě 1:** formulace „Platón si ten spor představil…“ (Theaitétos), nebo vyprávět jako Sókratés × „Prótagorovi zastánci“?
-- **Pýthagorás a Anaxagorás** mají v datech 2. pád „Pýthagory“, „Anaxagory“. Podle téhož pravidla jako u Prótagora by to bylo „Pýthagora“, „Anaxagora“. Sjednotit?
-- **Obrázek Sókrata:** potvrdit licenci na Commons a stáhnout soubor do `public/` (pak zapíšu do `obrazky`).
+- ~~Skloňování~~ **Rozhodnuto 1. 10.:** jména na -ás podle vzoru pán, 2. pád Prótagora, Pýthagora, Anaxagora, Gorgia, Archyta (sjednoceno v `lide.yaml`).
+- **Obrázek Sókrata:** autor 1. 10. potvrdil autora fotky i licenci na Commons. Čeká se, až soubor uloží do `public/obrazky/sokrates-louvre.jpg`; pak se zapíše do `obrazky` a autor s licencí do Pramenů.
 - **Animace (k zamyšlení):** šaty se nabízejí jako interaktivní blok „Změň jednu věc“: posuvník předpokládaného světla, který přebarví okolí výřezu šatů (bez kopírování fotky, vlastní kresba). U Délia by stačila malá mapa s cestou ústupu, u soudu počítadlo „30 hlasů“. Patří to do skillu `atlas-komponenta` po schválení textu, ne do podkladů.
-- **České překlady:** porovnat vlastní převody s Novotným (Platón) a Kolářem (Diogenés Laertios), pokud chceš publikovaný překlad.
+- ~~České překlady~~ **Rozhodnuto 1. 10.:** v celku 1 zůstávají vlastní převody z řečtiny; publikované překlady se nepřebírají.
