@@ -1,13 +1,14 @@
 ---
 // Volba s důvodem. Obsah je v src/content/bloky/<id>.yaml (druh: volba).
-// Použití v MDX: <Volba id="cesta1-jak-zjistit" />
+// Použití v MDX: <Volba id="cesta1-jak-zjistit" />  (volitelně dal={{ href, text }})
 import Ostrov from '../ostrovy/Volba.svelte';
-import { nactiBlok, odkazNaBlok, proOstrov } from './_kontrola';
-import { osoba } from '../../lib/data';
+import { nactiBlok, odkazNaBlok, proOstrov, clovek, kamDal } from './_kontrola';
+import type { Dal } from '../ostrovy/bloky-typy';
 
-interface Props { id: string }
-const { id } = Astro.props;
+interface Props { id: string; dal?: Dal }
+const { id, dal } = Astro.props;
 const blok = await nactiBlok(id, 'volba', Astro.url.pathname);
-const f = blok.coUdelal ? osoba(blok.coUdelal.osoba) : undefined;
+const filozof = blok.coUdelal ? clovek(blok.coUdelal.osoba) : undefined;
+const dalsi = await kamDal(Astro.url.pathname, dal ?? blok.dal);
 ---
-<Ostrov client:visible id={id} blok={proOstrov(blok)} filozof={f && { jmeno: f.jmeno, zena: f.zena }} odkaz={odkazNaBlok(Astro.url.pathname, id)} />
+<Ostrov client:visible id={id} blok={proOstrov(blok)} filozof={filozof} odkaz={odkazNaBlok(Astro.url.pathname, id)} dal={dalsi} />

@@ -7,14 +7,20 @@
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import { posunZmeny, zapisZmeny, platnyStavZmeny, odstavce, radek, veta } from '../../lib/bloky';
   import type { TBlokZmena } from '../../lib/bloky-schema';
+  import { odkryti } from '../../lib/pohyb';
+  import BlokHlava from './BlokHlava.svelte';
+  import BlokFilozof from './BlokFilozof.svelte';
+  import BlokDal from './BlokDal.svelte';
+  import type { ClovekBloku, Dal } from './bloky-typy';
 
   interface Props {
     id: string;
-    blok: Omit<TBlokZmena, 'zdroje' | 'kOvereni'>;
-    filozof?: { jmeno: string; zena?: boolean };
+    blok: Omit<TBlokZmena, 'zdroje' | 'kOvereni' | 'dal'>;
+    filozof?: ClovekBloku;
     odkaz: string;
+    dal?: Dal;
   }
-  let { id, blok, filozof, odkaz }: Props = $props();
+  let { id, blok, filozof, odkaz, dal }: Props = $props();
 
   /** rozpracovaná volba v základu a v podmínkách (před potvrzením) */
   let navrhZaklad = $state<string | null>(null);
@@ -40,7 +46,7 @@
   });
 
   function ulozStav() {
-    ulozStavBloku(id, { zaklad, podminky: odpovedi, aktivni });
+    ulozStavBloku(id, { zaklad, podminky: odpovedi, aktivni }, { odkaz, otazka: blok.otazka, druh: 'zmena', hotovo: Object.keys(odpovedi).length > 0 });
   }
 
   let prepinace = $state<HTMLElement>();
@@ -101,7 +107,7 @@
 {/snippet}
 
 <section class="blok zmena obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <p class="t-nadtitulek blok__nadtitulek">{blok.nadtitulek ?? 'Myšlenkový pokus'}</p>
+  <BlokHlava nadtitulek={blok.nadtitulek ?? 'Myšlenkový pokus'} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
     {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena">{@html o}</p>{/each}
   {/if}
@@ -127,7 +133,7 @@
     </fieldset>
 
     {#if podminka}
-      <div class="zmenena">
+      <div class="zmenena" in:odkryti>
         {#each odstavce(podminka.zmena) as o, i (i)}<p>{@html o}</p>{/each}
         <p class="znovu-otazka t-ovladani-l">{@html radek(blok.otazka)}</p>
         {#key aktivni}
@@ -140,7 +146,7 @@
 
       {#if odpovedTed}
         {@const posun = posunZmeny(zaklad, odpovedTed)}
-        <div class="blok__zpetna" role="region" aria-label="Posun odpovědi" aria-live="polite" tabindex="-1" bind:this={oblast}>
+        <div class="blok__zpetna" role="region" aria-label="Posun odpovědi" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
           <p class="posun t-ovladani">
             <span class="posun__cast"><span class="t-popisek">Předtím</span> {veta(textMoznosti(zaklad))}</span>
             <span class="posun__sipka" aria-hidden="true">→</span>
@@ -155,11 +161,13 @@
     {/if}
 
     {#if nejakaOdpoved && blok.coUdelal && filozof}
-      <div class="co-udelal">
-        <h4 class="blok__zpetna-titulek">Co {filozof.zena ? 'udělala' : 'udělal'} {filozof.jmeno}</h4>
-        {#each odstavce(blok.coUdelal.text) as o, i (i)}<p>{@html o}</p>{/each}
+      <div class="co-udelal" in:odkryti>
+        <BlokFilozof {filozof}>
+          {#each odstavce(blok.coUdelal.text) as o, i (i)}<p>{@html o}</p>{/each}
+        </BlokFilozof>
       </div>
     {/if}
+    {#if nejakaOdpoved}<BlokDal {dal} />{/if}
 
     <div class="blok__akce">
       {#if nejakaOdpoved}<p class="blok__ulozeno">Tvoje rozhodnutí jsou uložená v deníku.</p>{/if}
@@ -231,6 +239,7 @@
   .posun__cast { display: inline-flex; flex-direction: column; }
   .posun__cast .t-popisek { color: var(--ink-2); }
   .posun__sipka { font-size: var(--fs-ovladani-l); color: var(--pc); }
-  .co-udelal { margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--rule); }
-  .co-udelal > :last-child { margin-bottom: 0; }
+  .co-udelal { margin-top: var(--s-5); }
+  .co-udelal :global(.blok__oddil) { margin-top: 0; padding-top: var(--s-4); border-top: 1px solid var(--rule); }
+  .co-udelal :global(.blok__oddil > :last-child) { margin-bottom: 0; }
 </style>

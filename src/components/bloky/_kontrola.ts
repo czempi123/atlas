@@ -1,8 +1,10 @@
 // Společná kontrola bloků z YAML při sestavení: druh, odkazy na data a obsah čekající na ověření.
-import { getEntry } from 'astro:content';
-import { data } from '../../lib/data';
+import { getEntry, getCollection } from 'astro:content';
+import { data, osoba } from '../../lib/data';
 import { chybyBloku } from '../../lib/bloky';
 import type { TBlok } from '../../lib/bloky-schema';
+import { dalsiKrok, krokZAdresy } from '../../lib/cesty';
+import type { ClovekBloku, Dal } from '../ostrovy/bloky-typy';
 
 const osoby = new Set(data.lide.map((o) => o.id));
 const prameny = new Set(data.zdroje.prameny.map((p) => p.id));
@@ -24,8 +26,23 @@ export async function nactiBlok<D extends TBlok['druh']>(id: string, druh: D, st
 /** Odkaz zpět k bloku pro deník: stránka a kotva. */
 export const odkazNaBlok = (stranka: string, id: string) => `${stranka}#${id}`;
 
-/** Blok bez polí, která ostrov nepotřebuje (zdroje, ověření). */
-export function proOstrov<T extends { zdroje: string[]; kOvereni: string[] }>(b: T): Omit<T, 'zdroje' | 'kOvereni'> {
-  const { zdroje: _z, kOvereni: _k, ...zbytek } = b;
+/** Blok bez polí, která ostrov nepotřebuje (zdroje, ověření, kam dál). */
+export function proOstrov<T extends { zdroje: string[]; kOvereni: string[]; dal?: unknown }>(b: T): Omit<T, 'zdroje' | 'kOvereni' | 'dal'> {
+  const { zdroje: _z, kOvereni: _k, dal: _d, ...zbytek } = b;
   return zbytek;
+}
+
+/** Člověk pro mince a „Co udělal …“: jméno, období a atribut z lide.yaml. */
+export function clovek(id: string): ClovekBloku {
+  const o = osoba(id);
+  return { jmeno: o.jmeno, obdobi: o.obdobi, ikona: o.atribut?.ikona, zena: o.zena };
+}
+
+/** Kam dál po bloku: vlastní odkaz, jinak v kroku cesty další krok (nebo dokončení cesty). */
+export async function kamDal(stranka: string, vlastni?: Dal): Promise<Dal | undefined> {
+  if (vlastni) return vlastni;
+  const k = krokZAdresy(stranka);
+  if (!k) return undefined;
+  const kroky = (await getCollection('kroky')).map((x) => x.data);
+  return dalsiKrok(kroky, k.slug, k.n) ?? undefined;
 }

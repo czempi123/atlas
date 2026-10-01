@@ -7,15 +7,23 @@
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import { zpetnaVolby, zapisVolby, platnyStavVolby, pismeno, odstavce, radek } from '../../lib/bloky';
   import type { TBlokVolba } from '../../lib/bloky-schema';
+  import { odkryti } from '../../lib/pohyb';
+  import BlokHlava from './BlokHlava.svelte';
+  import BlokFilozof from './BlokFilozof.svelte';
+  import BlokDal from './BlokDal.svelte';
+  import type { ClovekBloku, Dal } from './bloky-typy';
 
   interface Props {
     id: string;
-    blok: Omit<TBlokVolba, 'zdroje' | 'kOvereni'>;
-    /** filozof z oddílu „Co udělal …“ (jméno z dat) */
-    filozof?: { jmeno: string; zena?: boolean };
+    blok: Omit<TBlokVolba, 'zdroje' | 'kOvereni' | 'dal'>;
+    /** filozof z oddílu „Co udělal …“ (jméno, období a atribut z dat) */
+    filozof?: ClovekBloku;
     odkaz: string;
+    /** Kam dál po tahu */
+    dal?: Dal;
   }
-  let { id, blok, filozof, odkaz }: Props = $props();
+  let { id, blok, filozof, odkaz, dal }: Props = $props();
+  const meta = (hotovo: boolean) => ({ odkaz, otazka: blok.otazka, druh: 'volba' as const, hotovo });
 
   let vyber = $state<number | null>(null);
   let proc = $state('');
@@ -29,13 +37,13 @@
   });
 
   function ulozRozpracovane() {
-    if (vyber !== null) ulozStavBloku(id, { vyber, proc, potvrzeno });
+    if (vyber !== null) ulozStavBloku(id, { vyber, proc, potvrzeno }, meta(potvrzeno));
   }
 
   async function potvrd() {
     if (vyber === null) return;
     potvrzeno = true;
-    ulozStavBloku(id, { vyber, proc: proc.trim(), potvrzeno });
+    ulozStavBloku(id, { vyber, proc: proc.trim(), potvrzeno }, meta(true));
     ulozZapis({ id, otazka: blok.otazka, odpoved: zapisVolby(blok, vyber, proc), odkaz, druh: 'volba' });
     await tick();
     oblast?.focus();
@@ -53,7 +61,7 @@
 </script>
 
 <section class="blok volba obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <p class="t-nadtitulek blok__nadtitulek">{blok.nadtitulek ?? 'Co uděláš?'}</p>
+  <BlokHlava nadtitulek={blok.nadtitulek ?? 'Co uděláš?'} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
     {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena">{@html o}</p>{/each}
   {/if}
@@ -61,7 +69,7 @@
 
   <div class="moznosti" role="radiogroup" aria-labelledby={`${id}-otazka`}>
     {#each blok.moznosti as m, i (i)}
-      <label class={['karta', vyber === i && 'karta--vybrana', potvrzeno && 'karta--zamcena']}>
+      <label class={['karta', vyber === i && 'karta--vybrana', potvrzeno && 'karta--zamcena', potvrzeno && vyber !== i && 'karta--skryta']}>
         <input
           class="vizualne-skryte"
           type="radio"
@@ -79,21 +87,20 @@
 
   {#if !potvrzeno}
     <label class="blok__popis" for={`${id}-proc`}>Proč právě tohle? <span class="nepovinne">Nepovinné</span></label>
-    <textarea class="blok__pole" id={`${id}-proc`} rows="2" bind:value={proc} onchange={ulozRozpracovane} placeholder="Stačí pár slov…"></textarea>
+    <textarea class="blok__pole blok__pole--kratke" id={`${id}-proc`} rows="2" bind:value={proc} onchange={ulozRozpracovane} placeholder="Stačí pár slov…"></textarea>
     <button class="blok__tl blok__tl--hlavni" type="button" onclick={potvrd} disabled={vyber === null}>Tohle je můj tah</button>
   {:else if proc.trim()}
     <p class="tvuj-duvod"><span class="t-popisek">Tvůj důvod:</span> {proc}</p>
   {/if}
 
   {#if zpetna}
-    <div class="blok__zpetna" role="region" aria-label="Zpětná vazba" aria-live="polite" tabindex="-1" bind:this={oblast}>
+    <div class="blok__zpetna" role="region" aria-label="Zpětná vazba" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
       <p class="blok__zpetna-titulek">{zpetna.titulek}</p>
       {#each odstavce(zpetna.text) as o, i (i)}<p>{@html o}</p>{/each}
-      {#if zpetna.coUdelal}
-        <div class="blok__oddil">
-          <h4 class="blok__zpetna-titulek">{zpetna.coUdelal.nadpis}</h4>
+      {#if zpetna.coUdelal && filozof}
+        <BlokFilozof {filozof} nadpis={zpetna.coUdelal.nadpis}>
           {#each odstavce(zpetna.coUdelal.text) as o, i (i)}<p>{@html o}</p>{/each}
-        </div>
+        </BlokFilozof>
       {/if}
     </div>
     <details class="ostatni">
@@ -109,6 +116,7 @@
         {/each}
       </ul>
     </details>
+    <BlokDal {dal} />
     <div class="blok__akce">
       <p class="blok__ulozeno">Tvůj tah je uložený v deníku.</p>
       <button class="blok__tl blok__tl--tiche" type="button" onclick={znovu}>Začít znovu</button>
@@ -144,6 +152,9 @@
   .karta--zamcena { cursor: default; }
   .karta--zamcena:not(.karta--vybrana) { color: var(--ink-2); }
   .karta--zamcena:hover:not(.karta--vybrana) { border-color: var(--rule); }
+  /* Po tahu zůstane vidět jen vybraná karta; ostatní tahy jsou v „Co kdybys zvolil jinak?“. */
+  .karta--skryta { display: none; }
+  .moznosti:has(.karta--skryta) { grid-template-columns: 1fr; }
   .pismeno {
     flex: none;
     display: grid;

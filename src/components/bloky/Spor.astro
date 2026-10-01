@@ -1,16 +1,14 @@
 ---
 // Spor dvou filozofů na škále. Obsah je v src/content/bloky/<id>.yaml (druh: spor).
-// Použití v MDX: <Spor id="platon-diogenes-skutecnost" />
+// Použití v MDX: <Spor id="platon-diogenes-skutecnost" />  (volitelně dal={{ href, text }})
 import Ostrov from '../ostrovy/Spor.svelte';
-import { nactiBlok, odkazNaBlok, proOstrov } from './_kontrola';
-import { osoba } from '../../lib/data';
+import { nactiBlok, odkazNaBlok, proOstrov, clovek, kamDal } from './_kontrola';
+import type { ClovekBloku, Dal } from '../ostrovy/bloky-typy';
 
-interface Props { id: string }
-const { id } = Astro.props;
+interface Props { id: string; dal?: Dal }
+const { id, dal } = Astro.props;
 const blok = await nactiBlok(id, 'spor', Astro.url.pathname);
-const lide = blok.strany.map((s) => {
-  const o = osoba(s.osoba);
-  return { jmeno: o.jmeno, obdobi: o.obdobi };
-}) as [{ jmeno: string; obdobi: number }, { jmeno: string; obdobi: number }];
+const lide = blok.strany.map((s) => clovek(s.osoba)) as [ClovekBloku, ClovekBloku];
+const dalsi = await kamDal(Astro.url.pathname, dal ?? blok.dal);
 ---
-<Ostrov client:visible id={id} blok={proOstrov(blok)} lide={lide} odkaz={odkazNaBlok(Astro.url.pathname, id)} />
+<Ostrov client:visible id={id} blok={proOstrov(blok)} lide={lide} odkaz={odkazNaBlok(Astro.url.pathname, id)} dal={dalsi} />

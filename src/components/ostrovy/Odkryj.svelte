@@ -7,6 +7,10 @@
   import { onMount, tick, type Snippet } from 'svelte';
   import { najdiZapis, ulozZapis, stavBloku, ulozStavBloku } from '../../lib/denik';
   import { platnyStavOdkryj, radek } from '../../lib/bloky';
+  import { odkryti } from '../../lib/pohyb';
+  import BlokHlava from './BlokHlava.svelte';
+  import BlokDal from './BlokDal.svelte';
+  import type { ClovekBloku, Dal } from './bloky-typy';
 
   interface Modelova { text: string; komentar?: string }
   interface Props {
@@ -19,9 +23,13 @@
     sebekontrola?: string[];
     /** CSS třída období (obdobi-N); bez ní blok převezme barvu stránky */
     obdobi?: number;
+    /** filozof, se kterým se student srovnává (mince v hlavičce) */
+    filozof?: ClovekBloku;
+    /** Kam dál po odkrytí */
+    dal?: Dal;
     children?: Snippet;
   }
-  let { id, nadtitulek = 'Než budeš číst dál', otazka, tlacitko = 'Odkrýt', odkaz, modelove = [], sebekontrola = [], obdobi, children }: Props = $props();
+  let { id, nadtitulek = 'Než budeš číst dál', otazka, tlacitko = 'Odkrýt', odkaz, modelove = [], sebekontrola = [], obdobi, filozof, dal, children }: Props = $props();
 
   let odpoved = $state('');
   let odkryto = $state(false);
@@ -46,7 +54,7 @@
   });
 
   function ulozStav() {
-    ulozStavBloku(id, { odpoved: odpoved.trim(), odkryto, kontrola });
+    ulozStavBloku(id, { odpoved: odpoved.trim(), odkryto, kontrola }, { odkaz, otazka, druh: 'odkryj', hotovo: odkryto });
   }
 
   function zapis() {
@@ -76,7 +84,7 @@
 </script>
 
 <section class={['blok', 'odkryj', obdobi && `obdobi-${obdobi}`]} id={id} aria-labelledby={`${id}-otazka`}>
-  <p class="t-nadtitulek blok__nadtitulek">{nadtitulek}</p>
+  <BlokHlava {nadtitulek} lide={filozof ? [filozof] : []} />
   <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{otazka}</h3>
   <label class="vizualne-skryte" for={`${id}-pole`}>Tvoje odpověď</label>
   <textarea
@@ -97,7 +105,7 @@
   {/if}
 
   {#if odkryto}
-    <div class="blok__zpetna odkryto" role="region" aria-label="Srovnání" aria-live="polite" tabindex="-1" bind:this={oblast}>
+    <div class="blok__zpetna odkryto" role="region" aria-label="Srovnání" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
       {#if children}{@render children()}{/if}
 
       {#if modelove.length}
@@ -126,6 +134,7 @@
         </fieldset>
       {/if}
     </div>
+    <BlokDal {dal} />
     <div class="blok__akce">
       {#if ulozeno}<p class="blok__ulozeno">Tvoje odpověď je uložená v deníku.</p>{/if}
       {#if !upravuji}
