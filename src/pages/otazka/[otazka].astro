@@ -1,0 +1,116 @@
+---
+// Stránka velké otázky: otázka a úvod scénou → Tvůj první názor → hlasy myslitelů na časové ose →
+// cesty k otázce → Změnil se? → Prameny. Obsah v src/content/otazky/<slug>.mdx (frontmatter hlasy, text = úvod).
+// Hlasy, cesty a návrat se ukážou až po prvním názoru nebo po „Přeskočit“; bez JavaScriptu jsou vidět hned.
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Zakladni from '../../layouts/Zakladni.astro';
+import PrvniNazor from '../../components/ostrovy/PrvniNazor.svelte';
+import ZmenilSe from '../../components/ostrovy/ZmenilSe.svelte';
+import HlasyOsa from '../../components/otazka/HlasyOsa.astro';
+import CestaKarta from '../../components/cesta/CestaKarta.astro';
+import Prameny from '../../components/osobnost/Prameny.astro';
+import { osoba as najdiOsobu, osoby, citatyPodleId, pramenyPodleId } from '../../lib/data';
+import { maStranku, seradHlasy, chybyHlasu, klicOtazky } from '../../lib/otazky';
+
+export async function getStaticPaths() {
+  const vse = await getCollection('otazky');
+  return vse.filter((o) => maStranku(o.data)).map((zaznam) => ({ params: { otazka: zaznam.id }, props: { zaznam } }));
+}
+interface Props { zaznam: CollectionEntry<'otazky'> }
+const { zaznam } = Astro.props;
+const slug = zaznam.id;
+const o = zaznam.data;
+const chyby = chybyHlasu(slug, o.hlasy, osoby, citatyPodleId, pramenyPodleId);
+if (chyby.length) throw new Error(chyby.join('\n'));
+
+const { Content } = await render(zaznam);
+const hlasy = seradHlasy(o.hlasy, osoby).map((h) => ({ ...h, osoba: najdiOsobu(h.osoba) }));
+const profily = new Set((await getCollection('osobnosti')).map((p) => p.data.osoba));
+const cesty = (await getCollection('cesty')).filter((c) => c.data.otazka === o.cislo).sort((a, b) => a.data.cislo - b.data.cislo);
+
+const citatyNaStrance = [
+  ...hlasy.flatMap((h) => (h.citat ? [h.citat] : [])),
+  ...[...(zaznam.body ?? '').matchAll(/<Citat id="([^"]+)"/g)].map((m) => m[1]),
+];
+const prameny = [...hlasy.flatMap((h) => h.zdroje), ...citatyNaStrance.map((id) => citatyPodleId.get(id)!.zdroj)];
+const adresa = `/otazka/${slug}/`;
+const klic = klicOtazky(slug);
+---
+<Zakladni
+  titulek={o.otazka}
+  popis={`Velká otázka ${o.cislo}: ${o.otazka} Odpověz sám a pak se podívej, jak odpovídali filozofové.`}
+  sekce="otazky"
+  zpet={{ href: '/otazky/', text: 'Otázky' }}
+  kratkyTitulek={`Otázka ${o.cislo}`}
+  drobecky={[{ text: 'Otázky', href: '/otazky/' }, { text: `Otázka ${o.cislo}` }]}
+>
+  <article class="otazka stranka" data-navsteva={adresa} data-nazev={o.otazka}>
+    <header class="otazka__hlava ctenarsky">
+      <p class="t-nadtitulek nadtitulek">Velká otázka {o.cislo} · {o.disciplina}</p>
+      <h1 class="t-h1">{o.otazka}</h1>
+    </header>
+    <div class="ctenarsky uvod"><Content /></div>
+
+    <script is:inline define:vars={{ prvni: klic.prvni, stav: klic.stav }}>
+      // Než student odpoví nebo přeskočí, zbytek stránky skryjeme (bez JavaScriptu zůstane vidět).
+      (function () {
+        var hotovo = false;
+        try {
+          var d = JSON.parse(localStorage.getItem('atlas-denik') || 'null');
+          hotovo = !!d && ((d.zapisy || []).some(function (z) { return z.id === prvni; }) || !!(d.bloky && d.bloky[stav] && d.bloky[stav].preskoceno));
+        } catch (e) { /* úložiště nedostupné */ }
+        if (!hotovo) document.documentElement.setAttribute('data-otazka-zavreno', '');
+      })();
+    </script>
+
+    <div class="ctenarsky prvni">
+      <PrvniNazor client:load slug={slug} otazka={o.otazka} odkaz={`${adresa}#prvni-nazor`} />
+    </div>
+
+    <div class="po" id={`${slug}-po`}>
+      <section class="ctenarsky oddil" aria-labelledby={`${slug}-hlasy-nadpis`}>
+        <h2 class="t-h2 oddil__nadpis" id={`${slug}-hlasy-nadpis`} tabindex="-1">Jak odpovídali <em>filozofové</em></h2>
+        <HlasyOsa hlasy={hlasy} profily={profily} />
+      </section>
+
+      {cesty.length > 0 && (
+        <section class="ctenarsky oddil" aria-labelledby={`${slug}-cesty-nadpis`}>
+          <h2 class="t-h3" id={`${slug}-cesty-nadpis`}>{cesty.length === 1 ? 'Cesta k otázce' : 'Cesty k otázce'}</h2>
+          {cesty.map((c) => <CestaKarta slug={c.id} />)}
+        </section>
+      )}
+
+      <section class="ctenarsky oddil" id="zmenil-se" aria-labelledby={`${slug}-zmenil-nadpis`}>
+        <h2 class="t-h2 oddil__nadpis" id={`${slug}-zmenil-nadpis`}>Změnil <em>se?</em></h2>
+        <ZmenilSe client:visible slug={slug} otazka={o.otazka} odkaz={`${adresa}#zmenil-se`} />
+      </section>
+
+      <div class="ctenarsky">
+        <Prameny prameny={prameny} citaty={citatyNaStrance} />
+      </div>
+    </div>
+  </article>
+</Zakladni>
+
+<script>
+  import { zaznamenejNavstevu } from '../../lib/denik';
+  const a = document.querySelector<HTMLElement>('[data-navsteva]');
+  if (a) zaznamenejNavstevu(a.dataset.navsteva!, a.dataset.nazev!);
+</script>
+
+<style>
+  .otazka { padding-bottom: var(--s-8); }
+  .otazka :global(.ctenarsky) { margin-inline: auto; }
+  .otazka__hlava { padding: var(--s-6) 0 var(--s-4); }
+  .nadtitulek { margin: 0 0 var(--s-3); color: var(--ink-2); }
+  h1 { margin: 0; text-wrap: balance; }
+  .uvod { margin-bottom: var(--s-6); font-size: var(--fs-perex); line-height: var(--lh-perex); }
+  .uvod :global(p:last-child) { margin-bottom: 0; }
+  .prvni { margin-bottom: var(--s-8); }
+  .oddil { margin-top: var(--s-8); }
+  .oddil__nadpis { margin: 0 0 var(--s-6); }
+  .oddil__nadpis:focus { outline: none; }
+  .oddil__nadpis:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .oddil :global(.cesta-karta) { margin: var(--s-4) 0 0; }
+  :global(html[data-otazka-zavreno]) .po { display: none; }
+</style>

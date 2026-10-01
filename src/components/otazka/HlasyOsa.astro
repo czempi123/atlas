@@ -1,0 +1,70 @@
+---
+// Hlasy myslitelů na časové ose stránky velké otázky: mince, letopočty, jméno (odkaz na profil, pokud ho
+// osoba má), jedna věta a citát z pramene. Pořadí podle narození dodá stránka (seradHlasy v src/lib/otazky.ts).
+// Telefon: svislá linka vlevo s mincemi, letopočty nad jménem. Notebook: letopočty v levém okraji vedle mince.
+import type { TOsoba } from '../../lib/schema';
+import Mince from '../ui/Mince.astro';
+import Citat from '../ui/Citat.astro';
+import { zivot } from '../../lib/casy';
+
+interface Props {
+  hlasy: { osoba: TOsoba; veta: string; citat?: string }[];
+  /** id osob, které mají stránku /osobnost/<id>/ */
+  profily: Set<string>;
+}
+const { hlasy, profily } = Astro.props;
+---
+<ol class="osa">
+  {hlasy.map((h) => (
+    <li class={`hlas obdobi-${h.osoba.obdobi}`}>
+      <span class="hlas__mince" aria-hidden="true"><Mince osoba={h.osoba} varianta="tint" velikost={44} /></span>
+      <div class="hlas__text">
+        <p class="hlas__roky t-popisek t-letopocet">{zivot(h.osoba)}</p>
+        <h3 class="hlas__jmeno t-h3">
+          {profily.has(h.osoba.id) ? <a href={`/osobnost/${h.osoba.id}/`}>{h.osoba.jmeno}</a> : h.osoba.jmeno}
+        </h3>
+        <p class="hlas__veta">{h.veta}</p>
+        {h.citat && <Citat id={h.citat} kompaktni />}
+      </div>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .osa { position: relative; margin: 0; padding: 0; list-style: none; }
+  /* Linka času prochází středem mincí. */
+  .osa::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    bottom: 22px;
+    left: 21px;
+    width: 2px;
+    background: var(--rule);
+  }
+  .hlas {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: var(--s-4);
+    padding-bottom: var(--s-7);
+  }
+  .hlas:last-child { padding-bottom: 0; }
+  .hlas__mince { position: relative; z-index: 1; display: block; height: 44px; border-radius: var(--r-full); background: var(--paper); }
+  .hlas__text { min-width: 0; }
+  .hlas__roky { margin: 0 0 var(--s-1); color: var(--pc); font-weight: 600; }
+  .hlas__jmeno { margin: 0 0 var(--s-2); }
+  .hlas__jmeno a { text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .hlas__veta { margin: 0; }
+  @media (min-width: 1100px) {
+    .hlas__roky {
+      position: absolute;
+      top: 12px;
+      right: calc(100% + var(--s-5));
+      width: 10rem;
+      margin: 0;
+      text-align: right;
+    }
+    .hlas__jmeno { padding-top: 2px; }
+  }
+</style>

@@ -111,7 +111,7 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 - **Volba s důvodem:** karty možností A–D (min. 60 px), vybraná má okraj 2 px a tint období; pole „Proč právě tohle?“ nepovinné; zpětná vazba v tintu období s titulkem „Tvůj tah: …“ a oddílem „Co udělal …“.
 - **Odkryj (dříve Nejdřív sám):** povrchová karta s nadtitulkem v barvě období, otázkou v Newsreaderu, polem a tlačítkem „Porovnat…“; po odkrytí srovnání v tintu období, modelové odpovědi a sebekontrola. API v oddílu Bloky.
 - **Zkus to žít:** karta v tintu období, jedno hlavní tlačítko „Přijmout výzvu“.
-- **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a).
+- **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a). Varianta `velky` pro hlavní citát stránky, `kompaktni` (menší okraje, velikost textu) pro citát na časové ose otázky.
 
 ## Bloky
 
@@ -316,6 +316,17 @@ Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` �
 - **Krok** `/cesta/<slug>/<n>/`: soustředěná hlavička (vlevo zpět na přehled, uprostřed „Krok n z N“ s tečkami kroků, vpravo Uložit a odejít; postup se ukládá sám), nadtitulek, název kroku, „Kde jsme“ a obsah. Dole pevná lišta Předchozí / Další krok (na telefonu bez názvu kroku), na konci Dokončit cestu.
 - **Vstupy:** karta cesty (`src/components/cesta/CestaKarta.astro`) na Domů a v profilu, odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku.
 - Bloky v kroku nabídnou po dokončení další krok samy.
+
+## Velká otázka
+
+Stránka `/otazka/<slug>/` (`src/pages/otazka/[otazka].astro`) je rozhovor napříč staletími. Ukázková je otázka 7 „Jak poznám, co je pravda?“.
+
+- **Soubor:** `src/content/otazky/<slug>.mdx`. Frontmatter `cislo`, `otazka`, `disciplina` a `hlasy: [{ osoba, veta, citat?, zdroje? }]` (osoba z `lide.yaml`, citát a prameny ze `zdroje.yaml`); text = úvod scénou („Představ si…“), dva až tři krátké odstavce. Otázka bez hlasů stránku nemá, zůstává jen řádek v přehledu `/otazky/`. Sestavení se zastaví, když osoba, citát nebo pramen chybí nebo když citát patří jiné osobě (`chybyHlasu` v `src/lib/otazky.ts`).
+- **Pořadí:** nadtitulek (Velká otázka N · disciplína), otázka jako h1, úvod → **Tvůj první názor** (`PrvniNazor.svelte`) → **Jak odpovídali filozofové** (časová osa) → **Cesta / Cesty k otázce** (karty všech cest s touto otázkou, samy z dat) → **Změnil se?** (`ZmenilSe.svelte`) → Prameny.
+- **Nejdřív student:** dokud student neuloží první názor nebo nestiskne Přeskočit, je všechno pod prvním názorem skryté (atribut `data-otazka-zavreno` na `<html>`, nastaví ho malý skript před vykreslením). Bez JavaScriptu je stránka vidět celá. Po odkrytí jde fokus na nadpis hlasů.
+- **Časová osa:** hlasy seřazené podle narození (`seradHlasy`). Svislá linka `--rule` 2 px prochází středem mincí 44 px (`tint`, barva období osoby); vedle mince letopočty (`t-popisek`, `--pc`, 600), jméno `t-h3` (odkaz, jen když má osoba stránku), věta a citát `<Citat kompaktni />`. Telefon: letopočty nad jménem. Od 1100 px letopočty v levém okraji vedle mince, text drží čtenářský sloupec. Rozestupy jsou stejné, ne podle let.
+- **Deník:** `otazka-<slug>-prvni` (Můj první názor) a `otazka-<slug>-ted` (Po setkání s filozofy), druh `stanovisko`; přeskočení je stav `otazka-<slug>`. Změnil se? ukáže po uložení obě odpovědi vedle sebe („Na začátku“ / „Teď“) a otázku, co by názor změnilo ještě jednou. Nic se nehodnotí.
+- **Odkazy:** na otázku odkazuj `adresaOtazky(id, data)`; vede na stránku, a dokud otázka stránku nemá, na kotvu v přehledu.
 
 ## Mapa a čas
 

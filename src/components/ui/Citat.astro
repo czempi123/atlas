@@ -3,12 +3,13 @@
 // Znění a údaje bere z src/data/zdroje.yaml, aby každý citát měl ověřený pramen a překlad.
 import { citatyPodleId } from '../../lib/data';
 
-interface Props { id: string; velky?: boolean }
-const { id, velky = false } = Astro.props;
+/** kompaktni: menší okraje, pro citát uvnitř karty nebo na časové ose */
+interface Props { id: string; velky?: boolean; kompaktni?: boolean }
+const { id, velky = false, kompaktni = false } = Astro.props;
 const c = citatyPodleId.get(id);
 if (!c) throw new Error(`Citát „${id}“ není v zdroje.yaml`);
 ---
-<figure class:list={['citat', { 'citat--velky': velky }]}>
+<figure class:list={['citat', { 'citat--velky': velky, 'citat--kompaktni': kompaktni }]}>
   <blockquote><p>„{c.cesky}“</p></blockquote>
   <figcaption class="t-popisek">{c.autor}, <cite>{c.dilo}</cite> {c.misto}</figcaption>
 </figure>
@@ -27,6 +28,8 @@ if (!c) throw new Error(`Citát „${id}“ není v zdroje.yaml`);
     line-height: 1.4;
     text-wrap: balance;
   }
+  .citat--kompaktni { margin: var(--s-4) 0 0; padding: var(--s-4) 0 var(--s-3); border-top-color: var(--rule); }
+  .citat--kompaktni blockquote p { font-size: var(--fs-text); line-height: 1.5; }
   .citat--velky blockquote p { font-size: var(--fs-citat); line-height: var(--lh-citat); }
   figcaption { color: var(--muted); }
   cite { font-style: italic; }

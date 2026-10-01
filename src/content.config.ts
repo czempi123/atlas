@@ -53,7 +53,18 @@ const obdobiTexty = defineCollection({
 
 const otazky = defineCollection({
   loader: vsechny('otazky'),
-  schema: z.object({ cislo: otazka, otazka: z.string(), disciplina: z.string() }),
+  schema: z.object({
+    cislo: otazka,
+    otazka: z.string(),
+    disciplina: z.string(),
+    /**
+     * Hlasy myslitelů na časové ose stránky /otazka/<slug>/ (pořadí podle narození dopočítá stránka).
+     * Otázka bez hlasů zatím nemá vlastní stránku, jen řádek v přehledu /otazky/.
+     */
+    hlasy: z
+      .array(z.object({ osoba: id, veta: z.string().trim().min(1), citat: id.optional(), zdroje: z.array(id).default([]) }).strict())
+      .default([]),
+  }),
 });
 
 /** Cesta: přehled v src/content/cesty/<slug>.mdx, kroky v src/content/cesty/<slug>/<n>-<název>.mdx. */
