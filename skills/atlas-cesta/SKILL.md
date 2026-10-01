@@ -24,7 +24,7 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
    | Náraz | Postaví se mezi dva filozofy, přečte nejsilnější argumenty obou | Spor |
    | Nový případ | Rozhodne v dnešní situaci a mění jednu podmínku | Změň jednu věc |
    | Souvislosti | Kdo kdy žil, s kým se mohl potkat | Kdo žil dřív? |
-   | Tvoje pravidlo | Zapíše si vlastní odpověď do deníku | Moje stanovisko |
+   | Tvoje pravidlo | Zapíše si vlastní odpověď do deníku; pole je vidět hned a ukládá se samo | Moje stanovisko s `rozbalene` |
 
    Ne každý blok musí být v každé cestě. Dva stejné bloky za sebou jen výjimečně.
 4. **Napiš soubory** (návod v `docs/design.md` › Cesta a › Bloky):

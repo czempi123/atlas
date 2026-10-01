@@ -1,6 +1,6 @@
 <script lang="ts">
   // Postup v cestě: v hlavičce kroku „Krok 2 z 6“ s tečkami (a zápis návštěvy do deníku),
-  // na přehledu cesty seznam kroků s tím, co student už prošel, a tlačítko Začít / Pokračovat.
+  // na přehledu cesty tlačítko Začít / Pokračovat a pod ním seznam kroků s tím, co student už prošel.
   import { onMount } from 'svelte';
   import { nacti, zaznamenejKrok } from '../../lib/denik';
 
@@ -43,6 +43,17 @@
     </ol>
   </div>
 {:else}
+  <div class="akce">
+    {#if hotovo}
+      <p class="hotovo t-ovladani" role="status">Cestu jsi prošel celou. Tvoje odpovědi jsou v <a href="/denik/">deníku</a>.</p>
+      <a class="blok__tl blok__tl--vedlejsi" href={kroky[0].href}>Projít znovu</a>
+    {:else if posledni}
+      <a class="blok__tl blok__tl--hlavni" href={kroky.find((k) => k.n === posledni)?.href ?? kroky[0].href}>Pokračovat: krok {posledni}</a>
+    {:else}
+      <a class="blok__tl blok__tl--hlavni" href={kroky[0].href}>Začít cestu</a>
+    {/if}
+  </div>
+  <h2 class="t-h3 kroky-nadpis" id="kroky-nadpis">Kroky</h2>
   <ol class="seznam">
     {#each kroky as k (k.n)}
       <li class={[navstivene.includes(k.n) && 'prosel']}>
@@ -54,16 +65,6 @@
       </li>
     {/each}
   </ol>
-  <div class="akce">
-    {#if hotovo}
-      <p class="hotovo t-ovladani" role="status">Cestu jsi prošel celou. Tvoje odpovědi jsou v <a href="/denik/">deníku</a>.</p>
-      <a class="blok__tl blok__tl--vedlejsi" href={kroky[0].href}>Projít znovu</a>
-    {:else if posledni}
-      <a class="blok__tl blok__tl--hlavni" href={kroky.find((k) => k.n === posledni)?.href ?? kroky[0].href}>Pokračovat: krok {posledni}</a>
-    {:else}
-      <a class="blok__tl blok__tl--hlavni" href={kroky[0].href}>Začít cestu</a>
-    {/if}
-  </div>
 {/if}
 
 <style>
@@ -77,7 +78,8 @@
   .tecka--ted span { width: 14px; height: 14px; border-color: var(--ink); background: var(--ink); }
   .tecka:hover span { border-color: var(--ink); }
 
-  .seznam { display: grid; gap: var(--s-2); margin: 0 0 var(--s-5); padding: 0; list-style: none; counter-reset: krok; }
+  .kroky-nadpis { margin: 0 0 var(--s-4); }
+  .seznam { display: grid; gap: var(--s-2); margin: 0; padding: 0; list-style: none; counter-reset: krok; }
   .seznam a {
     display: flex;
     align-items: center;
@@ -104,6 +106,6 @@
   }
   .prosel .cislo { background: var(--pc); color: var(--surface); }
   .nazev { font-size: var(--fs-perex); line-height: 1.3; }
-  .akce { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4); }
+  .akce { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-4); margin-bottom: var(--s-6); }
   .hotovo { margin: 0; }
 </style>

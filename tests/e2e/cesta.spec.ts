@@ -179,3 +179,35 @@ test('cesta: Spor Prótagorás × Sókratés a šaty jen klávesnicí (telefon)'
   await expect(zpetna).toContainText('Tvoje odpověď se posunula.');
   await expect(zpetna).toContainText('svědectví');
 });
+
+test('cesta: pravidlo v kroku 7 je vidět hned a uloží se samo, i když student jen dokončí cestu', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  // Přehled: Začít cestu stojí nad seznamem kroků.
+  await page.goto(CESTA);
+  await pripravit(page);
+  const zacit = await page.getByRole('link', { name: 'Začít cestu' }).boundingBox();
+  const prvni = await page.locator('.seznam a').first().boundingBox();
+  expect(zacit!.y).toBeLessThan(prvni!.y);
+
+  await page.goto(`${CESTA}7/`);
+  await pripravit(page);
+  const pole = page.getByRole('textbox', { name: 'Kdy mám dobrý důvod něčemu věřit? Napiš svoje pravidlo.' });
+  await expect(pole).toBeVisible();
+  await expect(page.locator('.citat')).toHaveCount(0);
+  await pole.fill('Když tvrzení obstojí, i když hledám, co by ho vyvrátilo.');
+  await page.getByRole('link', { name: 'Dokončit cestu' }).click();
+  await expect(page).toHaveURL(`${CESTA}#hotovo`);
+  await page.goto('/denik/');
+  await expect(page.locator('.seznam--zapisy')).toContainText('Když tvrzení obstojí, i když hledám, co by ho vyvrátilo.');
+  // Návrat do kroku 7: text je v poli a ví se, že je uložený.
+  await page.goto(`${CESTA}7/`);
+  await pripravit(page);
+  await expect(pole).toHaveValue('Když tvrzení obstojí, i když hledám, co by ho vyvrátilo.');
+  await expect(page.getByText('Uloženo v deníku.')).toBeVisible();
+  // Smazaný text zmizí i z deníku.
+  await pole.fill('');
+  await pole.blur();
+  await page.goto('/denik/');
+  await expect(page.getByText('Když tvrzení obstojí')).toHaveCount(0);
+});

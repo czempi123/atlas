@@ -1,5 +1,5 @@
 ---
-// Přehled cesty: otázka, úvod, kroky s tím, co student prošel, a Začít / Pokračovat.
+// Přehled cesty: otázka, úvod, Začít / Pokračovat a kroky s tím, co student prošel.
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Zakladni from '../../../layouts/Zakladni.astro';
 import PostupCesty from '../../../components/cesta/PostupCesty.svelte';
@@ -47,7 +47,6 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
     </header>
     <div class="ctenarsky uvod"><Content /></div>
     <section class="ctenarsky" aria-labelledby="kroky-nadpis">
-      <h2 class="t-h3 kroky-nadpis" id="kroky-nadpis">Kroky</h2>
       <PostupCesty client:load varianta="prehled" slug={cesta.id} nazev={c.nazev} kroky={seznam} />
     </section>
     <section class="ctenarsky kam-dal" id="hotovo" aria-labelledby="kam-dal-nadpis">
@@ -69,7 +68,6 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
   .lide { display: flex; flex-wrap: wrap; gap: var(--s-4); margin: 0; }
   .clovek { display: inline-flex; align-items: center; gap: var(--s-2); }
   .uvod { margin-bottom: var(--s-6); }
-  .kroky-nadpis { margin-bottom: var(--s-4); }
   .kam-dal { margin-top: var(--s-8); padding-top: var(--s-5); border-top: 1px solid var(--rule); }
   .kam-dal ul { margin: var(--s-3) 0 0; padding-left: var(--s-5); font-family: var(--font-sans); font-size: var(--fs-ovladani-l); }
   .kam-dal li { padding: var(--s-2) 0; }
