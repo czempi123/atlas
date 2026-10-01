@@ -1,0 +1,39 @@
+# Spor · cesta 1, krok 5: Prótagorás × Sókratés o měřítku pravdy, jak si ho představil Platón v Theaitétovi.
+# Podklad: docs/podklady/celek-1-pravda.md › Spor Sókratés × Prótagorás. Rámec Theaitétos 164e–165a, 171c–d;
+# Prótagorova strana 152a–b, 166d–167b, 167c; Sókratova strana 178b–179b, 170a–171c.
+druh: spor
+obdobi: 1
+nadtitulek: Spor
+scena: >-
+  Platón si představil, jak se Sókratés o tu větu přel. V jeho dialogu je ale Prótagorás už mrtvý.
+  Přítel, který ho znal, ho hájit nechce. Sókratés tedy hájí „sirotka“ sám, a teprve potom ho vyvrací.
+
+
+  Přizná přitom, že kdyby Prótagorás vystrčil hlavu ze země, nejspíš by je oba usvědčil z nesmyslů a zase zmizel.
+otazka: Je pravda to, co se ti jeví?
+strany:
+  - osoba: protagoras
+    postoj: Co se mi jeví, je pro mě pravda.
+    argumenty:
+      - >-
+        Komu je ve větru zima, tomu je vítr studený. Komu zima není, tomu studený není.
+        Nikdo z nich se nemýlí. Ptát se, jaký je vítr sám o sobě, nemá smysl.
+      - >-
+        Neznamená to, že jsou všichni stejně moudří. Moudrý nemění nepravdivé názory v pravdivé, protože nepravdivý názor neexistuje.
+        Mění horší stav v lepší.
+
+
+        Dělá to jako lékař: nemocnému chutná jídlo hořce a lékař ho nepřemlouvá, ale léčí. Učitel totéž dělá slovy.
+      - >-
+        Totéž platí pro obce. Co obci připadá spravedlivé, je pro ni spravedlivé, dokud to tak vidí.
+        Moudrý řečník ji vede k lepšímu.
+  - osoba: sokrates
+    postoj: Ne každý názor obstojí.
+    argumenty:
+      - >-
+        Jestli dostaneš zítra horečku, pozná lékař líp než ty. O víně rozhodne líp vinař, o hostině kuchař.
+        A sám Prótagorás tvrdil, že líp než kdokoli ví, co zapůsobí u soudu. Aspoň o budoucnosti tedy není každý stejné měřítko.
+      - >-
+        Prótagorás říká, že každý názor je pravdivý. Většina lidí si ale myslí, že Prótagorás pravdu nemá.
+        Pak musí přiznat, že i jejich názor je pravdivý. A tím sám přizná, že jeho věta pravdivá není.
+zdroje: [platon-theaitetos, sep-protagoras]

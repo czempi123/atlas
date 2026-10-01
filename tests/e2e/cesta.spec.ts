@@ -1,11 +1,11 @@
-// Ukázková cesta 1: přehled, šest kroků, soustředěná hlavička a lišta Předchozí / Další,
+// Ukázková cesta 1: přehled, sedm kroků, soustředěná hlavička a lišta Předchozí / Další,
 // Kam dál z bloků, Pokračuj na Domů a v deníku. Každý krok na 390 a 1440 px ve světlém
 // i tmavém režimu s axe, bez vodorovného posouvání a se snímky.
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 const CESTA = '/cesta/kdy-mam-dobry-duvod-verit/';
-const KROKY = ['Odpověď z Delf', 'Jak bys to zjišťoval ty?', 'Politik, básníci, řemeslníci', 'Podle čeho to poznáš?', 'Zpráva ve skupině', 'Tvoje pravidlo'];
+const KROKY = ['Odpověď z Delf', 'Jak bys to zjišťoval ty?', 'Politik, básníci, řemeslníci', 'Podle čeho to poznáš?', 'Člověk je měřítkem', 'Bílozlaté, nebo modročerné?', 'Tvoje pravidlo'];
 
 async function pripravit(page: Page) {
   await page.evaluate(() => document.fonts.ready);
@@ -61,7 +61,7 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
   await pripravit(page);
   await page.getByRole('link', { name: 'Začít cestu' }).click();
   await expect(page).toHaveURL(`${CESTA}1/`);
-  await expect(page.locator('.postup-text')).toHaveText('Krok 1 z 6');
+  await expect(page.locator('.postup-text')).toHaveText('Krok 1 z 7');
   // Lišta: Další krok.
   await page.getByRole('link', { name: /Další krok/ }).click();
   await expect(page).toHaveURL(`${CESTA}2/`);
@@ -80,7 +80,7 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
   await page.goto('/');
   const pokracuj = page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' });
   await expect(pokracuj.getByRole('link').first()).toContainText('Kdy mám dobrý důvod věřit?');
-  await expect(pokracuj.getByRole('link').first()).toContainText('Krok 3 z 6');
+  await expect(pokracuj.getByRole('link').first()).toContainText('Krok 3 z 7');
   await expect(pokracuj.getByRole('link').first()).toHaveAttribute('href', `${CESTA}3/`);
 
   // Přehled cesty ukáže prošlé kroky a nabídne pokračovat.
@@ -92,11 +92,11 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
   // Deník: rozpracovaná cesta a zápis z Volby.
   await page.goto('/denik/');
   await expect(page.locator('.seznam--rozpracovane')).toContainText('Kdy mám dobrý důvod věřit?');
-  await expect(page.locator('.seznam--rozpracovane')).toContainText('krok 3 z 6');
+  await expect(page.locator('.seznam--rozpracovane')).toContainText('krok 3 z 7');
   await expect(page.locator('.seznam--zapisy')).toContainText('B · Najdu lidi, kteří mají pověst moudrých, a vyzkouším je.');
 
   // Projít zbytek a dokončit.
-  for (const n of [4, 5, 6]) {
+  for (const n of [4, 5, 6, 7]) {
     await page.goto(`${CESTA}${n}/`);
     await pripravit(page);
   }
@@ -107,20 +107,75 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
 
 test('cesta: klávesnice v hlavičce a liště; rozpracovaná otázka v Pokračuj', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto(`${CESTA}5/`);
+  await page.goto(`${CESTA}6/`);
   await pripravit(page);
   await page.keyboard.press('Tab'); // Přeskočit na obsah
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: /Zpět na přehled cesty/ })).toBeFocused();
   // Změň jednu věc: jen první rozhodnutí, bez změny podmínky = rozpracovaná otázka.
-  const z = page.locator('#cesta1-zprava-ve-skupine');
-  await z.getByRole('radio', { name: 'Nejdřív si to ověřím.' }).focus();
+  const z = page.locator('#cesta1-saty');
+  await z.getByRole('radio', { name: 'Nedá se to rozhodnout.' }).focus();
   await page.keyboard.press('Space');
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
-  await expect(z.getByRole('radio', { name: 'Potvrdí to deset lidí' })).toBeFocused();
+  await expect(z.getByRole('radio', { name: 'Kdo je viděl naživo, říká modročerné' })).toBeFocused();
   await page.goto('/');
   const pokracuj = page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' });
-  await expect(pokracuj).toContainText('Přijdeš zítra později?');
-  await expect(pokracuj.getByRole('link', { name: /Přijdeš zítra později\?/ })).toHaveAttribute('href', `${CESTA}5/#cesta1-zprava-ve-skupine`);
+  await expect(pokracuj).toContainText('Kdo má pravdu?');
+  await expect(pokracuj.getByRole('link', { name: /Kdo má pravdu\?/ })).toHaveAttribute('href', `${CESTA}6/#cesta1-saty`);
+});
+
+test('cesta: Spor Prótagorás × Sókratés a šaty jen klávesnicí (telefon)', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(`${CESTA}5/`);
+  await pripravit(page);
+  await expect(page.locator('.citat').first()).toContainText('Člověk je měřítkem všech věcí');
+  const spor = page.locator('#cesta1-meritko-spor');
+  await expect(spor).toContainText('vystrčil hlavu ze země');
+  await spor.getByRole('radio').first().focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(spor.getByRole('radio', { name: 'spíš Prótagorás' })).toBeChecked();
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  const argumenty = spor.getByRole('region', { name: 'Argumenty obou stran' });
+  await expect(argumenty).toBeFocused();
+  await expect(argumenty.getByRole('heading', { name: 'Prótagorás' })).toBeVisible();
+  await expect(argumenty.getByRole('heading', { name: 'Sókratés' })).toBeVisible();
+  await expect(argumenty).toContainText('jako lékař');
+  await expect(argumenty).toContainText('horečku');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('Tab');
+  await page.keyboard.type('budoucnost');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  const posun = spor.getByRole('region', { name: 'Tvůj posun' });
+  await expect(posun).toBeFocused();
+  await expect(posun).toContainText('Začal jsi: spíš Prótagorás. Teď: spíš Sókratés.');
+  await expect(posun).not.toContainText(/správn|špatn/i);
+  // Kam dál z bloku vede na šaty.
+  await expect(spor.getByRole('link', { name: 'Další krok: Bílozlaté, nebo modročerné?' })).toHaveAttribute('href', `${CESTA}6/`);
+
+  await page.goto(`${CESTA}6/`);
+  await pripravit(page);
+  const saty = page.locator('#cesta1-saty');
+  await expect(saty).toContainText('V únoru 2015 obletěla internet fotka šatů.');
+  await saty.getByRole('radio', { name: 'Obě strany. Každý vidí, co vidí.' }).focus();
+  await page.keyboard.press('Space');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await expect(saty.getByRole('radio', { name: 'Kdo je viděl naživo, říká modročerné' })).toBeFocused();
+  await page.keyboard.press('Space');
+  await expect(saty.locator('.zmenena')).toContainText('viděla na svatbě');
+  await page.keyboard.press('Tab');
+  await expect(saty.locator('.zmenena').getByRole('radio', { name: 'Ti, kdo vidí modrou a černou.' })).toBeFocused();
+  await page.keyboard.press('Space');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  const zpetna = saty.getByRole('region', { name: 'Posun odpovědi' });
+  await expect(zpetna).toBeFocused();
+  await expect(zpetna).toContainText('Tvoje odpověď se posunula.');
+  await expect(zpetna).toContainText('svědectví');
 });

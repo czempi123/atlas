@@ -1,0 +1,48 @@
+# Změň jednu věc · cesta 1, krok 6: nový případ, šaty z roku 2015 (modročerné, nebo bílozlaté?).
+# Podklad: docs/podklady/celek-1-pravda.md › nový případ (šaty, 2015), body 1–4. Fotku šatů atlas nepřebírá.
+druh: zmena
+obdobi: 1
+nadtitulek: Nový případ
+scena: >-
+  V únoru 2015 obletěla internet fotka šatů. Jedni přísahali, že jsou modročerné, druzí, že bílozlaté.
+  Během jednoho dne se z toho stal spor po celém světě.
+
+
+  Ve velkém průzkumu viděla víc než polovina lidí modrou a černou, skoro třetina bílou a zlatou.
+  Všichni se přitom dívali na stejnou fotku.
+otazka: Kdo má pravdu?
+moznosti:
+  - { id: modrocerne, text: "Ti, kdo vidí modrou a černou." }
+  - { id: bilozlate, text: "Ti, kdo vidí bílou a zlatou." }
+  - { id: obe, text: "Obě strany. Každý vidí, co vidí." }
+  - { id: nikdo, text: Nedá se to rozhodnout. }
+podminky:
+  - id: nazivo
+    prepinac: Kdo je viděl naživo, říká modročerné
+    zmena: >-
+      Teď víš, že žena, která šaty viděla na svatbě, i firma, která je ušila, říkají totéž: jsou modročerné.
+    posun: >-
+      Posunul ses, protože promluvil někdo, kdo šaty viděl mimo fotku. Proč má jeho svědectví větší váhu než tvoje oči?
+      A kdy bys mu nevěřil?
+    stejne: >-
+      Ani svědectví z první ruky tvou odpověď nezměnilo. Co pro tebe znamená mít pravdu o barvě?
+  - id: svetlo
+    prepinac: Vědci vysvětlí, proč to vidíme jinak
+    zmena: >-
+      Teď víš, že si mozek domýšlí, v jakém světle šaty jsou. Kdo čeká chladné denní světlo, vidí bílou a zlatou.
+      Kdo čeká teplé umělé světlo, vidí modrou a černou.
+    posun: >-
+      Posunulo tě vysvětlení. Mýlí se tedy ti druzí, nebo jen jejich mozek odhadl světlo jinak? Je mezi tím rozdíl?
+    stejne: >-
+      Vysvětlení tvou odpověď nezměnilo. Říká, proč vidíme různě. Říká ale taky, kdo vidí správně?
+  - id: porad
+    prepinac: Ty je pořád vidíš bílozlaté
+    zmena: >-
+      Teď si představ, že víš všechno: co říká majitelka, výrobce i vědci. A ty šaty na fotce pořád vidíš bílé a zlaté.
+    posun: >-
+      Posunul ses, když přibyl tvůj vlastní pohled. Jsou tu tedy dvě otázky: jaké šaty jsou a jak je vidíš ty.
+      Na kterou z nich jsi odpovídal?
+    stejne: >-
+      Tvá odpověď stojí, ať vidíš cokoli. Odpovídáš tedy na to, jaké šaty jsou, ne na to, jak se ti jeví.
+      Co by na to řekl Prótagorás?
+zdroje: [buzzfeed-saty-2015, nbc-saty-2015, lafer-sousa-2015]
