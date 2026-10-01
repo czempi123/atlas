@@ -1,0 +1,46 @@
+---
+// Pevná lišta kroku cesty: Předchozí krok / Další krok (na konci Dokončit cestu).
+import Ikona from '../ui/Ikona.astro';
+
+interface Props {
+  predchozi: { href: string; text: string };
+  dalsi: { href: string; text: string; nazev?: string };
+}
+const { predchozi, dalsi } = Astro.props;
+---
+<nav class="cesta-lista" aria-label="Kroky cesty" data-pagefind-ignore>
+  <div class="cesta-lista__vnitrek stranka">
+    <a class="blok__tl blok__tl--vedlejsi predchozi" href={predchozi.href}>
+      <Ikona id="zpet" velikost={20} /><span>{predchozi.text}</span>
+    </a>
+    <a class="blok__tl blok__tl--hlavni dalsi" href={dalsi.href} rel="next">
+      <span>{dalsi.text}{dalsi.nazev && <span class="dalsi__nazev">: {dalsi.nazev}</span>}</span>
+      <Ikona id="dal" velikost={20} />
+    </a>
+  </div>
+</nav>
+
+<style>
+  .cesta-lista {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 40;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+  }
+  .cesta-lista__vnitrek {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-3);
+    min-height: var(--spodni-lista);
+    padding-block: var(--s-2);
+  }
+  .predchozi { padding-inline: var(--s-4); }
+  .dalsi { margin-left: auto; }
+  .dalsi__nazev { display: none; }
+  @media (min-width: 700px) {
+    .dalsi__nazev { display: inline; }
+  }
+</style>

@@ -1,0 +1,14 @@
+---
+// Změň jednu věc. Obsah je v src/content/bloky/<id>.yaml (druh: zmena).
+// Použití v MDX: <ZmenJednuVec id="utek-z-vezeni" />  (volitelně dal={{ href, text }})
+import Ostrov from '../ostrovy/ZmenJednuVec.svelte';
+import { nactiBlok, odkazNaBlok, proOstrov, clovek, kamDal } from './_kontrola';
+import type { Dal } from '../ostrovy/bloky-typy';
+
+interface Props { id: string; dal?: Dal }
+const { id, dal } = Astro.props;
+const blok = await nactiBlok(id, 'zmena', Astro.url.pathname);
+const filozof = blok.coUdelal ? clovek(blok.coUdelal.osoba) : undefined;
+const dalsi = await kamDal(Astro.url.pathname, dal ?? blok.dal);
+---
+<Ostrov client:visible id={id} blok={proOstrov(blok)} filozof={filozof} odkaz={odkazNaBlok(Astro.url.pathname, id)} dal={dalsi} />

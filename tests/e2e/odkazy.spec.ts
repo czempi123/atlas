@@ -27,7 +27,9 @@ test('všechny vnitřní odkazy a kotvy existují', () => {
     const text = readFileSync(s, 'utf8');
     for (const [, href] of text.matchAll(/\shref="([^"]+)"/g)) {
       if (/^(https?:|mailto:|data:)/.test(href) || href.startsWith('/_astro/') || href.startsWith('/pagefind/')) continue;
-      const [cesta, kotva] = href.split('#');
+      const [sDotazem, kotva] = href.split('#');
+      // Stav v adrese (/mapa/?rok=…) nemění stránku, na kterou odkaz vede.
+      const cesta = sDotazem.split('?')[0];
       const cil = cesta === '' ? cestaStranky(s) : cesta;
       if (cil.startsWith('/ikony/') || cil.endsWith('.svg') || cil.endsWith('.woff2')) {
         if (!existsSync(join(DIST, cil))) chyby.push(`${cestaStranky(s)}: ${href} neexistuje`);

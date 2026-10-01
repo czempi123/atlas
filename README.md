@@ -14,13 +14,13 @@ Atlas vzniká jako závěrečná práce pedagogického minima a jako pomůcka, k
 
 ## Stav
 
-Nová verze vzniká jako statický web v [Astru](https://astro.build) podle plánu v [`docs/plan.md`](docs/plan.md). Hotová je kostra: design systém, ověřená data období 1 a 2, šablona osobnosti na Sókratovi, stránky Domů, Lidé a směry, Otázky, Můj deník a interaktivní Mapa a čas (mapa, posuvník roku, řeka životů, karta člověka). Dosavadní prototyp (jeden soubor HTML) je v `docs/archiv/` jako verze 9.
+Nová verze vzniká jako statický web v [Astru](https://astro.build) podle plánu v [`docs/plan.md`](docs/plan.md). Hotová je kostra: design systém, ověřená data období 1 a 2, šablona osobnosti na Sókratovi, stránky Domů, Lidé a směry, Otázky, Můj deník a interaktivní Mapa a čas (mapa, posuvník roku, řeka životů, karta člověka). Prvních šest interaktivních bloků je v ukázkové cestě „Kdy mám dobrý důvod věřit?“ a v Sókratově profilu. Dosavadní prototyp (jeden soubor HTML) je v `docs/archiv/` jako verze 9.
 
 | Fáze | Obsah | Stav |
 | --- | --- | --- |
 | F0 Základ | Archiv, pravidla projektu, průvodce stylem, první skilly, [architektura celé filozofie](docs/architektura.md) | hotovo |
 | F1 Design a kostra | Vizuální návrh, web v Astru s ověřenými daty období 1–2 a šablonou na Sókratovi | hotovo |
-| F2 Vertikální řez antiky | Mapa a čas v2, portréty, tři cesty, deník, zkoušení se studenty | rozpracováno: Mapa a čas v2 hotová, další jsou bloky (P5) |
+| F2 Vertikální řez antiky | Mapa a čas v2, portréty, tři cesty, deník, zkoušení se studenty | rozpracováno: Mapa a čas v2 hotová; prvních šest bloků a ukázková cesta 1 (P5) čekají na schválení |
 
 ## Spuštění
 

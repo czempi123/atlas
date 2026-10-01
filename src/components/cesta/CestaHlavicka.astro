@@ -1,0 +1,57 @@
+---
+// Soustředěná hlavička kroku cesty (docs/design.md › Navigace): vlevo zpět na přehled cesty,
+// uprostřed postup po krocích, vpravo Uložit a odejít (postup se ukládá sám).
+import Ikona from '../ui/Ikona.astro';
+import PostupCesty from './PostupCesty.svelte';
+
+interface Props {
+  slug: string;
+  nazev: string;
+  kroky: { n: number; nazev: string; href: string }[];
+  aktualni: number;
+}
+const { slug, nazev, kroky, aktualni } = Astro.props;
+---
+<header class="cesta-hlavicka" data-pagefind-ignore>
+  <div class="cesta-hlavicka__vnitrek stranka">
+    <a class="zpet t-ovladani" href={`/cesta/${slug}/`}>
+      <Ikona id="zpet" velikost={20} />
+      <span><span class="vizualne-skryte">Zpět na přehled cesty </span><span class="zpet__nazev">{nazev}</span></span>
+    </a>
+    <PostupCesty client:load varianta="hlavicka" slug={slug} nazev={nazev} kroky={kroky} aktualni={aktualni} />
+    <a class="odejit t-ovladani" href="/"><span class="kratce">Odejít</span><span class="dlouze">Uložit a odejít</span></a>
+  </div>
+</header>
+
+<style>
+  .cesta-hlavicka {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+  }
+  .cesta-hlavicka__vnitrek {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--s-3);
+    min-height: var(--hlavicka);
+    padding-block: var(--s-1);
+  }
+  .zpet, .odejit {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--dotyk);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .zpet:hover .zpet__nazev, .odejit:hover { text-decoration: underline; }
+  .zpet__nazev, .dlouze { display: none; }
+  .odejit { justify-self: end; }
+  @media (min-width: 900px) {
+    .zpet__nazev, .dlouze { display: inline; }
+    .kratce { display: none; }
+  }
+</style>

@@ -2,6 +2,32 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Bloky v atlasu (P5, druhé kolo)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Bloky jsou vidět v ukázkové cestě 1 „Kdy mám dobrý důvod věřit?“ (šest kroků) a v Sókratově profilu; vstup z Domů, z profilu a přes Pokračuj | Autor: v dílně se k blokům student nedostal a zobrazoval se v ní kód |
+| Dílna zůstává pro autora (noindex), ale bez kódu, cest k souborům a redakčních poznámek | Autor: do zobrazení se nesmí propisovat kód |
+| Cesta 1 zatím jen Sókratova část; Prótagorás přibude s jeho ověřením | Ukázka stojí jen na ověřeném obsahu; krok 4 a 5 jsou pokus studenta a nový případ „Představ si…“ bez historických tvrzení |
+| Krok cesty má vlastní soustředěnou hlavičku a lištu Předchozí / Další místo hlavní navigace | Podle docs/design.md › Navigace; student ví, kde je, jak se vrátí a co dál |
+| Kdo žil dřív? (vzdálenost) a Spor se ovládají tažením, klepnutím i klávesnicí; osa je souměrná kolem prvního člověka | Autor zvolil tažení; souměrná osa neprozradí odpověď |
+| Každý blok po dokončení nabídne jeden další krok (v cestě další krok sám) | Autor: Kam dál po bloku |
+| Spor Platón × Diogenés ověřen (Diogenés Laertios VI, 53, vlastní převod) a je v Sókratově profilu | Autor: ověřit hned; podklady v docs/podklady/spor-platon-diogenes.md |
+| Kontrola odkazů ignoruje stav v adrese (`?rok=…`) | Odkaz do Mapy a času se stavem vede na existující stránku /mapa/ |
+
+## 30. 9. 2026: Knihovna bloků, prvních šest (P5)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Obsah bloků s více možnostmi (Volba s důvodem, Změň jednu věc, Spor) je v YAML v `src/content/bloky/`, do MDX se vkládá jedním řádkem `<Volba id="…" />` | Rozhodnutí autora: schéma a kontrola dat (osoby, prameny) při sestavení; dlouhé české texty s uvozovkami ve vlastnostech MDX jsou křehké |
+| Do deníku jdou Odkryj, Volba, Změň jednu věc a Spor; Příběh nic a Kdo žil dřív? jen stav bloku | Rozhodnutí autora: deník je pro názory a důvody, ne pro fakta. Rozpracovaný stav všech bloků je v části `bloky` záznamu `atlas-denik`, vydrží obnovení a je v exportu |
+| Nejdřív sám a Odkryj jsou jeden blok; `NejdrivSam.svelte` zůstává jako starší jméno | Sókratův profil funguje beze změny textu a nově po obnovení ukáže uloženou odpověď |
+| Příběh je komponenta Astro bez JavaScriptu, ne Svelte ostrov | Nemá interakci; statická komponenta je rychlejší a funguje i bez skriptů |
+| Blok s neprázdným `kOvereni` smí být jen v dílně (`/dilna/`), jinde zastaví sestavení | Neověřený obsah se nesmí dostat ke studentům omylem |
+| Ukázka Změň jednu věc: útěk z vězení („Představ si…“), jako fakt jen „mohl utéct, neutekl“ z atributu | Rozhodnutí autora; Sókratovy důvody z Kritóna čekají na ověření |
+| Ukázka Sporu: Platón × Diogenés o skutečnosti; Diogenova strana čeká na ověření (Diogenés Laertios VI, 53), do té doby jen v dílně | Rozhodnutí autora: skutečný historický spor je lepší než spor sestavený z nesouvisejících vět |
+| Mapa: první změna roku po načtení vždy založí záznam historie | Na rychlém počítači se první změna do 800 ms jen přepsala a Zpět odešlo ze stránky |
+
 ## 30. 9. 2026: Schválení P4
 
 | Rozhodnutí | Důvod |

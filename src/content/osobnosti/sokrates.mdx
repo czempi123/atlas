@@ -39,6 +39,8 @@ import Myslenka from '../../components/osobnost/Myslenka.astro';
 import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
 import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
 import KamDal from '../../components/osobnost/KamDal.astro';
+import CestaKarta from '../../components/cesta/CestaKarta.astro';
+import { KdoZilDriv, ZmenJednuVec, Spor } from '../../components/bloky';
 
 <div class="uvod ctenarsky">
 
@@ -70,6 +72,8 @@ Sókratés by se tě nejdřív zeptal, jestli ten člověk ví, kde jeho věděn
 Podívej se na svou odpověď. Napsal jsi znak, podle kterého moudrost poznáš, nebo jen jméno? Poznal bys podle něj moudrého člověka, kterého vůbec neznáš?
 
 </NejdrivSam>
+
+<CestaKarta slug="kdy-mam-dobry-duvod-verit" nadtitulek="Pokračuj cestou" />
 </Kapitola>
 
 <DobaALide osoba={props.osoba}>
@@ -77,6 +81,8 @@ Podívej se na svou odpověď. Napsal jsi znak, podle kterého moudrost poznáš
 Z Athén vycházel skoro jen do války. Třikrát: k Potidaii, k Déliu a k Amfipoli.
 
 </DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="sokrates" b="platon" druh="vzdalenost" /></div>
 
 <Myslenky>
   <Myslenka cislo={1} disciplina="Poznání">
@@ -97,6 +103,16 @@ Podle Sókrata nikdo nedělá špatné věci proto, že chce být špatný. Děl
   </Myslenka>
 </Myslenky>
 
+<div class="ctenarsky">
+
+<ZmenJednuVec id="utek-z-vezeni" />
+
+Po Sókratově smrti se v Athénách potkávali lidé, kteří přemýšleli úplně jinak. Platón, jeho žák, tu založil Akademii. Diogenés žil na ulici a vysmíval se tomu, čemu ostatní slepě věřili.
+
+</div>
+
+<div class="blok-sloupec"><Spor id="platon-diogenes-skutecnost" /></div>
+
 <ZkusToZitKarta id="sokrates-rozhovor" nazev="Jeden sokratovský rozhovor" odkaz="/osobnost/sokrates/#zkus-to-zit">
 
 Zeptej se kamaráda na něco, o čem je pevně přesvědčený. Třeba: Co je podle tebe opravdové přátelství? Neoponuj. Jen se ptej dál: Platí to vždycky? A co když…? Na konci si zapiš, na co jste přišli oba.
@@ -104,6 +120,7 @@ Zeptej se kamaráda na něco, o čem je pevně přesvědčený. Třeba: Co je po
 </ZkusToZitKarta>
 
 <KamDal odkazy={[
+  { href: '/cesta/kdy-mam-dobry-duvod-verit/', nadtitulek: 'Cesta 1', text: 'Kdy mám dobrý důvod věřit?' },
   { href: '/mapa/', nadtitulek: 'Mapa a čas', text: 'Kdo žil v Athénách a kolem Egejského moře' },
   { href: '/lide/#obdobi-1', nadtitulek: 'Lidé a směry', text: 'Sókratovi žáci, přátelé a protivníci' },
   { href: '/otazky/#jak-poznam-pravdu', nadtitulek: 'Velká otázka 7', text: 'Jak poznám, co je pravda?' },

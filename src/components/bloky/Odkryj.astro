@@ -1,0 +1,42 @@
+---
+// Odkryj: vlastní pokus → srovnání, modelové odpovědi a sebekontrola. Srovnání se píše dovnitř.
+// Použití v MDX:
+// <Odkryj id="sokrates-kdo-je-moudry" otazka="Koho považuješ za moudrého člověka?" tlacitko="Porovnat se Sókratem"
+//   filozof="sokrates" modelove={[{ text: '…', komentar: '…' }]} sebekontrola={['…']}>
+//   Srovnání s filozofem…
+// </Odkryj>
+import Ostrov from '../ostrovy/Odkryj.svelte';
+import { odkazNaBlok, clovek, kamDal } from './_kontrola';
+import type { Dal } from '../ostrovy/bloky-typy';
+
+interface Props {
+  id: string;
+  otazka: string;
+  nadtitulek?: string;
+  tlacitko?: string;
+  modelove?: { text: string; komentar?: string }[];
+  sebekontrola?: string[];
+  /** barva období, když ji blok nemá převzít ze stránky */
+  obdobi?: number;
+  /** id filozofa, se kterým se student srovnává (mince v hlavičce, barva období) */
+  filozof?: string;
+  /** Kam dál po odkrytí (v cestě se doplní další krok sám) */
+  dal?: Dal;
+}
+const { id, otazka, nadtitulek, tlacitko, modelove, sebekontrola, obdobi, filozof, dal } = Astro.props;
+const f = filozof ? clovek(filozof) : undefined;
+const dalsi = await kamDal(Astro.url.pathname, dal);
+---
+<Ostrov
+  client:visible
+  id={id}
+  otazka={otazka}
+  nadtitulek={nadtitulek}
+  tlacitko={tlacitko}
+  modelove={modelove}
+  sebekontrola={sebekontrola}
+  obdobi={obdobi ?? f?.obdobi}
+  filozof={f}
+  dal={dalsi}
+  odkaz={odkazNaBlok(Astro.url.pathname, id)}
+><slot /></Ostrov>

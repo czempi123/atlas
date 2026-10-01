@@ -1,0 +1,42 @@
+# Změň jednu věc · myšlenkový pokus „Představ si…“ podle Sókratova odmítnutí útěku.
+# Jako fakt jen atribut kalich: „Mohl utéct, ale neutekl“ (Platón, Kritón; Faidón 117a–118a).
+# Sókratovy vlastní důvody (Kritón 50a–54d) čekají na ověření, proto tu nejsou (docs/podklady/k-overeni.md).
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si, že tě soud odsoudil k smrti. Podle tebe jsi nic špatného neudělal.
+  Přátelé mají všechno připravené: peníze, loď a místo, kde tě nikdo nenajde. Stačí dnes v noci vyjít ze dveří.
+otazka: Utečeš?
+moznosti:
+  - { id: uteku, text: Uteču. }
+  - { id: zustanu, text: Zůstanu. }
+podminky:
+  - id: spravedlivy
+    prepinac: Rozsudek je spravedlivý
+    zmena: Teď si představ, že soud byl poctivý a ty jsi opravdu udělal to, z čeho tě viní.
+    posun: >-
+      Rozhoduje tedy pro tebe, jestli je rozsudek spravedlivý.
+      Kdo to ale má posoudit, když soudíš sám sebe?
+    stejne: >-
+      Na tom, jestli je rozsudek spravedlivý, tvé rozhodnutí nestojí.
+      Na čem tedy stojí?
+  - id: pratele
+    prepinac: Přátelé by za útěk pykali
+    zmena: >-
+      Teď si představ, že kdyby útěk vyšel najevo, zaplatí za něj tví přátelé. Přijdou o majetek, nebo půjdou do vězení místo tebe.
+    posun: >-
+      Posunul ses kvůli druhým. Kolik smějí ostatní zaplatit za tvou svobodu? A kolik bys za tu jejich zaplatil ty?
+    stejne: >-
+      Zůstal jsi u svého, i když se změnilo, co to bude stát tvé přátele. Co tě v tom drží?
+  - id: nikdo
+    prepinac: Nikdo se to nedozví
+    zmena: Teď si představ, že se nikdy nikdo nedozví, že jsi utekl, ani kdo ti pomohl.
+    posun: >-
+      Změnilo se jen to, jestli to někdo uvidí. Co přesně na tom tvé rozhodnutí měnilo?
+    stejne: >-
+      Na tom, jestli to někdo uvidí, tvé rozhodnutí nestojí. Dokážeš říct, co ho nese?
+coUdelal:
+  osoba: sokrates
+  text: Sókratés utéct mohl, ale neutekl. Když ho Athény odsoudily, vypil ve vězení číši jedu.
+zdroje: [platon-kriton, platon-faidon]

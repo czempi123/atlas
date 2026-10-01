@@ -1,0 +1,26 @@
+---
+// Dílna: stránky pro autora s ukázkami bloků. Mimo navigaci, hledání i vyhledávače.
+import Zakladni from './Zakladni.astro';
+
+interface Props { frontmatter: { titulek: string; perex?: string } }
+const { frontmatter } = Astro.props;
+---
+<Zakladni titulek={frontmatter.titulek} hledat={false} noindex drobecky={[{ text: 'Dílna' }, { text: frontmatter.titulek }]}>
+  <div class="stranka dilna obdobi-1">
+    <header class="dilna__hlava ctenarsky">
+      <p class="t-nadtitulek dilna__nadtitulek">Dílna</p>
+      <h1 class="t-h1">{frontmatter.titulek}</h1>
+      {frontmatter.perex && <p class="t-perex">{frontmatter.perex}</p>}
+    </header>
+    <slot />
+  </div>
+</Zakladni>
+
+<style>
+  .dilna__hlava { padding: var(--s-6) 0 var(--s-4); }
+  .dilna__nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
+  .dilna h1 { margin-bottom: var(--s-4); }
+  .dilna :global(.ukazka) { margin-top: var(--s-9); padding-top: var(--s-6); border-top: 1px solid var(--rule); }
+  .dilna :global(.ukazka > h2) { margin-bottom: var(--s-3); }
+  .dilna :global(.ukazka__popis) { max-width: var(--ctenarsky-sloupec); font-family: var(--font-sans); font-size: var(--fs-ovladani); line-height: var(--lh-ovladani); color: var(--ink-2); }
+</style>

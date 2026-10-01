@@ -1,0 +1,38 @@
+---
+// Kdo žil dřív?: odhad pořadí nebo vzdálenosti dvou lidí z dat, pak odhalení s osou a odkazem do mapy.
+// Použití v MDX: <KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
+//                <KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />
+import Ostrov from '../ostrovy/KdoZilDriv.svelte';
+import { osoba } from '../../lib/data';
+import { zivot } from '../../lib/casy';
+import { faktaDvojice } from '../../lib/bloky';
+import { odkazNaBlok, kamDal } from './_kontrola';
+import type { Dal } from '../ostrovy/bloky-typy';
+
+interface Props {
+  a: string;
+  b: string;
+  druh?: 'poradi' | 'vzdalenost';
+  /** vlastní znění otázky (výchozí: „Kdo žil dřív: A, nebo B?“) */
+  otazka?: string;
+  /** id bloku; výchozí kdo-<a>-<b>-<druh> */
+  id?: string;
+  /** Kam dál vedle odkazu do mapy (v cestě další krok sám) */
+  dal?: Dal;
+}
+const { a, b, druh = 'poradi', otazka, id, dal } = Astro.props;
+const vytah = (x: string) => {
+  const o = osoba(x);
+  return {
+    id: o.id, jmeno: o.jmeno, jmeno2: o.jmeno2, zena: o.zena, obdobi: o.obdobi,
+    narozen: o.narozen, zemrel: o.zemrel, aktivni: o.aktivni, mista: [], zivotText: zivot(o), ikona: o.atribut?.ikona,
+  };
+};
+const A = vytah(a);
+const B = vytah(b);
+if (a === b) throw new Error('Kdo žil dřív? potřebuje dva různé lidi.');
+if (!faktaDvojice(A, B)) throw new Error(`Kdo žil dřív?: u „${a}“ nebo „${b}“ chybějí roky v lide.yaml.`);
+const idBloku = id ?? `kdo-${a}-${b}-${druh}`;
+const dalsi = await kamDal(Astro.url.pathname, dal);
+---
+<Ostrov client:visible id={idBloku} druh={druh} a={A} b={B} otazka={otazka} odkaz={odkazNaBlok(Astro.url.pathname, idBloku)} dal={dalsi} />

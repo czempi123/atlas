@@ -85,6 +85,7 @@ prameny:
   - { id: platon-faidon, druh: pramen, nazev: "Faidón", autor: Platón, dilo: "Phaedo, angl. B. Jowett (Project Gutenberg 1658)", url: "https://www.gutenberg.org/files/1658/1658-h/1658-h.htm", overeno: 2026-09-29, poznamka: "Poslední den a smrt (117a–118a); Kritón je přítomen." }
   - { id: platon-symposion, druh: pramen, nazev: "Symposion", autor: Platón, dilo: "Symposium, angl. B. Jowett (Project Gutenberg 1600)", url: "https://www.gutenberg.org/files/1600/1600-h/1600-h.htm", overeno: 2026-09-29, poznamka: "Alkibiadés o Sókratovi u Potidaie a při ústupu od Délia (219e–221b)." }
   - { id: platon-ustava, druh: pramen, nazev: "Ústava VII", autor: Platón, dilo: "Republic, angl. B. Jowett (MIT Internet Classics Archive)", url: "http://classics.mit.edu/Plato/republic.8.vii.html", overeno: 2026-09-29, poznamka: "Podobenství o jeskyni (514a–515c)." }
+  - { id: dl-vi-53, druh: pramen, nazev: "Životy filozofů VI, 53", autor: Diogenés Laertios, dilo: "Vitae philosophorum, angl. R. D. Hicks (Perseids)", url: "https://fgh.perseids.org/read/greekLit/tlg0004/tlg001/perseus-eng2/6.2.53-6.2.53", overeno: 2026-10-01, poznamka: "Platón mluví o idejích, Diogenés: stůl a pohár vidím, stolovost a pohárovost ne; Platón: máš oči, ne rozum. Řecký text: perseus-grc2 6.2.53." }
   - { id: dl-vi-76, druh: pramen, nazev: "Životy filozofů VI, 76–79", autor: Diogenés Laertios, dilo: "Vitae philosophorum, angl. R. D. Hicks (Perseids)", url: "https://fgh.perseids.org/read/greekLit/tlg0004/tlg001/perseus-eng2/6.2.76-6.4.84", overeno: 2026-09-30, poznamka: "Zemřel skoro devadesátiletý, podle Démétria v Korinthu týž den jako Alexandr v Babylónu." }
   - { id: dl-ix-68, druh: pramen, nazev: "Životy filozofů IX, 68", autor: Diogenés Laertios, dilo: "Lives of Eminent Philosophers, angl. R. D. Hicks (LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/9/Pyrrho*.html", overeno: 2026-09-30, poznamka: "Pyrrhón za bouře ukazuje na prasátko, které dál žere (podle Poseidónia)." }
   - { id: cicero-de-fato, druh: pramen, nazev: "O osudu 42–43", autor: Cicero, dilo: "De fato, lat. a angl. H. Rackham (Logic Museum)", url: "https://www.logicmuseum.com/wiki/Authors/cicero/defato", overeno: 2026-09-30, poznamka: "Chrýsippův válec a káča." }
@@ -118,6 +119,29 @@ citaty:
       druh: vlastni
       podle: "řecký text a anglický překlad B. Jowetta („he knows nothing, and thinks that he knows; I neither know nor think that I know“)"
     zdroj: platon-obrana
+
+  - id: dl-vi-53-diogenes
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 53
+    cesky: "Stůl a pohár vidím, Platóne. Stolovost a pohárovost ale nikde."
+    original: "τράπεζαν μὲν καὶ κύαθον ὁρῶ· τραπεζότητα δὲ καὶ κυαθότητα οὐδαμῶς"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („Table and cup I see; but your tablehood and cuphood, Plato, I can nowise see“)"
+    zdroj: dl-vi-53
+  - id: dl-vi-53-platon
+    osoba: platon
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 53
+    cesky: "Oči, kterými se vidí stůl a pohár, máš. Rozum, kterým se vidí stolovost a pohárovost, nemáš."
+    original: "οἷς μὲν γὰρ κύαθος καὶ τράπεζα θεωρεῖται, ὀφθαλμοὺς ἔχεις· ᾧ δὲ τραπεζότης καὶ κυαθότης βλέπεται, νοῦν οὐκ ἔχεις"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („you have the eyes to see the visible table and cup; but not the understanding by which ideal tablehood and cuphood are discerned“)"
+    zdroj: dl-vi-53
 
 # Zatím žádný obrázek: Wikimedia Commons nebyl při založení projektu dostupný.
 # Deska do té doby ukazuje minci s atributem (docs/design.md, oddíl Obrázky).

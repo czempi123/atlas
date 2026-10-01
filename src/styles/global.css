@@ -132,3 +132,87 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ─── Interaktivní bloky (src/components/bloky, docs/design.md › Komponenty) ─────────────────── */
+.blok {
+  margin: var(--s-7) 0;
+  padding: var(--s-5);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  scroll-margin-top: calc(var(--hlavicka) + var(--s-4));
+}
+.blok > :last-child { margin-bottom: 0; }
+.blok__nadtitulek { margin: 0 0 var(--s-2); color: var(--pc, var(--ink)); }
+.blok__scena { color: var(--ink-2); }
+.blok__otazka { margin: 0 0 var(--s-5); }
+.blok__hlava { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--s-4); }
+.blok__hlava .blok__nadtitulek { padding-top: var(--s-1); }
+.blok__mince { display: flex; flex: none; gap: var(--s-1); }
+/* Pole na psaní: linkovaný papír deníku, spodní linka s kontrastem 3 : 1. */
+.blok__pole {
+  display: block;
+  width: 100%;
+  min-height: calc(3 * 1.6em + var(--s-3));
+  margin: 0 0 var(--s-4);
+  padding: var(--s-1) var(--s-1) var(--s-2);
+  border: 0;
+  border-bottom: 1.5px solid var(--muted);
+  border-radius: 0;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.6em - 1px), var(--rule) calc(1.6em - 1px), var(--rule) 1.6em);
+  background-position: 0 var(--s-1);
+  background-attachment: local;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: var(--fs-text);
+  line-height: 1.6;
+  resize: vertical;
+}
+.blok__pole--kratke { min-height: calc(2 * 1.6em + var(--s-3)); }
+.blok__pole::placeholder { color: var(--muted); opacity: 1; font-style: italic; }
+.blok__pole:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; border-bottom-color: var(--ink); }
+.blok__pole:disabled { color: var(--ink-2); border-bottom-style: dotted; }
+.blok__popis { display: block; margin-bottom: var(--s-2); font-family: var(--font-sans); font-size: var(--fs-ovladani); font-weight: 500; color: var(--ink); }
+.blok__akce { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); margin-top: var(--s-4); }
+.blok__tl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  min-height: 48px;
+  padding: 0 var(--s-5);
+  border-radius: var(--r-sm);
+  font-family: var(--font-sans);
+  font-size: var(--fs-ovladani-l);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--pohyb-rychle), border-color var(--pohyb-rychle), color var(--pohyb-rychle);
+}
+.blok__tl--hlavni { min-height: 52px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); }
+.blok__tl--hlavni:hover { background: var(--ink-2); border-color: var(--ink-2); }
+.blok__tl--hlavni:disabled { cursor: not-allowed; border-color: var(--rule); background: transparent; color: var(--muted); }
+.blok__tl--vedlejsi { border: 1.5px solid var(--ink); background: transparent; color: var(--ink); }
+.blok__tl--vedlejsi:hover { background: var(--sunk); }
+.blok__tl--tiche { min-height: 44px; border: 1px solid var(--rule); background: transparent; color: var(--ink); font-size: var(--fs-ovladani); font-weight: 500; }
+.blok__tl--tiche:hover { border-color: var(--muted); }
+/* Zpětná vazba a odkrytý obsah: tint období, titulek v inkoustu. */
+.blok__zpetna {
+  margin-top: var(--s-5);
+  padding: var(--s-4) var(--s-5);
+  border-radius: var(--r-sm);
+  background: var(--pc-tint, var(--sunk));
+}
+.blok__zpetna > :last-child { margin-bottom: 0; }
+.blok__zpetna-titulek { margin: 0 0 var(--s-2); font-family: var(--font-sans); font-size: var(--fs-ovladani-l); font-weight: 600; line-height: var(--lh-ovladani-l); color: var(--ink); }
+.blok__oddil { margin-top: var(--s-4); padding-top: var(--s-4); border-top: 1px solid var(--pc-soft, var(--rule)); }
+.blok__ulozeno { margin: var(--s-3) 0 0; font-family: var(--font-sans); font-size: var(--fs-popisek); color: var(--ink-2); }
+.blok__dal { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-5); }
+.blok__dal a { gap: var(--s-2); }
+.blok__dal svg { flex: none; }
+/* „Co udělal …“: mince filozofa vedle nadpisu. */
+.blok__filozof { display: flex; align-items: center; gap: var(--s-3); margin: 0 0 var(--s-2); }
+.blok__filozof .blok__zpetna-titulek { margin: 0; }
+.blok-sloupec { max-width: 960px; }

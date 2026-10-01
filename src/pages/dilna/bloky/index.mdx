@@ -1,0 +1,67 @@
+---
+layout: ../../../layouts/Dilna.astro
+titulek: Bloky
+perex: Všech šest bloků na jednom místě. Ve skutečném atlasu je najdeš v cestě „Kdy mám dobrý důvod věřit?“ a u Sókrata.
+---
+import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../../components/bloky';
+
+<section class="ukazka" aria-labelledby="h-pribeh">
+<h2 class="t-h2" id="h-pribeh">Příběh</h2>
+
+<Pribeh id="delfy-pribeh" osoba="sokrates" nadtitulek="Delfy" titulek="Nikdo není *moudřejší.*" popisek="Delfy. Tady se Chairefón zeptal věštírny na Sókrata.">
+
+Sókratův přítel Chairefón byl prudký člověk: do čeho se pustil, do toho šel celý. Jednou se vydal do Delf a zeptal se věštírny, jestli je někdo moudřejší než Sókratés. Pýthie odpověděla, že nikdo.
+
+Když se to Sókratés dozvěděl, nevěděl, co si s tím počít. O sobě věděl, že moudrý není, ve velkém ani v malém. Bůh ale přece lhát nemůže. Rozhodl se tedy věštbu prověřit.
+
+</Pribeh>
+</section>
+
+<section class="ukazka" aria-labelledby="h-volba">
+<h2 class="t-h2" id="h-volba">Volba s důvodem</h2>
+
+<Volba id="cesta1-jak-zjistit" dal={{ href: '/cesta/kdy-mam-dobry-duvod-verit/', text: 'Projdi celou cestu' }} />
+</section>
+
+<section class="ukazka" aria-labelledby="h-odkryj">
+<h2 class="t-h2" id="h-odkryj">Odkryj</h2>
+
+<Odkryj
+  id="dilna-kdo-je-moudry"
+  filozof="sokrates"
+  otazka="Koho považuješ za moudrého člověka? Podle čeho to poznáš?"
+  tlacitko="Porovnat se Sókratem"
+  modelove={[
+    { text: 'Moje babička. Hodně toho zažila a málokdy se splete.', komentar: 'Jméno a zkušenost. Zkušenost moudrosti pomáhá. Sókratés ale potkal zkušené politiky i řemeslníky, a přesto si mysleli, že rozumějí i tomu, čemu nerozuměli.' },
+    { text: 'Moudrý je ten, kdo pozná, kde jeho vědění končí, a řekne: tohle nevím.', komentar: 'Znak, podle kterého moudrost poznáš i u člověka, kterého vůbec neznáš. Přesně tohle Sókratés u lidí zkoušel.' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem znak, podle kterého moudrost poznám, ne jen jméno.',
+    'Podle mého znaku bych poznal moudrého člověka, i kdybych ho vůbec neznal.',
+  ]}
+>
+
+Sókratés by se tě nejdřív zeptal, jestli ten člověk ví, kde jeho vědění končí. Politik, básníci i řemeslníci něčemu opravdu rozuměli. Mýlili se v tom, že si mysleli, že rozumějí všemu.
+
+</Odkryj>
+</section>
+
+<section class="ukazka" aria-labelledby="h-zmena">
+<h2 class="t-h2" id="h-zmena">Změň jednu věc</h2>
+
+<ZmenJednuVec id="utek-z-vezeni" />
+</section>
+
+<section class="ukazka" aria-labelledby="h-spor">
+<h2 class="t-h2" id="h-spor">Spor</h2>
+
+<Spor id="platon-diogenes-skutecnost" />
+</section>
+
+<section class="ukazka" aria-labelledby="h-kdo">
+<h2 class="t-h2" id="h-kdo">Kdo žil dřív?</h2>
+
+<KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
+
+<KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />
+</section>

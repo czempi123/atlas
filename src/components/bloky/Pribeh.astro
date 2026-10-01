@@ -1,0 +1,62 @@
+---
+// Příběh: krátká scéna se stejnou typografií jako profil. Vedle ní deska v barvě období:
+// obraz, když ho máme (s popiskem a licencí v zdroje.yaml), jinak ornament a mince s atributem osoby.
+// Bez JavaScriptu; nic se neukládá.
+// Použití v MDX:
+// <Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Odpověď *z Delf*" popisek="Delfy, Apollónova věštírna.">
+//   Text scény v odstavcích…
+// </Pribeh>
+import Deska from '../ui/Deska.astro';
+import { osoba as najdiOsobu } from '../../lib/data';
+import { radek } from '../../lib/bloky';
+
+interface Props {
+  /** kotva scény (volitelná) */
+  id?: string;
+  /** id osoby v lide.yaml: barva období, mince s atributem a výchozí obraz */
+  osoba?: string;
+  /** období (1–8), když scéna nepatří k jedné osobě */
+  obdobi?: number;
+  /** id obrázku v zdroje.yaml */
+  obrazek?: string;
+  nadtitulek?: string;
+  /** titulek scény; *kurzíva* nese pointu */
+  titulek?: string;
+  /** popisek pod deskou */
+  popisek: string;
+}
+const { id, osoba: osobaId, obdobi: obdobiProp, obrazek, nadtitulek, titulek, popisek } = Astro.props;
+const osoba = osobaId ? najdiOsobu(osobaId) : undefined;
+const obdobi = osoba?.obdobi ?? obdobiProp;
+if (!obdobi) throw new Error('Příběh potřebuje osobu nebo období.');
+---
+<section class:list={['pribeh', `obdobi-${obdobi}`]} id={id}>
+  <div class="pribeh__deska">
+    <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} pomer="4 / 3">{popisek}</Deska>
+  </div>
+  <div class="pribeh__text">
+    {nadtitulek && <p class="t-nadtitulek pribeh__nadtitulek">{nadtitulek}</p>}
+    {titulek && <h3 class="t-h2 pribeh__titulek" set:html={radek(titulek)} />}
+    <div class="pribeh__scena"><slot /></div>
+  </div>
+</section>
+
+<style>
+  .pribeh {
+    display: grid;
+    gap: var(--s-5);
+    margin: var(--s-8) 0;
+  }
+  .pribeh__nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
+  .pribeh__titulek { margin-bottom: var(--s-5); max-width: 16ch; }
+  .pribeh__scena { max-width: var(--ctenarsky-sloupec); }
+  .pribeh__scena :global(p:last-child) { margin-bottom: 0; }
+  @media (min-width: 900px) {
+    .pribeh {
+      grid-template-columns: minmax(240px, 4fr) 8fr;
+      gap: var(--s-7);
+      align-items: start;
+    }
+    .pribeh__deska { position: sticky; top: calc(var(--hlavicka) + var(--s-5)); }
+  }
+</style>

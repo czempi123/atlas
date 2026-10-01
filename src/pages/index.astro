@@ -6,6 +6,7 @@ import Tlacitko from '../components/ui/Tlacitko.astro';
 import Ikona from '../components/ui/Ikona.astro';
 import Mince from '../components/ui/Mince.astro';
 import Pokracuj from '../components/ostrovy/Pokracuj.svelte';
+import CestaKarta from '../components/cesta/CestaKarta.astro';
 import { osoba } from '../lib/data';
 
 const sokrates = osoba('sokrates');
@@ -26,6 +27,10 @@ const vstupy = [
       <Tlacitko href="/mapa/" varianta="vedlejsi">Mapa a čas</Tlacitko>
     </div>
     <Pokracuj client:idle />
+  </section>
+
+  <section class="prvni-cesta stranka" aria-label="První cesta">
+    <CestaKarta slug="kdy-mam-dobry-duvod-verit" nadtitulek="Začni cestou" />
   </section>
 
   <section class="obdobi stranka" aria-labelledby="osm-obdobi">
@@ -73,6 +78,8 @@ const vstupy = [
   .sekce-hlavicka { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-2) var(--s-5); margin-bottom: var(--s-4); }
   .sekce-hlavicka p { margin: 0; }
   .obdobi { margin-bottom: var(--s-8); }
+  .prvni-cesta { margin-top: calc(-1 * var(--s-6)); margin-bottom: var(--s-8); }
+  .prvni-cesta :global(.cesta-karta) { margin: 0; }
   .rozcestnik ul { display: grid; gap: var(--s-4); margin: 0; padding: 0; list-style: none; }
   .rozcestnik a {
     display: flex;
