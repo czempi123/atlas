@@ -121,7 +121,7 @@
     // Chytil-li pruh, táhne se za místo, kde ho drží; klik vedle pruhu ho tam přesune středem.
     const naPruhu = rok >= start && rok <= start + tahOsa.delkaB;
     tazeni = { posun: naPruhu ? rok - start : tahOsa.delkaB / 2 };
-    radek.setPointerCapture(e.pointerId);
+    try { radek.setPointerCapture(e.pointerId); } catch { /* syntetická událost bez ukazatele */ }
     posun(rok - tazeni.posun);
   }
   function tah(e: PointerEvent) {
@@ -130,7 +130,7 @@
   function pust(e: PointerEvent) {
     if (!tazeni) return;
     tazeni = null;
-    radek?.releasePointerCapture(e.pointerId);
+    try { radek?.releasePointerCapture(e.pointerId); } catch { /* už uvolněno */ }
     ulozStav();
     radek?.querySelector<HTMLElement>('[role="slider"]')?.focus({ preventScroll: true });
   }

@@ -230,24 +230,31 @@ const BLOKY: {
       await expect(blok.getByRole('link', { name: 'Ukázat na mapě v roce 399 př. n. l.' })).toHaveAttribute(
         'href', '/mapa/?rok=-399&osoba=sokrates&srovnat=diogenes',
       );
-      // Vzdálenost: posuvník klávesnicí.
+      // Vzdálenost: život Diogena se posouvá po ose šipkami (výchozí začátek 50 let po Platónově smrti).
       const druhy = await pripravBlok(page, 'kdo-platon-diogenes-vzdalenost', 'KdoZilDriv');
-      await druhy.getByRole('radio', { name: 'Žili současně' }).focus();
-      await page.keyboard.press('Space');
+      await expect(druhy.getByRole('button', { name: 'Odhalit' })).toBeDisabled();
+      const zivot = druhy.getByRole('slider', { name: /Kdy žil Diogenés/ });
+      await zivot.focus();
+      await expect(zivot).toHaveAttribute('aria-valuenow', '-295');
+      for (let i = 0; i < 19; i++) await page.keyboard.press('ArrowLeft');
+      await expect(zivot).toHaveAttribute('aria-valuenow', '-390');
+      await expect(zivot).toHaveAttribute('aria-valuetext', /^Diogenés: žili by současně 44.let$/);
+      await expect(druhy.locator('.tah__odhad')).toHaveText('Tvůj odhad: žili by současně 44 let');
       await page.keyboard.press('Tab');
-      await expect(druhy.getByRole('slider')).toBeFocused();
-      for (let i = 0; i < 4; i++) await page.keyboard.press('ArrowLeft');
-      await expect(druhy.locator('output')).toHaveText('30 let');
-      await page.keyboard.press('Tab');
+      await expect(druhy.getByRole('button', { name: 'Odhalit' })).toBeFocused();
       await page.keyboard.press('Enter');
-      await expect(druhy.getByRole('region', { name: 'Odhalení' })).toContainText('Tipoval jsi, že žili současně 30 let. Ve skutečnosti je to o 35 let víc.');
+      const odhaleni2 = druhy.getByRole('region', { name: 'Odhalení' });
+      await expect(odhaleni2).toContainText('Žili současně asi 65 let.');
+      await expect(odhaleni2).toContainText('Tipoval jsi, že žili současně 44 let. Ve skutečnosti je to o 21 let víc.');
+      await expect(druhy.locator('.tah__pruh--skutecny')).toBeVisible();
+      await expect(druhy.locator('.tah__radek--b .tah__popis')).toContainText('asi 412–323 př. n. l.');
       await blok.scrollIntoViewIfNeeded();
     },
     poObnoveni: async (page, blok) => {
       await expect(blok.getByRole('region', { name: 'Odhalení' })).toContainText('Žili současně asi 13 let.');
       const druhy = await pripravBlok(page, 'kdo-platon-diogenes-vzdalenost', 'KdoZilDriv');
-      await expect(druhy.locator('output')).toHaveText('30 let');
-      await expect(druhy.getByRole('region', { name: 'Odhalení' })).toContainText('asi 65 let');
+      await expect(druhy.getByRole('slider')).toHaveAttribute('aria-valuenow', '-390');
+      await expect(druhy.getByRole('region', { name: 'Odhalení' })).toContainText('o 21 let víc');
     },
   },
 ];
@@ -334,8 +341,8 @@ test('deník: zápisy z bloků jsou v Mém deníku, Kdo žil dřív? tam není; 
   await page.goto('/denik/');
   await expect(page.getByText('D · Zeptám se přátel, co si o mně myslí.')).toBeVisible();
   await expect(page.getByText('Na začátku: Diogenés. Po argumentech: spíš Platón.')).toBeVisible();
-  await expect(page.locator('.seznam li')).toHaveCount(2);
-  await expect(page.locator('.seznam a').first()).toHaveAttribute('href', /^\/dilna\/bloky\/#/);
+  await expect(page.locator('.seznam--zapisy li')).toHaveCount(2);
+  await expect(page.locator('.seznam--zapisy a').first()).toHaveAttribute('href', /^\/dilna\/bloky\/#/);
 
   await page.goto(STRANKA);
   const znovu = await pripravBlok(page, 'cesta1-jak-zjistit', 'Volba');
@@ -343,7 +350,7 @@ test('deník: zápisy z bloků jsou v Mém deníku, Kdo žil dřív? tam není; 
   await expect(znovu.getByRole('radio').first()).toBeFocused();
   await expect(znovu.getByRole('button', { name: 'Tohle je můj tah' })).toBeDisabled();
   await page.goto('/denik/');
-  await expect(page.locator('.seznam li')).toHaveCount(1);
+  await expect(page.locator('.seznam--zapisy li')).toHaveCount(1);
 });
 
 test('Kdo žil dřív?: odkaz otevře mapu ve správném roce se srovnáním', async ({ page }) => {
@@ -370,4 +377,68 @@ test('Sókratův profil: Nejdřív sám beze změny textu a odpověď vydrží o
   const znovu = await pripravBlok(page, 'sokrates-kdo-je-moudry', 'NejdrivSam');
   await expect(znovu.locator('textarea')).toHaveValue('Kdo umí říct: nevím.');
   await expect(znovu.getByRole('region', { name: 'Srovnání' })).toBeVisible();
+});
+
+test('tažení myší: život na ose a poloha na škále Sporu, šipka odkud kam; vydrží obnovení', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(STRANKA);
+  const kdo = await pripravBlok(page, 'kdo-platon-diogenes-vzdalenost', 'KdoZilDriv');
+  const zivot = kdo.getByRole('slider');
+  await zivot.scrollIntoViewIfNeeded();
+  const b = (await zivot.boundingBox())!;
+  await page.mouse.move(b.x + b.width / 2, b.y + b.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(b.x + b.width / 2 - 250, b.y + b.height / 2, { steps: 10 });
+  await page.mouse.up();
+  const po = Number(await zivot.getAttribute('aria-valuenow'));
+  expect(po).toBeLessThan(-295);
+  expect(Math.abs(po % 5)).toBe(0);
+  await expect(kdo.locator('.tah__odhad')).toContainText('Tvůj odhad:');
+  await expect(zivot).toBeFocused();
+  await page.reload();
+  const kdo2 = await pripravBlok(page, 'kdo-platon-diogenes-vzdalenost', 'KdoZilDriv');
+  await expect(kdo2.getByRole('slider')).toHaveAttribute('aria-valuenow', String(po));
+
+  const spor = await pripravBlok(page, 'platon-diogenes-skutecnost', 'Spor');
+  const stopa = spor.locator('.skala__stopa');
+  await stopa.scrollIntoViewIfNeeded();
+  let s = (await stopa.boundingBox())!;
+  await page.mouse.move(s.x + 22, s.y + s.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(s.x + 22 + (s.width - 44) * 0.25, s.y + s.height / 2, { steps: 5 });
+  await page.mouse.up();
+  await expect(spor.getByRole('radio', { name: 'spíš Platón' })).toBeChecked();
+  await spor.getByRole('button', { name: 'Tady stojím' }).click();
+  const stopa2 = spor.locator('.skala__stopa');
+  await stopa2.scrollIntoViewIfNeeded();
+  s = (await stopa2.boundingBox())!;
+  await page.mouse.move(s.x + 22 + (s.width - 44) * 0.25, s.y + s.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(s.x + 22 + (s.width - 44) * 0.75, s.y + s.height / 2, { steps: 6 });
+  await page.mouse.up();
+  await expect(spor.getByRole('radio', { name: 'spíš Diogenés' })).toBeChecked();
+  await expect(spor.locator('.sipka--vpravo')).toBeVisible();
+  await expect(spor.locator('.skala__stav')).toHaveText('Stojíš: spíš Diogenés · začal jsi: spíš Platón');
+});
+
+test('tažení prstem: život na ose se posune (dotykové události ukazatele)', async ({ browser }) => {
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  const page = await ctx.newPage();
+  await page.goto(STRANKA);
+  const kdo = await pripravBlok(page, 'kdo-platon-diogenes-vzdalenost', 'KdoZilDriv');
+  const radek = kdo.locator('.tah__radek--b');
+  const zivot = kdo.getByRole('slider');
+  const b = (await zivot.boundingBox())!;
+  const y = b.y + b.height / 2;
+  const x = b.x + b.width / 2;
+  const udalost = { pointerId: 7, pointerType: 'touch', isPrimary: true, button: 0, buttons: 1, bubbles: true, clientY: y };
+  await radek.dispatchEvent('pointerdown', { ...udalost, clientX: x });
+  await radek.dispatchEvent('pointermove', { ...udalost, clientX: x - 60 });
+  await radek.dispatchEvent('pointerup', { ...udalost, clientX: x - 60, buttons: 0 });
+  expect(Number(await zivot.getAttribute('aria-valuenow'))).toBeLessThan(-295);
+  await expect(kdo.getByRole('button', { name: 'Odhalit' })).toBeEnabled();
+  // Svislé posouvání stránky zůstává prstu, vodorovné patří ose.
+  expect(await radek.evaluate((e) => getComputedStyle(e).touchAction)).toBe('pan-y');
+  await ctx.close();
 });

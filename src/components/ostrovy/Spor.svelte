@@ -83,7 +83,7 @@
     if (e.button !== 0) return;
     const stopa = e.currentTarget as HTMLElement;
     tazeni = true;
-    stopa.setPointerCapture(e.pointerId);
+    try { stopa.setPointerCapture(e.pointerId); } catch { /* syntetická událost bez ukazatele */ }
     navrh = polohaZUdalosti(e, stopa);
   }
   function pohyb(e: PointerEvent) {
@@ -92,7 +92,7 @@
   function pusteni(e: PointerEvent) {
     if (!tazeni) return;
     tazeni = false;
-    (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+    try { (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId); } catch { /* už uvolněno */ }
     // Po tažení přenes fokus na vybraný přepínač, ať jde pokračovat šipkami.
     const vstup = (e.currentTarget as HTMLElement).querySelectorAll<HTMLInputElement>('input')[navrh ?? 0];
     vstup?.focus({ preventScroll: true });
