@@ -2,6 +2,16 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Sókratův portrét a profil Prótagora (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Blok Změň jednu věc „Útěk z vězení“ stojí v kapitole 05 hned za Kritónovou nabídkou, před Sókratovou odpovědí | Autor: student rozhoduje dřív, než se dozví, co udělal Sókratés; za Myšlenkami už to věděl |
+| Každá kapitola má jeden blok: 02 Odkryj (co je odvaha), 03 Volba (byl ústup odvážný?), 04 Volba (návrh trestu), 05 Změň jednu věc | Blok vyrůstá ze scény; Volba 03 spojuje Lachétovu definici s ústupem od Délia |
+| Euthyfrónovo dilema v portrétu jako otázka pro studenta v textu, bez bloku | Blok si nechává stránka velké otázky 9 |
+| Prótagorův profil: úvod Hippokratés a Kalliův dům, kapitoly Měřítko všech věcí (Volba o větru) a O bozích a o obci (Odkryj o pravidlech školy), konec života podle Menóna 91e | Doporučení podkladů; vyhnání a pálení knih vynechány |
+| Lékař z Theaitéta 166d–167b zůstává pro Spor v cestě 1 (P8) | Aby se profil a Spor neopakovaly |
+
 ## 1. 10. 2026: Podklady k celku 1 (P6)
 
 | Rozhodnutí | Důvod |

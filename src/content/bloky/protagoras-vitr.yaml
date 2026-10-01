@@ -1,0 +1,40 @@
+# Volba s důvodem · profil Prótagora, kapitola 01 „Měřítko všech věcí“.
+# Podklad: Platón, Theaitétos 152a–b (vítr; výklad věty o měřítku) — docs/podklady/celek-1-pravda.md.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj soud
+scena: >-
+  Stojíte s kamarádem venku ve stejném větru. Ty se třeseš zimou, jemu je příjemně.
+  Oba si jste jistí, že to cítíte správně.
+otazka: Jaký je ten vítr doopravdy?
+moznosti:
+  - text: Studený. Kamarád je jen otužilý.
+    tah: věřit svému pocitu
+    zpetna: >-
+      Věříš svému pocitu, a to je pochopitelné: jiný nemáš. Kamarád ale může říct totéž o tom svém.
+      Čím je tvůj pocit lepší svědek než jeho?
+  - text: Takový, jak ukáže teploměr. Pocity se pletou.
+    tah: změřit to
+    zpetna: >-
+      Teploměr řekne, kolik je stupňů. Neřekne ale, jestli je to zima: pro tebe ano, pro kamaráda ne.
+      Na kterou otázku teploměr odpovídá a na kterou ne?
+  - text: Pro mě studený, pro kamaráda ne. Pravdu máme oba.
+    tah: pravda pro každého
+    jeho: true
+    zpetna: >-
+      Nikdo se tu nemýlí: každý popisuje, co opravdu zažívá. Platí to ale i pro jiné otázky?
+      Je pro každého pravda i to, jestli Země obíhá kolem Slunce?
+  - text: Vítr sám není studený ani teplý. Takový je až pro toho, kdo ho cítí.
+    tah: oddělit věc od pocitu
+    zpetna: >-
+      Rozlišuješ vítr a pocit z něj. Tím se ptáš dál: jaký je vítr, když ho nikdo necítí?
+      A dá se to vůbec zjistit jinak než pocitem nebo přístrojem?
+coUdelal:
+  osoba: protagoras
+  stejne: >-
+    Odpověděl by stejně jako ty. Platón jeho větu vysvětluje právě na větru: pro toho, komu je zima, je studený,
+    pro toho, komu není, studený není.
+  jinak: >-
+    Odpověděl by jinak. Platón jeho větu vysvětluje právě na větru: pro toho, komu je zima, je studený,
+    pro toho, komu není, studený není. Ptát se, jaký je vítr sám o sobě, podle něj nemá smysl.
+zdroje: [platon-theaitetos]

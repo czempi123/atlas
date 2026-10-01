@@ -82,3 +82,20 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Velikost poroty a počty hlasů u Diogena Laertia II, 41–42 | Prameny se rozcházejí, velikost poroty se jen dovozuje. | Ve studentském textu jen Obrana 36a (třicet hlasů). |
 | ~~2. pád Pýthagorás, Anaxagorás~~ | **Vyřízeno 1. 10.:** autor rozhodl pro vzor pán, v datech Pýthagora, Anaxagora. | — |
 | ~~Obrázek Sókrata~~ | **Vyřízeno 1. 10.:** autor licenci potvrdil a soubor stáhl; v datech jako `sokrates-louvre`. | — |
+
+## Sókratův portrét a profil Prótagora (P7)
+
+1. 10. 2026. Co by příběhu pomohlo, ale v podkladech není, proto to v textu chybí:
+
+| Bod | Kde by se hodil | Co udělat |
+| --- | --- | --- |
+| Kdo byl Asklépios (bůh lékařství) a proč mu Sókratés dlužil kohouta | Kapitola 05, poslední slova | Doložit (např. SEP „Socrates“ nebo komentář k Faidónu 118a); výklad „uzdravení ze života“ je sporný, studentům ho nepodávat jako fakt. |
+| Alkibiadés: pronásledovatelé honí ty, kdo utíkají bezhlavě, klidného nechají být (Symposion 221b–c) | Kapitola 03 a zpětná vazba Volby o ústupu | Ověřit místo a znění; pak lze doplnit, proč byl Sókratův klid i rozumný. |
+| Lachétovy další definice a Nikiova odpověď (Lachés 192b–199e) | Kapitola 02, průběh rozhovoru | Text teď jen říká, že nakonec nevěděli. Doplnit, pokud má rozhovor dostat víc kroků. |
+| Mladí za Sókratem chodili, protože měli nejvíc volného času (Obrana 23c) | Kapitola 02 | Doplnit do tvrzení v `celek-1-pravda.md`, pak lze použít. |
+| Euthyfrón tvrdí, že přesně ví, co je zbožné (Euthyfrón 4e–5a) | Kapitola 04 | Ověřit; zesílilo by to scénu (znovu člověk, který si myslí, že ví). |
+| Kdo v dialogu Prótagorás vznese námitku o lodích a o obci (319b–d) | Prótagorás, kapitola 02 | Text ji uvádí bez přisouzení; ověřit, zda ji vznáší Sókratés, a pak to říct. |
+| Co je sofista (krátké vysvětlení pro studenty) | Úvod Prótagorova profilu | Doložit jednou větou ze SEP „The Sophists“ nebo IEP; teď stojí jen „nejslavnější ze sofistů“. |
+| Obraz flétny korybantů (Kritón 54d) | Kapitola 05 | Vynechán, studentům by bez výkladu nic neřekl; ponecháno „zněla tak silně, že nic jiného neslyšel“. |
+
+Vědomě vynecháno podle doporučení v podkladech: počty hlasů u Diogena Laertia a velikost poroty, Platón okřiknutý porotou, potrestání žalobců, Platónova nemoc (Faidón 59b), bolehlav, Prótagorovo vyhnání, pálení knih a utonutí, Démokritos jako jeho učitel, Euathlos, částka sto min. Lachétův citát (Lachés 190e) je jen v nepřímé řeči, protože v `zdroje.yaml` není.
