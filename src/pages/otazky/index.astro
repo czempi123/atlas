@@ -2,6 +2,7 @@
 // Otázky: deset velkých otázek atlasu.
 import { getCollection } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
+import { maStranku } from '../../lib/otazky';
 const otazky = (await getCollection('otazky')).sort((a, b) => a.data.cislo - b.data.cislo);
 ---
 <Zakladni titulek="Otázky" sekce="otazky" drobecky={[{ text: 'Otázky' }]} kratkyTitulek="Otázky">
@@ -15,7 +16,9 @@ const otazky = (await getCollection('otazky')).sort((a, b) => a.data.cislo - b.d
         <li id={o.id}>
           <span class="cislo t-letopocet">{o.data.cislo}</span>
           <span class="text">
-            <span class="t-h3">{o.data.otazka}</span>
+            {maStranku(o.data)
+              ? <a class="t-h3" href={`/otazka/${o.id}/`}>{o.data.otazka}</a>
+              : <span class="t-h3">{o.data.otazka}</span>}
             <span class="t-popisek">{o.data.disciplina}</span>
           </span>
         </li>
@@ -31,5 +34,6 @@ const otazky = (await getCollection('otazky')).sort((a, b) => a.data.cislo - b.d
   li { display: flex; gap: var(--s-4); align-items: baseline; padding: var(--s-4) 0; border-top: 1px solid var(--rule); }
   .cislo { flex: none; width: 2ch; font-size: 15px; font-weight: 600; color: var(--muted); }
   .text { display: flex; flex-direction: column; gap: var(--s-1); }
+  .text a { text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
   @media (min-width: 900px) { .otazky { grid-template-columns: 1fr 1fr; } }
 </style>

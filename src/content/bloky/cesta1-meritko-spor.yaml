@@ -1,0 +1,40 @@
+# Spor · cesta 1, krok 5: Prótagorás × Sókratés o měřítku pravdy, jak si ho představil Platón v Theaitétovi.
+# Podklad: docs/podklady/celek-1-pravda.md › Spor Sókratés × Prótagorás. Rámec Theaitétos 164e–165a, 171c–d;
+# Prótagorova strana 152a–b, 166d–167b a odpověď na sebevyvrácení (171a–d, výklad); Sókratova strana 178b–179b, 170e–171c.
+druh: spor
+obdobi: 1
+nadtitulek: Spor
+scena: >-
+  Platón si představil, jak se Sókratés o tu větu přel. V jeho dialogu je ale Prótagorás už mrtvý.
+  Přítel, který ho znal, ho hájit nechce. Sókratés tedy hájí „sirotka“ sám.
+
+
+  Na jednom místě přizná, že kdyby Prótagorás vystrčil hlavu ze země, nejspíš by je oba usvědčil z nesmyslů.
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: Je pravda to, co se ti jeví?
+strany:
+  - osoba: protagoras
+    postoj: Co se mi jeví, je pro mě pravda.
+    argumenty:
+      - >-
+        Komu je ve větru zima, tomu je vítr studený. Komu zima není, tomu studený není.
+        Nikdo z nich se nemýlí. Ptát se, jaký je vítr sám o sobě, nemá smysl.
+      - >-
+        Neznamená to, že jsou všichni stejně moudří. Moudrý nemění nepravdivé názory v pravdivé, protože nepravdivý názor neexistuje.
+        Mění horší stav v lepší.
+
+
+        Dělá to jako lékař: nemocnému chutná jídlo hořce a lékař ho nepřemlouvá, ale léčí. Učitel totéž dělá slovy.
+      - >-
+        Že se Prótagorás mýlí, je pravda pro ty, kdo si to myslí. Pro něj samotného ne.
+        Kdo z jeho věty vynechá „pro toho, kdo ho má“, nevyvrací Prótagora, ale někoho jiného.
+  - osoba: sokrates
+    postoj: Ne každý názor obstojí.
+    argumenty:
+      - >-
+        Jestli dostaneš zítra horečku, pozná lékař líp než ty. O víně rozhodne líp vinař, o hostině kuchař.
+        A sám Prótagorás tvrdil, že líp než kdokoli ví, co zapůsobí u soudu. Aspoň o budoucnosti tedy není každý stejné měřítko.
+      - >-
+        Podle Prótagora je každý názor pravdivý pro toho, kdo ho má. Většina lidí má ale názor, že Prótagorás pravdu nemá.
+        Pro ně je tedy pravda, že se mýlí. A podle vlastní věty jim to musí uznat.
+zdroje: [platon-theaitetos, sep-protagoras]

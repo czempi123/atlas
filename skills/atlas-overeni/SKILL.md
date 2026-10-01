@@ -19,7 +19,7 @@ Tady se odvádí všechna pramenná práce, aby studentský text mohl vyprávět
    | Přibližný fakt | Epiktétos se narodil kolem roku 55 | „kolem roku 55“ |
    | Tradovaný příběh | Diogenés řekl Alexandrovi, ať mu nestíní | „Vypráví se, že…“ nebo uvedením vypravěče („Podle Plútarcha…“) |
    | Výklad | Stoikové rozlišují, co je v naší moci | Přímo, jako výklad myšlenky, se zdrojem v datech |
-   | Sporné nebo nedoložené | Přesný rok narození Pýthagory | Nahradit opatrnější formulací, nebo vynechat |
+   | Sporné nebo nedoložené | Přesný rok narození Pýthagora | Nahradit opatrnější formulací, nebo vynechat |
    | Podvržené | „Vím, že nic nevím“ jako doslovný Sókratův výrok | Nepoužít; použít skutečné znění z pramene |
 
 4. **Citáty ověř zvlášť.** Najdi místo v díle (kniha, kapitola, paragraf; u Platóna Stephanovo číslování, u předsókratiků číslo zlomku DK). Zjisti český překlad a překladatele; pokud překlad chybí nebo je nevhodný, připrav vlastní převod a označ ho v podkladech jako vlastní. Nikdy nevkládej do úst historické osobě větu, kterou nelze najít v prameni.

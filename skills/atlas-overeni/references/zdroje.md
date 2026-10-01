@@ -5,6 +5,7 @@ Pořadí odpovídá spolehlivosti. Vždy otevři konkrétní text nebo heslo, ne
 ## 1. Primární texty
 
 - **Perseus Digital Library** (https://www.perseus.tufts.edu): řecké a latinské texty s anglickými překlady, včetně Diogena Laertia; standardní číslování (u Platóna Stephanovo, např. Obrana 21a).
+  - Webové rozhraní Perseus a Scaife zakazují přístup robotům. Tytéž texty (řecky i anglicky, TEI se Stephanovým a Bekkerovým číslováním) jsou v repozitáři **PerseusDL/canonical-greekLit** na GitHubu (`data/tlg0059/` Platón, `tlg0004/tlg001` Diogenés Laertios, `tlg0086/tlg025` Metafyzika, `tlg0007` Plútarchos). Stáhni soubory mimo repozitář atlasu a místa vyhledej podle značek `milestone n="190e"`. Do `zdroje.yaml` dej odkaz na soubor na GitHubu.
 - **Project Gutenberg** (https://www.gutenberg.org) a **Wikisource** (https://en.wikisource.org): starší volně dostupné anglické překlady (Jowett pro Platóna, Long pro Marca Aurelia a Epiktéta).
 - **Předsókratici:** zlomky citovat podle Dielse a Kranze (např. Hérakleitos DK 22 B91).
 - **České překlady:** u každého citátu zjisti konkrétní vydání a překladatele (např. Platónovy Spisy v překladu Františka Novotného). Není-li vhodný překlad dostupný, připrav vlastní převod a označ ho jako vlastní.
@@ -23,6 +24,8 @@ Pořadí odpovídá spolehlivosti. Vždy otevři konkrétní text nebo heslo, ne
 ## 4. Obrázky
 
 - **Wikimedia Commons** (https://commons.wikimedia.org): u každého obrázku zapiš autora fotografie, instituci, inventární číslo, licenci a odkaz.
+  - Commons a upload.wikimedia.org nástrojům nevydají stránku ani soubor a obcházet to nesmíš. Najdi kandidáta, zapiš údaje do podkladového listu jako neověřené a požádej autora, ať licenci potvrdí na Commons a soubor uloží do `public/obrazky/`. Do `obrazky` v `zdroje.yaml` se zapisuje až potom (test kontroluje, že soubor existuje).
+  - U licencí CC BY a CC BY-SA musí být autor a licence vidět na stránce, kde se obrázek ukazuje (v atlasu v Pramenech).
 
 ## 5. Rozcestníky
 

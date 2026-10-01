@@ -2,6 +2,90 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Schválení celku 1 a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 1 „Jak poznám, co je pravda?“ schválen a sloučen do hlavní větve (lokálně, bez GitHubu) | Autor: „můžeme se opět posunout o krok dál“ |
+| Ve Sporu v kroku 5 dostal Prótagorás odpověď na sebevyvrácení místo argumentu o obcích; bez dalšího ověřování | Autor: jdeme primárně po pointě, ne po stoprocentní historické věrohodnosti, i když ji chceme maximálně zachovat. Výklad se podává jako výklad, historická fakta dál jen z podkladů |
+| Skill `atlas-cesta` doplněn o poučení z revize (shrnutí drží rozdíly pramene, text drží souvislost bez bloků, Spor bez ohlášeného vítěze a s odpovědí obou stran, hlas na stránce otázky se pozná, závěrečné pravidlo s `rozbalene`) | Ať se chyby celku 1 neopakují |
+| Celek 2 „Jak mám žít?“: velká otázka 1, cesta 6 „Kolik je dost?“, profil Epikúra a profil Diogena jako protihlas; stoici na stránce otázky, celek s Epiktétem (cesta 5) hned potom. Další krok P6, zadání v `docs/plan.md` | Autor vybral z navržených možností; oba myslitelé žijí s málem, každý z jiného důvodu, a to dává Spor |
+
+## 1. 10. 2026: Revize celku 1 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Délka Sókratovy stránky zůstává; Spor Platón × Diogenés i citát `obrana-38a` v kapitole 04 zůstávají | Autor: kdo chce, přečte si víc; neodrazovat zvídavé studenty a nedělat z portrétu povrchní věc |
+| V kapitole 02 doplněn krok mezi Lachétovou první a druhou definicí: Skythové a Sparťané v hlavním textu, Lachés uzná, že věta nestačí, Sókratés chce definici pro všechny odvážné (Lachés 191a–e). Srovnání v Odkryj už příběh nevyzrazuje, jen vede ke zkoušce vlastní věty | Autor: mezi „ptal se“ a „zkusil to znovu“ chyběla myšlenka; text musí dávat smysl i bez odkrytí bloku |
+| Politik, básníci a řemeslníci podle Obrany 21c–22e: opravdu rozuměli jen řemeslníci; citát 21d stojí hned za politikem | Věcná chyba nalezená revizí (ověřeno v PerseusDL) |
+| Spor v kroku 5 neohlašuje vítěze; Sókratův argument o sebevyvrácení ponechává Prótagorovo „pro toho, kdo ho má“. Prótagorova odpověď na sebevyvrácení přibude až po ověření | Nejsilnější verze druhého |
+| Na stránce otázky 7: Parmenidés odpovídá „ani babičce, ani učitelce, obojí je jen mínění“, Prótagorás s lékařem, Sókratés s Lachétem místo Delf, Prótagorova myšlenka bez větru | Parmenidés se v původní odpovědi nepoznal; Delfy a vítr se v celku opakovaly |
+| Kapitola 01 portrétu bez karty „Pokračuj cestou“ (cesta zůstává v Kam dál); konec cesty bez citátu 38a | Kroky 1–3 opakují kapitolu 01; 38a byl v celku potřetí |
+| Moje stanovisko má vlastnost `rozbalene`: pole je vidět hned a ukládá se samo; použito v kroku 7 | Pravidlo bylo schované za tlačítkem a po „Dokončit cestu“ bez uložení se ztratilo |
+| Na přehledu cesty stojí Začít / Pokračovat nad seznamem kroků | Na telefonu bylo tlačítko pod okrajem obrazovky, klávesnicí za 16 tabulátory |
+| Chairefón jménem jen v první větě kroku 1 a kapitoly 01, Melétos bez jména | Pravidlo 6 „Jména a podrobnosti střídmě“ |
+
+## 1. 10. 2026: Schválení P8
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Stránka velké otázky (šablona a otázka 7), cesta 1 s Prótagorem a skill `atlas-cesta` schváleny; finální čtení proběhne u celého celku po revizi | Autor: „můžeme se posunout o krok dál“ |
+| Další krok P10: revize celku 1 skillem `atlas-revize`; návrhy z revize autor schválí dřív, než se zapracují; zadání v `docs/plan.md` | Pořadí workflow celku: psaní → revize → schválení |
+
+## 1. 10. 2026: Stránka velké otázky, druhé kolo
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Filozofové na stránce otázky ve dvou vrstvách: nejdřív všichni odpoví na úvodní případ (karty vedle sebe, „Komu věřit?“), teprve potom časová osa „Proč to tak viděli“ s myšlenkou, citátem a odkazem na profil | Autor: srovnání s filozofy bylo polovičaté; student má nejdřív vidět, kde se rozcházejí na tomtéž případu |
+| Odpověď na případ je náš převod myšlenky filozofa, ve třetí osobě a bez uvozovek; přímá řeč zůstává jen v citátu | Pravidlo o přímé řeči skutečných osob |
+
+## 1. 10. 2026: Stránka velké otázky a cesta 1 s Prótagorem (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Stránka velké otázky `/otazka/<slug>/`: otázka a úvod „Představ si…“ → Tvůj první názor → hlasy na časové ose → cesty k otázce → Změnil se? → Prameny. Hlasy ve frontmatteru `src/content/otazky/<slug>.mdx`; sestavení je kontroluje proti datům | Autor schválil návrh; jména, roky a citáty se berou z dat, takže se nerozejdou s mapou |
+| Hlasy, cesty a návrat jsou skryté, dokud student neuloží první názor nebo nestiskne Přeskočit; bez JavaScriptu je stránka vidět celá | Nejdřív student, pak filozof (`CLAUDE.md`); přeskočení nechává osobní rovinu dobrovolnou |
+| Časová osa na telefonu i notebooku svisle se stejnými rozestupy; na notebooku letopočty v levém okraji | Prótagorás a Sókratés žili současně; poměrné rozestupy by je slily dohromady |
+| Otázka bez hlasů zatím nemá stránku; přehled `/otazky/` odkazuje jen na hotové stránky | Žádná prázdná stránka; adresy `/otazky/#<slug>` dál fungují |
+| Na stránce otázky 7 věta Aristotela jeho odpovědí z Metafyziky IV, 6 (pro koho, kdy a jak se jeví), definice pravdy v citátu | Věta a citát by jinak říkaly totéž |
+| Cesta 1 má sedm kroků, asi 20 minut: krok 5 Spor Prótagorás × Sókratés z Theaitéta, krok 6 šaty z roku 2015 (Změň jednu věc). Šaty nahradily „Zprávu ve skupině“ | S oběma by cesta měla 8 kroků a přes 20 minut a dva bloky Změň jednu věc za sebou; šaty přímo zkoušejí spor z kroku 5 |
+| Ve Sporu Prótagorova strana: vítr, lékař (166d–167b), obce; Sókratova: budoucnost (178b–179b), sebevyvrácení. Posměšek o praseti vynechán | Nejsilnější verze obou stran podle podkladů |
+| Skloňování Prótagorás podle vzoru pán i v 7. a 4. pádě (s Prótagorem, o Prótagora), opraveno v dokumentech, skillu i textu | Autor |
+
+## 1. 10. 2026: Schválení P7
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Sókratův portrét a profil Prótagora schváleny; finální čtení proběhne u celého celku po revizi (P10) | Autor |
+| Stránka velké otázky 7 má čtyři hlasy: Parmenidés, Prótagorás, Sókratés, Aristotelés; Platón, Pyrrhón a Epikúros přibudou s vlastními profily | Pravidlo „Jména střídmě“: čtyři hlasy, které spolu opravdu vedou spor |
+| Další krok P8: nejdřív šablona stránky velké otázky (`/otazka/<slug>/`, nový typ stránky), pak otázka 7 a cesta 1 s Prótagorem; zadání v `docs/plan.md` | Stránka velké otázky zatím neexistuje, přehled `/otazky/` má jen kotvy |
+
+## 1. 10. 2026: Sókratův portrét a profil Prótagora (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Blok Změň jednu věc „Útěk z vězení“ stojí v kapitole 05 hned za Kritónovou nabídkou, před Sókratovou odpovědí | Autor: student rozhoduje dřív, než se dozví, co udělal Sókratés; za Myšlenkami už to věděl |
+| Každá kapitola má jeden blok: 02 Odkryj (co je odvaha), 03 Volba (byl ústup odvážný?), 04 Volba (návrh trestu), 05 Změň jednu věc | Blok vyrůstá ze scény; Volba 03 spojuje Lachétovu definici s ústupem od Délia |
+| Euthyfrónovo dilema v portrétu jako otázka pro studenta v textu, bez bloku | Blok si nechává stránka velké otázky 9 |
+| Prótagorův profil: úvod Hippokratés a Kalliův dům, kapitoly Měřítko všech věcí (Volba o větru) a O bozích a o obci (Odkryj o pravidlech školy), konec života podle Menóna 91e | Doporučení podkladů; vyhnání a pálení knih vynechány |
+| Lékař z Theaitéta 166d–167b zůstává pro Spor v cestě 1 (P8) | Aby se profil a Spor neopakovaly |
+| **Jména střídmě:** jménem jen ten, kdo nese příběh nebo myšlenku (v portrétu Sókratés, Alkibiadés, Lachés, Euthyfrón, Kritón, Xanthippa, Platón); vedlejší postavy popisem, popisy vzhledu a čísla jen tam, kde něco říkají. Pravidlo 6 v `docs/styl.md`, zapsáno i ve skillu `atlas-osobnost` | Autor po přečtení P7: hodně jmen ubírá z údernosti; atlas má předávat hlavně myšlenky a příběh |
+| Body z `k-overeni.md` (P7) ověřené a zapracované: pronásledovatelé u Délia, Lachétovy další definice, mladí s volným časem, Euthyfrónova jistota, Sókratova námitka o lodích, kdo byli sofisté, Asklépios | Autor souhlasil s návrhy; podklady v `celek-1-pravda.md`, oddíl Doplněno po P7 |
+
+## 1. 10. 2026: Podklady k celku 1 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Řecká jména na -ás se skloňují podle vzoru pán: Prótagora, Pýthagora, Anaxagora, Gorgia, Archyta | Autor; jednotně v `lide.yaml` (`jmeno2`) |
+| Sókratův portrét: kapitola 02 stojí na Lachétovi, kapitola 04 začíná setkáním s Euthyfrónem; Euthyfrónovo dilema zazní v portrétu i na stránce velké otázky 9 | Lachés vede přímo k ústupu od Délia, Euthyfrón k soudu; dilema patří k otázce víry i k Sókratovu způsobu ptaní |
+| Spor Sókratés × Prótagorás v cestě 1 se bere z Platónova Theaitéta a podává se jako spor, který si představil Platón | Skutečný záznam jejich hádky o pravdě neexistuje; Prótagorás je v dialogu už mrtvý |
+| Nový případ k cestě 1: šaty z roku 2015 (modročerné, nebo bílozlaté?) | Vnímání se liší jako Prótagorův vítr, a přitom existuje ověřitelná odpověď |
+| Citáty celku 1 jsou vlastní převody z řeckého textu; publikované české překlady se nepřebírají | Autor |
+| Fotografie busty Sókrata z Louvru (Eric Gaba, CC BY-SA 2.5) je na desce Sókratovy stránky; autor a licence jsou v Pramenech (oddíl Obrázky), mince s kalichem se přesunula k popisku „Proč kalich?“ | Autor ověřil licenci na Commons; CC BY-SA vyžaduje uvedení autora a licence; bez mince by „Proč kalich?“ ztratilo obraz |
+| Příběh nepřebírá portrét osoby, jen obraz předaný přímo | Popisek Příběhu patří k místu scény (Delfy), ne k bustě |
+| Stránka osobnosti má středovou osu: text a bloky v jednom čtenářském sloupci uprostřed, přes celou šířku jen hlavička a oddíly na mřížce (Doba a lidé, Myšlenky, Zkus to žít, Kam dál) | Autor: na notebooku se střídaly čtyři šířky zarovnané vlevo a stránka působila nesourodě |
+| Testy v prohlížeči běží na portu 4322 | Na 4321 bývá spuštěné `npm run dev`; testy se k němu připojily a hledání i kontrola odkazů selhaly |
+
 ## 1. 10. 2026: Schválení P5
 
 | Rozhodnutí | Důvod |

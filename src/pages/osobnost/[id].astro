@@ -4,6 +4,7 @@
 import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
 import Deska from '../../components/ui/Deska.astro';
+import Mince from '../../components/ui/Mince.astro';
 import Prameny from '../../components/osobnost/Prameny.astro';
 import { osoba as najdiOsobu, obdobiPodleId, mistaPodleId, data } from '../../lib/data';
 import { zivot } from '../../lib/casy';
@@ -60,7 +61,11 @@ const dev = import.meta.env.DEV;
       <div class="osobnost__deska">
         <Deska osoba={osoba}>
           {osoba.atribut && (
-            <span class="proc"><strong>Proč {osoba.atribut.nazev}?</strong> {osoba.atribut.proc}</span>
+            <span class:list={['proc', { 'proc--mince': osoba.obrazek }]}>
+              {/* S fotografií na desce chybí mince; atribut proto zůstane u popisku. */}
+              {osoba.obrazek && <Mince osoba={osoba} varianta="ring" velikost={40} />}
+              <span><strong>Proč {osoba.atribut.nazev}?</strong> {osoba.atribut.proc}</span>
+            </span>
           )}
         </Deska>
       </div>
@@ -91,7 +96,7 @@ const dev = import.meta.env.DEV;
     )}
 
     <div class="ctenarsky">
-      <Prameny prameny={prameny} citaty={citatyNaStrance} />
+      <Prameny prameny={prameny} citaty={citatyNaStrance} obrazky={osoba.obrazek ? [osoba.obrazek] : []} />
     </div>
   </article>
 </Zakladni>
@@ -119,6 +124,8 @@ const dev = import.meta.env.DEV;
   }
   .proc { display: block; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
   .proc strong { color: var(--ink); font-weight: 600; }
+  .proc--mince { display: flex; gap: var(--s-3); align-items: flex-start; }
+  .proc--mince :global(.mince) { flex: none; }
   .kapitoly { margin: var(--s-7) 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .kapitoly ol { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: 0; padding: var(--s-2) 0; list-style: none; font-family: var(--font-sans); font-size: var(--fs-ovladani); }
   .kapitoly li { display: flex; align-items: center; gap: var(--s-2); min-height: var(--dotyk); }
@@ -128,6 +135,15 @@ const dev = import.meta.env.DEV;
   .kapitoly .osnova { color: var(--muted); }
   .kapitoly .osnova .cislo { color: var(--muted); }
   .obsah :global(.uvod) { margin-top: var(--s-6); font-size: var(--fs-perex); line-height: var(--lh-perex); }
+  /* Středová osa: text, kapitoly i bloky v jednom čtecím sloupci uprostřed; široké oddíly
+     (Doba a lidé, Myšlenky, Zkus to žít, Kam dál) se rozprostřou přes celou šířku stránky. */
+  .osobnost :global(.ctenarsky),
+  .osobnost :global(.blok-sloupec),
+  .osobnost :global(.kapitola) { max-width: var(--ctenarsky-sloupec); margin-inline: auto; }
+  .osobnost :global(.kapitola .ctenarsky) { max-width: none; }
+  /* Text uvnitř širokých oddílů zůstává u jejich levého okraje, pod nadpisem. */
+  .osobnost :global(.doba .ctenarsky),
+  .osobnost :global(.zkus .ctenarsky) { margin-inline: 0; }
   .osnova-autor {
     margin: var(--s-8) 0;
     padding: var(--s-5);

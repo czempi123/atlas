@@ -1,0 +1,140 @@
+---
+osoba: protagoras
+nadtitulek: Sofista z Abdéry · Prótagorův profil
+titulek: Prótagorás
+pointa: První, kdo učil za peníze.
+citat: theaitetos-152a
+kapitoly:
+  - cislo: "01"
+    kotva: meritko
+    nazev: Měřítko všech věcí
+    stav: hotovo
+  - cislo: "02"
+    kotva: o-bozich-a-o-obci
+    nazev: O bozích a o obci
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import CestaKarta from '../../components/cesta/CestaKarta.astro';
+import { KdoZilDriv, Volba, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Platón vypráví, jak jednou před úsvitem bušil někdo holí na Sókratovy dveře. Byl to jeden mladý Athéňan a nesl novinu: do Athén přijel Prótagorás! Chtěl, aby ho k němu Sókratés vzal. Rád by Prótagorovi zaplatil, jen aby ho udělal moudrým.
+
+V domě, kde se ubytoval, pak Prótagorás chodil sem a tam sloupovím. Za ním šly dva zástupy posluchačů. Kdykoli se otočil, rozestoupily se, obešly ho a znovu se seřadily za ním.
+
+Byl to nejslavnější ze sofistů. Sofisté cestovali po řeckých městech a za peníze učili, jak dobře mluvit a jak uspět v životě i v obci. Prótagorás si jako první nechal za vyučování platit. Platón píše, že vydělal víc než ten nejslavnější sochař.
+
+</div>
+
+<div class="ctenarsky"><Citat id="theaitetos-152a" velky /></div>
+
+<Kapitola cislo="01" kotva="meritko" nazev="Měřítko všech věcí">
+  <Fragment slot="titulek">Jaký je vítr <em>doopravdy?</em></Fragment>
+
+Prótagorás napsal knihu jménem Pravda. Platón píše, že začínala právě větou o člověku jako měřítku všech věcí. Co tím Prótagorás myslel?
+
+Platón to vysvětluje na větru. Fouká vítr a jednomu je zima, druhému ne. Jaký je tedy ten vítr sám o sobě?
+
+<Volba id="protagoras-vitr" />
+
+Jak se věc jeví mně, taková je pro mě. Jak se jeví tobě, taková je pro tebe. Tak Platón Prótagorovu větu vykládá.
+
+Prótagorás si všímal, že i dobro je pestré. V jiném Platónově dialogu ukazuje, že hnůj je dobrý pro kořeny, ale mladým výhonkům škodí. Olej rostlinám škodí, lidem prospívá.
+
+Co je dobré, záleží na tom, pro koho.
+
+<CestaKarta slug="kdy-mam-dobry-duvod-verit" nadtitulek="Pokračuj cestou" />
+</Kapitola>
+
+<Kapitola cislo="02" kotva="o-bozich-a-o-obci" nazev="O bozích a o obci">
+  <Fragment slot="titulek">Spravedlnost dostal <em>každý.</em></Fragment>
+
+Prótagorás napsal i knihu o bozích. Začínala takhle:
+
+<Citat id="dl-ix-51" />
+
+Neřekl, že bohové nejsou. Řekl, že to nemůže vědět.
+
+Platón vypráví, jak Sókratés pochyboval, že se dá naučit, jak být dobrým občanem. O stavbě lodí přece Athéňané poslouchají jen stavitele lodí. O věcech obce ale nechají mluvit kováře, ševce, bohatého i chudého. Prótagorás mu odpověděl mýtem.
+
+Prométheus dal lidem oheň a dovednosti. Umění žít spolu jim ale nedal. Lidé si proto ubližovali a hynuli.
+
+Zeus tedy poslal svého posla, aby lidem rozdal stud a spravedlnost. Ne jen několika odborníkům, jako se rozdělilo lékařství, ale všem. Kdo nemá na spravedlnosti podíl, nemůže v obci žít. Proto o věcech obce smí mluvit každý.
+
+<Odkryj
+  id="protagoras-kdo-rozhoduje"
+  otazka="O tom, jak postavit most, rozhodují inženýři. Kdo má rozhodovat o pravidlech vaší školy? Proč právě on?"
+  tlacitko="Porovnat s Prótagorem"
+  filozof="protagoras"
+  modelove={[
+    { text: 'Všichni, kterých se pravidla týkají, protože je musí dodržovat.', komentar: 'Blízko Prótagorovi: kdo pravidlo nese, má o něm co říct. Platí to i o pravidle, kterému nerozumí?' },
+    { text: 'Ředitel a učitelé, protože mají zkušenost a odpovědnost.', komentar: 'Stavíš školu do role mostu: rozhoduje ten, kdo se vyzná. Jaká znalost dělá z někoho odborníka na spravedlivá pravidla?' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem nejen kdo, ale i proč.',
+    'Rozlišil jsem otázky, kde rozhoduje znalost, od otázek, kde jde o to, jak spolu žít.',
+  ]}
+>
+
+Prótagorás by řekl, že stavba mostu je jako lékařství: rozumí jí jen někdo. Stud a spravedlnost ale dostali všichni. O tom, jak spolu žít, proto smí mluvit každý, kdo spolu s ostatními žije.
+
+Podívej se na svou odpověď. Odlišil jsi otázky, kde rozhoduje znalost, od otázek, kde jde o společný život? Kam bys podle toho zařadil rozvrh hodin? A kam pravidla o mobilech?
+
+</Odkryj>
+
+Do Athén přijel Prótagorás aspoň dvakrát a znal se s Periklem. Roku 444 př. n. l. mu Periklés svěřil sepsání zákonů pro novou osadu v jižní Itálii. Měli v ní žít Řekové z celého řeckého světa.
+
+Vypráví se, že při závodech zabil oštěp nešťastnou náhodou jednoho muže. Periklés prý pak s Prótagorem celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův vlastní syn.
+
+*Kdo za to podle tebe může? A je to pro tebe hloupá otázka, nebo ta nejdůležitější?*
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Narodil se kolem roku 490 př. n. l. v Abdéře na severu Egejského moře. Dožil se asi sedmdesáti let a čtyřicet z nich učil. Vážnost si podle Platóna udržel až do smrti.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="protagoras" b="sokrates" druh="poradi" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Poznání">
+    <Fragment slot="titulek">Pravda je <em>pro někoho.</em></Fragment>
+
+Měřítkem všech věcí je podle Prótagora člověk. Co se ti jeví, je pro tebe pravda. Kdo vidí věc jinak, nemýlí se. Vidí ji ze svého místa.
+
+*Platí to všude? Je krutost špatná jen pro toho, komu se špatná zdá?*
+
+<MojeStanovisko client:visible id="protagoras-meritko" otazka="Je něco pravda pro všechny, bez ohledu na to, jak to kdo vidí? Co třeba?" odkaz="/osobnost/protagoras/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Argumentace">
+    <Fragment slot="titulek">O každé věci se dá mluvit <em>pro i proti.</em></Fragment>
+
+Prótagorás tvrdil, že o každé věci se dají vést dva protichůdné výklady. Dá se to brát jako trik, jak obhájit cokoli. Nebo jako nejpoctivější zkouška vlastního názoru: dokud neznáš nejsilnější důvod proti, nevíš, jak pevně stojíš.
+
+<MojeStanovisko client:visible id="protagoras-pro-i-proti" otazka="Vyber si názor, za kterým si pevně stojíš. Jaký je nejsilnější důvod proti němu?" odkaz="/osobnost/protagoras/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="protagoras-druha-strana" nazev="Řekni to za druhého" odkaz="/osobnost/protagoras/#zkus-to-zit">
+
+Až se s někým neshodneš, nezačínej svým názorem. Nejdřív zopakuj ten jeho, a tak dobře, aby řekl: přesně tak. Teprve pak odpověz. Na konci týdne si zapiš, jestli to něco změnilo.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/kdy-mam-dobry-duvod-verit/', nadtitulek: 'Cesta 1', text: 'Kdy mám dobrý důvod věřit?' },
+  { href: '/osobnost/sokrates/', nadtitulek: 'Portrét', text: 'Sókratés: muž, který se ptal' },
+  { href: '/otazka/jak-poznam-pravdu/', nadtitulek: 'Velká otázka 7', text: 'Jak poznám, co je pravda?' },
+]} />

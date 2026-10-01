@@ -88,6 +88,7 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 
 - Mezery (základ 4 px): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96.
 - Mřížka 12 sloupců, mezera 24; okraj stránky 80 (notebook) / 16 (telefon); čtenářský sloupec 680 px.
+- **Středová osa stránky osobnosti:** úvod, citát, kapitoly, vložené bloky (Kdo žil dřív?, Změň jednu věc, Spor) a Prameny leží v jednom čtenářském sloupci uprostřed stránky. Přes celou šířku jdou jen hlavička s deskou a oddíly, které stojí na mřížce: Doba a lidé (osa, mapa, vztahy), Velké myšlenky, Zkus to žít a Kam dál. Text uvnitř širokých oddílů začíná u jejich levého okraje. Na telefonu je všechno v jednom sloupci.
 - Zaoblení: `xs` 4 (obrazy, pásy) · `sm` 8 (tlačítka, pole) · `md` 14 (karty, panely) · `lg` 20 (spodní list) · `full` (mince, čipy).
 - Stín: překryv na mapě `0 6px 18px rgb(0 0 0 / 12%)`; spodní list `0 -8px 28px rgb(0 0 0 / 14%)`. Jinak bez stínů.
 - Hlavička 72 px (notebook) / 56 px (telefon), spodní lišta 72 px, dotykový cíl nejméně 44 × 44.
@@ -105,12 +106,13 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 
 - **Tlačítka:** hlavní (`--ink` / text `--paper`, výška 48–56), vedlejší (obrys `--ink`), tiché (obrys `--rule`), textový odkaz s podtržením.
 - **Mince (atribut osobnosti):** kruh s ikonou atributu, dvojitý okraj (1,5 px barva období, mezera, 1 px soft). Varianty: `ring` (na mapě, povrch), `tint` (karty), `sel` (vybraný člověk, plná barva). Velikosti 24–26 (mapa), 36–44 (karty, portrét), 56–64 (přehledy). Nikdy iniciála.
-- **Deska:** duotónová plocha pro fotografii (busta, freska, rukopis) v barvách `--period-N-plate` / `--period-N-on-plate`, vždy s popiskem pod obrazem a licencí v Pramenech.
+- **Deska:** duotónová plocha pro fotografii (busta, freska, rukopis) v barvách `--period-N-plate` / `--period-N-on-plate`, vždy s popiskem pod obrazem a licencí v Pramenech (oddíl Obrázky: popisek, autor, instituce, licence s odkazem). Výřez drží tvář v horní třetině (`object-position: 50% 25%`). Na stránce osobnosti s fotografií se mince s atributem přesune k popisku „Proč …?“. Vlastnost `obrazOsoby={false}` vypne portrét osoby (používá Příběh).
 - **Pás období:** osm segmentů bez mezer; pozadí každého segmentu je gradient, který na hranách přechází do poloviční směsi se sousedem; ornament období je maskovaný do ztracena k okrajům. Varianty: velký (Domů, 250 px), malý přepínač (mapa, 26–28 px, aktivní období širší).
 - **Volba s důvodem:** karty možností A–D (min. 60 px), vybraná má okraj 2 px a tint období; pole „Proč právě tohle?“ nepovinné; zpětná vazba v tintu období s titulkem „Tvůj tah: …“ a oddílem „Co udělal …“.
 - **Odkryj (dříve Nejdřív sám):** povrchová karta s nadtitulkem v barvě období, otázkou v Newsreaderu, polem a tlačítkem „Porovnat…“; po odkrytí srovnání v tintu období, modelové odpovědi a sebekontrola. API v oddílu Bloky.
 - **Zkus to žít:** karta v tintu období, jedno hlavní tlačítko „Přijmout výzvu“.
-- **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a).
+- **Moje stanovisko:** krátký zápis do deníku (`MojeStanovisko.svelte`, druh `stanovisko`). V profilu za tlačítkem „Moje stanovisko“ s Uložit / Zrušit. S vlastností `rozbalene` (závěr cesty) je otázka s polem vidět hned, text se ukládá sám 600 ms po psaní, při opuštění pole i při odchodu ze stránky; pod polem „Ukládá se samo do deníku.“ / „Uloženo v deníku.“ (`aria-live`). Smazaný text zmizí i z deníku.
+- **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a). Varianta `velky` pro hlavní citát stránky, `kompaktni` (menší okraje, velikost textu) pro citát na časové ose otázky.
 
 ## Bloky
 
@@ -151,7 +153,7 @@ Vše jen v prohlížeči, v záznamu `atlas-denik` (`src/lib/denik.ts`). Bez loc
 
 ### Příběh
 
-Scéna se stejnou typografií jako profil a deska v barvě období: obraz, když je v `zdroje.yaml`, jinak ornament a mince s atributem osoby. Bez JavaScriptu (komponenta Astro, ne ostrov).
+Scéna se stejnou typografií jako profil a deska v barvě období: obraz scény, když ho předáš v `obrazek`, jinak ornament a mince s atributem osoby. Portrét osoby (`obrazek` v `lide.yaml`) se v Příběhu nepoužije, protože popisek patří k místu scény. Bez JavaScriptu (komponenta Astro, ne ostrov).
 
 ```mdx
 <Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Nikdo není *moudřejší.*" popisek="Delfy. Tady se Chairefón zeptal věštírny na Sókrata.">
@@ -164,7 +166,7 @@ Text scény v odstavcích…
 | Vlastnost | Povinná | Význam |
 | --- | --- | --- |
 | `popisek` | ano | popisek pod deskou |
-| `osoba` | ne* | id v `lide.yaml`: barva období, mince, výchozí obraz |
+| `osoba` | ne* | id v `lide.yaml`: barva období a mince |
 | `obdobi` | ne* | 1–8, když scéna nepatří k jedné osobě (*jedno z `osoba`/`obdobi` je nutné) |
 | `obrazek` | ne | id obrázku v `zdroje.yaml` (licence povinná) |
 | `nadtitulek`, `titulek` | ne | titulek s pointou v `*kurzívě*` |
@@ -308,13 +310,25 @@ Odhad pořadí (karty A / B / Žili ve stejné době), nebo vzdálenosti: na ose
 
 ## Cesta
 
-Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (zatím jen Sókratova část, bez Prótagory).
+Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (sedm kroků, Sókratés a Prótagorás).
 
 - **Soubory:** přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`; text = úvod), kroky `src/content/cesty/<slug>/<n>-<název>.mdx` (frontmatter `cesta`, `krok`, `nazev`, volitelně `kdeJsme`; text = obsah kroku s bloky). Kroky se číslují 1…n bez mezer, jinak se sestavení zastaví.
-- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, seznam kroků s tím, co student prošel, tlačítko Začít / Pokračovat: krok n / Projít znovu a oddíl Kam dál (`#hotovo`).
+- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, tlačítko Začít / Pokračovat: krok n / Projít znovu, pod ním nadpis Kroky a seznam kroků s tím, co student prošel, a oddíl Kam dál (`#hotovo`). Tlačítko stojí nad seznamem, aby bylo na telefonu vidět bez posouvání a klávesnicí na dosah.
 - **Krok** `/cesta/<slug>/<n>/`: soustředěná hlavička (vlevo zpět na přehled, uprostřed „Krok n z N“ s tečkami kroků, vpravo Uložit a odejít; postup se ukládá sám), nadtitulek, název kroku, „Kde jsme“ a obsah. Dole pevná lišta Předchozí / Další krok (na telefonu bez názvu kroku), na konci Dokončit cestu.
 - **Vstupy:** karta cesty (`src/components/cesta/CestaKarta.astro`) na Domů a v profilu, odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku.
 - Bloky v kroku nabídnou po dokončení další krok samy.
+
+## Velká otázka
+
+Stránka `/otazka/<slug>/` (`src/pages/otazka/[otazka].astro`) je rozhovor napříč staletími. Ukázková je otázka 7 „Jak poznám, co je pravda?“.
+
+- **Soubor:** `src/content/otazky/<slug>.mdx`. Frontmatter `cislo`, `otazka`, `disciplina`, `pripad` (otázka úvodního případu, „Komu věřit?“) a `hlasy: [{ osoba, odpoved, myslenka, citat?, zdroje? }]` (osoba z `lide.yaml`, citát a prameny ze `zdroje.yaml`); text = úvod scénou („Představ si…“), dva až tři krátké odstavce. Otázka bez hlasů stránku nemá, zůstává jen řádek v přehledu `/otazky/`. Sestavení se zastaví, když osoba, citát nebo pramen chybí nebo když citát patří jiné osobě (`chybyHlasu` v `src/lib/otazky.ts`).
+- **Pořadí:** nadtitulek (Velká otázka N · disciplína), otázka jako h1, úvod → **Tvůj první názor** (`PrvniNazor.svelte`) → **odpovědi na úvodní případ** (nadtitulek „Tentýž případ, čtyři odpovědi“, nadpis z `pripad`) → **Proč to tak viděli** (časová osa) → **Cesta / Cesty k otázce** (karty všech cest s touto otázkou, samy z dat) → **Změnil se?** (`ZmenilSe.svelte`) → Prameny.
+- **Nejdřív student:** dokud student neuloží první názor nebo nestiskne Přeskočit, je všechno pod prvním názorem skryté (atribut `data-otazka-zavreno` na `<html>`, nastaví ho malý skript před vykreslením). Bez JavaScriptu je stránka vidět celá. Po odkrytí jde fokus na nadpis odpovědí.
+- **Odpovědi** (`HlasyOdpovedi.astro`): karty s horní linkou v barvě období, mince 40 px, jméno, `odpoved` (jedna až dvě věty, jak by myslitel naložil s případem; převod jeho myšlenky, ne citát) a „Proč takhle?“. Celá karta je odkaz na `#hlas-<osoba>` na časové ose. Telefon pod sebou, od 700 px dva sloupce v pásu 960 px.
+- **Časová osa** (`HlasyOsa.astro`): hlasy seřazené podle narození (`seradHlasy`). Svislá linka `--rule` 2 px prochází středem mincí 44 px (`tint`, barva období osoby); vedle mince letopočty (`t-popisek`, `--pc`, 600), jméno `t-h3` (odkaz, jen když má osoba stránku), `myslenka` (odstavce) a citát `<Citat kompaktni />`. Telefon: letopočty nad jménem. Od 1100 px letopočty v levém okraji vedle mince, text drží čtenářský sloupec. Rozestupy jsou stejné, ne podle let.
+- **Deník:** `otazka-<slug>-prvni` (Můj první názor) a `otazka-<slug>-ted` (Po setkání s filozofy), druh `stanovisko`; přeskočení je stav `otazka-<slug>`. Změnil se? ukáže po uložení obě odpovědi vedle sebe („Na začátku“ / „Teď“) a otázku, co by názor změnilo ještě jednou. Nic se nehodnotí.
+- **Odkazy:** na otázku odkazuj `adresaOtazky(id, data)`; vede na stránku, a dokud otázka stránku nemá, na kotvu v přehledu.
 
 ## Mapa a čas
 

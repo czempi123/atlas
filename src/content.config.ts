@@ -53,7 +53,32 @@ const obdobiTexty = defineCollection({
 
 const otazky = defineCollection({
   loader: vsechny('otazky'),
-  schema: z.object({ cislo: otazka, otazka: z.string(), disciplina: z.string() }),
+  schema: z.object({
+    cislo: otazka,
+    otazka: z.string(),
+    disciplina: z.string(),
+    /** otázka úvodního případu, na kterou odpovídají všichni myslitelé („Komu věřit?“) */
+    pripad: z.string().trim().min(1).optional(),
+    /**
+     * Hlasy myslitelů na stránce /otazka/<slug>/ (pořadí podle narození dopočítá stránka).
+     * `odpoved`: jedna až dvě věty, jak by myslitel naložil s úvodním případem (nahoře, vedle sebe).
+     * `myslenka`: proč to tak viděl, 2–4 věty z podkladů; prázdný řádek dělí odstavce (časová osa).
+     * Otázka bez hlasů zatím nemá vlastní stránku, jen řádek v přehledu /otazky/.
+     */
+    hlasy: z
+      .array(
+        z
+          .object({
+            osoba: id,
+            odpoved: z.string().trim().min(1),
+            myslenka: z.string().trim().min(1),
+            citat: id.optional(),
+            zdroje: z.array(id).default([]),
+          })
+          .strict(),
+      )
+      .default([]),
+  }),
 });
 
 /** Cesta: přehled v src/content/cesty/<slug>.mdx, kroky v src/content/cesty/<slug>/<n>-<název>.mdx. */

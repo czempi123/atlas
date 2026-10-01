@@ -3,11 +3,15 @@
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const STRANKY = [
+// `preskocit`: stránka otázky skrývá hlasy do prvního názoru; v prohlídce je chceme vidět celé.
+const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: string }[] = [
   { cesta: '/', nazev: 'domu', nadpis: /Velké otázky mají/ },
   { cesta: '/lide/', nazev: 'lide', nadpis: /Lidé a směry/ },
   { cesta: '/osobnost/sokrates/', nazev: 'sokrates', nadpis: /Sókratés/ },
+  { cesta: '/osobnost/protagoras/', nazev: 'protagoras', nadpis: /Prótagorás/ },
   { cesta: '/mapa/', nazev: 'mapa', nadpis: /Mapa a čas/ },
+  { cesta: '/otazky/', nazev: 'otazky', nadpis: /Deset velkých otázek/ },
+  { cesta: '/otazka/jak-poznam-pravdu/', nazev: 'otazka-7', nadpis: /Jak poznám, co je pravda\?/, preskocit: 'otazka-jak-poznam-pravdu' },
 ];
 const SIRKY = [
   { sirka: 390, vyska: 844 },
@@ -34,6 +38,11 @@ for (const s of STRANKY) {
       test(`${s.nazev} · ${sirka} px · ${rezim === 'light' ? 'světlý' : 'tmavý'}`, async ({ page }) => {
         await page.setViewportSize({ width: sirka, height: vyska });
         await page.emulateMedia({ colorScheme: rezim, reducedMotion: 'reduce' });
+        if (s.preskocit) {
+          await page.addInitScript((klic) => {
+            localStorage.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: { [klic]: { preskoceno: true } }, aktivita: [], cesty: {} }));
+          }, s.preskocit);
+        }
         await page.goto(s.cesta);
         await pripravit(page);
 

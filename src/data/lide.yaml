@@ -27,7 +27,8 @@
     nazev: kalich
     proc: Když ho Athény odsoudily, vypil ve vězení číši jedu. Mohl utéct, ale neutekl.
     zdroj: platon-faidon
-  zdroje: [sep-socrates, platon-obrana, platon-kriton, platon-faidon]
+  obrazek: sokrates-louvre
+  zdroje: [sep-socrates, platon-obrana, platon-kriton, platon-faidon, platon-laches, platon-euthyfron, platon-symposion, dl-ii-40]
 
 - id: platon
   jmeno: Platón
@@ -37,7 +38,7 @@
   obdobi: 1
   hloubka: portret
   smery: [akademie]
-  otazky: [6, 8, 2]
+  otazky: [6, 8, 2, 7]
   linie: [spolecnost]
   mista:
     - { misto: athenes, role: narozeni, zdroj: britannica-plato }
@@ -61,7 +62,7 @@
   obdobi: 1
   hloubka: portret
   smery: [peripatetici]
-  otazky: [1, 6, 10]
+  otazky: [1, 6, 10, 7]
   linie: [veda, spolecnost]
   mista:
     - { misto: stageira, role: narozeni, rok: -384, zdroj: sep-aristotle }
@@ -78,7 +79,7 @@
     nazev: váhy
     proc: Ctnost je střed mezi dvěma krajnostmi.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics]
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika]
 
 - id: thales
   jmeno: Thalés
@@ -103,7 +104,7 @@
 
 - id: pythagoras
   jmeno: Pýthagorás
-  jmeno2: Pýthagory
+  jmeno2: Pýthagora
   narozen: { rok: -570, priblizne: true }
   zemrel: { rok: -490, priblizne: true }
   obdobi: 1
@@ -151,7 +152,7 @@
   obdobi: 1
   hloubka: profil
   smery: [eleate]
-  otazky: [6]
+  otazky: [6, 7]
   mista:
     - { misto: elea, role: narozeni, zdroj: sep-parmenides }
   kdo: Myslitel z Eleje v jižní Itálii, který svou filozofii napsal jako báseň.
@@ -161,7 +162,7 @@
     nazev: brána
     proc: Ve své básni vypráví, jak projel branou Noci a Dne k bohyni, která ho poučila, co skutečně je.
     zdroj: sep-parmenides
-  zdroje: [sep-parmenides]
+  zdroje: [sep-parmenides, dl-ix-22]
 
 - id: demokritos
   jmeno: Démokritos
@@ -186,7 +187,7 @@
 
 - id: protagoras
   jmeno: Prótagorás
-  jmeno2: Prótagory
+  jmeno2: Prótagora
   narozen: { rok: -490, priblizne: true }
   zemrel: { rok: -420, priblizne: true }
   obdobi: 1
@@ -196,7 +197,7 @@
   mista:
     - { misto: abdera, role: narozeni, zdroj: iep-protagoras }
     - { misto: athenes, role: pusobeni, zdroj: iep-protagoras }
-    - { misto: thurioi, role: pusobeni, rok: -444, zdroj: iep-protagoras }
+    - { misto: thurioi, role: pusobeni, rok: -444, zdroj: sep-protagoras }
   kdo: Nejslavnější sofista, učitel, kterému Periklés svěřil sepsání zákonů pro novou osadu Thurioi.
   proc: Tvrdil, že člověk je měřítkem všech věcí.
   atribut:
@@ -204,7 +205,7 @@
     nazev: měřítko
     proc: Člověk je měřítkem všech věcí.
     zdroj: iep-protagoras
-  zdroje: [iep-protagoras]
+  zdroje: [sep-protagoras, sep-sophists, iep-protagoras, platon-menon, platon-protagoras, plutarchos-perikles, dl-ix-50]
 
 - id: zenon-z-eleje
   jmeno: Zénón z Eleje
@@ -286,7 +287,7 @@
 
 - id: anaxagoras
   jmeno: Anaxagorás
-  jmeno2: Anaxagory
+  jmeno2: Anaxagora
   narozen: { rok: -500, priblizne: true }
   zemrel: { rok: -428, priblizne: true }
   obdobi: 1
@@ -580,7 +581,7 @@
   obdobi: 2
   hloubka: portret
   smery: [epikureismus]
-  otazky: [1, 3]
+  otazky: [1, 3, 7]
   mista:
     - { misto: samos, role: pobyt, do: -321, zdroj: sep-epicurus }
     - { misto: kolofon, role: pobyt, od: -321, zdroj: sep-epicurus }
@@ -595,7 +596,7 @@
     nazev: výhonek
     proc: Jeho škole se říkalo Zahrada.
     zdroj: sep-epicurus
-  zdroje: [sep-epicurus]
+  zdroje: [sep-epicurus, dl-x-31]
 
 - id: seneca
   jmeno: Seneca
@@ -729,7 +730,7 @@
     nazev: prasátko
     proc: "Vypráví se, že za bouře na lodi ukázal na prasátko, které klidně žralo: takový klid má mít moudrý."
     zdroj: dl-ix-68
-  zdroje: [sep-pyrrho, dl-ix-68]
+  zdroje: [sep-pyrrho, dl-ix-68, dl-ix-61]
 
 - id: lucretius
   jmeno: Lucretius

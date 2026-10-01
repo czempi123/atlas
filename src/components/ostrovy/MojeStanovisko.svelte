@@ -1,17 +1,27 @@
 <script lang="ts">
   // Moje stanovisko: krátký zápis do deníku k otázce. Dobrovolné, nic se nehodnotí ani neodesílá.
+  // Použití v MDX:
+  // <MojeStanovisko client:visible id="sokrates-nikdo-nedela-zlo" otazka="…" odkaz="/osobnost/sokrates/#myslenky" />
+  // <MojeStanovisko client:visible rozbalene id="cesta1-moje-pravidlo" otazka="…" odkaz="/cesta/…/7/" />
+  // S `rozbalene` je pole vidět hned a zápis se do deníku ukládá sám během psaní (závěr cesty).
   import { onMount } from 'svelte';
-  import { nacti, ulozZapis } from '../../lib/denik';
+  import { nacti, ulozZapis, smazZapis } from '../../lib/denik';
 
-  interface Props { id: string; otazka: string; odkaz: string }
-  let { id, otazka, odkaz }: Props = $props();
+  interface Props { id: string; otazka: string; odkaz: string; rozbalene?: boolean }
+  let { id, otazka, odkaz, rozbalene = false }: Props = $props();
   let otevreno = $state(false);
   let text = $state('');
   let ulozeno = $state(false);
+  let casovac: ReturnType<typeof setTimeout> | undefined;
 
   onMount(() => {
     const z = nacti().zapisy.find((x) => x.id === id);
     if (z) { text = z.odpoved; ulozeno = true; }
+    if (!rozbalene) return;
+    // Odchod ze stránky (Dokončit cestu, Odejít, zavření) uloží, co je rozepsané.
+    const priOdchodu = () => ulozSamo();
+    addEventListener('pagehide', priOdchodu);
+    return () => { clearTimeout(casovac); removeEventListener('pagehide', priOdchodu); };
   });
 
   function uloz() {
@@ -20,10 +30,30 @@
     ulozeno = true;
     otevreno = false;
   }
+
+  function ulozSamo() {
+    clearTimeout(casovac);
+    if (text.trim()) {
+      ulozZapis({ id, otazka, odpoved: text.trim(), odkaz });
+      ulozeno = true;
+    } else if (ulozeno) {
+      smazZapis(id);
+      ulozeno = false;
+    }
+  }
+
+  function piseSe() {
+    clearTimeout(casovac);
+    casovac = setTimeout(ulozSamo, 600);
+  }
 </script>
 
 <div class="stanovisko">
-  {#if !otevreno}
+  {#if rozbalene}
+    <label class="t-ovladani" for={`${id}-stanovisko`}>{otazka}</label>
+    <textarea id={`${id}-stanovisko`} rows="3" bind:value={text} oninput={piseSe} onblur={ulozSamo} aria-describedby={`${id}-stav`}></textarea>
+    <p class="t-popisek stav" id={`${id}-stav`} aria-live="polite">{ulozeno ? 'Uloženo v deníku.' : 'Ukládá se samo do deníku.'}</p>
+  {:else if !otevreno}
     <button class="vedlejsi" type="button" onclick={() => (otevreno = true)} aria-expanded="false">
       {ulozeno ? 'Upravit stanovisko v deníku' : 'Moje stanovisko'}
     </button>
@@ -51,6 +81,7 @@
     font-family: var(--font-serif);
     font-size: var(--fs-text);
   }
+  .stav { flex-basis: 100%; margin: 0; color: var(--ink-2); }
   .akce { display: flex; gap: var(--s-3); }
   button {
     min-height: 48px;

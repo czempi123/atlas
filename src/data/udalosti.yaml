@@ -6,6 +6,7 @@
 - { id: marathon, nazev: Bitva u Marathónu, od: -490, obdobi: [1], druh: kotva, zdroj: britannica-greco-persian-wars }
 - { id: salamina, nazev: Bitva u Salamíny, od: -480, obdobi: [1], druh: kotva, zdroj: britannica-greco-persian-wars }
 - { id: peloponneska-valka, nazev: Peloponéská válka, od: -431, do: -404, obdobi: [1], druh: kotva, zdroj: britannica-peloponnesian-war }
+- { id: thurioi-zakony, nazev: Prótagorás píše zákony pro Thurioi, od: -444, obdobi: [1], misto: thurioi, osoby: [protagoras], druh: zivot, zdroj: sep-protagoras }
 - { id: potidaia, nazev: Tažení k Potidaii, od: -432, obdobi: [1], misto: potidaia, osoby: [sokrates, alkibiades], druh: zivot, zdroj: sep-socrates }
 - { id: oblaka, nazev: Aristofanova Oblaka, od: -423, obdobi: [1], misto: athenes, osoby: [aristofanes, sokrates], druh: zivot, zdroj: sep-socrates }
 - { id: delion, nazev: Bitva u Délia, od: -424, obdobi: [1], misto: delion, osoby: [sokrates, alkibiades], druh: zivot, zdroj: sep-socrates }
