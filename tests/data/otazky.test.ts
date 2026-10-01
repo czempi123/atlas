@@ -9,7 +9,7 @@ describe('adresa otázky', () => {
   it('otázka s hlasy má vlastní stránku, bez hlasů kotvu v přehledu', () => {
     expect(adresaOtazky('jak-zit', { hlasy: [] })).toBe('/otazky/#jak-zit');
     expect(adresaOtazky('jak-zit', {})).toBe('/otazky/#jak-zit');
-    expect(adresaOtazky('jak-poznam-pravdu', { hlasy: [{ osoba: 'sokrates', veta: 'x' }] })).toBe('/otazka/jak-poznam-pravdu/');
+    expect(adresaOtazky('jak-poznam-pravdu', { hlasy: [{ osoba: 'sokrates', odpoved: 'x' }] })).toBe('/otazka/jak-poznam-pravdu/');
     expect(maStranku({ hlasy: [] })).toBe(false);
   });
   it('klíče deníku jsou odvozené ze slugu', () => {
@@ -29,7 +29,7 @@ describe('pořadí hlasů', () => {
       ['c', { narozen: { rok: 55 }, zemrel: { rok: 135 } }],
       ['d', { aktivni: { od: -4, do: 30 } }],
     ]) as never;
-    const h = ['c', 'x', 'a', 'd', 'b'].map((osoba) => ({ osoba, veta: '…' }));
+    const h = ['c', 'x', 'a', 'd', 'b'].map((osoba) => ({ osoba, odpoved: '…' }));
     expect(seradHlasy(h, m).map((x) => x.osoba)).toEqual(['b', 'a', 'd', 'c', 'x']);
   });
   it('prázdný seznam zůstane prázdný', () => {
@@ -42,10 +42,10 @@ describe('kontrola hlasů', () => {
     const chyby = chybyHlasu(
       'test',
       [
-        { osoba: 'nikdo', veta: '…' },
-        { osoba: 'sokrates', veta: '…', citat: 'theaitetos-152a' },
-        { osoba: 'sokrates', veta: '…', zdroje: ['neexistuje'] },
-        { osoba: 'protagoras', veta: '…', citat: 'neni' },
+        { osoba: 'nikdo', odpoved: '…' },
+        { osoba: 'sokrates', odpoved: '…', citat: 'theaitetos-152a' },
+        { osoba: 'sokrates', odpoved: '…', zdroje: ['neexistuje'] },
+        { osoba: 'protagoras', odpoved: '…', citat: 'neni' },
       ],
       osoby,
       citatyPodleId,

@@ -2,6 +2,13 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Stránka velké otázky, druhé kolo
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Filozofové na stránce otázky ve dvou vrstvách: nejdřív všichni odpoví na úvodní případ (karty vedle sebe, „Komu věřit?“), teprve potom časová osa „Proč to tak viděli“ s myšlenkou, citátem a odkazem na profil | Autor: srovnání s filozofy bylo polovičaté; student má nejdřív vidět, kde se rozcházejí na tomtéž případu |
+| Odpověď na případ je náš převod myšlenky filozofa, ve třetí osobě a bez uvozovek; přímá řeč zůstává jen v citátu | Pravidlo o přímé řeči skutečných osob |
+
 ## 1. 10. 2026: Stránka velké otázky a cesta 1 s Prótagorem (P8)
 
 | Rozhodnutí | Důvod |

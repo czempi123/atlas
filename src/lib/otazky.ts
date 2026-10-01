@@ -6,8 +6,10 @@ import { interval } from './casy';
 export interface Hlas {
   /** id osoby v lide.yaml */
   osoba: string;
-  /** jedna věta: jak by na otázku odpověděl */
-  veta: string;
+  /** jak by naložil s úvodním případem (jedna až dvě věty) */
+  odpoved?: string;
+  /** proč to tak viděl (2–4 věty, odstavce dělí prázdný řádek) */
+  myslenka?: string;
   /** id citátu v zdroje.yaml (volitelně) */
   citat?: string;
   /** prameny věty (id v zdroje.yaml › prameny); pramen citátu se doplní sám */

@@ -57,11 +57,12 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 
 ## Stránka velké otázky
 
-Stránka `/otazka/<slug>/` (`docs/design.md` › Velká otázka) je rozhovor napříč staletími: úvod scénou, Tvůj první názor, hlasy myslitelů na časové ose, cesty k otázce a na konci Změnil se?. Obsah je v `src/content/otazky/<slug>.mdx`.
+Stránka `/otazka/<slug>/` (`docs/design.md` › Velká otázka) je rozhovor napříč staletími: úvod scénou, Tvůj první názor, odpovědi myslitelů na tentýž případ, proč to tak viděli (časová osa), cesty k otázce a na konci Změnil se?. Obsah je v `src/content/otazky/<slug>.mdx`.
 
-- **Úvod** je „Představ si…“ ze života studenta, dva až tři krátké odstavce, které končí otázkami. Nepoužívej scénu, kterou už nese cesta k téže otázce nebo profil.
-- **Hlasy** ve frontmatteru: `hlasy: [{ osoba, veta, citat, zdroje }]`. Pořadí podle narození dopočítá stránka. Jen myslitelé, kteří spolu opravdu vedou spor a mají ověřenou větu v podkladech; další přibudou s vlastním profilem.
-- **Věta** je jedna až dvě věty, jak by myslitel na otázku odpověděl, v tykání a bez uvozovek. Nesmí opakovat citát pod ní; když by věta a citát řekly totéž, vezmi do věty jinou část jeho odpovědi.
+- **Úvod** je „Představ si…“ ze života studenta, dva až tři krátké odstavce, které končí otázkami. Nepoužívej scénu, kterou už nese cesta k téže otázce nebo profil. Otázku případu zapiš do `pripad` („Komu věřit?“).
+- **Hlasy** ve frontmatteru: `hlasy: [{ osoba, odpoved, myslenka, citat, zdroje }]`. Pořadí podle narození dopočítá stránka. Jen myslitelé, kteří spolu opravdu vedou spor a mají ověřenou myšlenku v podkladech; další přibudou s vlastním profilem.
+- **Nejdřív odpověď, pak myšlenka.** `odpoved` je jedna až dvě věty, jak by myslitel naložil s úvodním případem, v tykání, ve třetí osobě a bez uvozovek (převod jeho myšlenky, ne citát). Odpovědi mají stejný tvar, aby bylo na první pohled vidět, kde se rozcházejí.
+- **Myšlenka** (`myslenka`) jsou 2–4 věty z podkladů: proč to tak viděl. Nesmí opakovat citát pod ní; může na něj navázat („Sám řekl, co je pravda, jednou větou:“).
 - **Citát** jen ze `zdroje.yaml` a jen ten, který patří téže osobě (kontroluje sestavení). `zdroje` = prameny věty.
 - Cesty k otázce se na stránce ukážou samy z `otazka:` v přehledu cesty. Na otázku odkazuj adresou `/otazka/<slug>/`.
 

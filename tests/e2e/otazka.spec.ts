@@ -35,7 +35,17 @@ test('otázka: první názor klávesnicí, hlasy v pořadí, návrat na konci a 
 
   await expect(page.locator(PO)).toBeVisible();
   await expect(page.locator('#jak-poznam-pravdu-hlasy-nadpis')).toBeFocused();
+  await expect(page.locator('#jak-poznam-pravdu-hlasy-nadpis')).toHaveText('Komu věřit?');
+  // Nejdřív odpovědi všech na tentýž případ, pak rozvinutí na časové ose.
+  await expect(page.locator('.odpoved__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés']);
+  await expect(page.locator('.odpoved').first()).toContainText('Nevěř ani tomu, co slyšíš odmalička.');
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.odpoved__odkaz').first()).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#hlas-parmenides$/);
+  await expect(page.locator('#hlas-parmenides')).toBeInViewport();
   await expect(page.locator('.hlas__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés']);
+  await expect(page.locator('#hlas-protagoras')).toContainText('jako lékař');
   // Odkaz na profil jen tam, kde profil je.
   await expect(page.locator('.hlas__jmeno a')).toHaveText(['Prótagorás', 'Sókratés']);
   await expect(page.locator('.hlas .citat')).toHaveCount(4);
