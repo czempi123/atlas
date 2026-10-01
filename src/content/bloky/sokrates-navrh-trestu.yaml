@@ -1,0 +1,40 @@
+# Volba s důvodem · Sókratův portrét, kapitola 04 „Soud“.
+# Podklad: Platón, Obrana Sókratova 36a–38b (docs/podklady/celek-1-pravda.md, kapitola 04, body 8–12).
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: >-
+  Porota tě uznala vinným, jen o pár hlasů. Podle sebe jsi nic špatného neudělal. Žalobci žádají smrt.
+  Teď máš sám navrhnout jiný trest.
+otazka: Co navrhneš?
+moznosti:
+  - text: Vyhnanství. Odejdu z Athén a budu žít jinde.
+    tah: odejít
+    zpetna: >-
+      Zachráníš si život a nikomu neublížíš. Jenže co budeš dělat jinde? Když totéž co tady, nejspíš tě vyženou i odtud.
+      Když s tím přestaneš, proč jsi neslíbil rovnou tady?
+  - text: Pokutu, jakou dokážu zaplatit.
+    tah: zaplatit
+    zpetna: >-
+      Pokuta je rozumný kompromis a porotu nejspíš neurazí. Říká ale: provinil jsem se, jen málo.
+      Když si myslíš, že jsi nic špatného neudělal, za co přesně platíš?
+  - text: Slíbím, že s tím přestanu.
+    tah: slíbit, že přestanu
+    zpetna: >-
+      Zachráníš se a dáš soudu, co chce. Co když ale to, co děláš, považuješ za nejdůležitější věc svého života?
+      Za jakou cenu se dá vzdát toho, čemu věříš?
+  - text: Odměnu. Obci jsem prospěl.
+    tah: chtít odměnu
+    jeho: true
+    zpetna: >-
+      Je to poctivé: navrhuješ, co si podle sebe zasloužíš. Porota to ale může slyšet jako výsměch.
+      Kdy je poctivost odvaha a kdy zbytečná provokace?
+coUdelal:
+  osoba: sokrates
+  stejne: >-
+    Navrhl totéž co ty: jídlo v prytaneu na útraty obce, jaké dostávali vítězové z Olympie.
+    Teprve potom nabídl pokutu.
+  jinak: >-
+    Navrhl odměnu: jídlo v prytaneu na útraty obce, jaké dostávali vítězové z Olympie.
+    Teprve potom nabídl pokutu.
+zdroje: [platon-obrana]

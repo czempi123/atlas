@@ -1,6 +1,6 @@
 # Změň jednu věc · myšlenkový pokus „Představ si…“ podle Sókratova odmítnutí útěku.
-# Jako fakt jen atribut kalich: „Mohl utéct, ale neutekl“ (Platón, Kritón; Faidón 117a–118a).
-# Sókratovy vlastní důvody (Kritón 50a–54d) čekají na ověření, proto tu nejsou (docs/podklady/k-overeni.md).
+# Stojí v kapitole 05 portrétu hned za Kritónovou nabídkou, před Sókratovou odpovědí.
+# Co udělal Sókratés: Platón, Kritón 49a–e, 51e–52e, 54b–d; Faidón 117a–118a (docs/podklady/celek-1-pravda.md, kapitola 05).
 druh: zmena
 obdobi: 1
 nadtitulek: Myšlenkový pokus
@@ -38,5 +38,8 @@ podminky:
       Na tom, jestli to někdo uvidí, tvé rozhodnutí nestojí. Dokážeš říct, co ho nese?
 coUdelal:
   osoba: sokrates
-  text: Sókratés utéct mohl, ale neutekl. Když ho Athény odsoudily, vypil ve vězení číši jedu.
+  text: >-
+    Sókratés utéct mohl, ale neutekl. Kritónovi řekl, že se nesmí oplácet křivda křivdou, ani když ti někdo ublížil.
+    Celý život mohl athénské zákony přesvědčit, nebo poslechnout. Útěkem by ublížil sobě, přátelům, vlasti i zákonům.
+    Zůstal a ve vězení vypil číši jedu.
 zdroje: [platon-kriton, platon-faidon]

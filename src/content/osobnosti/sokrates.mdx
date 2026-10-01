@@ -12,23 +12,19 @@ kapitoly:
   - cislo: "02"
     kotva: muz-z-agory
     nazev: Muž z agory
-    stav: osnova
-    osnova: "Sókratův den na athénském tržišti: koho zastavoval a jak se ptal (elenchos na příkladu z Lachéta nebo Euthyfróna). Proč za ním chodili mladí Athéňané, Alkibiadés a Platón. Podklady: Platón, Obrana 23c; Symposion. Napíše se v P7."
+    stav: hotovo
   - cislo: "03"
     kotva: ustup-od-delia
     nazev: Ústup od Délia
-    stav: osnova
-    osnova: "Sókratés jako voják: Potidaia 432, Délion 424, Amfipolis 422. Alkibiadovo vyprávění o klidném ústupu od Délia (Symposion 219e–221b). Odvaha jako otázka, kterou si Sókratés kladl i v rozhovorech. Napíše se v P7."
+    stav: hotovo
   - cislo: "04"
     kotva: soud
     nazev: Soud
-    stav: osnova
-    osnova: "Proces roku 399 př. n. l.: obžaloba z bezbožnosti a kažení mládeže, Obrana, hlasování a trest. Proč nenavrhl vyhnanství (Kritón 52c). Ověřit podrobnosti obžaloby a počty hlasů (atlas-overeni). Napíše se v P7."
+    stav: hotovo
   - cislo: "05"
     kotva: posledni-den
     nazev: Poslední den
-    stav: osnova
-    osnova: "Kritón přemlouvá k útěku, Sókratés odmítá (Kritón). Poslední rozhovor o duši a číše jedu (Faidón 117a–118a). Vazba na atribut kalich. Napíše se v P7."
+    stav: hotovo
 ---
 import Kapitola from '../../components/osobnost/Kapitola.astro';
 import Citat from '../../components/ui/Citat.astro';
@@ -40,7 +36,7 @@ import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
 import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
 import KamDal from '../../components/osobnost/KamDal.astro';
 import CestaKarta from '../../components/cesta/CestaKarta.astro';
-import { KdoZilDriv, ZmenJednuVec, Spor } from '../../components/bloky';
+import { KdoZilDriv, ZmenJednuVec, Spor, Volba, Odkryj } from '../../components/bloky';
 
 <div class="uvod ctenarsky">
 
@@ -76,6 +72,140 @@ Podívej se na svou odpověď. Napsal jsi znak, podle kterého moudrost poznáš
 <CestaKarta slug="kdy-mam-dobry-duvod-verit" nadtitulek="Pokračuj cestou" />
 </Kapitola>
 
+<Kapitola cislo="02" kotva="muz-z-agory" nazev="Muž z agory">
+  <Fragment slot="titulek">Generál, který nevěděl, co je <em>odvaha.</em></Fragment>
+
+Platón vypráví, jak se dva athénští otcové, Lysimachos a Melésias, radili o výchově svých synů. Právě spolu viděli ukázku boje ve zbroji. Na radu si přizvali Nikiu a Lachéta, který velel athénskému vojsku u Délia.
+
+Slovo dostal i Sókratés. Lachés ho znal z války a řekl o něm, že kdyby se u Délia všichni chovali jako Sókratés, Athény by tu porážku neutrpěly.
+
+Sókratés se pak generála zeptal na věc, které by měl rozumět nejlíp: co je odvaha? Lachés odpověděl, že odvážný je ten, kdo zůstane v řadě, brání se nepříteli a neuteče.
+
+<Odkryj
+  id="sokrates-co-je-odvaha"
+  otazka="Co je odvaha? Napiš jednou větou definici, která platí pro každého odvážného člověka."
+  tlacitko="Porovnat se Sókratem"
+  filozof="sokrates"
+  modelove={[
+    { text: 'Odvaha je udělat, co je správné, i když se bojím.', komentar: 'Platí pro vojáka, nemocného i chudého. Jenže teď musíš vědět, co je správné. Otázka se jen přestěhovala o dům dál.' },
+    { text: 'Odvaha je nepovolit strachu.', komentar: 'Silná věta. Je ale odvážný i ten, kdo ze vzdoru začne rvačku, kterou nemůže vyhrát? Nebo je to jen hloupost bez strachu?' },
+  ]}
+  sebekontrola={[
+    'Moje definice platí i pro někoho, kdo ustupuje.',
+    'Moje definice platí i mimo bitvu: v nemoci, v chudobě, proti pokušení.',
+    'Našel jsem aspoň jeden případ, na který moje definice nesedí.',
+  ]}
+>
+
+Sókratés Lachétovu odpověď vyzkoušel na protipříkladech. Skythové bojují i na ústupu. Sparťané u Platají před proutěnými štíty ustoupili, pak se obrátili a vyhráli. Byli snad zbabělí?
+
+A co odvaha na moři, v nemoci nebo v chudobě? Co člověk, který odolá pokušení? Vyzkoušej stejně svou větu. Platí pro všechny tyhle lidi?
+
+</Odkryj>
+
+Sókratés chtěl vědět, co mají společného odvážný voják, nemocný, chudý i člověk, který odolá pokušení. Lachés to nevěděl. Nakonec museli přiznat, že nevědí, co odvaha je. Generál, který vedl vojsko do bitvy, ji nedokázal popsat.
+
+Takové rozhovory vedl Sókratés na athénském tržišti celý život. Chodili za ním mladí, většinou synové bohatých rodin, a nikdo je k tomu nenutil. Bavilo je poslouchat, jak lidi zkouší, a pak to sami zkoušeli na jiných.
+
+Za Sókratem chodili i Platón, Xenofón, Antisthenés, Aristippos, Alkibiadés, Chairefón a Kritón. Sókratés přitom tvrdil, že žádný učitel není.
+
+Jenže kdo se před mladíky ztrapnil, nezlobil se na sebe. Zlobil se na Sókrata.
+</Kapitola>
+
+<Kapitola cislo="03" kotva="ustup-od-delia" nazev="Ústup od Délia">
+  <Fragment slot="titulek">Odvaha na <em>ústupu.</em></Fragment>
+
+Sókratés bojoval jako hoplíta, pěšák v těžké zbroji. Do války šel třikrát: k Potidaii roku 432, k Déliu roku 424 a k Amfipoli roku 422 př. n. l.
+
+Platón vypráví o hostině, na které o něm mluvil Alkibiadés. Byl s ním u Potidaie i u Délia a viděl ho zblízka.
+
+Alkibiadés vyprávěl, že u Potidaie snášel Sókratés hlad líp než ostatní. V mrazu chodil bos po ledu, jen v obyčejném plášti. Jednou se nad něčím zamyslel a stál na místě od úsvitu do úsvitu. Vojáci si na noc vynesli rohože, aby viděli, jestli vydrží.
+
+Ráno se pomodlil ke Slunci a odešel. V bitvě pak Alkibiada zranili a Sókratés ho zachránil i s jeho zbrojí. Cenu za statečnost si podle Alkibiada zasloužil Sókratés, ale přenechal ji jemu.
+
+Pak přišel Délion. Athéňané tam prohráli a vojsko se dalo na útěk. Alkibiadés jel na koni. Sókratés šel pěšky ve zbroji, vedle generála Lachéta.
+
+Alkibiadés z koně viděl, že Sókratés je klidnější než Lachés. Šel stejně jako po athénských ulicích, vzpřímeně a s pohledem na všechny strany. Díval se po přátelích i po nepřátelích. Z dálky bylo vidět, že kdo na něj sáhne, narazí.
+
+Nikdo se ho neodvážil napadnout a oba se dostali do bezpečí. Alkibiadés tu citoval komedii Oblaka, kde se Sókratés po ulicích naparuje. Její autor Aristofanés seděl u téže hostiny.
+
+<Volba id="sokrates-ustup-odvaha" />
+</Kapitola>
+
+<Kapitola cislo="04" kotva="soud" nazev="Soud">
+  <Fragment slot="titulek">Místo trestu <em>odměna.</em></Fragment>
+
+Roku 399 př. n. l. musel Sókratés k úřadu krále-archonta. Žalobu na něj podal Melétos. Platón ho popisuje jako mladého neznámého muže s rovnými vlasy, řídkým vousem a zahnutým nosem.
+
+Platón vypráví, že u sloupoví krále-archonta potkal Sókratés Euthyfróna. Ten tu žaloval vlastního otce z vraždy. Otec dal spoutat nádeníka, který v opilosti zabil otroka, a nechal ho ležet v příkopu. Než se vrátil posel od vykladače, nádeník zemřel hladem a zimou.
+
+Sókratés se Euthyfróna zeptal, co je vlastně zbožné. Nakonec se ho zeptal, jestli bohové milují zbožné proto, že je zbožné, nebo jestli je zbožné proto, že to bohové milují.
+
+*Zkus to s čímkoli, co považuješ za správné. Je to správné, protože to někdo přikázal? Nebo to přikázal, protože je to správné?*
+
+Pak přišel soud. Žaloba zněla: Sókratés neuznává bohy, které uznává obec, zavádí nová božstva a kazí mládež. Navržený trest: smrt. Kromě Meléta žalovali i Anytos a Lykón.
+
+Vypráví se, že mu řečník Lýsiás napsal obhajobu. Sókratés ji odmítl: byla prý krásná, ale jemu nesedí. Hájil se sám.
+
+Porota ho uznala vinným. Rozhodlo jen málo hlasů:
+
+<Citat id="obrana-36a" />
+
+Žalobci žádali smrt. Odsouzený ale mohl sám navrhnout jiný trest.
+
+<Volba id="sokrates-navrh-trestu" />
+
+Sókratés řekl, že si zaslouží jídlo v prytaneu na útraty obce, jaké dostávají vítězové z Olympie. Proč on, a ne vítěz závodu?
+
+<Citat id="obrana-36d" />
+
+Vězení odmítl, byl by otrokem úředníků. Pokutu neměl z čeho zaplatit. A vyhnanství? Kdekoli bude, mladí ho budou poslouchat jako tady a vyženou ho i odtud.
+
+Mlčet také nemohl, byla by to neposlušnost vůči bohu. Mluvit každý den o ctnosti je podle něj pro člověka to největší dobro.
+
+<Citat id="obrana-38a" />
+
+Nakonec nabídl minu stříbra. Pak třicet min, za které ručili přátelé: Platón, Kritón, Kritobúlos a Apollodóros. Porota ho odsoudila k smrti.
+
+Popravit ho ale hned nemohli. Dokud byla posvátná loď na cestě na Délos, nesmělo se v Athénách popravovat. Než se loď vrátila, uplynul skoro měsíc.
+</Kapitola>
+
+<Kapitola cislo="05" kotva="posledni-den" nazev="Poslední den">
+  <Fragment slot="titulek">Kohout pro <em>Asklépia.</em></Fragment>
+
+Platón vypráví, že Kritón přišel do vězení ještě před úsvitem. Sókratés spal. Kritón ho nebudil, mlčky seděl vedle něj a divil se, jak klidně spí.
+
+Když se Sókratés probudil, Kritón mu řekl novinu. Loď z Délu je u Súnia. Zítra má Sókratés zemřít.
+
+Kritón ho přišel přemluvit k útěku. Měl pro to dobré důvody. Přijde o přítele. Lidé si budou myslet, že ho přátelé nechtěli zachránit, protože litovali peněz.
+
+Peníze jsou připravené, přispějí i Simmiás a Kebés z Théb. V Thesálii jsou přátelé, kteří ho ochrání. A když zůstane, zradí sám sebe, udělá radost nepřátelům a opustí vlastní syny.
+
+<ZmenJednuVec id="utek-z-vezeni" />
+
+Sókratés mu odpověděl, že se neřídí ničím jiným než úvahou, která se mu po zvážení zdá nejlepší. A podle ní se nikdy nesmí jednat nespravedlivě, i kdyby si většina myslela opak.
+
+<Citat id="kriton-49c" />
+
+Pak nechal promluvit samotné athénské Zákony. Ptaly se ho, jestli může obec obstát, když soukromé osoby ruší rozsudky soudů. Vždycky měl volbu: přesvědčit je, nebo poslechnout.
+
+Z Athén skoro nevycházel, jen do války. Měl tu děti. U soudu mohl navrhnout vyhnanství, a místo toho řekl, že dá přednost smrti. Na odchod měl sedmdesát let.
+
+Kdyby teď utekl, oplatil by křivdu křivdou. Ublížil by sobě, přátelům, vlasti i zákonům. Ta slova v něm zněla tak silně, že nic jiného neslyšel. Kritón už neměl co říct.
+
+Faidón, který u toho byl, vyprávěl o posledním dni. U Sókrata byla už ráno Xanthippa s malým synem. Než den skončil, rozloučil se Sókratés s rodinou, se třemi syny, z nichž dva byli malí. Pak ženy poslal pryč.
+
+Přišel žalářník. Řekl Sókratovi, že je to nejušlechtilejší člověk, jaký kdy do vězení přišel. A rozplakal se.
+
+Slunce bylo ještě nad horami a Kritón prosil, ať nespěchá. Sókratés odmítl. Číši vypil klidně, bez zachvění.
+
+Přátelé se rozplakali, Apollodóros nahlas. Sókratés je okřikl: kvůli tomu přece poslal ženy pryč. Když mu chlad stoupal od nohou k srdci, odkryl si tvář a promluvil naposledy:
+
+<Citat id="faidon-118a" />
+
+Kritón mu zavřel ústa a oči.
+</Kapitola>
+
 <DobaALide osoba={props.osoba}>
 
 Z Athén vycházel skoro jen do války. Třikrát: k Potidaii, k Déliu a k Amfipoli.
@@ -105,8 +235,6 @@ Podle Sókrata nikdo nedělá špatné věci proto, že chce být špatný. Děl
 
 <div class="ctenarsky">
 
-<ZmenJednuVec id="utek-z-vezeni" />
-
 Po Sókratově smrti se v Athénách potkávali lidé, kteří přemýšleli úplně jinak. Platón, jeho žák, tu založil Akademii. Diogenés žil na ulici a vysmíval se tomu, čemu ostatní slepě věřili.
 
 </div>
@@ -122,6 +250,6 @@ Zeptej se kamaráda na něco, o čem je pevně přesvědčený. Třeba: Co je po
 <KamDal odkazy={[
   { href: '/cesta/kdy-mam-dobry-duvod-verit/', nadtitulek: 'Cesta 1', text: 'Kdy mám dobrý důvod věřit?' },
   { href: '/mapa/', nadtitulek: 'Mapa a čas', text: 'Kdo žil v Athénách a kolem Egejského moře' },
-  { href: '/lide/#obdobi-1', nadtitulek: 'Lidé a směry', text: 'Sókratovi žáci, přátelé a protivníci' },
+  { href: '/osobnost/protagoras/', nadtitulek: 'Profil', text: 'Prótagorás: člověk je měřítkem všech věcí' },
   { href: '/otazky/#jak-poznam-pravdu', nadtitulek: 'Velká otázka 7', text: 'Jak poznám, co je pravda?' },
 ]} />
