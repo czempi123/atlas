@@ -7,6 +7,7 @@ const STRANKY = [
   { cesta: '/', nazev: 'domu', nadpis: /Velké otázky mají/ },
   { cesta: '/lide/', nazev: 'lide', nadpis: /Lidé a směry/ },
   { cesta: '/osobnost/sokrates/', nazev: 'sokrates', nadpis: /Sókratés/ },
+  { cesta: '/osobnost/protagoras/', nazev: 'protagoras', nadpis: /Prótagorás/ },
   { cesta: '/mapa/', nazev: 'mapa', nadpis: /Mapa a čas/ },
 ];
 const SIRKY = [
