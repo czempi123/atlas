@@ -119,4 +119,4 @@ Vědomě vynecháno: Sókratův posměšek o praseti a paviánovi jako měřítk
 
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
-| Prótagorova odpověď na sebevyvrácení (Theaitétos 171a–d) | Spor v kroku 5 by ji mohl dát Prótagorovi místo argumentu „obce“; jde o výklad, který je mezi badateli sporný (M. Burnyeat 1976 hájí Platónův argument). | Ověřit v SEP „Protagoras“ a u Burnyeata; teprve pak rozhodnout o záměně argumentu. |
+| ~~Prótagorova odpověď na sebevyvrácení (Theaitétos 171a–d)~~ | **Vyřízeno 1. 10.:** autor rozhodl, že pointa sporu má přednost před sporem badatelů; odpověď je ve Sporu v kroku 5 jako výklad místo argumentu „obce“. | — |
