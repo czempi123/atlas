@@ -61,8 +61,9 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 
 | Blok | Co chybí | Kde hledat | Stav |
 | --- | --- | --- | --- |
-| Spor Platón × Diogenés (`src/content/bloky/platon-diogenes-skutecnost.yaml`) | Diogenova strana: anekdota o stolu a „stolovosti“ (Platón mluví o idejích, Diogenés vidí stůl, ne stolovost), český převod a přesné místo | Diogenés Laertios VI, 53 (vydání Hicks, Loeb; český překlad Diogenés Laertios, *Životy, názory a výroky proslulých filozofů*) | blok je v `kOvereni`, jen v dílně |
-| Tentýž Spor | Platónův nejsilnější argument pro ideje vlastními slovy (zatím jen teze z `lide.yaml`) | Ústava VI–VII (úsečka, jeskyně), Faidón 74a–75b (rovnost sama) | tamtéž |
+| Spor Platón × Diogenés (`src/content/bloky/platon-diogenes-skutecnost.yaml`) | Diogenova strana a Platónova odpověď | Diogenés Laertios VI, 53 | ověřeno 1. 10. 2026 (`docs/podklady/spor-platon-diogenes.md`); otevřené: porovnat vlastní převod s českým překladem A. Koláře |
+| Tentýž Spor | Platónův argument pro ideje šířeji vlastními slovy (teď teze z dat, jeskyně a odpověď z DL VI, 53) | Ústava VI–VII (úsečka, jeskyně), Faidón 74a–75b (rovnost sama) | stačí pro ukázku; rozšířit při profilu Platóna |
+| Cesta 1 „Kdy mám dobrý důvod věřit?“ | Prótagorás (druhý filozof cesty podle architektury): život, „člověk je měřítkem všech věcí“ a spor se Sókratem | DK 80 B1, Platón, Theaitétos 152a; SEP „Protagoras“ | nezačato; cesta má zatím jen Sókratovu část |
 | Změň jednu věc „Útěk z vězení“ | Sókratovy vlastní důvody, proč neutekl, pro oddíl „Co udělal Sókratés“ | Platón, Kritón 45a–46a (Kritónova nabídka), 50a–54d (řeč Zákonů) | v bloku zatím jen ověřený fakt z atributu |
 | Změň jednu věc (další ukázka) | Gygův prsten jako klasický pokus pro cestu 2 | Platón, Ústava II, 359c–360d | nezačato |
 | Odkryj „Koho považuješ za moudrého?“ | Modelové odpovědi a sebekontrola jsou autorské (nejde o historická tvrzení); projít revizí (`atlas-revize`) před vložením do profilu | — | jen v dílně |

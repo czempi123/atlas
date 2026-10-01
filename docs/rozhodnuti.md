@@ -2,6 +2,19 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Bloky v atlasu (P5, druhé kolo)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Bloky jsou vidět v ukázkové cestě 1 „Kdy mám dobrý důvod věřit?“ (šest kroků) a v Sókratově profilu; vstup z Domů, z profilu a přes Pokračuj | Autor: v dílně se k blokům student nedostal a zobrazoval se v ní kód |
+| Dílna zůstává pro autora (noindex), ale bez kódu, cest k souborům a redakčních poznámek | Autor: do zobrazení se nesmí propisovat kód |
+| Cesta 1 zatím jen Sókratova část; Prótagorás přibude s jeho ověřením | Ukázka stojí jen na ověřeném obsahu; krok 4 a 5 jsou pokus studenta a nový případ „Představ si…“ bez historických tvrzení |
+| Krok cesty má vlastní soustředěnou hlavičku a lištu Předchozí / Další místo hlavní navigace | Podle docs/design.md › Navigace; student ví, kde je, jak se vrátí a co dál |
+| Kdo žil dřív? (vzdálenost) a Spor se ovládají tažením, klepnutím i klávesnicí; osa je souměrná kolem prvního člověka | Autor zvolil tažení; souměrná osa neprozradí odpověď |
+| Každý blok po dokončení nabídne jeden další krok (v cestě další krok sám) | Autor: Kam dál po bloku |
+| Spor Platón × Diogenés ověřen (Diogenés Laertios VI, 53, vlastní převod) a je v Sókratově profilu | Autor: ověřit hned; podklady v docs/podklady/spor-platon-diogenes.md |
+| Kontrola odkazů ignoruje stav v adrese (`?rok=…`) | Odkaz do Mapy a času se stavem vede na existující stránku /mapa/ |
+
 ## 30. 9. 2026: Knihovna bloků, prvních šest (P5)
 
 | Rozhodnutí | Důvod |

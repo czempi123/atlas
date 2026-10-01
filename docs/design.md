@@ -114,7 +114,7 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 
 ## Bloky
 
-Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem, ukázky jsou na stránce `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
+Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem. Ve skutečném atlasu jsou v cestě 1 „Kdy mám dobrý důvod věřit?“ (`/cesta/kdy-mam-dobry-duvod-verit/`) a v Sókratově profilu; všech šest pohromadě a bez kódu je pro autora na `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
 
 ### Jak blok vložit do MDX
 
@@ -129,7 +129,10 @@ Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/p
 6. Historická tvrzení v bloku musí stát na pramenech v `zdroje` (id ze `zdroje.yaml`). Co ještě čeká na ověření, zapiš do `kOvereni`. Takový blok smí být jen v dílně, jinde zastaví sestavení.
 7. Zpětná vazba vysvětluje důvod a ptá se dál. Nikdy „správně“ nebo „špatně“, nikdy hodnocení názoru; nic se neboduje.
 
-Sestavení zkontroluje schéma, druh bloku, osoby a prameny (`src/components/bloky/_kontrola.ts`, test `tests/data/bloky.test.ts`).
+8. **Kam dál:** každý blok po dokončení nabídne jeden další krok. V kroku cesty je to sám od sebe další krok (na konci „Dokončit cestu“); jinde ho nastav vlastností `dal={{ href: '/…', text: '…' }}` nebo v YAML polem `dal: { href, text }`. Kdo žil dřív? má navíc vždy odkaz do Mapy a času.
+9. Do studentských stránek nepatří kód ani cesty k souborům; ani v dílně.
+
+Sestavení zkontroluje schéma, druh bloku, osoby a prameny (`src/components/bloky/_kontrola.ts`, test `tests/data/bloky.test.ts`). Prameny bloků z YAML se na profilu samy přidají do rozbalovacích Pramenů.
 
 ### Co se ukládá
 
@@ -144,7 +147,7 @@ Vše jen v prohlížeči, v záznamu `atlas-denik` (`src/lib/denik.ts`). Bez loc
 | Spor | „Na začátku: spíš Platón. Po argumentech: uprostřed. Co mě posunulo: …“ | první a konečná poloha, důvod |
 | Kdo žil dřív? | nic (fakt, ne názor) | odhad, odkryto |
 
-„Začít znovu“ smaže stav bloku i jeho zápis v deníku.
+„Začít znovu“ smaže stav bloku i jeho zápis v deníku. Bloky navíc zapisují poslední aktivitu (`aktivita`: otázka, odkaz, hotovo) a cesty svůj postup (`cesty`: naposledy otevřený krok a prošlé kroky). Z toho staví „Pokračuj, kde jsi skončil“ na Domů (`src/lib/pokracuj.ts`) a oddíl Rozpracované v deníku.
 
 ### Příběh
 
@@ -199,7 +202,7 @@ zdroje: [platon-obrana]
 
 ### Odkryj
 
-Vlastní pokus, pak srovnání, volitelně modelové odpovědi a sebekontrola (zaškrtávací věty, nic se nesčítá). Po odkrytí jde odpověď připsat nebo upravit. `NejdrivSam.svelte` zůstává jako starší jméno téhož bloku kvůli hotovým stránkám.
+Vlastní pokus, pak srovnání, volitelně modelové odpovědi a sebekontrola (zaškrtávací věty, nic se nesčítá). Po odkrytí jde odpověď připsat nebo upravit. S `filozof="sokrates"` má hlavička minci filozofa a barvu jeho období. `NejdrivSam.svelte` zůstává jako starší jméno téhož bloku kvůli hotovým stránkám.
 
 ```mdx
 <Odkryj
@@ -223,6 +226,8 @@ Srovnání s filozofem v odstavcích…
 | `modelove` | ne | `[{ text, komentar? }]`, nadpis „Jak se dá odpovědět“ |
 | `sebekontrola` | ne | věty, které si student zaškrtne |
 | `obdobi` | ne | barva, když ji blok nemá převzít ze stránky |
+| `filozof` | ne | id osoby: mince v hlavičce a barva období |
+| `dal` | ne | Kam dál po odkrytí (v cestě další krok sám) |
 
 ### Změň jednu věc
 
@@ -253,7 +258,7 @@ zdroje: [platon-kriton, platon-faidon]
 
 ### Spor
 
-Otázka a postoje obou stran; škála s pěti polohami („Platón“, „spíš Platón“, „uprostřed“, „spíš Diogenés“, „Diogenés“; radiogroup, šipky, body 44 px). Po „Tady stojím“ se otevřou argumenty obou stran, student se může přesunout a připsat, co ho posunulo nebo udrželo. Zpětnou vazbu k posunu píše blok sám (`zpetnaSporu` v `src/lib/bloky.ts`), nikdy neříká, kdo má pravdu.
+Otázka a postoje obou stran; škála s pěti polohami („Platón“, „spíš Platón“, „uprostřed“, „spíš Diogenés“, „Diogenés“) s mincemi na koncích. Poloha se volí tažením nebo klepnutím (prst svisle dál posouvá stránku) i šipkami (přepínače, body 44 px). Po „Tady stojím“ se otevřou argumenty obou stran s mincemi, student se může přesunout a šipka na škále ukazuje odkud kam; může připsat, co ho posunulo nebo udrželo. Zpětnou vazbu k posunu píše blok sám (`zpetnaSporu` v `src/lib/bloky.ts`), nikdy neříká, kdo má pravdu.
 
 ```mdx
 <Spor id="platon-diogenes-skutecnost" />
@@ -276,11 +281,11 @@ kOvereni: [ … ]                 # dokud není prázdné, jen v dílně
 
 ### Kdo žil dřív?
 
-Odhad pořadí (A / B / Žili ve stejné době), nebo vzdálenosti (Žili současně / Minuli se a posuvník let). Po „Odhalit“ se ukáže věta „Žili současně … / Dělí je …“ a věta o věku (`src/lib/cas-mapy.ts`), malá osa se dvěma životy a odkaz „Ukázat na mapě v roce …“. Mapa se otevře u současníků v posledním společném roce, jinak v roce úmrtí staršího, s vybraným člověkem a srovnáním. Odhad se jen popíše vedle skutečnosti.
+Odhad pořadí (karty A / B / Žili ve stejné době), nebo vzdálenosti: na ose s kulatými letopočty leží pevně život A a student přetáhne život B (jeho skutečnou délku) tam, kde podle něj žil, myší, prstem nebo šipkami (PageUp/PageDown po 25 letech). Pod osou se průběžně píše „žili by současně 30 let“ / „dělilo by je 120 let“. Osa je souměrná kolem A, takže její rozsah neprozradí stranu. Po „Odhalit“ se ukáže věta „Žili současně … / Dělí je …“ a věta o věku (`src/lib/cas-mapy.ts`), skutečná poloha vedle čárkovaného odhadu (u pořadí malá osa) a odkaz „Ukázat na mapě v roce …“. Mapa se otevře u současníků v posledním společném roce, jinak v roce úmrtí staršího, s vybraným člověkem a srovnáním. Odhad se jen popíše vedle skutečnosti.
 
 ```mdx
 <KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
-<KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" maxLet={200} />
+<KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />
 ```
 
 | Vlastnost | Povinná | Význam |
@@ -288,15 +293,28 @@ Odhad pořadí (A / B / Žili ve stejné době), nebo vzdálenosti (Žili souča
 | `a`, `b` | ano | id dvou lidí s roky v `lide.yaml` |
 | `druh` | ne | `poradi` (výchozí) nebo `vzdalenost` |
 | `otazka` | ne | vlastní znění otázky |
-| `maxLet` | ne | horní mez posuvníku (výchozí 600) |
+| `dal` | ne | další krok vedle odkazu do mapy (v cestě sám) |
 | `id` | ne | výchozí `kdo-<a>-<b>-<druh>` |
 
 ### Společné pro všechny bloky
 
-- Karta `.blok` (povrch, okraj `--rule`, zaoblení `md`), nadtitulek v barvě období, otázka `t-h3`; styly v `global.css` › Interaktivní bloky.
+- Karta `.blok` (povrch, okraj `--rule`, zaoblení `md`), hlavička s nadtitulkem v barvě období a mincemi lidí, o kterých blok je; otázka `t-h3`; styly v `global.css` › Interaktivní bloky. „Co udělal …“ má minci filozofa.
+- Pole na psaní vypadají jako linkovaný deník (spodní linka `--muted`, kontrast 3 : 1). Po tahu ve Volbě zůstane vidět jen vybraná karta, ostatní tahy jsou v „Co kdybys zvolil jinak?“.
+- Zpětná vazba se odkrývá krátkým vyjetím (260 ms), při omezeném pohybu bez animace (`src/lib/pohyb.ts`).
+- V profilu patří bloky do čtenářského sloupce; Spor se dvěma sloupci argumentů do `.blok-sloupec` (960 px).
 - Karty možností jsou nativní přepínače v popiscích (šipky, mezerník, dotyk), cíle aspoň 44 px (karty 56–60).
 - Po odkrytí jde fokus na zpětnou vazbu (`aria-live="polite"`), po „Začít znovu“ na první volbu.
 - Blok funguje bez JavaScriptu jen jako text; interaktivní část se hydratuje, až je vidět.
+
+## Cesta
+
+Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (zatím jen Sókratova část, bez Prótagory).
+
+- **Soubory:** přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`; text = úvod), kroky `src/content/cesty/<slug>/<n>-<název>.mdx` (frontmatter `cesta`, `krok`, `nazev`, volitelně `kdeJsme`; text = obsah kroku s bloky). Kroky se číslují 1…n bez mezer, jinak se sestavení zastaví.
+- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, seznam kroků s tím, co student prošel, tlačítko Začít / Pokračovat: krok n / Projít znovu a oddíl Kam dál (`#hotovo`).
+- **Krok** `/cesta/<slug>/<n>/`: soustředěná hlavička (vlevo zpět na přehled, uprostřed „Krok n z N“ s tečkami kroků, vpravo Uložit a odejít; postup se ukládá sám), nadtitulek, název kroku, „Kde jsme“ a obsah. Dole pevná lišta Předchozí / Další krok (na telefonu bez názvu kroku), na konci Dokončit cestu.
+- **Vstupy:** karta cesty (`src/components/cesta/CestaKarta.astro`) na Domů a v profilu, odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku.
+- Bloky v kroku nabídnou po dokončení další krok samy.
 
 ## Mapa a čas
 
