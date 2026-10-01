@@ -2,6 +2,20 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Revize celku 1 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Délka Sókratovy stránky zůstává; Spor Platón × Diogenés i citát `obrana-38a` v kapitole 04 zůstávají | Autor: kdo chce, přečte si víc; neodrazovat zvídavé studenty a nedělat z portrétu povrchní věc |
+| V kapitole 02 doplněn krok mezi Lachétovou první a druhou definicí: Skythové a Sparťané v hlavním textu, Lachés uzná, že věta nestačí, Sókratés chce definici pro všechny odvážné (Lachés 191a–e). Srovnání v Odkryj už příběh nevyzrazuje, jen vede ke zkoušce vlastní věty | Autor: mezi „ptal se“ a „zkusil to znovu“ chyběla myšlenka; text musí dávat smysl i bez odkrytí bloku |
+| Politik, básníci a řemeslníci podle Obrany 21c–22e: opravdu rozuměli jen řemeslníci; citát 21d stojí hned za politikem | Věcná chyba nalezená revizí (ověřeno v PerseusDL) |
+| Spor v kroku 5 neohlašuje vítěze; Sókratův argument o sebevyvrácení ponechává Prótagorovo „pro toho, kdo ho má“. Prótagorova odpověď na sebevyvrácení přibude až po ověření | Nejsilnější verze druhého |
+| Na stránce otázky 7: Parmenidés odpovídá „ani babičce, ani učitelce, obojí je jen mínění“, Prótagorás s lékařem, Sókratés s Lachétem místo Delf, Prótagorova myšlenka bez větru | Parmenidés se v původní odpovědi nepoznal; Delfy a vítr se v celku opakovaly |
+| Kapitola 01 portrétu bez karty „Pokračuj cestou“ (cesta zůstává v Kam dál); konec cesty bez citátu 38a | Kroky 1–3 opakují kapitolu 01; 38a byl v celku potřetí |
+| Moje stanovisko má vlastnost `rozbalene`: pole je vidět hned a ukládá se samo; použito v kroku 7 | Pravidlo bylo schované za tlačítkem a po „Dokončit cestu“ bez uložení se ztratilo |
+| Na přehledu cesty stojí Začít / Pokračovat nad seznamem kroků | Na telefonu bylo tlačítko pod okrajem obrazovky, klávesnicí za 16 tabulátory |
+| Chairefón jménem jen v první větě kroku 1 a kapitoly 01, Melétos bez jména | Pravidlo 6 „Jména a podrobnosti střídmě“ |
+
 ## 1. 10. 2026: Schválení P8
 
 | Rozhodnutí | Důvod |

@@ -112,3 +112,11 @@ Po revizi autora vynechány i vedlejší postavy a popisy, které příběh nene
 | Platón, Pyrrhón a Epikúros na stránce otázky 7 | Věty jsou ověřené (`celek-1-pravda.md`, Velká otázka 7), ale podle rozhodnutí z 1. 10. přibudou až s vlastním profilem. | Doplnit do `hlasy` v `src/content/otazky/jak-poznam-pravdu.mdx`, až profil vznikne. Citát `menon-98a` pro Platóna už je v datech. |
 
 Vědomě vynecháno: Sókratův posměšek o praseti a paviánovi jako měřítku (Theaitétos 161c; podklad ho vede jen jako barvu, ne argument), jméno Prótagorova přítele z Theaitéta (nese jen rámec), prodej šatů a telefonáty výrobci, jména majitelky a výrobce šatů, Kdo žil dřív? Prótagorás × Sókratés (je v Prótagorově profilu).
+
+## Revize celku 1 (P10)
+
+1. 10. 2026. Otevřené po revizi (`docs/revize/celek-1-2026-10-01.md`):
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Prótagorova odpověď na sebevyvrácení (Theaitétos 171a–d) | Spor v kroku 5 by ji mohl dát Prótagorovi místo argumentu „obce“; jde o výklad, který je mezi badateli sporný (M. Burnyeat 1976 hájí Platónův argument). | Ověřit v SEP „Protagoras“ a u Burnyeata; teprve pak rozhodnout o záměně argumentu. |
