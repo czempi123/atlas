@@ -33,7 +33,7 @@ Stránka směru a pojmu se řídí stejnými zásadami (scéna, nejsilnější v
 
 ## Jak najít a vyprávět příběh
 
-- **Hledej chvíli rozhodnutí nebo otázky,** ne životopis. Dobrá scéna má člověka, místo a napětí: Kritón sedí před úsvitem u spícího Sókrata a přišel ho přemluvit k útěku. mladý Athéňan buší holí na dveře, protože do Athén přijel Prótagorás.
+- **Hledej chvíli rozhodnutí nebo otázky,** ne životopis. Dobrá scéna má člověka, místo a napětí: Kritón sedí před úsvitem u spícího Sókrata a přišel ho přemluvit k útěku. Mladý Athéňan buší holí na dveře, protože do Athén přijel Prótagorás.
 - **Scéna nese myšlenku.** Lachés definuje odvahu jako „neutéct“, a přitom chválí Sókrata za ústup od Délia. Ze dvou kapitol tak vyroste jedna otázka, kterou student sám rozhodne.
 - **Druh pramene řekni jednou větou na začátku scény:** „Platón vypráví…“ (scéna z dialogu), „Alkibiadés vyprávěl…“ (vyprávění postavy), „Vypráví se…“ (tradovaný příběh), „Představ si…“ (vymyšlená situace). Dál už vyprávěj bez výhrad.
 - **Přímá řeč skutečných osob jen jako citát** ze `zdroje.yaml` přes `<Citat id="…" />`. Ostatní v nepřímé řeči: „Lachés odpověděl, že odvážný je ten, kdo…“. Ani otázku filozofa nepiš jako vymyšlenou přímou řeč.
