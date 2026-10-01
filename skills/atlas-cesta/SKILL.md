@@ -11,7 +11,7 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 
 ## Postup
 
-1. **Přečti** `CLAUDE.md`, `docs/styl.md`, v `docs/architektura.md` řádek cesty v Katalogu cest, v `docs/design.md` oddíly **Bloky** a **Cesta** (API a stavba) a ukázkovou cestu 1 (`src/content/cesty/kdy-mam-dobry-duvod-verit*`).
+1. **Přečti** `CLAUDE.md`, `docs/styl.md`, v `docs/architektura.md` řádek cesty v Katalogu cest, v `docs/design.md` oddíly **Bloky**, **Cesta** a **Velká otázka** (API a stavba) a ukázkovou cestu 1 (`src/content/cesty/kdy-mam-dobry-duvod-verit*`).
 2. **Podklady nejdřív.** Každé historické tvrzení, citát a příběh musí být v podkladovém listu (`docs/podklady/`, skill `atlas-overeni`). Co ověřené není, do cesty nepiš; zapiš to do `docs/podklady/k-overeni.md`. Vymyšlené situace uváděj „Představ si…“ a nevkládej do nich historické osoby.
 3. **Navrhni osnovu** (6–8 kroků) a ukaž ji autorovi, než začneš psát. Každý krok má jeden úkol pro studenta. Osvědčené pořadí:
 
@@ -36,6 +36,13 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 6. **Ověř** `npm test` celé, projdi cestu v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí, snímky si prohlédni. Pak skill `atlas-revize`.
 7. **Zapiš** do `docs/plan.md` stav, do `docs/rozhodnuti.md` zásadní volby, potřeby ověření do `k-overeni.md`. Commituj česky po ucelených krocích ve vlastní větvi.
 
+## Jak psát
+
+- **Druh pramene řekni jednou větou na začátku scény:** „Platón vypráví…“ (scéna z dialogu), „Platón si ten spor představil…“ (literární konstrukce, třeba spor s mrtvým Prótagorem), „Vypráví se…“ (tradovaný příběh), „Představ si…“ (vymyšlená situace). Doložená událost z dneška (šaty z roku 2015) se vypráví přímo. Dál už bez výhrad.
+- **Přímá řeč skutečných osob jen jako citát** ze `zdroje.yaml` přes `<Citat id="…" />`. Ostatní v nepřímé řeči nebo jako výklad; ani otázku filozofa nepiš jako vymyšlenou přímou řeč. Postoj ve Sporu („To, co vidím.“) je zkratka stanoviska, ne citát.
+- **Jména a podrobnosti střídmě** (`docs/styl.md`, pravidlo 6). Jménem nazvi jen toho, kdo nese příběh nebo myšlenku; ostatní popiš tím, kým jsou: „přítel, který ho znal“, „žena, která šaty viděla na svatbě“, „firma, která je ušila“. Vzhled, místa, částky a data jen tam, kde něco říkají o člověku nebo o myšlence. V cestě 1 stačí Sókratés, Chairefón, Prótagorás a Platón jako vypravěč.
+- **Myšlenka má přednost před ozdobou.** Když podklad nabízí další krok argumentu (Prótagorův lékař, Sókratova budoucnost), vezmi ho; když nabízí jen další jméno, kulisu nebo posměšek, vynech ho.
+
 ## Jak psát bloky
 
 - **Otázka** je jedna věta ve druhé osobě: „Co uděláš?“, „Utečeš?“, „Změní se tvá odpověď, když…?“ Žádné „Zamysli se nad tím, že…“.
@@ -48,6 +55,16 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 - **Kdo žil dřív?** jen pro dvojice, kde výsledek překvapí nebo souvisí s příběhem (Sókratés a Diogenés žili současně, Platón byl při Sókratově smrti mladý muž).
 - Věty do 25 slov, odstavce do 4 vět, tykání, české uvozovky, jména podle `lide.yaml`.
 
+## Stránka velké otázky
+
+Stránka `/otazka/<slug>/` (`docs/design.md` › Velká otázka) je rozhovor napříč staletími: úvod scénou, Tvůj první názor, hlasy myslitelů na časové ose, cesty k otázce a na konci Změnil se?. Obsah je v `src/content/otazky/<slug>.mdx`.
+
+- **Úvod** je „Představ si…“ ze života studenta, dva až tři krátké odstavce, které končí otázkami. Nepoužívej scénu, kterou už nese cesta k téže otázce nebo profil.
+- **Hlasy** ve frontmatteru: `hlasy: [{ osoba, veta, citat, zdroje }]`. Pořadí podle narození dopočítá stránka. Jen myslitelé, kteří spolu opravdu vedou spor a mají ověřenou větu v podkladech; další přibudou s vlastním profilem.
+- **Věta** je jedna až dvě věty, jak by myslitel na otázku odpověděl, v tykání a bez uvozovek. Nesmí opakovat citát pod ní; když by věta a citát řekly totéž, vezmi do věty jinou část jeho odpovědi.
+- **Citát** jen ze `zdroje.yaml` a jen ten, který patří téže osobě (kontroluje sestavení). `zdroje` = prameny věty.
+- Cesty k otázce se na stránce ukážou samy z `otazka:` v přehledu cesty. Na otázku odkazuj adresou `/otazka/<slug>/`.
+
 ## Časté chyby
 
 - Cesta začíná výkladem místo scény. První krok je vždy příběh nebo silný pokus.
@@ -56,6 +73,8 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 - Nový případ je úřední školní scénka. Lepší jsou situace, které studenty opravdu zajímají: přátelé, sociální sítě, zprávy ve skupině, rozhodování o budoucnosti.
 - V kroku je redakční poznámka, metodický popisek nebo cesta k souboru. Do studentských stránek nepatří nic z toho.
 - Krok má dva úkoly naráz. Rozděl ho.
+- Ve vymyšlené situaci vystupuje historická osoba, nebo v doložené události přibude detail, který v podkladech není.
+- V textu je víc jmen, než příběh potřebuje.
 
 ## Kdy je hotovo
 
