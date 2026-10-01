@@ -357,8 +357,8 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Hotovo 29. 9. 2026, `docs/architektura.md` |
 | P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
-| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Další krok: podklady k celku „Jak poznám, co je pravda?“, plné znění níže |
-| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Se skillem `atlas-osobnost` |
+| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Hotovo 1. 10. 2026 pro celek „Jak poznám, co je pravda?“ (`docs/podklady/celek-1-pravda.md`) |
+| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Další krok: Sókratův portrét a profil Prótagora, při nich vznikne skill `atlas-osobnost`; plné znění níže |
 | P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Se skillem `atlas-cesta` (připraven 1. 10. 2026) |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
 | P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Se skillem `atlas-revize` |
@@ -510,6 +510,8 @@ Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně API bloků a c
 
 ### P6: Podklady k celku „Jak poznám, co je pravda?“
 
+**Stav 1. 10. 2026:** hotovo, podklady v `docs/podklady/celek-1-pravda.md`, rozhodnutí v `docs/rozhodnuti.md`. Zadání, se kterým P6 proběhl:
+
 Další krok po P5. První celý celek F2: dopsaný Sókratův portrét, profil Prótagora, dokončená cesta 1 a stránka velké otázky 7. P6 připraví jen ověřené podklady; psaní je P7 (portrét a profil, při něm vznikne skill `atlas-osobnost`) a P8 (cesta a velká otázka se skillem `atlas-cesta`), revize P10.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem (terminál na Macu). Sonnet 5.5 · high s vyhledáváním; když narazí na sporné prameny (počty hlasů při procesu, osud Prótagorových knih), přepni na Opus 5.5 · high.
@@ -531,6 +533,49 @@ Výstup: podkladový list docs/podklady/celek-1-pravda.md podle šablony skillu,
 
 Nejdřív mi v pár bodech napiš, co budeš ověřovat a které příběhy považuješ za nejsilnější, a počkej na odpověď. Pak pracuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci napiš, co je ověřeno, co zůstalo otevřené a co potřebuje moje rozhodnutí.
 ```
+
+### Po P6: co zůstalo na později
+
+- Nikiás jako generál (rámec Lachéta): doložit z Thúkydida, jinak ho ve studentském textu nenazývat velitelem.
+- Dramatické datum dialogu Prótagorás: neověřeno, rok setkání se neuvádí.
+- Euthyfrónovo dilema (Euthyfrón 10a) zazní i na stránce velké otázky 9 „Je Bůh?“, až bude.
+- Blok Spor Sókratés × Prótagorás (Theaitétos) a nový případ se šaty z roku 2015 napíše P8 do cesty 1; strany v nejsilnější verzi jsou v `docs/podklady/celek-1-pravda.md`.
+- Animace jen tam, kde nesou myšlenku (vznikají se skillem `atlas-komponenta` až po schválení textu): u šatů posuvník předpokládaného světla nad vlastní kresbou, u Délia malá mapa ústupu, u soudu počítadlo „30 hlasů“.
+- Kopie `docs/plan.md` v projektu Claude (Atlas filozofie) je starší než repozitář; platí verze v repozitáři.
+
+### P7: Sókratův portrét a profil Prótagora
+
+**Stav 1. 10. 2026:** další krok. Podklady jsou hotové (P6, `docs/podklady/celek-1-pravda.md`), stránka osobnosti má středovou osu a Sókratés bustu z Louvru. Pracuje se dál ve větvi `celek-1`; do hlavní větve jde až schválený celek po P8 a P10.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (portrét je hlavně vyprávění a čeština). Skill `atlas-osobnost` při P7 teprve vznikne, proto prompt odkazuje na podklady, styl a hotovou kapitolu 01 jako vzor.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-1; podklady z P6 jsou v ní.
+
+Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-1-pravda.md (Nejsilnější příběhy, Tvrzení s doporučenými formulacemi, Citáty, Rozpory a rozhodnutí), docs/rozhodnuti.md (záznamy z 1. 10. 2026), v docs/design.md oddíly Bloky a Mezery, mřížka, tvary (středová osa stránky osobnosti) a hotový začátek src/content/osobnosti/sokrates.mdx: úvod a kapitola 01 jsou vzor tónu.
+
+Napiš:
+
+1. Sókratův portrét, kapitoly 02–05, přímo do sokrates.mdx podle osnovy ve frontmatteru (stav změň na hotovo, osnovu smaž):
+   - 02 Muž z agory: jádro je Lachés (co je odvaha, Skythové a Plataje, nakonec nevědí); kdo za Sókratem chodil (Obrana 23c).
+   - 03 Ústup od Délia: Alkibiadovo vyprávění (Symposion 220a–221c), nejsilnější scéna je ústup.
+   - 04 Soud: začni setkáním s Euthyfrónem u sloupoví krále-archonta a jeho otázkou o zbožném (Euthyfrón 10a); pak obžaloba, třicet hlasů (Obrana 36a), prytaneum (36d–e) a proč nenavrhl vyhnanství (37c–38a). Citát obrana-38a patří sem.
+   - 05 Poslední den: Kritón u spícího Sókrata, jeho důvody k útěku a Sókratova odpověď (neoplácet křivdu křivdou, řeč Zákonů), smrt podle Faidóna 116b–118a, kohout pro Asklépia.
+   Každá kapitola: titulek s pointou v kurzívě, vyprávění scénou, jeden blok pro studenta podle toho, co scéna nese (Nejdřív sám, Volba s důvodem, Odkryj, Změň jednu věc), citáty jen ze zdroje.yaml přes <Citat id="…" />. V src/content/bloky/utek-z-vezeni.yaml doplň do „Co udělal Sókratés“ jeho vlastní důvody z Kritóna.
+
+2. Profil Prótagora src/content/osobnosti/protagoras.mdx ve stejné šabloně: úvod scénou (Hippokratés buší před úsvitem na dveře, Prótagorás v Kalliově domě), jedna až dvě kapitoly (Měřítko všech věcí; O bozích a o obci s mýtem o Prométheovi), dvě velké myšlenky s vlastním pokusem studenta, Zkus to žít a Kam dál (cesta 1, Sókratés, velká otázka 7). Konec života podle doporučení v podkladech (Menón 91e); vyhnání a pálení knih vynech, nebo jen „Později se vyprávělo…“. Deska s mincí, portrét neexistuje.
+
+3. Skill atlas-osobnost: až budou oba texty hotové, vytvoř skillem skill-creator skill podle tabulky skillů v docs/plan.md (tři hloubky, jak najít a vyprávět příběh, výběr myšlenek, blok Zkus to žít, šablona MDX, rychlá kontrola) s ukázkami z těchto dvou stránek. Ulož ho do skills/atlas-osobnost/ a nabídni mi ho k uložení do účtu.
+
+Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml (připravené jsou mimo jiné obrana-36a, obrana-36d, kriton-49c, faidon-118a, theaitetos-152a, dl-ix-51). Scény z Platónových dialogů uváděj „Platón vypráví…“, tradované příběhy „Vypráví se…“. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí); obě stránky si prohlédni v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu; projdi rychlou kontrolu z docs/styl.md.
+
+Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každou kapitolu a Prótagorův profil a jaký blok v ní bude, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky obou stránek a seznam toho, co jsi vynechal nebo připsal do k-overeni.
+```
+
+Po P7 následuje P8 (cesta 1 s Prótagorou, blokem Spor a šaty z roku 2015, stránka velké otázky 7, skill `atlas-cesta`) a P10 (revize celku skillem `atlas-revize`). Plné znění P8 připravím po schválení P7.
+
 
 ## Plán etap
 
