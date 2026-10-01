@@ -2,6 +2,14 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Schválení P5
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Knihovna šesti bloků a ukázková cesta 1 schváleny a sloučeny do hlavní větve | Autor: „toto je tedy hotovo“ |
+| Další krok je P6: podklady k celku „Jak poznám, co je pravda?“ (Sókratův portrét, Prótagorás, cesta 1, velká otázka 7); skill `atlas-cesta` připraven pro P8 | Pořadí F2: celek po celku, podklady před psaním |
+| Claude pracuje přímo v repozitáři na Macu přes terminál Desktop Commanderu; kopie repozitáře a git bundle jen tehdy, když terminál chybí | Bez přenosu bundlů a bez dvou kopií; testy běží nativně na Macu |
+
 ## 1. 10. 2026: Bloky v atlasu (P5, druhé kolo)
 
 | Rozhodnutí | Důvod |

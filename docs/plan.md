@@ -356,10 +356,10 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P2 | Založení projektu v Astru a přenos dat | Opus 5.5 · high (xhigh při zaseknutí) | Dlouhá souvislá implementace s ověřením | Hotovo 29. 9. 2026, schváleno 30. 9. 2026 (brána F1) |
 | P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Hotovo 29. 9. 2026, `docs/architektura.md` |
 | P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
-| P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Další krok, plné znění níže; skill `atlas-komponenta` připraven 30. 9. 2026 |
-| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Se skillem `atlas-overeni` |
+| P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
+| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Další krok: podklady k celku „Jak poznám, co je pravda?“, plné znění níže |
 | P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Se skillem `atlas-osobnost` |
-| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Se skillem `atlas-cesta` |
+| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Se skillem `atlas-cesta` (připraven 1. 10. 2026) |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
 | P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Se skillem `atlas-revize` |
 | P11 | Souhrnná revize období | Fable 5.1 · high | Souvislosti napříč desítkami stránek | Na konci každé fáze |
@@ -469,9 +469,9 @@ Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně data, která p
 
 ### P5: Knihovna bloků, prvních šest
 
-**Stav 1. 10. 2026:** hotovo ve větvi `bloky-v1` po druhém kole připomínek, čeká na schválení autorem. Bloky jsou v ukázkové cestě 1 (`/cesta/kdy-mam-dobry-duvod-verit/`) a v Sókratově profilu, všechny pohromadě v dílně `/dilna/bloky/`. API, návod pro MDX a stavba cesty v `docs/design.md` › Bloky a › Cesta, rozhodnutí v `docs/rozhodnuti.md`, potřeby ověření v `docs/podklady/k-overeni.md` › Obsah bloků. Co zůstalo na později, je v oddílu „Po P5“ níže.
+**Stav 1. 10. 2026:** hotovo a schváleno autorem, sloučeno do hlavní větve. Bloky jsou v ukázkové cestě 1 (`/cesta/kdy-mam-dobry-duvod-verit/`) a v Sókratově profilu, všechny pohromadě v dílně `/dilna/bloky/`. API, návod pro MDX a stavba cesty v `docs/design.md` › Bloky a › Cesta, rozhodnutí v `docs/rozhodnuti.md`, potřeby ověření v `docs/podklady/k-overeni.md` › Obsah bloků. Co zůstalo na později, je v oddílu „Po P5“ níže.
 
-Další krok po P4. Doporučeně v Claude Code ve složce Atlas na Macu (změny pak vznikají rovnou v tvém repozitáři), nebo v Coworku v novém chatu projektu; Opus 5.5, úsilí high, při zaseknutí xhigh. Před spuštěním musí být v účtu uložený skill `atlas-komponenta` (zdrojová verze ve `skills/atlas-komponenta/`).
+Zadání, se kterým P5 proběhl. Doporučeně v Claude Code ve složce Atlas na Macu (změny pak vznikají rovnou v tvém repozitáři), nebo v Coworku v novém chatu projektu; Opus 5.5, úsilí high, při zaseknutí xhigh. Před spuštěním musí být v účtu uložený skill `atlas-komponenta` (zdrojová verze ve `skills/atlas-komponenta/`).
 
 ```text
 Pracuješ v repozitáři atlas ve složce Atlas na mém Macu. Hlavní větev main obsahuje schválenou Mapu a čas (P4); založ z ní větev bloky-v1. Když k mému počítači nemáš terminál, pracuj v kopii repozitáře a hotovou větev mi na konci předej jako git bundle do složky Atlas s jedním příkazem, jak ji načíst.
@@ -506,6 +506,31 @@ Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně API bloků a c
 - Kdo žil dřív?: varianta se třemi a více lidmi (seřaď na ose) a lidé jen s dobou činnosti (bez narození a úmrtí).
 - Zbylé bloky knihovny: Dialog, Úryvek s otázkou, Slož argument, Kdo to řekl?, Návrat.
 - Skill `atlas-cesta` napsat podle `docs/design.md` › Bloky.
+
+
+### P6: Podklady k celku „Jak poznám, co je pravda?“
+
+Další krok po P5. První celý celek F2: dopsaný Sókratův portrét, profil Prótagory, dokončená cesta 1 a stránka velké otázky 7. P6 připraví jen ověřené podklady; psaní je P7 (portrét a profil, při něm vznikne skill `atlas-osobnost`) a P8 (cesta a velká otázka se skillem `atlas-cesta`), revize P10.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem (terminál na Macu). Sonnet 5.5 · high s vyhledáváním; když narazí na sporné prameny (počty hlasů při procesu, osud Prótagorových knih), přepni na Opus 5.5 · high.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Z větve main založ větev celek-1.
+
+Přečti CLAUDE.md, docs/styl.md, v docs/architektura.md velkou otázku 7 a cestu 1, docs/podklady/k-overeni.md a hotové podkladové listy v docs/podklady/. Postupuj podle skillu atlas-overeni.
+
+Připrav podklady k prvnímu celému celku „Jak poznám, co je pravda?“. Studentský text zatím nepiš.
+
+1. Sókratův portrét, kapitoly 02–05 podle osnovy ve frontmatteru src/content/osobnosti/sokrates.mdx: Muž z agory (jak se ptal, na příkladu z Lachéta nebo Euthyfróna; kdo za ním chodil), Ústup od Délia (tři tažení, Alkibiadovo vyprávění v Symposiu), Soud (obžaloba, Obrana, hlasování a trest, proč nenavrhl vyhnanství) a Poslední den (Kritón přemlouvá k útěku a Sókratovy důvody, proč zůstal; Faidón 117a–118a). U každé kapitoly jedna nejsilnější scéna.
+2. Prótagorás pro profil: život (Abdéra, Athény, Thurioi), „Člověk je měřítkem všech věcí“ (DK 80 B1, Platón, Theaitétos 152a), výrok o bozích (DK 80 B4), co je doložené a co jen tradované o konci jeho života, a jeho nejsilnější argument v Platónově dialogu Prótagorás.
+3. Cesta 1: skutečný střet Sókrata a Prótagory pro blok Spor (obě strany v nejsilnější verzi) a nový případ ze současnosti, na kterém se dá jejich spor vyzkoušet.
+4. Velká otázka 7: pro lidi období 1 a 2, kteří k ní mají co říct (Parmenidés, Prótagorás, Sókratés, Platón, Aristotelés, Pyrrhón, Epikúros), jedna ověřená věta o tom, jak odpovídali, se zdrojem.
+5. Obrázky: Sókratova busta a případně Prótagorás; autor fotografie, instituce, licence a odkaz (Wikimedia Commons).
+
+Výstup: podkladový list docs/podklady/celek-1-pravda.md podle šablony skillu, nové prameny a citáty do src/data/zdroje.yaml (citát vždy s místem a překladem), návrh dat do src/data, vyřízené body v docs/podklady/k-overeni.md. Celé npm test musí projít.
+
+Nejdřív mi v pár bodech napiš, co budeš ověřovat a které příběhy považuješ za nejsilnější, a počkej na odpověď. Pak pracuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci napiš, co je ověřeno, co zůstalo otevřené a co potřebuje moje rozhodnutí.
+```
 
 ## Plán etap
 

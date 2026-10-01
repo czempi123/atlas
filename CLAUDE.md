@@ -38,6 +38,12 @@ Než začneš pracovat, přečti si `docs/plan.md` (plán a technika), `docs/arc
 - Každou změnu UI ověř v prohlížeči na šířce 390 a 1440 px, ve světlém i tmavém režimu, a ovládáním klávesnicí.
 - Web zatím běží jen lokálně.
 
+## Práce na autorově Macu
+
+- Repozitář je na Macu v `/Users/vojtechczempka/Atlas`. Terminál macOS máš přes Desktop Commander (`start_process`, zsh): pracuj přímo v repozitáři, spouštěj `npm test` a commituj tam. Kopii repozitáře a git bundle použij jen tehdy, když Desktop Commander není k dispozici.
+- Linuxový shell Coworku (`device_bash`) vidí složku taky, ale `node_modules` jsou pro macOS: `npm` v něm nespouštěj a nic do `node_modules` neinstaluj.
+- Autor nepracuje v Terminálu rád. Když musí něco spustit sám, dej mu jeden příkaz a řekni, co udělá.
+
 ## Workflow a skilly
 
 Celek (velká otázka s cestou a potřebnými profily) prochází kroky: podklady (`atlas-overeni`) → psaní přímo do atlasu (`atlas-cesta`, `atlas-osobnost`, `atlas-data`) → revize (`atlas-revize`) → schválení autorem. Nová komponenta vzniká se skillem `atlas-komponenta`, nové období se plánuje se skillem `atlas-obdobi`. Zdrojová verze skillů je ve složce `skills/` (používají se uložené v účtu Claude); ty, které zatím chybí, vzniknou podle plánu. Když skill upravíš, uprav i jeho kopii ve `skills/`.
