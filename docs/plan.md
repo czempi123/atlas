@@ -545,7 +545,7 @@ Nejdřív mi v pár bodech napiš, co budeš ověřovat a které příběhy pova
 
 ### P7: Sókratův portrét a profil Prótagora
 
-**Stav 1. 10. 2026:** další krok. Podklady jsou hotové (P6, `docs/podklady/celek-1-pravda.md`), stránka osobnosti má středovou osu a Sókratés bustu z Louvru. Pracuje se dál ve větvi `celek-1`; do hlavní větve jde až schválený celek po P8 a P10.
+**Stav 1. 10. 2026:** hotovo, čeká na schválení autorem. Sókratův portrét má kapitoly 02–05, Prótagorás profil, skill `atlas-osobnost` je ve `skills/`; vynechané a neověřené v `docs/podklady/k-overeni.md` (oddíl P7). Původně: podklady jsou hotové (P6, `docs/podklady/celek-1-pravda.md`), stránka osobnosti má středovou osu a Sókratés bustu z Louvru. Pracuje se dál ve větvi `celek-1`; do hlavní větve jde až schválený celek po P8 a P10.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (portrét je hlavně vyprávění a čeština). Skill `atlas-osobnost` při P7 teprve vznikne, proto prompt odkazuje na podklady, styl a hotovou kapitolu 01 jako vzor.
 
