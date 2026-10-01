@@ -1,6 +1,6 @@
 # K ověření
 
-29. 9. 2026 · P2. Co se při zakládání dat období 1 a 2 nepodařilo ověřit, a proto to v `src/data/` zatím není. Každý bod má návrh, co s ním. Postup ověřování je v `docs/podklady/data-obdobi-1-2.md`.
+29. 9. 2026 · P2. Co se při zakládání dat období 1 a 2 nepodařilo ověřit, a proto to v `src/data/` zatím není. Každý bod má návrh, co s ním. Postup ověřování je v `docs/podklady/data-obdobi-1-2.md`. Doplněno 1. 10. 2026 (P6, celek 1): vyřízené body jsou označené, nové otevřené jsou v posledním oddílu.
 
 ## Lidé, kteří v datech zatím chybějí
 
@@ -40,7 +40,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | --- | --- |
 | Xenofanés → Parmenidés | SEP: tradice je spojuje, Parmenidés ho „mohl potkat“. |
 | Hérakleitos ↔ Parmenidés (polemika) | SEP: Hérakleitos Parmenida „možná podnítil“. |
-| Prótagorás ↔ Sókratés | Setkání známe jen z Platónova dialogu Prótagorás; historičnost jsem neověřil. |
+| ~~Prótagorás ↔ Sókratés~~ | **Vyřízeno 1. 10. 2026:** v datech jako `znali-se`, `tradovany: true`, pramen Platón, Prótagorás (`docs/podklady/celek-1-pravda.md`). Polemika o pravdě (Theaitétos) je Platónova konstrukce, do vztahů nejde. |
 | Aspasie ↔ Sókratés | Britannica zmiňuje jen Aischinův dialog Aspasie. |
 | Leukippos → Démokritos | Leukippos zatím není v datech (vztah SEP: „druh nebo učitel“). |
 | Démokritos → Epikúros (vliv textem) | Přes Nausifana; Nausifanés není v datech. |
@@ -49,11 +49,13 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 ## Citáty a překlady
 
 - **Obrana 38a a 21d:** autor 30. 9. 2026 rozhodl, že zůstává vlastní převod (zapsáno v `zdroje.yaml`). Novotného překlad se nepřebírá.
+- **Celek 1 (1. 10. 2026):** nové citáty (Obrana 36a, 36d–e; Kritón 49c; Faidón 118a; Theaitétos 152a; DL IX, 51; DL IX, 22; Metafyzika 1011b26–27; Menón 98a) jsou vlastní převody z řeckého textu. Porovnat s publikovanými překlady (Novotný, Kolář), pokud autor chce převzít.
 - **Kapitola 01 Delfy** odkazuje na Obranu 20e–22e; čísla stran jsem ověřil přes SEP (20e–23b) a Jowettův překlad bez Stephanova číslování. Při revizi (P10) zkontrolovat po odstavcích proti řeckému vydání (Burnet, OCT).
 
 ## Obrázky
 
-- Wikimedia Commons nebyl při zakládání dostupný, proto atlas zatím žádný obrázek nemá a desky ukazují minci s atributem. Kandidát pro Sókrata: římská mramorová busta z Louvru; ověřit autora fotografie, licenci a inventární číslo.
+- Wikimedia Commons nebyl při zakládání dostupný, proto atlas zatím žádný obrázek nemá a desky ukazují minci s atributem.
+- **1. 10. 2026 (celek 1):** Commons byl pro nástroje znovu nedostupný. Kandidát pro Sókrata: `Socrates_Louvre.jpg`, busta z Louvru (Ma 59, MR 652), foto Eric Gaba (Sting), 13. 7. 2005, CC BY-SA 2.5. Údaje jsou z kopie stránky (Wikipedia for Schools), ne z Commons. **Autor:** potvrdit na Commons, stáhnout soubor do `public/` a pak zapsat do `obrazky`. Prótagorás autentický portrét nemá, zůstává mince.
 
 ## Obsah bloků (P5)
 
@@ -63,8 +65,20 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | --- | --- | --- | --- |
 | Spor Platón × Diogenés (`src/content/bloky/platon-diogenes-skutecnost.yaml`) | Diogenova strana a Platónova odpověď | Diogenés Laertios VI, 53 | ověřeno 1. 10. 2026 (`docs/podklady/spor-platon-diogenes.md`); otevřené: porovnat vlastní převod s českým překladem A. Koláře |
 | Tentýž Spor | Platónův argument pro ideje šířeji vlastními slovy (teď teze z dat, jeskyně a odpověď z DL VI, 53) | Ústava VI–VII (úsečka, jeskyně), Faidón 74a–75b (rovnost sama) | stačí pro ukázku; rozšířit při profilu Platóna |
-| Cesta 1 „Kdy mám dobrý důvod věřit?“ | Prótagorás (druhý filozof cesty podle architektury): život, „člověk je měřítkem všech věcí“ a spor se Sókratem | DK 80 B1, Platón, Theaitétos 152a; SEP „Protagoras“ | nezačato; cesta má zatím jen Sókratovu část |
-| Změň jednu věc „Útěk z vězení“ | Sókratovy vlastní důvody, proč neutekl, pro oddíl „Co udělal Sókratés“ | Platón, Kritón 45a–46a (Kritónova nabídka), 50a–54d (řeč Zákonů) | v bloku zatím jen ověřený fakt z atributu |
+| Cesta 1 „Kdy mám dobrý důvod věřit?“ | Prótagorás (druhý filozof cesty podle architektury): život, „člověk je měřítkem všech věcí“ a spor se Sókratem | DK 80 B1, Platón, Theaitétos 152a; SEP „Protagoras“ | ověřeno 1. 10. 2026 (`docs/podklady/celek-1-pravda.md`): život, B1, B4, konec života, spor z Theaitéta, nový případ (šaty 2015) |
+| Změň jednu věc „Útěk z vězení“ | Sókratovy vlastní důvody, proč neutekl, pro oddíl „Co udělal Sókratés“ | Platón, Kritón 45a–46a (Kritónova nabídka), 50a–54d (řeč Zákonů) | ověřeno 1. 10. 2026 (`celek-1-pravda.md`, kapitola 05: Kritón 44b–46a, 49a–e, 50a–54d); do bloku se dopíše s textem portrétu (P7) |
 | Změň jednu věc (další ukázka) | Gygův prsten jako klasický pokus pro cestu 2 | Platón, Ústava II, 359c–360d | nezačato |
 | Odkryj „Koho považuješ za moudrého?“ | Modelové odpovědi a sebekontrola jsou autorské (nejde o historická tvrzení); projít revizí (`atlas-revize`) před vložením do profilu | — | jen v dílně |
 | Kdo žil dřív? | Nic; roky jsou z dat | — | hotovo |
+
+## Celek 1 „Jak poznám, co je pravda?“ (P6)
+
+1. 10. 2026. Podklady jsou v `docs/podklady/celek-1-pravda.md`. Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Nikiás jako generál (Lachés, rámec) | Dialog ho jako velitele nepředstavuje, Thúkydida jsem neotevřel. | Ve studentském textu ho nenazývat velitelem, nebo doložit z Thúkydida. |
+| Dramatické datum dialogu Prótagorás | Neověřeno; pro text není potřeba. | Neuvádět rok setkání. |
+| Velikost poroty a počty hlasů u Diogena Laertia II, 41–42 | Prameny se rozcházejí, velikost poroty se jen dovozuje. | Ve studentském textu jen Obrana 36a (třicet hlasů). |
+| 2. pád Pýthagorás, Anaxagorás | V datech „Pýthagory“, „Anaxagory“; u Prótagora autor rozhodl pro „Prótagora“ (vzor pán). Příručku ÚJČ nástroj otevřít nemohl. | Rozhodnout, zda sjednotit na „Pýthagora“, „Anaxagora“. |
+| Obrázek Sókrata | Commons nedostupný (viz Obrázky). | Potvrdit licenci, stáhnout soubor. |
