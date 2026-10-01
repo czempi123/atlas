@@ -26,6 +26,8 @@ const zaklad = {
    * (/dilna/); na jiné stránce zastaví sestavení.
    */
   kOvereni: z.array(Text).default([]),
+  /** „Kam dál“ po dokončení bloku (v cestě se doplní další krok sám) */
+  dal: z.object({ href: z.string().startsWith('/'), text: Text }).strict().optional(),
 };
 
 export const BlokVolba = z

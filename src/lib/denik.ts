@@ -28,10 +28,35 @@ export interface Denik {
    * Nezobrazuje se v deníku, ale vydrží obnovení stránky a je součástí exportu.
    */
   bloky: Record<string, unknown>;
+  /** Poslední práce v blocích (nejnovější první): pro „Pokračuj, kde jsi skončil“ a deník. */
+  aktivita: Aktivita[];
+  /** Postup v cestách podle slugu cesty. */
+  cesty: Record<string, PostupCesty>;
+}
+
+export type DruhBloku = 'odkryj' | 'volba' | 'zmena' | 'spor' | 'kdo-zil-driv';
+export interface Aktivita {
+  id: string;
+  odkaz: string;
+  otazka: string;
+  druh: DruhBloku;
+  /** blok je dokončený (odkryto, potvrzeno, zapsáno) */
+  hotovo: boolean;
+  kdy: string;
+}
+export interface PostupCesty {
+  nazev: string;
+  /** počet kroků cesty */
+  pocet: number;
+  /** naposledy otevřený krok (1…pocet) */
+  krok: number;
+  /** kroky, které student otevřel */
+  navstivene: number[];
+  kdy: string;
 }
 
 const KLIC = 'atlas-denik';
-const prazdny = (): Denik => ({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: {} });
+const prazdny = (): Denik => ({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: {}, aktivita: [], cesty: {} });
 let vPameti: Denik | null = null;
 
 export function nacti(): Denik {
@@ -41,7 +66,10 @@ export function nacti(): Denik {
       const d = JSON.parse(t);
       if (d && d.verze === 1) {
         const plny = { ...prazdny(), ...d };
-        if (!plny.bloky || typeof plny.bloky !== 'object' || Array.isArray(plny.bloky)) plny.bloky = {};
+        const objekt = (x: unknown) => !!x && typeof x === 'object' && !Array.isArray(x);
+        if (!objekt(plny.bloky)) plny.bloky = {};
+        if (!objekt(plny.cesty)) plny.cesty = {};
+        if (!Array.isArray(plny.aktivita)) plny.aktivita = [];
         return plny;
       }
     }
@@ -77,9 +105,11 @@ export function stavBloku<T>(id: string): T | undefined {
   return nacti().bloky[id] as T | undefined;
 }
 
-export function ulozStavBloku(id: string, stav: unknown): void {
+/** Uloží stav bloku; s `meta` ho zapíše i do poslední aktivity (Pokračuj, deník). */
+export function ulozStavBloku(id: string, stav: unknown, meta?: Omit<Aktivita, 'id' | 'kdy'>): void {
   const d = nacti();
   d.bloky = { ...d.bloky, [id]: stav };
+  if (meta) d.aktivita = [{ ...meta, id, kdy: new Date().toISOString() }, ...d.aktivita.filter((a) => a.id !== id)].slice(0, 30);
   uloz(d);
 }
 
@@ -87,6 +117,16 @@ export function smazStavBloku(id: string): void {
   const d = nacti();
   const { [id]: _pryc, ...zbytek } = d.bloky;
   d.bloky = zbytek;
+  d.aktivita = d.aktivita.filter((a) => a.id !== id);
+  uloz(d);
+}
+
+/** Zaznamená otevřený krok cesty. */
+export function zaznamenejKrok(slug: string, krok: number, nazev: string, pocet: number): void {
+  const d = nacti();
+  const p = d.cesty[slug];
+  const navstivene = [...new Set([...(p?.navstivene ?? []), krok])].sort((a, b) => a - b);
+  d.cesty = { ...d.cesty, [slug]: { nazev, pocet, krok, navstivene, kdy: new Date().toISOString() } };
   uloz(d);
 }
 

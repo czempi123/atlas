@@ -1,7 +1,7 @@
 // Deník: zápisy a stav bloků se ukládají do localStorage, vydrží „obnovení“ (nové načtení)
 // a bez úložiště fungují aspoň v paměti.
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { nacti, ulozZapis, najdiZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku, _zapomenPamet } from '../../src/lib/denik';
+import { nacti, ulozZapis, najdiZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku, zaznamenejKrok, _zapomenPamet } from '../../src/lib/denik';
 
 class Uloziste {
   data = new Map<string, string>();
@@ -59,5 +59,31 @@ describe('deník bez localStorage', () => {
     ulozZapis({ id: 'z', otazka: '?', odpoved: 'ano', odkaz: '/' });
     expect(stavBloku('b')).toEqual({ x: 1 });
     expect(najdiZapis('z')?.odpoved).toBe('ano');
+  });
+});
+
+describe('deník: aktivita a cesty', () => {
+  beforeEach(() => { (globalThis as unknown as { localStorage?: unknown }).localStorage = new Uloziste(); _zapomenPamet(); });
+  afterEach(() => { delete (globalThis as unknown as { localStorage?: unknown }).localStorage; });
+
+  it('stav s meta zapíše aktivitu, novější nahoře, smazání ji odstraní', () => {
+    ulozStavBloku('a', { x: 1 }, { odkaz: '/x/#a', otazka: 'A?', druh: 'volba', hotovo: false });
+    ulozStavBloku('b', { x: 2 }, { odkaz: '/x/#b', otazka: 'B?', druh: 'spor', hotovo: true });
+    ulozStavBloku('a', { x: 3 }, { odkaz: '/x/#a', otazka: 'A?', druh: 'volba', hotovo: true });
+    expect(nacti().aktivita.map((x) => [x.id, x.hotovo])).toEqual([['a', true], ['b', true]]);
+    smazStavBloku('a');
+    expect(nacti().aktivita.map((x) => x.id)).toEqual(['b']);
+  });
+  it('postup cesty: naposledy otevřený krok a navštívené kroky', () => {
+    zaznamenejKrok('c', 1, 'Cesta', 6);
+    zaznamenejKrok('c', 3, 'Cesta', 6);
+    zaznamenejKrok('c', 2, 'Cesta', 6);
+    _zapomenPamet();
+    expect(nacti().cesty.c).toMatchObject({ krok: 2, navstivene: [1, 2, 3], pocet: 6, nazev: 'Cesta' });
+  });
+  it('starší deník bez aktivity a cest se doplní', () => {
+    (globalThis as unknown as { localStorage: Uloziste }).localStorage.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [] }));
+    expect(nacti().aktivita).toEqual([]);
+    expect(nacti().cesty).toEqual({});
   });
 });

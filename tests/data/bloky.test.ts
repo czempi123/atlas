@@ -10,10 +10,11 @@ import {
   posunZmeny, zapisZmeny, platnyStavZmeny,
   popisPolohy, zpetnaSporu, zapisSporu, platnyStavSporu,
   faktaDvojice, hodnotPoradi, hodnotVzdalenost, platnyStavKdoZil, osaDvou,
+  osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy,
   chybyBloku,
 } from '../../src/lib/bloky';
 import { Blok, BlokVolba, BlokZmena, BlokSpor } from '../../src/lib/bloky-schema';
-import type { OsobaMapy } from '../../src/lib/cas-mapy';
+import { zAstro, type OsobaMapy } from '../../src/lib/cas-mapy';
 
 const N = ' ';
 const osoba = (id: string, jmeno: string, n: number, z: number, o: Partial<OsobaMapy> = {}): OsobaMapy => ({
@@ -164,6 +165,49 @@ describe('Spor', () => {
   });
 });
 
+describe('Kdo žil dřív?: odhad tažením', () => {
+  it('osa je souměrná kolem A a vejde se na ni skutečná poloha B', () => {
+    for (const [a, b] of [[platon, diogenes], [platon, marcus], [marcus, platon], [sokrates, diogenes]] as const) {
+      const o = osaOdhadu(a, b)!;
+      const stredA = (o.a.od + o.a.do) / 2;
+      expect(Math.abs(o.od + o.do - 2 * stredA)).toBeLessThanOrEqual(100);
+      expect(o.startB).toBeGreaterThanOrEqual(o.minStart);
+      expect(o.startB).toBeLessThanOrEqual(o.maxStart);
+      expect(o.vychozi).toBeGreaterThanOrEqual(o.minStart);
+      expect(o.vychozi).toBeLessThanOrEqual(o.maxStart);
+      expect(Math.abs(o.vychozi % o.krok)).toBe(0);
+    }
+  });
+  it('skutečná poloha B dá stejný výsledek jako vzdálenost z dat (i přes rok nula)', () => {
+    for (const [a, b] of [[platon, diogenes], [sokrates, diogenes], [platon, marcus]] as const) {
+      const o = osaOdhadu(a, b)!;
+      const odhad = odhadZPolohy(o, o.startB);
+      const v = faktaDvojice(a, b)!.vzdalenost;
+      expect(odhad).toEqual({ potkali: v.druh === 'soucasne', let: v.let });
+    }
+  });
+  it('překryv, dotyk a mezera', () => {
+    const o = { a: { od: -400, do: -330 }, delkaB: 60 };
+    expect(odhadZPolohy(o, -360)).toEqual({ potkali: true, let: 30 });
+    expect(odhadZPolohy(o, -330)).toEqual({ potkali: true, let: 0 });
+    expect(odhadZPolohy(o, -300)).toEqual({ potkali: false, let: 30 });
+    expect(odhadZPolohy(o, -500)).toEqual({ potkali: false, let: 40 });
+  });
+  it('popis odhadu v češtině', () => {
+    expect(popisOdhadu({ potkali: true, let: 30 })).toBe(`žili by současně 30${N}let`);
+    expect(popisOdhadu({ potkali: false, let: 1 })).toBe(`dělil by je 1${N}rok`);
+    expect(popisOdhadu({ potkali: false, let: 3 })).toBe(`dělily by je 3${N}roky`);
+    expect(popisOdhadu({ potkali: false, let: 120 })).toBe(`dělilo by je 120${N}let`);
+  });
+  it('procenta a značky osy', () => {
+    expect(naProcenta({ od: -500, do: -100 }, -300)).toBe(50);
+    // Kulaté letopočty př. n. l. (600 př. n. l. = astronomicky −599), přes přelom bez roku nula.
+    expect(znackyOsy({ od: -700, do: -100 })).toEqual([-699, -599, -499, -399, -299, -199]);
+    expect(znackyOsy({ od: -500, do: -100 })).toEqual([-499, -449, -399, -349, -299, -249, -199, -149]);
+    expect(znackyOsy({ od: -300, do: 300 }).map(zAstro)).toEqual([-300, -200, -100, 100, 200]);
+  });
+});
+
 describe('Kdo žil dřív?', () => {
   it('Sókratés a Diogenés žili současně asi 13 let; mapa na rok Sókratovy smrti', () => {
     const f = faktaDvojice(sokrates, diogenes)!;
@@ -217,8 +261,11 @@ describe('Kdo žil dřív?', () => {
   it('uložený stav pro oba druhy', () => {
     expect(platnyStavKdoZil({ odhad: 'a', odkryto: true }, 'poradi')).toEqual({ odhad: 'a', odkryto: true });
     expect(platnyStavKdoZil({ odhad: 'c' }, 'poradi')).toBeNull();
-    expect(platnyStavKdoZil({ odhad: { potkali: true, let: 64.6 } }, 'vzdalenost')).toEqual({ odhad: { potkali: true, let: 65 }, odkryto: false });
-    expect(platnyStavKdoZil({ odhad: { let: -3 } }, 'vzdalenost')).toBeNull();
+    expect(platnyStavKdoZil({ odhad: { start: -410.4 } }, 'vzdalenost')).toEqual({ odhad: { start: -410 }, odkryto: false });
+    expect(platnyStavKdoZil({ odhad: { start: -9999 }, odkryto: true }, 'vzdalenost', osaOdhadu(platon, diogenes)!)).toEqual({
+      odhad: { start: osaOdhadu(platon, diogenes)!.minStart }, odkryto: true,
+    });
+    expect(platnyStavKdoZil({ odhad: { let: 3 } }, 'vzdalenost')).toBeNull();
     expect(platnyStavKdoZil({ odhad: 'a' }, 'vzdalenost')).toBeNull();
   });
   it('osa: pruhy leží uvnitř a respektují chybějící rok nula', () => {

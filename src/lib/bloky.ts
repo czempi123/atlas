@@ -2,7 +2,7 @@
 // Čisté funkce bez DOM a Astra; běží při sestavení i v prohlížeči a mají testy v tests/data/bloky.test.ts.
 // Zpětná vazba nikdy nehodnotí souhlas s filozofem a nic se neboduje.
 import type { TBlokVolba, TBlokZmena } from './bloky-schema';
-import { let_, vekVRoce, vzdalenost, zivotOsoby, naAstro, type OsobaMapy, type Vzdalenost } from './cas-mapy';
+import { let_, vekVRoce, vzdalenost, zivotOsoby, naAstro, zAstro, type OsobaMapy, type Vzdalenost } from './cas-mapy';
 import { rok as rokText } from './casy';
 
 const NBSP = ' ';
@@ -297,20 +297,98 @@ export function hodnotVzdalenost(odhad: OdhadVzdalenosti, f: FaktaDvojice): stri
 }
 
 export interface StavKdoZil {
-  odhad: OdhadPoradi | OdhadVzdalenosti;
+  /** pořadí: 'a' | 'b' | 'soucasne'; vzdálenost: kde student položil začátek života B (astronomický rok) */
+  odhad: OdhadPoradi | { start: number };
   odkryto: boolean;
 }
 
-export function platnyStavKdoZil(s: unknown, druh: 'poradi' | 'vzdalenost'): StavKdoZil | null {
+export function platnyStavKdoZil(s: unknown, druh: 'poradi' | 'vzdalenost', osa?: OsaOdhadu): StavKdoZil | null {
   if (!s || typeof s !== 'object') return null;
   const x = s as Partial<StavKdoZil>;
   if (druh === 'poradi') {
     if (x.odhad !== 'a' && x.odhad !== 'b' && x.odhad !== 'soucasne') return null;
     return { odhad: x.odhad, odkryto: x.odkryto === true };
   }
-  const o = x.odhad as Partial<OdhadVzdalenosti> | undefined;
-  if (!o || typeof o !== 'object' || typeof o.let !== 'number' || !Number.isFinite(o.let) || o.let < 0) return null;
-  return { odhad: { potkali: o.potkali === true, let: Math.round(o.let) }, odkryto: x.odkryto === true };
+  const o = x.odhad as { start?: unknown } | undefined;
+  if (!o || typeof o !== 'object' || typeof o.start !== 'number' || !Number.isFinite(o.start)) return null;
+  const start = osa ? Math.min(osa.maxStart, Math.max(osa.minStart, Math.round(o.start))) : Math.round(o.start);
+  return { odhad: { start }, odkryto: x.odkryto === true };
+}
+
+// ─── Odhad vzdálenosti tažením na ose ─────────────────────────────────────────
+
+/** Osa pro odhad: život A pevně, život B (jeho skutečná délka) student posouvá. Roky jsou astronomické. */
+export interface OsaOdhadu {
+  od: number;
+  do: number;
+  /** život A */
+  a: { od: number; do: number };
+  /** délka života B v letech */
+  delkaB: number;
+  /** skutečný začátek B */
+  startB: number;
+  /** kde B začíná, než student sáhne */
+  vychozi: number;
+  minStart: number;
+  maxStart: number;
+  /** krok posunu v letech */
+  krok: number;
+}
+
+/**
+ * Osa souměrná kolem života A, aby rozsah neprozradil, na kterou stranu B patří.
+ * Výchozí poloha B: začíná 50 let po konci A.
+ */
+export function osaOdhadu(a: OsobaMapy, b: OsobaMapy): OsaOdhadu | null {
+  const za = zivotOsoby(a);
+  const zb = zivotOsoby(b);
+  if (!za || !zb) return null;
+  const A = { od: naAstro(za.od), do: naAstro(za.do) };
+  const delkaB = naAstro(zb.do) - naAstro(zb.od);
+  const startB = naAstro(zb.od);
+  const stred = (A.od + A.do) / 2;
+  const potreba = Math.max(Math.abs(startB - stred), Math.abs(startB + delkaB - stred)) + 60;
+  const pul = Math.ceil(Math.max(220, potreba, (A.do - A.od) / 2 + delkaB + 60) / 50) * 50;
+  const od = Math.floor((stred - pul) / 50) * 50;
+  const do_ = Math.ceil((stred + pul) / 50) * 50;
+  const krok = 5;
+  const minStart = od;
+  const maxStart = do_ - delkaB;
+  const vychozi = Math.min(maxStart, Math.round((A.do + 50) / krok) * krok);
+  return { od, do: do_, a: A, delkaB, startB, vychozi, minStart, maxStart, krok };
+}
+
+/** Co student odhadl, když B začíná v roce `start`: překryv, nebo mezera mezi životy. */
+export function odhadZPolohy(osa: Pick<OsaOdhadu, 'a' | 'delkaB'>, start: number): OdhadVzdalenosti {
+  const konec = start + osa.delkaB;
+  const prekryv = Math.min(osa.a.do, konec) - Math.max(osa.a.od, start);
+  return prekryv >= 0 ? { potkali: true, let: prekryv } : { potkali: false, let: -prekryv };
+}
+
+/** Krátký popis odhadu pro čtečky a pod osu: „žili by současně 30 let“, „dělila by je 120 let“. */
+export function popisOdhadu(o: OdhadVzdalenosti): string {
+  if (o.potkali) return o.let === 0 ? 'jeden by zemřel v roce, kdy se druhý narodil' : `žili by současně ${let_(o.let)}`;
+  const n = o.let;
+  const dela = n === 1 ? 'dělil by je' : n >= 2 && n <= 4 ? 'dělily by je' : 'dělilo by je';
+  return `${dela} ${let_(n)}`;
+}
+
+/** Poloha v procentech osy (pro pruhy a značky). */
+export function naProcenta(osa: Pick<OsaOdhadu, 'od' | 'do'>, rokAstro: number): number {
+  return ((rokAstro - osa.od) / (osa.do - osa.od)) * 100;
+}
+
+/** Značky osy na kulatých letopočtech (po 50, 100 nebo 200 letech), vrací astronomické roky pro polohu. */
+export function znackyOsy(osa: Pick<OsaOdhadu, 'od' | 'do'>): number[] {
+  const rozsah = osa.do - osa.od;
+  const krok = rozsah > 900 ? 200 : rozsah > 500 ? 100 : 50;
+  const z: number[] = [];
+  for (let r = Math.ceil(zAstro(osa.od) / krok) * krok; naAstro(r) < osa.do; r += krok) {
+    if (r === 0) continue;
+    const a = naAstro(r);
+    if (a > osa.od) z.push(a);
+  }
+  return z;
 }
 
 export interface PruhOsy {
