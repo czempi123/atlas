@@ -101,3 +101,14 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 Vědomě vynecháno podle doporučení v podkladech: počty hlasů u Diogena Laertia a velikost poroty, Platón okřiknutý porotou, potrestání žalobců, Platónova nemoc (Faidón 59b), bolehlav, Prótagorovo vyhnání, pálení knih a utonutí, Démokritos jako jeho učitel, Euathlos, částka sto min. Lachétův citát (Lachés 190e) je jen v nepřímé řeči, protože v `zdroje.yaml` není.
 
 Po revizi autora vynechány i vedlejší postavy a popisy, které příběh nenesou (rozhodnutí 1. 10. 2026, „Jména střídmě“).
+
+## Cesta 1 s Prótagorem a velká otázka 7 (P8)
+
+1. 10. 2026. Všechna tvrzení v kroku 5 (Spor), v kroku 6 (šaty) a na stránce otázky 7 jsou z `celek-1-pravda.md`; nic nového k ověření nevzniklo. Otevřené zůstává:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Fotka šatů (#TheDress) | Licenci fotky jsem neověřoval; atlas ji proto neukazuje a případ stojí jen na popisu. | Pro animaci „posuvník předpokládaného světla“ (Po P7) použít vlastní kresbu, ne fotku. |
+| Platón, Pyrrhón a Epikúros na stránce otázky 7 | Věty jsou ověřené (`celek-1-pravda.md`, Velká otázka 7), ale podle rozhodnutí z 1. 10. přibudou až s vlastním profilem. | Doplnit do `hlasy` v `src/content/otazky/jak-poznam-pravdu.mdx`, až profil vznikne. Citát `menon-98a` pro Platóna už je v datech. |
+
+Vědomě vynecháno: Sókratův posměšek o praseti a paviánovi jako měřítku (Theaitétos 161c; podklad ho vede jen jako barvu, ne argument), jméno Prótagorova přítele z Theaitéta (nese jen rámec), prodej šatů a telefonáty výrobci, jména majitelky a výrobce šatů, Kdo žil dřív? Prótagorás × Sókratés (je v Prótagorově profilu).

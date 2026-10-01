@@ -586,7 +586,9 @@ Po P7 následuje P8 (cesta 1 s Prótagorem, blokem Spor a šaty z roku 2015, str
 
 ### P8: Cesta 1 s Prótagorem a stránka velké otázky 7
 
-**Stav 1. 10. 2026:** další krok. P7 je schválený, podklady ke sporu Sókratés × Prótagorás, k šatům z roku 2015 a k velké otázce 7 jsou v `docs/podklady/celek-1-pravda.md`. Pracuje se dál ve větvi `celek-1`; po P8 následuje revize celku (P10) a schválení autorem.
+**Stav 1. 10. 2026: hotovo, čeká na revizi (P10).** Šablona stránky velké otázky (`/otazka/<slug>/`), stránka otázky 7 se čtyřmi hlasy, cesta 1 se sedmi kroky (Spor Prótagorás × Sókratés, šaty z roku 2015) a skill `atlas-cesta` (Jména střídmě, stránka velké otázky). Rozhodnutí v `docs/rozhodnuti.md`, otevřené body v `k-overeni.md` (oddíl P8).
+
+**Původní zadání:** další krok. P7 je schválený, podklady ke sporu Sókratés × Prótagorás, k šatům z roku 2015 a k velké otázce 7 jsou v `docs/podklady/celek-1-pravda.md`. Pracuje se dál ve větvi `celek-1`; po P8 následuje revize celku (P10) a schválení autorem.
 
 Stránka velké otázky je nový typ stránky (`docs/plan.md` › Informační architektura: otázka, tvůj první názor, odpovědi filozofů na časové ose, cesty k otázce, zápis do deníku). Proto P8 má dvě části: nejdřív šablona stránky se skillem `atlas-komponenta`, pak obsah se skillem `atlas-cesta`.
 
@@ -611,6 +613,13 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 
 Nejdřív mi v pár bodech napiš návrh stránky velké otázky (pořadí částí, jak bude vypadat časová osa na telefonu) a osnovu cesty 1 po změně (kroky, blok v každém, odhad minut), a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (šablona, otázka 7, cesta, skill) a nic neposílej na GitHub. Na konci pošli snímky stránky otázky a nového kroku cesty a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
+
+### Po P8: co zůstalo na později
+
+- Hlasy Platóna, Pyrrhóna a Epikúra na stránce otázky 7, až budou mít profil (věty jsou ověřené).
+- Animace u šatů (posuvník předpokládaného světla nad vlastní kresbou) se skillem `atlas-komponenta`, až autor schválí text celku.
+- Skill `atlas-cesta` uložit do účtu (návrh předán v P8); skill `atlas-osobnost` v účtu má ještě „s Prótagorou“, opravit při sjednocení skillů (P13).
+- Stránky dalších velkých otázek vzniknou s jejich celky; do té doby je přehled `/otazky/` neodkazuje.
 
 Po P8 následuje P10: revize celého celku 1 skillem `atlas-revize` (portrét, profil, cesta, otázka), pak schválení autorem a sloučení do hlavní větve. Plné znění P10 připravím po P8.
 

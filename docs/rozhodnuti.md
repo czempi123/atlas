@@ -2,6 +2,19 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Stránka velké otázky a cesta 1 s Prótagorem (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Stránka velké otázky `/otazka/<slug>/`: otázka a úvod „Představ si…“ → Tvůj první názor → hlasy na časové ose → cesty k otázce → Změnil se? → Prameny. Hlasy ve frontmatteru `src/content/otazky/<slug>.mdx`; sestavení je kontroluje proti datům | Autor schválil návrh; jména, roky a citáty se berou z dat, takže se nerozejdou s mapou |
+| Hlasy, cesty a návrat jsou skryté, dokud student neuloží první názor nebo nestiskne Přeskočit; bez JavaScriptu je stránka vidět celá | Nejdřív student, pak filozof (`CLAUDE.md`); přeskočení nechává osobní rovinu dobrovolnou |
+| Časová osa na telefonu i notebooku svisle se stejnými rozestupy; na notebooku letopočty v levém okraji | Prótagorás a Sókratés žili současně; poměrné rozestupy by je slily dohromady |
+| Otázka bez hlasů zatím nemá stránku; přehled `/otazky/` odkazuje jen na hotové stránky | Žádná prázdná stránka; adresy `/otazky/#<slug>` dál fungují |
+| Na stránce otázky 7 věta Aristotela jeho odpovědí z Metafyziky IV, 6 (pro koho, kdy a jak se jeví), definice pravdy v citátu | Věta a citát by jinak říkaly totéž |
+| Cesta 1 má sedm kroků, asi 20 minut: krok 5 Spor Prótagorás × Sókratés z Theaitéta, krok 6 šaty z roku 2015 (Změň jednu věc). Šaty nahradily „Zprávu ve skupině“ | S oběma by cesta měla 8 kroků a přes 20 minut a dva bloky Změň jednu věc za sebou; šaty přímo zkoušejí spor z kroku 5 |
+| Ve Sporu Prótagorova strana: vítr, lékař (166d–167b), obce; Sókratova: budoucnost (178b–179b), sebevyvrácení. Posměšek o praseti vynechán | Nejsilnější verze obou stran podle podkladů |
+| Skloňování Prótagorás podle vzoru pán i v 7. a 4. pádě (s Prótagorem, o Prótagora), opraveno v dokumentech, skillu i textu | Autor |
+
 ## 1. 10. 2026: Schválení P7
 
 | Rozhodnutí | Důvod |
