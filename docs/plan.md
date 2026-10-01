@@ -358,8 +358,8 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
 | P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Hotovo 1. 10. 2026 pro celek „Jak poznám, co je pravda?“ (`docs/podklady/celek-1-pravda.md`) |
-| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Další krok: Sókratův portrét a profil Prótagora, při nich vznikne skill `atlas-osobnost`; plné znění níže |
-| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Se skillem `atlas-cesta` (připraven 1. 10. 2026) |
+| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Hotovo a schváleno 1. 10. 2026: Sókratův portrét a profil Prótagora; skill `atlas-osobnost` |
+| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Další krok: cesta 1 s Prótagorou a stránka velké otázky 7 (nový typ stránky); plné znění níže |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
 | P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Se skillem `atlas-revize` |
 | P11 | Souhrnná revize období | Fable 5.1 · high | Souvislosti napříč desítkami stránek | Na konci každé fáze |
@@ -545,7 +545,7 @@ Nejdřív mi v pár bodech napiš, co budeš ověřovat a které příběhy pova
 
 ### P7: Sókratův portrét a profil Prótagora
 
-**Stav 1. 10. 2026:** hotovo, čeká na schválení autorem. Sókratův portrét má kapitoly 02–05, Prótagorás profil, skill `atlas-osobnost` je ve `skills/`; vynechané a neověřené v `docs/podklady/k-overeni.md` (oddíl P7). Původně: podklady jsou hotové (P6, `docs/podklady/celek-1-pravda.md`), stránka osobnosti má středovou osu a Sókratés bustu z Louvru. Pracuje se dál ve větvi `celek-1`; do hlavní větve jde až schválený celek po P8 a P10.
+**Stav 1. 10. 2026:** hotovo a schváleno. Sókratův portrét má kapitoly 02–05, Prótagorás profil, skill `atlas-osobnost` je ve `skills/` i v účtu. Po připomínce autora méně jmen a víc myšlenky (`docs/styl.md`, pravidlo 6); ověřené body z `k-overeni.md` jsou zapracované.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (portrét je hlavně vyprávění a čeština). Skill `atlas-osobnost` při P7 teprve vznikne, proto prompt odkazuje na podklady, styl a hotovou kapitolu 01 jako vzor.
 
@@ -575,6 +575,45 @@ Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každou kapitolu a Pr
 ```
 
 Po P7 následuje P8 (cesta 1 s Prótagorou, blokem Spor a šaty z roku 2015, stránka velké otázky 7, skill `atlas-cesta`) a P10 (revize celku skillem `atlas-revize`). Plné znění P8 připravím po schválení P7.
+
+### Po P7: co zůstalo na později
+
+- Animace jen tam, kde nesou myšlenku, se skillem `atlas-komponenta` až po schválení textu celku: u šatů posuvník předpokládaného světla nad vlastní kresbou, u Délia malá mapa ústupu, u soudu počítadlo „30 hlasů“.
+- Sókratova stránka má na telefonu asi 20 000 px. Celostránkový snímek v `tests/e2e/prohlidka.spec.ts` se nad 16 384 px v Chromiu uřízne (zbytek je prázdný); snímky skládat po částech. Délku stránky sledovat při zkoušce se studenty.
+- Euthyfrónovo dilema (Euthyfrón 10a) zazní i na stránce velké otázky 9 „Je Bůh?“, až bude.
+- Popis skillu `atlas-osobnost` v účtu je kratší než kopie ve `skills/`; sjednotit při úpravě skillů po fázi (P13).
+- Pravidlo „Jména a podrobnosti střídmě“ (`docs/styl.md`, pravidlo 6) projít i na hotové cestě 1 a v kapitole 01 Sókratova portrétu (P10).
+
+### P8: Cesta 1 s Prótagorou a stránka velké otázky 7
+
+**Stav 1. 10. 2026:** další krok. P7 je schválený, podklady ke sporu Sókratés × Prótagorás, k šatům z roku 2015 a k velké otázce 7 jsou v `docs/podklady/celek-1-pravda.md`. Pracuje se dál ve větvi `celek-1`; po P8 následuje revize celku (P10) a schválení autorem.
+
+Stránka velké otázky je nový typ stránky (`docs/plan.md` › Informační architektura: otázka, tvůj první názor, odpovědi filozofů na časové ose, cesty k otázce, zápis do deníku). Proto P8 má dvě části: nejdřív šablona stránky se skillem `atlas-komponenta`, pak obsah se skillem `atlas-cesta`.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (xhigh, když se šablona stránky zasekne).
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-1.
+
+Přečti CLAUDE.md, docs/styl.md (hlavně pravidlo 6 „Jména a podrobnosti střídmě“), docs/podklady/celek-1-pravda.md (Spor Sókratés × Prótagorás, nový případ: šaty 2015, Velká otázka 7, Citáty), docs/rozhodnuti.md (záznamy z 1. 10. 2026), v docs/plan.md Informační architekturu (řádek Velká otázka), v docs/architektura.md velkou otázku 7 a cestu 1, v docs/design.md oddíly Bloky a Cesta, hotovou cestu 1 (src/content/cesty/kdy-mam-dobry-duvod-verit*) a hotové stránky src/content/osobnosti/sokrates.mdx a protagoras.mdx jako vzor tónu.
+
+Udělej:
+
+1. Šablonu stránky velké otázky (skill atlas-komponenta): adresa /otazka/<slug>/ podle informační architektury, obsah v src/content/otazky/<slug>.mdx. Stránka má: otázku a krátký úvod scénou, „Tvůj první názor“ (zápis do deníku, než student uvidí filozofy), hlasy myslitelů na časové ose (mince, jméno, jedna věta, citát ze zdroje.yaml, odkaz na profil, pokud existuje), cesty k otázce a na konci návrat k prvnímu názoru („Změnil se?“). Odkazy /otazky/#<slug> v atlasu převeď na novou adresu; přehled /otazky/ zůstává. Ověř na 390 a 1440 px ve světlém i tmavém režimu a klávesnicí, přidej stránku do testů prohlídky.
+
+2. Stránku velké otázky 7 „Jak poznám, co je pravda?“ se čtyřmi hlasy: Parmenidés (rozum, ne smysly), Prótagorás (člověk je měřítkem), Sókratés (zkoušet tvrzení v rozhovoru), Aristotelés (definice pravdy). Platón, Pyrrhón a Epikúros přibudou, až budou mít vlastní profil. Věty a citáty jen z podkladů (dl-ix-22-parmenides, theaitetos-152a, obrana-21d, metafyzika-1011b).
+
+3. Cestu 1 doplň o Prótagoru (skill atlas-cesta): krok se Sporem Sókratés × Prótagorás z Theaitéta, podaný jako spor, který si představil Platón (Prótagorás je tam už mrtvý; obě strany v nejsilnější verzi podle podkladů, Prótagorův lékař 166d–167b a Sókratova budoucnost 178b–179b), a nový případ se šaty z roku 2015 (Změň jednu věc). Rozhodni, jestli šaty nahradí krok „Zpráva ve skupině“, nebo přibudou; cesta má zůstat do 20 minut a 6–8 kroků. Na kartě cesty a v přehledu přidej Prótagoru mezi filozofy. Skill atlas-cesta doplň o pravidlo „Jména a podrobnosti střídmě“ (stejně jako atlas-osobnost) a nabídni mi ho k uložení do účtu.
+
+Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš a zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml. Scény z Platónových dialogů „Platón vypráví…“, tradované příběhy „Vypráví se…“, vymyšlené situace „Představ si…“. Jménem jen ten, kdo nese příběh nebo myšlenku. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky. Zpětná vazba vysvětluje důvod a ptá se dál, nikdy neříká, kdo má pravdu.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí); cestu projdi celou v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí; projdi rychlou kontrolu z docs/styl.md.
+
+Nejdřív mi v pár bodech napiš návrh stránky velké otázky (pořadí částí, jak bude vypadat časová osa na telefonu) a osnovu cesty 1 po změně (kroky, blok v každém, odhad minut), a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (šablona, otázka 7, cesta, skill) a nic neposílej na GitHub. Na konci pošli snímky stránky otázky a nového kroku cesty a seznam toho, co jsi vynechal nebo připsal do k-overeni.
+```
+
+Po P8 následuje P10: revize celého celku 1 skillem `atlas-revize` (portrét, profil, cesta, otázka), pak schválení autorem a sloučení do hlavní větve. Plné znění P10 připravím po P8.
+
 
 
 ## Plán etap
