@@ -56,15 +56,33 @@ const otazky = defineCollection({
   schema: z.object({ cislo: otazka, otazka: z.string(), disciplina: z.string() }),
 });
 
+/** Cesta: přehled v src/content/cesty/<slug>.mdx, kroky v src/content/cesty/<slug>/<n>-<název>.mdx. */
 const cesty = defineCollection({
-  loader: vsechny('cesty'),
+  loader: glob({ pattern: '[^_]*.{md,mdx}', base: './src/content/cesty' }),
   schema: z.object({
     cislo: z.number().int().min(1),
     nazev: z.string(),
     obdobi,
     otazka,
+    /** jedna věta pod názvem na přehledu cesty a na kartě */
     vstup: z.string(),
     filozofove: z.array(id),
+    /** odhad délky v minutách */
+    minut: z.number().int().min(5).max(60).optional(),
+  }),
+});
+
+const kroky = defineCollection({
+  loader: glob({ pattern: '*/[0-9]*.mdx', base: './src/content/cesty' }),
+  schema: z.object({
+    /** slug cesty (název souboru přehledu) */
+    cesta: id,
+    /** pořadí kroku od 1 */
+    krok: z.number().int().min(1),
+    /** krátký název kroku: v postupu, v liště Další krok */
+    nazev: z.string(),
+    /** „Kde jsme“: místo a chvíle příběhu (volitelné) */
+    kdeJsme: z.string().optional(),
   }),
 });
 
@@ -94,4 +112,4 @@ const bloky = defineCollection({
   schema: Blok,
 });
 
-export const collections = { osobnosti, smery, obdobi: obdobiTexty, otazky, cesty, pokusy, pojmy, pribehy, nabozenstvi, bloky };
+export const collections = { osobnosti, smery, obdobi: obdobiTexty, otazky, cesty, pokusy, pojmy, pribehy, nabozenstvi, bloky, kroky };

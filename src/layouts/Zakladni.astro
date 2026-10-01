@@ -48,17 +48,17 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
   </head>
   <body>
     <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
-    <Hlavicka sekce={sekce} zpet={zpet} titulek={kratkyTitulek} />
+    {Astro.slots.has('hlavicka') ? <slot name="hlavicka" /> : <Hlavicka sekce={sekce} zpet={zpet} titulek={kratkyTitulek} />}
     {drobecky && <Drobecky cesta={drobecky} />}
     <main id="obsah" tabindex="-1" data-pagefind-body={hledat ? '' : undefined} class:list={{ aplikace }}>
       <slot />
     </main>
     {!aplikace && (
-      <footer class="paticka stranka t-popisek" data-pagefind-ignore>
+      <footer class:list={['paticka', 'stranka', 't-popisek', { 'paticka--lista': Astro.slots.has('lista') }]} data-pagefind-ignore>
         <p>Atlas myšlení · Vojtěch Czempka · texty a data CC BY-NC-SA 4.0, kód MIT</p>
       </footer>
     )}
-    <SpodniLista sekce={sekce} />
+    {Astro.slots.has('lista') ? <slot name="lista" /> : <SpodniLista sekce={sekce} />}
   </body>
 </html>
 
@@ -74,4 +74,6 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
   @media (min-width: 900px) {
     .paticka { padding-bottom: var(--s-6); }
   }
+  /* Vlastní spodní lišta (krok cesty) je vidět i na notebooku. */
+  .paticka--lista, .paticka--lista:is(*) { padding-bottom: calc(var(--spodni-lista) + var(--s-7)); }
 </style>

@@ -1,0 +1,49 @@
+---
+// Karta cesty: pozvánka na cestu z Domů, z profilu nebo z otázky. Vede na přehled cesty.
+import { getEntry, getCollection } from 'astro:content';
+import Mince from '../ui/Mince.astro';
+import Ikona from '../ui/Ikona.astro';
+import { osoba } from '../../lib/data';
+
+interface Props { slug: string; nadtitulek?: string }
+const { slug, nadtitulek } = Astro.props;
+const c = await getEntry('cesty', slug);
+if (!c) throw new Error(`Cesta „${slug}“ není v src/content/cesty`);
+const pocet = (await getCollection('kroky')).filter((k) => k.data.cesta === slug).length;
+const lide = c.data.filozofove.map(osoba);
+---
+<a class={`cesta-karta obdobi-${c.data.obdobi}`} href={`/cesta/${slug}/`}>
+  <span class="cesta-karta__mince" aria-hidden="true">{lide.map((o) => <Mince osoba={o} varianta="sel" velikost={56} />)}</span>
+  <span class="cesta-karta__text">
+    <span class="t-nadtitulek cesta-karta__nad">{nadtitulek ?? `Cesta ${c.data.cislo}`} · {pocet} kroků{c.data.minut && ` · asi ${c.data.minut} minut`}</span>
+    <span class="t-h3 cesta-karta__nazev">{c.data.nazev}</span>
+    <span class="cesta-karta__vstup">{c.data.vstup}</span>
+    <span class="cesta-karta__akce t-ovladani-l">Vydat se na cestu <Ikona id="dal" velikost={20} /></span>
+  </span>
+</a>
+
+<style>
+  .cesta-karta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+    margin: var(--s-7) 0;
+    padding: var(--s-5);
+    border: 1px solid var(--pc-soft);
+    border-left: 4px solid var(--pc);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    color: var(--ink);
+    text-decoration: none;
+    max-width: var(--ctenarsky-sloupec);
+  }
+  .cesta-karta:hover { border-color: var(--pc); }
+  .cesta-karta:hover .cesta-karta__nazev { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .cesta-karta__text { display: flex; flex-direction: column; gap: var(--s-2); }
+  .cesta-karta__nad { color: var(--pc); }
+  .cesta-karta__vstup { color: var(--ink-2); font-size: var(--fs-text); line-height: 1.5; }
+  .cesta-karta__akce { display: inline-flex; align-items: center; gap: var(--s-2); margin-top: var(--s-2); }
+  @media (min-width: 700px) {
+    .cesta-karta { flex-direction: row; align-items: flex-start; gap: var(--s-5); padding: var(--s-6); }
+  }
+</style>
