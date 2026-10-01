@@ -38,7 +38,7 @@ test('otázka: první názor klávesnicí, hlasy v pořadí, návrat na konci a 
   await expect(page.locator('#jak-poznam-pravdu-hlasy-nadpis')).toHaveText('Komu věřit?');
   // Nejdřív odpovědi všech na tentýž případ, pak rozvinutí na časové ose.
   await expect(page.locator('.odpoved__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés']);
-  await expect(page.locator('.odpoved').first()).toContainText('Nevěř ani tomu, co slyšíš odmalička.');
+  await expect(page.locator('.odpoved').first()).toContainText('Ani babičce, ani učitelce.');
   await page.keyboard.press('Tab');
   await expect(page.locator('.odpoved__odkaz').first()).toBeFocused();
   await page.keyboard.press('Enter');

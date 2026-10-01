@@ -6,10 +6,11 @@ obdobi: 1
 nadtitulek: Spor
 scena: >-
   Platón si představil, jak se Sókratés o tu větu přel. V jeho dialogu je ale Prótagorás už mrtvý.
-  Přítel, který ho znal, ho hájit nechce. Sókratés tedy hájí „sirotka“ sám, a teprve potom ho vyvrací.
+  Přítel, který ho znal, ho hájit nechce. Sókratés tedy hájí „sirotka“ sám.
 
 
-  Přizná přitom, že kdyby Prótagorás vystrčil hlavu ze země, nejspíš by je oba usvědčil z nesmyslů a zase zmizel.
+  Na jednom místě přizná, že kdyby Prótagorás vystrčil hlavu ze země, nejspíš by je oba usvědčil z nesmyslů.
+  Kdo z nich má pravdu, rozhodni sám.
 otazka: Je pravda to, co se ti jeví?
 strany:
   - osoba: protagoras
@@ -34,6 +35,6 @@ strany:
         Jestli dostaneš zítra horečku, pozná lékař líp než ty. O víně rozhodne líp vinař, o hostině kuchař.
         A sám Prótagorás tvrdil, že líp než kdokoli ví, co zapůsobí u soudu. Aspoň o budoucnosti tedy není každý stejné měřítko.
       - >-
-        Prótagorás říká, že každý názor je pravdivý. Většina lidí si ale myslí, že Prótagorás pravdu nemá.
-        Pak musí přiznat, že i jejich názor je pravdivý. A tím sám přizná, že jeho věta pravdivá není.
+        Podle Prótagora je každý názor pravdivý pro toho, kdo ho má. Většina lidí má ale názor, že Prótagorás pravdu nemá.
+        Pro ně je tedy pravda, že se mýlí. A podle vlastní věty jim to musí uznat.
 zdroje: [platon-theaitetos, sep-protagoras]
