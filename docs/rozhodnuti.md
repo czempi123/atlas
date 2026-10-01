@@ -11,6 +11,8 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | Euthyfrónovo dilema v portrétu jako otázka pro studenta v textu, bez bloku | Blok si nechává stránka velké otázky 9 |
 | Prótagorův profil: úvod Hippokratés a Kalliův dům, kapitoly Měřítko všech věcí (Volba o větru) a O bozích a o obci (Odkryj o pravidlech školy), konec života podle Menóna 91e | Doporučení podkladů; vyhnání a pálení knih vynechány |
 | Lékař z Theaitéta 166d–167b zůstává pro Spor v cestě 1 (P8) | Aby se profil a Spor neopakovaly |
+| **Jména střídmě:** jménem jen ten, kdo nese příběh nebo myšlenku (v portrétu Sókratés, Alkibiadés, Lachés, Euthyfrón, Kritón, Xanthippa, Platón); vedlejší postavy popisem, popisy vzhledu a čísla jen tam, kde něco říkají. Pravidlo 6 v `docs/styl.md`, zapsáno i ve skillu `atlas-osobnost` | Autor po přečtení P7: hodně jmen ubírá z údernosti; atlas má předávat hlavně myšlenky a příběh |
+| Body z `k-overeni.md` (P7) ověřené a zapracované: pronásledovatelé u Délia, Lachétovy další definice, mladí s volným časem, Euthyfrónova jistota, Sókratova námitka o lodích, kdo byli sofisté, Asklépios | Autor souhlasil s návrhy; podklady v `celek-1-pravda.md`, oddíl Doplněno po P7 |
 
 ## 1. 10. 2026: Podklady k celku 1 (P6)
 

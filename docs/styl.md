@@ -2,13 +2,14 @@
 
 Atlas má znít jako dobrý vypravěč, který filozofii miluje a studentovi věří. Ne jako posudek, učebnice ani právní dokument. Tento průvodce ukazuje rozdíl na deseti dvojicích. Příklady „takhle ne“ jsou skutečné věty z prototypu v9 (`docs/archiv/`).
 
-## Pět pravidel
+## Šest pravidel
 
 1. **Vyprávěj.** Scéna, člověk, rozhodnutí. Pojem přijde až potom.
 2. **Tvrzení drž udržitelné, ne obalené výhradami.** Když si nejsme jisti, zvolíme opatrnější formulaci nebo detail vynecháme. Pochybnosti o pramenech řešíme v podkladech.
 3. **Tradované je tradované.** „Vypráví se, že…“ stačí; další odstavec o spolehlivosti pramene nepíšeme.
 4. **Mluv ke studentovi.** Tykání, krátké věty, otázky, které se ho týkají.
 5. **Zpětná vazba vysvětluje důvod.** Nikdy jen „správně“ nebo „špatně“, nikdy hodnocení názoru.
+6. **Jména a podrobnosti střídmě.** Jménem nazvi jen toho, kdo nese příběh nebo myšlenku. Vedlejší postavy popiš tím, kým jsou: „dva otcové“, „přítel, který u toho byl“, „přátelé z ciziny“. Vzhled, místo nebo částka patří do textu, jen když něco říkají o člověku nebo o myšlence. Student si má odnést myšlenku a příběh, ne seznam jmen.
 
 ## Deset dvojic
 
@@ -95,6 +96,7 @@ Proč: slogan je snadný, ale nepravdivý. Nejsilnější verze filozofa je zár
 ## Rychlá kontrola před odevzdáním textu
 
 - Začíná text scénou, člověkem nebo otázkou?
+- Nese každé jméno a každý detail příběh nebo myšlenku? Ostatní popsat, nebo vynechat.
 - Je v něm věta, která mluví o naší práci místo o filozofii? Smazat.
 - Má každá volba vlastní zpětnou vazbu s důvodem?
 - Dostal protivník svůj nejlepší argument?

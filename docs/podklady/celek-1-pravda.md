@@ -16,6 +16,24 @@ Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 7, cesta 1 „Kdy mám dobrý 
 6. **Mrtvý Prótagorás vystrčí hlavu ze země** (spor v cestě 1). V Theaitétovi je Prótagorás už mrtvý a jeho přítel Theodóros ho nechce hájit. Sókratés tedy hájí „sirotka“ sám a pak ho vyvrací. Přizná ale, že kdyby Prótagorás vystrčil hlavu ze země, nejspíš by je oba usvědčil z nesmyslů a zase zmizel. — typ: literární scéna — zdroj: Platón, Theaitétos 164e–165a, 171c–d — doporučená formulace: přímo jako scéna z dialogu.
 7. **Celý den o oštěpu** (profil Prótagora, volitelně). Při závodech zabil oštěp nešťastnou náhodou Epitíma z Farsálu. Periklés prý celý den rozebíral s Prótagorou, kdo za to „v nejpřesnějším smyslu“ může: oštěp, ten, kdo ho hodil, nebo pořadatelé. — typ: tradovaný příběh (posměšek, který podle Plútarcha šířil o otci Periklův syn Xanthippos) — zdroj: Plútarchos, Periklés 36, 3 — doporučená formulace: „Vypráví se, že…“
 
+## Doplněno po P7 (1. 10. 2026)
+
+Body z `k-overeni.md` (oddíl P7), ověřené v řeckém textu a anglickém překladu z PerseusDL (Burnet; Fowler, Lamb) a v SEP.
+
+| # | Tvrzení | Typ | Zdroj a místo | Doporučená formulace pro studenty |
+| --- | --- | --- | --- | --- |
+| 1 | Při ústupu od Délia: na ty, kdo se drží klidně a jsou připraveni se bránit, si ve válce skoro nikdo netroufne; pronásledují ty, kdo utíkají bez hlavy (προτροπάδην φεύγοντας). | vyprávění postavy (Alkibiadés) | Symposion 221b–c | „Alkibiadés věděl proč: na toho, kdo se drží takhle, si ve válce skoro nikdo netroufne. Pronásledují ty, kdo utíkají bez hlavy.“ |
+| 2 | Alkibiadés při ústupu dojel k Sókratovi a Lachétovi a řekl jim, ať se nebojí, že je neopustí. | vyprávění postavy | Symposion 221a | volitelně; souhlasí s `lide.yaml` (Alkibiadés, `proc`) |
+| 3 | Lachétova druhá odpověď: odvaha je jakási vytrvalost duše. Sókratés: vytrvalost spojená s nerozumem škodí, a není tedy odvaha; „rozumná vytrvalost“? Pak by byl odvážnější ten, kdo vydrží s vědomím, že přijdou posily a nepřítel je slabší, než jeho protivník, který vydrží bez toho; Lachés uzná, že je to naopak. | literární | Lachés 192b–193c | „Lachés to zkusil znovu: odvaha je vytrvalost…“ |
+| 4 | Nikiova odpověď: odvaha je vědění o tom, čeho se bát a co si troufnout. Domyšlená vede k vědění o všem dobrém a zlém, tedy k celé ctnosti, ne k její části; „nenašli jsme, co je odvaha“. | literární | Lachés 194d–195a, 199c–e | „Druhý rádce zkusil jinou odpověď: odvaha je vědění, čeho se bát a čeho ne. Když ji ale domysleli, popisovala už celou ctnost.“ (Nikiu ve studentském textu nejmenovat.) |
+| 5 | Za Sókratem chodili sami od sebe mladí, kteří měli nejvíc volného času (σχολή), synové nejbohatších. | doložený text (Sókratés v Obraně) | Obrana 23c | „Chodili za ním mladí, kteří měli nejvíc volného času, většinou synové nejbohatších rodin.“ |
+| 6 | Euthyfrón tvrdí, že přesně ví, co je zbožné; jinak by „nebyl k ničemu“. | literární | Euthyfrón 4e–5a | „Euthyfrón si byl jistý, že jedná zbožně. Kdyby přesně nevěděl, co je zbožné, nebyl by prý k ničemu.“ |
+| 7 | Námitku o lodích a o obci vznáší v dialogu Sókratés: o stavbě a lodích radí v sněmu jen odborníci, o obci smí mluvit kovář, švec, kupec, kormidelník, bohatý i chudý; proto se podle něj politické umění nedá naučit. Prótagorás odpoví mýtem. | literární | Prótagorás 319b–d, 320c | „Platón vypráví, jak Sókratés pochyboval, že se dá naučit, jak být dobrým občanem…“ |
+| 8 | Sofisté: profesionální učitelé, kteří cestovali po řeckém světě a učili různé obory, hlavně umění veřejně mluvit a úspěšně vést život. | výklad | SEP „The Sophists“ (M.-K. Lee, C. C. W. Taylor, rev. 2025), úvod | „Sofisté cestovali po řeckých městech a za peníze učili, jak dobře mluvit a jak uspět v životě i v obci.“ |
+| 9 | Asklépios: lékař Eryximachos ho v Symposiu nazývá „naším praotcem“, který založil lékařství. | literární / mytologie | Symposion 186e | „Asklépios byl pro Řeky zakladatel lékařství.“ Výklad posledních slov (uzdravení ze života) nepodávat. |
+| 10 | Xanthippa byla Sókratova žena; měli tři syny. | doložený fakt | SEP „Socrates“, oddíl 3; Faidón 60a, 116b | „jeho žena Xanthippa“ |
+| 11 | Prótagorás bydlel v Athénách u Kallia, syna Hipponíkova. | literární | Prótagorás 311a | „V domě, kde se ubytoval…“ |
+
 ## Tvrzení: Sókratův portrét
 
 Všechny dialogy jsou Platónovy (Xenofónta jsem pro tyto kapitoly nepoužil). Rozhovory v Lachétovi a Euthyfrónovi jsou literární; v textu je podávat jako „Platón vypráví“, ne jako záznam.

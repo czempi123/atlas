@@ -85,17 +85,19 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 
 ## Sókratův portrét a profil Prótagora (P7)
 
-1. 10. 2026. Co by příběhu pomohlo, ale v podkladech není, proto to v textu chybí:
+1. 10. 2026. **Vyřízeno týž den:** všechny body ověřené a zapsané v `celek-1-pravda.md` (oddíl Doplněno po P7); co text potřeboval, je v něm.
 
-| Bod | Kde by se hodil | Co udělat |
-| --- | --- | --- |
-| Kdo byl Asklépios (bůh lékařství) a proč mu Sókratés dlužil kohouta | Kapitola 05, poslední slova | Doložit (např. SEP „Socrates“ nebo komentář k Faidónu 118a); výklad „uzdravení ze života“ je sporný, studentům ho nepodávat jako fakt. |
-| Alkibiadés: pronásledovatelé honí ty, kdo utíkají bezhlavě, klidného nechají být (Symposion 221b–c) | Kapitola 03 a zpětná vazba Volby o ústupu | Ověřit místo a znění; pak lze doplnit, proč byl Sókratův klid i rozumný. |
-| Lachétovy další definice a Nikiova odpověď (Lachés 192b–199e) | Kapitola 02, průběh rozhovoru | Text teď jen říká, že nakonec nevěděli. Doplnit, pokud má rozhovor dostat víc kroků. |
-| Mladí za Sókratem chodili, protože měli nejvíc volného času (Obrana 23c) | Kapitola 02 | Doplnit do tvrzení v `celek-1-pravda.md`, pak lze použít. |
-| Euthyfrón tvrdí, že přesně ví, co je zbožné (Euthyfrón 4e–5a) | Kapitola 04 | Ověřit; zesílilo by to scénu (znovu člověk, který si myslí, že ví). |
-| Kdo v dialogu Prótagorás vznese námitku o lodích a o obci (319b–d) | Prótagorás, kapitola 02 | Text ji uvádí bez přisouzení; ověřit, zda ji vznáší Sókratés, a pak to říct. |
-| Co je sofista (krátké vysvětlení pro studenty) | Úvod Prótagorova profilu | Doložit jednou větou ze SEP „The Sophists“ nebo IEP; teď stojí jen „nejslavnější ze sofistů“. |
-| Obraz flétny korybantů (Kritón 54d) | Kapitola 05 | Vynechán, studentům by bez výkladu nic neřekl; ponecháno „zněla tak silně, že nic jiného neslyšel“. |
+| Bod | Stav |
+| --- | --- |
+| ~~Asklépios~~ | Symposion 186e: zakladatel lékařství; v textu jedna věta, výklad posledních slov se nepodává. |
+| ~~Pronásledovatelé honí ty, kdo utíkají bez hlavy~~ | Symposion 221b–c; v kapitole 03. |
+| ~~Lachétovy další definice a Nikiova odpověď~~ | Lachés 192b–193c, 194d–199e; v kapitole 02, Nikiás bez jména („druhý rádce“). |
+| ~~Mladí s nejvíc volného času~~ | Obrana 23c; v kapitole 02. |
+| ~~Euthyfrón přesně ví, co je zbožné~~ | Euthyfrón 4e–5a; v kapitole 04. |
+| ~~Kdo vznáší námitku o lodích a o obci~~ | Sókratés, Prótagorás 319b–d; v profilu Prótagora. |
+| ~~Co je sofista~~ | SEP „The Sophists“; v úvodu profilu. |
+| Obraz flétny korybantů (Kritón 54d) | Vynechán natrvalo; bez výkladu by studentům nic neřekl. |
 
 Vědomě vynecháno podle doporučení v podkladech: počty hlasů u Diogena Laertia a velikost poroty, Platón okřiknutý porotou, potrestání žalobců, Platónova nemoc (Faidón 59b), bolehlav, Prótagorovo vyhnání, pálení knih a utonutí, Démokritos jako jeho učitel, Euathlos, částka sto min. Lachétův citát (Lachés 190e) je jen v nepřímé řeči, protože v `zdroje.yaml` není.
+
+Po revizi autora vynechány i vedlejší postavy a popisy, které příběh nenesou (rozhodnutí 1. 10. 2026, „Jména střídmě“).

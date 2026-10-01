@@ -205,7 +205,7 @@
     nazev: měřítko
     proc: Člověk je měřítkem všech věcí.
     zdroj: iep-protagoras
-  zdroje: [sep-protagoras, iep-protagoras, platon-menon, dl-ix-50]
+  zdroje: [sep-protagoras, sep-sophists, iep-protagoras, platon-menon, platon-protagoras, plutarchos-perikles, dl-ix-50]
 
 - id: zenon-z-eleje
   jmeno: Zénón z Eleje

@@ -33,10 +33,12 @@ Stránka směru a pojmu se řídí stejnými zásadami (scéna, nejsilnější v
 
 ## Jak najít a vyprávět příběh
 
-- **Hledej chvíli rozhodnutí nebo otázky,** ne životopis. Dobrá scéna má člověka, místo a napětí: Kritón sedí před úsvitem u spícího Sókrata a přišel ho přemluvit k útěku. Hippokratés buší holí na dveře, protože do Athén přijel Prótagorás.
+- **Hledej chvíli rozhodnutí nebo otázky,** ne životopis. Dobrá scéna má člověka, místo a napětí: Kritón sedí před úsvitem u spícího Sókrata a přišel ho přemluvit k útěku. mladý Athéňan buší holí na dveře, protože do Athén přijel Prótagorás.
 - **Scéna nese myšlenku.** Lachés definuje odvahu jako „neutéct“, a přitom chválí Sókrata za ústup od Délia. Ze dvou kapitol tak vyroste jedna otázka, kterou student sám rozhodne.
 - **Druh pramene řekni jednou větou na začátku scény:** „Platón vypráví…“ (scéna z dialogu), „Alkibiadés vyprávěl…“ (vyprávění postavy), „Vypráví se…“ (tradovaný příběh), „Představ si…“ (vymyšlená situace). Dál už vyprávěj bez výhrad.
 - **Přímá řeč skutečných osob jen jako citát** ze `zdroje.yaml` přes `<Citat id="…" />`. Ostatní v nepřímé řeči: „Lachés odpověděl, že odvážný je ten, kdo…“. Ani otázku filozofa nepiš jako vymyšlenou přímou řeč.
+- **Jména a podrobnosti střídmě** (`docs/styl.md`, pravidlo 6). Jménem nazvi jen toho, kdo nese příběh nebo myšlenku; ostatní popiš tím, kým jsou: „dva athénští otcové“, „druhý rádce“, „přítel, který u toho byl“, „přátelé z ciziny“. Vzhled, místa, částky a seznamy žáků jen tam, kde něco říkají o člověku nebo o myšlence. V Sókratově portrétu stačí Alkibiadés, Lachés, Euthyfrón, Kritón, Xanthippa a Platón.
+- **Myšlenka má přednost před ozdobou.** Když scéna nabízí další krok argumentu (Lachétova druhá definice, Sókratova námitka o lodích), vezmi ho; když nabízí jen další jméno nebo kulisu, vynech ji.
 - **Sporné vynech,** nejisté zmírni („kolem roku“, „asi“, „prý“). Pochybnosti o pramenech patří do podkladů, ne do textu.
 - **Protivník a pokušitel dostanou nejsilnější verzi.** Kritónovy důvody k útěku jsou dobré důvody, jinak Sókratova odpověď nic neváží.
 - **Konec kapitoly** nech na silné větě nebo na otázce pro studenta v kurzívě. Pointu nevysvětluj.
@@ -153,9 +155,9 @@ Poznámky k šabloně:
 
 **Úvod scénou (profil Prótagora):**
 
-> Platón vypráví, jak jednou před úsvitem bušil někdo holí na Sókratovy dveře. Byl to mladý Hippokratés a nesl novinu: do Athén přijel Prótagorás! Chtěl, aby ho k němu Sókratés vzal. Rád by Prótagorovi zaplatil, jen aby ho udělal moudrým.
+> Platón vypráví, jak jednou před úsvitem bušil někdo holí na Sókratovy dveře. Byl to jeden mladý Athéňan a nesl novinu: do Athén přijel Prótagorás! Chtěl, aby ho k němu Sókratés vzal. Rád by Prótagorovi zaplatil, jen aby ho udělal moudrým.
 
-Proč funguje: první věta řekne pramen a hned je tu zvuk, čas a spěch. Fakta o Prótagorovi (první placený učitel, víc než Feidiás) přijdou až potom.
+Proč funguje: první věta řekne pramen a hned je tu zvuk, čas a spěch. Mladík nemusí mít jméno: příběh nese jeho spěch, ne on. Fakta o Prótagorovi (kdo byli sofisté, první placený učitel) přijdou až potom.
 
 **Scéna, ze které vyroste blok (Sókratés, kapitola 03):**
 
@@ -165,13 +167,13 @@ Pak Volba „Byl Sókratův ústup od Délia odvážný?“ s Lachétovou defini
 
 **Nejsilnější verze druhé strany (Sókratés, kapitola 05):**
 
-> Peníze jsou připravené, přispějí i Simmiás a Kebés z Théb. V Thesálii jsou přátelé, kteří ho ochrání. A když zůstane, zradí sám sebe, udělá radost nepřátelům a opustí vlastní syny.
+> Peníze jsou připravené, přispějí i přátelé z ciziny. Daleko od Athén čekají lidé, kteří ho ochrání. A když zůstane, zradí sám sebe, udělá radost nepřátelům a opustí vlastní syny.
 
-Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď s citátem `kriton-49c`.
+Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď s citátem `kriton-49c`. Jména dárců a cíl útěku (Simmiás, Kebés, Thesálie) by tu jen zdržovala.
 
 **Tradovaný příběh s otázkou na konci (profil Prótagora, kapitola 02):**
 
-> Vypráví se, že při závodech zabil oštěp nešťastnou náhodou Epitíma z Farsálu. Periklés prý pak s Prótagorou celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův syn Xanthippos.
+> Vypráví se, že při závodech zabil oštěp nešťastnou náhodou jednoho muže. Periklés prý pak s Prótagorou celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův vlastní syn.
 >
 > *Kdo za to podle tebe může? A je to pro tebe hloupá otázka, nebo ta nejdůležitější?*
 
@@ -184,6 +186,7 @@ Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď
 ## Rychlá kontrola před odevzdáním
 
 - Začíná úvod i každá kapitola scénou, člověkem nebo otázkou?
+- Nese každé jméno a každý detail příběh nebo myšlenku? Ostatní popsat, nebo vynechat.
 - Má každé historické tvrzení podklad, a co chybělo, je v `k-overeni.md`?
 - Je přímá řeč skutečných osob jen v `<Citat />`? Má scéna z dialogu „Platón vypráví…“ a tradovaný příběh „Vypráví se…“?
 - Stojí blok před tím, co udělal filozof? Má každá volba vlastní zpětnou vazbu s důvodem?
