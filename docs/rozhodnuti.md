@@ -8,7 +8,7 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | --- | --- |
 | Sókratův portrét a profil Prótagora schváleny; finální čtení proběhne u celého celku po revizi (P10) | Autor |
 | Stránka velké otázky 7 má čtyři hlasy: Parmenidés, Prótagorás, Sókratés, Aristotelés; Platón, Pyrrhón a Epikúros přibudou s vlastními profily | Pravidlo „Jména střídmě“: čtyři hlasy, které spolu opravdu vedou spor |
-| Další krok P8: nejdřív šablona stránky velké otázky (`/otazka/<slug>/`, nový typ stránky), pak otázka 7 a cesta 1 s Prótagorou; zadání v `docs/plan.md` | Stránka velké otázky zatím neexistuje, přehled `/otazky/` má jen kotvy |
+| Další krok P8: nejdřív šablona stránky velké otázky (`/otazka/<slug>/`, nový typ stránky), pak otázka 7 a cesta 1 s Prótagorem; zadání v `docs/plan.md` | Stránka velké otázky zatím neexistuje, přehled `/otazky/` má jen kotvy |
 
 ## 1. 10. 2026: Sókratův portrét a profil Prótagora (P7)
 

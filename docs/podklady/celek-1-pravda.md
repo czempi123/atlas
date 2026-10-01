@@ -14,7 +14,7 @@ Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 7, cesta 1 „Kdy mám dobrý 
 4. **Kohout pro Asklépia** (kap. 05). Žalářník se s ním loučí v slzách. Sókratés vypije číši klidně, přátelé se rozpláčou, on je okřikne. Když mu chlad stoupá od nohou k srdci, odkryje tvář a řekne: „Kritóne, dlužíme Asklépiovi kohouta. Splaťte ho, nezapomeňte.“ — typ: Platónův Faidón (vypravěč Faidón; Platón podle textu nebyl přítomen, 59b) — zdroj: Faidón 116b–118a — doporučená formulace: „Faidón, který u toho byl, vyprávěl…“
 5. **Hippokratés buší na dveře** (profil Prótagora). Před úsvitem buší mladý Hippokratés holí na Sókratovy dveře: Prótagorás přijel do Athén! Chce, aby ho Sókratés k němu vzal, protože by mu rád zaplatil, aby ho udělal moudrým. V Kalliově domě pak Prótagorás chodí sloupovím a za ním dva zástupy posluchačů, kteří se při každém obratu rozestoupí a seřadí znovu za ním. — typ: literární scéna — zdroj: Platón, Prótagorás 310a–311a, 314e–315b — doporučená formulace: „Platón vypráví, jak…“
 6. **Mrtvý Prótagorás vystrčí hlavu ze země** (spor v cestě 1). V Theaitétovi je Prótagorás už mrtvý a jeho přítel Theodóros ho nechce hájit. Sókratés tedy hájí „sirotka“ sám a pak ho vyvrací. Přizná ale, že kdyby Prótagorás vystrčil hlavu ze země, nejspíš by je oba usvědčil z nesmyslů a zase zmizel. — typ: literární scéna — zdroj: Platón, Theaitétos 164e–165a, 171c–d — doporučená formulace: přímo jako scéna z dialogu.
-7. **Celý den o oštěpu** (profil Prótagora, volitelně). Při závodech zabil oštěp nešťastnou náhodou Epitíma z Farsálu. Periklés prý celý den rozebíral s Prótagorou, kdo za to „v nejpřesnějším smyslu“ může: oštěp, ten, kdo ho hodil, nebo pořadatelé. — typ: tradovaný příběh (posměšek, který podle Plútarcha šířil o otci Periklův syn Xanthippos) — zdroj: Plútarchos, Periklés 36, 3 — doporučená formulace: „Vypráví se, že…“
+7. **Celý den o oštěpu** (profil Prótagora, volitelně). Při závodech zabil oštěp nešťastnou náhodou Epitíma z Farsálu. Periklés prý celý den rozebíral s Prótagorem, kdo za to „v nejpřesnějším smyslu“ může: oštěp, ten, kdo ho hodil, nebo pořadatelé. — typ: tradovaný příběh (posměšek, který podle Plútarcha šířil o otci Periklův syn Xanthippos) — zdroj: Plútarchos, Periklés 36, 3 — doporučená formulace: „Vypráví se, že…“
 
 ## Doplněno po P7 (1. 10. 2026)
 
@@ -73,7 +73,7 @@ Všechny dialogy jsou Platónovy (Xenofónta jsem pro tyto kapitoly nepoužil). 
 | 1 | Úvodní scéna: Sókratés čeká u sloupoví krále-archonta, kam ho předvolala Melétova žaloba. Potká Euthyfróna, který tu žaluje vlastního otce z vraždy: otec nechal spoutaného nádeníka, který v opilosti zabil otroka, ležet v příkopu, a ten zemřel hladem a zimou dřív, než se vrátil posel od vykladače. | literární scéna | Euthyfrón 2a–b, 3e–4d | „Platón vypráví, že v den, kdy šel Sókratés k úřadu kvůli žalobě, potkal…“ |
 | 2 | Sókratova otázka: Je zbožné to, co milují bohové, proto, že je to zbožné? Nebo je zbožné proto, že to bohové milují? | literární (dilema) | Euthyfrón 10a | přímo jako otázka |
 | 3 | Melétos je podle Sókrata mladý a neznámý muž z démy Pitthos s rovnými vlasy, řídkým vousem a zahnutým nosem. | literární | Euthyfrón 2b | lze použít jako barvitý detail („Platón ho popisuje…“) |
-| 4 | Theaitétos končí tím, že Sókratés musí jít ke sloupoví krále-archonta kvůli Melétově žalobě. Platón tak spor s Prótagorou staví do týchž dnů jako soud. | doložený fakt (text) | Theaitétos 210d | „Ještě ten den musel jít k úřadu kvůli žalobě.“ |
+| 4 | Theaitétos končí tím, že Sókratés musí jít ke sloupoví krále-archonta kvůli Melétově žalobě. Platón tak spor s Prótagorem staví do týchž dnů jako soud. | doložený fakt (text) | Theaitétos 210d | „Ještě ten den musel jít k úřadu kvůli žalobě.“ |
 | 5 | Žalobci: Melétos, Anytos a Lykón. | doložený fakt | Obrana 36a–b; SEP „Socrates“, oddíl 3 | přímo |
 | 6 | Obžaloba: Sókratés je vinen, protože neuznává bohy, které uznává obec, a zavádí jiná, nová božstva; je vinen i tím, že kazí mládež. Navržený trest: smrt. | doložené znění (podle Favorína se listina dochovala v athénském archivu Métróu) | Diogenés Laertios II, 40; obsahem odpovídá Obrana 24b–c | „Žaloba zněla: Sókratés neuznává bohy, které uznává obec, zavádí nová božstva a kazí mládež. Navržený trest: smrt.“ |
 | 7 | Formálně šlo o žalobu z bezbožnosti (asebeia); Melétos byl mladý básník. | výklad | SEP „Socrates“, oddíl 3 | přímo |
@@ -147,7 +147,7 @@ Všechny dialogy jsou Platónovy (Xenofónta jsem pro tyto kapitoly nepoužil). 
 2. Budoucnost: o tom, jestli dostanu horečku, rozhodne lékař lépe než já; o víně vinař, o hudbě hudebník, o hostině kuchař. A Prótagorás sám tvrdil, že líp než kdokoli jiný ví, co u soudu zapůsobí. Aspoň o budoucnosti tedy není každý stejné měřítko (Theaitétos 178b–179b). — výklad; **nejsilnější tah**, protože nepotřebuje logický trik, jen běžnou zkušenost.
 3. Posměšek: proč ne prase nebo pavián jako měřítko všech věcí (Theaitétos 161c). — literární; jen jako barva, ne jako argument.
 
-**Třetí hlas (volitelně, na stránku velké otázky):** Aristotelés odpovídá těm, kdo tvrdí, že všechno, co se jeví, je pravdivé: tím dělají všechno relativním, a museli by poctivě říkat ne „co se jeví, je“, ale „co se jeví, je pro toho, komu se jeví, kdy a jak se mu jeví“ (Metafyzika IV, 6, 1011a17–24; Prótagoru jmenuje v IV, 4–5), a pak podá definici pravdy (IV, 7, 1011b26–27).
+**Třetí hlas (volitelně, na stránku velké otázky):** Aristotelés odpovídá těm, kdo tvrdí, že všechno, co se jeví, je pravdivé: tím dělají všechno relativním, a museli by poctivě říkat ne „co se jeví, je“, ale „co se jeví, je pro toho, komu se jeví, kdy a jak se mu jeví“ (Metafyzika IV, 6, 1011a17–24; Prótagora jmenuje v IV, 4–5), a pak podá definici pravdy (IV, 7, 1011b26–27).
 
 ## Tvrzení: nový případ (šaty, 2015)
 
@@ -159,7 +159,7 @@ Všechny dialogy jsou Platónovy (Xenofónta jsem pro tyto kapitoly nepoužil). 
 | 4 | Vysvětlení: mozek odhaduje, jakým světlem je věc osvětlená. Kdo předpokládá chladné denní světlo (modrou oblohu), odečte modrou a vidí bílou a zlatou; kdo předpokládá teplé umělé světlo, vidí modrou a černou. Pixely fotky jsou samy o sobě modré a hnědé. | výklad (hypotéza autorů studie) | tamtéž | „Mozek si domýšlí, v jakém světle šaty jsou.“ |
 | 5 | Prodej šatů vzrostl; firma za 45 minut dostala asi 150 telefonátů s dotazem na bílozlatou verzi. | doložený fakt | NBC News (Ian Johnson) | volitelně |
 
-**Proč případ sedí.** Pro Prótagoru jsou šaty jako vítr z Theaitéta 152b: každý vidí, co vidí, a nikdo se nemýlí. Pro Sókrata existuje odpověď, kterou lze prověřit: podívat se na šaty v jiném světle, zeptat se toho, kdo je viděl naživo. A Prótagorův lékař z 167a tu má svůj protějšek: vědci vysvětlí, proč to vidíme jinak, ale nikoho nepřesvědčí, aby to viděl jinak.
+**Proč případ sedí.** Pro Prótagora jsou šaty jako vítr z Theaitéta 152b: každý vidí, co vidí, a nikdo se nemýlí. Pro Sókrata existuje odpověď, kterou lze prověřit: podívat se na šaty v jiném světle, zeptat se toho, kdo je viděl naživo. A Prótagorův lékař z 167a tu má svůj protějšek: vědci vysvětlí, proč to vidíme jinak, ale nikoho nepřesvědčí, aby to viděl jinak.
 
 ## Velká otázka 7: jak odpovídali (období 1 a 2)
 

@@ -173,7 +173,7 @@ Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď
 
 **Tradovaný příběh s otázkou na konci (profil Prótagora, kapitola 02):**
 
-> Vypráví se, že při závodech zabil oštěp nešťastnou náhodou jednoho muže. Periklés prý pak s Prótagorou celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův vlastní syn.
+> Vypráví se, že při závodech zabil oštěp nešťastnou náhodou jednoho muže. Periklés prý pak s Prótagorem celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův vlastní syn.
 >
 > *Kdo za to podle tebe může? A je to pro tebe hloupá otázka, nebo ta nejdůležitější?*
 
