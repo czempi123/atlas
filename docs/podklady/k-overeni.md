@@ -1,6 +1,6 @@
 # K ověření
 
-29. 9. 2026 · P2. Co se při zakládání dat období 1 a 2 nepodařilo ověřit, a proto to v `src/data/` zatím není. Každý bod má návrh, co s ním. Postup ověřování je v `docs/podklady/data-obdobi-1-2.md`. Doplněno 1. 10. 2026 (P6, celek 1): vyřízené body jsou označené, nové otevřené jsou v posledním oddílu.
+29. 9. 2026 · P2. Co se při zakládání dat období 1 a 2 nepodařilo ověřit, a proto to v `src/data/` zatím není. Každý bod má návrh, co s ním. Postup ověřování je v `docs/podklady/data-obdobi-1-2.md`. Doplněno 1. 10. 2026 (P6, celek 1 a celek 2): vyřízené body jsou označené, nové otevřené jsou v oddílech celků na konci.
 
 ## Lidé, kteří v datech zatím chybějí
 
@@ -11,7 +11,7 @@
 | Čuang-c’ (okno období 2) | SEP („Zhuangzi“) uvádí jen „pozdní 4. století př. n. l.“; tradiční 369–286 z návrhu P1 jsem nedoložil. | Dohledat v Chan, *A Source Book in Chinese Philosophy*, nebo v IEP. |
 | Hieroklés (stoik) | Heslo IEP neexistuje na očekávané adrese; datace „2. st. n. l.“ nemá odborný zdroj. | Dohledat v Ramelli, *Hierocles the Stoic* (SBL 2009); obraz soustředných kruhů je u Stobaia 4.27.23. |
 | Sextus Empiricus | SEP: „víme málo nebo nic o tom, kdy a kde žil“ (asi 2.–3. st. n. l.). | Nechat bez dat jako medailonek bez místa na mapě, nebo vynechat z mapy. Schéma to umí. |
-| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). |
+| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. |
 
 ## Chybějící roky a místa u lidí, kteří v datech jsou
 
@@ -21,7 +21,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | --- | --- | --- | --- |
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
 | Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
-| Epikúros | místo narození | SEP: athénský občan, vyrůstal na Samu. | V datech jen pobyt na Samu do 321. |
+| ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
 | Epiktétos | roky v Římě a v Níkopoli | SEP: Domitianův edikt roku 89; SEP „Stoicism“: 93. | Po rozhodnutí doplnit `do`/`od`. **Rozpor pramenů.** |
 | Marcus Aurelius | místo smrti, Carnuntum | Britannica: zemřel ve Vindoboně nebo v Sirmiu; Carnuntum a Granua jsou v nadpisech knih Hovorů (I a II/III), stránka je nepodala. | Doplnit Carnuntum z Hovorů (vydání Haines, Loeb) po ověření. |
 | Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
@@ -120,3 +120,26 @@ Vědomě vynecháno: Sókratův posměšek o praseti a paviánovi jako měřítk
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
 | ~~Prótagorova odpověď na sebevyvrácení (Theaitétos 171a–d)~~ | **Vyřízeno 1. 10.:** autor rozhodl, že pointa sporu má přednost před sporem badatelů; odpověď je ve Sporu v kroku 5 jako výklad místo argumentu „obce“. | — |
+
+## Celek 2 „Jak mám žít?“ (P6)
+
+1. 10. 2026. Podklady jsou v `docs/podklady/celek-2-jak-zit.md`. Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Obrázek Epikúra | Hlava z Metropolitan Museum (inv. 11.90) je podle muzea Public Domain (Open Access, CC0). Soubor jsem nestahoval, stažení potřebuje souhlas autora. | Uložit `https://images.metmuseum.org/CRDImages/gr/original/DP333053.jpg` jako `public/obrazky/epikuros-met.jpg`, pak zapsat do `obrazky` a `obrazek: epikuros-met` u Epikúra. |
+| Obrázek Diogena | Spolehlivá podobizna neexistuje: busty v Kapitolských muzeích se uvádějí s otazníkem, soška z vily Albani je silně restaurovaná. | Doporučeno: zůstat u lucerny (atribut), jako Prótagorás u mince. Rozhodnout. |
+| Mince ze Sinópy | IEP: aféra se znehodnocením je díky mincím „jistá“. Mince s úředníkem ΙΚΕΣΙΟ existují a některé mají zásek, ale Corpus Nummorum (SNG France 7) je datuje asi 330–300 př. n. l., tedy po Diogenově odchodu. Starší literaturu (Seltman 1938) jsem neviděl. | Ve studentském textu jen aféra s mincemi a vyhnanství; „mince s otcovým jménem“ nepoužívat, dokud se nedohledá odborná numismatická studie. |
+| Vatikánský výrok 23 | Rukopis má „ctnost“ (ἀρετή), vydavatelé „žádoucí“ (αἱρετή); SEP uvádí obě. | Citát do dat nedán; výklad přátelství stojí na KD 27 a DL X, 120. |
+| Vatikánský výrok 33 | Jméno Dia je doplněk vydavatelů. | Citát `vs-33` v datech s poznámkou; nic dalšího. |
+| Senekův nápis na Zahradě | Známe jen ze Seneky (Dopisy 21, 10); rukopisy se v místě nápisu rozcházejí. | Ve studentském textu „Seneca popisuje…“, nikdy „na bráně stálo“. |
+| Leontion | Jen z nepřátelských pramenů (Timokratés u DL X, 4–7; Cicero, O povaze bohů I, 93). | Ve studentském textu bez slova hetéra; jen že napsala spis proti Theofrastovi. |
+| Tacitova řeč Seneky k Neronovi (Letopisy XIV, 53–54) | Řeč je historikova stylizace; rok 62 podle rámce knihy XIV, nekontroloval jsem ho proti odbornému heslu. | Při portrétu Seneky ověřit datum v SEP nebo komentáři. |
+| České překlady | Kolářův Diogenés Laertios a české překlady Seneky jsem neměl v ruce. | Pokud autor chce publikované překlady, porovnat; jinak platí vlastní převody (rozhodnutí z celku 1). |
+| Diogenés v SEP | SEP heslo o kynicích ani o Diogenovi nemá. | Výklad stojí na IEP (Piering) a Routledge (Branham); při revizi případně doplnit Branham a Goulet-Cazé (ed.), *The Cynics* (1996). |
+
+Vyřízeno v celku 2: Epikúrovo místo narození (viz výše), Epikúrův postoj ke kynikům (DL X, 119, ověřeno v řečtině), Alexandr u Diogena ve třech pramenech (DL VI, 38; Plútarchos, Alexandr 14; Arriános VII, 2, 1).
+
+Vědomě vynecháno: Diogenovy tělesné potřeby na veřejnosti (DL VI, 46, 69), verze jeho smrti, „Kynici, nepřátelé Řecka“ (DL X, 8, nepřátelský pramen), konkrétní pomluvy o Epikúrovi (zvracení, hetéry), cena Zahrady (80 min), Epikúrův věk při smrti (DL 72, SEP 70–71).
+
+**Do skillu `atlas-overeni`, tabulka známých zkreslení:** „Hledám poctivého člověka“ (Diogenés) → řecky jen „hledám člověka“ (DL VI, 41); „Diogenés v sudu“ → pithos, hliněná zásobnice (DL VI, 23); „epikurejec = požitkář“ → Epikúros sám odmítá (Dopis Menoikeovi 131).

@@ -79,7 +79,7 @@
     nazev: váhy
     proc: Ctnost je střed mezi dvěma krajnostmi.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika]
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika]
 
 - id: thales
   jmeno: Thalés
@@ -570,8 +570,8 @@
     ikona: lantern
     nazev: lucerna
     proc: Za bílého dne hledal s lucernou člověka.
-    zdroj: iep-diogenes
-  zdroje: [iep-diogenes, iep-cynics, dl-vi-76, rep-diogenes]
+    zdroj: dl-vi-41
+  zdroje: [iep-diogenes, iep-cynics, dl-vi-20, dl-vi-41, dl-vi-69, dl-vi-104, dl-vi-76, rep-diogenes]
 
 - id: epikuros
   jmeno: Epikúros
@@ -583,7 +583,8 @@
   smery: [epikureismus]
   otazky: [1, 3, 7]
   mista:
-    - { misto: samos, role: pobyt, do: -321, zdroj: sep-epicurus }
+    - { misto: samos, role: pobyt, do: -323, zdroj: dl-x-1 }
+    - { misto: athenes, role: pobyt, od: -323, do: -321, zdroj: dl-x-1 }
     - { misto: kolofon, role: pobyt, od: -321, zdroj: sep-epicurus }
     - { misto: mytilena, role: pusobeni, od: -311, priblizne: true, zdroj: sep-epicurus }
     - { misto: lampsakos, role: pusobeni, zdroj: sep-epicurus }
@@ -596,7 +597,7 @@
     nazev: výhonek
     proc: Jeho škole se říkalo Zahrada.
     zdroj: sep-epicurus
-  zdroje: [sep-epicurus, dl-x-31]
+  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, dl-x-31]
 
 - id: seneca
   jmeno: Seneca
@@ -621,7 +622,7 @@
     nazev: přesýpací hodiny
     proc: Psal o tom, že nemáme málo času, jen ho hodně promarníme.
     zdroj: seneca-brevitate
-  zdroje: [sep-seneca, seneca-brevitate]
+  zdroje: [sep-seneca, seneca-brevitate, seneca-vita-beata]
 
 - id: epiktetos
   jmeno: Epiktétos
