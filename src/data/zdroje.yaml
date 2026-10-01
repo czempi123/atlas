@@ -263,7 +263,14 @@ citaty:
       podle: "řecký text (Burnet) a anglický překlad W. R. M. Lamba; zkráceno"
     zdroj: platon-menon
 
-# Zatím žádný obrázek: Wikimedia Commons nebyl při založení projektu ani při ověřování celku 1 (1. 10. 2026) nástrojům dostupný.
-# Kandidát pro Sókrata (busta z Louvru, Ma 59) je popsaný v docs/podklady/celek-1-pravda.md; zapíše se, až autor potvrdí licenci a soubor bude v public/.
-# Deska do té doby ukazuje minci s atributem (docs/design.md, oddíl Obrázky).
-obrazky: []
+# Obrázky: soubor v public/, autor a licence se ukazují v Pramenech stránky.
+# Kdo obrázek nemá, má na desce minci s atributem (docs/design.md, oddíl Obrázky).
+# Commons nástrojům nevydá soubor: licenci ověřuje a soubor stahuje autor (docs/podklady/celek-1-pravda.md).
+obrazky:
+  - id: sokrates-louvre
+    soubor: obrazky/sokrates-louvre.jpg
+    popisek: "Sókratés. Římská mramorová busta z 1. století, snad podle ztracené bronzové sochy od Lýsippa."
+    autor: "Eric Gaba (Wikimedia Commons, uživatel Sting), 2005"
+    instituce: "Musée du Louvre, Paříž, inv. Ma 59"
+    licence: "CC BY-SA 2.5"
+    url: "https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg"

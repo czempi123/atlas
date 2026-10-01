@@ -11,7 +11,8 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | Spor Sókratés × Prótagorás v cestě 1 se bere z Platónova Theaitéta a podává se jako spor, který si představil Platón | Skutečný záznam jejich hádky o pravdě neexistuje; Prótagorás je v dialogu už mrtvý |
 | Nový případ k cestě 1: šaty z roku 2015 (modročerné, nebo bílozlaté?) | Vnímání se liší jako Prótagorův vítr, a přitom existuje ověřitelná odpověď |
 | Citáty celku 1 jsou vlastní převody z řeckého textu; publikované české překlady se nepřebírají | Autor |
-| Fotografie busty Sókrata z Louvru (Eric Gaba, CC BY-SA 2.5) se použije; autor a licence budou v Pramenech stránky | Autor ověřil licenci na Commons |
+| Fotografie busty Sókrata z Louvru (Eric Gaba, CC BY-SA 2.5) je na desce Sókratovy stránky; autor a licence jsou v Pramenech (oddíl Obrázky), mince s kalichem se přesunula k popisku „Proč kalich?“ | Autor ověřil licenci na Commons; CC BY-SA vyžaduje uvedení autora a licence; bez mince by „Proč kalich?“ ztratilo obraz |
+| Příběh nepřebírá portrét osoby, jen obraz předaný přímo | Popisek Příběhu patří k místu scény (Delfy), ne k bustě |
 
 ## 1. 10. 2026: Schválení P5
 

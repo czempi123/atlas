@@ -81,4 +81,4 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Dramatické datum dialogu Prótagorás | Neověřeno; pro text není potřeba. | Neuvádět rok setkání. |
 | Velikost poroty a počty hlasů u Diogena Laertia II, 41–42 | Prameny se rozcházejí, velikost poroty se jen dovozuje. | Ve studentském textu jen Obrana 36a (třicet hlasů). |
 | ~~2. pád Pýthagorás, Anaxagorás~~ | **Vyřízeno 1. 10.:** autor rozhodl pro vzor pán, v datech Pýthagora, Anaxagora. | — |
-| Obrázek Sókrata | Autor 1. 10. potvrdil licenci na Commons; soubor musí stáhnout sám (nástroje na Commons nedosáhnou). | Uložit do `public/obrazky/sokrates-louvre.jpg`, pak zapsat do dat. |
+| ~~Obrázek Sókrata~~ | **Vyřízeno 1. 10.:** autor licenci potvrdil a soubor stáhl; v datech jako `sokrates-louvre`. | — |

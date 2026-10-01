@@ -1,6 +1,7 @@
 ---
 // Příběh: krátká scéna se stejnou typografií jako profil. Vedle ní deska v barvě období:
-// obraz, když ho máme (s popiskem a licencí v zdroje.yaml), jinak ornament a mince s atributem osoby.
+// obraz scény, když ho předáme v `obrazek` (s popiskem a licencí v zdroje.yaml), jinak ornament a mince
+// s atributem osoby. Portrét osoby se tu nepoužije: popisek patří k místu scény, ne k podobě.
 // Bez JavaScriptu; nic se neukládá.
 // Použití v MDX:
 // <Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Odpověď *z Delf*" popisek="Delfy, Apollónova věštírna.">
@@ -32,7 +33,7 @@ if (!obdobi) throw new Error('Příběh potřebuje osobu nebo období.');
 ---
 <section class:list={['pribeh', `obdobi-${obdobi}`]} id={id}>
   <div class="pribeh__deska">
-    <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} pomer="4 / 3">{popisek}</Deska>
+    <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} obrazOsoby={false} pomer="4 / 3">{popisek}</Deska>
   </div>
   <div class="pribeh__text">
     {nadtitulek && <p class="t-nadtitulek pribeh__nadtitulek">{nadtitulek}</p>}

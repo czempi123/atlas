@@ -192,7 +192,7 @@ Přeneseno do `src/data/` v témže commitu jako tento list:
 
 # vztahy.yaml
 - { od: sokrates, k: protagoras, typ: znali-se, tradovany: true,
-    poznamka: "setkání v Kalliově domě zná jen Platónův dialog Prótagorás", zdroj: platon-protagoras }
+    poznamka: "Platón líčí jejich setkání v Kalliově domě", zdroj: platon-protagoras }   # poznámka se ukazuje studentům
 
 # udalosti.yaml
 - { id: thurioi-zakony, nazev: Prótagorás píše zákony pro Thurioi, od: -444, obdobi: [1],
@@ -205,10 +205,10 @@ Nepřidávám: vztah Démokritos → Prótagorás (chronologicky nemožný), pol
 
 | Soubor | Co zobrazuje | Autor / instituce | Licence | Odkaz |
 | --- | --- | --- | --- | --- |
-| Socrates_Louvre.jpg (kandidát) | Sókratova busta, římská mramorová kopie (1. st.), snad podle Lýsippova bronzu | foto Eric Gaba (uživatel Sting), 13. 7. 2005; Louvre, inv. Ma 59 (MR 652) | CC BY-SA 2.5 | commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg — **neověřeno**: Commons mému nástroji přístup nedal, údaje jsou z kopie stránky (Wikipedia for Schools na solarspell-dls.sfis.asu.edu) |
+| Socrates_Louvre.jpg → `public/obrazky/sokrates-louvre.jpg` | Sókratova busta, římská mramorová kopie (1. st.), snad podle Lýsippova bronzu | foto Eric Gaba (uživatel Sting), 13. 7. 2005; Louvre, inv. Ma 59 (MR 652) | CC BY-SA 2.5 | commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg — licenci ověřil autor na Commons 1. 10. 2026 |
 | Prótagorás | autentický portrét neexistuje; barokní obrazy (Ribera, Salvator Rosa) jsou smyšlené podoby | — | — | doporučuji minci s měřítkem |
 
-Do `zdroje.yaml` (pole `obrazky`) jsem busta nezapsal: test vyžaduje soubor v `public/` a licenci jsem neviděl na původní stránce.
+**1. 10.:** autor licenci na Commons potvrdil a soubor stáhl; metadata EXIF souboru uvádějí „Copyright: 2005 – Eric Gaba for Wikimedia Commons“. Obrázek je v datech jako `sokrates-louvre` (`public/obrazky/sokrates-louvre.jpg`, 960 × 1280 px), autor a licence jsou v Pramenech Sókratovy stránky. V Příběhu (cesta 1, Delfy) se portrét nepoužívá, protože popisek tam patří k místu scény.
 
 ## Rozpory a rozhodnutí
 

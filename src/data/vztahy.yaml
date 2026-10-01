@@ -11,7 +11,7 @@
 - { od: sokrates, k: kriton, typ: znali-se, poznamka: "vrstevník a přítel", zdroj: platon-obrana }
 - { od: sokrates, k: alkibiades, typ: znali-se, poznamka: "spolu u Potidaie a Délia", zdroj: britannica-alcibiades }
 - { od: aristofanes, k: sokrates, typ: polemika, poznamka: "zesměšnil ho v Oblacích", zdroj: sep-socrates }
-- { od: sokrates, k: protagoras, typ: znali-se, tradovany: true, poznamka: "setkání v Kalliově domě zná jen Platónův dialog Prótagorás", zdroj: platon-protagoras }
+- { od: sokrates, k: protagoras, typ: znali-se, tradovany: true, poznamka: "Platón líčí jejich setkání v Kalliově domě", zdroj: platon-protagoras }
 
 # Akademie a Lykeion
 - { od: platon, k: aristoteles, typ: ucitel, zdroj: sep-aristotle }

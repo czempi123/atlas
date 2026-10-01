@@ -74,7 +74,8 @@ describe('kontroly samy odhalí chyby', () => {
     expect(ch).toMatch(/nikdo/);
   });
   it('obrázek bez licence', () => {
-    const z = surova.zdroje.replace('obrazky: []', 'obrazky:\n  - { id: busta, soubor: x.jpg, popisek: Busta, autor: X, licence: "", url: "https://example.org" }');
+    // Funguje s prázdným seznamem obrázků i se seznamem, který už obrázky má.
+    const z = surova.zdroje.replace(/^obrazky:( \[\])?/m, 'obrazky:\n  - { id: busta, soubor: x.jpg, popisek: Busta, autor: X, licence: "", url: "https://example.org" }');
     expect(nactiData(s(surova.lide, surova.vztahy, z)).chyby.join()).toMatch(/licence/);
   });
   it('profil bez atributu', () => {
