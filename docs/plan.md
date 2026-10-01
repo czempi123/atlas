@@ -510,7 +510,7 @@ Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně API bloků a c
 
 ### P6: Podklady k celku „Jak poznám, co je pravda?“
 
-Další krok po P5. První celý celek F2: dopsaný Sókratův portrét, profil Prótagory, dokončená cesta 1 a stránka velké otázky 7. P6 připraví jen ověřené podklady; psaní je P7 (portrét a profil, při něm vznikne skill `atlas-osobnost`) a P8 (cesta a velká otázka se skillem `atlas-cesta`), revize P10.
+Další krok po P5. První celý celek F2: dopsaný Sókratův portrét, profil Prótagora, dokončená cesta 1 a stránka velké otázky 7. P6 připraví jen ověřené podklady; psaní je P7 (portrét a profil, při něm vznikne skill `atlas-osobnost`) a P8 (cesta a velká otázka se skillem `atlas-cesta`), revize P10.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem (terminál na Macu). Sonnet 5.5 · high s vyhledáváním; když narazí na sporné prameny (počty hlasů při procesu, osud Prótagorových knih), přepni na Opus 5.5 · high.
 
@@ -523,7 +523,7 @@ Připrav podklady k prvnímu celému celku „Jak poznám, co je pravda?“. Stu
 
 1. Sókratův portrét, kapitoly 02–05 podle osnovy ve frontmatteru src/content/osobnosti/sokrates.mdx: Muž z agory (jak se ptal, na příkladu z Lachéta nebo Euthyfróna; kdo za ním chodil), Ústup od Délia (tři tažení, Alkibiadovo vyprávění v Symposiu), Soud (obžaloba, Obrana, hlasování a trest, proč nenavrhl vyhnanství) a Poslední den (Kritón přemlouvá k útěku a Sókratovy důvody, proč zůstal; Faidón 117a–118a). U každé kapitoly jedna nejsilnější scéna.
 2. Prótagorás pro profil: život (Abdéra, Athény, Thurioi), „Člověk je měřítkem všech věcí“ (DK 80 B1, Platón, Theaitétos 152a), výrok o bozích (DK 80 B4), co je doložené a co jen tradované o konci jeho života, a jeho nejsilnější argument v Platónově dialogu Prótagorás.
-3. Cesta 1: skutečný střet Sókrata a Prótagory pro blok Spor (obě strany v nejsilnější verzi) a nový případ ze současnosti, na kterém se dá jejich spor vyzkoušet.
+3. Cesta 1: skutečný střet Sókrata a Prótagora pro blok Spor (obě strany v nejsilnější verzi) a nový případ ze současnosti, na kterém se dá jejich spor vyzkoušet.
 4. Velká otázka 7: pro lidi období 1 a 2, kteří k ní mají co říct (Parmenidés, Prótagorás, Sókratés, Platón, Aristotelés, Pyrrhón, Epikúros), jedna ověřená věta o tom, jak odpovídali, se zdrojem.
 5. Obrázky: Sókratova busta a případně Prótagorás; autor fotografie, instituce, licence a odkaz (Wikimedia Commons).
 

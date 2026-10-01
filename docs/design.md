@@ -308,7 +308,7 @@ Odhad pořadí (karty A / B / Žili ve stejné době), nebo vzdálenosti: na ose
 
 ## Cesta
 
-Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (zatím jen Sókratova část, bez Prótagory).
+Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (zatím jen Sókratova část, bez Prótagora).
 
 - **Soubory:** přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`; text = úvod), kroky `src/content/cesty/<slug>/<n>-<název>.mdx` (frontmatter `cesta`, `krok`, `nazev`, volitelně `kdeJsme`; text = obsah kroku s bloky). Kroky se číslují 1…n bez mezer, jinak se sestavení zastaví.
 - **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, seznam kroků s tím, co student prošel, tlačítko Začít / Pokračovat: krok n / Projít znovu a oddíl Kam dál (`#hotovo`).

@@ -186,7 +186,7 @@
 
 - id: protagoras
   jmeno: Prótagorás
-  jmeno2: Prótagory
+  jmeno2: Prótagora
   narozen: { rok: -490, priblizne: true }
   zemrel: { rok: -420, priblizne: true }
   obdobi: 1
