@@ -2,6 +2,13 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Schválení P8
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Stránka velké otázky (šablona a otázka 7), cesta 1 s Prótagorem a skill `atlas-cesta` schváleny; finální čtení proběhne u celého celku po revizi | Autor: „můžeme se posunout o krok dál“ |
+| Další krok P10: revize celku 1 skillem `atlas-revize`; návrhy z revize autor schválí dřív, než se zapracují; zadání v `docs/plan.md` | Pořadí workflow celku: psaní → revize → schválení |
+
 ## 1. 10. 2026: Stránka velké otázky, druhé kolo
 
 | Rozhodnutí | Důvod |

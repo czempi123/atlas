@@ -359,9 +359,9 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
 | P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Hotovo 1. 10. 2026 pro celek „Jak poznám, co je pravda?“ (`docs/podklady/celek-1-pravda.md`) |
 | P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Hotovo a schváleno 1. 10. 2026: Sókratův portrét a profil Prótagora; skill `atlas-osobnost` |
-| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Další krok: cesta 1 s Prótagorem a stránka velké otázky 7 (nový typ stránky); plné znění níže |
+| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Hotovo a schváleno 1. 10. 2026: cesta 1 s Prótagorem, stránka velké otázky (šablona a otázka 7); skill `atlas-cesta` |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
-| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Se skillem `atlas-revize` |
+| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Další krok: revize celku 1; plné znění níže |
 | P11 | Souhrnná revize období | Fable 5.1 · high | Souvislosti napříč desítkami stránek | Na konci každé fáze |
 | P12 | Plán nového období | Opus 5.5 · high | Výběr a pořadí podle hotové architektury | Se skillem `atlas-obdobi` |
 | P13 | Úprava skillů po fázi | Opus 5.5 · high | Zobecnění opakovaných chyb | Na konci každé fáze |
@@ -586,7 +586,7 @@ Po P7 následuje P8 (cesta 1 s Prótagorem, blokem Spor a šaty z roku 2015, str
 
 ### P8: Cesta 1 s Prótagorem a stránka velké otázky 7
 
-**Stav 1. 10. 2026: hotovo, čeká na revizi (P10).** Šablona stránky velké otázky (`/otazka/<slug>/`), stránka otázky 7 se čtyřmi hlasy, cesta 1 se sedmi kroky (Spor Prótagorás × Sókratés, šaty z roku 2015) a skill `atlas-cesta` (Jména střídmě, stránka velké otázky). Rozhodnutí v `docs/rozhodnuti.md`, otevřené body v `k-overeni.md` (oddíl P8).
+**Stav 1. 10. 2026: hotovo a schváleno.** Po připomínce autora mají filozofové na stránce otázky dvě vrstvy: nejdřív odpovědi všech na tentýž případ, pak proč to tak viděli. Šablona stránky velké otázky (`/otazka/<slug>/`), stránka otázky 7 se čtyřmi hlasy, cesta 1 se sedmi kroky (Spor Prótagorás × Sókratés, šaty z roku 2015) a skill `atlas-cesta` (Jména střídmě, stránka velké otázky). Rozhodnutí v `docs/rozhodnuti.md`, otevřené body v `k-overeni.md` (oddíl P8).
 
 **Původní zadání:** další krok. P7 je schválený, podklady ke sporu Sókratés × Prótagorás, k šatům z roku 2015 a k velké otázce 7 jsou v `docs/podklady/celek-1-pravda.md`. Pracuje se dál ve větvi `celek-1`; po P8 následuje revize celku (P10) a schválení autorem.
 
@@ -621,7 +621,39 @@ Nejdřív mi v pár bodech napiš návrh stránky velké otázky (pořadí čás
 - Skill `atlas-cesta` uložit do účtu (návrh předán v P8); skill `atlas-osobnost` v účtu má ještě „s Prótagorou“, opravit při sjednocení skillů (P13).
 - Stránky dalších velkých otázek vzniknou s jejich celky; do té doby je přehled `/otazky/` neodkazuje.
 
-Po P8 následuje P10: revize celého celku 1 skillem `atlas-revize` (portrét, profil, cesta, otázka), pak schválení autorem a sloučení do hlavní větve. Plné znění P10 připravím po P8.
+### P10: Revize celku 1 „Jak poznám, co je pravda?“
+
+**Stav 1. 10. 2026:** další krok. P8 je schválený. Celek tvoří Sókratův portrét, profil Prótagora, cesta 1 se sedmi kroky a stránka velké otázky 7; vše ve větvi `celek-1`. Po revizi rozhodne autor o návrzích, pak schválení celku a sloučení do hlavní větve.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-1.
+
+Udělej revizi celku 1 „Jak poznám, co je pravda?“ skillem atlas-revize. Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-1-pravda.md, docs/podklady/k-overeni.md (oddíly P6–P8), docs/rozhodnuti.md (záznamy z 1. 10. 2026) a v docs/design.md oddíly Bloky, Cesta a Velká otázka.
+
+Celek tvoří:
+- Sókratův portrét (src/content/osobnosti/sokrates.mdx, kapitoly 01–05),
+- profil Prótagora (src/content/osobnosti/protagoras.mdx),
+- cesta 1 „Kdy mám dobrý důvod věřit?“ (src/content/cesty/kdy-mam-dobry-duvod-verit*, 7 kroků, bloky cesta1-* v src/content/bloky),
+- stránka velké otázky 7 (src/content/otazky/jak-poznam-pravdu.mdx, adresa /otazka/jak-poznam-pravdu/),
+- vstupy a návraty: Domů, přehled /otazky/, karty cest, Kam dál, Pokračuj a Můj deník.
+
+Zvlášť zkontroluj:
+1. Pravidlo 6 „Jména a podrobnosti střídmě“ v krocích 1–4 cesty 1 a v kapitole 01 Sókratova portrétu (zbylo z P7).
+2. Odpovědi filozofů na žvýkačku na stránce otázky 7: jsou to věrné převody jejich myšlenek, poznal by se v nich každý z nich? Stačí Parmenidova část, která je nejkratší?
+3. Spor Prótagorás × Sókratés v kroku 5: dostal Prótagorás opravdu nejsilnější verzi, nebo ho text táhne k porážce?
+4. Opakování: neopakuje se zbytečně tentýž příklad nebo citát v portrétu, profilu, cestě a na stránce otázky (vítr, Delfy, obrana-21d, theaitetos-152a)?
+5. Délka: Sókratova stránka má na telefonu asi 20 000 px, cesta 7 kroků. Kde by student přestal číst?
+
+Postup podle skillu: projdi celek jako student na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí (i přímé odkazy na kroky, obnovení stránky, Začít znovu, deník), pak pět perspektiv. Drobnosti oprav rovnou a commituj česky; zásahy do významu, příběhu nebo struktury jen navrhni s hotovým novým zněním. Záznam ulož do docs/revize/celek-1-<datum>.md (nejvýš deset nálezů).
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí).
+
+Na konci mi napiš verdikt (připraveno ke schválení / po opravách / přepracovat), tři nejdůležitější nálezy a pošli snímky míst, kterých se nálezy týkají. Návrhy zatím nezapracovávej, počkej na moje rozhodnutí. Nic neposílej na GitHub a do hlavní větve nic neslučuj.
+```
+
+Po P10 rozhodne autor o návrzích z revize; po jejich zapracování schválení celku 1, sloučení `celek-1` do hlavní větve a další celek podle plánu etap F2.
 
 
 
