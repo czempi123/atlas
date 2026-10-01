@@ -2,6 +2,14 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 1. 10. 2026: Podklady k celku 2 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta 6 dostane oba nové případy: „Představ si… měsíc na minimum“ i studii o penězích a štěstí (Killingsworth, Kahneman, Mellers 2023) | Autor: na každého zapůsobí něco jiného, není důvod se omezovat |
+| Stoik na stránce otázky 1 je Seneca | Epiktétos nese cestu 5; Seneca se jasně liší od Diogena (bohatství nevyhodí) i od Aristotela (ke štěstí ho nepotřebuje) |
+| Leontion, Themista ani další nové osoby zatím do dat nepřibudou; v textu je lze zmínit bez odkazu | Autor: osob je už hodně, přidávat se bude až dodatečně, až bude vše hotové |
+
 ## 1. 10. 2026: Schválení celku 1 a další krok
 
 | Rozhodnutí | Důvod |
