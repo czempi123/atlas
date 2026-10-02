@@ -43,6 +43,7 @@ prameny:
   - { id: iep-gorgias, druh: encyklopedie, nazev: "Gorgias", autor: "C. Francis Higgins", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/gorgias/", overeno: 2026-09-29 }
   - { id: iep-antisthenes, druh: encyklopedie, nazev: "Antisthenes", autor: "Julie Piering", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/antisthenes/", overeno: 2026-09-29 }
   - { id: iep-diogenes, druh: encyklopedie, nazev: "Diogenes of Sinope", autor: "Julie Piering", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/diogenes-of-sinope/", overeno: 2026-09-29 }
+  - { id: sep-cosmopolitanism, druh: encyklopedie, nazev: "Cosmopolitanism", autor: "Pauline Kleingeld, Eric Brown", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/cosmopolitanism/", overeno: 2026-10-02, poznamka: "Oddíl 1.1: Řek se představoval nejdřív jako občan své obce a říkal tím, komu patří jeho věrnost; Diogenés se jako občan světa odmítl cítit zvlášť zavázán Sinópě." }
   - { id: iep-cynics, druh: encyklopedie, nazev: "Cynics", autor: "Julie Piering", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/cynics/", overeno: 2026-09-29 }
   - { id: iep-chrysippus, druh: encyklopedie, nazev: "Chrysippus", autor: "Jeremy Kirby", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/chrysippus/", overeno: 2026-09-29 }
   - { id: iep-cicero, druh: encyklopedie, nazev: "Marcus Tullius Cicero", autor: "Edward Clayton", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/cicero/", overeno: 2026-09-29 }
@@ -115,6 +116,30 @@ prameny:
   - { id: buzzfeed-saty-2015, druh: data, nazev: "The Dress Is Blue And Black, Says The Girl Who Saw It In Person", autor: "Claudia Koerner", dilo: BuzzFeed News (26. 2. 2015), url: "https://www.buzzfeednews.com/article/claudiakoerner/the-dress-is-blue-and-black-says-the-girl-who-saw-it-in-pers", overeno: 2026-10-01, poznamka: "Fotku pořídila matka nevěsty, na Tumblr ji dala Caitlin McNeillová; na svatbě byly šaty modročerné." }
   - { id: nbc-saty-2015, druh: data, nazev: "Blue and Black? White and Gold? For Dressmaker, It's All Green", dilo: NBC News (27. 2. 2015), url: "https://www.nbcnews.com/business/business-news/blue-black-white-gold-dressmaker-its-all-green-n314096", overeno: 2026-10-01, poznamka: "Ian Johnson (Roman Originals): šaty jsou modročerné; nárůst prodeje." }
   - { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života 1, 3", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-09-29, poznamka: "Non exiguum temporis habemus, sed multum perdidimus." }
+
+  # Celek 2 „Jak mám žít?“ (docs/podklady/celek-2-jak-zit.md): řecké a latinské texty z PerseusDL a First1KGreek.
+  - { id: dl-x-1, druh: pramen, nazev: "Životy filozofů X, 1–26", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Epikúros: Samos, v 18 letech do Athén, Kolofón (1); k filozofii ve 14 letech, učitelé a Hésiodův chaos (2); otrok Mys (3, 10); pomluvy (3–8), obhajoba (9–10); přátelé žijí v zahradě, 80 min (10); voda a trocha vína, majetek nedávají dohromady, jak žádala Pýthagorova zásada „přátelé mají všechno společné“ (κοινὰ τὰ φίλων), chléb a voda, hrnek sýra (11); narozen 341, škola od 32 let, zemřel 271/270 v 72 letech (14–15); závěť a propuštění otroků (16–21); Metrodóros, Polyainos, Hermarchos, Leonteus a Themista (22–25); asi 300 svitků (26)." }
+  - { id: hesiodos-theogonia, druh: pramen, nazev: "Theogonia 116", autor: Hésiodos, dilo: "Theogonia, řecky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0020/tlg001/tlg0020.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Jako úplně první vznikl Chaos (ἦ τοι μὲν πρώτιστα Χάος γένετʼ); k Epikúrově otázce učitelům (Diogenés Laertios X, 2)." }
+  - { id: dl-x-117, druh: pramen, nazev: "Životy filozofů X, 117–121", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Moudrý podle Epikúra a jeho školy: nebude se účastnit politiky, nebude žít jako kynik ani žebrat (119, podle spisu O způsobech života I a II); přátelství kvůli potřebám, ale někdo musí začít jako při setí; v chudobě si vydělá moudrostí (120)." }
+  - { id: dl-x-122, druh: pramen, nazev: "Dopis Menoikeovi (Životy filozofů X, 122–135)", autor: Epikúros, dilo: "u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Dělení tužeb (127); cílem je nemít bolest ani strach, bouře duše (128); ne každou slast volíme (129); soběstačnost, přepych si nejvíc užije, kdo ho nepotřebuje (130); ječná placka (μᾶζα) a voda, slast není prostopášnost (131); rozumnost a ctnosti (132)." }
+  - { id: dl-x-136, druh: pramen, nazev: "Životy filozofů X, 136–138", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Klidová slast (ataraxia, aponia) a slast v pohybu (radost, veselí), citát ze spisu O volbě (136); rozdíl od kyrénaiků (136–137)." }
+  - { id: dl-x-139, druh: pramen, nazev: "Hlavní myšlenky (Životy filozofů X, 139–154)", autor: Epikúros, dilo: "Kyriai doxai u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "KD 3 strop slasti (139); KD 15 bohatství přírody, KD 18 slast se jen obměňuje (144); KD 26–28 nenutné touhy, přátelství (148); KD 29 trojí dělení tužeb se scholiem (149)." }
+  - { id: gnomologium-vaticanum, druh: pramen, nazev: "Vatikánské výroky", autor: Epikúros, dilo: "Gnomologium Vaticanum Epicureum, vyd. P. von der Mühll (Teubner 1922), First1KGreek", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0537/tlg014/tlg0537.tlg014.1st1K-grc1.xml", overeno: 2026-10-01, poznamka: "VS 23 přátelství (rukopis ἀρετή, vydavatel αἱρετή); VS 25 chudoba a bohatství; VS 33 hlas těla (jméno Dia doplněk); VS 52 přátelství tančí kolem světa; VS 68 komu je málo, co stačí." }
+  - { id: seneca-epistulae, druh: pramen, nazev: "Dopisy Luciliovi 18 a 21", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-01, poznamka: "Epikúros měl dny skrovného jídla, méně než as, Metrodóros celý (18, 9, podle dopisu Polyainovi z roku archonta Charína); nápis na zahradách, správce, polenta a voda (21, 10; rukopisy se v místě nápisu rozcházejí); žaludek je skromný věřitel (21, 11)." }
+  - { id: seneca-vita-beata, druh: pramen, nazev: "O blaženém životě", autor: Seneca, dilo: "De vita beata (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.vita.shtml", overeno: 2026-10-01, poznamka: "Blažený život je v souladu s přírodou, dary štěstěny užívá, neslouží jim (3, 3); Epikúrova slast je střízlivá, škola má neprávem špatnou pověst (12, 4 – 13, 2); výčitka pokrytectví (17, 1–2); moudrý bohatství neodmítá (23, 3), bohatství není dobro, ale je užitečné (24, 5); u moudrého slouží, u hlupáka vládne (26, 1)." }
+  - { id: tacitus-annales, druh: pramen, nazev: "Letopisy XIII, 42 a XIV, 53–54", autor: Tacitus, dilo: "Annales, lat. C. D. Fisher (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml", overeno: 2026-10-01, poznamka: "Suillius vyčítá Senekovi 300 milionů sesterciů za čtyři roky u dvora (XIII, 42); Seneca prosí Nerona, ať si majetek vezme zpět (XIV, 53–54, stylizovaná řeč)." }
+  - { id: cicero-nd-i-93, druh: pramen, nazev: "O povaze bohů I, 93", autor: Cicero, dilo: "De natura deorum, lat. O. Plasberg (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0474/phi050/phi0474.phi050.perseus-lat2.xml", overeno: 2026-10-01, poznamka: "Akademik Cotta posměšně: i Leontion se odvážila psát proti Theofrastovi, sice vytříbenou attičtinou." }
+  - { id: dl-vi-20, druh: pramen, nazev: "Životy filozofů VI, 20–38", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Sinópé, otec směnárník Hikesios, aféra s mincemi ve více verzích, věštba (20–21); Antisthenés (21); myš (22); pithos v Métróu, horký písek a zasněžené sochy (23); prodej Xeniadovi podle Menippa (29–31); Alexandr: kdybych nebyl Alexandrem (32); dítě, pohárek a miska (37); nestíněj mi, osudu odvahu, zvyku přírodu (38)." }
+  - { id: dl-vi-41, druh: pramen, nazev: "Životy filozofů VI, 40–63", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Platónova definice člověka, oškubaný kohout přinesený do školy, „tohle je Platónův člověk“, k definici přidáno „s plochými nehty“ (40); lampa za dne, hledám člověka (41); snadný život skrytý za medovými koláčky (44); vyhnanství ho udělalo filozofem, prosí sochu o almužnu (49); Sókratés, který se zbláznil (54); jí na agoře (58); jsem Diogenés, pes (60); připraven na každý osud, občan světa (63)." }
+  - { id: dl-vi-69, druh: pramen, nazev: "Životy filozofů VI, 69–75", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Otevřená řeč, vše veřejně (69); cvičení těla i duše, pohrdání slastí je nejslastnější, zvyk proti přírodě, Héraklés a svoboda (70–71; podle Hickse vložka z jiného pramene); piráti, Kréta, Xeniadés, Korinth (74); odmítne výkupné (75)." }
+  - { id: dl-vi-104, druh: pramen, nazev: "Životy filozofů VI, 103–105", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Kynická nauka: život podle ctnosti, prostý život, pohrdání bohatstvím a slávou, pithos; Diogenés: bohům je vlastní nic nepotřebovat, podobným bohům potřebovat málo (104); nic nesvěřovat osudu (105)." }
+  - { id: plutarchos-alexandr, druh: pramen, nazev: "Alexandr 14", autor: Plútarchos, dilo: "Vitae parallelae, řecky a angl. B. Perrin (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg047/tlg0007.tlg047.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Po sněmu na Isthmu jde Alexandr za Diogenem do Kraneia; ustup mi trochu ze slunce; kdybych nebyl Alexandrem, byl bych Diogenem (kap. 14)." }
+  - { id: arrianos-anabaze, druh: pramen, nazev: "Anabasis VII, 2, 1", autor: Arriános, dilo: "Anabasis Alexandri, řecky A. G. Roos (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0074/tlg001/tlg0074.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Diogenés na Isthmu nepotřebuje nic, jen ať Alexandr s družinou ustoupí ze slunce; Arriános: Alexandra strašně ovládala touha po slávě." }
+  - { id: aristoteles-etika, druh: pramen, nazev: "Etika Nikomachova I, 7–8 a VIII, 1", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Lidské dobro je činnost duše podle ctnosti v celém životě, jedna vlaštovka (1098a16–20); na olympiádě věnčí ty, kdo závodí (1099a3–7); štěstí potřebuje i vnější dobra (1099a31–b8); bez přátel by nikdo nechtěl žít (1155a5–6)." }
+  - { id: ssjc-epikurejec, druh: encyklopedie, nazev: "epikurejec", dilo: "Slovník spisovného jazyka českého (ÚJČ AV ČR)", url: "https://ssjc.ujc.cas.cz/search.php?heslo=epikurejec&sti=EMPTY&where=hesla&hsubstr=no", overeno: 2026-10-01, poznamka: "1. stoupenec Epikúrova učení; 2. milovník slasti a pohodlí, požitkář, rozkošník." }
+  - { id: kkm-2023, druh: monografie, nazev: "Income and emotional well-being: A conflict resolved", autor: "Matthew A. Killingsworth, Daniel Kahneman, Barbara Mellers", dilo: "PNAS 120 (2023), e2208661120", url: "https://doi.org/10.1073/pnas.2208661120", overeno: 2026-10-01, poznamka: "33 391 zaměstnaných dospělých v USA, 1 725 994 hlášení; štěstí roste s log(příjmu), u nejméně šťastné asi pětiny se nad 100 000 USD zastaví (tab. 1); medián příjmu 85 000 USD. Čteno v plném textu (Europe PMC, PMC10013834)." }
+  - { id: kahneman-deaton-2010, druh: monografie, nazev: "High income improves evaluation of life but not emotional well-being", autor: "Daniel Kahneman, Angus Deaton", dilo: "PNAS 107 (2010), 16489–16493", url: "https://doi.org/10.1073/pnas.1011492107", overeno: 2026-10-01, poznamka: "Víc než 450 000 odpovědí (Gallup); emoční pohoda roste s příjmem jen do asi 75 000 USD, hodnocení života dál. Čten souhrn (Europe PMC)." }
+  - { id: met-epikuros, druh: data, nazev: "Marble head of Epikouros (11.90)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/248475", overeno: 2026-10-01, poznamka: "Římská kopie z 2. st. n. l. podle řecké sochy z 1. pol. 3. st. př. n. l.; Public Domain, Open Access CC0." }
 
 citaty:
   - id: obrana-38a
@@ -264,6 +289,283 @@ citaty:
       podle: "řecký text (Burnet) a anglický překlad W. R. M. Lamba; zkráceno"
     zdroj: platon-menon
 
+  # Celek 2 „Jak mám žít?“ (docs/podklady/celek-2-jak-zit.md). Převody jsou vlastní z řeckého a latinského textu.
+  - id: dl-x-11-syr
+    osoba: epikuros
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: X, 11
+    cesky: "Pošli mi hrnek sýra, ať si můžu dopřát hostinu, kdykoli budu chtít."
+    original: "πέμψον μοι τυροῦ κυθριδίου, ἵνʼ ὅταν βούλωμαι πολυτελεύσασθαι δύνωμαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („Send me a little pot of cheese, that, when I like, I may fare sumptuously“); úryvek z Epikúrova dopisu"
+    zdroj: dl-x-1
+  - id: menoikeus-130
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 130 (Diogenés Laertios X, 130)
+    cesky: "Soběstačnost je velké dobro. Ne proto, abychom vždycky žili s málem, ale abychom si s málem vystačili, když víc nemáme. Přepych si nejvíc užijí ti, kdo ho nejméně potřebují."
+    original: "τὴν αὐτάρκειαν δὲ ἀγαθὸν μέγα νομίζομεν, οὐχ ἵνα πάντως τοῖς ὀλίγοις χρώμεθα, ἀλλʼ ὅπως ἐὰν μὴ ἔχωμεν τὰ πολλά, τοῖς ὀλίγοις ἀρκώμεθα, πεπεισμένοι γνησίως ὅτι ἥδιστα πολυτελείας ἀπολαύουσιν οἱ ἥκιστα ταύτης δεόμενοι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; rozděleno do tří vět, vynecháno „upřímně přesvědčeni“"
+    zdroj: dl-x-122
+  - id: menoikeus-131-maza
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 131 (Diogenés Laertios X, 131)
+    cesky: "Ječná placka a voda dají tu nejvyšší slast, když je jí ten, kdo je potřebuje."
+    original: "μᾶζα καὶ ὕδωρ τὴν ἀκροτάτην ἀποδίδωσιν ἡδονήν, ἐπειδὰν ἐνδέων τις αὐτὰ προσενέγκηται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („bread and water“); μᾶζα je ječná placka, ne pšeničný chléb"
+    zdroj: dl-x-122
+  - id: menoikeus-131-slast
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 131 (Diogenés Laertios X, 131)
+    cesky: "Když říkáme, že cílem je slast, nemyslíme slasti prostopášníků ani ty, které spočívají v požitku, jak si někteří myslí z nevědomosti, z nesouhlasu nebo ze zlé vůle. Myslíme tím nemít bolest v těle a zmatek v duši."
+    original: "ὅταν οὖν λέγωμεν ἡδονὴν τέλος ὑπάρχειν, οὐ τὰς τῶν ἀσώτων ἡδονὰς καὶ τὰς ἐν ἀπολαύσει κειμένας λέγομεν, ὥς τινες ἀγνοοῦντες καὶ οὐχ ὁμολογοῦντες ἢ κακῶς ἐκδεχόμενοι νομίζουσιν, ἀλλὰ τὸ μήτε ἀλγεῖν κατὰ σῶμα μήτε ταράττεσθαι κατὰ ψυχήν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse"
+    zdroj: dl-x-122
+  - id: menoikeus-132
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 132 (Diogenés Laertios X, 132)
+    cesky: "Nedá se žít příjemně, aniž by člověk žil rozumně, čestně a spravedlivě. A nedá se žít rozumně, čestně a spravedlivě, aniž by žil příjemně."
+    original: "οὐκ ἔστιν ἡδέως ζῆν ἄνευ τοῦ φρονίμως καὶ καλῶς καὶ δικαίως, οὐδὲ φρονίμως καὶ καλῶς καὶ δικαίως ἄνευ τοῦ ἡδέως"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; καλῶς = krásně, čestně; totéž říká Hlavní myšlenka 5"
+    zdroj: dl-x-122
+  - id: kd-15
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Hlavní myšlenky
+    misto: 15 (Diogenés Laertios X, 144)
+    cesky: "Bohatství, které žádá příroda, má své meze a snadno se získá. Bohatství, které žádají prázdné představy, se ztrácí do nekonečna."
+    original: "ὁ τῆς φύσεως πλοῦτος καὶ ὥρισται καὶ εὐπόριστός ἐστιν· ὁ δὲ τῶν κενῶν δοξῶν εἰς ἄπειρον ἐκπίπτει"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („Nature's wealth at once has its bounds and is easy to procure; but the wealth of vain fancies recedes to an infinite distance“)"
+    zdroj: dl-x-139
+  - id: kd-27
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Hlavní myšlenky
+    misto: 27 (Diogenés Laertios X, 148)
+    cesky: "Ze všeho, co moudrost chystá pro šťastný celý život, je zdaleka nejdůležitější získat přátele."
+    original: "ὧν ἡ σοφία παρασκευάζεται εἰς τὴν τοῦ ὅλου βίου μακαριότητα, πολὺ μέγιστόν ἐστιν ἡ τῆς φιλίας κτῆσις"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse"
+    zdroj: dl-x-139
+  - id: vs-52
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Vatikánské výroky
+    misto: "52"
+    cesky: "Přátelství tančí kolem celého světa a všem nám ohlašuje: probuďte se ke štěstí!"
+    original: "ἡ φιλία περιχορεύει τὴν οἰκουμένην κηρύττουσα δὴ πᾶσιν ἡμῖν ἐγείρεσθαι ἐπὶ τὸν μακαρισμόν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (P. von der Mühll) a anglický překlad v SEP „Epicurus“ („Friendship goes dancing round the world, announcing to all of us to wake up to happiness“)"
+    zdroj: gnomologium-vaticanum
+  - id: vs-33
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Vatikánské výroky
+    misto: "33"
+    cesky: "Tělo volá: nehladovět, nežíznit, nemrznout. Kdo to má a doufá, že to mít bude, mohl by se o štěstí přít i se samotným Diem."
+    original: "σαρκὸς φωνὴ τὸ μὴ πεινῆν, τὸ μὴ διψῆν, τὸ μὴ ῥιγοῦν· ταῦτα γὰρ ἔχων τις καὶ ἐλπίζων ἕξειν κἂν 〈Διὶ〉 ὑπὲρ εὐδαιμονίας μαχέσαιτο"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (P. von der Mühll); jméno Dia je doplněk vydavatelů, rukopis má mezeru"
+    zdroj: gnomologium-vaticanum
+  - id: vs-68
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Vatikánské výroky
+    misto: "68"
+    cesky: "Komu je málo to, co stačí, tomu nestačí nic."
+    original: "οὐδὲν ἱκανὸν ᾧ ὀλίγον τὸ ἱκανόν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (P. von der Mühll); doslova „nic není dost tomu, komu je dost málo“"
+    zdroj: gnomologium-vaticanum
+  - id: dl-x-119
+    osoba: epikuros
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: X, 119
+    cesky: "Moudrý nebude žít jako kynik ani žebrat."
+    original: "οὐδὲ κυνιεῖν, ὡς ἐν τῇ δευτέρᾳ Περὶ βίων· οὐδὲ πτωχεύσειν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („nor will he turn Cynic … nor will he be a mendicant“); nepřímá řeč podle 2. knihy Epikúrova spisu O způsobech života, zkráceno"
+    zdroj: dl-x-117
+  - id: seneca-ep-21-10
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 21, 10
+    cesky: "Hoste, tady ti bude dobře, tady je nejvyšším dobrem slast."
+    original: "Hospes, hic bene manebis, hic summum bonum voluptas est."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); nápis na Epikúrových zahradách, jak ho uvádí Seneca"
+    zdroj: seneca-epistulae
+  - id: seneca-ep-18-9
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 18, 9
+    cesky: "Epikúros, ten učitel slasti, měl určité dny, kdy hlad jen skrovně tišil. Chtěl vidět, jestli mu něco chybí do plné a dokonalé slasti."
+    original: "Certos habebat dies ille magister voluptatis Epicurus, quibus maligne famem extingueret, visurus, an aliquid deesset ex plena et consummata voluptate"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); zkráceno"
+    zdroj: seneca-epistulae
+  - id: vita-beata-13
+    osoba: seneca
+    autor: Seneca
+    dilo: O blaženém životě
+    misto: 13, 1
+    cesky: "Myslím si, že Epikúros učí věci svaté a správné, a když se k nim přiblížíš, dokonce přísné."
+    original: "in ea quidem ipse sententia sum … sancta Epicurum et recta praecipere et si propius accesseris tristia"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); tristia = vážné, přísné; vynecháno „řeknu to proti vůli našich“"
+    zdroj: seneca-vita-beata
+  - id: vita-beata-26
+    osoba: seneca
+    autor: Seneca
+    dilo: O blaženém životě
+    misto: 26, 1
+    cesky: "U moudrého slouží bohatství jemu, u hlupáka bohatství vládne."
+    original: "diuitiae enim apud sapientem uirum in seruitute sunt, apud stultum in imperio"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); doslova „u moudrého muže je bohatství v otroctví, u hlupáka u vlády“"
+    zdroj: seneca-vita-beata
+  - id: dl-vi-37
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 37
+    cesky: "Dítě mě porazilo ve skromnosti."
+    original: "παιδίον με νενίκηκεν εὐτελείᾳ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („A child has beaten me in plainness of living“)"
+    zdroj: dl-vi-20
+  - id: dl-vi-44
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 44
+    cesky: "Bohové dali lidem snadný život. Lidé ho ale nevidí, protože hledají medové koláčky, vonné masti a podobné věci."
+    original: "τὸν τῶν ἀνθρώπων βίον ῥᾴδιον ὑπὸ τῶν θεῶν δεδόσθαι, ἀποκεκρύφθαι δʼ αὐτῶν ζητούντων μελίπηκτα καὶ μύρα καὶ τὰ παραπλήσια"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; v originále nepřímá řeč („často volal, že…“)"
+    zdroj: dl-vi-41
+  - id: dl-vi-104
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 104
+    cesky: "Bohům je vlastní nic nepotřebovat. Těm, kdo se bohům podobají, potřebovat málo."
+    original: "θεῶν μὲν ἴδιον εἶναι μηδενὸς δεῖσθαι, τῶν δὲ θεοῖς ὁμοίων τὸ ὀλίγων χρῄζειν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; v přehledu kynické nauky jako Diogenova slova, nepřímá řeč"
+    zdroj: dl-vi-104
+  - id: dl-vi-71
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 71
+    cesky: "Samo pohrdání slastí je nejslastnější, když se v něm člověk vycvičí."
+    original: "αὐτὴ τῆς ἡδονῆς ἡ καταφρόνησις ἡδυτάτη προμελετηθεῖσα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; z oddílu VI, 70–73, který je podle Hickse vložkou z jiného pramene"
+    zdroj: dl-vi-69
+  - id: dl-vi-41
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 41
+    cesky: "Hledám člověka."
+    original: "ἄνθρωπον ζητῶ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text; za bílého dne s rozsvícenou lampou; „poctivého člověka“ v řečtině není"
+    zdroj: dl-vi-41
+  - id: dl-vi-63
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 63
+    cesky: "Jsem občan světa."
+    original: "κοσμοπολίτης"
+    preklad:
+      druh: vlastni
+      podle: "řecký text; odpověď na otázku, odkud je, řecky jediné slovo"
+    zdroj: dl-vi-41
+  - id: plutarchos-alexandr-14
+    osoba: diogenes
+    autor: Plútarchos
+    dilo: Alexandr
+    misto: "14"
+    cesky: "Ustup mi trochu ze slunce."
+    original: "μικρὸν … ἀπὸ τοῦ ἡλίου μετάστηθι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad B. Perrin („stand a little out of my sun“); Diogenés Laertios VI, 38 má „nestíněj mi“"
+    zdroj: plutarchos-alexandr
+  - id: etika-1098a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: I, 7, 1098a18–20
+    cesky: "Jedna vlaštovka jaro nedělá, ani jeden den. A tak ani jeden den nebo krátký čas neudělá člověka blaženým a šťastným."
+    original: "μία γὰρ χελιδὼν ἔαρ οὐ ποιεῖ, οὐδὲ μία ἡμέρα· οὕτω δὲ οὐδὲ μακάριον καὶ εὐδαίμονα μία ἡμέρα οὐδʼ ὀλίγος χρόνος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika
+  - id: etika-1155a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: VIII, 1, 1155a5–6
+    cesky: "Bez přátel by nikdo nechtěl žít, i kdyby měl všechna ostatní dobra."
+    original: "ἄνευ γὰρ φίλων οὐδεὶς ἕλοιτʼ ἂν ζῆν, ἔχων τὰ λοιπὰ ἀγαθὰ πάντα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika
+  - id: dl-vi-40
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 40
+    cesky: "Tohle je Platónův člověk."
+    original: "οὗτός ἐστιν ὁ Πλάτωνος ἄνθρωπος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse („Here is Plato's man“); Diogenés přinesl oškubaného kohouta do Platónovy školy"
+    zdroj: dl-vi-41
+
 # Obrázky: soubor v public/, autor a licence se ukazují v Pramenech stránky.
 # Kdo obrázek nemá, má na desce minci s atributem (docs/design.md, oddíl Obrázky).
 # Commons nástrojům nevydá soubor: licenci ověřuje a soubor stahuje autor (docs/podklady/celek-1-pravda.md).
@@ -275,3 +577,28 @@ obrazky:
     instituce: "Musée du Louvre, Paříž, inv. Ma 59"
     licence: "CC BY-SA 2.5"
     url: "https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg"
+  # Celek 2: obrázky z The Metropolitan Museum of Art (Open Access, CC0); licence ověřena u muzea, soubory zmenšeny na 1280 px.
+  - id: epikuros-met
+    soubor: obrazky/epikuros-met.jpg
+    popisek: "Epikúros. Římská mramorová hlava z 2. století, kopie řecké sochy z 1. poloviny 3. století př. n. l."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 11.90"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/248475"
+    vyrez: "50% 33%"
+  - id: diogenes-carpi
+    soubor: obrazky/diogenes-carpi-met.jpg
+    popisek: "Diogenés, jak si ho představila renesance: před sudem a s oškubaným kohoutem, kterým se vysmál Platónovi. Dřevořez Uga da Carpi podle Parmigianina, asi 1527–1530."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 17.50.1"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/354611"
+    vyrez: "50% 12%"
+  - id: diogenes-poharek
+    soubor: obrazky/diogenes-poharek-met.jpg
+    popisek: "Diogenés odhazuje pohárek, když vidí dítě pít z dlaní. Kresba neznámého francouzského umělce, 17. století."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 53.513.8"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/344405"
+    vyrez: "50% 37%"

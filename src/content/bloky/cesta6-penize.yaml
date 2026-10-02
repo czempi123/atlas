@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 6 „Kolik je dost?“, krok 6: nový případ B, studie o penězích a štěstí (doložená).
+# Podklad: docs/podklady/celek-2-jak-zit.md › Nový případ B, řádky 1–5 (Kahneman a Deaton 2010; Killingsworth 2021;
+# Killingsworth, Kahneman a Mellersová 2023: růst s logaritmem příjmu, u nejméně šťastné asi pětiny se nad 100 000 dolary
+# zastaví; zaměstnaní dospělí v USA, medián příjmu domácnosti 85 000 dolarů, souvislost, ne příčina) a „Proč případ sedí“
+# (slast v pohybu × klid, DL X, 136: výklad). Výhrady ke studii jsou ve zpětné vazbě. Žádný tah není něčí, blok nemá Co udělal.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Dávají ty křivky Epikúrovi za pravdu?
+moznosti:
+  - text: Ne. U většiny lidí nálada s penězi roste dál, strop tam není.
+    tah: věřit horní křivce
+    zpetna: >-
+      Horní křivka opravdu stoupá a to mluví proti Epikúrovi. Vědci se ale ptali, jak se lidé právě cítí.
+      Epikúros nejvyšší slastí nemyslel dobrou náladu, ale klid: tělo bez bolesti a mysl bez strachu. Dal by se změřit i ten?
+  - text: Ano. Každý další kousek nálady stojí dvakrát tolik než ten před ním.
+    tah: počítat, co to stojí
+    zpetna: >-
+      Nedíváš se jen na směr, ale i na cenu. Křivka ale pořád stoupá: není to strop, spíš čím dál dražší schody.
+      Kolik svého času bys dal za další schod?
+  - text: Jak komu. Těm nejméně šťastným víc peněz nepomůže.
+    tah: číst spodní křivku
+    zpetna: >-
+      Čteš spodní křivku: nejméně šťastné pětině nad určitou hranicí další peníze náladu nezvednou.
+      Studie ale ukazuje jen souvislost, ne příčinu. Co může trápit lidi, kterým víc peněz nepomáhá?
+  - text: Nedá se říct. Ptali se jen části lidí.
+    tah: ptát se, koho měřili
+    zpetna: >-
+      Ptáš se, koho vlastně měřili. Byli to zaměstnaní dospělí ve Spojených státech a polovina jejich domácností měla
+      příjem přes 85 000 dolarů ročně. Epikúros ale mluvil o lidech vůbec. Koho by ses musel zeptat, abys ho opravdu vyzkoušel?
+zdroje: [kkm-2023, kahneman-deaton-2010, dl-x-136]

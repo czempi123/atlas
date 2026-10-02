@@ -1,0 +1,69 @@
+# Roztřiď · cesta 6 „Kolik je dost?“, krok 2: věci z jednoho týdne do tří košů tužeb.
+# Podklad: docs/podklady/celek-2-jak-zit.md › Co je potřeba a co ne, řádek 22 (trojí dělení a tři druhy nutných
+# tužeb, Dopis Menoikeovi 127, Hlavní myšlenky 29), řádek 26 (Hlavní myšlenky 26: touha, která nebolí, když ji
+# nesplníme, není nutná) a Přátelství, řádek 33 (Hlavní myšlenky 27). Karty jsou autorské příklady, jiné než v profilu.
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: Tady je šest věcí z jednoho obyčejného týdne.
+otazka: Do kterého koše která patří?
+kose:
+  - id: nutne
+    nazev: Potřebuju
+    popis: Bez toho to bolí.
+  - id: prijemne
+    nazev: Těší mě
+    popis: Je to příjemné, ale obejdu se bez toho.
+  - id: prazdne
+    nazev: Prázdné
+    popis: Chci to jen kvůli představě, co mám mít.
+karty:
+  - id: spanek
+    text: Vyspat se po probdělé noci
+    zpetna: >-
+      Tělo si o spánek řekne samo a nedá pokoj, dokud ho nedostane. Kolik takových věcí ve svém týdnu najdeš?
+  - id: pizza
+    text: Páteční pizza s kamarády
+    zpetna: >-
+      V téhle kartě jsou dvě věci: pizza a kamarádi. Kterou z nich jsi třídil? A kam by šla ta druhá?
+  - id: sluchatka
+    text: Lepší sluchátka, než jaká mám
+    zpetna: >-
+      Hudba hraje i z těch starých. Co by ti nová přidala: lepší zvuk, nebo pocit, že máš něco lepšího než dřív?
+  - id: lajky
+    text: Sto lajků pod fotkou
+    zpetna: >-
+      Lajky nenasytí ani nezahřejí. Kdyby jich přišlo sto, stačilo by ti to, nebo bys příště chtěl dvě stě?
+    kdyz:
+      nutne: >-
+        Dal jsi je mezi věci, bez kterých to bolí. Co přesně bolí, když nepřijdou: chybí ti lajky, nebo lidé, kterým na tobě záleží?
+  - id: duvera
+    text: Někdo, komu řeknu, co mě trápí
+    zpetna: >-
+      Hladem bez něj neumřeš. Epikúros ale mezi nutné počítal i to, bez čeho člověk není šťastný. Kam podle toho patří přítel?
+    kdyz:
+      nutne: >-
+        Dal jsi ho mezi věci, bez kterých to bolí. I Epikúros počítal mezi nutné to, bez čeho člověk není šťastný.
+        Co přesně by ti chybělo, kdyby takový člověk nebyl?
+  - id: serial
+    text: Nový díl seriálu, o kterém všichni mluví
+    zpetna: >-
+      Jsou v tom dvě chuti. Chceš vědět, jak to dopadne, nebo nechceš zůstat stranou, až o tom budou ostatní mluvit?
+vlastni:
+  pocet: 2
+  vyzva: Přidej věc, kterou jsi tento týden chtěl ty
+  zpetna: >-
+    Tuhle kartu jsi přidal sám. Co by se stalo, kdyby ses bez té věci musel obejít?
+srovnani:
+  osoba: epikuros
+  nadpis: Jak třídil Epikúros
+  text: >-
+    Epikúros měl na třídění jednu zkoušku: bolí, když touhu nesplníš? Když nebolí, nutná není.
+
+
+    Nutné touhy pak dělil ještě dál: bez něčeho nepřežiješ, bez něčeho není dobře tělu a bez něčeho člověk není šťastný.
+    Ke šťastnému životu podle něj nejvíc ze všeho přispívají přátelé.
+
+
+    Projdi teď svůj první koš. Je v něm něco, co by tou zkouškou neprošlo? A nechal bys to tam i tak?
+zdroje: [dl-x-122, dl-x-139]

@@ -1,0 +1,219 @@
+---
+osoba: diogenes
+nadtitulek: Kynik ze Sinópy · Diogenův profil
+titulek: Diogenés
+pointa: Muž, který vyhodil i pohárek.
+citat: dl-vi-63
+kapitoly:
+  - cislo: "01"
+    kotva: poharek
+    nazev: Pohárek
+    stav: hotovo
+  - cislo: "02"
+    kotva: lucerna
+    nazev: Lucerna
+    stav: hotovo
+  - cislo: "03"
+    kotva: pes
+    nazev: Pes
+    stav: hotovo
+  - cislo: "04"
+    kotva: na-prodej
+    nazev: Na prodej
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import { KdoZilDriv, Pribeh, Volba, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Diogenův otec byl směnárník v Sinópě na břehu Černého moře. Pak ve městě vypukla aféra s penězi: někdo znehodnocoval mince. Podle jedněch to byl otec, podle jiných Diogenés sám. Z města musel pryč.
+
+Vypráví se, že se předtím ptal věštírny a dostal radu, ať změní ražbu. Nepochopil ji a pustil se do mincí. Řecké slovo pro minci, nomisma, je přitom příbuzné se slovem nomos: zvyk, zákon.
+
+Diogenés pak opravdu celý život přerážel ražbu. Ne na mincích, ale na zvycích: nedával jim žádnou váhu. Do Athén přišel jako vyhnanec. Později prý říkal, že filozofa z něj udělalo právě vyhnanství.
+
+Na otázku, odkud je, prý neodpovídal jménem města.
+
+</div>
+
+<div class="ctenarsky"><Citat id="dl-vi-63" velky /></div>
+
+<Kapitola cislo="01" kotva="poharek" nazev="Pohárek">
+  <Fragment slot="titulek">Porazilo ho <em>dítě.</em></Fragment>
+
+Vypráví se, že si Diogenés v Athénách jednou všiml myši. Běhala sem a tam, nehledala, kam si lehnout, nebála se tmy a nestála o žádné lahůdky. Od ní se prý naučil vystačit si s tím, co zrovna je.
+
+Plášť si skládal napůl, protože v něm i spal. Jídlo nosil v mošně. Jedl, spal a mluvil s lidmi tam, kde zrovna byl.
+
+Někoho požádal, ať mu sežene domek. Když to trvalo, nastěhoval se do pithu ve svatyni na athénské agoře. Pithos je velká hliněná nádoba na zásoby.
+
+Možná Diogena znáš jako filozofa, který bydlel v sudu. Tak ho ukazuje i dřevořez na začátku stránky. Vznikl ale až v renesanci a umělec nakreslil nádobu, jakou znal ze své doby. Řekové Diogenových časů dřevěné sudy nepoužívali.
+
+V mošně nosil i pohárek a misku.
+
+<Volba id="diogenes-poharek" />
+
+<Pribeh id="dite-a-poharek" osoba="diogenes" obrazek="diogenes-poharek" pomer="4 / 5" popisek="Diogenés odhazuje pohárek, když vidí dítě pít z dlaní. Kresba neznámého francouzského umělce, 17. století.">
+
+Vypráví se, že Diogenés jednou uviděl dítě, které pilo z dlaní. Vytáhl z mošny pohárek a zahodil ho.
+
+<Citat id="dl-vi-37" />
+
+Jindy viděl dítě, kterému se rozbil talíř. Čočku si nabíralo do vydlabaného kusu chleba. Diogenés vyhodil i misku.
+
+</Pribeh>
+
+Nešlo mu o pohárek. Zkoušel, kolik toho člověk opravdu potřebuje. A vycházelo mu, že skoro nic.
+
+Cvičil se v tom. V létě se prý válel v rozpáleném písku, v zimě objímal zasněžené sochy. Chtěl si zvyknout na všechno.
+
+Když se ho ptali, co mu dala filozofie, odpověděl prý, že je připravený na každý osud.
+</Kapitola>
+
+<Kapitola cislo="02" kotva="lucerna" nazev="Lucerna">
+  <Fragment slot="titulek">Lidí plno, člověk <em>žádný.</em></Fragment>
+
+Vypráví se, že Diogenés jednou za bílého dne rozsvítil lampu. Chodil s ní a říkal:
+
+<Citat id="dl-vi-41" />
+
+Lidí kolem bylo plno. Koho tedy hledal? Jindy prý svolával lidi, a když se seběhli, hnal je holí pryč. Volal prý lidi, ne lumpy.
+
+Co je to tedy člověk? Vypráví se, že Platón na to měl definici: člověk je dvounohý tvor bez peří. Sklidil za ni uznání.
+
+<Odkryj
+  id="diogenes-co-je-clovek"
+  otazka="Co je člověk? Napiš jednou větou definici, která platí pro každého člověka a pro nic jiného."
+  tlacitko="Porovnat s Diogenem"
+  filozof="diogenes"
+  modelove={[
+    { text: 'Člověk je tvor, který myslí.', komentar: 'Myslí i novorozenec nebo člověk, který tvrdě spí? A podle čeho poznáš, že zvíře nemyslí?' },
+    { text: 'Člověk je tvor, který mluví.', komentar: 'Řeč odliší člověka od kohouta. Je ale člověkem i ten, kdo mluvit nemůže? A co program, který ti odpovídá celými větami?' },
+  ]}
+  sebekontrola={[
+    'Hledal jsem tvora nebo věc, která mou definici splní, a člověk to není.',
+    'Hledal jsem člověka, na kterého moje definice nesedí.',
+  ]}
+>
+
+Diogenés by tvou větu zkoušel stejně jako Platónovu. Hledal by něco, co jí projde, a člověk to není.
+
+Vyzkoušej to sám. Projde tvou definicí zvíře, stroj nebo socha? A projde jí opravdu každý člověk?
+
+</Odkryj>
+
+Diogenés oškubal kohouta, přinesl ho do Platónovy školy a řekl:
+
+<Citat id="dl-vi-40" />
+
+K definici se pak prý přidalo: s plochými nehty. Oškubaného kohouta najdeš i na dřevořezu na začátku stránky, hned vedle Diogena.
+
+Platón o něm prý řekl, že je to Sókratés, který se zbláznil. O co dalšího se ti dva přeli, najdeš v [Sókratově portrétu](/osobnost/sokrates/#platon-diogenes-skutecnost).
+
+Diogenés ale nehledal lepší definici. Hledal někoho, kdo žije jako člověk, a ne jako otrok zvyků.
+</Kapitola>
+
+<Kapitola cislo="03" kotva="pes" nazev="Pes">
+  <Fragment slot="titulek">Říkali mu <em>pes.</em></Fragment>
+
+Diogenovi říkali pes, řecky kyón. Odtud slovo kynik. Bral to jako čest: lísá se prý k těm, kdo dávají, štěká na ty, kdo nedávají, a lumpy kouše.
+
+Jako pes taky žil: na ulici a všem na očích. Vyčítali mu třeba, že jí na náměstí.
+
+<Odkryj
+  id="diogenes-zvyk"
+  otazka="Vyber jednu věc, kterou děláš jen proto, že se to tak dělá. Co by se stalo, kdybys s ní přestal?"
+  tlacitko="Porovnat s Diogenem"
+  filozof="diogenes"
+  modelove={[
+    { text: 'Nosím značkové boty. Nestalo by se nic, jen by si toho ve třídě všimli.', komentar: 'Sám říkáš, že chodit se dá i bez nich. Diogenés by se zeptal, komu ty boty slouží: nohám, nebo očím ostatních?' },
+    { text: 'Zdravím sousedy, i když se mi nechce. Mysleli by si, že jsem nevychovaný, a mrzelo by je to.', komentar: 'Tenhle zvyk něco dělá pro druhé: říká jim, že je vidíš. Je i to jen ražba na minci? Nebo některé zvyky drží lidi pohromadě?' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem, co by se opravdu stalo, a komu.',
+    'Rozlišil jsem zvyk, který slouží jen mé pověsti, od zvyku, který slouží druhým.',
+  ]}
+>
+
+Diogenés by se u každého zvyku zeptal na totéž: žádá to příroda, nebo jen ostatní lidé? Co žádá jen zvyk, to podle něj člověka svazuje.
+
+Podívej se na svou odpověď. Komu by tvoje změna ublížila: tobě, někomu druhému, nebo jen tvé pověsti?
+
+</Odkryj>
+
+Na výčitku prý Diogenés odpověděl, že právě na náměstí dostal hlad. Co není hanebné doma, nemůže být podle něj hanebné ani na ulici.
+
+Zvyku nedával žádnou váhu, přírodě všechnu.
+</Kapitola>
+
+<Kapitola cislo="04" kotva="na-prodej" nazev="Na prodej">
+  <Fragment slot="titulek">Kdo tu potřebuje <em>pána?</em></Fragment>
+
+Vypráví se, že Diogena na jedné plavbě zajali piráti. Na Krétě ho pak prodávali jako otroka. Vyvolávač se ho zeptal, co umí. Odpověděl, že vládnout lidem.
+
+Pak ukázal na Korinťana v drahém lemovaném plášti. Tomu ať ho prodají: ten prý potřebuje pána.
+
+Korinťan ho opravdu koupil. Odvezl ho domů a svěřil mu syny i celý dům. Diogenés je učil skromnosti.
+
+Přátelé ho chtěli vykoupit. Řekl jim, že jsou hlupáci.
+
+*Kdo z těch dvou byl svobodnější: otrok, který nic nepotřeboval, nebo pán, který si ho koupil?*
+
+V Korinthu Diogenés zůstal až do smrti. Když tam za ním přišel sám Alexandr Veliký, požádal ho prý jen o jedno: aby mu nestínil.
+
+Zemřel velmi starý, kolem roku 323 př. n. l. Na hrob mu postavili sloup se psem z mramoru.
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Narodil se kolem roku 410 př. n. l. v Sinópě na břehu Černého moře. V Athénách se prý přidal k Antisthenovi, který žáky nechtěl a hrozil mu holí. Diogenés vytrval. Jeho myšlenky známe z vyprávění jiných.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="diogenes" b="platon" druh="poradi" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Etika">
+    <Fragment slot="titulek">Zvyk není <em>důvod.</em></Fragment>
+
+Diogenés rozlišoval, co žádá příroda a co jen zvyk. Že se něco dělá, pro něj nebyl důvod to dělat. Kdo se řídí jen zvykem, žije podle ražby, kterou si nevybral.
+
+*Platí to o každém zvyku? Co pozdrav, fronta nebo daný slib?*
+
+<MojeStanovisko client:visible id="diogenes-zvyk-neni-duvod" otazka="Který zvyk bys bránil, i kdyby se ti Diogenés smál? Proč právě ten?" odkaz="/osobnost/diogenes/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Politika">
+    <Fragment slot="titulek">Domov je celý <em>svět.</em></Fragment>
+
+Řek se tehdy představoval nejdřív jménem své obce. Říkal tím, kam patří a komu je zavázán. Diogenés o svou obec přišel.
+
+Když se ho ptali, odkud je, neřekl jméno města: je prý občan světa. Dával tím najevo, že Sinópě není zavázán víc než komukoli jinému. A kdo je doma všude, toho nesvazují zvyky jediného města.
+
+*Dá se patřit všude, a přitom nikam? Komu pomůžeš dřív: sousedovi, nebo cizinci?*
+
+<MojeStanovisko client:visible id="diogenes-obcan-sveta" otazka="Kam patříš ty: k partě, k městu, k zemi, ke světu? Co z toho bys napsal jako první a proč?" odkaz="/osobnost/diogenes/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="diogenes-vyhod-poharek" nazev="Vyhoď pohárek" odkaz="/osobnost/diogenes/#zkus-to-zit">
+
+Vyber jednu věc, kterou máš jen ze zvyku nebo kvůli ostatním, a týden se bez ní obejdi. Nikomu to neoznamuj. Na konci týdne si zapiš, co ti chybělo: ta věc, nebo to, co si o tobě díky ní mysleli druzí?
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/kolik-je-dost/', nadtitulek: 'Cesta 6', text: 'Kolik je dost?' },
+  { href: '/osobnost/epikuros/', nadtitulek: 'Profil', text: 'Epikúros: učitel slasti, kterému stačil chléb a voda' },
+  { href: '/osobnost/sokrates/#platon-diogenes-skutecnost', nadtitulek: 'Spor', text: 'Platón × Diogenés: co je skutečnější?' },
+  { href: '/otazka/jak-zit/', nadtitulek: 'Velká otázka 1', text: 'Jak mám žít?' },
+]} />

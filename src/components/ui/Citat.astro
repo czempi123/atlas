@@ -2,6 +2,7 @@
 // Citát z pramene: Newsreader, linka nad i pod, pod ním autor, dílo, místo.
 // Znění a údaje bere z src/data/zdroje.yaml, aby každý citát měl ověřený pramen a překlad.
 import { citatyPodleId } from '../../lib/data';
+import { nezlomitelne } from '../../lib/sazba.js';
 
 /** kompaktni: menší okraje, pro citát uvnitř karty nebo na časové ose */
 interface Props { id: string; velky?: boolean; kompaktni?: boolean }
@@ -10,7 +11,7 @@ const c = citatyPodleId.get(id);
 if (!c) throw new Error(`Citát „${id}“ není v zdroje.yaml`);
 ---
 <figure class:list={['citat', { 'citat--velky': velky, 'citat--kompaktni': kompaktni }]}>
-  <blockquote><p>„{c.cesky}“</p></blockquote>
+  <blockquote><p>„{nezlomitelne(c.cesky)}“</p></blockquote>
   <figcaption class="t-popisek">{c.autor}, <cite>{c.dilo}</cite> {c.misto}</figcaption>
 </figure>
 

@@ -6,7 +6,7 @@
   // <Spor id="platon-diogenes-skutecnost" />
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
-  import { POLOHY, popisPolohy, zpetnaSporu, zapisSporu, platnyStavSporu, odstavce, radek } from '../../lib/bloky';
+  import { POLOHY, popisPolohy, zpetnaSporu, zapisSporu, platnyStavSporu, odstavce, radek, velke } from '../../lib/bloky';
   import type { TBlokSpor } from '../../lib/bloky-schema';
   import { odkryti } from '../../lib/pohyb';
   import Mince from '../mapa/Mince.svelte';
@@ -22,7 +22,9 @@
     dal?: Dal;
   }
   let { id, blok, lide, odkaz, dal }: Props = $props();
-  const [A, B] = [lide[0].jmeno, lide[1].jmeno];
+  // Strana se jmenuje po osobě, nebo po směru, za který osoba mluví („kynici“); v nadpisech s velkým písmenem.
+  const [A, B] = [lide[0].oznaceni ?? lide[0].jmeno, lide[1].oznaceni ?? lide[1].jmeno];
+  const nadpisy = [velke(A), velke(B)];
   const polohy = Array.from({ length: POLOHY }, (_, i) => i);
 
   let navrh = $state<number | null>(null);
@@ -105,8 +107,8 @@
   <fieldset class="skala">
     <legend class="vizualne-skryte">{popisek}</legend>
     <div class="skala__konce" aria-hidden="true">
-      <span class="obdobi-{lide[0].obdobi}"><Mince ikona={lide[0].ikona} obdobi={lide[0].obdobi} varianta="tint" velikost={32} />{A}</span>
-      <span class="obdobi-{lide[1].obdobi}">{B}<Mince ikona={lide[1].ikona} obdobi={lide[1].obdobi} varianta="tint" velikost={32} /></span>
+      <span class="obdobi-{lide[0].obdobi}"><Mince ikona={lide[0].ikona} obdobi={lide[0].obdobi} varianta="tint" velikost={32} />{nadpisy[0]}</span>
+      <span class="obdobi-{lide[1].obdobi}">{nadpisy[1]}<Mince ikona={lide[1].ikona} obdobi={lide[1].obdobi} varianta="tint" velikost={32} /></span>
     </div>
     <div
       class={['skala__stopa', zamceno && 'skala__stopa--zamcena']}
@@ -144,7 +146,7 @@
   <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{@html radek(blok.otazka)}</h3>
   <div class="postoje">
     {#each blok.strany as s, i (s.osoba)}
-      <p class="postoj obdobi-{lide[i].obdobi}"><span class="t-nadtitulek">{lide[i].jmeno}</span> {@html radek(s.postoj)}</p>
+      <p class="postoj obdobi-{lide[i].obdobi}"><span class="t-nadtitulek">{nadpisy[i]}</span> {@html radek(s.postoj)}</p>
     {/each}
   </div>
 
@@ -159,7 +161,7 @@
           <article class="strana obdobi-{lide[i].obdobi}" aria-labelledby={`${id}-strana-${i}`}>
             <div class="strana__hlava">
               <Mince ikona={lide[i].ikona} obdobi={lide[i].obdobi} varianta="sel" velikost={36} />
-              <h4 class="strana__jmeno t-nadtitulek" id={`${id}-strana-${i}`}>{lide[i].jmeno}</h4>
+              <h4 class="strana__jmeno t-nadtitulek" id={`${id}-strana-${i}`}>{nadpisy[i]}</h4>
             </div>
             {#each s.argumenty as arg, j (j)}
               {#each odstavce(arg) as o, k (k)}<p>{@html o}</p>{/each}

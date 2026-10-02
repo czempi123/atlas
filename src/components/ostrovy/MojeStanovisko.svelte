@@ -6,6 +6,7 @@
   // S `rozbalene` je pole vidět hned a zápis se do deníku ukládá sám během psaní (závěr cesty).
   import { onMount } from 'svelte';
   import { nacti, ulozZapis, smazZapis } from '../../lib/denik';
+  import { nezlomitelne } from '../../lib/sazba.js';
 
   interface Props { id: string; otazka: string; odkaz: string; rozbalene?: boolean }
   let { id, otazka, odkaz, rozbalene = false }: Props = $props();
@@ -50,7 +51,7 @@
 
 <div class="stanovisko">
   {#if rozbalene}
-    <label class="t-ovladani" for={`${id}-stanovisko`}>{otazka}</label>
+    <label class="t-ovladani" for={`${id}-stanovisko`}>{nezlomitelne(otazka)}</label>
     <textarea id={`${id}-stanovisko`} rows="3" bind:value={text} oninput={piseSe} onblur={ulozSamo} aria-describedby={`${id}-stav`}></textarea>
     <p class="t-popisek stav" id={`${id}-stav`} aria-live="polite">{ulozeno ? 'Uloženo v deníku.' : 'Ukládá se samo do deníku.'}</p>
   {:else if !otevreno}
@@ -59,7 +60,7 @@
     </button>
     {#if ulozeno}<span class="t-popisek">Uloženo v deníku.</span>{/if}
   {:else}
-    <label class="t-ovladani" for={`${id}-stanovisko`}>{otazka}</label>
+    <label class="t-ovladani" for={`${id}-stanovisko`}>{nezlomitelne(otazka)}</label>
     <textarea id={`${id}-stanovisko`} rows="3" bind:value={text}></textarea>
     <div class="akce">
       <button class="hlavni" type="button" onclick={uloz}>Uložit do deníku</button>

@@ -37,6 +37,10 @@ const { predchozi, dalsi } = Astro.props;
     min-height: var(--spodni-lista);
     padding-block: var(--s-2);
   }
+  /* Na širokém okně stojí tlačítka pod okraji bloků, ne v rozích obrazovky. */
+  @media (min-width: 1100px) {
+    .cesta-lista__vnitrek { max-width: calc(960px + 2 * var(--okraj)); }
+  }
   .predchozi { padding-inline: var(--s-4); }
   .dalsi { margin-left: auto; }
   .dalsi__nazev { display: none; }

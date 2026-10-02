@@ -1,9 +1,10 @@
 // Logika interaktivních bloků: vyhodnocení, posun odpovědi, texty do deníku a stav po obnovení.
 // Čisté funkce bez DOM a Astra; běží při sestavení i v prohlížeči a mají testy v tests/data/bloky.test.ts.
 // Zpětná vazba nikdy nehodnotí souhlas s filozofem a nic se neboduje.
-import type { TBlokVolba, TBlokZmena } from './bloky-schema';
+import type { TBlokVolba, TBlokZmena, TBlokRoztrid } from './bloky-schema';
 import { let_, vekVRoce, vzdalenost, zivotOsoby, naAstro, zAstro, type OsobaMapy, type Vzdalenost } from './cas-mapy';
 import { rok as rokText } from './casy';
+import { nezlomitelne } from './sazba.js';
 
 const NBSP = ' ';
 const PISMENA = ['A', 'B', 'C', 'D'] as const;
@@ -14,9 +15,9 @@ function escapuj(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-/** Jeden řádek textu do HTML: escapuje a *kurzívu* převede na <em>. */
+/** Jeden řádek textu do HTML: escapuje, *kurzívu* převede na <em> a jednopísmenné předložky přiváže k dalšímu slovu. */
 export function radek(text: string): string {
-  return escapuj(text.trim()).replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+  return escapuj(nezlomitelne(text.trim())).replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
 }
 
 /** Text s odstavci (prázdný řádek) do seznamu HTML odstavců bez obalu <p>. */
@@ -32,6 +33,11 @@ export function odstavce(text: string): string[] {
 export function veta(s: string): string {
   const t = s.trim();
   return /[.!?…“]$/.test(t) ? t : `${t}.`;
+}
+
+/** První písmeno velké: označení strany („kynici“) na začátku popisku. */
+export function velke(s: string): string {
+  return s.charAt(0).toLocaleUpperCase('cs') + s.slice(1);
 }
 
 export function pismeno(i: number): string {
@@ -197,6 +203,94 @@ export function platnyStavSporu(s: unknown): StavSporu | null {
   const prvni = platnaPoloha(x.prvni);
   if (prvni === null) return null;
   return { prvni, konecna: platnaPoloha(x.konecna), duvod: typeof x.duvod === 'string' ? x.duvod : '' };
+}
+
+// ─── Roztřiď ──────────────────────────────────────────────────────────────────
+
+/** Nejdelší text vlastní karty (znaků). */
+export const DELKA_KARTY = 60;
+
+export interface KartaRoztrid {
+  id: string;
+  text: string;
+  /** kartu přidal student */
+  vlastni?: boolean;
+}
+
+export interface StavRoztrid {
+  /** id karty → id koše */
+  umisteni: Record<string, string>;
+  /** karty, které přidal student */
+  vlastni: { id: string; text: string }[];
+  /** student třídění uzavřel a vidí zpětnou vazbu */
+  hotovo: boolean;
+}
+
+type ObsahRoztrid = Pick<TBlokRoztrid, 'kose' | 'karty' | 'vlastni'>;
+
+/** Všechny karty bloku: nejdřív autorské, pak studentovy. */
+export function kartyRoztrid(blok: Pick<TBlokRoztrid, 'karty'>, vlastni: StavRoztrid['vlastni'] = []): KartaRoztrid[] {
+  return [...blok.karty.map((k) => ({ id: k.id, text: k.text })), ...vlastni.map((k) => ({ ...k, vlastni: true }))];
+}
+
+/** Karty, které ještě nejsou v žádném koši, v pořadí bloku. */
+export function hromadkaRoztrid(karty: KartaRoztrid[], umisteni: Record<string, string>): KartaRoztrid[] {
+  return karty.filter((k) => !umisteni[k.id]);
+}
+
+/** Karty v jednom koši, v pořadí bloku. */
+export function kartyVKosi(karty: KartaRoztrid[], umisteni: Record<string, string>, kos: string): KartaRoztrid[] {
+  return karty.filter((k) => umisteni[k.id] === kos);
+}
+
+/** Id pro další vlastní kartu: první volné „vlastni-N“. */
+export function idVlastniKarty(vlastni: { id: string }[]): string {
+  for (let n = 1; ; n++) if (!vlastni.some((k) => k.id === `vlastni-${n}`)) return `vlastni-${n}`;
+}
+
+/** Text vlastní karty: bez okrajových mezer, na jednom řádku, nejvýš DELKA_KARTY znaků. Prázdný = null. */
+export function textVlastniKarty(s: string): string | null {
+  const t = s.replace(/\s+/g, ' ').trim().slice(0, DELKA_KARTY).trim();
+  return t || null;
+}
+
+/** Zpětná vazba ke kartě v daném koši: pro koš zvlášť, jinak společná; u vlastní karty společná pro vlastní. */
+export function zpetnaKarty(blok: Pick<TBlokRoztrid, 'karty' | 'vlastni'>, karta: KartaRoztrid, kos: string): string | null {
+  if (karta.vlastni) return blok.vlastni?.zpetna ?? null;
+  const k = blok.karty.find((x) => x.id === karta.id);
+  return k?.kdyz?.[kos] ?? k?.zpetna ?? null;
+}
+
+/** Text do deníku: „Potřebuju: spánek; přítel. Těší mě: pizza.“ Prázdné koše se vynechají. */
+export function zapisRoztrid(blok: Pick<TBlokRoztrid, 'kose' | 'karty'>, stav: Pick<StavRoztrid, 'umisteni' | 'vlastni'>): string {
+  const karty = kartyRoztrid(blok, stav.vlastni);
+  return blok.kose
+    .map((k) => ({ k, v: kartyVKosi(karty, stav.umisteni, k.id) }))
+    .filter((x) => x.v.length)
+    .map((x) => `${x.k.nazev}: ${veta(x.v.map((c) => c.text).join('; '))}`)
+    .join(' ');
+}
+
+/** Přečte uložený stav a zahodí, co neodpovídá bloku (smazaná karta, koš, víc vlastních karet, než blok dovolí). */
+export function platnyStavRoztrid(s: unknown, blok: ObsahRoztrid): StavRoztrid | null {
+  if (!s || typeof s !== 'object') return null;
+  const x = s as Partial<StavRoztrid>;
+  const vlastni: StavRoztrid['vlastni'] = [];
+  for (const k of Array.isArray(x.vlastni) ? x.vlastni : []) {
+    if (vlastni.length >= (blok.vlastni?.pocet ?? 0)) break;
+    const text = k && typeof k.text === 'string' ? textVlastniKarty(k.text) : null;
+    if (!k || typeof k.id !== 'string' || !/^vlastni-\d+$/.test(k.id) || !text || vlastni.some((v) => v.id === k.id)) continue;
+    vlastni.push({ id: k.id, text });
+  }
+  const karty = new Set(kartyRoztrid(blok, vlastni).map((k) => k.id));
+  const kose = new Set(blok.kose.map((k) => k.id));
+  const umisteni: Record<string, string> = {};
+  for (const [karta, kos] of Object.entries(x.umisteni && typeof x.umisteni === 'object' ? x.umisteni : {})) {
+    if (karty.has(karta) && typeof kos === 'string' && kose.has(kos)) umisteni[karta] = kos;
+  }
+  if (!vlastni.length && !Object.keys(umisteni).length) return null;
+  // Hotovo platí, jen když je roztříděné všechno; jinak se student vrátí k třídění.
+  return { umisteni, vlastni, hotovo: x.hotovo === true && [...karty].every((id) => umisteni[id]) };
 }
 
 // ─── Kdo žil dřív? ────────────────────────────────────────────────────────────
@@ -419,12 +513,12 @@ export function osaDvou(a: OsobaMapy, b: OsobaMapy): { od: number; do: number; a
 /** Odkazy bloku z YAML na data: osoby v lide.yaml a prameny v zdroje.yaml. Vrací seznam chyb. */
 export function chybyBloku(
   id: string,
-  blok: { druh: string; zdroje: string[]; coUdelal?: { osoba: string }; strany?: { osoba: string }[] },
+  blok: { druh: string; zdroje: string[]; coUdelal?: { osoba: string }; strany?: { osoba: string }[]; srovnani?: { osoba?: string } },
   osoby: Set<string>,
   prameny: Set<string>,
 ): string[] {
   const chyby: string[] = [];
-  const osobyBloku = [blok.coUdelal?.osoba, ...(blok.strany ?? []).map((s) => s.osoba)].filter(Boolean) as string[];
+  const osobyBloku = [blok.coUdelal?.osoba, blok.srovnani?.osoba, ...(blok.strany ?? []).map((s) => s.osoba)].filter(Boolean) as string[];
   for (const o of osobyBloku) if (!osoby.has(o)) chyby.push(`Blok „${id}“: osoba „${o}“ není v lide.yaml.`);
   for (const z of blok.zdroje) if (!prameny.has(z)) chyby.push(`Blok „${id}“: pramen „${z}“ není v zdroje.yaml.`);
   return chyby;

@@ -8,7 +8,7 @@ import type { ClovekBloku, Dal } from '../ostrovy/bloky-typy';
 interface Props { id: string; dal?: Dal }
 const { id, dal } = Astro.props;
 const blok = await nactiBlok(id, 'spor', Astro.url.pathname);
-const lide = blok.strany.map((s) => clovek(s.osoba)) as [ClovekBloku, ClovekBloku];
+const lide = blok.strany.map((s) => ({ ...clovek(s.osoba), oznaceni: s.oznaceni })) as [ClovekBloku, ClovekBloku];
 const dalsi = await kamDal(Astro.url.pathname, dal ?? blok.dal);
 ---
 <Ostrov client:visible id={id} blok={proOstrov(blok)} lide={lide} odkaz={odkazNaBlok(Astro.url.pathname, id)} dal={dalsi} />

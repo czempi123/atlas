@@ -1,0 +1,131 @@
+---
+// Graf křivek: jednoduchá vlastní kresba jedné až tří křivek (směr, ne přesné hodnoty). Bez JavaScriptu.
+// Popisky stojí přímo u křivek; druhá křivka se liší i čárkováním. Text pod grafem (slot) říká totéž
+// co kresba a slouží i čtečkám jako popis obrázku. Barva období z okolí (.obdobi-N) nebo z `obdobi`.
+// Použití v MDX:
+// <GrafKrivek id="graf-penize-stesti" osaY="Jak se lidé právě cítí" smerY="lépe"
+//   osaX="Roční příjem domácnosti" poznamkaX="Každý dílek je dvojnásobek předchozího." dilku={5}
+//   znacka={{ x: 3, text: '100 000 dolarů' }}
+//   krivky={[
+//     { nazev: 'Většina lidí', body: [[0, 0.42], [5, 0.86]] },
+//     { nazev: 'Nejméně šťastná pětina', body: [[0, 0.1], [3, 0.4], [5, 0.4]], carkovana: true },
+//   ]}>
+//   U většiny lidí nálada s příjmem roste dál. …
+// </GrafKrivek>
+import { KRESBA, cestaKrivky, dilkyOsy, mistoPopisku, mistoZnacky, polohaX, polohaY, sirkaTextu, chybyGrafu, type KrivkaGrafu } from '../../lib/graf';
+
+interface Props {
+  /** kotva grafu; z ní se odvodí id popisu pro čtečky */
+  id: string;
+  /** název svislé osy: co se měří */
+  osaY: string;
+  /** co znamená směr nahoru („lépe“, „víc“) */
+  smerY?: string;
+  /** název vodorovné osy */
+  osaX: string;
+  /** poznámka k měřítku vodorovné osy */
+  poznamkaX?: string;
+  /** počet dílků vodorovné osy */
+  dilku: number;
+  /** svislá značka na ose s popiskem */
+  znacka?: { x: number; text: string };
+  krivky: KrivkaGrafu[];
+  /** barva období (1–8), když ji graf nemá převzít ze stránky */
+  obdobi?: number;
+}
+const { id, osaY, smerY, osaX, poznamkaX, dilku, znacka, krivky, obdobi } = Astro.props;
+const chyby = chybyGrafu(krivky, dilku, znacka);
+if (chyby.length) throw new Error(chyby.join('\n'));
+if (!Astro.slots.has('default')) throw new Error(`Graf „${id}“ potřebuje pod kresbou text, který říká totéž slovy.`);
+
+const K = KRESBA;
+// Mezi číslicemi nezlomitelná mezera, ať se „100 000“ nikdy nerozdělí.
+const cislo = (t: string) => t.replace(/(\d) (?=\d)/g, '$1 ');
+const zn = znacka ? { ...mistoZnacky(znacka.x, dilku, sirkaTextu(znacka.text)), cara: polohaX(znacka.x, dilku), text: cislo(znacka.text) } : null;
+const cary = krivky.map((k, i) => {
+  const [u, v] = k.body[k.body.length - 1];
+  return { ...k, i, d: cestaKrivky(k.body, dilku), konec: { x: polohaX(u, dilku), y: polohaY(v) }, popis: mistoPopisku(k, dilku) };
+});
+---
+<figure class:list={['graf', obdobi && `obdobi-${obdobi}`]} id={id}>
+  <svg class="graf__kresba" viewBox={`0 0 ${K.sirka} ${K.vyska}`} role="img" aria-label={`Graf: ${osaY.toLowerCase()} podle toho, jak roste ${osaX.toLowerCase()}`} aria-describedby={`${id}-popis`}>
+    <g aria-hidden="true">
+      {/* osy se šipkami */}
+      <path class="graf__osa" d={`M${K.vlevo} ${K.dole} V30 M${K.vlevo - 4} 37 L${K.vlevo} 30 L${K.vlevo + 4} 37`} />
+      <path class="graf__osa" d={`M${K.vlevo} ${K.dole} H${K.sirka - 6} M${K.sirka - 13} ${K.dole - 4} L${K.sirka - 6} ${K.dole} L${K.sirka - 13} ${K.dole + 4}`} />
+      {dilkyOsy(dilku).map((x) => <path class="graf__dilek" d={`M${x} ${K.dole} v5`} />)}
+      <text class="graf__text graf__text--osa" x={K.vlevo} y="16">{osaY}</text>
+      {smerY && <text class="graf__text graf__text--maly" x={K.vlevo + 9} y="40">{smerY}</text>}
+      <text class="graf__text graf__text--osa" x={K.vlevo} y={K.dole + 44}>{osaX}</text>
+      {poznamkaX && <text class="graf__text graf__text--maly" x={K.vlevo} y={K.dole + 62}>{poznamkaX}</text>}
+
+      {zn && (
+        <>
+          <path class="graf__znacka" d={`M${zn.cara} 44 V${K.dole + 5}`} />
+          <text class="graf__text graf__text--znacka" x={zn.x} y={K.dole + 22} text-anchor={zn.kotva}>{zn.text}</text>
+        </>
+      )}
+
+      {cary.map((c) => (
+        <>
+          <path class:list={['graf__krivka', `graf__krivka--${c.i + 1}`, { 'graf__krivka--carkovana': c.carkovana }]} d={c.d} />
+          <circle class:list={['graf__bod', `graf__bod--${c.i + 1}`]} cx={c.konec.x} cy={c.konec.y} r="4.5" />
+        </>
+      ))}
+      {cary.map((c) => (
+        <text class="graf__text graf__text--krivka" x={c.popis.x} y={c.popis.y} text-anchor="end">{c.nazev}</text>
+      ))}
+    </g>
+  </svg>
+  <figcaption class="graf__popis" id={`${id}-popis`}><slot /></figcaption>
+</figure>
+
+<style>
+  .graf {
+    max-width: 420px;
+    margin: var(--s-6) 0;
+    /* Na telefonu vyjde jednotka kresby na jeden pixel: popisky mají 13 px. */
+    padding: var(--s-3);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    scroll-margin-top: calc(var(--hlavicka) + var(--s-4));
+  }
+  @media (min-width: 700px) {
+    .graf { padding: var(--s-4) var(--s-4) var(--s-3); }
+  }
+  .graf__kresba { width: 100%; height: auto; overflow: visible; }
+  .graf__osa { fill: none; stroke: var(--muted); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+  .graf__dilek { stroke: var(--muted); stroke-width: 1; }
+  .graf__znacka { stroke: var(--muted); stroke-width: 1; }
+  .graf__krivka { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .graf__krivka--1, .graf__krivka--3 { stroke: var(--pc, var(--ink)); }
+  .graf__krivka--2 { stroke: var(--ink); }
+  .graf__krivka--carkovana { stroke-dasharray: 7 6; }
+  .graf__krivka--3 { stroke-dasharray: 2 5; }
+  .graf__bod { stroke: var(--surface); stroke-width: 2; }
+  .graf__bod--1, .graf__bod--3 { fill: var(--pc, var(--ink)); }
+  .graf__bod--2 { fill: var(--ink); }
+  .graf__text {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-variant-numeric: lining-nums tabular-nums;
+    fill: var(--ink-2);
+  }
+  .graf__text--osa { font-weight: 600; fill: var(--ink); }
+  .graf__text--maly { font-size: 12px; fill: var(--muted); }
+  .graf__text--znacka { font-weight: 600; fill: var(--ink); }
+  /* Popisek křivky smí ležet přes značku: světlý obrys ho od ní oddělí. */
+  .graf__text--krivka { font-weight: 600; fill: var(--ink); stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; paint-order: stroke; }
+  .graf__popis {
+    margin-top: var(--s-3);
+    padding-top: var(--s-3);
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    line-height: var(--lh-ovladani);
+    color: var(--ink-2);
+  }
+  .graf__popis :global(p) { margin: 0 0 var(--s-2); }
+  .graf__popis :global(p:last-child) { margin-bottom: 0; }
+</style>

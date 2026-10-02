@@ -1,13 +1,15 @@
 ---
-// Šablona osobnosti (portrét, profil): hlavička s deskou a atributem → příběh v kapitolách →
+// Šablona osobnosti (portrét, profil): hlavička s deskou, atributem a vstupy do cest a otázek → příběh v kapitolách →
 // doba a lidé (z dat) → velké myšlenky → zkus to žít → kam dál → prameny.
 import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
 import Deska from '../../components/ui/Deska.astro';
 import Mince from '../../components/ui/Mince.astro';
 import Prameny from '../../components/osobnost/Prameny.astro';
+import VstupyOsoby from '../../components/osobnost/VstupyOsoby.astro';
 import { osoba as najdiOsobu, obdobiPodleId, mistaPodleId, data } from '../../lib/data';
 import { zivot } from '../../lib/casy';
+import { nezlomitelne } from '../../lib/sazba.js';
 
 export async function getStaticPaths() {
   const vse = await getCollection('osobnosti');
@@ -19,7 +21,8 @@ const { Content } = await render(zaznam);
 const fm = zaznam.data;
 const osoba = najdiOsobu(fm.osoba);
 const obdobi = obdobiPodleId.get(osoba.obdobi)!;
-const rodiste = osoba.mista.find((m) => m.role === 'narozeni' || m.role === 'pusobeni');
+// Místo v hlavičce: rodiště; když ho neznáme, místo, kde člověk působil naposledy (Epikúros: Athény, ne Mytiléna).
+const rodiste = osoba.mista.find((m) => m.role === 'narozeni') ?? osoba.mista.findLast((m) => m.role === 'pusobeni');
 const misto = rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
 const vztahy = data.vztahy.filter((v) => v.od === osoba.id || v.k === osoba.id);
 const citatyNaStrance = [fm.citat, ...[...(zaznam.body ?? '').matchAll(/<Citat id="([^"]+)"/g)].map((m) => m[1])].filter(Boolean) as string[];
@@ -33,6 +36,11 @@ const prameny = [
   ...vztahy.map((v) => v.zdroj),
   ...(osoba.atribut ? [osoba.atribut.zdroj] : []),
   ...citatyNaStrance.map((id) => data.zdroje.citaty.find((c) => c.id === id)!.zdroj),
+];
+// Obrázky na stránce: portrét na desce a obrazy scén v blocích Příběh; licence každého patří do Pramenů.
+const obrazkyNaStrance = [
+  ...(osoba.obrazek ? [osoba.obrazek] : []),
+  ...[...(zaznam.body ?? '').matchAll(/<Pribeh [^>]*obrazek="([^"]+)"/g)].map((m) => m[1]),
 ];
 const dev = import.meta.env.DEV;
 ---
@@ -51,12 +59,13 @@ const dev = import.meta.env.DEV;
     <header class="osobnost__hlavicka">
       <div class="osobnost__titulek">
         <p class="t-nadtitulek nadtitulek">{fm.nadtitulek}</p>
-        <h1 class="t-display-2">{fm.titulek}.<br /><em>{fm.pointa}</em></h1>
+        <h1 class="t-display-2">{fm.titulek}.<br /><em>{nezlomitelne(fm.pointa)}</em></h1>
         <p class="data t-ovladani">
           <span class="t-letopocet">{zivot(osoba)}</span>
           {misto && <> · {misto}</>}
           {' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a>
         </p>
+        <VstupyOsoby osoba={osoba} />
       </div>
       <div class="osobnost__deska">
         <Deska osoba={osoba}>
@@ -64,7 +73,7 @@ const dev = import.meta.env.DEV;
             <span class:list={['proc', { 'proc--mince': osoba.obrazek }]}>
               {/* S fotografií na desce chybí mince; atribut proto zůstane u popisku. */}
               {osoba.obrazek && <Mince osoba={osoba} varianta="ring" velikost={40} />}
-              <span><strong>Proč {osoba.atribut.nazev}?</strong> {osoba.atribut.proc}</span>
+              <span><strong>Proč {osoba.atribut.nazev}?</strong> {nezlomitelne(osoba.atribut.proc)}</span>
             </span>
           )}
         </Deska>
@@ -96,7 +105,7 @@ const dev = import.meta.env.DEV;
     )}
 
     <div class="ctenarsky">
-      <Prameny prameny={prameny} citaty={citatyNaStrance} obrazky={osoba.obrazek ? [osoba.obrazek] : []} />
+      <Prameny prameny={prameny} citaty={citatyNaStrance} obrazky={obrazkyNaStrance} />
     </div>
   </article>
 </Zakladni>

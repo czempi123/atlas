@@ -23,7 +23,7 @@ Tady se odvádí všechna pramenná práce, aby studentský text mohl vyprávět
    | Podvržené | „Vím, že nic nevím“ jako doslovný Sókratův výrok | Nepoužít; použít skutečné znění z pramene |
 
 4. **Citáty ověř zvlášť.** Najdi místo v díle (kniha, kapitola, paragraf; u Platóna Stephanovo číslování, u předsókratiků číslo zlomku DK). Zjisti český překlad a překladatele; pokud překlad chybí nebo je nevhodný, připrav vlastní převod a označ ho v podkladech jako vlastní. Nikdy nevkládej do úst historické osobě větu, kterou nelze najít v prameni.
-5. **Obrázky:** zjisti autora, instituci, licenci a odkaz (typicky Wikimedia Commons). Bez jasné licence obrázek nepoužívej.
+5. **Obrázky:** zjisti autora, instituci, licenci a odkaz (muzeum s otevřeným přístupem, nebo Wikimedia Commons). Bez jasné licence obrázek nepoužívej. Soubor stahuj až po souhlasu autora; při žádosti uveď název souboru, zdroj a velikost.
 6. **Zapiš podkladový list** do `docs/podklady/<id-celku>.md` podle šablony v `references/podkladovy-list.md`. Návrhy dat (životní data, místa, vztahy) připrav rovnou ve tvaru, který se přenese do `src/data/`.
 7. **Předej** v pár větách: co je ověřeno, které příběhy jsou nejsilnější a co zůstalo otevřené a vyžaduje rozhodnutí autora.
 

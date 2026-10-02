@@ -66,6 +66,152 @@ export function projekce(v: Vyrez, rezerva = 20) {
     .clipExtent([[-rx, -ry], [v.sirka + rx, v.vyska + ry]]);
 }
 
+/** Místo na mini mapě osoby: souřadnice, název a řádky pod ním („působení 306 př. n. l.“). */
+export interface MistoMiniMapy {
+  souradnice: [number, number];
+  nazev: string;
+  radky: string[];
+}
+
+export type StranaPopisku = 'vpravo' | 'vlevo';
+
+/**
+ * Na kterou stranu od bodu patří popisek: vlevo u pravého okraje výřezu, nebo když těsně vpravo
+ * ve stejné výšce leží jiný bod (Korinth vedle Athén), aby se popisky nepřekryly.
+ */
+export function stranyPopisku(xy: [number, number][], sirka: number): StranaPopisku[] {
+  return xy.map(([x, y], i) => {
+    if (x > sirka * 0.6) return 'vlevo';
+    const soused = xy.some(([x2, y2], j) => j !== i && x2 > x && x2 - x < 170 && Math.abs(y2 - y) < 30);
+    return soused ? 'vlevo' : 'vpravo';
+  });
+}
+
+// Rozměry popisku v jednotkách výřezu. Počítáme s většími písmy na telefonu (MiniMapa.astro), ať se vejde všude.
+const ZNAK_NAZVU = 11.5;
+const ZNAK_ROLE = 9.2;
+const sirkaPopisku = (m: Pick<MistoMiniMapy, 'nazev' | 'radky'>) => 13 + Math.max(m.nazev.length * ZNAK_NAZVU, ...m.radky.map((r) => r.length * ZNAK_ROLE));
+const VYSKA_NAZVU = 24;
+const VYSKA_RADKU = 22;
+/** Odstup popisku od bodu a řádkování rolí (1,2 em při písmu 18 px), stejné jako v MiniMapa.astro. */
+const ODSTUP_POPISKU = 11;
+const RADKOVANI_ROLI = 21.6;
+
+/** Kde stojí popisek místa: strana od bodu a jestli je celý vysunutý nad bod (role pak končí u bodu). */
+export interface UmisteniPopisku {
+  strana: StranaPopisku;
+  nahoru: boolean;
+}
+
+export type Obdelnik = [x0: number, y0: number, x1: number, y1: number];
+type BodSPopiskem = { xy: [number, number] } & Pick<MistoMiniMapy, 'nazev' | 'radky'>;
+
+// Šířka textu v Instrument Sans: úzké znaky (mezera, tečka, i, l, t…) mají asi poloviční šířku ostatních.
+// Změřeno v prohlížeči pro písmo na telefonu (název 21 px tučně, role 18 px); odhad sedí na ±5 %.
+const UZKE_ZNAKY = new Set(' .,ijlítfr1I');
+const sirkaTextu = (text: string, siroky: number, uzky: number) => [...text].reduce((s, z) => s + (UZKE_ZNAKY.has(z) ? uzky : siroky), 0);
+
+/** Obdélníky jednotlivých řádků popisku (název a role) v jednotkách výřezu, odhad pro písmo na telefonu. */
+export function radkyPopisku(b: BodSPopiskem, u: UmisteniPopisku): Obdelnik[] {
+  const [x, y] = b.xy;
+  const ucari = y - 2 - (u.nahoru ? b.radky.length * RADKOVANI_ROLI : 0);
+  const radek = (s: number, zaklad: number, vyska: number): Obdelnik => {
+    const x0 = u.strana === 'vpravo' ? x + ODSTUP_POPISKU : x - ODSTUP_POPISKU - s;
+    return [x0, zaklad - vyska, x0 + s, zaklad + vyska * 0.3];
+  };
+  return [
+    radek(sirkaTextu(b.nazev, 13.4, 6), ucari, 17),
+    ...b.radky.map((r, k) => radek(sirkaTextu(r, 10.2, 4.6), ucari + (k + 1) * RADKOVANI_ROLI, 14)),
+  ];
+}
+
+const prekryv = (a: Obdelnik, b: Obdelnik, mez = 6) => a[0] < b[2] + mez && b[0] < a[2] + mez && a[1] < b[3] && b[1] < a[3];
+
+/**
+ * Umístění popisků všech míst. Strany určí `stranyPopisku`; když se pak řádky dvou popisků potkají
+ * (Athény se třemi řádky a Kolofón hned vedle), vysune se popisek s méně řádky nad svůj bod.
+ * Vysunutí zůstane, jen když popisek nikomu dalšímu nepřekáží, nezakryje cizí bod a nevyjde z výřezu.
+ */
+export function umisteniPopisku(body: BodSPopiskem[], sirka: number): UmisteniPopisku[] {
+  const u: UmisteniPopisku[] = stranyPopisku(body.map((b) => b.xy), sirka).map((strana) => ({ strana, nahoru: false }));
+  const koliduje = (i: number, j: number) => {
+    const druhe = radkyPopisku(body[j], u[j]);
+    return radkyPopisku(body[i], u[i]).some((a) => druhe.some((b) => prekryv(a, b)));
+  };
+  const volny = (i: number) => {
+    const moje = radkyPopisku(body[i], u[i]);
+    if (moje.some((r) => r[1] < 0)) return false;
+    return body.every((b, j) => {
+      if (j === i) return true;
+      const bod: Obdelnik = [b.xy[0] - 7, b.xy[1] - 7, b.xy[0] + 7, b.xy[1] + 7];
+      return !koliduje(i, j) && !moje.some((r) => prekryv(r, bod, 0));
+    });
+  };
+  for (let i = 0; i < body.length; i++) {
+    for (let j = i + 1; j < body.length; j++) {
+      if (!koliduje(i, j)) continue;
+      const poradi = body[i].radky.length <= body[j].radky.length ? [i, j] : [j, i];
+      for (const k of poradi) {
+        if (u[k].nahoru) continue;
+        u[k].nahoru = true;
+        if (volny(k)) break;
+        u[k].nahoru = false;
+      }
+    }
+  }
+  return u;
+}
+
+/** Obdélník, který zabírají body s popisky (v pixelech výřezu). */
+function obalPopisku(v: Vyrez, mista: MistoMiniMapy[]) {
+  const proj = projekce(v, 1e6);
+  const xy = mista.map((m) => proj(m.souradnice) as [number, number]);
+  const umisteni = umisteniPopisku(mista.map((m, i) => ({ xy: xy[i], nazev: m.nazev, radky: m.radky })), v.sirka);
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  xy.forEach(([x, y], i) => {
+    const s = sirkaPopisku(mista[i]);
+    const { strana, nahoru } = umisteni[i];
+    const radku = mista[i].radky.length * VYSKA_RADKU;
+    x0 = Math.min(x0, strana === 'vpravo' ? x - 8 : x - s);
+    x1 = Math.max(x1, strana === 'vpravo' ? x + s : x + 8);
+    y0 = Math.min(y0, y - VYSKA_NAZVU - (nahoru ? radku : 0));
+    y1 = Math.max(y1, y + (nahoru ? 0 : radku) + 6);
+  });
+  return { x0, y0, x1, y1 };
+}
+
+/**
+ * Výřez mini mapy osoby. Dokud jsou všechna její místa vidět ve výchozím egejském výřezu, zůstává ten.
+ * Jinak se střed a měřítko spočítají tak, aby se vešla všechna místa i s popisky (Sinópé, Thurioi).
+ */
+export function vyrezMiniMapy(mista: MistoMiniMapy[], vychozi: Vyrez = VYREZY_OBDOBI_1.mini): Vyrez {
+  if (!mista.length) return vychozi;
+  const p0 = projekce(vychozi, 1e6);
+  const vsechnaVidet = mista.every((m) => {
+    const [x, y] = p0(m.souradnice) as [number, number];
+    return x > 0 && x < vychozi.sirka && y > 0 && y < vychozi.vyska;
+  });
+  if (vsechnaVidet) return vychozi;
+
+  const delky = mista.map((m) => m.souradnice[0]);
+  const sirky = mista.map((m) => m.souradnice[1]);
+  const stred: [number, number] = [(Math.min(...delky) + Math.max(...delky)) / 2, (Math.min(...sirky) + Math.max(...sirky)) / 2];
+  const OKRAJ = 8;
+  let v: Vyrez = { ...vychozi, stred };
+  for (let meritko = vychozi.meritko; meritko >= 250; meritko = Math.floor(meritko * 0.94)) {
+    v = { ...vychozi, stred, meritko };
+    // Popisky visí pod bodem a do strany: střed výřezu dorovnáme na střed bodů i s popisky.
+    for (let k = 0; k < 3; k++) {
+      const o = obalPopisku(v, mista);
+      const novy = projekce(v, 1e6).invert!([(o.x0 + o.x1) / 2, (o.y0 + o.y1) / 2]) as [number, number];
+      v = { ...v, stred: [Math.round(novy[0] * 100) / 100, Math.round(novy[1] * 100) / 100] };
+    }
+    const o = obalPopisku(v, mista);
+    if (o.x0 >= OKRAJ && o.x1 <= v.sirka - OKRAJ && o.y0 >= OKRAJ && o.y1 <= v.vyska - OKRAJ) return v;
+  }
+  return v;
+}
+
 export interface Podklad {
   pevnina: string;
   sit: string;

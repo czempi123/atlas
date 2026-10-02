@@ -7,6 +7,7 @@ import Mince from '../../../components/ui/Mince.astro';
 import { osoba } from '../../../lib/data';
 import { krokyCesty, adresaKroku } from '../../../lib/cesty';
 import { adresaOtazky } from '../../../lib/otazky';
+import { nezlomitelne } from '../../../lib/sazba.js';
 
 export async function getStaticPaths() {
   const cesty = await getCollection('cesty');
@@ -40,7 +41,7 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
     <header class="cesta__hlava ctenarsky">
       <p class="t-nadtitulek nadtitulek">Cesta {c.cislo}{c.minut && <> · asi {c.minut} minut</>} · {kroky.length} kroků</p>
       <h1 class="t-h1">{c.nazev}</h1>
-      <p class="t-perex">{c.vstup}</p>
+      <p class="t-perex">{nezlomitelne(c.vstup)}</p>
       <p class="lide t-ovladani">
         {lide.map((o) => <span class="clovek"><Mince osoba={o} varianta="tint" velikost={36} /> <a href={`/osobnost/${o.id}/`}>{o.jmeno}</a></span>)}
       </p>
@@ -53,7 +54,7 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
       <h2 class="t-h3" id="kam-dal-nadpis">Kam dál</h2>
       <ul>
         {lide.map((o) => <li><a href={`/osobnost/${o.id}/`}>{o.jmeno}: celý příběh</a></li>)}
-        <li><a href="/mapa/?rok=-399&osoba=sokrates">Mapa a čas: Athény roku 399 př. n. l.</a></li>
+        {c.mapa && <li><a href={`/mapa/?rok=${c.mapa.rok}&osoba=${c.mapa.osoba}`}>Mapa a čas: {c.mapa.text}</a></li>}
         {otazka && <li><a href={odkazOtazky}>Velká otázka {otazka.data.cislo}: {otazka.data.otazka}</a></li>}
       </ul>
     </section>
@@ -62,6 +63,8 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
 
 <style>
   .cesta { padding-bottom: var(--s-8); }
+  /* Středová osa jako u kroků, profilu a otázky: sloupec uprostřed, ne u levého okraje. */
+  .cesta :global(.ctenarsky) { margin-inline: auto; }
   .cesta__hlava { padding: var(--s-6) 0 var(--s-4); }
   .nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
   h1 { margin-bottom: var(--s-4); }

@@ -1,6 +1,6 @@
 # K ověření
 
-29. 9. 2026 · P2. Co se při zakládání dat období 1 a 2 nepodařilo ověřit, a proto to v `src/data/` zatím není. Každý bod má návrh, co s ním. Postup ověřování je v `docs/podklady/data-obdobi-1-2.md`. Doplněno 1. 10. 2026 (P6, celek 1): vyřízené body jsou označené, nové otevřené jsou v posledním oddílu.
+29. 9. 2026 · P2. Co se při zakládání dat období 1 a 2 nepodařilo ověřit, a proto to v `src/data/` zatím není. Každý bod má návrh, co s ním. Postup ověřování je v `docs/podklady/data-obdobi-1-2.md`. Doplněno 1. 10. 2026 (P6, celek 1 a celek 2): vyřízené body jsou označené, nové otevřené jsou v oddílech celků na konci.
 
 ## Lidé, kteří v datech zatím chybějí
 
@@ -11,7 +11,7 @@
 | Čuang-c’ (okno období 2) | SEP („Zhuangzi“) uvádí jen „pozdní 4. století př. n. l.“; tradiční 369–286 z návrhu P1 jsem nedoložil. | Dohledat v Chan, *A Source Book in Chinese Philosophy*, nebo v IEP. |
 | Hieroklés (stoik) | Heslo IEP neexistuje na očekávané adrese; datace „2. st. n. l.“ nemá odborný zdroj. | Dohledat v Ramelli, *Hierocles the Stoic* (SBL 2009); obraz soustředných kruhů je u Stobaia 4.27.23. |
 | Sextus Empiricus | SEP: „víme málo nebo nic o tom, kdy a kde žil“ (asi 2.–3. st. n. l.). | Nechat bez dat jako medailonek bez místa na mapě, nebo vynechat z mapy. Schéma to umí. |
-| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). |
+| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. |
 
 ## Chybějící roky a místa u lidí, kteří v datech jsou
 
@@ -21,7 +21,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | --- | --- | --- | --- |
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
 | Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
-| Epikúros | místo narození | SEP: athénský občan, vyrůstal na Samu. | V datech jen pobyt na Samu do 321. |
+| ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
 | Epiktétos | roky v Římě a v Níkopoli | SEP: Domitianův edikt roku 89; SEP „Stoicism“: 93. | Po rozhodnutí doplnit `do`/`od`. **Rozpor pramenů.** |
 | Marcus Aurelius | místo smrti, Carnuntum | Britannica: zemřel ve Vindoboně nebo v Sirmiu; Carnuntum a Granua jsou v nadpisech knih Hovorů (I a II/III), stránka je nepodala. | Doplnit Carnuntum z Hovorů (vydání Haines, Loeb) po ověření. |
 | Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
@@ -120,3 +120,69 @@ Vědomě vynecháno: Sókratův posměšek o praseti a paviánovi jako měřítk
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
 | ~~Prótagorova odpověď na sebevyvrácení (Theaitétos 171a–d)~~ | **Vyřízeno 1. 10.:** autor rozhodl, že pointa sporu má přednost před sporem badatelů; odpověď je ve Sporu v kroku 5 jako výklad místo argumentu „obce“. | — |
+
+## Celek 2 „Jak mám žít?“ (P6)
+
+1. 10. 2026. Podklady jsou v `docs/podklady/celek-2-jak-zit.md`. Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| ~~Obrázek Epikúra~~ | **Vyřízeno 2. 10. 2026:** autor souhlasil; hlava z Metropolitan Museum (inv. 11.90, Open Access CC0) stažena přímo z muzea a zmenšena. | V datech jako `epikuros-met`. |
+| ~~Obrázek Diogena~~ | **Vyřízeno 2. 10. 2026:** spolehlivá antická podobizna neexistuje; autor rozhodl použít novověké vyobrazení. Obě díla jsou z Met (Open Access CC0). | V datech `diogenes-carpi` (dřevořez Uga da Carpi podle Parmigianina, asi 1527–1530, na desku) a `diogenes-poharek` (kresba, 17. st., ke scéně s dítětem). Lucerna zůstává atributem. |
+| Mince ze Sinópy | IEP: aféra se znehodnocením je díky mincím „jistá“. Mince s úředníkem ΙΚΕΣΙΟ existují a některé mají zásek, ale Corpus Nummorum (SNG France 7) je datuje asi 330–300 př. n. l., tedy po Diogenově odchodu. Starší literaturu (Seltman 1938) jsem neviděl. | Ve studentském textu jen aféra s mincemi a vyhnanství; „mince s otcovým jménem“ nepoužívat, dokud se nedohledá odborná numismatická studie. |
+| Vatikánský výrok 23 | Rukopis má „ctnost“ (ἀρετή), vydavatelé „žádoucí“ (αἱρετή); SEP uvádí obě. | Citát do dat nedán; výklad přátelství stojí na KD 27 a DL X, 120. |
+| Vatikánský výrok 33 | Jméno Dia je doplněk vydavatelů. | Citát `vs-33` v datech s poznámkou; nic dalšího. |
+| Senekův nápis na Zahradě | Známe jen ze Seneky (Dopisy 21, 10); rukopisy se v místě nápisu rozcházejí. | Ve studentském textu „Seneca popisuje…“, nikdy „na bráně stálo“. |
+| Leontion | Jen z nepřátelských pramenů (Timokratés u DL X, 4–7; Cicero, O povaze bohů I, 93). | Ve studentském textu bez slova hetéra; jen že napsala spis proti Theofrastovi. |
+| Tacitova řeč Seneky k Neronovi (Letopisy XIV, 53–54) | Řeč je historikova stylizace; rok 62 podle rámce knihy XIV, nekontroloval jsem ho proti odbornému heslu. | Při portrétu Seneky ověřit datum v SEP nebo komentáři. |
+| ~~České překlady~~ | **Vyřízeno 2. 10. 2026:** autor rozhodl, že vlastní převody platí i pro Diogena Laertia a Senecu. | — |
+| Diogenés v SEP | SEP heslo o kynicích ani o Diogenovi nemá. | Výklad stojí na IEP (Piering) a Routledge (Branham); při revizi případně doplnit Branham a Goulet-Cazé (ed.), *The Cynics* (1996). |
+
+Vyřízeno v celku 2: Epikúrovo místo narození (viz výše), Epikúrův postoj ke kynikům (DL X, 119, ověřeno v řečtině), Alexandr u Diogena ve třech pramenech (DL VI, 38; Plútarchos, Alexandr 14; Arriános VII, 2, 1).
+
+Vědomě vynecháno: Diogenovy tělesné potřeby na veřejnosti (DL VI, 46, 69), verze jeho smrti, „Kynici, nepřátelé Řecka“ (DL X, 8, nepřátelský pramen), konkrétní pomluvy o Epikúrovi (zvracení, hetéry), cena Zahrady (80 min), Epikúrův věk při smrti (DL 72, SEP 70–71).
+
+**Do skillu `atlas-overeni`, tabulka známých zkreslení:** „Hledám poctivého člověka“ (Diogenés) → řecky jen „hledám člověka“ (DL VI, 41); „Diogenés v sudu“ → pithos, hliněná zásobnice (DL VI, 23); „epikurejec = požitkář“ → Epikúros sám odmítá (Dopis Menoikeovi 131).
+
+**2. 10. 2026, po rozhodnutích autora:** Spor je Epikúros × kynici (bez smyšleného setkání s Diogenem), studie o penězích a štěstí je samostatný krok cesty 6. Nově otevřené pro P7 a P8:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Kresba `diogenes-poharek` v bloku Příběh | Kresba je na výšku (784 × 1280), deska bloku Příběh má poměr 4 : 3. | Výřez, nebo poměr desky na výšku (skill `atlas-komponenta`). |
+| Graf ke kroku se studií | Graf ze studie se nesmí kopírovat. | Vlastní jednoduchá kresba dvou křivek podle tab. 1 a obr. 2 studie (`kkm-2023`). |
+| Kratés v Athénách po roce 306 | Rámec Sporu říká, že Epikúros měl kyniky v Athénách před očima; opírá se o data Kratéta (zemřel asi 301, Britannica), roky jsou přibližné. | Ve studentském textu bez Kratétova jména a bez roku („chodili po městě kynici“). |
+| Římská soška Diogena v Met (inv. 22.139.1) | Neprověřeno (datace, restaurování). | Jen pokud by autor chtěl antické vyobrazení. |
+
+Walters Art Museum (Gérôme, Diogenés, CC0) soubor nástrojům nevydá, stejně jako Wikimedia Commons; Met ano.
+
+## Profily Epikúra a Diogena (P7)
+
+2. 10. 2026. Všechna tvrzení a citáty v profilech jsou z `celek-2-jak-zit.md` a z dat. Pět bodů, které příběh unesl, ale v podkladech chyběly, autor nechal doověřit a zahrnout:
+
+| Bod | Výsledek | Kde je |
+| --- | --- | --- |
+| ~~Oškubaný kohout v podrobnostech (DL VI, 40)~~ | **Vyřízeno 2. 10.:** řecký text přečten. Kohout přinesen do školy, „Tohle je Platónův člověk“, k definici přidáno „s plochými nehty“ (pramen neříká kým). | Diogenés, kapitola 02, s vlastním Odkryj „Co je člověk?“ a citátem `dl-vi-40`. |
+| ~~Pýthagorejská zásada o společném majetku přátel~~ | **Vyřízeno 2. 10.:** DL X, 11 ji uvádí přímo (κοινὰ τὰ φίλων). DL VIII, 10 o praxi pýthagorejců jsem nečetl. | Epikúros, kapitola 01 a Volba: „Pýthagorás říkal, že přátelé mají všechno společné.“ |
+| ~~Kde Epikúros žil ve čtrnácti~~ | **Vyřízeno 2. 10.:** DL X, 1 (vyrostl na Samu, do Athén v osmnácti) a SEP. | Epikúros, úvod: učitelé „na ostrově Samos“. |
+| ~~Co znamenalo patřit k obci~~ | **Vyřízeno 2. 10.:** SEP „Cosmopolitanism“, oddíl 1.1 (Řek se představoval jako občan své obce; Diogenés odmítl být Sinópě zvlášť zavázán). Práva, bohové a hrob obce ověřeny nejsou. | Diogenés, Myšlenka 2; pramen `sep-cosmopolitanism`. |
+| Ženy a otroci ve škole jako výjimka mezi athénskými školami | **Nepoužito.** SEP ani IEP to netvrdí a podle DL III, 46 měl i Platón dvě žačky. | Kapitola 01 říká jen, že v Zahradě byli. Vrátit se k tomu jen s odbornou studií v ruce. |
+
+Vědomě vynecháno v profilech: Hermippova verze Epikúrových začátků, cena Zahrady, jména (Perdikkás, Metrodóros, Leontion, Themista, Mys, Hikesios, Xeniadés, adresát Dopisu Menoikeovi), konkrétní pomluvy, věk při smrti, citát `vs-52`; u Diogena verze smrti a týž den jako Alexandr, tělesné potřeby na veřejnosti, odpověď Sinópským (DL VI, 49), otevřená řeč (VI, 69), Héraklés, sochy od Sinópských, „Jsem Diogenés, pes“ (VI, 60).
+
+Cestě 6 a stránce otázky 1 zůstává: nápis na Zahradě a správce, hrnek sýra, Epikúrovy dny skrovného jídla (`seneca-ep-18-9`), Spor s kyniky a jeho citáty, `kd-15`, `vs-68`, `menoikeus-132`, `dl-vi-44`. Cestě 7 celá scéna s Alexandrem, cestě 8 umírající Epikúros.
+
+## Cesta 6 a velká otázka 1 (P8)
+
+2. 10. 2026. Všechna historická tvrzení a citáty v cestě 6, na stránce otázky 1 a v novém hlasu Epikúra na stránce otázky 7 jsou z `celek-2-jak-zit.md`, z `celek-1-pravda.md` (Velká otázka 7) a z dat. Do textu nepřibylo nic neověřeného. Co by se hodilo a v podkladech není:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Hodnoty v grafu ke studii (`kkm-2023`) | Podklady mají jen hranici 100 000 dolarů, „asi pětinu“ a logaritmický růst. Kresba proto ukazuje směr dvou křivek, osy nemají čísla a sklon křivek je schematický. | Kdyby měl graf nést další čísla (50 000, 200 000 na ose) nebo třetí křivku nejšťastnějších, přečíst tab. 1 a obr. 2 studie a hodnoty zapsat do podkladů. |
+| Chyba je až v úsudku, ne ve vjemu | Epikúrova odpověď na stránce otázky 7 by byla ostřejší s větou, že smysly neklamou a mýlí se až to, co si k nim domyslíme (Dopis Hérodotovi, DL X, 50–51; Hlavní myšlenky 23–24). Nečetl jsem. | Ověřit v řeckém textu a v SEP „Epicurus“, oddíl 3; pak případně doplnit odpověď. Teď stojí jen na DL X, 31–32. |
+| Komu Epikúros psal o hrnku sýra | DL X, 11 cituje dopis bez adresáta, který bych měl ověřený. | V kroku 1 jen „V jednom z nich prosí:“. |
+| Aristotelés: „jednat dobře, a to po celý život“ | Zjednodušení věty „činnost duše podle ctnosti v celém životě“ (1098a16–20) pro studenty. | Při portrétu Aristotela (cesta 4) rozhodnout, jak česky podat ctnost (areté). |
+| „Kynici se cvičili, dokud je nepohodlí nepřestalo bolet“ | Výklad vložky DL VI, 70–71 (kdo se vycvičí, tomu je pohrdání slastí nejslastnější); pramen neříká, jak dlouho. | Nechat jako výklad; při revizi případně zjemnit. |
+
+Vědomě vynecháno v P8: přímá řeč správce Zahrady (jeho otázka je v kroku 1 jen nepřímo) a Senekovo „v téhle slasti jsem zestárl“; žaludek jako věřitel (Dopisy 21, 11); Epikúrova chlouba, že se nají za méně než as, a jména Metrodóra a Polyaina; adresát Dopisu Menoikeovi; Kratés a rok jeho smrti; kdo v Zahradě žil a společná pokladna (nese profil); Vatikánský výrok 25, `vs-52` a `etika-1155a`; Suilliovo obvinění a scéna s Neronem (portrét Seneky); jména autorů studie, Gallup, počty odpovědí a hlášení, pojem spolupráce protivníků a to, že u nejšťastnějších roste nálada rychleji; Alexandr (cesta 7).
+
+Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s kamarády, sluchátka, lajky, člověk, kterému se dá svěřit, seriál), bunda v kroku 3, výzva „měsíc na minimum“ a její tři podmínky v kroku 5, úvodní případ stránky otázky 1 (sklad, nebo tábor). Domyšlené odpovědi ve Sporu jsou podané jako výklad („by kynik mohl namítnout“, „by Epikúros mohl odpovědět“), stejně jako věta, že válet se v horkém písku by pro Epikúra byla zbytečná bolest.

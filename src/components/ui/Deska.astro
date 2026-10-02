@@ -29,7 +29,7 @@ const orn = ornamenty.orn(obdobi - 1);
 <figure class:list={['deska', `obdobi-${obdobi}`, trida]}>
   <div class="deska__plocha" style={`aspect-ratio:${pomer}`}>
     {obrazek ? (
-      <img src={`/${obrazek.soubor}`} alt={obrazek.popisek} loading="lazy" />
+      <img src={`/${obrazek.soubor}`} alt={obrazek.popisek} loading="lazy" style={obrazek.vyrez ? `object-position:${obrazek.vyrez}` : undefined} />
     ) : (
       <>
         <svg class="deska__ornament" viewBox="0 0 160 128" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -61,7 +61,8 @@ const orn = ornamenty.orn(obdobi - 1);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Busty a portréty: tvář bývá v horní třetině; při úzkém výřezu (telefon) se nesmí useknout. */
+    /* Busty a portréty: tvář bývá v horní třetině; při úzkém výřezu (telefon) se nesmí useknout.
+       Obrázek s vlastním středem výřezu (`vyrez` v zdroje.yaml) ho přebije stylem na prvku. */
     object-position: 50% 25%;
     filter: grayscale(1) contrast(1.1);
     mix-blend-mode: luminosity;

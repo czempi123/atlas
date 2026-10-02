@@ -2,6 +2,105 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Schválení celku 2 a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 2 „Jak mám žít?“ schválen a sloučen do hlavní větve | Autor: „Ano, schvaluji“ |
+| Krok 5 cesty 6: první možnost zní „Jdu do toho také.“ | Autor po zapracování: „celé“ tam nesedělo |
+| Skilly `atlas-cesta`, `atlas-komponenta` a `atlas-revize` doplněny o poučení z revize celku 2 (hlas i proti filozofovi cesty, možnosti v každé podmínce, Spor a poslední slovo, sazba a Sätteri, fokus nad spodní lištou, čísla proti prameni) | Autor: doplnit; ať se chyby celku 2 neopakují |
+| Celek 3 „Co mám ve svých rukou?“: cesta 5, portrét Epiktéta, Marcus Aurelius jako druhý hlas cesty. O rozsahu (Marcův portrét, stránka otázky 4) rozhodne autor po osnově P6. Další krok P6, zadání v `docs/plany/celek-3.md` | Rozhodnutí z 1. 10.: celek s Epiktétem přijde hned po celku 2; stoicismus má v atlasu zvláštní váhu |
+
+## 2. 10. 2026: Revize celku 2 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Všech devět nálezů revize schváleno a zapracováno (`docs/revize/celek-2-2026-10-02.md`) | Autor: „Nálezy schvaluju všechny“ |
+| Cesta dá na konci hlas i odpovědi „víc“: krok 7 říká, že s Epikúrem a kyniky souhlasit nemusíš, a posílá za Aristotelem na stránku otázky | Celek o penězích nesmí naznačovat, že skromnější odpověď je ta lepší; zpětné vazby byly v pořádku, tlak byl v celku |
+| Spor s kyniky se ptá „Mám se učit potřebovat co nejméně, nebo vědět, co mi stačí?“; kynik odpovídá na žebrání předem (socha a almužna, DL VI, 49) | „Obejít se bez všeho“ bylo krajnější než kynický citát; každá strana má mít odpověď na nejsilnější námitku druhé |
+| Možnosti ve Změň jednu věc musí dávat smysl v každé podmínce; oddíl Co udělal v kroku 5 říká, co by udělal Epikúros i kynik | Ve třetí podmínce ztrácely dvě možnosti smysl; samotné „Epikúros to dělal taky“ vypadalo jako správná odpověď |
+| Nezlomitelnou mezeru za jednopísmennými předložkami a spojkami doplňuje sestavení (`src/lib/sazba.js`), do textů se ručně nepíše. Markdown a MDX zpracovává Sätteri s vlastním pluginem; `@astrojs/markdown-satteri` je uvedený v `package.json` | Jedno místo pravdy pro MDX, bloky i data; Astro 7 už rehype pluginy bez dalšího balíčku nespouští |
+| Popisek na mini mapě, jehož řádky by se potkaly s jiným, se vysune nad svůj bod | Na telefonu se u Epikúra slévaly popisky Athén a Kolofónu |
+| Odpověď hlasu na stránce otázky má nejvýš dvě věty i po úpravě; Diogenova odpověď proto spojuje obě otázky do jedné věty | Pravidlo ze stránky velké otázky, hlídá ho test |
+
+## 2. 10. 2026: Vstupy, které nezapadnou, a středová osa cesty (po P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Ke každé cestě a stránce otázky vede viditelný vstup z hlavičky profilu: cesta jako plná deska v barvě období, otázky jako tlačítka s obrysem, hned pod letopočty a nad kapitolami | Autor po P8: cesta byla z Epikúrova profilu nenápadná (karta až za třetí kapitolou); každý prvek má být snadno k nalezení |
+| Vstupy se skládají samy z dat (`filozofove` cesty, `hlasy` otázky), ne ručně v MDX profilu | Nová cesta nebo otázka se u svých lidí objeví sama a nemůže zapadnout; hlídá to test |
+| Přehled otázek ukazuje u každé otázky její cesty, stránka Lidé u člověka s profilem jeho cestu | Cesta má být vidět i z míst, kudy student prochází, když nezná jméno filozofa |
+| Karta cesty má hlavní tlačítko „Vydat se na cestu“ a okraj v barvě období | Dřív byla k nerozeznání od ostatních karet v textu; odkaz jen jako řádek textu se přehlédl |
+| Karta cesty v profilu Epikúra zůstává i za kapitolou 03 | V hlavičce je vstup pro toho, kdo cestu hledá; karta v textu je pozvánka pro toho, kdo dočetl |
+| Krok cesty a přehled cesty stojí na středové ose: text 680 px, bloky 960 px, společný střed; lišta Předchozí / Další pod okraji bloku | Autor po P8: obsah byl na notebooku přiražený doleva a vpravo zůstávala prázdná plocha. Stejnou osu má stránka osobnosti |
+
+## 2. 10. 2026: Cesta 6 a stránka velké otázky 1 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Krok 2 cesty 6 je nový blok **Roztřiď**: karty se do košů přetahují, pokládají tlačítkem Dát sem nebo klávesnicí, student smí přidat vlastní. Blok je součást knihovny (sedmý), obsah má v YAML | Autor nad osnovou: postavit třídění rovnou s přetahováním, komponenta se použije i jinde |
+| Žádný koš není „správně“. Zpětná vazba patří ke kartě, ptá se dál a jen někde se liší podle koše (`kdyz`); srovnání „Jak třídil Epikúros“ říká jeho zkoušku, ne řešení | Zpětná vazba hodnotí důvody, nic se neboduje |
+| Strana Sporu smí mít `oznaceni` místo jména osoby. Ve Sporu cesty 6 stojí „kynici“ s Diogenovou mincí a scéna říká, že se Epikúros s Diogenem nejspíš nepotkal | Autor souhlasil; Spor je Epikúros × kynici, ne smyšlené setkání |
+| Citát `menoikeus-130` (soběstačnost) stojí v kroku 3 u stropu slasti, ne v kroku 4 | Autor souhlasil; před Sporem by jinak stálo pět citátů za sebou a blok Spor citáty neumí |
+| V kroku cesty stojí text před blokem, i když jde o výklad filozofa (krok 3: strop slasti, pak volba bundy) | Po dokončení nabídne blok další krok; text pod blokem by student přeskočil |
+| Graf ke studii je vlastní kresba směru (`GrafKrivek`): dvě křivky, jediné číslo 100 000 dolarů, osy bez hodnot. Druhá křivka je inkoustem a čárkovaně, svislá značka je plná tenká čára | Čísla jen z podkladů a graf ze studie se nekopíruje; dvě čárkované čáry vedle sebe by se pletly |
+| Výhrady ke studii (zaměstnaní Američané, souvislost není příčina, měří se okamžitá nálada) jsou jen ve zpětné vazbě Volby v kroku 6 | Studie se vypráví přímo jako doložená událost; pochybnost je tu obsah úkolu |
+| Karta cesty 6 stojí v profilu Epikúra na konci kapitoly 03 „Pověst“ | Kapitola končí Senekou a cesta Senekou začíná; za kapitolou 02 by student četl touhy a strop dvakrát po sobě |
+| Přehled cesty bere odkaz do Mapy a času z frontmatteru cesty (`mapa`) | Dřív vedl u každé cesty do Athén roku 399 k Sókratovi |
+| Stránku otázky 1 otevírá Diogenés, protože hlasy jdou podle narození | Diogenés je starší než Aristotelés; jeho „Ptáš se špatně“ na začátku neškodí |
+| Hlas Epikúra na stránce otázky 7 nemá citát | V datech je jen ověřená věta (DL X, 31–32), žádný citát k měřítku pravdy |
+
+## 2. 10. 2026: Plány větví a GitHub
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Zadání kroků, jejich stav a „co zůstalo na později“ má každá větev ve vlastním souboru `docs/plany/<větev>.md`, od podkladů po závěrečnou revizi celku. `docs/plan.md` drží strategii, katalog promptů a rozcestník. Dosavadní prompty jsou přesunuté do `zaklad.md` (P0 až P5), `celek-1.md` a `celek-2.md` | Autor: prompty se v plánu hromadí a v tom množství textu se špatně hledá |
+| Po závěrečné revizi a schválení celku se větev sloučí do hlavní a hlavní větev se pošle na GitHub. Poprvé po dokončení celku 2 | Autor: po finální revizi celku vždy aktualizovat GitHub |
+
+## 2. 10. 2026: Schválení P7 (celek 2) a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Profily Epikúra a Diogena schváleny, včetně odstavce o sudu a bodů doověřených z `k-overeni.md` | Autor: „Výborně“ |
+| Další krok P8 pro celek 2: nejdřív graf ke studii o penězích a štěstí (`atlas-komponenta`), pak cesta 6 „Kolik je dost?“ a stránka velké otázky 1 (`atlas-cesta`); zadání v `docs/plany/celek-2.md` | Pořadí workflow celku: psaní → revize → schválení |
+| V P8 se do Kam dál profilů doplní cesta 6, otázka 1 se přepojí na vlastní stránku a na stránku otázky 7 přibude hlas Epikúra | Odkazy čekaly na stránky; Epikúros už má profil a jeho věta k otázce 7 je ověřená z celku 1 |
+
+## 2. 10. 2026: Profily Epikúra a Diogena (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kam dál obou profilů vede zatím jen na stránky, které existují: druhý profil, Spor v Sókratově portrétu, Mapa a čas a řádek otázky 1 v přehledu otázek. Věta o Alexandrovi je bez odkazu. Cesta 6 a stránka otázky 1 se připojí v P8, cesty 7 a 8, až vzniknou | Autor: odkážeme, až to bude; test odkazů neexistující cíl nepustí |
+| Epikúros a Diogenés mají v datech `hloubka: profil`, dokud nevznikne portrét | Autor; stránka Lidé je řadila mezi portréty, ale stránky jsou profily |
+| Profil Epikúra má tři krátké kapitoly, profil Diogena čtyři (Pohárek, Lucerna, Pes, Na prodej) | Autor: v pochybnostech raději rozsáhlejší |
+| Body z `k-overeni.md` (P7) doověřeny a zahrnuty: kohout s citátem `dl-vi-40` a vlastním Odkryj „Co je člověk?“, Pýthagorova zásada, Samos v úvodu, pozadí „občana světa“ podle SEP. Srovnání Zahrady s jinými školami (ženy a otroci jako výjimka) se nepíše | Autor: zahrnout vše z k ověření. Výjimečnost pramen nepotvrdil a Platón měl podle DL III, 46 také dvě žačky |
+| V Diogenově profilu vysvětluje odstavec o sudu, proč ho student zná jinak: sud nakreslil až renesanční umělec podle nádob své doby | Autor: holá věta, že Řekové sudy nepoužívali, působila nepatřičně |
+| Vlastní pokus s touhami v profilu Epikúra zkouší jedno studentovo přání (bolelo by, kdyby se nesplnilo?); třídění věcí do tří košů zůstává cestě 6 | Aby se pokus v celku neopakoval (poučení z revize celku 1) |
+| Velký citát Diogena je „Jsem občan světa“: odpovídá na vyhnanství z úvodu. „Hledám člověka“ zazní v kapitole Lucerna, „Dítě mě porazilo“ v bloku Příběh | Každý citát stojí tam, kde zazněl |
+| Volba „Co uděláš se svým pohárkem?“ stojí před blokem Příběh a nemá oddíl Co udělal: co Diogenés udělal, vypráví hned Příběh s kresbou | Kresba ukazuje odhozený pohárek; za blokem Volba by vyzradila tah předem |
+| Blok Příběh umí desku na výšku (`pomer`), rozvržení se řídí šířkou místa a obrázek může mít vlastní střed výřezu (`vyrez` v `zdroje.yaml`); obrázky z Příběhu jsou v Pramenech | Kresba s pohárkem je na výšku; v čtenářském sloupci profilu by deska vedle textu byla drobná; výchozí výřez pro busty usekl Diogenovi hlavu |
+| Mini mapa v oddílu Doba a lidé se přizpůsobí místům osoby, když se nevejdou do egejského výřezu; popisek bodu s těsným sousedem vpravo stojí vlevo | Na mapě chyběla Diogenova Sinópé i Epikúrův Samos a Kolofón. Změnila se tím i mapa Prótagora (přibyly Thurioi); Sókratova zůstala |
+| V hlavičce osobnosti stojí rodiště, a když ho neznáme, poslední působiště | U Epikúra stála Mytiléna místo Athén |
+
+## 2. 10. 2026: Podklady k celku 2 schváleny
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Podklady k celku 2 schváleny; další krok P7 (profily Epikúra a Diogena) | Autor: „vše schvaluji“ |
+| Epikúros má na desce mramorovou hlavu z Metropolitan Museum (inv. 11.90, CC0) | Licence ověřena přímo u muzea |
+| Diogenés má na desce novověké vyobrazení: dřevořez Uga da Carpi podle Parmigianina (Met, CC0); ke scéně s dítětem kresba „Diogenés odhazuje pohárek“ (Met, CC0). Lucerna zůstává atributem | Autor: Diogenových kreseb a maleb je hodně, použijme některou; spolehlivá antická podobizna neexistuje. Popisek říká, že jde o představu renesance (sud místo pithu) |
+| Spor v cestě 6 je Epikúros × kynici, bez smyšleného setkání s Diogenem | Doložené je jen Epikúrovo „moudrý nebude žít jako kynik“ (DL X, 119); kynická strana mluví Diogenovými průpovídkami |
+| Studie o penězích a štěstí je samostatný krok cesty 6, vedle kroku „měsíc na minimum“ | Autor |
+| Vlastní převody citátů platí i pro Diogena Laertia a Senecu | Stejně jako v celku 1 |
+| Tři zkreslení doplněna do skillu `atlas-overeni` („poctivého člověka“, „Diogenés v sudu“, „epikurejec = požitkář“), k tomu muzea s otevřeným přístupem jako zdroj obrázků | Poučení z celku 2 |
+
+## 1. 10. 2026: Podklady k celku 2 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta 6 dostane oba nové případy: „Představ si… měsíc na minimum“ i studii o penězích a štěstí (Killingsworth, Kahneman, Mellers 2023) | Autor: na každého zapůsobí něco jiného, není důvod se omezovat |
+| Stoik na stránce otázky 1 je Seneca | Epiktétos nese cestu 5; Seneca se jasně liší od Diogena (bohatství nevyhodí) i od Aristotela (ke štěstí ho nepotřebuje) |
+| Leontion, Themista ani další nové osoby zatím do dat nepřibudou; v textu je lze zmínit bez odkazu | Autor: osob je už hodně, přidávat se bude až dodatečně, až bude vše hotové |
+
 ## 1. 10. 2026: Schválení celku 1 a další krok
 
 | Rozhodnutí | Důvod |

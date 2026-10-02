@@ -28,12 +28,27 @@ Komponenta je hotová, když ji autor vloží do MDX jedním řádkem, student j
 
 ## Časté pasti
 
-- Nezlomitelnou mezeru v TypeScriptu piš jako `' '`, v šabloně jako `&nbsp;`. Znak vložený přímo se při úpravách souboru může změnit na obyčejnou mezeru.
+- Nezlomitelnou mezeru v TypeScriptu piš jako `'\u00a0'`, v šabloně jako `&nbsp;`. Znak vložený přímo se při úpravách souboru může změnit na obyčejnou mezeru. Za jednopísmenné předložky a spojky ji doplňuje sestavení (`src/lib/sazba.js`): v MDX plugin `sazbaMdast`, v textech bloků `radek` a `odstavce`. Komponenta, která vypisuje delší text z dat nebo z atributu, zavolá `nezlomitelne()` sama.
 - `requestAnimationFrame`, `matchMedia`, `localStorage` a `history` nejsou při sestavení (SSR) k dispozici: používej je jen v `onMount`, v obsluze událostí nebo za kontrolou `typeof`.
 - Efekt (`$effect`), který zapisuje stav, jenž sám čte, se zacyklí nebo si zruší vlastní práci; čtení zabal do `untrack`.
 - Ostrov s `client:visible` se hydratuje až po posunu k němu; test musí počkat na `astro-island[component-url*="Jmeno"]:not([ssr])`, jinak klikne dřív než skript.
 - Prvek skrytý přes `display: none` v CSS mřížce posune ostatní do jiných sloupců; sloupec nastav explicitně (`grid-column`).
-- Text jen pro čtečky: třída `vizualne-skryte` z `global.css`.
+- Text jen pro čtečky: třída `vizualne-skryte` z `global.css`. Je umístěná absolutně, takže ji čtečka od viditelného textu oddělí mezerou: nezačínej ji interpunkcí („Dát sem“ + „kartu … do koše …“, ne „: …“).
+- Běžící `npm run dev` po změně schématu kolekce (`content.config.ts`, `bloky-schema.ts`) vrací chybu, dokud ho autor nerestartuje. Na náhled si sestav web (`npx astro build`) a pusť `npx astro preview --port 4323 --ignore-lock`.
+- Playwright před každým během smaže `test-results/`: pomocné skripty a pracovní snímky drž jinde (`/tmp`), ne tam.
+- Volání přes Desktop Commander delší než minuta se přeruší, i když proces běží dál. Dlouhé příkazy (`npm test`) pouštěj na pozadí s výstupem do souboru a čti ho po částech.
+- Když je cílem klepnutí celá plocha (tlačítko roztažené přes koš pomocí `::after`), Playwright nahlásí, že prvek pod ním něco překrývá: v testu klepej na tlačítko, nebo s `force`.
+- Tažení prstem: `touch-action: none` dej jen prvku, který se táhne, ať se stránka dá posouvat všude kolem; ke každému tažení patří cesta bez tažení (tlačítko, klávesnice).
+- Tažení prstem ověř i skutečnými dotykovými událostmi (CDP `Input.dispatchTouchEvent`), ne jen syntetickými událostmi ukazatele: jen tak poznáš, jestli se při tažení neposouvá stránka.
+- Astro 7 zpracovává Markdown a MDX procesorem Sätteri. Remark a rehype pluginy se bez balíčku `@astrojs/markdown-remark` nespustí: v `markdown.rehypePlugins` zastaví sestavení, v `mdx({ … })` se tiše ignorují. Úpravu textu napiš jako plugin pro Sätteri (`markdown.processor: satteri({ mdastPlugins: [...] })`).
+- Pevná lišta dole (telefon, krok cesty) zakryje prvek, na který přijde fokus z klávesnice. `html` má proto `scroll-padding-bottom` na výšku lišty; prvku, jehož rámeček fokusu je větší než on sám (koš kolem tlačítka), přidej `scroll-margin-bottom`.
+- Vypnuté tlačítko musí vypadat vypnutě v každé variantě (hlavní, vedlejší, tiché). Varianta bez stylu pro `:disabled` vypadá jako živá.
+- Dva prvky stejného druhu pod sebou musí mít stejnou stavbu při každé délce textu: `flex-wrap` zalomí jen ten delší a tlačítka pak vypadají každé jinak. Zkoušej s nejkratším i nejdelším skutečným textem.
+- Doplněk za popiskem („Nepovinné“) s `margin-left` po zalomení odskočí od kraje; dej obalu `column-gap`.
+- Věta složená z dat s pádem: „život {jmeno2}“, ne „{jmeno2} život“. Přečti ji se třemi různými jmény.
+- Popisky v SVG (mini mapa): překryvy počítej z obdélníků jednotlivých řádků, ne z jednoho obalu. Šířku textu změř v prohlížeči (úzké znaky mají asi poloviční šířku) a výsledek ověř testem přes `getBoundingClientRect` na obou šířkách.
+- `npx astro build` nevytvoří index hledání, ten dělá až `npm run build` (Pagefind). Test hledání pak s `PW_BEZ_BUILDU=1` selže a není to chyba komponenty.
+- Snímek jednoho prvku (`locator.screenshot`) na stránce s pevnou hlavičkou má lištu uprostřed a text přesahující prvek je uříznutý. Je to vlastnost snímku, ne chyba stránky; lišty před snímkem skryj stylem.
 
 ## Když nemáš terminál na autorově počítači
 

@@ -84,11 +84,13 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 | `popisek` | Instrument Sans 400 | 13 | 12 | 1,5 |
 | `nadtitulek` | Instrument Sans 600, verzálky | 12 | 11 | +0,14 až 0,16 em |
 
+**Jednopísmenné předložky a spojky** (k, s, v, z, o, u, a, i) nezůstávají na konci řádku. Nezlomitelnou mezeru za ně doplní sestavení, do textů se ručně nepíše: v MDX plugin `sazbaMdast` (zapojený v `astro.config.mjs`), v textech bloků a hlasů funkce `radek` a `odstavce`, u textů z dat a z atributů komponent `nezlomitelne()` v komponentě (citát, karta cesty, popisek Příběhu, otázka v Odkryj a v Mém stanovisku). Vše je v `src/lib/sazba.js`. Nová komponenta, která vypisuje delší text z dat, si `nezlomitelne()` zavolá sama.
+
 ## Mezery, mřížka, tvary
 
 - Mezery (základ 4 px): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96.
 - Mřížka 12 sloupců, mezera 24; okraj stránky 80 (notebook) / 16 (telefon); čtenářský sloupec 680 px.
-- **Středová osa stránky osobnosti:** úvod, citát, kapitoly, vložené bloky (Kdo žil dřív?, Změň jednu věc, Spor) a Prameny leží v jednom čtenářském sloupci uprostřed stránky. Přes celou šířku jdou jen hlavička s deskou a oddíly, které stojí na mřížce: Doba a lidé (osa, mapa, vztahy), Velké myšlenky, Zkus to žít a Kam dál. Text uvnitř širokých oddílů začíná u jejich levého okraje. Na telefonu je všechno v jednom sloupci.
+- **Středová osa stránky osobnosti:** úvod, citát, kapitoly, vložené bloky (Kdo žil dřív?, Změň jednu věc, Spor) a Prameny leží v jednom čtenářském sloupci uprostřed stránky. Přes celou šířku jdou jen hlavička s deskou a oddíly, které stojí na mřížce: Doba a lidé (osa, mapa, vztahy), Velké myšlenky, Zkus to žít a Kam dál. Text uvnitř širokých oddílů začíná u jejich levého okraje. Na telefonu je všechno v jednom sloupci. V hlavičce stojí u letopočtů rodiště; když ho neznáme, místo, kde člověk působil naposledy. Hned pod nimi jsou **vstupy osobnosti** (viz Komponenty): cesta a velké otázky, kde člověka potkáš.
 - Zaoblení: `xs` 4 (obrazy, pásy) · `sm` 8 (tlačítka, pole) · `md` 14 (karty, panely) · `lg` 20 (spodní list) · `full` (mince, čipy).
 - Stín: překryv na mapě `0 6px 18px rgb(0 0 0 / 12%)`; spodní list `0 -8px 28px rgb(0 0 0 / 14%)`. Jinak bez stínů.
 - Hlavička 72 px (notebook) / 56 px (telefon), spodní lišta 72 px, dotykový cíl nejméně 44 × 44.
@@ -99,32 +101,45 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 - **Notebook:** hlavička s logem (glóbus a „Atlas myšlení“), vstupy Domů · Mapa a čas · Otázky · Lidé a směry (aktivní podtržený inkoustem), hledání s klávesou `/`, Můj deník, přepínač režimu.
 - **Telefon:** horní lišta s názvem nebo „‹ Zpět na …“, spodní lišta s pěti ikonami a popisky (Domů, Mapa, Otázky, Lidé, Deník).
 - **Drobečková navigace** vždy pod hlavičkou vlevo (Lidé a směry / období / osoba).
-- **Cesta** má soustředěnou hlavičku: vlevo zpět na přehled cesty, uprostřed postup po krocích, vpravo Režim třídy a Uložit a odejít. Dole pevná lišta Předchozí krok / Další krok.
+- **Cesta** má soustředěnou hlavičku: vlevo zpět na přehled cesty, uprostřed postup po krocích, vpravo Režim třídy a Uložit a odejít. Dole pevná lišta Předchozí krok / Další krok. Obsah kroku i přehledu cesty stojí na středové ose stránky (oddíl Cesta).
+- **Nic nesmí zapadnout.** Ke každé cestě a stránce otázky vede vstup z míst, kde ji student čeká: z Domů nebo přehledu otázek, z hlavičky profilu každého jejího filozofa, z karty člověka v Lidech a z Kam dál. Vstup je vidět bez posouvání a bez rozbalování.
 - Rámeček fokusu 2 px `--ink`, odsazení 3 px, jen při `:focus-visible`.
 
 ## Komponenty
 
 - **Tlačítka:** hlavní (`--ink` / text `--paper`, výška 48–56), vedlejší (obrys `--ink`), tiché (obrys `--rule`), textový odkaz s podtržením.
 - **Mince (atribut osobnosti):** kruh s ikonou atributu, dvojitý okraj (1,5 px barva období, mezera, 1 px soft). Varianty: `ring` (na mapě, povrch), `tint` (karty), `sel` (vybraný člověk, plná barva). Velikosti 24–26 (mapa), 36–44 (karty, portrét), 56–64 (přehledy). Nikdy iniciála.
-- **Deska:** duotónová plocha pro fotografii (busta, freska, rukopis) v barvách `--period-N-plate` / `--period-N-on-plate`, vždy s popiskem pod obrazem a licencí v Pramenech (oddíl Obrázky: popisek, autor, instituce, licence s odkazem). Výřez drží tvář v horní třetině (`object-position: 50% 25%`). Na stránce osobnosti s fotografií se mince s atributem přesune k popisku „Proč …?“. Vlastnost `obrazOsoby={false}` vypne portrét osoby (používá Příběh).
+- **Deska:** duotónová plocha pro fotografii (busta, freska, rukopis) v barvách `--period-N-plate` / `--period-N-on-plate`, vždy s popiskem pod obrazem a licencí v Pramenech (oddíl Obrázky: popisek, autor, instituce, licence s odkazem). Výřez drží tvář v horní třetině (`object-position: 50% 25%`). Na stránce osobnosti s fotografií se mince s atributem přesune k popisku „Proč …?“. Vlastnost `obrazOsoby={false}` vypne portrét osoby (používá Příběh). Obrázek, u kterého by výchozí výřez usekl to podstatné (rytina, kresba), má v `zdroje.yaml` vlastní střed výřezu `vyrez` („50% 37%“).
+- **Mini mapa osoby** (Doba a lidé): výchozí egejský výřez, dokud jsou v něm vidět všechna místa osoby; jinak se střed a měřítko spočítají z míst i s popisky (`vyrezMiniMapy` v `src/lib/mapa.ts`), takže je vidět i Sinópé nebo Thurioi. Popisek stojí vpravo od bodu; vlevo u pravého okraje a u bodu, který má těsně vpravo souseda (Korinth vedle Athén). Když by se řádky dvou popisků potkaly (Athény se třemi řádky vedle Kolofónu), vysune se popisek s méně řádky nad svůj bod: název stojí nahoře a poslední řádek rolí vedle bodu (`umisteniPopisku`). Že se popisky nepřekrývají, hlídá test v prohlížeči na obou šířkách u všech profilů.
 - **Pás období:** osm segmentů bez mezer; pozadí každého segmentu je gradient, který na hranách přechází do poloviční směsi se sousedem; ornament období je maskovaný do ztracena k okrajům. Varianty: velký (Domů, 250 px), malý přepínač (mapa, 26–28 px, aktivní období širší).
 - **Volba s důvodem:** karty možností A–D (min. 60 px), vybraná má okraj 2 px a tint období; pole „Proč právě tohle?“ nepovinné; zpětná vazba v tintu období s titulkem „Tvůj tah: …“ a oddílem „Co udělal …“.
 - **Odkryj (dříve Nejdřív sám):** povrchová karta s nadtitulkem v barvě období, otázkou v Newsreaderu, polem a tlačítkem „Porovnat…“; po odkrytí srovnání v tintu období, modelové odpovědi a sebekontrola. API v oddílu Bloky.
 - **Zkus to žít:** karta v tintu období, jedno hlavní tlačítko „Přijmout výzvu“.
 - **Moje stanovisko:** krátký zápis do deníku (`MojeStanovisko.svelte`, druh `stanovisko`). V profilu za tlačítkem „Moje stanovisko“ s Uložit / Zrušit. S vlastností `rozbalene` (závěr cesty) je otázka s polem vidět hned, text se ukládá sám 600 ms po psaní, při opuštění pole i při odchodu ze stránky; pod polem „Ukládá se samo do deníku.“ / „Uloženo v deníku.“ (`aria-live`). Smazaný text zmizí i z deníku.
+- **Graf křivek** (`src/components/ui/GrafKrivek.astro`, geometrie v `src/lib/graf.ts`): vlastní jednoduchá kresba jedné až tří křivek pro studii nebo průzkum, bez JavaScriptu. Ukazuje směr, ne přesné hodnoty: vodorovná osa má dílky bez čísel a nejvýš jednu svislou značku s popiskem („100 000 dolarů“), svislá jen název a směr („lépe“). Popisky stojí přímo u křivek, legenda není. První křivka má barvu období, druhá inkoust a čárkování, takže se neliší jen barvou. Karta na povrchu (`--surface`) s okrajem `--rule`, nejvýš 420 px; na telefonu vyjde jednotka kresby na pixel (písmo 13 a 12 px). Text pod kresbou (slot, povinný) říká totéž slovy a je popisem obrázku pro čtečky (`role="img"`, `aria-describedby`). Čísla jen z podkladů; graf ze studie se nepřekresluje bod po bodu.
+  ```mdx
+  <GrafKrivek id="graf-penize-stesti" osaY="Jak se lidé právě cítí" smerY="lépe" osaX="Roční příjem domácnosti"
+    poznamkaX="Každý dílek je dvojnásobek předchozího." dilku={5} znacka={{ x: 3, text: '100 000 dolarů' }}
+    krivky={[{ nazev: 'Většina lidí', body: [[0, 0.42], [5, 0.86]] }, { nazev: 'Nejméně šťastná pětina', body: [[0, 0.1], [3, 0.4], [5, 0.4]], carkovana: true }]}>
+    U většiny lidí nálada s příjmem roste dál. …
+  </GrafKrivek>
+  ```
+  Bod křivky je `[dílek 0…n, výška 0…1]`; `popisek: [dílek, výška]` posune popisek křivky jinam než nad její konec. Chybné zadání zastaví sestavení (`chybyGrafu`).
+- **Karta cesty** (`src/components/cesta/CestaKarta.astro`): povrchová karta s okrajem v barvě období a silnou levou hranou (6 px), nadtitulek (Cesta N · minuty · kroky), otázka cesty `t-h3`, vstup, mince filozofů a hlavní tlačítko „Vydat se na cestu“ (`--ink` / `--paper`, 48 px). Odkaz je celá karta; po najetí dostane tint období.
+- **Vstupy osobnosti** (`src/components/osobnost/VstupyOsoby.astro`, logika `src/lib/vstupy.ts`): navigace v hlavičce profilu pod letopočty, „Cesty a otázky, kde potkáš …“. Cesta je plná deska v barvě období (dva řádky: „Cesta N · K kroků · asi M minut“ a název, aspoň 64 px), stránky velkých otázek jsou vedlejší tlačítka s obrysem (aspoň 48 px; na telefonu stojí „Velká otázka N“ nad názvem u každé otázky stejně, od 700 px je otázka na jednom řádku). Pořadí: cesty podle čísla, pak otázka, ke které cesta osoby vede, pak ostatní otázky podle čísla. Nic se nepíše ručně: cesty se berou z `filozofove` v přehledu cesty, otázky z `hlasy` stránky otázky. Osoba bez cesty i bez hlasu navigaci nemá. Telefon pod sebou přes celou šířku, od 700 px v řadě.
 - **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a). Varianta `velky` pro hlavní citát stránky, `kompaktni` (menší okraje, velikost textu) pro citát na časové ose otázky.
 
 ## Bloky
 
-Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem. Ve skutečném atlasu jsou v cestě 1 „Kdy mám dobrý důvod věřit?“ (`/cesta/kdy-mam-dobry-duvod-verit/`) a v Sókratově profilu; všech šest pohromadě a bez kódu je pro autora na `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
+Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem. Ve skutečném atlasu jsou v cestě 1 „Kdy mám dobrý důvod věřit?“ (`/cesta/kdy-mam-dobry-duvod-verit/`), v cestě 6 „Kolik je dost?“ (`/cesta/kolik-je-dost/`) a v profilech; všech sedm pohromadě a bez kódu je pro autora na `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
 
 ### Jak blok vložit do MDX
 
 1. Na začátek MDX jeden import (cestu uprav podle hloubky souboru):
    ```mdx
-   import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../components/bloky';
+   import { Pribeh, Volba, Odkryj, Roztrid, ZmenJednuVec, Spor, KdoZilDriv } from '../../components/bloky';
    ```
-2. Volba s důvodem, Změň jednu věc a Spor mají obsah v YAML v `src/content/bloky/<id>.yaml` (schéma `src/lib/bloky-schema.ts`). Do MDX pak stačí `<Volba id="<id>" />`. Příběh, Odkryj a Kdo žil dřív? se píšou přímo v MDX.
+2. Volba s důvodem, Roztřiď, Změň jednu věc a Spor mají obsah v YAML v `src/content/bloky/<id>.yaml` (schéma `src/lib/bloky-schema.ts`). Do MDX pak stačí `<Volba id="<id>" />`. Příběh, Odkryj a Kdo žil dřív? se píšou přímo v MDX.
 3. `client:visible` ani odkaz zpět z deníku nepiš. Doplní je obal v `src/components/bloky/`; odkaz je stránka a kotva `#<id>`.
 4. `id` je malými písmeny bez diakritiky, s pomlčkami a na celém webu jedinečné (`sokrates-utek`, `cesta1-jak-zjistit`). Podle něj se ukládá odpověď. Když ho později změníš, studentům zmizí rozpracovaný stav.
 5. V textech YAML funguje `*kurzíva*` a prázdný řádek dělí odstavce. Jména lidí se berou z `lide.yaml` podle id; v textu je piš v podobě z dat.
@@ -145,6 +160,7 @@ Vše jen v prohlížeči, v záznamu `atlas-denik` (`src/lib/denik.ts`). Bez loc
 | Příběh | nic | nic |
 | Volba s důvodem | „B · text možnosti. Proč: …“ | vybraná karta, důvod, potvrzeno |
 | Odkryj | vlastní pokus | odkryto, zaškrtnutá sebekontrola, rozepsaná odpověď |
+| Roztřiď | „Potřebuju: … Těší mě: … Prázdné: …“ (karty v koších) | která karta je v kterém koši, vlastní karty, hotovo |
 | Změň jednu věc | „Na začátku: … Podmínka: … (posun)“ | základní rozhodnutí, odpověď v každé podmínce, zapnutá podmínka |
 | Spor | „Na začátku: spíš Platón. Po argumentech: uprostřed. Co mě posunulo: …“ | první a konečná poloha, důvod |
 | Kdo žil dřív? | nic (fakt, ne názor) | odhad, odkryto |
@@ -154,6 +170,8 @@ Vše jen v prohlížeči, v záznamu `atlas-denik` (`src/lib/denik.ts`). Bez loc
 ### Příběh
 
 Scéna se stejnou typografií jako profil a deska v barvě období: obraz scény, když ho předáš v `obrazek`, jinak ornament a mince s atributem osoby. Portrét osoby (`obrazek` v `lide.yaml`) se v Příběhu nepoužije, protože popisek patří k místu scény. Bez JavaScriptu (komponenta Astro, ne ostrov).
+
+Rozvržení se řídí šířkou místa, ne obrazovky: od 800 px stojí deska vedle textu (krok cesty), v užším sloupci nad textem (profil, telefon). Obraz na výšku dostane `pomer="4 / 5"` a nad textem zůstává nejvýš 400 px široký. Obrázek z Příběhu se na stránce osobnosti sám přidá do Pramenů.
 
 ```mdx
 <Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Nikdo není *moudřejší.*" popisek="Delfy. Tady se Chairefón zeptal věštírny na Sókrata.">
@@ -170,6 +188,7 @@ Text scény v odstavcích…
 | `obdobi` | ne* | 1–8, když scéna nepatří k jedné osobě (*jedno z `osoba`/`obdobi` je nutné) |
 | `obrazek` | ne | id obrázku v `zdroje.yaml` (licence povinná) |
 | `nadtitulek`, `titulek` | ne | titulek s pointou v `*kurzívě*` |
+| `pomer` | ne | poměr stran desky, výchozí `4 / 3`; kresba nebo rytina na výšku `4 / 5` |
 | `id` | ne | kotva scény |
 
 ### Volba s důvodem
@@ -231,6 +250,42 @@ Srovnání s filozofem v odstavcích…
 | `filozof` | ne | id osoby: mince v hlavičce a barva období |
 | `dal` | ne | Kam dál po odkrytí (v cestě další krok sám) |
 
+### Roztřiď
+
+Třídění karet do dvou až čtyř košů. Navrchu leží jedna karta („Zbývá 4 z 6“); student ji **přetáhne** do koše (myší i prstem), nebo u koše zvolí **Dát sem** (klepnutí, Enter, mezerník; cílem je celý koš). Karta položená v koši je tlačítko, které ji vrátí navrch, takže jde přendat. S `vlastni` smí student připsat vlastní karty. Když je hromádka prázdná, „Mám roztříděno“ odkryje výsledek: koše vedle sebe (na telefonu pod sebou), u každé karty její zpětná vazba a pod nimi srovnání s mincí filozofa. Žádný koš není „správně“: zpětná vazba vysvětluje důvod a ptá se dál, `kdyz` dovolí jinou otázku pro kartu v určitém koši.
+
+Tažení patří jen kartě navrchu (`touch-action: none`), stránka se prstem posouvá všude kolem ní; koš pod kartou se zvýrazní okrajem a tintem období. Klávesnicí: Tab jde po koších a položených kartách, po Enteru zůstává fokus u koše, po poslední kartě přejde na „Mám roztříděno“. Co se stalo, slyší čtečka z oblasti `aria-live` („… je v koši Potřebuju. Další karta: …“).
+
+```mdx
+<Roztrid id="cesta6-tri-kose" />
+```
+
+```yaml
+# src/content/bloky/cesta6-tri-kose.yaml
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah            # nepovinné (výchozí „Roztřiď“)
+scena: Tady je šest věcí z jednoho obyčejného týdne.   # nepovinné
+otazka: Do kterého koše která patří?
+kose:                           # 2–4
+  - { id: nutne, nazev: Potřebuju, popis: Bez toho to bolí. }
+  - { id: prijemne, nazev: Těší mě, popis: "Je to příjemné, ale obejdu se bez toho." }
+karty:                          # 3–8, text nejvýš 60 znaků
+  - id: lajky
+    text: Sto lajků pod fotkou
+    zpetna: Lajky nenasytí ani nezahřejí…        # ke kartě, ať je kdekoli (nepovinné)
+    kdyz: { nutne: "Dal jsi je mezi věci, bez kterých to bolí…" }   # jen pro některý koš; má přednost
+vlastni:                        # nepovinné: karty, které přidá student
+  pocet: 2                      # 1–3
+  vyzva: Přidej věc, kterou jsi tento týden chtěl ty
+  zpetna: Tuhle kartu jsi přidal sám…
+srovnani:                       # nepovinné; s osobou jen doložená fakta
+  osoba: epikuros
+  nadpis: Jak třídil Epikúros
+  text: Epikúros měl na třídění jednu zkoušku…
+zdroje: [dl-x-122, dl-x-139]
+```
+
 ### Změň jednu věc
 
 Scéna a rozhodnutí; pak přepínač podmínky (čipy, 1–3), v každé podmínce nové rozhodnutí a „Předtím → Teď“ se zpětnou vazbou pro posun, nebo pro stejnou odpověď. Po první změně oddíl „Co udělal …“.
@@ -272,6 +327,7 @@ obdobi: 1
 otazka: Co je skutečnější, to, co vidíš, nebo to, co pochopíš?
 strany:                         # právě dvě různé osoby; jména z dat
   - osoba: platon
+    # oznaceni: kynici          # nepovinné: strana se jmenuje po směru, za který osoba mluví (mince zůstává její)
     postoj: To, co pochopím.
     argumenty: [Za proměnlivým světem, který vidíme, stojí neměnné ideje., …]   # 1–3, nejsilnější verze
   - osoba: diogenes
@@ -280,6 +336,8 @@ strany:                         # právě dvě různé osoby; jména z dat
 zdroje: [platon-ustava]
 kOvereni: [ … ]                 # dokud není prázdné, jen v dílně
 ```
+
+Když za jednu stranu nemluví člověk, ale směr (kynici proti Epikúrovi), dostane strana `oznaceni` malým písmenem. Na škále, v polohách („spíš kynici“), ve zpětné vazbě i v deníku pak stojí označení místo jména; v nadpisech se první písmeno zvětší samo. Scéna má říct, čí slova strana používá a že se ti dva nepotkali.
 
 ### Kdo žil dřív?
 
@@ -310,12 +368,13 @@ Odhad pořadí (karty A / B / Žili ve stejné době), nebo vzdálenosti: na ose
 
 ## Cesta
 
-Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (sedm kroků, Sókratés a Prótagorás).
+Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (sedm kroků, Sókratés a Prótagorás); druhá hotová je cesta 6 „Kolik je dost?“ (sedm kroků, Epikúros a kynici).
 
-- **Soubory:** přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`; text = úvod), kroky `src/content/cesty/<slug>/<n>-<název>.mdx` (frontmatter `cesta`, `krok`, `nazev`, volitelně `kdeJsme`; text = obsah kroku s bloky). Kroky se číslují 1…n bez mezer, jinak se sestavení zastaví.
-- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, tlačítko Začít / Pokračovat: krok n / Projít znovu, pod ním nadpis Kroky a seznam kroků s tím, co student prošel, a oddíl Kam dál (`#hotovo`). Tlačítko stojí nad seznamem, aby bylo na telefonu vidět bez posouvání a klávesnicí na dosah.
+- **Soubory:** přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`, volitelně `mapa: { rok, osoba, text }` pro odkaz do Mapy a času v Kam dál; text = úvod), kroky `src/content/cesty/<slug>/<n>-<název>.mdx` (frontmatter `cesta`, `krok`, `nazev`, volitelně `kdeJsme`; text = obsah kroku s bloky). Kroky se číslují 1…n bez mezer, jinak se sestavení zastaví.
+- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, tlačítko Začít / Pokračovat: krok n / Projít znovu, pod ním nadpis Kroky a seznam kroků s tím, co student prošel, a oddíl Kam dál (`#hotovo`). Tlačítko stojí nad seznamem, aby bylo na telefonu vidět bez posouvání a klávesnicí na dosah. Celý přehled je jeden čtenářský sloupec (680 px) uprostřed stránky.
 - **Krok** `/cesta/<slug>/<n>/`: soustředěná hlavička (vlevo zpět na přehled, uprostřed „Krok n z N“ s tečkami kroků, vpravo Uložit a odejít; postup se ukládá sám), nadtitulek, název kroku, „Kde jsme“ a obsah. Dole pevná lišta Předchozí / Další krok (na telefonu bez názvu kroku), na konci Dokončit cestu.
-- **Vstupy:** karta cesty (`src/components/cesta/CestaKarta.astro`) na Domů a v profilu, odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku.
+- **Středová osa kroku:** nadpis kroku a text leží v čtenářském sloupci (680 px), bloky v pásu 960 px; obojí má společný střed uprostřed stránky, takže vlevo i vpravo zbývá stejně místa. Od 1100 px stojí tlačítka lišty pod okraji bloku, ne u okrajů okna. Na telefonu jde obsah od okraje k okraji jako dřív.
+- **Vstupy:** karta cesty na Domů, v profilu a na stránce otázky; deska cesty v hlavičce profilu každého filozofa cesty (vstupy osobnosti, samy z dat); odkaz „Cesta N Název“ u otázky v přehledu `/otazky/` (i u otázky, která ještě nemá stránku); řádek „Cesta N: Název“ na kartě člověka v Lidech; odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku. Test hlídá, že každá cesta je dosažitelná z profilu aspoň jednoho svého filozofa.
 - Bloky v kroku nabídnou po dokončení další krok samy.
 
 ## Velká otázka
@@ -380,4 +439,4 @@ Fotografie busty, fresky a rukopisy v duotónu barvy období (`plate` / `on-plat
 
 ## Přístupnost
 
-Kontrast AA pro všechen text ve všech čtyřech kombinacích (A/B × světlý/tmavý) je ověřený výpočtem. Každá osoba na mapě i pruh v řece je tlačítko ovladatelné klávesnicí; řeka má textovou alternativu (seznam žijících ve zvoleném roce). Ikony mají `aria-hidden`, mince nese jméno a atribut v `title` / `aria-label`.
+Kontrast AA pro všechen text ve všech čtyřech kombinacích (A/B × světlý/tmavý) je ověřený výpočtem. Každá osoba na mapě i pruh v řece je tlačítko ovladatelné klávesnicí; řeka má textovou alternativu (seznam žijících ve zvoleném roce). Ikony mají `aria-hidden`, mince nese jméno a atribut v `title` / `aria-label`. Pevná spodní lišta (telefon, krok cesty) nesmí zakrýt prvek s fokusem: `html` má `scroll-padding-bottom` na výšku lišty (`global.css`).

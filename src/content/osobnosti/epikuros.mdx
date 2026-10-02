@@ -1,0 +1,177 @@
+---
+osoba: epikuros
+nadtitulek: Filozof ze Zahrady · Epikúrův profil
+titulek: Epikúros
+pointa: Učitel slasti, kterému stačil chléb a voda.
+citat: menoikeus-131-maza
+kapitoly:
+  - cislo: "01"
+    kotva: zahrada
+    nazev: Zahrada
+    stav: hotovo
+  - cislo: "02"
+    kotva: klid
+    nazev: Klid
+    stav: hotovo
+  - cislo: "03"
+    kotva: povest
+    nazev: Pověst
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import CestaKarta from '../../components/cesta/CestaKarta.astro';
+import { KdoZilDriv, Volba, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Básník Hésiodos píše, že jako úplně první vznikl Chaos. Vypráví se, že čtrnáctiletý Epikúros chtěl od učitelů na ostrově Samos vědět, co to znamená. Nedokázali mu to vysvětlit. A tak se dal na filozofii.
+
+Epikúros tam vyrostl mezi athénskými osadníky. V osmnácti odešel do Athén na vojenskou službu. Mezitím osadníky ze Samu vyhnali a jeho rodina přišla o domov.
+
+Dalších patnáct let žil a učil ve městech na druhém břehu Egejského moře. Tam získal první přátele a žáky. Roku 306 př. n. l. se vrátil do Athén a koupil zahradu. Jeho škole se pak říkalo prostě Zahrada.
+
+</div>
+
+<div class="ctenarsky"><Citat id="menoikeus-131-maza" velky /></div>
+
+<Kapitola cislo="01" kotva="zahrada" nazev="Zahrada">
+  <Fragment slot="titulek">Přátelé si <em>věří.</em></Fragment>
+
+Za Epikúrem přicházeli přátelé z celého řeckého světa a žili s ním v zahradě. Žili prostě: stačila jim trocha vína, jinak pili vodu. Sám v dopisech psal, že mu stačí voda a obyčejný chléb.
+
+Filozofovali s ním i jeho otroci. Patřily k nim i ženy. Jedna z nich napsala spis proti Aristotelovu nástupci.
+
+Kdo spolu žije, musí se dohodnout i o penězích. Pýthagorás kdysi říkal, že přátelé mají všechno společné. Mají tedy dát majetek dohromady i přátelé v Zahradě?
+
+<Volba id="epikuros-spolecna-kasa" />
+
+Epikúros majetek dohromady nedával. Společná pokladna by podle něj znamenala, že si lidé nevěří. A bez důvěry přátelství není.
+
+Přátelství podle něj začíná z potřeby. Pak má ale cenu samo o sobě. Někdo jen musí udělat první krok, tak jako se musí zasít.
+
+Nic nám podle něj nedá tolik bezpečí jako přátelé.
+
+<Citat id="kd-27" />
+
+V závěti propustil své otroky na svobodu. A postaral se o děti přítele, který zemřel dřív než on.
+</Kapitola>
+
+<Kapitola cislo="02" kotva="klid" nazev="Klid">
+  <Fragment slot="titulek">Slast má <em>strop.</em></Fragment>
+
+Představ si, že se vracíš z celodenního výletu a máš hroznou žízeň. První sklenice vody je to nejlepší na světě. Druhá je ještě dobrá. A desátá?
+
+Podle Epikúra je cílem všeho, co děláme, slast. Slast ale potřebujeme, jen když nám něco chybí a bolí to. Když nic nebolí a ničeho se nebojíme, utiší se podle něj bouře duše.
+
+Nejvyšší slast tedy není vzrušení, ale klid: tělo bez bolesti a mysl bez strachu. Odtud už slast neroste. Až zmizí hlad, další jídlo ji nezvětší, jen obmění.
+
+Proto si Epikúros nevybíral každou slast, která se nabízela, a neutíkal před každou bolestí. Počítal, co z čeho vzejde.
+
+<Odkryj
+  id="epikuros-jedno-prani"
+  otazka="Po čem teď nejvíc toužíš? Napiš jednu věc. A co by se stalo, kdybys ji nedostal?"
+  tlacitko="Porovnat s Epikúrem"
+  filozof="epikuros"
+  modelove={[
+    { text: 'Nový telefon. Nestalo by se nic, jen bych měl dál ten starý.', komentar: 'Sám říkáš, že by to nebolelo. Odkud se tedy ta touha vzala: z tebe, nebo z toho, co mají ostatní?' },
+    { text: 'Aby mě vzali do party. Bylo by mi smutno a připadal bych si sám.', komentar: 'Tahle touha bolí, když se nesplní. Epikúros by ji nebral na lehkou váhu: bez přátel podle něj šťastný život není. Musí to ale být právě tahle parta?' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem, co by se opravdu stalo, ne jen že by mi to bylo líto.',
+    'Rozlišil jsem, co chci já, od toho, co chci kvůli ostatním.',
+  ]}
+>
+
+Epikúros by se tě zeptal na dvě věci. Chce to tvoje tělo a tvůj klid, nebo jen představa o tom, co máš mít? A bolelo by, kdyby se to nesplnilo?
+
+Podívej se na svou odpověď. Kdyby se nestalo nic, co bolí, nebyla to podle něj touha nutná. Takové se dá zbavit, zvlášť když je těžké ji splnit.
+
+</Odkryj>
+
+Epikúros dělil touhy na tři druhy. Jedny jsou přirozené a nutné. Druhé jsou přirozené, ale nutné nejsou. A třetí nejsou ani přirozené, ani nutné: těm říkal prázdné.
+
+Pít, když máš žízeň, je přirozené a nutné. Drahé jídlo je přirozené, ale ne nutné. Sochu na svou počest nepotřebuješ vůbec.
+
+Touha, která nebolí, když ji nesplníš, nutná není. A co je přirozené, se shání snadno. Těžko se shání jen to prázdné.
+
+Kolik toho tedy člověk opravdu potřebuje?
+
+<Citat id="vs-33" />
+
+Kdo si zvykne na prostý život, víc si užije občasnou hostinu. A nemusí se bát, co mu osud vezme.
+</Kapitola>
+
+<Kapitola cislo="03" kotva="povest" nazev="Pověst">
+  <Fragment slot="titulek">Epikurejec nebyl <em>požitkář.</em></Fragment>
+
+Dodnes se požitkáři říká epikurejec. Začalo to už za Epikúrova života: nepřátelé o něm roznášeli, že se přejídá a hýří.
+
+Stačilo jim k tomu jedno slovo. Kdo učí, že cílem je slast, ten přece musí hodovat. Epikúros na to odpověděl v dopise:
+
+<Citat id="menoikeus-131-slast" />
+
+Příjemný život podle něj nedělají pitky ani bohatý stůl. Dělá ho střízlivá úvaha, která u každé volby hledá důvod. Rozumnost proto cenil výš než samu filozofii.
+
+Zastal se ho i soupeř. Seneca byl stoik a se Zahradou se v mnohém přel. O tři sta let později přesto napsal:
+
+<Citat id="vita-beata-13" />
+
+Epikúrova slast se podle Seneky spokojí s málem. Jeho škola má jen špatnou pověst, protože se ke slasti rádi hlásí lidé, kteří hledají omluvu pro vlastní neřesti.
+
+*Když ti někdo špatně rozumí, je to jeho chyba, nebo tvoje? Měl si Epikúros vybrat jiné slovo než slast?*
+
+Seneca popsal i to, čím Zahrada vítala hosty. Jeho popisem začíná cesta o tom, kolik je dost.
+
+<CestaKarta slug="kolik-je-dost" nadtitulek="Pokračuj cestou" />
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Narodil se roku 341 př. n. l. jako athénský občan, do Athén ale přišel až v osmnácti. Napsal na tři sta svitků; zbyly z nich tři dopisy a sbírky krátkých výroků. Zemřel roku 270 př. n. l. Zahrada ho přežila o celá staletí.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="epikuros" b="diogenes" druh="poradi" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Etika">
+    <Fragment slot="titulek">Nejvyšší slast je <em>klid.</em></Fragment>
+
+Slast podle Epikúra není vzrušení. Je to stav, kdy tělo nebolí a mysl se nebojí. Víc už jí nepřibude, jen se obmění. Kdo to ví, přestane se honit za dalším a dalším.
+
+*Je klid opravdu to nejlepší, co můžeš zažít? Co nadšení, zamilovanost nebo vítězství?*
+
+<MojeStanovisko client:visible id="epikuros-klid" otazka="Vzpomeň si na chvíli, kdy ti bylo opravdu dobře. Byl to klid, nebo vzrušení? Čeho z toho bys chtěl víc?" odkaz="/osobnost/epikuros/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Politika">
+    <Fragment slot="titulek">Štěstí bydlí mezi <em>přáteli.</em></Fragment>
+
+Epikúros se do politiky nepletl. Moudrý se jí podle něj účastnit nebude. Nic totiž člověku nedá tolik bezpečí jako přátelé, a ti se vejdou do jedné zahrady.
+
+*Kdyby se všichni rozumní lidé stáhli mezi přátele, kdo by se staral o obec?*
+
+<MojeStanovisko client:visible id="epikuros-pratele-nebo-obec" otazka="Co je pro dobrý život důležitější: pár lidí, kterým věříš, nebo mít slovo v tom, jak se žije všem? Proč?" odkaz="/osobnost/epikuros/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="epikuros-hostina-z-mala" nazev="Hostina z mála" odkaz="/osobnost/epikuros/#zkus-to-zit">
+
+Pozvi tenhle týden jednoho nebo dva kamarády na něco úplně obyčejného: chleba s máslem, čaj, lavičku v parku. Nic kvůli tomu nekupuj a telefon nech v kapse. Na konci si zapiš, co ti při tom chybělo a co ne.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/kolik-je-dost/', nadtitulek: 'Cesta 6', text: 'Kolik je dost?' },
+  { href: '/osobnost/diogenes/', nadtitulek: 'Profil', text: 'Diogenés: muž, který vyhodil i pohárek' },
+  { href: '/mapa/?rok=-306&osoba=epikuros', nadtitulek: 'Mapa a čas', text: 'Athény roku 306 př. n. l., kdy Epikúros koupil zahradu' },
+  { href: '/otazka/jak-zit/', nadtitulek: 'Velká otázka 1', text: 'Jak mám žít?' },
+]} />

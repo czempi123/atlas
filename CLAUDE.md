@@ -2,7 +2,7 @@
 
 Interaktivní atlas filozofie pro středoškoláky (15–19 let), od antiky po současnost. Slouží ve třídě i k samostudiu doma. Kromě učiva má předávat lásku k filozofii, odvahu hledat vlastní odpovědi, poctivost k sobě a ohled na druhé. Páteří je západní filozofie s okny do islámské, židovské, indické a čínské tradice; součástí je úvod do religionistiky podle RVP G a stoicismus má zvláštní váhu. Autor a pedagog: Vojtěch Czempka.
 
-Než začneš pracovat, přečti si `docs/plan.md` (plán a technika), `docs/architektura.md` (období, velké otázky, cesty, osobnosti) a `docs/styl.md` (tón). Zásadní rozhodnutí jsou v `docs/rozhodnuti.md`; nové zapiš tamtéž.
+Než začneš pracovat, přečti si `docs/plan.md` (plán a technika), `docs/architektura.md` (období, velké otázky, cesty, osobnosti) a `docs/styl.md` (tón). Zásadní rozhodnutí jsou v `docs/rozhodnuti.md`; nové zapiš tamtéž. Plán větve, na které pracuješ (zadání kroků, stav, co zůstalo na později), je v `docs/plany/<větev>.md`; stav a další zadání zapisuj tam, `docs/plan.md` drží jen strategii a rozcestník.
 
 ## Jak píšeme pro studenty
 
@@ -52,7 +52,7 @@ Celek (velká otázka s cestou a potřebnými profily) prochází kroky: podklad
 
 ## Git
 
-Pracuj ve větvích, commity piš česky a stručně (co a proč). Do hlavní větve jde jen schválený celek. Nic neposílej na GitHub bez pokynu autora.
+Pracuj ve větvích, commity piš česky a stručně (co a proč). Do hlavní větve jde jen schválený celek. Po závěrečné revizi a schválení celku se větev sloučí do hlavní a hlavní větev se pošle na GitHub; jinak na GitHub nic neposílej bez pokynu autora.
 
 ## Do atlasu nepatří
 
