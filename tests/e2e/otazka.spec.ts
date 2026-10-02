@@ -37,18 +37,24 @@ test('otázka: první názor klávesnicí, hlasy v pořadí, návrat na konci a 
   await expect(page.locator('#jak-poznam-pravdu-hlasy-nadpis')).toBeFocused();
   await expect(page.locator('#jak-poznam-pravdu-hlasy-nadpis')).toHaveText('Komu věřit?');
   // Nejdřív odpovědi všech na tentýž případ, pak rozvinutí na časové ose.
-  await expect(page.locator('.odpoved__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés']);
+  await expect(page.locator('.odpoved__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés', 'Epikúros']);
+  await expect(page.locator('.oddil__nad').first()).toHaveText('Tentýž případ, pět odpovědí');
   await expect(page.locator('.odpoved').first()).toContainText('Ani babičce, ani učitelce.');
+  // Epikúros přibyl s profilem: rozhodují smysly, ne rozum ani zvyk.
+  await expect(page.locator('.odpoved').last()).toContainText('O pravdě rozhodují smysly');
   await page.keyboard.press('Tab');
   await expect(page.locator('.odpoved__odkaz').first()).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/#hlas-parmenides$/);
   await expect(page.locator('#hlas-parmenides')).toBeInViewport();
-  await expect(page.locator('.hlas__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés']);
+  await expect(page.locator('.hlas__jmeno')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés', 'Epikúros']);
   await expect(page.locator('#hlas-protagoras')).toContainText('jako lékař');
+  await expect(page.locator('#hlas-epikuros')).toContainText('Rozum podle něj žádný vjem vyvrátit nemůže, protože sám na vjemech závisí.');
   // Odkaz na profil jen tam, kde profil je.
-  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Prótagorás', 'Sókratés']);
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Prótagorás', 'Sókratés', 'Epikúros']);
+  // Epikúrova věta je výklad bez citátu.
   await expect(page.locator('.hlas .citat')).toHaveCount(4);
+  await expect(page.locator('#hlas-epikuros .citat')).toHaveCount(0);
   await expect(page.locator('.cesta-karta')).toHaveAttribute('href', '/cesta/kdy-mam-dobry-duvod-verit/');
 
   // Změnil se?
@@ -95,7 +101,7 @@ test('otázka: bez JavaScriptu jsou hlasy vidět hned', async ({ browser }) => {
   const page = await kontext.newPage();
   await page.goto(ADRESA);
   await expect(page.locator(PO)).toBeVisible();
-  await expect(page.locator('.hlas')).toHaveCount(4);
+  await expect(page.locator('.hlas')).toHaveCount(5);
   await kontext.close();
 });
 
@@ -190,3 +196,21 @@ for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska
     });
   }
 }
+
+test('profily Epikúra a Diogena vedou na cestu 6 a na stránku otázky 1; karta cesty stojí za kapitolou Pověst', async ({ page }) => {
+  for (const id of ['epikuros', 'diogenes']) {
+    await page.goto(`/osobnost/${id}/`);
+    const kamDal = page.getByRole('navigation', { name: 'Kam dál' });
+    await expect(kamDal.getByRole('link', { name: /Cesta 6\s*Kolik je dost\?/ })).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+    await expect(kamDal.getByRole('link', { name: /Velká otázka 1\s*Jak mám žít\?/ })).toHaveAttribute('href', '/otazka/jak-zit/');
+    await expect(page.locator('a[href="/otazky/#jak-zit"]')).toHaveCount(0);
+  }
+  await page.goto('/osobnost/epikuros/');
+  const karta = page.locator('#povest .cesta-karta');
+  await expect(karta).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+  await expect(karta).toContainText('Pokračuj cestou');
+  await expect(page.locator('.cesta-karta')).toHaveCount(1);
+  // Diogenův profil kartu nemá: jeho cesta 7 teprve vznikne.
+  await page.goto('/osobnost/diogenes/');
+  await expect(page.locator('.cesta-karta')).toHaveCount(0);
+});
