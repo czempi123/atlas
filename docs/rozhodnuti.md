@@ -2,6 +2,17 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Vstupy, které nezapadnou, a středová osa cesty (po P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Ke každé cestě a stránce otázky vede viditelný vstup z hlavičky profilu: cesta jako plná deska v barvě období, otázky jako tlačítka s obrysem, hned pod letopočty a nad kapitolami | Autor po P8: cesta byla z Epikúrova profilu nenápadná (karta až za třetí kapitolou); každý prvek má být snadno k nalezení |
+| Vstupy se skládají samy z dat (`filozofove` cesty, `hlasy` otázky), ne ručně v MDX profilu | Nová cesta nebo otázka se u svých lidí objeví sama a nemůže zapadnout; hlídá to test |
+| Přehled otázek ukazuje u každé otázky její cesty, stránka Lidé u člověka s profilem jeho cestu | Cesta má být vidět i z míst, kudy student prochází, když nezná jméno filozofa |
+| Karta cesty má hlavní tlačítko „Vydat se na cestu“ a okraj v barvě období | Dřív byla k nerozeznání od ostatních karet v textu; odkaz jen jako řádek textu se přehlédl |
+| Karta cesty v profilu Epikúra zůstává i za kapitolou 03 | V hlavičce je vstup pro toho, kdo cestu hledá; karta v textu je pozvánka pro toho, kdo dočetl |
+| Krok cesty a přehled cesty stojí na středové ose: text 680 px, bloky 960 px, společný střed; lišta Předchozí / Další pod okraji bloku | Autor po P8: obsah byl na notebooku přiražený doleva a vpravo zůstávala prázdná plocha. Stejnou osu má stránka osobnosti |
+
 ## 2. 10. 2026: Cesta 6 a stránka velké otázky 1 (P8)
 
 | Rozhodnutí | Důvod |

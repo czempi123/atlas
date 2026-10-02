@@ -432,3 +432,49 @@ test('Domů: zůstává jedna doporučená cesta', async ({ page }) => {
   await expect(page.locator('.cesta-karta')).toHaveCount(1);
   await expect(page.locator('.cesta-karta')).toHaveAttribute('href', CESTA);
 });
+
+test('cesta na notebooku: obsah stojí na středové ose, ne u levého okraje', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  // Měří se rozvržení ze serveru; na oživení ostrovů tu nezáleží.
+  const osa = async (vyber: string) => {
+    const r = (await page.locator(vyber).first().boundingBox())!;
+    return { vlevo: r.x, vpravo: 1440 - (r.x + r.width), sirka: r.width };
+  };
+  // Krok s textem i blokem: nadpis, text a blok mají společný střed.
+  await page.goto(`${CESTA6}3/`);
+  await page.evaluate(() => document.fonts.ready);
+  for (const vyber of ['.krok__hlava', '.krok__obsah', '.krok__obsah > .ctenarsky', '.krok__obsah .blok']) {
+    const o = await osa(vyber);
+    expect(Math.abs(o.vlevo - o.vpravo), vyber).toBeLessThanOrEqual(2);
+  }
+  expect((await osa('.krok__obsah .blok')).sirka).toBe(960);
+  expect((await osa('.krok__obsah > .ctenarsky')).sirka).toBe(680);
+  // Nadpis stojí nad textem, ne nad okrajem bloku.
+  expect((await osa('.krok__hlava')).vlevo).toBe((await osa('.krok__obsah > .ctenarsky')).vlevo);
+  // Tlačítka lišty stojí pod okraji bloku.
+  const blok = await osa('.krok__obsah .blok');
+  const predchozi = (await page.getByRole('link', { name: 'Předchozí' }).boundingBox())!;
+  const dalsi = (await page.getByRole('link', { name: /Další krok/ }).boundingBox())!;
+  expect(Math.abs(predchozi.x - blok.vlevo)).toBeLessThanOrEqual(2);
+  expect(Math.abs(1440 - (dalsi.x + dalsi.width) - blok.vpravo)).toBeLessThanOrEqual(2);
+  // Krok jen s blokem (Příběh, Změň jednu věc) a přehled cesty drží tutéž osu.
+  for (const n of [1, 5]) {
+    await page.goto(`${CESTA6}${n}/`);
+    await page.evaluate(() => document.fonts.ready);
+    const o = await osa('.krok__obsah');
+    expect(Math.abs(o.vlevo - o.vpravo), `krok ${n}`).toBeLessThanOrEqual(2);
+  }
+  await page.goto(CESTA6);
+  await page.evaluate(() => document.fonts.ready);
+  for (const vyber of ['.cesta__hlava', '.cesta .uvod', '#hotovo']) {
+    const o = await osa(vyber);
+    expect(Math.abs(o.vlevo - o.vpravo), vyber).toBeLessThanOrEqual(2);
+  }
+  // Na telefonu se nic nemění: obsah jde od okraje k okraji.
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(`${CESTA6}3/`);
+  await page.evaluate(() => document.fonts.ready);
+  const telefon = (await page.locator('.krok__obsah').boundingBox())!;
+  expect(telefon.x).toBe(16);
+  expect(telefon.width).toBe(358);
+});

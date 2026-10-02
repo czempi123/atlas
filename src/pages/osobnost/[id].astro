@@ -1,11 +1,12 @@
 ---
-// Šablona osobnosti (portrét, profil): hlavička s deskou a atributem → příběh v kapitolách →
+// Šablona osobnosti (portrét, profil): hlavička s deskou, atributem a vstupy do cest a otázek → příběh v kapitolách →
 // doba a lidé (z dat) → velké myšlenky → zkus to žít → kam dál → prameny.
 import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
 import Deska from '../../components/ui/Deska.astro';
 import Mince from '../../components/ui/Mince.astro';
 import Prameny from '../../components/osobnost/Prameny.astro';
+import VstupyOsoby from '../../components/osobnost/VstupyOsoby.astro';
 import { osoba as najdiOsobu, obdobiPodleId, mistaPodleId, data } from '../../lib/data';
 import { zivot } from '../../lib/casy';
 
@@ -63,6 +64,7 @@ const dev = import.meta.env.DEV;
           {misto && <> · {misto}</>}
           {' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a>
         </p>
+        <VstupyOsoby osoba={osoba} />
       </div>
       <div class="osobnost__deska">
         <Deska osoba={osoba}>

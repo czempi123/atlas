@@ -88,7 +88,7 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 
 - Mezery (základ 4 px): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96.
 - Mřížka 12 sloupců, mezera 24; okraj stránky 80 (notebook) / 16 (telefon); čtenářský sloupec 680 px.
-- **Středová osa stránky osobnosti:** úvod, citát, kapitoly, vložené bloky (Kdo žil dřív?, Změň jednu věc, Spor) a Prameny leží v jednom čtenářském sloupci uprostřed stránky. Přes celou šířku jdou jen hlavička s deskou a oddíly, které stojí na mřížce: Doba a lidé (osa, mapa, vztahy), Velké myšlenky, Zkus to žít a Kam dál. Text uvnitř širokých oddílů začíná u jejich levého okraje. Na telefonu je všechno v jednom sloupci. V hlavičce stojí u letopočtů rodiště; když ho neznáme, místo, kde člověk působil naposledy.
+- **Středová osa stránky osobnosti:** úvod, citát, kapitoly, vložené bloky (Kdo žil dřív?, Změň jednu věc, Spor) a Prameny leží v jednom čtenářském sloupci uprostřed stránky. Přes celou šířku jdou jen hlavička s deskou a oddíly, které stojí na mřížce: Doba a lidé (osa, mapa, vztahy), Velké myšlenky, Zkus to žít a Kam dál. Text uvnitř širokých oddílů začíná u jejich levého okraje. Na telefonu je všechno v jednom sloupci. V hlavičce stojí u letopočtů rodiště; když ho neznáme, místo, kde člověk působil naposledy. Hned pod nimi jsou **vstupy osobnosti** (viz Komponenty): cesta a velké otázky, kde člověka potkáš.
 - Zaoblení: `xs` 4 (obrazy, pásy) · `sm` 8 (tlačítka, pole) · `md` 14 (karty, panely) · `lg` 20 (spodní list) · `full` (mince, čipy).
 - Stín: překryv na mapě `0 6px 18px rgb(0 0 0 / 12%)`; spodní list `0 -8px 28px rgb(0 0 0 / 14%)`. Jinak bez stínů.
 - Hlavička 72 px (notebook) / 56 px (telefon), spodní lišta 72 px, dotykový cíl nejméně 44 × 44.
@@ -99,7 +99,8 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 - **Notebook:** hlavička s logem (glóbus a „Atlas myšlení“), vstupy Domů · Mapa a čas · Otázky · Lidé a směry (aktivní podtržený inkoustem), hledání s klávesou `/`, Můj deník, přepínač režimu.
 - **Telefon:** horní lišta s názvem nebo „‹ Zpět na …“, spodní lišta s pěti ikonami a popisky (Domů, Mapa, Otázky, Lidé, Deník).
 - **Drobečková navigace** vždy pod hlavičkou vlevo (Lidé a směry / období / osoba).
-- **Cesta** má soustředěnou hlavičku: vlevo zpět na přehled cesty, uprostřed postup po krocích, vpravo Režim třídy a Uložit a odejít. Dole pevná lišta Předchozí krok / Další krok.
+- **Cesta** má soustředěnou hlavičku: vlevo zpět na přehled cesty, uprostřed postup po krocích, vpravo Režim třídy a Uložit a odejít. Dole pevná lišta Předchozí krok / Další krok. Obsah kroku i přehledu cesty stojí na středové ose stránky (oddíl Cesta).
+- **Nic nesmí zapadnout.** Ke každé cestě a stránce otázky vede vstup z míst, kde ji student čeká: z Domů nebo přehledu otázek, z hlavičky profilu každého jejího filozofa, z karty člověka v Lidech a z Kam dál. Vstup je vidět bez posouvání a bez rozbalování.
 - Rámeček fokusu 2 px `--ink`, odsazení 3 px, jen při `:focus-visible`.
 
 ## Komponenty
@@ -122,6 +123,8 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
   </GrafKrivek>
   ```
   Bod křivky je `[dílek 0…n, výška 0…1]`; `popisek: [dílek, výška]` posune popisek křivky jinam než nad její konec. Chybné zadání zastaví sestavení (`chybyGrafu`).
+- **Karta cesty** (`src/components/cesta/CestaKarta.astro`): povrchová karta s okrajem v barvě období a silnou levou hranou (6 px), nadtitulek (Cesta N · minuty · kroky), otázka cesty `t-h3`, vstup, mince filozofů a hlavní tlačítko „Vydat se na cestu“ (`--ink` / `--paper`, 48 px). Odkaz je celá karta; po najetí dostane tint období.
+- **Vstupy osobnosti** (`src/components/osobnost/VstupyOsoby.astro`, logika `src/lib/vstupy.ts`): navigace v hlavičce profilu pod letopočty, „Cesty a otázky, kde potkáš …“. Cesta je plná deska v barvě období (dva řádky: „Cesta N · K kroků · asi M minut“ a název, aspoň 64 px), stránky velkých otázek jsou vedlejší tlačítka s obrysem (48 px). Pořadí: cesty podle čísla, pak otázka, ke které cesta osoby vede, pak ostatní otázky podle čísla. Nic se nepíše ručně: cesty se berou z `filozofove` v přehledu cesty, otázky z `hlasy` stránky otázky. Osoba bez cesty i bez hlasu navigaci nemá. Telefon pod sebou přes celou šířku, od 700 px v řadě.
 - **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a). Varianta `velky` pro hlavní citát stránky, `kompaktni` (menší okraje, velikost textu) pro citát na časové ose otázky.
 
 ## Bloky
@@ -366,9 +369,10 @@ Odhad pořadí (karty A / B / Žili ve stejné době), nebo vzdálenosti: na ose
 Cesta je 15–20 minut vedeného průchodu po krocích (`docs/architektura.md` › Katalog cest). Ukázková je cesta 1 „Kdy mám dobrý důvod věřit?“ (sedm kroků, Sókratés a Prótagorás); druhá hotová je cesta 6 „Kolik je dost?“ (sedm kroků, Epikúros a kynici).
 
 - **Soubory:** přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`, volitelně `mapa: { rok, osoba, text }` pro odkaz do Mapy a času v Kam dál; text = úvod), kroky `src/content/cesty/<slug>/<n>-<název>.mdx` (frontmatter `cesta`, `krok`, `nazev`, volitelně `kdeJsme`; text = obsah kroku s bloky). Kroky se číslují 1…n bez mezer, jinak se sestavení zastaví.
-- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, tlačítko Začít / Pokračovat: krok n / Projít znovu, pod ním nadpis Kroky a seznam kroků s tím, co student prošel, a oddíl Kam dál (`#hotovo`). Tlačítko stojí nad seznamem, aby bylo na telefonu vidět bez posouvání a klávesnicí na dosah.
+- **Přehled cesty** `/cesta/<slug>/`: nadtitulek (číslo, minuty, počet kroků), otázka, vstup, mince filozofů, úvod, tlačítko Začít / Pokračovat: krok n / Projít znovu, pod ním nadpis Kroky a seznam kroků s tím, co student prošel, a oddíl Kam dál (`#hotovo`). Tlačítko stojí nad seznamem, aby bylo na telefonu vidět bez posouvání a klávesnicí na dosah. Celý přehled je jeden čtenářský sloupec (680 px) uprostřed stránky.
 - **Krok** `/cesta/<slug>/<n>/`: soustředěná hlavička (vlevo zpět na přehled, uprostřed „Krok n z N“ s tečkami kroků, vpravo Uložit a odejít; postup se ukládá sám), nadtitulek, název kroku, „Kde jsme“ a obsah. Dole pevná lišta Předchozí / Další krok (na telefonu bez názvu kroku), na konci Dokončit cestu.
-- **Vstupy:** karta cesty (`src/components/cesta/CestaKarta.astro`) na Domů a v profilu, odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku.
+- **Středová osa kroku:** nadpis kroku a text leží v čtenářském sloupci (680 px), bloky v pásu 960 px; obojí má společný střed uprostřed stránky, takže vlevo i vpravo zbývá stejně místa. Od 1100 px stojí tlačítka lišty pod okraji bloku, ne u okrajů okna. Na telefonu jde obsah od okraje k okraji jako dřív.
+- **Vstupy:** karta cesty na Domů, v profilu a na stránce otázky; deska cesty v hlavičce profilu každého filozofa cesty (vstupy osobnosti, samy z dat); odkaz „Cesta N Název“ u otázky v přehledu `/otazky/` (i u otázky, která ještě nemá stránku); řádek „Cesta N: Název“ na kartě člověka v Lidech; odkaz v Kam dál profilu, Pokračuj na Domů a Rozpracované v deníku. Test hlídá, že každá cesta je dosažitelná z profilu aspoň jednoho svého filozofa.
 - Bloky v kroku nabídnou po dokončení další krok samy.
 
 ## Velká otázka

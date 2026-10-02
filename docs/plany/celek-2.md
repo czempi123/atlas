@@ -125,6 +125,13 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 Nejdřív mi v pár bodech napiš osnovu cesty 6 (kroky, blok v každém, odhad minut), návrh grafu (co je na osách a jak vypadá na telefonu) a čtyři odpovědi hlasů na úvodní případ, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (graf, cesta, stránka otázky, propojení) a nic neposílej na GitHub. Na konci pošli snímky cesty a stránky otázky a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
 
+## Po P8: úpravy podle autora (2. 10. 2026)
+
+Autor P8 prošel: celek se mu líbí, dvě připomínky. Obě zapracované, `npm test` prošlo celé.
+
+- **Cesta byla z profilu Epikúra nenápadná.** Nově má hlavička každého profilu vstupy „Cesty a otázky, kde potkáš …“ (deska cesty a tlačítka otázek, samy z dat), přehled otázek ukazuje u otázky její cesty, stránka Lidé u člověka jeho cestu a karta cesty má hlavní tlačítko. Zásada „nic nesmí zapadnout“ je v `docs/design.md` › Navigace a rozvržení.
+- **Kroky cesty byly na notebooku přiražené doleva.** Krok i přehled cesty stojí na středové ose (text 680 px, bloky 960 px), lišta Předchozí / Další pod okraji bloku.
+
 ## Po P8: co zůstalo na později
 
 - **Blok Roztřiď.** Karta položená v koši se vrací klepnutím a pak se položí znovu; přetáhnout ji rovnou z koše do koše nejde. Při tažení se stránka sama neposouvá; na telefonu leží koše hned pod kartou, takže to nevadí, u bloku s víc koši by to vadit mohlo. Obojí doplnit, až blok dostane druhé použití.

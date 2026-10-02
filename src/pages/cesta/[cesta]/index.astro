@@ -62,6 +62,8 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
 
 <style>
   .cesta { padding-bottom: var(--s-8); }
+  /* Středová osa jako u kroků, profilu a otázky: sloupec uprostřed, ne u levého okraje. */
+  .cesta :global(.ctenarsky) { margin-inline: auto; }
   .cesta__hlava { padding: var(--s-6) 0 var(--s-4); }
   .nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
   h1 { margin-bottom: var(--s-4); }

@@ -214,3 +214,41 @@ test('profily Epikúra a Diogena vedou na cestu 6 a na stránku otázky 1; karta
   await page.goto('/osobnost/diogenes/');
   await expect(page.locator('.cesta-karta')).toHaveCount(0);
 });
+
+test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehledu a na kartách v Lidech', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  // Hlavička profilu: cesta jako první a nejvýraznější vstup, nad kapitolami; otázka její cesty před ostatními.
+  await page.goto('/osobnost/epikuros/');
+  const vstupy = page.getByRole('navigation', { name: 'Cesty a otázky, kde potkáš Epikúra' });
+  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(vstupy.getByRole('link').first()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+  const cesta = (await vstupy.getByRole('link').first().boundingBox())!;
+  const kapitoly = (await page.getByRole('navigation', { name: 'Kapitoly' }).boundingBox())!;
+  expect(cesta.y).toBeLessThan(kapitoly.y);
+  // Na telefonu je cesta vidět bez posouvání a je dost velká na prst.
+  expect(cesta.y + cesta.height).toBeLessThan(844);
+  expect(cesta.height).toBeGreaterThanOrEqual(56);
+  for (const o of await vstupy.getByRole('link').all()) expect((await o.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  await vstupy.getByRole('link').first().click();
+  await expect(page).toHaveURL('/cesta/kolik-je-dost/');
+
+  await page.goto('/osobnost/diogenes/');
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 6[\s\S]*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/]);
+  await page.goto('/osobnost/sokrates/');
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 1[\s\S]*Kdy mám dobrý důvod věřit\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+
+  // Přehled otázek: u otázky stojí cesty, které k ní vedou, i když otázka ještě nemá vlastní stránku.
+  await page.goto('/otazky/');
+  await expect(page.locator('#jak-zit .cesta')).toHaveText(/Cesta 6\s*Kolik je dost\?/);
+  await expect(page.locator('#jak-zit .cesta')).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+  await expect(page.locator('#jak-poznam-pravdu .cesta')).toHaveAttribute('href', '/cesta/kdy-mam-dobry-duvod-verit/');
+  await expect(page.locator('#co-je-spravne .cesta')).toHaveCount(0);
+  expect((await page.locator('#jak-zit .cesta').boundingBox())!.height).toBeGreaterThanOrEqual(44);
+
+  // Lidé: karta člověka s profilem říká, která cesta k němu patří.
+  await page.goto('/lide/');
+  await expect(page.locator('#epikuros .karta__cesta')).toHaveText('Cesta 6: Kolik je dost?');
+  await expect(page.locator('#diogenes .karta__cesta')).toHaveText('Cesta 6: Kolik je dost?');
+  await expect(page.locator('#sokrates .karta__cesta')).toHaveText('Cesta 1: Kdy mám dobrý důvod věřit?');
+  await expect(page.locator('#seneca .karta__cesta')).toHaveCount(0);
+});

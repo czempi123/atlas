@@ -1,0 +1,85 @@
+---
+// Vstupy osobnosti: cesty, ve kterých člověk vystupuje, a velké otázky, na které odpovídá.
+// Stojí hned pod jménem v hlavičce profilu, aby cesta ani otázka nezapadly až na konec stránky.
+// Vše se bere z dat (filozofove v přehledu cesty, hlasy na stránce otázky); nic se nepíše ručně.
+// Použití: <VstupyOsoby osoba={osoba} />
+import { getCollection } from 'astro:content';
+import Ikona from '../ui/Ikona.astro';
+import { maStranku } from '../../lib/otazky';
+import { vstupyOsoby } from '../../lib/vstupy';
+import type { TOsoba } from '../../lib/schema';
+
+interface Props { osoba: Pick<TOsoba, 'id' | 'jmeno' | 'jmeno2'> }
+const { osoba } = Astro.props;
+const kroky = await getCollection('kroky');
+const { cesty, otazky } = vstupyOsoby(
+  osoba.id,
+  (await getCollection('cesty')).map((c) => ({ slug: c.id, ...c.data, kroku: kroky.filter((k) => k.data.cesta === c.id).length })),
+  (await getCollection('otazky')).filter((o) => maStranku(o.data)).map((o) => ({ slug: o.id, ...o.data })),
+);
+---
+{(cesty.length > 0 || otazky.length > 0) && (
+  <nav class="vstupy-osoby" aria-label={`Cesty a otázky, kde potkáš ${osoba.jmeno2 ?? osoba.jmeno}`} data-pagefind-ignore>
+    <ul>
+      {cesty.map((c) => (
+        <li>
+          <a class="vstup vstup--cesta" href={`/cesta/${c.slug}/`}>
+            <span class="vstup__text">
+              <span class="t-nadtitulek vstup__nad">Cesta {c.cislo} · {c.kroku} kroků{c.minut && ` · asi ${c.minut} minut`}</span>
+              <span class="vstup__nazev">{c.nazev}</span>
+            </span>
+            <Ikona id="dal" velikost={22} />
+          </a>
+        </li>
+      ))}
+      {otazky.map((o) => (
+        <li>
+          <a class="vstup vstup--otazka" href={`/otazka/${o.slug}/`}>
+            <span class="vstup__text">
+              <span class="t-nadtitulek vstup__nad">Velká otázka {o.cislo}</span>
+              <span class="vstup__nazev">{o.otazka}</span>
+            </span>
+            <Ikona id="dal" velikost={22} />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .vstupy-osoby { margin-top: var(--s-5); }
+  ul { display: flex; flex-wrap: wrap; gap: var(--s-3); margin: 0; padding: 0; list-style: none; }
+  li { display: flex; flex: 1 1 100%; min-width: 0; }
+  .vstup {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-4);
+    min-height: 64px;
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-sm);
+    text-decoration: none;
+    transition: background var(--pohyb-rychle), border-color var(--pohyb-rychle);
+  }
+  .vstup__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .vstup__nazev { font-size: var(--fs-perex); line-height: 1.2; }
+  .vstup :global(svg) { flex: none; }
+  /* Cesta je hlavní vstup: plná deska v barvě období. Otázka je vedlejší: obrys. */
+  .vstup--cesta { border: 1.5px solid var(--pc-plate); background: var(--pc-plate); color: var(--pc-on-plate); }
+  .vstup--cesta .vstup__nad { color: var(--pc-on-plate); }
+  .vstup--cesta:hover { border-color: var(--ink); }
+  /* Otázka je na jednom řádku a nižší, ať tři vstupy na telefonu neodsunou portrét z první obrazovky. */
+  .vstup--otazka { min-height: 48px; padding-block: var(--s-2); border: 1.5px solid var(--ink); background: transparent; color: var(--ink); }
+  .vstup--otazka .vstup__text { flex-flow: row wrap; align-items: baseline; gap: 0 var(--s-3); }
+  .vstup--otazka .vstup__nad { color: var(--ink-2); white-space: nowrap; }
+  .vstup--otazka .vstup__nazev { font-size: var(--fs-text); }
+  .vstup--otazka:hover { background: var(--sunk); }
+  .vstup:hover .vstup__nazev { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  @media (min-width: 700px) {
+    ul { align-items: center; }
+    li { flex: 0 1 auto; }
+    .vstup--cesta { min-width: 300px; }
+  }
+</style>

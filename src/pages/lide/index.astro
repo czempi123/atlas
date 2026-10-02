@@ -5,10 +5,12 @@ import Zakladni from '../../layouts/Zakladni.astro';
 import Mince from '../../components/ui/Mince.astro';
 import { data } from '../../lib/data';
 import { zivot, interval, rozpeti } from '../../lib/casy';
+import { cestyOsoby } from '../../lib/vstupy';
 
 const smery = (await getCollection('smery')).sort((a, b) => a.data.poradi - b.data.poradi);
 const osobnosti = new Map((await getCollection('osobnosti')).map((o) => [o.data.osoba, o.id]));
 const nazevSmeru = new Map(smery.map((s) => [s.id, s.data.nazev]));
+const cesty = (await getCollection('cesty')).map((c) => ({ slug: c.id, ...c.data }));
 const obdobi = data.obdobi.filter((o) => data.lide.some((l) => l.obdobi === o.id));
 const podleNarozeni = (a: (typeof data.lide)[number], b: (typeof data.lide)[number]) =>
   (interval(a)?.[0] ?? a.narozen?.rok ?? a.aktivni?.od ?? 9999) - (interval(b)?.[0] ?? b.narozen?.rok ?? b.aktivni?.od ?? 9999);
@@ -60,6 +62,7 @@ const HLOUBKY = [
                             <span class="t-popisek karta__roky">{zivot(l)}{l.smery.length > 0 && <> · {l.smery.map((s) => nazevSmeru.get(s)).join(', ')}</>}</span>
                             <span class="karta__kdo">{l.kdo}</span>
                             {h.id === 'portret' && l.atribut && <span class="t-popisek karta__proc">Proč {l.atribut.nazev}? {l.atribut.proc}</span>}
+                            {stranka && cestyOsoby(l.id, cesty).map((c) => <span class="karta__cesta">Cesta {c.cislo}: {c.nazev}</span>)}
                           </span>
                         </Tag>
                       </li>
@@ -115,6 +118,7 @@ const HLOUBKY = [
   .skupina--portret .karta__jmeno { font-size: var(--fs-h3); }
   .karta__kdo { font-size: 16px; line-height: 1.45; color: var(--ink-2); margin-top: var(--s-1); }
   .karta__proc { margin-top: var(--s-2); }
+  .karta__cesta { margin-top: var(--s-2); font-family: var(--font-sans); font-size: var(--fs-ovladani); font-weight: 600; line-height: 1.35; color: var(--pc); }
   .skupina--medailonek .karta { padding: var(--s-3); border-color: transparent; background: none; border-bottom: 1px solid var(--rule); border-radius: 0; }
   .skupina--medailonek .karta__jmeno { font-size: 19px; }
   .skupina--medailonek .karta__kdo { font-size: 15px; }
