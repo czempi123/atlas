@@ -94,6 +94,8 @@ const cesty = defineCollection({
     filozofove: z.array(id),
     /** odhad délky v minutách */
     minut: z.number().int().min(5).max(60).optional(),
+    /** odkaz do Mapy a času v Kam dál na přehledu cesty: rok, vybraná osoba a text odkazu */
+    mapa: z.object({ rok: z.number().int(), osoba: id, text: z.string() }).strict().optional(),
   }),
 });
 

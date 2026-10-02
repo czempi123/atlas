@@ -1,0 +1,49 @@
+# Změň jednu věc · cesta 6 „Kolik je dost?“, krok 5: nový případ A „měsíc na minimum“ (autorský, bez historických osob).
+# Podklad: docs/podklady/celek-2-jak-zit.md › Nový případ A. Oddíl Co udělal stojí na Senekovi, Dopisy Luciliovi 18, 9
+# (Epikúrovy dny skrovného jídla).
+druh: zmena
+obdobi: 2
+nadtitulek: Nový případ
+scena: >-
+  Představ si, že spolužačka vyhlásí na síti výzvu: měsíc na minimum. Žádné nákupy, jen studená sprcha, nic sladkého,
+  telefon jen na volání. Kdo vydrží, dokáže, že nic z toho nepotřebuje.
+
+
+  Ty se ale každý pátek scházíš s kamarády na pizzu.
+otazka: Jdeš do toho?
+moznosti:
+  - { id: cele, text: "Jdu do toho celé, i bez pátků." }
+  - { id: s-patky, text: "Jdu, ale pátky s kamarády si nechám." }
+  - { id: nejdu, text: Nejdu do toho. }
+podminky:
+  - id: bez-divaku
+    prepinac: Nikdo se to nedozví
+    zmena: >-
+      Teď si představ, že výzva nemá diváky. Nic se nesdílí, nikdo nepočítá dny a nikdo se nedozví, jestli jsi vydržel.
+    posun: >-
+      Rozhodl ses jinak, když zmizeli diváci. Kolik z té výzvy tedy bylo o tobě a kolik o tom, co uvidí druzí?
+      Do kterého koše patří chuť být viděn?
+    stejne: >-
+      Diváci na tvé odpovědi nic nezměnili. Rozhoduješ se tedy podle něčeho jiného než podle obdivu. Podle čeho?
+  - id: naporad
+    prepinac: Není to na měsíc, ale napořád
+    zmena: >-
+      Teď si představ, že výzva po měsíci neskončí. Takhle se má žít napořád.
+    posun: >-
+      Rozhodl ses jinak, když zmizel konec. Kynik by řekl, že cvičit se má pořád, ne jen měsíc.
+      Co se pro tebe změnilo: věci, kterých se vzdáváš, nebo to, že není cesta zpátky?
+    stejne: >-
+      Měsíc, nebo napořád, odpovídáš stejně. O délku ti tedy nejde. O co tedy: o ty věci samotné, nebo o to, kdo o nich rozhoduje?
+  - id: s-kamarady
+    prepinac: Kamarádi jdou do toho s tebou
+    zmena: >-
+      Teď si představ, že se přidá celá tvoje parta. V pátek se sejdete stejně, jen místo pizzy přinese každý, co má doma.
+    posun: >-
+      Rozhodl ses jinak, když přibyli kamarádi. Co ti tedy na pátku předtím chybělo víc: pizza, nebo lidé kolem stolu?
+    stejne: >-
+      Ani kamarádi tvou odpověď nezměnili. Na čem tedy stojí: na věcech, kterých by ses vzdal, nebo na výzvě samotné?
+coUdelal:
+  osoba: epikuros
+  text: >-
+    Epikúros si podobnou zkoušku dával sám. Měl dny, kdy jedl jen skrovně, aby viděl, jestli mu něco chybí.
+zdroje: [seneca-epistulae]

@@ -1,0 +1,43 @@
+# Spor · cesta 6 „Kolik je dost?“, krok 4: Epikúros × kynici (rozhodnutí autora 2. 10. 2026: bez smyšleného setkání s Diogenem).
+# Podklad: docs/podklady/celek-2-jak-zit.md › Spor: Epikúros × kynici. Kynická strana mluví Diogenovými průpovídkami
+# (DL VI, 23, 63, 70–71, 104–105), Epikúrova strana Hlavními myšlenkami 3, 18, 27, 28, Dopisem Menoikeovi 129–131,
+# DL X, 11 a 119–120 a Senekou (Dopisy 18, 9). Třetí argument každé strany je domyšlená odpověď na druhou stranu
+# a podává se jako výklad („by mohl“). Že se Epikúros s Diogenem nejspíš nepotkal: DL X, 1 a VI, 77–79.
+druh: spor
+obdobi: 2
+nadtitulek: Spor
+scena: >-
+  S Diogenem samotným se Epikúros nejspíš nikdy nepotkal: když přišel poprvé do Athén, Diogenés dožíval v Korinthu.
+  Kynici ale mluvili slovy svého učitele, a proto tu za ně mluví on.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: Mám se naučit obejít bez všeho, nebo vědět, co mi stačí?
+strany:
+  - osoba: diogenes
+    oznaceni: kynici
+    postoj: Obejít se bez všeho.
+    argumenty:
+      - >-
+        Každá potřeba je provázek, za který tě může někdo tahat. Kdo skoro nic nepotřebuje, je svobodný.
+        Kynik proto pohrdá bohatstvím, slávou i urozeným původem.
+      - >-
+        Na nepohodlí se dá vycvičit. Vypráví se, že se Diogenés v létě válel v rozpáleném písku a v zimě objímal zasněžené sochy.
+        Kdo se vycvičí, toho nepohodlí přestane bolet. A samo pohrdání slastí je pak slast.
+      - >-
+        Epikúrovi by kynik mohl namítnout: kdo potřebuje zahradu, přátele a jistotu, potřebuje pořád hodně, jen jiné věci.
+        Co s ním bude, až o zahradu přijde? Kynik chce být připravený na každý osud a nic nesvěřuje štěstí.
+  - osoba: epikuros
+    postoj: Vědět, co mi stačí.
+    argumenty:
+      - >-
+        Slast má strop: když zmizí bolest z nedostatku, víc už jí nepřibude. Proto stačí málo.
+        Málo ale nemusí být pořád: přepych si nejvíc užije ten, kdo ho nepotřebuje. Hrnek sýra si dopřát smí.
+      - >-
+        Trápení samo nic nedává. Bolest má cenu snášet, jen když z ní vzejde větší slast.
+        I Epikúros měl dny, kdy jedl jen skrovně, chtěl ale zjistit, jestli mu něco chybí.
+        Válet se kvůli tomu v horkém písku by pro něj byla zbytečná bolest.
+      - >-
+        Kynikovi by Epikúros mohl odpovědět: kdo žije na ulici z toho, co vyžebrá, je vydaný na milost druhým.
+        I to je provázek. Nic nedá člověku tolik bezpečí jako přátelé.
+zdroje: [dl-vi-20, dl-vi-41, dl-vi-69, dl-vi-104, dl-vi-76, dl-x-1, dl-x-117, dl-x-122, dl-x-139, seneca-epistulae]

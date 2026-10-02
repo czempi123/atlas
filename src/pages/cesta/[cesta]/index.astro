@@ -53,7 +53,7 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
       <h2 class="t-h3" id="kam-dal-nadpis">Kam dál</h2>
       <ul>
         {lide.map((o) => <li><a href={`/osobnost/${o.id}/`}>{o.jmeno}: celý příběh</a></li>)}
-        <li><a href="/mapa/?rok=-399&osoba=sokrates">Mapa a čas: Athény roku 399 př. n. l.</a></li>
+        {c.mapa && <li><a href={`/mapa/?rok=${c.mapa.rok}&osoba=${c.mapa.osoba}`}>Mapa a čas: {c.mapa.text}</a></li>}
         {otazka && <li><a href={odkazOtazky}>Velká otázka {otazka.data.cislo}: {otazka.data.otazka}</a></li>}
       </ul>
     </section>

@@ -1,0 +1,33 @@
+# Volba s důvodem · cesta 6 „Kolik je dost?“, krok 3: Epikúrův strop slasti na jedné věci.
+# Podklad: docs/podklady/celek-2-jak-zit.md › Slast jako klid, řádky 18 (Hlavní myšlenky 3 a 18: slast má strop)
+# a 19 (Menoikeovi 129–130: výpočet, co z čeho vzejde), Co je potřeba a co ne, řádek 26 (Hlavní myšlenky 26).
+# Situace je vymyšlená, bez historických osob; žádný tah není „Epikúrův“, proto blok nemá oddíl Co udělal.
+druh: volba
+obdobi: 2
+nadtitulek: Zkus to
+scena: >-
+  Představ si lednové ráno na zastávce. Mrzneš. Na zimu si můžeš vybrat ze dvou bund: jedna stojí patnáct stovek,
+  druhá patnáct tisíc. Hřejí obě stejně.
+otazka: Co ti ta dražší dá navíc?
+moznosti:
+  - text: Nic. Zima zmizí v obou stejně.
+    tah: stačí, že hřeje
+    zpetna: >-
+      Bereš bundu jako věc proti zimě. Když zima zmizí, není co přidat: takhle si strop představoval Epikúros.
+      Platí to i tam, kde nejde o tělo? Třeba u hudby nebo u telefonu?
+  - text: Vydrží déle a líp se nosí.
+    tah: počítat, co vydrží
+    zpetna: >-
+      Počítáš, co z čeho vzejde, a to dělal i Epikúros. Dražší věc někdy opravdu ušetří starosti.
+      Kolik z těch patnácti tisíc ale platíš za výdrž a kolik za něco jiného?
+  - text: Vypadá líp. A na tom mi záleží.
+    tah: chtít hezkou věc
+    zpetna: >-
+      Hezká věc je taky radost a Epikúros by ti ji nebral: slast se podle něj dá obměňovat.
+      Zkus ale jeho zkoušku. Bolelo by, kdybys měl tu levnější?
+  - text: Ostatní uvidí, co mám na sobě.
+    tah: chtít, aby to viděli druzí
+    zpetna: >-
+      Říkáš to na rovinu. Teplo má strop: když ti není zima, je hotovo. Má strop i obdiv ostatních?
+      Kolik lidí by si té bundy muselo všimnout, aby to stačilo?
+zdroje: [dl-x-122, dl-x-139]
