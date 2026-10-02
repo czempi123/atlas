@@ -5,8 +5,8 @@ Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „
 | Krok | Co | Stav |
 | --- | --- | --- |
 | P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
-| P7 | Portrét Epiktéta a portrét Marca Aurelia | **další krok**, zadání níže |
-| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | po P7, zadání níže |
+| P7 | Portrét Epiktéta a portrét Marca Aurelia | napsáno 2. 10. 2026, čeká na schválení autorem |
+| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | **další krok** po schválení P7, zadání níže |
 | P10 | Revize celku | po P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
@@ -74,7 +74,7 @@ Nejdřív mi v pár bodech napiš, co budeš ověřovat, které příběhy pova�
 
 ## P7: Portrét Epiktéta a portrét Marca Aurelia
 
-**Stav 2. 10. 2026:** další krok.
+**Stav 2. 10. 2026:** napsáno, čeká na schválení autorem. Co je hotové a co si nese P8, je v oddílu „Stav po P7“ pod zadáním. Zadání zůstává pro záznam.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
 
@@ -97,6 +97,21 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 
 Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý portrét, jaké kapitoly a bloky v něm budou, které citáty použiješ a čím se oba portréty navzájem neopakují, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky obou stránek a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
+
+## Stav po P7 (2. 10. 2026)
+
+**Rozhodl autor nad osnovou:** portrét Epiktéta má čtyři kapitoly; Marcovo císařské jméno Antoninus se ověří (ověřeno v Britannice a zapsáno v podkladech).
+
+**Co je hotové:** `src/content/osobnosti/epiktetos.mdx` a `marcus-aurelius.mdx`, šest bloků v `src/content/bloky/` (`epiktetos-musoniova-zkouska`, `epiktetos-kdo-je-svobodnejsi`, `epiktetos-senator`, `marcus-vladnout-nechtel`, `marcus-prazdna-pokladna`, `marcus-pisemnosti`), obě stránky v testech prohlídky a mini mapy. Obrázky mají zkontrolovaný výřez (`vyrez` a nový `vyrezNaSirku` pro desku na telefonu), mini mapa píše u přibližného roku „asi“, místo se jmenuje Níkopolis. Rozhodnutí jsou v `docs/rozhodnuti.md` (P7), otevřené body v `docs/podklady/k-overeni.md` (Celek 3, Po P7).
+
+**Co si P8 nese z portrétů:**
+
+- **Použité citáty** (v cestě ani na stránce otázky už ne): u Epiktéta `rozpravy-i-1-23` (motto), `rozpravy-iii-23-30`, `rozpravy-i-18-15`, `rozpravy-i-16-20`, `rozpravy-i-2-21`, `rukojet-43`, `rukojet-17`; u Marca `hovory-vi-30` (motto), `hovory-vi-44`, `hovory-iv-3`, `hovory-viii-48`, `hovory-viii-59`, `hovory-x-16`, `hovory-vii-7`. Nepoužité zůstaly `hovory-iv-41`, `hovory-v-1`, `rozpravy-iii-2-4` a `rukojet-1-5`.
+- **Odkaz na cestu:** v portrétu Epiktéta, kapitola 03, stojí věta „Celý ten příběh vypráví cesta „Co mám ve svých rukou?“.“ zatím bez odkazu. P8 z ní udělá odkaz nebo za odstavec vloží kartu cesty; do Kam dál obou portrétů doplní cestu 5 a otázku 4.
+- **Co portréty říkají o vztahu obou:** Rusticus půjčil Marcovi Epiktétovy zápisky (jedna věta u Marca), císař si opisoval Epiktétovy věty (jedna věta na konci kapitoly 02 u Epiktéta), kulhavý voják (Marcova druhá myšlenka). Že se nepotkali a že Marcus říká totéž co Epiktétos, zůstalo cestě (krok 4).
+- **Kdo žil dřív?** je u Epiktéta s Diogenem a u Marca se Senekou; dvojice Epiktétos × Marcus je volná pro cestu.
+- **Svoboda:** portrét Epiktéta má Volbu „Kdo z těch dvou je svobodnější?“ (pán, nebo otrok) a propuštěného otroka (Rozpravy IV, 1, 33–37). Stránka otázky 4 stojí na `rozpravy-iv-1-1` a na otázce, jestli je v mých rukou aspoň moje rozhodnutí; pána a ševce neopakovat.
+- **Vůle** je v portrétu Epiktéta vysvětlená jednou (kapitola 03); cesta ji vysvětlí po svém, protože musí stát i bez portrétu.
 
 ## P8: Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4
 

@@ -218,4 +218,22 @@ Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s ka
 
 Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozpravy I, 25, 18–20), místa o smrti dítěte (Rukojeť 3 a 11; Rozpravy III, 3, 15; III, 24, 85–88; Hovory XI, 34), část Hovorů VI, 13 o tělesné lásce, Ciceronova výtka „jen slova“ (O nejvyšším dobru a zlu IV, 72), Karneadés jako pátý hlas otázky 4.
 
+### Po P7 (portréty Epiktéta a Marca Aurelia)
+
+2. 10. 2026. Vyřízeno: Marcovo císařské jméno (Britannica, přehled u hesla: Caesar Marcus Aurelius Antoninus Augustus, původně Marcus Annius Verus). Výřez obou rytin je zkontrolovaný v prohlížeči. Nově otevřené:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Půldruhého milionu (Rozpravy I, 26, 11–12) | Podklady neuvádějí, čeho (sesterciů, nebo denárů). | Úvod portrétu je bez jednotky; při revizi ověřit v řeckém textu, nebo nechat. |
+| Kapitol (Rozpravy I, 7, 32) | Co byl Kapitol a proč je „zapálit Kapitol“ příklad největšího zločinu, v podkladech není. | Text vysvětlivku nemá; po ověření zvážit jednu větu. |
+| Kdy Marcus přijal jméno Antoninus | Britannica dává jen celé jméno, ne kdy které přijal. | Text říká jen „jako císař se jmenoval Marcus Aurelius Antoninus“; víc nepsat. |
+| Musoniova zkouška, Epiktétův dovětek (Rozpravy I, 9, 31) | V podkladech je jen Musoniova otázka, ne Epiktétův výklad, proč je zbytečné chtít od druhého, co si člověk může dát sám. | Nepoužito; ověřit, kdyby revize chtěla scénu dovysvětlit. |
+| Lúkianův sběratel | Lúkianos píše „za našich časů“; jestli lampu koupil po Epiktétově smrti, neříká. | Text je bez časového údaje („Našel se člověk, který…“). |
+| Mini mapa: „působení asi 93 n. l.“ | Rok bere mapa z dat; ve studentském textu je odchod z Říma bez roku. | Autor: nechat „asi 93“, nebo rok z mapy u přibližných údajů skrýt. |
+| Odkaz na cestu 5 v kapitole 03 portrétu Epiktéta | Věta „Celý ten příběh vypráví cesta…“ je zatím bez odkazu. | P8: odkaz nebo karta cesty; do Kam dál obou portrétů cesta 5 a otázka 4. |
+
+Vědomě vynecháno v portrétech: jméno ševce (Felikión), zemětřesení v Níkopoli, vousy (Rozpravy I, 2, 29), „největší ze stoiků“ (Gellius I, 2), „snášej a zdrž se“, dvojverší z rytiny, Helvidiův konec, Vespasianovo jméno; u Marca otec a dědeček, Hadrianova podmínka adopce, jména Hadriana, Lucia Vera, Frontona a Cassia Diona, murínové poháry, Granua, `hovory-iv-41`, ranní příprava, syn a Faustina, slova v nemoci a všechny roky vedené výše jako neověřené. Citáty `rozpravy-iii-2-4`, `hovory-v-1` a `rukojet-1-5`, které podklady nabízely i portrétu, zůstávají cestě 5 a Stoickému týdnu.
+
+Autorské, bez historického nároku: možnosti a zpětné vazby všech šesti bloků, podmínky obou pokusů Změň jednu věc, modelové odpovědi v Odkryj (lampa, tenisky, jednička z matiky), obě výzvy Zkus to žít.
+
 **Do skillu `atlas-overeni`:** tabulka zkreslení doplněna o čtyři řádky (stoik bez citu, noha a Epafroditos, noc u Dunaje, spálené dopisy) a zdroje o místa stoických textů; kopie ve `skills/atlas-overeni/references/zdroje.md` je upravená, skill v účtu je třeba uložit zvlášť.

@@ -2,6 +2,22 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Portréty Epiktéta a Marca Aurelia (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Portrét Epiktéta má čtyři kapitoly: Otrok v Římě, Níkopolis, Co mu nikdo nevzal, Senátor a císař. Svoboda otroka a Helvidius mají každá vlastní blok | Autor nad osnovou: „Můžeš nechat 4“; portrét má mít čtyři až šest kapitol |
+| „Antoninus“ v citátu `hovory-vi-44` vysvětlí text jednou větou: jako císař se jmenoval Marcus Aurelius Antoninus | Autor: ověřit. Britannica uvádí celé jméno Caesar Marcus Aurelius Antoninus Augustus; bez vysvětlení by si ho student spletl s adoptivním otcem |
+| Helvidius je jménem jen jednou a jen v portrétu Epiktéta. V portrétu Marca jsou beze jména Hadrianus, Lucius Verus („spoluvládce“), Fronto i Cassius Dio („jeden antický dějepisec“) | Pravidlo 6; vedle vzbouřence Cassia by druhý Cassius mátl |
+| Helvidiovo rozhodnutí je Změň jednu věc bez oddílu Co udělal; jeho odpověď vypráví text za blokem a citát `rozpravy-i-2-21` uvádí věta „Senátor podle Epiktéta odpověděl…“ | Helvidius není v datech osob; citát je veden pod Epiktétem a text musí říct, čí slova to jsou |
+| Volba „Kdo z těch dvou je svobodnější?“ má čtvrtou možnost „Otroctví je křivda, ať si otrok myslí cokoli“ a zpětná vazba přizná, že ji Epiktétova odpověď celou nevyřídí | Podklady: tady má námitka váhu; student, který se stoikem nesouhlasí, má dostat slovo |
+| Velké myšlenky: u Epiktéta „Každá věc má dvě ucha“ a „Roli si nevybíráš“, u Marca „Mám dvě vlasti: Řím a svět“ a „Nestyď se, když ti pomáhají“ | Portréty se neopakují: Epiktétos se ptá, co mu nikdo nevezme, Marcus, co dluží druhým. Pevnost, ústraní a svlékání věcí nese kapitola 03 |
+| Kdo žil dřív? je u Epiktéta Diogenés × Epiktétos, u Marca Seneca × Marcus Aurelius | Dvojici Epiktétos × Marcus prozrazuje osa Současníci hned nad blokem a cesta 5 ji řekne v kroku 4 |
+| Věta o noze v kapitole 03 odkazuje na cestu 5 jen slovy; odkaz a kartu cesty doplní P8 | Cesta ještě neexistuje a test odkazů neexistující cíl nepustí |
+| Obrázek smí mít druhý střed výřezu `vyrezNaSirku` pro desku v hlavičce osobnosti na telefonu (16 : 10). Epiktétos: `vyrez` 50 % 60 %, na šířku 50 % 34 %; Marcus: 50 % 28 % (celý nápis na podstavci), na šířku 50 % 8 % | Rytiny jsou na výšku: s jedním středem chyběla Epiktétovi na telefonu hlava a Marcovi buď hlava na telefonu, nebo třetí řádek nápisu na notebooku |
+| Mini mapa píše u roku, který je v datech přibližný, „asi“ | U Níkopole stálo „působení 93 n. l.“ jako přesný rok; ve studentském textu je odchod z Říma bez roku a v datech „asi 93“. Totéž u Carnunta („asi 172“) |
+| Místo se v datech jmenuje Níkopolis (bylo Nikopolis) | Stejně jako v textu portrétu a v podkladech |
+
 ## 2. 10. 2026: Podklady celku 3 (P6)
 
 | Rozhodnutí | Důvod |

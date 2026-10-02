@@ -130,7 +130,7 @@ Ověřeno 2. 10. 2026 (P6). Celek: cesta 5 „Co mám ve svých rukou?“, portr
 
 | # | Tvrzení | Typ | Zdroj a místo | Doporučená formulace pro studenty |
 | --- | --- | --- | --- | --- |
-| 1 | Narodil se 26. dubna 121 v Římě; původně se jmenoval Marcus Annius Verus. | doložený fakt | Historia Augusta, Marcus 1, 5 (den a místo); Britannica; SEP (rok) | „Narodil se roku 121 v Římě.“ |
+| 1 | Narodil se 26. dubna 121 v Římě; původně se jmenoval Marcus Annius Verus. Jako císař se jmenoval Caesar Marcus Aurelius Antoninus Augustus (doplněno v P7; kdy které jméno přijal, neověřeno). | doložený fakt | Historia Augusta, Marcus 1, 5 (den a místo); Britannica (přehled u hesla: celé a původní jméno); SEP (rok) | „Narodil se roku 121 v Římě.“ K citátu `hovory-vi-44`: „Antoninus je tu on sám: jako císař se jmenoval Marcus Aurelius Antoninus.“ |
 | 2 | Otec mu zemřel, vychovával ho děd. | tradovaný (Historia Augusta) | Historia Augusta, Marcus 1, 10 | „Otec mu brzy zemřel a vychoval ho dědeček.“ |
 | 3 | Učil ho řečník Fronto (dopisují si od Marcova mládí až do císařských let) a stoici Rusticus, Apollónios a Sextos. Od rétoriky se obrátil k filozofii; bohům děkuje, že v řečnictví a básnictví nepokročil dál, jinak by u nich možná zůstal. | doložený fakt | SEP; IEP; Hovory I, 7; I, 17, 4 | „Měl být řečníkem. Vybral si filozofii.“ |
 | 4 | Roku 138 ho adoptoval Antoninus Pius; zařídil to císař Hadrianus, když si Antonina vybral za nástupce. | doložený fakt (rok); podmínky adopce tradované | IEP; Historia Augusta, Marcus 5, 1 | „Roku 138 ho adoptoval budoucí císař Antoninus Pius. Marcus tím dostal určeno, čím bude.“ |
