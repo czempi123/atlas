@@ -8,7 +8,9 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | --- | --- |
 | Kam dál obou profilů vede zatím jen na stránky, které existují: druhý profil, Spor v Sókratově portrétu, Mapa a čas a řádek otázky 1 v přehledu otázek. Věta o Alexandrovi je bez odkazu. Cesta 6 a stránka otázky 1 se připojí v P8, cesty 7 a 8, až vzniknou | Autor: odkážeme, až to bude; test odkazů neexistující cíl nepustí |
 | Epikúros a Diogenés mají v datech `hloubka: profil`, dokud nevznikne portrét | Autor; stránka Lidé je řadila mezi portréty, ale stránky jsou profily |
-| Oba profily mají tři krátké kapitoly místo jedné až dvou | Autor: v pochybnostech raději rozsáhlejší |
+| Profil Epikúra má tři krátké kapitoly, profil Diogena čtyři (Pohárek, Lucerna, Pes, Na prodej) | Autor: v pochybnostech raději rozsáhlejší |
+| Body z `k-overeni.md` (P7) doověřeny a zahrnuty: kohout s citátem `dl-vi-40` a vlastním Odkryj „Co je člověk?“, Pýthagorova zásada, Samos v úvodu, pozadí „občana světa“ podle SEP. Srovnání Zahrady s jinými školami (ženy a otroci jako výjimka) se nepíše | Autor: zahrnout vše z k ověření. Výjimečnost pramen nepotvrdil a Platón měl podle DL III, 46 také dvě žačky |
+| V Diogenově profilu vysvětluje odstavec o sudu, proč ho student zná jinak: sud nakreslil až renesanční umělec podle nádob své doby | Autor: holá věta, že Řekové sudy nepoužívali, působila nepatřičně |
 | Vlastní pokus s touhami v profilu Epikúra zkouší jedno studentovo přání (bolelo by, kdyby se nesplnilo?); třídění věcí do tří košů zůstává cestě 6 | Aby se pokus v celku neopakoval (poučení z revize celku 1) |
 | Velký citát Diogena je „Jsem občan světa“: odpovídá na vyhnanství z úvodu. „Hledám člověka“ zazní v kapitole Lucerna, „Dítě mě porazilo“ v bloku Příběh | Každý citát stojí tam, kde zazněl |
 | Volba „Co uděláš se svým pohárkem?“ stojí před blokem Příběh a nemá oddíl Co udělal: co Diogenés udělal, vypráví hned Příběh s kresbou | Kresba ukazuje odhozený pohárek; za blokem Volba by vyzradila tah předem |

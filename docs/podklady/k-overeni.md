@@ -157,15 +157,15 @@ Walters Art Museum (Gérôme, Diogenés, CC0) soubor nástrojům nevydá, stejn�
 
 ## Profily Epikúra a Diogena (P7)
 
-2. 10. 2026. Všechna tvrzení a citáty v profilech jsou z `celek-2-jak-zit.md` a z dat. Co by příběh ještě unesl, ale v podkladech není:
+2. 10. 2026. Všechna tvrzení a citáty v profilech jsou z `celek-2-jak-zit.md` a z dat. Pět bodů, které příběh unesl, ale v podkladech chyběly, autor nechal doověřit a zahrnout:
 
-| Bod | Kde by se hodilo | Co udělat |
+| Bod | Výsledek | Kde je |
 | --- | --- | --- |
-| Oškubaný kohout v podrobnostech (Diogenés ho prý přinesl do Platónovy školy; Platón pak k definici doplnil „s plochými nehty“), DL VI, 40 | Diogenés, kapitola 02; scéna by unesla vlastní Odkryj „Co je člověk?“ | V podkladech je jen jádro (definice vyvrácena oškubaným kohoutem). Ověřit řecký text VI, 40 a doplnit do podkladového listu; do té doby jen jedna věta. |
-| Ženy a otroci ve filozofické škole jako výjimka mezi athénskými školami | Epikúros, kapitola 01 | Podklady říkají jen, že v Zahradě byli. Srovnání s Akademií a Lykeiem ověřit v SEP nebo odborné literatuře; do té doby bez srovnání. |
-| Pýthagorejská zásada o společném majetku přátel v původním znění (DL X, 11; VIII, 10) | Epikúros, kapitola 01 a Volba | V textu jen „pýthagorejci dávali majetek dohromady“. Znění zásady ověřit, kdyby měla zaznět jako citát. |
-| Kde Epikúros žil ve čtrnácti (Samos podle DL X, 1, ale scéna s učiteli místo neuvádí) | Epikúros, úvod | Úvod místo scény neuvádí; nic dalšího, pokud autor nechce scénu ukotvit. |
-| Co znamenalo patřit k obci (práva, bohové, hrob) jako pozadí slova „občan světa“ | Diogenés, Myšlenka 2 | V podkladech není; výklad proto stojí jen na vyhnanství a na DL VI, 63. Doplnit při revizi, pokud myšlenka potřebuje kontrast. |
+| ~~Oškubaný kohout v podrobnostech (DL VI, 40)~~ | **Vyřízeno 2. 10.:** řecký text přečten. Kohout přinesen do školy, „Tohle je Platónův člověk“, k definici přidáno „s plochými nehty“ (pramen neříká kým). | Diogenés, kapitola 02, s vlastním Odkryj „Co je člověk?“ a citátem `dl-vi-40`. |
+| ~~Pýthagorejská zásada o společném majetku přátel~~ | **Vyřízeno 2. 10.:** DL X, 11 ji uvádí přímo (κοινὰ τὰ φίλων). DL VIII, 10 o praxi pýthagorejců jsem nečetl. | Epikúros, kapitola 01 a Volba: „Pýthagorás říkal, že přátelé mají všechno společné.“ |
+| ~~Kde Epikúros žil ve čtrnácti~~ | **Vyřízeno 2. 10.:** DL X, 1 (vyrostl na Samu, do Athén v osmnácti) a SEP. | Epikúros, úvod: učitelé „na ostrově Samos“. |
+| ~~Co znamenalo patřit k obci~~ | **Vyřízeno 2. 10.:** SEP „Cosmopolitanism“, oddíl 1.1 (Řek se představoval jako občan své obce; Diogenés odmítl být Sinópě zvlášť zavázán). Práva, bohové a hrob obce ověřeny nejsou. | Diogenés, Myšlenka 2; pramen `sep-cosmopolitanism`. |
+| Ženy a otroci ve škole jako výjimka mezi athénskými školami | **Nepoužito.** SEP ani IEP to netvrdí a podle DL III, 46 měl i Platón dvě žačky. | Kapitola 01 říká jen, že v Zahradě byli. Vrátit se k tomu jen s odbornou studií v ruce. |
 
 Vědomě vynecháno v profilech: Hermippova verze Epikúrových začátků, cena Zahrady, jména (Perdikkás, Metrodóros, Leontion, Themista, Mys, Hikesios, Xeniadés, adresát Dopisu Menoikeovi), konkrétní pomluvy, věk při smrti, citát `vs-52`; u Diogena verze smrti a týž den jako Alexandr, tělesné potřeby na veřejnosti, odpověď Sinópským (DL VI, 49), otevřená řeč (VI, 69), Héraklés, sochy od Sinópských, „Jsem Diogenés, pes“ (VI, 60).
 
