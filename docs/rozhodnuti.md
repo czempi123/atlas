@@ -2,6 +2,18 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Podklady k celku 2 schváleny
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Podklady k celku 2 schváleny; další krok P7 (profily Epikúra a Diogena) | Autor: „vše schvaluji“ |
+| Epikúros má na desce mramorovou hlavu z Metropolitan Museum (inv. 11.90, CC0) | Licence ověřena přímo u muzea |
+| Diogenés má na desce novověké vyobrazení: dřevořez Uga da Carpi podle Parmigianina (Met, CC0); ke scéně s dítětem kresba „Diogenés odhazuje pohárek“ (Met, CC0). Lucerna zůstává atributem | Autor: Diogenových kreseb a maleb je hodně, použijme některou; spolehlivá antická podobizna neexistuje. Popisek říká, že jde o představu renesance (sud místo pithu) |
+| Spor v cestě 6 je Epikúros × kynici, bez smyšleného setkání s Diogenem | Doložené je jen Epikúrovo „moudrý nebude žít jako kynik“ (DL X, 119); kynická strana mluví Diogenovými průpovídkami |
+| Studie o penězích a štěstí je samostatný krok cesty 6, vedle kroku „měsíc na minimum“ | Autor |
+| Vlastní převody citátů platí i pro Diogena Laertia a Senecu | Stejně jako v celku 1 |
+| Tři zkreslení doplněna do skillu `atlas-overeni` („poctivého člověka“, „Diogenés v sudu“, „epikurejec = požitkář“), k tomu muzea s otevřeným přístupem jako zdroj obrázků | Poučení z celku 2 |
+
 ## 1. 10. 2026: Podklady k celku 2 (P6)
 
 | Rozhodnutí | Důvod |

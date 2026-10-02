@@ -1,6 +1,6 @@
 # Podklady: Jak mám žít?
 
-Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 1 „Jak mám žít?“, cesta 6 „Kolik je dost?“, profil Epikúra, profil Diogena (protihlas). Stoik na stránce otázky: Seneca (rozhodnutí autora 1. 10. 2026).
+Ověřeno 1. 10. 2026 (P6), doplněno 2. 10. 2026 po rozhodnutích autora (obrázky, Spor Epikúros × kynici, studie jako samostatný krok). Celek: velká otázka 1 „Jak mám žít?“, cesta 6 „Kolik je dost?“, profil Epikúra, profil Diogena (protihlas). Stoik na stránce otázky: Seneca (rozhodnutí autora 1. 10. 2026).
 
 **Jak se ověřovalo.** Diogena Laertia (Hicksovo vydání, Loeb 1925), Plútarchova Alexandra (Perrin) a Aristotelovu Etiku Nikomachovu (řecky Bywater, anglicky Rackham) jsem četl v řeckém textu a anglickém překladu z PerseusDL (`canonical-greekLit`), Arriánovu Anabasi jen řecky (Roos). Vatikánské výroky v řeckém textu (P. von der Mühll, Teubner 1922) z First1KGreek. Senekovy Dopisy (Gummere), Ciceronovo O povaze bohů (Plasberg) a Tacitovy Letopisy (Fisher) latinsky z PerseusDL (`canonical-latinLit`), Senekův spis O blaženém životě latinsky z The Latin Library. Výklad podle SEP „Epicurus“ (D. Konstan, rev. 2022), SEP „Seneca“ (K. Vogt, rev. 2024), SEP „Stoicism“ a IEP „Diogenes of Sinope“ (J. Piering). **SEP nemá heslo o kynicích ani o Diogenovi** (adresy `cynics` a `diogenes-sinope` neexistují); za odborný výklad proto slouží IEP a Routledge (R. B. Branham), který už je v datech. Všechny české převody citátů jsou **vlastní**; publikované české překlady (A. Kolář, Diogenés Laertios; české překlady Senekových Dopisů a spisu O blaženém životě) jsem neměl v ruce a jejich vydání jsem neověřoval.
 
@@ -15,6 +15,7 @@ Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 1 „Jak mám žít?“, cesta
 3. **Zahrada a kdo v ní žil.** Přátelé za ním chodili odevšad a žili s ním v zahradě, kterou koupil za osmdesát min (podle Apollodóra). Žili velmi skromně: stačila jim čtvrtka vína, jinak pili vodu. Majetek nedávali dohromady, protože by to znamenalo nedůvěru, a bez důvěry není přátelství. Spolu s ním filozofovali i jeho otroci, nejvíc proslul otrok Mys. V závěti propustil na svobodu Mya, Nikiu, Lykóna a Faidrion. Mezi jeho přátele patřily i ženy: Themista, manželka Leontea z Lampsaku, které psal dopisy, a Athéňanka Leontion, která napsala spis proti Aristotelovu nástupci Theofrastovi. — typ: doložený fakt (závěť je citována doslova) / tradice (80 min podle Apollodóra) — zdroj: DL X, 3; 10–11; 21; 25; Cicero, O povaze bohů I, 93 — doporučená formulace: „Za Epikúrem přicházeli přátelé z celého řeckého světa a žili s ním v zahradě. Filozofovali s ním i jeho otroci; v závěti je propustil na svobodu. Patřily k nim i ženy.“ (K Leontion viz Rozpory.)
 4. **Dny o hladu na zkoušku.** Epikúros měl určité dny, kdy jedl jen málo, aby viděl, jestli mu něco chybí k plné slasti. V dopise Polyainovi se chlubil, že se nají za méně než jeden as, kdežto Metrodóros, který ještě tolik nepokročil, potřebuje celý. — typ: doložený text (Seneca cituje Epikúrův dopis z roku, kdy byl archontem Charínos, 308/307 př. n. l.) — zdroj: Seneca, Dopisy 18, 9 — doporučená formulace: „Epikúros si dokonce vyhrazoval dny, kdy jedl jen trochu. Chtěl zjistit, jestli mu něco chybí.“ **Pro Spor důležité:** i Epikúros se cvičí, jen kvůli jinému cíli než Diogenés.
 5. **Pomluvy už za života.** Odpůrci šířili, že dvakrát denně zvracel z přejídání, utrácel minu denně za jídlo a měl kolem sebe hetéry; jeden stoik prý podvrhl padesát oplzlých dopisů pod jeho jménem. Diogenés Laertios to odbývá: „Tihle lidé jsou šílení.“ — typ: doložená existence pomluv; obsah pomluv nepravdivý nebo nedoložený — zdroj: DL X, 3–9; SEP „Epicurus“, oddíl 2 — doporučená formulace: „Už za jeho života o něm nepřátelé roznášeli, že se přejídá a hýří.“ Konkrétní pomluvy (zvracení) do studentského textu nedávat.
+6. **Čtrnáctiletý a chaos** (úvod profilu). Epikúros sám napsal, že se k filozofii dostal ve čtrnácti. Podle jeho životopisce Apollodóra to bylo proto, že pohrdl učiteli: neuměli mu vysvětlit, co je u básníka Hésioda chaos, který prý vznikl jako úplně první (Theogonia 116). — typ: věk čtrnáct let doložený (Epikúrova vlastní slova u DL); důvod tradovaný (Apollodóros epikurejec; jiný pramen, Aristón, uvádí dvanáct let, DL X, 14) — zdroj: DL X, 2; Hésiodos, Theogonia 116 — doporučená formulace: „Básník Hésiodos píše, že jako úplně první vznikl Chaos. Vypráví se, že čtrnáctiletý Epikúros chtěl od učitelů vědět, co to znamená. Nedokázali mu to vysvětlit, a tak se dal na filozofii.“ (Že se ptal, „z čeho chaos vznikl“, je až u Sexta Empeirika, kterého jsem nečetl; proto jen „co to znamená“.) **Hrnek sýra nechává profil cestě 6**, aby se scéna neopakovala.
 
 ### Diogenés
 
@@ -33,6 +34,7 @@ Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 1 „Jak mám žít?“, cesta
 | --- | --- | --- | --- | --- |
 | 1 | Narodil se roku 341 př. n. l. (v měsíci Gamélión, tedy v zimě 342/341); byl athénský občan z démy Gargéttos. | doložený fakt | DL X, 1 a 14 (podle Apollodóra); SEP, oddíl 2 | „Narodil se roku 341 př. n. l. Byl athénský občan, ale vyrůstal na ostrově Samos.“ |
 | 2 | Vyrůstal na Samu, kam Athény poslaly osadníky; do Athén přišel v osmnácti (323) na vojenskou službu. | doložený fakt | DL X, 1; SEP, oddíl 2 | přímo |
+| 2a | K filozofii se podle vlastních slov dostal ve čtrnácti; podle Apollodóra z pohrdání učiteli, kteří mu neuměli vyložit Hésiodův chaos. Podle Hermippa byl nejdřív sám učitelem a k filozofii ho přivedly Démokritovy knihy. | věk doložený (vlastní slova); důvody tradované a různé | DL X, 2 (Aristón u DL X, 14: ve dvanácti) | viz Nejsilnější příběhy 6; Hermippovu verzi nepodávat |
 | 3 | Po Alexandrově smrti Perdikkás vyhnal athénské osadníky ze Samu; Epikúros odešel za otcem do Kolofónu (321). | doložený fakt | DL X, 1; SEP | „Rodina přišla o domov na Samu…“ |
 | 4 | Asi o deset let později učil v Mytiléně a Lampsaku; tam získal první přátele a žáky (Metrodóros, Polyainos, Idomeneus, Leonteus a Themista byli z Lampsaku). | doložený fakt / přibližný | DL X, 15, 22–25; SEP | přímo, bez jmen kromě Metrodóra |
 | 5 | Do Athén se vrátil 307/306 a koupil zahradu; škole se pak říkalo Zahrada. | doložený fakt | DL X, 2, 10; SEP | přímo; událost `epikurova-zahrada` v datech |
@@ -119,7 +121,7 @@ Ověřeno 1. 10. 2026 (P6). Celek: velká otázka 1 „Jak mám žít?“, cesta
 | 17 | Co mu dala filozofie: být připraven na každý osud. | tradovaný | DL VI, 63 | přímo jako odpověď; spojuje ho s Epikúrem (Menoikeovi 131) |
 | 18 | Hledal s lampou za dne člověka. | tradovaný | DL VI, 41 | citát `dl-vi-41` |
 | 19 | Nejkrásnější věc na světě je otevřená řeč (παρρησία). | tradovaný | DL VI, 69 | volitelně |
-| 20 | Platón o něm prý řekl: „Sókratés, který se zbláznil.“ | tradovaný (i u Aeliána) | DL VI, 54 | volitelně, pro Spor Platón × Diogenés (přesouvá se do Diogenova profilu podle revize celku 1) |
+| 20 | Platón o něm prý řekl: „Sókratés, který se zbláznil.“ | tradovaný (i u Aeliána) | DL VI, 54 | volitelně; Spor Platón × Diogenés zůstává v Sókratově portrétu (rozhodnutí autora 1. 10.), profil Diogena na něj jen odkáže |
 | 21 | Platónovu definici člověka („dvounohý tvor bez peří“) vyvrátil oškubaným kohoutem. | tradovaný | DL VI, 40 | „Vypráví se…“; ověřeno už v `spor-platon-diogenes.md` |
 | 22 | Prodán do otroctví na Krétě, koupil ho Xeniadés z Korinthu a svěřil mu syny; učil je skromnosti a dožil u něj. | tradovaný (satira „Prodej Diogena“) | DL VI, 29–31, 74–75 | viz příběh 6 |
 | 23 | Zemřel téměř devadesátiletý; prameny dávají několik verzí smrti (zadržel dech, syrová chobotnice, pokousání psem). Podle Démétria zemřel týž den jako Alexandr. | tradované, navzájem si odporují | DL VI, 76–79 | „Zemřel v Korinthu velmi starý, kolem roku 323 př. n. l.“ Verze smrti nepodávat; den Alexandrovy smrti jen „Vypráví se…“ |
@@ -159,40 +161,42 @@ K tomu DL VI, 32 (Alexandr prý řekl: „Kdybych nebyl Alexandrem, chtěl bych 
 
 **Vlastní pokus po scéně (návrh pro P8, ne historické tvrzení):** student dostane seznam věcí ze svého týdne a třídí je do tří Epikúrových košů (přirozené a nutné, přirozené a nenutné, prázdné); zpětná vazba podle KD 29 a scholia. Dělení je doložené (Menoikeovi 127, KD 29), příklady jsou autorské.
 
-### Spor: Epikúros × Diogenés „Mám se naučit obejít bez všeho, nebo vědět, co mi stačí?“
+### Spor: Epikúros × kynici „Mám se naučit obejít bez všeho, nebo vědět, co mi stačí?“
 
-**Co je doložené.** Epikúros a Diogenés se nejspíš nikdy nepotkali: Epikúros přišel do Athén roku 323 (DL X, 1), Diogenés tehdy dožíval v Korinthu (DL VI, 77–79). Epikúrův postoj ke kynikům je ale výslovný: ve 2. knize spisu *O způsobech života* píše, že moudrý „nebude žít jako kynik“ (οὐδὲ κυνιεῖν) „ani žebrat“ (οὐδὲ πτωχεύσειν) (DL X, 119). Že by Epikúros nazýval kyniky „nepřáteli Řecka“ (DL X, 8), uvádí jen nepřátelský Timokratés v seznamu Epikúrových urážek, proto do Sporu nepatří. Diogenova odpověď Epikúrovi doložená není; jeho strana se skládá z vlastních průpovídek a z přehledu kynické nauky u DL.
+**Rozhodnutí autora 2. 10. 2026:** Spor je Epikúros × kynici, ne smyšlené setkání Epikúra s Diogenem.
 
-**Doporučená rámcová formulace:** „Diogenés a Epikúros se nejspíš nikdy nepotkali. Když osmnáctiletý Epikúros přišel do Athén, Diogenés už byl starý muž v Korinthu. Epikúros ale později napsal, že moudrý nebude žít jako kynik ani žebrat. Představ si, že by se potkali.“ (Podle pravidla z revize celku 1: Spor bez ohlášeného vítěze a s odpovědí pro obě strany.)
+**Co je doložené.** Epikúrův postoj ke kynikům je výslovný: ve 2. knize spisu *O způsobech života* píše, že moudrý „nebude žít jako kynik“ (οὐδὲ κυνιεῖν) „ani žebrat“ (οὐδὲ πτωχεύσειν) (DL X, 119). V Athénách měl kyniky nejspíš před očima: Diogenův žák Kratés tam působil a zemřel asi roku 301 (v datech podle Britanniky; roky jsou přibližné), tedy až po založení Zahrady. S Diogenem samotným se nejspíš nepotkal: když Epikúros přišel roku 323 poprvé do Athén (DL X, 1), Diogenés dožíval v Korinthu (DL VI, 77–79). Že by Epikúros nazýval kyniky „nepřáteli Řecka“ (DL X, 8), uvádí jen nepřátelský Timokratés, proto do Sporu nepatří. Kynická odpověď Epikúrovi doložená není; kynická strana se skládá z Diogenových průpovídek a z přehledu kynické nauky u Diogena Laertia (VI, 70–71 a 103–105).
 
-**Diogenova strana v nejsilnější verzi**
+**Doporučená rámcová formulace:** „Když Epikúros otevřel v Athénách Zahradu, chodili po městě kynici: Diogenovi žáci v jednom plášti, s mošnou a holí. Žili z mála jako on. A přece o nich napsal, že moudrý nebude žít jako kynik ani žebrat. V čem se neshodli?“ (Podle pravidla z revize celku 1: Spor bez ohlášeného vítěze a s odpovědí pro obě strany. Že kynici nosili jeden plášť, mošnu a hůl: DL VI, 22–23 a 104.)
 
-1. **Kdo nic nepotřebuje, je svobodný.** „Bohům je vlastní nic nepotřebovat, těm, kdo se bohům podobají, potřebovat málo“ (DL VI, 104). Každá potřeba je provázek, za který tě někdo může tahat. Proto vyhodil i pohárek, když viděl dítě pít z dlaní (VI, 37). — výklad
-2. **Na nepohodlí se dá vycvičit, a pak už nebolí.** Bez cvičení se v životě nepovede nic; kdo se vycvičí, tomu je samo pohrdání slastí nejslastnější (VI, 70–71). Válel se v horkém písku a objímal zasněžené sochy (VI, 23). — výklad; **nejsilnější tah**: obrací Epikúrův argument, protože i on mluví o slasti.
-3. **Snadný život tu je pro každého, jen ho nevidíme.** Bohové dali lidem snadný život, ale lidé ho přehlédnou, protože chtějí medové koláčky a vonné masti (VI, 44). — výklad
-4. **Proti Epikúrovým přátelům a zahradě:** kdo potřebuje zahradu, přátele a jistotu, potřebuje pořád hodně, jen jiné věci. Svoboda od zvyků (VI, 71) platí i pro zvyky přátel. — **výklad autorský** (z VI, 71 a VI, 104 domyšlená odpověď na Epikúra; podávat jako „Diogenés by mohl namítnout“, ne jako jeho slova).
+**Kynická strana v nejsilnější verzi** (mluví Diogenovými slovy; ve Sporu jako „kynici“, citáty s Diogenovým jménem)
+
+1. **Kdo nic nepotřebuje, je svobodný.** „Bohům je vlastní nic nepotřebovat, těm, kdo se bohům podobají, potřebovat málo“ (DL VI, 104). Každá potřeba je provázek, za který tě někdo může tahat. Proto Diogenés vyhodil i pohárek, když viděl dítě pít z dlaní (VI, 37). — výklad
+2. **Na nepohodlí se dá vycvičit, a pak už nebolí.** Bez cvičení se v životě nepovede nic; kdo se vycvičí, tomu je samo pohrdání slastí nejslastnější (VI, 70–71). Diogenés se válel v horkém písku a objímal zasněžené sochy (VI, 23). — výklad; **nejsilnější tah**: obrací Epikúrův argument, protože i kynik mluví o slasti.
+3. **Snadný život tu je pro každého, jen ho nevidíme.** Bohové dali lidem snadný život, ale lidé ho přehlédnou, protože chtějí medové koláčky a vonné masti (VI, 44). Kynici pohrdají bohatstvím, slávou i urozeností (VI, 104). — výklad
+4. **Proti Epikúrově zahradě:** kdo potřebuje zahradu, přátele a jistotu, potřebuje pořád hodně, jen jiné věci. Svoboda od zvyků (VI, 71) platí i pro zvyky přátel; kynik má být připraven na každý osud (VI, 63) a nic nesvěřovat štěstěně (VI, 105). — **výklad autorský** (domyšlená odpověď na Epikúra; podávat jako „kynik by mohl namítnout“, ne jako něčí slova).
 
 **Epikúrova strana v nejsilnější verzi**
 
 1. **Slast má strop.** Až zmizí bolest z nedostatku, slast už neroste, jen se obměňuje (KD 3, 18). Bohatství, které chce příroda, je malé a snadno se získá; bohatství prázdných představ nemá konec (KD 15). Proto stačí málo. — výklad
-2. **Málo nemusí být pořád.** Soběstačnost neznamená vždycky žít s málem, ale umět si s málem vystačit; přepych si nejvíc užije ten, kdo ho nepotřebuje (Menoikeovi 130). Sýr si dopřát smí (DL X, 11). — výklad; **nejsilnější tah**: proti Diogenovi neříká „víc“, ale „ne kvůli trápení“.
+2. **Málo nemusí být pořád.** Soběstačnost neznamená vždycky žít s málem, ale umět si s málem vystačit; přepych si nejvíc užije ten, kdo ho nepotřebuje (Menoikeovi 130). Sýr si dopřát smí (DL X, 11). — výklad; **nejsilnější tah**: proti kynikům neříká „víc“, ale „ne kvůli trápení“.
 3. **Trápení samo nic nedává.** Bolest snášíme jen tehdy, když z ní vzejde větší slast (Menoikeovi 129). I Epikúros se cvičil, měl dny, kdy jedl skrovně, ale aby zjistil, že mu nic nechybí (Seneca, Dopisy 18, 9; Menoikeovi 131: zvyknout si na prostou stravu dělá nebojácnými vůči osudu). Válet se v horkém písku jako cíl je zbytečná bolest. — výklad
-4. **Bez přátel to nejde.** Největší dar moudrosti je přátelství (KD 27) a nic nedá tolik bezpečí (KD 28). Moudrý nebude žebrat (DL X, 119); když zchudne, vydělá si moudrostí (DL X, 120). Kdo žije na ulici a odhání lidi holí, klid nenajde. — výklad (poslední věta je autorské domyšlení; v textu jako „Epikúros by mohl odpovědět“)
+4. **Bez přátel to nejde.** Největší dar moudrosti je přátelství (KD 27) a nic nedá tolik bezpečí (KD 28). Moudrý nebude žebrat (DL X, 119); když zchudne, vydělá si moudrostí (DL X, 120). Kdo žije na ulici z toho, co vyžebrá, je vydaný na milost druhým a klid nenajde. — výklad (poslední věta je autorské domyšlení; v textu jako „Epikúros by mohl odpovědět“)
 
-**Co spojuje obě strany (pointa pro závěr Sporu):** oba chtějí, aby je osud nezaskočil (Menoikeovi 131; DL VI, 63). Oba jedí chléb a pijí vodu. Diogenés kvůli svobodě, Epikúros kvůli klidu; Diogenés sám, Epikúros s přáteli.
+**Co spojuje obě strany (pointa pro závěr Sporu):** obě chtějí, aby je osud nezaskočil (Menoikeovi 131; DL VI, 63). Kynik i Epikúros jedí chléb a pijí vodu. Kynik kvůli svobodě, Epikúros kvůli klidu; kynik sám proti zvykům, Epikúros s přáteli.
 
-**Citáty pro Spor:** `dl-vi-104`, `dl-vi-71` (Diogenés); `menoikeus-130`, `dl-x-119` (Epikúros). `dl-x-11-syr` patří scéně, `kd-15` novému případu, aby se nic neopakovalo.
+**Citáty pro Spor:** `dl-vi-104`, `dl-vi-71` (kynická strana, Diogenés); `menoikeus-130`, `dl-x-119` (Epikúros). `dl-x-11-syr` patří scéně, `kd-15` kroku se studií, aby se nic neopakovalo.
 
-### Nový případ A: „Představ si… měsíc na minimum“
+### Nový případ A (krok cesty): „Představ si… měsíc na minimum“
 
 Autorský případ bez historických osob, nic k ověření. Návrh znění: „Představ si, že spolužačka na síti vyhlásí výzvu: měsíc na minimum. Žádné nákupy, jen studená sprcha, nic sladkého, telefon jen na volání. Kdo vydrží, dokáže, že nic z toho nepotřebuje. Ty se ale každý pátek scházíš s kamarády na pizzu. Jdeš do toho?“
 
 | Hlas | Pravděpodobná odpověď | Opora |
 | --- | --- | --- |
-| Diogenés | Do toho, a nepřestávej po měsíci. Studená sprcha je cvičení, ne trest. Na pátek se podívej taky: chodíš tam kvůli přátelům, nebo ze zvyku? | DL VI, 23, 70–71, 104 |
+| Kynik (Diogenés) | Do toho, a nepřestávej po měsíci. Studená sprcha je cvičení, ne trest. Na pátek se podívej taky: chodíš tam kvůli přátelům, nebo ze zvyku? | DL VI, 23, 70–71, 104 |
 | Epikúros | Nákupy kvůli tomu, co mají ostatní, škrtni: to jsou prázdné touhy. Studená sprcha navíc ti nic nedá. Pizzu s přáteli si nech, to je to nejcennější, co máš. | KD 15, 27, 29; Menoikeovi 129–131 |
 
-### Nový případ B: studie o penězích a štěstí (doložená)
+### Nový případ B (samostatný krok cesty): studie o penězích a štěstí (doložená)
 
 | # | Tvrzení | Typ | Zdroj a místo | Doporučená formulace pro studenty |
 | --- | --- | --- | --- | --- |
@@ -204,7 +208,7 @@ Autorský případ bez historických osob, nic k ověření. Návrh znění: „
 
 **Proč případ sedí.** Diogenés: i stokrát víc peněz je jen stokrát víc provázků. Epikúros: tělo má strop (KD 18), prázdné touhy ne (KD 15) a „komu je málo to, co stačí, tomu nestačí nic“ (VS 68, citát `vs-68`). Studie ho ale i zkouší: u většiny lidí nálada s penězi roste dál. Epikúros by mohl odpovědět, že aplikace měřila slast v pohybu („jak se právě cítíš“), ne klid (DL X, 136). To je výklad, ale filozoficky nejzajímavější místo případu, vhodné pro „Změň jednu věc“ nebo pro učitele.
 
-**Doporučení k použití obou případů (rozhodnutí autora: obojí):** A jako hlavní případ kroku cesty (student volí sám za sebe), B jako „Zkus to jinde“ nebo druhá karta, kde student porovná svou odpověď z A s daty. B se zastará pomaleji než trend ze sítí, A je bližší životu studenta.
+**Rozhodnutí autora 2. 10. 2026:** oba případy jsou samostatné kroky cesty 6. Návrh pořadí pro P8: scéna v Zahradě → vlastní pokus (tři koše tužeb) → Epikúros o stropu slasti → Spor s kyniky → **krok A** „měsíc na minimum“ (student volí sám za sebe) → **krok B** studie o penězích a štěstí (student porovná svou volbu s daty; citáty `kd-15` a `vs-68`) → vlastní pravidlo „Kolik je dost?“. Krok B potřebuje jednoduchý graf (štěstí proti příjmu, dvě křivky: většina a nejméně šťastná pětina); kresba vlastní, bez kopírování grafu ze studie (skill `atlas-komponenta`).
 
 ## Velká otázka 1 „Jak mám žít?“
 
@@ -236,7 +240,7 @@ Všechny převody jsou vlastní z řeckého nebo latinského textu (vydání viz
 
 | # | Znění v atlasu | Autor, dílo, místo | Kde použít | Poznámka |
 | --- | --- | --- | --- | --- |
-| 1 | „Pošli mi hrnek sýra, ať si můžu dopřát hostinu, kdykoli budu chtít.“ | Epikúros u Diogena Laertia X, 11 | cesta 6, scéna; nebo profil | πέμψον μοι τυροῦ κυθριδίου; id `dl-x-11-syr` |
+| 1 | „Pošli mi hrnek sýra, ať si můžu dopřát hostinu, kdykoli budu chtít.“ | Epikúros u Diogena Laertia X, 11 | cesta 6, scéna (v profilu ne) | πέμψον μοι τυροῦ κυθριδίου; id `dl-x-11-syr` |
 | 2 | „Soběstačnost je velké dobro. Ne proto, abychom vždycky žili s málem, ale abychom si s málem vystačili, když víc nemáme. Přepych si nejvíc užijí ti, kdo ho nejméně potřebují.“ | Epikúros, Dopis Menoikeovi 130 | Spor | zkráceno; id `menoikeus-130` |
 | 3 | „Ječná placka a voda dají tu nejvyšší slast, když je jí ten, kdo je potřebuje.“ | Epikúros, Dopis Menoikeovi 131 | profil | μᾶζα = ječná placka; id `menoikeus-131-maza` |
 | 4 | „Když říkáme, že cílem je slast, nemyslíme slasti prostopášníků ani ty, které spočívají v požitku, jak si někteří myslí z nevědomosti, z nesouhlasu nebo ze zlé vůle. Myslíme tím nemít bolest v těle a zmatek v duši.“ | Epikúros, Dopis Menoikeovi 131 | profil, oddíl o pověsti | id `menoikeus-131-slast` |
@@ -274,8 +278,10 @@ Přeneseno do `src/data/` v témže commitu jako tento list:
     - { misto: samos, role: pobyt, do: -323, zdroj: dl-x-1 }          # bylo do: -321; DL X, 1: v 18 letech (323) do Athén
     - { misto: athenes, role: pobyt, od: -323, do: -321, zdroj: dl-x-1 }   # nové: vojenská služba (efébie)
     # Kolofón 321, Mytiléna asi 311, Lampsakos, Athény 306–270 beze změny (sep-epicurus)
-  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, dl-x-31]
+  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, hesiodos-theogonia, dl-x-31]
+  obrazek: epikuros-met            # 2. 10.
 - id: diogenes
+  obrazek: diogenes-carpi          # 2. 10.; lucerna zůstává atributem
   atribut: { …, zdroj: dl-vi-41 }   # bylo iep-diogenes; lucerna je přímo v DL VI, 41
   zdroje: [iep-diogenes, iep-cynics, dl-vi-20, dl-vi-41, dl-vi-69, dl-vi-104, dl-vi-76, rep-diogenes]
 - id: seneca
@@ -295,12 +301,17 @@ Nové prameny a 24 citátů jsou v `src/data/zdroje.yaml` (oddíl „Celek 2“)
 
 ## Obrázky
 
+Rozhodnutí autora 2. 10. 2026: Epikúros hlava z Met; Diogenés nemá spolehlivou antickou podobiznu, proto novověké vyobrazení (dřevořez Uga da Carpi na desku, kresba s pohárkem ke scéně s dítětem). Všechny tři soubory jsou z The Metropolitan Museum of Art, které je vydává jako Open Access (CC0); licenci jsem ověřil na stránce předmětu a v API muzea (`isPublicDomain: true`), soubory jsem stáhl přímo z `images.metmuseum.org` a zmenšil na 1280 px. V datech jsou jako `epikuros-met`, `diogenes-carpi` a `diogenes-poharek`.
+
 | Soubor | Co zobrazuje | Autor / instituce | Licence | Odkaz |
 | --- | --- | --- | --- | --- |
-| `DP333053.jpg` → navrženo `public/obrazky/epikuros-met.jpg` | Mramorová hlava Epikúra, římská kopie z 2. století n. l. podle řecké sochy z 1. poloviny 3. století př. n. l.; pentelský mramor, 49,8 cm | The Metropolitan Museum of Art, New York, inv. 11.90 (Rogers Fund, 1911); fotografie muzea | **Public Domain, Met Open Access (CC0)**; ověřeno přímo u muzea (stránka předmětu a API: `isPublicDomain: true`; zásady Open Access: CC0) | https://www.metmuseum.org/art/collection/search/248475 |
-| Diogenés | **Žádná spolehlivá podobizna.** Busty v Kapitolských muzeích (Palazzo Nuovo, Sál filozofů) se uvádějí s otazníkem; soška z vily Albani (pes, lucerna) je podle Cornellovy sbírky odlitků silně restaurovaná | — | — | ancientrome.ru (Waldhauer 1921, foto Arndt-Bruckmann); Cornell, Collection of Antiquities, CCC_0648 |
+| `public/obrazky/epikuros-met.jpg` (960 × 1280) | Mramorová hlava Epikúra, římská kopie z 2. století n. l. podle řecké sochy z 1. poloviny 3. století př. n. l.; pentelský mramor, 49,8 cm | The Metropolitan Museum of Art, New York, inv. 11.90 (Rogers Fund, 1911); fotografie muzea | CC0 (Open Access) | https://www.metmuseum.org/art/collection/search/248475 |
+| `public/obrazky/diogenes-carpi-met.jpg` (942 × 1280) | Diogenés sedí před sudem, čte z knihy a drží hůl; vpravo za ním oškubaný kohout (narážka na DL VI, 40). Šerosvitový dřevořez ze čtyř štočků v šedozelené barvě | Ugo da Carpi (asi 1480–1532) podle Parmigianina, asi 1527–1530; The Metropolitan Museum of Art, inv. 17.50.1 (Joseph Pulitzer Bequest, 1917) | CC0 (Open Access) | https://www.metmuseum.org/art/collection/search/354611 |
+| `public/obrazky/diogenes-poharek-met.jpg` (784 × 1280) | Diogenés odhazuje pohárek; vlevo dítě pije z dlaní u potoka, pohárek leží na zemi (DL VI, 37). Pero a hnědý inkoust, lavírováno; dole přípis „Diogenes“ | neznámý francouzský umělec, 17. století; The Metropolitan Museum of Art, inv. 53.513.8 (Elisha Whittelsey Fund, 1953) | CC0 (Open Access) | https://www.metmuseum.org/art/collection/search/344405 |
 
-**Doporučení:** Epikúros dostane hlavu z Met (CC0 nevyžaduje uvedení autora, atlas ho přesto uvede jako u Sókrata). Diogenés zůstane u atributu lucerny jako Prótagorás u mince: obraz s otazníkem by studentovi tvrdil víc, než víme. Do `obrazky` v `zdroje.yaml` se Epikúros zapíše až po uložení souboru (test kontroluje, že soubor existuje). Soubor jsem nestahoval, protože stahování potřebuje tvůj souhlas; příkaz je v Otevřených otázkách.
+**Jak je použít.** `epikuros-met` a `diogenes-carpi` jsou u osob jako `obrazek` (deska 4 : 5). Dřevořez ukazuje **sud**, ne pithos: popisek proto říká „jak si ho představila renesance“ a text profilu může na obrázku ukázat, kde se pithos změnil v sud. `diogenes-poharek` patří do bloku Příběh u scény s dítětem; kresba je na výšku (asi 3 : 5), blok Příběh má desku 4 : 3, takže v P7 bude potřeba buď výřez (dítě, pohárek a Diogenova postava po pás), nebo poměr desky na výšku (skill `atlas-komponenta`).
+
+**Zvážené a nepoužité:** J.-L. Gérôme, Diogenés (1860), Walters Art Museum, inv. 37.131, CC0 podle muzea: nejznámější obraz (pithos, lampa, psi), ale muzeum soubor nástrojům nevydá a obraz je na šířku; autor zvolil dřevořez. Antické „busty Diogena“ v Kapitolských muzeích se uvádějí s otazníkem, soška z vily Albani je silně restaurovaná (Cornell, CCC_0648); Met má i římskou mramorovou sošku Diogena (inv. 22.139.1, CC0), kterou jsem neprověřoval. Popis Gérômova obrazu na webu Walters mluví o „honest man“, tedy o zkreslení, které atlas opravuje.
 
 ## Rozpory a rozhodnutí
 
@@ -322,10 +333,14 @@ Nové prameny a 24 citátů jsou v `src/data/zdroje.yaml` (oddíl „Celek 2“)
 
 ## Otevřené otázky pro autora
 
-- **Obrázek Epikúra:** souhlasíš se stažením hlavy z Met (CC0, 1,1 MB)? Stačí jeden příkaz v Terminálu ve složce Atlas: `curl -o public/obrazky/epikuros-met.jpg https://images.metmuseum.org/CRDImages/gr/original/DP333053.jpg` (stáhne obrázek přímo z muzea do složky s obrázky atlasu). Nebo mi stažení povol a udělám to sám; pak doplním `obrazky` v `zdroje.yaml` a `obrazek` u Epikúra.
-- **Diogenés bez podobizny:** souhlasíš, že zůstane u lucerny?
-- **Případ A a B v cestě 6:** navrhuji A jako hlavní krok, B jako „Zkus to jinde“. Nebo chceš B jako samostatný krok cesty?
-- **Spor:** formulace „Představ si, že by se potkali“ (doložené je jen Epikúrovo X, 119 a Diogenovy vlastní průpovídky), nebo raději „Epikúros × kynici“ bez Diogena jako postavy?
-- **Seneca na stránce otázky:** stačí jedna věta o jeho bohatství, nebo i Tacitova scéna s nabídkou Neronovi (pak by se v portrétu Seneky opakovala)?
-- **Publikované překlady:** v celku 1 jsi rozhodl pro vlastní převody. Platí to i pro Diogena Laertia (Kolář) a Senecu?
-- **Leontion a Themista:** podle tvého rozhodnutí zatím bez medailonku; v profilu Epikúra navrhuji jednu větu o ženách v Zahradě (viz tvrzení 11).
+Všechny otázky z 1. 10. autor rozhodl 2. 10. 2026 (zapsáno v `docs/rozhodnuti.md`):
+
+- ~~Obrázek Epikúra~~ **Rozhodnuto:** hlava z Met, stažena a zapsána jako `epikuros-met`.
+- ~~Diogenés bez podobizny~~ **Rozhodnuto:** použít novověké vyobrazení. Na desku dřevořez Uga da Carpi (`diogenes-carpi`), ke scéně s dítětem kresba `diogenes-poharek`; lucerna zůstává atributem.
+- ~~Případ A a B~~ **Rozhodnuto:** oba jako samostatné kroky cesty 6.
+- ~~Spor~~ **Rozhodnuto:** Epikúros × kynici, bez smyšleného setkání s Diogenem.
+- ~~Seneca na stránce otázky~~ **Rozhodnuto (schválen návrh):** jedna věta o jeho bohatství; Tacitova scéna s Neronem zůstává pro portrét Seneky.
+- ~~Publikované překlady~~ **Rozhodnuto:** vlastní převody platí i pro Diogena Laertia a Senecu.
+- ~~Leontion a Themista~~ **Rozhodnuto:** bez medailonku; v profilu Epikúra jedna věta o ženách v Zahradě.
+
+Pro P7 a P8 zbývá jen technická věc: kresba `diogenes-poharek` je na výšku a blok Příběh má desku 4 : 3 (viz Obrázky), a krok se studií potřebuje vlastní jednoduchý graf.

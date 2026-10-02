@@ -127,15 +127,15 @@ Vědomě vynecháno: Sókratův posměšek o praseti a paviánovi jako měřítk
 
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
-| Obrázek Epikúra | Hlava z Metropolitan Museum (inv. 11.90) je podle muzea Public Domain (Open Access, CC0). Soubor jsem nestahoval, stažení potřebuje souhlas autora. | Uložit `https://images.metmuseum.org/CRDImages/gr/original/DP333053.jpg` jako `public/obrazky/epikuros-met.jpg`, pak zapsat do `obrazky` a `obrazek: epikuros-met` u Epikúra. |
-| Obrázek Diogena | Spolehlivá podobizna neexistuje: busty v Kapitolských muzeích se uvádějí s otazníkem, soška z vily Albani je silně restaurovaná. | Doporučeno: zůstat u lucerny (atribut), jako Prótagorás u mince. Rozhodnout. |
+| ~~Obrázek Epikúra~~ | **Vyřízeno 2. 10. 2026:** autor souhlasil; hlava z Metropolitan Museum (inv. 11.90, Open Access CC0) stažena přímo z muzea a zmenšena. | V datech jako `epikuros-met`. |
+| ~~Obrázek Diogena~~ | **Vyřízeno 2. 10. 2026:** spolehlivá antická podobizna neexistuje; autor rozhodl použít novověké vyobrazení. Obě díla jsou z Met (Open Access CC0). | V datech `diogenes-carpi` (dřevořez Uga da Carpi podle Parmigianina, asi 1527–1530, na desku) a `diogenes-poharek` (kresba, 17. st., ke scéně s dítětem). Lucerna zůstává atributem. |
 | Mince ze Sinópy | IEP: aféra se znehodnocením je díky mincím „jistá“. Mince s úředníkem ΙΚΕΣΙΟ existují a některé mají zásek, ale Corpus Nummorum (SNG France 7) je datuje asi 330–300 př. n. l., tedy po Diogenově odchodu. Starší literaturu (Seltman 1938) jsem neviděl. | Ve studentském textu jen aféra s mincemi a vyhnanství; „mince s otcovým jménem“ nepoužívat, dokud se nedohledá odborná numismatická studie. |
 | Vatikánský výrok 23 | Rukopis má „ctnost“ (ἀρετή), vydavatelé „žádoucí“ (αἱρετή); SEP uvádí obě. | Citát do dat nedán; výklad přátelství stojí na KD 27 a DL X, 120. |
 | Vatikánský výrok 33 | Jméno Dia je doplněk vydavatelů. | Citát `vs-33` v datech s poznámkou; nic dalšího. |
 | Senekův nápis na Zahradě | Známe jen ze Seneky (Dopisy 21, 10); rukopisy se v místě nápisu rozcházejí. | Ve studentském textu „Seneca popisuje…“, nikdy „na bráně stálo“. |
 | Leontion | Jen z nepřátelských pramenů (Timokratés u DL X, 4–7; Cicero, O povaze bohů I, 93). | Ve studentském textu bez slova hetéra; jen že napsala spis proti Theofrastovi. |
 | Tacitova řeč Seneky k Neronovi (Letopisy XIV, 53–54) | Řeč je historikova stylizace; rok 62 podle rámce knihy XIV, nekontroloval jsem ho proti odbornému heslu. | Při portrétu Seneky ověřit datum v SEP nebo komentáři. |
-| České překlady | Kolářův Diogenés Laertios a české překlady Seneky jsem neměl v ruce. | Pokud autor chce publikované překlady, porovnat; jinak platí vlastní převody (rozhodnutí z celku 1). |
+| ~~České překlady~~ | **Vyřízeno 2. 10. 2026:** autor rozhodl, že vlastní převody platí i pro Diogena Laertia a Senecu. | — |
 | Diogenés v SEP | SEP heslo o kynicích ani o Diogenovi nemá. | Výklad stojí na IEP (Piering) a Routledge (Branham); při revizi případně doplnit Branham a Goulet-Cazé (ed.), *The Cynics* (1996). |
 
 Vyřízeno v celku 2: Epikúrovo místo narození (viz výše), Epikúrův postoj ke kynikům (DL X, 119, ověřeno v řečtině), Alexandr u Diogena ve třech pramenech (DL VI, 38; Plútarchos, Alexandr 14; Arriános VII, 2, 1).
@@ -143,3 +143,14 @@ Vyřízeno v celku 2: Epikúrovo místo narození (viz výše), Epikúrův posto
 Vědomě vynecháno: Diogenovy tělesné potřeby na veřejnosti (DL VI, 46, 69), verze jeho smrti, „Kynici, nepřátelé Řecka“ (DL X, 8, nepřátelský pramen), konkrétní pomluvy o Epikúrovi (zvracení, hetéry), cena Zahrady (80 min), Epikúrův věk při smrti (DL 72, SEP 70–71).
 
 **Do skillu `atlas-overeni`, tabulka známých zkreslení:** „Hledám poctivého člověka“ (Diogenés) → řecky jen „hledám člověka“ (DL VI, 41); „Diogenés v sudu“ → pithos, hliněná zásobnice (DL VI, 23); „epikurejec = požitkář“ → Epikúros sám odmítá (Dopis Menoikeovi 131).
+
+**2. 10. 2026, po rozhodnutích autora:** Spor je Epikúros × kynici (bez smyšleného setkání s Diogenem), studie o penězích a štěstí je samostatný krok cesty 6. Nově otevřené pro P7 a P8:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Kresba `diogenes-poharek` v bloku Příběh | Kresba je na výšku (784 × 1280), deska bloku Příběh má poměr 4 : 3. | Výřez, nebo poměr desky na výšku (skill `atlas-komponenta`). |
+| Graf ke kroku se studií | Graf ze studie se nesmí kopírovat. | Vlastní jednoduchá kresba dvou křivek podle tab. 1 a obr. 2 studie (`kkm-2023`). |
+| Kratés v Athénách po roce 306 | Rámec Sporu říká, že Epikúros měl kyniky v Athénách před očima; opírá se o data Kratéta (zemřel asi 301, Britannica), roky jsou přibližné. | Ve studentském textu bez Kratétova jména a bez roku („chodili po městě kynici“). |
+| Římská soška Diogena v Met (inv. 22.139.1) | Neprověřeno (datace, restaurování). | Jen pokud by autor chtěl antické vyobrazení. |
+
+Walters Art Museum (Gérôme, Diogenés, CC0) soubor nástrojům nevydá, stejně jako Wikimedia Commons; Met ano.
