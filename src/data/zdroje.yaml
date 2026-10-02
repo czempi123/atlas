@@ -56,7 +56,7 @@ prameny:
   - { id: britannica-aspasia, druh: encyklopedie, nazev: "Aspasia", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Aspasia", overeno: 2026-09-29 }
   - { id: britannica-alcibiades, druh: encyklopedie, nazev: "Alcibiades", autor: "Russell Meiggs", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Alcibiades-Athenian-politician-and-general", overeno: 2026-09-29 }
   - { id: britannica-aristophanes, druh: encyklopedie, nazev: "Aristophanes", autor: "Oliver Taplin", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Aristophanes", overeno: 2026-09-29 }
-  - { id: britannica-marcus, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "John Anthony Crook", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Marcus-Aurelius-Roman-emperor", overeno: 2026-09-29 }
+  - { id: britannica-marcus, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "John Anthony Crook", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Marcus-Aurelius-Roman-emperor", overeno: 2026-10-02, poznamka: "Celým jménem Caesar Marcus Aurelius Antoninus Augustus, původně Marcus Annius Verus (přehled Quick Facts; kdy které jméno přijal, neověřeno)." }
   - { id: britannica-zeno-citium, druh: encyklopedie, nazev: "Zeno of Citium", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Zeno-of-Citium", overeno: 2026-09-29 }
   - { id: britannica-crates, druh: encyklopedie, nazev: "Crates of Thebes", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Crates-of-Thebes", overeno: 2026-09-29 }
   - { id: britannica-cleanthes, druh: encyklopedie, nazev: "Cleanthes", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Cleanthes", overeno: 2026-09-29 }
@@ -1089,7 +1089,8 @@ obrazky:
     instituce: "New York, inv. 59.570.282"
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/343595"
-    vyrez: "50% 15%"
+    vyrez: "50% 28%"
+    vyrezNaSirku: "50% 8%"
   - id: epiktetos-1715
     soubor: obrazky/epiktetos-1715.jpg
     popisek: "Epiktétos, jak si ho představil rytec roku 1715: s berlou a perem nad knihou. Úvodní list latinského vydání Rukojeti z Oxfordu."
@@ -1098,3 +1099,4 @@ obrazky:
     licence: "volné dílo (Public Domain)"
     url: "https://www.worldhistory.org/image/3388/epictetus/"
     vyrez: "50% 60%"
+    vyrezNaSirku: "50% 34%"

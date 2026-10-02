@@ -15,7 +15,8 @@ const mista = new Map<string, MistoMiniMapy>();
 for (const m of Astro.props.osoba.mista) {
   const misto = mistaPodleId.get(m.misto)!;
   const rok = m.rok ?? m.od;
-  const popis = `${ROLE[m.role]}${rok !== undefined ? ` ${fmtRok(rok)}` : ''}`;
+  // Přibližný rok (priblizne v datech) nese „asi“, stejně jako letopočty života.
+  const popis = `${ROLE[m.role]}${rok !== undefined ? ` ${m.priblizne ? 'asi ' : ''}${fmtRok(rok)}` : ''}`;
   const b = mista.get(m.misto) ?? { nazev: misto.nazev, souradnice: misto.souradnice as [number, number], radky: [] };
   b.radky.push(popis);
   mista.set(m.misto, b);

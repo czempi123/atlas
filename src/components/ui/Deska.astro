@@ -25,11 +25,13 @@ const idObrazku = obrazekId ?? (obrazOsoby ? osoba?.obrazek : undefined);
 const obrazek = idObrazku ? data.zdroje.obrazky.find((o) => o.id === idObrazku) : undefined;
 if (idObrazku && !obrazek) throw new Error(`Obrázek „${idObrazku}“ není v zdroje.yaml`);
 const orn = ornamenty.orn(obdobi - 1);
+// Střed výřezu jde do proměnných: --vyrez platí všude, --vyrez-sirka pro desku na šířku (hlavička osobnosti na telefonu).
+const vyrezStyl = [obrazek?.vyrez && `--vyrez:${obrazek.vyrez}`, obrazek?.vyrezNaSirku && `--vyrez-sirka:${obrazek.vyrezNaSirku}`].filter(Boolean).join(';') || undefined;
 ---
 <figure class:list={['deska', `obdobi-${obdobi}`, trida]}>
   <div class="deska__plocha" style={`aspect-ratio:${pomer}`}>
     {obrazek ? (
-      <img src={`/${obrazek.soubor}`} alt={obrazek.popisek} loading="lazy" style={obrazek.vyrez ? `object-position:${obrazek.vyrez}` : undefined} />
+      <img src={`/${obrazek.soubor}`} alt={obrazek.popisek} loading="lazy" style={vyrezStyl} />
     ) : (
       <>
         <svg class="deska__ornament" viewBox="0 0 160 128" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -62,8 +64,8 @@ const orn = ornamenty.orn(obdobi - 1);
     height: 100%;
     object-fit: cover;
     /* Busty a portréty: tvář bývá v horní třetině; při úzkém výřezu (telefon) se nesmí useknout.
-       Obrázek s vlastním středem výřezu (`vyrez` v zdroje.yaml) ho přebije stylem na prvku. */
-    object-position: 50% 25%;
+       Obrázek s vlastním středem výřezu (`vyrez` v zdroje.yaml) ho přebije proměnnou na prvku. */
+    object-position: var(--vyrez, 50% 25%);
     filter: grayscale(1) contrast(1.1);
     mix-blend-mode: luminosity;
   }

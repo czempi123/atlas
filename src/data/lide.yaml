@@ -648,7 +648,7 @@
     proc: Byl chromý otrok, a přesto svobodný uvnitř.
     zdroj: sep-epictetus
   obrazek: epiktetos-1715
-  zdroje: [sep-epictetus, iep-epictetus, epiktetos-rozpravy, epiktetos-rukojet, gellius-epiktetos, origenes-kelsos]
+  zdroje: [sep-epictetus, iep-epictetus, epiktetos-rozpravy, epiktetos-rukojet, gellius-epiktetos, origenes-kelsos, lukianos-nevzdelanec]
 
 - id: marcus-aurelius
   jmeno: Marcus Aurelius
@@ -672,7 +672,7 @@
     proc: Filozof na císařském trůnu.
     zdroj: sep-marcus-aurelius
   obrazek: marcus-jezdec
-  zdroje: [sep-marcus-aurelius, britannica-marcus, iep-marcus, marcus-hovory, historia-augusta-marcus, dio-72]
+  zdroje: [sep-marcus-aurelius, britannica-marcus, iep-marcus, marcus-hovory, historia-augusta-marcus, dio-72, britannica-carnuntum]
 
 - id: zenon-z-kitia
   jmeno: Zénón z Kitia

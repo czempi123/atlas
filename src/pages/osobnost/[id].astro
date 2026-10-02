@@ -130,6 +130,8 @@ const dev = import.meta.env.DEV;
   .osobnost__deska { max-width: 420px; }
   @media (max-width: 899px) {
     .osobnost__deska :global(.deska__plocha) { aspect-ratio: 16 / 10 !important; }
+    /* Deska je tu na šířku: obrázek na výšku smí mít pro ni vlastní střed výřezu (`vyrezNaSirku`). */
+    .osobnost__deska :global(.deska__plocha img) { object-position: var(--vyrez-sirka, var(--vyrez, 50% 25%)) !important; }
   }
   .proc { display: block; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
   .proc strong { color: var(--ink); font-weight: 600; }

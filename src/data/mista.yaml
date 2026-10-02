@@ -22,7 +22,7 @@
 - { id: mytilena, nazev: Mytiléna, dnes: "Mytilini, Lesbos, Řecko", souradnice: [26.55, 39.11] }
 - { id: samos, nazev: Samos, dnes: "Samos, Řecko", souradnice: [26.93, 37.69], oblast: true }
 - { id: gyaros, nazev: Gyaros, dnes: "Gyaros, Řecko", souradnice: [24.72, 37.61], oblast: true }
-- { id: nikopolis, nazev: Nikopolis, dnes: "u Prevezy, Řecko", souradnice: [20.73, 39.01] }
+- { id: nikopolis, nazev: Níkopolis, dnes: "u Prevezy, Řecko", souradnice: [20.73, 39.01] }
 
 # Malá Asie a Černé moře
 - { id: miletos, nazev: Milétos, dnes: "u Balatu, Turecko", souradnice: [27.28, 37.53] }
