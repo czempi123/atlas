@@ -70,9 +70,10 @@ const { cesty, otazky } = vstupyOsoby(
   .vstup--cesta { border: 1.5px solid var(--pc-plate); background: var(--pc-plate); color: var(--pc-on-plate); }
   .vstup--cesta .vstup__nad { color: var(--pc-on-plate); }
   .vstup--cesta:hover { border-color: var(--ink); }
-  /* Otázka je na jednom řádku a nižší, ať tři vstupy na telefonu neodsunou portrét z první obrazovky. */
+  /* Otázka je nižší než cesta, ať tři vstupy na telefonu neodsunou portrét z první obrazovky.
+     Na telefonu stojí nadtitulek nad názvem u každé otázky stejně (delší otázka by se jinak zalomila a kratší ne);
+     od 700 px je otázka na jednom řádku. */
   .vstup--otazka { min-height: 48px; padding-block: var(--s-2); border: 1.5px solid var(--ink); background: transparent; color: var(--ink); }
-  .vstup--otazka .vstup__text { flex-flow: row wrap; align-items: baseline; gap: 0 var(--s-3); }
   .vstup--otazka .vstup__nad { color: var(--ink-2); white-space: nowrap; }
   .vstup--otazka .vstup__nazev { font-size: var(--fs-text); }
   .vstup--otazka:hover { background: var(--sunk); }
@@ -80,6 +81,7 @@ const { cesty, otazky } = vstupyOsoby(
   @media (min-width: 700px) {
     ul { align-items: center; }
     li { flex: 0 1 auto; }
+    .vstup--otazka .vstup__text { flex-flow: row wrap; align-items: baseline; gap: 0 var(--s-3); }
     .vstup--cesta { min-width: 300px; }
   }
 </style>

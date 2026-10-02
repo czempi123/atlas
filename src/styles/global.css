@@ -13,6 +13,12 @@ html {
   scroll-padding-top: calc(var(--hlavicka) + var(--s-4));
 }
 
+/* Pevná spodní lišta (telefon, krok cesty) nesmí zakrýt prvek, na který přijde fokus z klávesnice. */
+@media (max-width: 899px) {
+  html { scroll-padding-bottom: calc(var(--spodni-lista) + env(safe-area-inset-bottom, 0px) + var(--s-4)); }
+}
+html:has(.cesta-lista) { scroll-padding-bottom: calc(var(--spodni-lista) + env(safe-area-inset-bottom, 0px) + var(--s-4)); }
+
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
@@ -196,6 +202,7 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
 .blok__tl--hlavni:disabled { cursor: not-allowed; border-color: var(--rule); background: transparent; color: var(--muted); }
 .blok__tl--vedlejsi { border: 1.5px solid var(--ink); background: transparent; color: var(--ink); }
 .blok__tl--vedlejsi:hover { background: var(--sunk); }
+.blok__tl--vedlejsi:disabled { cursor: not-allowed; border-color: var(--rule); background: transparent; color: var(--muted); }
 .blok__tl--tiche { min-height: 44px; border: 1px solid var(--rule); background: transparent; color: var(--ink); font-size: var(--fs-ovladani); font-weight: 500; }
 .blok__tl--tiche:hover { border-color: var(--muted); }
 /* Zpětná vazba a odkrytý obsah: tint období, titulek v inkoustu. */

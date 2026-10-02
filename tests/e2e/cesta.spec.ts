@@ -478,3 +478,22 @@ test('cesta na notebooku: obsah stojí na středové ose, ne u levého okraje', 
   expect(telefon.x).toBe(16);
   expect(telefon.width).toBe(358);
 });
+
+test('krok cesty: prvek s fokusem z klávesnice nezůstane pod pevnou spodní lištou', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(`${CESTA6}2/`);
+  await pripravit(page);
+  const kose = page.locator('#cesta6-tri-kose');
+  await kose.locator('[data-kos="prazdne"] .kos__sem').focus();
+  await page.keyboard.press('Tab');
+  const pole = kose.locator('.vlastni__pole');
+  await expect(pole).toBeFocused();
+  const lista = (await page.locator('.cesta-lista').boundingBox())!;
+  const p = (await pole.boundingBox())!;
+  expect(p.y + p.height).toBeLessThanOrEqual(lista.y);
+  // Tlačítko, které zatím nejde stisknout, tak i vypadá.
+  const pridat = kose.getByRole('button', { name: 'Přidat kartu' });
+  await expect(pridat).toBeDisabled();
+  expect(await pridat.evaluate((e) => getComputedStyle(e).cursor)).toBe('not-allowed');
+});

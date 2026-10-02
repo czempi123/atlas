@@ -339,6 +339,8 @@
     font-size: var(--fs-ovladani);
     font-weight: 600;
     cursor: pointer;
+    /* Fokus z klávesnice ukáže celý koš, ne jen tlačítko nad spodní lištou. */
+    scroll-margin-bottom: 56px;
   }
   .kos__sem::after { content: ''; position: absolute; inset: 0; border-radius: var(--r-md); }
   .kos__sem:focus-visible { outline: none; }
@@ -377,7 +379,9 @@
     font-size: var(--fs-text);
   }
   .vlastni__pole:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; border-bottom-color: var(--ink); }
-  .nepovinne { margin-left: var(--s-2); font-weight: 400; color: var(--muted); }
+  /* Popisek se na telefonu láme; „Nepovinné“ pak stojí na novém řádku od kraje, ne odsazené. */
+  .vlastni .blok__popis { display: flex; flex-wrap: wrap; column-gap: var(--s-2); }
+  .nepovinne { font-weight: 400; color: var(--muted); }
 
   /* Výsledek drží rozložení košů: na telefonu pod sebou, na notebooku vedle sebe. */
   .vysledky { display: grid; gap: var(--s-4); }

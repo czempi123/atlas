@@ -252,3 +252,13 @@ test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehl
   await expect(page.locator('#sokrates .karta__cesta')).toHaveText('Cesta 1: Kdy mám dobrý důvod věřit?');
   await expect(page.locator('#seneca .karta__cesta')).toHaveCount(0);
 });
+
+test('vstupy v hlavičce profilu: tlačítka otázek jsou na telefonu stejně vysoká', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/osobnost/epikuros/');
+  await page.evaluate(() => document.fonts.ready);
+  // Kratší otázka zůstávala na jednom řádku s nadtitulkem, delší se zalomila: dvě tlačítka pod sebou vypadala každé jinak.
+  const vysky = await page.locator('.vstup--otazka').evaluateAll((e) => e.map((x) => Math.round(x.getBoundingClientRect().height)));
+  expect(vysky).toHaveLength(2);
+  expect(vysky[0]).toBe(vysky[1]);
+});
