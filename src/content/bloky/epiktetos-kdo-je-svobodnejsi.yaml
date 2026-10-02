@@ -1,0 +1,33 @@
+# Volba s důvodem (soud, bez „Co udělal“) · portrét Epiktéta, kapitola 03 „Co mu nikdo nevzal“.
+# Podklad: Rozpravy I, 19, 19–22 (pán si najednou váží ševce, kterého koupil císařův dům) a IV, 1, 33–37
+# (propuštěný otrok) — docs/podklady/celek-3-co-mam-v-rukou.md, Nejsilnější příběhy: Epiktétos 5; Tvrzení 31.
+# Čtvrtá možnost dává slovo studentovi, který se stoikem nesouhlasí (podklady: „tady má námitka váhu“).
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj soud
+scena: >-
+  Vzpomeň si na dům ze začátku. Pán je bohatý a mocný, a přitom se klaní císařovu ševci.
+  Otrok nesmí odejít ani odmlouvat. A všechno to vidí.
+otazka: Kdo z těch dvou je svobodnější?
+moznosti:
+  - text: Pán. Může jít, kam chce, a nikdo ho nesmí prodat.
+    tah: svobodný je ten, kdo není ničí majetek
+    zpetna: >-
+      Držíš se toho, co je vidět: jeden je majetek, druhý ne. To není maličkost.
+      Proč se ale svobodný muž klaní ševci? Kdo mu to přikázal?
+  - text: Otrok. Od císaře nic nechce, a tak se ševci klanět nemusí.
+    tah: svobodný je ten, kdo od mocných nic nechce
+    zpetna: >-
+      Hledáš svobodu v tom, po čem kdo touží, ne v tom, co kdo smí. Pán chce císařovu přízeň, a tak ho má v hrsti i švec.
+      Otroka ale může pán prodat stejně jako toho ševce. Stačí ke svobodě, že po ničem netoužíš?
+  - text: Ani jeden. Každý z nich se někoho bojí.
+    tah: svobodný není nikdo, kdo se bojí
+    zpetna: >-
+      Měříš oba stejným metrem: kdo se bojí, má nad sebou pána. Pak je ale svobodný jen ten, kdo se nebojí ničeho.
+      Znáš někoho takového? A chtěl bys jím být?
+  - text: To se nedá srovnávat. Otroctví je křivda, ať si otrok myslí cokoli.
+    tah: odmítnout srovnání
+    zpetna: >-
+      Nechceš mluvit o svobodě v hlavě tam, kde člověku chybí ta obyčejná. To je vážná námitka a Epiktétova odpověď ji celou nevyřídí.
+      Co má ale dělat otrok, kterého nikdo propustit nechce: jen čekat?
+zdroje: [epiktetos-rozpravy]

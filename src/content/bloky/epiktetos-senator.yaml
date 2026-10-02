@@ -1,0 +1,47 @@
+# Změň jednu věc · myšlenkový pokus „Představ si…“ podle Epiktétova vyprávění o senátorovi Helvidiovi.
+# Stojí v kapitole 04 portrétu za císařovou hrozbou, před Helvidiovou odpovědí.
+# Podklad: Rozpravy I, 2, 19–22 (docs/podklady/celek-3-co-mam-v-rukou.md, Nejsilnější příběhy: Epiktétos 6;
+# Nejsilnější námitka a Epiktétova odpověď: „Není to rezignace?“). Podmínky a zpětné vazby jsou autorské.
+# Bez oddílu „Co udělal“: Helvidius není v datech osob, jeho odpověď vypráví text za blokem.
+druh: zmena
+obdobi: 2
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si, že sedíš v senátu. Císař chystá věc, kterou pokládáš za špatnou, a zeptá se tě na názor.
+  Předem ti vzkázal: když promluvíš proti, zaplatíš životem.
+otazka: Co uděláš?
+moznosti:
+  - { id: promluvim, text: "Přijdu a řeknu, co si myslím." }
+  - { id: prikyvnu, text: "Přijdu a řeknu, co chce císař slyšet." }
+  - { id: doma, text: Zůstanu doma. }
+podminky:
+  - id: nic-nezmeni
+    prepinac: Nic se tím nezmění
+    zmena: "Teď si představ, že víš jistě: ať řekneš cokoli, císař svou věc prosadí."
+    posun: >-
+      Tvé rozhodnutí tedy stálo na tom, jestli tvá slova něco změní.
+      Podle čeho ještě se dá měřit, jestli má čin cenu?
+    stejne: >-
+      Na tom, jestli tvá slova něco změní, tvé rozhodnutí nestojí.
+      Na čem tedy stojí?
+  - id: nikdo-neuvidi
+    prepinac: Nikdo se to nedozví
+    zmena: >-
+      Teď si představ, že jednání je tajné. Co kdo řekl a kdo chyběl, se venku nikdy nikdo nedozví.
+    posun: >-
+      Změnilo se jen to, jestli tě někdo uvidí. Šlo ti tedy i o to, co si z tebe vezmou ostatní.
+      Je to slabost, nebo dobrý důvod?
+    stejne: >-
+      Diváky jsi ke svému rozhodnutí nepotřeboval.
+      Komu tedy tím, co uděláš, skládáš účty?
+  - id: rodina
+    prepinac: Odnese to i rodina
+    zmena: >-
+      Teď si představ, že trest nedopadne jen na tebe. Kdo promluví proti, toho rodina přijde o majetek i o domov.
+    posun: >-
+      Za sebe bys rozhodl jinak než za své blízké.
+      Smí člověk platit za své svědomí cizím účtem? A smí kvůli blízkým mlčet ke křivdě?
+    stejne: >-
+      Zůstal jsi u svého, i když se změnilo, kdo všechno za tvá slova zaplatí.
+      Co bys řekl svým blízkým, kdyby se tě zeptali proč?
+zdroje: [epiktetos-rozpravy]
