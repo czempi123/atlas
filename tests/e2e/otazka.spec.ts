@@ -142,7 +142,7 @@ test('otázka 1: úvodní případ, čtyři hlasy, které se poznají, a cesta 6
   // Každý hlas se pozná: zpochybněná volba, činnost a nástroje, klid a přátelé, kdo komu slouží.
   await expect(odpovedi.nth(0)).toContainText('Ptáš se špatně');
   await expect(odpovedi.nth(1)).toContainText('štěstí je činnost, ne pocit');
-  await expect(odpovedi.nth(1)).toContainText('jen jako nástroj');
+  await expect(odpovedi.nth(1)).toContainText('taky, ale jako nástroj');
   await expect(odpovedi.nth(2)).toContainText('Zbytek léta stráv s přáteli');
   await expect(odpovedi.nth(3)).toContainText('kdo komu slouží');
   for (let i = 0; i < 4; i++) {

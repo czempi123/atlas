@@ -12,8 +12,8 @@ scena: >-
   Ty se ale každý pátek scházíš s kamarády na pizzu.
 otazka: Jdeš do toho?
 moznosti:
-  - { id: cele, text: "Jdu do toho celé, i bez pátků." }
-  - { id: s-patky, text: "Jdu, ale pátky s kamarády si nechám." }
+  - { id: cele, text: "Jdu do toho celé." }
+  - { id: s-patky, text: "Jdu, ale páteční pizzu si nechám." }
   - { id: nejdu, text: Nejdu do toho. }
 podminky:
   - id: bez-divaku
@@ -39,11 +39,16 @@ podminky:
     zmena: >-
       Teď si představ, že se přidá celá tvoje parta. V pátek se sejdete stejně, jen místo pizzy přinese každý, co má doma.
     posun: >-
-      Rozhodl ses jinak, když přibyli kamarádi. Co ti tedy na pátku předtím chybělo víc: pizza, nebo lidé kolem stolu?
+      Rozhodl ses jinak, když přibyli kamarádi. O co ti tedy v pátek šlo víc: o pizzu, nebo o lidi kolem stolu?
     stejne: >-
       Ani kamarádi tvou odpověď nezměnili. Na čem tedy stojí: na věcech, kterých by ses vzdal, nebo na výzvě samotné?
 coUdelal:
   osoba: epikuros
   text: >-
-    Epikúros si podobnou zkoušku dával sám. Měl dny, kdy jedl jen skrovně, aby viděl, jestli mu něco chybí.
+    Epikúros si podobnou zkoušku dával sám: měl dny, kdy jedl jen skrovně, aby viděl, jestli mu něco chybí.
+    Studenou sprchu by ale nejspíš vynechal: bolest, ze které nic nevzejde, pro něj cenu neměla.
+    A pátek s přáteli by si nechal.
+
+
+    Kynik by šel do všeho a po měsíci by nepřestal. A zeptal by se tě, jestli na pátek chodíš kvůli přátelům, nebo ze zvyku.
 zdroje: [seneca-epistulae]

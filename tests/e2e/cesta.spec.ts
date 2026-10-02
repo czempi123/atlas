@@ -278,6 +278,9 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   const trideni = kose.getByRole('region', { name: 'Tvoje třídění' });
   await expect(trideni).toBeFocused();
   await expect(trideni).toContainText('bolí, když touhu nesplníš?');
+  // Zpětná vazba vidí, kam student kartu dal, a srovnání se ptá i proti Epikúrovi.
+  await expect(trideni).toContainText('Dal jsi ho mezi věci, bez kterých to bolí.');
+  await expect(trideni).toContainText('A nechal bys to tam i tak?');
   await dalKlavesnici(page, kose, 'Která bunda víc hřeje?', `${CESTA6}3/`);
 
   // Krok 3: strop slasti v textu, citát o soběstačnosti, volba bez „Co udělal“.
@@ -316,6 +319,8 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   // Obě strany odpovídají na nejsilnější námitku druhé a domyšlená odpověď je podaná jako výklad.
   await expect(argumenty).toContainText('Epikúrovi by kynik mohl namítnout');
   await expect(argumenty).toContainText('Kynikovi by Epikúros mohl odpovědět');
+  // Na Epikúrovo „žebrání je taky provázek“ má kynik odpověď: cvičil se i v odmítnutí.
+  await expect(argumenty).toContainText('Jednu sochu prý prosil o almužnu');
   await page.keyboard.press('Tab');
   await page.keyboard.press('ArrowRight');
   await page.keyboard.press('ArrowRight');
@@ -332,7 +337,7 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
 
   // Krok 5: měsíc na minimum, jedna změněná podmínka.
   const mesic = page.locator('#cesta6-mesic-na-minimum');
-  await mesic.getByRole('radio', { name: 'Jdu, ale pátky s kamarády si nechám.' }).focus();
+  await mesic.getByRole('radio', { name: 'Jdu, ale páteční pizzu si nechám.' }).focus();
   await page.keyboard.press('Space');
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
@@ -342,14 +347,17 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(mesic.getByRole('radio', { name: 'Kamarádi jdou do toho s tebou' })).toBeChecked();
   await expect(mesic.locator('.zmenena')).toContainText('přidá celá tvoje parta');
   await page.keyboard.press('Tab');
-  await expect(mesic.locator('.zmenena').getByRole('radio', { name: 'Jdu do toho celé, i bez pátků.' })).toBeFocused();
+  await expect(mesic.locator('.zmenena').getByRole('radio', { name: 'Jdu do toho celé.' })).toBeFocused();
   await page.keyboard.press('Space');
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
   const zmena = mesic.getByRole('region', { name: 'Posun odpovědi' });
   await expect(zmena).toBeFocused();
-  await expect(zmena).toContainText('pizza, nebo lidé kolem stolu?');
+  await expect(zmena).toContainText('o pizzu, nebo o lidi kolem stolu?');
   await expect(mesic.getByRole('heading', { name: 'Co udělal Epikúros' })).toBeVisible();
+  // Oba hlasy: Epikúros by si pátek nechal, kynik by šel do všeho.
+  await expect(mesic.locator('.co-udelal')).toContainText('A pátek s přáteli by si nechal.');
+  await expect(mesic.locator('.co-udelal')).toContainText('Kynik by šel do všeho');
   await dalKlavesnici(page, mesic, 'Peníze a štěstí', `${CESTA6}6/`);
 
   // Krok 6: studie vyprávěná přímo, graf s textovou alternativou, výhrady až ve zpětné vazbě.
@@ -360,6 +368,8 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(graf.getByRole('img')).toHaveAttribute('aria-describedby', 'graf-penize-stesti-popis');
   await expect(graf.locator('figcaption')).toContainText('Asi u pětiny lidí, těch nejméně šťastných, se zhruba nad 100 000 dolary ročně zastaví.');
   await expect(text6.locator('.citat')).toHaveCount(2);
+  // Oba Epikúrovy citáty stojí před studií; poslední slovo před hlasováním nemá Epikúros, ale křivky.
+  await expect(text6.locator(':scope > p').last()).toContainText('musel by se příjem pokaždé zdvojnásobit');
   const penize = page.locator('#cesta6-penize');
   await penize.getByRole('radio', { name: /Nedá se říct/ }).focus();
   await page.keyboard.press('Space');
@@ -402,7 +412,7 @@ test('cesta 6 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
     ['Moudrý nebude žít jako kynik ani žebrat.', 'Kynik i Epikúros tedy jedli chléb a pili vodu.', 'S Diogenem samotným se Epikúros nejspíš nikdy nepotkal'],
     ['měsíc na minimum', 'každý pátek scházíš s kamarády na pizzu'],
     ['Epikúros tvrdil, že strop má i bohatství', 'U většiny lidí nálada s příjmem roste dál.', 'Komu je málo to, co stačí, tomu nestačí nic.'],
-    ['Oba chtěli totéž: aby je osud nezaskočil.', 'Vzpomeň si na své koše z kroku 2.'],
+    ['Oba chtěli totéž: aby je osud nezaskočil.', 'Souhlasit s nimi nemusíš.', 'Vzpomeň si na své koše z kroku 2.'],
   ];
   await page.goto(`${CESTA6}1/`);
   for (let n = 1; n <= KROKY6.length; n++) {

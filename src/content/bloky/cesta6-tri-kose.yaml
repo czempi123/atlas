@@ -41,6 +41,10 @@ karty:
     text: Někdo, komu řeknu, co mě trápí
     zpetna: >-
       Hladem bez něj neumřeš. Epikúros ale mezi nutné počítal i to, bez čeho člověk není šťastný. Kam podle toho patří přítel?
+    kdyz:
+      nutne: >-
+        Dal jsi ho mezi věci, bez kterých to bolí. I Epikúros počítal mezi nutné to, bez čeho člověk není šťastný.
+        Co přesně by ti chybělo, kdyby takový člověk nebyl?
   - id: serial
     text: Nový díl seriálu, o kterém všichni mluví
     zpetna: >-
@@ -61,5 +65,5 @@ srovnani:
     Ke šťastnému životu podle něj nejvíc ze všeho přispívají přátelé.
 
 
-    Projdi teď svůj první koš. Je v něm něco, co by tou zkouškou neprošlo?
+    Projdi teď svůj první koš. Je v něm něco, co by tou zkouškou neprošlo? A nechal bys to tam i tak?
 zdroje: [dl-x-122, dl-x-139]

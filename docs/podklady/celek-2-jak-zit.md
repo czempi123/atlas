@@ -163,7 +163,9 @@ K tomu DL VI, 32 (Alexandr prý řekl: „Kdybych nebyl Alexandrem, chtěl bych 
 
 **Vlastní pokus po scéně (návrh pro P8, ne historické tvrzení):** student dostane seznam věcí ze svého týdne a třídí je do tří Epikúrových košů (přirozené a nutné, přirozené a nenutné, prázdné); zpětná vazba podle KD 29 a scholia. Dělení je doložené (Menoikeovi 127, KD 29), příklady jsou autorské.
 
-### Spor: Epikúros × kynici „Mám se naučit obejít bez všeho, nebo vědět, co mi stačí?“
+### Spor: Epikúros × kynici „Mám se učit potřebovat co nejméně, nebo vědět, co mi stačí?“
+
+(Do revize 2. 10. 2026 zněla otázka „Mám se naučit obejít bez všeho, nebo vědět, co mi stačí?“; „bez všeho“ bylo krajnější než kynický citát „potřebovat málo“.)
 
 **Rozhodnutí autora 2. 10. 2026:** Spor je Epikúros × kynici, ne smyšlené setkání Epikúra s Diogenem.
 
@@ -174,7 +176,7 @@ K tomu DL VI, 32 (Alexandr prý řekl: „Kdybych nebyl Alexandrem, chtěl bych 
 **Kynická strana v nejsilnější verzi** (mluví Diogenovými slovy; ve Sporu jako „kynici“, citáty s Diogenovým jménem)
 
 1. **Kdo nic nepotřebuje, je svobodný.** „Bohům je vlastní nic nepotřebovat, těm, kdo se bohům podobají, potřebovat málo“ (DL VI, 104). Každá potřeba je provázek, za který tě někdo může tahat. Proto Diogenés vyhodil i pohárek, když viděl dítě pít z dlaní (VI, 37). — výklad
-2. **Na nepohodlí se dá vycvičit, a pak už nebolí.** Bez cvičení se v životě nepovede nic; kdo se vycvičí, tomu je samo pohrdání slastí nejslastnější (VI, 70–71). Diogenés se válel v horkém písku a objímal zasněžené sochy (VI, 23). — výklad; **nejsilnější tah**: obrací Epikúrův argument, protože i kynik mluví o slasti.
+2. **Na nepohodlí se dá vycvičit, a pak už nebolí.** Bez cvičení se v životě nepovede nic; kdo se vycvičí, tomu je samo pohrdání slastí nejslastnější (VI, 70–71). Diogenés se válel v horkém písku a objímal zasněžené sochy (VI, 23). Sochu prosil o almužnu, a když se ptali proč, řekl, že se cvičí v tom, nedostat nic (VI, 49; tradované): odpověď předem na Epikúrovo „nebude žebrat“ a „žebrání je taky provázek“. — výklad; **nejsilnější tah**: obrací Epikúrův argument, protože i kynik mluví o slasti.
 3. **Snadný život tu je pro každého, jen ho nevidíme.** Bohové dali lidem snadný život, ale lidé ho přehlédnou, protože chtějí medové koláčky a vonné masti (VI, 44). Kynici pohrdají bohatstvím, slávou i urozeností (VI, 104). — výklad
 4. **Proti Epikúrově zahradě:** kdo potřebuje zahradu, přátele a jistotu, potřebuje pořád hodně, jen jiné věci. Svoboda od zvyků (VI, 71) platí i pro zvyky přátel; kynik má být připraven na každý osud (VI, 63) a nic nesvěřovat štěstěně (VI, 105). — **výklad autorský** (domyšlená odpověď na Epikúra; podávat jako „kynik by mohl namítnout“, ne jako něčí slova).
 
