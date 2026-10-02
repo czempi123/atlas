@@ -24,8 +24,8 @@ prameny:
   - { id: sep-cyrenaics, druh: encyklopedie, nazev: "The Cyrenaics", autor: "Voula Tsouna", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/cyrenaics/", overeno: 2026-09-29 }
   - { id: sep-epicurus, druh: encyklopedie, nazev: "Epicurus", autor: "David Konstan", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epicurus/", overeno: 2026-09-29 }
   - { id: sep-seneca, druh: encyklopedie, nazev: "Seneca", autor: "Katja Vogt", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/seneca/", overeno: 2026-09-29 }
-  - { id: sep-epictetus, druh: encyklopedie, nazev: "Epictetus", autor: "Margaret Graver", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epictetus/", overeno: 2026-09-29 }
-  - { id: sep-marcus-aurelius, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "Rachana Kamtekar", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/marcus-aurelius/", overeno: 2026-09-29 }
+  - { id: sep-epictetus, druh: encyklopedie, nazev: "Epictetus", autor: "Margaret Graver", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epictetus/", overeno: 2026-10-02, poznamka: "Narozen v 50. letech v Hierapoli; otrok Epafrodita; kdy přišel do Říma, se neví; žák Musonia Rufa; vykázán nejspíš ediktem roku 89 (SEP „Stoicism“ uvádí 93); škola v Níkopoli, zemřel kolem 135; kulhání připisováno artritidě, nebo týrání v otroctví; neoženil se, ve stáří se ujal dítěte. Oddíly 4.3–4.6: vůle, hodnota, city, vztahy." }
+  - { id: sep-marcus-aurelius, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "Rachana Kamtekar", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/marcus-aurelius/", overeno: 2026-10-02, poznamka: "Narozen 121, císařem 161–180; útoky Germánů, vzpoury, mor; Hovory aspoň zčásti z posledních let tažení; události svého života popisuje tak, že je nelze poznat; učitelé Fronto, Rusticus, Apollónios, Sextos; Epiktétovy zápisky (I, 7)." }
   - { id: sep-stoicism, druh: encyklopedie, nazev: "Stoicism", autor: "Dirk Baltzly", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/stoicism/", overeno: 2026-09-29 }
   - { id: sep-pyrrho, druh: encyklopedie, nazev: "Pyrrho", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/pyrrho/", overeno: 2026-09-29 }
   - { id: sep-lucretius, druh: encyklopedie, nazev: "Lucretius", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/lucretius/", overeno: 2026-09-29 }
@@ -140,6 +140,37 @@ prameny:
   - { id: kkm-2023, druh: monografie, nazev: "Income and emotional well-being: A conflict resolved", autor: "Matthew A. Killingsworth, Daniel Kahneman, Barbara Mellers", dilo: "PNAS 120 (2023), e2208661120", url: "https://doi.org/10.1073/pnas.2208661120", overeno: 2026-10-01, poznamka: "33 391 zaměstnaných dospělých v USA, 1 725 994 hlášení; štěstí roste s log(příjmu), u nejméně šťastné asi pětiny se nad 100 000 USD zastaví (tab. 1); medián příjmu 85 000 USD. Čteno v plném textu (Europe PMC, PMC10013834)." }
   - { id: kahneman-deaton-2010, druh: monografie, nazev: "High income improves evaluation of life but not emotional well-being", autor: "Daniel Kahneman, Angus Deaton", dilo: "PNAS 107 (2010), 16489–16493", url: "https://doi.org/10.1073/pnas.1011492107", overeno: 2026-10-01, poznamka: "Víc než 450 000 odpovědí (Gallup); emoční pohoda roste s příjmem jen do asi 75 000 USD, hodnocení života dál. Čten souhrn (Europe PMC)." }
   - { id: met-epikuros, druh: data, nazev: "Marble head of Epikouros (11.90)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/248475", overeno: 2026-10-01, poznamka: "Římská kopie z 2. st. n. l. podle řecké sochy z 1. pol. 3. st. př. n. l.; Public Domain, Open Access CC0." }
+
+  # Celek 3 „Co mám ve svých rukou?“ (docs/podklady/celek-3-co-mam-v-rukou.md): řecké a latinské texty z PerseusDL a First1KGreek.
+  - { id: epiktetos-rozpravy, druh: pramen, nazev: "Rozpravy", autor: Epiktétos, dilo: "Dissertationes ab Arriano digestae, řecky H. Schenkl (Teubner 1916), angl. G. Long (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg001/tlg0557.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Arriánův úvodní dopis (zapisoval, co slyšel, jako poznámky pro sebe); co je v naší moci, vítr, „nohu mi spoutáš“ (I, 1); Helvidius Priscus, vousy (I, 2); Musonius (I, 7, 32; I, 9, 29–30); chromý stařec (I, 16, 20); lampa (I, 18, 15–16; I, 29, 21); Epafroditos a švec (I, 19, 19–22; I, 26, 11–12); hra s míčem (II, 5); Níkopolis a zemětřesení (II, 6, 20); role (II, 10); ne jako socha (III, 2, 4); cvičení od svítání (III, 3, 14–16); škola jako ordinace (III, 23, 30); o svobodě (IV, 1)." }
+  - { id: epiktetos-rukojet, druh: pramen, nazev: "Rukojeť", autor: Epiktétos, dilo: "Encheiridion, řecky H. Schenkl (Teubner 1916), angl. G. Long (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg002/tlg0557.tlg002.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Co je a není v naší moci, cvičení s dojmem (1); touha a odpor (2); věci a soudy (5); kulhání je překážkou nohy, ne vůle (9); kdo chce být svobodný (14); herec (17); urážka (20); povinnosti a vztahy (30); dvě ucha (43)." }
+  - { id: marcus-hovory, druh: pramen, nazev: "Hovory k sobě", autor: Marcus Aurelius, dilo: "Ad se ipsum, řecky J. H. Leopold (Teubner 1908), PerseusDL", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0562/tlg001/tlg0562.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Rusticus a Epiktétovy zápisky (I, 7); místní údaje „u Kvádů na Granui“ (konec knihy I) a „v Carnuntu“ (konec knihy II); ráno (II, 1; V, 1); Epiktétos jmenován (IV, 41; VII, 19; XI, 34 a 36), opsaná místa XI, 33–38; soudy (IV, 3; IV, 7; VIII, 47); pevnost (VIII, 48); pohled shora (VII, 48; IX, 30; XII, 24); VI, 6; VI, 30; VI, 41; VI, 44; VII, 7; VIII, 59; IX, 5; IX, 7; X, 16." }
+  - { id: origenes-kelsos, druh: pramen, nazev: "Proti Kelsovi VII, 53–54", autor: Órigenés, dilo: "Contra Celsum, řecky P. Koetschau (1899), First1KGreek", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2042/tlg001/tlg2042.tlg001.perseus-grc1.xml", overeno: 2026-10-02, poznamka: "Kelsos: pán kroutil Epiktétovi nohou, ten s pousmáním řekl „zlomíš ji“ a potom „neříkal jsem, že ji zlomíš?“; pán není jmenován. Tradovaný příběh: Kelsos psal asi roku 178, Órigenés asi 248." }
+  - { id: gellius-epiktetos, druh: pramen, nazev: "Attické noci I, 2; II, 18; XV, 11; XVII, 19; XIX, 1", autor: Aulus Gellius, dilo: "Noctes Atticae, lat. a angl. J. C. Rolfe (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1254/phi001/phi1254.phi001.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Héródés Attikos: Epiktétos, největší ze stoiků (I, 2, 6); Epiktétos byl otrok (II, 18, 10); za Domitiana byli filozofové usnesením senátu vyhnáni z Říma a Itálie a Epiktétos odešel do Níkopole (XV, 11, 3–5, bez roku); „snášej a zdrž se“ podle Favorina (XVII, 19, 5–6); z páté knihy Rozprav: dojmy nejsou v naší moci, souhlas ano, i moudrý zbledne (XIX, 1, 14–21)." }
+  - { id: gellius-vii-2, druh: pramen, nazev: "Attické noci VII, 2", autor: Aulus Gellius, dilo: "Noctes Atticae, lat. a angl. J. C. Rolfe (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1254/phi001/phi1254.phi001.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Chrýsippova definice osudu (řecky, ze 4. knihy O prozřetelnosti); námitka, že pak je nespravedlivé trestat; odpověď válcem; nesmí se poslouchat ti, kdo se vymlouvají na osud (13)." }
+  - { id: lukianos-nevzdelanec, druh: pramen, nazev: "Proti nevzdělanci, který kupuje mnoho knih 13", autor: Lúkianos, dilo: "Adversus indoctum, řecky a angl. A. M. Harmon (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0062/tlg028/tlg0062.tlg028.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Kdosi „za našich časů“ koupil hliněnou lampu stoika Epiktéta za tři tisíce drachem." }
+  - { id: suetonius-domitianus, druh: pramen, nazev: "Domitianus 10", autor: Suetonius, dilo: "De vita Caesarum, lat. M. Ihm (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1348/abo022/phi1348.abo022.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Při procesu s Juniem Rustikem vykázal Domitianus všechny filozofy z Města a z Itálie (10, 3); rok neuvádí." }
+  - { id: tacitus-agricola, druh: pramen, nazev: "Agricola 2 a 44–45", autor: Tacitus, dilo: "De vita Iulii Agricolae, lat. H. Furneaux (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1351/phi001/phi1351.phi001.perseus-lat1.xml", overeno: 2026-10-02, poznamka: "Vyhnání učitelů moudrosti (2); Agricola zemřel 23. srpna za konzulů Collegy a Priscina a popravy Helvidia, Rustika a Senekióna už neviděl (44–45). Rok 93 podle běžné datace konzulů, seznam jsem neověřoval." }
+  - { id: plinius-epistulae, druh: pramen, nazev: "Dopisy III, 11", autor: Plinius mladší, dilo: "Epistulae (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1318/phi001/phi1318.phi001.perseus-lat1.xml", overeno: 2026-10-02, poznamka: "Když byli filozofové vykázáni z Města, byl Plinius praetorem; Senekió, Rusticus a Helvidius popraveni." }
+  - { id: dio-67, druh: pramen, nazev: "Římské dějiny 67, 13", autor: Cassius Dio, dilo: "Roman History, angl. E. Cary (LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/67*.html", overeno: 2026-10-02, poznamka: "Poprava Arulena Rustika a Herennia Senekióna; filozofové, kteří v Římě zbyli, byli vyhnáni „znovu“. Čteno jen anglicky." }
+  - { id: dio-72, druh: pramen, nazev: "Římské dějiny 72", autor: Cassius Dio, dilo: "Roman History, angl. E. Cary (LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/72*.html", overeno: 2026-10-02, poznamka: "Cassiova vzpoura, hlava pohřbena, papíry zničeny nepřečtené (27–28); smrt 17. března (33); hodnocení vlády, „ze zlatého království do železného a rezavého“ (34–36). Kniha se dochovala ve výtahu; čteno jen anglicky." }
+  - { id: hieronymus-kronika, druh: pramen, nazev: "Kronika, léta Domitianovy vlády", autor: Hieronymus, dilo: "Chronicon, angl. překlad (tertullian.org)", url: "https://www.tertullian.org/fathers/jerome_chronicle_03_part2.htm", overeno: 2026-10-02, poznamka: "K roku 95: Domitianus znovu vyhání ediktem filozofy a astrology z Říma." }
+  - { id: suda-epiktetos, druh: pramen, nazev: "Suda, heslo Epiktétos (epsilon 2424)", dilo: "Suda On Line, angl. překlad", url: "https://www.cs.uky.edu/~raphael/sol/sol-html/", overeno: 2026-10-02, poznamka: "Otrok Epafrodita; ochrnul na nohu „z revmatu“; žil v Níkopoli; prý až do vlády Marca Antonina (vydavatelé hesla to mají za sporné)." }
+  - { id: long-epictetus-1877, druh: monografie, nazev: "Epictetus (úvod k překladu)", autor: "George Long", dilo: "The Discourses of Epictetus; with the Encheiridion and Fragments (1877), Wikisource", url: "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Epictetus", overeno: 2026-10-02, poznamka: "Simplikios: Epiktétos byl slabého těla a chromý od mládí, neoženil se, ve stáří se ujal dítěte; Rozprav bylo osm knih, dochovaly se čtyři. Simplikia samotného jsem nečetl." }
+  - { id: historia-augusta-marcus, druh: pramen, nazev: "Historia Augusta, Marcus Antoninus", dilo: "Scriptores Historiae Augustae, lat. D. Magie (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi2331/phi004/phi2331.phi004.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Pozdní sbírka životopisů, jen jako tradice. Narozen 26. dubna v Římě (1, 5); ve dvanácti filozofský plášť (2, 6); adopce a úlek (5, 1–6); povodeň Tibery (8, 4–5); mor a pohřby chudých (13, 3–6); dražba císařského majetku (17, 4–5; 21, 9); smrt syna Vera (21, 3–5); Cassius (24–26); smrt (28)." }
+  - { id: aristoteles-etika-stesti, druh: pramen, nazev: "Etika Nikomachova I, 8–10; IV, 5; VII, 13", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Blaženost potřebuje i vnější dobra (1099a31–b8); šťastný není chameleon, velké rány blaženost tísní, ale prosvítá v nich krása, švec a kůže, Priamos (1100b4–1101a8); kdo se nezlobí, když má, je považován za hlupáka, snášet urážky je otrocké (1125b31–1126a8); člověk lámaný kolem šťastný není (1153b17–21)." }
+  - { id: aristoteles-etika-iii, druh: pramen, nazev: "Etika Nikomachova III, 1 a 5", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Nedobrovolné je, co se děje z donucení nebo z nevědomosti; náklad hozený do moře za bouře (1109b30–1110a19); dobrovolné má počátek v člověku, který zná okolnosti (1111a22–24); co je na nás konat, je na nás i nekonat (1113b6–14); povahu si děláme svými činy, kámen (1114a3–21); jsme spolupůvodci svých vlastností (1114b22–23)." }
+  - { id: cicero-de-fato-perseus, druh: pramen, nazev: "O osudu 22–31 a 39–43", autor: Cicero, dilo: "De fato, lat. C. F. W. Müller (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0474/phi054/phi0474.phi054.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Epikúrova odchylka atomů proti nutnosti osudu, Démokritos nutnost přijal (22–23); Karneadés: epikurejci odchylku nepotřebují, pohyb vůle nemá vnější příčinu (23–25); líný argument a Chrýsippova odpověď (28–30); Karneadův argument proti osudu (31); Chrýsippos jako rozhodčí (39); válec a káča (41–43)." }
+  - { id: cicero-de-finibus, druh: pramen, nazev: "O nejvyšším dobru a zlu III, 22 a 50–51; IV, 20 a 72", autor: Cicero, dilo: "De finibus bonorum et malorum, lat. Th. Schiche (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0474/phi048/phi0474.phi048.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Stoik Cato: lučištník má udělat všechno, aby mířil přesně, zásah je „k vybrání, ne k usilování“ (III, 22); věci, kterým se dává přednost (III, 50–51); Cicero proti stoikům: se staršími se shodují věcí, liší se slovy (IV, 72)." }
+  - { id: cicero-tusculanae, druh: pramen, nazev: "Tuskulské hovory V, 24–25", autor: Cicero, dilo: "Tusculanae disputationes, lat. M. Pohlenz (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0474/phi049/phi0474.phi049.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Theofrastos napadán všemi školami za větu „životu vládne štěstěna, ne moudrost“ a za to, že mučený podle něj nemůže být blažený." }
+  - { id: lucretius-ii, druh: pramen, nazev: "O přírodě II, 216–293", autor: Lucretius, dilo: "De rerum natura, lat. (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0550/phi001/phi0550.phi001.perseus-lat1.xml", overeno: 2026-10-02, poznamka: "Atomy se v neurčitý čas a na neurčitém místě nepatrně odchylují (216–224); odchylka trhá „úmluvy osudu“, odtud svobodná vůle (251–293)." }
+  - { id: iep-epictetus, druh: encyklopedie, nazev: "Epictetus", autor: "Keith H. Seddon", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/epictetu/", overeno: 2026-10-02, poznamka: "Narozen asi 55 v Hierapoli; u Musonia ještě jako otrok; vykázán „asi 89“; Arriános asi 86–160; Kelsos a Suda o noze." }
+  - { id: iep-marcus, druh: encyklopedie, nazev: "Marcus Aurelius", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/marcus/", overeno: 2026-10-02, poznamka: "Adopce 138, císařem 161, sám od 169; Hovory jako osobní zápisník, nejspíš z tažení asi 171–175; Epiktétovy tři oblasti cvičení; pohled z hlediska kosmu (IX, 32)." }
+  - { id: sep-freedom-ancient, druh: encyklopedie, nazev: "Ancient Theories of Freedom and Determinism", autor: "Tim O'Keefe", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/freedom-ancient/", overeno: 2026-10-02, poznamka: "Aristotelés tezi determinismu neformuluje; odchylka atomů v dochovaných Epikúrových textech není; stoikové spojují osud a odpovědnost (válec, spoluosudové věci); Karneadés kritizuje obě strany; podle M. Fredeho se pojem svobodné vůle poprvé objevuje u Epiktéta." }
+  - { id: britannica-celsus, druh: encyklopedie, nazev: "Celsus", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Celsus", overeno: 2026-10-02, poznamka: "Pravdivé slovo napsal asi roku 178." }
+  - { id: britannica-contra-celsum, druh: encyklopedie, nazev: "Contra Celsum", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/topic/Contra-Celsum", overeno: 2026-10-02, poznamka: "Órigenés psal nejspíš roku 248." }
+  - { id: britannica-carnuntum, druh: encyklopedie, nazev: "Carnuntum", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/place/Carnuntum", overeno: 2026-10-02, poznamka: "U dnešní obce Petronell-Carnuntum, 32 km východně od Vídně, na Dunaji; Marcus tu psal druhou knihu Hovorů za tažení proti Markomanům (172–174)." }
+  - { id: gross-1998, druh: monografie, nazev: "Antecedent- and response-focused emotion regulation: divergent consequences for experience, expression, and physiology", autor: "James J. Gross", dilo: "Journal of Personality and Social Psychology 74 (1998), 224–237", url: "https://pubmed.ncbi.nlm.nih.gov/9457784/", overeno: 2026-10-02, poznamka: "120 účastníků, film vyvolávající odpor; přehodnocení i potlačení snížily projevy, přehodnocení snížilo i prožívaný odpor, potlačení zvýšilo aktivaci sympatiku. Čten jen souhrn (PubMed); jméno autora nástroj nezobrazil, ověřit." }
 
 citaty:
   - id: obrana-38a
@@ -569,6 +600,451 @@ citaty:
 # Obrázky: soubor v public/, autor a licence se ukazují v Pramenech stránky.
 # Kdo obrázek nemá, má na desce minci s atributem (docs/design.md, oddíl Obrázky).
 # Commons nástrojům nevydá soubor: licenci ověřuje a soubor stahuje autor (docs/podklady/celek-1-pravda.md).
+
+  # Celek 3 „Co mám ve svých rukou?“ (docs/podklady/celek-3-co-mam-v-rukou.md). Vlastní převody z řeckého a latinského textu.
+  # προαίρεσις převádím jako „vůle“, φαντασία jako „dojem“, τὰ ἐφʼ ἡμῖν jako „co je v naší moci“.
+  - id: origenes-vii-53
+    osoba: epiktetos
+    autor: Órigenés
+    dilo: Proti Kelsovi
+    misto: VII, 53
+    cesky: "Neříkal jsem, že ji zlomíš?"
+    original: "οὐκ ἔλεγον … ὅτι κατάσσεις;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (P. Koetschau); tradovaný výrok, který Epiktétovi připisuje Kelsos; řecky přítomný čas („lámeš ji“)"
+    zdroj: origenes-kelsos
+  - id: rukojet-1
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "1"
+    cesky: "Některé věci jsou v naší moci a jiné ne. V naší moci je úsudek, podnět k činu, touha a odpor: jedním slovem všechno, co je naše dílo. V naší moci není tělo, majetek, pověst a úřady: jedním slovem všechno, co naše dílo není."
+    original: "τῶν ὄντων τὰ μέν ἐστιν ἐφʼ ἡμῖν, τὰ δὲ οὐκ ἐφʼ ἡμῖν. ἐφʼ ἡμῖν μὲν ὑπόληψις, ὁρμή, ὄρεξις, ἔκκλισις καὶ ἑνὶ λόγῳ ὅσα ἡμέτερα ἔργα· οὐκ ἐφʼ ἡμῖν δὲ τὸ σῶμα, ἡ κτῆσις, δόξαι, ἀρχαὶ καὶ ἑνὶ λόγῳ ὅσα οὐχ ἡμέτερα ἔργα."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-1-5
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "1"
+    cesky: "Jsi dojem, a vůbec ne to, čím se zdáš být."
+    original: "φαντασία εἶ καὶ οὐ πάντως τὸ φαινόμενον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa („You are an appearance, and in no manner what you appear to be“)"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-5
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "5"
+    cesky: "Lidi neznepokojují věci, ale jejich soudy o věcech."
+    original: "ταράσσει τοὺς ἀνθρώπους οὐ τὰ πράγματα, ἀλλὰ τὰ περὶ τῶν πραγμάτων δόγματα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-9
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "9"
+    cesky: "Nemoc je překážkou těla, ne vůle, pokud to vůle sama nechce. Kulhání je překážkou nohy, ne vůle."
+    original: "νόσος σώματός ἐστιν ἐμπόδιον, προαιρέσεως δὲ οὔ, ἐὰν μὴ αὐτὴ θέλῃ. χώλανσις σκέλους ἐστὶν ἐμπόδιον, προαιρέσεως δὲ οὔ."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-14
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "14"
+    cesky: "Kdo chce být svobodný, ať nechce nic a ničemu se nevyhýbá z toho, co je v moci druhých. Jinak z něj nutně bude otrok."
+    original: "ὅστις οὖν ἐλεύθερος εἶναι βούλεται, μήτε θελέτω τι μήτε φευγέτω τι τῶν ἐπʼ ἄλλοις· εἰ δὲ μή, δουλεύειν ἀνάγκη."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-17
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "17"
+    cesky: "Pamatuj, že jsi herec ve hře, jakou chce ten, kdo ji uvádí. Tvým úkolem je dobře zahrát roli, kterou jsi dostal. Vybrat ji náleží jinému."
+    original: "μέμνησο, ὅτι ὑποκριτὴς εἶ δράματος, οἵου ἂν θέλῃ ὁ διδάσκαλος … σὸν γὰρ τοῦτʼ ἔστι, τὸ δοθὲν ὑποκρίνασθαι πρόσωπον καλῶς· ἐκλέξασθαι δʼ αὐτὸ ἄλλου."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; zkráceno (vynechán výčet rolí)"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-20
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "20"
+    cesky: "Neuráží tě ten, kdo ti nadává nebo tě bije, ale tvůj soud, že tě tím uráží."
+    original: "οὐχ ὁ λοιδορῶν ἢ ὁ τύπτων ὑβρίζει, ἀλλὰ τὸ δόγμα τὸ περὶ τούτων ὡς ὑβριζόντων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rukojet
+  - id: rukojet-43
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rukojeť
+    misto: "43"
+    cesky: "Každá věc má dvě ucha: za jedno se unést dá, za druhé ne."
+    original: "πᾶν πρᾶγμα δύο ἔχει λαβάς, τὴν μὲν φορητήν, τὴν δὲ ἀφόρητον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rukojet
+  - id: rozpravy-i-1-23
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 1, 23
+    cesky: "Nohu mi spoutáš. Mou vůli nepřemůže ani Zeus."
+    original: "τὸ σκέλος μου δήσεις, τὴν προαίρεσιν δὲ οὐδʼ ὁ Ζεὺς νικῆσαι δύναται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rozpravy
+  # Slova senátora Helvidia Priska císaři Vespasianovi, jak je vypráví Epiktétos; věta před citátem to musí říct.
+  - id: rozpravy-i-2-21
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 2, 21
+    cesky: "Ty udělej své a já udělám své. Tvoje je zabít, moje zemřít a netřást se."
+    original: "καὶ σὺ τὸ σὸν ποιήσεις κἀγὼ τὸ ἐμόν. σόν ἐστιν ἀποκτεῖναι, ἐμὸν ἀποθανεῖν μὴ τρέμοντα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; slova Helvidia Priska v Epiktétově vyprávění"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-i-16-20
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 16, 20
+    cesky: "Co jiného mohu já, chromý stařec, než zpívat chválu bohu?"
+    original: "τί γὰρ ἄλλο δύναμαι γέρων χωλὸς εἰ μὴ ὑμνεῖν τὸν θεόν;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-i-18-15
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 18, 15–16
+    cesky: "Zítra najdeš hliněnou. Člověk totiž ztrácí jen to, co má."
+    original: "αὔριον, φημί, ὀστράκινον εὑρήσεις. ἐκεῖνα γὰρ ἀπολλύει, ἃ ἔχει."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa („To-morrow, I said, you will find an earthen lamp“)"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-ii-5-1
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: II, 5, 1
+    cesky: "Věci jsou lhostejné. To, jak s nimi zacházíme, lhostejné není."
+    original: "αἱ ὗλαι ἀδιάφοροι, ἡ δὲ χρῆσις αὐτῶν οὐκ ἀδιάφορος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl); SEP: „The materials of action are indifferent, but the use we make of them is not indifferent“"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-iii-2-4
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 2, 4
+    cesky: "Nemám být bez citu jako socha."
+    original: "οὐ δεῖ γάρ με εἶναι ἀπαθῆ ὡς ἀνδριάντα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl); SEP: „unfeeling like a statue“"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-iii-3-16
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 3, 16
+    cesky: "Kdybychom to dělali a cvičili se v tom každý den od rána do noci, něco by z toho bylo."
+    original: "καὶ τοῦτο εἰ ἐποιοῦμεν καὶ πρὸς τοῦτο ἠσκούμεθα καθʼ ἡμέραν ἐξ ὄρθρου μέχρι νυκτός, ἐγίνετο ἄν τι, νὴ τοὺς θεούς"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; vynecháno „při bozích“"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-iii-23-30
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 23, 30
+    cesky: "Filozofova škola je ordinace. Nemáte z ní odcházet potěšeni, ale s bolestí."
+    original: "ἰατρεῖόν ἐστιν, ἄνδρες, τὸ τοῦ φιλοσόφου σχολεῖον· οὐ δεῖ ἡσθέντας ἐξελθεῖν, ἀλλʼ ἀλγήσαντας"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-iv-1-1
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: IV, 1, 1
+    cesky: "Svobodný je ten, kdo žije, jak chce: koho nelze donutit, zastavit ani zlomit násilím."
+    original: "ἐλεύθερός ἐστιν ὁ ζῶν ὡς βούλεται, ὃν οὔτʼ ἀναγκάσαι ἔστιν οὔτε κωλῦσαι οὔτε βιάσασθαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa"
+    zdroj: epiktetos-rozpravy
+  - id: hovory-i-7
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: I, 7
+    cesky: "Od Rustika: že jsem se dostal k Epiktétovým zápiskům, o které se se mnou podělil ze své knihovny."
+    original: "Παρὰ Ῥουστίκου … τὸ ἐντυχεῖν τοῖς Ἐπικτητείοις ὑπομνήμασιν, ὧν οἴκοθεν μετέδωκεν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); zkráceno, řecky „z domu“"
+    zdroj: marcus-hovory
+  - id: hovory-ii-1
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: II, 1
+    cesky: "Hned ráno si řekni: potkám člověka všetečného, nevděčného, zpupného, lstivého, závistivého, sobeckého."
+    original: "Ἕωθεν προλέγειν ἑαυτῷ· συντεύξομαι περιέργῳ, ἀχαρίστῳ, ὑβριστῇ, δολερῷ, βασκάνῳ, ἀκοινωνήτῳ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-iv-3
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: IV, 3
+    cesky: "Svět je změna, život je to, co si o něm myslíme."
+    original: "ὁ κόσμος ἀλλοίωσις, ὁ βίος ὑπόληψις"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); doslova „život je mínění“"
+    zdroj: marcus-hovory
+  - id: hovory-iv-41
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: IV, 41
+    cesky: "Jsi dušička, která nosí mrtvolu, jak říkával Epiktétos."
+    original: "Ψυχάριον εἶ βαστάζον νεκρόν, ὡς Ἐπίκτητος ἔλεγεν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-v-1
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: V, 1
+    cesky: "Když se ti za svítání nechce vstávat, měj po ruce: vstávám k práci člověka."
+    original: "Ὄρθρου, ὅταν δυσόκνως ἐξεγείρῃ, πρόχειρον ἔστω ὅτι ἐπὶ ἀνθρώπου ἔργον ἐγείρομαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-vi-6
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VI, 6
+    cesky: "Nejlepší obrana je nestat se stejným."
+    original: "Ἄριστος τρόπος τοῦ ἀμύνεσθαι τὸ μὴ ἐξομοιοῦσθαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-vi-30
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VI, 30
+    cesky: "Dej pozor, ať nezcísařštíš, ať tou barvou nenasákneš. To se totiž stává."
+    original: "Ὅρα μὴ ἀποκαισαρωθῇς, μὴ βαφῇς· γίνεται γάρ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-vi-44
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VI, 44
+    cesky: "Jako Antoninus mám za obec a vlast Řím, jako člověk svět."
+    original: "Πόλις καὶ πατρὶς ὡς μὲν Ἀντωνίνῳ μοι ἡ Ῥώμη, ὡς δὲ ἀνθρώπῳ ὁ κόσμος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-vii-7
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VII, 7
+    cesky: "Nestyď se, když ti pomáhají. Máš splnit svůj úkol jako voják, který dobývá hradbu. Co když kulháš a sám na cimbuří nevylezeš, ale s druhým to jde?"
+    original: "Μὴ αἰσχύνου βοηθούμενος· πρόκειται γάρ σοι ἐνεργεῖν τὸ ἐπιβάλλον ὡς στρατιώτῃ ἐν τειχομαχίᾳ. τί οὖν, ἐὰν σὺ μὲν χωλαίνων ἐπὶ τὴν ἔπαλξιν ἀναβῆναι μόνος μὴ δύνῃ, σὺν ἄλλῳ δὲ δυνατὸν ᾖ τοῦτο;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-viii-47
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VIII, 47
+    cesky: "Trápí-li tě něco vnějšího, netrápí tě ta věc, ale tvůj soud o ní. A ten můžeš smazat hned."
+    original: "Εἰ μὲν διά τι τῶν ἐκτὸς λυπῇ, οὐκ ἐκεῖνό σοι ἐνοχλεῖ, ἀλλὰ τὸ σὸν περὶ αὐτοῦ κρῖμα, τοῦτο δὲ ἤδη ἐξαλεῖψαι ἐπὶ σοί ἐστιν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-viii-48
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VIII, 48
+    cesky: "Mysl, kterou neovládají vášně, je hrad. Člověk nemá nic pevnějšího, kam by se uchýlil."
+    original: "ἀκρόπολίς ἐστιν ἡ ἐλευθέρα παθῶν διάνοια· οὐδὲν γὰρ ὀχυρώτερον ἔχει ἄνθρωπος, ἐφʼ ὃ καταφυγὼν ἀνάλωτος λοιπὸν ἂν εἴη"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); zkráceno o „a byl by pak nedobytný“"
+    zdroj: marcus-hovory
+  - id: hovory-viii-59
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: VIII, 59
+    cesky: "Lidé jsou tu jeden pro druhého. Tak je pouč, nebo je snášej."
+    original: "Οἱ ἄνθρωποι γεγόνασιν ἀλλήλων ἕνεκεν· ἢ δίδασκε οὖν ἢ φέρε"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-ix-5
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: IX, 5
+    cesky: "Křivdí často i ten, kdo něco nedělá, nejen ten, kdo něco dělá."
+    original: "Ἀδικεῖ πολλάκις ὁ μὴ ποιῶν τι, οὐ μόνον ὁ ποιῶν τι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-ix-30
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: IX, 30
+    cesky: "Dívej se shora: nespočetná stáda, nespočetné obřady, lodě v bouři i za bezvětří."
+    original: "Ἄνωθεν ἐπιθεωρεῖν ἀγέλας μυρίας καὶ τελετὰς μυρίας καὶ πλοῦν παντοῖον ἐν χειμῶσι καὶ γαλήναις"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); zkráceno"
+    zdroj: marcus-hovory
+  - id: hovory-x-16
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: X, 16
+    cesky: "Už vůbec nerozprávěj o tom, jaký má být dobrý člověk. Buď takový."
+    original: "Μηκέθʼ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold)"
+    zdroj: marcus-hovory
+  - id: etika-1099a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: I, 8, 1099a31–33
+    cesky: "Blaženost zjevně potřebuje i vnější dobra. Je totiž nemožné, nebo aspoň ne snadné, konat krásné činy bez prostředků."
+    original: "φαίνεται δʼ ὅμως καὶ τῶν ἐκτὸς ἀγαθῶν προσδεομένη … ἀδύνατον γὰρ ἢ οὐ ῥᾴδιον τὰ καλὰ πράττειν ἀχορήγητον ὄντα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika-stesti
+  - id: etika-1100b
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: I, 10, 1100b30–33
+    cesky: "I v neštěstí prosvítá krása, když člověk nese mnohé a velké rány klidně: ne proto, že nic necítí, ale protože je ušlechtilý a velkodušný."
+    original: "ὅμως δὲ καὶ ἐν τούτοις διαλάμπει τὸ καλόν, ἐπειδὰν φέρῃ τις εὐκόλως πολλὰς καὶ μεγάλας ἀτυχίας, μὴ διʼ ἀναλγησίαν, ἀλλὰ γεννάδας ὢν καὶ μεγαλόψυχος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika-stesti
+  - id: etika-1153b
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: VII, 13, 1153b19–21
+    cesky: "Kdo tvrdí, že člověk lámaný kolem a stižený velkým neštěstím je šťastný, jen když je dobrý, mluví naprázdno, ať chce, nebo nechce."
+    original: "οἱ δὲ τὸν τροχιζόμενον καὶ τὸν δυστυχίαις μεγάλαις περιπίπτοντα εὐδαίμονα φάσκοντες εἶναι, ἐὰν ᾖ ἀγαθός, ἢ ἑκόντες ἢ ἄκοντες οὐδὲν λέγουσιν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika-stesti
+  - id: etika-1126a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: IV, 5, 1126a7–8
+    cesky: "Snášet urážky a přehlížet, když urážejí naše blízké, je otrocké."
+    original: "τὸ δὲ προπηλακιζόμενον ἀνέχεσθαι καὶ τοὺς οἰκείους περιορᾶν ἀνδραποδῶδες"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika-stesti
+  - id: etika-1114a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: III, 5, 1114a17–19
+    cesky: "Kdo hodil kámen, už ho zpátky nevezme. A přece bylo na něm, jestli ho hodí: počátek byl v něm."
+    original: "ὥσπερ οὐδʼ ἀφέντι λίθον ἔτʼ αὐτὸν δυνατὸν ἀναλαβεῖν· ἀλλʼ ὅμως ἐπʼ αὐτῷ τὸ βαλεῖν καὶ ῥῖψαι· ἡ γὰρ ἀρχὴ ἐν αὐτῷ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-etika-iii
+  - id: menoikeus-134
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 134 (Diogenés Laertios X, 134)
+    cesky: "Bylo by lepší věřit bájím o bozích než otročit osudu přírodních filozofů."
+    original: "κρεῖττον ἦν τῷ περὶ θεῶν μύθῳ κατακολουθεῖν ἢ τῇ τῶν φυσικῶν εἱμαρμένῃ δουλεύειν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse (Diogenés Laertios X, 134)"
+    zdroj: dl-x-122
+  - id: de-fato-43
+    osoba: chrysippos
+    autor: Cicero
+    dilo: O osudu
+    misto: "43"
+    cesky: "Kdo strčil do válce, dal mu počátek pohybu, ale schopnost valit se mu nedal."
+    original: "qui protrusit cylindrum, dedit ei principium motionis, volubilitatem autem non dedit"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (C. F. W. Müller); Cicero větu uvádí jako Chrýsippova slova"
+    zdroj: cicero-de-fato-perseus
+
 obrazky:
   - id: sokrates-louvre
     soubor: obrazky/sokrates-louvre.jpg
