@@ -84,6 +84,8 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 | `popisek` | Instrument Sans 400 | 13 | 12 | 1,5 |
 | `nadtitulek` | Instrument Sans 600, verzálky | 12 | 11 | +0,14 až 0,16 em |
 
+**Jednopísmenné předložky a spojky** (k, s, v, z, o, u, a, i) nezůstávají na konci řádku. Nezlomitelnou mezeru za ně doplní sestavení, do textů se ručně nepíše: v MDX plugin `sazbaMdast` (zapojený v `astro.config.mjs`), v textech bloků a hlasů funkce `radek` a `odstavce`, u textů z dat a z atributů komponent `nezlomitelne()` v komponentě (citát, karta cesty, popisek Příběhu, otázka v Odkryj a v Mém stanovisku). Vše je v `src/lib/sazba.js`. Nová komponenta, která vypisuje delší text z dat, si `nezlomitelne()` zavolá sama.
+
 ## Mezery, mřížka, tvary
 
 - Mezery (základ 4 px): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96.

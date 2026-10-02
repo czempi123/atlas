@@ -54,7 +54,7 @@
 <section class="blok prvni-nazor" id="prvni-nazor" aria-labelledby={`${slug}-prvni-otazka`}>
   <p class="t-nadtitulek blok__nadtitulek">Tvůj první názor</p>
   <h2 class="t-h3 blok__otazka" id={`${slug}-prvni-otazka`}>Co si o tom myslíš ty?</h2>
-  <label class="blok__popis" for={`${slug}-prvni-pole`}>Odpověz dřív, než uvidíš filozofy. Na konci se k odpovědi vrátíš.</label>
+  <label class="blok__popis" for={`${slug}-prvni-pole`}>Odpověz dřív, než uvidíš filozofy. Na konci se k&nbsp;odpovědi vrátíš.</label>
   <textarea
     class="blok__pole"
     id={`${slug}-prvni-pole`}

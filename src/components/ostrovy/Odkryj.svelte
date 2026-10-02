@@ -8,6 +8,7 @@
   import { najdiZapis, ulozZapis, stavBloku, ulozStavBloku } from '../../lib/denik';
   import { platnyStavOdkryj, radek } from '../../lib/bloky';
   import { odkryti } from '../../lib/pohyb';
+  import { nezlomitelne } from '../../lib/sazba.js';
   import BlokHlava from './BlokHlava.svelte';
   import BlokDal from './BlokDal.svelte';
   import type { ClovekBloku, Dal } from './bloky-typy';
@@ -85,7 +86,7 @@
 
 <section class={['blok', 'odkryj', obdobi && `obdobi-${obdobi}`]} id={id} aria-labelledby={`${id}-otazka`}>
   <BlokHlava {nadtitulek} lide={filozof ? [filozof] : []} />
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{otazka}</h3>
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{nezlomitelne(otazka)}</h3>
   <label class="vizualne-skryte" for={`${id}-pole`}>Tvoje odpověď</label>
   <textarea
     class="blok__pole"

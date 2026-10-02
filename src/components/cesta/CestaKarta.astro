@@ -4,6 +4,7 @@ import { getEntry, getCollection } from 'astro:content';
 import Mince from '../ui/Mince.astro';
 import Ikona from '../ui/Ikona.astro';
 import { osoba } from '../../lib/data';
+import { nezlomitelne } from '../../lib/sazba.js';
 
 interface Props { slug: string; nadtitulek?: string }
 const { slug, nadtitulek } = Astro.props;
@@ -17,7 +18,7 @@ const lide = c.data.filozofove.map(osoba);
   <span class="cesta-karta__text">
     <span class="t-nadtitulek cesta-karta__nad">{nadtitulek ?? `Cesta ${c.data.cislo}`} · {pocet} kroků{c.data.minut && ` · asi ${c.data.minut} minut`}</span>
     <span class="t-h3 cesta-karta__nazev">{c.data.nazev}</span>
-    <span class="cesta-karta__vstup">{c.data.vstup}</span>
+    <span class="cesta-karta__vstup">{nezlomitelne(c.data.vstup)}</span>
     <span class="cesta-karta__akce">Vydat se na cestu <Ikona id="dal" velikost={20} /></span>
   </span>
 </a>

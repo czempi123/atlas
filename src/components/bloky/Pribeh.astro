@@ -9,6 +9,7 @@
 // </Pribeh>
 // Obraz na výšku (kresba, rytina): pomer="4 / 5"; střed výřezu má obrázek v zdroje.yaml (`vyrez`).
 import Deska from '../ui/Deska.astro';
+import { nezlomitelne } from '../../lib/sazba.js';
 import { osoba as najdiOsobu } from '../../lib/data';
 import { radek } from '../../lib/bloky';
 
@@ -39,7 +40,7 @@ const naVysku = pw < ph;
 <section class:list={['pribeh', `obdobi-${obdobi}`, { 'pribeh--na-vysku': naVysku }]} id={id}>
   <div class="pribeh__mrizka">
     <div class="pribeh__deska">
-      <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} obrazOsoby={false} pomer={pomer}>{popisek}</Deska>
+      <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} obrazOsoby={false} pomer={pomer}>{nezlomitelne(popisek)}</Deska>
     </div>
     <div class="pribeh__text">
       {nadtitulek && <p class="t-nadtitulek pribeh__nadtitulek">{nadtitulek}</p>}

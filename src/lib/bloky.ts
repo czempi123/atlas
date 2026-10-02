@@ -4,6 +4,7 @@
 import type { TBlokVolba, TBlokZmena, TBlokRoztrid } from './bloky-schema';
 import { let_, vekVRoce, vzdalenost, zivotOsoby, naAstro, zAstro, type OsobaMapy, type Vzdalenost } from './cas-mapy';
 import { rok as rokText } from './casy';
+import { nezlomitelne } from './sazba.js';
 
 const NBSP = ' ';
 const PISMENA = ['A', 'B', 'C', 'D'] as const;
@@ -14,9 +15,9 @@ function escapuj(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-/** Jeden řádek textu do HTML: escapuje a *kurzívu* převede na <em>. */
+/** Jeden řádek textu do HTML: escapuje, *kurzívu* převede na <em> a jednopísmenné předložky přiváže k dalšímu slovu. */
 export function radek(text: string): string {
-  return escapuj(text.trim()).replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+  return escapuj(nezlomitelne(text.trim())).replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
 }
 
 /** Text s odstavci (prázdný řádek) do seznamu HTML odstavců bez obalu <p>. */

@@ -9,6 +9,7 @@ import Prameny from '../../components/osobnost/Prameny.astro';
 import VstupyOsoby from '../../components/osobnost/VstupyOsoby.astro';
 import { osoba as najdiOsobu, obdobiPodleId, mistaPodleId, data } from '../../lib/data';
 import { zivot } from '../../lib/casy';
+import { nezlomitelne } from '../../lib/sazba.js';
 
 export async function getStaticPaths() {
   const vse = await getCollection('osobnosti');
@@ -58,7 +59,7 @@ const dev = import.meta.env.DEV;
     <header class="osobnost__hlavicka">
       <div class="osobnost__titulek">
         <p class="t-nadtitulek nadtitulek">{fm.nadtitulek}</p>
-        <h1 class="t-display-2">{fm.titulek}.<br /><em>{fm.pointa}</em></h1>
+        <h1 class="t-display-2">{fm.titulek}.<br /><em>{nezlomitelne(fm.pointa)}</em></h1>
         <p class="data t-ovladani">
           <span class="t-letopocet">{zivot(osoba)}</span>
           {misto && <> · {misto}</>}
@@ -72,7 +73,7 @@ const dev = import.meta.env.DEV;
             <span class:list={['proc', { 'proc--mince': osoba.obrazek }]}>
               {/* S fotografií na desce chybí mince; atribut proto zůstane u popisku. */}
               {osoba.obrazek && <Mince osoba={osoba} varianta="ring" velikost={40} />}
-              <span><strong>Proč {osoba.atribut.nazev}?</strong> {osoba.atribut.proc}</span>
+              <span><strong>Proč {osoba.atribut.nazev}?</strong> {nezlomitelne(osoba.atribut.proc)}</span>
             </span>
           )}
         </Deska>

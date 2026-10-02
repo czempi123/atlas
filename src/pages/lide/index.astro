@@ -6,6 +6,7 @@ import Mince from '../../components/ui/Mince.astro';
 import { data } from '../../lib/data';
 import { zivot, interval, rozpeti } from '../../lib/casy';
 import { cestyOsoby } from '../../lib/vstupy';
+import { nezlomitelne } from '../../lib/sazba.js';
 
 const smery = (await getCollection('smery')).sort((a, b) => a.data.poradi - b.data.poradi);
 const osobnosti = new Map((await getCollection('osobnosti')).map((o) => [o.data.osoba, o.id]));
@@ -60,8 +61,8 @@ const HLOUBKY = [
                           <span class="karta__text">
                             <span class="karta__jmeno">{l.jmeno}</span>
                             <span class="t-popisek karta__roky">{zivot(l)}{l.smery.length > 0 && <> · {l.smery.map((s) => nazevSmeru.get(s)).join(', ')}</>}</span>
-                            <span class="karta__kdo">{l.kdo}</span>
-                            {h.id === 'portret' && l.atribut && <span class="t-popisek karta__proc">Proč {l.atribut.nazev}? {l.atribut.proc}</span>}
+                            <span class="karta__kdo">{nezlomitelne(l.kdo)}</span>
+                            {h.id === 'portret' && l.atribut && <span class="t-popisek karta__proc">Proč {l.atribut.nazev}? {nezlomitelne(l.atribut.proc)}</span>}
                             {stranka && cestyOsoby(l.id, cesty).map((c) => <span class="karta__cesta">Cesta {c.cislo}: {c.nazev}</span>)}
                           </span>
                         </Tag>
