@@ -2,6 +2,22 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Cesta 6 a stránka velké otázky 1 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Krok 2 cesty 6 je nový blok **Roztřiď**: karty se do košů přetahují, pokládají tlačítkem Dát sem nebo klávesnicí, student smí přidat vlastní. Blok je součást knihovny (sedmý), obsah má v YAML | Autor nad osnovou: postavit třídění rovnou s přetahováním, komponenta se použije i jinde |
+| Žádný koš není „správně“. Zpětná vazba patří ke kartě, ptá se dál a jen někde se liší podle koše (`kdyz`); srovnání „Jak třídil Epikúros“ říká jeho zkoušku, ne řešení | Zpětná vazba hodnotí důvody, nic se neboduje |
+| Strana Sporu smí mít `oznaceni` místo jména osoby. Ve Sporu cesty 6 stojí „kynici“ s Diogenovou mincí a scéna říká, že se Epikúros s Diogenem nejspíš nepotkal | Autor souhlasil; Spor je Epikúros × kynici, ne smyšlené setkání |
+| Citát `menoikeus-130` (soběstačnost) stojí v kroku 3 u stropu slasti, ne v kroku 4 | Autor souhlasil; před Sporem by jinak stálo pět citátů za sebou a blok Spor citáty neumí |
+| V kroku cesty stojí text před blokem, i když jde o výklad filozofa (krok 3: strop slasti, pak volba bundy) | Po dokončení nabídne blok další krok; text pod blokem by student přeskočil |
+| Graf ke studii je vlastní kresba směru (`GrafKrivek`): dvě křivky, jediné číslo 100 000 dolarů, osy bez hodnot. Druhá křivka je inkoustem a čárkovaně, svislá značka je plná tenká čára | Čísla jen z podkladů a graf ze studie se nekopíruje; dvě čárkované čáry vedle sebe by se pletly |
+| Výhrady ke studii (zaměstnaní Američané, souvislost není příčina, měří se okamžitá nálada) jsou jen ve zpětné vazbě Volby v kroku 6 | Studie se vypráví přímo jako doložená událost; pochybnost je tu obsah úkolu |
+| Karta cesty 6 stojí v profilu Epikúra na konci kapitoly 03 „Pověst“ | Kapitola končí Senekou a cesta Senekou začíná; za kapitolou 02 by student četl touhy a strop dvakrát po sobě |
+| Přehled cesty bere odkaz do Mapy a času z frontmatteru cesty (`mapa`) | Dřív vedl u každé cesty do Athén roku 399 k Sókratovi |
+| Stránku otázky 1 otevírá Diogenés, protože hlasy jdou podle narození | Diogenés je starší než Aristotelés; jeho „Ptáš se špatně“ na začátku neškodí |
+| Hlas Epikúra na stránce otázky 7 nemá citát | V datech je jen ověřená věta (DL X, 31–32), žádný citát k měřítku pravdy |
+
 ## 2. 10. 2026: Plány větví a GitHub
 
 | Rozhodnutí | Důvod |

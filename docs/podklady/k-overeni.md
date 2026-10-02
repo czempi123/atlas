@@ -170,3 +170,19 @@ Walters Art Museum (Gérôme, Diogenés, CC0) soubor nástrojům nevydá, stejn�
 Vědomě vynecháno v profilech: Hermippova verze Epikúrových začátků, cena Zahrady, jména (Perdikkás, Metrodóros, Leontion, Themista, Mys, Hikesios, Xeniadés, adresát Dopisu Menoikeovi), konkrétní pomluvy, věk při smrti, citát `vs-52`; u Diogena verze smrti a týž den jako Alexandr, tělesné potřeby na veřejnosti, odpověď Sinópským (DL VI, 49), otevřená řeč (VI, 69), Héraklés, sochy od Sinópských, „Jsem Diogenés, pes“ (VI, 60).
 
 Cestě 6 a stránce otázky 1 zůstává: nápis na Zahradě a správce, hrnek sýra, Epikúrovy dny skrovného jídla (`seneca-ep-18-9`), Spor s kyniky a jeho citáty, `kd-15`, `vs-68`, `menoikeus-132`, `dl-vi-44`. Cestě 7 celá scéna s Alexandrem, cestě 8 umírající Epikúros.
+
+## Cesta 6 a velká otázka 1 (P8)
+
+2. 10. 2026. Všechna historická tvrzení a citáty v cestě 6, na stránce otázky 1 a v novém hlasu Epikúra na stránce otázky 7 jsou z `celek-2-jak-zit.md`, z `celek-1-pravda.md` (Velká otázka 7) a z dat. Do textu nepřibylo nic neověřeného. Co by se hodilo a v podkladech není:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Hodnoty v grafu ke studii (`kkm-2023`) | Podklady mají jen hranici 100 000 dolarů, „asi pětinu“ a logaritmický růst. Kresba proto ukazuje směr dvou křivek, osy nemají čísla a sklon křivek je schematický. | Kdyby měl graf nést další čísla (50 000, 200 000 na ose) nebo třetí křivku nejšťastnějších, přečíst tab. 1 a obr. 2 studie a hodnoty zapsat do podkladů. |
+| Chyba je až v úsudku, ne ve vjemu | Epikúrova odpověď na stránce otázky 7 by byla ostřejší s větou, že smysly neklamou a mýlí se až to, co si k nim domyslíme (Dopis Hérodotovi, DL X, 50–51; Hlavní myšlenky 23–24). Nečetl jsem. | Ověřit v řeckém textu a v SEP „Epicurus“, oddíl 3; pak případně doplnit odpověď. Teď stojí jen na DL X, 31–32. |
+| Komu Epikúros psal o hrnku sýra | DL X, 11 cituje dopis bez adresáta, který bych měl ověřený. | V kroku 1 jen „V jednom z nich prosí:“. |
+| Aristotelés: „jednat dobře, a to po celý život“ | Zjednodušení věty „činnost duše podle ctnosti v celém životě“ (1098a16–20) pro studenty. | Při portrétu Aristotela (cesta 4) rozhodnout, jak česky podat ctnost (areté). |
+| „Kynici se cvičili, dokud je nepohodlí nepřestalo bolet“ | Výklad vložky DL VI, 70–71 (kdo se vycvičí, tomu je pohrdání slastí nejslastnější); pramen neříká, jak dlouho. | Nechat jako výklad; při revizi případně zjemnit. |
+
+Vědomě vynecháno v P8: přímá řeč správce Zahrady (jeho otázka je v kroku 1 jen nepřímo) a Senekovo „v téhle slasti jsem zestárl“; žaludek jako věřitel (Dopisy 21, 11); Epikúrova chlouba, že se nají za méně než as, a jména Metrodóra a Polyaina; adresát Dopisu Menoikeovi; Kratés a rok jeho smrti; kdo v Zahradě žil a společná pokladna (nese profil); Vatikánský výrok 25, `vs-52` a `etika-1155a`; Suilliovo obvinění a scéna s Neronem (portrét Seneky); jména autorů studie, Gallup, počty odpovědí a hlášení, pojem spolupráce protivníků a to, že u nejšťastnějších roste nálada rychleji; Alexandr (cesta 7).
+
+Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s kamarády, sluchátka, lajky, člověk, kterému se dá svěřit, seriál), bunda v kroku 3, výzva „měsíc na minimum“ a její tři podmínky v kroku 5, úvodní případ stránky otázky 1 (sklad, nebo tábor). Domyšlené odpovědi ve Sporu jsou podané jako výklad („by kynik mohl namítnout“, „by Epikúros mohl odpovědět“), stejně jako věta, že válet se v horkém písku by pro Epikúra byla zbytečná bolest.

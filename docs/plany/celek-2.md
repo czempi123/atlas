@@ -6,8 +6,8 @@ Celek 2: velká otázka 1, cesta 6 „Kolik je dost?“, profil Epikúra a profi
 | --- | --- | --- |
 | P6 | Podklady | hotovo a schváleno 2. 10. 2026 |
 | P7 | Profily Epikúra a Diogena | hotovo a schváleno 2. 10. 2026 |
-| P8 | Cesta 6 „Kolik je dost?“ a stránka velké otázky 1 | **další krok**, zadání níže |
-| P10 | Revize celku | zadání vznikne po schválení P8 |
+| P8 | Cesta 6 „Kolik je dost?“ a stránka velké otázky 1 | hotovo 2. 10. 2026, čeká na schválení autora |
+| P10 | Revize celku | **další krok** po schválení P8; zadání vznikne po něm |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
@@ -88,7 +88,9 @@ Po P7 následuje P8 (cesta 6 „Kolik je dost?“ se Sporem Epikúros × kynici 
 
 ## P8: Cesta 6 „Kolik je dost?“ a stránka velké otázky 1
 
-**Stav 2. 10. 2026:** další krok. P7 je schválený, podklady k cestě 6 (scéna v Zahradě, Spor Epikúros × kynici, oba nové případy) a k velké otázce 1 jsou v `docs/podklady/celek-2-jak-zit.md`. Pracuje se dál ve větvi `celek-2`; po P8 následuje revize celku (P10) a schválení autorem.
+**Stav 2. 10. 2026:** hotovo, čeká na schválení autora. Vzniklo: graf křivek (`GrafKrivek`), nový blok Roztřiď s přetahováním (rozhodnutí autora nad osnovou), označení strany ve Sporu, cesta 6 o sedmi krocích, stránka otázky 1 se čtyřmi hlasy, karta cesty v profilu Epikúra, Kam dál obou profilů a hlas Epikúra na stránce otázky 7. `npm test` prošlo celé (243 testů dat, 130 v prohlížeči). Co zůstalo, je v oddílu „Po P8“ níže.
+
+**Zadání (pro záznam).** P7 je schválený, podklady k cestě 6 (scéna v Zahradě, Spor Epikúros × kynici, oba nové případy) a k velké otázce 1 jsou v `docs/podklady/celek-2-jak-zit.md`. Pracuje se dál ve větvi `celek-2`; po P8 následuje revize celku (P10) a schválení autorem.
 
 Krok se studií potřebuje vlastní graf, proto P8 začíná komponentou (skill `atlas-komponenta`) a teprve potom přijde obsah (skill `atlas-cesta`). Šablona stránky velké otázky je hotová z celku 1.
 
@@ -122,5 +124,14 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 
 Nejdřív mi v pár bodech napiš osnovu cesty 6 (kroky, blok v každém, odhad minut), návrh grafu (co je na osách a jak vypadá na telefonu) a čtyři odpovědi hlasů na úvodní případ, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (graf, cesta, stránka otázky, propojení) a nic neposílej na GitHub. Na konci pošli snímky cesty a stránky otázky a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
+
+## Po P8: co zůstalo na později
+
+- **Blok Roztřiď.** Karta položená v koši se vrací klepnutím a pak se položí znovu; přetáhnout ji rovnou z koše do koše nejde. Při tažení se stránka sama neposouvá; na telefonu leží koše hned pod kartou, takže to nevadí, u bloku s víc koši by to vadit mohlo. Obojí doplnit, až blok dostane druhé použití.
+- **Graf křivek** je kresba směru bez čísel na osách a bez nápovědy po najetí. Kdyby měl ukazovat hodnoty (další dílky osy, třetí křivku nejšťastnějších), musí se čísla nejdřív ověřit v tabulce 1 studie (`k-overeni.md`).
+- **Odkazy, které čekají na stránky:** cesta 7 (Kam dál Diogena, věta o Alexandrovi v kapitole 03) a cesta 8 (Kam dál Epikúra). Stránka otázky 1 ukáže další cesty sama, až vzniknou (cesty 4, 7, 16, 29 a 34 mají otázku 1).
+- **Stránka otázky 1** má čtyři hlasy z období 1 a 2. Další hlasy z architektury (Montaigne, Komenský, Mill, Havel) přibudou se svými celky.
+- **Skilly:** kopie `skills/atlas-cesta` a `skills/atlas-komponenta` jsou doplněné o poučení z P8 (Roztřiď, Spor se směrem, studie a graf, pasti při práci přes Desktop Commander). Verze uložené v účtu Claude je potřeba uložit z návrhu, který přišel s předáním P8.
+- Běžící `npm run dev` po P8 potřebuje restart (změnilo se schéma bloků a cest).
 
 Po P8 následuje P10 (revize celku 2 skillem `atlas-revize`), rozhodnutí autora o návrzích z revize, schválení celku a sloučení větve `celek-2` do hlavní větve. Plné znění P10 připravím po schválení P8.

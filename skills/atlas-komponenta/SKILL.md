@@ -33,7 +33,12 @@ Komponenta je hotová, když ji autor vloží do MDX jedním řádkem, student j
 - Efekt (`$effect`), který zapisuje stav, jenž sám čte, se zacyklí nebo si zruší vlastní práci; čtení zabal do `untrack`.
 - Ostrov s `client:visible` se hydratuje až po posunu k němu; test musí počkat na `astro-island[component-url*="Jmeno"]:not([ssr])`, jinak klikne dřív než skript.
 - Prvek skrytý přes `display: none` v CSS mřížce posune ostatní do jiných sloupců; sloupec nastav explicitně (`grid-column`).
-- Text jen pro čtečky: třída `vizualne-skryte` z `global.css`.
+- Text jen pro čtečky: třída `vizualne-skryte` z `global.css`. Je umístěná absolutně, takže ji čtečka od viditelného textu oddělí mezerou: nezačínej ji interpunkcí („Dát sem“ + „kartu … do koše …“, ne „: …“).
+- Běžící `npm run dev` po změně schématu kolekce (`content.config.ts`, `bloky-schema.ts`) vrací chybu, dokud ho autor nerestartuje. Na náhled si sestav web (`npx astro build`) a pusť `npx astro preview --port 4323 --ignore-lock`.
+- Playwright před každým během smaže `test-results/`: pomocné skripty a pracovní snímky drž jinde (`/tmp`), ne tam.
+- Volání přes Desktop Commander delší než minuta se přeruší, i když proces běží dál. Dlouhé příkazy (`npm test`) pouštěj na pozadí s výstupem do souboru a čti ho po částech.
+- Když je cílem klepnutí celá plocha (tlačítko roztažené přes koš pomocí `::after`), Playwright nahlásí, že prvek pod ním něco překrývá: v testu klepej na tlačítko, nebo s `force`.
+- Tažení prstem: `touch-action: none` dej jen prvku, který se táhne, ať se stránka dá posouvat všude kolem; ke každému tažení patří cesta bez tažení (tlačítko, klávesnice).
 
 ## Když nemáš terminál na autorově počítači
 
