@@ -378,7 +378,7 @@ Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v soubo
 | --- | --- | --- | --- |
 | `restart`, `mapa-v2`, `bloky-v1` | Základ a kostra: P0 až P5 | `docs/plany/zaklad.md` | hotovo a schváleno |
 | `celek-1` | „Jak poznám, co je pravda?“: Sókratés, Prótagorás, cesta 1, otázka 7 | `docs/plany/celek-1.md` | hotovo, sloučeno 1. 10. 2026 |
-| `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026 |
+| `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; odeslání na GitHub čeká na autora |
 | `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5 | `docs/plany/celek-3.md` | další krok je P6 (podklady) |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
