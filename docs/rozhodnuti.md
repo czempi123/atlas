@@ -2,6 +2,20 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Profily Epikúra a Diogena (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kam dál obou profilů vede zatím jen na stránky, které existují: druhý profil, Spor v Sókratově portrétu, Mapa a čas a řádek otázky 1 v přehledu otázek. Věta o Alexandrovi je bez odkazu. Cesta 6 a stránka otázky 1 se připojí v P8, cesty 7 a 8, až vzniknou | Autor: odkážeme, až to bude; test odkazů neexistující cíl nepustí |
+| Epikúros a Diogenés mají v datech `hloubka: profil`, dokud nevznikne portrét | Autor; stránka Lidé je řadila mezi portréty, ale stránky jsou profily |
+| Oba profily mají tři krátké kapitoly místo jedné až dvou | Autor: v pochybnostech raději rozsáhlejší |
+| Vlastní pokus s touhami v profilu Epikúra zkouší jedno studentovo přání (bolelo by, kdyby se nesplnilo?); třídění věcí do tří košů zůstává cestě 6 | Aby se pokus v celku neopakoval (poučení z revize celku 1) |
+| Velký citát Diogena je „Jsem občan světa“: odpovídá na vyhnanství z úvodu. „Hledám člověka“ zazní v kapitole Lucerna, „Dítě mě porazilo“ v bloku Příběh | Každý citát stojí tam, kde zazněl |
+| Volba „Co uděláš se svým pohárkem?“ stojí před blokem Příběh a nemá oddíl Co udělal: co Diogenés udělal, vypráví hned Příběh s kresbou | Kresba ukazuje odhozený pohárek; za blokem Volba by vyzradila tah předem |
+| Blok Příběh umí desku na výšku (`pomer`), rozvržení se řídí šířkou místa a obrázek může mít vlastní střed výřezu (`vyrez` v `zdroje.yaml`); obrázky z Příběhu jsou v Pramenech | Kresba s pohárkem je na výšku; v čtenářském sloupci profilu by deska vedle textu byla drobná; výchozí výřez pro busty usekl Diogenovi hlavu |
+| Mini mapa v oddílu Doba a lidé se přizpůsobí místům osoby, když se nevejdou do egejského výřezu; popisek bodu s těsným sousedem vpravo stojí vlevo | Na mapě chyběla Diogenova Sinópé i Epikúrův Samos a Kolofón. Změnila se tím i mapa Prótagora (přibyly Thurioi); Sókratova zůstala |
+| V hlavičce osobnosti stojí rodiště, a když ho neznáme, poslední působiště | U Epikúra stála Mytiléna místo Athén |
+
 ## 2. 10. 2026: Podklady k celku 2 schváleny
 
 | Rozhodnutí | Důvod |

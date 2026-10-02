@@ -358,7 +358,7 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
 | P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Hotovo 1. 10. 2026 pro celek „Jak poznám, co je pravda?“ (`docs/podklady/celek-1-pravda.md`); pro celek 2 „Jak mám žít?“ hotovo a schváleno 2. 10. 2026 (`docs/podklady/celek-2-jak-zit.md`); další krok: P7 pro celek 2, plné znění níže |
-| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Hotovo a schváleno 1. 10. 2026: Sókratův portrét a profil Prótagora; skill `atlas-osobnost` |
+| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Hotovo a schváleno 1. 10. 2026: Sókratův portrét a profil Prótagora; skill `atlas-osobnost`. Pro celek 2 hotovo 2. 10. 2026 (profily Epikúra a Diogena), čeká na schválení autora |
 | P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Hotovo a schváleno 1. 10. 2026: cesta 1 s Prótagorem, stránka velké otázky (šablona a otázka 7); skill `atlas-cesta` |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
 | P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Hotovo a schváleno 1. 10. 2026: revize celku 1, celek 1 sloučen do hlavní větve |
@@ -703,7 +703,7 @@ Nejdřív mi v pár bodech napiš, co budeš ověřovat, které příběhy pova�
 
 ### P7: Profily Epikúra a Diogena
 
-**Stav 2. 10. 2026:** další krok.
+**Stav 2. 10. 2026:** hotovo, čeká na schválení autora. Profily `src/content/osobnosti/epikuros.mdx` a `diogenes.mdx` (každý tři kapitoly, Volba, Odkryj, dvě myšlenky, Zkus to žít), u Diogena blok Příběh s kresbou. Při práci přibylo: deska na výšku a vlastní výřez obrázku, rozvržení Příběhu podle šířky místa, mini mapa podle míst osoby. Rozhodnutí v `docs/rozhodnuti.md`, vynechané a neověřené v `k-overeni.md` (oddíl P7). Zadání, se kterým P7 proběhl:
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
 
@@ -728,6 +728,14 @@ Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý profil, jaké
 ```
 
 Po P7 následuje P8 (cesta 6 „Kolik je dost?“ se Sporem Epikúros × kynici a dvěma novými případy, stránka velké otázky 1 se čtyřmi hlasy) a P10 (revize celku skillem `atlas-revize`). Plné znění P8 připravím po schválení P7.
+
+### Po P7 (celek 2): co zůstalo na později
+
+- **Odkazy, které čekají na stránky.** Kam dál obou profilů zatím nevede na cestu 6, 7 ani 8 a otázka 1 míří na řádek v přehledu `/otazky/#jak-zit`. V P8 doplnit do obou profilů cestu 6 a přepojit otázku 1 na `/otazka/jak-zit/`. Až vznikne cesta 7, přidat ji do Kam dál Diogena a k větě o Alexandrovi v kapitole 03; až vznikne cesta 8, do Kam dál Epikúra.
+- **Hloubka v datech.** Epikúros a Diogenés mají `hloubka: profil`; `docs/architektura.md` s nimi počítá jako s portréty. Vrátit na `portret`, až portrét vznikne.
+- **Cesta 6 se nesmí opakovat po profilech:** tři druhy tužeb jsou v profilu Epikúra vyložené (s příklady ze scholia), cesta má třídění do tří košů; strop slasti je v kapitole 02 jednou větou a v Myšlence 1. Dny skrovného jídla, hrnek sýra a nápis na Zahradě profil nepoužil.
+- Oškubaný kohout by unesl vlastní Odkryj „Co je člověk?“, až budou podrobnosti z DL VI, 40 v podkladech (`k-overeni.md`).
+- Popisky na mini mapě počítají s většími písmy na telefonu; na notebooku proto kolem míst zbývá víc místa, než je nutné. Doladit, až bude profilů s místy mimo Egejské moře víc.
 
 ## Plán etap
 

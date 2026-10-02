@@ -154,3 +154,19 @@ Vědomě vynecháno: Diogenovy tělesné potřeby na veřejnosti (DL VI, 46, 69)
 | Římská soška Diogena v Met (inv. 22.139.1) | Neprověřeno (datace, restaurování). | Jen pokud by autor chtěl antické vyobrazení. |
 
 Walters Art Museum (Gérôme, Diogenés, CC0) soubor nástrojům nevydá, stejně jako Wikimedia Commons; Met ano.
+
+## Profily Epikúra a Diogena (P7)
+
+2. 10. 2026. Všechna tvrzení a citáty v profilech jsou z `celek-2-jak-zit.md` a z dat. Co by příběh ještě unesl, ale v podkladech není:
+
+| Bod | Kde by se hodilo | Co udělat |
+| --- | --- | --- |
+| Oškubaný kohout v podrobnostech (Diogenés ho prý přinesl do Platónovy školy; Platón pak k definici doplnil „s plochými nehty“), DL VI, 40 | Diogenés, kapitola 02; scéna by unesla vlastní Odkryj „Co je člověk?“ | V podkladech je jen jádro (definice vyvrácena oškubaným kohoutem). Ověřit řecký text VI, 40 a doplnit do podkladového listu; do té doby jen jedna věta. |
+| Ženy a otroci ve filozofické škole jako výjimka mezi athénskými školami | Epikúros, kapitola 01 | Podklady říkají jen, že v Zahradě byli. Srovnání s Akademií a Lykeiem ověřit v SEP nebo odborné literatuře; do té doby bez srovnání. |
+| Pýthagorejská zásada o společném majetku přátel v původním znění (DL X, 11; VIII, 10) | Epikúros, kapitola 01 a Volba | V textu jen „pýthagorejci dávali majetek dohromady“. Znění zásady ověřit, kdyby měla zaznět jako citát. |
+| Kde Epikúros žil ve čtrnácti (Samos podle DL X, 1, ale scéna s učiteli místo neuvádí) | Epikúros, úvod | Úvod místo scény neuvádí; nic dalšího, pokud autor nechce scénu ukotvit. |
+| Co znamenalo patřit k obci (práva, bohové, hrob) jako pozadí slova „občan světa“ | Diogenés, Myšlenka 2 | V podkladech není; výklad proto stojí jen na vyhnanství a na DL VI, 63. Doplnit při revizi, pokud myšlenka potřebuje kontrast. |
+
+Vědomě vynecháno v profilech: Hermippova verze Epikúrových začátků, cena Zahrady, jména (Perdikkás, Metrodóros, Leontion, Themista, Mys, Hikesios, Xeniadés, adresát Dopisu Menoikeovi), konkrétní pomluvy, věk při smrti, citát `vs-52`; u Diogena verze smrti a týž den jako Alexandr, tělesné potřeby na veřejnosti, odpověď Sinópským (DL VI, 49), otevřená řeč (VI, 69), Héraklés, sochy od Sinópských, „Jsem Diogenés, pes“ (VI, 60).
+
+Cestě 6 a stránce otázky 1 zůstává: nápis na Zahradě a správce, hrnek sýra, Epikúrovy dny skrovného jídla (`seneca-ep-18-9`), Spor s kyniky a jeho citáty, `kd-15`, `vs-68`, `menoikeus-132`, `dl-vi-44`. Cestě 7 celá scéna s Alexandrem, cestě 8 umírající Epikúros.
