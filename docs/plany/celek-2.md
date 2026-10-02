@@ -8,7 +8,7 @@ Celek 2: velká otázka 1, cesta 6 „Kolik je dost?“, profil Epikúra a profi
 | P7 | Profily Epikúra a Diogena | hotovo a schváleno 2. 10. 2026 |
 | P8 | Cesta 6 „Kolik je dost?“ a stránka velké otázky 1 | hotovo a schváleno 2. 10. 2026 (i s úpravami vstupů a rozvržení cesty) |
 | P10 | Revize celku | hotovo 2. 10. 2026; všech devět nálezů schváleno a zapracováno (`docs/revize/celek-2-2026-10-02.md`) |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | autor celek schválil 2. 10. 2026 a větev je sloučená do hlavní. **Na GitHub hlavní větev ještě neodešla:** na Macu není uložené přihlášení ke GitHubu, odeslání (`git push origin main`) čeká na autora. Pokračuje celek 3 (`docs/plany/celek-3.md`) |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 2. 10. 2026: autor celek schválil, větev je sloučená do hlavní a hlavní větev je na GitHubu. Pokračuje celek 3 (`docs/plany/celek-3.md`) |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
 
