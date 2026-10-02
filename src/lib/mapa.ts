@@ -88,22 +88,94 @@ export function stranyPopisku(xy: [number, number][], sirka: number): StranaPopi
 }
 
 // Rozměry popisku v jednotkách výřezu. Počítáme s většími písmy na telefonu (MiniMapa.astro), ať se vejde všude.
-const sirkaPopisku = (m: MistoMiniMapy) => 13 + Math.max(m.nazev.length * 11.5, ...m.radky.map((r) => r.length * 9.2));
+const ZNAK_NAZVU = 11.5;
+const ZNAK_ROLE = 9.2;
+const sirkaPopisku = (m: Pick<MistoMiniMapy, 'nazev' | 'radky'>) => 13 + Math.max(m.nazev.length * ZNAK_NAZVU, ...m.radky.map((r) => r.length * ZNAK_ROLE));
 const VYSKA_NAZVU = 24;
 const VYSKA_RADKU = 22;
+/** Odstup popisku od bodu a řádkování rolí (1,2 em při písmu 18 px), stejné jako v MiniMapa.astro. */
+const ODSTUP_POPISKU = 11;
+const RADKOVANI_ROLI = 21.6;
+
+/** Kde stojí popisek místa: strana od bodu a jestli je celý vysunutý nad bod (role pak končí u bodu). */
+export interface UmisteniPopisku {
+  strana: StranaPopisku;
+  nahoru: boolean;
+}
+
+export type Obdelnik = [x0: number, y0: number, x1: number, y1: number];
+type BodSPopiskem = { xy: [number, number] } & Pick<MistoMiniMapy, 'nazev' | 'radky'>;
+
+// Šířka textu v Instrument Sans: úzké znaky (mezera, tečka, i, l, t…) mají asi poloviční šířku ostatních.
+// Změřeno v prohlížeči pro písmo na telefonu (název 21 px tučně, role 18 px); odhad sedí na ±5 %.
+const UZKE_ZNAKY = new Set(' .,ijlítfr1I');
+const sirkaTextu = (text: string, siroky: number, uzky: number) => [...text].reduce((s, z) => s + (UZKE_ZNAKY.has(z) ? uzky : siroky), 0);
+
+/** Obdélníky jednotlivých řádků popisku (název a role) v jednotkách výřezu, odhad pro písmo na telefonu. */
+export function radkyPopisku(b: BodSPopiskem, u: UmisteniPopisku): Obdelnik[] {
+  const [x, y] = b.xy;
+  const ucari = y - 2 - (u.nahoru ? b.radky.length * RADKOVANI_ROLI : 0);
+  const radek = (s: number, zaklad: number, vyska: number): Obdelnik => {
+    const x0 = u.strana === 'vpravo' ? x + ODSTUP_POPISKU : x - ODSTUP_POPISKU - s;
+    return [x0, zaklad - vyska, x0 + s, zaklad + vyska * 0.3];
+  };
+  return [
+    radek(sirkaTextu(b.nazev, 13.4, 6), ucari, 17),
+    ...b.radky.map((r, k) => radek(sirkaTextu(r, 10.2, 4.6), ucari + (k + 1) * RADKOVANI_ROLI, 14)),
+  ];
+}
+
+const prekryv = (a: Obdelnik, b: Obdelnik, mez = 6) => a[0] < b[2] + mez && b[0] < a[2] + mez && a[1] < b[3] && b[1] < a[3];
+
+/**
+ * Umístění popisků všech míst. Strany určí `stranyPopisku`; když se pak řádky dvou popisků potkají
+ * (Athény se třemi řádky a Kolofón hned vedle), vysune se popisek s méně řádky nad svůj bod.
+ * Vysunutí zůstane, jen když popisek nikomu dalšímu nepřekáží, nezakryje cizí bod a nevyjde z výřezu.
+ */
+export function umisteniPopisku(body: BodSPopiskem[], sirka: number): UmisteniPopisku[] {
+  const u: UmisteniPopisku[] = stranyPopisku(body.map((b) => b.xy), sirka).map((strana) => ({ strana, nahoru: false }));
+  const koliduje = (i: number, j: number) => {
+    const druhe = radkyPopisku(body[j], u[j]);
+    return radkyPopisku(body[i], u[i]).some((a) => druhe.some((b) => prekryv(a, b)));
+  };
+  const volny = (i: number) => {
+    const moje = radkyPopisku(body[i], u[i]);
+    if (moje.some((r) => r[1] < 0)) return false;
+    return body.every((b, j) => {
+      if (j === i) return true;
+      const bod: Obdelnik = [b.xy[0] - 7, b.xy[1] - 7, b.xy[0] + 7, b.xy[1] + 7];
+      return !koliduje(i, j) && !moje.some((r) => prekryv(r, bod, 0));
+    });
+  };
+  for (let i = 0; i < body.length; i++) {
+    for (let j = i + 1; j < body.length; j++) {
+      if (!koliduje(i, j)) continue;
+      const poradi = body[i].radky.length <= body[j].radky.length ? [i, j] : [j, i];
+      for (const k of poradi) {
+        if (u[k].nahoru) continue;
+        u[k].nahoru = true;
+        if (volny(k)) break;
+        u[k].nahoru = false;
+      }
+    }
+  }
+  return u;
+}
 
 /** Obdélník, který zabírají body s popisky (v pixelech výřezu). */
 function obalPopisku(v: Vyrez, mista: MistoMiniMapy[]) {
   const proj = projekce(v, 1e6);
   const xy = mista.map((m) => proj(m.souradnice) as [number, number]);
-  const strany = stranyPopisku(xy, v.sirka);
+  const umisteni = umisteniPopisku(mista.map((m, i) => ({ xy: xy[i], nazev: m.nazev, radky: m.radky })), v.sirka);
   let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
   xy.forEach(([x, y], i) => {
     const s = sirkaPopisku(mista[i]);
-    x0 = Math.min(x0, strany[i] === 'vpravo' ? x - 8 : x - s);
-    x1 = Math.max(x1, strany[i] === 'vpravo' ? x + s : x + 8);
-    y0 = Math.min(y0, y - VYSKA_NAZVU);
-    y1 = Math.max(y1, y + mista[i].radky.length * VYSKA_RADKU + 6);
+    const { strana, nahoru } = umisteni[i];
+    const radku = mista[i].radky.length * VYSKA_RADKU;
+    x0 = Math.min(x0, strana === 'vpravo' ? x - 8 : x - s);
+    x1 = Math.max(x1, strana === 'vpravo' ? x + s : x + 8);
+    y0 = Math.min(y0, y - VYSKA_NAZVU - (nahoru ? radku : 0));
+    y1 = Math.max(y1, y + (nahoru ? 0 : radku) + 6);
   });
   return { x0, y0, x1, y1 };
 }

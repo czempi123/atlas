@@ -1,6 +1,6 @@
 // Mini mapa osoby: výřez podle míst a strana popisků (src/lib/mapa.ts).
 import { describe, expect, it } from 'vitest';
-import { projekce, stranyPopisku, vyrezMiniMapy, VYREZY_OBDOBI_1, type MistoMiniMapy } from '../../src/lib/mapa';
+import { projekce, radkyPopisku, stranyPopisku, umisteniPopisku, vyrezMiniMapy, VYREZY_OBDOBI_1, type MistoMiniMapy } from '../../src/lib/mapa';
 
 const misto = (nazev: string, souradnice: [number, number], radky: string[] = ['působení']): MistoMiniMapy => ({ nazev, souradnice, radky });
 const athenes = misto('Athény', [23.727, 37.984]);
@@ -54,5 +54,51 @@ describe('strana popisku', () => {
 
   it('soused nad nebo pod bodem stranu nemění', () => {
     expect(stranyPopisku([[180, 250], [190, 300]], 520)).toEqual(['vpravo', 'vpravo']);
+  });
+});
+
+describe('umístění popisků', () => {
+  const body = (mista: MistoMiniMapy[]) => {
+    const { v, xy } = naVyrezu(mista);
+    return { v, b: mista.map((m, i) => ({ xy: xy[i], nazev: m.nazev, radky: m.radky })) };
+  };
+  const prekryvy = (b: ReturnType<typeof body>['b'], u: ReturnType<typeof umisteniPopisku>) => {
+    const radky = b.map((x, i) => radkyPopisku(x, u[i]));
+    let n = 0;
+    for (let i = 0; i < radky.length; i++) for (let j = i + 1; j < radky.length; j++) {
+      if (radky[i].some((a) => radky[j].some((c) => a[0] < c[2] && c[0] < a[2] && a[1] < c[3] && c[1] < a[3]))) n++;
+    }
+    return n;
+  };
+
+  it('kde si popisky nepřekážejí, zůstávají u bodu', () => {
+    const { v, b } = body([sinope, athenes, korinth]);
+    expect(umisteniPopisku(b, v.sirka).map((u) => u.nahoru)).toEqual([false, false, false]);
+  });
+
+  it('Epikúros: popisek Kolofónu se vysune nad bod, ať nevjede do řádků Athén', () => {
+    const mista = [
+      misto('Samos', [26.93, 37.69], ['pobyt']),
+      misto('Athény', [23.727, 37.984], ['pobyt 323 př. n. l.', 'působení 306 př. n. l.', 'smrt 270 př. n. l.']),
+      misto('Kolofón', [27.14, 38.1], ['pobyt 321 př. n. l.']),
+      misto('Mytiléna', [26.55, 39.11], ['působení 311 př. n. l.']),
+      misto('Lampsakos', [26.69, 40.35], ['působení']),
+    ];
+    const { v, b } = body(mista);
+    // Bez vysunutí se řádek „pobyt 321“ u Kolofónu potká s řádkem „pobyt 323“ u Athén.
+    expect(prekryvy(b, stranyPopisku(b.map((x) => x.xy), v.sirka).map((strana) => ({ strana, nahoru: false })))).toBeGreaterThan(0);
+    const u = umisteniPopisku(b, v.sirka);
+    expect(u.map((x) => x.nahoru)).toEqual([false, false, true, false, false]);
+    expect(prekryvy(b, u)).toBe(0);
+    // Vysunutý popisek zůstává ve výřezu.
+    expect(Math.min(...radkyPopisku(b[2], u[2]).map((r) => r[1]))).toBeGreaterThan(0);
+  });
+
+  it('vysunutý popisek má poslední řádek rolí u bodu a název nad ním', () => {
+    const bod = { xy: [300, 200] as [number, number], nazev: 'Kolofón', radky: ['pobyt 321 př. n. l.'] };
+    const [nazev, role] = radkyPopisku(bod, { strana: 'vlevo', nahoru: true });
+    expect(role[3]).toBeLessThan(205);
+    expect(nazev[3]).toBeLessThanOrEqual(role[1] + 1);
+    expect(nazev[2]).toBeLessThan(300);
   });
 });

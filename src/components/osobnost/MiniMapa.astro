@@ -3,7 +3,7 @@
 // Výřez: výchozí egejský, dokud se do něj vejdou všechna místa osoby; jinak podle míst (src/lib/mapa.ts, vyrezMiniMapy).
 import type { TOsoba } from '../../lib/schema';
 import { mistaPodleId } from '../../lib/data';
-import { podklad, stranyPopisku, vyrezMiniMapy, type MistoMiniMapy, type Vyrez } from '../../lib/mapa';
+import { podklad, umisteniPopisku, vyrezMiniMapy, type MistoMiniMapy, type Vyrez } from '../../lib/mapa';
 import { rok as fmtRok } from '../../lib/casy';
 
 interface Props { osoba: TOsoba; vyrez?: Vyrez }
@@ -24,7 +24,8 @@ const { osoba, vyrez = vyrezMiniMapy([...mista.values()]) } = Astro.props;
 const p = podklad(vyrez);
 const body = [...mista.values()].map((m) => ({ nazev: m.nazev, xy: p.bod(m.souradnice), popis: m.radky }));
 const vidimne = body.filter((b) => b.xy[0] > 0 && b.xy[0] < vyrez.sirka && b.xy[1] > 0 && b.xy[1] < vyrez.vyska);
-const strany = stranyPopisku(vidimne.map((b) => b.xy), vyrez.sirka);
+// Strana popisku a jeho vysunutí nad bod, když by se řádky dvou míst potkaly (src/lib/mapa.ts).
+const umisteni = umisteniPopisku(vidimne.map((b) => ({ xy: b.xy, nazev: b.nazev, radky: b.popis })), vyrez.sirka);
 ---
 <figure class={`minimapa obdobi-${osoba.obdobi}`}>
   <svg viewBox={`0 0 ${vyrez.sirka} ${vyrez.vyska}`} role="img" aria-label={`Mapa: ${vidimne.map((b) => `${b.nazev} (${b.popis.join(', ')})`).join('; ')}`}>
@@ -34,14 +35,16 @@ const strany = stranyPopisku(vidimne.map((b) => b.xy), vyrez.sirka);
     <path d={p.pevnina} class="svit svit--2" />
     <path d={p.pevnina} class="pevnina" />
     {vidimne.map((b, i) => {
-      const vlevo = strany[i] === 'vlevo';
+      const vlevo = umisteni[i].strana === 'vlevo';
       return (
         <g transform={`translate(${b.xy[0]} ${b.xy[1]})`}>
           <circle r="6" class="bod" />
-          <text x={vlevo ? -11 : 11} y="-2" class="nazev" text-anchor={vlevo ? 'end' : 'start'}>{b.nazev}</text>
-          <text y="-2" class="role" text-anchor={vlevo ? 'end' : 'start'}>
-            {b.popis.map((radek) => <tspan x={vlevo ? -11 : 11} dy="1.2em">{radek}</tspan>)}
-          </text>
+          <g class:list={['popisek', { 'popisek--nahoru': umisteni[i].nahoru }]} style={umisteni[i].nahoru ? `--radku:${b.popis.length}` : undefined}>
+            <text x={vlevo ? -11 : 11} y="-2" class="nazev" text-anchor={vlevo ? 'end' : 'start'}>{b.nazev}</text>
+            <text y="-2" class="role" text-anchor={vlevo ? 'end' : 'start'}>
+              {b.popis.map((radek) => <tspan x={vlevo ? -11 : 11} dy="1.2em">{radek}</tspan>)}
+            </text>
+          </g>
         </g>
       );
     })}
@@ -54,7 +57,7 @@ const strany = stranyPopisku(vidimne.map((b) => b.xy), vyrez.sirka);
 </figure>
 
 <style>
-  .minimapa { margin: 0; }
+  .minimapa { margin: 0; --fs-nazev: 15px; --fs-role: 13px; --fs-meritko: 12px; }
   svg { width: 100%; height: auto; border-radius: var(--r-xs); }
   .more { fill: var(--map-sea); }
   .sit { fill: none; stroke: var(--map-sea-line); stroke-width: 0.6; opacity: 0.7; }
@@ -63,15 +66,15 @@ const strany = stranyPopisku(vidimne.map((b) => b.xy), vyrez.sirka);
   .svit--2 { stroke-width: 7; opacity: var(--map-glow-2); }
   .pevnina { fill: var(--map-land); stroke: var(--map-coast); stroke-width: 0.9; stroke-linejoin: round; }
   .bod { fill: var(--pc); stroke: var(--surface); stroke-width: 2; }
-  .nazev { font-family: var(--font-sans); font-size: 15px; font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--map-land); stroke-width: 4px; stroke-linejoin: round; }
-  .role { font-family: var(--font-sans); font-size: 13px; fill: var(--ink-2); paint-order: stroke; stroke: var(--map-land); stroke-width: 4px; stroke-linejoin: round; }
+  /* Popisek vysunutý nad bod: poslední řádek rolí stojí vedle bodu, název nad ním. */
+  .popisek--nahoru { transform: translateY(calc(var(--radku) * -1.2 * var(--fs-role))); }
+  .nazev { font-family: var(--font-sans); font-size: var(--fs-nazev); font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--map-land); stroke-width: 4px; stroke-linejoin: round; }
+  .role { font-family: var(--font-sans); font-size: var(--fs-role); fill: var(--ink-2); paint-order: stroke; stroke: var(--map-land); stroke-width: 4px; stroke-linejoin: round; }
   .meritko path { stroke: var(--ink-2); stroke-width: 2; }
-  .meritko text { font-family: var(--font-sans); font-size: 12px; fill: var(--ink-2); }
+  .meritko text { font-family: var(--font-sans); font-size: var(--fs-meritko); fill: var(--ink-2); }
   figcaption { margin-top: var(--s-2); }
   /* Na telefonu se SVG zmenší zhruba na 70 %, popisky proto zvětšíme. */
   @media (max-width: 700px) {
-    .nazev { font-size: 21px; }
-    .role { font-size: 18px; }
-    .meritko text { font-size: 17px; }
+    .minimapa { --fs-nazev: 21px; --fs-role: 18px; --fs-meritko: 17px; }
   }
 </style>
