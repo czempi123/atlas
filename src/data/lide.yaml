@@ -647,6 +647,7 @@
     nazev: berla
     proc: Byl chromý otrok, a přesto svobodný uvnitř.
     zdroj: sep-epictetus
+  obrazek: epiktetos-1715
   zdroje: [sep-epictetus, iep-epictetus, epiktetos-rozpravy, epiktetos-rukojet, gellius-epiktetos, origenes-kelsos]
 
 - id: marcus-aurelius
@@ -670,6 +671,7 @@
     nazev: vavřín
     proc: Filozof na císařském trůnu.
     zdroj: sep-marcus-aurelius
+  obrazek: marcus-jezdec
   zdroje: [sep-marcus-aurelius, britannica-marcus, iep-marcus, marcus-hovory, historia-augusta-marcus, dio-72]
 
 - id: zenon-z-kitia

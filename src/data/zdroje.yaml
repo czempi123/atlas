@@ -171,6 +171,8 @@ prameny:
   - { id: britannica-contra-celsum, druh: encyklopedie, nazev: "Contra Celsum", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/topic/Contra-Celsum", overeno: 2026-10-02, poznamka: "Órigenés psal nejspíš roku 248." }
   - { id: britannica-carnuntum, druh: encyklopedie, nazev: "Carnuntum", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/place/Carnuntum", overeno: 2026-10-02, poznamka: "U dnešní obce Petronell-Carnuntum, 32 km východně od Vídně, na Dunaji; Marcus tu psal druhou knihu Hovorů za tažení proti Markomanům (172–174)." }
   - { id: gross-1998, druh: monografie, nazev: "Antecedent- and response-focused emotion regulation: divergent consequences for experience, expression, and physiology", autor: "James J. Gross", dilo: "Journal of Personality and Social Psychology 74 (1998), 224–237", url: "https://pubmed.ncbi.nlm.nih.gov/9457784/", overeno: 2026-10-02, poznamka: "120 účastníků, film vyvolávající odpor; přehodnocení i potlačení snížily projevy, přehodnocení snížilo i prožívaný odpor, potlačení zvýšilo aktivaci sympatiku. Čten jen souhrn (PubMed); jméno autora nástroj nezobrazil, ověřit." }
+  - { id: met-marcus-jezdec, druh: data, nazev: "Equestrian Statue of Marcus Aurelius (59.570.282)", autor: "Marco Dente", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/343595", overeno: 2026-10-02, poznamka: "Rytina, 1515–1527; nápis na podstavci: socha z bronzu stojí v Římě před Lateránem. Public Domain, Open Access CC0 (API muzea: isPublicDomain true)." }
+  - { id: whe-epiktetos-1715, druh: data, nazev: "Epictetus (rytina z roku 1715)", dilo: "World History Encyclopedia", url: "https://www.worldhistory.org/image/3388/epictetus/", overeno: 2026-10-02, poznamka: "Úvodní list knihy Epicteti Enchiridion Latinis versibus adumbratum (E. Ivie, Oxford 1715; vydání doloženo katalogem Eton College, B13574). V desce podpis kreslíře („… delin.“) a rytce („MB. sculp.“), pod obrazem řecké dvojverší o otroku Epiktétovi. Stránka uvádí Public Domain (a omylem rok 1751)." }
 
 citaty:
   - id: obrana-38a
@@ -1078,3 +1080,21 @@ obrazky:
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/344405"
     vyrez: "50% 37%"
+  # Celek 3: Marcus z The Metropolitan Museum of Art (Open Access, CC0, ověřeno v API muzea); Epiktétos je rytina z roku 1715
+  # (volné dílo), soubor z World History Encyclopedia. Oba zmenšeny na 1280 px; originály jsou mimo repozitář.
+  - id: marcus-jezdec
+    soubor: obrazky/marcus-jezdec-met.jpg
+    popisek: "Marcus Aurelius na koni. Bronzovou sochu v Římě zachytil rytec Marco Dente v letech 1515–1527; stála tehdy před Lateránem."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 59.570.282"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/343595"
+    vyrez: "50% 15%"
+  - id: epiktetos-1715
+    soubor: obrazky/epiktetos-1715.jpg
+    popisek: "Epiktétos, jak si ho představil rytec roku 1715: s berlou a perem nad knihou. Úvodní list latinského vydání Rukojeti z Oxfordu."
+    autor: "rytina se značkou MB, 1715 (soubor: World History Encyclopedia)"
+    instituce: "Epicteti Enchiridion Latinis versibus adumbratum, Oxford 1715"
+    licence: "volné dílo (Public Domain)"
+    url: "https://www.worldhistory.org/image/3388/epictetus/"
+    vyrez: "50% 60%"
