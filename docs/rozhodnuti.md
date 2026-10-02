@@ -2,6 +2,18 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Revize celku 2 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Všech devět nálezů revize schváleno a zapracováno (`docs/revize/celek-2-2026-10-02.md`) | Autor: „Nálezy schvaluju všechny“ |
+| Cesta dá na konci hlas i odpovědi „víc“: krok 7 říká, že s Epikúrem a kyniky souhlasit nemusíš, a posílá za Aristotelem na stránku otázky | Celek o penězích nesmí naznačovat, že skromnější odpověď je ta lepší; zpětné vazby byly v pořádku, tlak byl v celku |
+| Spor s kyniky se ptá „Mám se učit potřebovat co nejméně, nebo vědět, co mi stačí?“; kynik odpovídá na žebrání předem (socha a almužna, DL VI, 49) | „Obejít se bez všeho“ bylo krajnější než kynický citát; každá strana má mít odpověď na nejsilnější námitku druhé |
+| Možnosti ve Změň jednu věc musí dávat smysl v každé podmínce; oddíl Co udělal v kroku 5 říká, co by udělal Epikúros i kynik | Ve třetí podmínce ztrácely dvě možnosti smysl; samotné „Epikúros to dělal taky“ vypadalo jako správná odpověď |
+| Nezlomitelnou mezeru za jednopísmennými předložkami a spojkami doplňuje sestavení (`src/lib/sazba.js`), do textů se ručně nepíše. Markdown a MDX zpracovává Sätteri s vlastním pluginem; `@astrojs/markdown-satteri` je uvedený v `package.json` | Jedno místo pravdy pro MDX, bloky i data; Astro 7 už rehype pluginy bez dalšího balíčku nespouští |
+| Popisek na mini mapě, jehož řádky by se potkaly s jiným, se vysune nad svůj bod | Na telefonu se u Epikúra slévaly popisky Athén a Kolofónu |
+| Odpověď hlasu na stránce otázky má nejvýš dvě věty i po úpravě; Diogenova odpověď proto spojuje obě otázky do jedné věty | Pravidlo ze stránky velké otázky, hlídá ho test |
+
 ## 2. 10. 2026: Vstupy, které nezapadnou, a středová osa cesty (po P8)
 
 | Rozhodnutí | Důvod |
