@@ -1,0 +1,40 @@
+# Volba s důvodem · portrét Marca Aurelia, kapitola 02 „Vláda jako úkol“.
+# Podklad: Historia Augusta, Marcus 17, 4–5 a 21, 9 (válka vyčerpala pokladnu, Marcus nechtěl uvalit na provincie
+# mimořádné daně a dal v Traianově fóru vydražit císařský majetek) — docs/podklady/celek-3-co-mam-v-rukou.md,
+# Nejsilnější příběhy: Marcus Aurelius 5. Tradované, proto „Vypráví se“. Možnosti jsou autorské.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Představ si, že vládneš říši. Na hranici se válčí a pokladna je prázdná.
+  Vojáci přitom musí dostat žold a jídlo.
+otazka: Kde vezmeš peníze?
+moznosti:
+  - text: Vypíšu mimořádnou daň. Válka chrání všechny, ať tedy všichni přispějí.
+    tah: vypsat mimořádnou daň
+    zpetna: >-
+      Rozkládáš břemeno na všechny, kdo mají z ochrany užitek, a to zní spravedlivě. Daň ale nejvíc dolehne na ty, kdo mají nejmíň a o válce nerozhodli.
+      Kdo by měl podle tebe platit první?
+  - text: Prodám to, co patří mně jako vládci.
+    tah: začít u sebe
+    jeho: true
+    zpetna: >-
+      Začínáš u sebe, než sáhneš na cizí. Všichni uvidí, že válka něco stojí i tebe. Poháry a šaty ale jednou dojdou.
+      Co uděláš, až nebude co prodat a válka potrvá dál?
+  - text: Ukončím válku. Na co nemám, to nevedu.
+    tah: ukončit válku
+    zpetna: >-
+      Ptáš se, jestli je ta válka vůbec nutná, a to si má vládce položit jako první. Mír ale musí chtít i druhá strana.
+      Co když ti, kdo útočí na hranici, nepřestanou?
+  - text: Půjčím si od nejbohatších.
+    tah: půjčit si
+    zpetna: >-
+      Ušetříš chudé i sebe a účet odložíš. Dluh se ale jednou splácí.
+      A komu bude patřit vládce, který dluží těm nejbohatším?
+coUdelal:
+  osoba: marcus-aurelius
+  stejne: >-
+    Vypráví se, že šel stejnou cestou jako ty. Nechtěl uvalit na provincie mimořádné daně, a tak dal v Římě vydražit císařský majetek.
+  jinak: >-
+    Vypráví se, že šel jinou cestou. Nechtěl uvalit na provincie mimořádné daně, a tak dal v Římě vydražit císařský majetek.
+zdroje: [historia-augusta-marcus]

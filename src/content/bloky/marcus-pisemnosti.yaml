@@ -1,0 +1,52 @@
+# Změň jednu věc · myšlenkový pokus „Představ si…“ podle zprávy o písemnostech Avidia Cassia.
+# Stojí v kapitole 04 portrétu Marca Aurelia před tím, co Marcus udělal.
+# Podklad: Cassius Dio 72, 27–28 (papíry nalezené v truhlách dal zničit nepřečtené, aby se nedozvěděl jméno žádného
+# spiklence; senát požádal, ať nikoho nepopraví); Historia Augusta, Marcus 24, 5 – 26, 13
+# — docs/podklady/celek-3-co-mam-v-rukou.md, Nejsilnější příběhy: Marcus Aurelius 7. Tradované, proto „Vypráví se“;
+# Dio má „zničil“, ne „spálil“. Podmínky a zpětné vazby jsou autorské.
+druh: zmena
+obdobi: 2
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si, že vládneš a někdo se proti tobě vzbouřil. Vzpoura skončila a vzbouřenec je mrtvý.
+  Zůstaly po něm truhly s písemnostmi. Nejspíš jsou v nich jména všech, kdo mu pomáhali.
+otazka: Co s nimi uděláš?
+moznosti:
+  - { id: prectu, text: Přečtu je. }
+  - { id: znicim, text: Dám je zničit nepřečtené. }
+  - { id: soud, text: "Předám je soudu, ať rozhodne on." }
+podminky:
+  - id: pritel
+    prepinac: Může tam být přítel
+    zmena: Teď si představ, že mezi těmi jmény může být i člověk, kterému věříš nejvíc.
+    posun: >-
+      Rozhodl ses jinak, když mohlo jít o někoho blízkého.
+      Chceš o lidech, které máš rád, vědět všechno? A unesl bys to, co se dozvíš?
+    stejne: >-
+      Pro přátele u tebe platí stejné pravidlo jako pro cizí.
+      Co ho drží: spravedlnost, nebo to, že některé věci raději nevíš?
+  - id: znovu
+    prepinac: Mohou to zkusit znovu
+    zmena: >-
+      Teď si představ, že spiklenci zůstali na svých místech a mohou to zkusit znovu. Další vzpoura znamená další válku.
+    posun: >-
+      Rozhodl ses jinak, když šlo o bezpečí druhých.
+      Za sebe riskovat smíš. Smíš riskovat i za ty, kterým vládneš?
+    stejne: >-
+      Zůstal jsi u svého, i když byla v sázce další válka.
+      Co pro tebe váží víc než jistota?
+  - id: nikdo
+    prepinac: Nikdo se to nedozví
+    zmena: Teď si představ, že se nikdy nikdo nedozví, co jsi s písemnostmi udělal.
+    posun: >-
+      Změnilo se jen to, jestli tě někdo uvidí. Bylo tedy tvé první rozhodnutí i vzkazem pro ostatní.
+      Co jim mělo říct?
+    stejne: >-
+      Diváky jsi k rozhodnutí nepotřeboval.
+      Kvůli komu jsi ho tedy udělal: kvůli spiklencům, nebo kvůli sobě?
+coUdelal:
+  osoba: marcus-aurelius
+  text: >-
+    Vypráví se, že Marcus dal písemnosti zničit nepřečtené. Nechtěl znát jméno jediného spiklence.
+    Senát požádal, ať nikoho z účastníků nepopraví.
+zdroje: [dio-72, historia-augusta-marcus]

@@ -1,0 +1,32 @@
+# Volba s důvodem (soud, bez „Co udělal“) · portrét Marca Aurelia, kapitola 01 „Chlapec, který měl být císařem“.
+# Podklad: Historia Augusta, Marcus 5, 1–4 (zpráva o adopci ho spíš vyděsila než potěšila; domácím vypočítal,
+# kolik zla v sobě vláda nese) — docs/podklady/celek-3-co-mam-v-rukou.md, Nejsilnější příběhy: Marcus Aurelius 8.
+# Tradované, proto „Vypráví se“. Možnosti jsou autorské.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj soud
+scena: >-
+  Marcus se o vládu neucházel: vybral ho jiný císař. A radost z toho prý neměl.
+otazka: Je dobře, když vládne ten, kdo vládnout nechce?
+moznosti:
+  - text: Ano. Kdo po moci netouží, ten ji nezneužije.
+    tah: věřit tomu, kdo po moci netouží
+    zpetna: >-
+      Hlídáš největší nebezpečí moci: že zachutná. Kdo o ni nestál, má od ní odstup.
+      Stačí ale odstup? Co když ten, kdo vládnout nechce, bude vládnout jen napůl?
+  - text: Ne. Co člověk dělat nechce, dělá špatně.
+    tah: chtít vládce, který o to stojí
+    zpetna: >-
+      Víš z vlastní zkušenosti, že nechuť je na práci znát. Kdo o úkol stojí, vydrží víc.
+      Čím se ale liší chuť vládnout od chuti mít moc? A jak to poznáš zvenku?
+  - text: Na chuti nezáleží. Záleží na tom, co umí.
+    tah: soudit podle schopností
+    zpetna: >-
+      Odděluješ pocity od výsledků, a to je střízlivé. Schopný vládce ale může své schopnosti použít jen pro sebe.
+      Co ho podle tebe udrží, aby je použil pro druhé?
+  - text: Špatně je už to, že se nikdo neptal těch, kterým má vládnout.
+    tah: ptát se, kdo ho vybral
+    zpetna: >-
+      Nesoudíš Marca, ale způsob, jakým se k vládě dostal. Dnes bys chtěl volby.
+      Vyřeší ale volby tvou starost? I zvolený může po moci toužit příliš, nebo o úkol nestát.
+zdroje: [historia-augusta-marcus]
