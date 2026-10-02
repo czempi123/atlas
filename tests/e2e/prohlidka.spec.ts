@@ -14,6 +14,7 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/mapa/', nazev: 'mapa', nadpis: /Mapa a čas/ },
   { cesta: '/otazky/', nazev: 'otazky', nadpis: /Deset velkých otázek/ },
   { cesta: '/otazka/jak-poznam-pravdu/', nazev: 'otazka-7', nadpis: /Jak poznám, co je pravda\?/, preskocit: 'otazka-jak-poznam-pravdu' },
+  { cesta: '/otazka/jak-zit/', nazev: 'otazka-1', nadpis: /Jak mám žít\?/, preskocit: 'otazka-jak-zit' },
 ];
 const SIRKY = [
   { sirka: 390, vyska: 844 },

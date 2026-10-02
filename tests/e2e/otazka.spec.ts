@@ -1,4 +1,4 @@
-// Stránka velké otázky 7: první názor → hlasy na časové ose → cesty → Změnil se?
+// Stránky velkých otázek 7 a 1: první názor → hlasy na časové ose → cesty → Změnil se?
 // Klávesnicí, po obnovení, s přeskočením a bez JavaScriptu; snímky na 390 a 1440 px ve světlém i tmavém režimu.
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
@@ -99,12 +99,66 @@ test('otázka: bez JavaScriptu jsou hlasy vidět hned', async ({ browser }) => {
   await kontext.close();
 });
 
-test('přehled otázek vede na stránku otázky 7, ostatní zůstávají v přehledu', async ({ page }) => {
+test('přehled otázek vede na stránky otázek 7 a 1, ostatní zůstávají v přehledu', async ({ page }) => {
   await page.goto('/otazky/');
   await page.getByRole('link', { name: 'Jak poznám, co je pravda?' }).click();
   await expect(page).toHaveURL(ADRESA);
   await page.goto('/otazky/');
-  await expect(page.locator('#jak-zit a')).toHaveCount(0);
+  await page.getByRole('link', { name: 'Jak mám žít?' }).click();
+  await expect(page).toHaveURL('/otazka/jak-zit/');
+  await page.goto('/otazky/');
+  await expect(page.locator('#co-je-spravne a')).toHaveCount(0);
+});
+
+test('otázka 1: úvodní případ, čtyři hlasy, které se poznají, a cesta 6', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/otazka/jak-zit/');
+  await hydratovano(page, 'PrvniNazor');
+  await expect(page.locator('h1')).toHaveText('Jak mám žít?');
+  // Úvod je vymyšlená situace bez historických osob a končí otázkami.
+  const uvod = page.locator('.uvod');
+  await expect(uvod).toContainText('Představ si, že máš na léto dvě nabídky.');
+  await expect(uvod).not.toContainText(/Epikúr|Diogen|Senec|Aristotel/);
+  await expect(uvod.locator('p').last()).toContainText('?');
+  // Nejdřív student: hlasy se ukážou až po prvním názoru.
+  await expect(page.locator('#jak-zit-po')).toBeHidden();
+  await page.locator('#jak-zit-prvni-pole').focus();
+  await page.keyboard.type('Vzal bych tábor, peníze počkají.');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#jak-zit-hlasy-nadpis')).toBeFocused();
+  await expect(page.locator('#jak-zit-hlasy-nadpis')).toHaveText('Sklad, nebo tábor?');
+  await expect(page.locator('.oddil__nad').first()).toHaveText('Tentýž případ, čtyři odpovědi');
+  // Pořadí podle narození.
+  await expect(page.locator('.odpoved__jmeno')).toHaveText(['Diogenés', 'Aristotelés', 'Epikúros', 'Seneca']);
+  const odpovedi = page.locator('.odpoved');
+  // Každý hlas se pozná: zpochybněná volba, činnost a nástroje, klid a přátelé, kdo komu slouží.
+  await expect(odpovedi.nth(0)).toContainText('Ptáš se špatně');
+  await expect(odpovedi.nth(1)).toContainText('štěstí je činnost, ne pocit');
+  await expect(odpovedi.nth(1)).toContainText('jen jako nástroj');
+  await expect(odpovedi.nth(2)).toContainText('Zbytek léta stráv s přáteli');
+  await expect(odpovedi.nth(3)).toContainText('kdo komu slouží');
+  for (let i = 0; i < 4; i++) {
+    const vet = (await odpovedi.nth(i).locator('.odpoved__text').innerText()).split(/(?<=[.?!])\s+/).length;
+    expect(vet).toBeLessThanOrEqual(2);
+  }
+  await expect(page.locator('.hlas__jmeno')).toHaveText(['Diogenés', 'Aristotelés', 'Epikúros', 'Seneca']);
+  // Odkaz na profil jen tam, kde profil je.
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Diogenés', 'Epikúros']);
+  await expect(page.locator('.hlas .citat')).toHaveCount(4);
+  await expect(page.locator('#hlas-aristoteles .citat')).toContainText('Jedna vlaštovka jaro nedělá');
+  await expect(page.locator('#hlas-diogenes .citat')).toContainText('medové koláčky');
+  await expect(page.locator('#hlas-epikuros .citat')).toContainText('rozumně, čestně a spravedlivě');
+  await expect(page.locator('#hlas-seneca .citat')).toContainText('U moudrého slouží bohatství jemu');
+  // U Seneky jedna věta o jeho bohatství; scéna s Neronem zůstává portrétu.
+  await expect(page.locator('#hlas-seneca')).toContainText('Seneca sám byl velmi bohatý');
+  await expect(page.locator('#hlas-seneca')).not.toContainText(/Nero|sesterci/);
+  // Diogenés bez scén z profilu, citáty z profilů se neopakují.
+  await expect(page.locator('#jak-zit-po')).not.toContainText(/pohárek|lucern|lamp|kohout|občan světa|Ječná placka|Tělo volá/i);
+  await expect(page.locator('.cesta-karta')).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+  await axe(page);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
 });
 
 for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska: 900 }]) {
