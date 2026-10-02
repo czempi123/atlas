@@ -8,7 +8,7 @@ Celek 2: velká otázka 1, cesta 6 „Kolik je dost?“, profil Epikúra a profi
 | P7 | Profily Epikúra a Diogena | hotovo a schváleno 2. 10. 2026 |
 | P8 | Cesta 6 „Kolik je dost?“ a stránka velké otázky 1 | hotovo a schváleno 2. 10. 2026 (i s úpravami vstupů a rozvržení cesty) |
 | P10 | Revize celku | hotovo 2. 10. 2026; všech devět nálezů schváleno a zapracováno (`docs/revize/celek-2-2026-10-02.md`) |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | **další krok** |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 2. 10. 2026: autor celek schválil, větev je sloučená do hlavní; pokračuje celek 3 (`docs/plany/celek-3.md`) |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
 
@@ -145,7 +145,7 @@ Po P8 následuje P10 (revize celku 2 skillem `atlas-revize`); plné znění je n
 
 ## P10: Revize celku 2 „Jak mám žít?“
 
-**Stav 2. 10. 2026:** revize hotová a všech devět nálezů zapracováno po schválení autorem („Nálezy schvaluju všechny“). Záznam i s tabulkou zapracování je v `docs/revize/celek-2-2026-10-02.md`, rozhodnutí v `docs/rozhodnuti.md`. Vedle textů přibylo: nezlomitelné mezery za jednopísmennými předložkami při sestavení (`src/lib/sazba.js`) a rozmístění popisků mini mapy bez překryvů (`umisteniPopisku`). `npm test` prošlo celé (259 testů dat, 137 v prohlížeči). **Další krok: schválení celku 2 autorem**, potom sloučení `celek-2` do hlavní větve a hlavní větev na GitHub. Zůstalo na později: tečky kroků v hlavičce cesty jsou na telefonu menší než 44 px; poučení z revize doplnit do skillů `atlas-cesta` a `atlas-komponenta`.
+**Stav 2. 10. 2026:** revize hotová a všech devět nálezů zapracováno po schválení autorem („Nálezy schvaluju všechny“). Záznam i s tabulkou zapracování je v `docs/revize/celek-2-2026-10-02.md`, rozhodnutí v `docs/rozhodnuti.md`. Vedle textů přibylo: nezlomitelné mezery za jednopísmennými předložkami při sestavení (`src/lib/sazba.js`) a rozmístění popisků mini mapy bez překryvů (`umisteniPopisku`). `npm test` prošlo celé (259 testů dat, 137 v prohlížeči). Autor celek 2 schválil 2. 10. 2026 („Ano, schvaluji“), po zapracování připsal jednu změnu (krok 5: „Jdu do toho také.“ místo „Jdu do toho celé.“). Poučení z revize je ve skillech `atlas-cesta`, `atlas-komponenta` a `atlas-revize` (kopie ve `skills/`; verze v účtu Claude se ukládá z návrhu, který přišel s předáním). Větev je sloučená do hlavní. Zůstalo na později: tečky kroků v hlavičce cesty jsou na telefonu menší než 44 px. Další celek: `docs/plany/celek-3.md`.
 
 **Zadání (pro záznam).** P8 autor schválil i s úpravami po něm (vstupy v hlavičce profilu, středová osa cesty). Revize projde celý celek skillem `atlas-revize`: drobnosti opraví rovnou, zásahy do významu, příběhu a struktury jen navrhne a počká na rozhodnutí autora.
 

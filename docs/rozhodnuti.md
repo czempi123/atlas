@@ -2,6 +2,15 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Schválení celku 2 a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 2 „Jak mám žít?“ schválen a sloučen do hlavní větve | Autor: „Ano, schvaluji“ |
+| Krok 5 cesty 6: první možnost zní „Jdu do toho také.“ | Autor po zapracování: „celé“ tam nesedělo |
+| Skilly `atlas-cesta`, `atlas-komponenta` a `atlas-revize` doplněny o poučení z revize celku 2 (hlas i proti filozofovi cesty, možnosti v každé podmínce, Spor a poslední slovo, sazba a Sätteri, fokus nad spodní lištou, čísla proti prameni) | Autor: doplnit; ať se chyby celku 2 neopakují |
+| Celek 3 „Co mám ve svých rukou?“: cesta 5, portrét Epiktéta, Marcus Aurelius jako druhý hlas cesty. O rozsahu (Marcův portrét, stránka otázky 4) rozhodne autor po osnově P6. Další krok P6, zadání v `docs/plany/celek-3.md` | Rozhodnutí z 1. 10.: celek s Epiktétem přijde hned po celku 2; stoicismus má v atlasu zvláštní váhu |
+
 ## 2. 10. 2026: Revize celku 2 (P10)
 
 | Rozhodnutí | Důvod |
