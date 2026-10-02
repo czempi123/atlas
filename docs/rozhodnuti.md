@@ -2,6 +2,15 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Větev rozhrani-v2 (zadání)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Úpravy rozhraní (Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat) jdou do vlastní větve `rozhrani-v2` ve dvou krocích; zadání v `docs/plany/rozhrani-v2.md` | Šest úprav najednou by nešlo dobře zkontrolovat |
+| Větev se založí, až bude celek 3 sloučený a hlavní větev na GitHubu | Autor: bod, ke kterému se dá vrátit, kdyby po změnách něco nefungovalo |
+| V textech rozhraní nejsou lomené tvary („odpověděl/a“); nové texty volí formulaci, která rod neřeší, když zní přirozeně | Autor: lomené tvary ruší; jinak jedině elegantněji |
+| „Začít první cestu“ vede rovnou na krok 1 cesty; Návrat se nabízí jen v deníku, ne na Domů | Domů má mít jeden jasný začátek |
+
 ## 2. 10. 2026: Portréty Epiktéta a Marca Aurelia (P7)
 
 | Rozhodnutí | Důvod |
