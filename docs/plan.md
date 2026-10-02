@@ -301,7 +301,7 @@ flowchart LR
 2. **Psaní přímo do atlasu** (skilly `atlas-osobnost`, `atlas-cesta`, `atlas-data`): text se píše rovnou jako MDX s komponentami, data do YAML. Hned je vidět náhled v prohlížeči; odpadá samostatný scénář i specifikace interakcí.
 3. **Revize** (skill `atlas-revize`): filozofická přesnost, síla námitek, didaktika, čeština a tón, průchod v prohlížeči na telefonu i notebooku. Automatické kontroly běží v GitHubu samy.
 4. **Tvoje schválení:** přečteš si celek jako student (15–20 minut) a buď schválíš, nebo označíš, co nesedí. Tohle je jediný povinný lidský krok v každém celku.
-5. **Sloučení:** změna jde do hlavní větve a na GitHub; web zatím běží lokálně.
+5. **Sloučení:** po závěrečné revizi a schválení se větev celku sloučí do hlavní větve a hlavní větev se pošle na GitHub (stálý pokyn autora z 2. 10. 2026); mezi tím se na GitHub nic neposílá. Web zatím běží lokálně.
 
 Vyzkoušení se studenty se dělá po obdobích, ne po každém celku: na konci každé fáze jedna skutečná hodina nebo několik domácích průchodů a oprava podle zjištění. Pro závěrečnou práci je právě tohle nejcennější doklad.
 
@@ -338,7 +338,7 @@ Každý skill má krátký `SKILL.md` (postup a kritéria hotového) a 1–3 ref
 
 ## Katalog promptů s modelem a úsilím
 
-Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě nejtěžší syntézy, Sonnet 5.5 pro dobře zadanou rutinu a Haiku 4.5 jen pro mechanické úpravy. Trí promptům pro nejbližší kroky dávám plné znění níže, ostatní vzniknou až s příslušným skillem.
+Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě nejtěžší syntézy, Sonnet 5.5 pro dobře zadanou rutinu a Haiku 4.5 jen pro mechanické úpravy. Plné znění promptů je v plánech větví (`docs/plany/`), rozcestník je pod tabulkou.
 
 | Model | Silná stránka | Kdy ho použít v atlasu |
 | --- | --- | --- |
@@ -357,11 +357,11 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Hotovo 29. 9. 2026, `docs/architektura.md` |
 | P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
-| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Hotovo 1. 10. 2026 pro celek „Jak poznám, co je pravda?“ (`docs/podklady/celek-1-pravda.md`); pro celek 2 „Jak mám žít?“ hotovo a schváleno 2. 10. 2026 (`docs/podklady/celek-2-jak-zit.md`) |
-| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Hotovo a schváleno 1. 10. 2026: Sókratův portrét a profil Prótagora; skill `atlas-osobnost`. Pro celek 2 hotovo a schváleno 2. 10. 2026 (profily Epikúra a Diogena) |
-| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Hotovo a schváleno 1. 10. 2026: cesta 1 s Prótagorem, stránka velké otázky (šablona a otázka 7); skill `atlas-cesta`. Pro celek 2 další krok: cesta 6 a stránka otázky 1, plné znění níže |
+| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Celek 1 a celek 2 hotovo a schváleno |
+| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Celek 1 a celek 2 hotovo a schváleno; skill `atlas-osobnost` |
+| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Celek 1 hotovo a schváleno; celek 2 další krok (`docs/plany/celek-2.md`); skill `atlas-cesta` |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
-| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Hotovo a schváleno 1. 10. 2026: revize celku 1, celek 1 sloučen do hlavní větve |
+| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Celek 1 hotovo a schváleno 1. 10. 2026 |
 | P11 | Souhrnná revize období | Fable 5.1 · high | Souvislosti napříč desítkami stránek | Na konci každé fáze |
 | P12 | Plán nového období | Opus 5.5 · high | Výběr a pořadí podle hotové architektury | Se skillem `atlas-obdobi` |
 | P13 | Úprava skillů po fázi | Opus 5.5 · high | Zobecnění opakovaných chyb | Na konci každé fáze |
@@ -369,411 +369,17 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 
 Doporučení modelů platí pro nabídku k 29. 9. 2026 ([přehled modelů](https://platform.claude.com/docs/en/models/overview), [úrovně úsilí](https://platform.claude.com/docs/en/build-with-claude/effort)); při výrazné změně nabídky je projdu znovu.
 
-### P0: Základ projektu
+### Plány větví
 
-```text
-Pracuješ v repozitáři atlas (Atlas myšlení, interaktivní atlas filozofie pro střední školy). Nejdřív si přečti docs/plan.md, hlavně oddíly o kritice, obsahovém modelu a skillech.
+Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v souboru větve ve složce `docs/plany/`. Každý celek má jeden soubor od podkladů po závěrečnou revizi; tady zůstává jen strategie, katalog a tento rozcestník. Nový celek znamená novou větev a nový soubor `docs/plany/<větev>.md`.
 
-Připrav základ pro restart projektu:
-1. Přesuň všechny dosavadní soubory do docs/archiv/ (atlas-antika.html je verze v9).
-2. Napiš nový README.md: proč atlas vzniká, pro koho je, co v něm student najde, jak projekt spustit a jak je repozitář uspořádaný. Piš lidsky a krátce.
-3. Napiš CLAUDE.md podle oddílu „CLAUDE.md: ústava projektu“ v plánu. Maximálně dvě obrazovky textu; pravidla formuluj jako to, co dělat, ne jako seznam zákazů.
-4. Napiš docs/styl.md: průvodce tónem s deseti dvojicemi „takhle ne / takhle ano“. Příklady „ne“ vezmi ze skutečných textů v archivu (redakční výhrady, úřední školní příklady), příklady „ano“ napiš jako živé vyprávění.
-5. Pomocí skillu skill-creator vytvoř ve složce skills/ skilly atlas-overeni a atlas-revize podle tabulky skillů v plánu.
-6. Přidej LICENSE: CC BY-NC-SA 4.0 pro texty a MIT pro kód, s vysvětlením v README.
+| Větev | Co obsahuje | Soubor | Stav |
+| --- | --- | --- | --- |
+| `restart`, `mapa-v2`, `bloky-v1` | Základ a kostra: P0 až P5 | `docs/plany/zaklad.md` | hotovo a schváleno |
+| `celek-1` | „Jak poznám, co je pravda?“: Sókratés, Prótagorás, cesta 1, otázka 7 | `docs/plany/celek-1.md` | hotovo, sloučeno 1. 10. 2026 |
+| `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/plany/celek-2.md` | P7 schválen, další krok P8 |
 
-Všechno ulož jedním commitem s popisem změn. Na konci mi v pár větách řekni, co vzniklo a co bys na pravidlech ještě změnil.
-```
-
-### P1: Vizuální návrh
-
-Hotovo 29. 9. 2026: schválený návrh a tokeny jsou v `docs/design.md`, obrazovky na plátně (odkaz v design.md). Znění ponechané pro záznam.
-
-```text
-Navrhni vizuální podobu Atlasu myšlení, interaktivního atlasu filozofie pro středoškoláky. Vycházej z docs/plan.md (oddíly o informační architektuře, mapě a čase a vizuálním jazyce) a z profilu Marca Aurelia v docs/archiv/atlas-antika.html, jehož časopisecký styl je výchozí inspirací.
-
-Navrhni čtyři obrazovky, každou pro notebook (1440 px) i telefon (390 px): Domů, Mapa a čas (rok 360 př. n. l., vybraný Platón), profil Sókrata a jeden krok cesty s volbou a odkrytou zpětnou vazbou. Použij skutečné české texty, ne výplň.
-
-Atlas má působit klidně, krásně a důvěryhodně, jako dobře udělaný časopis nebo muzejní průvodce, a přitom lákat k prozkoumávání. Navrhni barvu pro každé období, pár písem s plnou podporou češtiny, světlý i tmavý režim. U každé obrazovky ukaž, kde student je, jak se vrátí a co může udělat dál.
-
-Vyřeš hlavně mapu s řekou životů: na mapě jen žijící, pod ní pruhy celých životů s čarou zvoleného roku; na notebooku vše vidět najednou.
-
-Odevzdej návrh k posouzení a seznam design tokenů (barvy, písma, velikosti, mezery, zaoblení); po schválení je ulož do docs/design.md. Nabídni mi dvě varianty barevnosti.
-```
-
-### P2: Založení projektu a přenos dat
-
-Doporučeně v Claude Code (nebo v Coworku s připojenou složkou Atlas), Opus 5.5, úsilí high. Projekt v Astru se zakládá od nuly; prototyp v9 (`docs/archiv/atlas-antika.html`) je nedotažený a slouží jen jako inspirace. Počítej s delší prací, klidně ve dvou sezeních; druhé sezení začni větou „Pokračuj v P2 podle docs/plan.md, stav najdeš v gitu“.
-
-```text
-Pracuješ v repozitáři atlas. Přečti CLAUDE.md, docs/plan.md (oddíly o technologii, informační architektuře a obsahovém modelu), docs/architektura.md a docs/design.md včetně podkladů ve složce docs/design/.
-
-Založ ve větvi restart nový projekt: Astro se statickým výstupem, TypeScript, Svelte pro interaktivní ostrovy. Content collections se schématy pro osobnosti, směry, období, otázky, cesty, pokusy, pojmy, příběhy a náboženství; datové soubory lide, vztahy, mista, udalosti, obdobi a zdroje v src/data.
-
-Design:
-1. Převeď tokeny z docs/design.md do src/styles/tokens.css jako CSS proměnné, varianta A ve světlém i tmavém režimu. Tmavý režim podle nastavení systému i ručního přepínače, volbu ulož v localStorage.
-2. Písma Newsreader a Instrument Sans přes balíčky @fontsource, jen latin a latin-ext, bez Google Fonts.
-3. Ikony atributů z docs/design/atributy-ikony.json jako jeden SVG soubor se symboly.
-4. Komponenty podle oddílu Komponenty: Mince (atribut), Deska (duotónová plocha pro obraz), PásObdobí (velký a malý, ornamenty z docs/design/ornamenty.js), Tlačítko, Citát. Hlavička, spodní lišta na telefonu a drobečková navigace podle oddílu Navigace a rozvržení.
-
-Data a obsah (projekt začíná od nuly; prototyp v9 v docs/archiv/ ber jen jako inspiraci, nic z něj nepřebírej doslova):
-5. Založ lide.yaml, mista.yaml, vztahy.yaml a udalosti.yaml pro období 1 a 2 podle kostry osobností v docs/architektura.md (portréty, profily, vybrané medailonky). Roky, místa s rolí a časem pobytu i vztahy ověř skillem atlas-overeni a pramen zapiš do zdroje.yaml. Co nejde ověřit, do dat nedávej a zapiš do docs/podklady/k-overeni.md.
-6. Atributy: u lidí z tabulky v docs/design.md je převezmi i s větou „proč“. Pro ostatní profily a portréty navrhni atribut do docs/podklady/atributy.md k mému schválení; do dat je zatím nedávej.
-7. obdobi.yaml podle architektury: osm období s časovým oknem, výřezem mapy, barvou a ornamentem.
-8. Šablonu osobnosti ověř na Sókratovi: úvod, kapitola 01 Delfy, Doba a lidé (generovaná z dat), Dvě velké myšlenky, Zkus to žít a Kam dál podle docs/podklady/texty-z-navrhu-p1.md. Kapitoly 02–05 nech jen jako osnovu; napíšou se v P7. Citáty ověř a doplň český překlad do zdroje.yaml.
-
-Stránky: Domů, Lidé a směry, šablona osobnosti (Sókratés) a Mapa a čas zatím jen jako statický podklad (podle docs/design/mapa-podklad.mjs). Nastav vyhledávání Pagefind.
-
-Kontroly: schéma dat, existující odkazy, žádný rok nula, narození před úmrtím, učitel starší než žák, licence u každého obrázku, atribut u každého profilu a portrétu. Test v Playwrightu projde Domů, Lidé a směry a Sókrata na 390 a 1440 px ve světlém i tmavém režimu a ověří kontrast. GitHub Actions pro sestavení a kontroly; web nenasazuj.
-
-Commituj po ucelených krocích česky, nic neposílej na GitHub. Na konci mi pošli snímky obou šířek v obou režimech, návod, jak web spustit, a seznam toho, co se od docs/design.md odchýlilo a proč.
-```
-
-### P4: Mapa a čas v2
-
-**Stav 30. 9. 2026:** hotovo a schváleno autorem, sloučeno do hlavní větve. Rozhodnutí v `docs/rozhodnuti.md`, prameny k novým datům v `docs/podklady/mapa-a-cas.md`, co zůstalo na později, v oddílu „Po P4“ níže.
-
-Až po dokončení P2. Doporučeně v Claude Code, Opus 5.5, úsilí high; když se zasekne na časové logice nebo výkonu, přepni na xhigh.
-
-```text
-Pracuješ v repozitáři atlas ve větvi mapa-v2 (vytvoř ji z restart). Přečti CLAUDE.md, v docs/plan.md oddíl „Mapa a čas pro celé dějiny“, v docs/design.md oddíl „Mapa a čas“, docs/design/mapa-podklad.mjs a data v src/data.
-
-Postav Mapu a čas jako Svelte ostrov na stránce /mapa. Adresa nese rok, období a vybraného člověka (/mapa?rok=-360&osoba=platon), takže se dá sdílet a tlačítko Zpět funguje.
-
-Musí umět:
-1. Mapa: d3-geo a Natural Earth (world-atlas, land 10m, jen polygony regionu), výřez a projekce podle období z obdobi.yaml, styl podle design.md (vodní linky u pobřeží, jemná síť poledníků, dobové názvy krajin a moří, měřítko). Geometrii pro každý výřez předpočítej při sestavení, ne v prohlížeči. Při změně období se kamera plynule přesune, při omezeném pohybu skočí.
-2. Jen žijící: člověk je na mapě od roku narození do roku úmrtí včetně, rok nula neexistuje. Pozici určují místa s rolí a časem (kde v daném roce byl). Víc lidí na jednom místě tvoří shluk s mincemi, který se po kliknutí rozbalí. Kdo je mimo výřez, má štítek se šipkou u okraje. Když vybraný člověk zemře, zmizí s krátkou zprávou „Platón zemřel roku 347 př. n. l.“
-3. Posuvník roku po jednom roce, šipkami po deseti, klávesnicí i dotykem; nad ním dějinné kotvy z udalosti.yaml.
-4. Řeka životů pod mapou: pruhy celých životů v okně kolem zvoleného roku, žijící v barvě období, ostatní vybledlí, svislá čára roku navazující na posuvník. Oblouky vztahů: plná čára učitel a žák, tečkovaná znali se, čárkovaná vliv textem, polemika vlastním tvarem. Klik na pruh vybere člověka i na mapě.
-5. Přepínač období jako malý pás období se závorkou okna řeky a značkou roku; přehled celých 2 600 let s hustotou myslitelů pro rychlý skok.
-6. Karta člověka: medailonek z dat, věk ve zvoleném roce, kde právě je, atribut s „proč“, vztahy s poznámkou („zemřel před 39 lety“), Změř vzdálenost mezi dvěma lidmi (správně přes chybějící rok nula).
-7. Volitelný stín odkazu (výchozí vypnutý) a karta „Mezitím jinde“, když pro rok existují data.
-8. Rozvržení: na notebooku mapa, posuvník, řeka i karta najednou bez posouvání při 1440 × 900 i 1280 × 800; na telefonu mapa nahoře a spodní list se záložkami Člověk a Řeka životů.
-
-Přístupnost: každá osoba i pruh jsou ovladatelné klávesnicí, řeka má textovou alternativu (seznam žijících ve zvoleném roce), kontrast podle design.md. Výkon: plynulé posouvání roku na slabším telefonu.
-
-Testy: jednotkové pro věk, „žije v roce“, vzdálenost mezi lidmi a přechod přes rok nula; Playwright pro roky -399, -360, -323 a 121 na 390 a 1440 px ve světlém i tmavém režimu, se snímky.
-
-Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně data, která pro mapu chybějí) a počkej na odpověď. Pak implementuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky a seznam toho, co zůstalo na později.
-```
-
-### Po P4: co zůstalo na později
-
-- Výřezy období 3–8 doladit a schválit, až přibudou lidé; stejně tak telefonní výřezy období 2–8 (odvozené z notebookového).
-- Hispánie, Sýrie a další římské provincie do `krajiny.yaml` po ověření; ID z Pleiad k místům (web Pleiades blokuje automatický přístup).
-- „Mezitím jinde“ s vloženou mapkou Číny a Indie, až budou v datech Buddha, Lao-c’ a další (`docs/podklady/k-overeni.md`).
-- Chybějící pobyty s časem (Platónovy cesty na Sicílii a založení Akademie, Xenokratés v Akademii, Epiktétos v Římě a Níkopoli), aby mapa přesněji ukazovala, kde kdo byl.
-- Lucretius nemá doložené místo, na mapě chybí (v řece je).
-- Plynulé posouvání roku ověřit na skutečném starším telefonu (měřeno jen se zpomaleným procesorem v Chromiu).
-- Tlačítko „cesta“ v kartě člověka, až budou hotové cesty.
-
-### P5: Knihovna bloků, prvních šest
-
-**Stav 1. 10. 2026:** hotovo a schváleno autorem, sloučeno do hlavní větve. Bloky jsou v ukázkové cestě 1 (`/cesta/kdy-mam-dobry-duvod-verit/`) a v Sókratově profilu, všechny pohromadě v dílně `/dilna/bloky/`. API, návod pro MDX a stavba cesty v `docs/design.md` › Bloky a › Cesta, rozhodnutí v `docs/rozhodnuti.md`, potřeby ověření v `docs/podklady/k-overeni.md` › Obsah bloků. Co zůstalo na později, je v oddílu „Po P5“ níže.
-
-Zadání, se kterým P5 proběhl. Doporučeně v Claude Code ve složce Atlas na Macu (změny pak vznikají rovnou v tvém repozitáři), nebo v Coworku v novém chatu projektu; Opus 5.5, úsilí high, při zaseknutí xhigh. Před spuštěním musí být v účtu uložený skill `atlas-komponenta` (zdrojová verze ve `skills/atlas-komponenta/`).
-
-```text
-Pracuješ v repozitáři atlas ve složce Atlas na mém Macu. Hlavní větev main obsahuje schválenou Mapu a čas (P4); založ z ní větev bloky-v1. Když k mému počítači nemáš terminál, pracuj v kopii repozitáře a hotovou větev mi na konci předej jako git bundle do složky Atlas s jedním příkazem, jak ji načíst.
-
-Přečti CLAUDE.md, docs/styl.md, v docs/plan.md oddíly „Pedagogické pilíře“ a „Mechanismy učení a obsahová složka“, v docs/design.md oddíly Komponenty a Přístupnost a hotové ostrovy v src/components/ostrovy (NejdrivSam, MojeStanovisko, ZkusToZit) i src/lib/denik.ts. Postupuj podle skillu atlas-komponenta.
-
-Postav prvních šest bloků knihovny jako Svelte ostrovy, které autor vloží do MDX jedním řádkem:
-1. Příběh: krátká scéna s volitelným obrazem (deska v barvě období, když obraz chybí) a popiskem; bez interakce, ale se stejnou typografií jako profil.
-2. Volba s důvodem: karty A–D, nepovinné pole „Proč právě tohle?“, ke každé možnosti vlastní zpětná vazba „Tvůj tah: …“ a oddíl „Co udělal …“ podle docs/design.md.
-3. Odkryj: vlastní pokus, pak modelové odpovědi a sebekontrola. Sjednoť ho s dnešním Nejdřív sám (Sókratův profil musí dál fungovat beze změny textu).
-4. Změň jednu věc: myšlenkový pokus s přepínačem podmínky; student rozhoduje znovu a vidí, jak se jeho odpověď posunula.
-5. Spor: student se postaví na škálu mezi dva filozofy, přečte si jejich nejsilnější argumenty a může se přesunout; zapíše se první i konečná poloha.
-6. Kdo žil dřív?: odhad pořadí nebo vzdálenosti dvou lidí z dat, pak odhalení s „Žili současně … / Dělí je …“ ze src/lib/cas-mapy.ts a odkazem do /mapa na správný rok.
-
-Pro všechny bloky: zpětná vazba hodnotí důvody, ne souhlas; nic se neboduje. Odpovědi, které mají smysl pro deník, se uloží přes src/lib/denik.ts a vydrží obnovení stránky. Ovládání klávesnicí a dotykem, cíle aspoň 44 px, omezený pohyb, světlý i tmavý režim, kontrast AA.
-
-Ukázky: stránka /dilna/bloky/ mimo navigaci a hledání (noindex), kde je každý blok na skutečném ověřeném obsahu období 1 (Sókratés, Platón, Diogenés); nový obsah, který by potřeboval ověření, nevymýšlej a zapiš jako potřebu do docs/podklady/k-overeni.md. Do docs/design.md doplň API každého bloku a krátký návod, jak ho vložit do MDX (bude ho potřebovat skill atlas-cesta).
-
-Testy: jednotkové pro logiku bloků (vyhodnocení, posun odpovědi, uložení), Playwright pro každý blok na 390 a 1440 px ve světlém i tmavém režimu s axe, ovládáním klávesnicí, obnovením stránky a se snímky; celé npm test musí projít.
-
-Nejdřív mi v pár bodech napiš plán a sporná místa (hlavně API bloků a co z bloků patří do deníku) a počkej na odpověď. Pak implementuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky a seznam toho, co zůstalo na později.
-```
-
-### Po P5: co zůstalo na později
-
-- Ověřit Sókratovy důvody z Kritóna pro „Co udělal Sókratés“ u útěku z vězení (`atlas-overeni`).
-- Dopsat cestu 1 o Prótagora (ověření, krok se Sporem Sókratés × Prótagorás) a projít ji revizí (`atlas-revize`), včetně autorských modelových odpovědí v krocích 4 a 5.
-- Režim třídy u bloků: zpětná vazba až na pokyn učitele, jeden podnět na obrazovce, QR kód.
-- Deník: seskupit zápisy podle druhu (`druh` už se ukládá), u Sporu ukázat posun graficky, „Zkus to žít“ s poznámkou, jak dopadlo.
-- Návrat (blok knihovny): po několika dnech nabídnout v Pokračuj otázku z prošlé cesty na novém případu.
-- Příběh s obrazem: první obraz s ověřenou licencí (Wikimedia Commons), později poslech s přepisem.
-- Kdo žil dřív?: varianta se třemi a více lidmi (seřaď na ose) a lidé jen s dobou činnosti (bez narození a úmrtí).
-- Zbylé bloky knihovny: Dialog, Úryvek s otázkou, Slož argument, Kdo to řekl?, Návrat.
-- Skill `atlas-cesta` napsat podle `docs/design.md` › Bloky.
-
-
-### P6: Podklady k celku „Jak poznám, co je pravda?“
-
-**Stav 1. 10. 2026:** hotovo, podklady v `docs/podklady/celek-1-pravda.md`, rozhodnutí v `docs/rozhodnuti.md`. Zadání, se kterým P6 proběhl:
-
-Další krok po P5. První celý celek F2: dopsaný Sókratův portrét, profil Prótagora, dokončená cesta 1 a stránka velké otázky 7. P6 připraví jen ověřené podklady; psaní je P7 (portrét a profil, při něm vznikne skill `atlas-osobnost`) a P8 (cesta a velká otázka se skillem `atlas-cesta`), revize P10.
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem (terminál na Macu). Sonnet 5.5 · high s vyhledáváním; když narazí na sporné prameny (počty hlasů při procesu, osud Prótagorových knih), přepni na Opus 5.5 · high.
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Z větve main založ větev celek-1.
-
-Přečti CLAUDE.md, docs/styl.md, v docs/architektura.md velkou otázku 7 a cestu 1, docs/podklady/k-overeni.md a hotové podkladové listy v docs/podklady/. Postupuj podle skillu atlas-overeni.
-
-Připrav podklady k prvnímu celému celku „Jak poznám, co je pravda?“. Studentský text zatím nepiš.
-
-1. Sókratův portrét, kapitoly 02–05 podle osnovy ve frontmatteru src/content/osobnosti/sokrates.mdx: Muž z agory (jak se ptal, na příkladu z Lachéta nebo Euthyfróna; kdo za ním chodil), Ústup od Délia (tři tažení, Alkibiadovo vyprávění v Symposiu), Soud (obžaloba, Obrana, hlasování a trest, proč nenavrhl vyhnanství) a Poslední den (Kritón přemlouvá k útěku a Sókratovy důvody, proč zůstal; Faidón 117a–118a). U každé kapitoly jedna nejsilnější scéna.
-2. Prótagorás pro profil: život (Abdéra, Athény, Thurioi), „Člověk je měřítkem všech věcí“ (DK 80 B1, Platón, Theaitétos 152a), výrok o bozích (DK 80 B4), co je doložené a co jen tradované o konci jeho života, a jeho nejsilnější argument v Platónově dialogu Prótagorás.
-3. Cesta 1: skutečný střet Sókrata a Prótagora pro blok Spor (obě strany v nejsilnější verzi) a nový případ ze současnosti, na kterém se dá jejich spor vyzkoušet.
-4. Velká otázka 7: pro lidi období 1 a 2, kteří k ní mají co říct (Parmenidés, Prótagorás, Sókratés, Platón, Aristotelés, Pyrrhón, Epikúros), jedna ověřená věta o tom, jak odpovídali, se zdrojem.
-5. Obrázky: Sókratova busta a případně Prótagorás; autor fotografie, instituce, licence a odkaz (Wikimedia Commons).
-
-Výstup: podkladový list docs/podklady/celek-1-pravda.md podle šablony skillu, nové prameny a citáty do src/data/zdroje.yaml (citát vždy s místem a překladem), návrh dat do src/data, vyřízené body v docs/podklady/k-overeni.md. Celé npm test musí projít.
-
-Nejdřív mi v pár bodech napiš, co budeš ověřovat a které příběhy považuješ za nejsilnější, a počkej na odpověď. Pak pracuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci napiš, co je ověřeno, co zůstalo otevřené a co potřebuje moje rozhodnutí.
-```
-
-### Po P6: co zůstalo na později
-
-- Nikiás jako generál (rámec Lachéta): doložit z Thúkydida, jinak ho ve studentském textu nenazývat velitelem.
-- Dramatické datum dialogu Prótagorás: neověřeno, rok setkání se neuvádí.
-- Euthyfrónovo dilema (Euthyfrón 10a) zazní i na stránce velké otázky 9 „Je Bůh?“, až bude.
-- Blok Spor Sókratés × Prótagorás (Theaitétos) a nový případ se šaty z roku 2015 napíše P8 do cesty 1; strany v nejsilnější verzi jsou v `docs/podklady/celek-1-pravda.md`.
-- Animace jen tam, kde nesou myšlenku (vznikají se skillem `atlas-komponenta` až po schválení textu): u šatů posuvník předpokládaného světla nad vlastní kresbou, u Délia malá mapa ústupu, u soudu počítadlo „30 hlasů“.
-- Kopie `docs/plan.md` v projektu Claude (Atlas filozofie) je starší než repozitář; platí verze v repozitáři.
-
-### P7: Sókratův portrét a profil Prótagora
-
-**Stav 1. 10. 2026:** hotovo a schváleno. Sókratův portrét má kapitoly 02–05, Prótagorás profil, skill `atlas-osobnost` je ve `skills/` i v účtu. Po připomínce autora méně jmen a víc myšlenky (`docs/styl.md`, pravidlo 6); ověřené body z `k-overeni.md` jsou zapracované.
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (portrét je hlavně vyprávění a čeština). Skill `atlas-osobnost` při P7 teprve vznikne, proto prompt odkazuje na podklady, styl a hotovou kapitolu 01 jako vzor.
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-1; podklady z P6 jsou v ní.
-
-Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-1-pravda.md (Nejsilnější příběhy, Tvrzení s doporučenými formulacemi, Citáty, Rozpory a rozhodnutí), docs/rozhodnuti.md (záznamy z 1. 10. 2026), v docs/design.md oddíly Bloky a Mezery, mřížka, tvary (středová osa stránky osobnosti) a hotový začátek src/content/osobnosti/sokrates.mdx: úvod a kapitola 01 jsou vzor tónu.
-
-Napiš:
-
-1. Sókratův portrét, kapitoly 02–05, přímo do sokrates.mdx podle osnovy ve frontmatteru (stav změň na hotovo, osnovu smaž):
-   - 02 Muž z agory: jádro je Lachés (co je odvaha, Skythové a Plataje, nakonec nevědí); kdo za Sókratem chodil (Obrana 23c).
-   - 03 Ústup od Délia: Alkibiadovo vyprávění (Symposion 220a–221c), nejsilnější scéna je ústup.
-   - 04 Soud: začni setkáním s Euthyfrónem u sloupoví krále-archonta a jeho otázkou o zbožném (Euthyfrón 10a); pak obžaloba, třicet hlasů (Obrana 36a), prytaneum (36d–e) a proč nenavrhl vyhnanství (37c–38a). Citát obrana-38a patří sem.
-   - 05 Poslední den: Kritón u spícího Sókrata, jeho důvody k útěku a Sókratova odpověď (neoplácet křivdu křivdou, řeč Zákonů), smrt podle Faidóna 116b–118a, kohout pro Asklépia.
-   Každá kapitola: titulek s pointou v kurzívě, vyprávění scénou, jeden blok pro studenta podle toho, co scéna nese (Nejdřív sám, Volba s důvodem, Odkryj, Změň jednu věc), citáty jen ze zdroje.yaml přes <Citat id="…" />. V src/content/bloky/utek-z-vezeni.yaml doplň do „Co udělal Sókratés“ jeho vlastní důvody z Kritóna.
-
-2. Profil Prótagora src/content/osobnosti/protagoras.mdx ve stejné šabloně: úvod scénou (Hippokratés buší před úsvitem na dveře, Prótagorás v Kalliově domě), jedna až dvě kapitoly (Měřítko všech věcí; O bozích a o obci s mýtem o Prométheovi), dvě velké myšlenky s vlastním pokusem studenta, Zkus to žít a Kam dál (cesta 1, Sókratés, velká otázka 7). Konec života podle doporučení v podkladech (Menón 91e); vyhnání a pálení knih vynech, nebo jen „Později se vyprávělo…“. Deska s mincí, portrét neexistuje.
-
-3. Skill atlas-osobnost: až budou oba texty hotové, vytvoř skillem skill-creator skill podle tabulky skillů v docs/plan.md (tři hloubky, jak najít a vyprávět příběh, výběr myšlenek, blok Zkus to žít, šablona MDX, rychlá kontrola) s ukázkami z těchto dvou stránek. Ulož ho do skills/atlas-osobnost/ a nabídni mi ho k uložení do účtu.
-
-Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml (připravené jsou mimo jiné obrana-36a, obrana-36d, kriton-49c, faidon-118a, theaitetos-152a, dl-ix-51). Scény z Platónových dialogů uváděj „Platón vypráví…“, tradované příběhy „Vypráví se…“. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky.
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí); obě stránky si prohlédni v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu; projdi rychlou kontrolu z docs/styl.md.
-
-Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každou kapitolu a Prótagorův profil a jaký blok v ní bude, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky obou stránek a seznam toho, co jsi vynechal nebo připsal do k-overeni.
-```
-
-Po P7 následuje P8 (cesta 1 s Prótagorem, blokem Spor a šaty z roku 2015, stránka velké otázky 7, skill `atlas-cesta`) a P10 (revize celku skillem `atlas-revize`). Plné znění P8 připravím po schválení P7.
-
-### Po P7: co zůstalo na později
-
-- Animace jen tam, kde nesou myšlenku, se skillem `atlas-komponenta` až po schválení textu celku: u šatů posuvník předpokládaného světla nad vlastní kresbou, u Délia malá mapa ústupu, u soudu počítadlo „30 hlasů“.
-- Sókratova stránka má na telefonu asi 20 000 px. Celostránkový snímek v `tests/e2e/prohlidka.spec.ts` se nad 16 384 px v Chromiu uřízne (zbytek je prázdný); snímky skládat po částech. Délku stránky sledovat při zkoušce se studenty.
-- Euthyfrónovo dilema (Euthyfrón 10a) zazní i na stránce velké otázky 9 „Je Bůh?“, až bude.
-- Popis skillu `atlas-osobnost` v účtu je kratší než kopie ve `skills/`; sjednotit při úpravě skillů po fázi (P13).
-- Pravidlo „Jména a podrobnosti střídmě“ (`docs/styl.md`, pravidlo 6) projít i na hotové cestě 1 a v kapitole 01 Sókratova portrétu (P10).
-
-### P8: Cesta 1 s Prótagorem a stránka velké otázky 7
-
-**Stav 1. 10. 2026: hotovo a schváleno.** Po připomínce autora mají filozofové na stránce otázky dvě vrstvy: nejdřív odpovědi všech na tentýž případ, pak proč to tak viděli. Šablona stránky velké otázky (`/otazka/<slug>/`), stránka otázky 7 se čtyřmi hlasy, cesta 1 se sedmi kroky (Spor Prótagorás × Sókratés, šaty z roku 2015) a skill `atlas-cesta` (Jména střídmě, stránka velké otázky). Rozhodnutí v `docs/rozhodnuti.md`, otevřené body v `k-overeni.md` (oddíl P8).
-
-**Původní zadání:** další krok. P7 je schválený, podklady ke sporu Sókratés × Prótagorás, k šatům z roku 2015 a k velké otázce 7 jsou v `docs/podklady/celek-1-pravda.md`. Pracuje se dál ve větvi `celek-1`; po P8 následuje revize celku (P10) a schválení autorem.
-
-Stránka velké otázky je nový typ stránky (`docs/plan.md` › Informační architektura: otázka, tvůj první názor, odpovědi filozofů na časové ose, cesty k otázce, zápis do deníku). Proto P8 má dvě části: nejdřív šablona stránky se skillem `atlas-komponenta`, pak obsah se skillem `atlas-cesta`.
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (xhigh, když se šablona stránky zasekne).
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-1.
-
-Přečti CLAUDE.md, docs/styl.md (hlavně pravidlo 6 „Jména a podrobnosti střídmě“), docs/podklady/celek-1-pravda.md (Spor Sókratés × Prótagorás, nový případ: šaty 2015, Velká otázka 7, Citáty), docs/rozhodnuti.md (záznamy z 1. 10. 2026), v docs/plan.md Informační architekturu (řádek Velká otázka), v docs/architektura.md velkou otázku 7 a cestu 1, v docs/design.md oddíly Bloky a Cesta, hotovou cestu 1 (src/content/cesty/kdy-mam-dobry-duvod-verit*) a hotové stránky src/content/osobnosti/sokrates.mdx a protagoras.mdx jako vzor tónu.
-
-Udělej:
-
-1. Šablonu stránky velké otázky (skill atlas-komponenta): adresa /otazka/<slug>/ podle informační architektury, obsah v src/content/otazky/<slug>.mdx. Stránka má: otázku a krátký úvod scénou, „Tvůj první názor“ (zápis do deníku, než student uvidí filozofy), hlasy myslitelů na časové ose (mince, jméno, jedna věta, citát ze zdroje.yaml, odkaz na profil, pokud existuje), cesty k otázce a na konci návrat k prvnímu názoru („Změnil se?“). Odkazy /otazky/#<slug> v atlasu převeď na novou adresu; přehled /otazky/ zůstává. Ověř na 390 a 1440 px ve světlém i tmavém režimu a klávesnicí, přidej stránku do testů prohlídky.
-
-2. Stránku velké otázky 7 „Jak poznám, co je pravda?“ se čtyřmi hlasy: Parmenidés (rozum, ne smysly), Prótagorás (člověk je měřítkem), Sókratés (zkoušet tvrzení v rozhovoru), Aristotelés (definice pravdy). Platón, Pyrrhón a Epikúros přibudou, až budou mít vlastní profil. Věty a citáty jen z podkladů (dl-ix-22-parmenides, theaitetos-152a, obrana-21d, metafyzika-1011b).
-
-3. Cestu 1 doplň o Prótagora (skill atlas-cesta): krok se Sporem Sókratés × Prótagorás z Theaitéta, podaný jako spor, který si představil Platón (Prótagorás je tam už mrtvý; obě strany v nejsilnější verzi podle podkladů, Prótagorův lékař 166d–167b a Sókratova budoucnost 178b–179b), a nový případ se šaty z roku 2015 (Změň jednu věc). Rozhodni, jestli šaty nahradí krok „Zpráva ve skupině“, nebo přibudou; cesta má zůstat do 20 minut a 6–8 kroků. Na kartě cesty a v přehledu přidej Prótagora mezi filozofy. Skill atlas-cesta doplň o pravidlo „Jména a podrobnosti střídmě“ (stejně jako atlas-osobnost) a nabídni mi ho k uložení do účtu.
-
-Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš a zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml. Scény z Platónových dialogů „Platón vypráví…“, tradované příběhy „Vypráví se…“, vymyšlené situace „Představ si…“. Jménem jen ten, kdo nese příběh nebo myšlenku. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky. Zpětná vazba vysvětluje důvod a ptá se dál, nikdy neříká, kdo má pravdu.
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí); cestu projdi celou v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí; projdi rychlou kontrolu z docs/styl.md.
-
-Nejdřív mi v pár bodech napiš návrh stránky velké otázky (pořadí částí, jak bude vypadat časová osa na telefonu) a osnovu cesty 1 po změně (kroky, blok v každém, odhad minut), a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (šablona, otázka 7, cesta, skill) a nic neposílej na GitHub. Na konci pošli snímky stránky otázky a nového kroku cesty a seznam toho, co jsi vynechal nebo připsal do k-overeni.
-```
-
-### Po P8: co zůstalo na později
-
-- Hlasy Platóna, Pyrrhóna a Epikúra na stránce otázky 7, až budou mít profil (věty jsou ověřené).
-- Animace u šatů (posuvník předpokládaného světla nad vlastní kresbou) se skillem `atlas-komponenta`, až autor schválí text celku.
-- Skill `atlas-cesta` uložit do účtu (návrh předán v P8); skill `atlas-osobnost` v účtu má ještě „s Prótagorou“, opravit při sjednocení skillů (P13).
-- Stránky dalších velkých otázek vzniknou s jejich celky; do té doby je přehled `/otazky/` neodkazuje.
-
-### P10: Revize celku 1 „Jak poznám, co je pravda?“
-
-**Stav 1. 10. 2026: hotovo a schváleno.** Revize (`docs/revize/celek-1-2026-10-01.md`): verdikt po opravách, návrhy autor schválil kromě zkrácení Sókratovy stránky a připsal chybějící krok v kapitole 02 (Lachés). Opravy zapracované, celek 1 schválený a sloučený do hlavní větve; skill `atlas-cesta` doplněný o poučení z revize.
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-1.
-
-Udělej revizi celku 1 „Jak poznám, co je pravda?“ skillem atlas-revize. Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-1-pravda.md, docs/podklady/k-overeni.md (oddíly P6–P8), docs/rozhodnuti.md (záznamy z 1. 10. 2026) a v docs/design.md oddíly Bloky, Cesta a Velká otázka.
-
-Celek tvoří:
-- Sókratův portrét (src/content/osobnosti/sokrates.mdx, kapitoly 01–05),
-- profil Prótagora (src/content/osobnosti/protagoras.mdx),
-- cesta 1 „Kdy mám dobrý důvod věřit?“ (src/content/cesty/kdy-mam-dobry-duvod-verit*, 7 kroků, bloky cesta1-* v src/content/bloky),
-- stránka velké otázky 7 (src/content/otazky/jak-poznam-pravdu.mdx, adresa /otazka/jak-poznam-pravdu/),
-- vstupy a návraty: Domů, přehled /otazky/, karty cest, Kam dál, Pokračuj a Můj deník.
-
-Zvlášť zkontroluj:
-1. Pravidlo 6 „Jména a podrobnosti střídmě“ v krocích 1–4 cesty 1 a v kapitole 01 Sókratova portrétu (zbylo z P7).
-2. Odpovědi filozofů na žvýkačku na stránce otázky 7: jsou to věrné převody jejich myšlenek, poznal by se v nich každý z nich? Stačí Parmenidova část, která je nejkratší?
-3. Spor Prótagorás × Sókratés v kroku 5: dostal Prótagorás opravdu nejsilnější verzi, nebo ho text táhne k porážce?
-4. Opakování: neopakuje se zbytečně tentýž příklad nebo citát v portrétu, profilu, cestě a na stránce otázky (vítr, Delfy, obrana-21d, theaitetos-152a)?
-5. Délka: Sókratova stránka má na telefonu asi 20 000 px, cesta 7 kroků. Kde by student přestal číst?
-
-Postup podle skillu: projdi celek jako student na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí (i přímé odkazy na kroky, obnovení stránky, Začít znovu, deník), pak pět perspektiv. Drobnosti oprav rovnou a commituj česky; zásahy do významu, příběhu nebo struktury jen navrhni s hotovým novým zněním. Záznam ulož do docs/revize/celek-1-<datum>.md (nejvýš deset nálezů).
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí).
-
-Na konci mi napiš verdikt (připraveno ke schválení / po opravách / přepracovat), tři nejdůležitější nálezy a pošli snímky míst, kterých se nálezy týkají. Návrhy zatím nezapracovávej, počkej na moje rozhodnutí. Nic neposílej na GitHub a do hlavní větve nic neslučuj.
-```
-
-Po P10 rozhodne autor o návrzích z revize; po jejich zapracování schválení celku 1, sloučení `celek-1` do hlavní větve a další celek podle plánu etap F2.
-
-### Po P10: co zůstalo na později
-
-- Animace jen tam, kde nesou myšlenku (`atlas-komponenta`), teď když je text celku 1 schválený: u šatů posuvník předpokládaného světla nad vlastní kresbou, u Délia malá mapa ústupu, u soudu počítadlo „30 hlasů“. Zařadit podle chuti autora mezi celky.
-- Hlasy Platóna, Pyrrhóna a Epikúra na stránce otázky 7, až budou mít profil (věty jsou ověřené). Epikúros přibude s celkem 2.
-- Spor Platón × Diogenés zůstává v Sókratově portrétu (rozhodnutí autora); v profilu Diogena ho neopakovat, jen na něj odkázat.
-- Skill `atlas-cesta` uložit do účtu (návrh po P10); `atlas-osobnost` sjednotit s kopií ve `skills/` při P13.
-
-### P6: Podklady k celku 2 „Jak mám žít?“
-
-**Stav 2. 10. 2026:** hotovo a schváleno, podklady v `docs/podklady/celek-2-jak-zit.md` (větev `celek-2`), rozhodnutí v `docs/rozhodnuti.md`. Zadání, se kterým P6 proběhl: Celek 2 tvoří velká otázka 1 „Jak mám žít?“, cesta 6 „Kolik je dost?“, profil Epikúra a profil Diogena jako protihlas: oba žijí s málem, každý z jiného důvodu (Epikúros kvůli klidu a přátelům, Diogenés kvůli svobodě od všeho, co není potřeba). Stoici zazní na stránce otázky, celek s Epiktétem (cesta 5) přijde hned potom. Rozhodnuto 1. 10. 2026 (`docs/rozhodnuti.md`).
-
-Postup jako u celku 1: P6 podklady, P7 profily (`atlas-osobnost`), P8 cesta a stránka otázky (`atlas-cesta`), P10 revize, schválení autorem. Poučení z revize celku 1 (`docs/revize/celek-1-2026-10-01.md`) platí od začátku: shrnutí pramene drží jeho rozdíly, Spor dá oběma stranám odpověď, každý hlas na stránce otázky se pozná.
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Sonnet 5.5 · high s vyhledáváním; u sporných pramenů (Epikúrovy zlomky, kynické anekdoty u Diogena Laertia) Opus 5.5 · high.
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Z větve main založ větev celek-2.
-
-Přečti CLAUDE.md, docs/styl.md, v docs/architektura.md velkou otázku 1, cestu 6 a cestu 7 (Diogenés, aby se celky nepřekrývaly), docs/podklady/k-overeni.md, hotový podkladový list docs/podklady/celek-1-pravda.md jako vzor a docs/revize/celek-1-2026-10-01.md (co se v celku 1 nepovedlo). Postupuj podle skillu atlas-overeni.
-
-Připrav podklady k celku 2 „Jak mám žít?“. Studentský text zatím nepiš.
-
-1. Epikúros pro profil: život (Samos, Athény, Zahrada a kdo v ní žil, včetně žen a otroků), slast jako klid (ataraxia a aponia), co je potřeba a co ne (přirozené a nutné touhy), přátelství, chléb a voda a hrnek sýra. Prameny: Diogenés Laertios X (Dopis Menoikeovi, Hlavní myšlenky), Vatikánské výroky, SEP „Epicurus“. Jak ho zkreslila pověst „epikurejce“, a jeho nejsilnější argument v jeho vlastní nejsilnější verzi.
-2. Diogenés pro profil: život (Sinópé, vyhnanství, Athény, Korinth), sud, miska, lucerna, Alexandr, žít podle přírody a bez studu; co je doložené, co tradované a co jen pozdní anekdota. Prameny: Diogenés Laertios VI, SEP „Cynics“ / „Diogenes of Sinope“. Příběh s Alexandrem patří i cestě 7: navrhni, co si nechá profil a co cesta 7.
-3. Cesta 6 „Kolik je dost?“: vstupní scéna z Epikúrovy zahrady, skutečný střet Epikúros × Diogenés nebo kynici pro blok Spor (obě strany v nejsilnější verzi; ověř, co Epikúros říká o kynicích, např. Diogenés Laertios X, 119), a nový případ ze současnosti, na kterém se dá spor vyzkoušet (doložená událost, nebo „Představ si…“ bez historických osob).
-4. Velká otázka 1: pro hlasy Aristotelés, Diogenés, Epikúros a jeden stoik (Epiktétos nebo Seneca) jedna ověřená myšlenka o tom, jak žít, se zdrojem, a citát, který patří téže osobě. Navrhni úvodní případ ze života studenta („Představ si…“), na který odpoví všichni čtyři a každý jinak.
-5. Obrázky: Epikúros a Diogenés (busty, Commons), autor fotografie, instituce, licence a odkaz.
-
-Výstup: podkladový list docs/podklady/celek-2-jak-zit.md podle šablony skillu, nové prameny a citáty do src/data/zdroje.yaml (citát vždy s místem a překladem; vlastní převody z řečtiny jako v celku 1), návrh dat do src/data, vyřízené a nové body v docs/podklady/k-overeni.md. Celé npm test musí projít (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí).
-
-Pravidla jako u celku 1, s poučením z revize: každé historické tvrzení a citát se zdrojem; u každého shrnutí pramene drž rozdíly, které pramen dělá; výklad, o kterém se badatelé přou, smí do textu, když slouží pointě a podává se jako výklad. Pointa má přednost před stoprocentní historickou jistotou, fakta ale jen ověřená.
-
-Nejdřív mi v pár bodech napiš, co budeš ověřovat, které příběhy považuješ za nejsilnější a jaký Spor a nový případ navrhuješ, a počkej na odpověď. Pak pracuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci napiš, co je ověřeno, co zůstalo otevřené a co potřebuje moje rozhodnutí.
-```
-
-
-
-### Po P6 (celek 2): co zůstalo na později
-
-- Spor v cestě 6 je Epikúros × kynici (ne smyšlené setkání s Diogenem); oba nové případy jsou samostatné kroky (měsíc na minimum, studie o penězích a štěstí). Krok se studií potřebuje vlastní jednoduchý graf (`atlas-komponenta`).
-- Kresba `diogenes-poharek` je na výšku, deska bloku Příběh má 4 : 3: výřez, nebo poměr desky na výšku.
-- Alexandr u Diogena patří cestě 7 (Plútarchos, Alexandr 14, a Arriánova věta o touze po slávě); profil ho zmíní jednou větou. Spor Platón × Diogenés zůstává v Sókratově portrétu, profil Diogena na něj jen odkáže.
-- Umírající Epikúros a dopis Idomeneovi patří cestě 8; Senekova nabídka Neronovi (Tacitus) portrétu Seneky.
-- Mince ze Sinópy se jménem Hikesios: datace nesedí, do textu jen aféra s mincemi (`k-overeni.md`).
-- Nové osoby (Leontion, Themista, Metrodóros, Alexandr) až dodatečně, až bude vše hotové.
-
-### P7: Profily Epikúra a Diogena
-
-**Stav 2. 10. 2026:** hotovo a schváleno. Profily `src/content/osobnosti/epikuros.mdx` (tři kapitoly) a `diogenes.mdx` (čtyři kapitoly), každý s Volbou, Odkryj, dvěma myšlenkami a Zkus to žít; u Diogena blok Příběh s kresbou a druhý Odkryj „Co je člověk?“. Při práci přibylo: deska na výšku a vlastní výřez obrázku, rozvržení Příběhu podle šířky místa, mini mapa podle míst osoby. Rozhodnutí v `docs/rozhodnuti.md`, vynechané a neověřené v `k-overeni.md` (oddíl P7). Zadání, se kterým P7 proběhl:
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-2; podklady z P6 jsou v ní.
-
-Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-2-jak-zit.md (Nejsilnější příběhy, Tvrzení s doporučenými formulacemi, Diogenés a Alexandr, Citáty se sloupcem Kde použít, Obrázky, Rozpory a rozhodnutí), docs/rozhodnuti.md (záznamy z 1. a 2. 10. 2026), docs/revize/celek-1-2026-10-01.md a hotové stránky src/content/osobnosti/protagoras.mdx a sokrates.mdx jako vzor. Postupuj podle skillu atlas-osobnost.
-
-Napiš:
-
-1. Profil Epikúra src/content/osobnosti/epikuros.mdx: úvod scénou (čtrnáctiletý Epikúros a učitelé, kteří mu neuměli vysvětlit Hésiodův chaos; rodina, která přišla o domov na Samu), Zahrada a kdo v ní žil (přátelé odevšad, otroci, ženy; majetek nesdíleli, protože přátelství stojí na důvěře), slast jako klid a její strop, tři druhy tužeb s vlastním pokusem studenta, přátelství, pověst „epikurejce“ (Dopis Menoikeovi 131 a Senekovo svědectví). Dvě velké myšlenky s vlastním pokusem, Zkus to žít, Kam dál (cesta 6, cesta 8, velká otázka 1). Obrázek epikuros-met je v datech.
-
-2. Profil Diogena src/content/osobnosti/diogenes.mdx: úvod mincemi ze Sinópy a věštbou „změň ražbu“ (mince i zvyk), nosná scéna je dítě, které pije z dlaní (citát dl-vi-37, kresba diogenes-poharek v bloku Příběh), dál myš, pithos (velká hliněná nádoba, ne sud), lucerna („Hledám člověka“), občan světa, prodej do otroctví. Žít podle přírody, ne podle zvyku. Alexandr jen jednou větou s odkazem na cestu 7; Spor Platón × Diogenés neopakuj, odkaž na Sókratův portrét. Dvě velké myšlenky s vlastním pokusem, Zkus to žít, Kam dál (cesta 6, cesta 7, velká otázka 1). Na desce je dřevořez diogenes-carpi: text může ukázat, že sud je až představa renesance.
-
-Co do profilů nepatří, protože to nese cesta 6 nebo stránka otázky 1: nápis na Zahradě a správce (Seneca 21, 10), Spor s kyniky a jeho citáty (dl-x-119, menoikeus-130, dl-vi-104, dl-vi-71), studie o penězích (kd-15, vs-68), hrnek sýra (dl-x-11-syr, pointa scény v cestě 6), citáty stránky otázky (menoikeus-132, dl-vi-44). Umírající Epikúros patří cestě 8.
-
-Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml. Diogenovy anekdoty uváděj „Vypráví se…“, Senekův popis Zahrady „Seneca popisuje…“. U každého shrnutí pramene drž rozdíly, které pramen dělá (ječná placka × chléb, pohárek × miska, pithos × sud). Jména střídmě: Leontion, Themistu, Mya ani Xeniada nejmenuj, pokud nenesou myšlenku. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky.
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí); obě stránky si prohlédni v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu (hlavně jak desky ořezávají nové obrázky); projdi rychlou kontrolu z docs/styl.md.
-
-Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý profil, jaké kapitoly a bloky v něm budou a které citáty použiješ, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky obou stránek a seznam toho, co jsi vynechal nebo připsal do k-overeni.
-```
-
-Po P7 následuje P8 (cesta 6 „Kolik je dost?“ se Sporem Epikúros × kynici a dvěma novými případy, stránka velké otázky 1 se čtyřmi hlasy; plné znění níže) a P10 (revize celku skillem `atlas-revize`).
-
-### Po P7 (celek 2): co zůstalo na později
-
-- **Odkazy, které čekají na stránky.** Kam dál obou profilů zatím nevede na cestu 6, 7 ani 8 a otázka 1 míří na řádek v přehledu `/otazky/#jak-zit`. V P8 doplnit do obou profilů cestu 6 a přepojit otázku 1 na `/otazka/jak-zit/`. Až vznikne cesta 7, přidat ji do Kam dál Diogena a k větě o Alexandrovi v kapitole 03; až vznikne cesta 8, do Kam dál Epikúra.
-- **Hloubka v datech.** Epikúros a Diogenés mají `hloubka: profil`; `docs/architektura.md` s nimi počítá jako s portréty. Vrátit na `portret`, až portrét vznikne.
-- **Cesta 6 se nesmí opakovat po profilech:** tři druhy tužeb jsou v profilu Epikúra vyložené (s příklady ze scholia), cesta má třídění do tří košů; strop slasti je v kapitole 02 jednou větou a v Myšlence 1. Dny skrovného jídla, hrnek sýra a nápis na Zahradě profil nepoužil.
-- Popisky na mini mapě počítají s většími písmy na telefonu; na notebooku proto kolem míst zbývá víc místa, než je nutné. Doladit, až bude profilů s místy mimo Egejské moře víc.
-
-### P8: Cesta 6 „Kolik je dost?“ a stránka velké otázky 1
-
-**Stav 2. 10. 2026:** další krok. P7 je schválený, podklady k cestě 6 (scéna v Zahradě, Spor Epikúros × kynici, oba nové případy) a k velké otázce 1 jsou v `docs/podklady/celek-2-jak-zit.md`. Pracuje se dál ve větvi `celek-2`; po P8 následuje revize celku (P10) a schválení autorem.
-
-Krok se studií potřebuje vlastní graf, proto P8 začíná komponentou (skill `atlas-komponenta`) a teprve potom přijde obsah (skill `atlas-cesta`). Šablona stránky velké otázky je hotová z celku 1.
-
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high (xhigh, když se zasekne graf).
-
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-2; profily Epikúra a Diogena z P7 jsou v ní hotové a schválené.
-
-Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-2-jak-zit.md (Čeho se drží celý celek, Tvrzení: cesta 6, Spor Epikúros × kynici, Nový případ A a B, Velká otázka 1, Citáty se sloupcem Kde použít, Rozpory a rozhodnutí), docs/podklady/k-overeni.md (oddíly Celek 2 a P7), docs/rozhodnuti.md (záznamy z 1. a 2. 10. 2026), docs/revize/celek-1-2026-10-01.md, v docs/plan.md oddíl „Po P7 (celek 2)“, v docs/architektura.md velkou otázku 1 a cesty 5 až 8, v docs/design.md oddíly Bloky, Cesta a Velká otázka, hotovou cestu 1 (src/content/cesty/kdy-mam-dobry-duvod-verit*), stránku otázky 7 (src/content/otazky/jak-poznam-pravdu.mdx) a oba nové profily (src/content/osobnosti/epikuros.mdx a diogenes.mdx), ať se v celku nic neopakuje. Postupuj podle skillu atlas-cesta, u grafu podle skillu atlas-komponenta.
-
-Udělej:
-
-1. Graf ke studii o penězích a štěstí (skill atlas-komponenta): vlastní jednoduchá kresba dvou křivek podle studie Killingswortha, Kahnemana a Mellersové z roku 2023 (pramen kkm-2023, tab. 1 a obr. 2). U většiny lidí štěstí s příjmem roste dál; u nejméně šťastné asi pětiny se nad zhruba 100 000 dolary ročně zastaví. Graf ze studie se nesmí kopírovat. Popisky česky, čitelné na 390 px, ve světlém i tmavém režimu, s textovou alternativou pro čtečky. Čísla jen ta, která jsou v podkladech.
-
-2. Cestu 6 „Kolik je dost?“ (období 2, velká otázka 1, filozofové Epikúros a Diogenés, do 20 minut, 6 až 8 kroků). Pořadí navržené v podkladech: scéna v Zahradě (nápis, správce, ječná kaše a voda podle Seneky; pointa hrnek sýra; citáty seneca-ep-21-10 a dl-x-11-syr) → vlastní pokus: věci ze studentova týdne do tří košů tužeb → Epikúros o stropu slasti → Spor Epikúros × kynici bez smyšleného setkání s Diogenem (citáty dl-vi-104, dl-vi-71, menoikeus-130, dl-x-119; Epikúrovy dny skrovného jídla, seneca-ep-18-9) → krok „Představ si… měsíc na minimum“ → krok se studií o penězích a štěstí a s grafem (citáty kd-15 a vs-68; výhrady ke studii patří do zpětné vazby) → vlastní pravidlo „Kolik je dost?“ (Moje stanovisko s rozbalene). Kartu cesty dej do profilu Epikúra tam, kde na ni text navazuje, a na stránku otázky 1; na Domů zůstává jedna doporučená cesta.
-
-3. Stránku velké otázky 1 „Jak mám žít?“ (src/content/otazky/jak-zit je zatím jen řádek v přehledu; doplň ji podle vzoru otázky 7): úvodní případ „Představ si…“ (celé léto brigáda ve skladu, nebo tři týdny jako vedoucí na táboře s kamarády) a čtyři hlasy podle podkladů: Aristotelés (etika-1098a), Epikúros (menoikeus-132), Diogenés (dl-vi-44) a Seneca (vita-beata-26). U Seneky jedna věta o jeho bohatství; Tacitova scéna s Neronem zůstává pro jeho portrét.
-
-4. Propojení: do Kam dál obou profilů doplň cestu 6 a otázku 1 přepoj z /otazky/#jak-zit na /otazka/jak-zit/. Na stránku otázky 7 přidej hlas Epikúra, protože už má profil (věta je ověřená v docs/podklady/celek-1-pravda.md, Velká otázka 7; pramen dl-x-31). Cesty 7 a 8 neexistují: neodkazuj na ně.
-
-Co se po profilech nesmí opakovat:
-- Tři druhy tužeb profil Epikúra vykládá na příkladech ze scholia (žízeň, drahé jídlo, socha) a zkouší na jednom studentově přání. Cesta má třídění do tří košů na věcech ze studentova týdne, s jinými příklady.
-- Zahrada, kdo v ní žil, a společná pokladna jsou v profilu Epikúra. Scéna cesty stojí na Senekově popisu a na sýru.
-- Dítě a pohárek, lucernu, kohouta, prodej do otroctví a občana světa nese profil Diogena. Spor a stránka otázky ukážou Diogena jinde: cvičení v nepohodlí, snadný život skrytý za medovými koláčky.
-- Citáty z profilů (menoikeus-131-maza, menoikeus-131-slast, kd-27, vs-33, vita-beata-13, dl-vi-63, dl-vi-37, dl-vi-41, dl-vi-40) v cestě ani na stránce otázky nepoužívej.
-- Každý hlas na stránce otázky se musí poznat: Aristotelés činnost a vnější dobra, Epikúros klid a přátelé, Diogenés zpochybní samu volbu, Seneca peníze mít smí, ale neslouží jim.
-
-Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml (i řeč správce jen jako citát ze Seneky). Senekův popis Zahrady uváděj „Seneca popisuje…“, nikdy „na bráně stálo“; Diogenovy anekdoty „Vypráví se…“; vymyšlené situace „Představ si…“ bez historických osob; studii vyprávěj přímo jako doloženou událost. Drž rozdíly pramenů (ječná kaše u Seneky × ječná placka v Dopise Menoikeovi × chléb v dopisech; pithos × sud). Spor bez ohlášeného vítěze, obě strany dostanou odpověď na nejsilnější námitku druhé; domyšlené odpovědi podávej jako výklad („kynik by mohl namítnout“). Jména střídmě: adresáty dopisů, Epikúrovy žáky, Kratéta ani autory studie nejmenuj, pokud nenesou myšlenku. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky. Zpětná vazba vysvětluje důvod a ptá se dál, nikdy neříká, kdo má pravdu.
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí); stránku otázky 1 přidej do testů prohlídky; cestu projdi celou v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí, jednou i bez odkrytí bloků; projdi rychlou kontrolu z docs/styl.md.
-
-Nejdřív mi v pár bodech napiš osnovu cesty 6 (kroky, blok v každém, odhad minut), návrh grafu (co je na osách a jak vypadá na telefonu) a čtyři odpovědi hlasů na úvodní případ, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (graf, cesta, stránka otázky, propojení) a nic neposílej na GitHub. Na konci pošli snímky cesty a stránky otázky a seznam toho, co jsi vynechal nebo připsal do k-overeni.
-```
-
-Po P8 následuje P10 (revize celku 2 skillem `atlas-revize`), rozhodnutí autora o návrzích z revize, schválení celku a sloučení větve `celek-2` do hlavní větve. Plné znění P10 připravím po schválení P8.
+Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
 
 ## Plán etap
 

@@ -34,7 +34,7 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
    Bloky v kroku nabídnou „Kam dál“ na další krok samy; `client:visible` ani odkaz do deníku nepiš. Závěrečný krok: `<MojeStanovisko client:visible rozbalene id="…" otazka="…" odkaz="…" />`.
 5. **Vstupy do cesty:** karta `<CestaKarta slug="…" />` u filozofa cesty a odkaz v jeho Kam dál; u velké otázky odkaz na cestu. Kartu nedávej hned za kapitolu, kterou první kroky cesty převyprávějí; student by tytéž odstavce četl dvakrát za sebou. Na Domů jen jedna doporučená cesta.
 6. **Ověř** `npm test` celé, projdi cestu v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí, snímky si prohlédni. Projdi ji jednou i bez odkrytí bloků (viz Jak psát). Pak skill `atlas-revize`.
-7. **Zapiš** do `docs/plan.md` stav, do `docs/rozhodnuti.md` zásadní volby, potřeby ověření do `k-overeni.md`. Commituj česky po ucelených krocích ve vlastní větvi.
+7. **Zapiš** stav do plánu větve (`docs/plany/<větev>.md`), do `docs/rozhodnuti.md` zásadní volby, potřeby ověření do `k-overeni.md`. Commituj česky po ucelených krocích ve vlastní větvi.
 
 ## Jak psát
 

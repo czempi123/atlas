@@ -2,12 +2,19 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Plány větví a GitHub
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Zadání kroků, jejich stav a „co zůstalo na později“ má každá větev ve vlastním souboru `docs/plany/<větev>.md`, od podkladů po závěrečnou revizi celku. `docs/plan.md` drží strategii, katalog promptů a rozcestník. Dosavadní prompty jsou přesunuté do `zaklad.md` (P0 až P5), `celek-1.md` a `celek-2.md` | Autor: prompty se v plánu hromadí a v tom množství textu se špatně hledá |
+| Po závěrečné revizi a schválení celku se větev sloučí do hlavní a hlavní větev se pošle na GitHub. Poprvé po dokončení celku 2 | Autor: po finální revizi celku vždy aktualizovat GitHub |
+
 ## 2. 10. 2026: Schválení P7 (celek 2) a další krok
 
 | Rozhodnutí | Důvod |
 | --- | --- |
 | Profily Epikúra a Diogena schváleny, včetně odstavce o sudu a bodů doověřených z `k-overeni.md` | Autor: „Výborně“ |
-| Další krok P8 pro celek 2: nejdřív graf ke studii o penězích a štěstí (`atlas-komponenta`), pak cesta 6 „Kolik je dost?“ a stránka velké otázky 1 (`atlas-cesta`); zadání v `docs/plan.md` | Pořadí workflow celku: psaní → revize → schválení |
+| Další krok P8 pro celek 2: nejdřív graf ke studii o penězích a štěstí (`atlas-komponenta`), pak cesta 6 „Kolik je dost?“ a stránka velké otázky 1 (`atlas-cesta`); zadání v `docs/plany/celek-2.md` | Pořadí workflow celku: psaní → revize → schválení |
 | V P8 se do Kam dál profilů doplní cesta 6, otázka 1 se přepojí na vlastní stránku a na stránku otázky 7 přibude hlas Epikúra | Odkazy čekaly na stránky; Epikúros už má profil a jeho věta k otázce 7 je ověřená z celku 1 |
 
 ## 2. 10. 2026: Profily Epikúra a Diogena (P7)
