@@ -66,6 +66,80 @@ export function projekce(v: Vyrez, rezerva = 20) {
     .clipExtent([[-rx, -ry], [v.sirka + rx, v.vyska + ry]]);
 }
 
+/** Místo na mini mapě osoby: souřadnice, název a řádky pod ním („působení 306 př. n. l.“). */
+export interface MistoMiniMapy {
+  souradnice: [number, number];
+  nazev: string;
+  radky: string[];
+}
+
+export type StranaPopisku = 'vpravo' | 'vlevo';
+
+/**
+ * Na kterou stranu od bodu patří popisek: vlevo u pravého okraje výřezu, nebo když těsně vpravo
+ * ve stejné výšce leží jiný bod (Korinth vedle Athén), aby se popisky nepřekryly.
+ */
+export function stranyPopisku(xy: [number, number][], sirka: number): StranaPopisku[] {
+  return xy.map(([x, y], i) => {
+    if (x > sirka * 0.6) return 'vlevo';
+    const soused = xy.some(([x2, y2], j) => j !== i && x2 > x && x2 - x < 170 && Math.abs(y2 - y) < 30);
+    return soused ? 'vlevo' : 'vpravo';
+  });
+}
+
+// Rozměry popisku v jednotkách výřezu. Počítáme s většími písmy na telefonu (MiniMapa.astro), ať se vejde všude.
+const sirkaPopisku = (m: MistoMiniMapy) => 13 + Math.max(m.nazev.length * 11.5, ...m.radky.map((r) => r.length * 9.2));
+const VYSKA_NAZVU = 24;
+const VYSKA_RADKU = 22;
+
+/** Obdélník, který zabírají body s popisky (v pixelech výřezu). */
+function obalPopisku(v: Vyrez, mista: MistoMiniMapy[]) {
+  const proj = projekce(v, 1e6);
+  const xy = mista.map((m) => proj(m.souradnice) as [number, number]);
+  const strany = stranyPopisku(xy, v.sirka);
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  xy.forEach(([x, y], i) => {
+    const s = sirkaPopisku(mista[i]);
+    x0 = Math.min(x0, strany[i] === 'vpravo' ? x - 8 : x - s);
+    x1 = Math.max(x1, strany[i] === 'vpravo' ? x + s : x + 8);
+    y0 = Math.min(y0, y - VYSKA_NAZVU);
+    y1 = Math.max(y1, y + mista[i].radky.length * VYSKA_RADKU + 6);
+  });
+  return { x0, y0, x1, y1 };
+}
+
+/**
+ * Výřez mini mapy osoby. Dokud jsou všechna její místa vidět ve výchozím egejském výřezu, zůstává ten.
+ * Jinak se střed a měřítko spočítají tak, aby se vešla všechna místa i s popisky (Sinópé, Thurioi).
+ */
+export function vyrezMiniMapy(mista: MistoMiniMapy[], vychozi: Vyrez = VYREZY_OBDOBI_1.mini): Vyrez {
+  if (!mista.length) return vychozi;
+  const p0 = projekce(vychozi, 1e6);
+  const vsechnaVidet = mista.every((m) => {
+    const [x, y] = p0(m.souradnice) as [number, number];
+    return x > 0 && x < vychozi.sirka && y > 0 && y < vychozi.vyska;
+  });
+  if (vsechnaVidet) return vychozi;
+
+  const delky = mista.map((m) => m.souradnice[0]);
+  const sirky = mista.map((m) => m.souradnice[1]);
+  const stred: [number, number] = [(Math.min(...delky) + Math.max(...delky)) / 2, (Math.min(...sirky) + Math.max(...sirky)) / 2];
+  const OKRAJ = 8;
+  let v: Vyrez = { ...vychozi, stred };
+  for (let meritko = vychozi.meritko; meritko >= 250; meritko = Math.floor(meritko * 0.94)) {
+    v = { ...vychozi, stred, meritko };
+    // Popisky visí pod bodem a do strany: střed výřezu dorovnáme na střed bodů i s popisky.
+    for (let k = 0; k < 3; k++) {
+      const o = obalPopisku(v, mista);
+      const novy = projekce(v, 1e6).invert!([(o.x0 + o.x1) / 2, (o.y0 + o.y1) / 2]) as [number, number];
+      v = { ...v, stred: [Math.round(novy[0] * 100) / 100, Math.round(novy[1] * 100) / 100] };
+    }
+    const o = obalPopisku(v, mista);
+    if (o.x0 >= OKRAJ && o.x1 <= v.sirka - OKRAJ && o.y0 >= OKRAJ && o.y1 <= v.vyska - OKRAJ) return v;
+  }
+  return v;
+}
+
 export interface Podklad {
   pevnina: string;
   sit: string;

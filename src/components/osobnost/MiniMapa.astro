@@ -1,27 +1,30 @@
 ---
 // Výřez mapy s místy, kde osoba žila, bojovala a zemřela. Podklad se počítá při sestavení z Natural Earth.
+// Výřez: výchozí egejský, dokud se do něj vejdou všechna místa osoby; jinak podle míst (src/lib/mapa.ts, vyrezMiniMapy).
 import type { TOsoba } from '../../lib/schema';
 import { mistaPodleId } from '../../lib/data';
-import { podklad, VYREZY_OBDOBI_1, type Vyrez } from '../../lib/mapa';
+import { podklad, stranyPopisku, vyrezMiniMapy, type MistoMiniMapy, type Vyrez } from '../../lib/mapa';
 import { rok as fmtRok } from '../../lib/casy';
 
 interface Props { osoba: TOsoba; vyrez?: Vyrez }
-const { osoba, vyrez = VYREZY_OBDOBI_1.mini } = Astro.props;
-const p = podklad(vyrez);
 const ROLE: Record<string, string> = {
   narozeni: 'narození', studium: 'studia', pusobeni: 'působení', pobyt: 'pobyt', exil: 'vyhnanství', tazeni: 'válečné tažení', smrt: 'smrt',
 };
 // Místa sloučená podle id, s rolemi a roky.
-const body = new Map<string, { nazev: string; xy: [number, number]; popis: string[] }>();
-for (const m of osoba.mista) {
+const mista = new Map<string, MistoMiniMapy>();
+for (const m of Astro.props.osoba.mista) {
   const misto = mistaPodleId.get(m.misto)!;
   const rok = m.rok ?? m.od;
   const popis = `${ROLE[m.role]}${rok !== undefined ? ` ${fmtRok(rok)}` : ''}`;
-  const b = body.get(m.misto) ?? { nazev: misto.nazev, xy: p.bod(misto.souradnice), popis: [] };
-  b.popis.push(popis);
-  body.set(m.misto, b);
+  const b = mista.get(m.misto) ?? { nazev: misto.nazev, souradnice: misto.souradnice as [number, number], radky: [] };
+  b.radky.push(popis);
+  mista.set(m.misto, b);
 }
-const vidimne = [...body.values()].filter((b) => b.xy[0] > 0 && b.xy[0] < vyrez.sirka && b.xy[1] > 0 && b.xy[1] < vyrez.vyska);
+const { osoba, vyrez = vyrezMiniMapy([...mista.values()]) } = Astro.props;
+const p = podklad(vyrez);
+const body = [...mista.values()].map((m) => ({ nazev: m.nazev, xy: p.bod(m.souradnice), popis: m.radky }));
+const vidimne = body.filter((b) => b.xy[0] > 0 && b.xy[0] < vyrez.sirka && b.xy[1] > 0 && b.xy[1] < vyrez.vyska);
+const strany = stranyPopisku(vidimne.map((b) => b.xy), vyrez.sirka);
 ---
 <figure class={`minimapa obdobi-${osoba.obdobi}`}>
   <svg viewBox={`0 0 ${vyrez.sirka} ${vyrez.vyska}`} role="img" aria-label={`Mapa: ${vidimne.map((b) => `${b.nazev} (${b.popis.join(', ')})`).join('; ')}`}>
@@ -30,15 +33,18 @@ const vidimne = [...body.values()].filter((b) => b.xy[0] > 0 && b.xy[0] < vyrez.
     <path d={p.pevnina} class="svit svit--1" />
     <path d={p.pevnina} class="svit svit--2" />
     <path d={p.pevnina} class="pevnina" />
-    {vidimne.map((b) => (
-      <g transform={`translate(${b.xy[0]} ${b.xy[1]})`}>
-        <circle r="6" class="bod" />
-        <text x={b.xy[0] > vyrez.sirka * 0.6 ? -11 : 11} y="-2" class="nazev" text-anchor={b.xy[0] > vyrez.sirka * 0.6 ? 'end' : 'start'}>{b.nazev}</text>
-        <text y="-2" class="role" text-anchor={b.xy[0] > vyrez.sirka * 0.6 ? 'end' : 'start'}>
-          {b.popis.map((radek) => <tspan x={b.xy[0] > vyrez.sirka * 0.6 ? -11 : 11} dy="1.2em">{radek}</tspan>)}
-        </text>
-      </g>
-    ))}
+    {vidimne.map((b, i) => {
+      const vlevo = strany[i] === 'vlevo';
+      return (
+        <g transform={`translate(${b.xy[0]} ${b.xy[1]})`}>
+          <circle r="6" class="bod" />
+          <text x={vlevo ? -11 : 11} y="-2" class="nazev" text-anchor={vlevo ? 'end' : 'start'}>{b.nazev}</text>
+          <text y="-2" class="role" text-anchor={vlevo ? 'end' : 'start'}>
+            {b.popis.map((radek) => <tspan x={vlevo ? -11 : 11} dy="1.2em">{radek}</tspan>)}
+          </text>
+        </g>
+      );
+    })}
     <g transform={`translate(16 ${vyrez.vyska - 18})`} class="meritko">
       <path d={`M0 0h${p.meritko.px}`} />
       <text y="-6">{p.meritko.km} km</text>

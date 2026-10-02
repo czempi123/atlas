@@ -573,6 +573,7 @@ obrazky:
     instituce: "New York, inv. 11.90"
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/248475"
+    vyrez: "50% 33%"
   - id: diogenes-carpi
     soubor: obrazky/diogenes-carpi-met.jpg
     popisek: "Diogenés, jak si ho představila renesance: před sudem a s oškubaným kohoutem, kterým se vysmál Platónovi. Dřevořez Uga da Carpi podle Parmigianina, asi 1527–1530."
@@ -580,6 +581,7 @@ obrazky:
     instituce: "New York, inv. 17.50.1"
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/354611"
+    vyrez: "50% 12%"
   - id: diogenes-poharek
     soubor: obrazky/diogenes-poharek-met.jpg
     popisek: "Diogenés odhazuje pohárek, když vidí dítě pít z dlaní. Kresba neznámého francouzského umělce, 17. století."
@@ -587,3 +589,4 @@ obrazky:
     instituce: "New York, inv. 53.513.8"
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/344405"
+    vyrez: "50% 37%"

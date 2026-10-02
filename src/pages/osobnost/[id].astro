@@ -19,7 +19,8 @@ const { Content } = await render(zaznam);
 const fm = zaznam.data;
 const osoba = najdiOsobu(fm.osoba);
 const obdobi = obdobiPodleId.get(osoba.obdobi)!;
-const rodiste = osoba.mista.find((m) => m.role === 'narozeni' || m.role === 'pusobeni');
+// Místo v hlavičce: rodiště; když ho neznáme, místo, kde člověk působil naposledy (Epikúros: Athény, ne Mytiléna).
+const rodiste = osoba.mista.find((m) => m.role === 'narozeni') ?? osoba.mista.findLast((m) => m.role === 'pusobeni');
 const misto = rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
 const vztahy = data.vztahy.filter((v) => v.od === osoba.id || v.k === osoba.id);
 const citatyNaStrance = [fm.citat, ...[...(zaznam.body ?? '').matchAll(/<Citat id="([^"]+)"/g)].map((m) => m[1])].filter(Boolean) as string[];
@@ -33,6 +34,11 @@ const prameny = [
   ...vztahy.map((v) => v.zdroj),
   ...(osoba.atribut ? [osoba.atribut.zdroj] : []),
   ...citatyNaStrance.map((id) => data.zdroje.citaty.find((c) => c.id === id)!.zdroj),
+];
+// Obrázky na stránce: portrét na desce a obrazy scén v blocích Příběh; licence každého patří do Pramenů.
+const obrazkyNaStrance = [
+  ...(osoba.obrazek ? [osoba.obrazek] : []),
+  ...[...(zaznam.body ?? '').matchAll(/<Pribeh [^>]*obrazek="([^"]+)"/g)].map((m) => m[1]),
 ];
 const dev = import.meta.env.DEV;
 ---
@@ -96,7 +102,7 @@ const dev = import.meta.env.DEV;
     )}
 
     <div class="ctenarsky">
-      <Prameny prameny={prameny} citaty={citatyNaStrance} obrazky={osoba.obrazek ? [osoba.obrazek] : []} />
+      <Prameny prameny={prameny} citaty={citatyNaStrance} obrazky={obrazkyNaStrance} />
     </div>
   </article>
 </Zakladni>

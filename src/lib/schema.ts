@@ -223,6 +223,11 @@ export const Obrazek = z
     instituce: z.string().optional(),
     licence: z.string().min(2, 'Obrázek bez licence nesmí do atlasu'),
     url: z.url(),
+    /**
+     * Střed výřezu na desce (CSS object-position, „50% 37%“), když výchozí výřez pro busty
+     * (tvář v horní třetině) usekne to, o co na obrázku jde.
+     */
+    vyrez: z.string().regex(/^\d{1,3}% \d{1,3}%$/, 'vyrez: dvě procenta, např. „50% 37%“').optional(),
   })
   .strict();
 

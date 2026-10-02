@@ -7,6 +7,7 @@
 // <Pribeh id="delfy" osoba="sokrates" nadtitulek="Delfy" titulek="Odpověď *z Delf*" popisek="Delfy, Apollónova věštírna.">
 //   Text scény v odstavcích…
 // </Pribeh>
+// Obraz na výšku (kresba, rytina): pomer="4 / 5"; střed výřezu má obrázek v zdroje.yaml (`vyrez`).
 import Deska from '../ui/Deska.astro';
 import { osoba as najdiOsobu } from '../../lib/data';
 import { radek } from '../../lib/bloky';
@@ -25,39 +26,47 @@ interface Props {
   titulek?: string;
   /** popisek pod deskou */
   popisek: string;
+  /** poměr stran desky (šířka / výška); výchozí 4 / 3, obraz na výšku 4 / 5 */
+  pomer?: string;
 }
-const { id, osoba: osobaId, obdobi: obdobiProp, obrazek, nadtitulek, titulek, popisek } = Astro.props;
+const { id, osoba: osobaId, obdobi: obdobiProp, obrazek, nadtitulek, titulek, popisek, pomer = '4 / 3' } = Astro.props;
 const osoba = osobaId ? najdiOsobu(osobaId) : undefined;
 const obdobi = osoba?.obdobi ?? obdobiProp;
 if (!obdobi) throw new Error('Příběh potřebuje osobu nebo období.');
+const [pw, ph] = pomer.split('/').map(Number);
+const naVysku = pw < ph;
 ---
-<section class:list={['pribeh', `obdobi-${obdobi}`]} id={id}>
-  <div class="pribeh__deska">
-    <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} obrazOsoby={false} pomer="4 / 3">{popisek}</Deska>
-  </div>
-  <div class="pribeh__text">
-    {nadtitulek && <p class="t-nadtitulek pribeh__nadtitulek">{nadtitulek}</p>}
-    {titulek && <h3 class="t-h2 pribeh__titulek" set:html={radek(titulek)} />}
-    <div class="pribeh__scena"><slot /></div>
+<section class:list={['pribeh', `obdobi-${obdobi}`, { 'pribeh--na-vysku': naVysku }]} id={id}>
+  <div class="pribeh__mrizka">
+    <div class="pribeh__deska">
+      <Deska osoba={osoba} obdobi={obdobi} obrazek={obrazek} obrazOsoby={false} pomer={pomer}>{popisek}</Deska>
+    </div>
+    <div class="pribeh__text">
+      {nadtitulek && <p class="t-nadtitulek pribeh__nadtitulek">{nadtitulek}</p>}
+      {titulek && <h3 class="t-h2 pribeh__titulek" set:html={radek(titulek)} />}
+      <div class="pribeh__scena"><slot /></div>
+    </div>
   </div>
 </section>
 
 <style>
-  .pribeh {
-    display: grid;
-    gap: var(--s-5);
-    margin: var(--s-8) 0;
-  }
+  /* Rozvržení se řídí šířkou místa, ne obrazovky: v kroku cesty deska vedle textu,
+     v čtenářském sloupci profilu (680 px) deska nad textem. */
+  .pribeh { margin: var(--s-8) 0; container-type: inline-size; }
+  .pribeh__mrizka { display: grid; gap: var(--s-5); }
   .pribeh__nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
   .pribeh__titulek { margin-bottom: var(--s-5); max-width: 16ch; }
   .pribeh__scena { max-width: var(--ctenarsky-sloupec); }
   .pribeh__scena :global(p:last-child) { margin-bottom: 0; }
-  @media (min-width: 900px) {
-    .pribeh {
+  /* Obraz na výšku by nad textem zabral celou obrazovku; držíme ho na šířce jedné karty. */
+  .pribeh--na-vysku .pribeh__deska { max-width: 400px; }
+  @container (min-width: 800px) {
+    .pribeh__mrizka {
       grid-template-columns: minmax(240px, 4fr) 8fr;
       gap: var(--s-7);
       align-items: start;
     }
     .pribeh__deska { position: sticky; top: calc(var(--hlavicka) + var(--s-5)); }
+    .pribeh--na-vysku .pribeh__deska { max-width: none; }
   }
 </style>
