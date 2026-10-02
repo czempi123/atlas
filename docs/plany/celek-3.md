@@ -14,9 +14,9 @@ Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
 
 ## Co si celek nese z celků 1 a 2
 
-- **Rozsah rozhodne autor po osnově P6.** Otevřené je: jestli Marcus Aurelius dostane v tomto celku jen místo v cestě 5, nebo i znovu napsaný portrét (architektura počítá ve fázi F2 s obojím); a jestli stránka velké otázky 4 vznikne už teď s antickými hlasy, nebo zůstane řádkem v přehledu (většina jejích hlasů je z pozdějších období).
+- **Rozsah (rozhodnuto 2. 10. 2026):** Marcus Aurelius dostane v tomto celku i portrét a stránka velké otázky 4 vznikne už teď se čtyřmi antickými hlasy.
 - **Co už v atlasu je:** Seneca jako hlas na stránce otázky 1 (citát `vita-beata-26`) a dva jeho citáty v cestě 6 (`seneca-ep-21-10`, `seneca-ep-18-9`); Epiktétos, Marcus Aurelius, Musonius Rufus a Seneca v datech (`lide.yaml`) bez stránek. Cesta 33 (Stockdale) a cesta 34 (Seneca a čas) jsou samostatné celky: jejich scény si celek 3 nebere.
-- **Otevřené z dřívějška:** rozpor roků Domitianova vyhnání filozofů (89 × 93) a Epiktétovy pobyty v Římě a Níkopoli bez let (`k-overeni.md`). Texty o Marcovi z prototypu v9 (`docs/archiv/`) jsou jen seznam témat; `docs/styl.md` na nich ukazuje, jak se psát nemá.
+- **Vyřízeno z dřívějška:** rok Domitianova vyhnání filozofů (v datech „asi 93“, ve studentském textu bez roku) a Epiktétovy pobyty v Římě a Níkopoli. Texty o Marcovi z prototypu v9 (`docs/archiv/`) jsou jen seznam témat; co z nich obstálo, je v podkladovém listu.
 - **Poučení z revizí** (`docs/revize/celek-1-2026-10-01.md`, `docs/revize/celek-2-2026-10-02.md`; jsou i ve skillech):
   - shrnutí pramene drží jeho rozdíly a „asi“ zůstává „asi“;
   - Spor dá oběma stranám odpověď na nejsilnější námitku a postoj není krajnější než citát strany;
