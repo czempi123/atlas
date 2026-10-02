@@ -1,0 +1,41 @@
+# Volba s důvodem · profil Epikúra, kapitola 01 „Zahrada“.
+# Podklad: Diogenés Laertios X, 11 (majetek nedávali dohromady jako pýthagorejci: znamenalo by to nedůvěru,
+# a bez důvěry není přátelství) — docs/podklady/celek-2-jak-zit.md, Tvrzení: Epikúros, řádek 8.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Představ si, že se s pěti nejlepšími kamarády stěhuješ do jednoho domu. Chcete spolu žít, vařit a mít čas jeden na druhého.
+  Někdo z vás má našetřeno hodně, někdo skoro nic.
+otazka: Jak to uděláte s penězi?
+moznosti:
+  - text: Všechno dáme dohromady. Jedna pokladna, nikdo nemá víc než ostatní.
+    tah: společná pokladna
+    zpetna: >-
+      Nikdo nebude závidět a nikdo nezůstane pozadu. Tak žili pýthagorejci. Proč to ale chceš mít pojištěné pravidlem?
+      Věříš, že by se s tebou kamarádi rozdělili i bez něj?
+  - text: Každý si nechá své. Kdo bude něco potřebovat, řekne si.
+    tah: každý své, a umět si říct
+    jeho: true
+    zpetna: >-
+      Stavíš na tom, že si přátelé pomůžou sami od sebe. To je víc než jakákoli smlouva.
+      Vydrží to ale chvíli, kdy si jeden řekne potřetí a druhý ještě ani jednou?
+  - text: Každý si nechá své a společné výdaje si přesně rozpočítáme.
+    tah: přesné účty
+    zpetna: >-
+      Nikdo nikomu nic nedluží a nikdo se nemusí doprošovat. Účet je spravedlivý. Je ale přátelství totéž co spravedlivý účet?
+      Co uděláte, až jeden z vás nebude mít na svůj díl?
+  - text: Kdo má víc, přispívá víc. Podle toho, kolik kdo unese.
+    tah: víc dává ten, kdo má víc
+    zpetna: >-
+      Myslíš na toho, kdo má nejmíň, a to je dobrý začátek. Někdo ale musí určit, kolik kdo unese. Kdo to bude?
+      A zůstane ten, kdo platí nejvíc, kamarádem, nebo se z něj stane hostitel?
+coUdelal:
+  osoba: epikuros
+  stejne: >-
+    Rozhodl se stejně jako ty. V Zahradě si každý nechal své. Společný majetek by podle Epikúra znamenal, že si lidé nevěří.
+    A bez důvěry přátelství není.
+  jinak: >-
+    Rozhodl se jinak. V Zahradě si každý nechal své. Společný majetek by podle Epikúra znamenal, že si lidé nevěří.
+    A bez důvěry přátelství není.
+zdroje: [dl-x-1]

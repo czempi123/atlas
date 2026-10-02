@@ -555,7 +555,7 @@
   narozen: { rok: -412, priblizne: true, rozmezi: [-412, -403] }
   zemrel: { rok: -323 }
   obdobi: 2
-  hloubka: portret
+  hloubka: profil
   smery: [kynismus]
   otazky: [1]
   linie: [autenticita]
@@ -580,7 +580,7 @@
   narozen: { rok: -341 }
   zemrel: { rok: -270 }
   obdobi: 2
-  hloubka: portret
+  hloubka: profil
   smery: [epikureismus]
   otazky: [1, 3, 7]
   mista:
@@ -599,7 +599,7 @@
     proc: Jeho škole se říkalo Zahrada.
     zdroj: sep-epicurus
   obrazek: epikuros-met
-  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, hesiodos-theogonia, dl-x-31]
+  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, hesiodos-theogonia, dl-x-31, seneca-vita-beata, ssjc-epikurejec]
 
 - id: seneca
   jmeno: Seneca
