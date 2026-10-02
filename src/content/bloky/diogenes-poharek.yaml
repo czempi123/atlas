@@ -1,0 +1,32 @@
+# Volba s důvodem · profil Diogena, kapitola 01 „Pohárek“.
+# Podklad: Diogenés Laertios VI, 37 (dítě pije z dlaní, Diogenés vyhodí z mošny pohárek) a VI, 22–23 (plášť, mošna)
+# — docs/podklady/celek-2-jak-zit.md, Nejsilnější příběhy: Diogenés 4. Co udělal Diogenés, vypráví hned za blokem Příběh.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Představ si, že všechno, co máš, se vejde do jedné mošny. Je v ní i pohárek.
+  Jednou uvidíš dítě, které pije vodu z dlaní. Pohárek k tomu nepotřebuje.
+otazka: Co uděláš se svým pohárkem?
+moznosti:
+  - text: Nechám si ho. Je to jen pohárek, nikomu neškodí.
+    tah: nechat si ho
+    zpetna: >-
+      Pohárek nikomu neubližuje a pije se z něj líp. Diogenés by se ale zeptal, kde ta řada končí.
+      Když nevadí pohárek, proč by vadil druhý plášť a potom dům?
+  - text: Vyhodím ho. Když to jde bez něj, nepotřebuju ho.
+    tah: vyhodit ho
+    zpetna: >-
+      Bereš vážně, co jsi právě viděl: bez pohárku to jde. O jednu věc míň musíš nosit a hlídat.
+      Vyhodil bys ale všechno, bez čeho se dá přežít? I knihu a telefon?
+  - text: Dám ho tomu dítěti.
+    tah: darovat ho
+    zpetna: >-
+      Je to štědré a pohárek aspoň někomu poslouží. Jenže to dítě ho nepotřebovalo, a právě to tě zaujalo.
+      Dáváš mu dárek, nebo potřebu, kterou dosud nemělo?
+  - text: Nechám si ho, ale týden zkusím pít z dlaní.
+    tah: nejdřív to vyzkoušet
+    zpetna: >-
+      Nevěříš jedné chvíli nadšení a chceš zkoušku. To je poctivé. Co ale uděláš po týdnu, až zjistíš, že to jde?
+      A proč ten pohárek celý týden nosit s sebou?
+zdroje: [dl-vi-20]
