@@ -22,8 +22,8 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
 | Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
 | ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
-| Epiktétos | roky v Římě a v Níkopoli | SEP: Domitianův edikt roku 89; SEP „Stoicism“: 93. | Po rozhodnutí doplnit `do`/`od`. **Rozpor pramenů.** |
-| Marcus Aurelius | místo smrti, Carnuntum | Britannica: zemřel ve Vindoboně nebo v Sirmiu; Carnuntum a Granua jsou v nadpisech knih Hovorů (I a II/III), stránka je nepodala. | Doplnit Carnuntum z Hovorů (vydání Haines, Loeb) po ověření. |
+| ~~Epiktétos~~ | ~~roky v Římě a v Níkopoli~~ | **Vyřízeno 2. 10. 2026 (celek 3):** Gellius XV, 11 a Suetonius, Domitianus 10, 3 rok neuvádějí; Tacitus, Plinius a Dio spojují vykázání s procesy roku 93; SEP „Epictetus“ a IEP mají 89, Hieronymova kronika 95 („znovu“). | V datech „asi 93“ (`priblizne`), ve studentském textu bez roku (`celek-3-co-mam-v-rukou.md`, Rozpory). Autor může přepsat na 89. |
+| Marcus Aurelius | místo smrti | Britannica: zemřel ve Vindoboně nebo v Sirmiu. **Carnuntum vyřízeno 2. 10. 2026 (celek 3):** údaje „u Kvádů na Granui“ a „v Carnuntu“ přečteny v řeckém textu (Leopold, konec knih I a II); Carnuntum je v datech jako tažení asi 172–174 (Britannica „Carnuntum“). | Místo smrti nechat bez záznamu. |
 | Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
 | Cicero | místo narození (Arpinum), studia v Athénách a na Rhodu, vyhnanství, smrt u Formií | IEP stránka nepodala. | Doplnit z Plútarchova Cicerona. |
 | Plótínos | místo narození | Místo smrti doplněno (Minturnae v Kampánii, Porfyrios, Život Plótínův 2). Lykopolis uvádí až Eunapios, ne Porfyrios. | Doplnit Lykopolis, pokud stačí Eunapios. |
@@ -186,3 +186,36 @@ Cestě 6 a stránce otázky 1 zůstává: nápis na Zahradě a správce, hrnek s
 Vědomě vynecháno v P8: přímá řeč správce Zahrady (jeho otázka je v kroku 1 jen nepřímo) a Senekovo „v téhle slasti jsem zestárl“; žaludek jako věřitel (Dopisy 21, 11); Epikúrova chlouba, že se nají za méně než as, a jména Metrodóra a Polyaina; adresát Dopisu Menoikeovi; Kratés a rok jeho smrti; kdo v Zahradě žil a společná pokladna (nese profil); Vatikánský výrok 25, `vs-52` a `etika-1155a`; Suilliovo obvinění a scéna s Neronem (portrét Seneky); jména autorů studie, Gallup, počty odpovědí a hlášení, pojem spolupráce protivníků a to, že u nejšťastnějších roste nálada rychleji; Alexandr (cesta 7).
 
 Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s kamarády, sluchátka, lajky, člověk, kterému se dá svěřit, seriál), bunda v kroku 3, výzva „měsíc na minimum“ a její tři podmínky v kroku 5, úvodní případ stránky otázky 1 (sklad, nebo tábor). Domyšlené odpovědi ve Sporu jsou podané jako výklad („by kynik mohl namítnout“, „by Epikúros mohl odpovědět“), stejně jako věta, že válet se v horkém písku by pro Epikúra byla zbytečná bolest.
+
+## Celek 3 „Co mám ve svých rukou?“ (P6)
+
+2. 10. 2026. Podklady jsou v `docs/podklady/celek-3-co-mam-v-rukou.md`. Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Rok vykázání filozofů | Prameny rok neuvádějí, encyklopedie mají 89 i 93, Hieronymus 95. První Domitianovo vykázání (na které míří „znovu“ u Diona a Hieronyma) jsem v pramenech nenašel. | V datech „asi 93“; autor potvrdí, nebo přepíše na 89. Ve studentském textu bez roku. |
+| Simplikios o Epiktétovi | Nečetl jsem ho; chromost od mládí a adoptované dítě znám jen z G. Longa (1877) a ze SEP. | Při portrétu ověřit v překladu Simplikiova komentáře, nebo nechat jako „Vypráví se“. |
+| Kelsos a Órigenés: datace | Asi 178 a asi 248 jen z Britanniky. | Stačí „o několik desítek let později“; přesné roky do studentského textu nedávat. |
+| Helvidius Priscus | Epiktétovo vyprávění (Rozpravy I, 2) je ověřené; jak a kdy Helvidius zemřel, ne. | Před portrétem ověřit (Suetonius, Vespasianus 15), nebo o jeho konci nepsat. |
+| Epafroditos | SEP: úředník Neronova dvora; Suda z něj dělá tělesného strážce. Jeho konec jsem neověřoval. | V textu jen „mocný muž na Neronově dvoře“. |
+| Arriános | Léta asi 86–160 jen z IEP; že byl později úředníkem a historikem, jsem pro tento celek neověřoval (pramen `arrianos-anabaze` v datech je). | Ve studentském textu jen „žák Arriános“. |
+| Cassius Dio 67 a 72 | Čteno jen anglicky (LacusCurtius), čísla kapitol nekontrolována proti řeckému vydání; Dionova životní data neověřena. | Nenazývat ho pamětníkem; u Marcova portrétu ověřit kapitoly. |
+| Historia Augusta | Datace a spolehlivost sbírky bez odborného zdroje. | Všechno z ní jako „Vypráví se“. |
+| Roky u Marca | Neověřeny: markomanské války, Cassiova vzpoura, smrt syna a Faustiny, Commodus spoluvládcem, počet dětí. | Před portrétem (P7) ověřit, nebo psát bez roků. |
+| Marcův věk při adopci | Historia Augusta: v osmnáctém roce; podle narození 16–17. | Věk neuvádět. |
+| Granua = Hron | Jen z Wikipedie. | „U řeky Granua v zemi Kvádů“, bez Hronu, dokud se nedoloží. |
+| Místní údaje v Hovorech | Leopold je tiskne na konci knih I a II, jiní jako záhlaví knih II a III. | „U jedné z knih stojí…“ |
+| „Krásné je to Platónovo“ (Hovory VII, 48) | Vydání se liší, kam věta patří; kde to Platón říká, jsem nehledal. | U pohledu shora Platóna nejmenovat. |
+| Studie J. J. Grosse (1998) | Četl jsem jen souhrn na PubMedu; jméno autora nástroj nezobrazil (znám ho, ale neověřil jsem ho na stránce) a Europe PMC odmítl požadavek. | Přečíst plný text, nebo v kroku držet jen tři věty ze souhrnu. |
+| „Stoický“ ve slovníku | SSJČ jsem neotvíral. | Kdyby text chtěl říct „dodnes se říká stoický klid“, ověřit heslo jako u „epikurejce“. |
+| Obrázek Marca | Walters (inv. 23.215, CC0) soubor nástrojům nevydá. | Autor stáhne sám, nebo zvolí rytinu z Met. |
+| Obrázek Epiktéta | Rytina s berlou (Oxford 1715) je jen na Commons, které nástroj neotevře; rytce a licenci jsem neověřil. | Autor potvrdí na Commons, nebo zvolí lept z Rijksmusea (RP-P-1967-430, CC0). |
+| Antická podobizna Epiktéta | Že žádná spolehlivá není, jsem odborným zdrojem nedoložil; v pěti otevřených sbírkách není. | Popisek obrázku to netvrdí, říká jen, čí představa to je. |
+| Carnuntum | V datech bez ID z Pleiad, souřadnice přibližné. | Doplnit s ostatními místy. |
+| Stoický týden | Večerní ohlédnutí (Seneca, O hněvu) a představa nejhoršího nejsou ověřeny; patří jiným celkům. | Ověřit, až týden vznikne. |
+| Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). | Vztah `polemika` do dat až s cestou 8 nebo s profilem Démokrita. |
+| `docs/styl.md`, dvojice 3 | Věta „Cassiovy dopisy spálil nepřečtené“: Dio má „zničil“ a mluví o papírech v truhlách. | Autor rozhodne, zda příklad v průvodci stylem upravit. |
+
+Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozpravy I, 25, 18–20), místa o smrti dítěte (Rukojeť 3 a 11; Rozpravy III, 3, 15; III, 24, 85–88; Hovory XI, 34), část Hovorů VI, 13 o tělesné lásce, Ciceronova výtka „jen slova“ (O nejvyšším dobru a zlu IV, 72), Karneadés jako pátý hlas otázky 4.
+
+**Do skillu `atlas-overeni`:** tabulka zkreslení doplněna o čtyři řádky (stoik bez citu, noha a Epafroditos, noc u Dunaje, spálené dopisy) a zdroje o místa stoických textů; kopie ve `skills/atlas-overeni/references/zdroje.md` je upravená, skill v účtu je třeba uložit zvlášť.
