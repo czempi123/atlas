@@ -2,6 +2,14 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Schválení P7 (celek 2) a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Profily Epikúra a Diogena schváleny, včetně odstavce o sudu a bodů doověřených z `k-overeni.md` | Autor: „Výborně“ |
+| Další krok P8 pro celek 2: nejdřív graf ke studii o penězích a štěstí (`atlas-komponenta`), pak cesta 6 „Kolik je dost?“ a stránka velké otázky 1 (`atlas-cesta`); zadání v `docs/plan.md` | Pořadí workflow celku: psaní → revize → schválení |
+| V P8 se do Kam dál profilů doplní cesta 6, otázka 1 se přepojí na vlastní stránku a na stránku otázky 7 přibude hlas Epikúra | Odkazy čekaly na stránky; Epikúros už má profil a jeho věta k otázce 7 je ověřená z celku 1 |
+
 ## 2. 10. 2026: Profily Epikúra a Diogena (P7)
 
 | Rozhodnutí | Důvod |
