@@ -1,12 +1,12 @@
 # Plán větve celek-3: „Co mám ve svých rukou?“
 
-Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „Jsem svobodný?“), portrét Epiktéta a Marcus Aurelius jako druhý hlas cesty. Je to první stoický celek; podle `docs/architektura.md` má stoicismus v atlasu zvláštní váhu a po cestě 5 navazuje Stoický týden. Podklady vzniknou v `docs/podklady/celek-3-co-mam-v-rukou.md`, rozhodnutí se zapisují do `docs/rozhodnuti.md`, otevřené body do `docs/podklady/k-overeni.md`.
+Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „Jsem svobodný?“), portrét Epiktéta a portrét Marca Aurelia, který je zároveň druhým hlasem cesty (rozhodnutí autora 2. 10. 2026). Je to první stoický celek; podle `docs/architektura.md` má stoicismus v atlasu zvláštní váhu a po cestě 5 navazuje Stoický týden. Podklady vzniknou v `docs/podklady/celek-3-co-mam-v-rukou.md`, rozhodnutí se zapisují do `docs/rozhodnuti.md`, otevřené body do `docs/podklady/k-overeni.md`.
 
 | Krok | Co | Stav |
 | --- | --- | --- |
-| P6 | Podklady | **další krok**, zadání níže |
-| P7 | Portrét Epiktéta (a rozhodnutí o Marcovi) | po P6 |
-| P8 | Cesta 5 „Co mám ve svých rukou?“ (a stránka velké otázky 4, pokud ji autor po P6 zařadí) | po P7 |
+| P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
+| P7 | Portrét Epiktéta a portrét Marca Aurelia | **další krok**; zadání doplní autor po rozhodnutích níže |
+| P8 | Cesta 5 „Co mám ve svých rukou?“ (a stránka velké otázky 4, pokud ji autor zařadí) | po P7 |
 | P10 | Revize celku | po P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
@@ -29,7 +29,7 @@ Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
 
 ## P6: Podklady k celku 3 „Co mám ve svých rukou?“
 
-**Stav 2. 10. 2026:** další krok. Celek 2 je schválený a sloučený do hlavní větve; větev `celek-3` je z ní založená.
+**Stav 2. 10. 2026:** hotovo. Zadání zůstává pro záznam.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Sonnet 5.5 · high s vyhledáváním; u sporných pramenů (příběh s Epiktétovou nohou, Historia Augusta o Marcovi) Opus 5.5 · high.
 
@@ -54,4 +54,19 @@ Pravidla jako u celku 2, s poučením z obou revizí: každé historické tvrzen
 Nejdřív mi v pár bodech napiš, co budeš ověřovat, které příběhy považuješ za nejsilnější, jaký Spor a nový případ navrhuješ a jak bys rozdělil Epiktéta, Marca a stránku otázky 4 mezi tento celek a další, a počkej na odpověď. Pak pracuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci napiš, co je ověřeno, co zůstalo otevřené a co potřebuje moje rozhodnutí.
 ```
 
-Po P6 rozhodne autor o rozsahu celku (Marcus, stránka otázky 4) a podle toho se sem doplní zadání P7 a P8.
+## Stav po P6 (2. 10. 2026)
+
+**Rozhodl autor před prací:** vstupní scénou cesty 5 je příběh s nohou; Spor je Epiktétos × Aristotelés; nový případ má dva kroky (snímek z chatu a doložený pokus s emocemi); Marcus Aurelius se zpracuje rovnou i s portrétem. Další stoikové se doplní později.
+
+**Co je hotové:** podkladový list (příběhy, tvrzení se zdrojem a doporučenou formulací, Spor, oba případy, čtyři hlasy otázky 4, cvičení Stoického týdne, obrázky), 29 pramenů a 40 citátů v `src/data/zdroje.yaml`, data Epiktéta (odchod z Říma „asi 93“) a Marca (Carnuntum), vztah Karneadés → Chrýsippos, otevřené body v `docs/podklady/k-overeni.md`.
+
+**Čeká na rozhodnutí autora** (podrobně v podkladovém listu, Otevřené otázky):
+
+1. stránka velké otázky 4 teď se čtyřmi hlasy, nebo řádek v přehledu;
+2. rok vykázání filozofů v datech („asi 93“, nebo 89);
+3. obrázky: Marcus (Walters, nebo Met), Epiktétos (rytina 1715, nebo Rijksmuseum);
+4. převod slova προαίρεσις („vůle“, nebo „volba“);
+5. Roztřiď se třemi koši, nebo se dvěma;
+6. kdo přečte plný text studie k novému případu B.
+
+**Co si P7 a P8 nesou z podkladů:** příběh s nohou jen jako „Vypráví se“ a bez jména pána; lampa, Musonius, Epafroditův dům a Helvidius patří portrétu Epiktéta; z Historie Augusty všechno jako tradované a žádná věta z Hovorů se nespojuje s konkrétní událostí; ranní příprava a pohled shora zůstávají Stoickému týdnu, čas cestě 34; cesta dá v posledním kroku slovo Aristotelovi.

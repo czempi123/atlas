@@ -2,6 +2,18 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 2. 10. 2026: Podklady celku 3 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vstupní scénou cesty 5 je příběh s nohou. Vypráví se jako tradovaný („Vypráví se, že…“), bez jména pána, a hned za ním stojí doložená Epiktétova věta o noze | Autor: k Epiktétovi to patří nejvíc, kulhání je pro něj charakteristické. Příběh podává až Kelsos u Órigena, kulhání a věty z Rukojeti 9 a Rozprav I, 1, 23 jsou doložené |
+| Spor cesty 5 je Epiktétos × Aristotelés, podaný jako spor dvou škol bez smyšleného setkání | Autor zvolil Aristotela; jeho námitka je v Etice Nikomachově (1153b19–21, 1126a3–8) a student, který se stoikem nesouhlasí, v něm má spojence |
+| Cesta 5 má dva nové případy jako samostatné kroky: „snímek z chatu“ (Představ si…) a pokus s přehodnocením a potlačením emocí (doložený) | Autor: líbí se mi obojí |
+| Marcus Aurelius se zpracuje v celku 3 rovnou i s portrétem; další stoikové se doplní později | Autor: oba jsou stoikové a myšlenky jsou provázané |
+| Epiktétův odchod z Říma: ve studentském textu bez roku, v datech „asi 93“ (návrh z P6, autor může změnit na 89) | Prameny rok neuvádějí; Suetonius, Tacitus a Plinius spojují vykázání filozofů s procesy roku 93, SEP „Epictetus“ a IEP uvádějí 89 |
+| Příběhy z Historie Augusty a z Cassia Diona jen jako „Vypráví se, že…“; žádná věta z Hovorů k sobě se nespojuje s konkrétní událostí | Zadání P6; podle SEP Marcus události svého života popisuje tak, že je nelze poznat |
+| Řecké προαίρεσις se v citátech celku 3 převádí jako „vůle“ (návrh z P6) | Jedno slovo ve všech citátech; změna by se dělala najednou |
+
 ## 2. 10. 2026: Schválení celku 2 a další krok
 
 | Rozhodnutí | Důvod |
