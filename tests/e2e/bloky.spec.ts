@@ -133,6 +133,79 @@ const BLOKY: {
     },
   },
   {
+    nazev: 'roztrid',
+    id: 'cesta6-tri-kose',
+    ostrov: 'Roztrid',
+    hraj: async (page, blok) => {
+      const hotovo = blok.getByRole('button', { name: 'Mám roztříděno' });
+      const sem = (kos: string) => blok.getByRole('button', { name: new RegExp(`^Dát sem kartu .* do koše ${kos}$`) });
+      const navrchu = blok.locator('.karta__text');
+      await expect(hotovo).toBeDisabled();
+      await expect(blok.getByRole('region', { name: 'Tvoje třídění' })).toHaveCount(0);
+      await expect(navrchu).toHaveText('Vyspat se po probdělé noci');
+      // Enter u koše položí kartu navrchu; fokus zůstane u koše, takže jde třídit dál.
+      await sem('Potřebuju').focus();
+      await page.keyboard.press('Enter');
+      await expect(navrchu).toHaveText('Páteční pizza s kamarády');
+      await expect(blok.locator('.stul__postup')).toHaveText('Zbývá 5 z 6');
+      await expect(sem('Potřebuju')).toBeFocused();
+      // Tabulátor jde přes položenou kartu k dalšímu koši.
+      await page.keyboard.press('Tab');
+      await expect(blok.getByRole('button', { name: 'Vyspat se po probdělé noci (vzít zpět z koše Potřebuju)' })).toBeFocused();
+      await page.keyboard.press('Tab');
+      await expect(sem('Těší mě')).toBeFocused();
+      await page.keyboard.press('Enter');
+      await page.keyboard.press('Space');
+      await expect(navrchu).toHaveText('Sto lajků pod fotkou');
+      await sem('Prázdné').focus();
+      await page.keyboard.press('Enter');
+      await expect(blok.locator('[aria-live="polite"]').first()).toHaveText('„Sto lajků pod fotkou“ je v koši Prázdné. Další karta: „Někdo, komu řeknu, co mě trápí“.');
+      await sem('Potřebuju').focus();
+      await page.keyboard.press('Enter');
+      await sem('Prázdné').focus();
+      await page.keyboard.press('Enter');
+      // Poslední karta: tlačítka košů zmizí a fokus přejde na dokončení.
+      await expect(hotovo).toBeFocused();
+      await expect(blok.locator('.stul__prazdny')).toBeVisible();
+      // Kartu jde vzít zpět a dát jinam.
+      await blok.getByRole('button', { name: 'Sto lajků pod fotkou (vzít zpět z koše Prázdné)' }).focus();
+      await page.keyboard.press('Enter');
+      await expect(navrchu).toHaveText('Sto lajků pod fotkou');
+      await expect(hotovo).toBeDisabled();
+      await expect(sem('Prázdné')).toBeFocused();
+      await sem('Potřebuju').focus();
+      await page.keyboard.press('Enter');
+      // Vlastní karta: napsat, Enter, vybrat koš.
+      await blok.getByLabel(/Přidej věc/).focus();
+      await page.keyboard.type('Nové kolo');
+      await page.keyboard.press('Enter');
+      await expect(navrchu).toHaveText('Nové kolo');
+      await expect(sem('Potřebuju')).toBeFocused();
+      await page.keyboard.press('Tab');
+      await page.keyboard.press('Tab');
+      await page.keyboard.press('Tab');
+      await page.keyboard.press('Tab');
+      await expect(sem('Těší mě')).toBeFocused();
+      await page.keyboard.press('Enter');
+      await expect(hotovo).toBeFocused();
+      await page.keyboard.press('Enter');
+      const vysledek = blok.getByRole('region', { name: 'Tvoje třídění' });
+      await expect(vysledek).toBeFocused();
+      // Zpětná vazba patří ke kartě a koši, ptá se dál a nic neznámkuje.
+      await expect(vysledek).toContainText('Co přesně bolí, když nepřijdou');
+      await expect(vysledek).toContainText('Tuhle kartu jsi přidal sám.');
+      await expect(vysledek.getByRole('heading', { name: 'Jak třídil Epikúros' })).toBeVisible();
+      await expect(vysledek).not.toContainText(/správn|špatn/i);
+      await expect(blok.getByText('Tvoje třídění je uložené v deníku.')).toBeVisible();
+    },
+    poObnoveni: async (_page, blok) => {
+      const vysledek = blok.getByRole('region', { name: 'Tvoje třídění' });
+      await expect(vysledek).toContainText('Nové kolo');
+      await expect(vysledek.locator('.vysledek').first()).toContainText('Sto lajků pod fotkou');
+      await expect(blok.getByRole('button', { name: 'Mám roztříděno' })).toHaveCount(0);
+    },
+  },
+  {
     nazev: 'zmen-jednu-vec',
     id: 'utek-z-vezeni',
     ostrov: 'ZmenJednuVec',
@@ -440,5 +513,101 @@ test('tažení prstem: život na ose se posune (dotykové události ukazatele)',
   await expect(kdo.getByRole('button', { name: 'Odhalit' })).toBeEnabled();
   // Svislé posouvání stránky zůstává prstu, vodorovné patří ose.
   expect(await radek.evaluate((e) => getComputedStyle(e).touchAction)).toBe('pan-y');
+  await ctx.close();
+});
+
+test('Roztřiď: tažení karty myší do koše, puštění mimo koš kartu vrátí; rozpracované vydrží obnovení', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(STRANKA);
+  let blok = await pripravBlok(page, 'cesta6-tri-kose', 'Roztrid');
+  const tahni = async (kam: Locator | null) => {
+    const karta = blok.locator('.karta');
+    await karta.evaluate((e) => e.scrollIntoView({ block: 'center' }));
+    const k = (await karta.boundingBox())!;
+    await page.mouse.move(k.x + 60, k.y + k.height / 2);
+    await page.mouse.down();
+    if (kam) {
+      const c = (await kam.boundingBox())!;
+      await page.mouse.move(c.x + c.width / 2, c.y + c.height / 2, { steps: 8 });
+      // Koš pod kartou se zvýrazní.
+      await expect(kam).toHaveClass(/kos--nad/);
+    } else {
+      await page.mouse.move(k.x + 60, k.y - 120, { steps: 5 });
+      await expect(blok.locator('.kos--nad')).toHaveCount(0);
+    }
+    await page.mouse.up();
+  };
+  await tahni(blok.locator('[data-kos="prazdne"]'));
+  await expect(blok.locator('[data-kos="prazdne"] .zeton')).toHaveText(/Vyspat se po probdělé noci/);
+  await expect(blok.locator('.karta__text')).toHaveText('Páteční pizza s kamarády');
+  await tahni(null);
+  await expect(blok.locator('.karta__text')).toHaveText('Páteční pizza s kamarády');
+  await expect(blok.locator('.zeton')).toHaveCount(1);
+  await expect(blok.locator('.karta')).not.toHaveClass(/karta--tazena/);
+  await tahni(blok.locator('[data-kos="nutne"]'));
+  await expect(blok.locator('[data-kos="nutne"] .zeton')).toHaveText(/Páteční pizza s kamarády/);
+  // Krátké klepnutí na kartu bez pohybu nic nepřesune.
+  await blok.locator('.karta').click();
+  await expect(blok.locator('.zeton')).toHaveCount(2);
+
+  await page.reload();
+  blok = await pripravBlok(page, 'cesta6-tri-kose', 'Roztrid');
+  await expect(blok.locator('.stul__postup')).toHaveText('Zbývá 4 z 6');
+  await expect(blok.locator('[data-kos="prazdne"] .zeton')).toHaveText(/Vyspat se po probdělé noci/);
+  await expect(blok.getByRole('region', { name: 'Tvoje třídění' })).toHaveCount(0);
+  // Domů nabídne rozpracovanou otázku.
+  await page.goto('/');
+  await expect(page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' })).toContainText('Do kterého koše která patří?');
+});
+
+test('Roztřiď: prstem tažením i klepnutím (telefon), zápis v deníku a Začít znovu', async ({ browser }) => {
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, reducedMotion: 'reduce' });
+  const page = await ctx.newPage();
+  await page.goto(STRANKA);
+  const blok = await pripravBlok(page, 'cesta6-tri-kose', 'Roztrid');
+  const karta = blok.locator('.karta');
+  await karta.evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  // Kartu vede prst; stránka se posouvá všude kolem ní.
+  expect(await karta.evaluate((e) => getComputedStyle(e).touchAction)).toBe('none');
+  const k = (await karta.boundingBox())!;
+  const c = (await blok.locator('[data-kos="prijemne"]').boundingBox())!;
+  const udalost = { pointerId: 5, pointerType: 'touch', isPrimary: true, button: 0, buttons: 1, bubbles: true };
+  await karta.dispatchEvent('pointerdown', { ...udalost, clientX: k.x + 30, clientY: k.y + 30 });
+  await karta.dispatchEvent('pointermove', { ...udalost, clientX: k.x + 40, clientY: k.y + 90 });
+  await karta.dispatchEvent('pointermove', { ...udalost, clientX: c.x + c.width / 2, clientY: c.y + c.height / 2 });
+  await expect(blok.locator('[data-kos="prijemne"]')).toHaveClass(/kos--nad/);
+  await karta.dispatchEvent('pointerup', { ...udalost, buttons: 0, clientX: c.x + c.width / 2, clientY: c.y + c.height / 2 });
+  await expect(blok.locator('[data-kos="prijemne"] .zeton')).toHaveText(/Vyspat se po probdělé noci/);
+  // Přerušené tažení (pointercancel) kartu nikam nepoloží.
+  await karta.dispatchEvent('pointerdown', { ...udalost, clientX: k.x + 30, clientY: k.y + 30 });
+  await karta.dispatchEvent('pointermove', { ...udalost, clientX: c.x + c.width / 2, clientY: c.y + c.height / 2 });
+  await karta.dispatchEvent('pointercancel', { ...udalost, buttons: 0, clientX: c.x + c.width / 2, clientY: c.y + c.height / 2 });
+  await expect(blok.locator('.zeton')).toHaveCount(1);
+  // Klepnutí: celý koš je cíl, ne jen tlačítko.
+  const nazev = blok.locator('[data-kos="nutne"] .kos__nazev');
+  await nazev.evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await nazev.tap({ force: true });
+  await expect(blok.locator('[data-kos="nutne"] .zeton')).toHaveText(/Páteční pizza s kamarády/);
+  for (let i = 0; i < 4; i++) await blok.locator('[data-kos="prazdne"] .kos__sem').tap();
+  // Klepnutí na položenou kartu ji vrátí navrch.
+  await blok.locator('[data-kos="prazdne"] .zeton').first().tap();
+  await expect(blok.locator('.karta__text')).toHaveText('Lepší sluchátka, než jaká mám');
+  await blok.locator('[data-kos="prijemne"] .kos__sem').tap();
+  await blok.getByRole('button', { name: 'Mám roztříděno' }).tap();
+  await expect(blok.getByRole('region', { name: 'Tvoje třídění' })).toContainText('Lajky nenasytí ani nezahřejí.');
+  // Dotykové cíle aspoň 44 px (po výsledku i před ním hlídá test dotyku výš).
+  expect((await blok.getByRole('button', { name: 'Začít znovu' }).boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
+
+  await page.goto('/denik/');
+  await expect(page.getByText('Potřebuju: Páteční pizza s kamarády. Těší mě: Vyspat se po probdělé noci; Lepší sluchátka, než jaká mám. Prázdné: Sto lajků pod fotkou; Někdo, komu řeknu, co mě trápí; Nový díl seriálu, o kterém všichni mluví.')).toBeVisible();
+  await page.goto(STRANKA);
+  const znovu = await pripravBlok(page, 'cesta6-tri-kose', 'Roztrid');
+  await znovu.getByRole('button', { name: 'Začít znovu' }).tap();
+  await expect(znovu.locator('.stul__postup')).toHaveText('Zbývá 6 z 6');
+  await expect(znovu.locator('.zeton')).toHaveCount(0);
+  await page.goto('/denik/');
+  await expect(page.locator('.seznam--zapisy li')).toHaveCount(0);
   await ctx.close();
 });

@@ -132,6 +132,7 @@ Všechny cesty, profily i otázky se skládají z jedné knihovny asi dvanácti 
 | Příběh | Čte krátkou scénu s obrazem (později i poslech) | Zaujmout, zasadit do doby |
 | Volba s důvodem | Vybere možnost a připiše proč; ke každé možnosti vlastní zpětná vazba | Odhalit vlastní předpoklad |
 | Odkryj | Napíše vlastní pokus, pak odkryje modelové odpovědi a sebekontrolu | Učit se z vlastního pokusu |
+| Roztřiď | Třídí karty do košů přetažením, klepnutím nebo klávesnicí a smí přidat vlastní; ke kartám pak dostane otázky | Vyzkoušet filozofovo rozlišení na vlastních věcech |
 | Změň jednu věc | Přepíná podmínku myšlenkového pokusu a znovu rozhoduje | Uvidět hranici principu |
 | Dialog | Vede sokratovský rozhovor: vybírá odpovědi, filozof se ptá dál, rozhovor se větví | Zažít filozofii jako rozhovor (scénář psaný předem, bez AI) |
 | Spor | Postaví se na škálu mezi dva filozofy, pak si přečte jejich nejsilnější argumenty a může se přesunout | Srovnat dvě odpovědi, změnit názor s důvodem |

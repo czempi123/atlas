@@ -5,6 +5,8 @@ export interface ClovekBloku {
   /** id ikony atributu (mince) */
   ikona?: string;
   zena?: boolean;
+  /** jak se strana Sporu jmenuje místo osoby („kynici“); mince zůstává osoby */
+  oznaceni?: string;
 }
 export interface Dal {
   href: string;

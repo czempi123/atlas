@@ -126,15 +126,15 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 
 ## Bloky
 
-Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem. Ve skutečném atlasu jsou v cestě 1 „Kdy mám dobrý důvod věřit?“ (`/cesta/kdy-mam-dobry-duvod-verit/`) a v Sókratově profilu; všech šest pohromadě a bez kódu je pro autora na `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
+Interaktivní bloky, ze kterých se skládají cesty, profily a otázky (`docs/plan.md` › Mechanismy učení). Každý se do MDX vkládá jedním řádkem. Ve skutečném atlasu jsou v cestě 1 „Kdy mám dobrý důvod věřit?“ (`/cesta/kdy-mam-dobry-duvod-verit/`), v cestě 6 „Kolik je dost?“ (`/cesta/kolik-je-dost/`) a v profilech; všech sedm pohromadě a bez kódu je pro autora na `/dilna/bloky/` (mimo navigaci a hledání, `noindex`). Tento oddíl používá skill `atlas-cesta`.
 
 ### Jak blok vložit do MDX
 
 1. Na začátek MDX jeden import (cestu uprav podle hloubky souboru):
    ```mdx
-   import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../components/bloky';
+   import { Pribeh, Volba, Odkryj, Roztrid, ZmenJednuVec, Spor, KdoZilDriv } from '../../components/bloky';
    ```
-2. Volba s důvodem, Změň jednu věc a Spor mají obsah v YAML v `src/content/bloky/<id>.yaml` (schéma `src/lib/bloky-schema.ts`). Do MDX pak stačí `<Volba id="<id>" />`. Příběh, Odkryj a Kdo žil dřív? se píšou přímo v MDX.
+2. Volba s důvodem, Roztřiď, Změň jednu věc a Spor mají obsah v YAML v `src/content/bloky/<id>.yaml` (schéma `src/lib/bloky-schema.ts`). Do MDX pak stačí `<Volba id="<id>" />`. Příběh, Odkryj a Kdo žil dřív? se píšou přímo v MDX.
 3. `client:visible` ani odkaz zpět z deníku nepiš. Doplní je obal v `src/components/bloky/`; odkaz je stránka a kotva `#<id>`.
 4. `id` je malými písmeny bez diakritiky, s pomlčkami a na celém webu jedinečné (`sokrates-utek`, `cesta1-jak-zjistit`). Podle něj se ukládá odpověď. Když ho později změníš, studentům zmizí rozpracovaný stav.
 5. V textech YAML funguje `*kurzíva*` a prázdný řádek dělí odstavce. Jména lidí se berou z `lide.yaml` podle id; v textu je piš v podobě z dat.
@@ -155,6 +155,7 @@ Vše jen v prohlížeči, v záznamu `atlas-denik` (`src/lib/denik.ts`). Bez loc
 | Příběh | nic | nic |
 | Volba s důvodem | „B · text možnosti. Proč: …“ | vybraná karta, důvod, potvrzeno |
 | Odkryj | vlastní pokus | odkryto, zaškrtnutá sebekontrola, rozepsaná odpověď |
+| Roztřiď | „Potřebuju: … Těší mě: … Prázdné: …“ (karty v koších) | která karta je v kterém koši, vlastní karty, hotovo |
 | Změň jednu věc | „Na začátku: … Podmínka: … (posun)“ | základní rozhodnutí, odpověď v každé podmínce, zapnutá podmínka |
 | Spor | „Na začátku: spíš Platón. Po argumentech: uprostřed. Co mě posunulo: …“ | první a konečná poloha, důvod |
 | Kdo žil dřív? | nic (fakt, ne názor) | odhad, odkryto |
@@ -244,6 +245,42 @@ Srovnání s filozofem v odstavcích…
 | `filozof` | ne | id osoby: mince v hlavičce a barva období |
 | `dal` | ne | Kam dál po odkrytí (v cestě další krok sám) |
 
+### Roztřiď
+
+Třídění karet do dvou až čtyř košů. Navrchu leží jedna karta („Zbývá 4 z 6“); student ji **přetáhne** do koše (myší i prstem), nebo u koše zvolí **Dát sem** (klepnutí, Enter, mezerník; cílem je celý koš). Karta položená v koši je tlačítko, které ji vrátí navrch, takže jde přendat. S `vlastni` smí student připsat vlastní karty. Když je hromádka prázdná, „Mám roztříděno“ odkryje výsledek: koše vedle sebe (na telefonu pod sebou), u každé karty její zpětná vazba a pod nimi srovnání s mincí filozofa. Žádný koš není „správně“: zpětná vazba vysvětluje důvod a ptá se dál, `kdyz` dovolí jinou otázku pro kartu v určitém koši.
+
+Tažení patří jen kartě navrchu (`touch-action: none`), stránka se prstem posouvá všude kolem ní; koš pod kartou se zvýrazní okrajem a tintem období. Klávesnicí: Tab jde po koších a položených kartách, po Enteru zůstává fokus u koše, po poslední kartě přejde na „Mám roztříděno“. Co se stalo, slyší čtečka z oblasti `aria-live` („… je v koši Potřebuju. Další karta: …“).
+
+```mdx
+<Roztrid id="cesta6-tri-kose" />
+```
+
+```yaml
+# src/content/bloky/cesta6-tri-kose.yaml
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah            # nepovinné (výchozí „Roztřiď“)
+scena: Tady je šest věcí z jednoho obyčejného týdne.   # nepovinné
+otazka: Do kterého koše která patří?
+kose:                           # 2–4
+  - { id: nutne, nazev: Potřebuju, popis: Bez toho to bolí. }
+  - { id: prijemne, nazev: Těší mě, popis: "Je to příjemné, ale obejdu se bez toho." }
+karty:                          # 3–8, text nejvýš 60 znaků
+  - id: lajky
+    text: Sto lajků pod fotkou
+    zpetna: Lajky nenasytí ani nezahřejí…        # ke kartě, ať je kdekoli (nepovinné)
+    kdyz: { nutne: "Dal jsi je mezi věci, bez kterých to bolí…" }   # jen pro některý koš; má přednost
+vlastni:                        # nepovinné: karty, které přidá student
+  pocet: 2                      # 1–3
+  vyzva: Přidej věc, kterou jsi tento týden chtěl ty
+  zpetna: Tuhle kartu jsi přidal sám…
+srovnani:                       # nepovinné; s osobou jen doložená fakta
+  osoba: epikuros
+  nadpis: Jak třídil Epikúros
+  text: Epikúros měl na třídění jednu zkoušku…
+zdroje: [dl-x-122, dl-x-139]
+```
+
 ### Změň jednu věc
 
 Scéna a rozhodnutí; pak přepínač podmínky (čipy, 1–3), v každé podmínce nové rozhodnutí a „Předtím → Teď“ se zpětnou vazbou pro posun, nebo pro stejnou odpověď. Po první změně oddíl „Co udělal …“.
@@ -285,6 +322,7 @@ obdobi: 1
 otazka: Co je skutečnější, to, co vidíš, nebo to, co pochopíš?
 strany:                         # právě dvě různé osoby; jména z dat
   - osoba: platon
+    # oznaceni: kynici          # nepovinné: strana se jmenuje po směru, za který osoba mluví (mince zůstává její)
     postoj: To, co pochopím.
     argumenty: [Za proměnlivým světem, který vidíme, stojí neměnné ideje., …]   # 1–3, nejsilnější verze
   - osoba: diogenes
@@ -293,6 +331,8 @@ strany:                         # právě dvě různé osoby; jména z dat
 zdroje: [platon-ustava]
 kOvereni: [ … ]                 # dokud není prázdné, jen v dílně
 ```
+
+Když za jednu stranu nemluví člověk, ale směr (kynici proti Epikúrovi), dostane strana `oznaceni` malým písmenem. Na škále, v polohách („spíš kynici“), ve zpětné vazbě i v deníku pak stojí označení místo jména; v nadpisech se první písmeno zvětší samo. Scéna má říct, čí slova strana používá a že se ti dva nepotkali.
 
 ### Kdo žil dřív?
 

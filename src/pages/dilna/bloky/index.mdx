@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/Dilna.astro
 titulek: Bloky
-perex: Všech šest bloků na jednom místě. Ve skutečném atlasu je najdeš v cestě „Kdy mám dobrý důvod věřit?“ a u Sókrata.
+perex: Všech sedm bloků a graf na jednom místě. Ve skutečném atlasu je najdeš v cestách „Kdy mám dobrý důvod věřit?“ a „Kolik je dost?“ a u Sókrata.
 ---
-import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../../components/bloky';
+import { Pribeh, Volba, Odkryj, Roztrid, ZmenJednuVec, Spor, KdoZilDriv } from '../../../components/bloky';
 import GrafKrivek from '../../../components/ui/GrafKrivek.astro';
 
 <section class="ukazka" aria-labelledby="h-pribeh">
@@ -45,6 +45,12 @@ Když se to Sókratés dozvěděl, nevěděl, co si s tím počít. O sobě věd
 Sókratés by se tě nejdřív zeptal, jestli ten člověk ví, kde jeho vědění končí. Politik, básníci i řemeslníci něčemu opravdu rozuměli. Mýlili se v tom, že si mysleli, že rozumějí všemu.
 
 </Odkryj>
+</section>
+
+<section class="ukazka" aria-labelledby="h-roztrid">
+<h2 class="t-h2" id="h-roztrid">Roztřiď</h2>
+
+<Roztrid id="cesta6-tri-kose" dal={{ href: '/cesta/kolik-je-dost/', text: 'Projdi celou cestu' }} />
 </section>
 
 <section class="ukazka" aria-labelledby="h-zmena">

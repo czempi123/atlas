@@ -1,0 +1,14 @@
+---
+// Roztřiď: třídění karet do košů přetažením, klepnutím nebo klávesnicí. Obsah je v src/content/bloky/<id>.yaml (druh: roztrid).
+// Použití v MDX: <Roztrid id="cesta6-tri-kose" />  (volitelně dal={{ href, text }})
+import Ostrov from '../ostrovy/Roztrid.svelte';
+import { nactiBlok, odkazNaBlok, proOstrov, clovek, kamDal } from './_kontrola';
+import type { Dal } from '../ostrovy/bloky-typy';
+
+interface Props { id: string; dal?: Dal }
+const { id, dal } = Astro.props;
+const blok = await nactiBlok(id, 'roztrid', Astro.url.pathname);
+const filozof = blok.srovnani?.osoba ? clovek(blok.srovnani.osoba) : undefined;
+const dalsi = await kamDal(Astro.url.pathname, dal ?? blok.dal);
+---
+<Ostrov client:visible id={id} blok={proOstrov(blok)} filozof={filozof} odkaz={odkazNaBlok(Astro.url.pathname, id)} dal={dalsi} />

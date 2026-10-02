@@ -4,7 +4,8 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { parse } from 'yaml';
 import {
-  radek, odstavce, veta, pismeno,
+  radek, odstavce, veta, pismeno, velke,
+  kartyRoztrid, hromadkaRoztrid, kartyVKosi, idVlastniKarty, textVlastniKarty, zpetnaKarty, zapisRoztrid, platnyStavRoztrid, DELKA_KARTY,
   zpetnaVolby, zapisVolby, platnyStavVolby,
   platnyStavOdkryj,
   posunZmeny, zapisZmeny, platnyStavZmeny,
@@ -13,7 +14,7 @@ import {
   osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy,
   chybyBloku,
 } from '../../src/lib/bloky';
-import { Blok, BlokVolba, BlokZmena, BlokSpor } from '../../src/lib/bloky-schema';
+import { Blok, BlokVolba, BlokZmena, BlokSpor, BlokRoztrid } from '../../src/lib/bloky-schema';
 import { zAstro, type OsobaMapy } from '../../src/lib/cas-mapy';
 
 const N = ' ';
@@ -42,6 +43,12 @@ describe('text', () => {
   });
   it('písmena možností', () => {
     expect([0, 1, 2, 3].map(pismeno)).toEqual(['A', 'B', 'C', 'D']);
+  });
+  it('označení strany dostane na začátku popisku velké písmeno', () => {
+    expect(velke('kynici')).toBe('Kynici');
+    expect(velke('čeští bratři')).toBe('Čeští bratři');
+    expect(velke('Epikúros')).toBe('Epikúros');
+    expect(velke('')).toBe('');
   });
 });
 
@@ -278,6 +285,108 @@ describe('Kdo žil dřív?', () => {
   });
 });
 
+describe('Spor: označení strany', () => {
+  const strana = (osoba: string, oznaceni?: string) => ({ osoba, postoj: 'Postoj.', argumenty: ['Argument.'], ...(oznaceni ? { oznaceni } : {}) });
+  it('strana smí mít označení místo jména osoby', () => {
+    const b = BlokSpor.parse({ druh: 'spor', obdobi: 2, otazka: 'Kolik je dost?', strany: [strana('diogenes', 'kynici'), strana('epikuros')] });
+    expect(b.strany[0].oznaceni).toBe('kynici');
+    expect(b.strany[1].oznaceni).toBeUndefined();
+  });
+  it('popisy poloh, zpětná vazba a zápis drží označení malým písmenem uprostřed věty', () => {
+    expect(popisPolohy(1, 'kynici', 'Epikúros')).toBe('spíš kynici');
+    expect(zpetnaSporu(3, 1, 'kynici', 'Epikúros')).toMatch(/ke straně, kterou hájí kynici\./);
+    expect(zapisSporu(0, 3, 'kynici', 'Epikúros')).toBe('Na začátku: kynici. Po argumentech: spíš Epikúros.');
+  });
+});
+
+const roztrid = BlokRoztrid.parse({
+  druh: 'roztrid',
+  obdobi: 2,
+  otazka: 'Kam to patří?',
+  kose: [
+    { id: 'nutne', nazev: 'Potřebuju', popis: 'Bez toho to bolí.' },
+    { id: 'prijemne', nazev: 'Těší mě' },
+    { id: 'prazdne', nazev: 'Prázdné' },
+  ],
+  karty: [
+    { id: 'spanek', text: 'Vyspat se', zpetna: 'Tělo si řekne samo.' },
+    { id: 'lajky', text: 'Sto lajků', zpetna: 'Stačilo by sto?', kdyz: { nutne: 'Co přesně bolí?' } },
+    { id: 'pizza', text: 'Pizza, páteční' },
+  ],
+  vlastni: { pocet: 2, vyzva: 'Přidej vlastní věc', zpetna: 'Tuhle kartu jsi přidal sám.' },
+  srovnani: { osoba: 'epikuros', nadpis: 'Jak třídil Epikúros', text: 'Bolí, když touhu nesplníš?' },
+});
+
+describe('Roztřiď', () => {
+  const moje = [{ id: 'vlastni-1', text: 'Nové kolo' }];
+  it('karty: nejdřív autorské, pak studentovy; hromádka je to, co ještě není v koši', () => {
+    const karty = kartyRoztrid(roztrid, moje);
+    expect(karty.map((k) => k.id)).toEqual(['spanek', 'lajky', 'pizza', 'vlastni-1']);
+    expect(karty[3].vlastni).toBe(true);
+    expect(hromadkaRoztrid(karty, {}).length).toBe(4);
+    expect(hromadkaRoztrid(karty, { lajky: 'prazdne', 'vlastni-1': 'nutne' }).map((k) => k.id)).toEqual(['spanek', 'pizza']);
+    expect(hromadkaRoztrid([], {})).toEqual([]);
+  });
+  it('koš drží pořadí karet z bloku, ne pořadí, v jakém je student pokládal', () => {
+    const karty = kartyRoztrid(roztrid, moje);
+    expect(kartyVKosi(karty, { pizza: 'nutne', spanek: 'nutne', lajky: 'prazdne' }, 'nutne').map((k) => k.id)).toEqual(['spanek', 'pizza']);
+    expect(kartyVKosi(karty, {}, 'nutne')).toEqual([]);
+  });
+  it('vlastní karta: první volné id, text na jednom řádku a nejvýš 60 znaků', () => {
+    expect(idVlastniKarty([])).toBe('vlastni-1');
+    expect(idVlastniKarty([{ id: 'vlastni-1' }, { id: 'vlastni-3' }])).toBe('vlastni-2');
+    expect(textVlastniKarty('  Nové \n kolo  ')).toBe('Nové kolo');
+    expect(textVlastniKarty('   ')).toBeNull();
+    expect(textVlastniKarty('a'.repeat(100))!.length).toBe(DELKA_KARTY);
+  });
+  it('zpětná vazba: pro koš zvlášť má přednost, jinak společná; vlastní karta má svou; nic se neboduje', () => {
+    const [spanek, lajky, pizza, kolo] = kartyRoztrid(roztrid, moje);
+    expect(zpetnaKarty(roztrid, lajky, 'nutne')).toBe('Co přesně bolí?');
+    expect(zpetnaKarty(roztrid, lajky, 'prazdne')).toBe('Stačilo by sto?');
+    expect(zpetnaKarty(roztrid, spanek, 'prazdne')).toBe('Tělo si řekne samo.');
+    expect(zpetnaKarty(roztrid, pizza, 'nutne')).toBeNull();
+    expect(zpetnaKarty(roztrid, kolo, 'prijemne')).toBe('Tuhle kartu jsi přidal sám.');
+  });
+  it('zápis do deníku: koše v pořadí bloku, karty oddělené středníkem, prázdný koš se vynechá', () => {
+    expect(zapisRoztrid(roztrid, { umisteni: { pizza: 'nutne', spanek: 'nutne', 'vlastni-1': 'prazdne' }, vlastni: moje })).toBe(
+      'Potřebuju: Vyspat se; Pizza, páteční. Prázdné: Nové kolo.',
+    );
+    expect(zapisRoztrid(roztrid, { umisteni: {}, vlastni: [] })).toBe('');
+  });
+  it('uložený stav: zahodí neznámé karty a koše; hotovo jen s celým roztříděním', () => {
+    expect(platnyStavRoztrid(null, roztrid)).toBeNull();
+    expect(platnyStavRoztrid({ umisteni: {}, vlastni: [] }, roztrid)).toBeNull();
+    expect(platnyStavRoztrid({ umisteni: { spanek: 'nutne', smazana: 'nutne', lajky: 'neni' }, hotovo: true }, roztrid)).toEqual({
+      umisteni: { spanek: 'nutne' }, vlastni: [], hotovo: false,
+    });
+    const cele = { umisteni: { spanek: 'nutne', lajky: 'prazdne', pizza: 'prijemne', 'vlastni-1': 'prijemne' }, vlastni: moje, hotovo: true };
+    expect(platnyStavRoztrid(cele, roztrid)).toEqual(cele);
+    // Vlastní karta bez koše: student se vrátí k třídění.
+    expect(platnyStavRoztrid({ ...cele, umisteni: { spanek: 'nutne', lajky: 'prazdne', pizza: 'prijemne' } }, roztrid)!.hotovo).toBe(false);
+  });
+  it('uložený stav: vlastních karet nejvýš tolik, kolik blok dovolí, a jen s platným id a textem', () => {
+    const s = platnyStavRoztrid({
+      umisteni: { 'vlastni-9': 'nutne' },
+      vlastni: [{ id: 'vlastni-1', text: ' A ' }, { id: 'spanek', text: 'podvrh' }, { id: 'vlastni-1', text: 'dvakrát' }, { id: 'vlastni-2', text: '' }, { id: 'vlastni-3', text: 'B' }, { id: 'vlastni-4', text: 'C' }],
+    }, roztrid)!;
+    expect(s.vlastni).toEqual([{ id: 'vlastni-1', text: 'A' }, { id: 'vlastni-3', text: 'B' }]);
+    expect(s.umisteni).toEqual({});
+    const bez = BlokRoztrid.parse({ ...roztrid, vlastni: undefined });
+    expect(platnyStavRoztrid({ umisteni: { spanek: 'nutne' }, vlastni: [{ id: 'vlastni-1', text: 'A' }] }, bez)!.vlastni).toEqual([]);
+  });
+  it('schéma: různá id, vyhrazené id vlastních karet a `kdyz` jen pro koše bloku', () => {
+    const zaklad = { druh: 'roztrid', obdobi: 2, otazka: 'Kam?', kose: [{ id: 'a', nazev: 'A' }, { id: 'b', nazev: 'B' }] };
+    const karty = [{ id: 'x', text: 'X' }, { id: 'y', text: 'Y' }, { id: 'z', text: 'Z' }];
+    expect(BlokRoztrid.safeParse({ ...zaklad, karty }).success).toBe(true);
+    expect(BlokRoztrid.safeParse({ ...zaklad, karty: karty.slice(0, 2) }).success).toBe(false);
+    expect(BlokRoztrid.safeParse({ ...zaklad, karty: [...karty.slice(0, 2), { id: 'x', text: 'Znovu' }] }).success).toBe(false);
+    expect(BlokRoztrid.safeParse({ ...zaklad, karty: [...karty.slice(0, 2), { id: 'vlastni-1', text: 'Z' }] }).success).toBe(false);
+    expect(BlokRoztrid.safeParse({ ...zaklad, karty: [...karty.slice(0, 2), { id: 'z', text: 'Z', kdyz: { c: 'Koš c není.' } }] }).success).toBe(false);
+    expect(BlokRoztrid.safeParse({ ...zaklad, kose: [{ id: 'a', nazev: 'A' }, { id: 'a', nazev: 'B' }], karty }).success).toBe(false);
+    expect(BlokRoztrid.safeParse({ ...zaklad, karty: [...karty.slice(0, 2), { id: 'z', text: 'z'.repeat(61) }] }).success).toBe(false);
+  });
+});
+
 // ─── Obsah bloků v YAML ──────────────────────────────────────────────────────
 
 const slozka = new URL('../../src/content/bloky/', import.meta.url);
@@ -288,9 +397,9 @@ const osoby = new Set(lide.map((o) => o.id));
 const prameny = new Set(zdroje.prameny.map((p) => p.id));
 
 describe('obsah bloků (src/content/bloky)', () => {
-  it('složka má aspoň ukázky tří druhů', () => {
+  it('složka má ukázky všech čtyř druhů', () => {
     const druhy = new Set(soubory.map((s) => parse(readFileSync(new URL(s, slozka), 'utf8')).druh));
-    expect([...druhy].sort()).toEqual(['spor', 'volba', 'zmena']);
+    expect([...druhy].sort()).toEqual(['roztrid', 'spor', 'volba', 'zmena']);
   });
   for (const s of soubory) {
     it(`${s}: schéma a odkazy na data`, () => {
@@ -301,5 +410,7 @@ describe('obsah bloků (src/content/bloky)', () => {
   it('kontrola odhalí neznámou osobu i pramen', () => {
     const chyby = chybyBloku('x', { druh: 'spor', zdroje: ['neni'], strany: [{ osoba: 'platon' }, { osoba: 'nikdo' }] }, osoby, prameny);
     expect(chyby).toHaveLength(2);
+    expect(chybyBloku('y', { druh: 'roztrid', zdroje: [], srovnani: { osoba: 'nikdo' } }, osoby, prameny)).toHaveLength(1);
+    expect(chybyBloku('y', { druh: 'roztrid', zdroje: [], srovnani: {} }, osoby, prameny)).toEqual([]);
   });
 });
