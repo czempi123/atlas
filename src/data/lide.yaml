@@ -571,6 +571,7 @@
     nazev: lucerna
     proc: Za bílého dne hledal s lucernou člověka.
     zdroj: dl-vi-41
+  obrazek: diogenes-carpi
   zdroje: [iep-diogenes, iep-cynics, dl-vi-20, dl-vi-41, dl-vi-69, dl-vi-104, dl-vi-76, rep-diogenes]
 
 - id: epikuros
@@ -597,7 +598,8 @@
     nazev: výhonek
     proc: Jeho škole se říkalo Zahrada.
     zdroj: sep-epicurus
-  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, dl-x-31]
+  obrazek: epikuros-met
+  zdroje: [sep-epicurus, dl-x-1, dl-x-117, dl-x-122, dl-x-136, dl-x-139, gnomologium-vaticanum, seneca-epistulae, hesiodos-theogonia, dl-x-31]
 
 - id: seneca
   jmeno: Seneca

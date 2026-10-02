@@ -117,7 +117,8 @@ prameny:
   - { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života 1, 3", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-09-29, poznamka: "Non exiguum temporis habemus, sed multum perdidimus." }
 
   # Celek 2 „Jak mám žít?“ (docs/podklady/celek-2-jak-zit.md): řecké a latinské texty z PerseusDL a First1KGreek.
-  - { id: dl-x-1, druh: pramen, nazev: "Životy filozofů X, 1–26", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Epikúros: Samos, v 18 letech do Athén, Kolofón (1); otrok Mys (3, 10); pomluvy (3–8), obhajoba (9–10); přátelé žijí v zahradě, 80 min (10); voda a trocha vína, majetek nesdílí, chléb a voda, hrnek sýra (11); narozen 341, škola od 32 let, zemřel 271/270 v 72 letech (14–15); závěť a propuštění otroků (16–21); Metrodóros, Polyainos, Hermarchos, Leonteus a Themista (22–25); asi 300 svitků (26)." }
+  - { id: dl-x-1, druh: pramen, nazev: "Životy filozofů X, 1–26", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Epikúros: Samos, v 18 letech do Athén, Kolofón (1); k filozofii ve 14 letech, učitelé a Hésiodův chaos (2); otrok Mys (3, 10); pomluvy (3–8), obhajoba (9–10); přátelé žijí v zahradě, 80 min (10); voda a trocha vína, majetek nesdílí, chléb a voda, hrnek sýra (11); narozen 341, škola od 32 let, zemřel 271/270 v 72 letech (14–15); závěť a propuštění otroků (16–21); Metrodóros, Polyainos, Hermarchos, Leonteus a Themista (22–25); asi 300 svitků (26)." }
+  - { id: hesiodos-theogonia, druh: pramen, nazev: "Theogonia 116", autor: Hésiodos, dilo: "Theogonia, řecky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0020/tlg001/tlg0020.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Jako úplně první vznikl Chaos (ἦ τοι μὲν πρώτιστα Χάος γένετʼ); k Epikúrově otázce učitelům (Diogenés Laertios X, 2)." }
   - { id: dl-x-117, druh: pramen, nazev: "Životy filozofů X, 117–121", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Moudrý podle Epikúra a jeho školy: nebude se účastnit politiky, nebude žít jako kynik ani žebrat (119, podle spisu O způsobech života I a II); přátelství kvůli potřebám, ale někdo musí začít jako při setí; v chudobě si vydělá moudrostí (120)." }
   - { id: dl-x-122, druh: pramen, nazev: "Dopis Menoikeovi (Životy filozofů X, 122–135)", autor: Epikúros, dilo: "u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Dělení tužeb (127); cílem je nemít bolest ani strach, bouře duše (128); ne každou slast volíme (129); soběstačnost, přepych si nejvíc užije, kdo ho nepotřebuje (130); ječná placka (μᾶζα) a voda, slast není prostopášnost (131); rozumnost a ctnosti (132)." }
   - { id: dl-x-136, druh: pramen, nazev: "Životy filozofů X, 136–138", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Klidová slast (ataraxia, aponia) a slast v pohybu (radost, veselí), citát ze spisu O volbě (136); rozdíl od kyrénaiků (136–137)." }
@@ -564,3 +565,25 @@ obrazky:
     instituce: "Musée du Louvre, Paříž, inv. Ma 59"
     licence: "CC BY-SA 2.5"
     url: "https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg"
+  # Celek 2: obrázky z The Metropolitan Museum of Art (Open Access, CC0); licence ověřena u muzea, soubory zmenšeny na 1280 px.
+  - id: epikuros-met
+    soubor: obrazky/epikuros-met.jpg
+    popisek: "Epikúros. Římská mramorová hlava z 2. století, kopie řecké sochy z 1. poloviny 3. století př. n. l."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 11.90"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/248475"
+  - id: diogenes-carpi
+    soubor: obrazky/diogenes-carpi-met.jpg
+    popisek: "Diogenés, jak si ho představila renesance: před sudem a s oškubaným kohoutem, kterým se vysmál Platónovi. Dřevořez Uga da Carpi podle Parmigianina, asi 1527–1530."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 17.50.1"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/354611"
+  - id: diogenes-poharek
+    soubor: obrazky/diogenes-poharek-met.jpg
+    popisek: "Diogenés odhazuje pohárek, když vidí dítě pít z dlaní. Kresba neznámého francouzského umělce, 17. století."
+    autor: "The Metropolitan Museum of Art"
+    instituce: "New York, inv. 53.513.8"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/344405"
