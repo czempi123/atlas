@@ -12,7 +12,7 @@ scena: >-
   Ty se ale každý pátek scházíš s kamarády na pizzu.
 otazka: Jdeš do toho?
 moznosti:
-  - { id: cele, text: "Jdu do toho celé." }
+  - { id: cele, text: "Jdu do toho také." }
   - { id: s-patky, text: "Jdu, ale páteční pizzu si nechám." }
   - { id: nejdu, text: Nejdu do toho. }
 podminky:

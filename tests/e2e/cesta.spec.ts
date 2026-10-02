@@ -347,7 +347,7 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(mesic.getByRole('radio', { name: 'Kamarádi jdou do toho s tebou' })).toBeChecked();
   await expect(mesic.locator('.zmenena')).toContainText('přidá celá tvoje parta');
   await page.keyboard.press('Tab');
-  await expect(mesic.locator('.zmenena').getByRole('radio', { name: 'Jdu do toho celé.' })).toBeFocused();
+  await expect(mesic.locator('.zmenena').getByRole('radio', { name: 'Jdu do toho také.' })).toBeFocused();
   await page.keyboard.press('Space');
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
