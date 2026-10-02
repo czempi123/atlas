@@ -28,7 +28,7 @@ Komponenta je hotová, když ji autor vloží do MDX jedním řádkem, student j
 
 ## Časté pasti
 
-- Nezlomitelnou mezeru v TypeScriptu piš jako `' '`, v šabloně jako `&nbsp;`. Znak vložený přímo se při úpravách souboru může změnit na obyčejnou mezeru.
+- Nezlomitelnou mezeru v TypeScriptu piš jako `'\u00a0'`, v šabloně jako `&nbsp;`. Znak vložený přímo se při úpravách souboru může změnit na obyčejnou mezeru.
 - `requestAnimationFrame`, `matchMedia`, `localStorage` a `history` nejsou při sestavení (SSR) k dispozici: používej je jen v `onMount`, v obsluze událostí nebo za kontrolou `typeof`.
 - Efekt (`$effect`), který zapisuje stav, jenž sám čte, se zacyklí nebo si zruší vlastní práci; čtení zabal do `untrack`.
 - Ostrov s `client:visible` se hydratuje až po posunu k němu; test musí počkat na `astro-island[component-url*="Jmeno"]:not([ssr])`, jinak klikne dřív než skript.
