@@ -14,6 +14,8 @@
 - Žádné vodorovné posouvání stránky; u celoobrazovkových nástrojů ani svislé.
 - Hlavní scénář studenta: pokus → odkrytí → zpětná vazba → uložení; obnovení stránky zachová, co má zachovat.
 - Ovládání jen klávesnicí: Tab dosáhne všech prvků ve smysluplném pořadí, Enter/mezerník/šipky dělají, co mají, Escape zavře, co se otevřelo.
+- Fokus z klávesnice nezůstane pod pevnou lištou: dolní okraj prvku s fokusem je nad horním okrajem lišty.
+- Nic se nepřekrývá: ovládací prvky ani popisky v SVG, na 390 i 1440 px.
 - Snímek každé kombinace do `test-results/snimky/<blok>-<sirka>-<svetly|tmavy>.png`.
 
 ## Než řekneš „hotovo“
