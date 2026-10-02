@@ -358,7 +358,7 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(text6).not.toContainText(/souvislost|85.000|Spojených státech/);
   const graf = page.locator('#graf-penize-stesti');
   await expect(graf.getByRole('img')).toHaveAttribute('aria-describedby', 'graf-penize-stesti-popis');
-  await expect(graf.locator('figcaption')).toContainText('U nejméně šťastné pětiny se nad 100 000 dolary ročně zastaví.');
+  await expect(graf.locator('figcaption')).toContainText('Asi u pětiny lidí, těch nejméně šťastných, se zhruba nad 100 000 dolary ročně zastaví.');
   await expect(text6.locator('.citat')).toHaveCount(2);
   const penize = page.locator('#cesta6-penize');
   await penize.getByRole('radio', { name: /Nedá se říct/ }).focus();
@@ -398,7 +398,7 @@ test('cesta 6 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
   const NAVAZUJE: (string | RegExp)[][] = [
     ['Hrnek sýra. Tak vypadala hostina muže, který učil, že cílem je slast.'],
     ['Všechno, po čem člověk touží, třídil do tří košů.', 'těm říkal prázdné.'],
-    ['bolí, když touhu nesplníš?', 'Slast podle něj nemůže růst donekonečna.', 'Hrnek sýra si tedy dopřát smíš.'],
+    ['bolí, když touhu nesplníš?', 'Slast podle něj nemůže růst donekonečna.', 'Hrnek sýra si tedy podle něj dopřát smíš.'],
     ['Moudrý nebude žít jako kynik ani žebrat.', 'Kynik i Epikúros tedy jedli chléb a pili vodu.', 'S Diogenem samotným se Epikúros nejspíš nikdy nepotkal'],
     ['měsíc na minimum', 'každý pátek scházíš s kamarády na pizzu'],
     ['Epikúros tvrdil, že strop má i bohatství', 'U většiny lidí nálada s příjmem roste dál.', 'Komu je málo to, co stačí, tomu nestačí nic.'],
