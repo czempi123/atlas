@@ -1,12 +1,12 @@
 # Podklady: Co mám ve svých rukou?
 
-Ověřeno 2. 10. 2026 (P6). Celek: cesta 5 „Co mám ve svých rukou?“, portrét Epiktéta, portrét Marca Aurelia a velká otázka 4 „Jsem svobodný?“. Rozhodnutí autora z 2. 10. 2026: vstupní scénou cesty je příběh s nohou, protivníkem ve Sporu je Aristotelés, nový případ má dva kroky (vymyšlený i doložený) a Marcus se zpracuje rovnou s Epiktétem. O stránce otázky 4 autor zatím nerozhodl; podklady i doporučení jsou níže.
+Ověřeno 2. 10. 2026 (P6). Celek: cesta 5 „Co mám ve svých rukou?“, portrét Epiktéta, portrét Marca Aurelia a velká otázka 4 „Jsem svobodný?“. Rozhodnutí autora z 2. 10. 2026: vstupní scénou cesty je příběh s nohou, protivníkem ve Sporu je Aristotelés, nový případ má dva kroky (vymyšlený i doložený) a Marcus se zpracuje rovnou s Epiktétem. Po předání podkladů rozhodl autor týž den i zbytek: stránka otázky 4 vznikne už teď, v datech zůstává odchod z Říma „asi 93“, obrázky jsou vybrané a stažené, Roztřiď má tři koše a k novému případu B stačí souhrn studie (viz Otevřené otázky na konci).
 
 **Jak se ověřovalo.** Epiktétovy Rozpravy a Rukojeť jsem četl řecky (H. Schenkl, Teubner 1916) s anglickým překladem G. Longa (1887), Marcovy Hovory k sobě řecky (J. H. Leopold, Teubner 1908), Aristotelovu Etiku Nikomachovu řecky (I. Bywater) a anglicky (H. Rackham), Diogena Laertia X (R. D. Hicks) a Lúkiana (A. M. Harmon); všechno z PerseusDL (`canonical-greekLit`). Órigenův spis Proti Kelsovi řecky (P. Koetschau, 1899) z First1KGreek. Latinsky z PerseusDL (`canonical-latinLit`): Gellius (J. C. Rolfe, i anglicky), Cicero (O osudu, O nejvyšším dobru a zlu, Tuskulské hovory), Suetonius (Domitianus), Tacitus (Agricola), Plinius mladší (Dopisy), Lucretius a Historia Augusta (Marcus). Cassia Diona (knihy 67 a 72) jen anglicky (E. Cary, LacusCurtius), Sudu jen v anglickém překladu Suda On Line, Hieronymovu kroniku anglicky (tertullian.org). **Simplikia jsem nečetl**; jeho zprávy o Epiktétovi znám jen z předmluvy G. Longa (1877) a ze SEP. Výklad podle SEP „Epictetus“ (M. Graver, rev. 2025), IEP „Epictetus“ (K. H. Seddon), SEP „Marcus Aurelius“ (R. Kamtekar, rev. 2025), IEP „Marcus Aurelius“, SEP „Stoicism“ (D. Baltzly, 2023) a SEP „Ancient Theories of Freedom and Determinism“ (T. O'Keefe, rev. 2024). Všechny české převody citátů jsou **vlastní**; publikované české překlady Rozprav, Rukojeti a Hovorů jsem neměl v ruce.
 
 **Čeho se drží celý celek.** Bývalý otrok a císař říkají totéž: v mé moci je jen to, co si myslím, co chci a co udělám. Všechno ostatní mi může někdo vzít. Epiktétos z toho dělá svobodu (Rozpravy IV, 1, 1; Rukojeť 14), Marcus pevnost (Hovory VIII, 48) a oba povinnost jednat (Rozpravy III, 2, 4; Hovory IX, 5). Proti nim stojí Aristotelés: ke šťastnému životu patří i to, co v rukou nemám, a kdo snáší urážky, jedná otrocky (Etika Nikomachova 1099a31–b8, 1153b17–21, 1126a3–8). Tenhle rozdíl nese cesta 5, Spor i oba nové případy. Otázka 4 jde o krok dál: je v mých rukou aspoň moje rozhodnutí?
 
-**Jak převádím klíčová slova.** τὰ ἐφʼ ἡμῖν = „co je v naší moci“ (ve studentském textu i „co mám v rukou“); προαίρεσις = „vůle“ (schopnost volit; SEP překládá volition); φαντασία = „dojem“; δόγμα, ὑπόληψις, κρῖμα = „soud“ nebo „úsudek“; τὰ ἐκτός = „vnější věci“. Kdyby autor chtěl místo „vůle“ raději „volba“ nebo „rozhodování“, je třeba to změnit ve všech citátech najednou.
+**Jak převádím klíčová slova.** τὰ ἐφʼ ἡμῖν = „co je v naší moci“ (ve studentském textu i „co mám v rukou“); προαίρεσις = „vůle“ (schopnost volit; SEP překládá volition); φαντασία = „dojem“; δόγμα, ὑπόληψις, κρῖμα = „soud“ nebo „úsudek“; τὰ ἐκτός = „vnější věci“. Mezi „vůlí“ a „volbou“ nechal autor rozhodnutí na mně: zůstává „vůle“ (důvody v Rozporech).
 
 ## Nejsilnější příběhy
 
@@ -26,6 +26,7 @@ Ověřeno 2. 10. 2026 (P6). Celek: cesta 5 „Co mám ve svých rukou?“, portr
 9. **Arriános nic „nenapsal“.** V dopise na začátku Rozprav žák Arriános píše, že Epiktétovy řeči nesepsal jako knihu: zapisoval, co slyšel, pokud možno jeho vlastními slovy, jako poznámky pro sebe. Mezi lidi se dostaly bez jeho vědomí. — typ: doložený text — zdroj: Rozpravy, úvodní dopis Luciu Gelliovi 1–4 — doporučená formulace: „Epiktétos nenapsal nic. Jeho žák Arriános si zapisoval, co slyšel, pokud možno jeho vlastními slovy.“
 10. **„Největší ze stoiků.“** Gellius vzpomíná na večer u Héróda Attika: mladý chvastoun vykládal, že stoik je šťastný i v bolestech. Héródés dal přinést Epiktétovy Rozpravy, „největšího ze stoiků“, a nechal přečíst místo o lidech, kteří o filozofii jen mluví. — typ: doložený text (Gelliova vzpomínka na studia v Athénách) — zdroj: Gellius, Attické noci I, 2, 1–7 — volitelně do portrétu (pověst krátce po smrti).
 11. **Dítě.** Epiktétos se neoženil. Ve stáří se ujal dítěte, které chtěl jeho přítel z chudoby odložit, a vzal k němu do domu chůvu. — typ: tradovaný (Simplikios, 6. století; znám jen ze SEP a z G. Longa) — doporučená formulace: „Vypráví se, že se ve stáří ujal dítěte, o které se rodiče nemohli postarat.“
+12. **Dvojverší na rytině.** Pod rytinou z roku 1715 (viz Obrázky) stojí řecké dvojverší: „Byl jsem otrok Epiktétos, tělem mrzák, chudý jako Íros a milý nesmrtelným.“ — typ: nápis na rytině; kdo a kdy dvojverší složil, jsem neověřoval — zdroj: rytina `epiktetos-1715` — volitelně v popisku nebo v závěru portrétu jako „pozdější dvojverší“, ne jako Epiktétova slova.
 
 ### Marcus Aurelius
 
@@ -216,7 +217,7 @@ Epiktétos mluví k žákům ve škole. Marcus mluví sám k sobě a jeho role j
 
 ### Vlastní pokus: Roztřiď věci z jednoho dne
 
-Dělení je doložené (Rukojeť 1, 1), karty jsou autorské. Epiktétos má jen dvě skupiny. **Návrh:** tři koše „Mám v rukou“, „Zčásti“ a „Nemám v rukou“. Prostřední koš je pro studenta poctivý a v kroku 3 se z něj stane úkol: roztrhni kartu na dvě půlky, která je tvoje? Druhá možnost jsou jen dva koše jako u Epiktéta; pak ale student nemá kam dát většinu svého dne.
+Dělení je doložené (Rukojeť 1, 1), karty jsou autorské. Epiktétos má jen dvě skupiny. **Rozhodnutí autora 2. 10. 2026:** tři koše „Mám v rukou“, „Zčásti“ a „Nemám v rukou“. Prostřední koš je pro studenta poctivý a v kroku 3 se z něj stane úkol: roztrhni kartu na dvě půlky, která je tvoje?
 
 | Karta (návrh) | Na kterou Epiktétovu položku míří | Co by řekl Epiktétos |
 | --- | --- | --- |
@@ -303,7 +304,7 @@ Odpovědi hlasů jsou výklad („by nejspíš řekl“), ne citace.
 
 **Proč případ sedí.** Zkouší větu „netrápí nás věci, ale soudy o nich“ (Rukojeť 5): změna soudu změnila prožitek. A opravuje obraz stoika, který zatíná zuby: zatínat zuby je potlačení, a to Epiktétos nechce („ne jako socha“, Rozpravy III, 2, 4). **Co z pokusu nevyplývá** (do zpětné vazby, ne do úvodu): film v laboratoři není zrada ani nemoc; pokus měřil minuty, ne život; neříká, kdy je správné cit ztlumit. Aristotelés by mohl namítnout, že některý hněv ztlumit vůbec nemáme (1126a3–8).
 
-**Četl jsem jen souhrn studie (PubMed), ne plný text.** Čísla efektů, složení účastníků a přesné znění pokynů proto v atlasu neuvádět, dokud je někdo neověří v plném textu. Jméno autora se mi nástrojem nepodařilo zobrazit (viz Otevřené otázky).
+**Četl jsem jen souhrn studie (PubMed), ne plný text. Rozhodnutí autora 2. 10. 2026: souhrn stačí.** Krok proto drží jen tři tvrzení z tabulky: žádná čísla efektů, složení účastníků ani přesné znění pokynů. Jméno autora (James J. Gross) znám, ale nástroj mi ho na stránce PubMedu nezobrazil a Europe PMC i Crossref požadavek odmítly; ve studentském textu autora nejmenovat („psycholog“).
 
 ### Vlastní pravidlo a hlas pro nesouhlas (krok 8)
 
@@ -364,9 +365,9 @@ Rezerva: **Karneadés** (v datech medailonek): „Může. A nepotřebuju k tomu 
 - Chrýsippos: všechno určené je, a přesto za sebe ručím. **Jediný, kdo drží obojí zároveň.**
 - Epiktétos: otázka se obrací dovnitř: svobodný nejsem tím, že jsem mohl jednat jinak, ale tím, že mě nikdo nemůže donutit. **Jediný, kdo mluví k tomu, komu bylo ublíženo, ne jen o viníkovi.**
 
-### Doporučení: stránka teď, nebo řádek v přehledu?
+### Rozhodnutí autora 2. 10. 2026: stránka vznikne už teď
 
-**Doporučuji stránku udělat teď se čtyřmi hlasy.** Důvody: (1) čtyři antické odpovědi se opravdu liší a tři z nich se o věc doloženě přely; (2) cesta 5 potřebuje místo, kam pošle studenta, který nesouhlasí, a kde uvidí, že „co mám v rukou“ je jen začátek otázky; (3) stránky otázek 7 a 1 vznikly stejně a další hlasy (Augustin, Spinoza, Kant, Sartre) se přidají s jejich obdobími. Cena: Aristotelés by byl hlasem už na třetí stránce bez vlastního portrétu a Chrýsippos nemá profil. Kdyby to autorovi vadilo, zůstane otázka 4 řádkem v přehledu a cesta 5 odkáže jen na otázku 1.
+Čtyři hlasy: Aristotelés, Epikúros, Chrýsippos, Epiktétos. Důvody: (1) čtyři antické odpovědi se opravdu liší a tři z nich se o věc doloženě přely; (2) cesta 5 potřebuje místo, kam pošle studenta, který nesouhlasí, a kde uvidí, že „co mám v rukou“ je jen začátek otázky; (3) stránky otázek 7 a 1 vznikly stejně a další hlasy (Augustin, Spinoza, Kant, Sartre) se přidají s jejich obdobími. Stránka vznikne v P8 spolu s cestou 5. Aristotelés je tím hlasem už na třetí stránce bez vlastního portrétu a Chrýsippos nemá profil: při revizi pohlídat, že se Aristotelés na otázce 1, ve Sporu a na otázce 4 neopakuje (pokaždé jiná myšlenka: činnost a vnější dobra; rány osudu a hněv; odpovědnost za povahu).
 
 ## Citáty
 
@@ -469,24 +470,24 @@ Nové prameny a 40 citátů jsou v `src/data/zdroje.yaml` (oddíl „Celek 3“)
 
 ## Obrázky
 
-Nic jsem nestahoval; do `obrazky` v `zdroje.yaml` se zapíše až po souhlasu autora a uložení souboru.
+**Rozhodnutí autora 2. 10. 2026:** Marcus dostane rytinu jezdecké sochy z Met, Epiktétos rytinu s berlou z roku 1715. Oba soubory jsem po jeho souhlasu stáhl, prohlédl a zapsal do dat (`marcus-jezdec`, `epiktetos-1715`); originály jsou mimo repozitář ve složce `~/Downloads/atlas-obrazky-originaly/`, v `public/obrazky/` jsou kopie zmenšené na 1280 px.
 
-| Kandidát | Co zobrazuje | Autor / instituce | Licence | Odkaz | Stav |
-| --- | --- | --- | --- | --- | --- |
-| **Marcus, doporučuji:** mramorová hlava | Portrét císaře Marca Aurelia, mramor, 161–180 n. l., výška 36,8 cm | The Walters Art Museum, Baltimore, inv. 23.215 (sbírka Massarenti, 1902) | Creative Commons Zero (podle stránky muzea) | https://art.thewalters.org/detail/10416/portrait-of-the-emperor-marcus-aurelius/ | Údaje ověřeny na stránce muzea. **Soubor muzeum nástrojům nevydá: stáhnout ho musí autor** a uložit do `public/obrazky/marcus-walters.jpg` (kopie zmenšená na 1280 px). |
-| Marcus, náhrada A: rytina | Jezdecká socha Marca Aurelia (antický bronz z Říma), rytina Marca Denta, 1515–1527 | The Metropolitan Museum of Art, inv. 59.570.282 | CC0 (Open Access; `isPublicDomain: true`) | https://www.metmuseum.org/art/collection/search/343595 | Ověřeno v API muzea; soubor z `images.metmuseum.org` jde stáhnout nástrojem. Popisek: „jak sochu viděla renesance“. |
-| Marcus, náhrada B: mince | Zlatý aureus s Marcovým profilem, ražený 153–154 za Antonina Pia | The Art Institute of Chicago, inv. 1922.4876 | veřejné dílo (`is_public_domain: true`; AIC je vydává jako CC0) | https://www.artic.edu/artworks/5644 | Ověřeno v API muzea; adresu stránky díla jsem neotvíral. Antická podoba z doby, kdy byl Marcus mladý. |
-| Marcus, náhrada C: busta | Bronzová busta „Marcus Aurelius“, konec 16. století | The Metropolitan Museum of Art, inv. 27.36.10 | CC0 (Open Access) | https://www.metmuseum.org/art/collection/search/195735 | Novověká práce; jen kdyby se nehodilo nic jiného. |
-| **Epiktétos, možnost A:** rytina s berlou | Epiktétos sedí u stolu a píše, o židli opřená berla; frontispis latinského veršovaného vydání Rukojeti (Oxford 1715) | podle údajů na Wikimedia Commons, které jsem **nemohl otevřít**: rytec Michael Burghers | volné dílo (stáří); potvrdit na Commons | https://commons.wikimedia.org/wiki/Category:Epictetus | **Neověřeno.** Commons nástrojům stránku nevydá. Autor: potvrdit rytce, rok a licenci a stáhnout. Jediné rozšířené vyobrazení s berlou, sedí k atributu. |
-| Epiktétos, možnost B: lept | „Epiktétos sedí na skále a píše“; putto mu drží před tváří masku a ukazuje na postavu Náboženství. Lept Sébastiena Leclerca podle Charlese Le Bruna, Paříž 1688, frontispis francouzského překladu Rukojeti | Rijksmuseum, Amsterdam, inv. RP-P-1967-430 | Public Domain (CC0 1.0) | https://www.rijksmuseum.nl/nl/collectie/object/RP-P-1967-430 | Údaje ověřeny v datech muzea; obrázek jsem neviděl. Křesťanská alegorie, bez berly: popisek by musel vysvětlovat víc než obrázek. |
+| Soubor | Co zobrazuje | Autor / instituce | Licence | Odkaz |
+| --- | --- | --- | --- | --- |
+| `public/obrazky/marcus-jezdec-met.jpg` (878 × 1280; originál 2617 × 3813, 2,9 MB) | Marcus Aurelius na koni, z profilu, s pravicí nataženou dopředu; socha stojí na podstavci s nápisem SIC ROMAE AERE SCVLP ANTE PORTAM ECCL S IOHANNIS LATHER („takto v Římě z bronzu před branou kostela sv. Jana v Lateráně“), v pozadí hradby a kruhová stavba. Rytina | Marco Dente (činný od 1515, zemřel 1527), 1515–1527; The Metropolitan Museum of Art, inv. 59.570.282 (The Elisha Whittelsey Fund, 1959) | CC0 (Open Access; API muzea `isPublicDomain: true`) | https://www.metmuseum.org/art/collection/search/343595 |
+| `public/obrazky/epiktetos-1715.jpg` (723 × 1280; originál 1996 × 3530, 1,4 MB) | Epiktétos sedí u stolu, opírá si hlavu o ruku a píše brkem do knihy; přes rameno má opřenou berlu, je bos, na stole stojí nejspíš svítilna. Pod obrazem řecké dvojverší (viz Nejsilnější příběhy 12). Vlevo dole podpis kreslíře („… delin.“), vpravo dole „MB. sculp.“ | Úvodní list knihy *Epicteti Enchiridion Latinis versibus adumbratum* (E. Ivie, Oxford 1715; vydání doloženo katalogem Eton College, B13574). Rytec se značkou MB; jména jsem odborným zdrojem nedoložil (uvádí se Michael Burghers podle kresby Williama Sonmanse) | volné dílo (Public Domain podle World History Encyclopedia; rytina je z roku 1715) | https://www.worldhistory.org/image/3388/epictetus/ |
 
-**Antická podobizna Epiktéta:** v otevřených sbírkách, které jsem prošel (Met, Art Institute of Chicago, Cleveland, Rijksmuseum, Wellcome), žádná není. Že žádná spolehlivá neexistuje, jsem odborným zdrojem nedoložil; platí postup jako u Diogena: novověké vyobrazení s popiskem, čí je to představa („jak si ho představil rytec roku 1715“), a mince s berlou jako atribut.
+**Jak je použít.** Oba obrázky jsou u osob jako `obrazek` (deska 4 : 5); výřez jsem nastavil odhadem (`vyrez` 50 % 15 % u Marca, 50 % 60 % u Epiktéta) a **P7 ho musí zkontrolovat v prohlížeči**, protože stránky zatím neexistují. Popisek u Epiktéta říká, čí je to představa („jak si ho představil rytec roku 1715“): berla je až na rytině, prameny dokládají jen kulhání. Popisek u Marca říká, že jde o rytinu sochy; že socha je antická a kdy vznikla, jsem neověřoval, proto to popisek netvrdí. Nápis na rytině dokládá jen to, že v době rytce stála před Lateránem.
 
-**Berla jako atribut** (v datech už je, zdroj `sep-epictetus`): prameny dokládají kulhání, ne berlu; berla je až na novověkých rytinách. Jako znak obstojí, text ale nemá tvrdit, že o berli chodil.
+**Odkud je soubor Epiktéta.** Wikimedia Commons nástrojům stránku nevydá a obcházet to nesmím. Stejnou rytinu má World History Encyclopedia s údajem Public Domain; soubor je odtud. Stránka uvádí rok 1751, což je překlep (kniha vyšla 1715). Kdyby autor chtěl mít jistotu i z Commons, stačí tam licenci potvrdit; soubor už měnit netřeba.
+
+**Zvážené a nepoužité:** mramorová hlava Marca Aurelia z Walters Art Museum (inv. 23.215, 161–180 n. l., CC0; muzeum soubor nástrojům nevydá), zlatý aureus s Marcovým profilem z Art Institute of Chicago (inv. 1922.4876), bronzová busta z konce 16. století v Met (inv. 27.36.10); lept Sébastiena Leclerca podle Charlese Le Bruna „Epiktétos sedí na skále a píše“ (1688, Rijksmuseum, RP-P-1967-430, CC0; křesťanská alegorie bez berly). Hlava z Walters zůstává možností pro Marcův portrét, kdyby autor chtěl uvnitř stránky i antickou podobu.
+
+**Antická podobizna Epiktéta:** v otevřených sbírkách, které jsem prošel (Met, Art Institute of Chicago, Cleveland, Rijksmuseum, Wellcome), žádná není. Že žádná spolehlivá neexistuje, jsem odborným zdrojem nedoložil.
 
 ## Rozpory a rozhodnutí
 
-- **Rok Domitianova vykázání filozofů (89 × 93 × 95).** Gellius (XV, 11, 3–5): za Domitiana byli filozofové usnesením senátu vyhnáni z Říma a Itálie a „tehdy“ odešel Epiktétos do Níkopole; rok neuvádí. Suetonius (Domitianus 10, 3): Domitianus vykázal všechny filozofy „z Města a z Itálie“ při procesu s Juniem Rustikem. Tacitus (Agricola 2 a 44–45) klade popravy Rustika a Senekióna až po Agricolově smrti 23. srpna za konzulů Collegy a Priscina (rok 93 podle běžné datace; seznam konzulů jsem neověřoval); Plinius (Dopisy III, 11) vzpomíná, že byl tehdy praetorem; Cassius Dio (67, 13) píše, že filozofové byli vyhnáni „znovu“. Hieronymova kronika má k roku 95: Domitianus „znovu“ vyhání filozofy a astrology z Říma. Encyklopedie: SEP „Epictetus“ a IEP rok 89, SEP „Stoicism“ rok 93; odkud je rok 89, jsem v pramenech nenašel (snad starší vykázání, na které míří Dionovo a Hieronymovo „znovu“). **Rozhodnutí:** ve studentském textu **bez roku** („Když císař Domitianus vykázal filozofy z Říma a z celé Itálie…“); v datech **„asi 93“**, protože Gellius i Suetonius mluví shodně o Římě a Itálii a Suetonius, Tacitus i Plinius to spojují s procesy roku 93. Kdyby autor chtěl držet SEP „Epictetus“, stačí v `lide.yaml` přepsat 93 na 89; `priblizne` zůstává.
+- **Rok Domitianova vykázání filozofů (89 × 93 × 95).** Gellius (XV, 11, 3–5): za Domitiana byli filozofové usnesením senátu vyhnáni z Říma a Itálie a „tehdy“ odešel Epiktétos do Níkopole; rok neuvádí. Suetonius (Domitianus 10, 3): Domitianus vykázal všechny filozofy „z Města a z Itálie“ při procesu s Juniem Rustikem. Tacitus (Agricola 2 a 44–45) klade popravy Rustika a Senekióna až po Agricolově smrti 23. srpna za konzulů Collegy a Priscina (rok 93 podle běžné datace; seznam konzulů jsem neověřoval); Plinius (Dopisy III, 11) vzpomíná, že byl tehdy praetorem; Cassius Dio (67, 13) píše, že filozofové byli vyhnáni „znovu“. Hieronymova kronika má k roku 95: Domitianus „znovu“ vyhání filozofy a astrology z Říma. Encyklopedie: SEP „Epictetus“ a IEP rok 89, SEP „Stoicism“ rok 93; odkud je rok 89, jsem v pramenech nenašel (snad starší vykázání, na které míří Dionovo a Hieronymovo „znovu“). **Rozhodnutí (autor potvrdil 2. 10. 2026):** ve studentském textu **bez roku** („Když císař Domitianus vykázal filozofy z Říma a z celé Itálie…“); v datech **„asi 93“**, protože Gellius i Suetonius mluví shodně o Římě a Itálii a Suetonius, Tacitus i Plinius to spojují s procesy roku 93. Kdyby autor chtěl držet SEP „Epictetus“, stačí v `lide.yaml` přepsat 93 na 89; `priblizne` zůstává.
 - **Proč Epiktétos kulhal.** Kelsos u Órigena (pán mu zlomil nohu), Suda (revma), Simplikios (chromý od mládí), SEP (artritida, nebo týrání). **Doporučení:** kulhání jako fakt, zlomenou nohu jako „Vypráví se“.
 - **Kdo byl ten pán.** Kelsos ho nejmenuje. Že Epiktétovým pánem byl Epafroditos, je doložené zvlášť (SEP; Rozpravy I, 19 a I, 26). **Doporučení:** ve scéně jen „pán“.
 - **Kdy přišel do Říma.** IEP: „jako chlapec“; SEP: neví se, buď před rokem 68, nebo po roce 81. **Doporučení:** nepsat, kdy.
@@ -498,23 +499,31 @@ Nic jsem nestahoval; do `obrazky` v `zdroje.yaml` se zapíše až po souhlasu au
 - **Noc u Dunaje.** Není doložená. **Doporučení:** „na tažení u Dunaje“; ráno je doložené (II, 1; V, 1).
 - **Marcův věk při adopci.** Historia Augusta (5, 6): „v osmnáctém roce věku“; narozen v dubnu 121, adopce 138 (IEP), tedy šestnáct až sedmnáct. **Doporučení:** věk neuvádět.
 - **Místo Marcovy smrti.** Vindobona, nebo Sirmium (Britannica). **Doporučení:** „na tažení“.
-- **Cassiovy papíry.** Dio: zničil nepřečtené. „Spálil“ jsem v prameni nenašel. **Doporučení:** „dal zničit nepřečtené“; opravit i příklad v `docs/styl.md`, dvojice 3.
+- **Cassiovy papíry.** Dio: zničil nepřečtené. „Spálil“ jsem v prameni nenašel. **Doporučení:** „dal zničit nepřečtené“. Příklad v `docs/styl.md` (dvojice 3) je na pokyn autora opraven.
 - **Odchylka atomů.** V dochovaných Epikúrových textech není (SEP); je u Lucretia a Cicerona. **Doporučení:** „pozdější epikurejci mu připisují…“ nebo „jeho žáci učili…“, citát jen z Dopisu Menoikeovi.
 - **Dopis Menoikeovi 133.** Začátek věty o osudu je v rukopisech porušený a vydavatelé ho doplňují; věta 134 o bájích a osudu přírodních filozofů je celá. Citát je z 134.
 - **Cicero, O osudu 39** řadí Aristotela k těm, podle nichž se vše děje nutně. SEP to nepotvrzuje. Nepoužívat.
+- **προαίρεσις: „vůle“, ne „volba“.** Autor nechal výběr na mně. „Vůle“ sedí líp ze tří důvodů: (1) věty o noze s ní znějí přirozeně („Kulhání je překážkou nohy, ne vůle“), s „volbou“ ne; (2) Epiktétos tím slovem myslí trvalou schopnost, která je „skutečným já“ člověka (SEP, oddíl 4.3, překládá volition), ne jednotlivé rozhodnutí; (3) stránka otázky 4 naváže na „svobodnou vůli“. **Riziko:** student čte „vůli“ jako sílu zatnout zuby. Text ji proto musí jednou vysvětlit: vůle je tu to, čím si věci vykládám a čím se rozhoduju. U Aristotela (týž řecký výraz v Etice III) atlas slovo nepřevádí; až vznikne jeho portrét, bude tam spíš „volba“.
 - **Aristotelés ve Sporu.** Nežil ve stejné době jako stoikové. **Rozhodnutí autora:** je protivníkem; rámec Sporu to říká první větou.
 - **Lučištník** je stoická nauka v Ciceronově podání (mluví Cato), ne Epiktétos. **Doporučení:** „starší stoikové“, nebo místo něj Epiktétův vítr (Rozpravy I, 1, 16–17).
 - **Pokus z roku 1998.** Četl jsem jen souhrn. **Doporučení:** jen tři tvrzení z tabulky, bez čísel.
 
 ## Otevřené otázky pro autora
 
-1. **Stránka velké otázky 4:** udělat teď se čtyřmi hlasy (Aristotelés, Epikúros, Chrýsippos, Epiktétos), nebo nechat řádkem v přehledu? Doporučuji teď.
-2. **Rok vykázání filozofů v datech:** zapsal jsem „asi 93“ (důvody v Rozporech). Souhlasíš, nebo raději 89 podle SEP „Epictetus“?
-3. **Obrázek Marca:** hlava z Walters (stáhneš sám), nebo rytina z Met (stáhnu po tvém souhlasu)?
-4. **Obrázek Epiktéta:** rytina s berlou z roku 1715 (potvrdíš na Commons), nebo lept z Rijksmusea?
-5. **Překlad προαίρεσις:** „vůle“ (zvolil jsem), nebo „volba“?
-6. **Roztřiď:** tři koše („Mám v rukou“, „Zčásti“, „Nemám v rukou“), nebo dva jako u Epiktéta?
-7. **Nový případ B:** kdo přečte plný text studie (J. J. Gross, 1998)? Bez něj jen tři věty ze souhrnu.
-8. **Jména v textu:** Arriános a Rusticus jménem, Epafroditos jen v portrétu, Helvidius jménem jen jednou?
-9. **Kulhavý voják u Marca (VII, 7)** a **Helvidius u obou** (Rozpravy I, 2; Hovory I, 14): chceš jimi oba portréty propojit?
-10. **Skill `atlas-overeni`:** kopii ve `skills/` jsem doplnil (tabulka zkreslení, texty Epiktéta a Marca v PerseusDL, Órigenés ve First1KGreek, API muzeí jen přes webové čtení). Skill v účtu je třeba uložit zvlášť.
+Rozhodnuto 2. 10. 2026 (zapsáno v `docs/rozhodnuti.md`):
+
+- ~~Stránka velké otázky 4~~ **Rozhodnuto:** vznikne teď se čtyřmi hlasy (v P8).
+- ~~Rok vykázání filozofů v datech~~ **Rozhodnuto:** „asi 93“.
+- ~~Obrázek Marca~~ **Rozhodnuto:** rytina jezdecké sochy z Met; stažena a zapsána jako `marcus-jezdec`.
+- ~~Obrázek Epiktéta~~ **Rozhodnuto:** rytina s berlou z roku 1715; stažena a zapsána jako `epiktetos-1715`.
+- ~~Překlad προαίρεσις~~ **Rozhodnuto:** autor nechal na mně; zůstává „vůle“.
+- ~~Roztřiď~~ **Rozhodnuto:** tři koše.
+- ~~Nový případ B~~ **Rozhodnuto:** stačí souhrn studie.
+- ~~`docs/styl.md`, dvojice 3~~ **Rozhodnuto:** opravit; věta teď zní „Cassiovy písemnosti dal zničit nepřečtené“.
+
+Zbývá pro P7 a P8 (rozhodne se nad osnovou):
+
+- **Jména v textu:** návrh je Arriános a Rusticus jménem, Epafroditos jen v portrétu, Helvidius jménem jen jednou.
+- **Propojení obou portrétů:** kulhavý voják u Marca (Hovory VII, 7) a Helvidius u obou (Rozpravy I, 2; Hovory I, 14).
+- **Výřez obou obrázků na desce** zkontrolovat v prohlížeči.
+- **Skill `atlas-overeni`:** kopie ve `skills/` je doplněná; skill v účtu je třeba uložit zvlášť.

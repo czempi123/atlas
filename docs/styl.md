@@ -33,7 +33,7 @@ Proč: student nepotřebuje vědět, co zpráva neříká. Potřebuje scénu, ze
 
 > ✗ Prameny se v podrobnostech rozcházejí a císaře často idealizují. Odpuštění také nebylo zcela bezvýjimečné.
 
-> ✓ Po Cassiově vzpouře Marcus ušetřil mnoho jejích účastníků. Vypráví se, že Cassiovy dopisy spálil nepřečtené, aby nemusel nikoho podezírat.
+> ✓ Po Cassiově vzpouře Marcus ušetřil mnoho jejích účastníků. Vypráví se, že Cassiovy písemnosti dal zničit nepřečtené, aby nemusel nikoho podezírat.
 
 Proč: nejistotu vyřešíme volbou udržitelné formulace („mnoho“, „vypráví se“), ne dovětkem.
 

@@ -12,7 +12,13 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | Marcus Aurelius se zpracuje v celku 3 rovnou i s portrétem; další stoikové se doplní později | Autor: oba jsou stoikové a myšlenky jsou provázané |
 | Epiktétův odchod z Říma: ve studentském textu bez roku, v datech „asi 93“ (návrh z P6, autor může změnit na 89) | Prameny rok neuvádějí; Suetonius, Tacitus a Plinius spojují vykázání filozofů s procesy roku 93, SEP „Epictetus“ a IEP uvádějí 89 |
 | Příběhy z Historie Augusty a z Cassia Diona jen jako „Vypráví se, že…“; žádná věta z Hovorů k sobě se nespojuje s konkrétní událostí | Zadání P6; podle SEP Marcus události svého života popisuje tak, že je nelze poznat |
-| Řecké προαίρεσις se v citátech celku 3 převádí jako „vůle“ (návrh z P6) | Jedno slovo ve všech citátech; změna by se dělala najednou |
+| Řecké προαίρεσις se v citátech celku 3 převádí jako „vůle“, ne „volba“; text ji jednou vysvětlí (to, čím si věci vykládám a čím se rozhoduju, ne síla zatnout zuby) | Autor nechal výběr na Claudovi; věty o noze s „vůlí“ znějí přirozeně a stránka otázky 4 naváže na „svobodnou vůli“ |
+| Stránka velké otázky 4 „Jsem svobodný?“ vznikne už v celku 3 (P8) se čtyřmi hlasy: Aristotelés, Epikúros, Chrýsippos, Epiktétos | Autor: teď. Čtyři odpovědi se opravdu liší a cesta 5 potřebuje místo pro studenta, který nesouhlasí |
+| V datech zůstává Epiktétův odchod z Říma „asi 93“ | Autor souhlasil s návrhem z P6 |
+| Marcus Aurelius má na desce rytinu jezdecké sochy (Marco Dente, 1515–1527, Met, CC0), Epiktétos rytinu s berlou z roku 1715 (volné dílo); popisek u Epiktéta říká, čí je to představa | Autor vybral z navržených možností; spolehlivá antická podobizna Epiktéta v otevřených sbírkách není a berla sedí k atributu |
+| Roztřiď v cestě 5 má tři koše: „Mám v rukou“, „Zčásti“, „Nemám v rukou“ | Autor: tři. Prostřední koš je pro studenta poctivý a v dalším kroku se z něj stane úkol |
+| K novému případu B stačí souhrn studie (1998); krok drží jen tři tvrzení ze souhrnu a autora nejmenuje | Autor: stačí souhrn |
+| V `docs/styl.md` (dvojice 3) je věta o Cassiovi opravena na „písemnosti dal zničit nepřečtené“ | Autor: oprav. Cassius Dio má „zničil“, ne „spálil“ |
 
 ## 2. 10. 2026: Schválení celku 2 a další krok
 

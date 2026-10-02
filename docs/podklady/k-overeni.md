@@ -193,7 +193,7 @@ Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s ka
 
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
-| Rok vykázání filozofů | Prameny rok neuvádějí, encyklopedie mají 89 i 93, Hieronymus 95. První Domitianovo vykázání (na které míří „znovu“ u Diona a Hieronyma) jsem v pramenech nenašel. | V datech „asi 93“; autor potvrdí, nebo přepíše na 89. Ve studentském textu bez roku. |
+| Rok vykázání filozofů | Prameny rok neuvádějí, encyklopedie mají 89 i 93, Hieronymus 95. První Domitianovo vykázání (na které míří „znovu“ u Diona a Hieronyma) jsem v pramenech nenašel. | **Autor potvrdil 2. 10. 2026:** v datech „asi 93“, ve studentském textu bez roku. Původ roku 89 zůstává nedohledaný. |
 | Simplikios o Epiktétovi | Nečetl jsem ho; chromost od mládí a adoptované dítě znám jen z G. Longa (1877) a ze SEP. | Při portrétu ověřit v překladu Simplikiova komentáře, nebo nechat jako „Vypráví se“. |
 | Kelsos a Órigenés: datace | Asi 178 a asi 248 jen z Britanniky. | Stačí „o několik desítek let později“; přesné roky do studentského textu nedávat. |
 | Helvidius Priscus | Epiktétovo vyprávění (Rozpravy I, 2) je ověřené; jak a kdy Helvidius zemřel, ne. | Před portrétem ověřit (Suetonius, Vespasianus 15), nebo o jeho konci nepsat. |
@@ -206,15 +206,15 @@ Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s ka
 | Granua = Hron | Jen z Wikipedie. | „U řeky Granua v zemi Kvádů“, bez Hronu, dokud se nedoloží. |
 | Místní údaje v Hovorech | Leopold je tiskne na konci knih I a II, jiní jako záhlaví knih II a III. | „U jedné z knih stojí…“ |
 | „Krásné je to Platónovo“ (Hovory VII, 48) | Vydání se liší, kam věta patří; kde to Platón říká, jsem nehledal. | U pohledu shora Platóna nejmenovat. |
-| Studie J. J. Grosse (1998) | Četl jsem jen souhrn na PubMedu; jméno autora nástroj nezobrazil (znám ho, ale neověřil jsem ho na stránce) a Europe PMC odmítl požadavek. | Přečíst plný text, nebo v kroku držet jen tři věty ze souhrnu. |
+| Studie J. J. Grosse (1998) | Četl jsem jen souhrn na PubMedu; jméno autora nástroj nezobrazil (znám ho, ale neověřil jsem ho na stránce) a Europe PMC odmítl požadavek. | **Autor rozhodl 2. 10. 2026: souhrn stačí.** V kroku jen tři věty ze souhrnu a bez jména autora; jméno se nepodařilo zobrazit ani přes Crossref (odmítl požadavek). |
 | „Stoický“ ve slovníku | SSJČ jsem neotvíral. | Kdyby text chtěl říct „dodnes se říká stoický klid“, ověřit heslo jako u „epikurejce“. |
-| Obrázek Marca | Walters (inv. 23.215, CC0) soubor nástrojům nevydá. | Autor stáhne sám, nebo zvolí rytinu z Met. |
-| Obrázek Epiktéta | Rytina s berlou (Oxford 1715) je jen na Commons, které nástroj neotevře; rytce a licenci jsem neověřil. | Autor potvrdí na Commons, nebo zvolí lept z Rijksmusea (RP-P-1967-430, CC0). |
+| ~~Obrázek Marca~~ | **Vyřízeno 2. 10. 2026:** autor zvolil rytinu jezdecké sochy z Met (inv. 59.570.282, CC0); stažena z muzea a zmenšena. | V datech jako `marcus-jezdec`. Že je socha antická a kdy vznikla, jsem neověřoval; popisek to netvrdí. Výřez na desce zkontrolovat v P7. |
+| ~~Obrázek Epiktéta~~ | **Vyřízeno 2. 10. 2026:** autor zvolil rytinu s berlou (Oxford 1715). Soubor je z World History Encyclopedia (uvádí Public Domain), protože Commons nástroj neotevře; vydání knihy dokládá katalog Eton College. | V datech jako `epiktetos-1715`. Jména kreslíře a rytce (značka MB) nejsou doložena odborným zdrojem, popisek je neuvádí. Původ řeckého dvojverší pod obrazem neověřen. Výřez zkontrolovat v P7. |
 | Antická podobizna Epiktéta | Že žádná spolehlivá není, jsem odborným zdrojem nedoložil; v pěti otevřených sbírkách není. | Popisek obrázku to netvrdí, říká jen, čí představa to je. |
 | Carnuntum | V datech bez ID z Pleiad, souřadnice přibližné. | Doplnit s ostatními místy. |
 | Stoický týden | Večerní ohlédnutí (Seneca, O hněvu) a představa nejhoršího nejsou ověřeny; patří jiným celkům. | Ověřit, až týden vznikne. |
 | Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). | Vztah `polemika` do dat až s cestou 8 nebo s profilem Démokrita. |
-| `docs/styl.md`, dvojice 3 | Věta „Cassiovy dopisy spálil nepřečtené“: Dio má „zničil“ a mluví o papírech v truhlách. | Autor rozhodne, zda příklad v průvodci stylem upravit. |
+| ~~`docs/styl.md`, dvojice 3~~ | **Vyřízeno 2. 10. 2026:** na pokyn autora opraveno na „Cassiovy písemnosti dal zničit nepřečtené“. | — |
 
 Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozpravy I, 25, 18–20), místa o smrti dítěte (Rukojeť 3 a 11; Rozpravy III, 3, 15; III, 24, 85–88; Hovory XI, 34), část Hovorů VI, 13 o tělesné lásce, Ciceronova výtka „jen slova“ (O nejvyšším dobru a zlu IV, 72), Karneadés jako pátý hlas otázky 4.
 
