@@ -6,8 +6,8 @@ Celek 2: velká otázka 1, cesta 6 „Kolik je dost?“, profil Epikúra a profi
 | --- | --- | --- |
 | P6 | Podklady | hotovo a schváleno 2. 10. 2026 |
 | P7 | Profily Epikúra a Diogena | hotovo a schváleno 2. 10. 2026 |
-| P8 | Cesta 6 „Kolik je dost?“ a stránka velké otázky 1 | hotovo 2. 10. 2026, čeká na schválení autora |
-| P10 | Revize celku | **další krok** po schválení P8; zadání vznikne po něm |
+| P8 | Cesta 6 „Kolik je dost?“ a stránka velké otázky 1 | hotovo a schváleno 2. 10. 2026 (i s úpravami vstupů a rozvržení cesty) |
+| P10 | Revize celku | **další krok**, zadání níže |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
@@ -88,7 +88,7 @@ Po P7 následuje P8 (cesta 6 „Kolik je dost?“ se Sporem Epikúros × kynici 
 
 ## P8: Cesta 6 „Kolik je dost?“ a stránka velké otázky 1
 
-**Stav 2. 10. 2026:** hotovo, čeká na schválení autora. Vzniklo: graf křivek (`GrafKrivek`), nový blok Roztřiď s přetahováním (rozhodnutí autora nad osnovou), označení strany ve Sporu, cesta 6 o sedmi krocích, stránka otázky 1 se čtyřmi hlasy, karta cesty v profilu Epikúra, Kam dál obou profilů a hlas Epikúra na stránce otázky 7. `npm test` prošlo celé (243 testů dat, 130 v prohlížeči). Co zůstalo, je v oddílu „Po P8“ níže.
+**Stav 2. 10. 2026:** hotovo a schváleno autorem i s úpravami po P8 (oddíl níže). Vzniklo: graf křivek (`GrafKrivek`), nový blok Roztřiď s přetahováním (rozhodnutí autora nad osnovou), označení strany ve Sporu, cesta 6 o sedmi krocích, stránka otázky 1 se čtyřmi hlasy, karta cesty v profilu Epikúra, Kam dál obou profilů a hlas Epikúra na stránce otázky 7. `npm test` prošlo celé (243 testů dat, 130 v prohlížeči). Co zůstalo, je v oddílu „Po P8“ níže.
 
 **Zadání (pro záznam).** P7 je schválený, podklady k cestě 6 (scéna v Zahradě, Spor Epikúros × kynici, oba nové případy) a k velké otázce 1 jsou v `docs/podklady/celek-2-jak-zit.md`. Pracuje se dál ve větvi `celek-2`; po P8 následuje revize celku (P10) a schválení autorem.
 
@@ -141,4 +141,43 @@ Autor P8 prošel: celek se mu líbí, dvě připomínky. Obě zapracované, `npm
 - **Skilly:** kopie `skills/atlas-cesta` a `skills/atlas-komponenta` jsou doplněné o poučení z P8 (Roztřiď, Spor se směrem, studie a graf, pasti při práci přes Desktop Commander). Verze uložené v účtu Claude je potřeba uložit z návrhu, který přišel s předáním P8.
 - Běžící `npm run dev` po P8 potřebuje restart (změnilo se schéma bloků a cest).
 
-Po P8 následuje P10 (revize celku 2 skillem `atlas-revize`), rozhodnutí autora o návrzích z revize, schválení celku a sloučení větve `celek-2` do hlavní větve. Plné znění P10 připravím po schválení P8.
+Po P8 následuje P10 (revize celku 2 skillem `atlas-revize`); plné znění je níže.
+
+## P10: Revize celku 2 „Jak mám žít?“
+
+**Stav 2. 10. 2026:** další krok. P8 autor schválil i s úpravami po něm (vstupy v hlavičce profilu, středová osa cesty). Revize projde celý celek skillem `atlas-revize`: drobnosti opraví rovnou, zásahy do významu, příběhu a struktury jen navrhne a počká na rozhodnutí autora.
+
+Celek je o penězích, věcech a o tom, kolik člověk potřebuje. Největší riziko proto není věcná chyba, ale tón: cesta nesmí studentovi naznačovat, že skromnější odpověď je ta lepší. Revize to má prověřit jako první.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-2.
+
+Udělej revizi celku 2 „Jak mám žít?“ skillem atlas-revize. Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-2-jak-zit.md, docs/podklady/k-overeni.md (oddíly Celek 2, P7 a P8), docs/rozhodnuti.md (záznamy z 1. a 2. 10. 2026), docs/revize/celek-1-2026-10-01.md (vzor záznamu a chyby, které se nemají opakovat), v docs/plany/celek-2.md oddíly „Po P7“ a oba oddíly „Po P8“ a v docs/design.md oddíly Navigace a rozvržení, Bloky (hlavně Roztřiď a Spor), Cesta a Velká otázka.
+
+Celek tvoří:
+- profil Epikúra (src/content/osobnosti/epikuros.mdx, kapitoly 01–03) a profil Diogena (src/content/osobnosti/diogenes.mdx, kapitoly 01–04) s bloky epikuros-spolecna-kasa a diogenes-poharek,
+- cesta 6 „Kolik je dost?“ (src/content/cesty/kolik-je-dost*, 7 kroků, bloky cesta6-* v src/content/bloky, graf v kroku 6),
+- stránka velké otázky 1 (src/content/otazky/jak-zit.mdx, adresa /otazka/jak-zit/) a nový hlas Epikúra na stránce otázky 7,
+- vstupy a návraty: Domů, přehled /otazky/ s cestami u otázek, Lidé a směry, vstupy v hlavičce profilu, karta cesty, Kam dál, Pokračuj a Můj deník.
+
+Zvlášť zkontroluj:
+1. Tlak na „správný“ život. Projdi zpětné vazby v Roztřiď (krok 2), u bundy (krok 3), v měsíci na minimum (krok 5), u studie (krok 6) a Zkus to žít obou profilů. Hodnotí důvody, nebo naznačují, že skromnější odpověď je lepší? Projde cestou student, který chce hodně vydělávat, bez pocitu, že odpovídá špatně?
+2. Spor Epikúros × kynici v kroku 4: dostali kynici nejsilnější verzi, nebo jsou jen kulisa pro Epikúra? Má každá strana odpověď na nejsilnější námitku druhé? Jsou domyšlené odpovědi podané jako výklad? Nevyznívá Diogenova mince u označení „kynici“ jako setkání obou mužů?
+3. Čtyři odpovědi na sklad a tábor na stránce otázky 1: poznal by se v nich každý (Aristotelés činnost a vnější dobra, Epikúros klid a přátelé, Diogenés zpochybní samu volbu, Seneca peníze mít smí, ale neslouží jim)? Nezní Epikúros a Seneca stejně? Funguje Diogenés jako první hlas? Nezkresluje věta o Senekově bohatství?
+4. Shrnutí pramenů drží rozdíly: ječná kaše u Seneky × ječná placka v Dopise Menoikeovi × chléb v dopisech, pithos × sud, pohárek × miska; „Seneca popisuje…“, nikdy „na bráně stálo“; Diogenovy anekdoty jako tradované. Každé shrnutí porovnej s podkladovým listem, sporná místa přímo s pramenem.
+5. Studie v kroku 6: říkají text, graf a jeho slovní popis totéž a jen to, co je v podkladech (jediné číslo 100 000 dolarů, „asi pětina“)? Jsou výhrady jen ve zpětné vazbě? Nevyznívá krok jako důkaz, že Epikúros měl pravdu?
+6. Opakování v celku: tři druhy tužeb (kapitola 02 profilu × krok 2), strop slasti (kapitola 02 × Myšlenka 1 × krok 3), Seneca a Zahrada (konec kapitoly 03 s kartou cesty × krok 1). Tentýž citát nanejvýš dvakrát; citáty z profilů v cestě ani na stránce otázky.
+7. Blok Roztřiď v kroku 2: na telefonu prstem (tažení i Dát sem), klávesnicí a se čtečkou; vlastní karta, obnovení stránky, Začít znovu, zápis v deníku. Ví student napoprvé, co má dělat?
+8. Délka: dá se cesta projít do 20 minut? Kde by student přestal číst v cestě a kde v profilech na telefonu?
+9. Vstupy po úpravách z 2. 10.: hlavička profilu u všech čtyř lidí s profilem, cesty v přehledu /otazky/ a na stránce Lidé, středová osa u cesty 1 i 6. Žádný odkaz na cestu 7 a 8, žádná slepá ulička, nic rozbitého v celku 1.
+
+Postup podle skillu: projdi celek jako student na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí (i přímé odkazy na kroky, obnovení stránky, Začít znovu, deník), cestu jednou i bez odkrytí bloků, pak pět perspektiv. Drobnosti oprav rovnou a commituj česky; zásahy do významu, příběhu nebo struktury jen navrhni s hotovým novým zněním. Záznam ulož do docs/revize/celek-2-<datum>.md (nejvýš deset nálezů) a stav zapiš do docs/plany/celek-2.md.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí). Na vlastní náhled si web sestav (npx astro build) a pusť npx astro preview --port 4323; příkazy delší než minutu pouštěj na pozadí s výstupem do souboru.
+
+Na konci mi napiš verdikt (připraveno ke schválení / po opravách / přepracovat), tři nejdůležitější nálezy a pošli snímky míst, kterých se nálezy týkají. Návrhy zatím nezapracovávej, počkej na moje rozhodnutí. Nic neposílej na GitHub a do hlavní větve nic neslučuj.
+```
+
+Po P10 rozhodne autor o návrzích z revize. Po jejich zapracování následuje schválení celku 2, sloučení `celek-2` do hlavní větve, hlavní větev na GitHub a další celek podle plánu etap F2 (Epiktétos a cesta 5).
