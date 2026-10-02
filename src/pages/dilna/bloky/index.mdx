@@ -4,6 +4,7 @@ titulek: Bloky
 perex: Všech šest bloků na jednom místě. Ve skutečném atlasu je najdeš v cestě „Kdy mám dobrý důvod věřit?“ a u Sókrata.
 ---
 import { Pribeh, Volba, Odkryj, ZmenJednuVec, Spor, KdoZilDriv } from '../../../components/bloky';
+import GrafKrivek from '../../../components/ui/GrafKrivek.astro';
 
 <section class="ukazka" aria-labelledby="h-pribeh">
 <h2 class="t-h2" id="h-pribeh">Příběh</h2>
@@ -64,4 +65,27 @@ Sókratés by se tě nejdřív zeptal, jestli ten člověk ví, kde jeho věděn
 <KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
 
 <KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />
+</section>
+
+<section class="ukazka" aria-labelledby="h-graf">
+<h2 class="t-h2" id="h-graf">Graf křivek</h2>
+
+<GrafKrivek
+  id="dilna-graf-penize-stesti"
+  obdobi={2}
+  osaY="Jak se lidé právě cítí"
+  smerY="lépe"
+  osaX="Roční příjem domácnosti"
+  poznamkaX="Každý dílek je dvojnásobek předchozího."
+  dilku={5}
+  znacka={{ x: 3, text: '100 000 dolarů' }}
+  krivky={[
+    { nazev: 'Většina lidí', body: [[0, 0.42], [5, 0.86]] },
+    { nazev: 'Nejméně šťastná pětina', body: [[0, 0.1], [3, 0.4], [5, 0.4]], carkovana: true },
+  ]}
+>
+
+U většiny lidí nálada s příjmem roste dál. U nejméně šťastné pětiny se nad 100&nbsp;000 dolary ročně zastaví.
+
+</GrafKrivek>
 </section>

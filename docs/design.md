@@ -113,6 +113,15 @@ Mapa světlý: `#DAE2E9` `#B8C6D1` `#FAFAF8` `#949EA7`; tmavý: `#0A1015` `#1B29
 - **Odkryj (dříve Nejdřív sám):** povrchová karta s nadtitulkem v barvě období, otázkou v Newsreaderu, polem a tlačítkem „Porovnat…“; po odkrytí srovnání v tintu období, modelové odpovědi a sebekontrola. API v oddílu Bloky.
 - **Zkus to žít:** karta v tintu období, jedno hlavní tlačítko „Přijmout výzvu“.
 - **Moje stanovisko:** krátký zápis do deníku (`MojeStanovisko.svelte`, druh `stanovisko`). V profilu za tlačítkem „Moje stanovisko“ s Uložit / Zrušit. S vlastností `rozbalene` (závěr cesty) je otázka s polem vidět hned, text se ukládá sám 600 ms po psaní, při opuštění pole i při odchodu ze stránky; pod polem „Ukládá se samo do deníku.“ / „Uloženo v deníku.“ (`aria-live`). Smazaný text zmizí i z deníku.
+- **Graf křivek** (`src/components/ui/GrafKrivek.astro`, geometrie v `src/lib/graf.ts`): vlastní jednoduchá kresba jedné až tří křivek pro studii nebo průzkum, bez JavaScriptu. Ukazuje směr, ne přesné hodnoty: vodorovná osa má dílky bez čísel a nejvýš jednu svislou značku s popiskem („100 000 dolarů“), svislá jen název a směr („lépe“). Popisky stojí přímo u křivek, legenda není. První křivka má barvu období, druhá inkoust a čárkování, takže se neliší jen barvou. Karta na povrchu (`--surface`) s okrajem `--rule`, nejvýš 420 px; na telefonu vyjde jednotka kresby na pixel (písmo 13 a 12 px). Text pod kresbou (slot, povinný) říká totéž slovy a je popisem obrázku pro čtečky (`role="img"`, `aria-describedby`). Čísla jen z podkladů; graf ze studie se nepřekresluje bod po bodu.
+  ```mdx
+  <GrafKrivek id="graf-penize-stesti" osaY="Jak se lidé právě cítí" smerY="lépe" osaX="Roční příjem domácnosti"
+    poznamkaX="Každý dílek je dvojnásobek předchozího." dilku={5} znacka={{ x: 3, text: '100 000 dolarů' }}
+    krivky={[{ nazev: 'Většina lidí', body: [[0, 0.42], [5, 0.86]] }, { nazev: 'Nejméně šťastná pětina', body: [[0, 0.1], [3, 0.4], [5, 0.4]], carkovana: true }]}>
+    U většiny lidí nálada s příjmem roste dál. …
+  </GrafKrivek>
+  ```
+  Bod křivky je `[dílek 0…n, výška 0…1]`; `popisek: [dílek, výška]` posune popisek křivky jinam než nad její konec. Chybné zadání zastaví sestavení (`chybyGrafu`).
 - **Citát:** Newsreader, linka nad i pod, pod ním autor, dílo, místo (Platón, Obrana Sókratova 38a). Varianta `velky` pro hlavní citát stránky, `kompaktni` (menší okraje, velikost textu) pro citát na časové ose otázky.
 
 ## Bloky
