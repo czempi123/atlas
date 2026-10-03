@@ -2,6 +2,22 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Cesta 5 a stránka velké otázky 4 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta 5 má osm kroků: Noha, Tři koše, Dvě půlky, Otrok a císař, Záleží na tom, co mě potká?, Snímek z chatu, Kamenná tvář, Tvoje pravidlo | Autor schválil osnovu. Dělení (krok 3) a dvojice vět (krok 4) zůstaly zvlášť: každý krok má jeden úkol |
+| „Vůli“ vysvětluje cesta už v kroku 1, hned za citátem o kulhání | Slovo tam zazní poprvé a cesta musí stát i bez portrétu |
+| Krok 3 má jen citát `rukojet-1`; `rukojet-5` zazní až v kroku 4, a to beze jména | Jinak by student větu v odhadu „otrok, nebo císař“ poznal |
+| Krok 4 je Odkryj: obě věty stojí v textu bez jména; kdo je kdo, řekne srovnání a první věta kroku 5 | Text musí držet souvislost i bez odkrytí bloku |
+| Třetí podmínka nového případu je „Do večera to všichni pustili z hlavy“ místo „Nedá se zjistit, kdo to poslal“; první možnost zní „Ozvu se a řeknu nahlas, že to není v pořádku“ | Autor nad osnovou: u neznámého odesílatele nedávalo smysl „vrátím to stejnou mincí“ ani „promluvím si s ním“. Nová podmínka zkouší, jestli šlo o pověst, nebo o křivdu |
+| V kroku 6 jsou tři citáty; `hovory-vi-6` zazní jen nepřímou řečí v oddílu Co udělal | Autor nad osnovou: čtyři citáty za sebou student přeskakuje (revize celku 2) |
+| Aristotelova věta o „otrockém“ snášení urážek je ve Sporu nepřímo, jako citát stojí až v kroku 6 | Epiktétova odpověď ve Sporu musí mít na co odpovídat; citát v celku jen jednou |
+| Oddíl Co udělal v kroku 6 nese tři hlasy jako výklad („by nejspíš“): Epiktétos, Marcus Aurelius a Aristotelés | Vymyšlený případ; Aristotelés dává za pravdu studentovi, který se zlobí |
+| Karta cesty stojí v portrétu Epiktéta na konci kapitoly 04; věta o noze v kapitole 03 je odkaz na cestu | Kapitola 04 končí otázkou, na kterou cesta navazuje Sporem a novým případem; uprostřed kapitoly 03 by karta přerušila výklad |
+| Kam dál obou portrétů má cestu 5 a otázku 4; odkaz do Mapy a času vypadl | Kam dál má nejvýš čtyři pokračování; do mapy vede blok Kdo žil dřív? |
+| Na stránce otázky 4 odpovídají všichni čtyři „může“ a liší se důvodem | Autor: nechat. Hlas pro „nemůže“ antické podklady nenabízejí, přijde s dalšími obdobími |
+
 ## 3. 10. 2026: Schválení P7 (celek 3) a další krok
 
 | Rozhodnutí | Důvod |

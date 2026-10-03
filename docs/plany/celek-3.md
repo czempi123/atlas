@@ -6,8 +6,8 @@ Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „
 | --- | --- | --- |
 | P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
 | P7 | Portrét Epiktéta a portrét Marca Aurelia | hotovo 2. 10. 2026, schváleno 3. 10. 2026 |
-| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | **další krok**, zadání níže |
-| P10 | Revize celku | po P8 |
+| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | napsáno 3. 10. 2026, čeká na schválení autorem |
+| P10 | Revize celku | **další krok** po schválení P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
@@ -117,7 +117,7 @@ Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý portrét, jak
 
 ## P8: Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4
 
-**Stav 3. 10. 2026:** další krok.
+**Stav 3. 10. 2026:** napsáno, čeká na schválení autorem. Co je hotové a na co se má podívat revize, je v oddílu „Stav po P8“ na konci. Zadání zůstává pro záznam.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
 
@@ -147,5 +147,19 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 
 Nejdřív mi v pár bodech napiš osnovu cesty 5 (kroky, blok v každém, odhad minut), karty pro Roztřiď, možnosti a podmínky nového případu a čtyři odpovědi hlasů na úvodní případ otázky 4, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (cesta, stránka otázky, propojení) a nic neposílej na GitHub. Na konci pošli snímky cesty a stránky otázky a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
+
+## Stav po P8 (3. 10. 2026)
+
+**Rozhodl autor nad osnovou:** osm kroků; třetí podmínka nového případu „Do večera to všichni pustili z hlavy“; v kroku 6 tři citáty; na otázce 4 smějí všichni čtyři odpovědět „může“.
+
+**Co je hotové:** cesta 5 (`src/content/cesty/co-mam-ve-svych-rukou.mdx` a osm kroků), čtyři bloky (`cesta5-tri-kose`, `cesta5-aristoteles-spor`, `cesta5-snimek-z-chatu`, `cesta5-pokus`), stránka otázky 4 (`src/content/otazky/jsem-svobodny.mdx`, čtyři hlasy), propojení (karta cesty na konci kapitoly 04 portrétu Epiktéta, odkaz u věty o noze, Kam dál obou portrétů; vstupy v hlavičce, přehled otázek a Lidé se složily samy z dat). Testy: cesta 5 v prohlídce kroků, celý průchod klávesnicí na telefonu a průchod bez odkrytí bloků (`tests/e2e/cesta5.spec.ts`), stránka otázky 4 a propojení (`tests/e2e/otazka.spec.ts`).
+
+**Na co se má podívat revize (P10):**
+
+- Dvě zprávy v celku: úvodní případ otázky 4 a snímek z chatu v kroku 6.
+- Aristotelés na třech místech (otázka 1, Spor a krok 6, otázka 4): pokaždé jiná myšlenka a jiný citát.
+- Krok 5 má čtyři citáty před Sporem a je nejdelší; krok 6 tři.
+- Student, který se stoikem nesouhlasí: čtvrtá možnost Volby v portrétu, Aristotelés ve Sporu, v kroku 6 a 7 a v kroku 8.
+- Rozsah: text kroků asi 700 slov, s bloky kolem 1 700; odhad 20 minut.
 
 Po P8 následuje P10 (revize celku skillem `atlas-revize`) a schválení autorem.

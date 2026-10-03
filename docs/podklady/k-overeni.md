@@ -236,4 +236,20 @@ Vědomě vynecháno v portrétech: jméno ševce (Felikión), zemětřesení v N
 
 Autorské, bez historického nároku: možnosti a zpětné vazby všech šesti bloků, podmínky obou pokusů Změň jednu věc, modelové odpovědi v Odkryj (lampa, tenisky, jednička z matiky), obě výzvy Zkus to žít.
 
+### Po P8 (cesta 5 a stránka otázky 4)
+
+3. 10. 2026. Nově otevřené:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Hlas pro „nemůže za to“ na otázce 4 | Všichni čtyři antičtí myslitelé odpovídají „může“; student s opačným názorem nemá na stránce zastánce. | Autor: nechat. Doplnit s obdobím 5 (Spinoza), případně dřív Karneadem jako větou u Chrýsippa. |
+| Dvě zprávy v celku | Úvodní případ otázky 4 (ošklivá zpráva v hádce) i nový případ cesty 5 (snímek z chatu) stojí na zprávě. Ptají se na jiné věci (odpovědnost × pověst). | Revize P10 posoudí, jestli to student čte jako opakování. |
+| `hovory-vi-6` | V datech je jako citát, v celku zazní jen nepřímo (krok 6, Co udělal). | Nechat pro Stoický týden, nebo při revizi vrátit jako citát. |
+| „O dvě generace později“ (krok 4, Kde jsme) | Přibližné: mezi Epiktétovou smrtí a Marcovými taženími je asi čtyřicet let. | Nechat; přesnější údaj text nepotřebuje. |
+| Krok 7 a slovo „stoický“ | Text se slovníkovému tvrzení („říká se stoický klid“) vyhnul, heslo v SSJČ ověřené není. | Platí řádek výš: ověřit, kdyby revize větu chtěla. |
+
+Vědomě vynecháno v cestě a na stránce otázky: lučištník (není Epiktétův, místo něj vítr), Kelsos a Órigenés jménem mimo údaj u citátu, „dveře jsou otevřené“, věta o špatném otci (Rukojeť 30), líný argument a Karneadés, čísla a jméno autora pokusu z roku 1998, ranní příprava a pohled shora, Stockdale.
+
+Autorské, bez historického nároku: osm karet a tři koše v kroku 2, modelové odpovědi v krocích 3 a 4, případ se snímkem z chatu, jeho možnosti a podmínky, možnosti v kroku 7, úvodní případ stránky otázky 4. Odpovědi hlasů na případ a třetí Epiktétův argument ve Sporu jsou výklad („by mohl“, „by nejspíš“).
+
 **Do skillu `atlas-overeni`:** tabulka zkreslení doplněna o čtyři řádky (stoik bez citu, noha a Epafroditos, noc u Dunaje, spálené dopisy) a zdroje o místa stoických textů; kopie ve `skills/atlas-overeni/references/zdroje.md` je upravená, skill v účtu je třeba uložit zvlášť.
