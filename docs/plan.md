@@ -381,7 +381,7 @@ Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v soubo
 | `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; hlavní větev je na GitHubu |
 | `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
 | `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/plany/celek-4.md` | **další krok** je P6 (podklady); může běžet souběžně s `rozhrani-v2` |
-| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | zadání schválena 2. 10. 2026; **další krok** (R1), autor ji projde zvlášť; celek 3 je na GitHubu |
+| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 hotový 3. 10. 2026, čeká na schválení autorem; pak R2 |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
 

@@ -2,6 +2,25 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Rozhraní v2, krok R1 (Domů, obsah profilu, ovládání mapy)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Domů má jedinou výzvu k začátku: hlavní tlačítko „Začít první cestu“ na krok 1 cesty 1 s údajem z dat cesty. Karta cesty a Příběh na začátek jsou spojené do jednoho panelu bez tlačítka, který stojí vpravo vedle úvodu (na telefonu pod ním) a vede na tentýž krok | O začátek se hlásily tři prvky a dva z nich vyprávěly tutéž věštbu z Delf. Umístění panelu vybral autor: „můžeme to dát asi vpravo vedle úvodu“ |
+| Kdo má první cestu hotovou a nic rozpracovaného, dostane „Vybrat další cestu“ do přehledu otázek, ne další cestu podle čísla | Autor: „není to nějak lineární, že by to muselo jít 1, 2, 3“; student si vybírá podle otázky |
+| Kdo má cestu rozpracovanou (kteroukoli, bere se naposledy otevřená), dostane „Pokračovat v cestě“ na naposledy otevřený krok; Pokračuj tu cestu ani blok v ní vedle tlačítka neopakuje | Jedno tlačítko vede tam, kde student právě je; dvě nabídky téže cesty vedle sebe by zase soupeřily |
+| Nadpis Domů má token `h1` (64 / 44 px), ne `display-2` | S `display-2` zbývalo na 1280 × 720 pod tlačítkem s údajem 85 px a řádek Pokračuj by další obsah vytlačil pod ohyb; s `h1` zbývá 214 px |
+| Co se při načtení mění podle deníku (tlačítko na Domů, „Pokračovat ve čtení“ na profilu), přepíše skript hned za prvkem ještě před vykreslením. Rozhoduje čistá funkce z `src/lib`, kterou volá i sestavení; do stránky se vkládá její text, proto nesmí sahat na nic mimo sebe | Bez probliknutí a s jedinou logikou, která má jednotkové testy; stejný postup už používá stránka otázky |
+| Obsah profilu je i na notebooku kompaktní lišta pod hlavičkou, ne sloupec v okraji. V klidu zůstává pod hlavičkou profilu řádek odkazů jako dřív | Vedle čtenářského sloupce je na 1440 px 300 px, na 1280 px 230 px a pod 1200 px se sloupec nevejde; ve druhé půlce stránky by ležel přes široké oddíly. Zadání pro ten případ žádalo kompaktní podobu z telefonu |
+| Obsah se skládá ze sestavené stránky: oddíl se hlásí atributem `data-oddil` se svým názvem. V obsahu proto stojí „Dvě velké myšlenky“, jak zní nadpis na stránce, ne obecné „Velké myšlenky“ | Zadání: názvy ze stránky, ne ze seznamu v kódu; oddíl, který profil nemá, v obsahu není |
+| Deník zůstává verze 1; naposledy čtený oddíl je v nepovinném poli `cteni` (adresa profilu → kotva), nejvýš třicet stránek, zapisuje se při změně oddílu | Starší deníky se načtou beze změny, pole je v exportu a nic dalšího se o čtení neukládá |
+| „Pokračovat ve čtení“ stojí v hlavičce profilu pod letopočty, nad vstupy do cest | Na telefonu je tak vidět bez posouvání; pod deskou s portrétem by vidět nebyl |
+| `stinOdkazu`: u polemiky dostává stín ten, s kým se žijící pře, ne zesnulý kritik | Kód bral směr obráceně než jeho vlastní komentář, takže polemika stín nikdy nezapnula; autor opravu schválil. Vysvětlení v mapě proto smí říkat „nebo se s ním přel“ |
+| Legenda čar je na notebooku stále viditelný řádek pod řekou (24 px), na telefonu panel za tlačítkem Legenda | Čára bez vysvětlení odporuje principu 3 z `docs/design.md`; na notebooku se řádek vejde, na telefonu ne |
+| Zpráva po klepnutí na připravované období zní „Středověk: připravujeme.“ (s dvojtečkou; návrh byl bez ní) | „Po válce a dnes připravujeme.“ se bez dvojtečky četlo špatně |
+| Názvy moří na mapě jsou v `--ink-2`, ne v `--muted` | `--muted` má na světlém moři kontrast 4,49 : 1, těsně pod AA; pár je nově v testu kontrastu |
+| Hlavička řeky je na telefonu 44 px místo 26 px a tlačítka v ní 32 px | Dotykový cíl 44 px se jinak nevešel: nad hlavičkou leží záložky, které by rozšířený cíl překrývaly |
+
 ## 3. 10. 2026: Celek 4 a skilly po revizi celku 3
 
 | Rozhodnutí | Důvod |
