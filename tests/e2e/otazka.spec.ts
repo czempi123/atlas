@@ -220,7 +220,7 @@ test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehl
   // Hlavička profilu: cesta jako první a nejvýraznější vstup, nad kapitolami; otázka její cesty před ostatními.
   await page.goto('/osobnost/epikuros/');
   const vstupy = page.getByRole('navigation', { name: 'Cesty a otázky, kde potkáš Epikúra' });
-  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
   await expect(vstupy.getByRole('link').first()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
   const cesta = (await vstupy.getByRole('link').first().boundingBox())!;
   const kapitoly = (await page.getByRole('navigation', { name: 'Kapitoly' }).boundingBox())!;
@@ -259,6 +259,84 @@ test('vstupy v hlavičce profilu: tlačítka otázek jsou na telefonu stejně vy
   await page.evaluate(() => document.fonts.ready);
   // Kratší otázka zůstávala na jednom řádku s nadtitulkem, delší se zalomila: dvě tlačítka pod sebou vypadala každé jinak.
   const vysky = await page.locator('.vstup--otazka').evaluateAll((e) => e.map((x) => Math.round(x.getBoundingClientRect().height)));
-  expect(vysky).toHaveLength(2);
-  expect(vysky[0]).toBe(vysky[1]);
+  // Epikúros je hlasem tří otázek (1, 4 a 7).
+  expect(vysky).toHaveLength(3);
+  expect(new Set(vysky).size).toBe(1);
+});
+
+test('otázka 4: úvodní případ, čtyři hlasy, které se poznají, a cesta 5', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/otazka/jsem-svobodny/');
+  await hydratovano(page, 'PrvniNazor');
+  await expect(page.locator('h1')).toHaveText('Jsem svobodný?');
+  // Úvod je vymyšlená situace bez historických osob a končí otázkami.
+  const uvod = page.locator('.uvod');
+  await expect(uvod).toContainText('Představ si, že ti kamarád v hádce napíše něco hodně ošklivého.');
+  await expect(uvod).not.toContainText(/Epikúr|Epiktét|Chrýsipp|Aristotel/);
+  await expect(uvod.locator('p').last()).toContainText('?');
+  // Nejdřív student: hlasy se ukážou až po prvním názoru.
+  await expect(page.locator('#jsem-svobodny-po')).toBeHidden();
+  await page.locator('#jsem-svobodny-prvni-pole').focus();
+  await page.keyboard.type('Může, ale ne úplně.');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#jsem-svobodny-hlasy-nadpis')).toBeFocused();
+  await expect(page.locator('#jsem-svobodny-hlasy-nadpis')).toHaveText('Může za to?');
+  // Pořadí podle narození.
+  await expect(page.locator('.odpoved__jmeno')).toHaveText(['Aristotelés', 'Epikúros', 'Chrýsippos', 'Epiktétos']);
+  const odpovedi = page.locator('.odpoved');
+  // Každý hlas se pozná: ručí i za povahu, nutnost nemá poslední slovo, osud i odpovědnost zároveň, otázka obrácená dovnitř.
+  await expect(odpovedi.nth(0)).toContainText('Výbušným se stal tím, jak dlouho jednal');
+  await expect(odpovedi.nth(1)).toContainText('Kdyby všechno řídila nutnost');
+  await expect(odpovedi.nth(2)).toContainText('Všechno má příčinu');
+  await expect(odpovedi.nth(2)).toContainText('na osud se vymlouvat nesmí');
+  await expect(odpovedi.nth(3)).toContainText('tvoje dílo je teď to, co si o té zprávě pomyslíš');
+  for (let i = 0; i < 4; i++) {
+    const vet = (await odpovedi.nth(i).locator('.odpoved__text').innerText()).split(/(?<=[.?!])\s+/).length;
+    expect(vet).toBeLessThanOrEqual(2);
+  }
+  await expect(page.locator('.hlas__jmeno')).toHaveText(['Aristotelés', 'Epikúros', 'Chrýsippos', 'Epiktétos']);
+  // Odkaz na profil jen tam, kde profil je.
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Epikúros', 'Epiktétos']);
+  await expect(page.locator('.hlas .citat')).toHaveCount(4);
+  await expect(page.locator('#hlas-aristoteles .citat')).toContainText('Kdo hodil kámen, už ho zpátky nevezme.');
+  await expect(page.locator('#hlas-epikuros .citat')).toContainText('otročit osudu přírodních filozofů');
+  await expect(page.locator('#hlas-chrysippos .citat')).toContainText('Kdo strčil do válce');
+  await expect(page.locator('#hlas-epiktetos .citat')).toContainText('Svobodný je ten, kdo žije, jak chce');
+  // Odchylka atomů jen jako nauka, kterou Epikúrovi připisují pozdější prameny.
+  await expect(page.locator('#hlas-epikuros')).toContainText('Pozdější prameny mu připisují');
+  // Aristotelés tu říká něco jiného než na otázce 1 a ve Sporu cesty 5; scény z portrétů a z cesty se neopakují.
+  await expect(page.locator('#jsem-svobodny-po')).not.toContainText(/vlaštovka|mluví naprázdno|otrocké|lamp|ševc|Helvidi|Musoni|dvě ucha|Zlomíš|Neříkal jsem/i);
+  await expect(page.locator('.cesta-karta')).toHaveAttribute('href', '/cesta/co-mam-ve-svych-rukou/');
+  await axe(page);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
+});
+
+test('portréty Epiktéta a Marca Aurelia vedou na cestu 5 a na stránku otázky 4; karta cesty stojí za kapitolou Senátor a císař', async ({ page }) => {
+  for (const id of ['epiktetos', 'marcus-aurelius']) {
+    await page.goto(`/osobnost/${id}/`);
+    const kamDal = page.getByRole('navigation', { name: 'Kam dál' });
+    await expect(kamDal.getByRole('link', { name: /Cesta 5\s*Co mám ve svých rukou\?/ })).toHaveAttribute('href', '/cesta/co-mam-ve-svych-rukou/');
+    await expect(kamDal.getByRole('link', { name: /Velká otázka 4\s*Jsem svobodný\?/ })).toHaveAttribute('href', '/otazka/jsem-svobodny/');
+    await expect(kamDal.getByRole('link')).toHaveCount(4);
+    await expect(page.locator('.vstupy-osoby a').first()).toHaveText(/Cesta 5 · 8 kroků · asi 20 minut\s*Co mám ve svých rukou\?/);
+  }
+  await page.goto('/osobnost/epiktetos/');
+  // Věta o noze vede na cestu, karta stojí až za poslední kapitolou: cesta pokračuje tam, kde kapitola končí otázkou.
+  await expect(page.locator('#co-mu-nikdo-nevzal a[href="/cesta/co-mam-ve-svych-rukou/"]')).toHaveText('Co mám ve svých rukou?');
+  const karta = page.locator('#senator-a-cisar .cesta-karta');
+  await expect(karta).toHaveAttribute('href', '/cesta/co-mam-ve-svych-rukou/');
+  await expect(karta).toContainText('Pokračuj cestou');
+  await expect(page.locator('.cesta-karta')).toHaveCount(1);
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 5[\s\S]*Co mám ve svých rukou\?/, /Velká otázka 4\s*Jsem svobodný\?/]);
+  await page.goto('/osobnost/marcus-aurelius/');
+  await expect(page.locator('.cesta-karta')).toHaveCount(0);
+  // Přehled otázek a Lidé: otázka 4 má vlastní stránku a cestu, oba lidé cestu na kartě.
+  await page.goto('/otazky/');
+  await expect(page.locator('#jsem-svobodny .cesta')).toHaveText(/Cesta 5\s*Co mám ve svých rukou\?/);
+  await expect(page.locator('#jsem-svobodny a[href="/otazka/jsem-svobodny/"]')).toHaveCount(1);
+  await page.goto('/lide/');
+  await expect(page.locator('#epiktetos .karta__cesta')).toHaveText('Cesta 5: Co mám ve svých rukou?');
+  await expect(page.locator('#marcus-aurelius .karta__cesta')).toHaveText('Cesta 5: Co mám ve svých rukou?');
 });

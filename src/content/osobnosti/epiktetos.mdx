@@ -30,6 +30,7 @@ import Myslenka from '../../components/osobnost/Myslenka.astro';
 import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
 import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
 import KamDal from '../../components/osobnost/KamDal.astro';
+import CestaKarta from '../../components/cesta/CestaKarta.astro';
 import { KdoZilDriv, ZmenJednuVec, Volba, Odkryj } from '../../components/bloky';
 
 <div class="uvod ctenarsky">
@@ -116,7 +117,7 @@ Epiktétos kulhal. Před žáky o sobě řekl:
 
 <Citat id="rozpravy-i-16-20" />
 
-Vypráví se, že mu nohu zlomil pán. Celý ten příběh vypráví cesta „Co mám ve svých rukou?“.
+Vypráví se, že mu nohu zlomil pán. Celý ten příběh vypráví cesta [Co mám ve svých rukou?](/cesta/co-mam-ve-svych-rukou/)
 
 O noze mluvil Epiktétos i ve škole. Jednou žákům předváděl rozhovor s tyranem. Tyran chce slyšet tajemství a hrozí pouty. Dozví se, že spoutat může nohu, ale vůli nepřemůže ani Zeus.
 
@@ -159,6 +160,10 @@ Jak věc dopadne, v senátorově moci nebylo. V jeho moci bylo, co udělá. Prot
 Jedno ale zůstává otevřené. Epiktétos měří čin tím, jestli byl správný, ne tím, co změnil.
 
 *Stačí ti to? Nebo má cenu jen to, co křivdu opravdu odstraní?*
+
+Proti Epiktétovi tu otázku položil už Aristotelés. Jejich spor a jeden dnešní případ na tebe čekají na cestě.
+
+<CestaKarta slug="co-mam-ve-svych-rukou" nadtitulek="Pokračuj cestou" />
 </Kapitola>
 
 <DobaALide osoba={props.osoba}>
@@ -203,7 +208,8 @@ Vyber si jednu věc, která tě tenhle týden štve: člověka, povinnost nebo p
 </ZkusToZitKarta>
 
 <KamDal odkazy={[
+  { href: '/cesta/co-mam-ve-svych-rukou/', nadtitulek: 'Cesta 5', text: 'Co mám ve svých rukou?' },
   { href: '/osobnost/marcus-aurelius/', nadtitulek: 'Portrét', text: 'Marcus Aurelius: císař, který si opisoval otroka' },
   { href: '/osobnost/diogenes/', nadtitulek: 'Profil', text: 'Diogenés: muž, kterého nebylo za co chytit' },
-  { href: '/mapa/?rok=110&osoba=epiktetos', nadtitulek: 'Mapa a čas', text: 'Níkopolis, kde Epiktétos učil až do smrti' },
+  { href: '/otazka/jsem-svobodny/', nadtitulek: 'Velká otázka 4', text: 'Jsem svobodný?' },
 ]} />
