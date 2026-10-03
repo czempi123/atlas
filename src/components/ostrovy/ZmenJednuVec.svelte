@@ -162,7 +162,7 @@
 
     {#if nejakaOdpoved && blok.coUdelal && filozof}
       <div class="co-udelal" in:odkryti>
-        <BlokFilozof {filozof}>
+        <BlokFilozof {filozof} nadpis={blok.coUdelal.nadpis}>
           {#each odstavce(blok.coUdelal.text) as o, i (i)}<p>{@html o}</p>{/each}
         </BlokFilozof>
       </div>

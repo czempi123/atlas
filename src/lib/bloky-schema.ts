@@ -95,8 +95,11 @@ export const BlokZmena = z
       )
       .min(1)
       .max(3),
-    /** co udělal skutečný člověk (volitelné, ukáže se po prvním posunu nebo nezměně) */
-    coUdelal: z.object({ osoba: Id, text: Text }).strict().optional(),
+    /**
+     * co udělal skutečný člověk (volitelné, ukáže se po prvním posunu nebo nezměně);
+     * `nadpis` nahradí „Co udělal …“ tam, kde text říká, co by lidé nejspíš řekli k vymyšlenému případu
+     */
+    coUdelal: z.object({ osoba: Id, nadpis: Text.optional(), text: Text }).strict().optional(),
   })
   .strict()
   .refine((b) => new Set(b.moznosti.map((m) => m.id)).size === b.moznosti.length, { message: 'Id možností se opakuje.' })

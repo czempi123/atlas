@@ -1,0 +1,46 @@
+---
+cesta: co-mam-ve-svych-rukou
+krok: 3
+nazev: Dvě půlky
+kdeJsme: Níkopolis, Epiktétova škola
+---
+import { Odkryj } from '../../../components/bloky';
+import Citat from '../../../components/ui/Citat.astro';
+
+<div class="ctenarsky">
+
+Epiktétos měl jen dva koše. Rukojeť, krátký výběr z jeho učení, jimi začíná:
+
+<Citat id="rukojet-1" />
+
+Tělo, majetek, pověst a postavení: čtyři věci, na kterých lidem záleží nejvíc, dal do koše, který náš není. Může nám je totiž někdo vzít. Kdo je má za své, bude podle něj naříkat a vinit bohy i lidi.
+
+Sedět se založenýma rukama tím nemyslel. Ukazoval to na lidech, kteří čekají na vítr. Vyhlížejí, jaký fouká, a ptají se, kdy přijde ten správný. Až se zlíbí jemu, zní odpověď: správcem větrů bůh neudělal je.
+
+Co je v naší moci, máme podle Epiktéta zařídit co nejlíp. Ostatního užívat, jak to přijde.
+
+Prostřední koš by tedy neuznal. Každou věc z něj by roztrhl na dvě půlky: na tu, která je tvoje dílo, a na tu, která není.
+
+</div>
+
+<Odkryj
+  id="cesta5-dve-pulky"
+  filozof="epiktetos"
+  nadtitulek="Nejdřív sám"
+  otazka="Vezmi jednu věc ze svého koše Zčásti, třeba známku ze čtvrtletky. Roztrhni ji: co na ní je tvoje dílo a co ne?"
+  tlacitko="Porovnat s Epiktétem"
+  modelove={[
+    { text: 'Známka: moje je, jak se připravím. Učitelovo je, co dá do písemky a jak to oznámkuje.', komentar: 'Půlky jsou čisté. Epiktétos by řekl, ať si přeješ jen tu první. Šlo by to: učit se naplno, a známku pustit z hlavy?' },
+    { text: 'Zápas: moje je trénink a spánek. Jestli chytím chřipku, moje není.', komentar: 'Sedí to. Zbývá těžší otázka: když se o svou půlku postaráš, a stejně onemocníš, co ti z té karty zůstane v ruce?' },
+  ]}
+  sebekontrola={[
+    'V mé půlce je jen to, co mi nikdo nemůže překazit.',
+    'Vím, na které půlce mi záleží víc.',
+  ]}
+>
+
+Epiktétos by se zeptal, kterou půlku chceš. Kdo chce tu, která jeho není, dává podle něj svůj klid do rukou někomu jinému.
+
+Podívej se na své půlky. Na které ti záleží víc? A dokázal by sis přát jen tu svou?
+
+</Odkryj>

@@ -22,7 +22,7 @@
 - { id: mytilena, nazev: Mytiléna, dnes: "Mytilini, Lesbos, Řecko", souradnice: [26.55, 39.11] }
 - { id: samos, nazev: Samos, dnes: "Samos, Řecko", souradnice: [26.93, 37.69], oblast: true }
 - { id: gyaros, nazev: Gyaros, dnes: "Gyaros, Řecko", souradnice: [24.72, 37.61], oblast: true }
-- { id: nikopolis, nazev: Nikopolis, dnes: "u Prevezy, Řecko", souradnice: [20.73, 39.01] }
+- { id: nikopolis, nazev: Níkopolis, dnes: "u Prevezy, Řecko", souradnice: [20.73, 39.01] }
 
 # Malá Asie a Černé moře
 - { id: miletos, nazev: Milétos, dnes: "u Balatu, Turecko", souradnice: [27.28, 37.53] }
@@ -52,6 +52,9 @@
 - { id: minturnae, nazev: Minturnae, dnes: "u Minturna, Itálie", souradnice: [13.77, 41.24] }
 - { id: volsinii, nazev: Volsinie, dobovy: Volsinii, dnes: "Bolsena, Itálie", souradnice: [11.99, 42.64] }
 - { id: korsika, nazev: Korsika, dnes: "Korsika, Francie", souradnice: [9.10, 42.15], oblast: true }
+
+# Podunají
+- { id: carnuntum, nazev: Carnuntum, dnes: "Petronell-Carnuntum, Rakousko", souradnice: [16.86, 48.11] }
 
 # Afrika a západ
 - { id: kyrene, nazev: Kyréné, dnes: "Šaḥḥát, Libye", souradnice: [21.86, 32.82] }

@@ -36,8 +36,9 @@
 - { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "vypráví se, že Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: iep-cynics }
 - { od: zenon-z-kitia, k: kleanthes, typ: ucitel, zdroj: britannica-cleanthes }
 - { od: kleanthes, k: chrysippos, typ: ucitel, zdroj: iep-chrysippus }
+- { od: karneades, k: chrysippos, typ: polemika, poznamka: "je-li všechno dáno předchozími příčinami, není nic v naší moci", zdroj: cicero-de-fato-perseus }
 
 # Římští stoikové a epikurejci
 - { od: musonius-rufus, k: epiktetos, typ: ucitel, zdroj: sep-epictetus }
-- { od: epiktetos, k: marcus-aurelius, typ: vliv-textem, zdroj: sep-marcus-aurelius }
+- { od: epiktetos, k: marcus-aurelius, typ: vliv-textem, poznamka: "Epiktétovy zápisky mu půjčil učitel Rusticus", zdroj: marcus-hovory }
 - { od: epikuros, k: lucretius, typ: vliv-textem, zdroj: sep-lucretius }

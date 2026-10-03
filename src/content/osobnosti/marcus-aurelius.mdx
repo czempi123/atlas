@@ -1,0 +1,202 @@
+---
+osoba: marcus-aurelius
+nadtitulek: Římský císař · Marcův portrét
+titulek: Marcus Aurelius
+pointa: Císař, který hlídal sám sebe.
+citat: hovory-vi-30
+kapitoly:
+  - cislo: "01"
+    kotva: chlapec
+    nazev: Chlapec, který měl být císařem
+    stav: hotovo
+  - cislo: "02"
+    kotva: vlada
+    nazev: Vláda jako úkol
+    stav: hotovo
+  - cislo: "03"
+    kotva: zapisky
+    nazev: Zápisky z tažení
+    stav: hotovo
+  - cislo: "04"
+    kotva: cassius
+    nazev: Cassius a konec
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import { KdoZilDriv, ZmenJednuVec, Volba, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Marcus Aurelius byl římský císař, nejmocnější muž světa. Velkou část vlády válčil na severní hranici říše.
+
+Psal si přitom zápisník. Řecky, sám pro sebe, ne pro čtenáře. Není to kronika jeho vlády. Jsou to věty, kterými domlouvá sám sobě.
+
+Před jedním nebezpečím se v nich varuje zvlášť:
+
+</div>
+
+<div class="ctenarsky"><Citat id="hovory-vi-30" velky /></div>
+
+<Kapitola cislo="01" kotva="chlapec" nazev="Chlapec, který měl být císařem">
+  <Fragment slot="titulek">Spíš vyděšen než <em>potěšen.</em></Fragment>
+
+Narodil se roku 121 n. l. v Římě. Vypráví se, že si už ve dvanácti oblékl filozofský plášť a spal na zemi. Na lůžko pokryté kožešinami si prý lehl, až když naléhala matka.
+
+Roku 138 ho adoptoval budoucí císař Antoninus Pius. Marcus tím dostal určeno, čím bude. Vypráví se, že ho ta zpráva spíš vyděsila než potěšila. Domácí se divili, a tak jim vypočítal, kolik zla v sobě vláda nese.
+
+<Volba id="marcus-vladnout-nechtel" />
+
+Měl z něj být řečník. Vybral si filozofii. V zápisníku za to později děkuje bohům: kdyby v řečnictví a básnictví pokročil dál, možná by u nich zůstal.
+
+K filozofii ho vedli stoici. Jeden z nich, Rusticus, mu půjčil ze své knihovny zápisky řečí bývalého otroka [Epiktéta](/osobnost/epiktetos/).
+
+Vládnout se učil od adoptivního otce. Cenil si na něm klidu, stálosti a toho, že mu stačilo málo. V zápisníku si přikazuje, ať všechno dělá jako Antoninův žák.
+</Kapitola>
+
+<Kapitola cislo="02" kotva="vlada" nazev="Vláda jako úkol">
+  <Fragment slot="titulek">Císař prodává vlastní <em>poháry.</em></Fragment>
+
+Roku 161 se Marcus stal císařem. Nejdřív vládl ve dvou, se spoluvládcem.
+
+Vypráví se, že hned na začátku jejich vlády zaplavila Řím Tibera. Poničila domy, zahubila mnoho zvířat a přinesla hlad. Oba císaři byli u toho a sami se starali o pomoc.
+
+Pak přišel mor. Vypráví se, že se mrtví vyváželi na vozech a že chudým dal Marcus vypravit pohřby na státní útraty.
+
+A do toho válka. Na severní hranici útočili Germáni a boje vyprázdnily pokladnu.
+
+<Volba id="marcus-prazdna-pokladna" />
+
+Vypráví se, že Marcus nechtěl uvalit na provincie mimořádné daně. Uspořádal na Traianově fóru dražbu císařského majetku. Prodávaly se zlaté a křišťálové poháry, manželčiny hedvábné a zlatem tkané šaty i drahokamy.
+
+Dražba prý trvala dva měsíce. Kupcům pak Marcus dovolil věci vrátit a dostat zlato zpět.
+
+Epiktétos učil ve škole a odpovídal za sebe. Marcus odpovídal za říši. Otázka, co je v jeho moci, pro něj proto měla druhou půlku: komu tím slouží. V zápisníku si píše, kam patří:
+
+<Citat id="hovory-vi-44" />
+
+Antoninus je tu on sám: jako císař se jmenoval Marcus Aurelius Antoninus. Dobré je pro něj jen to, co prospívá oběma těm obcím.
+</Kapitola>
+
+<Kapitola cislo="03" kotva="zapisky" nazev="Zápisky z tažení">
+  <Fragment slot="titulek">Hrad, který nosil <em>v sobě.</em></Fragment>
+
+Velkou část vlády strávil Marcus na taženích ve střední Evropě. Část zápisků psal právě tam. U jedné z knih stojí: psáno v Carnuntu.
+
+Carnuntum leželo na Dunaji, asi třicet kilometrů východně od dnešní Vídně. Knih je dvanáct. První je poděkování lidem, od kterých se něco naučil.
+
+V ostatních si Marcus radí, jak žít. Lidé podle něj hledají ústraní na venkově, u moře a v horách. Přitom se můžeš kdykoli uchýlit do sebe.
+
+<Citat id="hovory-iv-3" />
+
+Radí si i to, jak se dívat na věci, po kterých lidé touží. Má je svléknout: popsat jen to, z čeho jsou.
+
+<Odkryj
+  id="marcus-svlekni-vec"
+  otazka="Vyber si věc, po které hodně toužíš. Popiš ji jednou větou jen tím, z čeho je a co dělá."
+  tlacitko="Porovnat s Marcem"
+  filozof="marcus-aurelius"
+  modelove={[
+    { text: 'Značkové tenisky: guma, látka a logo.', komentar: 'Logo jsi nechal až na konec, a přitom se právě za ně platí nejvíc. Co z toho, po čem toužíš, je v botě, a co v hlavách lidí kolem?' },
+    { text: 'Jednička z matiky: číslice v elektronické žákovské.', komentar: 'Popis sedí, a přesto ta číslice něco říká: že něco umíš. Zmizelo svlečením jen pozlátko, nebo i to, na čem ti právem záleží?' },
+  ]}
+  sebekontrola={[
+    'Popsal jsem věc tak, že by ji poznal i ten, kdo po ní netouží.',
+    'Vím, co z mé touhy se do popisu nevešlo.',
+  ]}
+>
+
+Marcus by tvou větu zkoušel svléknout ještě víc. Nechal by v ní jen to, co je vidět a co se dá vzít do ruky.
+
+Podívej se na svou větu. Toužíš po té věci míň, když ji vidíš takhle? A jestli ne, zůstalo na ní něco, co se svléknout nedá?
+
+</Odkryj>
+
+Sám si zapsal, že víno je šťáva z hroznů. A purpurový lem je ovčí vlna namočená v krvi měkkýše.
+
+Co po takovém svlékání zbude? Místo, kam se dá ustoupit:
+
+<Citat id="hovory-viii-48" />
+
+*Je to hrad, nebo úkryt? Kdy je odejít do sebe moudré a kdy je to útěk před věcmi, které máš řešit?*
+</Kapitola>
+
+<Kapitola cislo="04" kotva="cassius" nazev="Cassius a konec">
+  <Fragment slot="titulek">Písemnosti, které nikdo <em>nečetl.</em></Fragment>
+
+Vypráví se, že se místodržící Cassius dal prohlásit císařem. Zabili ho vlastní lidé. Na jeho uťatou hlavu se prý Marcus nedokázal ani podívat a dal ji pohřbít.
+
+Po Cassiovi zůstaly truhly s písemnostmi.
+
+<ZmenJednuVec id="marcus-pisemnosti" />
+
+Vypráví se, že je Marcus dal zničit nepřečtené. Nechtěl znát jméno jediného spiklence. Senát požádal, ať nikoho z účastníků nepopraví.
+
+V zápisníku, který psal jen pro sebe, má o lidech tuhle větu:
+
+<Citat id="hovory-viii-59" />
+
+*Stačí ty dvě možnosti i tehdy, když někdo ubližuje dál?*
+
+Zemřel roku 180 na tažení. Říši po něm zdědil syn Commodus.
+
+Jeden antický dějepisec o něm napsal, že vládl líp než kdokoli jiný. Štěstí, jaké si zasloužil, se ale nedočkal: nebyl silného těla a skoro celou vládu měl plnou potíží. Po jeho smrti podle téhož dějepisce klesly dějiny ze zlatého království do železného a rezavého.
+
+Marcus sám si o velkých slovech zapsal:
+
+<Citat id="hovory-x-16" />
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Narodil se v Římě. Velkou část vlády ale strávil na taženích ve střední Evropě. Na Dunaji leželo i Carnuntum, kde psal část zápisků.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="seneca" b="marcus-aurelius" druh="vzdalenost" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Politika">
+    <Fragment slot="titulek">Mám dvě vlasti: Řím a <em>svět.</em></Fragment>
+
+Marcus měl dvě obce. Jako císař patřil Římu, jako člověk světu. Dobré pro něj bylo jen to, co prospívá oběma.
+
+Občanem světa se asi o pět set let dřív nazval [Diogenés](/osobnost/diogenes/), vyhnanec, který nevládl ničemu. Marcus to o sobě napsal jako muž, který vládl říši.
+
+*Co když jdou ty dvě obce proti sobě? Co má udělat vládce, když je něco dobré pro Řím, a ne pro svět?*
+
+<MojeStanovisko client:visible id="marcus-dve-vlasti" otazka="Kam všude patříš ty: rodina, třída, město, země, svět? Která z těch obcí má přednost, když jdou proti sobě? Proč?" odkaz="/osobnost/marcus-aurelius/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Etika">
+    <Fragment slot="titulek">Nestyď se, když ti <em>pomáhají.</em></Fragment>
+
+<Citat id="hovory-vii-7" />
+
+Epiktétos, který sám kulhal, učil stát na tom, co je jen tvoje. Marcův kulhavý voják se na hradbu dostane s druhým. Úkol je hradba, ne to, abys ji zdolal sám.
+
+*Kde to končí? Je něco, co musíš zvládnout sám, aby to bylo tvoje?*
+
+<MojeStanovisko client:visible id="marcus-pomoc" otazka="S čím si teď nechceš nechat pomoct? Je to hrdost, nebo máš dobrý důvod?" odkaz="/osobnost/marcus-aurelius/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="marcus-veta-pro-sebe" nazev="Věta pro sebe" odkaz="/osobnost/marcus-aurelius/#zkus-to-zit">
+
+Sedm dní si každý den napiš jednu větu sám sobě. Ne co se stalo, ale co si chceš připomenout, a oslov se v ní „ty“. Nikomu ji neukazuj. Na konci týdne si všech sedm přečti a zapiš si, která se vracela.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/co-mam-ve-svych-rukou/', nadtitulek: 'Cesta 5', text: 'Co mám ve svých rukou?' },
+  { href: '/osobnost/epiktetos/', nadtitulek: 'Portrét', text: 'Epiktétos: otrok, kterého četl císař' },
+  { href: '/otazka/jak-zit/', nadtitulek: 'Velká otázka 1', text: 'Jak mám žít?' },
+  { href: '/otazka/jsem-svobodny/', nadtitulek: 'Velká otázka 4', text: 'Jsem svobodný?' },
+]} />

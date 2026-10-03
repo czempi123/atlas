@@ -24,6 +24,8 @@ const obdobi = obdobiPodleId.get(osoba.obdobi)!;
 // Místo v hlavičce: rodiště; když ho neznáme, místo, kde člověk působil naposledy (Epikúros: Athény, ne Mytiléna).
 const rodiste = osoba.mista.find((m) => m.role === 'narozeni') ?? osoba.mista.findLast((m) => m.role === 'pusobeni');
 const misto = rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
+// Popisek portrétu stojí pod deskou vedle atributu: u rytiny nebo kresby říká, čí je to představa a z kdy.
+const obrazekOsoby = osoba.obrazek ? data.zdroje.obrazky.find((o) => o.id === osoba.obrazek) : undefined;
 const vztahy = data.vztahy.filter((v) => v.od === osoba.id || v.k === osoba.id);
 const citatyNaStrance = [fm.citat, ...[...(zaznam.body ?? '').matchAll(/<Citat id="([^"]+)"/g)].map((m) => m[1])].filter(Boolean) as string[];
 // Prameny bloků z YAML (Volba, Změň jednu věc, Spor) vložených do textu.
@@ -76,6 +78,7 @@ const dev = import.meta.env.DEV;
               <span><strong>Proč {osoba.atribut.nazev}?</strong> {nezlomitelne(osoba.atribut.proc)}</span>
             </span>
           )}
+          {obrazekOsoby && <span class="obraz-popisek">{nezlomitelne(obrazekOsoby.popisek)}</span>}
         </Deska>
       </div>
     </header>
@@ -130,11 +133,14 @@ const dev = import.meta.env.DEV;
   .osobnost__deska { max-width: 420px; }
   @media (max-width: 899px) {
     .osobnost__deska :global(.deska__plocha) { aspect-ratio: 16 / 10 !important; }
+    /* Deska je tu na šířku: obrázek na výšku smí mít pro ni vlastní střed výřezu (`vyrezNaSirku`). */
+    .osobnost__deska :global(.deska__plocha img) { object-position: var(--vyrez-sirka, var(--vyrez, 50% 25%)) !important; }
   }
   .proc { display: block; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
   .proc strong { color: var(--ink); font-weight: 600; }
   .proc--mince { display: flex; gap: var(--s-3); align-items: flex-start; }
   .proc--mince :global(.mince) { flex: none; }
+  .obraz-popisek { display: block; margin-top: var(--s-3); color: var(--ink-2); }
   .kapitoly { margin: var(--s-7) 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .kapitoly ol { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: 0; padding: var(--s-2) 0; list-style: none; font-family: var(--font-sans); font-size: var(--fs-ovladani); }
   .kapitoly li { display: flex; align-items: center; gap: var(--s-2); min-height: var(--dotyk); }

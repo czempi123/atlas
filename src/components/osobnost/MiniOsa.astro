@@ -27,10 +27,13 @@ const do_ = Math.ceil((Math.max(...radky.map((r) => r.i[1])) + 10) / 50) * 50;
 const pct = (r: number) => ((r - od) / (do_ - od)) * 100;
 const znacky: number[] = [];
 for (let r = od; r <= do_; r += 50) znacky.push(r);
+// Osa přes přelom letopočtu (Seneca u Epiktéta): roky vlevo od přelomu nesou „př. n. l.“, jinak by na ose stálo „50 … 50“.
+const smisena = od < 0 && do_ > 0;
+const popisZnacky = (r: number) => (r === 0 ? '' : smisena && r < 0 ? `${Math.abs(r)}\u00a0př.\u00a0n.\u00a0l.` : String(Math.abs(r)));
 ---
 <figure class={`osa obdobi-${osoba.obdobi}`}>
   <div class="osa__mrizka" aria-hidden="true">
-    {znacky.map((r) => <span class="osa__znacka t-letopocet" style={`left:${pct(r)}%`}>{r === 0 ? '' : Math.abs(r)}</span>)}
+    {znacky.map((r) => <span class="osa__znacka t-letopocet" style={`left:${pct(r)}%`}>{popisZnacky(r)}</span>)}
   </div>
   <ol class="osa__radky">
     {radky.map((r) => (
@@ -60,6 +63,7 @@ for (let r = od; r <= do_; r += 50) znacky.push(r);
     position: absolute;
     top: 0;
     transform: translateX(-50%);
+    white-space: nowrap;
     font-size: 12px;
     color: var(--muted);
   }

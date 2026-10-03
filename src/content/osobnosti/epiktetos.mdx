@@ -1,0 +1,219 @@
+---
+osoba: epiktetos
+nadtitulek: Otrok a učitel · Epiktétův portrét
+titulek: Epiktétos
+pointa: Otrok, kterému nikdo nevzal to hlavní.
+citat: rozpravy-i-1-23
+kapitoly:
+  - cislo: "01"
+    kotva: otrok-v-rime
+    nazev: Otrok v Římě
+    stav: hotovo
+  - cislo: "02"
+    kotva: nikopolis
+    nazev: Níkopolis
+    stav: hotovo
+  - cislo: "03"
+    kotva: co-mu-nikdo-nevzal
+    nazev: Co mu nikdo nevzal
+    stav: hotovo
+  - cislo: "04"
+    kotva: senator-a-cisar
+    nazev: Senátor a císař
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import CestaKarta from '../../components/cesta/CestaKarta.astro';
+import { KdoZilDriv, ZmenJednuVec, Volba, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Epiktétos byl otrok v Římě. Jeho pán Epafroditos patřil k mocným lidem na dvoře císaře Nerona. Svým žákům Epiktétos později vyprávěl, co v tom domě viděl.
+
+Pán jednou prodal svého ševce, protože prý k ničemu nebyl. Náhodou ho koupil někdo z císařova domu a ze ševce se stal švec císařův. Od té chvíle se pán uctivě vyptával, jak se tomu dobrému muži daří. A když se otroci ptali, co pán dělá, slyšeli, že se o něčem radí se ševcem.
+
+Jindy před pánem klečel muž a plakal, že je na dně. Zbylo mu jen půldruhého milionu. Pán se mu nevysmál. Užasl, jak to ten chudák mohl vydržet a mlčet.
+
+Otrok se díval, jak se jeho pán klaní ševci. I mocný muž měl svého pána.
+
+</div>
+
+<div class="ctenarsky"><Citat id="rozpravy-i-1-23" velky /></div>
+
+<Kapitola cislo="01" kotva="otrok-v-rime" nazev="Otrok v Římě">
+  <Fragment slot="titulek">To se lidem <em>stává.</em></Fragment>
+
+Ještě jako otrok chodil Epiktétos za stoikem Musoniem Rufem. Učitel ho nešetřil. Epiktétos na jeho zkoušky vzpomínal ještě před vlastními žáky.
+
+<Volba id="epiktetos-musoniova-zkouska" />
+
+Epiktétos odpověděl, že to se lidem stává. Musonius se zeptal, proč by se tedy u pána přimlouval. Totéž přece může dostat od žáka samého.
+
+*Stačila by ti taková odpověď od učitele? Kdy má zasáhnout někdo silnější, i když to člověk unese sám?*
+
+Jindy mu učitel vytkl, že v úsudku přehlédl chybějící krok. Epiktétos se bránil, že přece nezapálil Kapitol. Musonius odpověděl, že tady je tím Kapitolem právě to, co chybí.
+
+*Znáš tu větu: vždyť se zas tak moc nestalo. Je malá chyba malá, i když je to přesně ta věc, kterou ses měl naučit?*
+</Kapitola>
+
+<Kapitola cislo="02" kotva="nikopolis" nazev="Níkopolis">
+  <Fragment slot="titulek">Škola jako <em>ordinace.</em></Fragment>
+
+Později dostal Epiktétos svobodu a začal v Římě sám učit. Pak císař Domitianus vykázal filozofy z Říma a z celé Itálie. Epiktétos odešel do Níkopole na západě Řecka a otevřel tam školu.
+
+Učil v ní až do smrti. Žákům říkal, co od ní mají čekat:
+
+<Citat id="rozpravy-iii-23-30" />
+
+Nepřišli k němu přece zdraví, dodával. Kdo jde k lékaři, nechce slyšet pochvalu. Chce vědět, co mu je.
+
+Sám nenapsal nic. Jeho žák Arriános si zapisoval, co slyšel, pokud možno jeho vlastními slovy. Dochovaly se čtyři knihy těch řečí, Rozpravy, a krátká Rukojeť.
+
+V Rozpravách Epiktétos vypráví i to, co se mu stalo doma. Měl u domácích bůžků železnou lampu. Jednou uslyšel u okna hluk a seběhl dolů. Lampa byla pryč.
+
+<Odkryj
+  id="epiktetos-lampa"
+  otazka="Kdo při té krádeži přišel o víc: Epiktétos, nebo zloděj? Napiš proč."
+  tlacitko="Porovnat s Epiktétem"
+  filozof="epiktetos"
+  modelove={[
+    { text: 'Epiktétos. Zloděj má lampu a on nemá nic.', komentar: 'Počítáš věci, a v tom máš pravdu: lampa změnila majitele. Je ale lampa to jediné, o co se při krádeži dá přijít?' },
+    { text: 'Zloděj. Kdyby ho chytili, dopadl by hůř než Epiktétos bez lampy.', komentar: 'Díváš se na to, co zloději hrozí. A kdyby ho nikdy nikdo nechytil: přišel by o něco i tak?' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem, o co přesně každý z nich přišel.',
+    'Moje odpověď platí, i kdyby se na zloděje nikdy nepřišlo.',
+  ]}
+>
+
+Epiktétos by nepočítal jen lampu. Zeptal by se, co kdo za ni dal a co komu po té krádeži zůstalo.
+
+Podívej se na svou odpověď. Počítal jsi jen věci, nebo i to, kým se kdo tou krádeží stal?
+
+</Odkryj>
+
+Epiktétos usoudil, že zloděje potkalo něco docela pochopitelného. A k lampě řekl jen tohle:
+
+<Citat id="rozpravy-i-18-15" />
+
+Zloděj podle něj za lampu zaplatil draho. Stal se kvůli ní zlodějem a člověkem, kterému se nedá věřit.
+
+Našel se člověk, který Epiktétovu hliněnou lampu koupil za tři tisíce drachem. Doufal, že když při ní bude v noci číst, dostane ve spánku i Epiktétovu moudrost. Spisovatel, který to zaznamenal, se mu vysmál.
+
+Epiktétovy věty si opisoval i [Marcus Aurelius](/osobnost/marcus-aurelius/), císař, který se narodil, když Epiktétos stárl v Níkopoli. Nekoupil si lampu. Půjčil si knihu.
+
+*Kdo z těch dvou si z Epiktéta odnesl víc?*
+</Kapitola>
+
+<Kapitola cislo="03" kotva="co-mu-nikdo-nevzal" nazev="Co mu nikdo nevzal">
+  <Fragment slot="titulek">Nohu ano, vůli <em>ne.</em></Fragment>
+
+Epiktétos kulhal. Před žáky o sobě řekl:
+
+<Citat id="rozpravy-i-16-20" />
+
+Vypráví se, že mu nohu zlomil pán. Celý ten příběh vypráví cesta [Co mám ve svých rukou?](/cesta/co-mam-ve-svych-rukou/)
+
+O noze mluvil Epiktétos i ve škole. Jednou žákům předváděl rozhovor s tyranem. Tyran chce slyšet tajemství a hrozí pouty. Dozví se, že spoutat může nohu, ale vůli nepřemůže ani Zeus.
+
+Tyran hrozí vězením: zavře jen tělo. Hrozí popravou: a kdo kdy tvrdil, že zrovna tenhle krk se setnout nedá?
+
+Vůlí tu Epiktétos nemyslí sílu zatnout zuby. Myslí to, čím si věci vykládáš a čím se rozhoduješ. Pán mu mohl vzít skoro všechno. Tohle ne.
+
+<Volba id="epiktetos-kdo-je-svobodnejsi" />
+
+Epiktétos to žákům ukazoval na otrokovi, který se modlí, aby ho propustili. Věří, že pak bude s každým mluvit jako rovný a půjde, kam chce. Propustí ho. Nemá co jíst, hledá, komu zalichotit, a upadne do otroctví mnohem horšího.
+
+Propuštění samo podle Epiktéta svobodu nedá. Kdo dál stojí o to, co mu může dát jen někdo mocný, vymění jednoho pána za druhého. Jako muž, který se klaněl ševci.
+
+Za příklad svobodného člověka dával Epiktétos [Diogena](/osobnost/diogenes/): nebylo ho za co chytit. Kdo mu sáhl na majetek, tomu ho nechal. Kdo na nohu, tomu nohu.
+</Kapitola>
+
+<Kapitola cislo="04" kotva="senator-a-cisar" nazev="Senátor a císař">
+  <Fragment slot="titulek">Jeden purpurový <em>pruh.</em></Fragment>
+
+Zní to jako rada smířit se se vším. Když je moje jen to, co si myslím a co chci, mám ke křivdě mlčet?
+
+Ta námitka má váhu: křivda, o které všichni mlčí, trvá dál. Epiktétos k ní má příběh. Vyprávěl žákům o senátorovi Helvidiovi.
+
+Císař senátorovi vzkázal, ať nechodí do senátu. Ten odpověděl, že je v císařově moci nenechat ho senátorem. Dokud jím ale je, musí tam jít.
+
+Císař tedy chtěl, ať přijde, ale mlčí. Senátor slíbil mlčet, když se ho císař nezeptá na názor. Jenže císař se zeptat musel. A senátor musel říct, co pokládá za správné.
+
+Císař pohrozil, že když promluví, dá ho zabít.
+
+<ZmenJednuVec id="epiktetos-senator" />
+
+Senátor podle Epiktéta odpověděl, že nikdy netvrdil, že je nesmrtelný. A dodal:
+
+<Citat id="rozpravy-i-2-21" />
+
+Co zmohl jeden člověk proti císaři? Epiktétos odpovídá: totéž co purpurový pruh na šatu. Je na něm vidět a ostatním je příkladem.
+
+Jak věc dopadne, v senátorově moci nebylo. V jeho moci bylo, co udělá. Proto podle Epiktéta nestačí mlčet a snášet: i promluvit je čin.
+
+Jedno ale zůstává otevřené. Epiktétos měří čin tím, jestli byl správný, ne tím, co změnil.
+
+*Stačí ti to? Nebo má cenu jen to, co křivdu opravdu odstraní?*
+
+S Epiktétem by se tu přel Aristotelés: podle něj záleží i na tom, co člověka potká. Jejich spor a jeden dnešní případ na tebe čekají na cestě.
+
+<CestaKarta slug="co-mam-ve-svych-rukou" nadtitulek="Pokračuj cestou" />
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Narodil se kolem roku 55 n. l. v Hierapoli v Malé Asii. Z Říma odešel do Níkopole a učil tam až do smrti kolem roku 135. Žil skromně a sám. Vypráví se, že se ve stáří ujal dítěte, o které se rodiče nemohli postarat.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="diogenes" b="epiktetos" druh="vzdalenost" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Etika">
+    <Fragment slot="titulek">Každá věc má dvě <em>ucha.</em></Fragment>
+
+Za jedno ucho se věc unést dá, za druhé ne. Tak to stojí v Rukojeti.
+
+Epiktétův příklad: ukřivdil ti bratr. Za ucho „křivdí mi“ to neuneseš. Vezmi to za druhé: je to bratr, vyrostli jsme spolu. Věc zůstává stejná, mění se jen to, za co ji držíš.
+
+*Má každá věc ucho, za které se dá unést? A kdy je druhé ucho jen výmluva, proč křivdu nechat být?*
+
+<MojeStanovisko client:visible id="epiktetos-dve-ucha" otazka="Dá se každá křivda vzít za druhé ucho? Napiš jeden případ, kdy ano, a jeden, kdy by to byla chyba." odkaz="/osobnost/epiktetos/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Politika">
+    <Fragment slot="titulek">Roli si nevybíráš. Jak ji zahraješ, <em>ano.</em></Fragment>
+
+<Citat id="rukojet-17" />
+
+Mezi rolemi Epiktétos jmenuje žebráka, vládce, obyčejného člověka i chromého. Sám byl otrokem, vyhnancem a učitelem. Senátor z jeho vyprávění šel do senátu, protože byl senátor.
+
+*A co role, která je sama křivda? Má otrok dobře hrát otroka, nebo má chtít jinou hru?*
+
+<MojeStanovisko client:visible id="epiktetos-role" otazka="Kterou svou roli sis nevybral? Chceš ji zahrát dobře, nebo ji chceš změnit? Proč?" odkaz="/osobnost/epiktetos/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="epiktetos-druhe-ucho" nazev="Druhé ucho" odkaz="/osobnost/epiktetos/#zkus-to-zit">
+
+Vyber si jednu věc, která tě tenhle týden štve: povinnost, prohru nebo něčí zlozvyk. Pokaždé, když na ni přijde řada, zkus ji vzít za druhé ucho. Řekni si o ní jednu větu, která je taky pravdivá a dá se unést. Na konci týdne si zapiš, kdy to šlo a kdy druhé ucho nebylo k nalezení.
+
+Křivdu, se kterou se dá něco dělat, si nevybírej. Ta nepotřebuje druhé ucho, ale někoho, komu o ní řekneš.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/co-mam-ve-svych-rukou/', nadtitulek: 'Cesta 5', text: 'Co mám ve svých rukou?' },
+  { href: '/osobnost/marcus-aurelius/', nadtitulek: 'Portrét', text: 'Marcus Aurelius: císař, který si opisoval otroka' },
+  { href: '/osobnost/diogenes/', nadtitulek: 'Profil', text: 'Diogenés: muž, kterého nebylo za co chytit' },
+  { href: '/otazka/jsem-svobodny/', nadtitulek: 'Velká otázka 4', text: 'Jsem svobodný?' },
+]} />

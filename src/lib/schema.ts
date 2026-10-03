@@ -228,6 +228,11 @@ export const Obrazek = z
      * (tvář v horní třetině) usekne to, o co na obrázku jde.
      */
     vyrez: z.string().regex(/^\d{1,3}% \d{1,3}%$/, 'vyrez: dvě procenta, např. „50% 37%“').optional(),
+    /**
+     * Střed výřezu pro desku na šířku (hlavička osobnosti na telefonu, 16 : 10), když se má lišit od `vyrez`:
+     * rytina na výšku potřebuje v nízké desce jiný střed, jinak přijde o hlavu.
+     */
+    vyrezNaSirku: z.string().regex(/^\d{1,3}% \d{1,3}%$/, 'vyrezNaSirku: dvě procenta, např. „50% 10%“').optional(),
   })
   .strict();
 

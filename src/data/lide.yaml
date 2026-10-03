@@ -79,7 +79,7 @@
     nazev: váhy
     proc: Ctnost je střed mezi dvěma krajnostmi.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika]
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii]
 
 - id: thales
   jmeno: Thalés
@@ -638,8 +638,8 @@
   linie: [stoicismus]
   mista:
     - { misto: hierapolis, role: narozeni, zdroj: sep-epictetus }
-    - { misto: rim, role: pobyt, zdroj: sep-epictetus }
-    - { misto: nikopolis, role: pusobeni, zdroj: sep-epictetus }
+    - { misto: rim, role: pobyt, do: 93, priblizne: true, zdroj: gellius-epiktetos }
+    - { misto: nikopolis, role: pusobeni, od: 93, do: 135, priblizne: true, zdroj: gellius-epiktetos }
   kdo: Otrok z Hierapole, který se stal nejslavnějším učitelem stoicismu své doby.
   proc: Rozlišil, co je v naší moci a co ne.
   atribut:
@@ -647,7 +647,8 @@
     nazev: berla
     proc: Byl chromý otrok, a přesto svobodný uvnitř.
     zdroj: sep-epictetus
-  zdroje: [sep-epictetus]
+  obrazek: epiktetos-1715
+  zdroje: [sep-epictetus, iep-epictetus, epiktetos-rozpravy, epiktetos-rukojet, gellius-epiktetos, origenes-kelsos, lukianos-nevzdelanec]
 
 - id: marcus-aurelius
   jmeno: Marcus Aurelius
@@ -662,6 +663,7 @@
   mista:
     - { misto: rim, role: narozeni, rok: 121, zdroj: britannica-marcus }
     - { misto: rim, role: pusobeni, od: 161, do: 180, zdroj: sep-marcus-aurelius }
+    - { misto: carnuntum, role: tazeni, od: 172, do: 174, priblizne: true, zdroj: britannica-carnuntum }
   kdo: Římský císař, který si psal filozofické zápisky sám pro sebe.
   proc: Jeho Hovory k sobě patří k nejčtenějším knihám stoicismu.
   atribut:
@@ -669,7 +671,8 @@
     nazev: vavřín
     proc: Filozof na císařském trůnu.
     zdroj: sep-marcus-aurelius
-  zdroje: [sep-marcus-aurelius, britannica-marcus]
+  obrazek: marcus-jezdec
+  zdroje: [sep-marcus-aurelius, britannica-marcus, iep-marcus, marcus-hovory, historia-augusta-marcus, dio-72, britannica-carnuntum]
 
 - id: zenon-z-kitia
   jmeno: Zénón z Kitia
@@ -713,7 +716,7 @@
     nazev: válec
     proc: "Svobodu vysvětloval na válci: někdo ho postrčí, ale jak se kutálí, záleží na jeho tvaru."
     zdroj: cicero-de-fato
-  zdroje: [iep-chrysippus, sep-stoicism, cicero-de-fato]
+  zdroje: [iep-chrysippus, sep-stoicism, cicero-de-fato, cicero-de-fato-perseus, gellius-vii-2]
 
 - id: pyrrhon
   jmeno: Pyrrhón

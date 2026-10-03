@@ -11,10 +11,13 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/osobnost/protagoras/', nazev: 'protagoras', nadpis: /Prótagorás/ },
   { cesta: '/osobnost/epikuros/', nazev: 'epikuros', nadpis: /Epikúros/ },
   { cesta: '/osobnost/diogenes/', nazev: 'diogenes', nadpis: /Diogenés/ },
+  { cesta: '/osobnost/epiktetos/', nazev: 'epiktetos', nadpis: /Epiktétos/ },
+  { cesta: '/osobnost/marcus-aurelius/', nazev: 'marcus-aurelius', nadpis: /Marcus Aurelius/ },
   { cesta: '/mapa/', nazev: 'mapa', nadpis: /Mapa a čas/ },
   { cesta: '/otazky/', nazev: 'otazky', nadpis: /Deset velkých otázek/ },
   { cesta: '/otazka/jak-poznam-pravdu/', nazev: 'otazka-7', nadpis: /Jak poznám, co je pravda\?/, preskocit: 'otazka-jak-poznam-pravdu' },
   { cesta: '/otazka/jak-zit/', nazev: 'otazka-1', nadpis: /Jak mám žít\?/, preskocit: 'otazka-jak-zit' },
+  { cesta: '/otazka/jsem-svobodny/', nazev: 'otazka-4', nadpis: /Jsem svobodný\?/, preskocit: 'otazka-jsem-svobodny' },
 ];
 const SIRKY = [
   { sirka: 390, vyska: 844 },
@@ -119,4 +122,25 @@ test('Nejdřív sám: odpověď se odkryje až po pokusu a uloží do deníku', 
   await expect(blok.getByRole('region', { name: 'Srovnání' })).toContainText('kde jeho vědění končí');
   await page.goto('/denik/');
   await expect(page.getByText('Moudrý je ten, kdo umí přiznat chybu.')).toBeVisible();
+});
+
+// Rytina na výšku: deska v hlavičce je na telefonu na šířku (16 : 10) a potřebuje jiný střed výřezu než na notebooku,
+// jinak přijde o hlavu (zdroje.yaml, vyrez a vyrezNaSirku).
+test('deska osobnosti: rytina má na telefonu vlastní střed výřezu', async ({ page }) => {
+  const stred = () => page.locator('.osobnost__deska img').evaluate((img) => getComputedStyle(img).objectPosition);
+  for (const [id, uzky, siroky] of [['epiktetos', '50% 34%', '50% 60%'], ['marcus-aurelius', '50% 8%', '50% 28%']]) {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`/osobnost/${id}/`);
+    expect(await stred(), `${id} · 390 px`).toBe(uzky);
+    await page.setViewportSize({ width: 1440, height: 900 });
+    expect(await stred(), `${id} · 1440 px`).toBe(siroky);
+  }
+  // Pod deskou stojí vedle atributu i popisek obrázku: u rytiny říká, čí je to představa (revize P10).
+  await expect(page.locator('.osobnost__deska .obraz-popisek')).toContainText('Marcus Aurelius na koni.');
+  await page.goto('/osobnost/epiktetos/');
+  await expect(page.locator('.osobnost__deska .obraz-popisek')).toContainText('jak si ho představil rytec roku 1715');
+  // Obrázek bez vlastního výřezu na šířku drží svůj běžný střed i na telefonu.
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/osobnost/diogenes/');
+  expect(await stred()).toBe('50% 12%');
 });

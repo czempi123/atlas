@@ -2,11 +2,108 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Schválení celku 3 a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Všech deset nálezů revize schváleno a zapracováno (`docs/revize/celek-3-2026-10-03.md`) | Autor: „Souhlasím, zapracuj všechny ty nálezy“ |
+| Celek 3 „Co mám ve svých rukou?“ je schválený; větev `celek-3` se slučuje do hlavní a hlavní větev jde na GitHub | Autor zvolil „Sloučit do hlavní a poslat“; pravidlo z 2. 10. 2026 (do hlavní větve jen schválený celek) |
+| Citát `rukojet-20` je druhá věta kapitoly („Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.“); první věta („kdo ti nadává nebo tě bije“) ve studentském textu není | Student, kterého někdo bije, ji čte jako radu snášet; krok 6 mluví o urážce, ne o ublížení |
+| Výzva Zkus to žít u stoického celku říká, že křivdu, se kterou se dá něco dělat, si student nevybírá | Cvičení ve smíření nesmí mířit na člověka, který ubližuje |
+| Vliv přes texty má v Době a lidech vlastní skupiny („Četli ho a navázali“, „Koho četl“); „Znali se a přeli se“ jen pro lidi, kteří se potkali nebo přeli | Epiktétos a Marcus Aurelius se nikdy neviděli; nadpis tvrdil setkání u tří profilů |
+| Změň jednu věc smí mít vlastní nadpis oddílu Co udělal (`coUdelal.nadpis`) | „Co udělal Epiktétos“ stálo nad domněnkou tří hlasů k vymyšlenému případu |
+| Na stránce osobnosti stojí pod deskou i popisek obrázku | U rytiny a kresby říká, čí je to představa; text portrétu říká „Sám nenapsal nic“ a rytina ukazuje Epiktéta s perem |
+| Další krok: větev `rozhrani-v2`, krok R1 (`docs/plany/rozhrani-v2.md`) | Rozhodnutí z 2. 10. 2026: rozhraní až po celku 3 na GitHubu |
+
+## 3. 10. 2026: Revize celku 3 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Verdikt revize „po opravách“: tři blokující, dva důležité a pět drobných nálezů (`docs/revize/celek-3-2026-10-03.md`). Návrhy nejsou zapracované, čekají na rozhodnutí autora | Zadání P10: zásahy do významu, příběhu a struktury revize jen navrhuje |
+| Rovnou opraveno: „Velkou část vlády“ místo „Skoro celou vládu“ (Marcus), „Epiktétos k ní má příběh“ místo „na ni odpovídal příběhem“, „asi čtyři sta let“ v Kde jsme kroku 5, „jak léta jednal“ v Aristotelově odpovědi na otázce 4 | Formulace nesmí být silnější než tvrzení v podkladech; Rozpravy I, 2 nejsou odpověď na námitku rezignace, tou je dělá až náš výklad |
+| Mini osa současníků píše u roků před přelomem letopočtu „př. n. l.“, když osa přelom přechází | U Epiktéta stálo na ose dvakrát „50“ (Seneca se narodil před přelomem); první osa atlasu přes přelom letopočtu |
+
+## 3. 10. 2026: Schválení P8 (celek 3) a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta 5 a stránka velké otázky 4 schváleny i s odchylkami od zadání (vůle vysvětlená v kroku 1, krok 4 jako odhad s odkrytím, karta cesty za kapitolou 04, Kam dál bez mapy, Epikúros se třemi otázkami v hlavičce) | Autor: „V pořádku, P8 schvaluju“ |
+| Další krok P10: revize celku 3 skillem `atlas-revize` v novém chatu; zadání v `docs/plany/celek-3.md`. Jako první má prověřit tón: jestli celek nenaznačuje, že se má člověk s křivdou smířit | Portréty i cestu psal jeden chat, revize má číst cizíma očima. U stoického celku je největší riziko rada snášet, ne věcná chyba |
+| Po revizi a schválení celku se `celek-3` sloučí do hlavní větve, hlavní větev se pošle na GitHub a založí se větev `rozhrani-v2` | Rozhodnutí z 2. 10. 2026 (plány větví a GitHub; rozhraní až po celku 3) |
+
+## 3. 10. 2026: Cesta 5 a stránka velké otázky 4 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta 5 má osm kroků: Noha, Tři koše, Dvě půlky, Otrok a císař, Záleží na tom, co mě potká?, Snímek z chatu, Kamenná tvář, Tvoje pravidlo | Autor schválil osnovu. Dělení (krok 3) a dvojice vět (krok 4) zůstaly zvlášť: každý krok má jeden úkol |
+| „Vůli“ vysvětluje cesta už v kroku 1, hned za citátem o kulhání | Slovo tam zazní poprvé a cesta musí stát i bez portrétu |
+| Krok 3 má jen citát `rukojet-1`; `rukojet-5` zazní až v kroku 4, a to beze jména | Jinak by student větu v odhadu „otrok, nebo císař“ poznal |
+| Krok 4 je Odkryj: obě věty stojí v textu bez jména; kdo je kdo, řekne srovnání a první věta kroku 5 | Text musí držet souvislost i bez odkrytí bloku |
+| Třetí podmínka nového případu je „Do večera to všichni pustili z hlavy“ místo „Nedá se zjistit, kdo to poslal“; první možnost zní „Ozvu se a řeknu nahlas, že to není v pořádku“ | Autor nad osnovou: u neznámého odesílatele nedávalo smysl „vrátím to stejnou mincí“ ani „promluvím si s ním“. Nová podmínka zkouší, jestli šlo o pověst, nebo o křivdu |
+| V kroku 6 jsou tři citáty; `hovory-vi-6` zazní jen nepřímou řečí v oddílu Co udělal | Autor nad osnovou: čtyři citáty za sebou student přeskakuje (revize celku 2) |
+| Aristotelova věta o „otrockém“ snášení urážek je ve Sporu nepřímo, jako citát stojí až v kroku 6 | Epiktétova odpověď ve Sporu musí mít na co odpovídat; citát v celku jen jednou |
+| Oddíl Co udělal v kroku 6 nese tři hlasy jako výklad („by nejspíš“): Epiktétos, Marcus Aurelius a Aristotelés | Vymyšlený případ; Aristotelés dává za pravdu studentovi, který se zlobí |
+| Karta cesty stojí v portrétu Epiktéta na konci kapitoly 04; věta o noze v kapitole 03 je odkaz na cestu | Kapitola 04 končí otázkou, na kterou cesta navazuje Sporem a novým případem; uprostřed kapitoly 03 by karta přerušila výklad |
+| Kam dál obou portrétů má cestu 5 a otázku 4; odkaz do Mapy a času vypadl | Kam dál má nejvýš čtyři pokračování; do mapy vede blok Kdo žil dřív? |
+| Na stránce otázky 4 odpovídají všichni čtyři „může“ a liší se důvodem | Autor: nechat. Hlas pro „nemůže“ antické podklady nenabízejí, přijde s dalšími obdobími |
+
+## 3. 10. 2026: Schválení P7 (celek 3) a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Portréty Epiktéta a Marca Aurelia schváleny, včetně odchylek od osnovy (Kdo žil dřív? s Diogenem a se Senekou, Dionovo hodnocení jako „jeden antický dějepisec“, sběratel lampy bez časového údaje) | Autor: „Můžeme se posunout dál“ |
+| Mini mapa nechává u Níkopole „působení asi 93 n. l.“; přibližné roky se na mini mapě neskrývají | Autor: nechat, jak je. Ve vyprávění zůstává odchod z Říma bez roku, rok s „asi“ nese jen mapa z dat |
+| Další krok P8: cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4; zadání v `docs/plany/celek-3.md`, doplněné o oddíl „Stav po P7“ | Pořadí workflow celku: psaní → revize → schválení |
+
+## 2. 10. 2026: Větev rozhrani-v2 (zadání)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Úpravy rozhraní (Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat) jdou do vlastní větve `rozhrani-v2` ve dvou krocích; zadání v `docs/plany/rozhrani-v2.md` | Šest úprav najednou by nešlo dobře zkontrolovat |
+| Větev se založí, až bude celek 3 sloučený a hlavní větev na GitHubu | Autor: bod, ke kterému se dá vrátit, kdyby po změnách něco nefungovalo |
+| V textech rozhraní nejsou lomené tvary („odpověděl/a“); nové texty volí formulaci, která rod neřeší, když zní přirozeně | Autor: lomené tvary ruší; jinak jedině elegantněji |
+| „Začít první cestu“ vede rovnou na krok 1 cesty; Návrat se nabízí jen v deníku, ne na Domů | Domů má mít jeden jasný začátek |
+
+## 2. 10. 2026: Portréty Epiktéta a Marca Aurelia (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Portrét Epiktéta má čtyři kapitoly: Otrok v Římě, Níkopolis, Co mu nikdo nevzal, Senátor a císař. Svoboda otroka a Helvidius mají každá vlastní blok | Autor nad osnovou: „Můžeš nechat 4“; portrét má mít čtyři až šest kapitol |
+| „Antoninus“ v citátu `hovory-vi-44` vysvětlí text jednou větou: jako císař se jmenoval Marcus Aurelius Antoninus | Autor: ověřit. Britannica uvádí celé jméno Caesar Marcus Aurelius Antoninus Augustus; bez vysvětlení by si ho student spletl s adoptivním otcem |
+| Helvidius je jménem jen jednou a jen v portrétu Epiktéta. V portrétu Marca jsou beze jména Hadrianus, Lucius Verus („spoluvládce“), Fronto i Cassius Dio („jeden antický dějepisec“) | Pravidlo 6; vedle vzbouřence Cassia by druhý Cassius mátl |
+| Helvidiovo rozhodnutí je Změň jednu věc bez oddílu Co udělal; jeho odpověď vypráví text za blokem a citát `rozpravy-i-2-21` uvádí věta „Senátor podle Epiktéta odpověděl…“ | Helvidius není v datech osob; citát je veden pod Epiktétem a text musí říct, čí slova to jsou |
+| Volba „Kdo z těch dvou je svobodnější?“ má čtvrtou možnost „Otroctví je křivda, ať si otrok myslí cokoli“ a zpětná vazba přizná, že ji Epiktétova odpověď celou nevyřídí | Podklady: tady má námitka váhu; student, který se stoikem nesouhlasí, má dostat slovo |
+| Velké myšlenky: u Epiktéta „Každá věc má dvě ucha“ a „Roli si nevybíráš“, u Marca „Mám dvě vlasti: Řím a svět“ a „Nestyď se, když ti pomáhají“ | Portréty se neopakují: Epiktétos se ptá, co mu nikdo nevezme, Marcus, co dluží druhým. Pevnost, ústraní a svlékání věcí nese kapitola 03 |
+| Kdo žil dřív? je u Epiktéta Diogenés × Epiktétos, u Marca Seneca × Marcus Aurelius | Dvojici Epiktétos × Marcus prozrazuje osa Současníci hned nad blokem a cesta 5 ji řekne v kroku 4 |
+| Věta o noze v kapitole 03 odkazuje na cestu 5 jen slovy; odkaz a kartu cesty doplní P8 | Cesta ještě neexistuje a test odkazů neexistující cíl nepustí |
+| Obrázek smí mít druhý střed výřezu `vyrezNaSirku` pro desku v hlavičce osobnosti na telefonu (16 : 10). Epiktétos: `vyrez` 50 % 60 %, na šířku 50 % 34 %; Marcus: 50 % 28 % (celý nápis na podstavci), na šířku 50 % 8 % | Rytiny jsou na výšku: s jedním středem chyběla Epiktétovi na telefonu hlava a Marcovi buď hlava na telefonu, nebo třetí řádek nápisu na notebooku |
+| Mini mapa píše u roku, který je v datech přibližný, „asi“ | U Níkopole stálo „působení 93 n. l.“ jako přesný rok; ve studentském textu je odchod z Říma bez roku a v datech „asi 93“. Totéž u Carnunta („asi 172“) |
+| Místo se v datech jmenuje Níkopolis (bylo Nikopolis) | Stejně jako v textu portrétu a v podkladech |
+
+## 2. 10. 2026: Podklady celku 3 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vstupní scénou cesty 5 je příběh s nohou. Vypráví se jako tradovaný („Vypráví se, že…“), bez jména pána, a hned za ním stojí doložená Epiktétova věta o noze | Autor: k Epiktétovi to patří nejvíc, kulhání je pro něj charakteristické. Příběh podává až Kelsos u Órigena, kulhání a věty z Rukojeti 9 a Rozprav I, 1, 23 jsou doložené |
+| Spor cesty 5 je Epiktétos × Aristotelés, podaný jako spor dvou škol bez smyšleného setkání | Autor zvolil Aristotela; jeho námitka je v Etice Nikomachově (1153b19–21, 1126a3–8) a student, který se stoikem nesouhlasí, v něm má spojence |
+| Cesta 5 má dva nové případy jako samostatné kroky: „snímek z chatu“ (Představ si…) a pokus s přehodnocením a potlačením emocí (doložený) | Autor: líbí se mi obojí |
+| Marcus Aurelius se zpracuje v celku 3 rovnou i s portrétem; další stoikové se doplní později | Autor: oba jsou stoikové a myšlenky jsou provázané |
+| Epiktétův odchod z Říma: ve studentském textu bez roku, v datech „asi 93“ (návrh z P6, autor může změnit na 89) | Prameny rok neuvádějí; Suetonius, Tacitus a Plinius spojují vykázání filozofů s procesy roku 93, SEP „Epictetus“ a IEP uvádějí 89 |
+| Příběhy z Historie Augusty a z Cassia Diona jen jako „Vypráví se, že…“; žádná věta z Hovorů k sobě se nespojuje s konkrétní událostí | Zadání P6; podle SEP Marcus události svého života popisuje tak, že je nelze poznat |
+| Řecké προαίρεσις se v citátech celku 3 převádí jako „vůle“, ne „volba“; text ji jednou vysvětlí (to, čím si věci vykládám a čím se rozhoduju, ne síla zatnout zuby) | Autor nechal výběr na Claudovi; věty o noze s „vůlí“ znějí přirozeně a stránka otázky 4 naváže na „svobodnou vůli“ |
+| Stránka velké otázky 4 „Jsem svobodný?“ vznikne už v celku 3 (P8) se čtyřmi hlasy: Aristotelés, Epikúros, Chrýsippos, Epiktétos | Autor: teď. Čtyři odpovědi se opravdu liší a cesta 5 potřebuje místo pro studenta, který nesouhlasí |
+| V datech zůstává Epiktétův odchod z Říma „asi 93“ | Autor souhlasil s návrhem z P6 |
+| Marcus Aurelius má na desce rytinu jezdecké sochy (Marco Dente, 1515–1527, Met, CC0), Epiktétos rytinu s berlou z roku 1715 (volné dílo); popisek u Epiktéta říká, čí je to představa | Autor vybral z navržených možností; spolehlivá antická podobizna Epiktéta v otevřených sbírkách není a berla sedí k atributu |
+| Roztřiď v cestě 5 má tři koše: „Mám v rukou“, „Zčásti“, „Nemám v rukou“ | Autor: tři. Prostřední koš je pro studenta poctivý a v dalším kroku se z něj stane úkol |
+| K novému případu B stačí souhrn studie (1998); krok drží jen tři tvrzení ze souhrnu a autora nejmenuje | Autor: stačí souhrn |
+| V `docs/styl.md` (dvojice 3) je věta o Cassiovi opravena na „písemnosti dal zničit nepřečtené“ | Autor: oprav. Cassius Dio má „zničil“, ne „spálil“ |
+
 ## 2. 10. 2026: Schválení celku 2 a další krok
 
 | Rozhodnutí | Důvod |
 | --- | --- |
 | Celek 2 „Jak mám žít?“ schválen a sloučen do hlavní větve | Autor: „Ano, schvaluji“ |
+| Hlavní větev odeslal na GitHub autor z terminálu; přihlášení tokenem je od té doby uložené v klíčence Macu | Na Macu do té doby nebylo uložené přihlášení ke GitHubu, odeslání bez něj končilo chybou |
 | Krok 5 cesty 6: první možnost zní „Jdu do toho také.“ | Autor po zapracování: „celé“ tam nesedělo |
 | Skilly `atlas-cesta`, `atlas-komponenta` a `atlas-revize` doplněny o poučení z revize celku 2 (hlas i proti filozofovi cesty, možnosti v každé podmínce, Spor a poslední slovo, sazba a Sätteri, fokus nad spodní lištou, čísla proti prameni) | Autor: doplnit; ať se chyby celku 2 neopakují |
 | Celek 3 „Co mám ve svých rukou?“: cesta 5, portrét Epiktéta, Marcus Aurelius jako druhý hlas cesty. O rozsahu (Marcův portrét, stránka otázky 4) rozhodne autor po osnově P6. Další krok P6, zadání v `docs/plany/celek-3.md` | Rozhodnutí z 1. 10.: celek s Epiktétem přijde hned po celku 2; stoicismus má v atlasu zvláštní váhu |

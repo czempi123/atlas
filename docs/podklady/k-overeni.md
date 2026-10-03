@@ -22,8 +22,8 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
 | Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
 | ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
-| Epiktétos | roky v Římě a v Níkopoli | SEP: Domitianův edikt roku 89; SEP „Stoicism“: 93. | Po rozhodnutí doplnit `do`/`od`. **Rozpor pramenů.** |
-| Marcus Aurelius | místo smrti, Carnuntum | Britannica: zemřel ve Vindoboně nebo v Sirmiu; Carnuntum a Granua jsou v nadpisech knih Hovorů (I a II/III), stránka je nepodala. | Doplnit Carnuntum z Hovorů (vydání Haines, Loeb) po ověření. |
+| ~~Epiktétos~~ | ~~roky v Římě a v Níkopoli~~ | **Vyřízeno 2. 10. 2026 (celek 3):** Gellius XV, 11 a Suetonius, Domitianus 10, 3 rok neuvádějí; Tacitus, Plinius a Dio spojují vykázání s procesy roku 93; SEP „Epictetus“ a IEP mají 89, Hieronymova kronika 95 („znovu“). | V datech „asi 93“ (`priblizne`), ve studentském textu bez roku (`celek-3-co-mam-v-rukou.md`, Rozpory). Autor může přepsat na 89. |
+| Marcus Aurelius | místo smrti | Britannica: zemřel ve Vindoboně nebo v Sirmiu. **Carnuntum vyřízeno 2. 10. 2026 (celek 3):** údaje „u Kvádů na Granui“ a „v Carnuntu“ přečteny v řeckém textu (Leopold, konec knih I a II); Carnuntum je v datech jako tažení asi 172–174 (Britannica „Carnuntum“). | Místo smrti nechat bez záznamu. |
 | Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
 | Cicero | místo narození (Arpinum), studia v Athénách a na Rhodu, vyhnanství, smrt u Formií | IEP stránka nepodala. | Doplnit z Plútarchova Cicerona. |
 | Plótínos | místo narození | Místo smrti doplněno (Minturnae v Kampánii, Porfyrios, Život Plótínův 2). Lykopolis uvádí až Eunapios, ne Porfyrios. | Doplnit Lykopolis, pokud stačí Eunapios. |
@@ -186,3 +186,83 @@ Cestě 6 a stránce otázky 1 zůstává: nápis na Zahradě a správce, hrnek s
 Vědomě vynecháno v P8: přímá řeč správce Zahrady (jeho otázka je v kroku 1 jen nepřímo) a Senekovo „v téhle slasti jsem zestárl“; žaludek jako věřitel (Dopisy 21, 11); Epikúrova chlouba, že se nají za méně než as, a jména Metrodóra a Polyaina; adresát Dopisu Menoikeovi; Kratés a rok jeho smrti; kdo v Zahradě žil a společná pokladna (nese profil); Vatikánský výrok 25, `vs-52` a `etika-1155a`; Suilliovo obvinění a scéna s Neronem (portrét Seneky); jména autorů studie, Gallup, počty odpovědí a hlášení, pojem spolupráce protivníků a to, že u nejšťastnějších roste nálada rychleji; Alexandr (cesta 7).
 
 Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s kamarády, sluchátka, lajky, člověk, kterému se dá svěřit, seriál), bunda v kroku 3, výzva „měsíc na minimum“ a její tři podmínky v kroku 5, úvodní případ stránky otázky 1 (sklad, nebo tábor). Domyšlené odpovědi ve Sporu jsou podané jako výklad („by kynik mohl namítnout“, „by Epikúros mohl odpovědět“), stejně jako věta, že válet se v horkém písku by pro Epikúra byla zbytečná bolest.
+
+## Celek 3 „Co mám ve svých rukou?“ (P6)
+
+2. 10. 2026. Podklady jsou v `docs/podklady/celek-3-co-mam-v-rukou.md`. Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Rok vykázání filozofů | Prameny rok neuvádějí, encyklopedie mají 89 i 93, Hieronymus 95. První Domitianovo vykázání (na které míří „znovu“ u Diona a Hieronyma) jsem v pramenech nenašel. | **Autor potvrdil 2. 10. 2026:** v datech „asi 93“, ve studentském textu bez roku. Původ roku 89 zůstává nedohledaný. |
+| Simplikios o Epiktétovi | Nečetl jsem ho; chromost od mládí a adoptované dítě znám jen z G. Longa (1877) a ze SEP. | Při portrétu ověřit v překladu Simplikiova komentáře, nebo nechat jako „Vypráví se“. |
+| Kelsos a Órigenés: datace | Asi 178 a asi 248 jen z Britanniky. | Stačí „o několik desítek let později“; přesné roky do studentského textu nedávat. |
+| Helvidius Priscus | Epiktétovo vyprávění (Rozpravy I, 2) je ověřené; jak a kdy Helvidius zemřel, ne. | Před portrétem ověřit (Suetonius, Vespasianus 15), nebo o jeho konci nepsat. |
+| Epafroditos | SEP: úředník Neronova dvora; Suda z něj dělá tělesného strážce. Jeho konec jsem neověřoval. | V textu jen „mocný muž na Neronově dvoře“. |
+| Arriános | Léta asi 86–160 jen z IEP; že byl později úředníkem a historikem, jsem pro tento celek neověřoval (pramen `arrianos-anabaze` v datech je). | Ve studentském textu jen „žák Arriános“. |
+| Cassius Dio 67 a 72 | Čteno jen anglicky (LacusCurtius), čísla kapitol nekontrolována proti řeckému vydání; Dionova životní data neověřena. | Nenazývat ho pamětníkem; u Marcova portrétu ověřit kapitoly. |
+| Historia Augusta | Datace a spolehlivost sbírky bez odborného zdroje. | Všechno z ní jako „Vypráví se“. |
+| Roky u Marca | Neověřeny: markomanské války, Cassiova vzpoura, smrt syna a Faustiny, Commodus spoluvládcem, počet dětí. | Před portrétem (P7) ověřit, nebo psát bez roků. |
+| Marcův věk při adopci | Historia Augusta: v osmnáctém roce; podle narození 16–17. | Věk neuvádět. |
+| Granua = Hron | Jen z Wikipedie. | „U řeky Granua v zemi Kvádů“, bez Hronu, dokud se nedoloží. |
+| Místní údaje v Hovorech | Leopold je tiskne na konci knih I a II, jiní jako záhlaví knih II a III. | „U jedné z knih stojí…“ |
+| „Krásné je to Platónovo“ (Hovory VII, 48) | Vydání se liší, kam věta patří; kde to Platón říká, jsem nehledal. | U pohledu shora Platóna nejmenovat. |
+| Studie J. J. Grosse (1998) | Četl jsem jen souhrn na PubMedu; jméno autora nástroj nezobrazil (znám ho, ale neověřil jsem ho na stránce) a Europe PMC odmítl požadavek. | **Autor rozhodl 2. 10. 2026: souhrn stačí.** V kroku jen tři věty ze souhrnu a bez jména autora; jméno se nepodařilo zobrazit ani přes Crossref (odmítl požadavek). |
+| „Stoický“ ve slovníku | SSJČ jsem neotvíral. | Kdyby text chtěl říct „dodnes se říká stoický klid“, ověřit heslo jako u „epikurejce“. |
+| ~~Obrázek Marca~~ | **Vyřízeno 2. 10. 2026:** autor zvolil rytinu jezdecké sochy z Met (inv. 59.570.282, CC0); stažena z muzea a zmenšena. | V datech jako `marcus-jezdec`. Že je socha antická a kdy vznikla, jsem neověřoval; popisek to netvrdí. Výřez na desce zkontrolovat v P7. |
+| ~~Obrázek Epiktéta~~ | **Vyřízeno 2. 10. 2026:** autor zvolil rytinu s berlou (Oxford 1715). Soubor je z World History Encyclopedia (uvádí Public Domain), protože Commons nástroj neotevře; vydání knihy dokládá katalog Eton College. | V datech jako `epiktetos-1715`. Jména kreslíře a rytce (značka MB) nejsou doložena odborným zdrojem, popisek je neuvádí. Původ řeckého dvojverší pod obrazem neověřen. Výřez zkontrolovat v P7. |
+| Antická podobizna Epiktéta | Že žádná spolehlivá není, jsem odborným zdrojem nedoložil; v pěti otevřených sbírkách není. | Popisek obrázku to netvrdí, říká jen, čí představa to je. |
+| Carnuntum | V datech bez ID z Pleiad, souřadnice přibližné. | Doplnit s ostatními místy. |
+| Stoický týden | Večerní ohlédnutí (Seneca, O hněvu) a představa nejhoršího nejsou ověřeny; patří jiným celkům. | Ověřit, až týden vznikne. |
+| Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). | Vztah `polemika` do dat až s cestou 8 nebo s profilem Démokrita. |
+| ~~`docs/styl.md`, dvojice 3~~ | **Vyřízeno 2. 10. 2026:** na pokyn autora opraveno na „Cassiovy písemnosti dal zničit nepřečtené“. | — |
+
+Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozpravy I, 25, 18–20), místa o smrti dítěte (Rukojeť 3 a 11; Rozpravy III, 3, 15; III, 24, 85–88; Hovory XI, 34), část Hovorů VI, 13 o tělesné lásce, Ciceronova výtka „jen slova“ (O nejvyšším dobru a zlu IV, 72), Karneadés jako pátý hlas otázky 4.
+
+### Po P7 (portréty Epiktéta a Marca Aurelia)
+
+2. 10. 2026. Vyřízeno: Marcovo císařské jméno (Britannica, přehled u hesla: Caesar Marcus Aurelius Antoninus Augustus, původně Marcus Annius Verus). Výřez obou rytin je zkontrolovaný v prohlížeči. Nově otevřené:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Půldruhého milionu (Rozpravy I, 26, 11–12) | Podklady neuvádějí, čeho (sesterciů, nebo denárů). | Úvod portrétu je bez jednotky; při revizi ověřit v řeckém textu, nebo nechat. |
+| Kapitol (Rozpravy I, 7, 32) | Co byl Kapitol a proč je „zapálit Kapitol“ příklad největšího zločinu, v podkladech není. | Text vysvětlivku nemá; po ověření zvážit jednu větu. |
+| Kdy Marcus přijal jméno Antoninus | Britannica dává jen celé jméno, ne kdy které přijal. | Text říká jen „jako císař se jmenoval Marcus Aurelius Antoninus“; víc nepsat. |
+| Musoniova zkouška, Epiktétův dovětek (Rozpravy I, 9, 31) | V podkladech je jen Musoniova otázka, ne Epiktétův výklad, proč je zbytečné chtít od druhého, co si člověk může dát sám. | Nepoužito; ověřit, kdyby revize chtěla scénu dovysvětlit. |
+| Lúkianův sběratel | Lúkianos píše „za našich časů“; jestli lampu koupil po Epiktétově smrti, neříká. | Text je bez časového údaje („Našel se člověk, který…“). |
+| ~~Mini mapa: „působení asi 93 n. l.“~~ | **Vyřízeno 3. 10. 2026:** autor nechává „asi 93“. | — |
+| Odkaz na cestu 5 v kapitole 03 portrétu Epiktéta | Věta „Celý ten příběh vypráví cesta…“ je zatím bez odkazu. | P8: odkaz nebo karta cesty; do Kam dál obou portrétů cesta 5 a otázka 4. |
+
+Vědomě vynecháno v portrétech: jméno ševce (Felikión), zemětřesení v Níkopoli, vousy (Rozpravy I, 2, 29), „největší ze stoiků“ (Gellius I, 2), „snášej a zdrž se“, dvojverší z rytiny, Helvidiův konec, Vespasianovo jméno; u Marca otec a dědeček, Hadrianova podmínka adopce, jména Hadriana, Lucia Vera, Frontona a Cassia Diona, murínové poháry, Granua, `hovory-iv-41`, ranní příprava, syn a Faustina, slova v nemoci a všechny roky vedené výše jako neověřené. Citáty `rozpravy-iii-2-4`, `hovory-v-1` a `rukojet-1-5`, které podklady nabízely i portrétu, zůstávají cestě 5 a Stoickému týdnu.
+
+Autorské, bez historického nároku: možnosti a zpětné vazby všech šesti bloků, podmínky obou pokusů Změň jednu věc, modelové odpovědi v Odkryj (lampa, tenisky, jednička z matiky), obě výzvy Zkus to žít.
+
+### Po P8 (cesta 5 a stránka otázky 4)
+
+3. 10. 2026. Nově otevřené:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Hlas pro „nemůže za to“ na otázce 4 | Všichni čtyři antičtí myslitelé odpovídají „může“; student s opačným názorem nemá na stránce zastánce. | Autor: nechat. Doplnit s obdobím 5 (Spinoza), případně dřív Karneadem jako větou u Chrýsippa. |
+| Dvě zprávy v celku | Úvodní případ otázky 4 (ošklivá zpráva v hádce) i nový případ cesty 5 (snímek z chatu) stojí na zprávě. Ptají se na jiné věci (odpovědnost × pověst). | Revize P10 posoudí, jestli to student čte jako opakování. |
+| `hovory-vi-6` | V datech je jako citát, v celku zazní jen nepřímo (krok 6, Co udělal). | Nechat pro Stoický týden, nebo při revizi vrátit jako citát. |
+| „O dvě generace později“ (krok 4, Kde jsme) | Přibližné: mezi Epiktétovou smrtí a Marcovými taženími je asi čtyřicet let. | Nechat; přesnější údaj text nepotřebuje. |
+| Krok 7 a slovo „stoický“ | Text se slovníkovému tvrzení („říká se stoický klid“) vyhnul, heslo v SSJČ ověřené není. | Platí řádek výš: ověřit, kdyby revize větu chtěla. |
+
+Vědomě vynecháno v cestě a na stránce otázky: lučištník (není Epiktétův, místo něj vítr), Kelsos a Órigenés jménem mimo údaj u citátu, „dveře jsou otevřené“, věta o špatném otci (Rukojeť 30), líný argument a Karneadés, čísla a jméno autora pokusu z roku 1998, ranní příprava a pohled shora, Stockdale.
+
+Autorské, bez historického nároku: osm karet a tři koše v kroku 2, modelové odpovědi v krocích 3 a 4, případ se snímkem z chatu, jeho možnosti a podmínky, možnosti v kroku 7, úvodní případ stránky otázky 4. Odpovědi hlasů na případ a třetí Epiktétův argument ve Sporu jsou výklad („by mohl“, „by nejspíš“).
+
+**Do skillu `atlas-overeni`:** tabulka zkreslení doplněna o čtyři řádky (stoik bez citu, noha a Epafroditos, noc u Dunaje, spálené dopisy) a zdroje o místa stoických textů; kopie ve `skills/atlas-overeni/references/zdroje.md` je upravená, skill v účtu je třeba uložit zvlášť.
+
+### Po P10 (revize celku 3)
+
+3. 10. 2026. Záznam revize: `docs/revize/celek-3-2026-10-03.md`.
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| ~~Rukojeť 20, druhá věta~~ | **Vyřízeno 3. 10. 2026:** autor nález schválil, citát je v `zdroje.yaml` i v podkladovém listu změněn. Revize navrhla vyměnit citát `rukojet-20` za větu „Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.“ Řecký text ověřen (H. Schenkl 1916: ὅταν οὖν ἐρεθίσῃ σέ τις, ἴσθι, ὅτι ἡ σή σε ὑπόληψις ἠρέθικε). | Když autor nález 1 schválí, přepsat citát v `zdroje.yaml` a řádek 8 v tabulce citátů podkladového listu. |
+| Půldruhého milionu (Rozpravy I, 26, 11–12) | Řecký text se mi při revizi otevřít nepodařilo; jednotku jsem neověřil. | Úvod portrétu zůstává bez jednotky. |
+| Cassiovy písemnosti | Dio 72, 28 (anglicky): papíry byly nalezeny „v truhlách Pudentových“; kdo byl Pudens, jsem neověřoval. | Text říká „Po Cassiovi zůstaly truhly s písemnostmi“; nechat, jméno nepřidávat. |
+| „Boje vyprázdnily pokladnu“ (portrét Marca, kapitola 02) | Je to zpráva Historie Augusty (17, 4), v textu stojí bez „Vypráví se“ mezi dvěma tradovanými větami. | Ponecháno; kdyby se kapitola přepisovala, připojit k tradovaným. |
+
+Při revizi znovu přečteno a sedí: Cassius Dio 72, 27–28 a 34–36; Historia Augusta, Marcus 2, 6; 5, 1–4; 8, 4–5; 13, 3–6; 17, 4–5; 21, 9 (anglicky, LacusCurtius); Rozpravy I, 1; I, 2; I, 7; I, 9 (G. Long).

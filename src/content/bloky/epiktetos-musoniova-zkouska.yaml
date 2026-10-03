@@ -1,0 +1,38 @@
+# Volba s důvodem · portrét Epiktéta, kapitola 01 „Otrok v Římě“.
+# Podklad: Rozpravy I, 9, 29–30 (Musonius zkouší otroka tím, co ho čeká od pána; „to se lidem stává“;
+# proč by se u pána přimlouval, když totéž může dostat od žáka) — docs/podklady/celek-3-co-mam-v-rukou.md,
+# Nejsilnější příběhy: Epiktétos 4. Možnosti jsou autorské.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Epiktétos je otrok a chodí za filozofem Musoniem. Učitel ho zkouší: vylíčí mu, co všechno ho může čekat od pána.
+  Pak čeká, co žák řekne.
+otazka: Co bys učiteli odpověděl ty?
+moznosti:
+  - text: Přimluv se za mě. Tebe pán poslechne spíš než mě.
+    tah: požádat o přímluvu
+    zpetna: >-
+      Hledáš pomoc u toho, kdo má větší slovo než ty, a to je rozumné. Přímluva ale platí jen do chvíle, než si to pán rozmyslí.
+      Na čem budeš stát potom?
+  - text: To se lidem stává.
+    tah: počítat s tím
+    jeho: true
+    zpetna: >-
+      Nenecháš se zaskočit: co se stává lidem, může se stát i tobě. Strach tím ztrácí půdu pod nohama.
+      Kde je ale hranice mezi klidem a tím, že si na křivdu zvykneš?
+  - text: To není spravedlivé. Takhle se s člověkem zacházet nemá.
+    tah: nazvat křivdu křivdou
+    zpetna: >-
+      Říkáš nahlas, co je špatně, a bez toho se žádná křivda nezmění. Pán tě ale neposlouchá a zítra bude pánem dál.
+      Co uděláš do té doby, než se něco změní?
+  - text: Uteču dřív, než k tomu dojde.
+    tah: utéct
+    zpetna: >-
+      Bereš věc do vlastních rukou a nečekáš, až rozhodne někdo jiný. Útěk ale nemusí vyjít.
+      A kdyby vyšel: přestal by ses bát, nebo by sis strach odnesl s sebou?
+coUdelal:
+  osoba: epiktetos
+  stejne: Odpověděl stejně jako ty. Řekl učiteli, že to se lidem stává.
+  jinak: Odpověděl jinak. Řekl učiteli, že to se lidem stává.
+zdroje: [epiktetos-rozpravy]

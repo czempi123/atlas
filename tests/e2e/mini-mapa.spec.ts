@@ -2,7 +2,7 @@
 // na telefonu (větší písmo) ani na notebooku.
 import { test, expect } from '@playwright/test';
 
-const PROFILY = ['sokrates', 'protagoras', 'epikuros', 'diogenes'];
+const PROFILY = ['sokrates', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
 
 for (const sirka of [390, 1440]) {
   test(`mini mapa: popisky míst se nepřekrývají · ${sirka} px`, async ({ page }) => {
@@ -42,4 +42,55 @@ test('mini mapa Epikúra: popisek Kolofónu stojí nad bodem, ostatní vedle ně
   await expect(mapa.locator('g.popisek--nahoru .nazev')).toHaveText('Kolofón');
   // Čtečka dál slyší všechna místa i s rolemi.
   await expect(mapa).toHaveAttribute('aria-label', /Kolofón \(pobyt 321/);
+});
+
+test('mini mapa: přibližný rok z dat má „asi“, přesný ne', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/osobnost/epiktetos/');
+  const epiktetos = page.locator('.minimapa svg');
+  await expect(epiktetos.locator('g.popisek', { hasText: 'Níkopolis' })).toContainText('působení asi 93');
+  await page.goto('/osobnost/marcus-aurelius/');
+  const marcus = page.locator('.minimapa svg');
+  await expect(marcus.locator('g.popisek', { hasText: 'Carnuntum' })).toContainText('válečné tažení asi 172');
+  await expect(marcus.locator('g.popisek', { hasText: 'Řím' })).toContainText('narození 121');
+  await expect(marcus.locator('g.popisek', { hasText: 'Řím' })).not.toContainText('asi');
+});
+
+// Mini osa přes přelom letopočtu (Seneca u Epiktéta): značky vlevo od přelomu nesou „př. n. l.“,
+// jinak by na ose stálo dvakrát „50“. Značky se na telefonu nesmějí překrývat.
+test('mini osa: roky před přelomem letopočtu mají „př. n. l.“ a značky se nepřekrývají', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/osobnost/epiktetos/');
+  await page.evaluate(() => document.fonts.ready);
+  const znacky = page.locator('.doba__osa .osa__znacka');
+  await expect(znacky.first()).toHaveText('50 př. n. l.');
+  await expect(znacky.nth(2)).toHaveText('50');
+  const okraje = await znacky.evaluateAll((z) => z.filter((e) => e.textContent).map((e) => e.getBoundingClientRect()).map((r) => [r.left, r.right]));
+  for (let i = 1; i < okraje.length; i++) expect(okraje[i][0], `značka ${i}`).toBeGreaterThan(okraje[i - 1][1]);
+  // Osa jen z roků před naším letopočtem zůstává bez přípony; říká to popisek pod ní.
+  await page.goto('/osobnost/epikuros/');
+  await expect(page.locator('.doba__osa .osa__znacka').first()).toHaveText('450');
+  await expect(page.locator('.doba__osa figcaption')).toContainText('Letopočty před naším letopočtem');
+});
+
+// Doba a lidé: vliv přes texty má vlastní skupiny. Pod „Znali se a přeli se“ smějí stát jen lidé,
+// kteří se potkali nebo přeli (revize celku 3: Epiktétos a Marcus Aurelius se nikdy neviděli).
+test('Doba a lidé: kdo jen četl, nestojí pod „Znali se a přeli se“', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const skupina = (nazev: string) => page.locator('.doba__vztahy > div').filter({ has: page.getByRole('heading', { name: nazev, exact: true }) });
+  await page.goto('/osobnost/epiktetos/');
+  await expect(skupina('Znali se a přeli se')).toHaveCount(0);
+  await expect(skupina('Četli ho a navázali')).toContainText('Marcus Aurelius');
+  await expect(skupina('Četli ho a navázali')).toContainText('navázal na jeho texty');
+  await expect(skupina('Učitelé')).toContainText('Musonius Rufus');
+  await page.goto('/osobnost/marcus-aurelius/');
+  await expect(skupina('Znali se a přeli se')).toHaveCount(0);
+  await expect(skupina('Koho četl')).toContainText('Epiktétos');
+  await expect(skupina('Koho četl')).toContainText('znal ho z textů');
+  await page.goto('/osobnost/epikuros/');
+  await expect(skupina('Četli ho a navázali')).toContainText('Lucretius');
+  await expect(skupina('Znali se a přeli se')).toHaveCount(0);
+  // Kdo se opravdu znal, zůstává pod původním nadpisem.
+  await page.goto('/osobnost/sokrates/');
+  await expect(skupina('Znali se a přeli se')).toContainText('Chairefón');
 });
