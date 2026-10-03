@@ -2,6 +2,19 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Schválení celku 3 a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Všech deset nálezů revize schváleno a zapracováno (`docs/revize/celek-3-2026-10-03.md`) | Autor: „Souhlasím, zapracuj všechny ty nálezy“ |
+| Celek 3 „Co mám ve svých rukou?“ je schválený; větev `celek-3` se slučuje do hlavní a hlavní větev jde na GitHub | Autor zvolil „Sloučit do hlavní a poslat“; pravidlo z 2. 10. 2026 (do hlavní větve jen schválený celek) |
+| Citát `rukojet-20` je druhá věta kapitoly („Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.“); první věta („kdo ti nadává nebo tě bije“) ve studentském textu není | Student, kterého někdo bije, ji čte jako radu snášet; krok 6 mluví o urážce, ne o ublížení |
+| Výzva Zkus to žít u stoického celku říká, že křivdu, se kterou se dá něco dělat, si student nevybírá | Cvičení ve smíření nesmí mířit na člověka, který ubližuje |
+| Vliv přes texty má v Době a lidech vlastní skupiny („Četli ho a navázali“, „Koho četl“); „Znali se a přeli se“ jen pro lidi, kteří se potkali nebo přeli | Epiktétos a Marcus Aurelius se nikdy neviděli; nadpis tvrdil setkání u tří profilů |
+| Změň jednu věc smí mít vlastní nadpis oddílu Co udělal (`coUdelal.nadpis`) | „Co udělal Epiktétos“ stálo nad domněnkou tří hlasů k vymyšlenému případu |
+| Na stránce osobnosti stojí pod deskou i popisek obrázku | U rytiny a kresby říká, čí je to představa; text portrétu říká „Sám nenapsal nic“ a rytina ukazuje Epiktéta s perem |
+| Další krok: větev `rozhrani-v2`, krok R1 (`docs/plany/rozhrani-v2.md`) | Rozhodnutí z 2. 10. 2026: rozhraní až po celku 3 na GitHubu |
+
 ## 3. 10. 2026: Revize celku 3 (P10)
 
 | Rozhodnutí | Důvod |

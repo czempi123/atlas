@@ -260,7 +260,7 @@ Autorské, bez historického nároku: osm karet a tři koše v kroku 2, modelov�
 
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
-| Rukojeť 20, druhá věta | Revize navrhuje vyměnit citát `rukojet-20` za větu „Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.“ Řecký text ověřen (H. Schenkl 1916: ὅταν οὖν ἐρεθίσῃ σέ τις, ἴσθι, ὅτι ἡ σή σε ὑπόληψις ἠρέθικε). | Když autor nález 1 schválí, přepsat citát v `zdroje.yaml` a řádek 8 v tabulce citátů podkladového listu. |
+| ~~Rukojeť 20, druhá věta~~ | **Vyřízeno 3. 10. 2026:** autor nález schválil, citát je v `zdroje.yaml` i v podkladovém listu změněn. Revize navrhla vyměnit citát `rukojet-20` za větu „Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.“ Řecký text ověřen (H. Schenkl 1916: ὅταν οὖν ἐρεθίσῃ σέ τις, ἴσθι, ὅτι ἡ σή σε ὑπόληψις ἠρέθικε). | Když autor nález 1 schválí, přepsat citát v `zdroje.yaml` a řádek 8 v tabulce citátů podkladového listu. |
 | Půldruhého milionu (Rozpravy I, 26, 11–12) | Řecký text se mi při revizi otevřít nepodařilo; jednotku jsem neověřil. | Úvod portrétu zůstává bez jednotky. |
 | Cassiovy písemnosti | Dio 72, 28 (anglicky): papíry byly nalezeny „v truhlách Pudentových“; kdo byl Pudens, jsem neověřoval. | Text říká „Po Cassiovi zůstaly truhly s písemnostmi“; nechat, jméno nepřidávat. |
 | „Boje vyprázdnily pokladnu“ (portrét Marca, kapitola 02) | Je to zpráva Historie Augusty (17, 4), v textu stojí bez „Vypráví se“ mezi dvěma tradovanými větami. | Ponecháno; kdyby se kapitola přepisovala, připojit k tradovaným. |

@@ -7,8 +7,8 @@ Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „
 | P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
 | P7 | Portrét Epiktéta a portrét Marca Aurelia | hotovo 2. 10. 2026, schváleno 3. 10. 2026 |
 | P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | hotovo a schváleno 3. 10. 2026 |
-| P10 | Revize celku | hotovo 3. 10. 2026 (`docs/revize/celek-3-2026-10-03.md`), verdikt „po opravách“; **čeká na rozhodnutí autora o deseti nálezech** |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
+| P10 | Revize celku | hotovo 3. 10. 2026 (`docs/revize/celek-3-2026-10-03.md`); všech deset nálezů schváleno a zapracováno týž den |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 3. 10. 2026 |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
 
@@ -208,7 +208,7 @@ Po P10 rozhodne autor o návrzích z revize. Po jejich zapracování následuje 
 
 **Opraveno rovnou** (commity 017aca4 a 98e2584): „Velkou část vlády válčil…“ v úvodu Marcova portrétu, „Epiktétos k ní má příběh“ v kapitole 04, „asi čtyři sta let“ v Kde jsme kroku 5, „jak léta jednal“ v Aristotelově odpovědi na otázce 4; mini osa současníků nese u roků před přelomem letopočtu „př. n. l.“ (nový test).
 
-**Čeká na rozhodnutí autora** (návrhy s hotovým zněním jsou v záznamu, nic z nich není zapracováno):
+**Nálezy** (autor schválil všech deset 3. 10. 2026 a všechny jsou zapracované; co přesně se změnilo, je v záznamu v oddílu „Po rozhodnutí autora“):
 
 | # | Nález | Váha |
 | --- | --- | --- |
@@ -223,6 +223,8 @@ Po P10 rozhodne autor o návrzích z revize. Po jejich zapracování následuje 
 | 9 | Dvě zprávy v celku (otázka 4 × krok 6) | drobné |
 | 10 | Kroky 2 a 3 říkají totéž dvakrát; cesta má asi 2 100 slov | drobné |
 
-Nálezy 3, 7 (nadpis) a 8 jsou zásahy do komponent (skill `atlas-komponenta`); nález 8 může počkat na větev `rozhrani-v2`.
+Nálezy 3, 7 (nadpis) a 8 byly zásahy do komponent (skill `atlas-komponenta`): `src/lib/vztahy.ts`, nepovinné `coUdelal.nadpis` a popisek obrázku pod deskou; popsané jsou v `docs/design.md`.
 
-**Další krok:** autor rozhodne o nálezech → zapracování v tomtéž chatu (texty, bloky, testy; celé `npm test`) → schválení celku 3 → sloučení `celek-3` do hlavní větve a hlavní větev na GitHub → větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1).
+**Celek 3 je schválený** (autor 3. 10. 2026: „Sloučit do hlavní a poslat“). Větev `celek-3` je sloučená do hlavní a hlavní větev je na GitHubu.
+
+**Další krok:** větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1). Mimo deset nálezů zůstalo pro ni: hlavička profilu s více otázkami na telefonu. Poučení z revize (student, kterému někdo ubližuje; nadpisy generovaných oddílů; shrnutí studie drží i pokyn skupině) zatím není ve skillech.
