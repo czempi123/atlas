@@ -229,7 +229,7 @@ Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozprav
 | Kdy Marcus přijal jméno Antoninus | Britannica dává jen celé jméno, ne kdy které přijal. | Text říká jen „jako císař se jmenoval Marcus Aurelius Antoninus“; víc nepsat. |
 | Musoniova zkouška, Epiktétův dovětek (Rozpravy I, 9, 31) | V podkladech je jen Musoniova otázka, ne Epiktétův výklad, proč je zbytečné chtít od druhého, co si člověk může dát sám. | Nepoužito; ověřit, kdyby revize chtěla scénu dovysvětlit. |
 | Lúkianův sběratel | Lúkianos píše „za našich časů“; jestli lampu koupil po Epiktétově smrti, neříká. | Text je bez časového údaje („Našel se člověk, který…“). |
-| Mini mapa: „působení asi 93 n. l.“ | Rok bere mapa z dat; ve studentském textu je odchod z Říma bez roku. | Autor: nechat „asi 93“, nebo rok z mapy u přibližných údajů skrýt. |
+| ~~Mini mapa: „působení asi 93 n. l.“~~ | **Vyřízeno 3. 10. 2026:** autor nechává „asi 93“. | — |
 | Odkaz na cestu 5 v kapitole 03 portrétu Epiktéta | Věta „Celý ten příběh vypráví cesta…“ je zatím bez odkazu. | P8: odkaz nebo karta cesty; do Kam dál obou portrétů cesta 5 a otázka 4. |
 
 Vědomě vynecháno v portrétech: jméno ševce (Felikión), zemětřesení v Níkopoli, vousy (Rozpravy I, 2, 29), „největší ze stoiků“ (Gellius I, 2), „snášej a zdrž se“, dvojverší z rytiny, Helvidiův konec, Vespasianovo jméno; u Marca otec a dědeček, Hadrianova podmínka adopce, jména Hadriana, Lucia Vera, Frontona a Cassia Diona, murínové poháry, Granua, `hovory-iv-41`, ranní příprava, syn a Faustina, slova v nemoci a všechny roky vedené výše jako neověřené. Citáty `rozpravy-iii-2-4`, `hovory-v-1` a `rukojet-1-5`, které podklady nabízely i portrétu, zůstávají cestě 5 a Stoickému týdnu.

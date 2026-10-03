@@ -2,6 +2,14 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Schválení P7 (celek 3) a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Portréty Epiktéta a Marca Aurelia schváleny, včetně odchylek od osnovy (Kdo žil dřív? s Diogenem a se Senekou, Dionovo hodnocení jako „jeden antický dějepisec“, sběratel lampy bez časového údaje) | Autor: „Můžeme se posunout dál“ |
+| Mini mapa nechává u Níkopole „působení asi 93 n. l.“; přibližné roky se na mini mapě neskrývají | Autor: nechat, jak je. Ve vyprávění zůstává odchod z Říma bez roku, rok s „asi“ nese jen mapa z dat |
+| Další krok P8: cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4; zadání v `docs/plany/celek-3.md`, doplněné o oddíl „Stav po P7“ | Pořadí workflow celku: psaní → revize → schválení |
+
 ## 2. 10. 2026: Větev rozhrani-v2 (zadání)
 
 | Rozhodnutí | Důvod |

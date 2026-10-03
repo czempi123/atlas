@@ -5,8 +5,8 @@ Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „
 | Krok | Co | Stav |
 | --- | --- | --- |
 | P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
-| P7 | Portrét Epiktéta a portrét Marca Aurelia | napsáno 2. 10. 2026, čeká na schválení autorem |
-| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | **další krok** po schválení P7, zadání níže |
+| P7 | Portrét Epiktéta a portrét Marca Aurelia | hotovo 2. 10. 2026, schváleno 3. 10. 2026 |
+| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | **další krok**, zadání níže |
 | P10 | Revize celku | po P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
@@ -74,7 +74,7 @@ Nejdřív mi v pár bodech napiš, co budeš ověřovat, které příběhy pova�
 
 ## P7: Portrét Epiktéta a portrét Marca Aurelia
 
-**Stav 2. 10. 2026:** napsáno, čeká na schválení autorem. Co je hotové a co si nese P8, je v oddílu „Stav po P7“ pod zadáním. Zadání zůstává pro záznam.
+**Stav 3. 10. 2026:** hotovo a schváleno autorem. Co je hotové a co si nese P8, je v oddílu „Stav po P7“ pod zadáním. Zadání zůstává pro záznam.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
 
@@ -98,9 +98,11 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý portrét, jaké kapitoly a bloky v něm budou, které citáty použiješ a čím se oba portréty navzájem neopakují, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci pošli snímky obou stránek a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
 
-## Stav po P7 (2. 10. 2026)
+## Stav po P7 (2. 10. 2026, schváleno 3. 10. 2026)
 
 **Rozhodl autor nad osnovou:** portrét Epiktéta má čtyři kapitoly; Marcovo císařské jméno Antoninus se ověří (ověřeno v Britannice a zapsáno v podkladech).
+
+**Rozhodl autor po portrétech (3. 10. 2026):** portréty schváleny; mini mapa nechává „působení asi 93 n. l.“.
 
 **Co je hotové:** `src/content/osobnosti/epiktetos.mdx` a `marcus-aurelius.mdx`, šest bloků v `src/content/bloky/` (`epiktetos-musoniova-zkouska`, `epiktetos-kdo-je-svobodnejsi`, `epiktetos-senator`, `marcus-vladnout-nechtel`, `marcus-prazdna-pokladna`, `marcus-pisemnosti`), obě stránky v testech prohlídky a mini mapy. Obrázky mají zkontrolovaný výřez (`vyrez` a nový `vyrezNaSirku` pro desku na telefonu), mini mapa píše u přibližného roku „asi“, místo se jmenuje Níkopolis. Rozhodnutí jsou v `docs/rozhodnuti.md` (P7), otevřené body v `docs/podklady/k-overeni.md` (Celek 3, Po P7).
 
@@ -115,14 +117,14 @@ Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý portrét, jak
 
 ## P8: Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4
 
-**Stav 2. 10. 2026:** po P7.
+**Stav 3. 10. 2026:** další krok.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
 
 ```text
 Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-3; portréty Epiktéta a Marca Aurelia z P7 jsou v ní hotové a schválené.
 
-Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-3-co-mam-v-rukou.md (Čeho se drží celý celek, Tvrzení: cesta 5 se Sporem a oběma novými případy, Velká otázka 4, Stoický týden, Citáty se sloupcem Kde použít, Rozpory a rozhodnutí), docs/podklady/k-overeni.md (oddíl Celek 3 a co přibylo v P7), docs/rozhodnuti.md (záznamy z 2. 10. 2026), obě revize v docs/revize/, v docs/architektura.md velkou otázku 4 a cesty 5, 33 a 34, v docs/design.md oddíly Bloky, Cesta a Velká otázka, hotovou cestu 6 (src/content/cesty/kolik-je-dost*), stránku otázky 1 (src/content/otazky/jak-zit.mdx) a oba nové portréty, ať se v celku nic neopakuje. Postupuj podle skillu atlas-cesta.
+Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-3-co-mam-v-rukou.md (Čeho se drží celý celek, Tvrzení: cesta 5 se Sporem a oběma novými případy, Velká otázka 4, Stoický týden, Citáty se sloupcem Kde použít, Rozpory a rozhodnutí), docs/podklady/k-overeni.md (oddíl Celek 3 a co přibylo v P7), docs/rozhodnuti.md (záznamy z 2. a 3. 10. 2026), v docs/plany/celek-3.md oddíl „Stav po P7“ (použité citáty, věta s odkazem na cestu, co portréty říkají o vztahu obou), obě revize v docs/revize/, v docs/architektura.md velkou otázku 4 a cesty 5, 33 a 34, v docs/design.md oddíly Bloky, Cesta a Velká otázka, hotovou cestu 6 (src/content/cesty/kolik-je-dost*), stránku otázky 1 (src/content/otazky/jak-zit.mdx) a oba nové portréty, ať se v celku nic neopakuje. Postupuj podle skillu atlas-cesta.
 
 Udělej:
 
