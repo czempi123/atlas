@@ -72,3 +72,25 @@ test('mini osa: roky před přelomem letopočtu mají „př. n. l.“ a značky
   await expect(page.locator('.doba__osa .osa__znacka').first()).toHaveText('450');
   await expect(page.locator('.doba__osa figcaption')).toContainText('Letopočty před naším letopočtem');
 });
+
+// Doba a lidé: vliv přes texty má vlastní skupiny. Pod „Znali se a přeli se“ smějí stát jen lidé,
+// kteří se potkali nebo přeli (revize celku 3: Epiktétos a Marcus Aurelius se nikdy neviděli).
+test('Doba a lidé: kdo jen četl, nestojí pod „Znali se a přeli se“', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const skupina = (nazev: string) => page.locator('.doba__vztahy > div').filter({ has: page.getByRole('heading', { name: nazev, exact: true }) });
+  await page.goto('/osobnost/epiktetos/');
+  await expect(skupina('Znali se a přeli se')).toHaveCount(0);
+  await expect(skupina('Četli ho a navázali')).toContainText('Marcus Aurelius');
+  await expect(skupina('Četli ho a navázali')).toContainText('navázal na jeho texty');
+  await expect(skupina('Učitelé')).toContainText('Musonius Rufus');
+  await page.goto('/osobnost/marcus-aurelius/');
+  await expect(skupina('Znali se a přeli se')).toHaveCount(0);
+  await expect(skupina('Koho četl')).toContainText('Epiktétos');
+  await expect(skupina('Koho četl')).toContainText('znal ho z textů');
+  await page.goto('/osobnost/epikuros/');
+  await expect(skupina('Četli ho a navázali')).toContainText('Lucretius');
+  await expect(skupina('Znali se a přeli se')).toHaveCount(0);
+  // Kdo se opravdu znal, zůstává pod původním nadpisem.
+  await page.goto('/osobnost/sokrates/');
+  await expect(skupina('Znali se a přeli se')).toContainText('Chairefón');
+});

@@ -1,9 +1,10 @@
 ---
 // Blok „Doba a lidé“: generuje se z dat (lide, vztahy, mista), takže se nikdy nerozejde s mapou.
-// Mini osa se současníky, výřez mapy, učitelé a žáci, známí a kdo navazoval.
+// Mini osa se současníky, výřez mapy, učitelé a žáci, známí, vliv přes texty a kdo navazoval.
 import type { TOsoba, TVztah } from '../../lib/schema';
 import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
 import { zivot } from '../../lib/casy';
+import { roleVztahu, skupinyVztahu } from '../../lib/vztahy';
 import Mince from '../ui/Mince.astro';
 import MiniOsa from './MiniOsa.astro';
 import MiniMapa from './MiniMapa.astro';
@@ -11,23 +12,9 @@ import MiniMapa from './MiniMapa.astro';
 interface Props { osoba: TOsoba }
 const { osoba } = Astro.props;
 const vztahy = vztahyOsoby(osoba.id);
-const role = (v: TVztah, smer: 'od' | 'k') => {
-  switch (v.typ) {
-    case 'ucitel': return smer === 'od' ? 'žák' : 'učitel';
-    case 'znali-se': return 'znali se';
-    case 'vliv-textem': return smer === 'od' ? 'navázal na jeho texty' : 'četl jeho texty';
-    case 'polemika': return smer === 'od' ? 'polemizoval s ním' : 'polemizoval s ním';
-  }
-};
-const zaci = vztahy.filter((x) => x.vztah.typ === 'ucitel' && x.smer === 'od');
-const ucitele = vztahy.filter((x) => x.vztah.typ === 'ucitel' && x.smer === 'k');
-const ostatni = vztahy.filter((x) => x.vztah.typ !== 'ucitel');
 const retezy = kdoNavazoval(osoba.id);
-const skupiny = [
-  { nazev: 'Učitelé', lide: ucitele },
-  { nazev: 'Žáci', lide: zaci },
-  { nazev: 'Znali se a přeli se', lide: ostatni },
-].filter((s) => s.lide.length);
+// Vliv přes texty má vlastní skupiny: „Znali se a přeli se“ smí stát jen nad lidmi, kteří se potkali nebo přeli.
+const skupiny = skupinyVztahu(vztahy);
 const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 'teckovana', 'vliv-textem': 'carkovana', polemika: 'vlnovka' };
 ---
 <section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide">
@@ -58,7 +45,7 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
                 <span class="lide__jmeno">{druhy.jmeno}</span>
                 <span class="t-popisek">
                   <span class={`cara cara--${TYP_CARY[vztah.typ]}`} aria-hidden="true"></span>
-                  {role(vztah, smer)}{vztah.poznamka ? ` · ${vztah.poznamka}` : ''} · {zivot(druhy)}
+                  {roleVztahu(vztah, smer)}{vztah.poznamka ? ` · ${vztah.poznamka}` : ''} · {zivot(druhy)}
                 </span>
               </span>
             </li>
