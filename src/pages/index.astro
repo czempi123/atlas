@@ -1,15 +1,49 @@
 ---
-// Domů: pozvání k otázce, jeden jasný začátek, pás období a tři vstupy.
+// Domů: pozvání k otázce a jeden jasný začátek (první cesta), pás období a tři vstupy.
+// Jediná výzva k začátku je hlavní tlačítko; panel vedle úvodu říká, o čem první cesta je, a vede na tentýž krok.
+import { getCollection } from 'astro:content';
 import Zakladni from '../layouts/Zakladni.astro';
 import PasObdobi from '../components/ui/PasObdobi.astro';
 import Tlacitko from '../components/ui/Tlacitko.astro';
 import Ikona from '../components/ui/Ikona.astro';
 import Mince from '../components/ui/Mince.astro';
 import Pokracuj from '../components/ostrovy/Pokracuj.svelte';
-import CestaKarta from '../components/cesta/CestaKarta.astro';
 import { osoba } from '../lib/data';
+import { zacatekDomu, type CestaDomu } from '../lib/pokracuj';
+import { nezlomitelne } from '../lib/sazba.js';
 
-const sokrates = osoba('sokrates');
+// První cesta atlasu: tlačítko vede rovnou na její krok 1, údaj pod ním se skládá z dat cesty.
+const PRVNI = 'kdy-mam-dobry-duvod-verit';
+const vsechnyCesty = await getCollection('cesty');
+const kroky = await getCollection('kroky');
+const cesty: Record<string, CestaDomu> = Object.fromEntries(
+  vsechnyCesty.map((c) => [c.id, { cislo: c.data.cislo, nazev: c.data.nazev, pocet: kroky.filter((k) => k.data.cesta === c.id).length, minut: c.data.minut }]),
+);
+const prvni = vsechnyCesty.find((c) => c.id === PRVNI);
+if (!prvni) throw new Error(`První cesta „${PRVNI}“ není v src/content/cesty`);
+const zacatek = zacatekDomu(null, cesty, PRVNI);
+const filozofove = prvni.data.filozofove.map(osoba);
+// Vracející se student: tlačítko přepíše skript hned za ním, ještě před vykreslením (nic neproblikne).
+// Rozhoduje táž funkce jako při sestavení; do stránky se vkládá její text.
+const doSkriptu = (x: unknown) => JSON.stringify(x).replace(/</g, '\\u003c');
+const skript = `(function () {
+  try {
+    var d = JSON.parse(localStorage.getItem('atlas-denik') || 'null');
+    if (!d || d.verze !== 1) return;
+    var z = (${zacatekDomu.toString()})(d, ${doSkriptu(cesty)}, ${doSkriptu(PRVNI)});
+    var k = document.querySelector('[data-zacatek]');
+    // Je-li v deníku něco, co Pokračuj nejspíš nabídne, vyhradí se mu řádek předem.
+    var neco = function (x) { return !!x && typeof x === 'object' && Object.keys(x).length > 0; };
+    if (neco(d.navstivene) || neco(d.aktivita) || neco(d.cesty)) k.parentNode.querySelector('.pokracuj-misto').setAttribute('data-ceka', '');
+    if (z.stav === 'zacit') return;
+    var a = k.querySelector('[data-zacatek-tlacitko]');
+    a.setAttribute('href', z.href);
+    a.querySelector('span').textContent = z.text;
+    k.querySelector('[data-zacatek-udaj]').textContent = z.udaj;
+    k.setAttribute('data-zacatek', z.stav);
+  } catch (e) { /* úložiště nedostupné: zůstane výchozí začátek */ }
+})();`;
+
 const sLidmi = new Set(['1', '2']);
 const vstupy = [
   { href: '/mapa/', ikona: 'mapa', nazev: 'Mapa a čas', text: 'Kdo žil kdy, kde a s kým. Na mapě jsou jen ti, kdo ve zvoleném roce žijí.' },
@@ -19,18 +53,29 @@ const vstupy = [
 ---
 <Zakladni titulek="Atlas myšlení" sekce="domu">
   <section class="uvod stranka">
-    <p class="t-nadtitulek nadtitulek">Atlas myšlení · filozofie od Thaléta po dnešek</p>
-    <h1 class="t-display-1">Velké otázky mají <em>dlouhé dějiny.</em></h1>
-    <p class="t-perex perex">Lidé se dva a půl tisíce let ptají, jak žít, co je skutečné a komu věřit. Poznej je jako lidi, ne jako jména z učebnice. A pak si odpověz sám.</p>
-    <div class="akce">
-      <Tlacitko href="/osobnost/sokrates/" ikona="dal">Začni se Sókratem</Tlacitko>
-      <Tlacitko href="/mapa/" varianta="vedlejsi">Mapa a čas</Tlacitko>
+    <div class="uvod__text">
+      <p class="t-nadtitulek nadtitulek">Atlas myšlení · filozofie od Thaléta po dnešek</p>
+      <h1 class="t-h1">Velké otázky mají <em>dlouhé dějiny.</em></h1>
+      <p class="t-perex perex">Lidé se dva a půl tisíce let ptají, jak žít, co je skutečné a komu věřit. Poznej je jako lidi, ne jako jména z učebnice. A pak si odpověz sám.</p>
+      <div class="zacatek" data-zacatek={zacatek.stav}>
+        <div class="zacatek__hlavni">
+          <Tlacitko href={zacatek.href} ikona="dal" data-zacatek-tlacitko>{zacatek.text}</Tlacitko>
+          <p class="t-popisek zacatek__udaj" data-zacatek-udaj>{zacatek.udaj}</p>
+        </div>
+        <Tlacitko href="/osobnost/sokrates/" varianta="odkaz" class="zacatek__vedlejsi">Poznat Sókrata</Tlacitko>
+      </div>
+      <div class="pokracuj-misto"><Pokracuj client:idle /></div>
+      <script is:inline set:html={skript}></script>
     </div>
-    <Pokracuj client:idle />
-  </section>
 
-  <section class="prvni-cesta stranka" aria-label="První cesta">
-    <CestaKarta slug="kdy-mam-dobry-duvod-verit" nadtitulek="Začni cestou" />
+    <a class={`prvni-cesta obdobi-${prvni.data.obdobi}`} href={`/cesta/${PRVNI}/1/`}>
+      <span class="prvni-cesta__mince" aria-hidden="true">{filozofove.map((o) => <Mince osoba={o} varianta="sel" velikost={56} />)}</span>
+      <span class="prvni-cesta__text">
+        <span class="t-nadtitulek prvni-cesta__nad">Cesta {prvni.data.cislo} · {prvni.data.nazev}</span>
+        <span class="t-h2">Nikdo není <em>moudřejší.</em></span>
+        <span class="t-perex">{nezlomitelne(prvni.data.vstup)}</span>
+      </span>
+    </a>
   </section>
 
   <section class="obdobi stranka" aria-labelledby="osm-obdobi">
@@ -55,31 +100,37 @@ const vstupy = [
       ))}
     </ul>
   </section>
-
-  <section class="pribeh stranka obdobi-1" aria-labelledby="pribeh">
-    <a class="pribeh__karta" href="/osobnost/sokrates/#delfy">
-      <Mince osoba={sokrates} varianta="sel" velikost={64} />
-      <span class="pribeh__text">
-        <span class="t-nadtitulek pribeh__nad">Příběh na začátek</span>
-        <span class="t-h2" id="pribeh">Nikdo není <em>moudřejší.</em></span>
-        <span class="t-perex">Věštírna v Delfách prohlásila, že nikdo není moudřejší než Sókratés. Sókratés o sobě věděl, že moudrý není. Tak se ji rozhodl vyvrátit.</span>
-      </span>
-    </a>
-  </section>
 </Zakladni>
 
 <style>
-  .uvod { padding-top: var(--s-8); padding-bottom: var(--s-8); }
-  .nadtitulek { margin: 0 0 var(--s-5); color: var(--period-1); }
-  h1 { max-width: 11ch; margin-bottom: var(--s-6); }
+  .uvod { display: grid; gap: var(--s-5); padding-top: var(--s-5); padding-bottom: var(--s-7); }
+  .nadtitulek { margin: 0 0 var(--s-4); color: var(--period-1); }
+  h1 { max-width: 16ch; margin-bottom: var(--s-5); }
   h1 em { color: var(--ink-2); }
-  .perex { max-width: 36ch; margin-bottom: var(--s-6); }
-  .akce { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+  .perex { max-width: 36ch; margin-bottom: var(--s-5); }
+  /* Údaj patří k hlavnímu tlačítku: stojí hned pod ním, i když se vedlejší odkaz zalomí na další řádek. */
+  .zacatek { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--s-2) var(--s-5); }
+  .zacatek__hlavni { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-2); }
+  .zacatek__udaj { margin: 0; color: var(--ink-2); }
+  .zacatek :global(.zacatek__vedlejsi) { margin-top: var(--s-1); }
+  /* Vracejícímu se studentovi se místo pro Pokračuj vyhradí předem, aby se obsah pod úvodem po načtení deníku neposunul. */
+  .pokracuj-misto[data-ceka] { min-height: var(--dotyk); margin-top: var(--s-3); }
+  .prvni-cesta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+    padding: var(--s-5);
+    border-radius: var(--r-md);
+    background: var(--pc-tint);
+    text-decoration: none;
+  }
+  .prvni-cesta__mince { display: flex; gap: var(--s-2); }
+  .prvni-cesta__text { display: flex; flex-direction: column; gap: var(--s-3); }
+  .prvni-cesta__nad { color: var(--pc); }
+  .prvni-cesta:hover .t-h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
   .sekce-hlavicka { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-2) var(--s-5); margin-bottom: var(--s-4); }
   .sekce-hlavicka p { margin: 0; }
   .obdobi { margin-bottom: var(--s-8); }
-  .prvni-cesta { margin-top: calc(-1 * var(--s-6)); margin-bottom: var(--s-8); }
-  .prvni-cesta :global(.cesta-karta) { margin: 0; }
   .rozcestnik ul { display: grid; gap: var(--s-4); margin: 0; padding: 0; list-style: none; }
   .rozcestnik a {
     display: flex;
@@ -94,22 +145,9 @@ const vstupy = [
   }
   .rozcestnik a:hover { border-color: var(--muted); }
   .rozcestnik .text { color: var(--ink-2); font-size: 15px; }
-  .pribeh { margin-top: var(--s-8); }
-  .pribeh__karta {
-    display: flex;
-    flex-direction: column;
-    gap: var(--s-5);
-    padding: var(--s-6) var(--s-5);
-    border-radius: var(--r-md);
-    background: var(--pc-tint);
-    text-decoration: none;
-  }
-  .pribeh__text { display: flex; flex-direction: column; gap: var(--s-3); max-width: 46ch; }
-  .pribeh__nad { color: var(--ink-2); }
-  .pribeh__karta:hover .t-h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
   @media (min-width: 900px) {
-    .uvod { padding-top: var(--s-10); }
+    .uvod { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--s-8); align-items: center; padding-top: var(--s-7); }
+    .prvni-cesta { padding: var(--s-6); }
     .rozcestnik ul { grid-template-columns: repeat(3, 1fr); }
-    .pribeh__karta { flex-direction: row; align-items: flex-start; padding: var(--s-7) var(--s-8); }
   }
 </style>
