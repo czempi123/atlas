@@ -2,6 +2,8 @@
   // Mapa Mapy a času: předpočítaný podklad období (pevnina, vodní linky, síť, krajiny), nad ním lidé,
   // kteří ve zvoleném roce žijí. Víc lidí na jednom místě = shluk, který se po kliknutí rozbalí.
   // Kdo je mimo výřez, má štítek se šipkou u okraje. Při změně období se kamera plynule přesune.
+  // Přepínač Stín odkazu má vedle sebe tlačítko „?“: krátké vysvětlení se otevře pod přepínačem
+  // (klepnutím i klávesnicí, ne jen po najetí myší), zavře ho Esc nebo klepnutí vedle.
   import { onDestroy, untrack } from 'svelte';
   import type { PodkladObdobi } from '../../lib/mapa';
   import type { OsobaV, MistoV } from '../../lib/mapa-vstup';
@@ -243,7 +245,18 @@
       rozbaleny = null;
     } else rozbaleny = rozbaleny === z.misto ? null : z.misto;
   }
+  // Vysvětlení stínu odkazu: říká, co dělá stinOdkazu v src/lib/cas-mapy.ts.
+  let vysvetleni = $state(false);
+  let tlVysvetleni: HTMLButtonElement | undefined = $state();
+  function klepnuti(e: PointerEvent) {
+    if (vysvetleni && !(e.target as Element | null)?.closest?.('.stin-ovladani')) vysvetleni = false;
+  }
   function klavesa(e: KeyboardEvent) {
+    if (e.key === 'Escape' && vysvetleni) {
+      vysvetleni = false;
+      tlVysvetleni?.focus();
+      return;
+    }
     if (e.key === 'Escape' && rozbaleny) {
       const m = rozbaleny;
       rozbaleny = null;
@@ -260,7 +273,7 @@
   };
 </script>
 
-<svelte:window onkeydown={klavesa} />
+<svelte:window onkeydown={klavesa} onpointerdown={klepnuti} />
 
 <div class="mapa" bind:clientWidth={sirka} bind:clientHeight={vyska} class:mapa--kamera={!!prechod} style:--k={meritkoObrazovky}>
   {#if odchazejici && vbOdchazejici}
@@ -384,10 +397,26 @@
     </div>
   {/if}
 
-  <label class="prepinac-stinu">
-    <input type="checkbox" checked={stin} onchange={(e) => onstin((e.currentTarget as HTMLInputElement).checked)} />
-    <span>Stín odkazu</span>
-  </label>
+  <div class="stin-ovladani">
+    <label class="prepinac-stinu">
+      <input type="checkbox" checked={stin} onchange={(e) => onstin((e.currentTarget as HTMLInputElement).checked)} />
+      <span>Stín odkazu</span>
+    </label>
+    <button
+      type="button"
+      class="stin-otazka"
+      bind:this={tlVysvetleni}
+      aria-expanded={vysvetleni}
+      aria-controls="stin-vysvetleni"
+      aria-label="Co je stín odkazu?"
+      onclick={() => (vysvetleni = !vysvetleni)}
+    >?</button>
+    <div class="stin-vysvetleni" id="stin-vysvetleni" role="status">
+      {#if vysvetleni}
+        <p>Kdo zemřel, z mapy zmizí. Se stínem odkazu tam vybledle zůstane, dokud žije někdo, kdo ho znal, četl, učil se u něj nebo se s ním přel.</p>
+      {/if}
+    </div>
+  </div>
 
   <div class="zprava" role="status" aria-live="polite">
     {#if zprava}<p>{zprava}</p>{/if}
@@ -424,9 +453,10 @@
   .svit--2 { stroke-width: calc(7px * var(--k)); opacity: var(--map-glow-2); }
   .pevnina { fill: var(--map-land); stroke: var(--map-coast); stroke-width: calc(0.9px * var(--k)); stroke-linejoin: round; }
   .krajina { font-family: var(--font-sans); font-size: calc(11px * var(--k)); font-weight: 600; letter-spacing: 0.16em; fill: var(--muted); }
-  .krajina--more { font-family: var(--font-serif); font-style: italic; font-size: calc(16px * var(--k)); font-weight: 400; letter-spacing: 0.02em; }
+  /* Názvy moří v --ink-2: --muted má na světlém moři kontrast 4,49 : 1, těsně pod AA. */
+  .krajina--more { font-family: var(--font-serif); font-style: italic; font-size: calc(16px * var(--k)); font-weight: 400; letter-spacing: 0.02em; fill: var(--ink-2); }
   .krajina--zakryta { opacity: 0.35; }
-  .krajina__dnes { font-family: var(--font-sans); font-style: normal; font-size: calc(10.5px * var(--k)); font-weight: 500; letter-spacing: 0.02em; text-transform: none; }
+  .krajina__dnes { font-family: var(--font-sans); font-style: normal; font-size: calc(12px * var(--k)); font-weight: 500; letter-spacing: 0.02em; text-transform: none; }
   .cesta { fill: none; stroke: var(--pc); stroke-width: calc(2px * var(--k)); stroke-dasharray: calc(1px * var(--k)) calc(5px * var(--k)); stroke-linecap: round; }
 
   .vrstva { position: absolute; inset: 0; pointer-events: none; }
@@ -549,15 +579,58 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
-    font-size: 11px;
+    font-size: var(--fs-popisek);
     color: var(--ink-2);
     pointer-events: none;
   }
   .meritko__cara { height: 5px; border: 2px solid var(--ink-2); border-top: 0; }
-  .prepinac-stinu {
+  .stin-ovladani {
     position: absolute;
     left: var(--s-3);
     top: var(--s-3);
+    z-index: 15;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    max-width: calc(100% - 2 * var(--s-3));
+    pointer-events: none;
+  }
+  .stin-ovladani > * { pointer-events: auto; }
+  .stin-otazka {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    box-shadow: 0 0 0 1px var(--rule);
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+  }
+  /* Dotykový cíl 44 px kolem tlačítka o průměru 32 px. */
+  .stin-otazka::after { content: ''; position: absolute; inset: -6px; }
+  .stin-otazka:hover, .stin-otazka[aria-expanded='true'] { box-shadow: 0 0 0 1.5px var(--ink); }
+  /* Vysvětlení stojí pod přepínačem, nikdy přes něj. */
+  .stin-vysvetleni { flex-basis: 100%; }
+  .stin-vysvetleni p {
+    max-width: 300px;
+    margin: 0;
+    padding: var(--s-2) var(--s-3);
+    border-radius: var(--r-sm);
+    background: var(--surface);
+    box-shadow: var(--stin-mapa), 0 0 0 1px var(--rule);
+    color: var(--ink);
+    font-size: var(--fs-ovladani);
+    line-height: 1.4;
+  }
+  .prepinac-stinu {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -583,7 +656,7 @@
     white-space: nowrap;
     box-shadow: var(--stin-mapa);
   }
-  .mapa--kamera .prepinac-stinu { opacity: 0.6; }
+  .mapa--kamera .prepinac-stinu, .mapa--kamera .stin-otazka { opacity: 0.6; }
   @media (max-width: 899px) {
     .zprava { top: auto; bottom: var(--s-6); }
     .zprava p { white-space: normal; text-align: center; max-width: 86vw; }

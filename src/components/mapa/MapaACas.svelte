@@ -224,6 +224,7 @@
       rozsah={vstup.rozsah}
       onvyber={vyberObdobi}
       onskok={(r) => zmenaRoku(r, 'skok')}
+      onpripravuje={(o) => ukazZpravu(`${o.nazev}: připravujeme.`)}
     />
   </div>
 

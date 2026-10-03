@@ -1,6 +1,9 @@
 // Skupiny vztahů v oddílu Doba a lidé: vliv přes texty nesmí skončit pod nadpisem „Znali se a přeli se“.
 import { describe, it, expect } from 'vitest';
-import { roleVztahu, skupinyVztahu, type VztahOsoby } from '../../src/lib/vztahy';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { roleVztahu, skupinyVztahu, LEGENDA_VZTAHU, LEGENDA_TRADOVANY, type VztahOsoby } from '../../src/lib/vztahy';
+import { TypVztahu } from '../../src/lib/schema';
 import { vztahyOsoby } from '../../src/lib/data';
 
 const v = (typ: 'ucitel' | 'znali-se' | 'vliv-textem' | 'polemika', smer: 'od' | 'k', druhy: string): VztahOsoby<string> =>
@@ -40,5 +43,19 @@ describe('roleVztahu', () => {
   it('učitel a žák podle směru', () => {
     expect(roleVztahu({ typ: 'ucitel' }, 'od')).toBe('žák');
     expect(roleVztahu({ typ: 'ucitel' }, 'k')).toBe('učitel');
+  });
+});
+
+describe('legenda čar mezi životy', () => {
+  it('má právě čtyři typy vztahů ze schématu dat, každý jednou a s vlastní čárou', () => {
+    expect(LEGENDA_VZTAHU.map((v) => v.typ)).toEqual([...TypVztahu.options]);
+    expect(new Set(LEGENDA_VZTAHU.map((v) => v.cara)).size).toBe(4);
+  });
+  it('pojmenování sedí s CLAUDE.md a s kartou člověka', () => {
+    const pravidla = readFileSync(join(import.meta.dirname, '../../CLAUDE.md'), 'utf8');
+    const veta = pravidla.split('\n').find((r) => r.includes('Vztah mezi lidmi má vždy typ'))!;
+    for (const v of LEGENDA_VZTAHU) expect(veta, v.nazev).toContain(v.nazev);
+    const karta = readFileSync(join(import.meta.dirname, '../../src/components/mapa/KartaCloveka.svelte'), 'utf8');
+    expect(karta).toContain(`· ${LEGENDA_TRADOVANY}`);
   });
 });

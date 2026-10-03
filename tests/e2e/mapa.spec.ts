@@ -168,3 +168,244 @@ test('mapa · klávesnice: posuvník, řeka a přepnutí období', async ({ page
   await expect(page).toHaveURL(/rok=-/);
   await expect(page.locator('.mseg--aktivni')).toContainText('1');
 });
+
+// ── Srozumitelnější ovládání (větev rozhrani-v2): vysvětlení stínu, legenda čar, připravovaná období ──────────
+
+const VYSVETLENI = 'Kdo zemřel, z mapy zmizí. Se stínem odkazu tam vybledle zůstane, dokud žije někdo, kdo ho znal, četl, učil se u něj nebo se s ním přel.';
+const LEGENDA = ['učitel a žák', 'osobně se znali', 'vliv přes texty', 'polemika', 'slabší čára: vypráví se'];
+const prekryv = (a: { x: number; y: number; width: number; height: number }, b: { x: number; y: number; width: number; height: number }) =>
+  a.x < b.x + b.width && b.x < a.x + a.width && a.y < b.y + b.height && b.y < a.y + a.height;
+
+test('mapa · stín odkazu: vysvětlení jen klávesnicí, Esc ho zavře a přepínač zůstává vidět a ovladatelný', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/mapa/?rok=-360');
+  await pripravit(page);
+  const otazka = page.getByRole('button', { name: 'Co je stín odkazu?' });
+  const prepinac = page.getByRole('checkbox', { name: 'Stín odkazu' });
+  const text = page.locator('#stin-vysvetleni');
+  await expect(otazka).toHaveAttribute('aria-expanded', 'false');
+  await expect(text).toHaveText('');
+
+  // Tabulátorem z přepínače na otazník, Enter otevře.
+  await prepinac.focus();
+  await page.keyboard.press('Tab');
+  await expect(otazka).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(otazka).toHaveAttribute('aria-expanded', 'true');
+  await expect(text).toHaveText(VYSVETLENI);
+  // Jedna až dvě věty a zazní i ve čtečce.
+  expect(VYSVETLENI.split(/(?<=\.)\s/).length).toBeLessThanOrEqual(2);
+  await expect(text).toHaveAttribute('role', 'status');
+  // Vysvětlení nezakrývá přepínač ani otazník a vejde se do mapy.
+  const [b, p, o, mapa] = await Promise.all([text.locator('p').boundingBox(), page.locator('.prepinac-stinu').boundingBox(), otazka.boundingBox(), page.locator('.mapa').boundingBox()]);
+  expect(prekryv(b!, p!)).toBe(false);
+  expect(prekryv(b!, o!)).toBe(false);
+  expect(b!.y).toBeGreaterThanOrEqual(p!.y + p!.height);
+  expect(b!.x + b!.width).toBeLessThanOrEqual(mapa!.x + mapa!.width);
+  expect(b!.y + b!.height).toBeLessThanOrEqual(mapa!.y + mapa!.height);
+  expect(await page.evaluate(() => document.documentElement.scrollHeight - innerHeight)).toBeLessThanOrEqual(0);
+
+  // S otevřeným vysvětlením jde stín zapnout: zesnulý Sókratés se ukáže vybledle.
+  await page.keyboard.press('Shift+Tab');
+  await expect(prepinac).toBeFocused();
+  await page.keyboard.press('Space');
+  await expect(prepinac).toBeChecked();
+  await expect(page.locator('.stin[aria-label^="Sókratés"]')).toBeVisible();
+  await expect(text).toHaveText(VYSVETLENI);
+  const axe = await new AxeBuilder({ page }).include('.mac').withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+  expect(axe.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`)).toEqual([]);
+  await page.screenshot({ path: 'test-results/snimky/mapa-stin-vysvetleni-1440-svetly.png' });
+
+  // Esc zavře a vrátí fokus na otazník; druhé Esc už nic nerozbije.
+  await page.keyboard.press('Escape');
+  await expect(text).toHaveText('');
+  await expect(otazka).toHaveAttribute('aria-expanded', 'false');
+  await expect(otazka).toBeFocused();
+  await expect(prepinac).toBeChecked();
+  // Mezerník otevře znovu, druhé stisknutí zavře.
+  await page.keyboard.press('Space');
+  await expect(text).toHaveText(VYSVETLENI);
+  await page.keyboard.press('Space');
+  await expect(text).toHaveText('');
+});
+
+for (const rezim of REZIMY) {
+  test(`mapa · telefon · ${rezim === 'light' ? 'světlý' : 'tmavý'}: vysvětlení stínu klepnutím, legenda v řece a připravovaná období`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.emulateMedia({ colorScheme: rezim, reducedMotion: 'reduce' });
+    await page.goto('/mapa/?rok=-360&osoba=platon');
+    await pripravit(page);
+    const r = rezim === 'light' ? 'svetly' : 'tmavy';
+
+    // Vysvětlení stínu: klepnutí otevře, nezakryje přepínač, klepnutí vedle zavře.
+    const otazka = page.getByRole('button', { name: 'Co je stín odkazu?' });
+    const text = page.locator('#stin-vysvetleni');
+    await otazka.click();
+    await expect(text).toHaveText(VYSVETLENI);
+    const [b, p, mapa] = await Promise.all([text.locator('p').boundingBox(), page.locator('.prepinac-stinu').boundingBox(), page.locator('.mapa').boundingBox()]);
+    expect(prekryv(b!, p!)).toBe(false);
+    expect(b!.x).toBeGreaterThanOrEqual(0);
+    expect(b!.x + b!.width).toBeLessThanOrEqual(390);
+    expect(b!.y + b!.height).toBeLessThanOrEqual(mapa!.y + mapa!.height);
+    // Dotykový cíl otazníku je aspoň 44 px: klepnutí těsně vedle kroužku pořád patří jemu.
+    const o = (await otazka.boundingBox())!;
+    expect(await page.evaluate(([x, y]) => document.elementFromPoint(x, y)?.closest('button')?.getAttribute('aria-label'), [o.x + o.width / 2, o.y + o.height + 4])).toBe('Co je stín odkazu?');
+    await page.screenshot({ path: `test-results/snimky/mapa-stin-vysvetleni-390-${r}.png` });
+    await page.locator('.mac__posuvnik .letopocet').click();
+    await expect(text).toHaveText('');
+
+    // Pás období: připravované období se pozná bez najetí myší a nejen z barvy (šrafování a čárkovaný rámeček).
+    const segmenty = page.locator('.mseg');
+    await expect(segmenty).toHaveCount(8);
+    const vzhled = await segmenty.evaluateAll((s) => s.map((e) => ({
+      pripravuje: e.getAttribute('aria-disabled') === 'true',
+      sraf: getComputedStyle(e).backgroundImage.includes('repeating-linear-gradient'),
+      ramecek: getComputedStyle(e, '::before').borderTopStyle === 'dashed' && getComputedStyle(e, '::before').content !== 'none',
+    })));
+    expect(vzhled.filter((v) => v.pripravuje).length).toBeGreaterThan(0);
+    expect(vzhled.filter((v) => !v.pripravuje).length).toBeGreaterThan(0);
+    for (const v of vzhled) expect({ sraf: v.sraf, ramecek: v.ramecek }).toEqual({ sraf: v.pripravuje, ramecek: v.pripravuje });
+    // Čtečka to slyší v názvu a klepnutí odpoví zprávou.
+    const pripravovane = page.locator('.mseg[aria-disabled="true"]').first();
+    await expect(pripravovane).toHaveAccessibleName(/připravujeme$/);
+    await expect(page.locator('.mseg:not([aria-disabled])').first()).not.toHaveAccessibleName(/připravujeme/);
+    const nazev = (await pripravovane.getAttribute('title'))!.split(' · ')[0];
+    // Tlačítko má aria-disabled (období nejde otevřít), ale na klepnutí odpoví; Playwright by na „povolení“ čekal.
+    await pripravovane.click({ force: true });
+    await expect(page.locator('.zprava')).toHaveText(`${nazev}: připravujeme.`);
+    await expect(page).toHaveURL(/rok=-360/);
+    await page.screenshot({ path: `test-results/snimky/mapa-pas-obdobi-390-${r}.png` });
+
+    // Legenda čar v záložce Řeka životů: tlačítko vedle Seznamu, vzorek čáry a text.
+    await page.getByRole('tab', { name: 'Řeka životů' }).click();
+    const tl = page.locator('.reka').getByRole('button', { name: 'Legenda' });
+    await expect(tl).toHaveAttribute('aria-expanded', 'false');
+    await tl.click();
+    const legenda = page.getByRole('list', { name: 'Čáry mezi životy' });
+    await expect(legenda.getByRole('listitem')).toHaveText(LEGENDA);
+    await expect(legenda.locator('li svg.cara')).toHaveCount(5);
+    const l = (await page.locator('.legenda-panel').boundingBox())!;
+    expect(l.x).toBeGreaterThanOrEqual(0);
+    expect(l.x + l.width).toBeLessThanOrEqual(390);
+    expect(l.y + l.height).toBeLessThanOrEqual((await page.locator('nav.lista').boundingBox())!.y);
+    expect(prekryv(l, (await tl.boundingBox())!)).toBe(false);
+    const axe = await new AxeBuilder({ page }).include('.mac').withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    expect(axe.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`)).toEqual([]);
+    await page.screenshot({ path: `test-results/snimky/mapa-legenda-390-${r}.png` });
+    // Klepnutí vedle zavře; klávesnicí: Enter otevře, Esc zavře a vrátí fokus.
+    await page.locator('.mac__posuvnik .letopocet').click();
+    await expect(legenda).toHaveCount(0);
+    await tl.focus();
+    await page.keyboard.press('Enter');
+    await expect(legenda).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(legenda).toHaveCount(0);
+    await expect(tl).toBeFocused();
+    // Dotykový cíl nízkého tlačítka je rozšířený na 44 px.
+    const t = (await tl.boundingBox())!;
+    expect(await page.evaluate(([x, y]) => document.elementFromPoint(x, y)?.closest('button')?.textContent?.trim(), [t.x + t.width / 2, t.y - 4])).toBe('Legenda');
+    expect(t.height + 12).toBeGreaterThanOrEqual(44);
+
+    // Drobné popisky: nic pod tokenem popisek (12 px na telefonu); verzálkové nadtitulky smí mít token nadtitulek (11 px).
+    for (const zalozka of ['Řeka životů', /Člověk/] as const) {
+      await page.getByRole('tab', { name: zalozka }).click();
+      const male = await page.evaluate(() => {
+        const out: string[] = [];
+        const w = document.createTreeWalker(document.querySelector('.mac')!, NodeFilter.SHOW_TEXT);
+        for (let n = w.nextNode(); n; n = w.nextNode()) {
+          const el = n.parentElement!;
+          if (!n.textContent!.trim() || el.closest('svg') || !el.checkVisibility({ visibilityProperty: true })) continue;
+          const s = getComputedStyle(el);
+          const mez = s.textTransform === 'uppercase' ? 11 : 12;
+          if (parseFloat(s.fontSize) < mez) out.push(`${el.className || el.tagName} ${s.fontSize}: ${n.textContent!.trim().slice(0, 30)}`);
+        }
+        return [...new Set(out)];
+      });
+      expect(male, male.join('\n')).toEqual([]);
+    }
+    expect(await page.evaluate(() => ({ x: document.documentElement.scrollWidth - innerWidth, y: document.documentElement.scrollHeight - innerHeight }))).toEqual({ x: 0, y: 0 });
+  });
+}
+
+test('mapa · legenda čar na notebooku: stále viditelná pod řekou, čtyři typy z dat a tradovaný vztah, bez posouvání stránky', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  for (const { sirka, vyska } of [{ sirka: 1440, vyska: 900 }, { sirka: 1280, vyska: 800 }]) {
+    await page.setViewportSize({ width: sirka, height: vyska });
+    await page.goto('/mapa/?rok=-360&osoba=platon');
+    await pripravit(page);
+    const legenda = page.getByRole('list', { name: 'Čáry mezi životy' });
+    await expect(legenda).toBeVisible();
+    await expect(legenda.getByRole('listitem')).toHaveText(LEGENDA);
+    // Vzorek čáry u každé položky a čtyři typy se liší kresbou, ne barvou.
+    const vzorky = await legenda.locator('li svg.cara path').evaluateAll((c) => c.map((p) => `${p.getAttribute('d')} | ${getComputedStyle(p).strokeDasharray} | ${getComputedStyle(p).stroke}`));
+    expect(vzorky).toHaveLength(5);
+    expect(new Set(vzorky.slice(0, 4).map((v) => v.split(' | ').slice(0, 2).join('|'))).size).toBe(4);
+    expect(new Set(vzorky.map((v) => v.split(' | ')[2])).size).toBe(1);
+    expect(Number(await legenda.locator('.cara--slaba').evaluate((e) => getComputedStyle(e).opacity))).toBeLessThan(1);
+    // Rozvržení z docs/design.md drží: mapa, posuvník, řeka i legenda v okně, stránka se neposouvá.
+    expect(await page.evaluate(() => document.documentElement.scrollHeight - innerHeight)).toBeLessThanOrEqual(0);
+    const l = (await page.locator('.reka__legenda').boundingBox())!;
+    expect(l.y + l.height).toBeLessThanOrEqual(vyska);
+    expect(l.height).toBeLessThanOrEqual(26);
+    expect((await page.locator('.reka__telo').boundingBox())!.height).toBeGreaterThanOrEqual(140);
+    expect((await page.locator('.mac__mapa').boundingBox())!.height).toBeGreaterThanOrEqual(240);
+    // Pojmenování sedí s kartou člověka: tradovaný vztah je i tam „vypráví se“.
+    await page.goto('/mapa/?rok=-430&osoba=sokrates');
+    await pripravit(page);
+    await expect(page.locator('.vztahy')).toContainText('znali se · vypráví se');
+    // V seznamu žijících čáry nejsou, legenda tedy také ne.
+    await page.locator('.reka').getByRole('button', { name: 'Seznam' }).click();
+    await expect(legenda).toHaveCount(0);
+    await page.locator('.reka').getByRole('button', { name: 'Řeka' }).click();
+    await expect(legenda).toBeVisible();
+    if (sirka === 1280) await page.screenshot({ path: 'test-results/snimky/mapa-legenda-1280-svetly.png' });
+  }
+});
+
+test('mapa · výběr člověka zvýrazní jeho vztahy v řece a ostatní potlačí', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  const oblouky = async () => {
+    // Při omezeném pohybu trvá každý přechod 0,01 ms: hodnoty čteme, až doběhne.
+    await page.waitForFunction(() => document.getAnimations().length === 0);
+    return page.locator('.reka .oblouk').evaluateAll((c) => c.map((p) => {
+      const s = getComputedStyle(p);
+      return { popis: p.querySelector('title')!.textContent!, vybrany: p.classList.contains('oblouk--vybrany'), pruhlednost: Number(s.opacity), tloustka: parseFloat(s.strokeWidth) };
+    }));
+  };
+  // Bez výběru jsou všechny čáry stejně tlumené.
+  await page.goto('/mapa/?rok=-360');
+  await pripravit(page);
+  const bez = await oblouky();
+  expect(bez.length).toBeGreaterThan(5);
+  expect(bez.filter((o) => o.vybrany)).toEqual([]);
+  for (const o of bez) expect(o.pruhlednost).toBeLessThanOrEqual(0.4);
+
+  // Výběr Platóna: jeho čáry plně a silněji, ostatní zůstávají tlumené.
+  await page.locator('.reka').getByRole('button', { name: /^Platón,/ }).click();
+  await expect(page.locator('#karta-jmeno')).toHaveText('Platón');
+  const s = await oblouky();
+  const jeho = s.filter((o) => o.vybrany);
+  const ostatni = s.filter((o) => !o.vybrany);
+  expect(jeho.length).toBeGreaterThanOrEqual(3);
+  expect(ostatni.length).toBeGreaterThan(0);
+  for (const o of jeho) {
+    expect(o.popis).toContain('Platón');
+    expect(o.pruhlednost).toBe(1);
+  }
+  for (const o of ostatni) {
+    expect(o.popis).not.toContain('Platón');
+    expect(o.pruhlednost).toBeLessThanOrEqual(0.4);
+    expect(o.tloustka).toBeLessThan(jeho[0].tloustka);
+  }
+  expect(jeho.map((o) => o.popis)).toEqual(expect.arrayContaining(['Sókratés → Platón: učitel a žák', 'Platón → Aristotelés: učitel a žák']));
+  // Jiný výběr zvýraznění přesune.
+  await page.locator('.reka').getByRole('button', { name: /^Diogenés,/ }).click();
+  const d = await oblouky();
+  expect(d.filter((o) => o.vybrany).length).toBeGreaterThan(0);
+  for (const o of d.filter((x) => x.vybrany)) expect(o.popis).toContain('Diogenés');
+  // Zavření karty zvýraznění zruší.
+  await page.getByRole('button', { name: 'Zavřít kartu' }).click();
+  expect((await oblouky()).filter((o) => o.vybrany)).toEqual([]);
+});

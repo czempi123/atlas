@@ -25,7 +25,7 @@
     let konec = -Infinity;
     return v.map((k) => {
       const x = Math.max(0, podil(k.od)) * sirkaStopy;
-      const w = Math.min(180, k.nazev.length * 6.2 + 8);
+      const w = Math.min(180, k.nazev.length * 7.2 + 8);
       const popisek = x >= konec + 6 && x + w <= sirkaStopy + 40;
       if (popisek) konec = x + w;
       return { k, popisek };
@@ -211,7 +211,7 @@
     border: 0;
     background: none;
     color: var(--ink-2);
-    font-size: 11px;
+    font-size: var(--fs-popisek);
     font-weight: 500;
     line-height: 1.2;
     text-align: left;

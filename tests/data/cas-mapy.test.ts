@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { nactiData } from '../../src/lib/kontroly';
 import {
   posunRok, naAstro, zAstro, zijeVRoce, vekVRoce, vzdalenost, kdeVRoce, odkudPrisla, zpravaOSmrti,
-  poznamkaVRoce, vetaOVeku, stinOdkazu, oknoReky, lideVOkne, obdobiProRok, zijiciVRoce, let_,
+  poznamkaVRoce, vetaOVeku, stinOdkazu, zivotOsoby, oknoReky, lideVOkne, obdobiProRok, zijiciVRoce, let_,
 } from '../../src/lib/cas-mapy';
 
 const koren = join(import.meta.dirname, '../..');
@@ -149,6 +149,33 @@ describe('mapa v čase', () => {
     expect(stin).not.toContain('platon');
     // Thalés nemá v roce 360 žádného žijícího pokračovatele
     expect(stin).not.toContain('thales');
+  });
+  it('stín odkazu u polemiky: zůstává ten, s kým se žijící pře, ne zesnulý kritik', () => {
+    const lide = [
+      { id: 'starsi', narozen: { rok: -300 }, zemrel: { rok: -200 } },
+      { id: 'kritik', narozen: { rok: -220 }, zemrel: { rok: -130 } },
+    ] as unknown as typeof data.lide;
+    // Kritik polemizuje se starším, který už nežije: starší má stín, dokud kritik žije.
+    expect(stinOdkazu(lide, [{ od: 'kritik', k: 'starsi', typ: 'polemika' }], -150).map((o) => o.id)).toEqual(['starsi']);
+    expect(stinOdkazu(lide, [{ od: 'kritik', k: 'starsi', typ: 'polemika' }], -120)).toEqual([]);
+    // Obráceně to neplatí: zesnulý kritik nemá stín jen proto, že žije ten, koho kritizoval.
+    expect(stinOdkazu(lide, [{ od: 'starsi', k: 'kritik', typ: 'polemika' }], -150)).toEqual([]);
+    // Ostatní typy drží svůj směr: žák a čtenář navazují na `od`, známí na sebe navzájem.
+    for (const typ of ['ucitel', 'vliv-textem'] as const) {
+      expect(stinOdkazu(lide, [{ od: 'starsi', k: 'kritik', typ }], -150).map((o) => o.id)).toEqual(['starsi']);
+      expect(stinOdkazu(lide, [{ od: 'kritik', k: 'starsi', typ }], -150)).toEqual([]);
+    }
+    expect(stinOdkazu(lide, [{ od: 'kritik', k: 'starsi', typ: 'znali-se' }], -150).map((o) => o.id)).toEqual(['starsi']);
+    expect(stinOdkazu(lide, [{ od: 'starsi', k: 'kritik', typ: 'znali-se' }], -150).map((o) => o.id)).toEqual(['starsi']);
+  });
+  it('stín odkazu na datech: Chrýsippos zůstává, dokud žije Karneadés, který se s ním pře', () => {
+    const stin = (r: number) => stinOdkazu(data.lide, data.vztahy, r).map((o) => o.id);
+    const [chrysippos, karneades] = [zivotOsoby(os('chrysippos'))!, zivotOsoby(os('karneades'))!];
+    expect(chrysippos.do).toBeLessThan(karneades.do);
+    expect(stin(karneades.do)).toContain('chrysippos');
+    expect(stin(karneades.do)).not.toContain('karneades');
+    // Sókratés po smrti: pře se s ním Aristofanés a navazují na něj žáci.
+    expect(stin(-390)).toContain('sokrates');
   });
   it('okno řeky drží šířku a nevyjede z rozsahu', () => {
     expect(oknoReky(-360, 240, [-650, 550])).toEqual([-480, -240]);
