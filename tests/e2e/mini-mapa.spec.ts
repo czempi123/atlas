@@ -55,3 +55,20 @@ test('mini mapa: přibližný rok z dat má „asi“, přesný ne', async ({ pa
   await expect(marcus.locator('g.popisek', { hasText: 'Řím' })).toContainText('narození 121');
   await expect(marcus.locator('g.popisek', { hasText: 'Řím' })).not.toContainText('asi');
 });
+
+// Mini osa přes přelom letopočtu (Seneca u Epiktéta): značky vlevo od přelomu nesou „př. n. l.“,
+// jinak by na ose stálo dvakrát „50“. Značky se na telefonu nesmějí překrývat.
+test('mini osa: roky před přelomem letopočtu mají „př. n. l.“ a značky se nepřekrývají', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/osobnost/epiktetos/');
+  await page.evaluate(() => document.fonts.ready);
+  const znacky = page.locator('.doba__osa .osa__znacka');
+  await expect(znacky.first()).toHaveText('50 př. n. l.');
+  await expect(znacky.nth(2)).toHaveText('50');
+  const okraje = await znacky.evaluateAll((z) => z.filter((e) => e.textContent).map((e) => e.getBoundingClientRect()).map((r) => [r.left, r.right]));
+  for (let i = 1; i < okraje.length; i++) expect(okraje[i][0], `značka ${i}`).toBeGreaterThan(okraje[i - 1][1]);
+  // Osa jen z roků před naším letopočtem zůstává bez přípony; říká to popisek pod ní.
+  await page.goto('/osobnost/epikuros/');
+  await expect(page.locator('.doba__osa .osa__znacka').first()).toHaveText('450');
+  await expect(page.locator('.doba__osa figcaption')).toContainText('Letopočty před naším letopočtem');
+});
