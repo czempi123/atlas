@@ -5,13 +5,15 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Zakladni from '../../../layouts/Zakladni.astro';
 import CestaHlavicka from '../../../components/cesta/CestaHlavicka.astro';
 import CestaLista from '../../../components/cesta/CestaLista.astro';
-import { krokyCesty, adresaKroku, adresaCesty } from '../../../lib/cesty';
+import { krokyCesty, adresaKroku, adresaCesty, zacatekCesty } from '../../../lib/cesty';
 
 export async function getStaticPaths() {
   const cesty = await getCollection('cesty');
   const vse = await getCollection('kroky');
   return cesty.flatMap((c) => {
     const kroky = krokyCesty(vse.map((k) => ({ ...k.data, zaznam: k })), c.id);
+    // Začátek cesty z přehledu musí stát v některém dřívějším kroku; jinak se sestavení zastaví.
+    if (c.data.zacatek) zacatekCesty(vse.map((k) => ({ ...k.data, body: k.body })), c.id, c.data.zacatek);
     return kroky.map((k) => ({
       params: { cesta: c.id, krok: String(k.krok) },
       props: { cesta: c, zaznam: k.zaznam, kroky: kroky.map((x) => ({ n: x.krok, nazev: x.nazev })) },

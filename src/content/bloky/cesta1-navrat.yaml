@@ -1,0 +1,19 @@
+# Návrat · cesta 1 „Kdy mám dobrý důvod věřit?“: zpráva ve třídní skupině, kterou opakuje půlka třídy a nikdo neví, odkud je.
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen (schválil autor 3. 10. 2026).
+# Neopakuje šaty z kroku 6 (tam se lidé přou o to, co vidí; tady o zprávu z druhé ruky) ani žvýkačku z velké otázky 7.
+druh: navrat
+obdobi: 1
+cesta: kdy-mam-dobry-duvod-verit
+pravidlo: cesta1-moje-pravidlo
+nazev: Zpráva před čtvrtletkou
+scena: >-
+  Představ si večer před čtvrtletkou z matematiky. Někdo napíše do třídní skupiny, že se zítra nepíše:
+  učitelka je prý nemocná. Za hodinu to opakuje půlka třídy.
+
+
+  Když se zeptáš, odkud to kdo ví, každý to má od někoho jiného.
+  Máš před sebou sešit a rozhoduješ se, jestli ho zavřít.
+po:
+  ano: Co podle něj uděláš se sešitem?
+  upravim: Co mu chybělo, aby si s tímhle večerem poradilo?
+  nevim: "Na čem to vázne: na pravidle, nebo na tom, že tu zprávu večer nejde ověřit?"

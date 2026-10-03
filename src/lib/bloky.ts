@@ -167,34 +167,161 @@ export function platnaPoloha(x: unknown): number | null {
 }
 
 /**
- * Zpětná vazba k posunu na škále. Hodnotí pohyb a ptá se na důvod; nikdy neříká,
- * která strana má pravdu.
+ * Druhá strana je ta, ke které se student nakonec nepřiklonil: 0 = první, 1 = druhá strana sporu.
+ * Kdo skončil uprostřed, druhou stranu nemá (null) a v reflexi vybírá z argumentů obou.
  */
-export function zpetnaSporu(prvni: number, konecna: number, a: string, b: string): string {
-  if (prvni === konecna) {
-    if (konecna === STRED) return 'Zůstal jsi uprostřed. Co by se muselo stát, aby ses přiklonil k jedné straně?';
-    return 'Zůstal jsi tam, kde jsi začal. Který argument druhé strany šel nejhůř odbýt? Zkus říct, proč tě nepřesvědčil.';
-  }
-  const k = konecna - prvni;
-  const kdo = k > 0 ? b : a;
-  const zaklad = `Posunul ses o ${kroku(Math.abs(k))} ke straně, kterou hájí ${kdo}.`;
-  const presel = (prvni < STRED && konecna > STRED) || (prvni > STRED && konecna < STRED);
-  if (presel) return `${zaklad} Přešel jsi na druhou stranu. Který argument to udělal? Řekni ho vlastními slovy.`;
-  if (konecna === STRED) return `${zaklad} Teď stojíš uprostřed: obě strany pro tebe mají váhu. Který argument tě posunul?`;
-  return `${zaklad} Který argument tě posunul? Řekni ho vlastními slovy.`;
+export function druhaStrana(konecna: number): 0 | 1 | null {
+  if (konecna === STRED) return null;
+  return konecna < STRED ? 1 : 0;
 }
 
-/** Text do deníku: „Na začátku: spíš Platón. Po argumentech: uprostřed. Co mě posunulo: …“ */
-export function zapisSporu(prvni: number, konecna: number, a: string, b: string, duvod = ''): string {
-  const zaklad = `Na začátku: ${popisPolohy(prvni, a, b)}. Po argumentech: ${popisPolohy(konecna, a, b)}.`;
-  if (!duvod.trim()) return zaklad;
-  return `${zaklad} ${prvni === konecna ? 'Co mě udrželo' : 'Co mě posunulo'}: ${veta(duvod)}`;
+/**
+ * Zpětná vazba k posunu na škále. Popíše pohyb a dovede k nepovinné reflexi pod sebou
+ * (otázku klade až reflexe, ne zpětná vazba); nikdy neříká, která strana má pravdu.
+ * Jméno strany stojí vždy v 1. pádě za „kterou hájí“, takže věta sedí i na označení směru („kynici“).
+ */
+export function zpetnaSporu(prvni: number, konecna: number, a: string, b: string): string {
+  const obe = 'Neznamená to, že všechny argumenty vážily stejně.';
+  const d = druhaStrana(konecna);
+  const druha = `I strana, kterou hájí ${d === 0 ? a : b}, má argument, který stojí za odpověď.`;
+  if (prvni === konecna) {
+    if (d === null) return `Zůstal jsi uprostřed: obě strany pro tebe mají váhu. ${obe}`;
+    return `Zůstal jsi tam, kde jsi začal. ${druha}`;
+  }
+  const k = konecna - prvni;
+  const zaklad = `Posunul ses o ${kroku(Math.abs(k))} ke straně, kterou hájí ${k > 0 ? b : a}`;
+  if (d === null) return `${zaklad}. Teď stojíš uprostřed: obě strany pro tebe mají váhu. ${obe}`;
+  const presel = (prvni < STRED && konecna > STRED) || (prvni > STRED && konecna < STRED);
+  if (presel) return `${zaklad}. Přešel jsi na druhou stranu. ${druha}`;
+  // Šel směrem k druhé straně, ale stojí pořád na té své: věta o „straně, kterou hájí…“ by se opakovala.
+  if ((k > 0 ? 1 : 0) === d) return `${zaklad}, ale nepřešel jsi na ni. Některý její argument přitom stojí za odpověď.`;
+  return `${zaklad}. ${druha}`;
+}
+
+// Reflexe po zapsání konečné polohy: nejsilnější argument druhé strany a odpověď na něj. Nepovinná.
+
+/** Nejdelší úryvek argumentu ve výběru reflexe (znaků); první věta se ukáže vždy celá. */
+export const DELKA_URYVKU = 110;
+
+/** Rozdělí text na věty. Hranice je interpunkce a za ní velké písmeno, číslice nebo uvozovka („př. n. l.“ větu nekončí). */
+function vetyTextu(t: string): string[] {
+  const hranice = /[.!?…]+[“"]?\s+(?=[„A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ0-9])/g;
+  const vety: string[] = [];
+  let od = 0;
+  for (let m = hranice.exec(t); m; m = hranice.exec(t)) {
+    vety.push(t.slice(od, m.index + m[0].length));
+    od = m.index + m[0].length;
+  }
+  if (od < t.length) vety.push(t.slice(od));
+  return vety;
+}
+
+const pocet = (s: string, znak: string) => s.split(znak).length - 1;
+
+/**
+ * Začátek argumentu, podle kterého ho student ve výběru pozná: celé věty do DELKA_URYVKU znaků,
+ * aspoň první. Otevřené uvozovky se dočtou do konce. Zkrácený úryvek končí výpustkou.
+ */
+export function uryvekArgumentu(text: string): string {
+  const cely = text.replace(/\*([^*\n]+)\*/g, '$1').replace(/\s+/g, ' ').trim();
+  let u = '';
+  for (const v of vetyTextu(cely)) {
+    const otevrene = pocet(u, '„') > pocet(u, '“');
+    if (u && !otevrene && (u + v).trimEnd().length > DELKA_URYVKU) break;
+    u += v;
+  }
+  u = u.trim();
+  return u.length < cely.length ? `${u} …` : u;
+}
+
+/** Argument vybraný v reflexi: text, jak ho student četl (ne pořadí v YAML), nebo vlastní slova. */
+export type ArgumentReflexe = { strana: 0 | 1; text: string } | { vlastni: string };
+export interface ReflexeSporu {
+  argument: ArgumentReflexe | null;
+  odpoved: string;
+}
+
+export interface MoznostReflexe {
+  strana: 0 | 1;
+  /** celý text argumentu z bloku */
+  text: string;
+  uryvek: string;
+}
+
+const bezMezer = (s: string) => s.replace(/\s+/g, ' ').trim();
+
+/** Argumenty, ze kterých student v reflexi vybírá: druhé strany, uprostřed obou. */
+export function argumentyReflexe(strany: readonly { argumenty: string[] }[], konecna: number): MoznostReflexe[] {
+  const d = druhaStrana(konecna);
+  const ktere: (0 | 1)[] = d === null ? [0, 1] : [d];
+  return ktere.flatMap((s) => (strany[s]?.argumenty ?? []).map((text) => ({ strana: s, text, uryvek: uryvekArgumentu(text) })));
+}
+
+/**
+ * Která možnost odpovídá uloženému argumentu: pořadí v `moznosti`, nebo −1, když ho blok už nemá
+ * (autor text upravil nebo argument ubral). Porovnává se text, ne pořadí, aby reflexe nikdy neukázala jiný argument.
+ */
+export function mistoArgumentu(moznosti: MoznostReflexe[], arg: { strana: 0 | 1; text: string }): number {
+  return moznosti.findIndex((m) => m.strana === arg.strana && bezMezer(m.text) === bezMezer(arg.text));
+}
+
+export function otazkaReflexe(konecna: number): string {
+  return druhaStrana(konecna) === null ? 'Který argument byl nejsilnější?' : 'Který argument druhé strany byl nejsilnější?';
+}
+
+/** Je v reflexi něco, co stojí za zápis do deníku? */
+export function reflexeVyplnena(r: ReflexeSporu | null | undefined): boolean {
+  if (!r) return false;
+  const a = r.argument;
+  return !!r.odpoved.trim() || (!!a && ('strana' in a || !!a.vlastni.trim()));
+}
+
+/** Věta o reflexi do deníku: „Nejsilnější argument druhé strany (Epikúros): … Moje odpověď: …“ */
+function vetaReflexe(konecna: number, a: string, b: string, r: ReflexeSporu | null | undefined): string {
+  if (!r || !reflexeVyplnena(r)) return '';
+  const stred = druhaStrana(konecna) === null;
+  const uvod = stred ? 'Nejsilnější argument' : 'Nejsilnější argument druhé strany';
+  const arg = r.argument;
+  let v = '';
+  if (arg && 'strana' in arg) v = `${uvod} (${arg.strana === 0 ? a : b}): ${veta(uryvekArgumentu(arg.text))}`;
+  else if (arg && arg.vlastni.trim()) v = `${uvod}: ${veta(arg.vlastni)}`;
+  if (!r.odpoved.trim()) return v;
+  if (!v) return `${stred ? 'Moje odpověď' : 'Moje odpověď druhé straně'}: ${veta(r.odpoved)}`;
+  return `${v} Moje odpověď: ${veta(r.odpoved)}`;
+}
+
+/**
+ * Text do deníku: „Na začátku: spíš Platón. Po argumentech: uprostřed. Co mě posunulo: …
+ * Nejsilnější argument druhé strany (Diogenés): … Moje odpověď: …“
+ */
+export function zapisSporu(prvni: number, konecna: number, a: string, b: string, duvod = '', reflexe: ReflexeSporu | null = null): string {
+  const casti = [`Na začátku: ${popisPolohy(prvni, a, b)}. Po argumentech: ${popisPolohy(konecna, a, b)}.`];
+  if (duvod.trim()) casti.push(`${prvni === konecna ? 'Co mě udrželo' : 'Co mě posunulo'}: ${veta(duvod)}`);
+  const r = vetaReflexe(konecna, a, b, reflexe);
+  if (r) casti.push(r);
+  return casti.join(' ');
 }
 
 export interface StavSporu {
   prvni: number | null;
   konecna: number | null;
   duvod: string;
+  /** nepovinná reflexe po konečné poloze; starší uložené stavy ji nemají */
+  reflexe: ReflexeSporu | null;
+}
+
+/** Přečte uloženou reflexi; co nedává smysl, zahodí. Výběr „Jiný argument“ bez textu zůstává (přepínač drží). */
+export function platnaReflexe(x: unknown): ReflexeSporu | null {
+  if (!x || typeof x !== 'object') return null;
+  const r = x as { argument?: unknown; odpoved?: unknown };
+  const a = r.argument as { strana?: unknown; text?: unknown; vlastni?: unknown } | null | undefined;
+  let argument: ArgumentReflexe | null = null;
+  if (a && typeof a === 'object') {
+    if ((a.strana === 0 || a.strana === 1) && typeof a.text === 'string' && a.text.trim()) argument = { strana: a.strana, text: a.text };
+    else if (typeof a.vlastni === 'string') argument = { vlastni: a.vlastni };
+  }
+  const odpoved = typeof r.odpoved === 'string' ? r.odpoved : '';
+  return argument || odpoved ? { argument, odpoved } : null;
 }
 
 export function platnyStavSporu(s: unknown): StavSporu | null {
@@ -202,7 +329,9 @@ export function platnyStavSporu(s: unknown): StavSporu | null {
   const x = s as Partial<StavSporu>;
   const prvni = platnaPoloha(x.prvni);
   if (prvni === null) return null;
-  return { prvni, konecna: platnaPoloha(x.konecna), duvod: typeof x.duvod === 'string' ? x.duvod : '' };
+  const konecna = platnaPoloha(x.konecna);
+  // Reflexe patří ke konečné poloze; bez ní nemá k čemu být.
+  return { prvni, konecna, duvod: typeof x.duvod === 'string' ? x.duvod : '', reflexe: konecna === null ? null : platnaReflexe(x.reflexe) };
 }
 
 // ─── Roztřiď ──────────────────────────────────────────────────────────────────

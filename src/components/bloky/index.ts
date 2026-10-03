@@ -8,3 +8,5 @@ export { default as Roztrid } from './Roztrid.astro';
 export { default as ZmenJednuVec } from './ZmenJednuVec.astro';
 export { default as Spor } from './Spor.astro';
 export { default as KdoZilDriv } from './KdoZilDriv.astro';
+export { default as ZaverCesty } from './ZaverCesty.astro';
+export { default as Navrat } from './Navrat.astro';

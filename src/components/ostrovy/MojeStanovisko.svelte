@@ -4,12 +4,13 @@
   // <MojeStanovisko client:visible id="sokrates-nikdo-nedela-zlo" otazka="…" odkaz="/osobnost/sokrates/#myslenky" />
   // <MojeStanovisko client:visible rozbalene id="cesta1-moje-pravidlo" otazka="…" odkaz="/cesta/…/7/" />
   // S `rozbalene` je pole vidět hned a zápis se do deníku ukládá sám během psaní (závěr cesty).
+  // `popisek` je text nad polem, když se liší od otázky zápisu v deníku; `nepovinne` k němu přidá „Nepovinné“.
   import { onMount } from 'svelte';
   import { nacti, ulozZapis, smazZapis } from '../../lib/denik';
   import { nezlomitelne } from '../../lib/sazba.js';
 
-  interface Props { id: string; otazka: string; odkaz: string; rozbalene?: boolean }
-  let { id, otazka, odkaz, rozbalene = false }: Props = $props();
+  interface Props { id: string; otazka: string; odkaz: string; rozbalene?: boolean; popisek?: string; nepovinne?: boolean }
+  let { id, otazka, odkaz, rozbalene = false, popisek, nepovinne = false }: Props = $props();
   let otevreno = $state(false);
   let text = $state('');
   let ulozeno = $state(false);
@@ -51,8 +52,8 @@
 
 <div class="stanovisko">
   {#if rozbalene}
-    <label class="t-ovladani" for={`${id}-stanovisko`}>{nezlomitelne(otazka)}</label>
-    <textarea id={`${id}-stanovisko`} rows="3" bind:value={text} oninput={piseSe} onblur={ulozSamo} aria-describedby={`${id}-stav`}></textarea>
+    <label class="t-ovladani" for={`${id}-stanovisko`}>{nezlomitelne(popisek ?? otazka)}{#if nepovinne}<span class="nepovinne">Nepovinné</span>{/if}</label>
+    <textarea class={[nepovinne && 'kratke']} id={`${id}-stanovisko`} rows={nepovinne ? 2 : 3} bind:value={text} oninput={piseSe} onblur={ulozSamo} aria-describedby={`${id}-stav`}></textarea>
     <p class="t-popisek stav" id={`${id}-stav`} aria-live="polite">{ulozeno ? 'Uloženo v deníku.' : 'Ukládá se samo do deníku.'}</p>
   {:else if !otevreno}
     <button class="vedlejsi" type="button" onclick={() => (otevreno = true)} aria-expanded="false">
@@ -72,6 +73,9 @@
 <style>
   .stanovisko { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); margin-top: var(--s-4); }
   label { flex-basis: 100%; }
+  /* „Nepovinné“ za popiskem: po zalomení začíná u kraje, ne odsazené. */
+  label:has(.nepovinne) { display: flex; flex-wrap: wrap; column-gap: var(--s-2); }
+  .nepovinne { font-weight: 400; color: var(--muted); }
   textarea {
     flex-basis: 100%;
     min-height: 88px;
@@ -82,6 +86,7 @@
     font-family: var(--font-serif);
     font-size: var(--fs-text);
   }
+  textarea.kratke { min-height: 64px; }
   .stav { flex-basis: 100%; margin: 0; color: var(--ink-2); }
   .akce { display: flex; gap: var(--s-3); }
   button {

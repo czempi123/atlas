@@ -4,8 +4,8 @@ Zadání schválil autor 2. 10. 2026; spustí se po celku 3. Větev mimo celky: 
 
 | Krok | Co | Stav |
 | --- | --- | --- |
-| R1 | Orientace: Domů, obsah profilu, ovládání mapy | po sloučení celku 3 a odeslání hlavní větve na GitHub, zadání níže |
-| R2 | Argument a návrat: reflexe ve Sporu, Na začátku × Teď, blok Návrat | po schválení R1, zadání níže |
+| R1 | Orientace: Domů, obsah profilu, ovládání mapy | hotovo 3. 10. 2026, schválil autor; stav níže |
+| R2 | Argument a návrat: reflexe ve Sporu, Na začátku × Teď, blok Návrat | hotovo 3. 10. 2026, čeká na schválení autorem; stav níže |
 | P10 | Revize větve skillem `atlas-revize` (průchod jako student) | po R2 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
@@ -18,6 +18,8 @@ Zadání schválil autor 2. 10. 2026; spustí se po celku 3. Větev mimo celky: 
 
 ## Co je dnes v kódu (ověřeno na hlavní větvi)
 
+Oddíl popisuje stav před větví. Co platí teď, je v oddílech Stav po R1 (Domů, Profil, Mapa) a Stav po R2 (Spor, Závěr cest, Deník); bod Jazyk rozhraní platí dál.
+
 - **Domů** (`src/pages/index.astro`): nadpis má `t-display-1` (148 / 76 px). O začátek se hlásí několik prvků: hlavní tlačítko „Začni se Sókratem“ (vede na profil), vedlejší „Mapa a čas“, ostrov Pokračuj, pod úvodem karta cesty „Začni cestou“ s vlastním tlačítkem „Vydat se na cestu“ a dole „Příběh na začátek“.
 - **Profil** (`src/pages/osobnost/[id].astro`): `nav.kapitoly` vypisuje jen kapitoly z frontmatteru a stojí jednou pod hlavičkou. Další oddíly kotvy mají (`#doba-a-lide`, `#myslenky`, `#zkus-to-zit`, `#kam-dal`), Prameny (`<details>`) kotvu nemají. Široké oddíly jdou přes celou šířku stránky, takže obsah v levém okraji by je překrýval.
 - **Mapa** (`src/components/mapa/`): „Stín odkazu“ je zaškrtávací pole bez vysvětlení (`Mapa.svelte`). Legenda vztahů není; typy v datech jsou `ucitel`, `znali-se`, `vliv-textem`, `polemika` a příznak `tradovany` (v kartě „vypráví se“), čáry v řece plná, tečkovaná, čárkovaná, vlnovka. Připravované období pozná student v pásu období jen podle `title` po najetí myší (`PasObdobi.svelte`).
@@ -25,6 +27,68 @@ Zadání schválil autor 2. 10. 2026; spustí se po celku 3. Větev mimo celky: 
 - **Závěr cest**: počáteční odpověď se ukládá v kroku 2 (cesta 1: Volba `cesta1-jak-zjistit`; cesta 6: Roztřiď `cesta6-tri-kose`), pravidlo v kroku 7 (`cesta1-moje-pravidlo`, `cesta6-moje-pravidlo`, Moje stanovisko s `rozbalene`). Krok 7 na začátek odkazuje jen větou („Vzpomeň si na svůj tah v kroku 2“). Vzor „Na začátku / Teď“ už existuje na stránce velké otázky (`ZmenilSe.svelte`).
 - **Deník** (`src/lib/denik.ts`, `Denik.svelte`): u cesty se ukládá jen čas naposledy otevřeného kroku (`cesty[slug].kdy`), ne čas dokončení. Blok Návrat je v `docs/plan.md` (Mechanismy učení) plánovaný, ale neexistuje.
 - **Jazyk rozhraní**: všude tykání v mužském rodě bez lomených tvarů („Zůstal jsi“, „Co bys udělal?“).
+
+## Stav po R1 (3. 10. 2026)
+
+R1 je hotový a čeká na schválení autorem. Commity ve větvi: `Domů: jeden začátek místo tří`, `Profil: obsah celé stránky a návrat ke čtení`, `Mapa a čas: vysvětlení stínu, legenda čar a připravovaná období`, `Mapa: událost bez místa na název má jen krátkou čárku` a zápis do docs; na GitHub nic nešlo. Celé `npm test` prošlo: 319 jednotkových testů a 189 testů v prohlížeči (před větví 279 a 161). Popis je v `docs/design.md` (Navigace a rozvržení, Komponenty, Co se ukládá, Mapa a čas, Přístupnost), volby v `docs/rozhodnuti.md`.
+
+### Co je teď v kódu
+
+- **Domů** (`src/pages/index.astro`, `zacatekDomu` v `src/lib/pokracuj.ts`): nadpis `t-h1`, jediné hlavní tlačítko „Začít první cestu“ na krok 1 cesty 1 s údajem z dat („Cesta 1 · asi 20 minut · 7 kroků“), textový odkaz „Poznat Sókrata“, vpravo panel první cesty bez tlačítka (karta cesty a Příběh na začátek v jednom). Vracející se student: rozpracovaná cesta → „Pokračovat v cestě“, hotová první cesta → „Vybrat další cestu“ do přehledu otázek; stav přepíše skript před vykreslením. Pokračuj je tichý řádek odkazů a neopakuje, co nabízí tlačítko.
+- **Profil** (`src/components/osobnost/ObsahProfilu.astro`, `src/lib/obsah.ts`): obsah se skládá ze sestavené stránky (atribut `data-oddil` na každém oddílu), Prameny mají kotvu `#prameny`. V klidu řádek odkazů pod hlavičkou profilu (notebook), při čtení lišta 44 px pod hlavičkou webu s tlačítkem Obsah a názvem právě čteného oddílu; na telefonu lišta od začátku. Právě čtený oddíl má `aria-current`. Deník má nepovinné pole `cteni` (adresa → kotva) a v hlavičce profilu se při návratu nabídne „Pokračovat ve čtení“.
+- **Mapa** (`src/components/mapa/`): tlačítko „?“ u Stínu odkazu s vysvětlením, legenda čar (`LegendaVztahu.svelte`, názvy v `src/lib/vztahy.ts`), šrafovaná připravovaná období se zprávou po klepnutí, popisky na telefonu nejméně 12 px. `stinOdkazu` má opravený směr polemiky. Po připomínce autora (svislé čáry navíc u časové linky): událost nad posuvníkem, které se nevešel název, má jen krátkou čárku ve výšce pruhů a název ukáže po najetí nebo při fokusu.
+- **Deník**: pro R2 platí dál, že čas dokončení cesty se neukládá; nové je jen pole `cteni`.
+
+### Co se liší od zadání nebo od `docs/design.md`
+
+- Obsah profilu je i na notebooku kompaktní lišta, ne sloupec v okraji (zadání to pro případ, že sloupec nejde čistě, žádalo).
+- V obsahu stojí „Dvě velké myšlenky“, jak zní nadpis na stránce, ne „Velké myšlenky“.
+- Hlavní tlačítko na Domů pokračuje v naposledy otevřené rozpracované cestě, ať je to kterákoli, ne jen v cestě 1. Rozpracovanou otázku v tom kroku už Pokračuj zvlášť nenabízí.
+- Zpráva u připravovaného období má dvojtečku („Středověk: připravujeme.“) a připravované období má vedle šrafování i čárkovaný rámeček kolem čísla (v tmavém režimu bylo šrafování slabé).
+- Názvy moří na mapě jsou v `--ink-2` místo `--muted` (kontrast); `docs/design.md` je upravený.
+- Hlavička řeky na telefonu má 44 px místo 26 px (dotykový cíl tlačítek).
+- Stíny: rozbalený obsah profilu je bez stínu (design povoluje stín jen na mapě a u spodního listu); panel legendy a vysvětlení stínu leží na mapě a stín mají.
+
+### Zůstalo na později
+
+- Letopočty v levém sloupci řeky na notebooku mají dál 10,5 px, pod tokenem `popisek`: při 12 px by se ve sloupci 208 px ořezávala delší jména (Marcus Aurelius). Chce to širší sloupec nebo kratší zápis letopočtů.
+- „Krok 4 z 7“: správně česky je „ze 7“. Stejný tvar je v hlavičce kroku, v deníku i v Pokračuj; sjednotit najednou.
+- Lišta Obsah je po ruce myší a dotykem. Klávesnicí se k ní student dostane jen v pořadí stránky (hned za hlavičkou profilu); Shift+Tab z ní vede na řádek odkazů nahoře.
+- Panel první cesty na Domů zve na cestu 1 i studenta, který ji má hotovou.
+- Přehled dějin v mapě odlišuje připravovaná období jen průhledností (zadání se týkalo pásu období).
+- Na telefonu se měřítko mapy dotýká názvu „Středozemní moře“ (bylo tak už před větví).
+- `npx astro check` hlásí jednu chybu typů v `astro.config.mjs` (plugin `sazbaMdast`); je i v hlavní větvi a `npm test` ji nespouští.
+
+## Stav po R2 (3. 10. 2026)
+
+R2 je hotový a čeká na schválení autorem. Znění reflexe, panelu a tří případů autor schválil před prací. Commity ve větvi: `Spor: nepovinná reflexe nejsilnějšího argumentu druhé strany`, `Závěr cesty: Na začátku × Teď v posledním kroku`, `Návrat: nový případ v deníku pár dní po dokončení cesty` a zápis do docs; na GitHub nic nešlo. Celé `npm test` prošlo: 359 jednotkových testů a 231 testů v prohlížeči (po R1 319 a 189). Popis je v `docs/design.md` (Bloky › Co se ukládá, Spor, Závěr cesty, Návrat; Cesta), volby v `docs/rozhodnuti.md`, psaní případu pro Návrat ve skillu `atlas-cesta`. Snímky jsou ve složce `Claude outputs/R2-snimky/`.
+
+### Co je teď v kódu
+
+- **Spor** (`Spor.svelte`, `src/lib/bloky.ts`): pod zpětnou vazbou zavřený řádek „Který argument druhé strany byl nejsilnější?“ · Nepovinné (uprostřed „Který argument byl nejsilnější?“ a výběr z obou stran). Po otevření přepínače se začátky argumentů, „Jiný argument“ s polem „Který?“ a „Co na něj odpovíš?“; ukládá se samo do stavu bloku a jako další věta téhož zápisu. Zpětná vazba (`zpetnaSporu`) má šest znění, žádné se neptá. Ukládá se text argumentu, ne pořadí. Platí pro všechny čtyři Spory bez zásahu do YAML.
+- **Závěr cesty** (`ZaverCesty.astro` a `.svelte`, `src/lib/zaver.ts`, `zacatekCesty` v `src/lib/cesty.ts`): pole `zacatek` v přehledu cesty (cesta 1 `cesta1-jak-zjistit`, cesty 5 a 6 `cesta5-tri-kose` a `cesta6-tri-kose`), hlídané při sestavení. Poslední krok má `<ZaverCesty id otazka />` místo Mého stanoviska: „Na začátku“ ze zápisu v deníku, „Teď“ pole s pravidlem, pod tím nepovinné „Co se změnilo, nebo proč si myslíš totéž?“ (zápis `<id>-zmena`). Bez počáteční odpovědi panel není. Věty posledních kroků zní „Vrať se ke svému tahu / ke svým košům z kroku 2“.
+- **Návrat** (`Navrat.astro` a `.svelte`, `src/lib/navrat.ts`, `_navraty.ts`, `Denik.svelte`): nový druh bloku `navrat` se schématem a kontrolou proti cestám; tři případy (`cesta1-navrat` Zpráva před čtvrtletkou, `cesta6-navrat` Nový telefon, `cesta5-navrat` Kamarád se stěhuje). Deník nabídne nejvýš jeden, nejdřív tři dny po dokončení cesty a jen s uloženým pravidlem; Zkusit otevře blok v deníku, Později odloží o tři dny, Už nenabízet skryje. Rozhoduje `nabidkaNavratu(denik, navraty, ted)`. Blok je i v dílně.
+- **Deník** (`src/lib/denik.ts`): nepovinné `cesty[slug].dokonceno` (zapíše se jednou, když má student poprvé otevřené všechny kroky); zápis druhu `navrat`; stav návratu v `bloky[id]` (odpověď, důvod, zapsáno, odloženo, skryto). Verze 1 zůstává.
+- **Testy:** `tests/e2e/spor-reflexe.spec.ts`, `zaver.spec.ts`, `navrat.spec.ts` a `pruchod.spec.ts` (všechny tři cesty celé bez jediného nepovinného pole), `tests/data/zaver.test.ts` a `navrat.test.ts`, doplněné `bloky.test.ts`, `cesty.test.ts` a `denik.test.ts`.
+
+### Co se liší od zadání nebo od schváleného návrhu
+
+- Reflexe stojí těsně pod rámečkem zpětné vazby, ne v něm: rámeček čtečka ohlašuje a formulář uvnitř by se četl při každé změně.
+- Odpověď v reflexi bez vybraného argumentu se do deníku zapíše taky („Moje odpověď druhé straně: …“), aby se nic napsaného neztratilo.
+- Otázka „Co se změnilo…“ po smazání pravidla nezmizí, dokud student stránku neopustí; jinak by mohl přijít o rozepsanou odpověď.
+- Blok Návrat má v nadtitulku jen název cesty; slovo Návrat stojí v nadpisu nad ním (v deníku i v dílně).
+- Po odpovědi zůstane blok Návrat v deníku vidět do zavření stránky. Po obnovení je z něj už jen zápis v Mých odpovědích.
+
+### Zůstalo na později
+
+- „Už nenabízet“ nejde v rozhraní vzít zpět a odložené ani skryté návraty nejsou nikde vidět.
+- K zodpovězenému návratu se z deníku nejde vrátit: zápis vede „zpět ke stránce“ na poslední krok cesty, kde je pravidlo, ne k případu.
+- „Na začátku“ ukazuje to, co je pod blokem začátku v deníku teď. Když student v kroku 2 později začne znovu a roztřídí jinak, ukáže se nové třídění.
+- Úryvek argumentu ve výběru reflexe se tvoří sám z prvních vět. U argumentu, který začíná námitkou druhé strany („Aristotelés namítá, že…“), je v úryvku ta námitka; pomohl by nepovinný krátký popisek v YAML.
+- Vlastní karta z Roztřiď, která obsahuje středník, se v panelu rozdělí na dva řádky.
+- Dílna sdílí stav s deníkem jako u ostatních bloků: odpověď na návrat cesty 1 v dílně znamená, že ho deník už nenabídne.
+- Test `mapa · rok -399 · 390 px · světlý` jednou při plném běhu vypršel na přepnutí Řeka; samostatně i v dalším plném běhu prošel. S R2 nesouvisí, ale stojí za pohled.
+- `npx astro check` hlásí dál jednu chybu typů v `astro.config.mjs` (už z hlavní větve).
 
 ## R1: Orientace (Domů, obsah profilu, ovládání mapy)
 

@@ -2,6 +2,21 @@
 // setkání tam, kde jeden druhého jen četl (Epiktétos a Marcus Aurelius, Epikúros a Lucretius).
 import type { TVztah } from './schema';
 
+/** Vzorek čáry, kterou má typ vztahu v řece životů, v kartě člověka a v legendě. */
+export type CaraVztahu = 'plna' | 'teckovana' | 'carkovana' | 'vlnovka';
+/**
+ * Legenda čar mezi životy (Mapa a čas): čtyři typy vztahů z dat, slovy podle CLAUDE.md.
+ * Nový typ sem patří, až když je ve schématu dat; test hlídá, že legenda a schéma sedí.
+ */
+export const LEGENDA_VZTAHU: { typ: TVztah['typ']; nazev: string; cara: CaraVztahu }[] = [
+  { typ: 'ucitel', nazev: 'učitel a žák', cara: 'plna' },
+  { typ: 'znali-se', nazev: 'osobně se znali', cara: 'teckovana' },
+  { typ: 'vliv-textem', nazev: 'vliv přes texty', cara: 'carkovana' },
+  { typ: 'polemika', nazev: 'polemika', cara: 'vlnovka' },
+];
+/** Tradovaný vztah (v datech `tradovany`): slabší čára; stejné slovo jako v kartě člověka. */
+export const LEGENDA_TRADOVANY = 'vypráví se';
+
 /** Na které straně vztahu stojí osoba stránky: `od` (učitel, autor textu), nebo `k` (žák, čtenář). */
 export type Smer = 'od' | 'k';
 export interface VztahOsoby<T = unknown> { vztah: TVztah; druhy: T; smer: Smer }

@@ -23,6 +23,11 @@ export const kontrast = (a: string, b: string) => {
 const DVOJICE: [string, string][] = [
   ...['ink', 'ink-2', 'muted'].flatMap((t) => ['paper', 'surface', 'sunk'].map((p): [string, string] => [t, p])),
   ['paper', 'ink'],
+  // Popisky na mapě: názvy krajin a „dnes“ (--muted na pevnině), názvy moří a měřítko (--ink-2 na moři).
+  ['muted', 'map-land'],
+  ['ink-2', 'map-land'],
+  ['ink-2', 'map-sea'],
+  ['ink', 'map-sea'],
   ...[1, 2, 3, 4, 5, 6, 7, 8].flatMap((n): [string, string][] => [
     [`period-${n}`, 'paper'],
     [`period-${n}`, 'surface'],

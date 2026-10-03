@@ -1,44 +1,47 @@
 <script lang="ts">
   // „Pokračuj, kde jsi skončil“: rozpracovaná cesta, rozpracovaná otázka v bloku, nebo naposledy čtená stránka.
-  // Bez záznamu v deníku se nezobrazí nic.
+  // Tichý řádek textových odkazů pod hlavním tlačítkem na Domů, ne druhé tlačítko. Bez záznamu v deníku se nezobrazí nic.
+  // Co už nabízí hlavní tlačítko (prvek [data-zacatek-tlacitko]), se tu neopakuje.
+  // Použití: <Pokracuj client:idle />
   import { onMount } from 'svelte';
   import { nacti } from '../../lib/denik';
   import { coPokracovat, type Pokracovani } from '../../lib/pokracuj';
 
   let nabidky = $state<Pokracovani[]>([]);
   onMount(() => {
-    nabidky = coPokracovat(nacti());
+    const hlavni = document.querySelector('[data-zacatek-tlacitko]')?.getAttribute('href') ?? undefined;
+    nabidky = coPokracovat(nacti(), 2, hlavni);
   });
 </script>
 
 {#if nabidky.length}
   <nav class="pokracuj" aria-label="Pokračuj, kde jsi skončil">
-    {#each nabidky as n (n.odkaz)}
-      <a class="karta" href={n.odkaz}>
-        <span class="t-nadtitulek">{n.nadtitulek}</span>
-        <span class="nazev">{n.nazev}</span>
-        {#if n.popis}<span class="t-popisek popis">{n.popis}</span>{/if}
-      </a>
-    {/each}
+    <ul>
+      {#each nabidky as n (n.odkaz)}
+        <li>
+          <span class="co">{n.nadtitulek}:</span>
+          <a href={n.odkaz}>{n.nazev}{#if n.popis}<span class="popis">&nbsp;· {n.popis}</span>{/if}</a>
+        </li>
+      {/each}
+    </ul>
   </nav>
 {/if}
 
 <style>
-  .pokracuj { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
-  .karta {
+  .pokracuj ul { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: 0; padding: 0; list-style: none; }
+  .pokracuj li {
     display: flex;
-    flex-direction: column;
-    gap: var(--s-1);
-    flex: 1 1 260px;
-    max-width: 420px;
-    padding: var(--s-4) var(--s-5);
-    border: 1px solid var(--rule);
-    border-radius: var(--r-md);
-    background: var(--surface);
-    text-decoration: none;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--s-2);
+    min-width: 0;
+    min-height: var(--dotyk);
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    line-height: var(--lh-ovladani);
   }
-  .karta:hover { border-color: var(--muted); }
-  .t-nadtitulek { color: var(--ink-2); }
-  .nazev { font-size: var(--fs-perex); line-height: 1.3; }
-  .popis { color: var(--ink-2); }
+  .co { color: var(--ink-2); }
+  /* Odkaz má dotykový cíl 44 px a řádek je stejně vysoký jako místo, které mu Domů vyhradí předem. */
+  .pokracuj a { display: inline-flex; align-items: center; min-height: var(--dotyk); color: var(--ink); font-weight: 500; text-underline-offset: 0.2em; }
+  .popis { color: var(--ink-2); font-weight: 400; }
 </style>

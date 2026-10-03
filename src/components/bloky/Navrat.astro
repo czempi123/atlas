@@ -1,0 +1,15 @@
+---
+// Návrat: nový případ, na kterém student zkouší své závěrečné pravidlo. Obsah je v src/content/bloky/<id>.yaml
+// (druh: navrat). Ve skutečném atlasu ho nabízí jen deník, a to nejdřív tři dny po dokončení cesty;
+// tenhle obal je pro dílnu. `ukazka` je pravidlo, které se ukáže, dokud student žádné vlastní nemá.
+// Použití v MDX: <Navrat id="cesta1-navrat" ukazka="Věřím tomu, co si můžu ověřit jinde." />
+import Ostrov from '../ostrovy/Navrat.svelte';
+import { nactiBlok } from './_kontrola';
+import { nactiNavraty } from './_navraty';
+
+interface Props { id: string; ukazka?: string }
+const { id, ukazka } = Astro.props;
+await nactiBlok(id, 'navrat', Astro.url.pathname);
+const navrat = (await nactiNavraty(true)).find((n) => n.id === id)!;
+---
+<Ostrov client:visible navrat={navrat} ukazka={ukazka} />

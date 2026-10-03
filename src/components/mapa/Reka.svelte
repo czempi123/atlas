@@ -2,11 +2,16 @@
   // Řeka životů: pruhy celých životů v okně kolem zvoleného roku. Žijící v barvě období, ostatní vybledlí,
   // vybraný silnější s prstencem. Svislá čára roku navazuje na jezdec posuvníku nad řekou.
   // Oblouky vztahů: plná čára učitel a žák, tečkovaná znali se, čárkovaná vliv textem, vlnovka polemika.
+  // Čáry vysvětluje legenda (LegendaVztahu): na notebooku řádek pod řekou, na telefonu tlačítko Legenda v hlavičce.
   // Textová alternativa: seznam žijících ve zvoleném roce.
   import { tick, untrack } from 'svelte';
   import type { OsobaV, MistoV, VstupMapy } from '../../lib/mapa-vstup';
   import { naAstro, zivotOsoby, zijeVRoce, kdeVRoce, vekVRoce, let_ } from '../../lib/cas-mapy';
   import { rok as rokText } from '../../lib/casy';
+  import { LEGENDA_VZTAHU } from '../../lib/vztahy';
+  import LegendaVztahu from './LegendaVztahu.svelte';
+
+  const NAZEV_TYPU: Record<string, string> = Object.fromEntries(LEGENDA_VZTAHU.map((v) => [v.typ, v.nazev]));
 
   interface Props {
     lide: OsobaV[];
@@ -76,13 +81,25 @@
         }
       } else d = `M${x} ${y1} Q${x + ohyb} ${(y1 + y2) / 2} ${x} ${y2}`;
       const jm = (id: string) => radky[indexPodleId.get(id)!].o.jmeno;
-      const popisTypu = { ucitel: 'učitel a žák', 'znali-se': 'znali se', 'vliv-textem': 'vliv přes texty', polemika: 'polemika' }[v.typ];
+      const popisTypu = NAZEV_TYPU[v.typ];
       out.push({ d, typ: v.typ, vybrany: v.od === vybrany || v.k === vybrany, tradovany: !!v.tradovany, popis: `${jm(v.od)} → ${jm(v.k)}: ${popisTypu}` });
     }
     return out.sort((p, q) => Number(p.vybrany) - Number(q.vybrany));
   });
 
   let seznam = $state(false);
+  // Legenda na telefonu: rozbalovací panel u tlačítka; zavře ho Esc (fokus se vrátí na tlačítko) nebo klepnutí vedle.
+  let legenda = $state(false);
+  let tlLegenda: HTMLButtonElement | undefined = $state();
+  function klavesaOkna(e: KeyboardEvent) {
+    if (e.key === 'Escape' && legenda) {
+      legenda = false;
+      tlLegenda?.focus();
+    }
+  }
+  function klepnutiOkna(e: PointerEvent) {
+    if (legenda && !(e.target as Element | null)?.closest?.('.legenda-obal')) legenda = false;
+  }
   let telo: HTMLDivElement | undefined = $state();
   let vyskaTela = $state(0);
   let aktivniIndex = $state(0);
@@ -124,11 +141,23 @@
   };
 </script>
 
+<svelte:window onkeydown={klavesaOkna} onpointerdown={klepnutiOkna} />
+
 <section class="reka" class:reka--telefon={telefon} style:--radek="{radek}px" aria-labelledby="reka-nadpis">
   <div class="reka__osa">
     <div class="reka__hlava">
       <h2 id="reka-nadpis" class="reka__nadpis">Řeka životů</h2>
-      <button type="button" class="prepinac" aria-pressed={seznam} onclick={() => (seznam = !seznam)}>{seznam ? 'Řeka' : 'Seznam'}</button>
+      <div class="reka__tlacitka">
+        {#if telefon && !seznam}
+          <div class="legenda-obal">
+            <button type="button" class="prepinac" bind:this={tlLegenda} aria-expanded={legenda} aria-controls="legenda-vztahu" onclick={() => (legenda = !legenda)}>Legenda</button>
+            {#if legenda}
+              <div class="legenda-panel" id="legenda-vztahu"><LegendaVztahu svisle /></div>
+            {/if}
+          </div>
+        {/if}
+        <button type="button" class="prepinac" aria-pressed={seznam} onclick={() => { seznam = !seznam; legenda = false; }}>{seznam ? 'Řeka' : 'Seznam'}</button>
+      </div>
     </div>
     <div class="reka__znacky" aria-hidden="true">
       {#each znacky as z, i (z)}
@@ -191,11 +220,17 @@
         </ul>
       </div>
     </div>
+    {#if !telefon}
+      <div class="reka__legenda">
+        <span class="reka__legenda-nadpis" aria-hidden="true">Čáry mezi životy</span>
+        <LegendaVztahu />
+      </div>
+    {/if}
   {/if}
 </section>
 
 <style>
-  .reka { display: grid; grid-template-rows: 24px 1fr; height: 100%; min-height: 0; font-family: var(--font-sans); }
+  .reka { display: grid; grid-template-rows: 24px minmax(0, 1fr) auto; height: 100%; min-height: 0; font-family: var(--font-sans); }
   .reka__osa { display: grid; grid-template-columns: var(--zlab) 1fr; padding-right: var(--s-4); border-bottom: 1px solid var(--rule); }
   .reka__hlava { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); padding: 0 var(--s-2) 0 var(--s-3); }
   .reka__nadpis { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
@@ -209,13 +244,30 @@
     font-weight: 600;
     cursor: pointer;
   }
+  .reka__tlacitka { display: flex; align-items: center; gap: var(--s-2); }
+  /* Legenda: na notebooku stále viditelný řádek pod řekou, na telefonu panel u tlačítka. */
+  .reka__legenda { display: flex; align-items: center; gap: var(--s-4); min-height: 24px; padding: 0 var(--s-4) 0 var(--s-3); border-top: 1px solid var(--rule); }
+  .reka__legenda-nadpis { flex: none; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  @media (max-width: 1279px) { .reka__legenda-nadpis { display: none; } }
+  .legenda-obal { position: relative; display: flex; }
+  .legenda-panel {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 6;
+    padding: var(--s-2) var(--s-3);
+    border-radius: var(--r-sm);
+    background: var(--surface);
+    box-shadow: var(--stin-mapa), 0 0 0 1px var(--rule);
+  }
+  .prepinac[aria-expanded='true'] { border-color: var(--ink); }
   .reka__znacky { position: relative; }
   .znacka {
     position: absolute;
     top: 4px;
     padding-left: 4px;
     border-left: 1px solid var(--rule);
-    font-size: 11px;
+    font-size: var(--fs-popisek);
     line-height: 16px;
     color: var(--muted);
     white-space: nowrap;
@@ -280,19 +332,23 @@
   .pruh__jmeno { display: none; }
 
   /* Telefon: jméno nad pruhem, bez levého sloupce */
-  .reka--telefon { grid-template-rows: 48px 1fr; }
-  .reka--telefon .reka__osa { grid-template-columns: var(--zlab) 1fr; grid-template-rows: 26px 22px; }
+  .reka--telefon { grid-template-rows: 66px minmax(0, 1fr) auto; }
+  .reka--telefon .reka__osa { grid-template-columns: var(--zlab) 1fr; grid-template-rows: 44px 22px; }
   .reka--telefon .reka__hlava { grid-column: 1 / -1; padding: 0 0 0 var(--zlab); }
   .reka--telefon .reka__znacky { grid-column: 2; }
   .reka--telefon .radek__jmeno { display: none; }
+  /* Tlačítka v hlavičce řeky: na telefonu vyšší a s dotykovým cílem 44 px, který se celý vejde do hlavičky. */
+  .reka--telefon .reka__hlava { padding-right: var(--s-3); }
+  .reka--telefon .prepinac { position: relative; height: 32px; padding: 0 12px; font-size: 13px; }
+  .reka--telefon .prepinac::after { content: ''; position: absolute; inset: -6px -3px; }
   .reka--telefon .pruh::before { top: auto; bottom: 4px; margin-top: 0; }
   .reka--telefon .pruh__jmeno {
     display: block;
     position: absolute;
     left: 0;
-    top: 1px;
-    font-size: 11px;
-    line-height: 12px;
+    top: 0;
+    font-size: var(--fs-popisek);
+    line-height: 13px;
     color: var(--ink-2);
     white-space: nowrap;
   }

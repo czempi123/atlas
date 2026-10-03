@@ -223,7 +223,7 @@ test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehl
   await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
   await expect(vstupy.getByRole('link').first()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
   const cesta = (await vstupy.getByRole('link').first().boundingBox())!;
-  const kapitoly = (await page.getByRole('navigation', { name: 'Kapitoly' }).boundingBox())!;
+  const kapitoly = (await page.getByRole('navigation', { name: 'Obsah při čtení' }).boundingBox())!;
   expect(cesta.y).toBeLessThan(kapitoly.y);
   // Na telefonu je cesta vidět bez posouvání a je dost velká na prst.
   expect(cesta.y + cesta.height).toBeLessThan(844);

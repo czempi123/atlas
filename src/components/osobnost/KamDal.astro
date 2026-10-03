@@ -3,9 +3,11 @@
 import Ikona from '../ui/Ikona.astro';
 interface Props { odkazy: { href: string; nadtitulek: string; text: string }[] }
 const { odkazy } = Astro.props;
+// Název oddílu: nadpis na stránce i položka v obsahu stránky (ObsahProfilu.astro).
+const NAZEV = 'Kam dál';
 ---
-<nav class="kamdal" aria-labelledby="kam-dal">
-  <h2 class="t-h2" id="kam-dal">Kam dál</h2>
+<nav class="kamdal" aria-labelledby="kam-dal" data-oddil={NAZEV} data-oddil-kotva="kam-dal">
+  <h2 class="t-h2" id="kam-dal">{NAZEV}</h2>
   <ul>
     {odkazy.map((o) => (
       <li>

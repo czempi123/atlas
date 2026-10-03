@@ -96,6 +96,12 @@ const cesty = defineCollection({
     minut: z.number().int().min(5).max(60).optional(),
     /** odkaz do Mapy a času v Kam dál na přehledu cesty: rok, vybraná osoba a text odkazu */
     mapa: z.object({ rok: z.number().int(), osoba: id, text: z.string() }).strict().optional(),
+    /**
+     * Začátek cesty: id bloku, ve kterém student poprvé sám odpověděl (Volba, Odkryj, Roztřiď, Změň jednu věc, Spor).
+     * Poslední krok ukáže jeho zápis z deníku vedle závěrečného pravidla („Na začátku“ × „Teď“).
+     * Sestavení se zastaví, když blok nestojí v některém dřívějším kroku téže cesty (zacatekCesty v src/lib/cesty.ts).
+     */
+    zacatek: id.optional(),
   }),
 });
 

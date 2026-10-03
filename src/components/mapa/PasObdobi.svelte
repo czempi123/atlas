@@ -1,6 +1,7 @@
 <script lang="ts">
   // Malý pás období: přepínač období se závorkou okna řeky a značkou zvoleného roku.
   // Tlačítko Přehled otevře celých 2 600 let s hustotou myslitelů pro rychlý skok.
+  // Připravované období je šrafované (ne jen vybledlé) a po klepnutí to řekne zprávou.
   import type { ObdobiV } from '../../lib/mapa-vstup';
   import { naAstro } from '../../lib/cas-mapy';
   import { rok as rokText } from '../../lib/casy';
@@ -15,8 +16,10 @@
     rozsah: [number, number];
     onvyber: (id: number) => void;
     onskok: (rok: number) => void;
+    /** klepnutí na období, které ještě není otevřené */
+    onpripravuje?: (o: ObdobiV) => void;
   }
-  let { obdobi, aktivni, rok, okno, hustota, dejiny, rozsah, onvyber, onskok }: Props = $props();
+  let { obdobi, aktivni, rok, okno, hustota, dejiny, rozsah, onvyber, onskok, onpripravuje }: Props = $props();
 
   const plate = (n: number) => `var(--period-${n}-plate)`;
   const mix = (a: number, b: number) => `color-mix(in srgb, ${plate(a)} 50%, ${plate(b)})`;
@@ -81,13 +84,13 @@
         aria-current={siroky ? 'true' : undefined}
         aria-disabled={!o.otevrene ? 'true' : undefined}
         title={o.otevrene ? `${o.nazev} · ${o.oknoText}` : `${o.nazev} · ${o.oknoText} · připravujeme`}
-        onclick={() => o.otevrene && onvyber(o.id)}
+        onclick={() => (o.otevrene ? onvyber(o.id) : onpripravuje?.(o))}
       >
         <svg viewBox="0 0 {siroky ? 180 : 60} 26" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <path d={siroky ? o.ornament.siroky : o.ornament.uzky} fill="none" stroke="currentColor" stroke-width="1" opacity="0.55" />
         </svg>
         <span class="mseg__text">{siroky ? `${o.id} · ${o.kratce}` : o.id}</span>
-        <span class="vizualne-skryte">{siroky ? '' : o.nazev}</span>
+        <span class="vizualne-skryte">{siroky ? '' : o.nazev}{o.otevrene ? '' : ' připravujeme'}</span>
         {#if siroky}
           <span class="zavorka" style:left="{zavorka.l * 100}%" style:width="{(zavorka.p - zavorka.l) * 100}%" aria-hidden="true"></span>
           <span class="znacka" style:left="{znacka * 100}%" aria-hidden="true"></span>
@@ -143,8 +146,15 @@
   }
   .mseg:first-child { border-radius: var(--r-xs) 0 0 var(--r-xs); }
   .mseg:last-child { border-radius: 0 var(--r-xs) var(--r-xs) 0; }
-  .mseg[aria-disabled='true'] { cursor: default; filter: saturate(0.35); }
-  .mseg[aria-disabled='true'] .mseg__text { opacity: 0.75; }
+  /* Připravované období: šrafování přes vybledlou barvu, aby rozdíl nestál jen na barvě a byl vidět i na telefonu. */
+  .mseg[aria-disabled='true'] {
+    cursor: default;
+    filter: saturate(0.35);
+    background: repeating-linear-gradient(135deg, transparent 0 4px, rgb(0 0 0 / 34%) 4px 6px), var(--pozadi);
+  }
+  .mseg[aria-disabled='true'] .mseg__text { font-weight: 500; }
+  /* Čárkovaný rámeček kolem čísla: v tmavém režimu je šrafování slabé, rámeček je vidět v obou. */
+  .mseg[aria-disabled='true']::before { content: ''; position: absolute; inset: 3px; z-index: 1; border: 1px dashed currentColor; border-radius: 2px; opacity: 0.75; pointer-events: none; }
   .mseg--aktivni { flex: 3.2 1 0; box-shadow: inset 0 0 0 1.5px var(--ink); cursor: default; }
   .mseg:not(.mseg--aktivni):not([aria-disabled='true']):hover { filter: brightness(1.08); }
   .mseg svg { position: absolute; inset: 0; width: 100%; height: 100%; }

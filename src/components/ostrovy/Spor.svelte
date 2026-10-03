@@ -1,12 +1,16 @@
 <script lang="ts">
   // Spor: student se postaví na škálu mezi dva filozofy (tažením, klepnutím nebo šipkami), přečte si jejich
   // nejsilnější argumenty a může se přesunout; šipka ukáže, odkud kam. Do deníku se zapíše první i konečná
-  // poloha; nic se nehodnotí.
+  // poloha; nic se nehodnotí. Po konečné poloze nabídne zavřenou nepovinnou reflexi: nejsilnější argument
+  // druhé strany (kdo stojí uprostřed, vybírá z obou) a odpověď na něj; ukládá se sama do téhož zápisu.
   // Použití v MDX (obsah v src/content/bloky/platon-diogenes-skutecnost.yaml):
   // <Spor id="platon-diogenes-skutecnost" />
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
-  import { POLOHY, popisPolohy, zpetnaSporu, zapisSporu, platnyStavSporu, odstavce, radek, velke } from '../../lib/bloky';
+  import {
+    POLOHY, popisPolohy, zpetnaSporu, zapisSporu, platnyStavSporu, odstavce, radek, velke,
+    argumentyReflexe, mistoArgumentu, otazkaReflexe, reflexeVyplnena, uryvekArgumentu, type ReflexeSporu,
+  } from '../../lib/bloky';
   import type { TBlokSpor } from '../../lib/bloky-schema';
   import { odkryti } from '../../lib/pohyb';
   import Mince from '../mapa/Mince.svelte';
@@ -34,17 +38,82 @@
   let argumenty = $state<HTMLElement>();
   let oblast = $state<HTMLElement>();
 
+  // Reflexe. Výběr je pořadí v nabídce, „puvodni“ (uložený argument, který blok už nemá), nebo „jiny“.
+  let otevrena = $state(false);
+  let vyber = $state<string | null>(null);
+  let puvodni = $state<{ strana: 0 | 1; text: string } | null>(null);
+  let vlastni = $state('');
+  let odpoved = $state('');
+  let reflexeUlozena = $state(false);
+  let souhrn = $state<HTMLElement>();
+  let casovac: ReturnType<typeof setTimeout> | undefined;
+  let moznosti = $derived(konecna === null ? [] : argumentyReflexe(blok.strany, konecna));
+
   onMount(() => {
+    // Odchod ze stránky uloží, co je v reflexi rozepsané.
+    const priOdchodu = () => { if (casovac !== undefined) ulozReflexi(); };
+    addEventListener('pagehide', priOdchodu);
+    const uklid = () => { clearTimeout(casovac); removeEventListener('pagehide', priOdchodu); };
     const s = platnyStavSporu(stavBloku(id));
-    if (!s) return;
+    if (!s) return uklid;
     prvni = s.prvni;
     konecna = s.konecna;
     duvod = s.duvod;
     navrh = s.konecna ?? s.prvni;
+    const r = s.reflexe;
+    if (r && s.konecna !== null) {
+      odpoved = r.odpoved;
+      const a = r.argument;
+      if (a && 'strana' in a) {
+        // Hledá se text, ne pořadí: když autor argument změnil nebo ubral, zůstane vidět ten, který student vybral.
+        const i = mistoArgumentu(argumentyReflexe(blok.strany, s.konecna), a);
+        if (i >= 0) vyber = String(i);
+        else { puvodni = a; vyber = 'puvodni'; }
+      } else if (a) {
+        vyber = 'jiny';
+        vlastni = a.vlastni;
+      }
+      reflexeUlozena = reflexeVyplnena(r);
+      otevrena = true;
+    }
+    return uklid;
   });
 
+  function reflexe(): ReflexeSporu | null {
+    let argument: ReflexeSporu['argument'] = null;
+    if (vyber === 'jiny') argument = { vlastni: vlastni.trim() };
+    else if (vyber === 'puvodni') argument = puvodni;
+    else if (vyber !== null && moznosti[Number(vyber)]) argument = { strana: moznosti[Number(vyber)].strana, text: moznosti[Number(vyber)].text };
+    return argument || odpoved.trim() ? { argument, odpoved: odpoved.trim() } : null;
+  }
+
   const ulozStav = () =>
-    ulozStavBloku(id, { prvni, konecna, duvod: duvod.trim() }, { odkaz, otazka: blok.otazka, druh: 'spor', hotovo: konecna !== null });
+    ulozStavBloku(
+      id,
+      { prvni, konecna, duvod: duvod.trim(), reflexe: konecna === null ? null : reflexe() },
+      { odkaz, otazka: blok.otazka, druh: 'spor', hotovo: konecna !== null },
+    );
+
+  /** Reflexe se ukládá sama: do stavu bloku a do téhož zápisu v deníku jako další věta. */
+  function ulozReflexi() {
+    clearTimeout(casovac);
+    casovac = undefined;
+    if (prvni === null || konecna === null) return;
+    const r = reflexe();
+    ulozStav();
+    ulozZapis({ id, otazka: blok.otazka, odpoved: zapisSporu(prvni, konecna, A, B, duvod, r), odkaz, druh: 'spor' });
+    reflexeUlozena = reflexeVyplnena(r);
+  }
+  function piseSe() {
+    clearTimeout(casovac);
+    casovac = setTimeout(ulozReflexi, 600);
+  }
+  function klavesaReflexe(e: KeyboardEvent) {
+    if (e.key !== 'Escape' || !otevrena) return;
+    if (casovac !== undefined) ulozReflexi();
+    otevrena = false;
+    souhrn?.focus();
+  }
 
   async function postavSe() {
     if (navrh === null) return;
@@ -68,6 +137,14 @@
     prvni = null;
     konecna = null;
     duvod = '';
+    clearTimeout(casovac);
+    casovac = undefined;
+    otevrena = false;
+    vyber = null;
+    puvodni = null;
+    vlastni = '';
+    odpoved = '';
+    reflexeUlozena = false;
     smazStavBloku(id);
     smazZapis(id);
     await tick();
@@ -184,6 +261,53 @@
         <p>{zpetnaSporu(prvni, konecna, A, B)}</p>
         {#if duvod.trim()}<p class="duvod"><span class="t-popisek">Tvůj důvod:</span> {duvod}</p>{/if}
       </div>
+      <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+      <details class="reflexe" bind:open={otevrena} onkeydown={klavesaReflexe}>
+        <summary bind:this={souhrn}><span class="reflexe__otazka">{otazkaReflexe(konecna)}</span><span class="nepovinne">Nepovinné</span></summary>
+        <div class="reflexe__telo">
+          <fieldset class="reflexe__vyber">
+            <legend class="vizualne-skryte">{otazkaReflexe(konecna)}</legend>
+            {#each moznosti as m, i (i)}
+              {#if i === 0 || moznosti[i - 1].strana !== m.strana}
+                <p class="reflexe__strana t-nadtitulek obdobi-{lide[m.strana].obdobi}" aria-hidden="true">{nadpisy[m.strana]}</p>
+              {/if}
+              <label class={['arg', vyber === String(i) && 'arg--vybrany']}>
+                <input class="vizualne-skryte" type="radio" name={`${id}-reflexe`} value={String(i)} bind:group={vyber} onchange={ulozReflexi} />
+                <span class="arg__bod" aria-hidden="true"></span>
+                <span><span class="vizualne-skryte">{nadpisy[m.strana]}</span>{@html radek(m.uryvek)}</span>
+              </label>
+            {/each}
+            {#if puvodni}
+              <label class={['arg', vyber === 'puvodni' && 'arg--vybrany']}>
+                <input class="vizualne-skryte" type="radio" name={`${id}-reflexe`} value="puvodni" bind:group={vyber} onchange={ulozReflexi} />
+                <span class="arg__bod" aria-hidden="true"></span>
+                <span><span class="vizualne-skryte">{nadpisy[puvodni.strana]}</span>{@html radek(uryvekArgumentu(puvodni.text))}</span>
+              </label>
+            {/if}
+            <label class={['arg', 'arg--jiny', vyber === 'jiny' && 'arg--vybrany']}>
+              <input class="vizualne-skryte" type="radio" name={`${id}-reflexe`} value="jiny" bind:group={vyber} onchange={ulozReflexi} />
+              <span class="arg__bod" aria-hidden="true"></span>
+              <span>Jiný argument</span>
+            </label>
+          </fieldset>
+          {#if vyber === 'jiny'}
+            <label class="blok__popis" for={`${id}-jiny`}>Který?</label>
+            <textarea class="blok__pole blok__pole--kratke" id={`${id}-jiny`} rows="2" bind:value={vlastni} oninput={piseSe} onblur={ulozReflexi}></textarea>
+          {/if}
+          <label class="blok__popis" for={`${id}-odpoved`}>Co na něj odpovíš?</label>
+          <textarea
+            class="blok__pole blok__pole--kratke"
+            id={`${id}-odpoved`}
+            rows="2"
+            bind:value={odpoved}
+            oninput={piseSe}
+            onblur={ulozReflexi}
+            placeholder="Stačí pár slov…"
+            aria-describedby={`${id}-reflexe-stav`}
+          ></textarea>
+          <p class="blok__ulozeno reflexe__stav" id={`${id}-reflexe-stav`} aria-live="polite">{reflexeUlozena ? 'Uloženo v deníku.' : 'Ukládá se samo do deníku.'}</p>
+        </div>
+      </details>
       <BlokDal {dal} />
       <div class="blok__akce">
         <p class="blok__ulozeno">První i konečná poloha jsou uložené v deníku.</p>
@@ -290,6 +414,56 @@
   .strana__jmeno { margin: 0; color: var(--ink); }
   .posunout { margin: 0 0 var(--s-3); }
   .nepovinne { margin-left: var(--s-2); font-weight: 400; color: var(--muted); }
+
+  /* Reflexe: zavřená je jeden řádek pod zpětnou vazbou (stejný vzor jako „Co kdybys zvolil jinak?“ ve Volbě). */
+  .reflexe { margin-top: var(--s-4); }
+  .reflexe summary {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--s-2);
+    min-height: 44px;
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .reflexe__otazka { text-decoration: underline; text-underline-offset: 0.2em; }
+  .reflexe summary .nepovinne { margin-left: 0; }
+  .reflexe__telo { margin-top: var(--s-3); padding-left: var(--s-4); border-left: 2px solid var(--pc-soft); }
+  .reflexe__vyber { display: grid; gap: var(--s-2); min-width: 0; margin: 0 0 var(--s-4); padding: 0; border: 0; }
+  .reflexe__strana { margin: var(--s-2) 0 0; color: var(--pc); }
+  .reflexe__strana:first-of-type { margin-top: 0; }
+  .arg {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-3);
+    min-height: 48px;
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-sm);
+    background: var(--paper);
+    font-size: var(--fs-ovladani-l);
+    line-height: 1.45;
+    cursor: pointer;
+    transition: border-color var(--pohyb-rychle), background var(--pohyb-rychle);
+  }
+  .arg:hover { border-color: var(--muted); }
+  .arg:has(input:focus-visible) { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .arg--vybrany { border: 2px solid var(--pc); padding: calc(var(--s-3) - 1px) calc(var(--s-4) - 1px); background: var(--pc-tint); }
+  .arg--jiny { font-family: var(--font-sans); font-size: var(--fs-ovladani); font-weight: 500; }
+  .arg__bod {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    border: 2px solid var(--muted);
+    border-radius: var(--r-full);
+    background: var(--surface);
+  }
+  .arg--vybrany .arg__bod { border-color: var(--ink); background: var(--ink); box-shadow: inset 0 0 0 3px var(--surface); }
+  .reflexe__stav { margin: 0; }
   .duvod { font-style: italic; }
   .duvod .t-popisek { color: var(--ink-2); font-style: normal; }
 </style>

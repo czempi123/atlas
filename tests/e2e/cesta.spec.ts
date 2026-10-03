@@ -66,12 +66,13 @@ for (const c of CESTY) {
 
 test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v deníku', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
-  // Vstup z Domů.
-  await page.goto('/');
-  await page.getByRole('link', { name: /Kdy mám dobrý důvod věřit\?/ }).first().click();
-  await expect(page).toHaveURL(CESTA);
+  // Přehled cesty nabízí začátek.
+  await page.goto(CESTA);
   await pripravit(page);
-  await page.getByRole('link', { name: 'Začít cestu' }).click();
+  await expect(page.getByRole('link', { name: 'Začít cestu' })).toHaveAttribute('href', `${CESTA}1/`);
+  // Vstup z Domů: hlavní tlačítko vede rovnou na krok 1.
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Začít první cestu' }).click();
   await expect(page).toHaveURL(`${CESTA}1/`);
   await expect(page.locator('.postup-text')).toHaveText('Krok 1 z 7');
   // Lišta: Další krok.
@@ -88,12 +89,14 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
   await expect(page).toHaveURL(`${CESTA}3/`);
   await expect(page.locator('.citat, blockquote').first()).toContainText('Já nevím, ale ani si nemyslím, že vím.');
 
-  // Domů nabídne pokračování v cestě.
+  // Domů nabídne pokračování v cestě hlavním tlačítkem; Pokračuj ho neopakuje.
   await page.goto('/');
-  const pokracuj = page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' });
-  await expect(pokracuj.getByRole('link').first()).toContainText('Kdy mám dobrý důvod věřit?');
-  await expect(pokracuj.getByRole('link').first()).toContainText('Krok 3 z 7');
-  await expect(pokracuj.getByRole('link').first()).toHaveAttribute('href', `${CESTA}3/`);
+  const hlavni = page.locator('[data-zacatek-tlacitko]');
+  await expect(hlavni).toHaveText('Pokračovat v cestě');
+  await expect(hlavni).toHaveAttribute('href', `${CESTA}3/`);
+  await expect(page.locator('[data-zacatek-udaj]')).toHaveText('Cesta 1 · Kdy mám dobrý důvod věřit? · krok 3 z 7');
+  await expect(page.locator('astro-island[component-url*="Pokracuj"]:not([ssr])')).toHaveCount(1);
+  await expect(page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' })).toHaveCount(0);
 
   // Přehled cesty ukáže prošlé kroky a nabídne pokračovat.
   await page.goto(CESTA);
@@ -115,9 +118,13 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
   await page.getByRole('link', { name: 'Dokončit cestu' }).click();
   await expect(page).toHaveURL(`${CESTA}#hotovo`);
   await expect(page.getByRole('status')).toContainText('Cestu jsi prošel celou.');
+  // Po dokončení první cesty vede Domů do přehledu otázek, kde si student vybere další.
+  await page.goto('/');
+  await expect(hlavni).toHaveText('Vybrat další cestu');
+  await expect(hlavni).toHaveAttribute('href', '/otazky/');
 });
 
-test('cesta: klávesnice v hlavičce a liště; rozpracovaná otázka v Pokračuj', async ({ page }) => {
+test('cesta: klávesnice v hlavičce a liště; rozpracovaný krok nabídne hlavní tlačítko na Domů', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(`${CESTA}6/`);
   await pripravit(page);
@@ -131,10 +138,12 @@ test('cesta: klávesnice v hlavičce a liště; rozpracovaná otázka v Pokraču
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
   await expect(z.getByRole('radio', { name: 'Kdo je viděl naživo, říká modročerné' })).toBeFocused();
+  // Rozpracovaná otázka leží v kroku, kam vede hlavní tlačítko: Pokračuj ji vedle něj neopakuje.
   await page.goto('/');
-  const pokracuj = page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' });
-  await expect(pokracuj).toContainText('Kdo má pravdu?');
-  await expect(pokracuj.getByRole('link', { name: /Kdo má pravdu\?/ })).toHaveAttribute('href', `${CESTA}6/#cesta1-saty`);
+  await expect(page.locator('[data-zacatek-tlacitko]')).toHaveText('Pokračovat v cestě');
+  await expect(page.locator('[data-zacatek-tlacitko]')).toHaveAttribute('href', `${CESTA}6/`);
+  await expect(page.locator('astro-island[component-url*="Pokracuj"]:not([ssr])')).toHaveCount(1);
+  await expect(page.getByRole('navigation', { name: 'Pokračuj, kde jsi skončil' })).toHaveCount(0);
 });
 
 test('cesta: Spor Prótagorás × Sókratés a šaty jen klávesnicí (telefon)', async ({ page }) => {
@@ -386,7 +395,14 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await dalKlavesnici(page, penize, 'Tvoje pravidlo', `${CESTA6}7/`);
 
   // Krok 7: návrat ke košům a vlastní pravidlo, které se uloží samo.
-  await expect(page.locator('.krok__obsah')).toContainText('Vzpomeň si na své koše z kroku 2.');
+  await expect(page.locator('.krok__obsah')).toContainText('Vrať se ke svým košům z kroku 2.');
+  // Vedle pravidla stojí koše, jak je student v kroku 2 opravdu uložil.
+  const panel = page.getByRole('region', { name: 'Na začátku a teď' });
+  await expect(panel.getByRole('heading', { name: 'Na začátku' })).toBeVisible();
+  await expect(panel).toContainText('Krok 2 · Tři koše');
+  await expect(panel.locator('.cast').first()).toContainText('Potřebuju');
+  await expect(panel.locator('.cast').first().locator('li')).toHaveText(['Vyspat se po probdělé noci', 'Někdo, komu řeknu, co mě trápí']);
+  await expect(panel.getByRole('heading', { name: 'Teď' })).toBeVisible();
   const pole = page.getByRole('textbox', { name: 'Kolik je dost? Napiš svoje pravidlo.' });
   await pole.focus();
   await page.keyboard.type('Dost je, když mi nic nechybí, i když nic nepřibývá.');
@@ -415,7 +431,7 @@ test('cesta 6 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
     ['Moudrý nebude žít jako kynik ani žebrat.', 'Kynik i Epikúros tedy jedli chléb a pili vodu.', 'S Diogenem samotným se Epikúros nejspíš nikdy nepotkal'],
     ['měsíc na minimum', 'každý pátek scházíš s kamarády na pizzu'],
     ['Epikúros tvrdil, že strop má i bohatství', 'U většiny lidí nálada s příjmem roste dál.', 'Komu je málo to, co stačí, tomu nestačí nic.'],
-    ['Oba chtěli totéž: aby je osud nezaskočil.', 'Souhlasit s nimi nemusíš.', 'Vzpomeň si na své koše z kroku 2.'],
+    ['Oba chtěli totéž: aby je osud nezaskočil.', 'Souhlasit s nimi nemusíš.', 'Vrať se ke svým košům z kroku 2.'],
   ];
   await page.goto(`${CESTA6}1/`);
   for (let n = 1; n <= KROKY6.length; n++) {
@@ -438,12 +454,6 @@ test('cesta 6 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
     await expect(page.locator('.krok__obsah')).not.toContainText(/Ječná placka a voda|Dítě mě porazilo|Hledám člověka|Jsem občan světa|Tohle je Platónův člověk|Tělo volá/);
     await expect(page.locator('a[href*="cizi-zivot"], a[href*="proc-se-bat-smrti"]')).toHaveCount(0);
   }
-});
-
-test('Domů: zůstává jedna doporučená cesta', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.locator('.cesta-karta')).toHaveCount(1);
-  await expect(page.locator('.cesta-karta')).toHaveAttribute('href', CESTA);
 });
 
 test('cesta na notebooku: obsah stojí na středové ose, ne u levého okraje', async ({ page }) => {

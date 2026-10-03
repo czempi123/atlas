@@ -10,6 +10,7 @@ import {
   platnyStavOdkryj,
   posunZmeny, zapisZmeny, platnyStavZmeny,
   popisPolohy, zpetnaSporu, zapisSporu, platnyStavSporu,
+  druhaStrana, uryvekArgumentu, argumentyReflexe, mistoArgumentu, otazkaReflexe, reflexeVyplnena, platnaReflexe, DELKA_URYVKU,
   faktaDvojice, hodnotPoradi, hodnotVzdalenost, platnyStavKdoZil, osaDvou,
   osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy,
   chybyBloku,
@@ -146,13 +147,26 @@ describe('Spor', () => {
     ]);
   });
   it('zpětná vazba: zůstal, posunul se, přešel, došel doprostřed', () => {
-    expect(zpetnaSporu(1, 1, 'Platón', 'Diogenés')).toMatch(/^Zůstal jsi tam, kde jsi začal\./);
-    expect(zpetnaSporu(2, 2, 'Platón', 'Diogenés')).toMatch(/^Zůstal jsi uprostřed\./);
-    expect(zpetnaSporu(0, 1, 'Platón', 'Diogenés')).toBe(`Posunul ses o 1${N}krok ke straně, kterou hájí Diogenés. Který argument tě posunul? Řekni ho vlastními slovy.`);
-    expect(zpetnaSporu(4, 2, 'Platón', 'Diogenés')).toMatch(`Posunul ses o 2${N}kroky ke straně, kterou hájí Platón. Teď stojíš uprostřed`);
-    expect(zpetnaSporu(0, 4, 'Platón', 'Diogenés')).toMatch(`o 4${N}kroky ke straně, kterou hájí Diogenés. Přešel jsi na druhou stranu.`);
-    // Nikdy nehodnotí, kdo má pravdu.
-    for (const [a, b] of [[0, 0], [0, 4], [3, 1], [2, 2]]) expect(zpetnaSporu(a, b, 'A', 'B')).not.toMatch(/správn|špatn|pravdu/i);
+    const druha = (kdo: string) => `I strana, kterou hájí ${kdo}, má argument, který stojí za odpověď.`;
+    const obe = 'Neznamená to, že všechny argumenty vážily stejně.';
+    expect(zpetnaSporu(1, 1, 'Platón', 'Diogenés')).toBe(`Zůstal jsi tam, kde jsi začal. ${druha('Diogenés')}`);
+    expect(zpetnaSporu(4, 4, 'Platón', 'Diogenés')).toBe(`Zůstal jsi tam, kde jsi začal. ${druha('Platón')}`);
+    expect(zpetnaSporu(2, 2, 'Platón', 'Diogenés')).toBe(`Zůstal jsi uprostřed: obě strany pro tebe mají váhu. ${obe}`);
+    // K druhé straně, ale ne na ni; od druhé strany; ze středu na stranu.
+    expect(zpetnaSporu(0, 1, 'Platón', 'Diogenés')).toBe(`Posunul ses o 1${N}krok ke straně, kterou hájí Diogenés, ale nepřešel jsi na ni. Některý její argument přitom stojí za odpověď.`);
+    expect(zpetnaSporu(1, 0, 'Platón', 'Diogenés')).toBe(`Posunul ses o 1${N}krok ke straně, kterou hájí Platón. ${druha('Diogenés')}`);
+    expect(zpetnaSporu(2, 3, 'Platón', 'Diogenés')).toBe(`Posunul ses o 1${N}krok ke straně, kterou hájí Diogenés. ${druha('Platón')}`);
+    expect(zpetnaSporu(4, 2, 'Platón', 'Diogenés')).toBe(`Posunul ses o 2${N}kroky ke straně, kterou hájí Platón. Teď stojíš uprostřed: obě strany pro tebe mají váhu. ${obe}`);
+    expect(zpetnaSporu(0, 4, 'Platón', 'Diogenés')).toBe(`Posunul ses o 4${N}kroky ke straně, kterou hájí Diogenés. Přešel jsi na druhou stranu. ${druha('Platón')}`);
+    for (let a = 0; a < 5; a++) {
+      for (let b = 0; b < 5; b++) {
+        const z = zpetnaSporu(a, b, 'A', 'B');
+        // Nikdy nehodnotí, kdo má pravdu, a neklade otázku: tu klade až reflexe pod ní.
+        expect(z).not.toMatch(/správn|špatn|pravdu|\?/i);
+        // Strana, na jejíž argument vazba ukazuje, je ta, na které student nestojí.
+        if (b !== 2) expect(z).toMatch(b < 2 ? /kterou hájí B|její argument/ : /kterou hájí A|její argument/);
+      }
+    }
   });
   it('zápis do deníku: první a konečná poloha a nepovinný důvod', () => {
     expect(zapisSporu(1, 2, 'Platón', 'Diogenés')).toBe('Na začátku: spíš Platón. Po argumentech: uprostřed.');
@@ -160,10 +174,10 @@ describe('Spor', () => {
     expect(zapisSporu(3, 3, 'Platón', 'Diogenés', 'jeskyně')).toContain('Co mě udrželo: jeskyně.');
   });
   it('uložený stav', () => {
-    expect(platnyStavSporu({ prvni: 1, konecna: 3, duvod: 'x' })).toEqual({ prvni: 1, konecna: 3, duvod: 'x' });
-    expect(platnyStavSporu({ prvni: 1 })).toEqual({ prvni: 1, konecna: null, duvod: '' });
+    expect(platnyStavSporu({ prvni: 1, konecna: 3, duvod: 'x' })).toEqual({ prvni: 1, konecna: 3, duvod: 'x', reflexe: null });
+    expect(platnyStavSporu({ prvni: 1 })).toEqual({ prvni: 1, konecna: null, duvod: '', reflexe: null });
     expect(platnyStavSporu({ prvni: 7 })).toBeNull();
-    expect(platnyStavSporu({ prvni: 1, konecna: 1.5 })).toEqual({ prvni: 1, konecna: null, duvod: '' });
+    expect(platnyStavSporu({ prvni: 1, konecna: 1.5 })).toEqual({ prvni: 1, konecna: null, duvod: '', reflexe: null });
   });
   it('schéma: dvě různé osoby', () => {
     const strana = { osoba: 'platon', postoj: 'x', argumenty: ['a'] };
@@ -397,9 +411,9 @@ const osoby = new Set(lide.map((o) => o.id));
 const prameny = new Set(zdroje.prameny.map((p) => p.id));
 
 describe('obsah bloků (src/content/bloky)', () => {
-  it('složka má ukázky všech čtyř druhů', () => {
+  it('složka má ukázky všech pěti druhů', () => {
     const druhy = new Set(soubory.map((s) => parse(readFileSync(new URL(s, slozka), 'utf8')).druh));
-    expect([...druhy].sort()).toEqual(['roztrid', 'spor', 'volba', 'zmena']);
+    expect([...druhy].sort()).toEqual(['navrat', 'roztrid', 'spor', 'volba', 'zmena']);
   });
   for (const s of soubory) {
     it(`${s}: schéma a odkazy na data`, () => {
@@ -412,5 +426,107 @@ describe('obsah bloků (src/content/bloky)', () => {
     expect(chyby).toHaveLength(2);
     expect(chybyBloku('y', { druh: 'roztrid', zdroje: [], srovnani: { osoba: 'nikdo' } }, osoby, prameny)).toHaveLength(1);
     expect(chybyBloku('y', { druh: 'roztrid', zdroje: [], srovnani: {} }, osoby, prameny)).toEqual([]);
+  });
+});
+
+describe('Spor: reflexe nejsilnějšího argumentu', () => {
+  const strany = [
+    { argumenty: ['Stůl se jednou rozpadne. Za proměnlivým světem stojí neměnné ideje.', 'Druhý argument Platóna.'] },
+    { argumenty: ['Stůl a pohár vidím.', 'Co nejde ukázat ani vyzkoušet, o to nemá cenu se přít.'] },
+  ];
+  it('druhá strana je ta, na které student nestojí; uprostřed žádná', () => {
+    expect([0, 1, 2, 3, 4].map(druhaStrana)).toEqual([1, 1, null, 0, 0]);
+    expect(otazkaReflexe(1)).toBe('Který argument druhé strany byl nejsilnější?');
+    expect(otazkaReflexe(2)).toBe('Který argument byl nejsilnější?');
+  });
+  it('nabídka: argumenty druhé strany, uprostřed obou stran v pořadí bloku', () => {
+    expect(argumentyReflexe(strany, 0).map((m) => [m.strana, m.text])).toEqual([[1, 'Stůl a pohár vidím.'], [1, strany[1].argumenty[1]]]);
+    expect(argumentyReflexe(strany, 4).map((m) => m.strana)).toEqual([0, 0]);
+    expect(argumentyReflexe(strany, 2).map((m) => m.strana)).toEqual([0, 0, 1, 1]);
+  });
+  it('úryvek: celé věty do limitu, aspoň první, zkrácený končí výpustkou', () => {
+    expect(uryvekArgumentu('Krátký argument.')).toBe('Krátký argument.');
+    const dlouha = `${'Slovo '.repeat(30).trim()}.`;
+    expect(uryvekArgumentu(`${dlouha} Druhá věta.`)).toBe(`${dlouha} …`);
+    const u = uryvekArgumentu('První věta má třicet znaků takhle. Druhá věta je o něco delší než ta první věta. Třetí věta už se do úryvku určitě nevejde, je moc dlouhá.');
+    expect(u).toBe('První věta má třicet znaků takhle. Druhá věta je o něco delší než ta první věta. …');
+    expect(u.length).toBeLessThanOrEqual(DELKA_URYVKU + 2);
+    // Odstavce a kurzíva z YAML se v úryvku neprojeví; zkratka s tečkou větu nekončí.
+    expect(uryvekArgumentu('První *odstavec*.\n\nDruhý odstavec.')).toBe('První odstavec. Druhý odstavec.');
+    expect(uryvekArgumentu(`Zemřel roku 399 př. n. l. v Athénách a ${'dlouho '.repeat(20)}se o tom mluvilo. Konec.`)).toMatch(/mluvilo\. …$/);
+    // Otevřené uvozovky se dočtou do konce, i když úryvek přeroste limit.
+    const citat = 'Na Diogenovu námitku prý Platón odpověděl: „Oči, kterými se vidí stůl a pohár, máš. Rozum, kterým se vidí stolovost a pohárovost, nemáš.“ A šel dál.';
+    expect(uryvekArgumentu(citat)).toBe(`${citat.slice(0, citat.indexOf('“') + 1)} …`);
+  });
+  it('uložený argument se hledá podle textu, ne podle pořadí', () => {
+    const nabidka = argumentyReflexe(strany, 0);
+    expect(mistoArgumentu(nabidka, { strana: 1, text: 'Co nejde ukázat ani  vyzkoušet,\no to nemá cenu se přít.' })).toBe(1);
+    // Autor argumenty přehodil: uložený se najde na novém místě.
+    const prehozene = argumentyReflexe([strany[0], { argumenty: [...strany[1].argumenty].reverse() }], 0);
+    expect(mistoArgumentu(prehozene, { strana: 1, text: 'Stůl a pohár vidím.' })).toBe(1);
+    // Autor text změnil nebo argument ubral: nenajde se žádný, a tedy se neukáže jiný.
+    expect(mistoArgumentu(nabidka, { strana: 1, text: 'Stůl a pohár vidím, Platóne.' })).toBe(-1);
+    expect(mistoArgumentu(nabidka, { strana: 0, text: 'Stůl a pohár vidím.' })).toBe(-1);
+  });
+  it('zápis do deníku: reflexe je další věta za důvodem', () => {
+    const arg = { strana: 1 as const, text: 'Stůl a pohár vidím.' };
+    expect(zapisSporu(1, 0, 'Platón', 'Diogenés', 'jeskyně', { argument: arg, odpoved: 'vidět není všechno' })).toBe(
+      'Na začátku: spíš Platón. Po argumentech: Platón. Co mě posunulo: jeskyně. Nejsilnější argument druhé strany (Diogenés): Stůl a pohár vidím. Moje odpověď: vidět není všechno.',
+    );
+    expect(zapisSporu(1, 1, 'Platón', 'Diogenés', '', { argument: arg, odpoved: '' })).toBe(
+      'Na začátku: spíš Platón. Po argumentech: spíš Platón. Nejsilnější argument druhé strany (Diogenés): Stůl a pohár vidím.',
+    );
+    // Uprostřed není „druhá strana“; vlastní argument je bez jména strany.
+    expect(zapisSporu(2, 2, 'kynici', 'Epikúros', '', { argument: { strana: 0, text: 'Každá potřeba je provázek.' }, odpoved: 'ne každá' })).toBe(
+      'Na začátku: uprostřed. Po argumentech: uprostřed. Nejsilnější argument (kynici): Každá potřeba je provázek. Moje odpověď: ne každá.',
+    );
+    expect(zapisSporu(3, 4, 'Platón', 'Diogenés', '', { argument: { vlastni: 'matematika' }, odpoved: '' })).toMatch(/Nejsilnější argument druhé strany: matematika\.$/);
+    expect(zapisSporu(3, 4, 'Platón', 'Diogenés', '', { argument: null, odpoved: 'nevím' })).toMatch(/Diogenés\. Moje odpověď druhé straně: nevím\.$/);
+    expect(zapisSporu(2, 2, 'Platón', 'Diogenés', '', { argument: { vlastni: ' ' }, odpoved: 'nevím' })).toMatch(/uprostřed\. Moje odpověď: nevím\.$/);
+    // Dlouhý argument jde do deníku jako úryvek.
+    const dlouhy = `První věta. ${'Další slova '.repeat(20).trim()}.`;
+    expect(zapisSporu(0, 0, 'Platón', 'Diogenés', '', { argument: { strana: 1, text: dlouhy }, odpoved: 'ano' })).toContain('(Diogenés): První věta. … Moje odpověď: ano.');
+    // Prázdná reflexe zápis nemění.
+    for (const r of [null, { argument: null, odpoved: ' ' }, { argument: { vlastni: '' }, odpoved: '' }]) {
+      expect(zapisSporu(1, 2, 'Platón', 'Diogenés', '', r)).toBe('Na začátku: spíš Platón. Po argumentech: uprostřed.');
+      expect(reflexeVyplnena(r)).toBe(false);
+    }
+  });
+  it('uložený stav: starý bez reflexe platí dál, nesmysl se zahodí', () => {
+    expect(platnyStavSporu({ prvni: 1, konecna: 3, duvod: 'x' })?.reflexe).toBeNull();
+    const r = { argument: { strana: 0, text: 'Stůl se rozpadne.' }, odpoved: 'a co čísla' };
+    expect(platnyStavSporu({ prvni: 1, konecna: 3, duvod: '', reflexe: r })?.reflexe).toEqual(r);
+    expect(platnyStavSporu({ prvni: 1, konecna: 3, duvod: '', reflexe: { argument: { vlastni: '' }, odpoved: '' } })?.reflexe).toEqual({ argument: { vlastni: '' }, odpoved: '' });
+    // Bez konečné polohy reflexe být nemůže.
+    expect(platnyStavSporu({ prvni: 1, reflexe: r })?.reflexe).toBeNull();
+    expect(platnaReflexe({ argument: { strana: 2, text: 'x' }, odpoved: 5 })).toBeNull();
+    expect(platnaReflexe({ argument: { strana: 1, text: ' ' }, odpoved: 'jen odpověď' })).toEqual({ argument: null, odpoved: 'jen odpověď' });
+    expect(platnaReflexe('x')).toBeNull();
+    expect(platnaReflexe({})).toBeNull();
+  });
+  it('věty složené se jménem strany sedí na všechny strany, které v atlasu jsou', () => {
+    const jmena = new Map((lide as unknown as { id: string; jmeno: string }[]).map((o) => [o.id, o.jmeno]));
+    const spory = soubory.map((s) => parse(readFileSync(new URL(s, slozka), 'utf8'))).filter((b) => b.druh === 'spor');
+    expect(spory.length).toBeGreaterThanOrEqual(4);
+    for (const s of spory) {
+      const [a, b] = s.strany.map((x: { osoba: string; oznaceni?: string }) => x.oznaceni ?? jmena.get(x.osoba));
+      expect(a && b).toBeTruthy();
+      for (let p = 0; p < 5; p++) {
+        for (let k = 0; k < 5; k++) {
+          const z = zpetnaSporu(p, k, a, b);
+          expect(z).not.toMatch(/undefined|null/);
+          // Jméno strany stojí jen v 1. pádě za „kterou hájí“: nic se neskloňuje.
+          for (const j of [a, b]) for (const m of z.matchAll(new RegExp(j, 'g'))) expect(z.slice(0, m.index)).toMatch(/kterou hájí $/);
+        }
+      }
+      // V nabídce je každý argument poznat: úryvek není prázdný a argumenty téže strany se neliší až za ním.
+      for (const k of [0, 2, 4]) {
+        const nabidka = argumentyReflexe(s.strany, k);
+        expect(nabidka.every((m) => m.uryvek.length > 10)).toBe(true);
+        expect(new Set(nabidka.map((m) => `${m.strana}:${m.uryvek}`)).size).toBe(nabidka.length);
+      }
+      const z = zapisSporu(0, 0, a, b, '', { argument: { strana: 1, text: s.strany[1].argumenty[0] }, odpoved: 'x' });
+      expect(z).toContain(`Nejsilnější argument druhé strany (${b}): `);
+    }
   });
 });

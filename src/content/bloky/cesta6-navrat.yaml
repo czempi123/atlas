@@ -1,0 +1,20 @@
+# Návrat · cesta 6 „Kolik je dost?“: nový telefon, i když starý funguje, protože ho mají všichni ostatní.
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen (schválil autor 3. 10. 2026).
+# Neopakuje bundu z kroku 3: tam jde o cenu a teplo, tady o to, že věc mají druzí. Na nový má student našetřeno,
+# aby o ceně nešlo.
+druh: navrat
+obdobi: 2
+cesta: kolik-je-dost
+pravidlo: cesta6-moje-pravidlo
+nazev: Nový telefon
+scena: >-
+  Představ si, že tvůj telefon funguje. Fotí, hraje a baterie vydrží do večera.
+  Během podzimu si ale skoro všichni z tvé party pořídili nový model.
+
+
+  Nikdo ti nic neřekl. Jen když telefony leží na stole, ten tvůj je jediný starý.
+  Na nový máš našetřeno z brigády.
+po:
+  ano: "A kdyby ho z party neměl nikdo: chtěl bys ho stejně?"
+  upravim: Co do něj připíšeš o věcech, které chceš hlavně proto, že je mají druzí?
+  nevim: "Co vlastně chceš: ten telefon, nebo nebýt u stolu jediný?"

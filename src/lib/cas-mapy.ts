@@ -275,12 +275,14 @@ export function zijiciVRoce<T extends OsobaMapy>(lide: T[], r: number): T[] {
 /**
  * Stín odkazu: zesnulí, na které v roce r přímo navazuje někdo žijící (je jejich žákem, četl je,
  * polemizoval s nimi nebo se s nimi znal).
+ * Směr ve vztahu: u učitele a žáka a u vlivu přes texty navazuje `k` na `od`; u polemiky je to obráceně
+ * (`od` polemizuje s `k`, navazuje tedy `od` na `k`); kdo se znali, navazují na sebe navzájem.
  */
 export function stinOdkazu<T extends OsobaMapy>(lide: T[], vztahy: Pick<TVztah, 'od' | 'k' | 'typ'>[], r: number): T[] {
   const podleId = new Map(lide.map((o) => [o.id, o]));
   const vysledek = new Set<string>();
   for (const v of vztahy) {
-    const pary: [string, string][] = v.typ === 'znali-se' ? [[v.od, v.k], [v.k, v.od]] : [[v.od, v.k]];
+    const pary: [string, string][] = v.typ === 'znali-se' ? [[v.od, v.k], [v.k, v.od]] : v.typ === 'polemika' ? [[v.k, v.od]] : [[v.od, v.k]];
     for (const [mrtvy, zivy] of pary) {
       const m = podleId.get(mrtvy);
       const z = podleId.get(zivy);

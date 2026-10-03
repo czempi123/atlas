@@ -13,6 +13,46 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 | Větev `rozhrani-v2` je commitnutá a na GitHub půjde až s celkem 4 | Autor: „do githubu ho pak nahrajeme až s tímto celkem“ |
 | Citáty z dialogů celku 4 jsou v datech vedeny pod Platónem jako autorem; kdo větu v dialogu říká, stojí v poli `podle` a ve studentském textu ve větě před citátem | Kontrola hlasů na stránce otázky chce citát téže osoby; pravidlo „u dialogu řekni, kdo mluví“ |
 | Soubory, které se nevyplatí přepisovat terminálem, se do repozitáře zapisují přes připojenou složku Atlas; příkazy, testy a commity běží dál přes Desktop Commander | Podkladový list má přes sto tisíc znaků; autor přístup ke složce povolil |
+
+## 3. 10. 2026: Rozhraní v2, krok R2 (reflexe ve Sporu, Na začátku × Teď, Návrat)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Reflexe ve Sporu je zavřený řádek pod zpětnou vazbou („Který argument druhé strany byl nejsilnější?“ · Nepovinné), ne součást jejího rámečku, a ukládá se sama | „Další krok“ zůstává vidět bez ní. Rámeček zpětné vazby čtečka ohlašuje; formulář uvnitř by se četl při každé změně. Stejný vzor má „Co kdybys zvolil jinak?“ ve Volbě |
+| Zpětná vazba Sporu otázku neklade, jen k reflexi dovede („I strana, kterou hájí Epikúros, má argument, který stojí za odpověď.“). „Který argument tě posunul?“ vypadlo | Otázka má zaznít jednou, na řádku reflexe; na posun se ptá pole před zápisem polohy. Jméno v 1. pádě za „kterou hájí“ sedí na všech osm stran včetně „kynici“ |
+| Ve výběru stojí začátek argumentu (celé věty asi do 110 znaků), ne celý text ani nový popisek v YAML | Argumenty mají až tři odstavce a YAML Sporů se měnit neměl |
+| Reflexe ukládá text vybraného argumentu, ne pořadí. Když ho autor později změní, uvidí student svůj původní výběr jako zvláštní možnost | Argumenty nemají id; uložená reflexe nesmí nikdy ukázat jiný argument |
+| „Teď“ v závěru cesty je přímo pole s pravidlem, ne kopie textu pod ním | Pravidlo by jinak stálo na stránce dvakrát; schválil autor |
+| „Na začátku“ se čte ze zápisu v deníku (text, jak ho student uložil) a rozkládá se podle druhu bloku: tah bez písmene a „Proč“, koše s kartami po řádcích | Stav bloku ukazuje na pořadí možností a po změně YAML by ukázal jinou; zápis je to, co student opravdu uložil. Nic se neukládá podruhé |
+| Začátek cesty říká pole `zacatek` v přehledu cesty; u cesty 5 je to Roztřiď z kroku 2 | První vlastní pokus studenta; další cesta přidá jeden řádek a sestavení ho hlídá |
+| Věty posledního kroku zní „Vrať se ke svému tahu / ke svým košům z kroku 2“ | Text kroku je pevný a musí sedět s panelem i bez něj; schválil autor |
+| Otázka „Co se změnilo, nebo proč si myslíš totéž?“ se ukáže, až je pravidlo napsané | Dřív není co srovnávat; změna názoru se nečeká a otázka se ptá i na důvod, proč zůstal |
+| Cesta je dokončená, když má student otevřené všechny kroky; čas se zapíše jednou do `cesty[slug].dokonceno` | Stejné měřítko, podle kterého deník už psal „prošel jsi celou“. Klepnutí na Dokončit cestu by minulo studenty, kteří odejdou jinudy |
+| Starý deník bez `dokonceno` se řídí časem naposledy otevřeného kroku a při příští návštěvě kroku si ho zapíše natrvalo | Nejbližší údaj, který deník má; nic se nerozbije a deník zůstává verze 1 |
+| Návrat se otevírá přímo v deníku, ne na vlastní stránce. Nabízí se nejvýš jeden (cesta dokončená nejdéle) a určí se jednou při otevření deníku | Jedno klepnutí a žádná další stránka; po odpovědi nebo odložení se hned nenabídne další. Schválil autor |
+| Později vrátí nabídku za tři dny, Už nenabízet ji skryje natrvalo; obojí je ve stavu bloku návratu (`bloky[id]`), ne v nové části deníku | Schválil autor; export i starší deníky zůstávají beze změny tvaru |
+| Případ je v YAML (`druh: navrat`: `cesta`, `pravidlo`, `nazev`, `scena`, `po`); otázku „Platí tvoje pravidlo i tady?“ a možnosti Ano / Upravím ho / Nevím píše blok | Jsou pro všechny návraty stejné; autor píše jen případ a tři věty, které se ptají dál |
+| Návrat cesty 5 je „Kamarád se stěhuje“ | Ztráta, o které rozhodl někdo jiný: neopakuje výkon (známka, zápas) ani urážku (snímek z chatu). Schválil autor |
+
+## 3. 10. 2026: Rozhraní v2, krok R1 (Domů, obsah profilu, ovládání mapy)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Domů má jedinou výzvu k začátku: hlavní tlačítko „Začít první cestu“ na krok 1 cesty 1 s údajem z dat cesty. Karta cesty a Příběh na začátek jsou spojené do jednoho panelu bez tlačítka, který stojí vpravo vedle úvodu (na telefonu pod ním) a vede na tentýž krok | O začátek se hlásily tři prvky a dva z nich vyprávěly tutéž věštbu z Delf. Umístění panelu vybral autor: „můžeme to dát asi vpravo vedle úvodu“ |
+| Kdo má první cestu hotovou a nic rozpracovaného, dostane „Vybrat další cestu“ do přehledu otázek, ne další cestu podle čísla | Autor: „není to nějak lineární, že by to muselo jít 1, 2, 3“; student si vybírá podle otázky |
+| Kdo má cestu rozpracovanou (kteroukoli, bere se naposledy otevřená), dostane „Pokračovat v cestě“ na naposledy otevřený krok; Pokračuj tu cestu ani blok v ní vedle tlačítka neopakuje | Jedno tlačítko vede tam, kde student právě je; dvě nabídky téže cesty vedle sebe by zase soupeřily |
+| Nadpis Domů má token `h1` (64 / 44 px), ne `display-2` | S `display-2` zbývalo na 1280 × 720 pod tlačítkem s údajem 85 px a řádek Pokračuj by další obsah vytlačil pod ohyb; s `h1` zbývá 214 px |
+| Co se při načtení mění podle deníku (tlačítko na Domů, „Pokračovat ve čtení“ na profilu), přepíše skript hned za prvkem ještě před vykreslením. Rozhoduje čistá funkce z `src/lib`, kterou volá i sestavení; do stránky se vkládá její text, proto nesmí sahat na nic mimo sebe | Bez probliknutí a s jedinou logikou, která má jednotkové testy; stejný postup už používá stránka otázky |
+| Obsah profilu je i na notebooku kompaktní lišta pod hlavičkou, ne sloupec v okraji. V klidu zůstává pod hlavičkou profilu řádek odkazů jako dřív | Vedle čtenářského sloupce je na 1440 px 300 px, na 1280 px 230 px a pod 1200 px se sloupec nevejde; ve druhé půlce stránky by ležel přes široké oddíly. Zadání pro ten případ žádalo kompaktní podobu z telefonu |
+| Obsah se skládá ze sestavené stránky: oddíl se hlásí atributem `data-oddil` se svým názvem. V obsahu proto stojí „Dvě velké myšlenky“, jak zní nadpis na stránce, ne obecné „Velké myšlenky“ | Zadání: názvy ze stránky, ne ze seznamu v kódu; oddíl, který profil nemá, v obsahu není |
+| Deník zůstává verze 1; naposledy čtený oddíl je v nepovinném poli `cteni` (adresa profilu → kotva), nejvýš třicet stránek, zapisuje se při změně oddílu | Starší deníky se načtou beze změny, pole je v exportu a nic dalšího se o čtení neukládá |
+| „Pokračovat ve čtení“ stojí v hlavičce profilu pod letopočty, nad vstupy do cest | Na telefonu je tak vidět bez posouvání; pod deskou s portrétem by vidět nebyl |
+| `stinOdkazu`: u polemiky dostává stín ten, s kým se žijící pře, ne zesnulý kritik | Kód bral směr obráceně než jeho vlastní komentář, takže polemika stín nikdy nezapnula; autor opravu schválil. Vysvětlení v mapě proto smí říkat „nebo se s ním přel“ |
+| Legenda čar je na notebooku stále viditelný řádek pod řekou (24 px), na telefonu panel za tlačítkem Legenda | Čára bez vysvětlení odporuje principu 3 z `docs/design.md`; na notebooku se řádek vejde, na telefonu ne |
+| Zpráva po klepnutí na připravované období zní „Středověk: připravujeme.“ (s dvojtečkou; návrh byl bez ní) | „Po válce a dnes připravujeme.“ se bez dvojtečky četlo špatně |
+| Názvy moří na mapě jsou v `--ink-2`, ne v `--muted` | `--muted` má na světlém moři kontrast 4,49 : 1, těsně pod AA; pár je nově v testu kontrastu |
+| Hlavička řeky je na telefonu 44 px místo 26 px a tlačítka v ní 32 px | Dotykový cíl 44 px se jinak nevešel: nad hlavičkou leží záložky, které by rozšířený cíl překrývaly |
+
 ## 3. 10. 2026: Celek 4 a skilly po revizi celku 3
 
 | Rozhodnutí | Důvod |

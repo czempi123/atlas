@@ -1,6 +1,6 @@
 ---
 name: "atlas-cesta"
-description: "Psaní cesty, kroku cesty, myšlenkového pokusu nebo stránky velké otázky v Atlasu myšlení z bloků knihovny (Příběh, Volba, Odkryj, Roztřiď, Změň jednu věc, Spor, Kdo žil dřív?)."
+description: "Psaní cesty, kroku cesty, myšlenkového pokusu, případu pro Návrat nebo stránky velké otázky v Atlasu myšlení z bloků knihovny (Příběh, Volba, Odkryj, Roztřiď, Změň jednu věc, Spor, Kdo žil dřív?)."
 ---
 
 # Cesta Atlasu myšlení
@@ -25,15 +25,17 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
    | Náraz | Postaví se mezi dva filozofy, přečte nejsilnější argumenty obou | Spor |
    | Nový případ | Rozhodne v dnešní situaci a mění jednu podmínku | Změň jednu věc |
    | Souvislosti | Kdo kdy žil, s kým se mohl potkat | Kdo žil dřív? |
-   | Tvoje pravidlo | Vrátí se ke svému prvnímu tahu a zapíše si vlastní pravidlo; pole je vidět hned a ukládá se samo | Moje stanovisko s `rozbalene` |
+   | Tvoje pravidlo | Vrátí se ke svému prvnímu tahu a zapíše si vlastní pravidlo; pole je vidět hned a ukládá se samo. Vedle něj stojí, co uložil na začátku | Závěr cesty (`ZaverCesty`) |
 
    Ne každý blok musí být v každé cestě. Dva stejné bloky za sebou jen výjimečně.
 4. **Napiš soubory** (návod v `docs/design.md` › Cesta a › Bloky):
-   - přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`; text = krátký úvod, dvě až tři věty),
+   - přehled `src/content/cesty/<slug>.mdx` (frontmatter `cislo`, `nazev`, `obdobi`, `otazka`, `vstup`, `filozofove`, `minut`, `zacatek`; text = krátký úvod, dvě až tři věty),
    - kroky `src/content/cesty/<slug>/<n>-<nazev>.mdx` (frontmatter `cesta`, `krok`, `nazev`, `kdeJsme`), číslované 1…n bez mezer,
    - obsah Volby, Roztřiď, Změň jednu věc a Sporu do `src/content/bloky/<id>.yaml`; v MDX jen `<Volba id="…" />`.
    Text kroku patří před blok: po dokončení nabídne blok další krok a text pod ním student přeskočí.
-   Bloky v kroku nabídnou „Kam dál“ na další krok samy; `client:visible` ani odkaz do deníku nepiš. Závěrečný krok: `<MojeStanovisko client:visible rozbalene id="…" otazka="…" odkaz="…" />`.
+   Bloky v kroku nabídnou „Kam dál“ na další krok samy; `client:visible` ani odkaz do deníku nepiš.
+   - **Závěr:** poslední krok končí mimo čtenářský sloupec řádkem `<ZaverCesty id="<cesta>-moje-pravidlo" otazka="… Napiš svoje pravidlo." />`. Do přehledu cesty zapiš `zacatek: <id bloku>`: blok, ve kterém student poprvé sám odpověděl (obvykle krok 2). Poslední krok pak ukáže jeho odpověď vedle pravidla („Na začátku“ × „Teď“). Kdo začátek přeskočil, panel neuvidí; věta, která na začátek odkazuje, proto musí sedět s panelem i bez něj: „Vrať se ke svému tahu z kroku&nbsp;2“, ne „Níž vidíš svůj tah“.
+   - **Návrat:** ke každé cestě napiš jeden případ do `src/content/bloky/<cesta>-navrat.yaml` (`docs/design.md` › Bloky › Návrat; jak ho psát, je níž v Jak psát bloky). Do MDX cesty se nevkládá, nabízí ho deník.
 5. **Vstupy do cesty:** karta `<CestaKarta slug="…" />` u filozofa cesty a odkaz v jeho Kam dál; u velké otázky odkaz na cestu. Kartu nedávej hned za kapitolu, kterou první kroky cesty převyprávějí; student by tytéž odstavce četl dvakrát za sebou. Na Domů jen jedna doporučená cesta.
 6. **Ověř** `npm test` celé, projdi cestu v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí, snímky si prohlédni. Projdi ji jednou i bez odkrytí bloků (viz Jak psát). Projdi ji i očima studenta, který s filozofem cesty nesouhlasí. Všechny texty cesty včetně zpětných vazeb v YAML přečti ještě jednou jen podle oddílu Ať text nezní jako stroj. Pak skill `atlas-revize`.
 7. **Zapiš** stav do plánu větve (`docs/plany/<větev>.md`), do `docs/rozhodnuti.md` zásadní volby, potřeby ověření do `k-overeni.md`. Commituj česky po ucelených krocích ve vlastní větvi.
@@ -72,6 +74,12 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 - **Roztřiď:** dva až čtyři koše s krátkým názvem slovy studenta a jednou větou, podle čeho do koše věc patří. Karty (3–8) jsou věci ze studentova života, jiné než příklady v profilu; aspoň jedna má v sobě dvě věci, které patří do různých košů. Zpětná vazba ke kartě se ptá dál a žádný koš neoznačí za správný; `kdyz` jen tam, kde poloha karty mění otázku. Filozofovo rozlišení stojí v textu před blokem, jeho zkouška ve srovnání a znovu v textu dalšího kroku. Srovnání s osobou jen z doložených faktů. Kartě, jejíž obecná zpětná vazba vede právě ke koši, kam ji student může dát, napiš pro ten koš `kdyz`; jinak čte otázku, na kterou už odpověděl. Zpětná vazba vlastní karty (`vlastni.zpetna`) musí obstát, i když student napíše něco bolestného („hádka doma“): ptej se, co má v rukou on a co někdo jiný, ne co je „jeho dílo“.
 - **Studie a graf:** doložená studie se vypráví přímo, čísla jen z podkladů. Graf je vlastní kresba směru (`GrafKrivek`, `docs/design.md` › Komponenty) s textem pod kresbou, který říká totéž slovy; graf ze studie se nekopíruje. Výhrady ke studii (koho měřili, souvislost není příčina, co se vlastně měřilo) patří do zpětné vazby, ne do vyprávění. Shrnutí ale drží i to, co měli účastníci dělat („přemýšlet tak, aby nic necítili“, ne „brát film jinak“), i když se to filozofovi cesty nehodí; právě z toho bývá nejlepší otázka kroku. Úvodní věta říká, co pokus zkoušel, ne co „ukázal“.
 - **Kdo žil dřív?** jen pro dvojice, kde výsledek překvapí nebo souvisí s příběhem (Sókratés a Diogenés žili současně, Platón byl při Sókratově smrti mladý muž).
+- **Návrat:** krátký nový případ, který deník nabídne pár dní po dokončení cesty. Student na něm zkouší své závěrečné pravidlo; není to opakování cvičení.
+  - *Případ* (`scena`): „Představ si…“, dva krátké odstavce, bez historických osob a bez tvrzení, která by potřebovala pramen. Situace ze života studenta, ve které se musí rozhodnout. Poslední věta ho v ní nechá stát („Máš před sebou sešit a rozhoduješ se, jestli ho zavřít.“).
+  - *Musí jít posoudit jakýmkoli pravidlem,* které si student z cesty mohl odnést, i tím, které s filozofem cesty nesouhlasí. Případ nesmí napovídat, co je správně.
+  - *Neopakuje* nové případy cesty, karty z Roztřiď ani úvod stránky velké otázky. Změň to, na čem případ stojí: bunda v kroku 3 stála na ceně a teple, telefon v návratu na tom, že ho mají druzí. Vedlejší důvod, který by otázku rozmělnil, z případu odeber (na telefon má student našetřeno, aby nešlo o cenu).
+  - *Otázku* „Platí tvoje pravidlo i tady?“ a možnosti Ano / Upravím ho / Nevím píše blok. Ty píšeš `po`: ke každé odpovědi jednu větu do 25 slov, která končí otazníkem a ptá se dál. Po Ano, co pravidlo v tom případu říká udělat. Po Upravím ho, co mu chybělo. Po Nevím, na čem to vázne. Žádná nehodnotí a žádná nečeká změnu názoru: nechat si pravidlo je stejně dobrý výsledek.
+  - *Rod:* věty piš v přítomném nebo budoucím čase („Co do něj připíšeš…?“), ať rod neřeší. `nazev` je krátký název případu do deníku („Nový telefon“).
 - Věty do 25 slov, odstavce do 4 vět, tykání, české uvozovky, jména podle `lide.yaml`.
 
 ## Stránka velké otázky
@@ -157,6 +165,8 @@ Po dopsání přečti texty cesty ještě jednou jen s tímto oddílem. Každý 
 - Zpětná vazba vlastní karty nebo podmínky předpokládá něco, co student nezvolil nebo nenapsal.
 - Shrnutí studie vynechá pokyn, který skupina dostala, a krok pak vyznívá jako důkaz.
 - Věta by se dala beze změny napsat o jiném filozofovi, nebo zpětná vazba začíná pochvalou („Skvělá volba!“).
+- Případ pro Návrat opakuje nový případ cesty, napovídá odpověď, nebo věta po odpovědi hodnotí místo toho, aby se ptala.
+- Věta posledního kroku počítá s panelem „Na začátku“, který student bez počáteční odpovědi neuvidí.
 
 ## Kdy je hotovo
 
@@ -165,7 +175,8 @@ Po dopsání přečti texty cesty ještě jednou jen s tímto oddílem. Každý 
 - Text dává smysl i tomu, kdo bloky neodkryje.
 - Každá zpětná vazba vysvětluje důvod a ptá se dál; nic se neboduje.
 - Texty prošly čtením podle oddílu Ať text nezní jako stroj.
-- Na konci se student vrátí ke svému prvnímu tahu a zapíše si vlastní pravidlo do deníku.
+- Na konci se student vrátí ke svému prvnímu tahu a zapíše si vlastní pravidlo do deníku; přehled cesty má `zacatek` a poslední krok `ZaverCesty`.
+- Cesta má případ pro Návrat: jiný než její nové případy, s jednou větou po každé ze tří odpovědí.
 - Student, který s filozofem cesty nesouhlasí, najde v cestě nebo na jejím konci myslitele, který mu dává za pravdu.
 - Student, kterému někdo ubližuje, projde cestou, aniž by četl, že se má smířit.
 - `npm test` prošlo celé, snímky jsou prohlédnuté, revize (`atlas-revize`) bez zásadních nálezů.
