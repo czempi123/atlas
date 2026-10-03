@@ -42,8 +42,10 @@
   linie: [spolecnost]
   mista:
     - { misto: athenes, role: narozeni, zdroj: britannica-plato }
-    - { misto: athenes, role: pusobeni, zdroj: britannica-plato }
-    - { misto: syrakusy, role: pobyt, do: -361, zdroj: sep-archytas }
+    - { misto: syrakusy, role: pobyt, rok: -387, priblizne: true, zdroj: platon-sedmy-list }
+    - { misto: athenes, role: pusobeni, od: -387, do: -347, priblizne: true, zdroj: iep-academy }
+    - { misto: syrakusy, role: pobyt, rok: -366, priblizne: true, zdroj: nails-plato }
+    - { misto: syrakusy, role: pobyt, rok: -361, zdroj: sep-archytas }
     - { misto: athenes, role: smrt, rok: -347, zdroj: britannica-plato }
   kdo: Sókratův žák, který v Athénách založil Akademii a psal filozofii jako rozhovory.
   proc: Tvrdil, že za proměnlivým světem, který vidíme, stojí neměnné ideje.
@@ -52,7 +54,7 @@
     nazev: jeskyně
     proc: Přirovnal nás k vězňům, kteří mají stíny na zdi za skutečnost.
     zdroj: platon-ustava
-  zdroje: [sep-plato, britannica-plato, sep-archytas, platon-ustava]
+  zdroje: [sep-plato, britannica-plato, sep-archytas, platon-ustava, iep-plato, iep-academy, nails-plato, platon-ustava-perseus, platon-sedmy-list, platon-parmenides, dl-iii, plutarchos-dion]
 
 - id: aristoteles
   jmeno: Aristotelés
@@ -79,7 +81,7 @@
     nazev: váhy
     proc: Ctnost je střed mezi dvěma krajnostmi.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii]
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie]
 
 - id: thales
   jmeno: Thalés
@@ -162,7 +164,7 @@
     nazev: brána
     proc: Ve své básni vypráví, jak projel branou Noci a Dne k bohyni, která ho poučila, co skutečně je.
     zdroj: sep-parmenides
-  zdroje: [sep-parmenides, dl-ix-22]
+  zdroje: [sep-parmenides, dl-ix-22, parmenides-b8]
 
 - id: demokritos
   jmeno: Démokritos
@@ -183,7 +185,7 @@
     nazev: zrnka
     proc: Všechno se skládá z drobných nedělitelných částic a prázdna mezi nimi.
     zdroj: sep-democritus
-  zdroje: [sep-democritus, britannica-democritus]
+  zdroje: [sep-democritus, britannica-democritus, dl-ix-34]
 
 - id: protagoras
   jmeno: Prótagorás
@@ -403,7 +405,7 @@
     nazev: svitek
     proc: Učil řečnictví.
     zdroj: britannica-isocrates
-  zdroje: [britannica-isocrates]
+  zdroje: [britannica-isocrates, isokrates-antidosis, isokrates-helena]
 
 - id: eudoxos
   jmeno: Eudoxos

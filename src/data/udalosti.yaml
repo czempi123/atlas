@@ -11,7 +11,7 @@
 - { id: oblaka, nazev: Aristofanova Oblaka, od: -423, obdobi: [1], misto: athenes, osoby: [aristofanes, sokrates], druh: zivot, zdroj: sep-socrates }
 - { id: delion, nazev: Bitva u Délia, od: -424, obdobi: [1], misto: delion, osoby: [sokrates, alkibiades], druh: zivot, zdroj: sep-socrates }
 - { id: amfipolis, nazev: Bitva u Amfipole, od: -422, obdobi: [1], misto: amfipolis, osoby: [sokrates], druh: zivot, zdroj: sep-socrates }
-- { id: proces-sokrata, nazev: Sókratův proces, od: -399, obdobi: [1], misto: athenes, osoby: [sokrates], druh: kotva, zdroj: sep-socrates }
+- { id: proces-sokrata, nazev: Sókratův proces, od: -399, obdobi: [1], misto: athenes, osoby: [sokrates, platon], druh: kotva, zdroj: sep-socrates }
 
 # Období 1 a 2
 - { id: alexandrova-tazeni, nazev: Tažení Alexandra Velikého, od: -334, do: -323, obdobi: [1, 2], druh: kotva, zdroj: britannica-alexander }
