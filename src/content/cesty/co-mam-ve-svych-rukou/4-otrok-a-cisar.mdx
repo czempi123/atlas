@@ -1,0 +1,44 @@
+---
+cesta: co-mam-ve-svych-rukou
+krok: 4
+nazev: Otrok a císař
+kdeJsme: Řím a tábory u Dunaje, o dvě generace později
+---
+import { Odkryj } from '../../../components/bloky';
+import Citat from '../../../components/ui/Citat.astro';
+
+<div class="ctenarsky">
+
+Když Epiktétos v Níkopoli umíral, byl budoucí římský císař ještě chlapec. Nikdy se neviděli.
+
+Marcus Aurelius se k Epiktétovi dostal přes knihu. V zápisníku, který si psal jen pro sebe, za ni děkuje svému učiteli:
+
+<Citat id="hovory-i-7" />
+
+Císař si pak Epiktétovy věty opisoval. A psal vlastní, které znějí skoro stejně. Tady jsou dvě. Jednu řekl otrok, druhou napsal císař.
+
+**První:** „Lidi neznepokojují věci, ale jejich soudy o věcech.“
+
+**Druhá:** „Trápí-li tě něco vnějšího, netrápí tě ta věc, ale tvůj soud o ní. A ten můžeš smazat hned.“
+
+</div>
+
+<Odkryj
+  id="cesta5-otrok-a-cisar"
+  nadtitulek="Tvůj odhad"
+  otazka="Kterou z těch dvou vět řekl otrok a kterou napsal císař? Podle čeho hádáš?"
+  tlacitko="Odkrýt"
+  modelove={[
+    { text: 'První otrok, druhou císař. Ta druhá zní jako rozkaz.', komentar: 'Hledáš v tónu člověka, který je zvyklý poroučet. Všimni si ale, komu ten rozkaz dává: píše ho sám sobě.' },
+    { text: 'Nedá se to poznat. Říkají totéž.', komentar: 'Právě to je na těch dvou větách zvláštní. Co to říká o myšlence, když ji stejně vysloví člověk, který neměl nic, i ten, kdo měl všechno?' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem, podle čeho hádám, ne jen tip.',
+  ]}
+>
+
+První větu řekl Epiktétos, bývalý otrok. Stojí v Rukojeti (5). Druhou si do zápisníku napsal císař Marcus Aurelius (Hovory k sobě VIII, 47).
+
+Podívej se, podle čeho jsi hádal. Dá se z věty poznat, jestli ji říká člověk, který neměl nic, nebo ten, kdo měl všechno?
+
+</Odkryj>

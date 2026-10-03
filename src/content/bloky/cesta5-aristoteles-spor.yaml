@@ -1,0 +1,42 @@
+# Spor · cesta 5 „Co mám ve svých rukou?“, krok 5: Epiktétos × Aristotelés (rozhodnutí autora 2. 10. 2026:
+# spor dvou škol bez smyšleného setkání). Podklad: docs/podklady/celek-3-co-mam-v-rukou.md › Spor.
+# Epiktétos: Rukojeť 14 a 20; Rozpravy II, 5, 1–7 a 15–17; IV, 1, 128. Aristotelés: Etika Nikomachova 1099a31–b8,
+# 1153b19–21, 1100b22–1101a8, 1125b31–1126a8. Že se školy o věc později přely: Cicero, Tuskulské hovory V, 24–25.
+# Třetí argument Epiktéta je domyšlená odpověď a podává se jako výklad („by mohl“).
+# Citát etika-1126a („otrocké“) stojí až v kroku 6; tady jen nepřímo, aby Epiktétova odpověď měla na co odpovídat.
+druh: spor
+obdobi: 2
+nadtitulek: Spor
+scena: >-
+  Aristotelés zemřel dřív, než stoická škola vznikla. S Epiktétem se minuli asi o čtyři sta let.
+  Jejich školy se ale o tuhle otázku později opravdu přely.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: Záleží ke šťastnému životu i na tom, co nemám v rukou?
+strany:
+  - osoba: epiktetos
+    postoj: Záleží na tom, co s věcmi udělám.
+    argumenty:
+      - >-
+        Kdo chce to, o čem rozhodují jiní, má pána. Známka, pověst, zdraví: kdo na nich staví své štěstí,
+        dává klíč každému, kdo mu je může vzít.
+      - >-
+        Jedno mi to proto není. Hráč míče hraje naplno, i když míč sám není dobro ani zlo.
+        S věcmi mám zacházet pečlivě, protože na tom, jak s nimi zacházím, záleží. A klidně, protože na věci samé ne.
+      - >-
+        Aristotelovi by Epiktétos mohl odpovědět: na mučidlech nebude dobře nikomu. Ptám se ale, co člověku nevezme ani kat.
+        A unést urážku není otrocké. Otrok je ten, koho lze k něčemu donutit: koho rozzuří každý, kdo chce, toho má každý v moci.
+  - osoba: aristoteles
+    postoj: Záleží i na tom, co mě potká.
+    argumenty:
+      - >-
+        Ke štěstí patří i věci, které v rukou nemám: přátelé, prostředky, zdraví. Bez nich je nemožné, nebo aspoň ne snadné,
+        dělat dobré věci. Kdo tvrdí, že dobrý člověk je šťastný i na mučidlech, mluví naprázdno.
+      - >-
+        Hříčkou náhody proto nejsem. Drobné rány se šťastným člověkem nehnou. Velké mu štěstí kazí,
+        ale ubožákem se nestane nikdy: udělá to nejlepší z toho, co má, jako švec z kůže, kterou dostal.
+      - >-
+        A hněv je někdy na místě. Kdo se nezlobí, když má, vypadá, jako by nic necítil a neuměl se bránit.
+        Spolknout každou urážku je otrocké. Zlobit se má člověk kvůli správné věci, na správného člověka a přiměřeně dlouho.
+zdroje: [epiktetos-rukojet, epiktetos-rozpravy, aristoteles-etika-stesti, cicero-tusculanae]

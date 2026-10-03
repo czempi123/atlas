@@ -1,0 +1,89 @@
+# Roztřiď · cesta 5 „Co mám ve svých rukou?“, krok 2: věci z jednoho dne do tří košů.
+# Podklad: docs/podklady/celek-3-co-mam-v-rukou.md › Vlastní pokus: Roztřiď věci z jednoho dne (karty a na co míří),
+# Tvrzení: Epiktétos, řádky 14–16 (Rukojeť 1; Rozpravy I, 1, 7–12: tělo není naše) a 22 (Gellius XIX, 1: leknutí přijde samo).
+# Epiktétos má jen dva koše; prostřední „Zčásti“ je rozhodnutí autora z 2. 10. 2026. Karty jsou autorské.
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: Tady je osm věcí z jednoho obyčejného dne.
+otazka: Co z toho máš ve svých rukou?
+kose:
+  - id: moje
+    nazev: Mám v rukou
+    popis: Záleží to jen na mně.
+  - id: zcasti
+    nazev: Zčásti
+    popis: Něco z toho je na mně, něco ne.
+  - id: cizi
+    nazev: Nemám v rukou
+    popis: Rozhoduje o tom někdo nebo něco jiného.
+karty:
+  - id: znamka
+    text: Známka ze čtvrtletky
+    zpetna: >-
+      Známku píše učitel a o otázkách v písemce rozhoduje taky on. Co z té známky je tedy tvoje dílo?
+    kdyz:
+      moje: >-
+        Dal jsi ji mezi věci, které máš v rukou. Co když se naučíš všechno, a v písemce bude to jediné, co jsi přeskočil?
+        Čí je pak ta známka?
+      zcasti: >-
+        Dal jsi ji mezi věci napůl. Zkus tu kartu roztrhnout: která půlka je tvoje a která učitelova?
+  - id: uceni
+    text: Kolik času se na ni učím
+    zpetna: >-
+      O tom, kdy si sedneš k sešitu, rozhoduješ ty. Může ti do toho něco vstoupit tak, že to přestane být tvoje rozhodnutí?
+    kdyz:
+      cizi: >-
+        Dal jsi to mezi věci, které v rukou nemáš. Kdo nebo co tedy rozhoduje o tom, kdy si k učení sedneš?
+  - id: trida
+    text: Co si o mně myslí třída
+    zpetna: >-
+      Myslí si to oni, ve svých hlavách. Ty jim k tomu dáváš jen to, co děláš a říkáš. Kde přesně končí tvoje část?
+    kdyz:
+      moje: >-
+        Dal jsi to mezi věci, které máš v rukou. Stalo se ti někdy, že ses choval slušně, a přesto si o tobě někdo myslel svoje?
+  - id: odepise
+    text: Jestli mi odepíše
+    zpetna: >-
+      Zprávu jsi napsal ty. Odpověď je rozhodnutí někoho jiného. Proč je tak těžké tu druhou půlku pustit z ruky?
+  - id: urazka
+    text: Co odpovím, když mě někdo urazí
+    zpetna: >-
+      Urážku vyslovil on, odpověď vybíráš ty. Máš ji v rukou i v první vteřině, kdy ti stoupne krev do hlavy?
+  - id: zdravi
+    text: Jestli budu v sobotu zdravý na zápas
+    zpetna: >-
+      Spánek, jídlo a trénink ovlivníš. Chřipku od spolužáka ne. Kolik z té karty je tedy tvoje?
+    kdyz:
+      zcasti: >-
+        Dal jsi to mezi věci napůl a máš pro to důvod: spánek a trénink ovlivníš, chřipku ne.
+        Epiktétos dával tělo přesto celé mezi věci, které naše nejsou. Proč asi?
+  - id: kolo
+    text: Jestli mi někdo ukradne kolo
+    zpetna: >-
+      Zamknout ho můžeš. Jestli ho někdo ukradne, rozhoduje zloděj. Co ti zůstane v rukou, když kolo zmizí?
+  - id: leknuti
+    text: Že se leknu, když mě vyvolají
+    zpetna: >-
+      Leknutí přijde samo, dřív než stačíš cokoli rozhodnout. Co uděláš v další vteřině, to už je jiná věc. Kam patří ta?
+    kdyz:
+      zcasti: >-
+        Dal jsi to mezi věci napůl. Zkus kartu roztrhnout: leknutí samo a to, co uděláš hned po něm. Která půlka je tvoje?
+vlastni:
+  pocet: 2
+  vyzva: Přidej věc, která tě dnes rozhodila
+  zpetna: >-
+    Tuhle kartu jsi přidal sám. Co na ní je tvoje dílo a co ne?
+srovnani:
+  osoba: epiktetos
+  nadpis: Jak třídil Epiktétos
+  text: >-
+    Epiktétos měl jen dva koše. V jednom je všechno, co je naše dílo: co si o věcech myslíme, co chceme a co uděláme.
+    Ve druhém všechno ostatní, i vlastní tělo, majetek a pověst.
+
+
+    Prostřední koš by neuznal. Každou kartu z něj by roztrhl na dvě půlky.
+
+
+    Projdi svůj koš Zčásti. Dá se každá karta opravdu roztrhnout? A nechal bys v něm něco i tak?
+zdroje: [epiktetos-rukojet, epiktetos-rozpravy, gellius-epiktetos]

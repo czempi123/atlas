@@ -1,0 +1,61 @@
+# Změň jednu věc · cesta 5 „Co mám ve svých rukou?“, krok 6: nový případ A „snímek z chatu“ (autorský, bez historických osob).
+# Podklad: docs/podklady/celek-3-co-mam-v-rukou.md › Nový případ A (podmínky, opory a pravděpodobné odpovědi hlasů).
+# Třetí podmínka je proti podkladům jiná („Do večera to všichni pustili z hlavy“ místo „Nedá se zjistit, kdo to poslal“):
+# v původní nedávala smysl možnost „vrátím to stejnou mincí“ (rozhodnutí autora nad osnovou P8, 3. 10. 2026).
+# Oddíl Co udělal je výklad („by nejspíš“): Rukojeť 20, 30 a 43; Rozpravy II, 5; Hovory VI, 6 a IX, 5; Etika 1125b31–1126a8, 1099a31–b8.
+druh: zmena
+obdobi: 2
+nadtitulek: Nový případ
+scena: >-
+  Představ si, že někdo vyfotí tvou zprávu ze soukromého chatu a pošle ji do třídní skupiny s posměšným komentářem.
+  Ráno to ví celá třída.
+otazka: Co uděláš?
+moznosti:
+  - { id: ozvu, text: "Ozvu se a řeknu nahlas, že to není v pořádku." }
+  - { id: necham, text: "Nechám to být, ať to vyšumí." }
+  - { id: vratim, text: Vrátím to stejnou mincí. }
+podminky:
+  - id: podvrh
+    prepinac: Ta zpráva je podvrh
+    zmena: >-
+      Teď si představ, že jsi tu zprávu nikdy nenapsal. Někdo ji vyrobil a podepsal tvým jménem.
+    posun: >-
+      Rozhodl ses jinak, když se z trapasu stala lež.
+      Co se pro tebe změnilo: to, co si třída myslí, nebo to, že to není pravda?
+    stejne: >-
+      Pravda, nebo podvrh, jednáš stejně.
+      Na čem tedy tvé rozhodnutí stojí: na tom, co se stalo, nebo na tom, jaký chceš být?
+  - id: kamarad
+    prepinac: Stalo se to kamarádovi
+    zmena: >-
+      Teď si představ, že nejde o tvou zprávu. Stalo se to tvému kamarádovi a ty jsi v té skupině taky.
+    posun: >-
+      Za kamaráda bys jednal jinak než za sebe.
+      Co se unese hůř: vlastní ostuda, nebo to, že jsi mlčel, když šlo o něj?
+    stejne: >-
+      Za kamaráda jednáš stejně jako za sebe.
+      Čekal by on od tebe totéž?
+  - id: vysumelo
+    prepinac: Do večera to všichni pustili z hlavy
+    zmena: >-
+      Teď si představ, že večer se třída baví o něčem jiném. Na tu zprávu si už nikdo nevzpomene.
+    posun: >-
+      Rozhodl ses jinak, když to třída pustila z hlavy.
+      Co pro tebe tedy rozhodovalo: to, co si o tobě myslí, nebo to, co ten člověk udělal?
+    stejne: >-
+      Třída zapomněla, a ty jednáš stejně. O pověst ti tedy nejde.
+      O co potom?
+coUdelal:
+  osoba: epiktetos
+  text: >-
+    Epiktétos by nejspíš neodpověděl hned. Co si třída myslí, v rukou nemáš. Máš v nich to, co uděláš:
+    říct pravdu, zastat se kamaráda, a nevěšet svůj klid na to, jak to dopadne.
+
+
+    Marcus Aurelius by stejnou mincí nevracel: nejlepší obrana je podle něj nestat se stejným.
+    Mlčet by ale nemusel. Křivdí přece i ten, kdo nic neudělá.
+
+
+    Aristotelés by řekl, že zlobit se tady máš, na toho, kdo to udělal, a přiměřeně.
+    A že tě to bolí, není chyba v úsudku: o pověst a přátele opravdu přicházíš.
+zdroje: [epiktetos-rukojet, epiktetos-rozpravy, marcus-hovory, aristoteles-etika-stesti]

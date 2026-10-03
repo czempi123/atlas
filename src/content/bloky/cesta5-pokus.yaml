@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 5 „Co mám ve svých rukou?“, krok 7: nový případ B, pokus s přehodnocením a potlačením (doložený).
+# Podklad: docs/podklady/celek-3-co-mam-v-rukou.md › Nový případ B, řádky 1–3 (J. J. Gross 1998, jen souhrn: 120 lidí,
+# film vyvolávající odpor; přehodnocení snížilo i prožívaný odpor, potlačení zvýšilo aktivaci sympatického nervstva)
+# a „Co z pokusu nevyplývá“ (film není zrada ani nemoc; minuty, ne život; neříká, kdy cit ztlumit; Aristotelés, Etika 1126a3–8).
+# Výhrady jsou jen ve zpětné vazbě. Žádný tah není něčí, blok nemá Co udělal.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Dává ten pokus Epiktétovi za pravdu?
+moznosti:
+  - text: Ano. Změnil se soud o filmu a s ním i to, co lidé cítili.
+    tah: věřit první skupině
+    zpetna: >-
+      Přesně to Epiktétos tvrdil: netrápí nás věci, ale soudy o nich. Film v laboratoři ale není zrada ani nemoc.
+      Šlo by stejně přehodnotit i to, co se tě opravdu týká?
+  - text: Jen napůl. Ukazuje hlavně, že zatínat zuby nepomáhá.
+    tah: číst druhou skupinu
+    zpetna: >-
+      Čteš tu část pokusu, která mluví proti kamenné tváři, a s tou by Epiktétos souhlasil: jako socha být nechtěl.
+      Jestli pomáhá i jeho vlastní rada, je jiná otázka. Co by ti k ní ještě chybělo?
+  - text: Ne. Některé city se tlumit nemají, třeba spravedlivý vztek.
+    tah: ptát se, co tlumit nemáme
+    zpetna: >-
+      Tohle by řekl Aristotelés: zlobit se má člověk kvůli správné věci a přiměřeně. Pokus opravdu neříká, kdy je správné cit ztlumit.
+      Podle čeho poznáš vztek, který stojí za to nechat?
+  - text: Nedá se říct. Pár minut filmu není život.
+    tah: ptát se, co pokus měřil
+    zpetna: >-
+      Ptáš se, co se vlastně měřilo: minuty v laboratoři, ne měsíce po ráně, která bolí. To je poctivá výhrada.
+      Jaký pokus by tě přesvědčil?
+zdroje: [gross-1998, epiktetos-rukojet, epiktetos-rozpravy, aristoteles-etika-stesti]
