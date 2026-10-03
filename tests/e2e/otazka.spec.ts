@@ -272,7 +272,7 @@ test('otázka 4: úvodní případ, čtyři hlasy, které se poznají, a cesta 5
   await expect(page.locator('h1')).toHaveText('Jsem svobodný?');
   // Úvod je vymyšlená situace bez historických osob a končí otázkami.
   const uvod = page.locator('.uvod');
-  await expect(uvod).toContainText('Představ si, že ti kamarád v hádce napíše něco hodně ošklivého.');
+  await expect(uvod).toContainText('Představ si, že ti kamarád v hádce řekne něco hodně ošklivého.');
   await expect(uvod).not.toContainText(/Epikúr|Epiktét|Chrýsipp|Aristotel/);
   await expect(uvod.locator('p').last()).toContainText('?');
   // Nejdřív student: hlasy se ukážou až po prvním názoru.
@@ -291,7 +291,7 @@ test('otázka 4: úvodní případ, čtyři hlasy, které se poznají, a cesta 5
   await expect(odpovedi.nth(1)).toContainText('Kdyby všechno řídila nutnost');
   await expect(odpovedi.nth(2)).toContainText('Všechno má příčinu');
   await expect(odpovedi.nth(2)).toContainText('na osud se vymlouvat nesmí');
-  await expect(odpovedi.nth(3)).toContainText('tvoje dílo je teď to, co si o té zprávě pomyslíš');
+  await expect(odpovedi.nth(3)).toContainText('tvoje dílo je teď to, co si o těch slovech pomyslíš');
   for (let i = 0; i < 4; i++) {
     const vet = (await odpovedi.nth(i).locator('.odpoved__text').innerText()).split(/(?<=[.?!])\s+/).length;
     expect(vet).toBeLessThanOrEqual(2);

@@ -81,6 +81,8 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(trideni).toContainText('Zkus tu kartu roztrhnout: která půlka je tvoje a která učitelova?');
   await expect(trideni).toContainText('Epiktétos dával tělo přesto celé mezi věci, které naše nejsou.');
   await expect(trideni).toContainText('Epiktétos měl jen dva koše.');
+  // Co do kterého koše patří, řekne až citát v kroku 3 (revize P10: kroky 2 a 3 neříkají totéž dvakrát).
+  await expect(trideni).not.toContainText('co je naše dílo');
   await expect(trideni).toContainText('A nechal bys v něm něco i tak?');
   await expect(trideni).not.toContainText(/správn|špatn/i);
   await dalKlavesnici(page, kose, 'Dvě půlky', `${CESTA5}3/`);
@@ -137,7 +139,7 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   const argumenty = spor.getByRole('region', { name: 'Argumenty obou stran' });
   await expect(argumenty).toBeFocused();
   // Každá strana odpovídá na nejsilnější námitku druhé; domyšlená odpověď je podaná jako výklad.
-  await expect(argumenty).toContainText('Aristotelovi by Epiktétos mohl odpovědět');
+  await expect(argumenty).toContainText('Epiktétos by mohl odpovědět');
   await expect(argumenty).toContainText('Hříčkou náhody proto nejsem.');
   await expect(argumenty).toContainText('jako švec z kůže, kterou dostal');
   await page.keyboard.press('Tab');
@@ -156,6 +158,10 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   // Krok 6: tři citáty na začátku, případ bez historických osob, jedna změněná podmínka.
   const text6 = page.locator('.krok__obsah > .ctenarsky');
   await expect(text6.locator('.citat')).toHaveCount(3);
+  // Revize P10: krok mluví o urážce, ne o ublížení, a necituje větu „kdo tě bije“.
+  await expect(text6).toContainText('Co dělat, když tě někdo urazí?');
+  await expect(text6.locator('.citat').first()).toContainText('Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.');
+  await expect(page.locator('.krok__obsah')).not.toContainText(/tě bije|ublíží|trapas/);
   await expect(text6.locator(':scope > p').last()).toContainText('Vyzkoušej je na jednom případu.');
   const chat = page.locator('#cesta5-snimek-z-chatu');
   await chat.getByRole('radio', { name: 'Nechám to být, ať to vyšumí.' }).focus();
@@ -175,7 +181,7 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(zmena).toBeFocused();
   await expect(zmena).toContainText('Za kamaráda bys jednal jinak než za sebe.');
   // Tři hlasy jako výklad: Epiktétos, Marcus a Aristotelés, který dává za pravdu tomu, kdo se zlobí.
-  await expect(chat.getByRole('heading', { name: 'Co udělal Epiktétos' })).toBeVisible();
+  await expect(chat.getByRole('heading', { name: 'Co by na to řekli' })).toBeVisible();
   await expect(chat.locator('.co-udelal')).toContainText('Epiktétos by nejspíš neodpověděl hned.');
   await expect(chat.locator('.co-udelal')).toContainText('Marcus Aurelius by stejnou mincí nevracel');
   await expect(chat.locator('.co-udelal')).toContainText('Aristotelés by řekl, že zlobit se tady máš');
@@ -184,6 +190,9 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   // Krok 7: pokus vyprávěný přímo, jen tři tvrzení ze souhrnu; výhrady až ve zpětné vazbě.
   const text7 = page.locator('.krok__obsah > .ctenarsky');
   await expect(text7).toContainText('Psycholog pustil sto dvaceti lidem film');
+  // Shrnutí drží, co měla první skupina dělat (revize P10).
+  await expect(text7).toContainText('aby nic necítili');
+  await expect(text7).not.toContainText('ukázal');
   await expect(text7).not.toContainText(/Gross|sympatick|laboratoři|zrada/);
   await expect(text7.locator(':scope > p').last()).toContainText('pracovalo tělo naopak víc');
   const pokus = page.locator('#cesta5-pokus');

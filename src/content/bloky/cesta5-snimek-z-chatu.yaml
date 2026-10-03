@@ -20,7 +20,7 @@ podminky:
     zmena: >-
       Teď si představ, že jsi tu zprávu nikdy nenapsal. Někdo ji vyrobil a podepsal tvým jménem.
     posun: >-
-      Rozhodl ses jinak, když se z trapasu stala lež.
+      Rozhodl ses jinak, když se ze zprávy stal podvrh.
       Co se pro tebe změnilo: to, co si třída myslí, nebo to, že to není pravda?
     stejne: >-
       Pravda, nebo podvrh, jednáš stejně.
@@ -43,10 +43,11 @@ podminky:
       Rozhodl ses jinak, když to třída pustila z hlavy.
       Co pro tebe tedy rozhodovalo: to, co si o tobě myslí, nebo to, co ten člověk udělal?
     stejne: >-
-      Třída zapomněla, a ty jednáš stejně. O pověst ti tedy nejde.
-      O co potom?
+      Třída zapomněla, a ty jednáš stejně.
+      Co pro tebe tedy rozhoduje: to, co si o tobě třída myslí, nebo to, co ten člověk udělal?
 coUdelal:
   osoba: epiktetos
+  nadpis: Co by na to řekli
   text: >-
     Epiktétos by nejspíš neodpověděl hned. Co si třída myslí, v rukou nemáš. Máš v nich to, co uděláš:
     říct pravdu, zastat se kamaráda, a nevěšet svůj klid na to, jak to dopadne.
