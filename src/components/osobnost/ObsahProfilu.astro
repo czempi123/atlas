@@ -1,0 +1,273 @@
+---
+// Obsah stránky osobnosti: seznam oddílů, které na stránce opravdu jsou, a lišta, která je po ruce při čtení.
+// Seznam se skládá ze sestaveného obsahu (prvky s data-oddil), ne ze seznamu v kódu: oddíl, který profil nemá,
+// v obsahu není. Bez JavaScriptu zůstává obyčejným seznamem odkazů pod hlavičkou profilu. S JavaScriptem:
+//  · notebook: řádek odkazů pod hlavičkou profilu jako dřív; když odjede z obrazovky, ukáže se pod hlavičkou webu
+//    tenká lišta s tlačítkem Obsah a názvem právě čteného oddílu. Nezabírá místo, čtenářský sloupec se nehne
+//    a nic nepřekrývá široké oddíly (sloupec v okraji by je překrýval);
+//  · telefon: lišta stojí místo řádku odkazů hned od začátku a při čtení drží pod horní lištou.
+// Právě čtený oddíl má aria-current a ukládá se do deníku (jen kotva, při změně oddílu). Při návratu z něj skript
+// před vykreslením složí „Pokračovat ve čtení“ v hlavičce profilu (prvek [data-cteni]). Stránka se sama neposouvá.
+// Použití: <ObsahProfilu adresa="/osobnost/sokrates/"> …obsah stránky pod hlavičkou profilu… </ObsahProfilu>
+import { oddilyZeStranky, kamPokracovat } from '../../lib/obsah';
+
+interface Props { adresa: string }
+const { adresa } = Astro.props;
+const html = await Astro.slots.render('default');
+const oddily = oddilyZeStranky(html);
+const predel = (i: number) => i > 0 && !oddily[i].cislo && !!oddily[i - 1].cislo;
+const doSkriptu = (x: unknown) => JSON.stringify(x).replace(/</g, '\\u003c');
+// Běží před vykreslením: lišta nahradí na telefonu řádek odkazů hned, ne až po načtení skriptů stránky,
+// a odkaz „Pokračovat ve čtení“ se ukáže bez probliknutí. O tom, kam se nabídne návrat, rozhoduje kamPokracovat.
+const skript = `(function () {
+  document.documentElement.setAttribute('data-obsah-js', '');
+  try {
+    var d = JSON.parse(localStorage.getItem('atlas-denik') || 'null');
+    var kotva = d && d.verze === 1 && d.cteni && typeof d.cteni === 'object' ? d.cteni[${doSkriptu(adresa)}] : null;
+    var o = (${kamPokracovat.toString()})(${doSkriptu(oddily)}, kotva);
+    var p = document.querySelector('[data-cteni]');
+    if (!o || !p) return;
+    p.querySelector('a').setAttribute('href', '#' + o.kotva);
+    p.querySelector('[data-cteni-nazev]').textContent = o.nazev;
+    p.hidden = false;
+  } catch (e) { /* úložiště nedostupné: odkaz se neukáže */ }
+})();`;
+---
+{oddily.length > 1 && (
+  <>
+    <nav class="obsah-profilu" aria-label="Obsah stránky" data-obsah-profilu data-pagefind-ignore>
+      <ol>
+        {oddily.map((o) => (
+          <li>
+            <a href={`#${o.kotva}`}>{o.cislo && <><span class="t-letopocet cislo">{o.cislo}</span>{' '}</>}<span>{o.nazev}</span></a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+    <div class="obsah-lista" data-obsah-lista data-adresa={adresa} data-pagefind-ignore>
+      <div class="obsah-lista__pruh">
+        <div class="obsah-lista__pozadi"></div>
+        <nav class="obsah-lista__radek stranka" aria-label="Obsah při čtení">
+          <button type="button" class="obsah-lista__tlacitko" aria-expanded="false" aria-controls="obsah-panel" data-obsah-tlacitko>
+            <svg class="ikona" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+            <span>Obsah</span>{' '}
+            <span class="obsah-lista__ted" data-obsah-ted hidden>
+              <span class="vizualne-skryte">právě čteš</span>{' '}
+              <span class="t-letopocet cislo" data-obsah-ted-cislo></span>{' '}
+              <span class="obsah-lista__nazev" data-obsah-ted-nazev></span>
+            </span>
+            <svg class="sipka" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <div class="obsah-panel" id="obsah-panel" data-obsah-panel hidden>
+            <ol>
+              {oddily.map((o, i) => (
+                <li class:list={{ predel: predel(i) }}>
+                  <a href={`#${o.kotva}`}>{o.cislo && <><span class="t-letopocet cislo">{o.cislo}</span>{' '}</>}<span>{o.nazev}</span></a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <script is:inline set:html={skript}></script>
+  </>
+)}
+<Fragment set:html={html} />
+
+<script>
+  import { ulozCteni } from '../../lib/denik';
+  import { ctenyOddil } from '../../lib/obsah';
+
+  const lista = document.querySelector<HTMLElement>('[data-obsah-lista]');
+  const radek = document.querySelector<HTMLElement>('[data-obsah-profilu]');
+  if (lista && radek) {
+    const adresa = lista.dataset.adresa!;
+    const tlacitko = lista.querySelector<HTMLButtonElement>('[data-obsah-tlacitko]')!;
+    const panel = lista.querySelector<HTMLElement>('[data-obsah-panel]')!;
+    const ted = lista.querySelector<HTMLElement>('[data-obsah-ted]')!;
+    const tedCislo = lista.querySelector<HTMLElement>('[data-obsah-ted-cislo]')!;
+    const tedNazev = lista.querySelector<HTMLElement>('[data-obsah-ted-nazev]')!;
+    const hlavicka = document.querySelector<HTMLElement>('.hlavicka');
+    const spodni = document.querySelector<HTMLElement>('nav.lista');
+    const oddily = [...document.querySelectorAll<HTMLElement>('[data-oddil]')]
+      .map((el) => ({ el, kotva: el.dataset.oddilKotva || el.id, nazev: el.dataset.oddil ?? '', cislo: el.dataset.oddilCislo ?? '' }))
+      .filter((o) => o.kotva);
+    const odkazy = [...radek.querySelectorAll<HTMLAnchorElement>('a'), ...panel.querySelectorAll<HTMLAnchorElement>('a')];
+    let cteny: string | null = null;
+    let ceka = false;
+
+    // Viditelná část okna: pod hlavičkou webu, nad spodní lištou telefonu.
+    const horniMez = () => hlavicka?.getBoundingClientRect().bottom ?? 0;
+    const dolniMez = () => (spodni && getComputedStyle(spodni).display !== 'none' ? spodni.getBoundingClientRect().top : innerHeight);
+    const otevreno = () => tlacitko.getAttribute('aria-expanded') === 'true';
+
+    function zavri(vratFokus = false) {
+      if (!otevreno()) return;
+      tlacitko.setAttribute('aria-expanded', 'false');
+      panel.hidden = true;
+      if (vratFokus) tlacitko.focus();
+    }
+    function otevri() {
+      // Seznam se vejde mezi lištu a spodní okraj viditelné části; když je pod lištou málo místa, otevře se nad ni.
+      const b = tlacitko.getBoundingClientRect();
+      const dole = dolniMez() - b.bottom;
+      const nahore = b.top - horniMez();
+      const nahoru = dole < 220 && nahore > dole;
+      panel.classList.toggle('obsah-panel--nahoru', nahoru);
+      panel.style.maxHeight = `${Math.max(132, Math.floor((nahoru ? nahore : dole) - 16))}px`;
+      panel.hidden = false;
+      tlacitko.setAttribute('aria-expanded', 'true');
+      // Právě čtený oddíl je v dlouhém seznamu vidět; posouvá se jen seznam, stránka ne.
+      const cten = panel.querySelector<HTMLElement>('[aria-current]');
+      if (cten) panel.scrollTop = Math.max(0, cten.offsetTop - (panel.clientHeight - cten.offsetHeight) / 2);
+    }
+
+    function prepocitej() {
+      ceka = false;
+      const pod = horniMez() + tlacitko.offsetHeight;
+      const dole = dolniMez();
+      const novy = ctenyOddil(
+        oddily.map((o) => ({ kotva: o.kotva, nahore: o.el.getBoundingClientRect().top })),
+        pod + 0.3 * (dole - pod),
+        { naKonci: innerHeight + scrollY >= document.documentElement.scrollHeight - 2, vyskaOkna: dole },
+      );
+      lista!.toggleAttribute('data-drzi', lista!.getBoundingClientRect().top <= horniMez() + 1);
+      // Notebook: lišta se ukáže, až řádek odkazů pod hlavičkou profilu odjede z obrazovky.
+      const prilepeno = radek!.getBoundingClientRect().bottom <= horniMez();
+      if (prilepeno !== lista!.hasAttribute('data-prilepeno')) {
+        lista!.toggleAttribute('data-prilepeno', prilepeno);
+        if (!prilepeno && getComputedStyle(radek!).display !== 'none') zavri();
+      }
+      if (novy === cteny) return;
+      cteny = novy;
+      for (const a of odkazy) {
+        if (novy && a.getAttribute('href') === `#${novy}`) a.setAttribute('aria-current', 'location');
+        else a.removeAttribute('aria-current');
+      }
+      const o = oddily.find((x) => x.kotva === novy);
+      ted.hidden = !o;
+      tedCislo.textContent = o?.cislo ?? '';
+      tedCislo.hidden = !o?.cislo;
+      tedNazev.textContent = o?.nazev ?? '';
+      // Do deníku jde jen kotva, a jen když se oddíl změní.
+      if (novy) ulozCteni(adresa, novy);
+    }
+    const naplanuj = () => {
+      if (ceka) return;
+      ceka = true;
+      requestAnimationFrame(prepocitej);
+    };
+
+    tlacitko.addEventListener('click', () => (otevreno() ? zavri() : otevri()));
+    for (const a of odkazy) {
+      a.addEventListener('click', () => {
+        // Rozbalovací oddíl (Prameny) se po skoku z obsahu otevře.
+        const cil = document.getElementById(a.getAttribute('href')!.slice(1));
+        if (cil instanceof HTMLDetailsElement) cil.open = true;
+        zavri();
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && otevreno()) {
+        e.preventDefault();
+        zavri(true);
+      }
+    });
+    document.addEventListener('pointerdown', (e) => {
+      if (otevreno() && !lista.contains(e.target as Node)) zavri();
+    });
+    lista.addEventListener('focusout', (e) => {
+      const kam = e.relatedTarget as Node | null;
+      if (kam && !lista.contains(kam)) zavri();
+    });
+    addEventListener('scroll', naplanuj, { passive: true });
+    addEventListener('resize', () => {
+      zavri();
+      naplanuj();
+    });
+    prepocitej();
+  }
+</script>
+
+<style>
+  /* Řádek odkazů pod hlavičkou profilu: bez JavaScriptu vždy, s ním jen na notebooku. */
+  .obsah-profilu { margin: var(--s-7) 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .obsah-profilu ol { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); margin: 0; padding: var(--s-2) 0; list-style: none; }
+  ol { font-family: var(--font-sans); font-size: var(--fs-ovladani); line-height: var(--lh-ovladani); }
+  li a { display: flex; align-items: center; gap: var(--s-2); min-height: var(--dotyk); text-decoration: none; font-weight: 500; }
+  li a:hover { text-decoration: underline; }
+  .cislo { color: var(--pc); font-weight: 600; }
+  /* Právě čtený oddíl: tučně a s linkou, ne jen barvou. */
+  .obsah-profilu a[aria-current] { font-weight: 700; box-shadow: inset 0 -2px 0 var(--ink); }
+
+  /* Lišta: jen s JavaScriptem. Na telefonu stojí v toku stránky a při čtení drží pod horní lištou. */
+  .obsah-lista { display: none; }
+  :global(html[data-obsah-js]) .obsah-lista { display: block; position: sticky; top: var(--hlavicka); z-index: 30; height: var(--dotyk); margin: var(--s-6) calc(-1 * var(--okraj)) 0; }
+  .obsah-lista__pruh { position: absolute; inset: 0 0 auto; height: var(--dotyk); }
+  /* Papír a linky přes celou šířku okna; stín místo přesahu, aby nevzniklo vodorovné posouvání. */
+  .obsah-lista__pozadi { position: absolute; inset: 0; background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); }
+  .obsah-lista__pozadi::before,
+  .obsah-lista__pozadi::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: var(--rule); box-shadow: 0 0 0 100vmax var(--rule); clip-path: inset(0 -100vmax); }
+  .obsah-lista__pozadi::before { top: 0; }
+  .obsah-lista__pozadi::after { bottom: 0; }
+  /* Pod hlavičkou webu horní linku nese hlavička sama. */
+  .obsah-lista[data-drzi] .obsah-lista__pozadi::before { display: none; }
+  .obsah-lista__radek { position: relative; height: 100%; }
+  .obsah-lista__tlacitko {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    width: 100%;
+    height: var(--dotyk);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    cursor: pointer;
+  }
+  .obsah-lista__tlacitko svg { flex: none; }
+  .obsah-lista__ted { display: flex; flex: 1; gap: var(--s-2); min-width: 0; color: var(--ink-2); font-weight: 500; }
+  .obsah-lista__ted[hidden] { display: none; }
+  .obsah-lista__ted::before { content: '·'; color: var(--muted); }
+  .obsah-lista__nazev { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .sipka { margin-left: auto; transition: rotate var(--pohyb-rychle); }
+  .obsah-lista__tlacitko[aria-expanded='true'] .sipka { rotate: 180deg; }
+
+  .obsah-panel {
+    position: absolute;
+    top: 100%;
+    left: var(--okraj);
+    right: var(--okraj);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--rule);
+    border-top: 0;
+    border-radius: 0 0 var(--r-sm) var(--r-sm);
+    background: var(--surface);
+  }
+  .obsah-panel--nahoru { top: auto; bottom: 100%; border-top: 1px solid var(--rule); border-bottom: 0; border-radius: var(--r-sm) var(--r-sm) 0 0; }
+  .obsah-panel ol { margin: 0; padding: var(--s-2) 0; list-style: none; }
+  .obsah-panel a { padding: 0 var(--s-4); }
+  .obsah-panel .predel { margin-top: var(--s-2); padding-top: var(--s-2); border-top: 1px solid var(--rule); }
+  .obsah-panel a[aria-current] { font-weight: 700; background: var(--pc-tint); box-shadow: inset 3px 0 0 var(--pc); }
+
+  @media (max-width: 899px) {
+    :global(html[data-obsah-js]) .obsah-profilu { display: none; }
+  }
+  @media (min-width: 900px) {
+    /* Notebook: lišta nezabírá místo a je vidět, až řádek odkazů odjede z obrazovky. */
+    :global(html[data-obsah-js]) .obsah-lista { height: 0; margin-top: 0; }
+    .obsah-lista__pruh { visibility: hidden; opacity: 0; transition: opacity var(--pohyb-rychle), visibility 0s var(--pohyb-rychle); }
+    .obsah-lista[data-prilepeno] .obsah-lista__pruh { visibility: visible; opacity: 1; transition: opacity var(--pohyb-rychle); }
+    .obsah-lista__tlacitko { width: auto; max-width: 100%; }
+    .obsah-lista__ted { flex: 0 1 auto; }
+    .sipka { margin-left: var(--s-1); }
+    .obsah-panel { right: auto; width: 360px; }
+  }
+</style>

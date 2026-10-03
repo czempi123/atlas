@@ -19,6 +19,9 @@ html {
 }
 html:has(.cesta-lista) { scroll-padding-bottom: calc(var(--spodni-lista) + env(safe-area-inset-bottom, 0px) + var(--s-4)); }
 
+/* Profil s lištou Obsah (drží pod hlavičkou): skok na kotvu ani prvek s fokusem pod ni nesmí zajet. */
+html[data-obsah-js] { scroll-padding-top: calc(var(--hlavicka) + var(--dotyk) + var(--s-4)); }
+
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }

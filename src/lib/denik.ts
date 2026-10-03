@@ -32,6 +32,11 @@ export interface Denik {
   aktivita: Aktivita[];
   /** Postup v cestách podle slugu cesty. */
   cesty: Record<string, PostupCesty>;
+  /**
+   * Naposledy čtený oddíl profilu: adresa stránky → kotva oddílu. Nepovinné (starší deníky ho nemají),
+   * je součástí exportu. Staví z něj „Pokračovat ve čtení“ nahoře na profilu.
+   */
+  cteni?: Record<string, string>;
 }
 
 export type DruhBloku = 'odkryj' | 'volba' | 'zmena' | 'spor' | 'roztrid' | 'kdo-zil-driv';
@@ -70,6 +75,7 @@ export function nacti(): Denik {
         if (!objekt(plny.bloky)) plny.bloky = {};
         if (!objekt(plny.cesty)) plny.cesty = {};
         if (!Array.isArray(plny.aktivita)) plny.aktivita = [];
+        if (plny.cteni !== undefined && !objekt(plny.cteni)) delete plny.cteni;
         return plny;
       }
     }
@@ -128,6 +134,25 @@ export function zaznamenejKrok(slug: string, krok: number, nazev: string, pocet:
   const navstivene = [...new Set([...(p?.navstivene ?? []), krok])].sort((a, b) => a - b);
   d.cesty = { ...d.cesty, [slug]: { nazev, pocet, krok, navstivene, kdy: new Date().toISOString() } };
   uloz(d);
+}
+
+/** Nejvýš tolik profilů si deník pamatuje pro „Pokračovat ve čtení“; nejdéle nečtený vypadne. */
+const CTENI_NEJVYS = 30;
+
+/** Zapamatuje naposledy čtený oddíl stránky (jen kotvu). Volá se při změně oddílu, ne při každém posunu. */
+export function ulozCteni(odkaz: string, kotva: string): void {
+  const d = nacti();
+  if (d.cteni?.[odkaz] === kotva) return;
+  const { [odkaz]: _stare, ...ostatni } = d.cteni ?? {};
+  const zaznamy = [...Object.entries(ostatni), [odkaz, kotva] as const].filter(([, k]) => typeof k === 'string');
+  d.cteni = Object.fromEntries(zaznamy.slice(-CTENI_NEJVYS));
+  uloz(d);
+}
+
+/** Kotva naposledy čteného oddílu stránky, nebo undefined. */
+export function cteniStranky(odkaz: string): string | undefined {
+  const k = nacti().cteni?.[odkaz];
+  return typeof k === 'string' ? k : undefined;
 }
 
 export function prijmiVyzvu(v: Omit<Vyzva, 'prijato'>): void {

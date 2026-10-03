@@ -15,10 +15,12 @@ const vztahy = vztahyOsoby(osoba.id);
 const retezy = kdoNavazoval(osoba.id);
 // Vliv přes texty má vlastní skupiny: „Znali se a přeli se“ smí stát jen nad lidmi, kteří se potkali nebo přeli.
 const skupiny = skupinyVztahu(vztahy);
+// Název oddílu: nadtitulek na stránce i položka v obsahu stránky (ObsahProfilu.astro).
+const NAZEV = 'Doba a lidé';
 const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 'teckovana', 'vliv-textem': 'carkovana', polemika: 'vlnovka' };
 ---
-<section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide">
-  <p class="t-nadtitulek nadtitulek">Doba a lidé</p>
+<section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide" data-oddil={NAZEV} data-oddil-kotva="doba-a-lide">
+  <p class="t-nadtitulek nadtitulek">{NAZEV}</p>
   <h2 class="t-h2" id="doba-a-lide">S kým {osoba.jmeno} žil</h2>
   <div class="doba__uvod ctenarsky"><slot /></div>
 

@@ -1,9 +1,10 @@
 ---
 // Kapitola portrétu: číslo, krátký název a titulek s pointou v kurzívě.
+// Atributy data-oddil hlásí kapitolu obsahu stránky (ObsahProfilu.astro).
 interface Props { cislo: string; kotva: string; nazev: string }
 const { cislo, kotva, nazev } = Astro.props;
 ---
-<section class="kapitola" id={kotva} aria-labelledby={`${kotva}-titulek`}>
+<section class="kapitola" id={kotva} aria-labelledby={`${kotva}-titulek`} data-oddil={nazev} data-oddil-cislo={cislo}>
   <p class="t-nadtitulek kapitola__cislo"><span class="t-letopocet">{cislo}</span> · {nazev}</p>
   <h2 class="t-h1 kapitola__titulek" id={`${kotva}-titulek`}><slot name="titulek" /></h2>
   <div class="ctenarsky"><slot /></div>

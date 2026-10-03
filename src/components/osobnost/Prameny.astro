@@ -7,10 +7,12 @@ const { prameny, citaty = [], obrazky = [] } = Astro.props;
 const seznam = [...new Set(prameny)].map((id) => pramenyPodleId.get(id)!).filter(Boolean);
 const cit = [...new Set(citaty)].map((id) => citatyPodleId.get(id)!).filter(Boolean);
 // Obrázky na stránce: autor a licence musí být vidět (CC BY, CC BY-SA).
+// Název oddílu: popisek rozbalení i položka v obsahu stránky (ObsahProfilu.astro); kotva #prameny.
+const NAZEV = 'Prameny';
 const obr = [...new Set(obrazky)].map((id) => data.zdroje.obrazky.find((o) => o.id === id)!).filter(Boolean);
 ---
-<details class="prameny">
-  <summary class="t-ovladani-l">Prameny</summary>
+<details class="prameny" id="prameny" data-oddil={NAZEV}>
+  <summary class="t-ovladani-l">{NAZEV}</summary>
   <div class="prameny__obsah t-popisek">
     {cit.length > 0 && (
       <>
