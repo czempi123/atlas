@@ -395,7 +395,14 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await dalKlavesnici(page, penize, 'Tvoje pravidlo', `${CESTA6}7/`);
 
   // Krok 7: návrat ke košům a vlastní pravidlo, které se uloží samo.
-  await expect(page.locator('.krok__obsah')).toContainText('Vzpomeň si na své koše z kroku 2.');
+  await expect(page.locator('.krok__obsah')).toContainText('Vrať se ke svým košům z kroku 2.');
+  // Vedle pravidla stojí koše, jak je student v kroku 2 opravdu uložil.
+  const panel = page.getByRole('region', { name: 'Na začátku a teď' });
+  await expect(panel.getByRole('heading', { name: 'Na začátku' })).toBeVisible();
+  await expect(panel).toContainText('Krok 2 · Tři koše');
+  await expect(panel.locator('.cast').first()).toContainText('Potřebuju');
+  await expect(panel.locator('.cast').first().locator('li')).toHaveText(['Vyspat se po probdělé noci', 'Někdo, komu řeknu, co mě trápí']);
+  await expect(panel.getByRole('heading', { name: 'Teď' })).toBeVisible();
   const pole = page.getByRole('textbox', { name: 'Kolik je dost? Napiš svoje pravidlo.' });
   await pole.focus();
   await page.keyboard.type('Dost je, když mi nic nechybí, i když nic nepřibývá.');
@@ -424,7 +431,7 @@ test('cesta 6 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
     ['Moudrý nebude žít jako kynik ani žebrat.', 'Kynik i Epikúros tedy jedli chléb a pili vodu.', 'S Diogenem samotným se Epikúros nejspíš nikdy nepotkal'],
     ['měsíc na minimum', 'každý pátek scházíš s kamarády na pizzu'],
     ['Epikúros tvrdil, že strop má i bohatství', 'U většiny lidí nálada s příjmem roste dál.', 'Komu je málo to, co stačí, tomu nestačí nic.'],
-    ['Oba chtěli totéž: aby je osud nezaskočil.', 'Souhlasit s nimi nemusíš.', 'Vzpomeň si na své koše z kroku 2.'],
+    ['Oba chtěli totéž: aby je osud nezaskočil.', 'Souhlasit s nimi nemusíš.', 'Vrať se ke svým košům z kroku 2.'],
   ];
   await page.goto(`${CESTA6}1/`);
   for (let n = 1; n <= KROKY6.length; n++) {

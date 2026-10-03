@@ -1,0 +1,33 @@
+---
+// Závěr cesty: závěrečné pravidlo (Moje stanovisko, ukládá se samo) a vedle něj, co student uložil na začátku cesty.
+// Který blok je začátkem, říká pole `zacatek` v přehledu cesty; tady se jen dohledá krok, druh a názvy košů.
+// Použití v MDX posledního kroku, mimo čtenářský sloupec:
+// <ZaverCesty id="cesta1-moje-pravidlo" otazka="Kdy mám dobrý důvod něčemu věřit? Napiš svoje pravidlo." />
+import { getCollection, getEntry } from 'astro:content';
+import Ostrov from '../ostrovy/ZaverCesty.svelte';
+import { krokZAdresy, krokyCesty, zacatekCesty } from '../../lib/cesty';
+import type { DruhZacatku } from '../../lib/zaver';
+
+interface Props { id: string; otazka: string }
+const { id, otazka } = Astro.props;
+const stranka = Astro.url.pathname;
+const k = krokZAdresy(stranka);
+const cesta = k ? await getEntry('cesty', k.slug) : undefined;
+if (!k || !cesta) throw new Error(`Závěr cesty „${id}“ patří do kroku cesty, ne na ${stranka}.`);
+const kroky = (await getCollection('kroky')).map((x) => ({ ...x.data, body: x.body }));
+if (k.n !== krokyCesty(kroky, k.slug).length) throw new Error(`Závěr cesty „${id}“ patří do posledního kroku cesty, ne na ${stranka}.`);
+
+let zacatek: { id: string; krok: number; nazev: string; druh: DruhZacatku; kose?: string[] } | undefined;
+if (cesta.data.zacatek) {
+  const kde = zacatekCesty(kroky, k.slug, cesta.data.zacatek);
+  // Bloky z YAML mají druh v datech; blok psaný přímo v MDX (Odkryj) se ukáže jako prostý text.
+  const blok = (await getEntry('bloky', cesta.data.zacatek))?.data;
+  zacatek = {
+    id: cesta.data.zacatek,
+    ...kde,
+    druh: blok?.druh === 'volba' || blok?.druh === 'roztrid' ? blok.druh : 'jiny',
+    kose: blok?.druh === 'roztrid' ? blok.kose.map((x) => x.nazev) : undefined,
+  };
+}
+---
+<Ostrov client:load id={id} otazka={otazka} odkaz={stranka} cesta={cesta.data.nazev} obdobi={cesta.data.obdobi} zacatek={zacatek} />

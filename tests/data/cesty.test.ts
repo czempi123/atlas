@@ -2,7 +2,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { parse } from 'yaml';
-import { krokyCesty, krokZAdresy, dalsiKrok, adresaKroku } from '../../src/lib/cesty';
+import { krokyCesty, krokZAdresy, dalsiKrok, adresaKroku, zacatekCesty } from '../../src/lib/cesty';
 
 const k = [
   { cesta: 'c', krok: 2, nazev: 'Dva' },
@@ -26,6 +26,24 @@ describe('cesty', () => {
     expect(dalsiKrok(k, 'c', 2)).toEqual({ href: '/cesta/c/#hotovo', text: 'Dokončit cestu' });
     expect(dalsiKrok(k, 'x', 1)).toBeNull();
   });
+  it('začátek cesty: blok se zápisem v některém dřívějším kroku', () => {
+    const kroky = [
+      { cesta: 'c', krok: 1, nazev: 'Scéna', body: '<Pribeh id="scena" osoba="sokrates">Text</Pribeh>' },
+      { cesta: 'c', krok: 2, nazev: 'Tvůj tah', body: 'Text.\n\n<Volba id="c-tah" />' },
+      { cesta: 'c', krok: 3, nazev: 'Pokus', body: '<Odkryj\n  id="c-pokus"\n  otazka="Proč?"\n>\nText\n</Odkryj>' },
+      { cesta: 'c', krok: 4, nazev: 'Pravidlo', body: '<Spor id="c-spor" />\n<ZaverCesty id="c-pravidlo" otazka="?" />' },
+      { cesta: 'd', krok: 1, nazev: 'Jiná', body: '<Volba id="d-tah" />' },
+    ];
+    expect(zacatekCesty(kroky, 'c', 'c-tah')).toEqual({ krok: 2, nazev: 'Tvůj tah' });
+    // Blok psaný v MDX na víc řádků se najde taky.
+    expect(zacatekCesty(kroky, 'c', 'c-pokus')).toEqual({ krok: 3, nazev: 'Pokus' });
+    // Blok jiné cesty, blok bez zápisu, neznámý blok a blok až v posledním kroku sestavení zastaví.
+    expect(() => zacatekCesty(kroky, 'c', 'd-tah')).toThrow(/nestojí v žádném jejím kroku/);
+    expect(() => zacatekCesty(kroky, 'c', 'scena')).toThrow(/do deníku nic nezapisuje/);
+    expect(() => zacatekCesty(kroky, 'c', 'c-ta')).toThrow(/nestojí v žádném jejím kroku/);
+    expect(() => zacatekCesty(kroky, 'c', 'c-spor')).toThrow(/až v posledním kroku/);
+    expect(() => zacatekCesty(kroky, 'c', 'c-pravidlo')).toThrow(/nestojí v žádném jejím kroku/);
+  });
 });
 
 // Obsah cest v src/content/cesty: každá cesta má kroky 1…n a frontmatter s cestou, krokem a názvem.
@@ -44,6 +62,19 @@ describe('obsah cest', () => {
         expect(x.soubor.startsWith(`${x.krok}-`), x.soubor).toBe(true);
       }
       expect(krokyCesty(kroky, c).length).toBe(kroky.length);
+    });
+    it(`${c}: začátek cesty stojí v dřívějším kroku a poslední krok má závěr s pravidlem`, () => {
+      const prehled = frontmatter(readFileSync(new URL(`${c}.mdx`, slozka), 'utf8'));
+      const soubory = readdirSync(new URL(`${c}/`, slozka)).filter((s) => /^\d+.*\.mdx$/.test(s));
+      const kroky = soubory.map((s) => {
+        const text = readFileSync(new URL(`${c}/${s}`, slozka), 'utf8');
+        return { ...frontmatter(text), body: text.split('---').slice(2).join('---') };
+      });
+      expect(prehled.zacatek, 'hotová cesta má v přehledu pole zacatek').toMatch(/^[a-z0-9-]+$/);
+      const z = zacatekCesty(kroky, c, prehled.zacatek);
+      expect(z.krok).toBeLessThan(kroky.length);
+      const posledni = krokyCesty(kroky, c)[kroky.length - 1];
+      expect(posledni.body).toMatch(/<ZaverCesty id="[a-z0-9-]+" otazka="[^"]+" \/>/);
     });
   }
 });
