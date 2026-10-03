@@ -6,8 +6,8 @@ Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „
 | --- | --- | --- |
 | P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
 | P7 | Portrét Epiktéta a portrét Marca Aurelia | hotovo 2. 10. 2026, schváleno 3. 10. 2026 |
-| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | napsáno 3. 10. 2026, čeká na schválení autorem |
-| P10 | Revize celku | **další krok** po schválení P8 |
+| P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | hotovo a schváleno 3. 10. 2026 |
+| P10 | Revize celku | **další krok**, zadání níže |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
@@ -117,7 +117,7 @@ Nejdřív mi v pár bodech napiš, jakou scénou otevřeš každý portrét, jak
 
 ## P8: Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4
 
-**Stav 3. 10. 2026:** napsáno, čeká na schválení autorem. Co je hotové a na co se má podívat revize, je v oddílu „Stav po P8“ na konci. Zadání zůstává pro záznam.
+**Stav 3. 10. 2026:** hotovo a schváleno autorem („V pořádku, P8 schvaluju“). Co je hotové a na co se má podívat revize, je v oddílu „Stav po P8“ na konci. Zadání zůstává pro záznam.
 
 V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high.
 
@@ -148,7 +148,7 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 Nejdřív mi v pár bodech napiš osnovu cesty 5 (kroky, blok v každém, odhad minut), karty pro Roztřiď, možnosti a podmínky nového případu a čtyři odpovědi hlasů na úvodní případ otázky 4, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (cesta, stránka otázky, propojení) a nic neposílej na GitHub. Na konci pošli snímky cesty a stránky otázky a seznam toho, co jsi vynechal nebo připsal do k-overeni.
 ```
 
-## Stav po P8 (3. 10. 2026)
+## Stav po P8 (3. 10. 2026, schváleno týž den)
 
 **Rozhodl autor nad osnovou:** osm kroků; třetí podmínka nového případu „Do večera to všichni pustili z hlavy“; v kroku 6 tři citáty; na otázce 4 smějí všichni čtyři odpovědět „může“.
 
@@ -162,4 +162,42 @@ Nejdřív mi v pár bodech napiš osnovu cesty 5 (kroky, blok v každém, odhad 
 - Student, který se stoikem nesouhlasí: čtvrtá možnost Volby v portrétu, Aristotelés ve Sporu, v kroku 6 a 7 a v kroku 8.
 - Rozsah: text kroků asi 700 slov, s bloky kolem 1 700; odhad 20 minut.
 
-Po P8 následuje P10 (revize celku skillem `atlas-revize`) a schválení autorem.
+## P10: Revize celku 3 „Co mám ve svých rukou?“
+
+**Stav 3. 10. 2026:** další krok. P7 i P8 autor schválil. Revize projde celý celek skillem `atlas-revize`: drobnosti opraví rovnou, zásahy do významu, příběhu a struktury jen navrhne a počká na rozhodnutí autora.
+
+Celek je o tom, co člověk nemá ve své moci. Největší riziko proto není věcná chyba, ale tón: cesta ani portréty nesmějí studentovi, kterému někdo ubližuje, naznačovat, že se má smířit a mlčet. Revize to má prověřit jako první.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high. Nový chat je tu záměr: portréty i cestu psal jeden chat a revize má číst cizíma očima.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-3.
+
+Udělej revizi celku 3 „Co mám ve svých rukou?“ skillem atlas-revize. Přečti CLAUDE.md, docs/styl.md, docs/podklady/celek-3-co-mam-v-rukou.md, docs/podklady/k-overeni.md (oddíl Celek 3 i s částmi Po P7 a Po P8), docs/rozhodnuti.md (záznamy z 2. a 3. 10. 2026), obě revize v docs/revize/ (vzor záznamu a chyby, které se nemají opakovat), v docs/plany/celek-3.md oddíly „Stav po P7“ a „Stav po P8“ a v docs/design.md oddíly Komponenty (Deska a Mini mapa osoby), Bloky, Cesta a Velká otázka.
+
+Celek tvoří:
+- portrét Epiktéta (src/content/osobnosti/epiktetos.mdx, kapitoly 01–04) a portrét Marca Aurelia (src/content/osobnosti/marcus-aurelius.mdx, kapitoly 01–04) s bloky epiktetos-* a marcus-* v src/content/bloky,
+- cesta 5 „Co mám ve svých rukou?“ (src/content/cesty/co-mam-ve-svych-rukou*, 8 kroků, bloky cesta5-*),
+- stránka velké otázky 4 (src/content/otazky/jsem-svobodny.mdx, adresa /otazka/jsem-svobodny/),
+- vstupy a návraty: přehled /otazky/, Lidé a směry, vstupy v hlavičce profilu (Epikúros má nově tři otázky), karta cesty v portrétu Epiktéta, Kam dál, Pokračuj a Můj deník.
+
+Zvlášť zkontroluj:
+1. Rezignace a křivda. Projdi zpětné vazby ve Volbě s Musoniem (portrét, kapitola 01), ve Volbě „Kdo je svobodnější?“ (kapitola 03), v pokusu se senátorem (kapitola 04), v Roztřiď (krok 2), ve snímku z chatu (krok 6), v kroku 7 a obě výzvy Zkus to žít. Projde celkem student, kterému doma nebo ve třídě někdo ubližuje, aniž by četl, že se má smířit? Je někde věta, která zní jako rada snášet křivdu? Dostane slovo ten, kdo říká, že vnitřní klid křivdu neodčiní?
+2. Spor Epiktétos × Aristotelés v kroku 5: má každá strana odpověď na nejsilnější námitku druhé? Kdo mluví na telefonu poslední a zůstává jeho poslední tah bez odpovědi? Je třetí Epiktétův argument podaný jako výklad? Říká scéna jasně, že jde o spor dvou škol, a neoznamuje vítěze? Není postoj strany krajnější než její citát?
+3. Tradované × doložené. Noha jen jako „Vypráví se“, bez jména pána a bez roku; kulhání jako fakt. Všechno z Historie Augusty a z Cassia Diona jako tradované. Žádná věta z Hovorů spojená s konkrétní událostí (pozor na citáty, které stojí hned za scénou: `hovory-vi-44` za dražbou, `hovory-viii-59` za Cassiem; Kde jsme v kroku 4). Železná lampa × hliněná, „zničit“, ne „spálit“, žádná noc u Dunaje, žádný věk při adopci, žádné místo smrti, žádný neověřený rok. Každé shrnutí porovnej s podkladovým listem, sporná místa přímo s pramenem.
+4. Čtyři hlasy na stránce otázky 4: poznal by se v nich každý (Aristotelés ručí i za povahu, Epikúros jediný popírá, že všechno má nutnou příčinu, Chrýsippos drží osud i odpovědnost zároveň, Epiktétos obrací otázku dovnitř)? Všichni čtyři říkají „může“: je i tak vidět, kde se rozcházejí? Je odchylka atomů podaná jako nauka, kterou Epikúrovi připisují pozdější prameny?
+5. Aristotelés na třech místech (stránka otázky 1, Spor a krok 6 cesty 5, stránka otázky 4): říká pokaždé něco jiného a jiným citátem? Nezmenšuje se nikde to, čím se od stoiků liší?
+6. Opakování v celku: pán a švec (úvod portrétu × Volba v kapitole 03), noha (portrét jednou větou × krok 1), „vůle“ vysvětlená v portrétu i v cestě, Rusticus a Epiktétova kniha (portrét Marca × krok 4), kulhavý voják, dvě zprávy (úvodní případ otázky 4 × snímek z chatu v kroku 6). Tentýž citát nanejvýš dvakrát v celku; citáty z portrétů v cestě ani na stránce otázky (seznam je ve „Stavu po P7“).
+7. Pokus z roku 1998 v kroku 7: jen tři tvrzení ze souhrnu, bez čísel a bez jména autora; výhrady jen ve zpětné vazbě. Nevyznívá krok jako důkaz, že Epiktétos měl pravdu?
+8. Citlivá místa: v celku nesmí být „dveře jsou otevřené“, smrt dítěte, tělesná láska z Hovorů VI, 13 ani věta o špatném otci (Rukojeť 30) jako rada.
+9. Délka: dá se cesta projít do 20 minut? Krok 5 má čtyři citáty před Sporem, krok 6 tři. Kde by student přestal číst v cestě a kde v portrétech na telefonu (oba mají kolem 15 000 px)?
+10. Rozhraní: výřez obou rytin na desce na 390 i 1440 px (`vyrez`, `vyrezNaSirku`), mini mapa s Níkopolí a Carnuntem („asi“ u přibližných roků), hlavička Epikúrova profilu se třemi otázkami na telefonu, Roztřiď s osmi kartami prstem i klávesnicí, odhad „otrok, nebo císař“ v kroku 4 (ví student napoprvé, co má dělat?). Nic rozbitého v celcích 1 a 2.
+
+Postup podle skillu: projdi celek jako student na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí (i přímé odkazy na kroky, obnovení stránky, Začít znovu, deník), cestu jednou i bez odkrytí bloků a jednou očima studenta, který s Epiktétem nesouhlasí, pak pět perspektiv. Drobnosti oprav rovnou a commituj česky; zásahy do významu, příběhu nebo struktury jen navrhni s hotovým novým zněním. Záznam ulož do docs/revize/celek-3-<datum>.md (nejvýš deset nálezů) a stav zapiš do docs/plany/celek-3.md.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí). Na vlastní náhled si web sestav (npm run build) a pusť npx astro preview --port 4323 --ignore-lock; příkazy delší než minutu pouštěj na pozadí s výstupem do souboru a pomocné skripty drž mimo test-results.
+
+Na konci mi napiš verdikt (připraveno ke schválení / po opravách / přepracovat), tři nejdůležitější nálezy a pošli snímky míst, kterých se nálezy týkají. Návrhy zatím nezapracovávej, počkej na moje rozhodnutí. Nic neposílej na GitHub a do hlavní větve nic neslučuj.
+```
+
+Po P10 rozhodne autor o návrzích z revize. Po jejich zapracování následuje schválení celku 3, sloučení `celek-3` do hlavní větve a hlavní větev na GitHub. Pak se založí větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1).

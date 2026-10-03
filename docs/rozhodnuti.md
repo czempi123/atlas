@@ -2,6 +2,14 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Schválení P8 (celek 3) a další krok
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta 5 a stránka velké otázky 4 schváleny i s odchylkami od zadání (vůle vysvětlená v kroku 1, krok 4 jako odhad s odkrytím, karta cesty za kapitolou 04, Kam dál bez mapy, Epikúros se třemi otázkami v hlavičce) | Autor: „V pořádku, P8 schvaluju“ |
+| Další krok P10: revize celku 3 skillem `atlas-revize` v novém chatu; zadání v `docs/plany/celek-3.md`. Jako první má prověřit tón: jestli celek nenaznačuje, že se má člověk s křivdou smířit | Portréty i cestu psal jeden chat, revize má číst cizíma očima. U stoického celku je největší riziko rada snášet, ne věcná chyba |
+| Po revizi a schválení celku se `celek-3` sloučí do hlavní větve, hlavní větev se pošle na GitHub a založí se větev `rozhrani-v2` | Rozhodnutí z 2. 10. 2026 (plány větví a GitHub; rozhraní až po celku 3) |
+
 ## 3. 10. 2026: Cesta 5 a stránka velké otázky 4 (P8)
 
 | Rozhodnutí | Důvod |
