@@ -1,26 +1,78 @@
 <script lang="ts">
   // Můj deník: rozpracované cesty a otázky, odpovědi a stanoviska, přijaté výzvy a export do souboru.
-  // Vše jen v tomto prohlížeči.
-  import { onMount } from 'svelte';
-  import { nacti, exportuj, type Denik } from '../../lib/denik';
+  // Vše jen v tomto prohlížeči. Nahoře nejvýš jedna tichá nabídka Návratu: nový případ ke zkoušce vlastního
+  // pravidla, nejdřív tři dny po dokončení cesty. Jde zkusit, odložit, nebo skrýt; jinde v atlasu o ní nic neví.
+  import { onMount, tick } from 'svelte';
+  import { nacti, exportuj, stavBloku, ulozStavBloku, type Denik } from '../../lib/denik';
+  import { nabidkaNavratu, platnyStavNavratu, type NavratDeniku } from '../../lib/navrat';
+  import Navrat from './Navrat.svelte';
+
+  interface Props {
+    /** návraty všech cest (obsah z YAML); který a kdy nabídnout, rozhodne nabidkaNavratu */
+    navraty?: NavratDeniku[];
+  }
+  let { navraty = [] }: Props = $props();
 
   let denik = $state<Denik | null>(null);
+  // Nabídka se určí jednou při otevření deníku: po odložení nebo skrytí se hned nenabídne další.
+  let nabidka = $state<NavratDeniku | null>(null);
+  let otevreny = $state(false);
+  let zprava = $state('');
+  let obalNavratu = $state<HTMLElement>();
+  let zpravaPrvek = $state<HTMLElement>();
   let cesty = $derived(denik ? Object.entries(denik.cesty).sort((a, b) => b[1].kdy.localeCompare(a[1].kdy)) : []);
   let rozpracovane = $derived(denik ? denik.aktivita.filter((a) => !a.hotovo) : []);
   const datum = (iso: string) => new Date(iso).toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' });
 
   onMount(() => {
     denik = nacti();
+    nabidka = nabidkaNavratu(denik, navraty, Date.now());
     const obnov = () => (denik = nacti());
     window.addEventListener('atlas-denik', obnov);
     return () => window.removeEventListener('atlas-denik', obnov);
   });
+
+  async function zkusit() {
+    otevreny = true;
+    await tick();
+    obalNavratu?.focus();
+  }
+  /** Odloží (vrátí se za pár dní), nebo skryje (už se nenabídne); odpověď rozepsanou v bloku nechá být. */
+  async function odloz(natrvalo: boolean) {
+    if (!nabidka) return;
+    const stav = platnyStavNavratu(stavBloku(nabidka.id));
+    ulozStavBloku(nabidka.id, natrvalo ? { ...stav, skryto: true } : { ...stav, odlozeno: new Date().toISOString() });
+    zprava = natrvalo ? 'Tenhle návrat se už nenabídne.' : 'Návrat se nabídne znovu za pár dní.';
+    nabidka = null;
+    await tick();
+    zpravaPrvek?.focus();
+  }
 </script>
 
 {#if denik}
   {#if denik.zapisy.length === 0 && denik.vyzvy.length === 0 && cesty.length === 0 && rozpracovane.length === 0}
     <p class="t-perex">Zatím je prázdný. Když u osobnosti nebo otázky napíšeš vlastní odpověď nebo přijmeš výzvu, najdeš ji tady.</p>
   {:else}
+    {#if nabidka}
+      <section class="navrat" aria-labelledby="navrat-nadpis">
+        <h2 class="t-h3 nadpis" id="navrat-nadpis">Návrat</h2>
+        {#if otevreny}
+          <div class="navrat__blok" tabindex="-1" bind:this={obalNavratu}><Navrat navrat={nabidka} /></div>
+        {:else}
+          <div class="nabidka obdobi-{nabidka.blok.obdobi}">
+            <p class="t-nadtitulek nabidka__cesta">{nabidka.nazevCesty}</p>
+            <p class="nabidka__text">Tuhle cestu máš za sebou. Zkusíš své pravidlo na jednom novém případu?</p>
+            <div class="blok__akce">
+              <button class="blok__tl blok__tl--vedlejsi" type="button" onclick={zkusit}>Zkusit</button>
+              <button class="blok__tl blok__tl--tiche" type="button" onclick={() => odloz(false)}>Později</button>
+              <button class="blok__tl blok__tl--tiche" type="button" onclick={() => odloz(true)}>Už nenabízet</button>
+            </div>
+          </div>
+        {/if}
+      </section>
+    {:else if zprava}
+      <p class="navrat-zprava t-ovladani" role="status" tabindex="-1" bind:this={zpravaPrvek}>{zprava}</p>
+    {/if}
     {#if cesty.length || rozpracovane.length}
       <h2 class="t-h3 nadpis">Rozpracované</h2>
       <ul class="seznam seznam--rozpracovane">
@@ -69,6 +121,15 @@
 
 <style>
   .nadpis { margin: var(--s-7) 0 var(--s-4); }
+  .navrat .nadpis { margin-top: var(--s-5); }
+  .nabidka { padding: var(--s-4) var(--s-5); border: 1px solid var(--rule); border-radius: var(--r-md); background: var(--surface); }
+  .nabidka__cesta { margin: 0 0 var(--s-2); color: var(--pc); }
+  .nabidka__text { margin: 0; }
+  .nabidka .blok__akce { margin-top: var(--s-4); }
+  .navrat__blok { outline: none; }
+  .navrat__blok :global(.blok) { margin: 0; }
+  .navrat-zprava { margin: var(--s-5) 0 0; color: var(--ink-2); outline: none; }
+  .navrat-zprava:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
   .seznam { margin: 0; padding: 0; list-style: none; }
   .seznam li { padding: var(--s-4) 0; border-top: 1px solid var(--rule); }
   .seznam p { margin: 0 0 var(--s-1); }

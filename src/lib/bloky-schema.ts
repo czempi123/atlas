@@ -188,10 +188,35 @@ export const BlokRoztrid = z
     message: 'Zpětná vazba `kdyz` odkazuje na koš, který v bloku není.',
   });
 
-export const Blok = z.union([BlokVolba, BlokZmena, BlokSpor, BlokRoztrid]);
+/**
+ * Návrat: krátký nový případ, který deník nabídne několik dní po dokončení cesty. Student na něm zkouší
+ * vlastní závěrečné pravidlo; nic se nehodnotí. Otázka („Platí tvoje pravidlo i tady?“) a možnosti jsou
+ * pro všechny návraty stejné a píše je blok; v YAML je jen případ a věta po každé odpovědi.
+ */
+export const BlokNavrat = z
+  .object({
+    druh: z.literal('navrat'),
+    obdobi: Obdobi,
+    /** slug cesty, ke které návrat patří (nejvýš jeden návrat na cestu) */
+    cesta: Id,
+    /** id závěrečného pravidla v posledním kroku cesty (`<ZaverCesty id="…" />`) */
+    pravidlo: Id,
+    /** krátký název případu: stojí v zápisu v deníku („Návrat · Nový telefon: …“) */
+    nazev: Text,
+    /** nový případ („Představ si…“), bez historických osob a bez tvrzení, která by potřebovala pramen */
+    scena: Text,
+    /** věta po odpovědi: jedna, ptá se dál a nehodnotí */
+    po: z.object({ ano: Text, upravim: Text, nevim: Text }).strict(),
+    zdroje: zaklad.zdroje,
+    kOvereni: zaklad.kOvereni,
+  })
+  .strict();
+
+export const Blok = z.union([BlokVolba, BlokZmena, BlokSpor, BlokRoztrid, BlokNavrat]);
 
 export type TBlokVolba = z.infer<typeof BlokVolba>;
 export type TBlokZmena = z.infer<typeof BlokZmena>;
 export type TBlokSpor = z.infer<typeof BlokSpor>;
 export type TBlokRoztrid = z.infer<typeof BlokRoztrid>;
+export type TBlokNavrat = z.infer<typeof BlokNavrat>;
 export type TBlok = z.infer<typeof Blok>;

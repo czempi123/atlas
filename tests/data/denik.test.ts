@@ -1,7 +1,7 @@
 // Deník: zápisy a stav bloků se ukládají do localStorage, vydrží „obnovení“ (nové načtení)
 // a bez úložiště fungují aspoň v paměti.
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { nacti, ulozZapis, najdiZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku, zaznamenejKrok, ulozCteni, cteniStranky, _zapomenPamet } from '../../src/lib/denik';
+import { nacti, ulozZapis, najdiZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku, zaznamenejKrok, dokonceniCesty, ulozCteni, cteniStranky, _zapomenPamet } from '../../src/lib/denik';
 
 class Uloziste {
   data = new Map<string, string>();
@@ -45,6 +45,35 @@ describe('deník s localStorage', () => {
     expect(nacti().bloky).toEqual({});
     u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: [1] }));
     expect(nacti().bloky).toEqual({});
+  });
+  it('čas dokončení cesty se zapíše jednou a pozdější otevření kroku ho neposune', async () => {
+    zaznamenejKrok('c', 1, 'Cesta', 3);
+    zaznamenejKrok('c', 2, 'Cesta', 3);
+    expect(nacti().cesty.c.dokonceno).toBeUndefined();
+    zaznamenejKrok('c', 3, 'Cesta', 3);
+    const dokonceno = nacti().cesty.c.dokonceno!;
+    expect(dokonceno).toBe(nacti().cesty.c.kdy);
+    await new Promise((r) => setTimeout(r, 5));
+    zaznamenejKrok('c', 1, 'Cesta', 3);
+    zaznamenejKrok('c', 3, 'Cesta', 3);
+    _zapomenPamet();
+    const c = nacti().cesty.c;
+    expect(c.dokonceno).toBe(dokonceno);
+    expect(c.kdy > dokonceno).toBe(true);
+    expect(c.krok).toBe(3);
+  });
+  it('starý deník: cesta prošlá celá bez času dokončení dostane čas naposledy otevřeného kroku', () => {
+    const kdy = '2026-09-20T10:00:00.000Z';
+    u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], cesty: { c: { nazev: 'Cesta', pocet: 3, krok: 3, navstivene: [1, 2, 3], kdy } } }));
+    expect(nacti().cesty.c.dokonceno).toBeUndefined();
+    zaznamenejKrok('c', 2, 'Cesta', 3);
+    expect(nacti().cesty.c.dokonceno).toBe(kdy);
+    expect(nacti().cesty.c.kdy).not.toBe(kdy);
+    // Rozpracovaná cesta ze starého deníku se dokončí až teď.
+    expect(dokonceniCesty({ pocet: 3, navstivene: [1, 2], kdy }, [1, 2, 3], 3, 'TED')).toBe('TED');
+    expect(dokonceniCesty({ pocet: 3, navstivene: [1, 2], kdy }, [1, 2], 3, 'TED')).toBeUndefined();
+    expect(dokonceniCesty(undefined, [1], 1, 'TED')).toBe('TED');
+    expect(dokonceniCesty({ dokonceno: 'DRIV', pocet: 3, navstivene: [1, 2, 3], kdy }, [1, 2, 3], 3, 'TED')).toBe('DRIV');
   });
   it('poškozený záznam nerozbije deník', () => {
     u.setItem('atlas-denik', '{nejde');

@@ -1,0 +1,19 @@
+# Návrat · cesta 5 „Co mám ve svých rukou?“: nejlepší kamarád se stěhuje; rozhodl o tom někdo jiný.
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen (schválil autor 3. 10. 2026).
+# Neopakuje nové případy cesty (snímek z chatu, pokus s filmem) ani karty z kroku 2: nejde o výkon ani o urážku,
+# ale o ztrátu, na které studentovi záleží a o které nerozhoduje.
+druh: navrat
+obdobi: 2
+cesta: co-mam-ve-svych-rukou
+pravidlo: cesta5-moje-pravidlo
+nazev: Kamarád se stěhuje
+scena: >-
+  Představ si, že ti nejlepší kamarád řekne, že se o prázdninách stěhuje.
+  Rodiče dostali práci na druhém konci republiky a je rozhodnuto. Jeho se nikdo neptal a tebe taky ne.
+
+
+  Od září bude čtyři hodiny vlakem daleko. Doteď jste se vídali skoro každý den.
+po:
+  ano: Co z toho přátelství je podle něj ve tvých rukou a co už ne?
+  upravim: Co do něj připíšeš o věcech, o kterých nerozhoduješ, a přesto ti na nich záleží?
+  nevim: "Na čem to vázne: na tom, co máš v rukou, nebo na tom, že ti záleží i na zbytku?"

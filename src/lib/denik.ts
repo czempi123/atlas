@@ -9,7 +9,7 @@ export interface Zapis {
   odkaz: string;
   kdy: string;
   /** z jakého bloku zápis pochází (pro řazení v deníku); starší zápisy ho nemají */
-  druh?: 'stanovisko' | 'odkryj' | 'volba' | 'zmena' | 'spor' | 'roztrid';
+  druh?: 'stanovisko' | 'odkryj' | 'volba' | 'zmena' | 'spor' | 'roztrid' | 'navrat';
 }
 export interface Vyzva {
   id: string;
@@ -57,7 +57,13 @@ export interface PostupCesty {
   krok: number;
   /** kroky, které student otevřel */
   navstivene: number[];
+  /** čas naposledy otevřeného kroku; posouvá se každou návštěvou */
   kdy: string;
+  /**
+   * Čas, kdy student poprvé otevřel všechny kroky cesty. Zapíše se jednou a pozdější návštěvy ho nemění;
+   * počítá se od něj Návrat (src/lib/navrat.ts). Nepovinné: starší deníky ho nemají.
+   */
+  dokonceno?: string;
 }
 
 const KLIC = 'atlas-denik';
@@ -127,12 +133,26 @@ export function smazStavBloku(id: string): void {
   uloz(d);
 }
 
-/** Zaznamená otevřený krok cesty. */
+/**
+ * Čas dokončení cesty po další návštěvě kroku. Jednou zapsaný se nemění. Když student právě otevřel poslední
+ * chybějící krok, je to `ted`. Starší deník, kde už byla cesta prošlá celá a čas dokončení chybí, dostane čas
+ * svého naposledy otevřeného kroku: je to nejbližší údaj, který deník má. Nedokončená cesta nemá nic.
+ */
+export function dokonceniCesty(pred: Partial<PostupCesty> | undefined, navstivene: number[], pocet: number, ted: string): string | undefined {
+  if (typeof pred?.dokonceno === 'string') return pred.dokonceno;
+  if (navstivene.length < pocet) return undefined;
+  const bylaCela = Array.isArray(pred?.navstivene) && typeof pred?.pocet === 'number' && pred.navstivene.length >= pred.pocet;
+  return bylaCela && typeof pred?.kdy === 'string' ? pred.kdy : ted;
+}
+
+/** Zaznamená otevřený krok cesty; když tím student prošel všechny kroky, zapíše jednou čas dokončení. */
 export function zaznamenejKrok(slug: string, krok: number, nazev: string, pocet: number): void {
   const d = nacti();
   const p = d.cesty[slug];
   const navstivene = [...new Set([...(p?.navstivene ?? []), krok])].sort((a, b) => a - b);
-  d.cesty = { ...d.cesty, [slug]: { nazev, pocet, krok, navstivene, kdy: new Date().toISOString() } };
+  const ted = new Date().toISOString();
+  const dokonceno = dokonceniCesty(p, navstivene, pocet, ted);
+  d.cesty = { ...d.cesty, [slug]: { nazev, pocet, krok, navstivene, kdy: ted, ...(dokonceno ? { dokonceno } : {}) } };
   uloz(d);
 }
 

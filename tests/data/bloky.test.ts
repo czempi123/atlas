@@ -411,9 +411,9 @@ const osoby = new Set(lide.map((o) => o.id));
 const prameny = new Set(zdroje.prameny.map((p) => p.id));
 
 describe('obsah bloků (src/content/bloky)', () => {
-  it('složka má ukázky všech čtyř druhů', () => {
+  it('složka má ukázky všech pěti druhů', () => {
     const druhy = new Set(soubory.map((s) => parse(readFileSync(new URL(s, slozka), 'utf8')).druh));
-    expect([...druhy].sort()).toEqual(['roztrid', 'spor', 'volba', 'zmena']);
+    expect([...druhy].sort()).toEqual(['navrat', 'roztrid', 'spor', 'volba', 'zmena']);
   });
   for (const s of soubory) {
     it(`${s}: schéma a odkazy na data`, () => {
