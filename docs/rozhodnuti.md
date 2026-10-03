@@ -2,6 +2,26 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Rozhraní v2, krok R2 (reflexe ve Sporu, Na začátku × Teď, Návrat)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Reflexe ve Sporu je zavřený řádek pod zpětnou vazbou („Který argument druhé strany byl nejsilnější?“ · Nepovinné), ne součást jejího rámečku, a ukládá se sama | „Další krok“ zůstává vidět bez ní. Rámeček zpětné vazby čtečka ohlašuje; formulář uvnitř by se četl při každé změně. Stejný vzor má „Co kdybys zvolil jinak?“ ve Volbě |
+| Zpětná vazba Sporu otázku neklade, jen k reflexi dovede („I strana, kterou hájí Epikúros, má argument, který stojí za odpověď.“). „Který argument tě posunul?“ vypadlo | Otázka má zaznít jednou, na řádku reflexe; na posun se ptá pole před zápisem polohy. Jméno v 1. pádě za „kterou hájí“ sedí na všech osm stran včetně „kynici“ |
+| Ve výběru stojí začátek argumentu (celé věty asi do 110 znaků), ne celý text ani nový popisek v YAML | Argumenty mají až tři odstavce a YAML Sporů se měnit neměl |
+| Reflexe ukládá text vybraného argumentu, ne pořadí. Když ho autor později změní, uvidí student svůj původní výběr jako zvláštní možnost | Argumenty nemají id; uložená reflexe nesmí nikdy ukázat jiný argument |
+| „Teď“ v závěru cesty je přímo pole s pravidlem, ne kopie textu pod ním | Pravidlo by jinak stálo na stránce dvakrát; schválil autor |
+| „Na začátku“ se čte ze zápisu v deníku (text, jak ho student uložil) a rozkládá se podle druhu bloku: tah bez písmene a „Proč“, koše s kartami po řádcích | Stav bloku ukazuje na pořadí možností a po změně YAML by ukázal jinou; zápis je to, co student opravdu uložil. Nic se neukládá podruhé |
+| Začátek cesty říká pole `zacatek` v přehledu cesty; u cesty 5 je to Roztřiď z kroku 2 | První vlastní pokus studenta; další cesta přidá jeden řádek a sestavení ho hlídá |
+| Věty posledního kroku zní „Vrať se ke svému tahu / ke svým košům z kroku 2“ | Text kroku je pevný a musí sedět s panelem i bez něj; schválil autor |
+| Otázka „Co se změnilo, nebo proč si myslíš totéž?“ se ukáže, až je pravidlo napsané | Dřív není co srovnávat; změna názoru se nečeká a otázka se ptá i na důvod, proč zůstal |
+| Cesta je dokončená, když má student otevřené všechny kroky; čas se zapíše jednou do `cesty[slug].dokonceno` | Stejné měřítko, podle kterého deník už psal „prošel jsi celou“. Klepnutí na Dokončit cestu by minulo studenty, kteří odejdou jinudy |
+| Starý deník bez `dokonceno` se řídí časem naposledy otevřeného kroku a při příští návštěvě kroku si ho zapíše natrvalo | Nejbližší údaj, který deník má; nic se nerozbije a deník zůstává verze 1 |
+| Návrat se otevírá přímo v deníku, ne na vlastní stránce. Nabízí se nejvýš jeden (cesta dokončená nejdéle) a určí se jednou při otevření deníku | Jedno klepnutí a žádná další stránka; po odpovědi nebo odložení se hned nenabídne další. Schválil autor |
+| Později vrátí nabídku za tři dny, Už nenabízet ji skryje natrvalo; obojí je ve stavu bloku návratu (`bloky[id]`), ne v nové části deníku | Schválil autor; export i starší deníky zůstávají beze změny tvaru |
+| Případ je v YAML (`druh: navrat`: `cesta`, `pravidlo`, `nazev`, `scena`, `po`); otázku „Platí tvoje pravidlo i tady?“ a možnosti Ano / Upravím ho / Nevím píše blok | Jsou pro všechny návraty stejné; autor píše jen případ a tři věty, které se ptají dál |
+| Návrat cesty 5 je „Kamarád se stěhuje“ | Ztráta, o které rozhodl někdo jiný: neopakuje výkon (známka, zápas) ani urážku (snímek z chatu). Schválil autor |
+
 ## 3. 10. 2026: Rozhraní v2, krok R1 (Domů, obsah profilu, ovládání mapy)
 
 | Rozhodnutí | Důvod |

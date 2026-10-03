@@ -33,7 +33,7 @@ describe('Na začátku: zápis z Roztřiď', () => {
       const casti = castiZacatku(zapisRoztrid(b, { umisteni, vlastni }), 'roztrid', kose);
       expect(casti.map((c) => c.nadpis)).toEqual(kose);
       // Každá karta bloku je v panelu právě jednou, ve svém koši a bez tečky navíc.
-      b.kose.forEach((k, i) => {
+      b.kose.forEach((_, i) => {
         const ocekavane = b.karty.filter((_, j) => j % b.kose.length === i).map((x) => x.text);
         expect(casti[i].radky.slice(0, ocekavane.length)).toEqual(ocekavane);
       });

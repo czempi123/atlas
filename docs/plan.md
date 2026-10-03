@@ -140,7 +140,7 @@ Všechny cesty, profily i otázky se skládají z jedné knihovny asi dvanácti 
 | Slož argument | Seřadí premisy a závěr, najde skrytý předpoklad | Vidět stavbu myšlenky |
 | Kdo žil dřív? | Odhadne pořadí nebo vzdálenost dvou lidí, pak se otevře osa | Propojit učení s mapou a časem |
 | Kdo to řekl? | Přiřadí výrok k filozofovi | Rychlé opakování, hra |
-| Návrat | Po několika dnech vybaví princip a použije ho na nový případ | Dlouhodobé zapamatování |
+| Návrat | Pár dní po dokončení cesty zkusí své závěrečné pravidlo na krátkém novém případu; nabízí ho jen deník | Dlouhodobé zapamatování, zkouška vlastního pravidla v jiné situaci |
 | Zkus to žít | Vezme si týdenní výzvu, později zapíše, jak dopadla | Filozofie jako způsob života |
 | Moje stanovisko | Zapíše do deníku, kde stojí u velké otázky a proč | Autenticita, vlastní myšlenkový profil |
 
@@ -148,7 +148,7 @@ Všechny cesty, profily i otázky se skládají z jedné knihovny asi dvanácti 
 
 - **Sbírka setkání:** po dokončení profilu nebo cesty získá student kartu filozofa do deníku; mapa postupně „barevní“ tam, kde už byl.
 - **Žádné žebříčky, série dní ani body za názor.** Odpovídají hodnotám projektu a nevytvářejí tlak.
-- **„Pokračuj, kde jsi skončil“** na úvodní stránce a upozornění na návraty, které už čekají.
+- **„Pokračuj, kde jsi skončil“** na úvodní stránce. Návrat nabízí jen deník, tiše a bez upozornění jinde; jde odložit nebo skrýt (rozhodnutí autora z 2. 10. 2026, `docs/plany/rozhrani-v2.md`).
 
 ### Obsahová složka
 
@@ -381,7 +381,7 @@ Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v soubo
 | `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; hlavní větev je na GitHubu |
 | `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
 | `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/plany/celek-4.md` | **další krok** je P6 (podklady); může běžet souběžně s `rozhrani-v2` |
-| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 hotový 3. 10. 2026, čeká na schválení autorem; pak R2 |
+| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 schválený, R2 hotový 3. 10. 2026 a čeká na schválení autorem; pak revize větve (P10) |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
 
