@@ -410,38 +410,136 @@ test('mapa · výběr člověka zvýrazní jeho vztahy v řece a ostatní potla�
   expect((await oblouky()).filter((o) => o.vybrany)).toEqual([]);
 });
 
-test('mapa · posuvník: událost, které se nevešel název, má jen krátkou čárku v pásu událostí a název ukáže při fokusu', async ({ page }) => {
+/** Obdélníky viditelných názvů událostí a všech značek nad posuvníkem. */
+async function kotvyNaOse(page: Page) {
+  return page.locator('.kotvy').evaluate((ul) => {
+    const obd = (e: Element) => {
+      const b = e.getBoundingClientRect();
+      return { l: b.left, p: b.right, t: b.top, d: b.bottom };
+    };
+    const li = [...ul.querySelectorAll('li')];
+    return {
+      stopa: obd(ul),
+      nazvy: li.filter((e) => getComputedStyle(e.querySelector('.kotva__text')!).display !== 'none').map((e) => ({ nazev: e.querySelector('.kotva__text')!.textContent!, ...obd(e.querySelector('.kotva__text')!) })),
+      znacky: li.map((e) => ({ nazev: e.querySelector('.kotva__text')!.textContent!, pruh: e.classList.contains('kotva--pruh'), ...obd(e.querySelector('.kotva__znak')!) })),
+    };
+  });
+}
+
+for (const sirka of [1440, 1280, 1024]) {
+  test(`mapa · posuvník · ${sirka} px: názvy událostí se nepotkají a značky leží pod nimi`, async ({ page }) => {
+    await page.setViewportSize({ width: sirka, height: sirka === 1440 ? 900 : 800 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    for (const rok of [-470, -399, -360, 121, 400]) {
+      await page.goto(`/mapa/?rok=${rok}`);
+      await pripravit(page);
+      const { stopa, nazvy, znacky } = await kotvyNaOse(page);
+      expect(znacky.length, `rok ${rok}`).toBeGreaterThan(0);
+      expect(nazvy.length, `rok ${rok}`).toBeGreaterThan(0);
+      for (let i = 0; i < nazvy.length; i++) {
+        const a = nazvy[i];
+        // Název stojí celý nad stopou, vpravo smí přesáhnout jen do volného okraje panelu.
+        expect(a.l, `${rok}: ${a.nazev}`).toBeGreaterThanOrEqual(stopa.l - 1);
+        expect(a.p, `${rok}: ${a.nazev}`).toBeLessThanOrEqual(stopa.p + 14);
+        for (const b of nazvy.slice(i + 1)) expect(a.p + 6 <= b.l || b.p + 6 <= a.l, `${rok}: „${a.nazev}“ × „${b.nazev}“`).toBe(true);
+        // Žádná značka (ani cizí) nesahá do řádku názvů.
+        for (const z of znacky) expect(z.t, `${rok}: značka „${z.nazev}“ pod názvem „${a.nazev}“`).toBeGreaterThanOrEqual(a.d - 1);
+      }
+    }
+  });
+}
+
+test('mapa · posuvník: bitva uvnitř války je tečka na pruhu, název ukáže při fokusu; Sókratův proces má název vedle Peloponéské války', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/mapa/?rok=-360');
+  await page.goto('/mapa/?rok=-399');
   await pripravit(page);
-  const proces = page.locator('.kotvy button[title^="Sókratův proces"]');
-  const valka = page.locator('.kotvy button[title^="Peloponéská válka"]');
-  // Název Peloponéské války stojí hned vedle: Sókratův proces se nevejde a nesmí zbýt vysoká čára, která vypadá jako překlep.
-  await expect(valka.locator('.kotva__text')).toBeVisible();
-  await expect(proces.locator('.kotva__text')).toBeHidden();
-  const carka = (await proces.locator('.kotva__znak').boundingBox())!;
-  const pruh = (await valka.locator('.kotva__znak').boundingBox())!;
-  const nazev = (await valka.locator('.kotva__text').boundingBox())!;
-  expect(carka.height).toBeLessThanOrEqual(10);
-  // Čárka leží ve výšce pruhů delších událostí, pod řádkem s názvy.
-  expect(carka.y).toBeGreaterThanOrEqual(nazev.y + nazev.height - 2);
-  expect(carka.y).toBeLessThanOrEqual(pruh.y);
-  expect(carka.y + carka.height).toBeGreaterThanOrEqual(pruh.y + pruh.height);
-  // Cíl pro myš není široký jen jako čárka.
-  expect((await proces.boundingBox())!.width).toBeGreaterThanOrEqual(12);
-  // Název se ukáže při fokusu z klávesnice a Enter skočí na rok události.
-  await proces.focus();
-  await expect(proces.locator('.kotva__text')).toBeVisible();
-  await expect(proces.locator('.kotva__text')).toHaveText('Sókratův proces');
+  const kotva = (nazev: string) => page.locator(`.kotvy button[title^="${nazev}"]`);
+  const obd = async (nazev: string, cast: 'znak' | 'text') => (await kotva(nazev).locator(`.kotva__${cast}`).boundingBox())!;
+
+  // Tečka Marathónu leží na pruhu řecko-perských válek a má světlý okraj, aby se od pruhu odlišila.
+  await expect(kotva('Bitva u Marathónu').locator('.kotva__text')).toBeHidden();
+  const pruh = await obd('Řecko-perské války', 'znak');
+  const tecka = await obd('Bitva u Marathónu', 'znak');
+  expect(tecka.width).toBeLessThanOrEqual(8);
+  expect(Math.abs(tecka.width - tecka.height)).toBeLessThan(0.5);
+  expect(tecka.x).toBeGreaterThanOrEqual(pruh.x);
+  expect(tecka.x + tecka.width).toBeLessThanOrEqual(pruh.x + pruh.width);
+  expect(Math.abs(tecka.y + tecka.height / 2 - (pruh.y + pruh.height / 2))).toBeLessThanOrEqual(1);
+  expect(await kotva('Bitva u Marathónu').locator('.kotva__znak').evaluate((e) => getComputedStyle(e).boxShadow)).not.toBe('none');
+  // Cíl pro myš není velký jen jako tečka.
+  expect((await kotva('Bitva u Marathónu').boundingBox())!.width).toBeGreaterThanOrEqual(12);
+
+  // Název války ustoupil ke konci svého pruhu, takže se vedle něj vejde Sókratův proces nad svou tečkou.
+  await expect(kotva('Peloponéská válka').locator('.kotva__text')).toBeVisible();
+  await expect(kotva('Sókratův proces').locator('.kotva__text')).toBeVisible();
+  const valka = await obd('Peloponéská válka', 'text');
+  const valkaPruh = await obd('Peloponéská válka', 'znak');
+  const proces = await obd('Sókratův proces', 'text');
+  const procesTecka = await obd('Sókratův proces', 'znak');
+  // Šířka názvu se měří s rezervou pár pixelů, proto tolerance.
+  expect(Math.abs(valka.x + valka.width - (valkaPruh.x + valkaPruh.width))).toBeLessThanOrEqual(4);
+  expect(Math.abs(proces.x - procesTecka.x)).toBeLessThanOrEqual(2);
+  expect(proces.x - (valka.x + valka.width)).toBeGreaterThanOrEqual(8);
+
+  // Schovaný název se ukáže při fokusu z klávesnice a Enter skočí na rok události.
+  await kotva('Bitva u Marathónu').focus();
+  await expect(kotva('Bitva u Marathónu').locator('.kotva__text')).toBeVisible();
+  await expect(kotva('Bitva u Marathónu').locator('.kotva__text')).toHaveText('Bitva u Marathónu');
   await page.screenshot({ path: 'test-results/snimky/mapa-udalost-bez-nazvu-1440-svetly.png', clip: { x: 0, y: 520, width: 1032, height: 90 } });
   await page.keyboard.press('Enter');
-  await expect(page.getByRole('slider', { name: 'Rok' })).toHaveAttribute('aria-valuenow', '-399');
+  await expect(page.getByRole('slider', { name: 'Rok' })).toHaveAttribute('aria-valuenow', '-490');
 
-  // Kde se název vejde (1280 px), stojí u něj dál vysoká svislá značka.
-  await page.setViewportSize({ width: 1280, height: 800 });
+  // Na užší obrazovce se název procesu vedle války nevejde: zbude tečka a název se ukáže při fokusu.
+  await page.setViewportSize({ width: 1024, height: 800 });
   await page.goto('/mapa/?rok=-360');
   await pripravit(page);
-  await expect(proces.locator('.kotva__text')).toBeVisible();
-  expect((await proces.locator('.kotva__znak').boundingBox())!.height).toBeGreaterThanOrEqual(20);
+  await expect(kotva('Peloponéská válka').locator('.kotva__text')).toBeVisible();
+  await expect(kotva('Sókratův proces').locator('.kotva__text')).toBeHidden();
+  await kotva('Sókratův proces').focus();
+  await expect(kotva('Sókratův proces').locator('.kotva__text')).toBeVisible();
 });
+
+for (const { sirka, vyska } of SIRKY) {
+  for (const rezim of REZIMY) {
+    const r = rezim === 'light' ? 'svetly' : 'tmavy';
+    test(`mapa · pás období · ${sirka} px · ${rezim === 'light' ? 'světlý' : 'tmavý'}: číslo a název stojí na čistém štítku a jsou čitelné`, async ({ page }) => {
+      await page.setViewportSize({ width: sirka, height: vyska });
+      await page.emulateMedia({ colorScheme: rezim, reducedMotion: 'reduce' });
+      await page.goto('/mapa/?rok=-360');
+      await pripravit(page);
+      const stitky = await page.locator('.mseg').evaluateAll((segmenty) => {
+        // Barvu v libovolném zápisu (rgb, color-mix) převede plátno na složky sRGB.
+        const platno = document.createElement('canvas').getContext('2d', { willReadFrequently: true })!;
+        const slozky = (barva: string) => {
+          platno.clearRect(0, 0, 1, 1);
+          platno.fillStyle = barva;
+          platno.fillRect(0, 0, 1, 1);
+          return [...platno.getImageData(0, 0, 1, 1).data];
+        };
+        const jas = ([r, g, b]: number[]) => {
+          const [x, y, z] = [r, g, b].map((c) => c / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+          return 0.2126 * x + 0.7152 * y + 0.0722 * z;
+        };
+        return segmenty.map((s) => {
+          const stitek = s.querySelector('.mseg__stitek')!;
+          const cs = getComputedStyle(stitek);
+          const [text, pozadi] = [slozky(cs.color), slozky(cs.backgroundColor)];
+          const [svetlejsi, tmavsi] = [jas(text), jas(pozadi)].sort((a, b) => b - a);
+          const b = stitek.getBoundingClientRect();
+          const seg = s.getBoundingClientRect();
+          return { text: stitek.textContent!.trim(), kryti: pozadi[3], kontrast: (svetlejsi + 0.05) / (tmavsi + 0.05), uvnitr: b.left >= seg.left && b.right <= seg.right, velikost: parseFloat(cs.fontSize) };
+        });
+      });
+      expect(stitky).toHaveLength(8);
+      for (const s of stitky) {
+        expect(s.kryti, s.text).toBe(255);
+        expect(s.kontrast, s.text).toBeGreaterThanOrEqual(5);
+        expect(s.uvnitr, s.text).toBe(true);
+        expect(s.velikost, s.text).toBeGreaterThanOrEqual(12);
+      }
+      const pas = (await page.locator('.mac__pas').boundingBox())!;
+      await page.screenshot({ path: `test-results/snimky/mapa-pas-stitky-${sirka}-${r}.png`, clip: { x: 0, y: pas.y - 2, width: Math.min(sirka, pas.x + pas.width + 16), height: pas.height + 8 } });
+    });
+  }
+}

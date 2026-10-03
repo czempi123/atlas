@@ -2,6 +2,7 @@
   // Malý pás období: přepínač období se závorkou okna řeky a značkou zvoleného roku.
   // Tlačítko Přehled otevře celých 2 600 let s hustotou myslitelů pro rychlý skok.
   // Připravované období je šrafované (ne jen vybledlé) a po klepnutí to řekne zprávou.
+  // Číslo a název stojí na čistém štítku v barvě desky: ornament ani šrafování pod textem neprobíhají.
   import type { ObdobiV } from '../../lib/mapa-vstup';
   import { naAstro } from '../../lib/cas-mapy';
   import { rok as rokText } from '../../lib/casy';
@@ -80,6 +81,7 @@
         class="mseg"
         class:mseg--aktivni={siroky}
         style:--pozadi={pozadi(o.id)}
+        style:--deska={plate(o.id)}
         style:--na-desce="var(--period-{o.id}-on-plate)"
         aria-current={siroky ? 'true' : undefined}
         aria-disabled={!o.otevrene ? 'true' : undefined}
@@ -89,7 +91,7 @@
         <svg viewBox="0 0 {siroky ? 180 : 60} 26" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <path d={siroky ? o.ornament.siroky : o.ornament.uzky} fill="none" stroke="currentColor" stroke-width="1" opacity="0.55" />
         </svg>
-        <span class="mseg__text">{siroky ? `${o.id} · ${o.kratce}` : o.id}</span>
+        <span class="mseg__text"><span class="mseg__stitek">{siroky ? `${o.id} · ${o.kratce}` : o.id}</span></span>
         <span class="vizualne-skryte">{siroky ? '' : o.nazev}{o.otevrene ? '' : ' připravujeme'}</span>
         {#if siroky}
           <span class="zavorka" style:left="{zavorka.l * 100}%" style:width="{(zavorka.p - zavorka.l) * 100}%" aria-hidden="true"></span>
@@ -152,7 +154,6 @@
     filter: saturate(0.35);
     background: repeating-linear-gradient(135deg, transparent 0 4px, rgb(0 0 0 / 34%) 4px 6px), var(--pozadi);
   }
-  .mseg[aria-disabled='true'] .mseg__text { font-weight: 500; }
   /* Čárkovaný rámeček kolem čísla: v tmavém režimu je šrafování slabé, rámeček je vidět v obou. */
   .mseg[aria-disabled='true']::before { content: ''; position: absolute; inset: 3px; z-index: 1; border: 1px dashed currentColor; border-radius: 2px; opacity: 0.75; pointer-events: none; }
   .mseg--aktivni { flex: 3.2 1 0; box-shadow: inset 0 0 0 1.5px var(--ink); cursor: default; }
@@ -164,10 +165,23 @@
     place-items: center;
     height: 100%;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     font-variant-numeric: lining-nums;
     white-space: nowrap;
     overflow: hidden;
+  }
+  /* Štítek pod textem: plná barva desky s měkkým okrajem, text skoro bílý (kontrast na desce aspoň 5 : 1). */
+  .mseg__stitek {
+    padding: 0 4px;
+    border-radius: 2px;
+    background: var(--deska);
+    box-shadow: 0 0 3px 2px var(--deska);
+    color: color-mix(in srgb, var(--na-desce) 25%, #fff);
+    line-height: 16px;
+  }
+  .mseg--aktivni .mseg__stitek { padding: 0 8px; box-shadow: 0 0 5px 3px var(--deska); }
+  @media (min-width: 900px) {
+    .mseg__text { font-size: 13px; }
   }
   .mseg:focus-visible { outline-offset: 2px; z-index: 1; }
   .zavorka {

@@ -1,11 +1,13 @@
 <script lang="ts">
   // Posuvník roku: po jednom roce (tažení, šipky na klávesnici), tlačítky a PageUp/PageDown po deseti.
   // Stopa ukazuje okno řeky životů, takže jezdec navazuje na svislou čáru roku v řece pod ním.
-  // U okraje stopy se okno při tažení samo posouvá. Nad stopou jsou dějinné kotvy.
-  // Událost jednoho roku má svislou značku s názvem. Když se název nevejde vedle sousední události, zůstane jen
-  // krátká čárka v pásu událostí (ne vysoká čára, která vedle cizího názvu vypadá jako překlep); název se ukáže
-  // po najetí myší nebo při fokusu z klávesnice.
+  // U okraje stopy se okno při tažení samo posouvá. Nad stopou jsou dějinné kotvy ve dvou řádcích:
+  // nahoře názvy, pod nimi značky (pruh pro období, tečka pro jeden rok). Značka tak nikdy nezasáhne do cizího názvu
+  // a tečka uvnitř pruhu (bitva během války) má světlý okraj. Název, který se nevejde vedle sousedního, se schová
+  // a ukáže se jako štítek po najetí myší nebo při fokusu z klávesnice (rozmístění: src/lib/kotvy.ts).
+  import { onMount } from 'svelte';
   import type { UdalostV } from '../../lib/mapa-vstup';
+  import { rozmistiNazvy, mistoStitku, type KotvaNaOse } from '../../lib/kotvy';
   import { naAstro, zAstro, posunRok, omezRok } from '../../lib/cas-mapy';
   import { rok as rokText, rozpeti } from '../../lib/casy';
 
@@ -22,16 +24,39 @@
   const podil = (r: number) => (naAstro(r) - naAstro(okno[0])) / (naAstro(okno[1]) - naAstro(okno[0]));
   let poloha = $derived(Math.min(1, Math.max(0, podil(rok))));
   let sirkaStopy = $state(800);
-  // Kotvy v okně; popisek jen tam, kde se nepřekryje s předchozím (jinak jen značka a nápověda).
+  // Šířky názvů změřené v prohlížeči skutečným písmem; do té doby odhad podle počtu znaků.
+  let sirky = $state<Record<string, number>>({});
+  let kotvyEl: HTMLUListElement;
+  /** šířka cíle pro myš u události jednoho roku */
+  const CIL = 16;
+  function zmerNazvy() {
+    const ctx = document.createElement('canvas').getContext('2d');
+    if (!ctx || !kotvyEl) return;
+    const cs = getComputedStyle(kotvyEl);
+    ctx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    sirky = Object.fromEntries(kotvy.map((k) => [k.id, Math.ceil(ctx.measureText(k.nazev).width) + 2]));
+  }
+  onMount(() => {
+    zmerNazvy();
+    document.fonts?.ready.then(zmerNazvy);
+    addEventListener('resize', zmerNazvy);
+    return () => removeEventListener('resize', zmerNazvy);
+  });
+  // Kotvy v okně a místo pro jejich názvy: název jen tam, kde se nepotká s jiným (jinak značka a štítek po najetí).
   let viditelneKotvy = $derived.by(() => {
     const v = kotvy.filter((k) => (k.do ?? k.od) >= okno[0] && k.od <= okno[1]).sort((a, b) => a.od - b.od);
-    let konec = -Infinity;
-    return v.map((k) => {
-      const x = Math.max(0, podil(k.od)) * sirkaStopy;
-      const w = Math.min(180, k.nazev.length * 7.2 + 8);
-      const popisek = x >= konec + 6 && x + w <= sirkaStopy + 40;
-      if (popisek) konec = x + w;
-      return { k, popisek };
+    const naOse: KotvaNaOse[] = v.map((k) => ({
+      id: k.id,
+      x1: podil(k.od) * sirkaStopy,
+      x2: k.do ? podil(k.do) * sirkaStopy : null,
+      sirka: sirky[k.id] ?? k.nazev.length * 7.2 + 8,
+    }));
+    const mista = rozmistiNazvy(naOse, sirkaStopy);
+    return v.map((k, i) => {
+      const o = naOse[i];
+      const levy = o.x2 === null ? o.x1 - CIL / 2 : Math.max(0, o.x1);
+      const nazev = mista.get(k.id);
+      return { k, popisek: nazev !== undefined, posun: Math.round((nazev ?? mistoStitku(o, sirkaStopy)) - levy) };
     });
   });
 
@@ -124,14 +149,14 @@
   </div>
 
   <div class="posuvnik__cas">
-    <ul class="kotvy" aria-label="Dějinné události" bind:clientWidth={sirkaStopy}>
-      {#each viditelneKotvy as { k, popisek } (k.id)}
+    <ul class="kotvy" aria-label="Dějinné události" bind:this={kotvyEl} bind:clientWidth={sirkaStopy}>
+      {#each viditelneKotvy as { k, popisek, posun } (k.id)}
         {@const l = Math.max(0, podil(k.od))}
         {@const p = Math.min(1, podil(k.do ?? k.od))}
         <li class:kotva--pruh={!!k.do} class:kotva--bez-popisku={!popisek} style:left="{l * 100}%" style:width={k.do ? `${(p - l) * 100}%` : undefined}>
           <button type="button" class="kotva" title={kotvaText(k)} aria-label="{kotvaText(k)}: přejít" onclick={() => onzmena(k.od, 'tlacitko')}>
             <span class="kotva__znak" aria-hidden="true"></span>
-            <span class="kotva__text" aria-hidden="true">{k.nazev}</span>
+            <span class="kotva__text" aria-hidden="true" style:left="{posun}px">{k.nazev}</span>
           </button>
         </li>
       {/each}
@@ -199,54 +224,76 @@
   .sipka:hover:not(:disabled) { border-color: var(--ink); }
   .sipka:disabled { opacity: 0.4; cursor: default; }
   .posuvnik__cas { position: relative; padding-right: var(--s-4); }
-  .kotvy { position: absolute; inset: 4px var(--s-4) auto 0; height: 26px; margin: 0; padding: 0; list-style: none; }
-  .kotvy li { position: absolute; top: 0; height: 26px; }
-  .kotva {
+  /* Dějinné kotvy: řádek názvů (0–16 px) a pod ním řádek značek (16–27 px). */
+  .kotvy {
     position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 4px;
-    height: 26px;
-    max-width: 180px;
+    inset: 4px var(--s-4) auto 0;
+    height: 28px;
+    margin: 0;
     padding: 0;
-    border: 0;
-    background: none;
+    list-style: none;
     color: var(--ink-2);
     font-size: var(--fs-popisek);
     font-weight: 500;
     line-height: 1.2;
+  }
+  .kotvy li { position: absolute; top: 16px; height: 11px; }
+  /* Událost jednoho roku leží nad pruhem období, ve kterém se stala, a dá se na ni klepnout. */
+  .kotvy li:not(.kotva--pruh) { z-index: 1; }
+  .kotvy li:hover, .kotvy li:focus-within { z-index: 3; }
+  .kotva {
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
     text-align: left;
     cursor: pointer;
   }
-  .kotva__znak { flex: none; width: 2px; height: 22px; margin-top: 2px; background: var(--ink-2); }
-  .kotva--pruh .kotva { width: 100%; max-width: none; overflow: visible; }
-  .kotva--pruh .kotva__text { max-width: none; overflow: visible; }
-  .kotva--pruh .kotva__znak { position: absolute; left: 0; right: 0; top: 18px; width: auto; height: 5px; margin: 0; border-radius: 3px; background: color-mix(in srgb, var(--ink-2) 35%, transparent); }
-  .kotva__text { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 100%; }
-  .kotva--pruh .kotva__text { padding-top: 1px; }
+  .kotva--pruh .kotva { left: 0; width: 100%; min-width: 6px; }
+  .kotva:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; border-radius: var(--r-xs); }
+  .kotva__znak {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    border-radius: 999px;
+    background: var(--ink-2);
+    box-shadow: 0 0 0 2px var(--surface);
+  }
+  .kotva--pruh .kotva__znak {
+    left: 0;
+    right: 0;
+    top: 3px;
+    width: auto;
+    height: 5px;
+    margin: 0;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--ink-2) 35%, transparent);
+    box-shadow: none;
+  }
+  .kotva__text { position: absolute; top: -16px; white-space: nowrap; }
   .kotva:hover .kotva__text, .kotva:focus-visible .kotva__text { color: var(--ink); text-decoration: underline; }
+  .kotva:hover .kotva__znak, .kotva:focus-visible .kotva__znak { background: var(--ink); }
+  .kotva--pruh .kotva:hover .kotva__znak, .kotva--pruh .kotva:focus-visible .kotva__znak { background: color-mix(in srgb, var(--ink-2) 60%, transparent); }
   /* Událost bez místa na název: název je schovaný a ukáže se po najetí nebo při fokusu jako štítek nad ostatními. */
   .kotva--bez-popisku .kotva__text { display: none; }
-  .kotva--bez-popisku .kotva:hover, .kotva--bez-popisku .kotva:focus-visible { z-index: 3; overflow: visible; }
   .kotva--bez-popisku .kotva:hover .kotva__text,
   .kotva--bez-popisku .kotva:focus-visible .kotva__text {
     display: block;
-    position: absolute;
-    left: 6px;
-    top: -1px;
-    max-width: none;
+    top: -18px;
     padding: 1px 6px;
     border-radius: var(--r-xs);
     background: var(--surface);
     box-shadow: 0 0 0 1px var(--rule);
     text-decoration: none;
-  }
-  @media (min-width: 900px) {
-    /* Událost jednoho roku bez názvu: krátká čárka ve stejné výšce jako pruhy delších událostí, s cílem pro myš 12 px. */
-    .kotvy li.kotva--bez-popisku:not(.kotva--pruh) .kotva { width: 12px; margin-left: -5px; justify-content: center; }
-    .kotvy li.kotva--bez-popisku:not(.kotva--pruh) .kotva__znak { height: 9px; margin-top: 16px; }
   }
   .stopa { position: absolute; left: 0; right: var(--s-4); bottom: 6px; height: 34px; touch-action: none; cursor: pointer; }
   .stopa__draha { position: absolute; left: 0; right: 0; top: 14px; height: 6px; border-radius: 3px; background: var(--sunk); overflow: hidden; }
@@ -271,11 +318,23 @@
     .letopocet { flex: 0 1 auto; min-width: 9ch; }
     .sipka { width: 32px; height: 32px; }
     .posuvnik__cas { grid-column: 2; }
+    /* Telefon: jen značky; název se ukáže jako štítek po klepnutí nebo při fokusu. */
     .kotvy { top: 0; height: 14px; }
-    .kotvy li, .kotva { height: 14px; }
+    .kotvy li { top: 0; height: 14px; }
+    .kotva:focus-visible { outline-offset: 0; }
+    .kotva__znak { width: 6px; height: 6px; margin: -3px 0 0 -3px; }
+    .kotva--pruh .kotva__znak { top: 5px; height: 4px; }
     .kotva__text { display: none; }
-    .kotva__znak { height: 10px; margin-top: 2px; }
-    .kotva--pruh .kotva__znak { top: 6px; height: 4px; }
+    .kotva:hover .kotva__text,
+    .kotva:focus-visible .kotva__text {
+      display: block;
+      top: -4px;
+      padding: 1px 6px;
+      border-radius: var(--r-xs);
+      background: var(--surface);
+      box-shadow: 0 0 0 1px var(--rule);
+      text-decoration: none;
+    }
     .stopa { bottom: 2px; }
   }
 </style>

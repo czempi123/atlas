@@ -2,6 +2,15 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 4. 10. 2026: Mapa a čas: události nad posuvníkem a pás období
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Dějinné události nad posuvníkem mají řádek názvů a pod ním řádek značek; událost jednoho roku je tečka, ne svislá čárka | Čárky bitev protínaly pruh války a čárka Sókratova procesu zasahovala do názvu Peloponéské války; autor: události se překrývají |
+| Názvy rozmisťuje čistá funkce podle šířek změřených v prohlížeči, ne podle odhadu z počtu znaků | Odhad se mýlil o desítky pixelů a názvy se potkávaly |
+| Název období smí ustoupit ke konci svého pruhu, když tím uvolní místo události jednoho roku těsně za ním | Sókratův proces je hlavní událost období 1 a na notebooku má být vidět jménem, ne jen jako tečka |
+| Číslo a název v pásu období na mapě stojí na štítku v plné barvě desky, text je skoro bílý a tučný | Ornament v barvě textu probíhal přímo písmem a u připravovaných období i šrafování; autor: text splývá, chce větší kontrast |
+
 ## 3. 10. 2026: Podklady celku 4 (P6)
 
 | Rozhodnutí | Důvod |
