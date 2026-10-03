@@ -108,8 +108,10 @@
     overflow-wrap: anywhere;
   }
   .pripad:last-of-type { margin-bottom: var(--s-5); }
+  /* Karty vedle sebe jen tam, kde se do bloku vejdou celé (dílna); v deníku a na telefonu stojí pod sebou. */
+  .navrat { container-type: inline-size; }
   .moznosti { display: grid; gap: var(--s-3); margin-bottom: var(--s-5); }
-  @media (min-width: 700px) {
+  @container (min-width: 600px) {
     .moznosti { grid-template-columns: repeat(3, 1fr); }
   }
   .karta {
@@ -125,6 +127,7 @@
     font-family: var(--font-sans);
     font-size: var(--fs-ovladani-l);
     font-weight: 600;
+    white-space: nowrap;
     cursor: pointer;
     transition: border-color var(--pohyb-rychle), background var(--pohyb-rychle);
   }

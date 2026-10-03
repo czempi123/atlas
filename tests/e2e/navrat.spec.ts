@@ -313,6 +313,10 @@ for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska
       await nabidka(page).getByRole('button', { name: 'Zkusit' }).click();
       const blok = page.locator('#cesta6-navrat');
       await expect(blok.getByRole('heading', { name: 'Platí tvoje pravidlo i tady?' })).toBeVisible();
+      // Tři karty odpovědí mají stejnou stavbu: žádná se nezalamuje, všechny jsou stejně vysoké.
+      const karty = await blok.locator('.karta').evaluateAll((k) => k.map((e) => Math.round(e.getBoundingClientRect().height)));
+      expect(new Set(karty).size).toBe(1);
+      expect(karty[0]).toBeLessThanOrEqual(60);
       await axe(page);
       await page.screenshot({ path: `test-results/snimky/denik-navrat-blok-${sirka}-${r}.png`, fullPage: true });
       await blok.getByText('Upravím ho', { exact: true }).click();
