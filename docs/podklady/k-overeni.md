@@ -20,7 +20,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Osoba | Co chybí | Co uvádějí prameny | Návrh |
 | --- | --- | --- | --- |
 | Xenofón | přesný rok úmrtí, Skillús a Korinth | Britannica: asi 430 – „krátce před 350“; stránka neukázala pasáže o Skillúntu u Olympie a o Korinthu. | Doplnit místa z Anabase V, 3, 7–13 (Skillús) po ověření. |
-| Platón | roky cest na Sicílii (kromě návratu 361), rok založení Akademie | SEP uvádí „429?–347“, Britannica (Meinwald) „428/427–348/347, Athény“; roky cest a založení Akademie ani jedno heslo nepodalo. | V datech „asi 427“ (souhlasí s návrhem P1: v roce 360 je mu 67 let). Doplnit cesty a Akademii ze 7. listu a z Diogena Laertia III po ověření. |
+| ~~Platón~~ | ~~roky cest na Sicílii, rok založení Akademie~~ | **Vyřízeno 3. 10. 2026 (celek 4):** první cesta „asi ve čtyřiceti“ (Sedmý list 324a; rok dopočítán na asi 387, D. Nails má návrat 383), druhá 366 (Nails), třetí 361 (SEP „Archytas“); Akademie mezi 387 a 383 (IEP). Narození: Britannica a IEP 428/427, SEP „429?“, Nails 424/423. | V datech tři pobyty v Syrákúsách a působení v Athénách „asi 387–347“; ve studentském textu bez roků (`celek-4-co-je-skutecne.md`, Rozpory). |
 | ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
 | ~~Epiktétos~~ | ~~roky v Římě a v Níkopoli~~ | **Vyřízeno 2. 10. 2026 (celek 3):** Gellius XV, 11 a Suetonius, Domitianus 10, 3 rok neuvádějí; Tacitus, Plinius a Dio spojují vykázání s procesy roku 93; SEP „Epictetus“ a IEP mají 89, Hieronymova kronika 95 („znovu“). | V datech „asi 93“ (`priblizne`), ve studentském textu bez roku (`celek-3-co-mam-v-rukou.md`, Rozpory). Autor může přepsat na 89. |
 | Marcus Aurelius | místo smrti | Britannica: zemřel ve Vindoboně nebo v Sirmiu. **Carnuntum vyřízeno 2. 10. 2026 (celek 3):** údaje „u Kvádů na Granui“ a „v Carnuntu“ přečteny v řeckém textu (Leopold, konec knih I a II); Carnuntum je v datech jako tažení asi 172–174 (Britannica „Carnuntum“). | Místo smrti nechat bez záznamu. |
@@ -64,10 +64,10 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Blok | Co chybí | Kde hledat | Stav |
 | --- | --- | --- | --- |
 | Spor Platón × Diogenés (`src/content/bloky/platon-diogenes-skutecnost.yaml`) | Diogenova strana a Platónova odpověď | Diogenés Laertios VI, 53 | ověřeno 1. 10. 2026 (`docs/podklady/spor-platon-diogenes.md`); otevřené: porovnat vlastní převod s českým překladem A. Koláře |
-| Tentýž Spor | Platónův argument pro ideje šířeji vlastními slovy (teď teze z dat, jeskyně a odpověď z DL VI, 53) | Ústava VI–VII (úsečka, jeskyně), Faidón 74a–75b (rovnost sama) | stačí pro ukázku; rozšířit při profilu Platóna |
+| Tentýž Spor | Platónův argument pro ideje šířeji vlastními slovy | Ústava X, 596a–b (stůl jako příklad ideje), VI, 510d–e; Faidón 74a–75b | ověřeno 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`, oddíl Spor Platón × Diogenés): v P7 se blok přesune do Platónova portrétu, první Platónův argument bude bez jeskyně a Diogenés dostane repliku (DL VI, 24) |
 | Cesta 1 „Kdy mám dobrý důvod věřit?“ | Prótagorás (druhý filozof cesty podle architektury): život, „člověk je měřítkem všech věcí“ a spor se Sókratem | DK 80 B1, Platón, Theaitétos 152a; SEP „Protagoras“ | ověřeno 1. 10. 2026 (`docs/podklady/celek-1-pravda.md`): život, B1, B4, konec života, spor z Theaitéta, nový případ (šaty 2015) |
 | Změň jednu věc „Útěk z vězení“ | Sókratovy vlastní důvody, proč neutekl, pro oddíl „Co udělal Sókratés“ | Platón, Kritón 45a–46a (Kritónova nabídka), 50a–54d (řeč Zákonů) | ověřeno 1. 10. 2026 (`celek-1-pravda.md`, kapitola 05: Kritón 44b–46a, 49a–e, 50a–54d); dopsáno do „Co udělal Sókratés“ 1. 10. 2026 (P7); blok stojí v kapitole 05 portrétu |
-| Změň jednu věc (další ukázka) | Gygův prsten jako klasický pokus pro cestu 2 | Platón, Ústava II, 359c–360d | nezačato |
+| Změň jednu věc (další ukázka) | Gygův prsten | Platón, Ústava II, 357a–361d; X, 612b | ověřeno 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`, oddíl Gygův prsten): vypráví Glaukón; návrh je blok v Platónově portrétu, ne v cestě 2; čeká na rozhodnutí autora |
 | Odkryj „Koho považuješ za moudrého?“ | Modelové odpovědi a sebekontrola jsou autorské (nejde o historická tvrzení); projít revizí (`atlas-revize`) před vložením do profilu | — | jen v dílně |
 | Kdo žil dřív? | Nic; roky jsou z dat | — | hotovo |
 
@@ -266,3 +266,39 @@ Autorské, bez historického nároku: osm karet a tři koše v kroku 2, modelov�
 | „Boje vyprázdnily pokladnu“ (portrét Marca, kapitola 02) | Je to zpráva Historie Augusty (17, 4), v textu stojí bez „Vypráví se“ mezi dvěma tradovanými větami. | Ponecháno; kdyby se kapitola přepisovala, připojit k tradovaným. |
 
 Při revizi znovu přečteno a sedí: Cassius Dio 72, 27–28 a 34–36; Historia Augusta, Marcus 2, 6; 5, 1–4; 8, 4–5; 13, 3–6; 17, 4–5; 21, 9 (anglicky, LacusCurtius); Rozpravy I, 1; I, 2; I, 7; I, 9 (G. Long).
+
+## Celek 4 „Je to, co vidím, celá skutečnost?“ (P6)
+
+3. 10. 2026. Podklady jsou v `docs/podklady/celek-4-co-je-skutecne.md`. Vyřízeno z dřívějších bodů: roky Platónových cest a Akademie (oddíl Chybějící roky), Platónův argument pro ideje ve Sporu s Diogenem a Gygův prsten (oddíl Obsah bloků). Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Obrázek Platóna | Antická busta v muzeu s otevřeným přístupem není (Met, Art Institute of Chicago, Cleveland). Kandidát: sádrový odlitek (1947) římské kopie z Ny Carlsberg Glyptotek, Statens Museum for Kunst, inv. KAS2111, Public Domain. Druhá možnost: fotografie busty z Wikimedia Commons, kterou nástroje neotevřou. | **Autor:** vybrat; soubor stáhnout až po souhlasu a pak zapsat do `obrazky`. |
+| Obrázek jeskyně | Kandidát: J. Saenredam podle C. van Haarlem, 1604, National Gallery of Art (inv. 1983.61.1), volné dílo; tentýž list mají Art Institute of Chicago a SMK. Rytinu jsem neviděl. | **Autor:** souhlas se stažením. Po stažení prohlédnout a říct v popisku, v čem se od Platónova textu liší. |
+| Nápis nad Akademií | Článek H. D. Saffreyho (Revue des Études Grecques 81, 1968) jsem neotevřel (Persée robotům přístup nedává). Znění mám jen z neodborné stránky s odkazy na Filopona a Eliáše (6. století n. l.); starší zmínky ze 4. století n. l. znám jen z literatury. | Ve studentském textu nejvýš „O mnoho století později se vyprávělo…“. Kdyby text chtěl říct, kdo to tvrdí první, otevřít Saffreyho. |
+| Sedmý list | Knihu M. Burnyeata a M. Fredeho (2015) jsem nečetl, jen abstrakt diskuse N. Denyera. | Formulace „V dopise, který se dochoval pod Platónovým jménem…“ obstojí v obou případech; nic dalšího není třeba. |
+| Herculanský papyrus (2024) | Jen novinové zprávy (Smithsonian, Daily Nous): hrob v zahradě u svatyně Múz, prodej do otroctví už 404 nebo 399, poslední večer s flétnistkou. Vydání textu jsem neviděl. | Ve studentském textu nepoužívat; hrob v Akademii dokládá i Diogenés Laertios III, 41. |
+| Jméno Aristoklés | Notopoulův článek (Classical Philology 1939) znám jen z odkazu u W. K. C. Guthrieho. | Jméno ve studentském textu vynechat, nebo „Vypráví se“. |
+| Rok první sicilské cesty | Sedmý list: „asi ve čtyřiceti“; od narození 428/427 vychází 388/387, D. Nails má návrat 383. | V datech „asi 387“; ve studentském textu bez roku. |
+| Druhá sicilská cesta | Rok 366 jen podle D. Nails; rok návratu neověřen. | V datech jen rok 366 s `priblizne`. |
+| Dión | Roky výpravy (357) a vraždy (354) jen z D. Nails. | Ve studentském textu bez roků. |
+| Kdy Aristotelés napsal kritiku idejí | Neověřeno (za Platónova života, nebo po něm). | Neříkat, že to psal za Platónova života; „později napsal“ také ne. Stačí „napsal“. |
+| Kategorie 5 | V PerseusDL nejsou; anglicky Edghill (MIT), řecká věta z řecké Wikisource; Bekkerovy řádky (2a11–14, 2b5–6) jsem ve vydání neviděl. | Při portrétu Aristotela ověřit v tištěném nebo jiném otevřeném vydání. |
+| Démokritos B125 (smysly odpovídají rozumu) | SEP zlomek jen zmiňuje; Galénův text jsem neotevřel. | Do dat nedán. Ověřit při profilu Démokrita; hodil by se na stránku otázky 6. |
+| Démokritos B9 | Řecky jsem viděl jen kratší znění u Diogena Laertia IX, 72 („chladné“, „teplé“); delší (sladké, hořké, barva) cituje SEP ze Sexta Empeirika. | Citát `dl-ix-72-demokritos` je Diogenovo znění. |
+| Platón Démokrita nejmenuje | Tvrdí to Diogenés Laertios IX, 40; v díle jsem to neověřoval. | Nejvýš „Diogenés Laertios si všiml, že…“. |
+| Isokratés a Platón | V Antidosis 261–271 a v Heleně 1–5 Isokratés nikoho nejmenuje; že míří na Akademii, je výklad, který jsem neověřoval. | V textu jako současník s jiným názorem, bez vztahu v datech. |
+| Pokus C. Baila (PNAS 2018) | PNAS, PubMed Central i PubMed nástroj odmítly. | Nepoužívat, dokud se článek neotevře. |
+| Výhrada k pokusům s firmou Meta | Znám jen shrnutí na stránkách OSoMe; týká se sesterské studie (Science 2023), ne studie v Nature. | Ve zpětné vazbě jen „pokus běžel ve spolupráci s firmou, které Facebook patří“. |
+| Osmá kniha Ústavy (demokracie) | Nečetl jsem. | O Platónově kritice demokracie nepsat, dokud se neověří. |
+| K. Popper, Otevřená společnost | Neověřováno. | Jen pro učitele, po ověření. |
+| České překlady | F. Novotného (Platón), A. Kříže (Aristotelés) a A. Koláře (Diogenés Laertios) jsem neměl v ruce; jedinou Křížovu větu (Etika Nikomachova 1096a) znám z citace u K. Boháčka. | Platí rozhodnutí z 30. 9. a 2. 10.: vlastní převody. |
+| Části duše česky | „Rozum, hněv a žádosti“ × „vznětlivost a žádostivost“; druhé jsem ve vydání neověřoval. | **Autor:** vybrat před P7. |
+| Platón na stránce otázky 7 | Citát `menon-98a` je v datech veden pod Sókratem; kontrola hlasů chce citát téže osoby. | Až bude Platón hlasem otázky 7, použít `timaios-51d` (v datech pod Platónem), nebo založit `menon-98a` znovu pod Platónem. |
+| Zeměpis | Megara a Aigína nejsou v `mista.yaml`; pobyt v Megaře je tradovaný údaj (Hermodóros u Diogena Laertia III, 6). | Nepřidávat, dokud text Megaru nepotřebuje. |
+
+Vědomě vynecháno nebo jen pro učitele: úsečka (Ústava 509d–511e), Glaukónovo vyostření pokusu s prstenem (360e–361d), výběr dětí a řízené sňatky (459d–460c), společné ženy a děti strážců (457c–461e), Sókratův sen o labuti, Platónova závěť, verze jeho smrti, cesty do Egypta a Kyrény, Archytův dopis u Diogena Laertia (III, 21–22), Diónův konec v podrobnostech, kruh ze Sedmého listu (342b).
+
+Autorské, bez historického nároku: karty a koše Roztřiď „Odkud to vím?“, možnosti Volby „Podle čeho poznáš, že venku byl“, možnosti a podmínky bloku s Gygovým prstenem, úvodní případ stránky otázky 6 (lavice), odpovědi čtyř hlasů na něj, záložní „Představ si…“ k novému případu. Platónova odpověď Aristotelovi a Diogenova replika Platónovi jsou domyšlené a podávají se jako výklad („by mohl“).
+
+**Do skillu `atlas-overeni`:** kopie `skills/atlas-overeni/references/zdroje.md` je doplněná o místa Platónových a Aristotelových textů v PerseusDL, o muzea s otevřeným přístupem (National Gallery of Art, Statens Museum for Kunst, Art Institute of Chicago) a o šest zkreslení (přítel Platón, nápis o geometrii, Aristoklés, jeskyně, Gýgés, Sedmý list). Skill v účtu je třeba uložit zvlášť.

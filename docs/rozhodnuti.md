@@ -2,6 +2,17 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Podklady celku 4 (P6)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Spor v cestě 3 je Platón × Aristotelés | Skutečný střet učitele a žáka po dvaceti letech v Akademii; Aristotelova námitka je v pramenech (Metafyzika I, 9; Etika Nikomachova I, 6) a dává za pravdu studentovi, podle kterého jsou „stíny“ skutečné dost |
+| Spor Platón × Diogenés se v P7 přesune ze Sókratova portrétu do Platónova; první Platónův argument bude bez jeskyně a Diogenés dostane repliku | Revize celku 1: Spor není o Sókratovi; obraz jeskyně by se v celku opakoval potřetí; v prameni má poslední slovo Platón |
+| Nový případ cesty 3 je pokus na Facebooku z roku 2020 (Nature 2023) | Doložený pokus, který se dá vyprávět přímo; představu bublin zpochybňuje a vrací jeskyni k otázce, kam se člověk dívá |
+| Čtyři hlasy stránky otázky 6: Parmenidés, Démokritos, Platón a Aristotelés | Každý říká něco jiného než na ostatních stránkách; Aristotelés dává za pravdu smyslům |
+| Větev `rozhrani-v2` je commitnutá a na GitHub půjde až s celkem 4 | Autor: „do githubu ho pak nahrajeme až s tímto celkem“ |
+| Citáty z dialogů celku 4 jsou v datech vedeny pod Platónem jako autorem; kdo větu v dialogu říká, stojí v poli `podle` a ve studentském textu ve větě před citátem | Kontrola hlasů na stránce otázky chce citát téže osoby; pravidlo „u dialogu řekni, kdo mluví“ |
+| Soubory, které se nevyplatí přepisovat terminálem, se do repozitáře zapisují přes připojenou složku Atlas; příkazy, testy a commity běží dál přes Desktop Commander | Podkladový list má přes sto tisíc znaků; autor přístup ke složce povolil |
 ## 3. 10. 2026: Celek 4 a skilly po revizi celku 3
 
 | Rozhodnutí | Důvod |

@@ -4,8 +4,8 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 
 | Krok | Co | Stav |
 | --- | --- | --- |
-| P6 | Podklady | **další krok**, zadání níže |
-| P7 | Portrét Platóna | po schválení podkladů |
+| P6 | Podklady | hotovo 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`), čeká na schválení autorem |
+| P7 | Portrét Platóna | **další krok** po schválení podkladů; zadání vznikne podle odpovědí autora (viz Po P6 na konci) |
 | P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | po P7 |
 | P10 | Revize celku | po P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
@@ -65,3 +65,22 @@ Pravidla jako u celku 3, s poučením ze všech tří revizí: každé historick
 
 Nejdřív mi v pár bodech napiš, co budeš ověřovat, které příběhy považuješ za nejsilnější, jaký Spor a nový případ navrhuješ, co s dosavadním Sporem Platón × Diogenés a které čtyři hlasy vidíš na stránce otázky 6, a počkej na odpověď. Pak pracuj, commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci napiš, co je ověřeno, co zůstalo otevřené a co potřebuje moje rozhodnutí.
 ```
+
+## Po P6 (3. 10. 2026)
+
+Podklady jsou v `docs/podklady/celek-4-co-je-skutecne.md`; nové prameny (35) a citáty (35) v `src/data/zdroje.yaml`, data Platóna, čtyři vztahy a Platón u Sókratova procesu v `src/data/`. `npm test` prošel celý (279 testů dat, 161 v prohlížeči). Studentský text nevznikl.
+
+**Rozhodl autor nad osnovou:** Spor v cestě 3 je Platón × Aristotelés; Spor Platón × Diogenés se přesune do Platónova portrétu; novým případem je pokus na Facebooku z roku 2020; čtyři hlasy otázky 6 jsou Parmenidés, Démokritos, Platón a Aristotelés; větev `rozhrani-v2` půjde na GitHub až s tímto celkem.
+
+**Větev `rozhrani-v2`** je commitnutá, ale v hlavní větvi ani v `celek-4` není. Podle plánu výše se má před P7 sloučit; čeká na pokyn autora.
+
+**Čeká na autora** (podrobně v podkladovém listu, Otevřené otázky): obrázek Platóna (kodaňský odlitek, nebo busta z Commons) a souhlas se stažením rytiny jeskyně; Gygův prsten v portrétu, nebo na samostatné stránce; stránka otázky 6 už teď a její úvodní případ; české názvy částí duše; rozdělení citlivých míst Ústavy; údaj pod citátem ze Sedmého listu; Isokratés jako druhý hlas pro nesouhlasícího studenta; nové vztahy v Době a lidech.
+
+**Co si P7 a P8 nesou z podkladů:**
+
+- U dialogu vždy mluvčí: „Platón nechává Sókrata vyprávět“; prsten vypráví Glaukón, námitky proti idejím Parmenidés, boj obrů host z Eleje, vědění a mínění Tímaios.
+- Jeskyně podle kroků pramene: vězni jsou „podobní nám“; osvobodí je někdo jiný a násilím; venku jsou nejdřív zase stíny; vracejí se, protože musí; „bůh ví, jestli je to pravda“.
+- Jeskyně smí být v celku nejvýš dvakrát jako obraz mimo cestu (atribut a portrét); Spor s Diogenem a hlas Platóna na otázce 6 ji nepoužívají.
+- Sedmý list: fakta cest přímo, pohnutky jen s větou o dopise.
+- Tradované příběhy (otroctví na Aigíně, spálené tragédie, odpověď tyranovi, „co toho ten mladík nalhal“) jako „Vypráví se“; jméno Aristoklés, nápis o geometrii a verze smrti do studentského textu nepatří.
+- Shrnutí pokusu z roku 2020 drží, co vědci změnili (třetinu, na tři měsíce) a co ne; výhrady až ve zpětné vazbě.
