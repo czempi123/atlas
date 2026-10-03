@@ -409,3 +409,39 @@ test('mapa · výběr člověka zvýrazní jeho vztahy v řece a ostatní potla�
   await page.getByRole('button', { name: 'Zavřít kartu' }).click();
   expect((await oblouky()).filter((o) => o.vybrany)).toEqual([]);
 });
+
+test('mapa · posuvník: událost, které se nevešel název, má jen krátkou čárku v pásu událostí a název ukáže při fokusu', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/mapa/?rok=-360');
+  await pripravit(page);
+  const proces = page.locator('.kotvy button[title^="Sókratův proces"]');
+  const valka = page.locator('.kotvy button[title^="Peloponéská válka"]');
+  // Název Peloponéské války stojí hned vedle: Sókratův proces se nevejde a nesmí zbýt vysoká čára, která vypadá jako překlep.
+  await expect(valka.locator('.kotva__text')).toBeVisible();
+  await expect(proces.locator('.kotva__text')).toBeHidden();
+  const carka = (await proces.locator('.kotva__znak').boundingBox())!;
+  const pruh = (await valka.locator('.kotva__znak').boundingBox())!;
+  const nazev = (await valka.locator('.kotva__text').boundingBox())!;
+  expect(carka.height).toBeLessThanOrEqual(10);
+  // Čárka leží ve výšce pruhů delších událostí, pod řádkem s názvy.
+  expect(carka.y).toBeGreaterThanOrEqual(nazev.y + nazev.height - 2);
+  expect(carka.y).toBeLessThanOrEqual(pruh.y);
+  expect(carka.y + carka.height).toBeGreaterThanOrEqual(pruh.y + pruh.height);
+  // Cíl pro myš není široký jen jako čárka.
+  expect((await proces.boundingBox())!.width).toBeGreaterThanOrEqual(12);
+  // Název se ukáže při fokusu z klávesnice a Enter skočí na rok události.
+  await proces.focus();
+  await expect(proces.locator('.kotva__text')).toBeVisible();
+  await expect(proces.locator('.kotva__text')).toHaveText('Sókratův proces');
+  await page.screenshot({ path: 'test-results/snimky/mapa-udalost-bez-nazvu-1440-svetly.png', clip: { x: 0, y: 520, width: 1032, height: 90 } });
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('slider', { name: 'Rok' })).toHaveAttribute('aria-valuenow', '-399');
+
+  // Kde se název vejde (1280 px), stojí u něj dál vysoká svislá značka.
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto('/mapa/?rok=-360');
+  await pripravit(page);
+  await expect(proces.locator('.kotva__text')).toBeVisible();
+  expect((await proces.locator('.kotva__znak').boundingBox())!.height).toBeGreaterThanOrEqual(20);
+});

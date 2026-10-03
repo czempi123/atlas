@@ -30,13 +30,13 @@ První tři body (Domů, Profil, Mapa) popisují stav před R1; co platí teď, 
 
 ## Stav po R1 (3. 10. 2026)
 
-R1 je hotový a čeká na schválení autorem. Tři commity ve větvi (`Domů: jeden začátek místo tří`, `Profil: obsah celé stránky a návrat ke čtení`, `Mapa a čas: vysvětlení stínu, legenda čar a připravovaná období`), na GitHub nic nešlo. Celé `npm test` prošlo: 319 jednotkových testů a 188 testů v prohlížeči (před větví 279 a 161). Popis je v `docs/design.md` (Navigace a rozvržení, Komponenty, Co se ukládá, Mapa a čas, Přístupnost), volby v `docs/rozhodnuti.md`.
+R1 je hotový a čeká na schválení autorem. Commity ve větvi: `Domů: jeden začátek místo tří`, `Profil: obsah celé stránky a návrat ke čtení`, `Mapa a čas: vysvětlení stínu, legenda čar a připravovaná období`, `Mapa: událost bez místa na název má jen krátkou čárku` a zápis do docs; na GitHub nic nešlo. Celé `npm test` prošlo: 319 jednotkových testů a 189 testů v prohlížeči (před větví 279 a 161). Popis je v `docs/design.md` (Navigace a rozvržení, Komponenty, Co se ukládá, Mapa a čas, Přístupnost), volby v `docs/rozhodnuti.md`.
 
 ### Co je teď v kódu
 
 - **Domů** (`src/pages/index.astro`, `zacatekDomu` v `src/lib/pokracuj.ts`): nadpis `t-h1`, jediné hlavní tlačítko „Začít první cestu“ na krok 1 cesty 1 s údajem z dat („Cesta 1 · asi 20 minut · 7 kroků“), textový odkaz „Poznat Sókrata“, vpravo panel první cesty bez tlačítka (karta cesty a Příběh na začátek v jednom). Vracející se student: rozpracovaná cesta → „Pokračovat v cestě“, hotová první cesta → „Vybrat další cestu“ do přehledu otázek; stav přepíše skript před vykreslením. Pokračuj je tichý řádek odkazů a neopakuje, co nabízí tlačítko.
 - **Profil** (`src/components/osobnost/ObsahProfilu.astro`, `src/lib/obsah.ts`): obsah se skládá ze sestavené stránky (atribut `data-oddil` na každém oddílu), Prameny mají kotvu `#prameny`. V klidu řádek odkazů pod hlavičkou profilu (notebook), při čtení lišta 44 px pod hlavičkou webu s tlačítkem Obsah a názvem právě čteného oddílu; na telefonu lišta od začátku. Právě čtený oddíl má `aria-current`. Deník má nepovinné pole `cteni` (adresa → kotva) a v hlavičce profilu se při návratu nabídne „Pokračovat ve čtení“.
-- **Mapa** (`src/components/mapa/`): tlačítko „?“ u Stínu odkazu s vysvětlením, legenda čar (`LegendaVztahu.svelte`, názvy v `src/lib/vztahy.ts`), šrafovaná připravovaná období se zprávou po klepnutí, popisky na telefonu nejméně 12 px. `stinOdkazu` má opravený směr polemiky.
+- **Mapa** (`src/components/mapa/`): tlačítko „?“ u Stínu odkazu s vysvětlením, legenda čar (`LegendaVztahu.svelte`, názvy v `src/lib/vztahy.ts`), šrafovaná připravovaná období se zprávou po klepnutí, popisky na telefonu nejméně 12 px. `stinOdkazu` má opravený směr polemiky. Po připomínce autora (svislé čáry navíc u časové linky): událost nad posuvníkem, které se nevešel název, má jen krátkou čárku ve výšce pruhů a název ukáže po najetí nebo při fokusu.
 - **Deník**: pro R2 platí dál, že čas dokončení cesty se neukládá; nové je jen pole `cteni`.
 
 ### Co se liší od zadání nebo od `docs/design.md`

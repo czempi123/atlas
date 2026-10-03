@@ -2,6 +2,9 @@
   // Posuvník roku: po jednom roce (tažení, šipky na klávesnici), tlačítky a PageUp/PageDown po deseti.
   // Stopa ukazuje okno řeky životů, takže jezdec navazuje na svislou čáru roku v řece pod ním.
   // U okraje stopy se okno při tažení samo posouvá. Nad stopou jsou dějinné kotvy.
+  // Událost jednoho roku má svislou značku s názvem. Když se název nevejde vedle sousední události, zůstane jen
+  // krátká čárka v pásu událostí (ne vysoká čára, která vedle cizího názvu vypadá jako překlep); název se ukáže
+  // po najetí myší nebo při fokusu z klávesnice.
   import type { UdalostV } from '../../lib/mapa-vstup';
   import { naAstro, zAstro, posunRok, omezRok } from '../../lib/cas-mapy';
   import { rok as rokText, rozpeti } from '../../lib/casy';
@@ -125,10 +128,10 @@
       {#each viditelneKotvy as { k, popisek } (k.id)}
         {@const l = Math.max(0, podil(k.od))}
         {@const p = Math.min(1, podil(k.do ?? k.od))}
-        <li class:kotva--pruh={!!k.do} style:left="{l * 100}%" style:width={k.do ? `${(p - l) * 100}%` : undefined}>
+        <li class:kotva--pruh={!!k.do} class:kotva--bez-popisku={!popisek} style:left="{l * 100}%" style:width={k.do ? `${(p - l) * 100}%` : undefined}>
           <button type="button" class="kotva" title={kotvaText(k)} aria-label="{kotvaText(k)}: přejít" onclick={() => onzmena(k.od, 'tlacitko')}>
             <span class="kotva__znak" aria-hidden="true"></span>
-            {#if popisek}<span class="kotva__text" aria-hidden="true">{k.nazev}</span>{/if}
+            <span class="kotva__text" aria-hidden="true">{k.nazev}</span>
           </button>
         </li>
       {/each}
@@ -224,6 +227,27 @@
   .kotva__text { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 100%; }
   .kotva--pruh .kotva__text { padding-top: 1px; }
   .kotva:hover .kotva__text, .kotva:focus-visible .kotva__text { color: var(--ink); text-decoration: underline; }
+  /* Událost bez místa na název: název je schovaný a ukáže se po najetí nebo při fokusu jako štítek nad ostatními. */
+  .kotva--bez-popisku .kotva__text { display: none; }
+  .kotva--bez-popisku .kotva:hover, .kotva--bez-popisku .kotva:focus-visible { z-index: 3; overflow: visible; }
+  .kotva--bez-popisku .kotva:hover .kotva__text,
+  .kotva--bez-popisku .kotva:focus-visible .kotva__text {
+    display: block;
+    position: absolute;
+    left: 6px;
+    top: -1px;
+    max-width: none;
+    padding: 1px 6px;
+    border-radius: var(--r-xs);
+    background: var(--surface);
+    box-shadow: 0 0 0 1px var(--rule);
+    text-decoration: none;
+  }
+  @media (min-width: 900px) {
+    /* Událost jednoho roku bez názvu: krátká čárka ve stejné výšce jako pruhy delších událostí, s cílem pro myš 12 px. */
+    .kotvy li.kotva--bez-popisku:not(.kotva--pruh) .kotva { width: 12px; margin-left: -5px; justify-content: center; }
+    .kotvy li.kotva--bez-popisku:not(.kotva--pruh) .kotva__znak { height: 9px; margin-top: 16px; }
+  }
   .stopa { position: absolute; left: 0; right: var(--s-4); bottom: 6px; height: 34px; touch-action: none; cursor: pointer; }
   .stopa__draha { position: absolute; left: 0; right: 0; top: 14px; height: 6px; border-radius: 3px; background: var(--sunk); overflow: hidden; }
   .stopa__uplynulo { height: 100%; background: var(--pc-soft); }
