@@ -287,7 +287,7 @@ test('otázka 4: úvodní případ, čtyři hlasy, které se poznají, a cesta 5
   await expect(page.locator('.odpoved__jmeno')).toHaveText(['Aristotelés', 'Epikúros', 'Chrýsippos', 'Epiktétos']);
   const odpovedi = page.locator('.odpoved');
   // Každý hlas se pozná: ručí i za povahu, nutnost nemá poslední slovo, osud i odpovědnost zároveň, otázka obrácená dovnitř.
-  await expect(odpovedi.nth(0)).toContainText('Výbušným se stal tím, jak dlouho jednal');
+  await expect(odpovedi.nth(0)).toContainText('Výbušným se stal tím, jak léta jednal');
   await expect(odpovedi.nth(1)).toContainText('Kdyby všechno řídila nutnost');
   await expect(odpovedi.nth(2)).toContainText('Všechno má příčinu');
   await expect(odpovedi.nth(2)).toContainText('na osud se vymlouvat nesmí');
