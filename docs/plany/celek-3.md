@@ -227,4 +227,4 @@ Nálezy 3, 7 (nadpis) a 8 byly zásahy do komponent (skill `atlas-komponenta`): 
 
 **Celek 3 je schválený** (autor 3. 10. 2026: „Sloučit do hlavní a poslat“). Větev `celek-3` je sloučená do hlavní a hlavní větev je na GitHubu.
 
-**Další krok:** větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1). Mimo deset nálezů zůstalo pro ni: hlavička profilu s více otázkami na telefonu. Poučení z revize (student, kterému někdo ubližuje; nadpisy generovaných oddílů; shrnutí studie drží i pokyn skupině) zatím není ve skillech.
+**Další krok:** větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1). Mimo deset nálezů zůstalo pro ni: hlavička profilu s více otázkami na telefonu. Poučení z revize (student, kterému někdo ubližuje; nadpisy generovaných oddílů; shrnutí studie drží i pokyn skupině) je od 3. 10. 2026 ve skillech `atlas-revize`, `atlas-cesta` a `atlas-osobnost`. Souběžně s rozhraním může začít celek 4 „Je to, co vidím, celá skutečnost?“ (`docs/plany/celek-4.md`, krok P6).

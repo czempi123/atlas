@@ -2,6 +2,17 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Celek 4 a skilly po revizi celku 3
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Čtvrtý celek je „Platón a jeskyně“: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“. Plán a zadání P6 jsou v `docs/plany/celek-4.md` | Autor vybral z nabídnutých možností (Seneca a čas, strach ze smrti, Aristotelés, Platón a jeskyně) |
+| Celek 4 a větev `rozhrani-v2` běží vedle sebe: úpravy rozhraní projde autor zvlášť, podklady (P6) na ně nečekají. Před P7 se do `celek-4` sloučí hlavní větev, pokud v ní `rozhrani-v2` už bude | Autor: „já si ještě sjedu tu obecnou úpravu, ale měli bychom mít další celek“; podklady se rozhraní netýkají |
+| Největší riziko celku 4 je tón: jeskyně nesmí studentovi lichotit, že on vidí a ostatní spí | Stejný obraz používají konspirační weby; u celku 3 bylo obdobným rizikem smíření s křivdou |
+| Poučení z revize celku 3 je ve skillech `atlas-revize`, `atlas-cesta` a `atlas-osobnost`: čtení očima studenta, kterému někdo ubližuje; citát o ráně nepatří na začátek kroku; výzva Zkus to žít nemíří na člověka, který ubližuje; čte se i to, co se skládá z dat; shrnutí studie drží i pokyn skupině; spojovací věta netvrdí spor, který nebyl | Autor: „Revizi do skillů klidně dej“ |
+| Kopie skillů ve `skills/` odpovídají verzím v účtu: jeden soubor `SKILL.md` včetně oddílu Ať text nezní jako stroj a kontrolního seznamu; `skills/atlas-revize/references/kontrolni-seznam.md` je zrušený | Verze v účtu byly novější než kopie v repozitáři (přibyl oddíl o strojovém textu a šestá perspektiva revize) |
+| Skilly a plán celku 4 jdou do hlavní větve a na GitHub hned, ne až s dalším celkem | Autor: „Ano, poslat“; větve `rozhrani-v2` i `celek-4` tak vyjdou ze stavu, který je na GitHubu |
+
 ## 3. 10. 2026: Schválení celku 3 a další krok
 
 | Rozhodnutí | Důvod |
