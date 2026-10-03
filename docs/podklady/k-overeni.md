@@ -253,3 +253,16 @@ Vědomě vynecháno v cestě a na stránce otázky: lučištník (není Epiktét
 Autorské, bez historického nároku: osm karet a tři koše v kroku 2, modelové odpovědi v krocích 3 a 4, případ se snímkem z chatu, jeho možnosti a podmínky, možnosti v kroku 7, úvodní případ stránky otázky 4. Odpovědi hlasů na případ a třetí Epiktétův argument ve Sporu jsou výklad („by mohl“, „by nejspíš“).
 
 **Do skillu `atlas-overeni`:** tabulka zkreslení doplněna o čtyři řádky (stoik bez citu, noha a Epafroditos, noc u Dunaje, spálené dopisy) a zdroje o místa stoických textů; kopie ve `skills/atlas-overeni/references/zdroje.md` je upravená, skill v účtu je třeba uložit zvlášť.
+
+### Po P10 (revize celku 3)
+
+3. 10. 2026. Záznam revize: `docs/revize/celek-3-2026-10-03.md`.
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Rukojeť 20, druhá věta | Revize navrhuje vyměnit citát `rukojet-20` za větu „Když tě někdo podráždí, věz, že tě podráždil tvůj vlastní soud.“ Řecký text ověřen (H. Schenkl 1916: ὅταν οὖν ἐρεθίσῃ σέ τις, ἴσθι, ὅτι ἡ σή σε ὑπόληψις ἠρέθικε). | Když autor nález 1 schválí, přepsat citát v `zdroje.yaml` a řádek 8 v tabulce citátů podkladového listu. |
+| Půldruhého milionu (Rozpravy I, 26, 11–12) | Řecký text se mi při revizi otevřít nepodařilo; jednotku jsem neověřil. | Úvod portrétu zůstává bez jednotky. |
+| Cassiovy písemnosti | Dio 72, 28 (anglicky): papíry byly nalezeny „v truhlách Pudentových“; kdo byl Pudens, jsem neověřoval. | Text říká „Po Cassiovi zůstaly truhly s písemnostmi“; nechat, jméno nepřidávat. |
+| „Boje vyprázdnily pokladnu“ (portrét Marca, kapitola 02) | Je to zpráva Historie Augusty (17, 4), v textu stojí bez „Vypráví se“ mezi dvěma tradovanými větami. | Ponecháno; kdyby se kapitola přepisovala, připojit k tradovaným. |
+
+Při revizi znovu přečteno a sedí: Cassius Dio 72, 27–28 a 34–36; Historia Augusta, Marcus 2, 6; 5, 1–4; 8, 4–5; 13, 3–6; 17, 4–5; 21, 9 (anglicky, LacusCurtius); Rozpravy I, 1; I, 2; I, 7; I, 9 (G. Long).

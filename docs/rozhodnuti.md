@@ -2,6 +2,14 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 3. 10. 2026: Revize celku 3 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Verdikt revize „po opravách“: tři blokující, dva důležité a pět drobných nálezů (`docs/revize/celek-3-2026-10-03.md`). Návrhy nejsou zapracované, čekají na rozhodnutí autora | Zadání P10: zásahy do významu, příběhu a struktury revize jen navrhuje |
+| Rovnou opraveno: „Velkou část vlády“ místo „Skoro celou vládu“ (Marcus), „Epiktétos k ní má příběh“ místo „na ni odpovídal příběhem“, „asi čtyři sta let“ v Kde jsme kroku 5, „jak léta jednal“ v Aristotelově odpovědi na otázce 4 | Formulace nesmí být silnější než tvrzení v podkladech; Rozpravy I, 2 nejsou odpověď na námitku rezignace, tou je dělá až náš výklad |
+| Mini osa současníků píše u roků před přelomem letopočtu „př. n. l.“, když osa přelom přechází | U Epiktéta stálo na ose dvakrát „50“ (Seneca se narodil před přelomem); první osa atlasu přes přelom letopočtu |
+
 ## 3. 10. 2026: Schválení P8 (celek 3) a další krok
 
 | Rozhodnutí | Důvod |

@@ -7,7 +7,7 @@ Celek 3: cesta 5 „Co mám ve svých rukou?“ (období 2, velká otázka 4 „
 | P6 | Podklady | hotovo 2. 10. 2026 (`docs/podklady/celek-3-co-mam-v-rukou.md`) |
 | P7 | Portrét Epiktéta a portrét Marca Aurelia | hotovo 2. 10. 2026, schváleno 3. 10. 2026 |
 | P8 | Cesta 5 „Co mám ve svých rukou?“ a stránka velké otázky 4 „Jsem svobodný?“ | hotovo a schváleno 3. 10. 2026 |
-| P10 | Revize celku | **další krok**, zadání níže |
+| P10 | Revize celku | hotovo 3. 10. 2026 (`docs/revize/celek-3-2026-10-03.md`), verdikt „po opravách“; **čeká na rozhodnutí autora o deseti nálezech** |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`.
@@ -164,7 +164,7 @@ Nejdřív mi v pár bodech napiš osnovu cesty 5 (kroky, blok v každém, odhad 
 
 ## P10: Revize celku 3 „Co mám ve svých rukou?“
 
-**Stav 3. 10. 2026:** další krok. P7 i P8 autor schválil. Revize projde celý celek skillem `atlas-revize`: drobnosti opraví rovnou, zásahy do významu, příběhu a struktury jen navrhne a počká na rozhodnutí autora.
+**Stav 3. 10. 2026:** hotovo, výsledek je v oddílu „Stav po P10“ na konci. Zadání zůstává pro záznam. Revize projde celý celek skillem `atlas-revize`: drobnosti opraví rovnou, zásahy do významu, příběhu a struktury jen navrhne a počká na rozhodnutí autora.
 
 Celek je o tom, co člověk nemá ve své moci. Největší riziko proto není věcná chyba, ale tón: cesta ani portréty nesmějí studentovi, kterému někdo ubližuje, naznačovat, že se má smířit a mlčet. Revize to má prověřit jako první.
 
@@ -201,3 +201,28 @@ Na konci mi napiš verdikt (připraveno ke schválení / po opravách / přeprac
 ```
 
 Po P10 rozhodne autor o návrzích z revize. Po jejich zapracování následuje schválení celku 3, sloučení `celek-3` do hlavní větve a hlavní větev na GitHub. Pak se založí větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1).
+
+## Stav po P10 (3. 10. 2026)
+
+**Verdikt revize: po opravách.** Záznam je v `docs/revize/celek-3-2026-10-03.md`, snímky míst ve složce `Claude outputs/revize-celek-3/` (mimo git).
+
+**Opraveno rovnou** (commity 017aca4 a 98e2584): „Velkou část vlády válčil…“ v úvodu Marcova portrétu, „Epiktétos k ní má příběh“ v kapitole 04, „asi čtyři sta let“ v Kde jsme kroku 5, „jak léta jednal“ v Aristotelově odpovědi na otázce 4; mini osa současníků nese u roků před přelomem letopočtu „př. n. l.“ (nový test).
+
+**Čeká na rozhodnutí autora** (návrhy s hotovým zněním jsou v záznamu, nic z nich není zapracováno):
+
+| # | Nález | Váha |
+| --- | --- | --- |
+| 1 | Krok 6: úvodní otázka „když ti někdo ublíží“ a citát s „nebo tě bije“; „trapas“ ve zpětné vazbě | blokující |
+| 2 | Portrét Epiktéta, kapitola 04: „Proti Epiktétovi tu otázku položil už Aristotelés“ | blokující |
+| 3 | Doba a lidé: nadpis „Znali se a přeli se“ nad vztahem `vliv-textem` (Epiktétos, Marcus, Epikúros) | blokující |
+| 4 | Výzva „Druhé ucho“, vlastní karta v Roztřiď a scéna s Musoniem bez pojistky pro studenta, kterému někdo ubližuje | důležité |
+| 5 | Krok 7: shrnutí pokusu vynechává „aby nic necítili“; „ukázal“ | důležité |
+| 6 | Spor na telefonu: třetí Epiktétův argument odpovídá na námitky, které student ještě nečetl | drobné |
+| 7 | Krok 6: zpětná vazba „O pověst ti tedy nejde“ a nadpis „Co udělal Epiktétos“ | drobné |
+| 8 | Deska Epiktéta: popisek o rytci z roku 1715 není vidět | drobné |
+| 9 | Dvě zprávy v celku (otázka 4 × krok 6) | drobné |
+| 10 | Kroky 2 a 3 říkají totéž dvakrát; cesta má asi 2 100 slov | drobné |
+
+Nálezy 3, 7 (nadpis) a 8 jsou zásahy do komponent (skill `atlas-komponenta`); nález 8 může počkat na větev `rozhrani-v2`.
+
+**Další krok:** autor rozhodne o nálezech → zapracování v tomtéž chatu (texty, bloky, testy; celé `npm test`) → schválení celku 3 → sloučení `celek-3` do hlavní větve a hlavní větev na GitHub → větev `rozhrani-v2` (`docs/plany/rozhrani-v2.md`, krok R1).
