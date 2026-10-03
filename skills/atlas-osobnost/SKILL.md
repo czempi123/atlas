@@ -1,6 +1,6 @@
 ---
-name: atlas-osobnost
-description: Psaní stránky osobnosti v Atlasu myšlení (portrét v kapitolách, profil, medailonek), stránky směru nebo pojmu – příběh scénou, výběr velkých myšlenek s vlastním pokusem studenta, blok Zkus to žít, šablona MDX a rychlá kontrola. Použij VŽDY, když vzniká nebo se přepisuje src/content/osobnosti/*.mdx, kapitola portrétu, úvod profilu, Velké myšlenky nebo Zkus to žít, a když uživatel řekne „napiš profil“, „portrét“, „dopiš kapitolu“, „stránka filozofa“, „medailonek“, „stránka směru“, i když slovo osobnost nepadne.
+name: "atlas-osobnost"
+description: "Psaní stránky osobnosti v Atlasu myšlení (portrét, profil, medailonek), stránky směru nebo pojmu: příběh scénou, velké myšlenky s vlastním pokusem, Zkus to žít, šablona MDX, rychlá kontrola."
 ---
 
 # Osobnost v Atlasu myšlení
@@ -28,7 +28,7 @@ Stránka směru a pojmu se řídí stejnými zásadami (scéna, nejsilnější v
 3. **Navrhni autorovi** v pár bodech, jakou scénou otevřeš úvod a každou kapitolu, jaký blok v ní bude a které dvě myšlenky vybereš. Počkej na odpověď.
 4. **Piš** podle šablony níže. Obsah Volby, Změň jednu věc a Sporu patří do `src/content/bloky/<id>.yaml`, do MDX jen `<Volba id="…" />`. Odkryj a Moje stanovisko se píšou přímo do MDX.
 5. **Data:** pramen, ze kterého stránka čerpá a v osobě chybí, přidej do `zdroje` osoby v `lide.yaml`. Na novou stránku odkaž z Kam dál souvisejících osob.
-6. **Ověř:** `npm test` celé (testy v prohlížeči běží na portu 4322). Novou stránku přidej do `STRANKY` v `tests/e2e/prohlidka.spec.ts`, ať se kontroluje axe, přesah a snímky na 390 a 1440 px ve světlém i tmavém režimu. Snímky si prohlédni a aspoň jeden blok vyzkoušej v prohlížeči. Projdi rychlou kontrolu níže.
+6. **Ověř:** `npm test` celé (testy v prohlížeči běží na portu 4322). Novou stránku přidej do `STRANKY` v `tests/e2e/prohlidka.spec.ts`, ať se kontroluje axe, přesah a snímky na 390 a 1440 px ve světlém i tmavém režimu. Snímky si prohlédni a aspoň jeden blok vyzkoušej v prohlížeči. Text přečti ještě jednou jen podle oddílu Ať text nezní jako stroj. Projdi rychlou kontrolu níže.
 7. **Zapiš** zásadní volby do `docs/rozhodnuti.md`, vynechané a neověřené do `k-overeni.md`. Commituj česky po ucelených krocích (portrét, profil, kontrola); na GitHub nic bez pokynu autora.
 
 ## Jak najít a vyprávět příběh
@@ -41,6 +41,9 @@ Stránka směru a pojmu se řídí stejnými zásadami (scéna, nejsilnější v
 - **Myšlenka má přednost před ozdobou.** Když scéna nabízí další krok argumentu (Lachétova druhá definice, Sókratova námitka o lodích), vezmi ho; když nabízí jen další jméno nebo kulisu, vynech ji.
 - **Sporné vynech,** nejisté zmírni („kolem roku“, „asi“, „prý“). Pochybnosti o pramenech patří do podkladů, ne do textu.
 - **Protivník a pokušitel dostanou nejsilnější verzi.** Kritónovy důvody k útěku jsou dobré důvody, jinak Sókratova odpověď nic neváží.
+- **Co s příběhem děláme my, nepřipisuj filozofovi.** Epiktétos nevyprávěl o senátorovi jako odpověď na námitku rezignace; za odpověď ho bereme my. Piš „Epiktétos k ní má příběh“, ne „na ni odpovídal příběhem“. Stejně tak spojovací věta k jinému mysliteli nesmí tvrdit spor nebo otázku, které nebyly („Proti Epiktétovi tu otázku položil už Aristotelés“).
+- **Formulace nesmí být silnější než tvrzení v podkladech.** „Velkou část vlády“ není „skoro celou vládu“; porovnej doporučenou formulaci se sloupcem Tvrzení.
+- **Scéna, kde silnější odmítne pomoct nebo kde hrdina křivdu mlčky unese,** dostane hned za sebou otázku pro studenta („Stačila by ti taková odpověď od učitele?“). Student, kterému někdo ubližuje, jinak čte, že se ho nikdo zastat nemá.
 - **Konec kapitoly** nech na silné větě nebo na otázce pro studenta v kurzívě. Pointu nevysvětluj.
 - **Titulek kapitoly** je pointa s kurzívou na konci: „Místo trestu *odměna.*“, „Spravedlnost dostal *každý.*“
 
@@ -70,7 +73,58 @@ Možnosti ve Volbě jsou skutečné tahy, každá se zpětnou vazbou, která ře
 
 Jedna výzva na týden, kterou jde opravdu udělat ve škole nebo s kamarády a která v praxi procvičí myšlenku stránky. Tři až čtyři věty: co udělat, jak, co si na konci zapsat. Žádné body ani série.
 
+Výzva, která cvičí něco unést, přehodnotit nebo přijmout (stoici), nesmí mířit na člověka, který studentovi ubližuje. Příklady ber z věcí, které štvou (povinnost, prohra, něčí zlozvyk), a jednou větou řekni, že křivdu, se kterou se dá něco dělat, si student nevybírá: ta potřebuje někoho, komu o ní řekne.
+
 > **Řekni to za druhého.** Až se s někým neshodneš, nezačínej svým názorem. Nejdřív zopakuj ten jeho, a tak dobře, aby řekl: přesně tak. Teprve pak odpověz. Na konci týdne si zapiš, jestli to něco změnilo.
+
+## Ať text nezní jako stroj
+
+Platí pro každý text, který uvidí student: odstavce v MDX, scény a zpětné vazby v YAML, titulky, popisky i „Kde jsme“. Východiskem je seznam, který si pro úklid strojových textů vedou wikipedisté (`https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing`). Tady je převedený do češtiny a na atlas; anglická slova ze seznamu jsou nahrazená českými protějšky.
+
+Jazykový model táhne k průměru. Zvláštní, doložený detail nahradí hladkou obecnou větou, která by seděla na kohokoli. Oprava je proto vždy stejná: vrať do věty konkrétní věc z podkladů. Škrtnout podezřelé slovo a prázdnou větu nechat nestačí.
+
+**Test jedné věty:** dala by se beze změny napsat o jiném filozofovi? Pak nic neříká. Přepiš ji z podkladů, nebo ji smaž.
+
+### Obsah
+
+- **Nafouknutý význam.** „Je svědectvím…“, „sehrál klíčovou roli“, „zásadní zlom“, „položil základy“, „zanechal nesmazatelnou stopu“, „trvalý odkaz“, „dodnes fascinuje“, „připravil půdu pro…“, „odráží širší proměnu“. Napiš, co člověk udělal a co se stalo potom: „Dožil se asi sedmdesáti let a čtyřicet z nich učil.“
+- **Rozbor naoko.** Přívěsek na konci věty, který hodnotí, místo aby něco sdělil: „…, čímž podtrhl význam rozumu“, „…, což ukazuje jeho odvahu“, „…, a zdůraznil tak…“. Věta končí tím, co se stalo; závěr si udělá student.
+- **Průvodcovský a reklamní tón.** „Bohaté kulturní dědictví“, „pulzující přístav“, „úchvatný“, „malebný“, „v samém srdci Athén“, „pyšní se“. Místo popiš tím, co tam člověk viděl nebo dělal.
+- **Mlhavé odvolávky.** „Odborníci se shodují“, „badatelé upozorňují“, „často se uvádí“, „podle některých“, „jak známo“. V atlasu má pramen jméno („Platón vypráví…“), nebo poctivé „Vypráví se…“.
+- **Redakční vsuvky.** „Je důležité si uvědomit“, „stojí za zmínku“, „je třeba dodat“, „nelze nezmínit“, „zajímavé je, že“. Řekni rovnou tu věc.
+- **Závěr podle šablony.** „Závěrem lze říci“, „celkově“, „shrnuto“, „navzdory tomu všemu zůstává…“, výhled typu „jeho myšlenky budou inspirovat další generace“ a poslední věta, která opakuje, co odstavec už řekl.
+
+### Jazyk
+
+- **Slova, která model nadužívá.** Klíčový, zásadní, stěžejní, komplexní, nadčasový, fascinující, spletitý, bohatý (o dějinách a kultuře), hluboký (o myšlence); podtrhnout, zdůraznit, odhalit, utvářet, rezonovat, ponořit se, prozkoumat; krajina myšlení, mozaika, tapisérie, dobrodružství poznání. Jedno takové slovo může být na místě. Dvě v jednom odstavci jsou důvod odstavec přepsat.
+- **Vyhýbání se „je“ a „má“.** „Slouží jako“, „představuje“, „stává se symbolem“, „nabízí“, „vyznačuje se“. Když jde říct „je“ nebo „má“, napiš to tak.
+- **Záporná paralela.** „Nejde jen o X, jde o Y.“ „Nebyl to jen učitel, byl to…“ „Nejen…, ale i…“ Vyvrací tvrzení, které nikdo neřekl. Smí zůstat jen tam, kde X opravdu někdo tvrdí: postava ve scéně nebo student ve své volbě.
+- **Trojice ze zvyku.** Tři přídavná jména, tři příklady, tři krátké věty za sebou („Bez peněz. Bez domova. Bez strachu.“). Počet urči podle podkladů: když jsou věci dvě, napiš dvě.
+- **Střídání synonym.** Sókratés, pak „athénský myslitel“, „slavný filozof“ a „Platónův učitel“ v jednom odstavci. Opakuj jméno nebo zájmeno; vedlejší postava má jeden popis a ten se nemění.
+- **Falešné rozpětí.** „Od etiky po politiku“, „od otroků po císaře“ tam, kde mezi krajními body žádná škála není. Vyjmenuj, co opravdu máš.
+- **Navazovací vata.** Věty, které začínají „Navíc“, „Kromě toho“, „Zároveň“, „Dále“, „Nicméně“, „Na druhou stranu“. Když věty navazují obsahem, spojku nepotřebují.
+
+### Sazba a forma
+
+- **Pomlčka jako dramatická pauza** nebo jako náhrada čárky, dvojtečky a závorky. V textu pro studenty nanejvýš výjimečně; rozsahů („15–20 minut“) se to netýká. Dlouhá anglická pomlčka (—) do českého textu nepatří vůbec.
+- **Tučné písmo uvnitř vyprávění** a odrážky s tučným heslem a dvojtečkou („**Odvaha:** …“). Důraz v atlasu nese kurzíva v titulku a stavba věty.
+- **Odrážky a mezititulky tam, kde má být vyprávění.** Emoji nikde. Nadpis s Každým Slovem Velkým je anglický zvyk.
+- **Uvozovky.** Anglický seznam hlídá oblé uvozovky; u nás je to naopak. Správně jsou české „ “, chybou jsou rovné " a anglické “ ”.
+- **Zbytky značek.** `**`, `#`, zpětné apostrofy a `[odkaz](…)` v polích YAML a v atributech, kde se Markdown nevykreslí.
+
+### Zbytky rozhovoru s modelem
+
+- **Oslovení a nabídky.** „Tady je…“, „Jistě!“, „Doufám, že to pomůže“, „Dej vědět, jestli…“.
+- **Pochvala na úvod zpětné vazby.** „Skvělá volba!“, „Zajímavý postřeh.“, „To je dobrá otázka.“ Zpětná vazba začíná tím, co tah umí.
+- **Věty o tom, co se neví.** „Konkrétní podrobnosti nejsou doloženy“, „dostupné prameny neuvádějí“. Pochybnosti patří do podkladů.
+- **Výplně a značky.** „[doplnit]“, „XY“, „TODO“, `turn0search0`, `oaicite`, `utm_source=chatgpt.com` v adrese zdroje.
+- **Zdroj, který nejde otevřít a ověřit.** Citát, místo v díle nebo odkaz, který neexistuje. Citáty jen ze `zdroje.yaml`, tvrzení jen z podkladů.
+
+### Co znakem není
+
+Bezchybný pravopis, spisovná čeština, neobvyklé slovo ani jedna spojka na začátku věty nic nedokazují. Jeden znak z tohoto seznamu taky ne; vadí, když se jich sejde víc. Text proto schválně nekaz: žádné úmyslné chyby, žádná hovorovost naoko. A nenahrazuj jeden obrat jiným ze seznamu („klíčový“ za „stěžejní“, pomlčku za středník).
+
+Po dopsání přečti stránku ještě jednou jen s tímto oddílem. Každý nález přepiš z podkladového listu: kdo, kde, co udělal, co řekl. Když v podkladech nic konkrétního není, věta do stránky nepatří.
 
 ## Šablona MDX
 
@@ -146,7 +200,8 @@ Výzva na týden.
 Poznámky k šabloně:
 
 - Velký citát z úvodu se v textu nemusí opakovat; když se k němu kapitola vrací, odkaž na něj slovy („začínala právě větou o člověku jako měřítku“). Znovu jako citát má smysl jen tam, kde zazněl (Sókratés, Obrana 38a v kapitole Soud).
-- Osoba bez autentického portrétu má na desce minci s atributem; nic nepřidávej. Fotografie jen s ověřenou licencí v `zdroje.yaml` › `obrazky`.
+- Osoba bez autentického portrétu má na desce minci s atributem; nic nepřidávej. Fotografie jen s ověřenou licencí v `zdroje.yaml` › `obrazky`. Popisek obrázku (`popisek`) se ukazuje pod deskou vedle „Proč …?“: u rytiny, kresby nebo pozdější sochy v něm řekni, čí je to představa a z kdy, hlavně když obraz ukazuje něco, co text popírá (Epiktétos s perem × „Sám nenapsal nic“).
+- Doba a lidé skládá skupiny vztahů z dat: „Znali se a přeli se“ jen pro `znali-se` a `polemika`, vliv přes texty má skupiny „Četli ho a navázali“ a „Koho četl“. Lidem, kteří se nepotkali, dej v `vztahy.yaml` typ `vliv-textem`; po sestavení si oddíl přečti, nikdo jiný ho nepíše.
 - Letopočty s nezlomitelnými mezerami: `399 př. n. l.` (U+00A0 mezi číslem a „př.“ i uvnitř zkratky).
 - `id` bloků malými písmeny bez diakritiky a na celém webu jedinečné, `<osoba>-<tema>`.
 - Kapitolu se stavem `osnova` ukazuje stránka jen ve vývojovém režimu; po dopsání nastav `stav: hotovo` a pole `osnova` smaž.
@@ -173,7 +228,7 @@ Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď
 
 **Tradovaný příběh s otázkou na konci (profil Prótagora, kapitola 02):**
 
-> Vypráví se, že při závodech zabil oštěp nešťastnou náhodou jednoho muže. Periklés prý pak s Prótagorem celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův vlastní syn.
+> Vypráví se, že při závodech zabil oštěp nešťastnou náhodou jednoho muže. Periklés prý pak s Prótagorou celý den rozebíral, kdo za to může: oštěp, ten, kdo ho hodil, nebo pořadatelé. Posměšně to o otci vyprávěl Periklův vlastní syn.
 >
 > *Kdo za to podle tebe může? A je to pro tebe hloupá otázka, nebo ta nejdůležitější?*
 
@@ -191,7 +246,10 @@ Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď
 - Je přímá řeč skutečných osob jen v `<Citat />`? Má scéna z dialogu „Platón vypráví…“ a tradovaný příběh „Vypráví se…“?
 - Stojí blok před tím, co udělal filozof? Má každá volba vlastní zpětnou vazbu s důvodem?
 - Dostal protivník i filozof svou nejsilnější verzi?
+- Přečetl by stránku student, kterému někdo ubližuje, aniž by v ní našel radu smířit se (scéna, kde silnější nepomůže; výzva Zkus to žít; citát o snášení bez otázky za ním)?
+- Sedí oddíl Doba a lidé a popisek pod deskou na to, co říká text (nikdo se „neznal“ jen proto, že četl; obraz neodporuje vyprávění)?
 - Je ve stránce věta, která mluví o naší práci, o pramenech nebo o tom, proč je něco zpracované takhle? Smazat.
+- Dala by se některá věta beze změny napsat o jiném filozofovi? Prošel text čtením podle oddílu Ať text nezní jako stroj?
 - Věty do 25 slov, odstavce do 4 vět, tykání, jména a skloňování podle `lide.yaml`, letopočty s nezlomitelnými mezerami?
 - Prošlo `npm test` celé a jsou snímky na 390 a 1440 px ve světlém i tmavém režimu prohlédnuté?
 - Přečetl by to šestnáctiletý člověk dobrovolně až do konce?
