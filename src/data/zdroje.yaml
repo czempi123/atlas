@@ -186,6 +186,8 @@ prameny:
   - { id: aristoteles-etika-i-6, druh: pramen, nazev: "Etika Nikomachova I, 6", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Ideje zavedli přátelé; obojí je milé, ale svatou povinností je dát přednost pravdě (1096a11–17; Platóna nejmenuje). Dobro se říká mnoha způsoby (1096a17–b29). Dobro samo by člověk nemohl uskutečnit (1096b32–35). Tkadlec, tesař a lékař: léčí se tento člověk (1097a8–13)." }
   - { id: aristoteles-politika-ii, druh: pramen, nazev: "Politika II, 1 a 3", autor: Aristotelés, dilo: "Politica, řecky W. D. Ross, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg035/tlg0086.tlg035.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "„V Platónově Ústavě; tam totiž Sókratés říká…“ (1261a6). O společné se pečuje nejméně; každý by měl tisíc synů (1261b32–40)." }
   - { id: aristoteles-kategorie, druh: pramen, nazev: "Kategorie 5", autor: Aristotelés, dilo: "Categoriae, angl. E. M. Edghill (MIT Internet Classics Archive); řecká věta z řecké Wikisource", url: "http://classics.mit.edu/Aristotle/categories.1.1.html", overeno: 2026-10-03, poznamka: "První podstata je to, co se nevypovídá o podmětu ani není v podmětu: tento člověk, tento kůň; kdyby nebylo prvních podstat, nemohlo by být nic jiného. V PerseusDL dílo není; Bekkerovo číslování (2a11–14, 2b5–6) jsem v otevřeném vydání neviděl." }
+  - { id: aristoteles-meteorologika, druh: pramen, nazev: "Meteorologika III, 2 a 4", autor: Aristotelés, dilo: "Meteorologica, řecky I. Bekker (vydání 1837, First1KGreek), angl. E. W. Webster (MIT Internet Classics Archive)", url: "https://classics.mit.edu/Aristotle/meteorology.3.iii.html", overeno: 2026-10-04, poznamka: "Duha je odraz pohledu ke slunci, proto vzniká vždy naproti němu (III, 4). Drobné kapky jsou zrcadla, ve kterých se neukáže tvar, jen barva; duha netvoří celý kruh ani víc než půlkruh; měsíční duhu potkali za víc než padesát let jen dvakrát (III, 2). Duha vzniká i od vesel zvednutých z moře a když někdo proti slunci rozstříkne jemné kapky (III, 4). Aristotelés nechává pohled vycházet z oka; dnešní výklad je lom a odraz světla v kapkách (britannica-rainbow). Anglicky čteny kapitoly 2 a 4, řecky jen uvedené věty; Bekkerovo číslování v otevřeném vydání není." }
+  - { id: britannica-rainbow, druh: encyklopedie, nazev: "Rainbow", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/science/rainbow-atmospheric-phenomenon", overeno: 2026-10-04, poznamka: "Duha vzniká lomem a vnitřním odrazem světla v kapkách; je vidět naproti Slunci; nejjasnější paprsky tvoří kužel s vrcholem v oku pozorovatele a poloměrem asi 42°. Že každý pozorovatel vidí duhu jinde a že se k ní nedá dojít, z toho plyne; výslovně to článek neříká." }
   - { id: plutarchos-dion, druh: pramen, nazev: "Dión 5 a 20", autor: Plútarchos, dilo: "Dion, řecky a angl. B. Perrin (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg060/tlg0007.tlg060.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Platón a Dionýsios starší, Pollis, prodej na Aigíně („říká se“; kap. 5). Archytova loď; Platónova odpověď při loučení; Plútarchos dodává, že Platónova vlastní slova s tím docela nesouhlasí (kap. 20)." }
   - { id: isokrates-antidosis, druh: pramen, nazev: "Antidosis 261–271", autor: Isokratés, dilo: "Antidosis, řecky a angl. G. Norlin (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0010/tlg019/tlg0010.tlg019.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Učitelé sporů, astronomie a geometrie žákům prospívají méně, než slibují; je to cvičení mysli, ne filozofie (261–266); staří sofisté a jejich spekulace (268–269); lidé nemají v povaze dosáhnout vědění, moudrý je, kdo míněním většinou trefí nejlepší (271). Platóna ani Akademii nejmenuje." }
   - { id: isokrates-helena, druh: pramen, nazev: "Helena 1 a 5", autor: Isokratés, dilo: "Helena, řecky a angl. L. Van Hook (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0010/tlg009/tlg0010.tlg009.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Někteří tvrdí, že odvaha, moudrost a spravedlnost jsou totéž vědění (1); lepší rozumné mínění o užitečném než přesné vědění o neužitečném (5). Nikoho nejmenuje." }
@@ -207,8 +209,8 @@ prameny:
   - { id: smithsonian-papyrus-2024, druh: data, nazev: "This Newly Deciphered Papyrus Scroll Reveals the Location of Plato's Grave (novinová zpráva)", dilo: "Smithsonian Magazine, duben 2024", url: "https://www.smithsonianmag.com/smart-news/platos-elusive-grave-located-after-bionic-eye-penetrates-2000-year-old-papyrus-180984221/", overeno: 2026-10-03, poznamka: "Nově přečtené části Filodémových Dějin Akademie (G. Ranocchia, Univerzita v Pise, CNR): hrob v zahradě u svatyně Múz v Akademii; prodej do otroctví prý už roku 404 nebo 399. Jen zpráva, vydání textu jsem neviděl." }
   - { id: nyhan-2023, druh: monografie, nazev: "Like-minded sources on Facebook are prevalent but not polarizing", autor: "Brendan Nyhan a kol.", dilo: "Nature 620 (2023), 137–144", url: "https://www.nature.com/articles/s41586-023-06297-w", overeno: 2026-10-03, poznamka: "Čten plný text (otevřený přístup). Pokus 24. 9. – 23. 12. 2020 mezi 23 377 souhlasícími dospělými uživateli Facebooku v USA: podíl obsahu od stejně smýšlejících zdrojů snížen z 53,7 % na 36,2 %, obsah z opačné strany vzrostl z 20,7 % na 27,9 %; žádný měřitelný účinek na osm předem určených měřítek postojů. Prostřední uživatel: 50,4 % od stejně smýšlejících, 14,7 % z opačné strany; 20,6 % uživatelů má přes 75 %; občanský obsah a zprávy mediány 6,9 % a 6,7 %. Meze: tři měsíce, volby, jen USA a Facebook. Akademičtí autoři neplaceni, poslední slovo o analýze, předregistrace." }
   - { id: osome-eletter-2024, druh: data, nazev: "Science eLetter: Social media algorithms can curb misinformation, but do they? (shrnutí)", dilo: "Observatory on Social Media, Indiana University", url: "https://osome.iu.edu/research/blog/science-eletter-social-media-algorithms-can-curb-misinformation-but-do-they", overeno: 2026-10-03, poznamka: "Výhrada k sesterské studii (Guess a kol., Science 2023): Meta od listopadu 2020 do března 2021 dočasně zpřísnila algoritmus, pokus běžel v té době. Čteno jen shrnutí autorské skupiny." }
-  - { id: nga-saenredam-jeskyne, druh: data, nazev: "Plato's Cave (1983.61.1)", autor: "Jan Saenredam podle Cornelise Cornelisze van Haarlem", dilo: "National Gallery of Art, Washington", url: "https://www.nga.gov/artworks/62542-platos-cave", overeno: 2026-10-03, poznamka: "Mědirytina, 1604, vydal Hendrik Hondius; list 33,7 × 45 cm; Ailsa Mellon Bruce Fund. Muzeum: „free and in the public domain“. Nápis nahoře: Jan 3, 19 a ANTRUM PLATONICUM (přepis podle Harvard Art Museums a Art Institute of Chicago). Soubor nestažen." }
-  - { id: smk-platon-odlitek, druh: data, nazev: "Platon (427–347 f.Kr.), græsk filosof (KAS2111)", dilo: "Statens Museum for Kunst, Den Kongelige Afstøbningssamling, Kodaň", url: "https://open.smk.dk/artwork/image/KAS2111", overeno: 2026-10-03, poznamka: "Sádrový odlitek (1947) mramorové hlavy z Ny Carlsberg Glyptotek, římské kopie řeckého originálu z doby kolem 350 př. n. l.; výška 49 cm; Public Domain. Údaje z API muzea. Soubor nestažen." }
+  - { id: nga-saenredam-jeskyne, druh: data, nazev: "Plato's Cave (1983.61.1)", autor: "Jan Saenredam podle Cornelise Cornelisze van Haarlem", dilo: "National Gallery of Art, Washington", url: "https://www.nga.gov/artworks/62542-platos-cave", overeno: 2026-10-03, poznamka: "Mědirytina, 1604, vydal Hendrik Hondius; list 33,7 × 45 cm; Ailsa Mellon Bruce Fund. Muzeum: „free and in the public domain“. Nápis nahoře: Jan 3, 19 a ANTRUM PLATONICUM. Dole dvanáct latinských veršů, signatury „C. C. Harlemensis Inv.“, „Saenredam Sculpsit“, „Henr. Hondius excudit“, „1604“ a věnování: rytinu dal nakreslit a vyrýt H. L. Spiegel a věnoval ji Pieteru Paawovi, profesoru lékařství v Leidenu (čteno z listu 4. 10. 2026). Soubor stažen 4. 10. 2026 přes IIIF muzea (1280 × 959 px)." }
+  - { id: smk-platon-odlitek, druh: data, nazev: "Platon (427–347 f.Kr.), græsk filosof (KAS2111)", dilo: "Statens Museum for Kunst, Den Kongelige Afstøbningssamling, Kodaň", url: "https://open.smk.dk/artwork/image/KAS2111", overeno: 2026-10-03, poznamka: "Sádrový odlitek mramorové hlavy z Ny Carlsberg Glyptotek, římské kopie řeckého originálu z doby kolem 350 př. n. l.; do sbírky získán 1947 (rok výroby odlitku muzeum neuvádí); výška 49 cm; Public Domain. Údaje z API muzea. Soubor stažen 4. 10. 2026 přes IIIF muzea (1280 × 1280 px); snímek má černé pozadí." }
 
 citaty:
   - id: obrana-38a
@@ -1404,6 +1406,17 @@ citaty:
       druh: vlastni
       podle: "řecká věta z řecké Wikisource a anglický překlad E. M. Edghilla („if these last did not exist, it would be impossible for anything else to exist“); první podstata je tento člověk, tento kůň (2a11–14); Bekkerovo číslování neověřeno ve vydání"
     zdroj: aristoteles-kategorie
+  - id: meteorologika-iii-4
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Meteorologika
+    misto: III, 4
+    cesky: "Je tedy zřejmé, že duha je odraz pohledu ke slunci. Proto také vždycky vzniká naproti němu."
+    original: "Ὅτι μὲν οὖν ἀνάκλασις ἡ ἶρις τῆς ὄψεως πρὸς τὸν ἥλιόν ἐστι, φανερόν· διὸ καὶ ἐξ ἐναντίας ἀεὶ γίνεται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bekker, vydání 1837) a anglický překlad E. W. Webstera („the rainbow is a reflection of sight to the sun“); Bekkerovo číslování v otevřeném vydání není, proto jen kniha a kapitola"
+    zdroj: aristoteles-meteorologika
   - id: politika-1261b
     osoba: aristoteles
     autor: Aristotelés
@@ -1524,3 +1537,21 @@ obrazky:
     url: "https://www.worldhistory.org/image/3388/epictetus/"
     vyrez: "50% 60%"
     vyrezNaSirku: "50% 34%"
+  # Celek 4: Platón je sádrový odlitek ze Statens Museum for Kunst (volné dílo, údaje z API muzea), jeskyně rytina z roku 1604
+  # z National Gallery of Art (Open Access). Autor vybral 4. 10. 2026; soubory staženy přes IIIF muzeí rovnou v 1280 px. Výřez je odhad.
+  - id: platon-smk
+    soubor: obrazky/platon-smk.jpg
+    popisek: "Platón. Sádrový odlitek římské mramorové hlavy, která kopíruje řecký portrét z doby kolem roku 350 př. n. l."
+    autor: "Statens Museum for Kunst"
+    instituce: "Kodaň, Královská sbírka odlitků, inv. KAS2111; mramorová hlava je v Ny Carlsberg Glyptotek"
+    licence: "volné dílo (Public Domain)"
+    url: "https://open.smk.dk/artwork/image/KAS2111"
+    vyrez: "50% 36%"
+  - id: jeskyne-saenredam
+    soubor: obrazky/jeskyne-saenredam.jpg
+    popisek: "Platónova jeskyně, jak si ji roku 1604 představili nizozemští umělci: lidé pod zdí nemají pouta a místo ohně visí lampa. Rytina Jana Saenredama podle Cornelise van Haarlem."
+    autor: "Jan Saenredam podle Cornelise Cornelisze van Haarlem, 1604 (soubor: National Gallery of Art)"
+    instituce: "National Gallery of Art, Washington, inv. 1983.61.1"
+    licence: "volné dílo (Open Access)"
+    url: "https://www.nga.gov/artworks/62542-platos-cave"
+    vyrez: "55% 45%"

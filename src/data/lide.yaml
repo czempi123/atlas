@@ -54,6 +54,7 @@
     nazev: jeskyně
     proc: Přirovnal nás k vězňům, kteří mají stíny na zdi za skutečnost.
     zdroj: platon-ustava
+  obrazek: platon-smk
   zdroje: [sep-plato, britannica-plato, sep-archytas, platon-ustava, iep-plato, iep-academy, nails-plato, platon-ustava-perseus, platon-sedmy-list, platon-parmenides, dl-iii, plutarchos-dion]
 
 - id: aristoteles
@@ -81,7 +82,7 @@
     nazev: váhy
     proc: Ctnost je střed mezi dvěma krajnostmi.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie]
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie, aristoteles-meteorologika]
 
 - id: thales
   jmeno: Thalés
