@@ -226,3 +226,19 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
 .blok__filozof { display: flex; align-items: center; gap: var(--s-3); margin: 0 0 var(--s-2); }
 .blok__filozof .blok__zpetna-titulek { margin: 0; }
 .blok-sloupec { max-width: 960px; }
+
+/* ─── Kresba s pohybem (src/components/ostrovy/Kresba.svelte, docs/design.md › Komponenty) ───── */
+.kresba {
+  /* Tři tóny kresby vycházejí z desky období, stejně jako fotografie: světlo, stín a tma.
+     Tma je stín smíchaný s černou; jediná barva kresby mimo tokeny. */
+  --k-svetlo: var(--pc-on-plate, var(--surface));
+  --k-stin: var(--pc-plate, var(--ink-2));
+  --k-tma: color-mix(in srgb, var(--pc-plate, var(--ink)) 42%, black);
+}
+.kresba .k-svetlo { fill: var(--k-svetlo); }
+.kresba .k-stin { fill: var(--k-stin); }
+.kresba .k-tma { fill: var(--k-tma); }
+.kresba .k-popisek { font-family: var(--font-sans); font-size: 11.5px; font-weight: 600; fill: var(--k-svetlo); }
+.kresba .k-popisek--tmavy { fill: var(--k-tma); }
+/* Pohyblivý prvek (k-hybe) má vlastní animaci jen pod .kresba--pohyb; když student pohyb zastaví, zůstane stát tam, kde je. */
+.kresba:not(.kresba--bezi) .k-hybe { animation-play-state: paused !important; }

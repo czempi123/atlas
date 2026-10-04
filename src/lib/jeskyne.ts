@@ -35,3 +35,53 @@ export function stinNaStene(ohen: { x: number; y: number }, bod: { x: number; y:
   const sklon = (bod.y - ohen.y) / (bod.x - ohen.x);
   return ohen.y + sklon * (stenaX - ohen.x);
 }
+
+// ─── Cesta ven (src/components/ostrovy/JeskyneVen.svelte), Ústava VII, 515c–516b ───────────────────────────
+// Vězně někdo rozváže a vleče ven; venku nevidí nic a oči si zvykají v pořadí, které dává pramen:
+// stíny, odrazy ve vodě, věci samé, noční nebe a nakonec slunce (podkladový list, řádky 8–13).
+
+export type PohledVen = 'cesta' | 'venku';
+
+export const POHLEDY_VEN: { id: PohledVen; nazev: string }[] = [
+  { id: 'cesta', nazev: 'Cesta ven' },
+  { id: 'venku', nazev: 'Venku' },
+];
+
+export const POPIS_CESTY =
+  'Někdo vězně rozváže, donutí ho vstát a otočit se k ohni. Pak ho násilím vleče strmou cestou nahoru a nepustí ho, dokud nejsou venku. Vězeň trpí a zlobí se.';
+
+/** Stupně, kterými si oči venku zvykají, v pořadí pramene (516a–b). */
+export const STUPNE: { nazev: string; popis: string }[] = [
+  { nazev: 'záře', popis: 'Venku má vězeň oči plné záře a nevidí vůbec nic.' },
+  { nazev: 'stíny', popis: 'Jako první rozezná stíny. I venku začíná u nich.' },
+  { nazev: 'odrazy ve vodě', popis: 'Potom rozezná odrazy lidí a věcí ve vodě.' },
+  { nazev: 'věci samé', popis: 'Pak uvidí věci samé.' },
+  { nazev: 'noční nebe', popis: 'Nebe snese nejdřív v noci: světlo hvězd a měsíce.' },
+  { nazev: 'slunce', popis: 'Slunce samo uvidí až nakonec.' },
+];
+
+/** Jak moc je která vrstva kresby „Venku“ vidět (0 až 1). */
+export interface VrstvyVenku {
+  zare: number;
+  stiny: number;
+  voda: number;
+  veci: number;
+  noc: number;
+  slunce: number;
+}
+
+/**
+ * Co vězeň na daném stupni vidí. Stupeň mimo rozsah se přichytí ke kraji.
+ * Stíny v noci vidět nejsou (vrhá je slunce); věci jsou před čtvrtým stupněm jen tušit.
+ */
+export function vrstvyVenku(stupen: number): VrstvyVenku {
+  const s = Math.min(STUPNE.length - 1, Math.max(0, Math.round(Number.isFinite(stupen) ? stupen : 0)));
+  return {
+    zare: s === 0 ? 1 : 0,
+    stiny: s >= 1 && s !== 4 ? 1 : 0,
+    voda: s >= 2 ? 1 : 0,
+    veci: s >= 3 ? 1 : s >= 1 ? 0.08 : 0,
+    noc: s === 4 ? 1 : 0,
+    slunce: s === 5 ? 1 : 0,
+  };
+}

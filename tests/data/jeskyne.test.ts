@@ -1,6 +1,6 @@
 // Kresba jeskyně: pohledy a jejich popisy, průvod věcí a stín na stěně v pohledu z boku.
 import { describe, it, expect } from 'vitest';
-import { POHLEDY, POPISY, PRUVOD, ROZESTUP, delkaPruvodu, stinNaStene } from '../../src/lib/jeskyne';
+import { POHLEDY, POPISY, PRUVOD, ROZESTUP, delkaPruvodu, stinNaStene, POHLEDY_VEN, POPIS_CESTY, STUPNE, vrstvyVenku } from '../../src/lib/jeskyne';
 
 describe('kresba jeskyně', () => {
   it('každý pohled má název a popis; první je pohled vězňů', () => {
@@ -36,5 +36,39 @@ describe('kresba jeskyně', () => {
     expect(stinNaStene(ohen, { x: 40, y: 90 }, 200)).toBeNull();
     expect(stinNaStene(ohen, { x: 10, y: 90 }, 200)).toBeNull();
     expect(stinNaStene(ohen, { x: 200, y: 90 }, 200)).toBeNull();
+  });
+});
+
+describe('cesta ven z jeskyně', () => {
+  it('pořadí stupňů drží pramen: stíny, odrazy, věci, noční nebe, slunce', () => {
+    expect(POHLEDY_VEN.map((p) => p.id)).toEqual(['cesta', 'venku']);
+    expect(STUPNE.map((s) => s.nazev)).toEqual(['záře', 'stíny', 'odrazy ve vodě', 'věci samé', 'noční nebe', 'slunce']);
+  });
+  it('popisy: nikdo se neosvobodí sám, venku nejdřív nevidí nic, věty do 25 slov', () => {
+    expect(POPIS_CESTY).toMatch(/^Někdo vězně rozváže/);
+    expect(POPIS_CESTY).toContain('násilím vleče');
+    expect(STUPNE[0].popis).toContain('nevidí vůbec nic');
+    for (const text of [POPIS_CESTY, ...STUPNE.map((s) => s.popis)]) {
+      for (const veta of text.split(/(?<=[.?!])\s+/)) expect(veta.split(/\s+/).length, veta).toBeLessThanOrEqual(25);
+      expect(text).not.toMatch(/osvobodí se|prohlédl|probud/);
+    }
+  });
+  it('vrstvy: nejdřív jen záře, pak stíny, voda, věci; slunce až na konci', () => {
+    expect(vrstvyVenku(0)).toEqual({ zare: 1, stiny: 0, voda: 0, veci: 0, noc: 0, slunce: 0 });
+    expect(vrstvyVenku(1)).toMatchObject({ zare: 0, stiny: 1, voda: 0, slunce: 0 });
+    expect(vrstvyVenku(1).veci).toBeLessThan(0.2);
+    expect(vrstvyVenku(2)).toMatchObject({ stiny: 1, voda: 1 });
+    expect(vrstvyVenku(2).veci).toBeLessThan(0.2);
+    expect(vrstvyVenku(3)).toMatchObject({ stiny: 1, voda: 1, veci: 1, noc: 0, slunce: 0 });
+    // V noci nejsou sluneční stíny; slunce samo je vidět až na posledním stupni.
+    expect(vrstvyVenku(4)).toMatchObject({ stiny: 0, veci: 1, noc: 1, slunce: 0 });
+    expect(vrstvyVenku(5)).toMatchObject({ stiny: 1, veci: 1, noc: 0, slunce: 1 });
+    for (let s = 0; s < 5; s++) expect(vrstvyVenku(s).slunce).toBe(0);
+  });
+  it('stupeň mimo rozsah se přichytí ke kraji', () => {
+    expect(vrstvyVenku(-3)).toEqual(vrstvyVenku(0));
+    expect(vrstvyVenku(99)).toEqual(vrstvyVenku(5));
+    expect(vrstvyVenku(2.4)).toEqual(vrstvyVenku(2));
+    expect(vrstvyVenku(Number.NaN)).toEqual(vrstvyVenku(0));
   });
 });

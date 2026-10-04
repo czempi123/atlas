@@ -1,0 +1,16 @@
+---
+// Cesta ven z jeskyně: kresba s pohybem ve dvou pohledech. „Cesta ven“ je řez jeskyní se strmou cestou,
+// po které někdo vězně vleče nahoru; „Venku“ je pohled vězně s posuvníkem, jak si oči zvykají
+// (záře, stíny, odrazy ve vodě, věci samé, noční nebe, slunce). Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <JeskyneVen id="jeskyne-ven" />
+import Ostrov from '../ostrovy/JeskyneVen.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8); výchozí období 1 (Platón) */
+  obdobi?: number;
+}
+const { id = 'jeskyne-ven', obdobi = 1 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

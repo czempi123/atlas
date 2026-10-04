@@ -1,5 +1,5 @@
 // Knihovna interaktivních bloků Atlasu myšlení. V MDX stačí jeden import:
-// import { Pribeh, Volba, Odkryj, Roztrid, ZmenJednuVec, Spor, KdoZilDriv, Jeskyne } from '../../components/bloky';
+// import { Pribeh, Volba, Odkryj, Roztrid, ZmenJednuVec, Spor, KdoZilDriv, Jeskyne, JeskyneVen } from '../../components/bloky';
 // Návod a API: docs/design.md › Bloky.
 export { default as Pribeh } from './Pribeh.astro';
 export { default as Volba } from './Volba.astro';
@@ -11,3 +11,4 @@ export { default as KdoZilDriv } from './KdoZilDriv.astro';
 export { default as ZaverCesty } from './ZaverCesty.astro';
 export { default as Navrat } from './Navrat.astro';
 export { default as Jeskyne } from './Jeskyne.astro';
+export { default as JeskyneVen } from './JeskyneVen.astro';

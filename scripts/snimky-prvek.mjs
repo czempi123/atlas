@@ -2,7 +2,8 @@
 // node scripts/snimky-prvek.mjs <cesta> <selektor> <nazev> <sirka> <light|dark> [text přepínače nebo tlačítka, na které klepnout]
 //   node scripts/snimky-prvek.mjs /cesta/je-to-co-vidim-cela-skutecnost/1/ '#jeskyne-pohledy' jeskyne-bok 390 light 'Pohled z boku'
 // Proměnné: ZAKLAD (běžící web; výchozí náhled sestaveného webu na portu 4323), VEN (složka pro výstup),
-// POHYB=1 nechá animace běžet (jinak je omezený pohyb zapnutý a kresba stojí), CEKEJ (ms před snímkem).
+// POHYB=1 nechá animace běžet (jinak je omezený pohyb zapnutý a kresba stojí), CEKEJ (ms před snímkem),
+// POSUVNIK (hodnota prvního posuvníku v prvku).
 import { chromium } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
 
@@ -18,8 +19,15 @@ await page.goto(ZAKLAD + cesta);
 await page.evaluate(() => document.fonts.ready);
 const prvek = page.locator(selektor).first();
 await prvek.scrollIntoViewIfNeeded();
-await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+// Ostrov prvku se hydratuje, až je vidět; ostatní ostrovy na stránce na řadu přijít nemusí.
+await page.waitForFunction((sel) => {
+  const e = document.querySelector(sel);
+  const ostrov = e?.closest('astro-island');
+  return !!e && (!ostrov || !ostrov.hasAttribute('ssr'));
+}, selektor);
 if (klik) await prvek.getByText(klik, { exact: true }).click({ force: true });
+// POSUVNIK=3 nastaví první posuvník v prvku (kresba s posuvníkem).
+if (process.env.POSUVNIK) await prvek.locator('input[type="range"]').first().fill(process.env.POSUVNIK);
 await page.waitForTimeout(Number(process.env.CEKEJ ?? 300));
 // Pevné lišty by ležely přes prvek.
 await page.addStyleTag({ content: 'header.hlavicka, nav.lista, .cesta-lista, .cesta-hlavicka, .obsah-lista { visibility: hidden !important; }' });
