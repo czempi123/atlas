@@ -9,7 +9,7 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 | P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | hotovo 4. 10. 2026; stav v oddílu Po P8. Po připomínkách autora z téhož dne: nové názvy košů v kroku 2 a kresba jeskyně s pohybem v kroku 1 |
 | P10 | Revize celku | hotovo 4. 10. 2026 (`docs/revize/celek-4-2026-10-04.md`), verdikt „po opravách“; stav v oddílu Po P10 |
 | Opravy | Zapracování nálezů revize | hotovo 4. 10. 2026, všech osm nálezů schválených autorem; stav v oddílu Po opravách |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | **další krok**, čeká na autora |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 4. 10. 2026: autor celek schválil, `celek-4` sloučená do `main` a poslaná na GitHub |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7, P8, P10, opravy) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
 
@@ -202,3 +202,7 @@ Snímky na 390 px (kroky 2, 5, 6 a 8 cesty 3 a konec kapitoly 05 portrétu) jsou
 4. Schválení autorem, sloučení `celek-4` (s `rozhrani-v2`) do hlavní větve a poslání na GitHub.
 
 Samostatné kroky mimo uzavření: kresba „Zdvoj čtverec“ v kapitole 02 portrétu (po ověření Menóna 84d–85b) a oddíl Kresby v dílně bloků.
+
+## Uzavření (4. 10. 2026)
+
+Autor celek 4 schválil. Větev `celek-4` byla sloučena do `main` (posun bez konfliktů, `4d48d2d` → `89d12c1`) a `main` poslána na GitHub, i s větví `rozhrani-v2`. Celek je uzavřený. Zbývá mimo uzavření: uložit skilly `atlas-revize`, `atlas-komponenta` a `atlas-cesta` do účtu, autorovo oko na kresby (šaty a tři kresby pokusů), ověření Kratylos 402a a Metafyzika I, 1, kresba „Zdvoj čtverec“ v kapitole 02 portrétu a oddíl Kresby v dílně bloků.
