@@ -1,0 +1,73 @@
+# Změň jednu věc · myšlenkový pokus Gýgův prsten (Ústava II, 359c–360d). Portrét Platóna, kapitola 04 „Prsten a tři síly“.
+# Blok je psaný tak, aby ho později převzala samostatná stránka pokusu (fáze F3): scéna říká, kdo příběh vypráví.
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Gygův prsten (řádky 1–10 a Návrh bloku pro portrét).
+# Vypráví Glaukón a názoru, který předvádí, sám nevěří (357a–358d). V textu „pastýř“ a „Gýgův prsten“; pastýř jméno nemá
+# (řecký text: „předek Lýda Gýga“, 359d; „Gýgův prsten“ 612b). S Hérodotovým Gýgem nesouvisí.
+# Možnosti, podmínky a zpětné vazby jsou autorské. Pojistka pro tón: žádná možnost nedostane pokárání; otázka
+# „kdyby ho měli všichni“ (původ zákonů, 358e–359a) stojí u první podmínky a dostane ji každá možnost.
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Platónův bratr Glaukón vypráví v Ústavě příběh o pastýři. Po zemětřesení se před ním rozestoupila zem.
+  V trhlině našel dutého bronzového koně a v něm mrtvého, většího než člověk, se zlatým prstenem na ruce. Prsten si vzal.
+
+
+  Brzy zjistil, co prsten umí: když otočil kámen do dlaně, přestal být vidět. Dostal se s ním ke králi,
+  svedl královnu, s její pomocí krále zabil a vládl sám. Tomu prstenu se říká Gýgův.
+otazka: Máš ten prsten na týden. Co uděláš?
+moznosti:
+  - { id: nepouziju, text: Nepoužiju ho. }
+  - { id: neublizim, text: "Použiju ho, ale nikomu neublížím." }
+  - { id: jak-se-hodi, text: "Použiju ho, jak se mi to hodí." }
+podminky:
+  - id: nikdo
+    prepinac: Nikdo se to nikdy nedozví
+    zmena: >-
+      Teď si představ, že je to jisté: nezůstane žádná stopa a nikdo se nikdy nedozví, co jsi s prstenem dělal.
+      Ani náhodou.
+    posun: >-
+      Rozhodl ses jinak, když zmizela i poslední možnost, že se na to přijde.
+      Na tom, kdo se co dozví, tedy tvé rozhodnutí stálo.
+      A co kdyby takový prsten měli všichni? Podle názoru, který Glaukón předvádí, si lidé dali zákony právě proto:
+      každý se bojí, co by mu provedli ti druzí.
+    stejne: >-
+      Na tom, jestli se to někdo dozví, tvé rozhodnutí nestojí. Na čem tedy stojí?
+      A co kdyby takový prsten měli všichni? Podle názoru, který Glaukón předvádí, si lidé dali zákony právě proto:
+      každý se bojí, co by mu provedli ti druzí.
+  - id: blizci
+    prepinac: Dozvědí se to jen tví nejbližší
+    zmena: >-
+      Teď si představ, že trest ti nehrozí žádný. Co jsi s prstenem dělal, se ale dozvědí lidé, kterým na tobě záleží.
+      Nikdo jiný.
+    posun: >-
+      Trest se nezměnil. Změnilo se jen to, kdo o tom ví.
+      O co ti tedy šlo: o to, co ti hrozí, nebo o to, kým jsi před lidmi, které máš rád?
+    stejne: >-
+      Jednáš stejně, i když to budou vědět tví nejbližší.
+      Mohl bys jim o tom týdnu všechno vyprávět? A je to dobrá zkouška, nebo jen jiný druh strachu?
+  - id: jen-ty
+    prepinac: Budeš to vědět jen ty. Navždy.
+    zmena: >-
+      Teď si představ, že to nebude vědět nikdo. Jen ty na ten týden nikdy nezapomeneš:
+      co jsi s prstenem udělal, si poneseš celý život.
+    posun: >-
+      Rozhodl ses jinak, když jediným svědkem zůstal ty sám.
+      Tady začíná Platónova odpověď: nejde o to, kdo se dívá, ale o to, co tvůj čin udělá s tebou.
+      Dá se něco udělat tajně i před sebou?
+    stejne: >-
+      Jednáš stejně, i když jediným svědkem zůstaneš ty sám.
+      Platón by se zeptal, co ten týden udělá s tebou: kdo v tobě potom bude rozhodovat.
+      Je to pro tebe důvod, nebo jen hezká věta?
+coUdelal:
+  osoba: platon
+  nadpis: Co by na to řekli
+  text: >-
+    Názor, který Glaukón předvádí a kterému sám nevěří, zní: s takovým prstenem by spravedlivý i nespravedlivý dělali totéž.
+    Kdo by mohl beztrestně brát a nevzal by, toho by lidé měli za hlupáka.
+    Nahlas by ho ale chválili, ze strachu, aby se křivda nestala jim.
+
+
+    Platón odpovídá celou Ústavou. Kdo v sobě nechá vládnout žádostivost, rozvrátí si duši, i když ho nikdo nevidí.
+    Na konci nechává Sókrata říct, že spravedlivě má člověk jednat, ať má Gýgův prsten, nebo ne.
+zdroje: [platon-ustava-perseus]

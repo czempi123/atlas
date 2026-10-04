@@ -1,0 +1,43 @@
+# Volba s důvodem (s „Co udělal“) · portrét Platóna, kapitola 05 „Třikrát do Syrákús“.
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Nejsilnější příběhy 2 a Tvrzení: Platón 10–15.
+# Druhá cesta a to, že ho k ní přemluvil Dión, je doložený fakt (Nails, IEP). Čím ho Dión přemlouval, stojí v Sedmém listu
+# (327c–328b): text před blokem to říká s větou o dopise, scéna proto jen „prý“. Proč jel, říká až citát za blokem.
+# Možnosti a zpětné vazby jsou autorské.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: >-
+  Jsi na Platónově místě. V Athénách máš školu a žáky. Dión tě zve podruhé do Syrákús:
+  nový vládce je prý mladý a o filozofii stojí.
+otazka: Pojedeš?
+moznosti:
+  - text: Pojedu. Taková příležitost se nemusí opakovat.
+    tah: jet
+    jeho: true
+    zpetna: >-
+      Bereš vážně, co učíš: když má filozofie obci pomoct, musí se někdo k vládci vydat.
+      Jedeš ale ke dvoru, kde o všem rozhoduje jeden člověk.
+      Co uděláš, když si to rozmyslí?
+  - text: Nepojedu. Kdo má všechnu moc, učit se nenechá.
+    tah: nevěřit tyranovi
+    zpetna: >-
+      Držíš se toho, co o moci víš: kdo nemusí poslouchat nikoho, málokdy poslouchá učitele.
+      Ušetříš si cestu i nebezpečí.
+      Co ale odpovíš tomu, kdo se zeptá, k čemu je filozofie, která nevychází ze školy?
+  - text: Nepojedu, ale pozvu ho do Akademie. Ať se přijde učit on.
+    tah: pozvat ho k sobě
+    zpetna: >-
+      Obracíš směr: kdo se chce učit, ať přijde za učitelem. Poznáš na tom, jak vážně to myslí.
+      Vládce ale od své vlády těžko odjede.
+      Je tvoje podmínka zkouška, nebo jen zdvořilé ne?
+  - text: Pojedu, až něco změní. Nejdřív činy, potom já.
+    tah: chtít nejdřív důkaz
+    zpetna: >-
+      Chceš vidět čin dřív, než vsadíš vlastní kůži, a to je opatrné.
+      Podle čeho má ale mladý vládce poznat, co změnit, když u něj nikdo není?
+      Kdo má udělat první krok: učitel, nebo žák?
+coUdelal:
+  osoba: platon
+  stejne: Rozhodl se stejně jako ty. Nasedl na loď a jel do Syrákús podruhé.
+  jinak: Rozhodl se jinak. Nasedl na loď a jel do Syrákús podruhé.
+zdroje: [platon-sedmy-list, nails-plato, iep-plato]

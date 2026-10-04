@@ -1,0 +1,38 @@
+# Volba s důvodem (tah, bez „Co udělal“) · portrét Platóna, kapitola 01 „Příbuzní u moci“.
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Nejsilnější příběhy 8 a Tvrzení: Platón 3–5.
+# Válka, vláda Třiceti a příbuzní mezi nimi jsou doložený fakt (Nails, IEP). Že ho zvali mezi sebe a co ho odradilo,
+# stojí jen v Sedmém listu (324b–325a): proto blok nemá oddíl „Co udělal“ a text za ním to říká s větou o dopise.
+# Možnosti a zpětné vazby jsou autorské.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: >-
+  Představ si, že jsi na Platónově místě. Válka je prohraná a ve městě vládnou noví lidé.
+  Jsou mezi nimi tvoji příbuzní a zvou tě mezi sebe. Jak budou vládnout, zatím nevíš.
+otazka: Co uděláš?
+moznosti:
+  - text: Přidám se. Zevnitř změním víc než zvenku.
+    tah: jít dovnitř
+    zpetna: >-
+      Kdo sedí u stolu, může brzdit a navrhovat. Zvenku se dá jen přihlížet.
+      Pod vším, co ta vláda udělá, ale bude i tvoje jméno.
+      Podle čeho poznáš chvíli, kdy je čas odejít?
+  - text: Přidám se. Rodina je rodina.
+    tah: stát při rodině
+    zpetna: >-
+      Věrnosti blízkým rozumí každý a málokdo ji umí odmítnout.
+      Vláda ale rozhoduje o lidech, které neznáš a kteří tvoji příbuzní nejsou.
+      Komu jsi zavázán víc, když se ty dvě věrnosti rozejdou?
+  - text: Počkám a budu se dívat, jak si povedou.
+    tah: počkat
+    zpetna: >-
+      Nezavážeš se dřív, než víš k čemu, a soudíš podle činů, ne podle slibů.
+      I čekání ale něco stojí: mezitím se rozhoduje bez tebe.
+      Co bys musel vidět, aby ses přidal? A co, abys řekl ne?
+  - text: Odmítnu. S vládou, která se moci chopila sama, nechci nic mít.
+    tah: odmítnout
+    zpetna: >-
+      Soudíš vládu podle toho, jak se k moci dostala, a nečekáš, co udělá. Ruce ti zůstanou čisté.
+      Místo, které jsi nevzal, ale obsadí někdo jiný.
+      Stačí u toho nebýt, nebo je třeba se i postavit proti?
+zdroje: [platon-sedmy-list, nails-plato, iep-plato]
