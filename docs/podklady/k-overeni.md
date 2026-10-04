@@ -345,3 +345,14 @@ Autorské, bez historického nároku: možnosti a zpětné vazby obou Voleb, mod
 Vědomě vynecháno z toho, co podklady nabízejí: úsečka, Homér a „nádeničit u chudého“, soud a „stíny spravedlnosti“ (517c–e), dlouhý vchod jeskyně otevřený ke světlu, čísla studie (53,7 a 36,2 %, méně hrubého jazyka, podíl zpráv), výhrada k sesterské studii, Bailův pokus, záložní „Představ si…“ s vyměněnými videi, lékař a „hodně lži a klamu“ (459c–d), kovy železo a bronz u jednotlivých vrstev do podrobností, měsíční duha a duha od vesel jen jednou větou, Hérakleitos a Kratylos, že Platón Démokrita nejmenuje, Démokritův zlomek B125, Isokratés. Citát `metafyzika-1086b` zůstal jen jako obsah Aristotelova třetího argumentu.
 
 Autorské, bez historického nároku: koše a karty Roztřiď a jejich zpětné vazby, možnosti a zpětné vazby čtyř Voleb, modelové odpovědi a sebekontrola u čtverce, hodina geometrie, případ „U šaten“ a věty po odpovědích, úvod stránky otázky 6 (duha) a odpovědi čtyř hlasů na něj, popisy pohledů a stupňů obou kreseb jeskyně. Platónova odpověď Aristotelovi ve Sporu je domyšlená a podaná jako výklad („by mohl“).
+
+## Revize celku 4 (P10)
+
+4. 10. 2026. Záznam revize je v `docs/revize/celek-4-2026-10-04.md`. Při revizi vyšly dvě věci, které podklady nemají, a jedna, která už čeká.
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Platón cituje Hérakleita | Doba a lidé vede Hérakleita pod „Koho četl“ s popiskem „znal ho z textů“. Podklady mají jen Aristotelovo svědectví, že Platón jeho učení poznal od Kratyla. V dialogu Kratylos (402a) má Sókratés Hérakleita citovat (všechno plyne, do téže řeky nevstoupíš dvakrát); znám to z literatury, text jsem neotevřel. | Ověřit Kratylos 402a skillem `atlas-overeni`. Potvrdí-li se, je popisek přesný a poznámka u vztahu může říct, že ho Platón sám cituje. |
+| Aristotelés: zkušenost z mnoha nemocných | Ve Sporu kroku 5 Platón (domyšleně) namítá, že lékař musí vědět, co je zdraví, a z jednoho pacienta to nevyčte. Aristotelova nejlepší odpověď by byla Metafyzika I, 1 (kolem 981a): umění roste ze zkušenosti s mnoha jednotlivými případy a lékař neléčí „člověka“, ale Kalliu nebo Sókrata. Znám to z literatury, v podkladech to není. | Ověřit Metafyzika I, 1, 981a. Pak může třetí Aristotelův argument odpovědět Platónovi přímo; do té doby platí znění z nálezu 7. |
+| Nákres ke čtverci | Viz Portrét Platóna (P7), řádek o Menónu 84d–85b. Revize doporučuje kresbu s pohybem pod blokem Odkryj. | Ověřit postup kreslení před stavbou kresby. |
+
