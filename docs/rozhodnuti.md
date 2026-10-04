@@ -17,6 +17,7 @@ Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jso
 | Kresba šatů stojí pod blokem, ne nad ním. Blok k ní vede vlastním Kam dál, další krok nabízí lišta. Text pod blokem neříká, jaké šaty opravdu jsou | Nad blokem by vyzradila podmínku „Vědci vysvětlí, proč to vidíme jinak“ dřív, než student odpoví. Kdo vidí správně, nechává krok podmínkám v bloku |
 | Kresba šatů má vlastní barvy mimo tokeny a nemá tlačítko pohybu (`maPohyb={false}`) | Je o barvě, tři tóny období na ni nestačí; nic v ní neběží samo |
 | Text pod kresbou šatů neříká, co student vidí, ale co na fotce vidí ten, kdo dané světlo čeká | Podklad má výklad autorů studie o fotce. Jak silně zapůsobí naše kresba, ověřené není |
+| Kresba šatů je místnost s postavou a věcmi známé barvy (bílý okraj obrazu, zlatý rám, modrá váza, černá kočka), ne šaty na ramínku před barevnou stěnou. Obě světla jsou dopočítaná tak, aby se šaty na krajích posuvníku s těmi věcmi shodly | Autor k první verzi: „ve skutečnosti nevypadají jinak v obou tónech“. Barevné okolí samo dojem nevyvolá; světlo se odhaduje podle věcí, jejichž barvu člověk zná |
 | Otevřené body z P8 zůstávají, jak jsou: čtyři koše v kroku 2, rytina bez výřezu, karta „Jak vypadá válka“, „boj obrů“ v úvodu otázky 6 a Volba v kroku 7 | Autor: „Jinak můžeš nechat tam kde se ptáš.“ |
 
 ## 4. 10. 2026: Cesta 3, stránka otázky 6 a kresba jeskyně (P8)

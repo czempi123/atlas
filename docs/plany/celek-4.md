@@ -99,7 +99,7 @@ Velké myšlenky: „Učit se znamená rozpomínat se“ (Poznání) a „Sprave
 
 ## Po P8 (4. 10. 2026)
 
-Cesta 3 je v `src/content/cesty/je-to-co-vidim-cela-skutecnost.mdx` a ve složce kroků, bloky v `src/content/bloky/cesta3-*.yaml`, stránka otázky 6 v `src/content/otazky/co-je-skutecne.mdx`. Cesta má osm kroků a asi 1 150 slov mimo bloky; na telefonu měří kroky po odkrytí 2 100 až 4 200 px. `npm test` prošel celý (402 testů dat, 282 v prohlížeči). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/P8-cesta3/`.
+Cesta 3 je v `src/content/cesty/je-to-co-vidim-cela-skutecnost.mdx` a ve složce kroků, bloky v `src/content/bloky/cesta3-*.yaml`, stránka otázky 6 v `src/content/otazky/co-je-skutecne.mdx`. Cesta má osm kroků a asi 1 150 slov mimo bloky; na telefonu měří kroky po odkrytí 2 100 až 4 200 px. `npm test` prošel celý (404 testů dat, 282 v prohlížeči). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/P8-cesta3/`.
 
 Osnova se předem neschvalovala. Zásadní volby jsou v `docs/rozhodnuti.md` (Cesta 3, stránka otázky 6 a kresba jeskyně, P8), otevřené body v `docs/podklady/k-overeni.md` (Cesta 3 a stránka otázky 6, P8).
 
@@ -127,7 +127,7 @@ Případ pro Návrat: `cesta3-navrat` „U šaten“ (kamarád u cizí bundy; vi
 - **Krok 3 má kresbu `<JeskyneVen />`** za odstavcem o zvykání očí. Pohled „Cesta ven“ je řez jeskyní, ve kterém dvojice stoupá strmou chodbou. V pohledu „Venku“ student posuvníkem prochází šest stupňů v pořadí pramene (záře, stíny, odrazy ve vodě, věci samé, noční nebe, slunce).
 - **Skilly.** Kopie ve `skills/` říkají, kdy po kresbě sáhnout (`atlas-cesta`, `atlas-osobnost`), jak ji postavit (`atlas-komponenta`) a co u ní číst při revizi (`atlas-revize`). `atlas-cesta` navíc nese dvě poučení z P8: koše odpovídají na otázku stejným tvarem a krok se dvěma bloky dává prvnímu bloku vlastní Kam dál. V účtu jsou tři skilly navržené k uložení; `atlas-revize` je zatím jen v repozitáři.
 - **Otevřené body z prvního průchodu zůstávají, jak jsou** (autor: „můžeš nechat tam kde se ptáš“): čtyři koše v kroku 2, rytina bez výřezu, karta „Jak vypadá válka“, „boj obrů“ v úvodu otázky 6 a Volba v kroku 7.
-- **Šaty v cestě 1** (třetí průchod, 4. 10. 2026; autor: „Myslím, že ty šaty bychom mohli použít“). Krok 6 cesty 1 má pod blokem Změň jednu věc text „Proč je každý vidí jinak“ a kresbu `<Saty />`: šaty mají pořád stejné dvě barvy, posuvník mění jen světlo okolí (chladné denní, šedé, teplé umělé). Blok k ní vede vlastním Kam dál, další krok nabízí lišta. Popis je v `docs/design.md` › Komponenty › Kresba s pohybem.
+- **Šaty v cestě 1** (třetí průchod, 4. 10. 2026; autor: „Myslím, že ty šaty bychom mohli použít“). Krok 6 cesty 1 má pod blokem Změň jednu věc text „Proč je každý vidí jinak“ a kresbu `<Saty />`: šaty mají pořád stejné dvě barvy, posuvník mění světlo v místnosti (chladné denní, bílé, teplé umělé). První verze (šaty na ramínku před barevnou stěnou) podle autora v obou tónech nevypadala jinak. Druhá proto stojí na věcech známé barvy: v chladném světle se šaty shodují s bílým okrajem obrazu a zlatým rámem, v teplém s modrou vázou a černou kočkou. Blok k ní vede vlastním Kam dál, další krok nabízí lišta. Popis je v `docs/design.md` › Komponenty › Kresba s pohybem.
 
 **Stránka otázky 6:** úvod duha, za ní „boj obrů“ (`sofistes-246a`, mluví host z Eleje), hlasy Parmenidés (`parmenides-b8`), Démokritos (`dl-ix-72-demokritos`), Platón (`timaios-51d`, mluví Tímaios; bez jeskyně) a Aristotelés (`meteorologika-iii-4`; Kategorie 5 a Metafyzika I, 1 v myšlence bez citátu). Karta cesty 3 se ukazuje sama.
 
@@ -141,7 +141,7 @@ Případ pro Návrat: `cesta3-navrat` „U šaten“ (kamarád u cizí bundy; vi
 
 - **Skilly v účtu.** Řádek o kresbě s pohybem v `atlas-revize` má jen kopie v repozitáři. `atlas-komponenta` a `atlas-cesta` zatím neznají kresbu šatů (vlastní barvy jako výjimka, `maPohyb`, třída `k-posuvnik`, kresba pod blokem). Doplnit po revizi spolu s poučením.
 - **Kresby v dílně bloků.** `/dilna/bloky/` kresby neukazuje; vidět jsou jen v cestě 3.
-- **Kresba šatů.** Jak silně zapůsobí, ověřené není: barvy jsou odhad podle popisu, ne měření fotky. Revize ji má vyzkoušet. Další kresba se nabízí u čtverce v Platónově portrétu (nákres zbývá z P7).
+- **Kresba šatů.** Druhá verze (místnost s věcmi známé barvy) čeká na autorovo oko; se studenty ověřená není. Revize ji má vyzkoušet na telefonu i notebooku. Další kresba se nabízí u čtverce v Platónově portrétu (nákres zbývá z P7).
 - Z P7 zůstává: popisek „znal ho z textů“ u Hérakleita, nákres ke čtverci v portrétu, délka portrétu, údaj pod citátem ze Sedmého listu.
 
 **Další krok:** revize celku (P10) skillem `atlas-revize`; zadání je níž.
