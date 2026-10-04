@@ -9,12 +9,15 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Co s příběhem děláme my, nepřipisuj filozofovi. Spojovací věta netvrdí spor ani otázku, které nebyly.
 - Co stojí jen na jednom sporném prameni, říká text s větou o prameni; blok k tomu nemá oddíl Co udělal.
 - Shrnutí studie drží i to, co měli účastníci dělat a co vědci změnili. Výhrady patří do zpětné vazby; pokus „zkoušel“, ne „ukázal“.
+- Výsledek pokusu se dvěma skupinami je rozdíl proti srovnávací skupině, ne „než dřív“. Ověř ve studii, s čím se srovnává, i když podklady nabízejí hotovou větu.
 - Jménem nazvi jen toho, kdo nese příběh nebo myšlenku.
 
 ## Bloky
 
 - Blok stojí před tím, co filozof udělal. Srovnání v Odkryj pointu neprozradí a text za blokem drží souvislost i bez odkrytí.
 - Spor: obě strany odpoví na nejsilnější námitku druhé, postoj není krajnější než citát strany a scéna neohlašuje vítěze. Na telefonu čte student jednu stranu celou před druhou: první strana proto neodpovídá na něco, co ještě nezaznělo (námitku řekne scéna nebo začátek argumentu).
+- Krok se dvěma bloky: první blok dostane vlastní Kam dál na kotvu pod sebou (`dal={{ href: '#…', text: '…' }}`). Jinak nabídne další krok a student přeskočí text mezi bloky.
+- Koše v Roztřiď odpovídají na otázku bloku stejným tvarem („Ze zkušenosti · Od lidí · Z obrazovky“) a každá karta má koš, kam se dá poctivě dát.
 - Změň jednu věc: možnosti dávají smysl v každé podmínce a zpětná vazba neusuzuje z možnosti, kterou student nezvolil. Nadpis „Co udělal…“ nestojí nad domněnkou; tam patří „Co by na to řekli“.
 - Zpětná vazba vidí, co student zvolil nebo kam kartu dal, vysvětluje důvod a ptá se dál. Žádná možnost nedostane pokárání.
 
@@ -42,4 +45,5 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 
 - Po přidání stránky, bloku nebo změně dat restartuj běžící `npm run dev`. Starý náhled ukáže stránku bez obsahu a odkazy na kotvy nikam nevedou.
 - Playwright před každým během maže `test-results/`. Pracovní skripty patří do `scripts/`, snímky pro autora do `Claude outputs/`.
+- Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst.
 - Chromium nevyfotí najednou stránku vyšší než asi 16 000 px; dlouhé stránky foť po částech (`scripts/snimky-listy.mjs`).

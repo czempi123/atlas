@@ -322,3 +322,24 @@ Autorské, bez historického nároku: karty a koše Roztřiď „Odkud to vím?�
 Vědomě vynecháno z toho, co podklady nabízejí: zápasník, vyprávění, že Faidóna doposlouchal jen Aristotelés, koberce a olivy (další střety s Diogenem), strážci bez majetku a rodiny, jméno „třetí člověk“, pes, kterého pastýř odvolá, válečná loď a žoldnéři při třetí cestě (podrobnosti ze Sedmého listu), setkání s Diónem v Olympii, Glaukónovo vyostření pokusu a tyranova slova o spravedlivém a otroctví. Ostrov Aigína není jmenován.
 
 Autorské, bez historického nároku: možnosti a zpětné vazby obou Voleb, modelové odpovědi a sebekontrola u čtverce, zpětné vazby podmínek prstenu, otázky v kurzívě, stoly ve třídě, telefon ve tři ráno, protipříklad s podvodníkem a výzva Kdo dnes rozhodl?
+
+## Cesta 3 a stránka otázky 6 (P8)
+
+4. 10. 2026. Cesta je v `src/content/cesty/je-to-co-vidim-cela-skutecnost*`, bloky v `src/content/bloky/cesta3-*.yaml`, stránka otázky v `src/content/otazky/co-je-skutecne.mdx`. Všechno, co v nich stojí, je v podkladovém listu celku 4 nebo v datech; tady je, co při psaní zůstalo otevřené.
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| ~~Reakce na známé příspěvky~~ | **Vyřízeno 4. 10. 2026.** Podklady měly „klikali o to víc“ a „častěji než dřív“. Článek říká rozdíl proti srovnávací skupině („their rate of engagement was higher than in the control group“), ověřeno v textu. | Cesta píše „častěji než lidé, kterým vědci nic neubrali“; podkladový list je upřesněn. |
+| „Jejich názory se nezměnily“ | Doporučená formulace z podkladů; studie říká „žádný měřitelný účinek“ proti srovnávací skupině. Druhá věta kroku to říká přesně. | Při revizi posoudit, jestli první věta nezní silněji než pramen. |
+| „O sociálních sítích se říká, že nás zavírají do bublin“ | Obecná věta o tom, co se říká; pramen nemá a nepotřebuje, ale je to „mlhavá odvolávka“. | Při revizi posoudit; šla by nahradit otázkou („Znáš slovo bublina?“). |
+| Hodina geometrie a úhlopříčky | Autorský příklad („Představ si…“). Sókratés v 510d–e mluví o čtverci samém a úhlopříčce samé, žádnou větu o nich neuvádí. | Nic; že jsou úhlopříčky čtverce stejně dlouhé, je školní matematika. |
+| „Říká se tomu ušlechtilá lež“ | Ustálené označení pro místo 414b–c; v podkladech je jen jako nadpis řádku. | Při revizi potvrdit. |
+| „Jak by třídili vězni“ | Srovnání v Roztřiď říká, že by vězni nejspíš dali všechno do prvního koše. Je to výklad obrazu („nejspíš“), ne citát. | Nic. |
+| Démokritos: „Kapky tam jsou“ | Podle Diogena Laertia IX, 44 se všechno kromě atomů a prázdna „jen má za jsoucí“, tedy i kapky. Odpověď proto dodává „doopravdy jsou to částice a prázdno“. | Ověřit při profilu Démokrita. |
+| Parmenidés: „a déšť před ní taky ne“ | Dovozeno z B8 (co vzniká a zaniká, je jen jméno). SEP uvádí i čtení, podle nichž Parmenidés svět změny nepopírá. | Hlas je podán v nejsilnější verzi; učiteli poznámka o druhém čtení. |
+| Kresba jeskyně | Věci v průvodu (džbán, soška, kůň, kladivo, pták) jsou naše volba; pramen má „nářadí a sochy lidí a zvířat“. Že je oheň „na vyvýšeném místě“, odpovídá 514b („nahoře daleko za nimi“). Vězni v pohledu z boku jsou dva, v pohledu vězňů tři: kresba počet neříká. | Nic. Ozvěna je v popisu jen „kdyby“ (515b), i když ji kresba ukazuje obloučky. |
+| Rytina: „Na rytině stojíš mezi těmi, kdo vidí“ | Pozorování o kompozici listu (skupina učenců ve světle v popředí), ne tvrzení o Platónovi. | Nic. |
+
+Vědomě vynecháno z toho, co podklady nabízejí: úsečka, Homér a „nádeničit u chudého“, soud a „stíny spravedlnosti“ (517c–e), dlouhý vchod jeskyně otevřený ke světlu, čísla studie (53,7 a 36,2 %, méně hrubého jazyka, podíl zpráv), výhrada k sesterské studii, Bailův pokus, záložní „Představ si…“ s vyměněnými videi, lékař a „hodně lži a klamu“ (459c–d), kovy železo a bronz u jednotlivých vrstev do podrobností, měsíční duha a duha od vesel jen jednou větou, Hérakleitos a Kratylos, že Platón Démokrita nejmenuje, Démokritův zlomek B125, Isokratés. Citát `metafyzika-1086b` zůstal jen jako obsah Aristotelova třetího argumentu.
+
+Autorské, bez historického nároku: koše a karty Roztřiď a jejich zpětné vazby, možnosti a zpětné vazby čtyř Voleb, modelové odpovědi a sebekontrola u čtverce, hodina geometrie, případ „U šaten“ a věty po odpovědích, úvod stránky otázky 6 (duha) a odpovědi čtyř hlasů na něj, popisy obou pohledů kresby jeskyně. Platónova odpověď Aristotelovi ve Sporu je domyšlená a podaná jako výklad („by mohl“).

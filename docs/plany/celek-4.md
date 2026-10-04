@@ -6,11 +6,11 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 | --- | --- | --- |
 | P6 | Podklady | hotovo 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`); autor 4. 10. 2026 rozhodl otevřené otázky, obrázky jsou stažené |
 | P7 | Portrét Platóna | hotovo 4. 10. 2026 (`src/content/osobnosti/platon.mdx`); stav v oddílu Po P7. Autor zadal přípravu P8; výhrady k portrétu řekne průběžně nebo při revizi |
-| P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | **další krok**; zadání v oddílu P8 na konci |
-| P10 | Revize celku | po P8 |
+| P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | hotovo 4. 10. 2026; stav v oddílu Po P8. Po připomínkách autora z téhož dne: nové názvy košů v kroku 2 a kresba jeskyně s pohybem v kroku 1 |
+| P10 | Revize celku | **další krok** (skill `atlas-revize`) |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
+Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7, P8) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
 
 **Souběh s větví `rozhrani-v2`.** Autor chce úpravy rozhraní (`docs/plany/rozhrani-v2.md`) projít zvlášť. Podklady (P6) se rozhraní netýkají a mohou běžet souběžně. Před P7 se do `celek-4` sloučí hlavní větev, pokud v ní `rozhrani-v2` už bude: nový portrét a cesta mají vzniknout na novém obsahu profilu a novém závěru cest, ne na starém.
 
@@ -97,53 +97,46 @@ Velké myšlenky: „Učit se znamená rozpomínat se“ (Poznání) a „Sprave
 
 **Skilly v účtu:** `atlas-osobnost` a `atlas-cesta` jsou 4. 10. 2026 přepsané podle kopií v `skills/` a navržené k uložení do účtu Claude: krok 3 už neříká „ukaž osnovu autorovi a počkej“, `atlas-cesta` navíc čte `docs/pouceni.md` místo záznamů revizí. Dokud autor návrh neuloží, platí pravidlo v `CLAUDE.md`.
 
-## P8: Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6
+## Po P8 (4. 10. 2026)
 
-V Coworku v novém chatu projektu, se zapnutým Desktop Commanderem. Opus 5.5 · high. Zadání počítá s úsporným čtením (`CLAUDE.md` › Co číst a jak šetřit) a s tím, že se osnova předem neschvaluje.
+Cesta 3 je v `src/content/cesty/je-to-co-vidim-cela-skutecnost.mdx` a ve složce kroků, bloky v `src/content/bloky/cesta3-*.yaml`, stránka otázky 6 v `src/content/otazky/co-je-skutecne.mdx`. Cesta má osm kroků a asi 1 150 slov mimo bloky; na telefonu měří kroky po odkrytí 2 100 až 4 200 px. `npm test` prošel celý (392 testů dat, 272 v prohlížeči). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/P8-cesta3/`.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-4; podklady, oba obrázky a portrét Platóna jsou v ní hotové.
+Osnova se předem neschvalovala. Zásadní volby jsou v `docs/rozhodnuti.md` (Cesta 3, stránka otázky 6 a kresba jeskyně, P8), otevřené body v `docs/podklady/k-overeni.md` (Cesta 3 a stránka otázky 6, P8).
 
-Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md, docs/pouceni.md;
-- v docs/plany/celek-4.md oddíly „Co si celek nese z celků 1 až 3“ a „Po P7“;
-- z docs/podklady/celek-4-co-je-skutecne.md jen: Čeho se drží celý celek; Jak převádím klíčová slova; Slunce, úsečka a jeskyně; tabulku „Jak o tom psát v atlasu“ v oddílu Kde končí Sókratés a začíná Platón; v Citlivých místech Ústavy řádky Ušlechtilá lež a Filozofové mají vládnout; celý oddíl Tvrzení: cesta 3 (jeskyně podle pramene, Roztřiď, Podle čeho bys poznal, Spor Platón × Aristotelés, pokus na Facebooku, Kdo dá za pravdu studentovi, Návrat a vlastní pravidlo); oddíl Velká otázka 6 (kdo se s kým přel, duha, hlasy, čím se liší); Citáty (sloupce Mluví a Kde použít); u Obrázků rytinu jeskyně; Rozpory a rozhodnutí. Platónův život, Sedmý list, Gygův prsten a přesun Sporu s Diogenem nečti;
-- z docs/podklady/k-overeni.md oddíly Celek 4 a Portrét Platóna; z docs/rozhodnuti.md záznamy celku 4;
-- v docs/architektura.md řádek cesty 3 a velké otázky 6; v docs/design.md oddíly Cesta a Velká otázka a z Bloků jen bloky, které použiješ (Příběh, Roztřiď, Volba, Odkryj, Spor, Závěr cesty, Návrat);
-- jako vzor cestu 5: přehled src/content/cesty/co-mam-ve-svych-rukou.mdx, její kroky 1, 2, 5 a 8 a bloky cesta5-*.yaml (i případ pro Návrat); a stránku otázky 4 src/content/otazky/jsem-svobodny.mdx;
-- z portrétu src/content/osobnosti/platon.mdx kapitolu 03 a konec kapitoly 05.
-Postupuj podle skillu atlas-cesta.
+| Krok | Čím začíná | Blok | Citáty |
+| --- | --- | --- | --- |
+| 1 Jeskyně | Platón nechává Sókrata vyprávět obraz; scéna končí „Podobní nám“ | Příběh s rytinou `jeskyne-saenredam`; uvnitř kresba `<Jeskyne />` (dva pohledy, pohyb stínů) | `ustava-515a` |
+| 2 Odkud to vím? | stíny vyrobených věcí | Roztřiď `cesta3-odkud-to-vim` (začátek cesty) | `ustava-515c` |
+| 3 Ven | někdo ho rozváže a vleče; venku nejdřív zase stíny; pocty vězňů | Volba `cesta3-kdo-byl-venku` (bez Co udělal) | `ustava-518a` |
+| 4 Čtverec sám | výklad obrazu, slunce jednou větou, karta dvakrát dvě | Odkryj `cesta3-ctverec-sam` | `ustava-510d` (ve srovnání) |
+| 5 Učitel a žák | ideje; Aristotelés v Akademii | Spor `cesta3-aristoteles-spor` | `metafyzika-991a`, `etika-1097a` |
+| 6 Vyměnit stíny | věta o vzdělání; bubliny; pokus na Facebooku 2020 | Volba `cesta3-pokus-odhad` → text „Co vyšlo“ → Volba `cesta3-pokus-cteni` | `ustava-518c` |
+| 7 Zpátky dolů | návrat, smích vězňů, povinnost, ušlechtilá lež | Volba `cesta3-kdo-rozhoduje` | `ustava-517a`, `ustava-517b` |
+| 8 Tvoje pravidlo | co tvrdil Platón; spojenec nesouhlasícího je Aristotelés; odkaz na otázku 6 | Závěr cesty `cesta3-moje-pravidlo` | – |
 
-Udělej:
+Případ pro Návrat: `cesta3-navrat` „U šaten“ (kamarád u cizí bundy; viděl jsem to sám a nikdo jiný). Z citátů celku zůstal nepoužitý jen `metafyzika-1086b`; jeho obsah nese třetí Aristotelův argument ve Sporu.
 
-1. Cestu 3 „Je to, co vidím, celá skutečnost?“ (období 1, velká otázka 6, filozof Platón, ve Sporu Aristotelés; do 20 minut, 7 až 8 kroků). Průchod podle podkladů:
-- jeskyně jako Příběh s rytinou jeskyne-saenredam: pouta od dětství, oheň a zídka, nosiči, stíny, ozvěna; scéna končí větou „Podobní nám“ (ustava-515a). Popisek říká, že je to představa z roku 1604, a přidá jedno pozorování: na rytině stojíš mezi těmi, kdo vidí, v Platónově textu sedíš mezi vězni;
-- vlastní pokus Roztřiď „Odkud to vím?“ (koše Viděl jsem sám · Vím od někoho, komu věřím · Znám jen z obrazovky; karty z podkladů). Koš „z obrazovky“ není koš lží; karta „dvakrát dvě jsou čtyři“ nepatří nikam a vrátí se u čtverce;
-- osvobození, bolest očí a výstup podle pramene (někdo ho rozváže a vleče; venku jsou nejdřív zase stíny) s Volbou „Někdo ti řekne: já venku byl. Podle čeho poznáš, jestli má pravdu?“;
-- co je venku: čtverec sám (Odkryj; ustava-510d). Slunce jednou větou, úsečka vůbec;
-- Spor Platón × Aristotelés podle podkladů: rámec bez setkání tváří v tvář a bez ohlášeného vítěze, každá strana s odpovědí na nejsilnější námitku druhé;
-- nový případ: pokus na Facebooku z roku 2020. Nejdřív Volba „Co se podle tebe stalo s jejich názory?“, pak výsledek; drž, co vědci změnili (třetinu, na tři měsíce), výhrady až ve zpětné vazbě; druhá otázka „Mluví ten pokus pro jeskyni, nebo proti ní?“;
-- návrat: proč se v Ústavě vracejí (musí), co by vězni udělali (ustava-517a, „kdyby mohli“), ušlechtilá lež jednou a otázka, kdo má o skutečnosti rozhodovat;
-- vlastní pravidlo (Závěr cesty): dá slovo i tomu, kdo s Platónem nesouhlasí (jeho spojenec je Aristotelés), a pošle na velkou otázku 6.
-Citáty rozmísti podle sloupce Kde použít. K cestě patří pole zacatek v přehledu (Roztřiď) a případ pro Návrat (cesta3-navrat.yaml): autorské „Představ si…“ jiného druhu než Facebook a než duha.
+**Připomínky autora 4. 10. 2026 (po prvním průchodu) a co se změnilo:**
 
-2. Stránku velké otázky 6 „Co je skutečné?“ (src/content/otazky/co-je-skutecne je zatím jen řádek v přehledu; doplň ji podle vzoru otázky 4): úvodní případ duha a čtyři hlasy podle podkladů: Parmenidés (parmenides-b8), Démokritos (dl-ix-72-demokritos), Platón (timaios-51d; mluví Tímaios) a Aristotelés (meteorologika-iii-4; kategorie-2b a metafyzika-980a v myšlence). Odpověď hlasu má nejvýš dvě věty. Úvod smí otevřít „boj obrů“ (sofistes-246a; mluví host z Eleje).
+- **Koše v kroku 2.** Původní „Viděl jsem sám · Vím od někoho, komu věřím · Znám jen z obrazovky“ nebyly souměrné a „dvakrát dvě jsou čtyři“ se nedalo nikam dát. Teď jsou koše čtyři a všechny odpovídají na „Odkud to vím?“ stejným tvarem: **Ze zkušenosti · Od lidí · Z obrazovky · Z vlastní hlavy**. Do posledního patří dohad o spolužákovi i dvakrát dvě; zpětná vazba se ptá, čím se ty dvě karty liší. Krok 4 už neříká, že karta nikam nepatřila.
+- **Kresba jeskyně s pohybem** (`<Jeskyne />`, `src/components/ostrovy/Jeskyne.svelte`, logika `src/lib/jeskyne.ts`): první pokus o animaci jako formu. Stojí v kroku 1 uvnitř Příběhu, před větou „Podobní nám“. Popis je v `docs/design.md` › Komponenty.
 
-3. Propojení: do Kam dál Platónova portrétu cestu 3 a otázku 6 (položky nejvýš čtyři); u věty o jeskyni v kapitole 03 odkaz na cestu, nebo kartu cesty tam, kde na ni text navazuje; v přehledu otázek přepoj otázku 6 na vlastní stránku.
+**Stránka otázky 6:** úvod duha, za ní „boj obrů“ (`sofistes-246a`, mluví host z Eleje), hlasy Parmenidés (`parmenides-b8`), Démokritos (`dl-ix-72-demokritos`), Platón (`timaios-51d`, mluví Tímaios; bez jeskyně) a Aristotelés (`meteorologika-iii-4`; Kategorie 5 a Metafyzika I, 1 v myšlence bez citátu). Karta cesty 3 se ukazuje sama.
 
-Co se po portrétu nesmí opakovat:
-- Stůl a truhlář, stolovost, vlas, bláto a špína, den a plachta, chlapec se čtvercem, Leontios, Gýgův prsten, Syrákúsy a etika-1096a s větou o rčení jsou v portrétu. Cesta stojí na jeskyni, čtverci samém, Sporu s Aristotelem a pokusu z roku 2020.
-- „Aristotelés přišel do Akademie asi v sedmnácti a zůstal dvacet let“ a „to společné je ve věcech, ne vedle nich“ jsou v portrétu jednou; ve Sporu smějí zaznít ještě jednou. Spálené tragédie nepoužívej.
-- Tentýž citát a tentýž doložený detail nejvýš dvakrát v celku. Citáty z portrétu (seznam je v oddílu Po P7) v cestě ani na stránce otázky nepoužívej.
-- Jeskyně jako obraz stojí mimo cestu jen v atributu a jednou větou v portrétu; stránka otázky 6 ani Platónův hlas ji nepoužijí.
-- Aristotelés mluví na otázkách 1, 4 a 7 a ve Sporu cesty 5, Parmenidés na otázce 7: tady každý říká něco jiného a s jiným citátem. Každý ze čtyř hlasů se musí poznat (v podkladech tučně).
-- Úvodní případ otázky (duha) je jiného druhu než nový případ cesty (Facebook) a než případ pro Návrat.
+**Propojení:** Kam dál Platónova portrétu má čtyři položky (cesta 3, Sókratés, Marcus Aurelius, otázka 6; Diogenés vypadl, odkaz má v kapitole 03). Věta o jeskyni v kapitole 03 vede odkazem na cestu; karta cesty v portrétu není. Hlavička profilu, přehled otázek a Lidé ukazují vstupy samy z dat.
 
-Tón je největší riziko celku: jeskyně nesmí studentovi lichotit, že on vidí a ostatní spí. Student sedí mezi vězni („Podobní nám“). Vězni nejsou hloupí: udílejí si pocty za to, kdo stíny nejlíp předvídá. Kdo vyšel, je nejdřív oslepený a stínům věří víc než dřív. Vypravěč si není jistý („Bůh ví, jestli je to pravda“). Zpátky se nejde kázat, ale z povinnosti. Čeho se vyvarovat, vypisují podklady (hrdina, který se osvobodí sám; nosiči jako manipulátoři; Platón, který ví, jak to je). Cesta dá slovo i studentovi, podle kterého jsou stíny skutečné dost, a poslední krok mu řekne, že má spojence v Aristotelovi.
+**Co se v celku smí ještě jednou a co už ne** (pro revizi P10): „asi sedmnáctiletý Aristotelés a zůstal dvacet let“ je v portrétu a v kroku 5 (dvakrát, víc ne). „V nich, ne vedle nich“ je v portrétu a ve Sporu. Pocty vězňů, „oslepený a bezradný“ a „jen bůh ví“ jsou v cestě dvakrát (text a zpětná vazba, resp. zpětná vazba a citát). Rozdíl vědění a mínění („vědění se nedá vymluvit“) je ve Sporu a v Platónově hlasu otázky 6. „Tenhle člověk, tenhle kůň“ je ve Sporu a v Aristotelově hlasu.
 
-Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč skutečných osob jen jako citát ze zdroje.yaml. U dialogu vždy řekni, kdo mluví („Platón nechává Sókrata vyprávět…“; Tímaios; host z Eleje); nauku piš „podle Platóna“. Aristotelés nesmí znít, jako by znal dnešní fyziku: duha je „odraz v kapkách“. Neříkej, kdy Aristotelés kritiku idejí napsal, ani že se ti dva přeli tváří v tvář. Isokratés, Diogenés jako hlas, osmá kniha Ústavy, výběr dětí a společné ženy a děti strážců do studentského textu nepatří. U pokusu z roku 2020 stačí „Facebook“, bez jmen autorů a firmy; pokus „zkoušel“, ne „ukázal“. Zpětná vazba vysvětluje důvod a ptá se dál, nikdy neříká, kdo má pravdu; možnosti ve Volbě jsou skutečné tahy. Nové osoby do dat nepřidávej. Věty do 25 slov, odstavce do 4 vět, tykání, žádné redakční poznámky; text přečti ještě jednou podle oddílu „Ať text nezní jako stroj“ ve skillu.
+**Testy a skripty:** `tests/e2e/cesta3.spec.ts` (klávesnice, průchod bez odkrytí, tón a co do cesty nepatří), `tests/e2e/jeskyne.spec.ts` (kresba na obou šířkách v obou režimech, pohyb, klávesnice), cesta 3 v `cesta.spec.ts` a v průchodu, otázka 6 v `otazka.spec.ts` a v prohlídce, vstupy v `platon.spec.ts`. Průchod umí krok s více bloky. Nové skripty: `scripts/snimky-cesta.mjs` (kroky cesty s odpověďmi i bez nich) a `scripts/snimky-prvek.mjs` (jeden blok nebo kresba); `snimky-listy.mjs` umí `PRESKOCIT` pro stránku otázky.
 
-Kontrola: při psaní pouštěj jen dotčené testy, celé npm test jednou před posledním commitem (testy v prohlížeči běží na portu 4322). Cestu 3 a stránku otázky 6 přidej do testů prohlídky a průchodu. Cestu projdi v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí, jednou i bez odkrytí bloků; snímky dělej skripty scripts/snimky-listy.mjs a scripts/snimky-montaz.mjs. Podívej se, jak deska Příběhu ořezává rytinu (vyrez u jeskyne-saenredam je odhad) a jak hlavička Platónova portrétu ukáže vstupy do cesty a otázky. Po přidání stránek restartuj běžící npm run dev.
+**Otevřené pro autora a pro revizi (P10):**
 
-Osnovu mi neposílej ke schválení: kde váháš, zvol nejlepší cestu a pracuj dál. Commituj česky po ucelených krocích (cesta, stránka otázky, propojení a kontrola) a nic neposílej na GitHub. Na konci pošli snímky cesty a stránky otázky, zapiš do docs/plany/celek-4.md stav po P8 (plán aktualizuj i v projektu) a napiš: co je hotové, nad čím jsi váhal a co jsi zvolil, co jsi vynechal nebo připsal do k-overeni a co potřebuje moje rozhodnutí.
-```
+- **Čtvrtý koš.** Autor chtěl jen jiné názvy; čtvrtý koš „Z vlastní hlavy“ je návrh. Jde vrátit na tři koše, ale pak dvakrát dvě zase nemá místo. Druhá možnost je kartu vyřadit a zeptat se na ni až ve srovnání.
+- **Kresba jeskyně.** Je to pokus o formu: posoudit, jestli pohyb pomáhá, nebo ruší čtení, a jestli má podobná kresba vzniknout i pro výstup (krok 3). V dílně bloků zatím není.
+- **Rytina na desce.** Poměr 4 : 3 sedí, deska rytinu neořezává (`vyrez` se neprojeví). Na notebooku je ale deska asi 300 px široká a detaily rytiny nejsou čitelné; latinské verše zabírají dolní šestinu. Výřez bez veršů by byl nový soubor obrázku.
+- **Karta „Jak vypadá válka“.** Ve třídě může sedět student, který válku zažil. Karta má pro koš Ze zkušenosti vlastní zpětnou vazbu; kdyby se autorovi nezdála, nahradit ji jinou kartou „jen z obrazovky“.
+- **Krok 7 má Volbu „Kdo má rozhodovat o tom, co je skutečné?“.** Zadání chtělo jen otázku; blok dává studentovi tah i tady. Volba je tak v cestě čtyřikrát (kroky 3, 6 dvakrát a 7).
+- **Úvod otázky 6** začíná duhou a „boj obrů“ stojí až za ní; citát před prvním názorem stránku prodlužuje. Jde vypustit.
+- Z P7 zůstává: popisek „znal ho z textů“ u Hérakleita, nákres ke čtverci v portrétu, délka portrétu, údaj pod citátem ze Sedmého listu.
+
+**Další krok:** revize celku (P10) skillem `atlas-revize`; zadání zatím není napsané.

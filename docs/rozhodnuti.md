@@ -4,6 +4,31 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 4. 10. 2026: Cesta 3, stránka otázky 6 a kresba jeskyně (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Cesta má osm kroků: jeskyně, Roztřiď, výstup, čtverec sám, Spor, pokus, návrat, pravidlo. Osnova se předem neschvalovala | Rozhodnutí autora ze 4. 10. 2026; kroky odpovídají osmi bodům zadání |
+| Koše v kroku 2 jsou čtyři a odpovídají na „Odkud to vím?“ stejným tvarem: Ze zkušenosti · Od lidí · Z obrazovky · Z vlastní hlavy | Autor: původní názvy konceptuálně nesedí a „dvakrát dvě jsou čtyři“ se do nich nedá zakomponovat. Čtvrtý koš je návrh: dohad o spolužákovi i dvakrát dvě jsou „z hlavy“ a zpětná vazba se ptá, čím se liší (mínění a vědění) |
+| Krok 1 má vedle rytiny vlastní kresbu jeskyně s pohybem (`<Jeskyne />`): pohled vězňů a pohled z boku | Autor chce vyzkoušet animaci jako formu a pomoct představivosti. Výchozí je pohled vězňů, aby student seděl dole; pohled z boku má větu „Tenhle pohled žádný z nich nemá.“ |
+| Pohyb kresby běží po načtení, jde zastavit a při omezeném pohybu kresba stojí. Kresba nemá Kam dál ani třídu `.blok` a nic neukládá | Není to úkol, ale obraz k textu; automatický karusel to není (nic se nestřídá samo, jen stíny jdou po stěně) |
+| Kresba jeskyně stojí uvnitř Příběhu před větou „Podobní nám“ | Scéna má tou větou končit (zadání); kresba přichází po popisu, který zobrazuje |
+| Pokus na Facebooku je jeden krok se dvěma Volbami; první vede vlastním Kam dál na nadpis „Co vyšlo“ pod sebou | Zadání chce odhad, výsledek a čtení v jednom kroku. Blok jinak nabízí další krok a student by výsledek přeskočil |
+| Výsledek pokusu se říká proti srovnávací skupině („než lidé, kterým vědci nic neubrali“), ne „než dřív“ | Ověřeno v článku: všechny výsledky jsou rozdíl mezi skupinami. Podklady měly „o to víc“ a „pár příspěvků“; zůstalo jich 36 % |
+| `ustava-510d` stojí ve srovnání bloku Odkryj; krok 5 Platónovu odpověď opakuje větou v textu | Blok stojí před tím, co filozof řekl, a text drží souvislost i bez odkrytí |
+| `ustava-517b` („Bůh ví…“) je citátem až v kroku 7; v kroku 3 jen nepřímo ve zpětné vazbě. `ustava-518c` otevírá krok 6, ne krok 3 | Citát těsně před Volbou „Podle čeho poznáš…“ by odpovídal předem (jistota, cesta, kterou projdu sám) |
+| Glaukón má jméno jen při vstupu; dál je „posluchač“ | `docs/styl.md`, pravidlo 6 |
+| Ve scéně stojí „Kdo vězně spoutal, Sókratés neříká. Neříká ani, že je lidé za zídkou chtějí klamat.“ | Chrání před čtením o manipulátorech, které pramen nemá; je to věta o příběhu, ne o naší práci |
+| Karta „Že mě má někdo rád“ je bez slova „doma“; karta o válce zůstává a má vlastní zpětnou vazbu pro toho, kdo ji zažil | Student, který to doma nemá, a student, který válku viděl |
+| Krok 7 má Volbu „Kdo má podle tebe rozhodovat o tom, co je skutečné?“ | Krok o návratu a ušlechtilé lži je pro tón celku nejdůležitější a bez bloku by v něm student jen četl |
+| Věta o Akademii („asi sedmnáctiletý… dvacet let“) je v textu kroku 5, ne ve scéně Sporu ani v kroku 8 | Tentýž detail nejvýš dvakrát v celku; portrét ho má jednou |
+| Závěrečná otázka: „Jak poznáš, co je skutečné, a co se jen tak jeví? Napiš svoje pravidlo.“ | Pravidlo musí jít použít na případ v Návratu; otázka cesty sama je ano/ne |
+| Návrat „U šaten“: kamarád u cizí bundy, viděl jsem to jen já | Jiný druh než pokus (obrazovka, studie) a duha (příroda); posoudí ho pravidlo, které očím věří, i to, které ne |
+| Otázka 6: úvod začíná duhou, „boj obrů“ stojí za ní a úvod končí otázkou | Scéna před citátem; první názor se ptá na duhu |
+| Démokritova odpověď: „Kapky tam jsou, barvy ne. Barvu jim dává jen zvyk; doopravdy jsou to částice a prázdno.“ | Věta „ve skutečnosti jsou atomy a prázdno“ stojí hned pod hlasem jako citát; odpověď ji nemá opakovat |
+| Portrét vede na cestu odkazem u věty o jeskyni, ne kartou; z Kam dál vypadl Diogenés | Karta by do portrétu přinesla vstup cesty s větou „podobní nám“, kterou portrét nechává cestě; Diogenés má odkaz v kapitole 03 |
+| Rytina na desce Příběhu zůstává celá (poměr 4 : 3) | Deska ji neořezává; výřez bez latinských veršů by byl nový soubor a rozhodne o něm autor |
+
 ## 4. 10. 2026: Úspornější práce a konec předběžného schvalování
 
 | Rozhodnutí | Důvod |

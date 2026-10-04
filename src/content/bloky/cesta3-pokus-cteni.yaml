@@ -3,6 +3,7 @@
 # a Co pokus neukázal. Výhrady (tři měsíce, jen USA a volby, třetina místo všeho, spolupráce s firmou, které Facebook patří;
 # autoři podle článku neplaceni, plán zveřejněn předem) jsou jen tady ve zpětné vazbě. Že častější reakce na známé příspěvky
 # připomínají vězně, který se otáčí ke stínům (515e), je naše spojení, ne Platónovo ani autorů studie: blok ho netvrdí.
+# Všechny výsledky studie jsou rozdíl proti srovnávací skupině, ne „před a po“ (ověřeno v textu článku 4. 10. 2026).
 druh: volba
 obdobi: 1
 nadtitulek: Tvůj tah
@@ -16,7 +17,7 @@ moznosti:
   - text: Proti. Nikdo nás nedrží, díváme se, protože chceme.
     tah: číst pokus proti jeskyni
     zpetna: >-
-      Všímáš si, že účastníci na známé příspěvky reagovali častěji než dřív, a nikdo je nenutil. Vězni v jeskyni mají pouta, tihle lidé ne.
+      Všímáš si, že na známé příspěvky, které jim zůstaly, reagovali účastníci častěji, a nikdo je nenutil. Vězni v jeskyni mají pouta, tihle lidé ne.
       Je ale volný ten, kdo se jinam nikdy nepodívá?
   - text: Ani jedno. S bublinami je to jen složitější, než se říká.
     tah: nevěřit jednoduchému obrazu

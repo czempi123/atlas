@@ -24,7 +24,7 @@ Každé čtení stojí tokeny. Čti jen to, co potřebuješ ke kroku, na kterém
 - **Archiv nečti.** `docs/archiv/` drží hotové plány větví, záznamy revizí, provedená zadání, starší rozhodnutí a prototyp v9. Otevři ho, jen když tě tam pošle zadání nebo autor. Co se z revizí má dodržovat, je v `docs/pouceni.md`.
 - **Vzory střídmě.** Z hotových stránek stačí jedna jako vzor a z ní části, které potřebuješ.
 - **Testy:** při práci jen dotčené (`npx vitest run`; po `npm run build` pak `PW_BEZ_BUILDU=1 npx playwright test <soubor>`). Celé `npm test` jednou před posledním commitem.
-- **Snímky:** `node scripts/snimky-listy.mjs` složí celou stránku do pár obrázků, `node scripts/snimky-montaz.mjs` několik snímků vedle sebe. Prohlížej tyhle listy, ne jednotlivé obrazovky.
+- **Snímky:** `node scripts/snimky-listy.mjs` složí celou stránku do pár obrázků, `node scripts/snimky-cesta.mjs` vyfotí kroky cesty s odpověďmi i bez nich, `node scripts/snimky-prvek.mjs` jeden blok nebo kresbu a `node scripts/snimky-montaz.mjs` složí několik snímků vedle sebe. Prohlížej tyhle listy, ne jednotlivé obrazovky.
 - **Projekt v Claude** drží jen `docs/plan.md`, `docs/architektura.md` a plán běžící větve. Když se některý z nich v repozitáři změní, aktualizuj ho i tam; nic dalšího do projektu nepřidávej.
 
 ## České konvence
