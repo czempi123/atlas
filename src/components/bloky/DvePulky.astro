@@ -1,0 +1,15 @@
+---
+// Dvě půlky: kresba k Epiktétovu dělení (cesta 5, krok 3). Tři karty z koše Zčásti jdou roztrhnout na půlku, která je
+// moje dílo, a na tu, která není; na druhé půlce se mění, co se stane. Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <DvePulky id="dve-pulky-karta" />
+import Ostrov from '../ostrovy/DvePulky.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'dve-pulky-karta', obdobi = 2 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

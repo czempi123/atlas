@@ -88,7 +88,7 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await dalKlavesnici(page, kose, 'Dvě půlky', `${CESTA5}3/`);
 
   // Krok 3: dělení citátem, vítr v nepřímé řeči, vlastní pokus s jednou kartou.
-  const text3 = page.locator('.krok__obsah > .ctenarsky');
+  const text3 = page.locator('.krok__obsah > .ctenarsky').first();
   await expect(text3.locator('.citat')).toHaveCount(1);
   await expect(text3.locator('.citat')).toContainText('Některé věci jsou v naší moci a jiné ne.');
   await expect(text3).toContainText('správcem větrů bůh neudělal je');
@@ -100,7 +100,18 @@ test('cesta 5: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   const srovnani = pulky.getByRole('region', { name: 'Srovnání' });
   await expect(srovnani).toBeFocused();
   await expect(srovnani).toContainText('Epiktétos by se zeptal, kterou půlku chceš.');
-  await dalKlavesnici(page, pulky, 'Otrok a císař', `${CESTA5}4/`);
+  // Blok vede ke kresbě pod sebou (tři karty k roztržení); další krok nabízí lišta.
+  const kKresbe = pulky.getByRole('navigation', { name: 'Kam dál' }).getByRole('link');
+  await expect(kKresbe).toHaveText(/Co se stane s druhou půlkou/);
+  await expect(kKresbe).toHaveAttribute('href', '#druha-pulka');
+  await kKresbe.focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#dve-pulky-karta')).toBeVisible();
+  const dalsi3 = page.locator('.cesta-lista').getByRole('link', { name: /Další krok/ });
+  await dalsi3.focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(`${CESTA5}4/`);
+  await pripravit(page);
 
   // Krok 4: dvě věty bez jména, kdo je kdo, se dozví až po vlastním odhadu.
   const text4 = page.locator('.krok__obsah > .ctenarsky');

@@ -245,5 +245,27 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
 .kresba .k-posuvnik label { display: block; font-weight: 600; color: var(--ink); }
 .kresba .k-posuvnik input { display: block; width: 100%; height: 44px; margin: 0; accent-color: var(--pc, var(--ink)); cursor: pointer; }
 .kresba .k-posuvnik output { display: block; color: var(--ink-2); font-variant-numeric: lining-nums tabular-nums; }
+/* Přepínač kresby: pilulky s cílem 44 px, mezi volbami se chodí šipkami. Rám jím přepíná pohledy; kresba ho může dát
+   i do snippetu ovladani, s popiskem v obalu k-volba (popisek nad přepínačem; k-volba--radek ho dá vlevo od něj). */
+.kresba .k-prepinac { display: inline-flex; gap: var(--s-1); padding: 3px; border: 1px solid var(--rule); border-radius: var(--r-full); background: var(--sunk); }
+.kresba .k-prepinac label { position: relative; display: block; }
+.kresba .k-prepinac input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.kresba .k-prepinac span {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--s-4);
+  border-radius: var(--r-full);
+  font-family: var(--font-sans);
+  font-size: var(--fs-ovladani);
+  font-weight: 600;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.kresba .k-prepinac input:checked + span { background: var(--ink); color: var(--paper); }
+.kresba .k-prepinac input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+.kresba .k-volba { display: grid; justify-items: start; gap: var(--s-1); margin: var(--s-3) 0 0; font-family: var(--font-sans); font-size: var(--fs-ovladani); }
+.kresba .k-volba__popisek { font-weight: 600; color: var(--ink); }
+.kresba .k-volba--radek { grid-template-columns: 5.5em auto; align-items: center; justify-content: start; gap: var(--s-2); margin-top: var(--s-2); }
 /* Pohyblivý prvek (k-hybe) má vlastní animaci jen pod .kresba--pohyb; když student pohyb zastaví, zůstane stát tam, kde je. */
 .kresba:not(.kresba--bezi) .k-hybe { animation-play-state: paused !important; }

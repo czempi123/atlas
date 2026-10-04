@@ -1,0 +1,15 @@
+---
+// Stejný vítr: kresba k větru z Theaitéta (profil Prótagora, kapitola 01). Dva lidé v jednom větru; student mění jen to,
+// co má kdo za sebou. Vítr se nemění. Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <StejnyVitr id="vitr-dva-lide" />
+import Ostrov from '../ostrovy/StejnyVitr.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'vitr-dva-lide', obdobi = 1 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

@@ -6,8 +6,10 @@
   // jde zastavit a zastavený zůstane stát; text pod kresbou říká totéž slovy a je popisem obrázku pro čtečky;
   // kresba nic neukládá a nenabízí Kam dál. Barvy: třídy k-svetlo, k-stin a k-tma (global.css › Kresba s pohybem).
   // Pohyblivý prvek dostane třídu k-hybe a vlastní animaci pod :global(.kresba--pohyb); zastavení řeší rám.
-  // Posuvník ve snippetu ovladani dostane třídu k-posuvnik (global.css). Kresba bez vlastního pohybu: maPohyb={false}.
-  // Použití: viz src/components/ostrovy/Jeskyne.svelte, JeskyneVen.svelte a Saty.svelte.
+  // Posuvník ve snippetu ovladani dostane třídu k-posuvnik, přepínač třídy k-volba a k-prepinac (global.css).
+  // Kresba bez vlastního pohybu: maPohyb={false}.
+  // Použití: viz src/components/ostrovy/Jeskyne.svelte, JeskyneVen.svelte, Saty.svelte, StejnyVitr.svelte,
+  // DvePulky.svelte a KolikJeDost.svelte.
   import { onMount, type Snippet } from 'svelte';
   import { omezenyPohyb } from '../../lib/pohyb';
 
@@ -53,7 +55,7 @@
   </figcaption>
 
   {#if pohledy.length > 1}
-    <div class="kresba__prepinac" role="radiogroup" aria-labelledby="{id}-nazev">
+    <div class="kresba__prepinac k-prepinac" role="radiogroup" aria-labelledby="{id}-nazev">
       {#each pohledy as p (p.id)}
         <label>
           <input type="radio" name="{id}-pohled" value={p.id} bind:group={pohled} />
@@ -95,31 +97,8 @@
   .kresba__nadtitulek { margin: 0 0 var(--s-1); color: var(--pc, var(--ink)); }
   .kresba__nazev { margin: 0; }
 
-  .kresba__prepinac {
-    display: inline-flex;
-    gap: var(--s-1);
-    margin: 0 0 var(--s-3);
-    padding: 3px;
-    border: 1px solid var(--rule);
-    border-radius: var(--r-full);
-    background: var(--sunk);
-  }
-  .kresba__prepinac label { position: relative; display: block; }
-  .kresba__prepinac input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
-  .kresba__prepinac span {
-    display: flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0 var(--s-4);
-    border-radius: var(--r-full);
-    font-family: var(--font-sans);
-    font-size: var(--fs-ovladani);
-    font-weight: 600;
-    color: var(--ink-2);
-    white-space: nowrap;
-  }
-  .kresba__prepinac input:checked + span { background: var(--ink); color: var(--paper); }
-  .kresba__prepinac input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+  /* Vzhled přepínače je v global.css (k-prepinac); sdílí ho s přepínači v ovládání kreseb. */
+  .kresba__prepinac { margin: 0 0 var(--s-3); }
 
   .kresba__platno { display: block; width: 100%; height: auto; border-radius: var(--r-sm); }
   .kresba__popis {

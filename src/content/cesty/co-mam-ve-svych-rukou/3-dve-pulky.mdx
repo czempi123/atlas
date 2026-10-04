@@ -4,7 +4,7 @@ krok: 3
 nazev: Dvě půlky
 kdeJsme: Níkopolis, Epiktétova škola
 ---
-import { Odkryj } from '../../../components/bloky';
+import { Odkryj, DvePulky } from '../../../components/bloky';
 import Citat from '../../../components/ui/Citat.astro';
 
 <div class="ctenarsky">
@@ -29,6 +29,7 @@ Prostřední koš by tedy neuznal. Každou věc z něj by roztrhl na dvě půlky
   nadtitulek="Nejdřív sám"
   otazka="Vezmi jednu věc ze svého koše Zčásti, třeba známku ze čtvrtletky. Roztrhni ji: co na ní je tvoje dílo a co ne?"
   tlacitko="Porovnat s Epiktétem"
+  dal={{ href: '#druha-pulka', text: 'Co se stane s druhou půlkou' }}
   modelove={[
     { text: 'Známka: moje je, jak se připravím. Učitelovo je, co dá do písemky a jak to oznámkuje.', komentar: 'Půlky jsou čisté. Epiktétos by řekl, ať si přeješ jen tu první. Šlo by to: učit se naplno, a známku pustit z hlavy?' },
     { text: 'Zápas: moje je trénink a spánek. Jestli chytím chřipku, moje není.', komentar: 'Sedí to. Zbývá těžší otázka: když se o svou půlku postaráš, a stejně onemocníš, co ti z té karty zůstane v ruce?' },
@@ -44,3 +45,15 @@ Epiktétos by se zeptal, kterou půlku chceš. Kdo chce tu, která jeho není, d
 Podívej se na své půlky. Na které ti záleží víc? A dokázal by sis přát jen tu svou?
 
 </Odkryj>
+
+<div class="ctenarsky">
+
+<h2 id="druha-pulka" tabindex="-1">Co se stane s druhou půlkou</h2>
+
+Tady jsou tři karty z koše Zčásti. Každou roztrhni a pak zkoušej, co všechno se může stát na druhé půlce.
+
+<DvePulky id="dve-pulky-karta" />
+
+*Která půlka se pokaždé změnila? A která ti zůstala v ruce?*
+
+</div>

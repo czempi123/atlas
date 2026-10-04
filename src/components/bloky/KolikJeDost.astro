@@ -1,0 +1,15 @@
+---
+// Kdy je dost?: kresba k Epikúrovu stropu slasti (cesta 6, krok 3). Pohár se plní vodou až k čáře „dost“; další voda
+// ani máta hladinu výš nedostanou. Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <KolikJeDost id="kolik-je-dost-pohar" />
+import Ostrov from '../ostrovy/KolikJeDost.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'kolik-je-dost-pohar', obdobi = 2 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />
