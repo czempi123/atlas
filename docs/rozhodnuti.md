@@ -4,6 +4,24 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 4. 10. 2026: Tři kresby pokusů (vítr, dvě půlky, pohár)
+
+Autor dodal tři samostatné návrhy interakcí jako Web Components (Prótagorův vítr, Epiktétovy dvě půlky, Epikúrovo „Kolik je dost?“; archiv `atlas-interakce.zip` v repozitáři není) a chtěl je rozdělit, sjednotit s grafikou atlasu, uhladit a zařadit.
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Tři návrhy jsou přepsané na kresby atlasu: ostrovy Svelte na rámu `Kresba.svelte`, tři tóny desky období, plátno 340 × 240, texty a stav v `src/lib/`. Web Components se Shadow DOM a skripty v `public/` se nepřebírají | Atlas má pro takové věci jednu formu. Návrhy měly vlastní kartu, nadpis, písma a barvy a ve tmavém režimu i vedle ostatních kreseb by vypadaly jako cizí prvek |
+| Rozbalovací „Pramen“ s odkazem ven a věty o tom, co kresba není („není měřením štěstí“), v kresbách nejsou | Prameny má atlas na konci stránky; text pro studenta nenese výhrady ani poznámky o naší práci |
+| Podrobné postavy z návrhu větru jsou překreslené na jednoduché siluety | Na plátně 340 jednotek by jemné šrafování na telefonu splynulo; ostatní kresby atlasu jsou siluety ve třech tónech |
+| Vítr v kresbě běží sám (proudy, šály) a jde zastavit; u každého člověka se přepíná čekání / chůze | Pohyb větru drží pointu: mění se lidé, vítr ne. Přepínač ukazuje oba stavy naráz, tlačítko s měnícím se nápisem je schovávalo |
+| „Stejný vítr“ stojí v profilu Prótagora pod blokem Volba a text pod kresbou neříká, kdo má pravdu | Student má nejdřív odpovědět sám. Závěr návrhu („výpověď o chladu záleží i na tom, kdo ho cítí“) je jedna z možností volby, ne věc kresby; pod kresbou je místo něj otázka |
+| „Dvě půlky“ trhají tři karty z koše Zčásti z kroku 2 (Jestli mi odepíše, Známka ze čtvrtletky, Zdravý na zápas) místo scén Omluva, Známka, Závod z návrhu; omluva zůstala jako obsah zprávy | Krok 3 říká, že Epiktétos by roztrhl každou věc z prostředního koše. Student trhá karty, které sám třídil |
+| „Dvě půlky“ stojí pod blokem Odkryj; blok k nim vede vlastním Kam dál („Co se stane s druhou půlkou“) | Nad blokem by kresba prozradila modelové odpovědi. Pod ním přidává to, co blok nemá: druhá půlka se mění, moje ne |
+| „Kdy je dost?“ stojí v kroku 3 cesty 6 za odstavcem o stropu slasti, před volbou o bundě; u čáry jde dolévat dál | Kresba ukazuje myšlenku, kterou text označuje za divnou; volba ji pak zkouší na jiné věci. Kdo dojde k čáře, zkusí nejdřív dolít: hladina se nehne. Návrh nabízel jen změnu chuti |
+| Nádoba je „pohár“, ne hrnek | Hrnek je v cestě 6 hrnek sýra z Epikúrova dopisu |
+| Vzhled přepínače rámu je v `global.css` (`k-prepinac`) a kresby ho používají i ve svém ovládání (`k-volba`) | Vítr a dvě půlky potřebují stejný přepínač pod plátnem; styl by jinak byl dvakrát |
+| Texty kreseb nepoužívají minulý čas v druhé osobě („čekal jsi“) | Rozhodnutí z 2. 10. o lomených tvarech: rod studenta se obchází, ne láme |
+
 ## 4. 10. 2026: Kresba s pohybem jako forma (po P8)
 
 | Rozhodnutí | Důvod |

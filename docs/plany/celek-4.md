@@ -139,8 +139,9 @@ Případ pro Návrat: `cesta3-navrat` „U šaten“ (kamarád u cizí bundy; vi
 
 **Otevřené pro autora a pro revizi (P10):**
 
-- **Skilly v účtu.** Řádek o kresbě s pohybem v `atlas-revize` má jen kopie v repozitáři. `atlas-komponenta` a `atlas-cesta` zatím neznají kresbu šatů (vlastní barvy jako výjimka, `maPohyb`, třída `k-posuvnik`, kresba pod blokem). Doplnit po revizi spolu s poučením.
+- **Skilly v účtu.** Řádek o kresbě s pohybem v `atlas-revize` má jen kopie v repozitáři. `atlas-komponenta` a `atlas-cesta` zatím neznají kresbu šatů (vlastní barvy jako výjimka, `maPohyb`, třída `k-posuvnik`, kresba pod blokem). Doplnit po revizi spolu s poučením. Totéž platí pro tři kresby pokusů: přepínač v ovládání (`k-volba`, `k-prepinac`), tlačítka v ovládání, jednorázový děj po klepnutí (proud vody) a kresba v profilu pod blokem Volba.
 - **Kresby v dílně bloků.** `/dilna/bloky/` kresby neukazuje; vidět jsou jen v cestě 3.
+- **Tři kresby mimo celek** (4. 10. 2026, z autorových návrhů tří interakcí): „Stejný vítr“ v profilu Prótagora (kapitola 01, pod Volbou), „Roztrhni kartu“ v kroku 3 cesty 5 (pod Odkryj, blok k ní vede vlastním Kam dál) a „Kdy je dost?“ v kroku 3 cesty 6 (před Volbou). Jsou přepsané na rám `Kresba.svelte`; popis v `docs/design.md` › Komponenty › Kresba s pohybem, důvody v `docs/rozhodnuti.md`. Čekají na autorovo oko; se studenty ověřené nejsou.
 - **Kresba šatů.** Druhá verze (místnost s věcmi známé barvy) čeká na autorovo oko; se studenty ověřená není. Revize ji má vyzkoušet na telefonu i notebooku. Další kresba se nabízí u čtverce v Platónově portrétu (nákres zbývá z P7).
 - Z P7 zůstává: popisek „znal ho z textů“ u Hérakleita, nákres ke čtverci v portrétu, délka portrétu, údaj pod citátem ze Sedmého listu.
 
@@ -158,7 +159,7 @@ Udělej revizi celku 4 podle skillu atlas-revize. Do celku patří:
 - cesta 3 „Je to, co vidím, celá skutečnost?“ (přehled, osm kroků, bloky cesta3-*.yaml, případ pro Návrat);
 - stránka velké otázky 6 „Co je skutečné?“ (src/content/otazky/co-je-skutecne.mdx);
 - propojení: hlavička a Kam dál portrétu, přehled otázek, Lidé, Domů;
-- kresby s pohybem: jeskyně (krok 1), cesta ven (krok 3) a mimo celek šaty v kroku 6 cesty 1 (přibyly až po revizi celku 1).
+- kresby s pohybem: jeskyně (krok 1), cesta ven (krok 3) a mimo celek šaty v kroku 6 cesty 1, vítr v profilu Prótagora, dvě půlky v kroku 3 cesty 5 a pohár v kroku 3 cesty 6 (přibyly až po revizích celků 1 až 3).
 
 Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
 - CLAUDE.md, docs/styl.md, docs/pouceni.md;
@@ -167,7 +168,8 @@ Udělej revizi celku 4 podle skillu atlas-revize. Do celku patří:
 - z docs/podklady/k-overeni.md oddíly celku 4; z docs/rozhodnuti.md záznamy ze 4. 10. 2026;
 - v docs/design.md oddíly Cesta, Velká otázka a z Komponent Kresbu s pohybem;
 - jako vzor záznamu jen začátek docs/archiv/revize/celek-3-2026-10-03.md (formát a hloubka nálezů);
-- ke kresbě šatů z docs/podklady/celek-1-pravda.md jen oddíl „Tvrzení: nový případ (šaty, 2015)“.
+- ke kresbě šatů z docs/podklady/celek-1-pravda.md jen oddíl „Tvrzení: nový případ (šaty, 2015)“;
+- ke třem kresbám mimo celek jen místo, kde stojí (kapitola 01 profilu Prótagora, krok 3 cesty 5, krok 3 cesty 6), a jejich texty v src/lib/vitr.ts, dve-pulky.ts a pohar.ts.
 Podklady a obsah celků 1 až 3 jinak nečti.
 
 Na co se dívej zvlášť:
