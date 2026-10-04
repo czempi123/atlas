@@ -1,0 +1,16 @@
+---
+// Jeskyně: vlastní kresba Platónovy jeskyně ve dvou pohledech (pohled vězňů, pohled z boku) s pohybem stínů.
+// Pohyb jde zastavit a při omezeném pohybu kresba stojí. Nic se neukládá a blok nenabízí Kam dál:
+// je to obraz k textu, ne úkol. Text pod kresbou říká totéž slovy.
+// Použití v MDX: <Jeskyne id="jeskyne-pohledy" />
+import Ostrov from '../ostrovy/Jeskyne.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8); výchozí období 1 (Platón) */
+  obdobi?: number;
+}
+const { id = 'jeskyne-pohledy', obdobi = 1 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />
