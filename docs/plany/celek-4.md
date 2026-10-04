@@ -7,10 +7,11 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 | P6 | Podklady | hotovo 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`); autor 4. 10. 2026 rozhodl otevřené otázky, obrázky jsou stažené |
 | P7 | Portrét Platóna | hotovo 4. 10. 2026 (`src/content/osobnosti/platon.mdx`); stav v oddílu Po P7. Autor zadal přípravu P8; výhrady k portrétu řekne průběžně nebo při revizi |
 | P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | hotovo 4. 10. 2026; stav v oddílu Po P8. Po připomínkách autora z téhož dne: nové názvy košů v kroku 2 a kresba jeskyně s pohybem v kroku 1 |
-| P10 | Revize celku | **další krok** (skill `atlas-revize`); zadání je na konci tohoto souboru |
+| P10 | Revize celku | hotovo 4. 10. 2026 (`docs/revize/celek-4-2026-10-04.md`), verdikt „po opravách“; stav v oddílu Po P10 |
+| Opravy | Zapracování nálezů revize | **další krok** po rozhodnutí autora; zadání je na konci tohoto souboru |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7, P8) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
+Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7, P8, P10) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
 
 **Souběh s větví `rozhrani-v2`.** Autor chce úpravy rozhraní (`docs/plany/rozhrani-v2.md`) projít zvlášť. Podklady (P6) se rozhraní netýkají a mohou běžet souběžně. Před P7 se do `celek-4` sloučí hlavní větev, pokud v ní `rozhrani-v2` už bude: nový portrét a cesta mají vzniknout na novém obsahu profilu a novém závěru cest, ne na starém.
 
@@ -145,57 +146,49 @@ Případ pro Návrat: `cesta3-navrat` „U šaten“ (kamarád u cizí bundy; vi
 - **Kresba šatů.** Druhá verze (místnost s věcmi známé barvy) čeká na autorovo oko; se studenty ověřená není. Revize ji má vyzkoušet na telefonu i notebooku. Další kresba se nabízí u čtverce v Platónově portrétu (nákres zbývá z P7).
 - Z P7 zůstává: popisek „znal ho z textů“ u Hérakleita, nákres ke čtverci v portrétu, délka portrétu, údaj pod citátem ze Sedmého listu.
 
-**Další krok:** revize celku (P10) skillem `atlas-revize`; zadání je níž.
+## Po P10 (4. 10. 2026)
 
-## Zadání P10: Revize celku 4
+Revize celku je hotová, záznam je v `docs/revize/celek-4-2026-10-04.md`. **Verdikt: po opravách**, bez blokujícího nálezu. `npm test` prošel celý před opravami (423 testů dat, 297 v prohlížeči) i po nich (423 a 301). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/revize-celek-4/`.
 
-V Coworku v novém chatu projektu, se zapnutým Desktop Commanderem. Opus 5.5 · high. Zadání počítá s úsporným čtením (`CLAUDE.md` › Co číst a jak šetřit) a s tím, že se nálezy průběžně neschvalují.
+**Opraveno rovnou:** fokus z klávesnice už nezůstává pod pevnou spodní lištou (skript v `src/layouts/Zakladni.astro`, test `tests/e2e/fokus-lista.spec.ts`; týkalo se každého kroku každé cesty podle výšky okna); poznámka u Aristotela v Době a lidech je „spor o ideje“ místo odkazu na místa v díle; nový skript `scripts/kontrola-fokus.mjs` pro revize.
+
+**Čeká na rozhodnutí autora** (osm nálezů, každý s hotovým zněním v záznamu):
+
+| # | Váha | Nález | Kde |
+| --- | --- | --- | --- |
+| 1 | důležité | „Otočit se musí každý sám“ odporuje obrazu a lichotí | krok 8; první možnost druhé Volby v kroku 6 |
+| 2 | důležité | Vlastní karta se ptá, jak moc si jí student je jistý | Roztřiď v kroku 2 |
+| 3 | důležité | Hérakleitos: „znal ho z textů · … od Kratyla“ | Doba a lidé, `vztahy.yaml` |
+| 4 | důležité | Cesta slibuje 20 minut, vychází na 25 | `minut` v přehledu cesty |
+| 5 | drobné | „Jejich názory se nezměnily“ je silnější než pramen | krok 6 |
+| 6 | drobné | Pohled z boku: „žádný z nich“ | `src/lib/jeskyne.ts` |
+| 7 | drobné | Lékař třikrát a Aristotelés bez odpovědi | Spor v kroku 5 |
+| 8 | drobné | Aristotelés jako důvod proti vládě filozofů | portrét, závěr kapitoly 05 |
+
+Opravy nálezů 4, 5 a 6 mění i testy (`platon.spec.ts`, `cesta3.spec.ts`, `jeskyne.spec.ts`, `tests/data/jeskyne.test.ts`).
+
+**Doporučení k otevřeným bodům:** popisek u Hérakleita podle nálezu 3; nákres ke čtverci jako kresba s pohybem pod blokem Odkryj v kapitole 02 (po ověření Menóna 84d–85b, samostatný krok); portrét nekrátit; údaj pod citátem ze Sedmého listu nechat; kresby přidat do dílny bloků (samostatný krok). Kresba šatů vysvětluje, proč se lidé neshodnou, dojem sama nevyvolá; text pod ní to netvrdí. Čeká na autorovo oko, stejně jako tři kresby pokusů.
+
+**Poučení a skilly:** pět nových řádků v `docs/pouceni.md`. Kopie `atlas-revize`, `atlas-komponenta` a `atlas-cesta` ve `skills/` jsou upravené a navržené k uložení do účtu.
+
+**K ověření** (`docs/podklady/k-overeni.md` › Revize celku 4): Kratylos 402a (Platón cituje Hérakleita) a Metafyzika I, 1 (lékař a zkušenost).
+
+**Další krok:** rozhodnutí autora o nálezech, zapracování oprav (zadání níž), pak schválení, sloučení `celek-4` do hlavní větve a GitHub.
+
+## Zadání: opravy po revizi celku 4
+
+V Coworku v novém chatu projektu, se zapnutým Desktop Commanderem. Sonnet 5.5 · medium (jsou to věty a jedno číslo s hotovým zněním). Před spuštěním doplň do první věty, které nálezy schvaluješ.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-4. Portrét Platóna, cesta 3, stránka velké otázky 6 a kresby s pohybem jsou v ní hotové a commitnuté.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-4.
 
-Udělej revizi celku 4 podle skillu atlas-revize. Do celku patří:
-- portrét Platóna (src/content/osobnosti/platon.mdx a jeho bloky);
-- cesta 3 „Je to, co vidím, celá skutečnost?“ (přehled, osm kroků, bloky cesta3-*.yaml, případ pro Návrat);
-- stránka velké otázky 6 „Co je skutečné?“ (src/content/otazky/co-je-skutecne.mdx);
-- propojení: hlavička a Kam dál portrétu, přehled otázek, Lidé, Domů;
-- kresby s pohybem: jeskyně (krok 1), cesta ven (krok 3) a mimo celek šaty v kroku 6 cesty 1, vítr v profilu Prótagora, dvě půlky v kroku 3 cesty 5 a pohár v kroku 3 cesty 6 (přibyly až po revizích celků 1 až 3).
+Zapracuj nálezy revize celku 4 ze záznamu docs/revize/celek-4-2026-10-04.md. Schvaluji: všechny / jen čísla … / nález … chci jinak: …
 
-Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md, docs/pouceni.md;
-- v docs/plany/celek-4.md oddíly „Co si celek nese z celků 1 až 3“, „Po P7“ a „Po P8“;
-- docs/podklady/celek-4-co-je-skutecne.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (portrét, cesta, otázka, citáty, obrázky), ne celý list naráz;
-- z docs/podklady/k-overeni.md oddíly celku 4; z docs/rozhodnuti.md záznamy ze 4. 10. 2026;
-- v docs/design.md oddíly Cesta, Velká otázka a z Komponent Kresbu s pohybem;
-- jako vzor záznamu jen začátek docs/archiv/revize/celek-3-2026-10-03.md (formát a hloubka nálezů);
-- ke kresbě šatů z docs/podklady/celek-1-pravda.md jen oddíl „Tvrzení: nový případ (šaty, 2015)“;
-- ke třem kresbám mimo celek jen místo, kde stojí (kapitola 01 profilu Prótagora, krok 3 cesty 5, krok 3 cesty 6), a jejich texty v src/lib/vitr.ts, dve-pulky.ts a pohar.ts.
-Podklady a obsah celků 1 až 3 jinak nečti.
+Čti úsporně: CLAUDE.md, docs/pouceni.md, v docs/plany/celek-4.md oddíl „Po P10“ a ze záznamu revize oddíl Nálezy. U každého nálezu otevři jen soubor, který jmenuje. Použij znění ze záznamu; kde jsem napsal vlastní, použij moje.
 
-Na co se dívej zvlášť:
+S opravami uprav testy, které staré znění hlídají (nálezy 4, 5 a 6: tests/e2e/platon.spec.ts, tests/e2e/cesta3.spec.ts, tests/e2e/jeskyne.spec.ts, tests/data/jeskyne.test.ts), a kopii skillu atlas-cesta, pokud cituje větu u pohledu z boku jinak než nové znění. Nové osoby do dat nepřidávej a nic dalšího nepřepisuj.
 
-1. Tón. Největší riziko celku je, že jeskyně studentovi lichotí. Projdi cestu jako student, který si rád myslí, že on vidí a ostatní spí: dostane to někde potvrzené? Čti první obrazovku každého kroku, zpětné vazby všech čtyř Voleb, obě kresby jeskyně (výchozí pohled, věta u pohledu z boku) a popisek rytiny.
-2. Student, který s Platónem nesouhlasí. Podle něj jsou „stíny“ skutečné dost a o skutečnosti nemá rozhodovat ten, kdo tvrdí, že ji viděl. Najde v cestě a na stránce otázky někoho, kdo mu dává za pravdu, a řekne mu to poslední krok?
-3. Kdo mluví. U každého místa z dialogu musí být vidět, kdo mluví (Sókratés v Ústavě, Tímaios, host z Eleje), a nauka má být „podle Platóna“. Aristotelés nesmí znít jako dnešní fyzik a nikde se s Platónem nepře tváří v tvář.
-4. Opakování. Drž se seznamu „Co se v celku smí ještě jednou a co už ne“ v oddílu Po P8 a seznamu citátů portrétu v oddílu Po P7: tentýž citát a tentýž doložený detail nejvýš dvakrát v celku. Projdi portrét, cestu a stránku otázky za sebou, jak je projde student.
-5. Každá kombinace. Roztřiď: osm karet ve čtyřech koších včetně `kdyz` a vlastní karty s něčím bolestným; kartu „Jak vypadá válka“ čti očima studenta, který válku zažil. Všechny možnosti čtyř Voleb, Odkryj, Spor na telefonu (kdo mluví poslední), tři odpovědi Návratu, bloky portrétu.
-6. Pokus na Facebooku. Čísla a formulace porovnej s podklady: co vědci změnili, s kým se srovnává, „zkoušel“, ne „ukázal“; výhrady jen ve zpětné vazbě.
-7. Co se skládá z dat. Doba a lidé u Platóna (popisek „znal ho z textů“ u Hérakleita), mini osa, mini mapa, popisky pod deskami (Platónův obrázek, rytina), vstupy v hlavičce, Kam dál, řádek cesty a otázky v přehledech.
-8. Kresby s pohybem. Říká text kroku i text pod kresbou totéž co kresba? Drží se pramene („kdyby“ zůstává „kdyby“)? Jde pohyb zastavit, stojí při omezeném pohybu, jde všechno klávesnicí? U šatů: vznikne na telefonu i na notebooku dojem, o kterém mluví text (barvy okolí jsou odhad, ne měření fotky), a drží krok 6 cesty 1 s textem pod blokem?
-9. Délka. Spočítej slova cesty a čas průchodu; portrét je na telefonu asi o pětinu delší než Sókratův. Řekni, co by šlo zkrátit bez ztráty myšlenky, ale sám nezkracuj.
-10. Strojový text. Všechny studentské texty celku přečti ještě jednou jen podle oddílu „Ať text nezní jako stroj“.
+Kontrola: při práci jen dotčené testy, na konci jednou celé npm test (testy v prohlížeči běží na portu 4322; dlouhé příkazy pouštěj na pozadí s výstupem do souboru). Vyfoť kroky 2, 5, 6 a 8 cesty 3 a konec kapitoly 05 portrétu na 390 px a prohlédni je. Po změnách restartuj běžící npm run dev.
 
-Otevřené body, ke kterým chci doporučení: popisek u Hérakleita v Době a lidech, nákres ke čtverci v portrétu (teď by to mohla být kresba s pohybem), délka portrétu, údaj pod citátem ze Sedmého listu, kresby v dílně bloků.
-Rozhodnuté, neotvírej (ledaže je nález blokující): čtyři koše v kroku 2, rytina bez výřezu, karta „Jak vypadá válka“, „boj obrů“ v úvodu otázky 6, Volba v kroku 7.
-
-Opravy: drobné a jednoznačné věci oprav rovnou (překlepy, konvence, redakční vsuvky, rozbité odkazy, strojové obraty beze změny významu). Zásahy do významu, příběhu nebo struktury jen navrhni v záznamu s hotovým novým zněním. Nové osoby do dat nepřidávej. Co v podkladech chybí, nedopisuj; zapiš to do docs/podklady/k-overeni.md.
-
-Kontrola: na začátku npm run build a celé npm test, po opravách znovu (testy v prohlížeči běží na portu 4322; dlouhé příkazy pouštěj na pozadí s výstupem do souboru). Celek projdi v prohlížeči na 390 a 1440 px ve světlém i tmavém režimu a jen klávesnicí. Snímky dělej skripty scripts/snimky-listy.mjs, snimky-cesta.mjs, snimky-prvek.mjs a snimky-montaz.mjs a prohlédni je. Po změnách restartuj běžící npm run dev.
-
-Výstup:
-- záznam revize v docs/revize/celek-4-<datum>.md ve formátu ze skillu, nejvýš deset nálezů seřazených podle dopadu, a zvlášť seznam toho, co jsi opravil rovnou;
-- poučení, které má platit i pro další celky, do docs/pouceni.md a do kopií skillů ve skills/. Skilly pak navrhni k uložení do účtu (nejvýš tři najednou): atlas-revize (řádek o kresbě s pohybem je zatím jen v repozitáři), atlas-komponenta a atlas-cesta (kresba šatů: vlastní barvy jako výjimka, maPohyb, třída k-posuvnik, kresba pod blokem);
-- stav „Po P10“ v docs/plany/celek-4.md (plán aktualizuj i v projektu); tohle zadání přesuň do docs/archiv/zadani/celek-4.md.
-
-Nálezy mi průběžně neposílej ke schválení: kde váháš, zvol nejlepší cestu a pracuj dál. Commituj česky po ucelených krocích (opravy z revize, záznam revize, poučení a skilly) a nic neposílej na GitHub; sloučení do hlavní větve přijde až po mém schválení. Na konci napiš: verdikt (připraveno ke schválení / po opravách / přepracovat), tři nejdůležitější nálezy, co jsi opravil rovnou, co potřebuje moje rozhodnutí a co zbývá do uzavření celku.
+Výstup: do docs/plany/celek-4.md stav „Po opravách“ (plán aktualizuj i v projektu), toto zadání přesuň do docs/archiv/zadani/celek-4.md. Commituj česky a nic neposílej na GitHub; sloučení do hlavní větve přijde až po mém schválení. Na konci napiš, co je hotové a co zbývá do uzavření celku.
 ```

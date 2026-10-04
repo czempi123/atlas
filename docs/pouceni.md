@@ -1,6 +1,6 @@
 # Poučení z revizí a z psaní
 
-Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů revizí celků 1 až 3 (`docs/archiv/revize/`) a z psaní celku 4; totéž drží skilly. Záznamy revizí kvůli tomu číst netřeba. Nové poučení sem připiš jednou větou.
+Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů revizí celků 1 až 4 (`docs/archiv/revize/`, `docs/revize/`); totéž drží skilly. Záznamy revizí kvůli tomu číst netřeba. Nové poučení sem připiš jednou větou.
 
 ## Prameny a formulace
 
@@ -11,6 +11,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Shrnutí studie drží i to, co měli účastníci dělat a co vědci změnili. Výhrady patří do zpětné vazby; pokus „zkoušel“, ne „ukázal“.
 - Výsledek pokusu se dvěma skupinami je rozdíl proti srovnávací skupině, ne „než dřív“. Ověř ve studii, s čím se srovnává, i když podklady nabízejí hotovou větu.
 - Jménem nazvi jen toho, kdo nese příběh nebo myšlenku.
+- Závěr cesty a text možností drží obraz pramene stejně jako scéna. Shrnutí na jednu větu („otočit se musí každý sám“) snadno řekne opak toho, co cesta o tři kroky dřív vyprávěla.
 
 ## Bloky
 
@@ -20,6 +21,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Koše v Roztřiď odpovídají na otázku bloku stejným tvarem („Ze zkušenosti · Od lidí · Z obrazovky“) a každá karta má koš, kam se dá poctivě dát.
 - Změň jednu věc: možnosti dávají smysl v každé podmínce a zpětná vazba neusuzuje z možnosti, kterou student nezvolil. Nadpis „Co udělal…“ nestojí nad domněnkou; tam patří „Co by na to řekli“.
 - Zpětná vazba vidí, co student zvolil nebo kam kartu dal, vysvětluje důvod a ptá se dál. Žádná možnost nedostane pokárání.
+- Vlastní karta v Roztřiď: zpětná vazba se ptá, proč ji student dal do koše, ne jak moc si jí je jistý. U karty s něčím bolestným to zní jako pochybnost o tom, co zažil.
 
 ## Celek
 
@@ -29,6 +31,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec.
 - Čtyři citáty za sebou student přeskakuje.
 - Délka se kvůli délce nekrátí: zvídavý student si přečte víc (rozhodnutí autora).
+- Čas cesty na štítku (`minut`) se počítá: slova, která student opravdu přečte, při 150 za minutu, a k tomu ovládání. Neopisuje se z minulé cesty.
 
 ## Student, kterého se téma bolestně týká
 
@@ -40,6 +43,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 ## Co se skládá z dat
 
 - Čti i to, co nikdo nepsal: Dobu a lidi, mini mapu, mini osu a popisek pod deskou. Nadpis skupiny musí sedět na typ vztahu a obraz nesmí odporovat textu.
+- Poznámka u vztahu je studentský text: neodporuje popisku typu vztahu („znal ho z textů · … od Kratyla“) a neodkazuje na místa v díle.
 
 ## Technika
 
@@ -47,3 +51,4 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Playwright před každým během maže `test-results/`. Pracovní skripty patří do `scripts/`, snímky pro autora do `Claude outputs/`.
 - Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`. Dojem z barvy nevznikne z barevného pozadí: chce věci známé barvy ve stejném světle (šaty v cestě 1). Kresbu, která má vyvolat dojem, ukaž autorovi dřív, než ji popíšeš jako hotovou.
 - Chromium nevyfotí najednou stránku vyšší než asi 16 000 px; dlouhé stránky foť po částech (`scripts/snimky-listy.mjs`).
+- Prvek s fokusem z klávesnice zůstane pod pevnou lištou, když leží ve viditelné části okna: prohlížeč stránku neposune a `scroll-padding` to nespraví. Dorovnává to základní rozvržení. Při revizi zkoušej skutečným tabulátorem na dvou výškách okna a skriptem `scripts/kontrola-fokus.mjs`.

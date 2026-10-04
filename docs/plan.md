@@ -380,7 +380,7 @@ Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v soubo
 | `celek-1` | „Jak poznám, co je pravda?“: Sókratés, Prótagorás, cesta 1, otázka 7 | `docs/archiv/plany/celek-1.md` | hotovo, sloučeno 1. 10. 2026 |
 | `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/archiv/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; hlavní větev je na GitHubu |
 | `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/archiv/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
-| `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/plany/celek-4.md` | podklady (P6), portrét Platóna (P7), cesta 3 a stránka otázky 6 (P8) hotové 4. 10. 2026; **další krok** je revize celku (P10); větev `rozhrani-v2` je v ní sloučená |
+| `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/plany/celek-4.md` | podklady (P6), portrét Platóna (P7), cesta 3 a stránka otázky 6 (P8) hotové 4. 10. 2026; revize celku (P10) hotová 4. 10. 2026 s verdiktem „po opravách“ (`docs/revize/celek-4-2026-10-04.md`); **další krok** je rozhodnutí autora o osmi nálezech a zapracování oprav; větev `rozhrani-v2` je v ní sloučená |
 | `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 schválený, R2 hotový 3. 10. 2026 a čeká na schválení autorem; pak revize větve (P10) |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
