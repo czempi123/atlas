@@ -73,6 +73,7 @@ Blokující nálezy jsou opravené nebo předané autorovi s hotovým návrhem o
 - Netvrdí text, mapa nebo nadpis generovaného oddílu setkání tam, kde jde jen o vliv přes texty?
 - Drží shrnutí studie i to, co měli účastníci dělat, nebo jen tu část, která se hodí filozofovi? Neříká text, co pokus „ukázal“, dřív, než se student zeptá, co dokládá?
 - Je u rytiny, kresby nebo pozdější sochy vidět, čí je to představa a z kdy? Neodporuje obraz textu (Epiktétos s perem × „Sám nenapsal nic“)?
+- Kresba s pohybem: říká text kroku i text pod ní totéž co ona, drží se pramene („kdyby“ zůstává „kdyby“) a nenechává studenta dívat se shora tam, kde má sedět uvnitř? Jde pohyb zastavit a stojí při omezeném pohybu?
 - Je doba vylíčená tak, aby student pochopil, proč se tehdy myslelo právě takhle?
 
 ### 3. Šestnáctiletý student

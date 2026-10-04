@@ -8,6 +8,7 @@
 | Statická část bez JavaScriptu | `src/components/<oblast>/Jmeno.astro` |
 | Čistá logika | `src/lib/<tema>.ts` + `tests/data/<tema>.test.ts` |
 | Průchod v prohlížeči | `tests/e2e/<tema>.spec.ts`, snímky do `test-results/snimky/` |
+| Kresba s pohybem | ostrov `src/components/ostrovy/<Jmeno>.svelte` na rámu `Kresba.svelte`, obal `src/components/bloky/<Jmeno>.astro`, texty a geometrie v `src/lib/<tema>.ts` |
 
 ## Kostra ostrovu
 
@@ -58,3 +59,16 @@
 - Změny, které student má slyšet (odkrytí, zpráva), jdou do oblasti `aria-live="polite"`.
 - Fokus 2 px `--ink` s odsazením, jen při `:focus-visible`.
 - Kontrast AA pro všechen text ve světlém i tmavém režimu; ikony `aria-hidden`, význam nese text nebo `aria-label`.
+
+## Kresba s pohybem
+
+Vlastní kresba, která se hýbe a kterou student ovládá: prostor, děj nebo pořadí, které se z textu špatně představuje. Autor ji chce v atlasu častěji (rozhodnutí ze 4. 10. 2026). Vzor jsou `Jeskyne.svelte` (dva pohledy) a `JeskyneVen.svelte` (řez s postavami na cestě a posuvník). Kdy po ní sáhnout a kam ji dát, říkají skilly `atlas-cesta` a `atlas-osobnost`.
+
+- **Rám nepiš znovu.** `src/components/ostrovy/Kresba.svelte` dává kartu, název, přepínač pohledů, plátno, text pod kresbou a tlačítko Zastavit pohyb / Pustit pohyb. Ostrov kresby mu předá scénu (snippet `kresba` s prvky SVG) a případné další ovládání (snippet `ovladani`, třeba posuvník). K ostrovu patří obal `src/components/bloky/<Jmeno>.astro` s `client:visible` a řádek v `bloky/index.ts`.
+- **Tři tóny** z desky období: třídy `k-svetlo`, `k-stin`, `k-tma` a `k-popisek` (`global.css` › Kresba s pohybem). Jiné barvy ne; kresba tak sedí ve světlém i tmavém režimu sama.
+- **Plátno 340 × 240 jednotek:** na telefonu vyjde jednotka asi na pixel. Popisky v kresbě mají 11,5 jednotky a jedno až tři slova. Postavy a věci jsou jednoduché siluety; hlava má poloměr aspoň 3,5 jednotky.
+- **Pohyb je CSS, ne JavaScript.** Animaci dej pod `:global(.kresba--pohyb)` a prvku třídu `k-hybe`; zastavení a omezený pohyb pak řeší rám. Bez `.kresba--pohyb` (omezený pohyb, sestavení) musí kresba vypadat dobře i stát: výchozí poloha je součást návrhu. Změny stavu jdou přes `transition` s tokeny `--pohyb*`.
+- **Nic se nestřídá samo.** Pohyb je děj uvnitř jednoho pohledu (stíny jdou po stěně, dvojice stoupá). Pohled nebo stupeň mění jen student: přepínačem (dva pohledy na totéž) nebo posuvníkem (`<input type="range">` s `aria-valuetext`, pořadí nebo míra).
+- **Text pod kresbou říká totéž slovy** (`popis`, `aria-live`) a je popisem obrázku pro čtečky. Texty pohledů a stupňů patří do `src/lib/<tema>.ts` s testem (věty do 25 slov, co říká pramen); tam patří i geometrie (kde leží stín, co je na kterém stupni vidět).
+- **Není to blok:** žádná třída `.blok`, žádný zápis do deníku, žádné Kam dál. Testy průchodu cest ji proto míjejí.
+- **Testy navíc:** animace běží a po zastavení stojí (`animation-play-state`; polohu čti až po dalším snímku prohlížeče), při omezeném pohybu tlačítko chybí, přepínač a posuvník jdou klávesnicí, popisky v SVG se nepřekrývají, snímek každého pohledu a stupně. Hodnotu po přechodu čti přes `expect.poll`. Snímky pro autora: `node scripts/snimky-prvek.mjs` (`POHYB=1` nechá animaci běžet, `POSUVNIK=n` nastaví posuvník).

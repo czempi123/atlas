@@ -57,7 +57,10 @@ Každá kapitola portrétu má jeden blok, vybraný podle toho, co scéna nese. 
 | soud o činu nebo o tvrzení | Volba s důvodem bez `coUdelal` | „Byl Sókratův ústup od Délia odvážný?“ |
 | rozhodnutí, které filozof udělal | Volba s důvodem s `coUdelal` | „Soud tě uznal vinným. Co navrhneš jako trest?“ |
 | dilema, které záleží na podmínkách | Změň jednu věc | „Utečeš?“ (rozsudek spravedlivý, přátelé by pykali, nikdo se to nedozví) |
+| prostor, děj nebo pořadí, které se špatně představuje | Kresba s pohybem, vedle bloku, ne místo něj | jeskyně ve dvou pohledech; cesta ven s posuvníkem |
 | otázku k zamyšlení, kterou blok nepotřebuje | kurzíva v textu | „*Je to správné, protože to někdo přikázal? Nebo to přikázal, protože je to správné?*“ |
+
+**Kresba s pohybem** (`docs/design.md` › Komponenty) není blok: nic se neptá a nic neukládá. Autor ji chce v atlasu častěji (4. 10. 2026). V portrétu ji dej tam, kde kapitola stojí na místě nebo ději, který si student musí představit (bitva, cesta, pokus s věcmi): nejvýš jednu na kapitolu, za odstavec, který zobrazuje. Text drží i bez ní, popisy pohledů jsou studentský text z podkladů a výchozí pohled nechává studenta v situaci, ne nad ní. Kresbu, kterou už nese cesta celku, do portrétu podruhé nedávej; odkaž na cestu. Novou stav skillem `atlas-komponenta`.
 
 Možnosti ve Volbě jsou skutečné tahy, každá se zpětnou vazbou, která řekne, co tah umí, kde má slabinu, a položí otázku dál. Modelové odpovědi v Odkryj jsou různě silné studentské odpovědi s komentářem. Nikdy „správně“ ani hodnocení názoru. Podrobně v `docs/design.md` › Bloky a ve skillu `atlas-cesta`.
 
@@ -251,5 +254,6 @@ Hned za tím Změň jednu věc „Utečeš?“ a teprve pak Sókratova odpověď
 - Je ve stránce věta, která mluví o naší práci, o pramenech nebo o tom, proč je něco zpracované takhle? Smazat.
 - Dala by se některá věta beze změny napsat o jiném filozofovi? Prošel text čtením podle oddílu Ať text nezní jako stroj?
 - Věty do 25 slov, odstavce do 4 vět, tykání, jména a skloňování podle `lide.yaml`, letopočty s nezlomitelnými mezerami?
+- Je-li ve stránce kresba s pohybem: říká text totéž i bez ní, jde pohyb zastavit a neopakuje kresbu z cesty?
 - Prošlo `npm test` celé a jsou snímky na 390 a 1440 px ve světlém i tmavém režimu prohlédnuté?
 - Přečetl by to šestnáctiletý člověk dobrovolně až do konce?

@@ -49,6 +49,10 @@ Komponenta je hotová, když ji autor vloží do MDX jedním řádkem, student j
 - Popisky v SVG (mini mapa): překryvy počítej z obdélníků jednotlivých řádků, ne z jednoho obalu. Šířku textu změř v prohlížeči (úzké znaky mají asi poloviční šířku) a výsledek ověř testem přes `getBoundingClientRect` na obou šířkách.
 - `npx astro build` nevytvoří index hledání, ten dělá až `npm run build` (Pagefind). Test hledání pak s `PW_BEZ_BUILDU=1` selže a není to chyba komponenty.
 - Snímek jednoho prvku (`locator.screenshot`) na stránce s pevnou hlavičkou má lištu uprostřed a text přesahující prvek je uříznutý. Je to vlastnost snímku, ne chyba stránky; lišty před snímkem skryj stylem.
+- Styl ostrovu platí i pro obsah snippetu, který ostrov předá jiné komponentě, ale ne pro prvky, které ta komponenta vykreslí sama: scéna kresby se styluje v ostrovu kresby, rám v rámu. Stav rámu chytíš přes `:global(.kresba--pohyb) .prvek`.
+- CSS `transform` na prvku SVG přepíše jeho atribut `transform`. Co se má hýbat a zároveň stát posunuté, zabal do `<g transform="…">` a animuj vnitřní prvek; střed otáčení nebo zvětšení nastav přes `transform-box: fill-box` a `transform-origin`.
+- Zkratka `animation` ve stylu ostrovu přebije `animation-play-state` z `global.css`, když mají obě pravidla stejnou váhu. Zastavení kresby proto řeší rám pravidlem s `!important` nad třídou `k-hybe`.
+- Průhledný `<input>` roztažený přes popisek (přepínač pohledů) zachytí klepnutí: v testu zaškrtni přepínač (`getByRole('radio').check({ force: true })`), neklepej na text.
 
 ## Když nemáš terminál na autorově počítači
 
