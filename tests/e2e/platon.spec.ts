@@ -181,8 +181,27 @@ test('Platón: text drží pravidla celku (kdo mluví, dopis, tradované příb�
   const citaty = await page.locator('.obsah .citat').evaluateAll((c) => c.map((x) => x.textContent!.replace(/\s+/g, ' ').trim()));
   expect(citaty).toHaveLength(15);
   expect(new Set(citaty).size).toBe(15);
-  // Kam dál: cesta 3 a otázka 6 přibudou v P8.
-  await expect(page.getByRole('navigation', { name: 'Kam dál' }).getByRole('link')).toHaveText([/Sókratés/, /Diogenés/, /Marcus Aurelius/]);
+  // Kam dál: cesta 3 a otázka 6 (P8); položky nejvýš čtyři, Diogenés má odkaz v kapitole 03.
+  const kamDal = page.getByRole('navigation', { name: 'Kam dál' });
+  await expect(kamDal.getByRole('link')).toHaveText([/Cesta 3\s*Je to, co vidím, celá skutečnost\?/, /Sókratés/, /Marcus Aurelius/, /Velká otázka 6\s*Co je skutečné\?/]);
+  await expect(kamDal.getByRole('link').first()).toHaveAttribute('href', '/cesta/je-to-co-vidim-cela-skutecnost/');
+  await expect(kamDal.getByRole('link').last()).toHaveAttribute('href', '/otazka/co-je-skutecne/');
+});
+
+test('Platón: vstupy do cesty 3 a otázky 6 v hlavičce, u věty o jeskyni, v přehledu otázek a v Lidech', async ({ page }) => {
+  await page.goto(PLATON);
+  // Hlavička profilu nabízí cestu a otázku sama z dat.
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 3 · 8 kroků · asi 20 minut\s*Je to, co vidím, celá skutečnost\?/, /Velká otázka 6\s*Co je skutečné\?/]);
+  await expect(page.locator('.vstupy-osoby a').first()).toHaveAttribute('href', '/cesta/je-to-co-vidim-cela-skutecnost/');
+  // Věta o jeskyni v kapitole 03 vede na cestu; karta cesty v portrétu není (větu „Podobní nám“ nese až cesta).
+  await expect(page.locator('#stul-a-stolovost a[href="/cesta/je-to-co-vidim-cela-skutecnost/"]')).toHaveText('Je to, co vidím, celá skutečnost?');
+  await expect(page.locator('.cesta-karta')).toHaveCount(0);
+  // Přehled otázek: otázka 6 má vlastní stránku a cestu; Lidé: cesta na kartě Platóna.
+  await page.goto('/otazky/');
+  await expect(page.locator('#co-je-skutecne .cesta')).toHaveText(/Cesta 3\s*Je to, co vidím, celá skutečnost\?/);
+  await expect(page.locator('#co-je-skutecne a[href="/otazka/co-je-skutecne/"]')).toHaveCount(1);
+  await page.goto('/lide/');
+  await expect(page.locator('#platon .karta__cesta')).toHaveText('Cesta 3: Je to, co vidím, celá skutečnost?');
 });
 
 test('Platón: deska, mini mapa a Doba a lidé sedí na text', async ({ page }) => {
