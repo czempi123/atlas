@@ -13,6 +13,10 @@ Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jso
 | Krok 3 cesty 3 má kresbu `<JeskyneVen />`: řez s cestou ven a posuvník, kterým si oči venku zvykají | Autor: „Můžeš to udělat i v kroku 3.“ Pořadí šesti stupňů je z pramene (516a–b) a z textu se špatně představuje |
 | Stupně venku mění student posuvníkem; samy neběží | Pořadí je pointa a student si ho má projít vlastní rukou. Pohyb zůstává dějem uvnitř pohledu (dvojice stoupá chodbou) |
 | Kresba v kroku 3 stojí za odstavcem o zvykání očí; text kroku se kvůli ní neměnil | Kresba nenese nic, co neříká text; kdo ji přeskočí, o nic nepřijde |
+| Krok 6 cesty 1 má kresbu `<Saty />` „Stejné šaty, jiné světlo“: šaty mají pořád stejné dvě barvy, posuvník mění jen světlo okolí | Autor: „Myslím, že ty šaty bychom mohli použít.“ Případ dosud stál jen na popisu, fotku atlas nepřebírá |
+| Kresba šatů stojí pod blokem, ne nad ním. Blok k ní vede vlastním Kam dál, další krok nabízí lišta. Text pod blokem neříká, jaké šaty opravdu jsou | Nad blokem by vyzradila podmínku „Vědci vysvětlí, proč to vidíme jinak“ dřív, než student odpoví. Kdo vidí správně, nechává krok podmínkám v bloku |
+| Kresba šatů má vlastní barvy mimo tokeny a nemá tlačítko pohybu (`maPohyb={false}`) | Je o barvě, tři tóny období na ni nestačí; nic v ní neběží samo |
+| Text pod kresbou šatů neříká, co student vidí, ale co na fotce vidí ten, kdo dané světlo čeká | Podklad má výklad autorů studie o fotce. Jak silně zapůsobí naše kresba, ověřené není |
 | Otevřené body z P8 zůstávají, jak jsou: čtyři koše v kroku 2, rytina bez výřezu, karta „Jak vypadá válka“, „boj obrů“ v úvodu otázky 6 a Volba v kroku 7 | Autor: „Jinak můžeš nechat tam kde se ptáš.“ |
 
 ## 4. 10. 2026: Cesta 3, stránka otázky 6 a kresba jeskyně (P8)
