@@ -149,7 +149,7 @@
 
   {#snippet ovladani()}
     {#if pohled === 'venku'}
-      <div class="zvykani">
+      <div class="k-posuvnik">
         <label for="{id}-stupen">Posuň: oči si zvykají</label>
         <input id="{id}-stupen" type="range" min="0" max={STUPNE.length - 1} step="1" bind:value={stupen} aria-valuetext={STUPNE[stupen].nazev} />
         <output for="{id}-stupen">{stupen + 1} z {STUPNE.length} · {STUPNE[stupen].nazev}</output>
@@ -178,10 +178,6 @@
   .hladina { opacity: 0.92; }
   .odraz { opacity: 0.7; }
 
-  .zvykani { margin: var(--s-3) 0 0; font-family: var(--font-sans); font-size: var(--fs-ovladani); }
-  .zvykani label { display: block; font-weight: 600; color: var(--ink); }
-  .zvykani input { display: block; width: 100%; height: 44px; margin: 0; accent-color: var(--pc, var(--ink)); cursor: pointer; }
-  .zvykani output { display: block; color: var(--ink-2); font-variant-numeric: lining-nums tabular-nums; }
 
   /* Pohyb jen tam, kde ho student nemá omezený; zastavení řídí rám (třída k-hybe, global.css). */
   :global(.kresba--pohyb) .dvojice { animation: dvojice 18s linear infinite; }

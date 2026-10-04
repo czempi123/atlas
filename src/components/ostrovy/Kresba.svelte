@@ -6,7 +6,8 @@
   // jde zastavit a zastavený zůstane stát; text pod kresbou říká totéž slovy a je popisem obrázku pro čtečky;
   // kresba nic neukládá a nenabízí Kam dál. Barvy: třídy k-svetlo, k-stin a k-tma (global.css › Kresba s pohybem).
   // Pohyblivý prvek dostane třídu k-hybe a vlastní animaci pod :global(.kresba--pohyb); zastavení řeší rám.
-  // Použití: viz src/components/ostrovy/Jeskyne.svelte.
+  // Posuvník ve snippetu ovladani dostane třídu k-posuvnik (global.css). Kresba bez vlastního pohybu: maPohyb={false}.
+  // Použití: viz src/components/ostrovy/Jeskyne.svelte, JeskyneVen.svelte a Saty.svelte.
   import { onMount, type Snippet } from 'svelte';
   import { omezenyPohyb } from '../../lib/pohyb';
 
@@ -28,8 +29,10 @@
     ovladani?: Snippet;
     /** rozměr plátna; výchozí 340 × 240 jednotek (na telefonu vyjde jednotka asi na pixel) */
     viewBox?: string;
+    /** běží v kresbě něco samo? Kresba, kterou hýbe jen student (posuvník), tlačítko pohybu nemá. */
+    maPohyb?: boolean;
   }
-  let { id, obdobi = 1, nadtitulek = 'Podívej se', nazev, pohledy, pohled = $bindable(), popis, kresba, ovladani, viewBox = '0 0 340 240' }: Props = $props();
+  let { id, obdobi = 1, nadtitulek = 'Podívej se', nazev, pohledy, pohled = $bindable(), popis, kresba, ovladani, viewBox = '0 0 340 240', maPohyb = true }: Props = $props();
 
   /** smí se kresba hýbat (student nemá zapnutý omezený pohyb) */
   let smiPohyb = $state(false);
@@ -68,7 +71,7 @@
 
   <p class="kresba__popis" id="{id}-popis" aria-live="polite">{popis}</p>
 
-  {#if smiPohyb}
+  {#if smiPohyb && maPohyb}
     <button type="button" class="blok__tl blok__tl--tiche kresba__pohyb" onclick={() => (bezi = !bezi)}>
       {bezi ? 'Zastavit pohyb' : 'Pustit pohyb'}
     </button>

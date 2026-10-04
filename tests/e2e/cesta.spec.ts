@@ -129,6 +129,8 @@ test('cesta: průchod, Kam dál z bloku, lišta Další, Pokračuj na Domů a v 
 
 test('cesta: klávesnice v hlavičce a liště; rozpracovaný krok nabídne hlavní tlačítko na Domů', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
+  // Krok 6 má pod blokem kresbu: bez plynulého posouvání k ní příprava dojde a ostrov se hydratuje.
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(`${CESTA}6/`);
   await pripravit(page);
   await page.keyboard.press('Tab'); // Přeskočit na obsah

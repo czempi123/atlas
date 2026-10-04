@@ -50,6 +50,14 @@ async function pripravDenik(page: Page, cesty: Partial<Record<Klic, Priprava>>, 
 
 async function pripravit(page: Page) {
   await page.evaluate(() => document.fonts.ready);
+  // Ostrov pod ohybem (kresba v kroku 6 cesty 1) se hydratuje, až je vidět.
+  await page.evaluate(async () => {
+    for (let y = 0; y < document.body.scrollHeight; y += 500) {
+      window.scrollTo({ top: y, behavior: 'instant' });
+      await new Promise((r) => setTimeout(r, 30));
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
   await expect(page.locator('astro-island[ssr]')).toHaveCount(0);
 }
 const denik = (page: Page) => page.evaluate(() => JSON.parse(localStorage.getItem('atlas-denik') ?? '{}'));

@@ -85,10 +85,18 @@ for (const c of CESTY) {
         }
         const blok = bloky.nth(pocet - 1);
         druhy.push(await odpovez(blok));
-        // Po posledním bloku je další krok hned vidět a jedním klepnutím dosažitelný.
-        const dal = blok.getByRole('navigation', { name: 'Kam dál' }).getByRole('link', { name: /^Další krok/ });
-        await expect(dal).toBeVisible();
-        await dal.click();
+        const odkaz = blok.getByRole('navigation', { name: 'Kam dál' }).getByRole('link');
+        if ((await odkaz.getAttribute('href'))?.startsWith('#')) {
+          // Pod blokem je ještě text s kresbou (šaty v cestě 1): blok vede k němu, dál vede lišta.
+          await expect(odkaz).not.toHaveText(/Další krok/);
+          await odkaz.click();
+          await page.locator('.cesta-lista').getByRole('link', { name: /Další krok/ }).click();
+        } else {
+          // Po posledním bloku je další krok hned vidět a jedním klepnutím dosažitelný.
+          const dal = blok.getByRole('navigation', { name: 'Kam dál' }).getByRole('link', { name: /^Další krok/ });
+          await expect(dal).toBeVisible();
+          await dal.click();
+        }
       } else {
         druhy.push('pribeh');
         await page.locator('.cesta-lista').getByRole('link', { name: /Další krok/ }).click();

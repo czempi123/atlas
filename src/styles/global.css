@@ -240,5 +240,10 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
 .kresba .k-tma { fill: var(--k-tma); }
 .kresba .k-popisek { font-family: var(--font-sans); font-size: 11.5px; font-weight: 600; fill: var(--k-svetlo); }
 .kresba .k-popisek--tmavy { fill: var(--k-tma); }
+/* Posuvník kresby (snippet ovladani): popisek, posuvník s cílem 44 px a řádek „3 z 5 · název stupně“. */
+.kresba .k-posuvnik { margin: var(--s-3) 0 0; font-family: var(--font-sans); font-size: var(--fs-ovladani); }
+.kresba .k-posuvnik label { display: block; font-weight: 600; color: var(--ink); }
+.kresba .k-posuvnik input { display: block; width: 100%; height: 44px; margin: 0; accent-color: var(--pc, var(--ink)); cursor: pointer; }
+.kresba .k-posuvnik output { display: block; color: var(--ink-2); font-variant-numeric: lining-nums tabular-nums; }
 /* Pohyblivý prvek (k-hybe) má vlastní animaci jen pod .kresba--pohyb; když student pohyb zastaví, zůstane stát tam, kde je. */
 .kresba:not(.kresba--bezi) .k-hybe { animation-play-state: paused !important; }

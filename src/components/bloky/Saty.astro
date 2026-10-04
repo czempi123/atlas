@@ -1,0 +1,15 @@
+---
+// Stejné šaty, jiné světlo: kresba k šatům z roku 2015 (cesta 1, krok 6). Šaty mají pořád stejné dvě barvy;
+// posuvník mění jen světlo kolem (chladné denní, šedé okolí, teplé umělé). Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <Saty id="saty-svetlo" />
+import Ostrov from '../ostrovy/Saty.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8); výchozí období 1 (cesta 1) */
+  obdobi?: number;
+}
+const { id = 'saty-svetlo', obdobi = 1 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

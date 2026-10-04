@@ -4,6 +4,20 @@ krok: 6
 nazev: Bílozlaté, nebo modročerné?
 kdeJsme: Internet, únor 2015
 ---
-import { ZmenJednuVec } from '../../../components/bloky';
+import { ZmenJednuVec, Saty } from '../../../components/bloky';
 
-<ZmenJednuVec id="cesta1-saty" />
+<ZmenJednuVec id="cesta1-saty" dal={{ href: '#proc-jinak', text: 'Proč je každý vidí jinak' }} />
+
+<div class="ctenarsky">
+
+<h2 id="proc-jinak" tabindex="-1">Proč je každý vidí jinak</h2>
+
+Fotka byla jedna, a lidé na ní přesto viděli různé barvy. Vědci to vysvětlují tak, že si mozek domýšlí, v jakém světle šaty jsou.
+
+Zkus to na kresbě. Šaty na ní mají pořád stejné dvě barvy, modrou a hnědou, jako body na té fotce. Posuvník mění jen světlo kolem nich.
+
+<Saty id="saty-svetlo" />
+
+*Vidíš šaty jinak, i když víš, že se nezměnily? A kdo má tedy pravdu: ty u jednoho konce posuvníku, nebo ty u druhého?*
+
+</div>
