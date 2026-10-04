@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 3 „Je to, co vidím, celá skutečnost?“, krok 3: podle čeho poznám, že někdo venku opravdu byl.
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Podle čeho bys poznal, že jsi venku opravdu byl? (možnosti a co na ně
+# odpovídá pramen: Ústava 515d–516a, 516c–d, 516e–517a, 517b, 520c). Možnosti jsou autorské a žádná není něčí tah:
+# blok nemá Co udělal. Věta „jen bůh ví“ je tu nepřímo; jako citát (ustava-517b) stojí až v kroku 7.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: Představ si, že ti někdo řekne, že on venku byl a ty žiješ mezi stíny.
+otazka: Podle čeho poznáš, jestli má pravdu?
+moznosti:
+  - text: Podle toho, jak jistě mluví.
+    tah: dát na jistotu
+    zpetna: >-
+      Jistota přesvědčí: kdo váhá, tomu se věří hůř. V Sókratově obrazu je ale ten, kdo vyšel, nejdřív oslepený a bezradný.
+      A Sókratés o svém výkladu jeskyně říká, že jen bůh ví, jestli je pravdivý. Co ti tedy jistota o člověku prozradí?
+  - text: Podle toho, kolik lidí mu věří.
+    tah: počítat hlasy
+    zpetna: >-
+      Když něčemu věří hodně lidí, mívají k tomu důvod. V jeskyni se ale pocty rozdávají taky:
+      dostane je ten, kdo nejlíp uhodne další stín. Co by muselo platit, aby počet hlasů něco dokazoval?
+  - text: Podle toho, jestli mi ukáže cestu, kterou můžu projít sám.
+    tah: chtít cestu
+    zpetna: >-
+      Chceš něco, co si můžeš ověřit sám, a nemusíš mu věřit na slovo. Výstup je ale v Sókratově obrazu strmý a bolí
+      a vězeň se cestou zlobí. Jak dlouho bys šel, než bys řekl, že cesta nikam nevede?
+  - text: Podle toho, jestli se vyzná i tady dole.
+    tah: zkoušet ho dole
+    zpetna: >-
+      Zkoušíš ho na tom, čemu sám rozumíš. V Sókratově obrazu ale ten, kdo se vrátí, napřed tápe: oči má plné tmy.
+      Teprve až si zvykne, vyzná se dole líp než ti, kdo zůstali. Jak dlouho bys mu dal?
+zdroje: [platon-ustava-perseus]

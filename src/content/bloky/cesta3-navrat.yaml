@@ -1,0 +1,21 @@
+# Návrat · cesta 3 „Je to, co vidím, celá skutečnost?“: kamarád u cizí bundy; viděl jsem to sám a nikdo jiný.
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen.
+# Jiného druhu než nový případ cesty (pokus na Facebooku: obrazovka a studie), než úvod stránky otázky 6 (duha: příroda)
+# a než karty z kroku 2: tady jde o člověka a o to, co má student před očima on sám.
+# Dá se posoudit pravidlem, které očím věří, i pravidlem, podle kterého to, co vidím, není celé; případ nenapovídá.
+druh: navrat
+obdobi: 1
+cesta: je-to-co-vidim-cela-skutecnost
+pravidlo: cesta3-moje-pravidlo
+nazev: U šaten
+scena: >-
+  Představ si, že jdeš o přestávce kolem šaten. Kamarád tam stojí u cizí bundy a něco z ní vytahuje.
+  Tebe si nevšimne.
+
+
+  Odpoledne se ve třídě řekne, že se někomu ztratila peněženka. Kromě tebe u šaten nikdo nebyl.
+  Sedíš v lavici, ten obraz máš pořád před očima a rozhoduješ se, co s ním uděláš.
+po:
+  ano: Co podle něj teď uděláš jako první?
+  upravim: Co do něj připíšeš o tom, co vidíš jen ty a nikdo jiný?
+  nevim: "Na čem to vázne: na tom, co máš před očima, nebo na tom, co vidět nebylo?"

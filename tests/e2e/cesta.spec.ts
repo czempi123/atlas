@@ -1,4 +1,4 @@
-// Cesty 1, 5 a 6: přehled, kroky, soustředěná hlavička a lišta Předchozí / Další,
+// Cesty 1, 3, 5 a 6: přehled, kroky, soustředěná hlavička a lišta Předchozí / Další,
 // Kam dál z bloků, Pokračuj na Domů a v deníku. Každý krok na 390 a 1440 px ve světlém
 // i tmavém režimu s axe, bez vodorovného posouvání a se snímky. Cesta 6 navíc celá jen klávesnicí
 // a jednou bez odkrytí bloků.
@@ -11,10 +11,13 @@ const CESTA6 = '/cesta/kolik-je-dost/';
 const KROKY6 = ['Host v Zahradě', 'Tři koše', 'Která bunda víc hřeje?', 'Žít jako kynik?', 'Měsíc na minimum', 'Peníze a štěstí', 'Tvoje pravidlo'];
 const CESTA5 = '/cesta/co-mam-ve-svych-rukou/';
 const KROKY5 = ['Noha', 'Tři koše', 'Dvě půlky', 'Otrok a císař', 'Záleží na tom, co mě potká?', 'Snímek z chatu', 'Kamenná tvář', 'Tvoje pravidlo'];
+const CESTA3 = '/cesta/je-to-co-vidim-cela-skutecnost/';
+const KROKY3 = ['Jeskyně', 'Odkud to vím?', 'Ven', 'Čtverec sám', 'Učitel a žák', 'Vyměnit stíny', 'Zpátky dolů', 'Tvoje pravidlo'];
 const CESTY = [
   { adresa: CESTA, nazev: 'Kdy mám dobrý důvod věřit?', kroky: KROKY, snimek: 'cesta' },
   { adresa: CESTA6, nazev: 'Kolik je dost?', kroky: KROKY6, snimek: 'cesta6' },
   { adresa: CESTA5, nazev: 'Co mám ve svých rukou?', kroky: KROKY5, snimek: 'cesta5' },
+  { adresa: CESTA3, nazev: 'Je to, co vidím, celá skutečnost?', kroky: KROKY3, snimek: 'cesta3' },
 ];
 
 async function pripravit(page: Page) {

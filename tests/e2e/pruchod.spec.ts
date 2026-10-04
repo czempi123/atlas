@@ -7,6 +7,7 @@ const CESTY = [
   { slug: 'kdy-mam-dobry-duvod-verit', kroku: 7, pravidlo: 'cesta1-moje-pravidlo', spor: 'cesta1-meritko-spor', zacatek: 'Krok 2 · Jak bys to zjišťoval ty?' },
   { slug: 'kolik-je-dost', kroku: 7, pravidlo: 'cesta6-moje-pravidlo', spor: 'cesta6-kynici-spor', zacatek: 'Krok 2 · Tři koše' },
   { slug: 'co-mam-ve-svych-rukou', kroku: 8, pravidlo: 'cesta5-moje-pravidlo', spor: 'cesta5-aristoteles-spor', zacatek: 'Krok 2 · Tři koše' },
+  { slug: 'je-to-co-vidim-cela-skutecnost', kroku: 8, pravidlo: 'cesta3-moje-pravidlo', spor: 'cesta3-aristoteles-spor', zacatek: 'Krok 2 · Odkud to vím?' },
 ];
 
 async function pripravit(page: Page) {
@@ -73,10 +74,18 @@ for (const c of CESTY) {
       await expect(page).toHaveURL(`/cesta/${c.slug}/${n}/`);
       await pripravit(page);
       const bloky = page.locator('.krok__obsah section.blok');
-      if (await bloky.count()) {
-        const blok = bloky.first();
+      const pocet = await bloky.count();
+      if (pocet) {
+        // Krok se dvěma bloky (odhad a čtení pokusu v cestě 3): první blok vede k textu pod sebou, další krok nabízí až poslední.
+        for (let i = 0; i < pocet - 1; i++) {
+          druhy.push(await odpovez(bloky.nth(i)));
+          const niz = bloky.nth(i).getByRole('navigation', { name: 'Kam dál' }).getByRole('link');
+          await expect(niz).toHaveAttribute('href', /^#/);
+          await expect(niz).not.toHaveText(/Další krok/);
+        }
+        const blok = bloky.nth(pocet - 1);
         druhy.push(await odpovez(blok));
-        // Po každém bloku je další krok hned vidět a jedním klepnutím dosažitelný.
+        // Po posledním bloku je další krok hned vidět a jedním klepnutím dosažitelný.
         const dal = blok.getByRole('navigation', { name: 'Kam dál' }).getByRole('link', { name: /^Další krok/ });
         await expect(dal).toBeVisible();
         await dal.click();

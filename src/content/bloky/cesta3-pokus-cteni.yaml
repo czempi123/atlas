@@ -1,0 +1,27 @@
+# Volba s důvodem · cesta 3 „Je to, co vidím, celá skutečnost?“, krok 6: jak číst výsledek pokusu na Facebooku (2020).
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Nový případ: řádky 3–7, Proč případ sedí (tři čtení, žádné není správné)
+# a Co pokus neukázal. Výhrady (tři měsíce, jen USA a volby, třetina místo všeho, spolupráce s firmou, které Facebook patří;
+# autoři podle článku neplaceni, plán zveřejněn předem) jsou jen tady ve zpětné vazbě. Že častější reakce na známé příspěvky
+# připomínají vězně, který se otáčí ke stínům (515e), je naše spojení, ne Platónovo ani autorů studie: blok ho netvrdí.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+otazka: Mluví ten pokus pro jeskyni, nebo proti ní?
+moznosti:
+  - text: Pro. Vyměnit stíny nestačí, člověk se musí otočit sám.
+    tah: číst pokus s Platónem
+    zpetna: >-
+      Čteš pokus jako Platón: nejde o to, co se promítá, ale kam je člověk otočený. Pokus ale trval tři měsíce,
+      běžel jen v USA kolem voleb a ubral třetinu, ne všechno. Co by se muselo stát, abys tohle čtení opustil?
+  - text: Proti. Nikdo nás nedrží, díváme se, protože chceme.
+    tah: číst pokus proti jeskyni
+    zpetna: >-
+      Všímáš si, že účastníci na známé příspěvky reagovali častěji než dřív, a nikdo je nenutil. Vězni v jeskyni mají pouta, tihle lidé ne.
+      Je ale volný ten, kdo se jinam nikdy nepodívá?
+  - text: Ani jedno. S bublinami je to jen složitější, než se říká.
+    tah: nevěřit jednoduchému obrazu
+    zpetna: >-
+      Držíš se toho, co pokus opravdu zkoušel: jednu síť, jednu zemi, tři měsíce, třetinu příspěvků. Běžel navíc ve spolupráci
+      s firmou, které Facebook patří; vědci podle svých slov placeni nebyli a plán zveřejnili předem.
+      Jaký pokus by tě přesvědčil pro jednu, nebo druhou stranu?
+zdroje: [nyhan-2023, platon-ustava-perseus]

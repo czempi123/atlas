@@ -1,0 +1,27 @@
+# Volba s důvodem · cesta 3 „Je to, co vidím, celá skutečnost?“, krok 7: kdo má rozhodovat o tom, co je skutečné.
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Návrat a vlastní pravidlo; Citlivá místa Ústavy, řádky Ušlechtilá lež
+# (III, 414b–415c) a Filozofové mají vládnout (V, 473c–e; VII, 519c–521a). Scéna shrnuje, co stojí v textu kroku.
+# Možnosti i zpětné vazby jsou autorské, bez historického nároku; o Platónově kritice demokracie (kniha VIII) blok nemluví.
+# Žádný tah není něčí, blok nemá Co udělal.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: V Sókratově obci rozhodují ti, kdo vystoupali. Ostatní jim mají věřit.
+otazka: Kdo má podle tebe rozhodovat o tom, co je skutečné?
+moznosti:
+  - text: Ti, kdo vidí dál. Od toho se učili.
+    tah: věřit těm, kdo vidí dál
+    zpetna: >-
+      Lékařce nebo pilotovi věříš, protože o své věci vědí víc než ty. Podle čeho ale poznáš, že někdo vidí dál,
+      když sám tak daleko nevidíš? A smí ti kvůli tomu něco zamlčet?
+  - text: Všichni dohromady. Nikdo nemá vidět za ostatní.
+    tah: rozhodovat společně
+    zpetna: >-
+      Nikdo pak nemůže říct, že o něm rozhodli bez něj. Dá se ale o tom, co je skutečné, hlasovat?
+      Zkus najít jednu věc, o které ano, a jednu, o které ne.
+  - text: Nikdo. Co je skutečné, si musí každý ověřit sám.
+    tah: ověřit si sám
+    zpetna: >-
+      Nenecháš si nic vnutit. V kroku 2 ale bylo dost věcí, které sám ověřit nemůžeš.
+      Komu u nich budeš věřit a podle čeho si ho vybereš?
+zdroje: [platon-ustava-perseus]

@@ -1,0 +1,45 @@
+# Spor · cesta 3 „Je to, co vidím, celá skutečnost?“, krok 5: Platón × Aristotelés (rozhodnutí autora 3. 10. 2026).
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Spor: Platón × Aristotelés.
+# Platón: Ústava 510d–e a 520c, Faidón 74a–75a, Tímaios 51d–e. Aristotelés: Metafyzika 990b1–8, 991a8–22 a 1086b5–7,
+# Kategorie 5 (2a11–14, 2b5–6), Etika Nikomachova 1097a8–13. Skutečný spor učitele a žáka, ne rozhovor: scéna neříká,
+# že se přeli tváří v tvář, ani kdy Aristotelés kritiku napsal. Třetí Platónův argument je domyšlená odpověď („by mohl“)
+# a začíná námitkou, na kterou odpovídá (na telefonu stojí Platón nad Aristotelem). Věta o Akademii je v textu kroku.
+druh: spor
+obdobi: 1
+nadtitulek: Spor
+scena: >-
+  Aristotelés své námitky proti idejím sepsal. Platónova strana stojí na tom, co napsal v dialozích.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: "Co je skutečnější: jednotlivá věc, nebo to, co mají všechny takové věci společné?"
+strany:
+  - osoba: platon
+    postoj: To společné. Jednotlivé věci jsou jeho obrazy.
+    argumenty:
+      - >-
+        Přesný čtverec nikdo neviděl a v žádném nakresleném není: každý je trochu křivý. A přece o něm víme přesné věci.
+        Nakreslené čtverce se liší, stárnou a mažou se, a věta o úhlopříčkách platí pořád.
+        To, o čem je, musí být stálejší než cokoli nakresleného.
+      - >-
+        Vědět je víc než trefit se. Mínění se dá vymluvit, vědění ne.
+        Kdyby bylo jen to, co vidíme, nebyl by mezi nimi rozdíl.
+      - >-
+        Aristotelés namítá, že lékař neléčí zdraví, ale tohoto člověka.
+        Platón by mohl odpovědět: podle čeho lékař pozná, že je tenhle člověk nemocný?
+        Musí vědět, co je zdraví, a to z jednoho pacienta nevyčte. Kdo to ví, vyzná se i v jednotlivých případech líp.
+  - osoba: aristoteles
+    postoj: Jednotlivá věc. To společné je v ní, ne vedle ní.
+    argumenty:
+      - >-
+        Druhý svět nic nevysvětlí. Kdo chce pochopit věci a přidá k nim stejný počet idejí, má co vysvětlovat dvakrát.
+        Ideje věcmi nepohnou, nezmění je a nepomůžou je poznat, protože v nich nejsou.
+        A mají-li to být vzory: kdo podle nich věci dělá?
+      - >-
+        Skutečné je nejdřív tohle tady: tenhle člověk, tenhle kůň.
+        Kdyby nebylo jednotlivých věcí, nebylo by ani to, co mají společné.
+      - >-
+        Platón má pravdu, že bez obecného není vědění. Chyba je až v tom, že obecné oddělí od věcí; z toho jsou všechny potíže.
+        Čtverec není vedle nakreslených čtverců, ale v nich.
+        A lékaři ani tesaři dobro samo nepomůže: léčí se tenhle člověk.
+zdroje: [platon-ustava-perseus, platon-faidon-perseus, platon-timaios, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie]

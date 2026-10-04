@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 3 „Je to, co vidím, celá skutečnost?“, krok 6: odhad před výsledkem pokusu na Facebooku (2020).
+# Podklad: docs/podklady/celek-4-co-je-skutecne.md › Nový případ: pokus na Facebooku z roku 2020, řádky 1–2 a Návrh bloku
+# (B. Nyhan a kol., Nature 620, 2023: třetina příspěvků od stejně smýšlejících zdrojů pryč na tři měsíce).
+# Zpětná vazba výsledek neprozrazuje; ten stojí v textu kroku pod blokem (blok na něj vede vlastním Kam dál).
+# Žádný tah není něčí, blok nemá Co udělal.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj odhad
+otazka: Co se podle tebe stalo s jejich názory?
+moznosti:
+  - text: Zmírnily se. Viděli druhou stranu a začali jí víc rozumět.
+    tah: čekat zmírnění
+    zpetna: >-
+      Počítáš s tím, že názor stojí na tom, co člověk vidí: změň obraz a změní se i on. Tak uvažuje každý, kdo mluví o bublinách.
+      Co by muselo platit, aby cizí příspěvek někoho přesvědčil?
+  - text: Přitvrdily. Cizí názory je spíš naštvaly.
+    tah: čekat přitvrzení
+    zpetna: >-
+      Počítáš s tím, že se člověk dívá i tím, co si už myslí: cizí názor ho spíš popudí, než přesvědčí.
+      Stalo se ti někdy, že tě příspěvek z druhé strany utvrdil v tom tvém?
+  - text: Nic. Třetina příspěvků na tři měsíce je málo.
+    tah: čekat málo
+    zpetna: >-
+      Díváš se na to, co přesně vědci změnili: třetinu, na tři měsíce. Kolik by podle tebe muselo být, aby se něco pohnulo?
+      A stačí vůbec měnit to, co člověk vidí?
+  - text: Záleží na člověku. Někdo se zamyslí, jiný se zatvrdí.
+    tah: nečekat jednu odpověď
+    zpetna: >-
+      Nevěříš, že stejná změna udělá se všemi totéž. Na čem tedy u člověka záleží víc:
+      na tom, co vidí, nebo na tom, jak se dívá?
+zdroje: [nyhan-2023]
