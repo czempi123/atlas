@@ -205,4 +205,6 @@ Samostatné kroky mimo uzavření: kresba „Zdvoj čtverec“ v kapitole 02 por
 
 ## Uzavření (4. 10. 2026)
 
-Autor celek 4 schválil. Větev `celek-4` byla sloučena do `main` (posun bez konfliktů, `4d48d2d` → `89d12c1`) a `main` poslána na GitHub, i s větví `rozhrani-v2`. Celek je uzavřený. Zbývá mimo uzavření: uložit skilly `atlas-revize`, `atlas-komponenta` a `atlas-cesta` do účtu, autorovo oko na kresby (šaty a tři kresby pokusů), ověření Kratylos 402a a Metafyzika I, 1, kresba „Zdvoj čtverec“ v kapitole 02 portrétu a oddíl Kresby v dílně bloků.
+Autor celek 4 schválil a potvrdil, že vše ověřil: kresby (šaty a tři kresby pokusů), skilly `atlas-revize`, `atlas-komponenta` a `atlas-cesta` uložil do účtu a body k ověření (Kratylos 402a, Metafyzika I, 1) považuje za vyřízené. Větev `celek-4` byla sloučena do `main` (posun bez konfliktů, `4d48d2d` → `89d12c1`) a `main` poslána na GitHub i s větví `rozhrani-v2`. Celek je uzavřený, nic na něm nezbývá.
+
+Samostatné kroky mimo celek, kdy je autor zadá: kresba „Zdvoj čtverec“ v kapitole 02 portrétu (po ověření Menóna 84d–85b) a oddíl Kresby v dílně bloků.
