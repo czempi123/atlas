@@ -78,7 +78,7 @@ for (const { sirka, vyska } of SIRKY) {
       await tlacitko.click();
       await expect(tlacitko).toHaveText(['Skrýt počet']);
       await expect(kresba.locator('svg .cele')).toHaveCount(16);
-      await expect(kresba.locator('svg text')).toHaveText(['původní', 'strana', 'čtyři stopy', 'obsah', '16', 'hledáme: 8']);
+      await expect(kresba.locator('svg text')).toHaveText([...Array.from({ length: 16 }, (_, i) => String(i + 1)), 'původní', 'strana', 'čtyři stopy', 'obsah', '16', 'hledáme: 8']);
       await expect(popis).toContainText('Čtverec o straně čtyři stopy má šestnáct čtverečků.');
       await popiskyVolne(kresba);
       await vpravoOdMrizky(kresba);
@@ -104,7 +104,7 @@ for (const { sirka, vyska } of SIRKY) {
       await tlacitko.click();
       await expect(kresba.locator('svg .cele')).toHaveCount(4);
       await expect(kresba.locator('svg .pulka')).toHaveCount(8);
-      await expect(kresba.locator('svg text')).toHaveText(['původní', 'strana', 'úhlopříčka', 'obsah', '4 celé', '8 půlek', '= 8', 'hledáme: 8']);
+      await expect(kresba.locator('svg text')).toHaveText(['1', '2', '3', '4', ...Array(8).fill('½'), 'původní', 'strana', 'úhlopříčka', 'obsah', '4 celé', '8 půlek', '= 8', 'hledáme: 8']);
       await expect(popis).toContainText('Nový čtverec tvoří čtyři celé čtverečky a osm půlek, dohromady osm.');
       await popiskyVolne(kresba);
       await vpravoOdMrizky(kresba);

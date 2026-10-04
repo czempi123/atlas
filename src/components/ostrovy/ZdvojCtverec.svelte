@@ -30,6 +30,12 @@
   let pocty = $derived(pocet(p));
 
   /** Řádky vpravo po spočítání: co student napočítal. */
+  /** Čtverečky číslované po řadě (celé 1, 2, 3 …), půlky jako ½. */
+  let cisla = $derived([
+    ...rozdeleno.cele.map((c, i) => ({ ...c, text: String(i + 1) })),
+    ...rozdeleno.pulky.map((c) => ({ ...c, text: '½' })),
+  ]);
+
   let vysledek = $derived(p.id === 'uhlopricka' ? [`${pocty.cele} celé`, `${pocty.pulky} půlek`, `= ${pocty.soucet}`] : [`${pocty.soucet}`]);
 </script>
 
@@ -68,7 +74,13 @@
     {/each}
     <polygon class="okraj" points={bodyNaPlatno(p.body)} />
 
-    <text class="k-popisek" x={X0 + 6} y={Y0 + 16}>původní</text>
+    {#if spocitano}
+      {#each cisla as c (`${c.x}-${c.y}`)}
+        <text class="k-popisek cislo" class:pulka-cislo={c.text === '½'} x={X0 + c.x * JEDNOTKA + JEDNOTKA / 2} y={Y0 + c.y * JEDNOTKA + JEDNOTKA / 2 + 7} text-anchor="middle">{c.text}</text>
+      {/each}
+    {/if}
+
+    <text class="k-popisek puvodni-popisek" x={X0 + 6} y={Y0 + 12}>původní</text>
     <text class="k-popisek" x="234" y="58">{p.strana[0]}</text>
     <text class="k-popisek" x="234" y="75">{p.strana[1]}</text>
     {#if spocitano}
@@ -97,6 +109,10 @@
   .mrizka { stroke: var(--k-svetlo); stroke-width: 1; opacity: 0.32; }
   .puvodni-vypln { fill: var(--k-svetlo); opacity: 0.2; }
   .puvodni { fill: none; stroke: var(--k-svetlo); stroke-width: 1.75; opacity: 0.8; }
+  .cislo { fill: var(--k-tma); font-size: 14px; }
+  .pulka-cislo { fill: var(--k-svetlo); paint-order: stroke; stroke: var(--k-tma); stroke-width: 3px; stroke-linejoin: round; }
+  /* Štítek původního čtverce zůstane čitelný na světlé i tmavé ploše. */
+  .puvodni-popisek { paint-order: stroke; stroke: var(--k-tma); stroke-width: 3px; stroke-linejoin: round; }
   .cele { fill: var(--k-svetlo); opacity: 0.5; }
   .pulka { fill: var(--k-svetlo); opacity: 0.24; }
 </style>
