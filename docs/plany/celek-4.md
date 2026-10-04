@@ -5,8 +5,8 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 | Krok | Co | Stav |
 | --- | --- | --- |
 | P6 | Podklady | hotovo 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`); autor 4. 10. 2026 rozhodl otevřené otázky, obrázky jsou stažené |
-| P7 | Portrét Platóna | **další krok**; zadání je připravené v oddílu P7 na konci (4. 10. 2026) |
-| P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | po P7 |
+| P7 | Portrét Platóna | hotovo 4. 10. 2026 (`src/content/osobnosti/platon.mdx`); čeká na schválení autorem, stav v oddílu Po P7 na konci |
+| P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | **další krok** po schválení P7 |
 | P10 | Revize celku | po P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
 
@@ -131,3 +131,40 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 
 Nejdřív mi v pár bodech napiš, jakou scénou otevřeš úvod a každou kapitolu, jaký blok v ní bude (s možnostmi Volby a podmínkami prstenu), které citáty použiješ, které dvě myšlenky vybereš a co z návrhu výše měníš, a počkej na odpověď. Pak piš, commituj česky po ucelených krocích (přesun Sporu, portrét, kontrola) a nic neposílej na GitHub. Na konci pošli snímky stránky, zapiš do docs/plany/celek-4.md stav po P7 (použité citáty, co si nese P8) a napiš, co jsi vynechal nebo připsal do k-overeni.
 ```
+
+## Po P7 (4. 10. 2026)
+
+Portrét Platóna je v `src/content/osobnosti/platon.mdx`: úvod, pět kapitol s bloky, Doba a lidé, Kdo žil dřív?, dvě velké myšlenky, výzva a Kam dál. Má asi 1 850 slov; na telefonu měří 23 200 px (Sókratés 19 200 px), na notebooku 18 300 px. `npm test` prošel celý (376 testů dat, 250 v prohlížeči). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/P7-platon/`.
+
+Autor schválil osnovu i s odchylkami od zadání; důvody jsou v `docs/rozhodnuti.md` (Portrét Platóna, P7), otevřené body v `docs/podklady/k-overeni.md` (Portrét Platóna, P7).
+
+| Kapitola | Čím začíná | Blok | Citáty |
+| --- | --- | --- | --- |
+| Úvod | Platón u soudu seděl, v den popravy chyběl | – | `faidon-59b` (hlavní citát stránky) |
+| 01 Příbuzní u moci | válka, porážka, příbuzní mezi oligarchy | Volba `platon-pribuzni-u-moci` (bez Co udělal) | `dl-iii-5` |
+| 02 Chlapec a čtverec | škola v háji; rozhovory, ve kterých sám nemluví | Odkryj `platon-ctverec` | `dl-iii-35`, `metafyzika-1078b`, `menon-81d`, `menon-86b` |
+| 03 Stůl a stolovost | stoly ve třídě; idea na Platónově příkladu stolu | Spor `platon-diogenes-skutecnost` | `parmenides-130d`, `parmenides-135c`, `etika-1096a` |
+| 04 Prsten a tři síly | Glaukón předkládá názor, kterému nevěří | Změň jednu věc `platon-gyguv-prsten` | `ustava-360b`, `ustava-440a`, `ustava-433a` |
+| 05 Třikrát do Syrákús | věta o filozofech a králích | Volba `platon-dion-vola` (s Co udělal) | `ustava-473d`, `sedmy-list-328c`, `plutarchos-dion-20` |
+
+Velké myšlenky: „Učit se znamená rozpomínat se“ (Poznání) a „Spravedlnost je pořádek v tobě“ (Etika). Kdo žil dřív?: Platón × Aristotelés. Zkus to žít: Kdo dnes rozhodl? Kam dál: Sókratés, Diogenés, Marcus Aurelius.
+
+**Použité citáty (15, každý jednou):** `faidon-59b`, `dl-iii-5`, `dl-iii-35`, `metafyzika-1078b`, `menon-81d`, `menon-86b`, `parmenides-130d`, `parmenides-135c`, `etika-1096a`, `ustava-360b`, `ustava-440a`, `ustava-433a`, `ustava-473d`, `sedmy-list-328c`, `plutarchos-dion-20`. Ve Sporu stojí v textu argumentů obě věty z Diogena Laertia VI, 53 (`dl-vi-53-diogenes`, `dl-vi-53-platon`).
+
+**Citáty celku, které portrét nechal P8:** `ustava-515a`, `ustava-515c`, `ustava-517a`, `ustava-517b`, `ustava-518a`, `ustava-518c` a `ustava-510d` (cesta 3); `etika-1097a`, `metafyzika-991a` a `metafyzika-1086b` (Spor s Aristotelem); `timaios-51d`, `sofistes-246a`, `parmenides-b8`, `dl-ix-72-demokritos`, `kategorie-2b`, `metafyzika-980a` a `meteorologika-iii-4` (otázka 6). Mimo studentský text zůstávají `politika-1261b`, `kd-34`, `antidosis-271` a `helena-5`.
+
+**Přesun Sporu Platón × Diogenés:** blok stojí v kapitole 03 portrétu. První Platónův argument je stůl a truhlář, Diogenés má repliku a poslední slovo, scéna říká jeho námitku předem. Sókratův portrét blok nemá a odkazuje na Platónův (spojovací odstavec a Kam dál, kde Platón nahradil mapu); profil Diogena vede na novou adresu z kapitoly 02 i z Kam dál. Testy bloku běží dál v dílně s novým zněním; že blok stojí v Platónově portrétu a odkazy sedí, hlídá `tests/e2e/platon.spec.ts`.
+
+**Data:** Platónovi přibyly prameny `platon-obrana`, `platon-faidon-perseus` a `platon-menon`; obrázek `platon-smk` má `vyrezNaSirku: 50% 16%`. Nové osoby, místa ani vztahy nepřibyly.
+
+**Co si nese P8:**
+
+- Kam dál portrétu má tři položky. P8 přidá cestu 3 a otázku 6; položky smějí být nejvýš čtyři, jedna tedy vypadne (Diogenés má odkaz i v kapitole 03).
+- Jeskyně je v portrétu jednou větou v kapitole 03 („jako stíny na stěně jeskyně“), bez odkazu. P8 doplní odkaz na cestu 3 nebo kartu cesty. Vstupy v hlavičce profilu se ukážou samy, až bude Platón ve `filozofove` cesty a v `hlasy` otázky 6.
+- Co portrét už vyprávěl a cesta ani otázka nemají opakovat: stůl a truhlář, stolovost, vlas, bláto a špína, den a plachta, chlapec se čtvercem, Leontios, Gýgův prsten, Syrákúsy, `etika-1096a` s větou o rčení.
+- Detaily, které cesta bude chtít znovu a v portrétu jsou jednou: „Aristotelés přišel do Akademie asi v sedmnácti a zůstal dvacet let“ (kapitola 03) a „to, čím je stůl stolem, není vedle stolů, ale v nich“ (závěr kapitoly 03). Ve Sporu cesty smějí zaznít ještě jednou. Spálené tragédie jsou v portrétu dvakrát (kapitoly 01 a 04); jinde už ne.
+- Kapitola 05 končí otázkou, jestli svěřit vládu těm, kdo o sobě říkají, že vidí víc. Krok cesty o návratu na ni může navázat ušlechtilou lží, kterou portrét nemá.
+- Tón: portrét nikde neříká, že student vidí víc než ostatní. Větu „Podobní nám“ nechává cestě.
+- Blok `platon-gyguv-prsten` je psaný tak, aby ho převzala stránka pokusu: scéna říká, kdo příběh vypráví.
+
+**Otevřené pro autora a pro revizi (P10):** popisek „znal ho z textů“ u Hérakleita v Době a lidech (podle Aristotela ho Platón poznal od Kratyla); nákres ke čtverci v kapitole 02 (zatím jen slovy); délka stránky (na telefonu o pětinu delší než Sókratés); údaj pod citátem ze Sedmého listu zůstává „dochováno pod Platónovým jménem“.

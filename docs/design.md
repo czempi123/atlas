@@ -426,7 +426,7 @@ Sestavení se zastaví, když cesta neexistuje, má dva návraty nebo pravidlo n
 - Karta `.blok` (povrch, okraj `--rule`, zaoblení `md`), hlavička s nadtitulkem v barvě období a mincemi lidí, o kterých blok je; otázka `t-h3`; styly v `global.css` › Interaktivní bloky. „Co udělal …“ má minci filozofa.
 - Pole na psaní vypadají jako linkovaný deník (spodní linka `--muted`, kontrast 3 : 1). Po tahu ve Volbě zůstane vidět jen vybraná karta, ostatní tahy jsou v „Co kdybys zvolil jinak?“.
 - Zpětná vazba se odkrývá krátkým vyjetím (260 ms), při omezeném pohybu bez animace (`src/lib/pohyb.ts`).
-- V profilu patří bloky do čtenářského sloupce; Spor se dvěma sloupci argumentů do `.blok-sloupec` (960 px).
+- V profilu patří bloky do čtenářského sloupce, i Spor se dvěma sloupci argumentů: uvnitř kapitoly stojí bez obalu, mimo kapitolu v `.blok-sloupec`, který má na stránce osobnosti stejnou šířku (680 px; jinde 960 px).
 - Karty možností jsou nativní přepínače v popiscích (šipky, mezerník, dotyk), cíle aspoň 44 px (karty 56–60).
 - Po odkrytí jde fokus na zpětnou vazbu (`aria-live="polite"`), po „Začít znovu“ na první volbu.
 - Blok funguje bez JavaScriptu jen jako text; interaktivní část se hydratuje, až je vidět.

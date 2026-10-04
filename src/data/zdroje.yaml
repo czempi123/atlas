@@ -1547,6 +1547,7 @@ obrazky:
     licence: "volné dílo (Public Domain)"
     url: "https://open.smk.dk/artwork/image/KAS2111"
     vyrez: "50% 36%"
+    vyrezNaSirku: "50% 16%"
   - id: jeskyne-saenredam
     soubor: obrazky/jeskyne-saenredam.jpg
     popisek: "Platónova jeskyně, jak si ji roku 1604 představili nizozemští umělci: lidé pod zdí nemají pouta a místo ohně visí lampa. Rytina Jana Saenredama podle Cornelise van Haarlem."

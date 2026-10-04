@@ -64,10 +64,10 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | Blok | Co chybí | Kde hledat | Stav |
 | --- | --- | --- | --- |
 | Spor Platón × Diogenés (`src/content/bloky/platon-diogenes-skutecnost.yaml`) | Diogenova strana a Platónova odpověď | Diogenés Laertios VI, 53 | ověřeno 1. 10. 2026 (`docs/podklady/spor-platon-diogenes.md`); otevřené: porovnat vlastní převod s českým překladem A. Koláře |
-| Tentýž Spor | Platónův argument pro ideje šířeji vlastními slovy | Ústava X, 596a–b (stůl jako příklad ideje), VI, 510d–e; Faidón 74a–75b | ověřeno 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`, oddíl Spor Platón × Diogenés): v P7 se blok přesune do Platónova portrétu, první Platónův argument bude bez jeskyně a Diogenés dostane repliku (DL VI, 24) |
+| Tentýž Spor | Platónův argument pro ideje šířeji vlastními slovy | Ústava X, 596a–b (stůl jako příklad ideje), VI, 510d–e; Faidón 74a–75b | ověřeno 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`, oddíl Spor Platón × Diogenés): hotovo 4. 10. 2026 (P7): blok stojí v kapitole 03 Platónova portrétu, první Platónův argument je bez jeskyně a Diogenés má repliku (DL VI, 24) |
 | Cesta 1 „Kdy mám dobrý důvod věřit?“ | Prótagorás (druhý filozof cesty podle architektury): život, „člověk je měřítkem všech věcí“ a spor se Sókratem | DK 80 B1, Platón, Theaitétos 152a; SEP „Protagoras“ | ověřeno 1. 10. 2026 (`docs/podklady/celek-1-pravda.md`): život, B1, B4, konec života, spor z Theaitéta, nový případ (šaty 2015) |
 | Změň jednu věc „Útěk z vězení“ | Sókratovy vlastní důvody, proč neutekl, pro oddíl „Co udělal Sókratés“ | Platón, Kritón 45a–46a (Kritónova nabídka), 50a–54d (řeč Zákonů) | ověřeno 1. 10. 2026 (`celek-1-pravda.md`, kapitola 05: Kritón 44b–46a, 49a–e, 50a–54d); dopsáno do „Co udělal Sókratés“ 1. 10. 2026 (P7); blok stojí v kapitole 05 portrétu |
-| Změň jednu věc (další ukázka) | Gygův prsten | Platón, Ústava II, 357a–361d; X, 612b | ověřeno 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`, oddíl Gygův prsten): vypráví Glaukón; návrh je blok v Platónově portrétu, ne v cestě 2; čeká na rozhodnutí autora |
+| Změň jednu věc (další ukázka) | Gygův prsten | Platón, Ústava II, 357a–361d; X, 612b | ověřeno 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`, oddíl Gygův prsten): vypráví Glaukón; hotovo 4. 10. 2026 (P7): blok `platon-gyguv-prsten` stojí v kapitole 04 Platónova portrétu |
 | Odkryj „Koho považuješ za moudrého?“ | Modelové odpovědi a sebekontrola jsou autorské (nejde o historická tvrzení); projít revizí (`atlas-revize`) před vložením do profilu | — | jen v dílně |
 | Kdo žil dřív? | Nic; roky jsou z dat | — | hotovo |
 
@@ -306,3 +306,19 @@ Vědomě vynecháno nebo jen pro učitele: úsečka (Ústava 509d–511e), Glauk
 Autorské, bez historického nároku: karty a koše Roztřiď „Odkud to vím?“, možnosti Volby „Podle čeho poznáš, že venku byl“, možnosti a podmínky bloku s Gygovým prstenem, úvodní případ stránky otázky 6 (duha; rozhodnutí autora 4. 10. 2026, lavice je v rezervě), odpovědi čtyř hlasů na něj, záložní „Představ si…“ k novému případu. Platónova odpověď Aristotelovi a Diogenova replika Platónovi jsou domyšlené a podávají se jako výklad („by mohl“).
 
 **Do skillu `atlas-overeni`:** kopie `skills/atlas-overeni/references/zdroje.md` je doplněná o místa Platónových a Aristotelových textů v PerseusDL, o muzea s otevřeným přístupem (National Gallery of Art, Statens Museum for Kunst, Art Institute of Chicago) a o šest zkreslení (přítel Platón, nápis o geometrii, Aristoklés, jeskyně, Gýgés, Sedmý list). Skill v účtu je třeba uložit zvlášť.
+
+## Portrét Platóna (P7)
+
+4. 10. 2026. Portrét je v `src/content/osobnosti/platon.mdx`, bloky v `src/content/bloky/platon-*.yaml`. Všechno, co v něm stojí, je v podkladovém listu celku 4 nebo v datech; tady je, co při psaní zůstalo otevřené.
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Jak Sókratés v Menónu kreslí řešení | Podklady mají jen „nakreslí úhlopříčky“ (82b–85b). Portrét proto řešení říká jako matematiku (úhlopříčka půlí čtverec, čtverec na úhlopříčce se skládá ze čtyř takových trojúhelníků) a o postupu kreslení mlčí. | Pro nákres nebo stránku pokusu ověřit 84d–85b. Nákres by scéně pomohl; je to nový kus rozhraní a autor o něj zatím nestál. |
+| Hérakleitos v Době a lidech | Vztah je `vliv-textem`, takže stojí pod „Koho četl“ s popiskem „znal ho z textů“. Podle Aristotela (Metafyzika 987a32) ale Platón Hérakleitovo učení poznal od Kratyla, tedy od člověka. Úvod oddílu to říká správně („poznal podle Aristotela už v mládí“). | Rozhodne autor: nechat (typ vztahu je nejbližší ze čtyř), nebo dát takovému vztahu jiný popisek. |
+| Héfaistos | Věta „Héfaistos byl pro Řeky bůh ohně“ vysvětluje citát `dl-iii-5`; pramen v datech nemá. | Obecně známý údaj; při revizi stačí potvrdit. |
+| „Pět let po porážce“ | Dopočítáno z roků 404 a 399 př. n. l., které v datech jsou. | Nic. |
+| Rčení o příteli Platónovi | Portrét říká jen, že rčení z Aristotelovy věty „později vzniklo“ (podle K. Boháčka). Kdo a kdy, neříká. | Nic, dokud text nebude chtít víc. |
+
+Vědomě vynecháno z toho, co podklady nabízejí: zápasník, vyprávění, že Faidóna doposlouchal jen Aristotelés, koberce a olivy (další střety s Diogenem), strážci bez majetku a rodiny, jméno „třetí člověk“, pes, kterého pastýř odvolá, válečná loď a žoldnéři při třetí cestě (podrobnosti ze Sedmého listu), setkání s Diónem v Olympii, Glaukónovo vyostření pokusu a tyranova slova o spravedlivém a otroctví. Ostrov Aigína není jmenován.
+
+Autorské, bez historického nároku: možnosti a zpětné vazby obou Voleb, modelové odpovědi a sebekontrola u čtverce, zpětné vazby podmínek prstenu, otázky v kurzívě, stoly ve třídě, telefon ve tři ráno, protipříklad s podvodníkem a výzva Kdo dnes rozhodl?

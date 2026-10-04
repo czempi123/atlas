@@ -2,7 +2,7 @@
 // na telefonu (větší písmo) ani na notebooku.
 import { test, expect } from '@playwright/test';
 
-const PROFILY = ['sokrates', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
+const PROFILY = ['sokrates', 'platon', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
 
 for (const sirka of [390, 1440]) {
   test(`mini mapa: popisky míst se nepřekrývají · ${sirka} px`, async ({ page }) => {

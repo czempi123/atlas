@@ -2,6 +2,24 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 4. 10. 2026: Portrét Platóna (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Portrét má pět kapitol: Příbuzní u moci, Chlapec a čtverec, Stůl a stolovost, Prsten a tři síly, Třikrát do Syrákús | Autor schválil osnovu. Každá kapitola má jeden blok a ten stojí před tím, co Platón udělal nebo napsal |
+| Hlavní citát je `faidon-59b` („Platón, myslím, stonal“) a pointa „Muž, který ve vlastních rozhovorech nemluví.“; `menon-86b` stojí na konci scény s chlapcem | Úvod je scéna soudu a vězení a citát ji uzavírá. Věta, že Sókratés za nauku neručí, má váhu až po závěru o duši |
+| Volba v kapitole 01 nemá oddíl Co udělal, Volba v kapitole 05 ho má | Že Platóna příbuzní zvali a co ho odradilo, stojí jen v Sedmém listu; nadpis „Co udělal Platón“ by z toho dělal fakt. Druhá cesta do Syrákús je doložená |
+| Odkryj se čtvercem řešení neprozradí; úhlopříčka stojí v textu za blokem, popsaná jako matematika | Text musí držet i bez odkrytí bloku. Jak přesně Sókratés kreslil, podklady nemají |
+| Spor Platón × Diogenés stojí v kapitole 03 Platónova portrétu; scéna říká Diogenovu námitku nepřímo předem | Na telefonu čte student Platónovu stranu první a jeho druhý argument na námitku odpovídá (poučení z revize celku 3) |
+| `ustava-433a` je uvedená jako věta o obci, kterou Platón přenáší na duši | V prameni ji Sókratés říká o obci (433a); o duši až 441d–444a |
+| O strážcích bez majetku a rodiny portrét nemluví vůbec | Jedna věta by vyvolala otázky, na které studentský text podle rozdělení citlivých míst odpovídat nesmí |
+| Otázka „a kdyby takový prsten měli všichni?“ stojí ve zpětné vazbě první podmínky, pro posun i pro stejnou odpověď | Změň jednu věc nemá zpětnou vazbu podle možnosti; takhle otázku dostane každý a žádná možnost není pokáraná |
+| Kdo žil dřív? je Platón × Aristotelés (vzdálenost) | Dvojice na žádné hotové stránce není a oba mají v datech přesné roky; u Parmenida je rok smrti jen „nejdřív“ |
+| Kam dál: Sókratés, Diogenés a Marcus Aurelius; v Sókratově portrétu nahradil Platón odkaz do mapy | Cesta 3 a otázka 6 přibudou v P8; do mapy vede Kdo žil dřív? (rozhodnutí z 3. 10. 2026) |
+| Odlitek má na telefonu vlastní střed výřezu (`vyrezNaSirku: 50% 16%`); na notebooku zůstává 50% 36% | Deska na šířku s původním středem uřízla čelo. Teď zůstane čelo i oči a deska přijde o špičku vousů |
+| V kapitole 02 je Aristotelés jen „Platónův žák“; „dvacet let“ říká až kapitola 03 | Tentýž doložený detail nejvýš dvakrát v celku a cesta 3 ho ve Sporu potřebuje |
+| Platón má vlastní test v prohlížeči (`tests/e2e/platon.spec.ts`) | Hlídá přesun Sporu, bloky kapitol na obou šířkách a v obou režimech, pravidla textu (dopis, kdo mluví, co do portrétu nepatří), desku, mini mapu a skupiny v Době a lidech |
+
 ## 4. 10. 2026: Celek 4 po podkladech: odpovědi autora
 
 | Rozhodnutí | Důvod |
