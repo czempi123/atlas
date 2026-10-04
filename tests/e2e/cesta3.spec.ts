@@ -72,11 +72,13 @@ test('cesta 3: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(page).toHaveURL(`${CESTA3}2/`);
   await pripravit(page);
 
-  // Krok 2: osm karet do tří košů klávesnicí. Koš z obrazovky není koš lží; dvakrát dvě se vrátí.
+  // Krok 2: osm karet do čtyř košů klávesnicí. Koš z obrazovky není koš lží; dvakrát dvě má místo a vrátí se.
   const kose = page.locator('#cesta3-odkud-to-vim');
   const sem = (kos: string) => kose.getByRole('button', { name: new RegExp(`^Dát sem kartu .* do koše ${kos}$`) });
-  const SAM = 'Viděl jsem sám', VERIM = 'Vím od někoho, komu věřím', OBRAZOVKA = 'Znám jen z obrazovky';
-  for (const kos of [SAM, VERIM, OBRAZOVKA, OBRAZOVKA, SAM, SAM, VERIM, VERIM]) {
+  const SAM = 'Ze zkušenosti', LIDE = 'Od lidí', OBRAZOVKA = 'Z obrazovky', HLAVA = 'Z vlastní hlavy';
+  // Názvy košů odpovídají stejným tvarem na otázku „Odkud to vím?“ (připomínka autora 4. 10. 2026).
+  await expect(kose.locator('.kos__nazev')).toHaveText([SAM, LIDE, OBRAZOVKA, HLAVA]);
+  for (const kos of [SAM, LIDE, OBRAZOVKA, OBRAZOVKA, SAM, SAM, HLAVA, HLAVA]) {
     await sem(kos).focus();
     await page.keyboard.press('Enter');
   }
@@ -84,9 +86,11 @@ test('cesta 3: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await page.keyboard.press('Enter');
   const trideni = kose.getByRole('region', { name: 'Tvoje třídění' });
   await expect(trideni).toBeFocused();
-  await expect(trideni).toContainText('Komu přesně: učiteli, učebnici, fotkám?');
-  await expect(trideni).toContainText('Kde: v zrcadle, nebo na fotce?');
-  await expect(trideni).toContainText('Kdyby ti zítra učitelka řekla, že je to pět, uvěřil bys jí?');
+  await expect(trideni).toContainText('Komu přesně věříš: učitelce, rodičům?');
+  await expect(trideni).toContainText('Kde jsi to viděl: v zrcadle, nebo na fotce?');
+  // Dohad i dvakrát dvě leží v koši Z vlastní hlavy; zpětná vazba se ptá, čím se liší.
+  await expect(trideni).toContainText('A čím se liší od karty, že dvakrát dvě jsou čtyři?');
+  await expect(trideni).toContainText('Z hlavy je i dohad o spolužákovi. Jsi si oběma stejně jistý?');
   await expect(trideni).toContainText('Tuhle kartu si pamatuj, ještě se vrátí.');
   await expect(trideni).toContainText('Vězni v Sókratově obrazu by nejspíš dali všechno do prvního koše.');
   await expect(trideni).toContainText('Není to hanba ani hloupost');
@@ -119,7 +123,7 @@ test('cesta 3: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   // Krok 4: slunce jednou větou, úsečka vůbec; karta z kroku 2 se vrací u čtverce.
   const text4 = page.locator('.krok__obsah > .ctenarsky');
   await expect(text4).toContainText('Slunce je v tom obraze to, díky čemu je vůbec co vidět. Platón tím myslí dobro.');
-  await expect(text4).toContainText('dvakrát dvě jsou čtyři');
+  await expect(text4).toContainText('dvakrát dvě jsou čtyři. Vidět se to nedá, a přesto si tím jsi jistý.');
   await expect(page.locator('.krok__obsah')).not.toContainText(/úsečk/);
   const ctverec = page.locator('#cesta3-ctverec-sam');
   await ctverec.getByRole('textbox').focus();
@@ -216,8 +220,8 @@ test('cesta 3: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(text8).toContainText('Vrať se ke svým košům z kroku 2.');
   const panel = page.getByRole('region', { name: 'Na začátku a teď' });
   await expect(panel).toContainText('Krok 2 · Odkud to vím?');
-  await expect(panel.locator('.cast__nadpis')).toHaveText([SAM, VERIM, OBRAZOVKA]);
-  await expect(panel.locator('.cast').nth(1).locator('li')).toHaveText(['Že je Země kulatá', 'Co si o mně myslí spolužák, se kterým skoro nemluvím', 'Že dvakrát dvě jsou čtyři']);
+  await expect(panel.locator('.cast__nadpis')).toHaveText([SAM, LIDE, OBRAZOVKA, HLAVA]);
+  await expect(panel.locator('.cast').nth(3).locator('li')).toHaveText(['Co si o mně myslí spolužák, se kterým skoro nemluvím', 'Že dvakrát dvě jsou čtyři']);
   const pole = page.getByRole('textbox', { name: 'Jak poznáš, co je skutečné, a co se jen tak jeví? Napiš svoje pravidlo.' });
   await pole.focus();
   await page.keyboard.type('Skutečné je to, co obstojí, i když se podívám odjinud.');

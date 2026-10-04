@@ -1,24 +1,31 @@
 # Roztřiď · cesta 3 „Je to, co vidím, celá skutečnost?“, krok 2: odkud vím to, co vím.
 # Podklad: docs/podklady/celek-4-co-je-skutecne.md › Vlastní pokus před výkladem: Roztřiď „Odkud to vím?“.
-# Dělení do tří košů a karty jsou autorské; opírají se o to, že vězni znají z druhé ruky i sami sebe (Ústava 515a–b).
-# Karta „dvakrát dvě jsou čtyři“ nepatří pořádně nikam a vrací se v kroku 4 (čtverec sám).
+# Dělení a karty jsou autorské; opírají se o to, že vězni znají z druhé ruky i sami sebe (Ústava 515a–b).
+# Koše: autor 4. 10. 2026 vrátil původní názvy („Viděl jsem sám · Vím od někoho, komu věřím · Znám jen z obrazovky“):
+# nebyly souměrné a „dvakrát dvě jsou čtyři“ se nedalo nikam dát. Nové názvy odpovídají na otázku „Odkud to vím?“
+# stejným tvarem (ze zkušenosti · od lidí · z obrazovky · z vlastní hlavy); čtvrtý koš „Z vlastní hlavy“ je návrh z P8, aby karta měla poctivé místo.
+# Do koše „Z vlastní hlavy“ patří dohad o spolužákovi i dvakrát dvě: zpětná vazba se ptá, čím se ty dvě karty liší
+# (mínění × vědění). Karta se vrací v kroku 4 (čtverec sám).
 # Proti podkladům: „Že mě má někdo rád“ bez slova „doma“ (student, který to doma nemá); karta o válce má vlastní
-# zpětnou vazbu pro toho, kdo ji viděl sám. Srovnání říká, jak by nejspíš třídili vězni: je to výklad obrazu, ne citát.
+# zpětnou vazbu pro toho, kdo ji zažil. Srovnání říká, jak by nejspíš třídili vězni: je to výklad obrazu, ne citát.
 druh: roztrid
 obdobi: 1
 nadtitulek: Tvůj tah
 scena: Tady je osm věcí, které člověk obvykle ví.
 otazka: Odkud je víš ty?
 kose:
-  - id: sam
-    nazev: Viděl jsem sám
-    popis: Byl jsem u toho.
-  - id: verim
-    nazev: Vím od někoho, komu věřím
-    popis: Řekl mi to člověk nebo kniha, kterým věřím.
+  - id: zkusenost
+    nazev: Ze zkušenosti
+    popis: Viděl nebo zažil jsem to sám.
+  - id: lide
+    nazev: Od lidí
+    popis: Řekl mi to někdo, koho znám.
   - id: obrazovka
-    nazev: Znám jen z obrazovky
+    nazev: Z obrazovky
     popis: Mám to z videí, fotek a zpráv.
+  - id: hlava
+    nazev: Z vlastní hlavy
+    popis: Došel jsem k tomu přemýšlením.
 karty:
   - id: obed
     text: Jak dnes chutnal oběd
@@ -29,58 +36,67 @@ karty:
     zpetna: >-
       Celou Zemi vidělo na vlastní oči jen málo lidí. Ty to přesto víš. O co se opíráš?
     kdyz:
-      sam: >-
-        Dal jsi to mezi věci, které jsi viděl sám. Co přesně jsi viděl: Zemi, nebo její fotku a glóbus?
-      verim: >-
-        Dal jsi to mezi věci od někoho, komu věříš. Komu přesně: učiteli, učebnici, fotkám?
-        A podle čeho sis vybral, komu věřit?
+      zkusenost: >-
+        Dal jsi to mezi věci ze zkušenosti. Co přesně jsi viděl: Zemi, nebo její fotku a glóbus?
+      lide: >-
+        Dal jsi to mezi věci od lidí, které znáš. Komu přesně věříš: učitelce, rodičům? A odkud to vědí oni?
       obrazovka: >-
         Dal jsi to mezi věci z obrazovky. Věřil bys tomu míň, kdybys nikdy neviděl jedinou fotku z vesmíru?
+      hlava: >-
+        Dal jsi to mezi věci z vlastní hlavy. Z čeho jsi to vyvodil? A přesvědčilo by to někoho, kdo tomu nevěří?
   - id: valka
     text: Jak vypadá válka
     zpetna: >-
       Většina lidí zná válku jen ze záběrů, které někdo natočil a někdo jiný vybral. Co na nich vidět není?
     kdyz:
-      sam: >-
-        Dal jsi to mezi věci, které jsi viděl sám. Většina lidí kolem tebe ji zná jen ze záběrů.
+      zkusenost: >-
+        Dal jsi to mezi věci ze zkušenosti. Většina lidí kolem tebe ji zná jen ze záběrů.
         Co by z nich nepoznali?
   - id: svet
     text: Co se včera stalo ve světě
     zpetna: >-
       Skoro všechno z toho znáš ze zpráv a z videí. Kdo vybral, co z včerejška uvidíš?
     kdyz:
-      verim: >-
-        Dal jsi to mezi věci od někoho, komu věříš. Komu: člověku, který ti to řekl, nebo tomu, od koho to má on?
+      lide: >-
+        Dal jsi to mezi věci od lidí, které znáš. Odkud to má ten, kdo ti to řekl?
   - id: rad
     text: Že mě má někdo rád
     zpetna: >-
       Vyfotit se to nedá. Z čeho se to tedy pozná: z toho, co člověk říká, nebo z toho, co dělá?
     kdyz:
-      verim: >-
-        Dal jsi to mezi věci od někoho, komu věříš. Stačilo by ti, kdyby to jen říkal?
+      lide: >-
+        Dal jsi to mezi věci od lidí, které znáš. Stačilo by ti, kdyby to jen říkal?
   - id: smich
     text: Jak vypadám, když se směju
     zpetna: >-
       Vlastní obličej při smíchu znáš ze zrcadla, z fotek a z toho, jak se tváří druzí. Napřímo jsi ho neviděl nikdy.
       Stačí ti to?
     kdyz:
-      sam: >-
-        Dal jsi to mezi věci, které jsi viděl sám. Kde: v zrcadle, nebo na fotce? A je to totéž jako vidět se napřímo?
+      zkusenost: >-
+        Dal jsi to mezi věci ze zkušenosti. Kde jsi to viděl: v zrcadle, nebo na fotce?
+        A je to totéž jako vidět se napřímo?
   - id: spoluzak
     text: Co si o mně myslí spolužák, se kterým skoro nemluvím
     zpetna: >-
       Neřekl ti to a vidět se to nedá. Z čeho si to tedy skládáš? A jak moc tomu věříš?
+    kdyz:
+      hlava: >-
+        Dal jsi to mezi věci z vlastní hlavy: je to tvůj dohad. Jak moc mu věříš?
+        A čím se liší od karty, že dvakrát dvě jsou čtyři?
   - id: dvakrat
     text: Že dvakrát dvě jsou čtyři
     zpetna: >-
       Oběd jsi ochutnal, tohle ne, a obrazovka na tom nic nezmění. Platilo by to, i kdyby ti to nikdo neřekl?
       Tuhle kartu si pamatuj, ještě se vrátí.
     kdyz:
-      sam: >-
-        Dal jsi to mezi věci, které jsi viděl sám. Dvě a dvě jablka jsi viděl. Viděl jsi ale někdy dvojku samu?
+      zkusenost: >-
+        Dal jsi to mezi věci ze zkušenosti. Dvě a dvě jablka jsi viděl. Viděl jsi ale někdy dvojku samu?
         Tuhle kartu si pamatuj, ještě se vrátí.
-      verim: >-
-        Dal jsi to mezi věci od někoho, komu věříš. Kdyby ti zítra učitelka řekla, že je to pět, uvěřil bys jí?
+      lide: >-
+        Dal jsi to mezi věci od lidí, které znáš. Kdyby ti zítra učitelka řekla, že je to pět, uvěřil bys jí?
+        Tuhle kartu si pamatuj, ještě se vrátí.
+      hlava: >-
+        Dal jsi to mezi věci z vlastní hlavy. Z hlavy je i dohad o spolužákovi. Jsi si oběma stejně jistý?
         Tuhle kartu si pamatuj, ještě se vrátí.
 vlastni:
   pocet: 2
@@ -91,12 +107,12 @@ srovnani:
   osoba: platon
   nadpis: Jak by třídili vězni
   text: >-
-    Vězni v Sókratově obrazu by nejspíš dali všechno do prvního koše. Stíny přece vidí na vlastní oči a jiný koš neznají.
+    Vězni v Sókratově obrazu by nejspíš dali všechno do prvního koše. Stíny přece vidí na vlastní oči.
 
 
-    Ty máš koše tři a většinu světa znáš z druhé ruky. Není to hanba ani hloupost: všechno sám vidět nemůžeš.
-    A koš Znám jen z obrazovky není koš lží.
+    Ty většinu světa znáš z druhé ruky. Není to hanba ani hloupost: všechno sám vidět nemůžeš.
+    A koš Z obrazovky není koš lží.
 
 
-    Kterému z těch tří košů věříš nejvíc? A proč zrovna tomu?
+    Kterému z těch košů věříš nejvíc? A proč zrovna tomu?
 zdroje: [platon-ustava-perseus]
