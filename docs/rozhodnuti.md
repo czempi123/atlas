@@ -18,6 +18,7 @@ Autor dodal tři samostatné návrhy interakcí jako Web Components (Prótagorů
 | „Dvě půlky“ trhají tři karty z koše Zčásti z kroku 2 (Jestli mi odepíše, Známka ze čtvrtletky, Zdravý na zápas) místo scén Omluva, Známka, Závod z návrhu; omluva zůstala jako obsah zprávy | Krok 3 říká, že Epiktétos by roztrhl každou věc z prostředního koše. Student trhá karty, které sám třídil |
 | „Dvě půlky“ stojí pod blokem Odkryj; blok k nim vede vlastním Kam dál („Co se stane s druhou půlkou“) | Nad blokem by kresba prozradila modelové odpovědi. Pod ním přidává to, co blok nemá: druhá půlka se mění, moje ne |
 | „Kdy je dost?“ stojí v kroku 3 cesty 6 za odstavcem o stropu slasti, před volbou o bundě; u čáry jde dolévat dál | Kresba ukazuje myšlenku, kterou text označuje za divnou; volba ji pak zkouší na jiné věci. Kdo dojde k čáře, zkusí nejdřív dolít: hladina se nehne. Návrh nabízel jen změnu chuti |
+| Krok 3 cesty 6 se jmenuje „Kde má slast strop?“ místo „Která bunda víc hřeje?“ | Autor: nadpis o bundě neseděl ke kroku, který teď začíná pohárem vody. Nový název kryje obojí: pohár i bunda jsou dva pokusy s týmž stropem |
 | Nádoba je „pohár“, ne hrnek | Hrnek je v cestě 6 hrnek sýra z Epikúrova dopisu |
 | Vzhled přepínače rámu je v `global.css` (`k-prepinac`) a kresby ho používají i ve svém ovládání (`k-volba`) | Vítr a dvě půlky potřebují stejný přepínač pod plátnem; styl by jinak byl dvakrát |
 | Texty kreseb nepoužívají minulý čas v druhé osobě („čekal jsi“) | Rozhodnutí z 2. 10. o lomených tvarech: rod studenta se obchází, ne láme |

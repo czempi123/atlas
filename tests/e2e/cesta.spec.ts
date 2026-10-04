@@ -8,7 +8,7 @@ import AxeBuilder from '@axe-core/playwright';
 const CESTA = '/cesta/kdy-mam-dobry-duvod-verit/';
 const KROKY = ['Odpověď z Delf', 'Jak bys to zjišťoval ty?', 'Politik, básníci, řemeslníci', 'Podle čeho to poznáš?', 'Člověk je měřítkem', 'Bílozlaté, nebo modročerné?', 'Tvoje pravidlo'];
 const CESTA6 = '/cesta/kolik-je-dost/';
-const KROKY6 = ['Host v Zahradě', 'Tři koše', 'Která bunda víc hřeje?', 'Žít jako kynik?', 'Měsíc na minimum', 'Peníze a štěstí', 'Tvoje pravidlo'];
+const KROKY6 = ['Host v Zahradě', 'Tři koše', 'Kde má slast strop?', 'Žít jako kynik?', 'Měsíc na minimum', 'Peníze a štěstí', 'Tvoje pravidlo'];
 const CESTA5 = '/cesta/co-mam-ve-svych-rukou/';
 const KROKY5 = ['Noha', 'Tři koše', 'Dvě půlky', 'Otrok a císař', 'Záleží na tom, co mě potká?', 'Snímek z chatu', 'Kamenná tvář', 'Tvoje pravidlo'];
 const CESTA3 = '/cesta/je-to-co-vidim-cela-skutecnost/';
@@ -298,7 +298,7 @@ test('cesta 6: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   // Zpětná vazba vidí, kam student kartu dal, a srovnání se ptá i proti Epikúrovi.
   await expect(trideni).toContainText('Dal jsi ho mezi věci, bez kterých to bolí.');
   await expect(trideni).toContainText('A nechal bys to tam i tak?');
-  await dalKlavesnici(page, kose, 'Která bunda víc hřeje?', `${CESTA6}3/`);
+  await dalKlavesnici(page, kose, 'Kde má slast strop?', `${CESTA6}3/`);
 
   // Krok 3: strop slasti v textu, citát o soběstačnosti, volba bez „Co udělal“.
   await expect(page.locator('.krok__obsah')).toContainText('Slast podle něj nemůže růst donekonečna.');
