@@ -362,7 +362,7 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Celek 1, celek 2 a celek 3 hotovo a schváleno; skill `atlas-osobnost` |
 | P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Celek 1, celek 2 a celek 3 hotovo a schváleno; skill `atlas-cesta` |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
-| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Celek 1 hotovo a schváleno 1. 10. 2026; celek 2 hotovo a schváleno 2. 10. 2026 (`docs/plany/celek-2.md`); celek 3 hotovo a schváleno 3. 10. 2026 (`docs/plany/celek-3.md`) |
+| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Celek 1 hotovo a schváleno 1. 10. 2026; celek 2 hotovo a schváleno 2. 10. 2026 (`docs/archiv/plany/celek-2.md`); celek 3 hotovo a schváleno 3. 10. 2026 (`docs/archiv/plany/celek-3.md`) |
 | P11 | Souhrnná revize období | Fable 5.1 · high | Souvislosti napříč desítkami stránek | Na konci každé fáze |
 | P12 | Plán nového období | Opus 5.5 · high | Výběr a pořadí podle hotové architektury | Se skillem `atlas-obdobi` |
 | P13 | Úprava skillů po fázi | Opus 5.5 · high | Zobecnění opakovaných chyb | Na konci každé fáze |
@@ -372,15 +372,15 @@ Doporučení modelů platí pro nabídku k 29. 9. 2026 ([přehled modelů](https
 
 ### Plány větví
 
-Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v souboru větve ve složce `docs/plany/`. Každý celek má jeden soubor od podkladů po závěrečnou revizi; tady zůstává jen strategie, katalog a tento rozcestník. Nový celek znamená novou větev a nový soubor `docs/plany/<větev>.md`.
+Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v souboru větve ve složce `docs/plany/`. Plány hotových větví jsou v `docs/archiv/plany/`, provedená zadání běžící větve v `docs/archiv/zadani/`; archiv se bez pokynu nečte (`CLAUDE.md` › Co číst a jak šetřit). Každý celek má jeden soubor od podkladů po závěrečnou revizi; tady zůstává jen strategie, katalog a tento rozcestník. Nový celek znamená novou větev a nový soubor `docs/plany/<větev>.md`.
 
 | Větev | Co obsahuje | Soubor | Stav |
 | --- | --- | --- | --- |
-| `restart`, `mapa-v2`, `bloky-v1` | Základ a kostra: P0 až P5 | `docs/plany/zaklad.md` | hotovo a schváleno |
-| `celek-1` | „Jak poznám, co je pravda?“: Sókratés, Prótagorás, cesta 1, otázka 7 | `docs/plany/celek-1.md` | hotovo, sloučeno 1. 10. 2026 |
-| `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; hlavní větev je na GitHubu |
-| `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
-| `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/plany/celek-4.md` | **další krok** je P6 (podklady); může běžet souběžně s `rozhrani-v2` |
+| `restart`, `mapa-v2`, `bloky-v1` | Základ a kostra: P0 až P5 | `docs/archiv/plany/zaklad.md` | hotovo a schváleno |
+| `celek-1` | „Jak poznám, co je pravda?“: Sókratés, Prótagorás, cesta 1, otázka 7 | `docs/archiv/plany/celek-1.md` | hotovo, sloučeno 1. 10. 2026 |
+| `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/archiv/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; hlavní větev je na GitHubu |
+| `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/archiv/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
+| `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/plany/celek-4.md` | podklady (P6) a portrét Platóna (P7) hotové 4. 10. 2026; **další krok** je P8 (cesta 3 a stránka otázky 6); větev `rozhrani-v2` je v ní sloučená |
 | `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 schválený, R2 hotový 3. 10. 2026 a čeká na schválení autorem; pak revize větve (P10) |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.

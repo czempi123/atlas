@@ -25,7 +25,7 @@ Stránka směru a pojmu se řídí stejnými zásadami (scéna, nejsilnější v
 
 1. **Přečti** `CLAUDE.md`, `docs/styl.md`, podkladový list celku (`docs/podklady/…`: Nejsilnější příběhy, Tvrzení s doporučenými formulacemi, Citáty, Rozpory a rozhodnutí), poslední záznamy v `docs/rozhodnuti.md`, osobu v `lide.yaml` a citáty osoby v `zdroje.yaml`.
 2. **Podklady nejdřív.** Každé historické tvrzení musí být v podkladovém listu nebo v datech. Když příběh něco potřebuje a v podkladech to není, nepiš to a zapiš to do `docs/podklady/k-overeni.md` (co, kde by se hodilo, co udělat). Když podklady chybějí úplně, nejdřív skill `atlas-overeni`.
-3. **Navrhni autorovi** v pár bodech, jakou scénou otevřeš úvod a každou kapitolu, jaký blok v ní bude a které dvě myšlenky vybereš. Počkej na odpověď.
+3. **Rozvrhni si** v pár bodech, jakou scénou otevřeš úvod a každou kapitolu, jaký blok v ní bude a které dvě myšlenky vybereš. Autorovi osnovu předem neposílej: kde váháš, zvol nejlepší cestu a na konci napiš, nad čím jsi váhal a co by šlo jinak.
 4. **Piš** podle šablony níže. Obsah Volby, Změň jednu věc a Sporu patří do `src/content/bloky/<id>.yaml`, do MDX jen `<Volba id="…" />`. Odkryj a Moje stanovisko se píšou přímo do MDX.
 5. **Data:** pramen, ze kterého stránka čerpá a v osobě chybí, přidej do `zdroje` osoby v `lide.yaml`. Na novou stránku odkaž z Kam dál souvisejících osob.
 6. **Ověř:** `npm test` celé (testy v prohlížeči běží na portu 4322). Novou stránku přidej do `STRANKY` v `tests/e2e/prohlidka.spec.ts`, ať se kontroluje axe, přesah a snímky na 390 a 1440 px ve světlém i tmavém režimu. Snímky si prohlédni a aspoň jeden blok vyzkoušej v prohlížeči. Text přečti ještě jednou jen podle oddílu Ať text nezní jako stroj. Projdi rychlou kontrolu níže.

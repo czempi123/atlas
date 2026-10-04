@@ -13,7 +13,7 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 
 1. **Přečti** `CLAUDE.md`, `docs/styl.md`, v `docs/architektura.md` řádek cesty v Katalogu cest, v `docs/design.md` oddíly **Bloky**, **Cesta** a **Velká otázka** (API a stavba) a ukázkovou cestu 1 (`src/content/cesty/kdy-mam-dobry-duvod-verit*`). U hotového celku i jeho záznam revize v `docs/revize/`.
 2. **Podklady nejdřív.** Každé historické tvrzení, citát a příběh musí být v podkladovém listu (`docs/podklady/`, skill `atlas-overeni`). Co ověřené není, do cesty nepiš; zapiš to do `docs/podklady/k-overeni.md`. Vymyšlené situace uváděj „Představ si…“ a nevkládej do nich historické osoby.
-3. **Navrhni osnovu** (6–8 kroků) a ukaž ji autorovi, než začneš psát. Každý krok má jeden úkol pro studenta. Osvědčené pořadí:
+3. **Navrhni si osnovu** (6–8 kroků). Autorovi ji předem neposílej: kde váháš, zvol nejlepší cestu a na konci napiš, nad čím jsi váhal a co by šlo jinak. Každý krok má jeden úkol pro studenta. Osvědčené pořadí:
 
    | Krok | Úkol studenta | Blok |
    | --- | --- | --- |
@@ -170,7 +170,7 @@ Po dopsání přečti texty cesty ještě jednou jen s tímto oddílem. Každý 
 
 ## Kdy je hotovo
 
-- Osnova schválená autorem; každé historické tvrzení má podklad.
+- Každé historické tvrzení má podklad; ve zprávě autorovi stojí, nad čím jsi u osnovy váhal.
 - Kroky 1…n fungují na telefonu i notebooku, lišta Další vede až k Dokončit cestu a přehled cesty ukáže prošlé kroky.
 - Text dává smysl i tomu, kdo bloky neodkryje.
 - Každá zpětná vazba vysvětluje důvod a ptá se dál; nic se neboduje.
