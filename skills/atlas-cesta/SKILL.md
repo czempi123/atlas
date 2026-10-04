@@ -11,7 +11,7 @@ Tón a pravidla obsahu jsou v `CLAUDE.md` a `docs/styl.md`; platí i pro texty u
 
 ## Postup
 
-1. **Přečti** `CLAUDE.md`, `docs/styl.md`, v `docs/architektura.md` řádek cesty v Katalogu cest, v `docs/design.md` oddíly **Bloky**, **Cesta** a **Velká otázka** (API a stavba) a ukázkovou cestu 1 (`src/content/cesty/kdy-mam-dobry-duvod-verit*`). U hotového celku i jeho záznam revize v `docs/revize/`.
+1. **Přečti** `CLAUDE.md`, `docs/styl.md`, `docs/pouceni.md` (co se z revizí hotových celků má dodržovat), v `docs/architektura.md` řádek cesty v Katalogu cest, v `docs/design.md` oddíly **Bloky**, **Cesta** a **Velká otázka** (API a stavba) a ukázkovou cestu 1 (`src/content/cesty/kdy-mam-dobry-duvod-verit*`). Záznam revize hotového celku (`docs/archiv/revize/`) otevři, jen když upravuješ jeho cestu.
 2. **Podklady nejdřív.** Každé historické tvrzení, citát a příběh musí být v podkladovém listu (`docs/podklady/`, skill `atlas-overeni`). Co ověřené není, do cesty nepiš; zapiš to do `docs/podklady/k-overeni.md`. Vymyšlené situace uváděj „Představ si…“ a nevkládej do nich historické osoby.
 3. **Navrhni si osnovu** (6–8 kroků). Autorovi ji předem neposílej: kde váháš, zvol nejlepší cestu a na konci napiš, nad čím jsi váhal a co by šlo jinak. Každý krok má jeden úkol pro studenta. Osvědčené pořadí:
 

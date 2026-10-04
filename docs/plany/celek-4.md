@@ -95,7 +95,7 @@ Velké myšlenky: „Učit se znamená rozpomínat se“ (Poznání) a „Sprave
 
 **Otevřené pro autora a pro revizi (P10):** popisek „znal ho z textů“ u Hérakleita v Době a lidech (podle Aristotela ho Platón poznal od Kratyla); nákres ke čtverci v kapitole 02 (zatím jen slovy); délka stránky (na telefonu o pětinu delší než Sókratés); údaj pod citátem ze Sedmého listu zůstává „dochováno pod Platónovým jménem“.
 
-**Skilly v účtu:** kopie `skills/atlas-osobnost` a `skills/atlas-cesta` už neříkají „ukaž osnovu autorovi a počkej“ (rozhodnutí ze 4. 10. 2026). Skilly uložené v účtu Claude tu větu ještě mají; do jejich příští úpravy (nejpozději s poučením z revize celku 4) ji přebíjí pravidlo v `CLAUDE.md`.
+**Skilly v účtu:** `atlas-osobnost` a `atlas-cesta` jsou 4. 10. 2026 přepsané podle kopií v `skills/` a navržené k uložení do účtu Claude: krok 3 už neříká „ukaž osnovu autorovi a počkej“, `atlas-cesta` navíc čte `docs/pouceni.md` místo záznamů revizí. Dokud autor návrh neuloží, platí pravidlo v `CLAUDE.md`.
 
 ## P8: Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6
 
