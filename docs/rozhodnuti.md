@@ -4,6 +4,18 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 4. 10. 2026: Kresba „Zdvoj čtverec“ a oddíl Kresby v dílně
+
+Dva samostatné kroky po uzavření celku 4 (doporučení revize, autor je zadal).
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kresba stojí v kapitole 02 portrétu Platóna za odstavcem o úhlopříčkách, pod blokem Odkryj | Nad blokem by prozradila řešení. Odstavec o úhlopříčkách je první místo, kde se řešení v textu objeví, a kresba ho ukáže na mřížce |
+| Tři pokusy jsou strana čtyři, strana tři a čtverec na úhlopříčce, v pořadí, v jakém je zkoušel chlapec | Menón 82b–85b: čtyři stopy dají obsah 16 (83b–c), tři stopy 9 (83d–e), úhlopříčky ve čtyřech čtvercích dají 8 (84d–85b). Ověřeno 4. 10. 2026 v anglickém překladu PerseusDL |
+| Čtverečky si student nechá spočítat tlačítkem; před tím kresba výsledek neříká | Student nejdřív sám odhadne a ověří, teprve potom vidí počet. Čtverec na úhlopříčce se dá spočítat jako čtyři celé čtverečky a osm půlek, tedy bez odmocniny |
+| Kresba nemá tlačítko pohybu (`maPohyb={false}`) | Nic v ní neběží samo; přepnutí pokusu je jen přechod |
+| Dílna bloků dostala oddíl „Kresby s pohybem“ se všemi sedmi kresbami | Autor je uvidí na jedné stránce a revize je může fotit bez procházení cest |
+
 ## 4. 10. 2026: Tři kresby pokusů (vítr, dvě půlky, pohár)
 
 Autor dodal tři samostatné návrhy interakcí jako Web Components (Prótagorův vítr, Epiktétovy dvě půlky, Epikúrovo „Kolik je dost?“; archiv `atlas-interakce.zip` v repozitáři není) a chtěl je rozdělit, sjednotit s grafikou atlasu, uhladit a zařadit.
