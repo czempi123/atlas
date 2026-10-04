@@ -59,6 +59,30 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
       </footer>
     )}
     {Astro.slots.has('lista') ? <slot name="lista" /> : <SpodniLista sekce={sekce} />}
+    <script is:inline>
+      // Pevná spodní lišta nesmí zakrýt prvek, na který přijde fokus z klávesnice. Prohlížeč stránku sám
+      // neposune, když prvek leží ve viditelné části, byť pod lištou (scroll-padding na to nestačí).
+      (() => {
+        let klavesnice = false;
+        addEventListener('keydown', () => { klavesnice = true; }, true);
+        addEventListener('pointerdown', () => { klavesnice = false; }, true);
+        addEventListener('focusin', (e) => {
+          const prvek = e.target;
+          if (!klavesnice || !(prvek instanceof Element)) return;
+          const lista = [...document.querySelectorAll('.cesta-lista, nav.lista')].find(
+            (l) => getComputedStyle(l).position === 'fixed' && l.getBoundingClientRect().height > 0,
+          );
+          if (!lista || lista.contains(prvek)) return;
+          requestAnimationFrame(() => {
+            const r = prvek.getBoundingClientRect();
+            const hrana = lista.getBoundingClientRect().top;
+            const presah = r.bottom + 16 - hrana;
+            // Prvek vyšší než volné místo neposouvej nad horní okraj.
+            if (presah > 0 && r.top < hrana) scrollBy({ top: Math.min(presah, Math.max(0, r.top - 96)), behavior: 'instant' });
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
 
