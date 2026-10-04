@@ -171,7 +171,7 @@ Autor dodal tři samostatné návrhy interakcí jako Web Components (Prótagorů
 
 | Rozhodnutí | Důvod |
 | --- | --- |
-| Čtvrtý celek je „Platón a jeskyně“: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“. Plán a zadání P6 jsou v `docs/plany/celek-4.md` | Autor vybral z nabídnutých možností (Seneca a čas, strach ze smrti, Aristotelés, Platón a jeskyně) |
+| Čtvrtý celek je „Platón a jeskyně“: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“. Plán a zadání P6 jsou v `docs/archiv/plany/celek-4.md` | Autor vybral z nabídnutých možností (Seneca a čas, strach ze smrti, Aristotelés, Platón a jeskyně) |
 | Celek 4 a větev `rozhrani-v2` běží vedle sebe: úpravy rozhraní projde autor zvlášť, podklady (P6) na ně nečekají. Před P7 se do `celek-4` sloučí hlavní větev, pokud v ní `rozhrani-v2` už bude | Autor: „já si ještě sjedu tu obecnou úpravu, ale měli bychom mít další celek“; podklady se rozhraní netýkají |
 | Největší riziko celku 4 je tón: jeskyně nesmí studentovi lichotit, že on vidí a ostatní spí | Stejný obraz používají konspirační weby; u celku 3 bylo obdobným rizikem smíření s křivdou |
 | Poučení z revize celku 3 je ve skillech `atlas-revize`, `atlas-cesta` a `atlas-osobnost`: čtení očima studenta, kterému někdo ubližuje; citát o ráně nepatří na začátek kroku; výzva Zkus to žít nemíří na člověka, který ubližuje; čte se i to, co se skládá z dat; shrnutí studie drží i pokyn skupině; spojovací věta netvrdí spor, který nebyl | Autor: „Revizi do skillů klidně dej“ |
