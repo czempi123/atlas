@@ -99,7 +99,7 @@ Velké myšlenky: „Učit se znamená rozpomínat se“ (Poznání) a „Sprave
 
 ## Po P8 (4. 10. 2026)
 
-Cesta 3 je v `src/content/cesty/je-to-co-vidim-cela-skutecnost.mdx` a ve složce kroků, bloky v `src/content/bloky/cesta3-*.yaml`, stránka otázky 6 v `src/content/otazky/co-je-skutecne.mdx`. Cesta má osm kroků a asi 1 150 slov mimo bloky; na telefonu měří kroky po odkrytí 2 100 až 4 200 px. `npm test` prošel celý (392 testů dat, 272 v prohlížeči). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/P8-cesta3/`.
+Cesta 3 je v `src/content/cesty/je-to-co-vidim-cela-skutecnost.mdx` a ve složce kroků, bloky v `src/content/bloky/cesta3-*.yaml`, stránka otázky 6 v `src/content/otazky/co-je-skutecne.mdx`. Cesta má osm kroků a asi 1 150 slov mimo bloky; na telefonu měří kroky po odkrytí 2 100 až 4 200 px. `npm test` prošel celý (396 testů dat, 277 v prohlížeči). Na GitHub nic nešlo. Snímky jsou ve složce `Claude outputs/P8-cesta3/`.
 
 Osnova se předem neschvalovala. Zásadní volby jsou v `docs/rozhodnuti.md` (Cesta 3, stránka otázky 6 a kresba jeskyně, P8), otevřené body v `docs/podklady/k-overeni.md` (Cesta 3 a stránka otázky 6, P8).
 
@@ -107,7 +107,7 @@ Osnova se předem neschvalovala. Zásadní volby jsou v `docs/rozhodnuti.md` (Ce
 | --- | --- | --- | --- |
 | 1 Jeskyně | Platón nechává Sókrata vyprávět obraz; scéna končí „Podobní nám“ | Příběh s rytinou `jeskyne-saenredam`; uvnitř kresba `<Jeskyne />` (dva pohledy, pohyb stínů) | `ustava-515a` |
 | 2 Odkud to vím? | stíny vyrobených věcí | Roztřiď `cesta3-odkud-to-vim` (začátek cesty) | `ustava-515c` |
-| 3 Ven | někdo ho rozváže a vleče; venku nejdřív zase stíny; pocty vězňů | Volba `cesta3-kdo-byl-venku` (bez Co udělal) | `ustava-518a` |
+| 3 Ven | někdo ho rozváže a vleče; venku nejdřív zase stíny; pocty vězňů | kresba `<JeskyneVen />` (řez s cestou ven; posuvník, kterým si oči zvykají), pak Volba `cesta3-kdo-byl-venku` (bez Co udělal) | `ustava-518a` |
 | 4 Čtverec sám | výklad obrazu, slunce jednou větou, karta dvakrát dvě | Odkryj `cesta3-ctverec-sam` | `ustava-510d` (ve srovnání) |
 | 5 Učitel a žák | ideje; Aristotelés v Akademii | Spor `cesta3-aristoteles-spor` | `metafyzika-991a`, `etika-1097a` |
 | 6 Vyměnit stíny | věta o vzdělání; bubliny; pokus na Facebooku 2020 | Volba `cesta3-pokus-odhad` → text „Co vyšlo“ → Volba `cesta3-pokus-cteni` | `ustava-518c` |
@@ -121,22 +121,26 @@ Případ pro Návrat: `cesta3-navrat` „U šaten“ (kamarád u cizí bundy; vi
 - **Koše v kroku 2.** Původní „Viděl jsem sám · Vím od někoho, komu věřím · Znám jen z obrazovky“ nebyly souměrné a „dvakrát dvě jsou čtyři“ se nedalo nikam dát. Teď jsou koše čtyři a všechny odpovídají na „Odkud to vím?“ stejným tvarem: **Ze zkušenosti · Od lidí · Z obrazovky · Z vlastní hlavy**. Do posledního patří dohad o spolužákovi i dvakrát dvě; zpětná vazba se ptá, čím se ty dvě karty liší. Krok 4 už neříká, že karta nikam nepatřila.
 - **Kresba jeskyně s pohybem** (`<Jeskyne />`, `src/components/ostrovy/Jeskyne.svelte`, logika `src/lib/jeskyne.ts`): první pokus o animaci jako formu. Stojí v kroku 1 uvnitř Příběhu, před větou „Podobní nám“. Popis je v `docs/design.md` › Komponenty.
 
+**Připomínky autora 4. 10. 2026 (po druhém průchodu) a co se změnilo:**
+
+- **Kresba s pohybem je forma atlasu.** Autor ji chce častěji. Kresby stojí na společném rámu `src/components/ostrovy/Kresba.svelte`; `Jeskyne` je na něj přepsaná. Popis je v `docs/design.md` › Komponenty › Kresba s pohybem.
+- **Krok 3 má kresbu `<JeskyneVen />`** za odstavcem o zvykání očí. Pohled „Cesta ven“ je řez jeskyní, ve kterém dvojice stoupá strmou chodbou. V pohledu „Venku“ student posuvníkem prochází šest stupňů v pořadí pramene (záře, stíny, odrazy ve vodě, věci samé, noční nebe, slunce).
+- **Skilly.** Kopie ve `skills/` říkají, kdy po kresbě sáhnout (`atlas-cesta`, `atlas-osobnost`), jak ji postavit (`atlas-komponenta`) a co u ní číst při revizi (`atlas-revize`). `atlas-cesta` navíc nese dvě poučení z P8: koše odpovídají na otázku stejným tvarem a krok se dvěma bloky dává prvnímu bloku vlastní Kam dál. V účtu jsou tři skilly navržené k uložení; `atlas-revize` je zatím jen v repozitáři.
+- **Otevřené body z prvního průchodu zůstávají, jak jsou** (autor: „můžeš nechat tam kde se ptáš“): čtyři koše v kroku 2, rytina bez výřezu, karta „Jak vypadá válka“, „boj obrů“ v úvodu otázky 6 a Volba v kroku 7.
+
 **Stránka otázky 6:** úvod duha, za ní „boj obrů“ (`sofistes-246a`, mluví host z Eleje), hlasy Parmenidés (`parmenides-b8`), Démokritos (`dl-ix-72-demokritos`), Platón (`timaios-51d`, mluví Tímaios; bez jeskyně) a Aristotelés (`meteorologika-iii-4`; Kategorie 5 a Metafyzika I, 1 v myšlence bez citátu). Karta cesty 3 se ukazuje sama.
 
 **Propojení:** Kam dál Platónova portrétu má čtyři položky (cesta 3, Sókratés, Marcus Aurelius, otázka 6; Diogenés vypadl, odkaz má v kapitole 03). Věta o jeskyni v kapitole 03 vede odkazem na cestu; karta cesty v portrétu není. Hlavička profilu, přehled otázek a Lidé ukazují vstupy samy z dat.
 
 **Co se v celku smí ještě jednou a co už ne** (pro revizi P10): „asi sedmnáctiletý Aristotelés a zůstal dvacet let“ je v portrétu a v kroku 5 (dvakrát, víc ne). „V nich, ne vedle nich“ je v portrétu a ve Sporu. Pocty vězňů, „oslepený a bezradný“ a „jen bůh ví“ jsou v cestě dvakrát (text a zpětná vazba, resp. zpětná vazba a citát). Rozdíl vědění a mínění („vědění se nedá vymluvit“) je ve Sporu a v Platónově hlasu otázky 6. „Tenhle člověk, tenhle kůň“ je ve Sporu a v Aristotelově hlasu.
 
-**Testy a skripty:** `tests/e2e/cesta3.spec.ts` (klávesnice, průchod bez odkrytí, tón a co do cesty nepatří), `tests/e2e/jeskyne.spec.ts` (kresba na obou šířkách v obou režimech, pohyb, klávesnice), cesta 3 v `cesta.spec.ts` a v průchodu, otázka 6 v `otazka.spec.ts` a v prohlídce, vstupy v `platon.spec.ts`. Průchod umí krok s více bloky. Nové skripty: `scripts/snimky-cesta.mjs` (kroky cesty s odpověďmi i bez nich) a `scripts/snimky-prvek.mjs` (jeden blok nebo kresba); `snimky-listy.mjs` umí `PRESKOCIT` pro stránku otázky.
+**Testy a skripty:** `tests/e2e/cesta3.spec.ts` (klávesnice, průchod bez odkrytí, tón a co do cesty nepatří), `tests/e2e/jeskyne.spec.ts` (obě kresby na obou šířkách v obou režimech, pohyb, posuvník, klávesnice), cesta 3 v `cesta.spec.ts` a v průchodu, otázka 6 v `otazka.spec.ts` a v prohlídce, vstupy v `platon.spec.ts`. Průchod umí krok s více bloky. Nové skripty: `scripts/snimky-cesta.mjs` (kroky cesty s odpověďmi i bez nich) a `scripts/snimky-prvek.mjs` (jeden blok nebo kresba; `POHYB=1` nechá animaci běžet, `POSUVNIK=n` nastaví posuvník); `snimky-listy.mjs` umí `PRESKOCIT` pro stránku otázky.
 
 **Otevřené pro autora a pro revizi (P10):**
 
-- **Čtvrtý koš.** Autor chtěl jen jiné názvy; čtvrtý koš „Z vlastní hlavy“ je návrh. Jde vrátit na tři koše, ale pak dvakrát dvě zase nemá místo. Druhá možnost je kartu vyřadit a zeptat se na ni až ve srovnání.
-- **Kresba jeskyně.** Je to pokus o formu: posoudit, jestli pohyb pomáhá, nebo ruší čtení, a jestli má podobná kresba vzniknout i pro výstup (krok 3). V dílně bloků zatím není.
-- **Rytina na desce.** Poměr 4 : 3 sedí, deska rytinu neořezává (`vyrez` se neprojeví). Na notebooku je ale deska asi 300 px široká a detaily rytiny nejsou čitelné; latinské verše zabírají dolní šestinu. Výřez bez veršů by byl nový soubor obrázku.
-- **Karta „Jak vypadá válka“.** Ve třídě může sedět student, který válku zažil. Karta má pro koš Ze zkušenosti vlastní zpětnou vazbu; kdyby se autorovi nezdála, nahradit ji jinou kartou „jen z obrazovky“.
-- **Krok 7 má Volbu „Kdo má rozhodovat o tom, co je skutečné?“.** Zadání chtělo jen otázku; blok dává studentovi tah i tady. Volba je tak v cestě čtyřikrát (kroky 3, 6 dvakrát a 7).
-- **Úvod otázky 6** začíná duhou a „boj obrů“ stojí až za ní; citát před prvním názorem stránku prodlužuje. Jde vypustit.
+- **Skill `atlas-revize` v účtu.** Řádek o kresbě s pohybem má jen kopie v repozitáři; do účtu ho doplnit při příští úpravě skillu.
+- **Kresby v dílně bloků.** `/dilna/bloky/` kresby neukazuje; vidět jsou jen v cestě 3.
+- **Kde dál kreslit.** Nabízejí se šaty z cesty 1 (posuvník předpokládaného světla, `docs/podklady/k-overeni.md`) a čtverec v Platónově portrétu (nákres zbývá z P7). Posoudit při revizi.
 - Z P7 zůstává: popisek „znal ho z textů“ u Hérakleita, nákres ke čtverci v portrétu, délka portrétu, údaj pod citátem ze Sedmého listu.
 
 **Další krok:** revize celku (P10) skillem `atlas-revize`; zadání zatím není napsané.

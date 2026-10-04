@@ -45,5 +45,5 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 
 - Po přidání stránky, bloku nebo změně dat restartuj běžící `npm run dev`. Starý náhled ukáže stránku bez obsahu a odkazy na kotvy nikam nevedou.
 - Playwright před každým během maže `test-results/`. Pracovní skripty patří do `scripts/`, snímky pro autora do `Claude outputs/`.
-- Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst.
+- Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`.
 - Chromium nevyfotí najednou stránku vyšší než asi 16 000 px; dlouhé stránky foť po částech (`scripts/snimky-listy.mjs`).

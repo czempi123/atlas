@@ -4,6 +4,17 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 4. 10. 2026: Kresba s pohybem jako forma (po P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kresba s pohybem je forma atlasu a má se používat častěji. Kdy a jak, říkají skilly `atlas-cesta`, `atlas-osobnost`, `atlas-komponenta` a `atlas-revize` | Autor po kresbě jeskyně: „Ten javascript je úžasný. Používejme ho častěji, zakomponuj to i do skillů.“ |
+| Kresby stojí na společném rámu `Kresba.svelte` (karta, přepínač pohledů, text pod kresbou, zastavení pohybu); kresba sama dodává jen scénu a případný posuvník | Druhá kresba by jinak opsala polovinu první. Zastavení a omezený pohyb řeší jedno místo |
+| Krok 3 cesty 3 má kresbu `<JeskyneVen />`: řez s cestou ven a posuvník, kterým si oči venku zvykají | Autor: „Můžeš to udělat i v kroku 3.“ Pořadí šesti stupňů je z pramene (516a–b) a z textu se špatně představuje |
+| Stupně venku mění student posuvníkem; samy neběží | Pořadí je pointa a student si ho má projít vlastní rukou. Pohyb zůstává dějem uvnitř pohledu (dvojice stoupá chodbou) |
+| Kresba v kroku 3 stojí za odstavcem o zvykání očí; text kroku se kvůli ní neměnil | Kresba nenese nic, co neříká text; kdo ji přeskočí, o nic nepřijde |
+| Otevřené body z P8 zůstávají, jak jsou: čtyři koše v kroku 2, rytina bez výřezu, karta „Jak vypadá válka“, „boj obrů“ v úvodu otázky 6 a Volba v kroku 7 | Autor: „Jinak můžeš nechat tam kde se ptáš.“ |
+
 ## 4. 10. 2026: Cesta 3, stránka otázky 6 a kresba jeskyně (P8)
 
 | Rozhodnutí | Důvod |
