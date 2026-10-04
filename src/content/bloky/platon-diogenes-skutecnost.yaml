@@ -1,19 +1,24 @@
 # Spor · Platón × Diogenés: co je skutečnější, to, co vidím, nebo to, co pochopím?
-# Podklady: docs/podklady/spor-platon-diogenes.md (Diogenés Laertios VI, 53; Platón, Ústava VII).
+# Stojí v Platónově portrétu, kapitola 03 „Stůl a stolovost“ (do 4. 10. 2026 v Sókratově portrétu).
+# Podklady: docs/podklady/celek-4-co-je-skutecne.md › Spor Platón × Diogenés: přesun do Platónova portrétu.
+# Platón: stůl a truhlář podle Ústavy X, 596a–b (mluví Sókratés); odpověď z Diogena Laertia VI, 53 (tradovaná).
+# Diogenés: námitka z VI, 53 (tradovaná); „ztráta času“ z VI, 24 (tradované); druhá věta repliky je výklad („by mohl“).
+# Scéna říká Diogenovu námitku předem: na telefonu čte student Platónovu stranu první a jeho druhý argument na ni odpovídá.
 druh: spor
 obdobi: 1
 nadtitulek: Spor
 scena: >-
   Vypráví se, že Platón jednou vykládal o idejích a mluvil o „stolovosti“ a „pohárovosti“:
-  o tom, co dělá každý stůl stolem a každý pohár pohárem. Diogenés ho poslouchal a pak se ozval.
+  o tom, co dělá každý stůl stolem a každý pohár pohárem. Diogenés ho poslouchal a pak namítl,
+  že stůl a pohár vidí, ale stolovost a pohárovost nikde.
 otazka: Co je skutečnější, to, co vidíš, nebo to, co pochopíš?
 strany:
   - osoba: platon
     postoj: To, co pochopím.
     argumenty:
       - >-
-        Stůl se jednou rozpadne a pohár se rozbije. Za proměnlivým světem, který vidíme, stojí neměnné ideje.
-        Kdo je nepochopí, je jako vězeň v jeskyni, který celý život hledí na stíny na zdi a má je za skutečnost.
+        Stolů je mnoho, každý je jiný a jednou se rozpadne. Truhlář, který stůl dělá, se přitom dívá na jedno:
+        na to, čím je stůl stolem. To nevyrobil žádný truhlář a nerozpadne se.
       - >-
         Na Diogenovu námitku prý Platón odpověděl: „Oči, kterými se vidí stůl a pohár, máš.
         Rozum, kterým se vidí stolovost a pohárovost, nemáš.“
@@ -23,6 +28,6 @@ strany:
       - >-
         „Stůl a pohár vidím, Platóne. Stolovost a pohárovost ale nikde.“
       - >-
-        Diogenés se vysmíval tomu, čemu ostatní slepě věřili. Na vlastním životě ukazoval, že ke šťastnému životu
-        stačí velmi málo. Co nejde ukázat ani vyzkoušet, o to nemá cenu se přít.
-zdroje: [dl-vi-53, platon-ustava, sep-plato, iep-diogenes]
+        Vypráví se, že Platónovým přednáškám říkal ztráta času. Na Platónovu odpověď by mohl říct:
+        rozum, který mám, mi stačí, abych u stolu jedl a z poháru pil. K čemu je ten tvůj?
+zdroje: [dl-vi-53, dl-vi-20, platon-ustava-perseus, sep-plato, iep-diogenes]

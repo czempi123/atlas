@@ -263,7 +263,7 @@ const BLOKY: {
       await page.keyboard.press('Enter');
       const argumenty = blok.getByRole('region', { name: 'Argumenty obou stran' });
       await expect(argumenty).toBeFocused();
-      await expect(argumenty).toContainText('neměnné ideje');
+      await expect(argumenty).toContainText('čím je stůl stolem');
       await expect(argumenty.getByRole('heading', { name: 'Diogenés' })).toBeVisible();
       // Druhá škála začíná na první poloze; posun o krok doprava.
       await page.keyboard.press('Tab');

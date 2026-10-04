@@ -214,8 +214,8 @@ test('Spor: starý uložený stav bez reflexe funguje dál; změněný argument 
   await expect(r).toHaveJSProperty('open', false);
   expect(await zapis(page, PLATON)).toBe(stary);
   await r.locator('summary').click();
-  await r.getByText('Stůl se jednou rozpadne').click();
-  expect(await zapis(page, PLATON)).toMatch(/^Na začátku: spíš Platón\. Po argumentech: spíš Diogenés\. Co mě posunulo: stůl vidím\. Nejsilnější argument druhé strany \(Platón\): Stůl se jednou rozpadne a pohár se rozbije\./);
+  await r.getByText('Stolů je mnoho').click();
+  expect(await zapis(page, PLATON)).toMatch(/^Na začátku: spíš Platón\. Po argumentech: spíš Diogenés\. Co mě posunulo: stůl vidím\. Nejsilnější argument druhé strany \(Platón\): Stolů je mnoho, každý je jiný a jednou se rozpadne\. …/);
 
   // Uložený argument, který blok už nemá (autor ho přepsal): zůstane vidět ten původní a žádný jiný není vybraný.
   await uloz({ prvni: 1, konecna: 3, duvod: '', reflexe: { argument: { strana: 0, text: 'Tohle je argument, který autor později přepsal.' }, odpoved: 'pořád s ním nesouhlasím' } }, stary);
