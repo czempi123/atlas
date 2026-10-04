@@ -313,6 +313,63 @@ test('otázka 4: úvodní případ, čtyři hlasy, které se poznají, a cesta 5
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
 });
 
+test('otázka 6: duha, čtyři hlasy, které se poznají, a cesta 3', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/otazka/co-je-skutecne/');
+  await hydratovano(page, 'PrvniNazor');
+  await expect(page.locator('h1')).toHaveText('Co je skutečné?');
+  // Úvod: duha ze života studenta, pak „boj obrů“ s větou o tom, kdo v dialogu mluví; končí otázkou.
+  const uvod = page.locator('.uvod');
+  await expect(uvod).toContainText('Představ si, že po dešti vyjde slunce a nad hřištěm stojí duha.');
+  await expect(uvod).toContainText('V Platónově dialogu Sofistés o nich říká host z Eleje:');
+  await expect(uvod.locator('.citat')).toContainText('boj obrů');
+  await expect(uvod.locator(':scope > p').last()).toContainText('Kam bys v tom boji postavil duhu ty?');
+  // Nejdřív student: hlasy se ukážou až po prvním názoru.
+  await expect(page.locator('#co-je-skutecne-po')).toBeHidden();
+  await page.locator('#co-je-skutecne-prvni-pole').focus();
+  await page.keyboard.type('Je, vždyť ji vidím.');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#co-je-skutecne-hlasy-nadpis')).toBeFocused();
+  await expect(page.locator('#co-je-skutecne-hlasy-nadpis')).toHaveText('Je duha skutečná?');
+  // Pořadí podle narození.
+  await expect(page.locator('.odpoved__jmeno')).toHaveText(['Parmenidés', 'Démokritos', 'Platón', 'Aristotelés']);
+  const odpovedi = page.locator('.odpoved');
+  // Každý hlas se pozná: není duha ani déšť; kapky ano, barvy ne; mínění, ne vědění; odraz v kapkách.
+  await expect(odpovedi.nth(0)).toContainText('Není, a déšť před ní taky ne.');
+  await expect(odpovedi.nth(1)).toContainText('Kapky tam jsou, barvy ne.');
+  await expect(odpovedi.nth(2)).toContainText('o takové věci můžeš mít mínění, ne vědění');
+  await expect(odpovedi.nth(3)).toContainText('je to odraz slunce v kapkách');
+  for (let i = 0; i < 4; i++) {
+    const vet = (await odpovedi.nth(i).locator('.odpoved__text').innerText()).split(/(?<=[.?!])\s+/).length;
+    expect(vet).toBeLessThanOrEqual(2);
+  }
+  await expect(page.locator('.hlas__jmeno')).toHaveText(['Parmenidés', 'Démokritos', 'Platón', 'Aristotelés']);
+  // Odkaz na profil jen tam, kde profil je.
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Platón']);
+  await expect(page.locator('.hlas .citat')).toHaveCount(4);
+  await expect(page.locator('#hlas-parmenides .citat')).toContainText('co by to přimělo vzniknout později, a ne dřív?');
+  await expect(page.locator('#hlas-demokritos .citat')).toContainText('Ve skutečnosti jsou atomy a prázdno.');
+  await expect(page.locator('#hlas-platon .citat')).toContainText('smysly je nevnímáme, jen je myslíme');
+  await expect(page.locator('#hlas-aristoteles .citat')).toContainText('duha je odraz pohledu ke slunci');
+  // U dialogu a u básně je řečeno, kdo mluví.
+  await expect(page.locator('#hlas-platon')).toContainText('Platón nechává říct muže, po kterém se dialog jmenuje');
+  await expect(page.locator('#hlas-parmenides')).toContainText('Bohyně se v básni ptá:');
+  // Aristotelés nezní jako dnešní fyzik: duha je odraz v kapkách, o lomu světla nic.
+  await expect(page.locator('#hlas-aristoteles')).toContainText('zrcátka tak malá, že v nich není vidět tvar, jen barva');
+  await expect(page.locator('#hlas-aristoteles')).not.toContainText(/lom|láme|vln|spektr/i);
+  // Jeskyni nese cesta: úvod ani hlasy ji nepoužívají. Scény a citáty z portrétu a ze Sporu cesty 3 se neopakují,
+  // a Aristotelés i Parmenidés tu říkají něco jiného než na otázkách 1, 4 a 7.
+  for (const cast of [uvod, page.locator('.odpovedi'), page.locator('.hlasy-osa')]) {
+    if (await cast.count()) await expect(cast.first()).not.toContainText(/jeskyn|vězn|stín|stolovost|truhlář|naprázdno|Léčí přece|vlaštovka|Kdo hodil kámen|Diogen|Isokrat/i);
+  }
+  for (const id of ['parmenides', 'demokritos', 'platon', 'aristoteles']) await expect(page.locator(`#hlas-${id}`)).not.toContainText(/jeskyn|vězn|stín|stolovost|truhlář|naprázdno|Léčí přece|vlaštovka|Kdo hodil kámen/i);
+  await expect(page.locator('.cesta-karta')).toHaveAttribute('href', '/cesta/je-to-co-vidim-cela-skutecnost/');
+  await axe(page);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
+});
+
 test('portréty Epiktéta a Marca Aurelia vedou na cestu 5 a na stránku otázky 4; karta cesty stojí za kapitolou Senátor a císař', async ({ page }) => {
   for (const id of ['epiktetos', 'marcus-aurelius']) {
     await page.goto(`/osobnost/${id}/`);

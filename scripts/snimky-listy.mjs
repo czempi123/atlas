@@ -4,7 +4,8 @@
 //   telefon:  node scripts/snimky-listy.mjs /osobnost/platon/ platon 390 light 4 2000 1
 //   notebook: node scripts/snimky-listy.mjs /osobnost/platon/ platon 1440 dark 2 3200 0.55
 // Proměnné: ZAKLAD (běžící web; výchozí náhled sestaveného webu: npx astro preview --port 4323),
-// OD (od které výšky stránky), VEN (složka pro výstup; výchozí „Claude outputs/snimky“, mimo git).
+// OD (od které výšky stránky), VEN (složka pro výstup; výchozí „Claude outputs/snimky“, mimo git),
+// PRESKOCIT (klíč stránky otázky, třeba otazka-co-je-skutecne: ukáže hlasy bez prvního názoru).
 import { chromium } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
@@ -16,6 +17,12 @@ mkdirSync(VEN, { recursive: true });
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: sirka, height: 900 }, colorScheme: rezim, reducedMotion: 'reduce' });
+// Stránka otázky skrývá hlasy do prvního názoru; PRESKOCIT=otazka-<slug> ji ukáže celou (jako test prohlídky).
+if (process.env.PRESKOCIT) {
+  await page.addInitScript((klic) => {
+    localStorage.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: { [klic]: { preskoceno: true } }, aktivita: [], cesty: {} }));
+  }, process.env.PRESKOCIT);
+}
 await page.goto(ZAKLAD + cesta);
 await page.evaluate(() => document.fonts.ready);
 await page.evaluate(async () => {
