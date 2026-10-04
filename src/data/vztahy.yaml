@@ -24,7 +24,7 @@
 - { od: aristoteles, k: platon, typ: polemika, poznamka: "spor o ideje", zdroj: aristoteles-metafyzika-ideje }
 - { od: diogenes, k: platon, typ: polemika, tradovany: true, poznamka: "stolovost a pohárovost, oškubaný kohout", zdroj: dl-vi-53 }
 - { od: parmenides, k: platon, typ: vliv-textem, poznamka: "Platón po něm pojmenoval dialog a nechal ho v něm zkoušet ideje", zdroj: platon-parmenides }
-- { od: herakleitos, k: platon, typ: vliv-textem, poznamka: "podle Aristotela poznal Hérakleitovo učení od Kratyla", zdroj: aristoteles-metafyzika-ideje }
+- { od: herakleitos, k: platon, typ: vliv-textem, poznamka: "podle Aristotela poznal jeho učení už v mládí", zdroj: aristoteles-metafyzika-ideje }
 
 # Předsókratici
 - { od: thales, k: anaximandros, typ: ucitel, tradovany: true, zdroj: iep-thales }

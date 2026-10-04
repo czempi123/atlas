@@ -37,7 +37,7 @@ for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska
       await kresba.screenshot({ path: `test-results/snimky/jeskyne-vezni-${sirka}-${r}.png` });
 
       await kresba.getByRole('radio', { name: 'Pohled z boku' }).check({ force: true });
-      await expect(kresba.locator('.kresba__popis')).toContainText('Tenhle pohled žádný z nich nemá.');
+      await expect(kresba.locator('.kresba__popis')).toContainText('Tenhle pohled nemá žádný z nich. Ty jsi ho před chvílí taky neměl.');
       await expect(kresba.locator('svg .pohled-bok')).toHaveCount(1);
       await expect(kresba.locator('svg .pohled-vezni')).toHaveCount(0);
       await expect(kresba.locator('svg text.k-popisek')).toHaveText(['oheň', 'nosiči za zídkou', 'vězni', 'stěna']);

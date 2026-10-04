@@ -17,7 +17,7 @@ describe('kresba jeskyně', () => {
     }
     expect(POPISY.vezni).toMatch(/^Sedíš mezi vězni/);
     expect(POPISY.vezni).toContain('Kdyby se od stěny vracela ozvěna');
-    expect(POPISY.bok).toContain('Tenhle pohled žádný z nich nemá.');
+    expect(POPISY.bok).toContain('Tenhle pohled nemá žádný z nich. Ty jsi ho před chvílí taky neměl.');
   });
   it('průvod se opakuje po celé své délce', () => {
     expect(delkaPruvodu()).toBe(PRUVOD.length * ROZESTUP);

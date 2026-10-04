@@ -189,7 +189,7 @@ test('cesta 3: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(`${CESTA3}6/#co-vyslo`);
   await expect(page.locator('#co-vyslo')).toBeInViewport();
-  await expect(obsah6).toContainText('Jejich názory se nezměnily.');
+  await expect(obsah6).toContainText('Na jejich názorech se to neprojevilo.');
   await expect(obsah6).toContainText('Bublina přitom existuje.');
   // Výhrady až ve zpětné vazbě druhé otázky.
   for (const cast of await page.locator('.krok__obsah > .ctenarsky').all()) await expect(cast).not.toContainText(/jen v USA|s firmou/);
@@ -248,7 +248,7 @@ test('cesta 3 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
     ['někdo rozváže a donutí ho vstát', 'Slunce uvidí až nakonec.', 'Vězni si tam udíleli pocty'],
     ['Jeskyně je svět, který vidíme.', 'Věta platí přesně, jen ne o čtverci na tabuli.'],
     ['Platí o čtverci samém', 'Ideje nepřijal.', 'Rozcházejí se v tom, kde to obecné je.', 'Kdo z nich má pravdu, rozhodni sám.'],
-    ['Jde o to, kam je člověk otočený.', 'na tři měsíce ubrali asi třetinu příspěvků', 'Jejich názory se nezměnily.', 'Mluví ten pokus pro jeskyni, nebo proti ní?'],
+    ['Jde o to, kam je člověk otočený.', 'na tři měsíce ubrali asi třetinu příspěvků', 'Na jejich názorech se to neprojevilo.', 'Mluví ten pokus pro jeskyni, nebo proti ní?'],
     ['Oči má plné tmy', 'nesmí nahoře zůstat', 'Říká se tomu ušlechtilá lež.', 'věřil bys mu?'],
     ['Souhlasit s ním nemusíš.', 'máš v něm spojence', 'Vrať se ke svým košům z kroku 2.'],
   ];

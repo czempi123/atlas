@@ -13,7 +13,7 @@ export const POPISY: Record<Pohled, string> = {
   vezni:
     'Sedíš mezi vězni a vidíš to, co oni: stíny, které přicházejí a odcházejí, a pod nimi stíny vlastních hlav. Kdyby se od stěny vracela ozvěna, zdálo by se, že mluví stín.',
   bok:
-    'Takhle to vypadá z boku. Oheň svítí přes zídku na stěnu, a co nosiči zvednou nad zídku, je na stěně vidět jako stín. Vězni sedí zády k ohni a hlavu neotočí. Tenhle pohled žádný z nich nemá.',
+    'Takhle to vypadá z boku. Oheň svítí přes zídku na stěnu, a co nosiči zvednou nad zídku, je na stěně vidět jako stín. Vězni sedí zády k ohni a hlavu neotočí. Tenhle pohled nemá žádný z nich. Ty jsi ho před chvílí taky neměl.',
 };
 
 /** Věci, které nosiči nesou nad zídkou: nářadí a sochy lidí i zvířat (514b–515a). */
