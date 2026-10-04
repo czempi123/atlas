@@ -8,10 +8,10 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 | P7 | Portrét Platóna | hotovo 4. 10. 2026 (`src/content/osobnosti/platon.mdx`); stav v oddílu Po P7. Autor zadal přípravu P8; výhrady k portrétu řekne průběžně nebo při revizi |
 | P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | hotovo 4. 10. 2026; stav v oddílu Po P8. Po připomínkách autora z téhož dne: nové názvy košů v kroku 2 a kresba jeskyně s pohybem v kroku 1 |
 | P10 | Revize celku | hotovo 4. 10. 2026 (`docs/revize/celek-4-2026-10-04.md`), verdikt „po opravách“; stav v oddílu Po P10 |
-| Opravy | Zapracování nálezů revize | **další krok** po rozhodnutí autora; zadání je na konci tohoto souboru |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
+| Opravy | Zapracování nálezů revize | hotovo 4. 10. 2026, všech osm nálezů schválených autorem; stav v oddílu Po opravách |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | **další krok**, čeká na autora |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7, P8, P10) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
+Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání (P6, P7, P8, P10, opravy) jsou v plném znění v `docs/archiv/zadani/celek-4.md`.
 
 **Souběh s větví `rozhrani-v2`.** Autor chce úpravy rozhraní (`docs/plany/rozhrani-v2.md`) projít zvlášť. Podklady (P6) se rozhraní netýkají a mohou běžet souběžně. Před P7 se do `celek-4` sloučí hlavní větev, pokud v ní `rozhrani-v2` už bude: nový portrét a cesta mají vzniknout na novém obsahu profilu a novém závěru cest, ne na starém.
 
@@ -175,20 +175,30 @@ Opravy nálezů 4, 5 a 6 mění i testy (`platon.spec.ts`, `cesta3.spec.ts`, `je
 
 **Další krok:** rozhodnutí autora o nálezech, zapracování oprav (zadání níž), pak schválení, sloučení `celek-4` do hlavní větve a GitHub.
 
-## Zadání: opravy po revizi celku 4
+## Po opravách (4. 10. 2026)
 
-V Coworku v novém chatu projektu, se zapnutým Desktop Commanderem. Sonnet 5.5 · medium (jsou to věty a jedno číslo s hotovým zněním). Před spuštěním doplň do první věty, které nálezy schvaluješ.
+Autor schválil všech osm nálezů revize a opravy jsou zapracované ve znění ze záznamu (žádné vlastní znění nepřidal). Celé `npm test` prošlo (423 testů dat, 301 v prohlížeči). Na GitHub nic nešlo.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-4.
+| # | Oprava | Kde |
+| --- | --- | --- |
+| 1 | krok 8: „Vidět to za tebe nemůže nikdo a otáčet se bolí.“; možnost: „Pro. Vyměnit stíny nestačí, záleží na tom, kam je člověk otočený.“ | `8-tvoje-pravidlo.mdx`, `cesta3-pokus-cteni.yaml` |
+| 2 | zpětná vazba k vlastní kartě se ptá, podle čeho student vybral koš, a ne na jistotu | `cesta3-odkud-to-vim.yaml` |
+| 3 | Hérakleitos: poznámka „podle Aristotela poznal jeho učení už v mládí“; typ vztahu beze změny | `src/data/vztahy.yaml` |
+| 4 | `minut: 25`, test vstupu v portrétu | přehled cesty, `platon.spec.ts` |
+| 5 | „Na jejich názorech se to neprojevilo.“ | `6-vymenit-stiny.mdx`, `cesta3.spec.ts` (dva řádky) |
+| 6 | pohled z boku: „Tenhle pohled nemá žádný z nich. Ty jsi ho před chvílí taky neměl.“ | `src/lib/jeskyne.ts`, `jeskyne.test.ts`, `jeskyne.spec.ts` |
+| 7 | Aristotelova poslední věta: „A zdraví lékař nehledá mimo lidi, které léčí.“ | `cesta3-aristoteles-spor.yaml` |
+| 8 | konec kapitoly 05: „A o idejích, které mají ti vládci vidět, nepřesvědčil Platón ani vlastního žáka.“ | `platon.mdx` |
 
-Zapracuj nálezy revize celku 4 ze záznamu docs/revize/celek-4-2026-10-04.md. Schvaluji: všechny / jen čísla … / nález … chci jinak: …
+Kopie skillu `atlas-cesta` ve `skills/` už měla u pohledu z boku nové znění (doplnila ji revize), takže se neměnila. Nové osoby do dat nepřibyly a nic dalšího se nepřepisovalo.
 
-Čti úsporně: CLAUDE.md, docs/pouceni.md, v docs/plany/celek-4.md oddíl „Po P10“ a ze záznamu revize oddíl Nálezy. U každého nálezu otevři jen soubor, který jmenuje. Použij znění ze záznamu; kde jsem napsal vlastní, použij moje.
+Snímky na 390 px (kroky 2, 5, 6 a 8 cesty 3 a konec kapitoly 05 portrétu) jsou ve složce `Claude outputs/po-opravach-celek-4/`; nic v nich neprotíná ani nepřetéká a opravené věty stojí, kde mají. Běžící `npm run dev` je restartovaný.
 
-S opravami uprav testy, které staré znění hlídají (nálezy 4, 5 a 6: tests/e2e/platon.spec.ts, tests/e2e/cesta3.spec.ts, tests/e2e/jeskyne.spec.ts, tests/data/jeskyne.test.ts), a kopii skillu atlas-cesta, pokud cituje větu u pohledu z boku jinak než nové znění. Nové osoby do dat nepřidávej a nic dalšího nepřepisuj.
+**Zbývá do uzavření celku:**
 
-Kontrola: při práci jen dotčené testy, na konci jednou celé npm test (testy v prohlížeči běží na portu 4322; dlouhé příkazy pouštěj na pozadí s výstupem do souboru). Vyfoť kroky 2, 5, 6 a 8 cesty 3 a konec kapitoly 05 portrétu na 390 px a prohlédni je. Po změnách restartuj běžící npm run dev.
+1. Autorovo oko na kresbu šatů a na tři kresby pokusů (vítr, dvě půlky, pohár).
+2. Skilly `atlas-revize`, `atlas-komponenta` a `atlas-cesta` uložit do účtu (návrh je připravený).
+3. Ověření Kratylos 402a a Metafyzika I, 1 (`docs/podklady/k-overeni.md` › Revize celku 4); nezdržuje uzavření.
+4. Schválení autorem, sloučení `celek-4` (s `rozhrani-v2`) do hlavní větve a poslání na GitHub.
 
-Výstup: do docs/plany/celek-4.md stav „Po opravách“ (plán aktualizuj i v projektu), toto zadání přesuň do docs/archiv/zadani/celek-4.md. Commituj česky a nic neposílej na GitHub; sloučení do hlavní větve přijde až po mém schválení. Na konci napiš, co je hotové a co zbývá do uzavření celku.
-```
+Samostatné kroky mimo uzavření: kresba „Zdvoj čtverec“ v kapitole 02 portrétu (po ověření Menóna 84d–85b) a oddíl Kresby v dílně bloků.

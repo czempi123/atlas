@@ -172,3 +172,21 @@ Nálezy mi průběžně neposílej ke schválení: kde váháš, zvol nejlepší
 ```
 
 Provedeno 4. 10. 2026; stav je v `docs/plany/celek-4.md` › Po P10, záznam v `docs/revize/celek-4-2026-10-04.md`.
+
+## Opravy po revizi celku 4
+
+Spuštěno 4. 10. 2026 v Coworku; autor schválil všech osm nálezů. Sonnet 5.5 · medium.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-4.
+
+Zapracuj nálezy revize celku 4 ze záznamu docs/revize/celek-4-2026-10-04.md. Schvaluji: všechny
+
+Čti úsporně: CLAUDE.md, docs/pouceni.md, v docs/plany/celek-4.md oddíl „Po P10“ a ze záznamu revize oddíl Nálezy. U každého nálezu otevři jen soubor, který jmenuje. Použij znění ze záznamu; kde jsem napsal vlastní, použij moje.
+
+S opravami uprav testy, které staré znění hlídají (nálezy 4, 5 a 6: tests/e2e/platon.spec.ts, tests/e2e/cesta3.spec.ts, tests/e2e/jeskyne.spec.ts, tests/data/jeskyne.test.ts), a kopii skillu atlas-cesta, pokud cituje větu u pohledu z boku jinak než nové znění. Nové osoby do dat nepřidávej a nic dalšího nepřepisuj.
+
+Kontrola: při práci jen dotčené testy, na konci jednou celé npm test (testy v prohlížeči běží na portu 4322; dlouhé příkazy pouštěj na pozadí s výstupem do souboru). Vyfoť kroky 2, 5, 6 a 8 cesty 3 a konec kapitoly 05 portrétu na 390 px a prohlédni je. Po změnách restartuj běžící npm run dev.
+
+Výstup: do docs/plany/celek-4.md stav „Po opravách“ (plán aktualizuj i v projektu), toto zadání přesuň do docs/archiv/zadani/celek-4.md. Commituj česky a nic neposílej na GitHub; sloučení do hlavní větve přijde až po mém schválení. Na konci napiš, co je hotové a co zbývá do uzavření celku.
+```
