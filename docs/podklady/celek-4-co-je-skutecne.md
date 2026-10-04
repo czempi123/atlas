@@ -2,13 +2,15 @@
 
 Ověřeno 3. 10. 2026 (P6). Celek: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“, velká otázka 6 „Co je skutečné?“ a myšlenkový pokus Gygův prsten. Rozhodnutí autora z 3. 10. 2026 nad osnovou: Spor v cestě je Platón × Aristotelés; dosavadní Spor Platón × Diogenés se přesune ze Sókratova portrétu do Platónova; novým případem je pokus na Facebooku z roku 2020; čtyři hlasy otázky 6 jsou Parmenidés, Démokritos, Platón a Aristotelés. Studentský text v tomto kroku nevzniká.
 
-**Jak se ověřovalo.** Platóna jsem četl řecky (J. Burnet) s anglickým překladem, vše z PerseusDL (`canonical-greekLit`): Ústavu II 357a–361d a 377b–c, III 398a a 414b–415d, IV 433a–c, 439d–442a a 443c–444a, V 451d–452a, 455d–456a, 457c–d, 459c–460d, 461d–e a 473c–474a, VI 506b–511e, VII 514a–521b, X 595b–596c, 607b a 612b (P. Shorey); Menóna 80d–86c (W. R. M. Lamb); Parmenida 127a–c a 128e–135d, Faidóna 59b, 74a–75b, 91b–c a 100b–d, Obranu 33e–34a a 38b, Sofistu 245e–247c (H. N. Fowler); Tímaia 51b–52a a Sedmý list 324a–329e, 338a–339e, 341b–342c a 349e–350e (R. G. Bury). Aristotela řecky (W. D. Ross, I. Bywater) a anglicky: Metafyziku I, 1; I, 6; I, 9; XIII, 4 a XIII, 9 (H. Tredennick), Etiku Nikomachovu I, 6 a Politiku II, 1261a6 a 1261b16–40 (H. Rackham). Diogena Laertia III, 1–9, 18–26 a 35–47, VI, 24–26, IX, 21–23, 34–36, 40, 43–45 a 72, X, 150–151 (R. D. Hicks, řecky i anglicky). Plútarchova Dióna 5 a 20 (B. Perrin, řecky i anglicky), Isokratovu Antidosis 261–271 (G. Norlin) a Helenu 1 a 5 (L. Van Hook), Hérodota I, 8–12 jen anglicky a zběžně (A. D. Godley), Cicerona O stáří 13 latinsky. Aristotelovy Kategorie v PerseusDL nejsou: kapitolu 5 mám anglicky z překladu E. M. Edghilla (MIT Internet Classics Archive) a řeckou větu z řecké Wikisource; Bekkerovo číslování jsem v otevřeném vydání neviděl. Parmenidův zlomek B8 řecky a v překladu J. Burneta z lexundria.com. Výklad a život podle SEP „Plato“ (R. Kraut, rev. 24. 4. 2026), SEP „Plato's Parmenides“ (S. Rickless, rev. 13. 3. 2026), SEP „Plato's Middle Period Metaphysics and Epistemology“ (A. Silverman, 2014), SEP „Parmenides“ (J. Palmer, rev. 2025), SEP „Democritus“ (S. Berryman, rev. 2023), IEP „Plato“ (T. Brickhouse, N. D. Smith), IEP „Plato: The Academy“ (L. Trelawny-Cassity) a kapitoly D. Nails „The Life of Plato of Athens“ (A Companion to Plato, 2006; ukázka nakladatele). Studii o Facebooku jsem četl v plném znění (Nature, otevřený přístup). Všechny české převody citátů jsou **vlastní**; publikované české překlady (F. Novotný, A. Kříž, A. Kolář) jsem neměl v ruce, jedinou větu Křížova překladu znám z citace v článku K. Boháčka.
+**Doplněno 4. 10. 2026** po odpovědích autora na otevřené otázky (oddíl Rozhodnutí autora na konci): úvodní případ otázky 6 je duha, a kvůli ní jsou nově ověřena Aristotelova Meteorologika III, 2 a 4; části duše se jmenují rozum, hněv a žádostivost; studentovi, který s Platónem nesouhlasí, dává v cestě za pravdu jen Aristotelés; Gygův prsten je blok v portrétu; oba obrázky jsou stažené a prohlédnuté.
+
+**Jak se ověřovalo.** Platóna jsem četl řecky (J. Burnet) s anglickým překladem, vše z PerseusDL (`canonical-greekLit`): Ústavu II 357a–361d a 377b–c, III 398a a 414b–415d, IV 433a–c, 439d–442a a 443c–444a, V 451d–452a, 455d–456a, 457c–d, 459c–460d, 461d–e a 473c–474a, VI 506b–511e, VII 514a–521b, X 595b–596c, 607b a 612b (P. Shorey); Menóna 80d–86c (W. R. M. Lamb); Parmenida 127a–c a 128e–135d, Faidóna 59b, 74a–75b, 91b–c a 100b–d, Obranu 33e–34a a 38b, Sofistu 245e–247c (H. N. Fowler); Tímaia 51b–52a a Sedmý list 324a–329e, 338a–339e, 341b–342c a 349e–350e (R. G. Bury). Aristotela řecky (W. D. Ross, I. Bywater) a anglicky: Metafyziku I, 1; I, 6; I, 9; XIII, 4 a XIII, 9 (H. Tredennick), Etiku Nikomachovu I, 6 a Politiku II, 1261a6 a 1261b16–40 (H. Rackham). Dne 4. 10. 2026 kvůli duze Meteorologika III, 2 a 4 anglicky (E. W. Webster, MIT Internet Classics Archive) a citované věty řecky (I. Bekker, vydání 1837, First1KGreek; vydání nemá Bekkerovo číslování). Diogena Laertia III, 1–9, 18–26 a 35–47, VI, 24–26, IX, 21–23, 34–36, 40, 43–45 a 72, X, 150–151 (R. D. Hicks, řecky i anglicky). Plútarchova Dióna 5 a 20 (B. Perrin, řecky i anglicky), Isokratovu Antidosis 261–271 (G. Norlin) a Helenu 1 a 5 (L. Van Hook), Hérodota I, 8–12 jen anglicky a zběžně (A. D. Godley), Cicerona O stáří 13 latinsky. Aristotelovy Kategorie v PerseusDL nejsou: kapitolu 5 mám anglicky z překladu E. M. Edghilla (MIT Internet Classics Archive) a řeckou větu z řecké Wikisource; Bekkerovo číslování jsem v otevřeném vydání neviděl. Parmenidův zlomek B8 řecky a v překladu J. Burneta z lexundria.com. Výklad a život podle SEP „Plato“ (R. Kraut, rev. 24. 4. 2026), SEP „Plato's Parmenides“ (S. Rickless, rev. 13. 3. 2026), SEP „Plato's Middle Period Metaphysics and Epistemology“ (A. Silverman, 2014), SEP „Parmenides“ (J. Palmer, rev. 2025), SEP „Democritus“ (S. Berryman, rev. 2023), IEP „Plato“ (T. Brickhouse, N. D. Smith), IEP „Plato: The Academy“ (L. Trelawny-Cassity) a kapitoly D. Nails „The Life of Plato of Athens“ (A Companion to Plato, 2006; ukázka nakladatele). Studii o Facebooku jsem četl v plném znění (Nature, otevřený přístup). Všechny české převody citátů jsou **vlastní**; publikované české překlady (F. Novotný, A. Kříž, A. Kolář) jsem neměl v ruce, jedinou větu Křížova překladu znám z citace v článku K. Boháčka.
 
 **Co jsem neotevřel a jen o tom vím.** Článek H. D. Saffreyho o nápisu nad Akademií (Persée robotům přístup nedává), knihu M. Burnyeata a M. Fredeho o Sedmém listu (znám jen abstrakt diskuse N. Denyera), studii C. Baila z roku 2018 (PNAS a PubMed nástroj odmítly), Galénův text s Démokritovým zlomkem B125, vydání nového herculanského papyru (jen novinové zprávy z dubna 2024), Notopoulův článek o Platónově jménu (jen odkaz u W. K. C. Guthrieho) a osmou knihu Ústavy o demokracii. Co z toho plyne, je vždy označeno jako neověřené.
 
 **Čeho se drží celý celek.** Platón tvrdí, že to, co vidíme, není celá skutečnost: věci, které se mění a zanikají, jsou obrazy něčeho, co se nemění a co se dá jen pochopit. Říká to obrazem jeskyně a ten obraz začíná větou „Podobní nám“ (Ústava 515a): mezi vězni sedí vypravěč, jeho posluchač i čtenář. Proti němu stojí jeho vlastní žák. Podle Aristotela je skutečná v první řadě tahle jednotlivá věc, a to, co ji dělá tím, čím je, je v ní, ne vedle ní (Kategorie 5; Metafyzika 991b1–3). Tenhle rozdíl nese cestu 3, Spor i stránku otázky 6. Druhá osa celku je tón. Kdo vyjde ven, toho podle Platónova vlastního textu nejdřív bolí oči a stínům věří víc než dřív (515d–e); jistý si není ani vypravěč („Bůh ví, jestli je to pravda“, 517b); a zpátky se nevrací kázat, ale protože musí (519d–520e).
 
-**Jak převádím klíčová slova.** εἶδος, ἰδέα = „idea“ (ve studentském textu i „čtverec sám“, „krása sama“); δόξα = „mínění“; ἐπιστήμη = „vědění“; νοῦς = „rozum“; εἰκών = „obraz“ (Sókratés jeskyni nazývá obrazem, 515a a 517a; „podobenství“ je až naše označení a v atlasu může zůstat); ἀνάμνησις = „rozpomínání“; σκευαστά (515c) = „vyrobené věci“; φύλακες = „strážci“. Tři části duše (λογιστικόν, θυμοειδές, ἐπιθυμητικόν) převádím „rozum, hněv a žádosti“; pro prostřední část se v češtině užívá i „vznětlivost“ (ve vydání jsem neověřoval), výběr nechávám autorovi.
+**Jak převádím klíčová slova.** εἶδος, ἰδέα = „idea“ (ve studentském textu i „čtverec sám“, „krása sama“); δόξα = „mínění“; ἐπιστήμη = „vědění“; νοῦς = „rozum“; εἰκών = „obraz“ (Sókratés jeskyni nazývá obrazem, 515a a 517a; „podobenství“ je až naše označení a v atlasu může zůstat); ἀνάμνησις = „rozpomínání“; σκευαστά (515c) = „vyrobené věci“; φύλακες = „strážci“. Tři části duše (λογιστικόν, θυμοειδές, ἐπιθυμητικόν) se v atlasu jmenují **rozum, hněv a žádostivost** (rozhodnutí autora 4. 10. 2026); pro prostřední část se v češtině užívá i „vznětlivost“ (ve vydání jsem neověřoval).
 
 ## Nejsilnější příběhy
 
@@ -123,7 +125,7 @@ Sedmý list je dlouhý dopis v první osobě, psaný po Diónově smrti jeho př
 
 | # | Tvrzení | Typ | Zdroj a místo | Doporučená formulace pro studenty |
 | --- | --- | --- | --- | --- |
-| 38 | V duši je část, kterou počítáme a uvažujeme, a část, kterou toužíme, hladovíme a žízníme. Třetí je hněv: někdy s žádostmi bojuje (Leontios) a staví se po bok rozumu, „jako pes, kterého pastýř odvolá“. | doložený text (mluví Sókratés s Glaukónem) | Ústava IV, 439d–441a | „Platón rozlišil v duši tři síly: rozum, hněv a žádosti.“ Scéna: Leontios. |
+| 38 | V duši je část, kterou počítáme a uvažujeme, a část, kterou toužíme, hladovíme a žízníme. Třetí je hněv: někdy s žádostmi bojuje (Leontios) a staví se po bok rozumu, „jako pes, kterého pastýř odvolá“. | doložený text (mluví Sókratés s Glaukónem) | Ústava IV, 439d–441a | „Platón rozlišil v duši tři síly: rozum, hněv a žádostivost.“ Scéna: Leontios. |
 | 39 | Vládnout má rozum, hněv mu má být spojencem. Spravedlivý je ten, v kom každá část dělá to své a žádná se neplete druhé do práce: „stane se jedním z mnoha“. Teprve pak má jednat, ať jde o majetek, tělo, obec, nebo soukromé věci. | doložený text | Ústava IV, 441d–444a | „Spravedlnost podle něj není nejdřív to, co děláš druhým. Je to pořádek v tobě.“ Tohle je odpověď na Gygův prsten. |
 | 40 | Totéž v obci: spravedlnost je, když každý dělá to, k čemu se nejlíp hodí, a neplete se do všeho. Sókratés dodává, že to „slyšeli od mnohých“. Obec má tři stavy jako duše tři části: vládce, jejich pomocníky (vojáky) a rolníky s řemeslníky. | doložený text | Ústava IV, 433a–b, 441c–d; III, 414b–415c | Citát `ustava-433a`. Jedna věta o třech stavech stačí. |
 | 41 | „Dokud se v obcích nestanou králi filozofové, nebo dokud dnešní králové a vládci nezačnou opravdu filozofovat, nebude konec zlu v obcích ani v lidském rodě.“ Sókratés ví, že ho za to zaplaví „vlna smíchu“; Glaukón dodá, že se na něj vrhnou. | doložený text | Ústava V, 473c–474a | Citát `ustava-473d`. Hned za ním Syrákúsy: zkusil to. |
@@ -315,14 +317,14 @@ Obraz jeskyně používají i ti, kdo tvrdí, že „prohlédli“ a ostatní sp
 | Kdo | Co říká | Zdroj | Kde v cestě |
 | --- | --- | --- | --- |
 | **Aristotelés** | Skutečná je nejdřív jednotlivá věc; lékař léčí tohoto člověka; ideje věcem nepomáhají. | Kategorie 5; Etika Nikomachova 1097a8–13; Metafyzika 991a8–22 | Spor (krok 5), krok 8 |
-| **Isokratés**, athénský učitel řečnictví a Platónův současník | Lidé nemají v povaze dosáhnout vědění, se kterým by věděli, co dělat a říkat; moudrý je ten, kdo svým míněním většinou trefí to nejlepší. A je mnohem lepší mít rozumné mínění o užitečných věcech než přesné vědění o neužitečných. | Antidosis 271; Helena 5 | krok 7 nebo 8. **Je to hlas vězně, který dobře předvídá stíny (516c–d), a hájí se.** Koho Isokratés míní, neříká: Platóna ani Akademii v těch místech nejmenuje. Psát „Isokratés, který měl v Athénách vlastní školu, napsal:“, ne „Isokratés namítl Platónovi“. |
+| **Isokratés**, athénský učitel řečnictví a Platónův současník | Lidé nemají v povaze dosáhnout vědění, se kterým by věděli, co dělat a říkat; moudrý je ten, kdo svým míněním většinou trefí to nejlepší. A je mnohem lepší mít rozumné mínění o užitečných věcech než přesné vědění o neužitečných. | Antidosis 271; Helena 5 | **V cestě nebude** (rozhodnutí autora 4. 10. 2026: stačí Aristotelés). Citáty zůstávají v datech pro Isokratův profil. Kdyby se někdy použil: je to hlas vězně, který dobře předvídá stíny (516c–d), a hájí se. Koho Isokratés míní, neříká: Platóna ani Akademii v těch místech nejmenuje. Psát „Isokratés, který měl v Athénách vlastní školu, napsal:“, ne „Isokratés namítl Platónovi“. |
 | **Diogenés** | Stůl vidím, stolovost ne. | Diogenés Laertios VI, 53 (tradované) | jen odkazem na Spor v Platónově portrétu |
 | **Pokus z roku 2020** | Vyměnit stíny nestačí; lidé nejsou jen diváci. | viz výše | krok 6 |
 | **Platón sám** | Vězni si udílejí pocty za to, kdo stíny nejlíp předvídá: je to dovednost. | Ústava 516c–d | krok 1 nebo 3 |
 
 ### Návrat a vlastní pravidlo (kroky 7 a 8)
 
-Krok 7 má říct, proč se v Ústavě vracejí (z povinnosti a z donucení, 519c–520e), že dole smějí pro dobro obce lhát (414b–415c, 459c–d) a položit otázku, kdo má o skutečnosti rozhodovat. Krok 8: „Souhlasit s Platónem nemusíš. Aristotelés, který u něj studoval dvacet let, ideje odmítl: skutečná je podle něj nejdřív tahle věc tady. A Isokratés by řekl, že dobrý odhad o tom, na čem záleží, je víc než přesné vědění o tom, na čem ne.“ Odkaz na velkou otázku 6.
+Krok 7 má říct, proč se v Ústavě vracejí (z povinnosti a z donucení, 519c–520e), že dole smějí pro dobro obce lhát (414b–415c, 459c–d) a položit otázku, kdo má o skutečnosti rozhodovat. Krok 8: „Souhlasit s Platónem nemusíš. Aristotelés, který u něj studoval dvacet let, ideje odmítl: skutečná je podle něj nejdřív tahle věc tady.“ Odkaz na velkou otázku 6. (Věta o Isokratovi odsud vypadla: podle rozhodnutí autora ze 4. 10. 2026 v cestě není.)
 
 ## Spor Platón × Diogenés: přesun do Platónova portrétu
 
@@ -354,37 +356,54 @@ V prameni má poslední slovo Platón. Blok proto nesmí končit jeho odpovědí
 | **Aristotelés × Platón** | Obecné není vedle věcí, ale v nich; skutečná je nejdřív jednotlivá věc. | Metafyzika I, 9; XIII, 9, 1086b2–7; Kategorie 5 |
 | **Diogenés × Platón** | Stůl vidím, stolovost ne. | Diogenés Laertios VI, 53 (tradované) |
 
-### Úvodní případ (autorský, jiného druhu než nový případ cesty)
+### Úvodní případ: duha (autorský, jiného druhu než nový případ cesty)
 
-„Představ si, že sedíš ve fyzice a opíráš se lokty o lavici. Je tvrdá, hnědá a studená. Učitel zrovna vykládá, že lavice je skoro samé prázdno: nepatrné částice a mezi nimi nic. Barvu ani tvrdost žádná z nich nemá. Která lavice je skutečná: ta, o kterou se opíráš, nebo ta z výkladu?“
+Rozhodnutí autora ze 4. 10. 2026: duha, ne lavice.
 
-Proč tenhle: každý ze čtyř hlasů na něj odpoví jinak a tři z nich skoro vlastními slovy (Démokritos: atomy a prázdno; Platón: stůl jako příklad ideje; Aristotelés: tahle věc tady). Je to věc na dosah ruky, ne obrazovka: jiný druh případu než pokus z cesty. Rezerva: duha (každý ji vidí jinde a nikdo k ní nedojde).
+„Po dešti vyjde slunce a nad hřištěm stojí duha. Ty ji vidíš nad tělocvičnou; kamarád, který stojí o kus dál, ji má nad parkovištěm. Když se k ní rozběhneš, ustupuje. Sáhnout si na ni nejde, vyfotit ano. Je duha skutečná?“
+
+**Co je na případu věcně pravda.** Duha vzniká lomem a vnitřním odrazem slunečního světla v kapkách, je vidět naproti Slunci a nejjasnější paprsky tvoří kužel, který má vrchol v oku pozorovatele (poloměr asi 42°); tak Britannica, heslo „Rainbow“. Každý pozorovatel má tedy svůj kužel, duhu vidí jinde a nedojde k ní, protože se posouvá s ním. Tyhle dva důsledky článek neříká výslovně; plynou z popisu. Že se duha dá vyfotit, beru jako běžnou zkušenost a zdroj k tomu nemám.
+
+**Proč duha.** Vidí ji všichni a nikdo ji nedrží v ruce, takže otázka „je skutečná?“ nevyzní jako chyták. Každý ze čtyř hlasů na ni odpoví jinak. A Aristotelés o duze opravdu psal, takže jeho odpověď se opírá o text, ne o domyšlení. Je to příroda, ne obrazovka: jiný druh případu než pokus z cesty. Lavice ze školní fyziky zůstává v rezervě (ta z výkladu je „skoro samé prázdno“, a Démokritos na ni odpovídá skoro vlastními slovy).
+
+**Co o duze říká Aristotelés** (Meteorologika III, 2 a 4; anglicky celé obě kapitoly, řecky jen uvedené věty; Bekkerovo číslování v otevřeném vydání není):
+
+| # | Tvrzení | Typ | Místo | Doporučená formulace pro studenty |
+| --- | --- | --- | --- | --- |
+| D1 | Duha je odraz pohledu ke slunci; proto vzniká vždycky naproti němu. | doložený text | III, 4 | Citát `meteorologika-iii-4`. |
+| D2 | Kapky jsou zrcadla tak malá, že se v nich neukáže tvar, jen barva. | doložený text | III, 2 (řecky: „zbývá, že se ukáže jen barva“) | „Kapky jsou podle něj zrcátka tak malá, že v nich není vidět tvar, jen barva.“ |
+| D3 | Duha vzniká i ve vodě, kterou zvednou vesla, a když někdo proti slunci rozstříkne jemné kapky: tomu, kdo stojí opodál, se ukáže. | doložený text | III, 4 | „Všiml si, že duha se ukáže i ve vodě, kterou zvednou vesla, nebo když někdo proti slunci rozstříkne jemné kapky.“ |
+| D4 | Duha netvoří celý kruh ani víc než půlkruh. | doložený text (Aristotelovo pozorování) | III, 2 | Jako fakt o duze nepsat; je to, co viděl ze země. |
+| D5 | Měsíční duhu potkali za víc než padesát let jen dvakrát. | doložený text | III, 2 | „Duhu od měsíce prý za víc než padesát let viděli jen dvakrát.“ Kdo je „my“, text neříká. |
+| D6 | Směr je u Aristotela obráceně než dnes: pohled podle něj vychází z oka, odrazí se od kapek a dopadne na slunce. Dnes: světlo ze slunce se v kapce láme a odráží k oku. | výklad (srovnání s Britannikou) | III, 4 | Ve studentském textu jen „odraz v kapkách“. Že nechal pohled vycházet z oka, patří učiteli nebo do Odkryj. |
 
 ### Hlasy
 
-Pořadí podle narození. Odpověď hlasu smí mít nejvýš dvě věty.
+Pořadí podle narození. Odpověď hlasu smí mít nejvýš dvě věty. Odpovědi na případ jsou autorské návrhy; drží se toho, co je u každého ověřeno ve sloupci Myšlenka.
 
 | Osoba | Odpověď na případ (návrh) | Myšlenka pro stránku | Typ | Zdroj | Citát |
 | --- | --- | --- | --- | --- | --- |
-| Parmenidés | „Žádná. Lavici někdo vyrobil a jednou shoří; co vzniká a zaniká, doopravdy není.“ | Co je, nemohlo vzniknout: z čeho by vzniklo? Z ničeho ne, o ničem se nedá ani mluvit. A kdyby přece, proč by vzniklo zrovna tehdy, a ne dřív nebo později? Co doopravdy je, je tedy celé, nehybné a pořád. Vznik, zánik a změna jsou jména, která věcem dali lidé. | výklad + citát | DK 28 B8, 3–10 a 38–41; SEP | `parmenides-b8` |
-| Démokritos | „Ta z výkladu. Hnědá a studená je lavice jen podle zvyku; ve skutečnosti jsou atomy a prázdno.“ | Všechno se skládá z nedělitelných částic a prázdna mezi nimi. Částice nevznikají ani nezanikají, jen se spojují a rozpojují. Barva, chuť, teplo a chlad nejsou ve věcech: jsou „podle zvyku“. | výklad + citát | Diogenés Laertios IX, 44–45 a 72; SEP | `dl-ix-72-demokritos` |
-| Platón | „Ani jedna není ta nejskutečnější. Lavice se jednou rozpadne, ať je ze dřeva, nebo z částic; to, co dělá lavici lavicí, ne.“ | Kdyby bylo skutečné jen to, co vnímáme, nebyl by rozdíl mezi tím, kdo něco ví, a tím, kdo se jen trefil. Rozdíl mezi nimi ale je: vědění se nedá vymluvit. Musí tedy být něco stálého, čeho se vědění týká, a to se nedá vidět, jen myslet. | výklad + citát | Tímaios 51d–e; Ústava X, 596a–b | `timaios-51d` (mluví Tímaios); jeskyně zůstává cestě |
-| Aristotelés | „Ta, o kterou se opíráš. Skutečná je nejdřív tahle jedna věc tady, a co ji dělá lavicí, je v ní, ne někde vedle.“ | Všichni toužíme vědět a je to vidět na tom, jak rádi máme smysly, nejvíc zrak. Skutečné v prvním smyslu jsou jednotlivé věci: tenhle člověk, tenhle kůň. Kdyby nebyly, nebylo by ani nic obecného. Obecné k vědění potřebujeme, ale nesmíme ho od věcí oddělit. | výklad + citát | Kategorie 5; Metafyzika I, 1, 980a21–27; XIII, 9, 1086b5–7 | `kategorie-2b` (druhý citát `metafyzika-980a` v myšlence) |
+| Parmenidés | „Není. Před hodinou tu nebyla a za chvíli nebude; co vzniká, zaniká a mění barvu, tomu lidé jen dali jméno.“ | Co je, nemohlo vzniknout: z čeho by vzniklo? Z ničeho ne, o ničem se nedá ani mluvit. A kdyby přece, proč by vzniklo zrovna tehdy, a ne dřív nebo později? Co doopravdy je, je tedy celé, nehybné a pořád. Vznik, zánik a změna jsou jména, která věcem dali lidé. | výklad + citát | DK 28 B8, 3–10 a 38–41 (ve verších 38–41 je mezi „jmény“ i změna jasné barvy); SEP | `parmenides-b8` |
+| Démokritos | „Kapky tam jsou, barvy ne. Barva je jen podle zvyku; ve skutečnosti jsou atomy a prázdno.“ | Všechno se skládá z nedělitelných částic a prázdna mezi nimi. Částice nevznikají ani nezanikají, jen se spojují a rozpojují. Barva, chuť, teplo a chlad nejsou ve věcech: jsou „podle zvyku“. | výklad + citát | Diogenés Laertios IX, 44–45 a 72; SEP (barvu „podle zvyku“ má jen delší znění zlomku B9, které SEP cituje ze Sexta Empeirika; řecky jsem viděl jen Diogenovo) | `dl-ix-72-demokritos` |
+| Platón | „Tu, kterou vidíš, má každý jinou a za chvíli zmizí; o takové věci můžeš mít mínění, ne vědění. Vědět se dá jen to, co platí o každé duze, a to očima nevidíš.“ | Kdyby bylo skutečné jen to, co vnímáme, nebyl by rozdíl mezi tím, kdo něco ví, a tím, kdo se jen trefil. Rozdíl mezi nimi ale je: vědění se nedá vymluvit. Musí tedy být něco stálého, čeho se vědění týká, a to se nedá vidět, jen myslet. | výklad + citát | Tímaios 51d–e; Ústava X, 596a–b | `timaios-51d` (mluví Tímaios); jeskyně zůstává cestě |
+| Aristotelés | „Je, jen to není věc jako strom: je to odraz slunce v kapkách. Kapky i slunce tu doopravdy jsou a tvoje oči vidí, co se mezi nimi děje.“ | Všichni toužíme vědět a je to vidět na tom, jak rádi máme smysly, nejvíc zrak. Skutečné v prvním smyslu jsou jednotlivé věci: tenhle člověk, tenhle kůň; všechno ostatní je na nich závislé. Duhu proto nevykládá jako klam, ale jako něco, co se dá pozorovat a vysvětlit: odraz v kapkách, který uvidíš i ve vodě od vesel. | doložený text + výklad + citát | Meteorologika III, 2 a 4; Kategorie 5; Metafyzika I, 1, 980a21–27 | `meteorologika-iii-4` (nový); `kategorie-2b` a `metafyzika-980a` v myšlence |
 
-Rezerva: **Diogenés** („Lavici vidím a sedím na ní. Lavicovost ne.“; jen tradovaná anekdota, a Spor s ním je v portrétu) a **Hérakleitos** (nese cestu 2; sem by přinesl „skutečná je změna“, což je táž myšlenka jako tam).
+Rezerva: **Diogenés** (jen tradovaná anekdota o stolu a stolovosti, a Spor s ním je v portrétu) a **Hérakleitos** (nese cestu 2; sem by přinesl „skutečná je změna“, což je táž myšlenka jako tam).
 
 **Jak se hlasy liší (každý se musí poznat):**
 
-- Parmenidés: skutečné je jen to, co se nemění; změna je zdání. **Jediný, kdo popírá obě lavice.** Na otázce 7 mluví o tom, čím se pravda pozná (rozum, ne mínění); tady říká, proč nic nevzniká. Citát `dl-ix-22-parmenides` se neopakuje.
-- Démokritos: skutečné je to nejmenší a neviditelné; smysly ukazují jen „zvyk“. **Jediný, podle koho má pravdu fyzikář.** Na žádné jiné stránce zatím nemluví.
-- Platón: skutečné je to, co se dá jen pochopit. **Jediný, podle koho je lavice obrazem něčeho jiného.** Jeskyni tu nezmiňuje.
-- Aristotelés: skutečná je tahle věc. **Ten, kdo dá za pravdu smyslům a studentovi.** Na otázce 1 mluví o činnosti a vnějších dobrech, na otázce 4 o odpovědnosti za povahu, na otázce 7 o pravdě jako shodě, v cestě 5 o ranách osudu a hněvu, v cestě 3 o lékaři a idejích; tady o jednotlivé věci a smyslech. Pokaždé jiný citát.
+- Parmenidés: skutečné je jen to, co se nemění; změna je zdání. **Jediný, podle koho doopravdy není duha ani déšť.** Na otázce 7 mluví o tom, čím se pravda pozná (rozum, ne mínění); tady říká, proč nic nevzniká. Citát `dl-ix-22-parmenides` se neopakuje.
+- Démokritos: skutečné je to nejmenší a neviditelné; smysly ukazují jen „zvyk“. **Jediný, podle koho jsou kapky skutečné a barvy ne.** Na žádné jiné stránce zatím nemluví.
+- Platón: skutečné je to, co se dá jen pochopit. **Jediný, podle koho je duha, kterou vidíš, méně skutečná než to, co se o duze dá vědět.** Jeskyni tu nezmiňuje.
+- Aristotelés: skutečné jsou jednotlivé věci a to, co se s nimi děje. **Ten, kdo dá za pravdu smyslům a studentovi:** duhu nepopírá, vysvětluje ji. Že tím „dává za pravdu smyslům“, je výklad; v textu stojí, co duha je a kde všude ji viděl. Na otázce 1 mluví o činnosti a vnějších dobrech, na otázce 4 o odpovědnosti za povahu, na otázce 7 o pravdě jako shodě, v cestě 5 o ranách osudu a hněvu, v cestě 3 o lékaři a idejích; tady o duze a smyslech. Pokaždé jiný citát.
+
+**Pozor na Aristotelovu odpověď.** Nesmí znít, jako by znal dnešní fyziku: lom světla nezná a pohled u něj vychází z oka (D6). Věta „je to odraz slunce v kapkách“ obstojí u něj i dnes.
 
 **Démokritos a smysly.** K Démokritovi patří ještě zlomek, ve kterém smysly odpovídají rozumu: bereš od nás důkazy a pak nás chceš porazit? Náš pád bude tvůj pád (DK 68 B125, u Galéna). SEP ho jen zmiňuje a text jsem neotevřel; **do dat ho nedávám**. Kdyby se ho podařilo ověřit, je to nejlepší věta celé stránky: Démokritos sám dává smyslům poslední slovo.
 
 ### Má stránka vzniknout už teď? Doporučuji ano
 
-Důvody: (1) čtyři antické odpovědi se opravdu liší a tři z nich na sebe doloženě reagují; (2) cesta 3 potřebuje místo, kam pošle studenta, který s Platónem nesouhlasí; (3) stránky otázek 7, 1 a 4 vznikly stejně a další hlasy (Descartes, Berkeley, Kant) se přidají se svými obdobími. Rizika: Aristotelés bude hlasem už na čtvrté stránce bez vlastního portrétu (hlavička jeho budoucího profilu bude mít hodně tlačítek; viz poznámka revize celku 3) a Démokritos i Parmenidés mluví bez profilu. Stránka vznikne v P8 s cestou.
+Důvody: (1) čtyři antické odpovědi se opravdu liší a tři z nich na sebe doloženě reagují; (2) cesta 3 potřebuje místo, kam pošle studenta, který s Platónem nesouhlasí; (3) stránky otázek 7, 1 a 4 vznikly stejně a další hlasy (Descartes, Berkeley, Kant) se přidají se svými obdobími. Rizika: Aristotelés bude hlasem už na čtvrté stránce bez vlastního portrétu (hlavička jeho budoucího profilu bude mít hodně tlačítek; viz poznámka revize celku 3) a Démokritos i Parmenidés mluví bez profilu. Stránka vznikne v P8 s cestou. **Autor 4. 10. 2026 potvrdil:** stránka ano, úvodní případ duha.
 
 ## Gygův prsten (Ústava II, 359c–360d)
 
@@ -411,7 +430,7 @@ Důvody: (1) čtyři antické odpovědi se opravdu liší a tři z nich na sebe 
 | Pro | Portrét potřebuje vlastní pokus k myšlence o duši a spravedlnosti; jeskyni má cesta, takže se nic neopakuje. Prsten otevírá otázku, na kterou tři části duše odpovídají: scéna, pokus a hned Platónova odpověď. Blok Změň jednu věc je hotový. | Architektura ho tak vede (pokusy období 1–2); hodí se na začátek hodiny; patří k otázce 2 „Co je správné?“, která v období 1 nemá cestu. |
 | Proti | Portrét bude dlouhý; pokus míří na otázku 2, celek 4 na otázku 6. | Kolekce `pokusy` je prázdná a typ stránky nemá vzor ani komponentu: byl by to nový kus rozhraní uprostřed obsahového celku. Bez Platónovy odpovědi vedle sebe zůstane viset. |
 
-**Doporučení:** v P7 blok Změň jednu věc v kapitole portrétu o Ústavě (pracovní id `platon-gyguv-prsten`). Samostatná stránka vznikne s ostatními pokusy období 1–2 (fáze F3) a ukáže týž blok, doplněný o Glaukónovo vyostření a další hlasy.
+**Rozhodnuto 4. 10. 2026 (autor souhlasil s doporučením):** v P7 blok Změň jednu věc v kapitole portrétu o Ústavě (pracovní id `platon-gyguv-prsten`). Samostatná stránka vznikne s ostatními pokusy období 1–2 (fáze F3) a ukáže týž blok, doplněný o Glaukónovo vyostření a další hlasy.
 
 **Návrh bloku pro portrét (autorské, bez historického nároku).** Scéna: řádky 4–6, uvedené „V Ústavě vypráví Platónův bratr Glaukón příběh, kterému sám nevěří.“ Otázka: „Máš ten prsten na týden. Co uděláš?“ Možnosti, které dávají smysl v každé podmínce: „Nepoužiju ho.“ / „Použiju ho, ale nikomu neublížím.“ / „Použiju ho, jak se mi to hodí.“
 
@@ -421,7 +440,7 @@ Důvody: (1) čtyři antické odpovědi se opravdu liší a tři z nich na sebe 
 | „Dozvědí se to jen lidé, kterým na tobě záleží.“ | Jde o trest, nebo o to, kým jsem před nimi? | 360d (pověst), 361a–d |
 | „Budeš to vědět jen ty. Ale navždy.“ | Platónovu odpověď: co to udělá s tebou. | 443c–444a |
 
-Oddíl Co udělal (nadpis „Co by na to řekli“): Glaukónova teorie (spravedliví jsme ze strachu); Platón (kdo si nechá vládnout žádostmi, rozvrátí si duši, i když ho nikdo nevidí; 444a–b jsem nečetl, stačí 443c–e); a pro samostatnou stránku třetí hlas, který dává za pravdu Glaukónovi: **Epikúros**, Hlavní myšlenky 34–35: nespravedlnost není zlo sama o sobě; zlem je strach, že člověk neunikne trestu, a ten strach ho neopustí, i kdyby mu to prošlo nesčetněkrát (citát `kd-34`; ověřeno u Diogena Laertia X, 151). V portrétu stačí Glaukón a Platón.
+Oddíl Co udělal (nadpis „Co by na to řekli“): Glaukónova teorie (spravedliví jsme ze strachu); Platón (kdo si nechá vládnout žádostivostí, rozvrátí si duši, i když ho nikdo nevidí; 444a–b jsem nečetl, stačí 443c–e); a pro samostatnou stránku třetí hlas, který dává za pravdu Glaukónovi: **Epikúros**, Hlavní myšlenky 34–35: nespravedlnost není zlo sama o sobě; zlem je strach, že člověk neunikne trestu, a ten strach ho neopustí, i kdyby mu to prošlo nesčetněkrát (citát `kd-34`; ověřeno u Diogena Laertia X, 151). V portrétu stačí Glaukón a Platón.
 
 **Pojistka pro tón:** možnost „Použiju ho, jak se mi to hodí“ nesmí dostat pokárání; zpětná vazba se má zeptat, co by se stalo, kdyby prsten měli všichni (to je Glaukónův původ zákonů, 358e–359a).
 
@@ -463,9 +482,10 @@ Všechny převody jsou vlastní z řeckého textu (vydání viz úvod). Nové ci
 | 30 | `politika-1261b` | „O to, co je společné největšímu počtu lidí, se pečuje nejméně.“ | Aristotelés, Politika II, 3, 1261b33–34 | Aristotelés | učiteli (společné děti strážců); později otázka 8 |
 | 31 | `parmenides-b8` | „A kdyby to začalo z ničeho, co by to přimělo vzniknout později, a ne dřív?“ | Parmenidés, O přírodě, zlomek B8, 9–10 | Parmenidés (v básni mluví bohyně) | otázka 6 (hlas) |
 | 32 | `dl-ix-72-demokritos` | „Chladné je podle zvyku, teplé je podle zvyku. Ve skutečnosti jsou atomy a prázdno.“ | Diogenés Laertios, Životy filozofů IX, 72 | Démokritos (srov. DK 68 B9) | otázka 6 (hlas) |
-| 33 | `antidosis-271` | „Lidé nemají v povaze dosáhnout vědění, se kterým bychom věděli, co dělat a co říkat. Za moudré proto pokládám ty, kdo svým míněním většinou trefí to nejlepší.“ | Isokratés, Antidosis 271 | Isokratés (zkráceno) | cesta 3, krok 7 nebo 8 |
-| 34 | `helena-5` | „Je mnohem lepší mít rozumné mínění o užitečných věcech než přesné vědění o neužitečných.“ | Isokratés, Helena 5 | Isokratés | cesta 3 (jeden z obou Isokratových citátů, ne oba) |
+| 33 | `antidosis-271` | „Lidé nemají v povaze dosáhnout vědění, se kterým bychom věděli, co dělat a co říkat. Za moudré proto pokládám ty, kdo svým míněním většinou trefí to nejlepší.“ | Isokratés, Antidosis 271 | Isokratés (zkráceno) | v cestě se nepoužije (rozhodnutí autora 4. 10. 2026); zůstává v datech pro Isokratův profil |
+| 34 | `helena-5` | „Je mnohem lepší mít rozumné mínění o užitečných věcech než přesné vědění o neužitečných.“ | Isokratés, Helena 5 | Isokratés | v cestě se nepoužije; zůstává v datech pro Isokratův profil |
 | 35 | `kd-34` | „Nespravedlnost není zlo sama o sobě. Zlem je strach z podezření, že člověk neunikne těm, kdo mají takové věci trestat.“ | Epikúros, Hlavní myšlenky 34 (Diogenés Laertios X, 151) | Epikúros | samostatná stránka Gygova prstenu |
+| 36 | `meteorologika-iii-4` | „Je tedy zřejmé, že duha je odraz pohledu ke slunci. Proto také vždycky vzniká naproti němu.“ | Aristotelés, Meteorologika III, 4 | Aristotelés | otázka 6 (hlas); doplněno 4. 10. 2026 |
 
 Jen v podkladech, do dat nedávám: Faidón 91c („málo na Sókrata, mnohem víc na pravdu“) a Ústava 595c („muže nelze ctít víc než pravdu“); Faidón 74a–75a (stejné klacky, nepřímo); Ústava 596b (stůl, nepřímo ve Sporu s Diogenem); „prosby tyranů jsou smíšené s nutností“ (Sedmý list 329d); Démokritův zlomek B125 (neověřen); DL IX, 44 („všechno ostatní se jen má za jsoucí“, nepřímo); Diogenovy koberce a olivy (DL VI, 25–26); Cicero o Platónově smrti.
 
@@ -501,7 +521,7 @@ Přeneseno do `src/data/` zároveň s tímto listem:
     - { misto: athenes, role: smrt, rok: -347, zdroj: britannica-plato }
   zdroje: [+ iep-plato, iep-academy, nails-plato, platon-ustava-perseus, platon-sedmy-list, platon-parmenides, dl-iii, plutarchos-dion]
 - id: aristoteles
-  zdroje: [+ aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie]
+  zdroje: [+ aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie, aristoteles-meteorologika]   # poslední doplněn 4. 10. 2026
 - id: parmenides
   zdroje: [+ parmenides-b8]
 - id: demokritos
@@ -517,7 +537,7 @@ Přeneseno do `src/data/` zároveň s tímto listem:
 - proces-sokrata: osoby [sokrates, platon]   # Platón byl u soudu (Obrana 34a, 38b)
 ```
 
-Obrázek (`obrazek` u Platóna a záznamy v `obrazky`) přibude až po souhlasu autora a stažení souborů; test kontroluje, že soubor existuje.
+Obrázky jsou od 4. 10. 2026 v datech: `obrazek: platon-smk` u Platóna a záznamy `platon-smk` a `jeskyne-saenredam` v `obrazky` (viz oddíl Obrázky). Rytinu jeskyně zatím nic nepoužívá; vezme si ji blok Příběh v cestě 3.
 
 Nepřidávám:
 
@@ -527,20 +547,45 @@ Nepřidávám:
 - **vztah Démokritos ↔ Platón:** žádný doložený; jen Diogenovo pozorování, že ho Platón nejmenuje.
 - **události:** založení Akademie (rok je rozmezí 387–383 a schéma události neumí „přibližně“), sicilské cesty (stačí u míst).
 
-Nové prameny a 35 citátů jsou v `src/data/zdroje.yaml` (oddíl „Celek 4“).
+Nové prameny a 36 citátů jsou v `src/data/zdroje.yaml` (oddíl „Celek 4“; citát `meteorologika-iii-4` a prameny `aristoteles-meteorologika` a `britannica-rainbow` přibyly 4. 10. 2026).
 
 ## Obrázky
 
-Nic jsem nestahoval. Oba návrhy jsou z muzeí s otevřeným přístupem a licenci uvádí přímo muzeum; soubory je třeba po souhlasu autora stáhnout, prohlédnout a zmenšit na 1280 px.
+Oba soubory jsou po souhlasu autora (4. 10. 2026) stažené, prohlédnuté a zapsané v `src/data/zdroje.yaml` (`obrazky`). Stáhl jsem je přes rozhraní IIIF obou muzeí rovnou ve velikosti 1280 px; plné originály v repozitáři ani vedle něj nejsou a dají se kdykoli stáhnout z odkazů.
 
-| Navržený soubor | Co zobrazuje | Autor / instituce | Licence | Odkaz |
-| --- | --- | --- | --- | --- |
-| `public/obrazky/platon-smk.jpg` | Hlava Platóna: **sádrový odlitek** (1947) mramorové hlavy z Ny Carlsberg Glyptotek v Kodani, římské kopie řeckého portrétu z doby kolem roku 350 př. n. l.; originál pochází z Itálie. Výška 49 cm, snímek 3200 × 3200 px. | neznámý autor; Statens Museum for Kunst (Královská sbírka odlitků), Kodaň, inv. KAS2111 | volné dílo (muzeum uvádí Public Domain) | https://open.smk.dk/artwork/image/KAS2111 |
-| `public/obrazky/jeskyne-saenredam.jpg` | Platónova jeskyně, mědirytina z roku 1604. Jan Saenredam ji vyryl podle Cornelise Cornelisze van Haarlem, vydal Hendrik Hondius. Nahoře latinský verš z Janova evangelia (3, 19): světlo přišlo na svět a lidé si víc zamilovali tmu než světlo; pod ním nápis ANTRUM PLATONICUM. Podle popisu muzea: nízká zídka se soškami, které vrhají stíny, zavěšená lampa, postavy v rozhovoru a několik lidí u vchodu. List 33,7 × 45 cm. | Jan Saenredam podle Cornelise van Haarlem; National Gallery of Art, Washington, inv. 1983.61.1 | volné dílo (Open Access; muzeum uvádí „free and in the public domain“) | https://www.nga.gov/artworks/62542-platos-cave |
+| Soubor | Id v datech | Co zobrazuje | Autor / instituce | Licence | Odkaz |
+| --- | --- | --- | --- | --- | --- |
+| `public/obrazky/platon-smk.jpg` (1280 × 1280 px, 344 kB) | `platon-smk` | Hlava Platóna: **sádrový odlitek** mramorové hlavy z Ny Carlsberg Glyptotek v Kodani, římské kopie řeckého portrétu z doby kolem roku 350 př. n. l.; originál pochází podle muzea z Itálie. Výška 49 cm. Do sbírky odlitků získán roku 1947; kdy odlitek vznikl, muzeum neuvádí. | neznámý autor; Statens Museum for Kunst (Královská sbírka odlitků), Kodaň, inv. KAS2111 | volné dílo (muzeum uvádí Public Domain) | https://open.smk.dk/artwork/image/KAS2111 |
+| `public/obrazky/jeskyne-saenredam.jpg` (1280 × 959 px, 516 kB) | `jeskyne-saenredam` | Platónova jeskyně, mědirytina z roku 1604. Nakreslil Cornelis Cornelisz van Haarlem, vyryl Jan Saenredam, vydal Hendrik Hondius; podle nápisu na listu ji dal udělat H. L. Spiegel. List 33,7 × 45 cm. | Jan Saenredam podle Cornelise van Haarlem; National Gallery of Art, Washington, inv. 1983.61.1 | volné dílo (Open Access; muzeum uvádí „free and in the public domain“) | https://www.nga.gov/artworks/62542-platos-cave |
 
-**Platón.** Antickou bustu v muzeu s otevřeným přístupem jsem nenašel: Met ji v otevřené sbírce nemá (hledání vrátilo jen perskou miniaturu a novější tisky), Art Institute of Chicago a Cleveland také ne. Kodaňský odlitek je nejbližší věc s jasnou licencí: podoba je antická, předmět je odlitek z 20. století a popisek to musí říct. Návrh popisku: „Platón. Sádrový odlitek římské mramorové hlavy, která kopíruje řecký portrét z doby kolem roku 350 př. n. l.“ Že originál portrétu vytvořil sochař Silanión, jak se píše v příručkách (a jak naznačuje nápis u Diogena Laertia III, 25), muzeum neuvádí; do popisku nedávat. Další odlitky tamtéž: herma z Holkham Hall (KAS2026) a herma z vatikánského Musea Pio-Clementina (KAS628). **Druhá možnost:** fotografie antické busty z Wikimedia Commons (například hlava z mnichovské Glyptotéky nebo herma z Kapitolských muzeí); Commons mi nástroje neotevřou, licenci by musel potvrdit autor jako u Sókrata.
+**Platón.** Autor vybral odlitek (4. 10. 2026). Antickou bustu v muzeu s otevřeným přístupem jsem nenašel: Met ji v otevřené sbírce nemá (hledání vrátilo jen perskou miniaturu a novější tisky), Art Institute of Chicago a Cleveland také ne. Kodaňský odlitek je nejbližší věc s jasnou licencí: podoba je antická, předmět je novodobý odlitek a popisek to říká. Na snímku je hlava zpředu na nízkém podstavci, bílá sádra na černém pozadí; vypadá spíš jako vykreslený model než jako fotografie v sále (jak snímek vznikl, muzeum u něj neuvádí). Popisek v datech: „Platón. Sádrový odlitek římské mramorové hlavy, která kopíruje řecký portrét z doby kolem roku 350 př. n. l.“ Že originál portrétu vytvořil sochař Silanión, jak se píše v příručkách (a jak naznačuje nápis u Diogena Laertia III, 25), muzeum neuvádí; do popisku nepatří. Další odlitky tamtéž: herma z Holkham Hall (KAS2026) a herma z vatikánského Musea Pio-Clementina (KAS628).
 
-**Jeskyně.** Je to představa z roku 1604, ne ilustrace Platónova textu, a popisek to musí říct. Křesťanský verš nad obrazem ukazuje, jak jeskyni četli tehdy: světlo je Kristus. Rytinu jsem neviděl; v čem se od Platónova textu liší (pouta, oheň, kdo jsou postavy u zídky), je třeba říct až po prohlédnutí. Návrh popisku: „Platónova jeskyně, jak si ji představili nizozemští umělci roku 1604. Rytina Jana Saenredama podle Cornelise van Haarlem.“ Tentýž list mají s volnou licencí i Art Institute of Chicago (inv. 2023.1138, CC0) a Statens Museum for Kunst (inv. KKSgb22177; snímek 7040 × 5084 px). Poměr stran je asi 4 : 3, na desku bloku Příběh sedí.
+**Oprava proti stavu z 3. 10.:** stálo tu „sádrový odlitek (1947)“. Rok 1947 je podle údajů muzea rok získání do sbírky, ne rok výroby odlitku; opraveno tady, v prameni `smk-platon-odlitek` i v `k-overeni.md`.
+
+**Jeskyně: co na rytině je** (prohlédnuto 4. 10. 2026, celek i výřezy ve větším rozlišení):
+
+- Nahoře verš z Janova evangelia: „Lux venit in mundum et dilexerunt homines magis tenebras quam lucem. Io. 3. 19“ (světlo přišlo na svět a lidé si víc zamilovali tmu než světlo) a pod ním „Antrum Platonicum“.
+- Vpravo dole se pod vysokou zdí tísní dav ve tmě. Lidé se otáčejí k sobě, dohadují se a někteří ukazují na protější stěnu, kde jsou stíny postav. Pouta nemají.
+- Na zdi stojí řada sošek: okřídlený chlapec, ženy (jedna s křížem), trubači, nahá postava s věncem sedící na sudu, muž s korunou a žezlem. Nikdo je nenosí. Co znamenají, list neříká a výklad jsem nehledal.
+- Uprostřed visí lampa s plamenem; ta vrhá stíny sošek na stěnu.
+- Vlevo, na straně lampy, stojí ve světle skupina mužů v dlouhých šatech a čepicích a rozmlouvá; jeden hledí vzhůru k soškám.
+- Vlevo vzadu vede klenutý průchod ven. V denním světle tam stojí tři malé postavy a jedna ukazuje vzhůru.
+- Dole je dvanáct latinských veršů. Začínají „Maxima pars hominum cecis immersa tenebris“ (největší část lidí je ponořená do slepé tmy) a končí tím, že několik málo lidí „z lepší hlíny“ (meliore luto) se snaží ostatní vytáhnout na jasné světlo, ale ti světlo nemilují. Vedle nich signatury „C. C. Harlemensis Inv.“, „Saenredam Sculpsit“, „Henr. Hondius excudit“, „1604“ a pod nimi věnování: „H. L. Spiegel figurari et sculpi curavit“ a list připisuje Pieteru Paawovi, profesoru lékařství na akademii v Leidenu. Verše i nápisy čtu z listu sám; s literaturou jsem přepis neporovnával a kdo H. L. Spiegel byl, jsem neověřoval.
+
+**V čem se rytina liší od Platónova textu:**
+
+| Platón (Ústava 514a–516a) | Rytina z roku 1604 |
+| --- | --- |
+| Vězni jsou od dětství spoutaní na nohou a na krku a vidí jen před sebe. | Lidé pod zdí pouta nemají: otáčejí se, dohadují se, ukazují si. |
+| Světlo dává oheň, který hoří nahoře daleko za nimi. | Visí tu lampa. |
+| Podél zídky nosí lidé nářadí a sošky lidí a zvířat; někteří mluví, jiní mlčí. | Sošky na zdi stojí; nikdo je nenosí. |
+| Jednoho vězně někdo rozváže a násilím vleče ven. | Nikdo nikoho nevleče. Jsou tu tři skupiny: dav ve tmě, učenci u lampy a několik postav venku. |
+| Vězni jsou „podobní nám“. | Verše dělí lidi na dav ve tmě a hrstku z lepší hlíny; divák se má poznat v té hrstce. |
+| Jeskyně stojí v rozhovoru o výchově. | Nad obrazem je verš z evangelia: světlem se tu myslí Kristus (výklad; verš sám jméno neříká). |
+
+**Co z toho plyne pro cestu.** Rytina je představa z roku 1604, ne ilustrace Platónova textu, a popisek to říká („jak si ji roku 1604 představili nizozemští umělci: lidé pod zdí nemají pouta a místo ohně visí lampa“). Dělá přesně to, čemu se cesta má vyhnout: lichotí divákovi. Dá se toho využít jedním pozorováním (v popisku desky, nebo v Odkryj): „Na rytině stojíš mezi těmi, kdo vidí. V Platónově textu sedíš mezi vězni.“ Je to pozorování o rytině, ne tvrzení o Platónovi.
+
+**Výřez.** `vyrez` je u obou odhad (Platón 50% 36%, rytina 55% 45%); autor posoudí na stránce. Rytina má poměr stran asi 4 : 3, na desku bloku Příběh sedí. Tentýž list mají s volnou licencí i Art Institute of Chicago (inv. 2023.1138, CC0) a Statens Museum for Kunst (inv. KKSgb22177).
 
 **Jiné zobrazení jeskyně** z antiky není. Kdyby rytina nevyhovovala, zbývá vlastní kresba (jako graf v cestě 6).
 
@@ -559,21 +604,29 @@ Nic jsem nestahoval. Oba návrhy jsou z muzeí s otevřeným přístupem a licen
 - **Gýgés, nebo jeho předek.** 359d „předek Lýda Gýga“, 612b „Gýgův prsten“. **Doporučení:** „pastýř“ a „Gýgův prsten“.
 - **Třetí člověk.** U Platóna je příkladem velikost; jméno „třetí člověk“ je Aristotelovo. **Doporučení:** ve studentském textu námitku vyložit na velkých věcech a jméno uvést jako pozdější.
 - **Aristotelovo „my“.** V Metafyzice I, 9 píše „dokazujeme“, jako člen Akademie. Kdy kapitolu napsal, jsem neověřoval. **Doporučení:** říct, že se počítá mezi Platónovy žáky; neříkat, že to psal za Platónova života.
-- **Isokratés.** Že v Antidosis a v Heleně míří na Platóna, text neříká. **Doporučení:** citovat ho jako současníka s jiným názorem na vědění, ne jako Platónova kritika.
+- **Isokratés.** Že v Antidosis a v Heleně míří na Platóna, text neříká. **Doporučení:** citovat ho jako současníka s jiným názorem na vědění, ne jako Platónova kritika. V cestě 3 podle rozhodnutí autora ze 4. 10. 2026 nebude.
 - **Démokritos B9 × Diogenés Laertios IX, 72.** SEP cituje delší znění (sladké, hořké, teplé, chladné, barva); u Diogena je jen „chladné“ a „teplé“. Citát v datech je Diogenovo znění, protože jen to jsem viděl řecky.
-- **Části duše česky.** „Rozum, hněv, žádosti“ × „rozumová, vznětlivá, žádostivá“. Autor rozhodne (viz Otevřené otázky).
+- **Části duše česky.** „Rozum, hněv, žádosti“ × „rozumová, vznětlivá, žádostivá“. **Rozhodl autor 4. 10. 2026:** rozum, hněv a žádostivost.
+- **Rok u odlitku.** Muzeum uvádí rok 1947 jako rok získání do sbírky; v podkladech ze 3. 10. stál jako rok odlitku. Opraveno 4. 10. 2026; popisek rok neuvádí.
+- **Duha u Aristotela a dnes.** Aristotelés: odraz pohledu od kapek ke slunci. Dnes: lom a odraz světla v kapce. **Doporučení:** ve studentském textu „odraz v kapkách“, které platí pro obojí.
 - **Počet účastníků pokusu.** Abstrakt říká „mezi 23 377 uživateli“; že jde o součet obou skupin, vyplývá z popisu v textu. **Doporučení:** „přes třiadvacet tisíc lidí se zapojilo; části z nich…“
 
-## Otevřené otázky pro autora
+## Rozhodnutí autora (4. 10. 2026)
 
-1. **Obrázek Platóna:** kodaňský odlitek (volné dílo, ale odlitek z roku 1947), nebo fotografie antické busty z Commons, kterou bys potvrdil a stáhl sám?
-2. **Obrázek jeskyně:** Saenredamova rytina z roku 1604 z National Gallery of Art? Smím soubory stáhnout (název, zdroj a velikost uvedu před stažením)?
-3. **Gygův prsten:** blok v portrétu (doporučuji), nebo samostatná stránka pokusu už v tomto celku?
-4. **Stránka otázky 6:** vzniknout už teď se čtyřmi hlasy (doporučuji)? A úvodní případ: lavice, nebo duha?
-5. **Části duše:** „rozum, hněv a žádosti“, nebo „rozum, vznětlivost a žádostivost“?
-6. **Citlivá místa:** souhlasíš s rozdělením (cenzura básníků a ušlechtilá lež do studentského textu; společné děti učiteli; výběr dětí jen učiteli)?
-7. **Sedmý list v údaji pod citátem:** „dochováno pod Platónovým jménem, Sedmý list 328c“ (doporučuji), nebo citát z listu vůbec nepoužívat?
-8. **Isokratés v cestě:** jako druhý hlas pro studenta, který nesouhlasí (doporučuji jedním citátem), nebo jen Aristotelés?
-9. **Vztahy v datech:** Diogenés → Platón jako tradovaná polemika a Parmenidés, Hérakleitos → Platón jako vliv přes texty se objeví v Době a lidech u všech čtyř. Souhlasíš?
-10. **Větev:** `rozhrani-v2` není v hlavní větvi ani v `celek-4`. Plán říká sloučit ji před P7; mám to udělat na začátku P7?
-11. **Skill `atlas-overeni`:** kopie ve `skills/` je doplněná o místa textů a šest zkreslení; skill v účtu je třeba uložit zvlášť.
+Autor odpověděl na otázky ze závěrečné zprávy P6:
+
+1. **Obrázek Platóna:** kodaňský odlitek. Stažen, v datech `platon-smk`, u Platóna `obrazek`.
+2. **Obrázek jeskyně:** Saenredamova rytina z roku 1604; autor dal souhlas se stažením. V datech `jeskyne-saenredam`.
+3. **Gygův prsten:** blok v portrétu.
+4. **Stránka otázky 6:** vznikne v P8; úvodní případ je duha.
+5. **Části duše:** rozum, hněv a žádostivost.
+6. **Citlivá místa Ústavy:** rozdělení platí (cenzura básníků a ušlechtilá lež do studentského textu; společné děti strážců učiteli; výběr dětí jen učiteli).
+7. **Kdo dá za pravdu nesouhlasícímu studentovi:** stačí Aristotelés; Isokratés v cestě nebude.
+8. **Vztahy v datech:** platí, jak jsou.
+9. **Větev `rozhrani-v2`:** je sloučená do `celek-4` (commit cc766c5); P7 vzniká na novém rozhraní.
+
+Zůstává:
+
+- **Sedmý list v údaji pod citátem.** Autor se k bodu nevyjádřil (v závěrečné zprávě nebyl). Dokud neřekne jinak, platí doporučení: „dochováno pod Platónovým jménem, Sedmý list 328c“.
+- **Výřezy obrázků** jsou odhad; posoudit na stránce.
+- **Skill `atlas-overeni`:** kopie ve `skills/` je doplněná o místa textů a šest zkreslení; skill v účtu je třeba uložit zvlášť.

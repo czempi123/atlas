@@ -2,6 +2,19 @@
 
 Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhodnutí a stručný důvod. Změna rozhodnutí se zapisuje jako nový záznam, starý zůstává.
 
+## 4. 10. 2026: Celek 4 po podkladech: odpovědi autora
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Platónův obrázek je sádrový odlitek ze Statens Museum for Kunst (inv. KAS2111), ne fotografie busty z Wikimedia Commons | Autor: „odlitek“. Licenci uvádí přímo muzeum (Public Domain); popisek říká, že jde o odlitek římské kopie |
+| Obraz jeskyně je rytina Jana Saenredama z roku 1604 (National Gallery of Art); popisek říká, že lidé na ní nemají pouta a místo ohně visí lampa | Autor dal souhlas se stažením. Je to představa z roku 1604, ne ilustrace textu: verše na listu dělí lidi na dav ve tmě a hrstku vidoucích, u Platóna jsou vězni „podobní nám“ |
+| Gygův prsten bude v P7 blok Změň jednu věc v Platónově portrétu | Autor souhlasil s doporučením: portrét dostane vlastní pokus k duši a spravedlnosti; samostatná stránka pokusu blok později převezme |
+| Stránka otázky 6 vznikne v P8 a její úvodní případ je duha, ne lavice | Autor: „duha“. Aristotelés o duze sám psal (Meteorologika III, 2 a 4), takže jeho hlas stojí na doloženém textu |
+| Části duše se v atlasu jmenují rozum, hněv a žádostivost | Autor: „rozum, hněv, žádostivost“ |
+| Citlivá místa Ústavy: cenzura básníků a ušlechtilá lež do studentského textu, společné děti strážců učiteli, výběr dětí jen učiteli | Autor souhlasil s rozdělením z podkladů |
+| Studentovi, který s Platónem nesouhlasí, dává v cestě 3 za pravdu Aristotelés; Isokratés v cestě nebude | Autor: „stačí Aristoteles“. Isokratovy citáty zůstávají v datech pro jeho profil |
+| Nové vztahy (Aristotelés → Platón a Diogenés → Platón jako polemika, Parmenidés a Hérakleitos → Platón jako vliv přes texty) zůstávají v datech | Autor souhlasil; ukážou se v Době a lidech u hotových profilů |
+
 ## 4. 10. 2026: Mapa a čas: události nad posuvníkem a pás období
 
 | Rozhodnutí | Důvod |

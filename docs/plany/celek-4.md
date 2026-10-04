@@ -4,8 +4,8 @@ Celek 4: portrét Platóna, cesta 3 „Je to, co vidím, celá skutečnost?“ (
 
 | Krok | Co | Stav |
 | --- | --- | --- |
-| P6 | Podklady | hotovo 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`), čeká na schválení autorem |
-| P7 | Portrét Platóna | **další krok** po schválení podkladů; zadání vznikne podle odpovědí autora (viz Po P6 na konci) |
+| P6 | Podklady | hotovo 3. 10. 2026 (`docs/podklady/celek-4-co-je-skutecne.md`); autor 4. 10. 2026 rozhodl otevřené otázky, obrázky jsou stažené |
+| P7 | Portrét Platóna | **další krok**, čeká na pokyn autora; co si nese, je v oddílu Po P6 na konci |
 | P8 | Cesta 3 „Je to, co vidím, celá skutečnost?“ a stránka velké otázky 6 „Co je skutečné?“ | po P7 |
 | P10 | Revize celku | po P8 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
@@ -72,9 +72,19 @@ Podklady jsou v `docs/podklady/celek-4-co-je-skutecne.md`; nové prameny (35) a 
 
 **Rozhodl autor nad osnovou:** Spor v cestě 3 je Platón × Aristotelés; Spor Platón × Diogenés se přesune do Platónova portrétu; novým případem je pokus na Facebooku z roku 2020; čtyři hlasy otázky 6 jsou Parmenidés, Démokritos, Platón a Aristotelés; větev `rozhrani-v2` půjde na GitHub až s tímto celkem.
 
-**Větev `rozhrani-v2`** je commitnutá, ale v hlavní větvi ani v `celek-4` není. Podle plánu výše se má před P7 sloučit; čeká na pokyn autora.
+**Větev `rozhrani-v2`** je sloučená do `celek-4` (commit cc766c5); nový portrét a cesta vzniknou na novém rozhraní. Na GitHub půjde s celkem 4.
 
-**Čeká na autora** (podrobně v podkladovém listu, Otevřené otázky): obrázek Platóna (kodaňský odlitek, nebo busta z Commons) a souhlas se stažením rytiny jeskyně; Gygův prsten v portrétu, nebo na samostatné stránce; stránka otázky 6 už teď a její úvodní případ; české názvy částí duše; rozdělení citlivých míst Ústavy; údaj pod citátem ze Sedmého listu; Isokratés jako druhý hlas pro nesouhlasícího studenta; nové vztahy v Době a lidech.
+**Odpovědi autora ze 4. 10. 2026** (podrobně v podkladovém listu, Rozhodnutí autora, a v `docs/rozhodnuti.md`):
+
+- obrázek Platóna je kodaňský sádrový odlitek (`platon-smk`), obraz jeskyně Saenredamova rytina z roku 1604 (`jeskyne-saenredam`); oba soubory jsou v `public/obrazky/` a v datech;
+- Gygův prsten je blok Změň jednu věc v portrétu;
+- stránka otázky 6 vznikne v P8, úvodní případ je duha (Aristotelés o ní psal: Meteorologika III, 2 a 4, citát `meteorologika-iii-4`);
+- části duše: rozum, hněv a žádostivost;
+- citlivá místa Ústavy podle návrhu (cenzura básníků a ušlechtilá lež do studentského textu, společné děti strážců učiteli, výběr dětí jen učiteli);
+- studentovi, který nesouhlasí, dává v cestě za pravdu jen Aristotelés; Isokratés v cestě nebude;
+- nové vztahy zůstávají v datech.
+
+**Zůstává otevřené:** údaj pod citátem ze Sedmého listu (platí doporučení „dochováno pod Platónovým jménem“, dokud autor neřekne jinak), výřezy obou obrázků (odhad) a uložení skillu `atlas-overeni` v účtu.
 
 **Co si P7 a P8 nesou z podkladů:**
 
@@ -84,3 +94,5 @@ Podklady jsou v `docs/podklady/celek-4-co-je-skutecne.md`; nové prameny (35) a 
 - Sedmý list: fakta cest přímo, pohnutky jen s větou o dopise.
 - Tradované příběhy (otroctví na Aigíně, spálené tragédie, odpověď tyranovi, „co toho ten mladík nalhal“) jako „Vypráví se“; jméno Aristoklés, nápis o geometrii a verze smrti do studentského textu nepatří.
 - Shrnutí pokusu z roku 2020 drží, co vědci změnili (třetinu, na tři měsíce) a co ne; výhrady až ve zpětné vazbě.
+- Rytina jeskyně je představa z roku 1604 a lichotí divákovi (dav ve tmě a hrstka vidoucích); u Platóna jsou vězni „podobní nám“. Popisek i text to drží.
+- Aristotelés na stránce otázky 6 nesmí znít, jako by znal dnešní fyziku: duha je u něj odraz pohledu od kapek ke slunci; ve studentském textu „odraz v kapkách“.
