@@ -1,51 +1,67 @@
-// Kresba „Stejné šaty, jiné světlo“ (cesta 1, krok 6): okolí se mění, barvy šatů ne; texty drží podklady.
+// Kresba „Stejné šaty, jiné světlo“ (cesta 1, krok 6): světlo mění místnost, barvy šatů ne.
+// Na krajích posuvníku se šaty shodují s věcmi, jejichž barvu student zná; texty drží podklady.
 import { describe, expect, it } from 'vitest';
-import { BARVY_SATU, STUPNE_SVETLA, VYCHOZI_STUPEN, okoli, smichej } from '../../src/lib/saty';
+import { BARVY_SATU, STUPNE_SVETLA, VYCHOZI_STUPEN, scena } from '../../src/lib/saty';
 
-describe('šaty: světlo okolí', () => {
-  it('míchá barvy po složkách a přichytí poměr ke krajům', () => {
-    expect(smichej('#000000', '#ffffff', 0)).toBe('#000000');
-    expect(smichej('#000000', '#ffffff', 1)).toBe('#ffffff');
-    expect(smichej('#000000', '#ffffff', 0.5)).toBe('#808080');
-    expect(smichej('#102030', '#302010', 2)).toBe('#302010');
-    expect(smichej('#102030', '#302010', Number.NaN)).toBe('#102030');
+const POSLEDNI = STUPNE_SVETLA.length - 1;
+
+describe('šaty: světlo v místnosti', () => {
+  it('barvy šatů jsou dvě', () => {
+    expect(BARVY_SATU).toEqual({ modra: '#8f9bd0', hneda: '#74633f' });
   });
 
-  it('uprostřed je okolí šedé, na krajích chladné a teplé', () => {
-    const [chladne, stred, teple] = [okoli(0), okoli(VYCHOZI_STUPEN), okoli(STUPNE_SVETLA.length - 1)];
-    expect(stred).toEqual({ stena: '#bdbdbd', podlaha: '#a2a2a2', okno: 0, lampa: 0 });
-    expect(chladne).toMatchObject({ stena: '#5d70ab', okno: 1, lampa: 0 });
-    expect(teple).toMatchObject({ stena: '#f6dc8a', okno: 0, lampa: 1 });
-    // Mezistupeň leží na půl cesty a zdroj světla je vidět jen zpola.
-    expect(okoli(1)).toMatchObject({ stena: smichej('#bdbdbd', '#5d70ab', 0.5), okno: 0.5, lampa: 0 });
-    expect(okoli(3)).toMatchObject({ stena: smichej('#bdbdbd', '#f6dc8a', 0.5), okno: 0, lampa: 0.5 });
+  it('v bílém světle mají věci své barvy a lampa nesvítí', () => {
+    const s = scena(VYCHOZI_STUPEN);
+    expect(s.lampa).toBe(0);
+    expect(s.veci.bila).toBe('#ffffff');
+    expect(s.veci.stena).toBe('#ceccc6');
+    // Šaty se v bílém světle neshodují s ničím v místnosti.
+    expect(Object.values(s.veci)).not.toContain(BARVY_SATU.modra);
+    expect(Object.values(s.veci)).not.toContain(BARVY_SATU.hneda);
+  });
+
+  it('v chladném světle vyjde bílá jako světlé pruhy a zlatá jako tmavé', () => {
+    const s = scena(0);
+    expect(s.veci.bila).toBe(BARVY_SATU.modra);
+    expect(s.veci.zlata).toBe(BARVY_SATU.hneda);
+    expect(s.lampa).toBe(0);
+    // Váza je v něm modřejší a kočka tmavší než šaty.
+    expect(s.veci.modra).not.toBe(BARVY_SATU.modra);
+    expect(s.veci.cerna).not.toBe(BARVY_SATU.hneda);
+  });
+
+  it('v teplém světle vyjde modrá váza jako světlé pruhy a černá kočka jako tmavé', () => {
+    const s = scena(POSLEDNI);
+    expect(s.veci.modra).toBe(BARVY_SATU.modra);
+    expect(s.veci.cerna).toBe(BARVY_SATU.hneda);
+    expect(s.lampa).toBe(1);
+    expect(s.veci.bila).not.toBe(BARVY_SATU.modra);
+  });
+
+  it('mezistupně leží mezi středem a krajem', () => {
+    const cervena = (h: string) => parseInt(h.slice(1, 3), 16);
+    expect(cervena(scena(1).veci.bila)).toBeLessThan(cervena(scena(2).veci.bila));
+    expect(cervena(scena(1).veci.bila)).toBeGreaterThan(cervena(scena(0).veci.bila));
+    expect(cervena(scena(3).veci.cerna)).toBeGreaterThan(cervena(scena(2).veci.cerna));
+    expect(cervena(scena(3).veci.cerna)).toBeLessThan(cervena(scena(4).veci.cerna));
+    expect(scena(3).lampa).toBe(0.5);
   });
 
   it('stupeň mimo rozsah se přichytí ke kraji, nečíslo zůstane uprostřed', () => {
-    expect(okoli(-3)).toEqual(okoli(0));
-    expect(okoli(99)).toEqual(okoli(STUPNE_SVETLA.length - 1));
-    expect(okoli(Number.NaN)).toEqual(okoli(VYCHOZI_STUPEN));
-  });
-
-  it('barvy šatů jsou dvě a okolí je nikdy nepoužije', () => {
-    const saty = Object.values(BARVY_SATU);
-    expect(saty).toEqual(['#8f9bd0', '#74633f']);
-    for (let s = 0; s < STUPNE_SVETLA.length; s++) {
-      const o = okoli(s);
-      expect(saty).not.toContain(o.stena);
-      expect(saty).not.toContain(o.podlaha);
-    }
+    expect(scena(-3)).toEqual(scena(0));
+    expect(scena(99)).toEqual(scena(POSLEDNI));
+    expect(scena(Number.NaN)).toEqual(scena(VYCHOZI_STUPEN));
   });
 });
 
 describe('šaty: texty pod kresbou', () => {
   it('pět stupňů od chladného světla k teplému, uprostřed barvy samé', () => {
     expect(STUPNE_SVETLA.map((s) => s.nazev)).toEqual([
-      'chladné denní světlo', 'trochu chladné světlo', 'šedé okolí', 'trochu teplé světlo', 'teplé umělé světlo',
+      'chladné denní světlo', 'trochu chladné světlo', 'bílé světlo', 'trochu teplé světlo', 'teplé umělé světlo',
     ]);
     expect(STUPNE_SVETLA[0].popis).toContain('bílé a zlaté');
     expect(STUPNE_SVETLA[VYCHOZI_STUPEN].popis).toContain('modrou a hnědou');
-    expect(STUPNE_SVETLA[4].popis).toContain('modré a černé');
+    expect(STUPNE_SVETLA[POSLEDNI].popis).toContain('modré a černé');
   });
 
   it('věty mají nejvýš 25 slov a neříkají, kdo vidí správně', () => {

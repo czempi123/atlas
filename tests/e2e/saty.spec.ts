@@ -1,4 +1,5 @@
-// Kresba „Stejné šaty, jiné světlo“ v kroku 6 cesty 1: posuvník mění jen okolí, barvy šatů zůstávají.
+// Kresba „Stejné šaty, jiné světlo“ v kroku 6 cesty 1: posuvník mění světlo v místnosti, barvy šatů zůstávají.
+// Na krajích se šaty shodují s věcmi známé barvy: s bílým okrajem obrazu a zlatým rámem, s modrou vázou a černou kočkou.
 // Obě šířky ve světlém i tmavém režimu s axe, bez vodorovného posouvání, klávesnice a snímky stupňů.
 import { test, expect, type Locator, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
@@ -42,32 +43,34 @@ for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska
       await expect(kresba.getByRole('radiogroup')).toHaveCount(0);
       await expect(kresba.getByRole('button')).toHaveCount(0);
 
-      // Začíná uprostřed: šedé okolí a barvy samé. Vzorky pod posuvníkem mají barvy šatů.
-      const posuvnik = kresba.getByRole('slider', { name: 'Posuň: mění se jen světlo kolem' });
+      // Začíná uprostřed: bílé světlo a barvy samé. Vzorky pod posuvníkem mají barvy šatů.
+      const posuvnik = kresba.getByRole('slider', { name: 'Posuň: mění se jen světlo' });
       await expect(posuvnik).toHaveValue('2');
-      await expect(kresba.locator('output')).toHaveText('3 z 5 · šedé okolí');
+      await expect(kresba.locator('output')).toHaveText('3 z 5 · bílé světlo');
       await expect(kresba.locator('.kresba__popis')).toContainText('dvě barvy, modrou a hnědou');
-      expect(await vypln(kresba.locator('.stena'))).toBe('rgb(189, 189, 189)');
+      expect(await vypln(kresba.locator('.stena'))).toBe('rgb(206, 204, 198)');
       await barvySatu(kresba);
       expect(await kresba.locator('.vzorek').evaluateAll((v) => v.map((e) => getComputedStyle(e).backgroundColor))).toEqual([MODRA, HNEDA]);
-      await kresba.screenshot({ path: `test-results/snimky/saty-sede-${sirka}-${r}.png` });
+      await kresba.screenshot({ path: `test-results/snimky/saty-bile-${sirka}-${r}.png` });
 
-      // Chladné denní světlo: okno, modré okolí. Šaty se nezměnily.
+      // Chladné denní světlo: bílý okraj obrazu, lišta a stínidlo i zlatý rám mají teď barvy šatů. Šaty se nezměnily.
       await posuvnik.fill('0');
       await expect(kresba.locator('output')).toHaveText('1 z 5 · chladné denní světlo');
-      await expect.poll(() => vypln(kresba.locator('.stena'))).toBe('rgb(93, 112, 171)');
-      await expect.poll(() => pruhlednost(kresba.locator('.okno'))).toBe('1');
-      expect(await pruhlednost(kresba.locator('.lampa'))).toBe('0');
+      for (const bila of await kresba.locator('.vec-bila').all()) await expect.poll(() => vypln(bila)).toBe(MODRA);
+      await expect.poll(() => vypln(kresba.locator('.vec-zlata'))).toBe(HNEDA);
+      expect(await vypln(kresba.locator('.vec-modra'))).not.toBe(MODRA);
+      expect(await pruhlednost(kresba.locator('.zare'))).toBe('0');
       await expect(kresba.locator('.kresba__popis')).toContainText('vidí šaty bílé a zlaté');
       await barvySatu(kresba);
       await kresba.screenshot({ path: `test-results/snimky/saty-chladne-${sirka}-${r}.png` });
 
-      // Teplé umělé světlo: lampa, žluté okolí. Šaty se nezměnily.
+      // Teplé umělé světlo: lampa svítí, modrá váza a černá kočka mají teď barvy šatů. Šaty se nezměnily.
       await posuvnik.fill('4');
       await expect(kresba.locator('output')).toHaveText('5 z 5 · teplé umělé světlo');
-      await expect.poll(() => vypln(kresba.locator('.stena'))).toBe('rgb(246, 220, 138)');
-      await expect.poll(() => pruhlednost(kresba.locator('.lampa'))).toBe('1');
-      expect(await pruhlednost(kresba.locator('.okno'))).toBe('0');
+      await expect.poll(() => vypln(kresba.locator('.vec-modra'))).toBe(MODRA);
+      await expect.poll(() => vypln(kresba.locator('.vec-cerna'))).toBe(HNEDA);
+      await expect.poll(() => pruhlednost(kresba.locator('.zare'))).toBe('1');
+      expect(await vypln(kresba.locator('.vec-bila'))).not.toBe(MODRA);
       await expect(kresba.locator('.kresba__popis')).toContainText('vidí šaty modré a černé');
       await barvySatu(kresba);
       await kresba.screenshot({ path: `test-results/snimky/saty-teple-${sirka}-${r}.png` });

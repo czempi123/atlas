@@ -1,59 +1,87 @@
 // Šaty z roku 2015 (cesta 1, krok 6): kresba „Stejné šaty, jiné světlo“.
-// Šaty mají v kresbě pořád stejné dvě barvy, modrou a hnědou, jako body té fotky. Posuvník mění jen světlo kolem.
+// Šaty mají v kresbě pořád stejné dvě barvy, modrou a hnědou, jako body té fotky. Posuvník mění světlo v místnosti
+// a s ním barvy všeho ostatního: obrazu, lampy, kočky, vázy, postavy. Světla jsou spočítaná tak, aby se šaty
+// na krajích posuvníku shodly s věcmi, jejichž barvu student zná: v chladném světle s bílým okrajem obrazu
+// a zlatým rámem, v teplém s modrou vázou a černou kočkou. Tak vzniká dojem, o kterém mluví text.
 // Podklad: docs/podklady/celek-1-pravda.md › Tvrzení: nový případ (šaty, 2015), bod 4. Fotku atlas nepřebírá.
 
-/** Barvy šatů v kresbě. Nemění se, ať je okolí jakékoli. */
-export const BARVY_SATU = { modra: '#8f9bd0', hneda: '#74633f' } as const;
+type Barva = [number, number, number];
 
-/** Barvy okolí ve třech světlech; mezistupně se míchají. Jediné barvy atlasu mimo tokeny vedle fotografií. */
-const CHLADNE = { stena: '#5d70ab', podlaha: '#475889' };
-const SEDE = { stena: '#bdbdbd', podlaha: '#a2a2a2' };
-const TEPLE = { stena: '#f6dc8a', podlaha: '#e3bd5c' };
+const SATY_MODRA: Barva = [143, 155, 208];
+const SATY_HNEDA: Barva = [116, 99, 63];
 
-const POPIS_CHLADNE = 'Okolí je v chladném denním světle. Kdo takové světlo na fotce čeká, vidí šaty bílé a zlaté.';
-const POPIS_SEDE = 'Šaty mají v kresbě dvě barvy, modrou a hnědou. Stejné barvy mají body na fotce.';
-const POPIS_TEPLE = 'Okolí je v teplém umělém světle. Kdo takové světlo na fotce čeká, vidí šaty modré a černé.';
+const hex = (b: number[]) => '#' + b.map((v) => Math.min(255, Math.max(0, Math.round(v))).toString(16).padStart(2, '0')).join('');
 
-/** Stupně posuvníku od chladného světla k teplému; uprostřed je okolí bez barvy. */
+/** Barvy šatů v kresbě. Nemění se, ať je světlo jakékoli. */
+export const BARVY_SATU = { modra: hex(SATY_MODRA), hneda: hex(SATY_HNEDA) } as const;
+
+/** Světlo: čím se barva věci násobí a co se k ní přičte (závoj přesvětlené scény). */
+interface Svetlo {
+  nasobek: Barva;
+  zavoj: Barva;
+}
+/** Chladné denní světlo: bílá věc v něm vyjde přesně jako světlé pruhy šatů. */
+const CHLADNE: Svetlo = { nasobek: SATY_MODRA.map((v) => v / 255) as Barva, zavoj: [0, 0, 0] };
+const BILE: Svetlo = { nasobek: [1, 1, 1], zavoj: [0, 0, 0] };
+/** Teplé umělé světlo, přesvětlené: i černá věc v něm zesvětlá a zhnědne. */
+const TEPLE: Svetlo = { nasobek: [1, 0.9, 0.72], zavoj: [70, 58, 30] };
+
+const zpet = (vysledek: Barva, s: Svetlo) => vysledek.map((v, i) => (v - s.zavoj[i]) / s.nasobek[i]) as Barva;
+
+/** Barvy věcí v bílém světle. Čtyři z nich jsou dopočítané ze šatů. */
+const VECI = {
+  bila: [255, 255, 255],
+  /** zlatý rám: v chladném světle vyjde jako tmavé pruhy šatů */
+  zlata: zpet(SATY_HNEDA, CHLADNE),
+  /** modrá váza: v teplém světle vyjde jako světlé pruhy šatů */
+  modra: zpet(SATY_MODRA, TEPLE),
+  /** černá kočka, vlasy a boty: v teplém světle vyjdou jako tmavé pruhy šatů */
+  cerna: zpet(SATY_HNEDA, TEPLE),
+  stena: [206, 204, 198],
+  podlaha: [150, 112, 74],
+  plet: [226, 176, 142],
+  list: [74, 132, 66],
+  obraz: [178, 92, 70],
+} satisfies Record<string, number[]>;
+
+export type Vec = keyof typeof VECI;
+
+/** Stupně posuvníku od chladného světla k teplému; uprostřed je světlo bílé. */
 export const STUPNE_SVETLA: { nazev: string; popis: string }[] = [
-  { nazev: 'chladné denní světlo', popis: POPIS_CHLADNE },
-  { nazev: 'trochu chladné světlo', popis: POPIS_CHLADNE },
-  { nazev: 'šedé okolí', popis: POPIS_SEDE },
-  { nazev: 'trochu teplé světlo', popis: POPIS_TEPLE },
-  { nazev: 'teplé umělé světlo', popis: POPIS_TEPLE },
+  {
+    nazev: 'chladné denní světlo',
+    popis: 'Chladné denní světlo. Světlé pruhy mají teď stejnou barvu jako bílý okraj obrazu, tmavé jako zlatý rám. Kdo takové světlo na fotce čeká, vidí šaty bílé a zlaté.',
+  },
+  { nazev: 'trochu chladné světlo', popis: 'Světlo chladne. Bílý okraj obrazu modrá a blíží se barvě světlých pruhů.' },
+  { nazev: 'bílé světlo', popis: 'Bílé světlo. Šaty mají v kresbě dvě barvy, modrou a hnědou. Stejné barvy mají body na fotce.' },
+  { nazev: 'trochu teplé světlo', popis: 'Světlo se otepluje. Černá kočka světlá a blíží se barvě tmavých pruhů.' },
+  {
+    nazev: 'teplé umělé světlo',
+    popis: 'Teplé umělé světlo. Světlé pruhy mají teď stejnou barvu jako modrá váza, tmavé jako černá kočka. Kdo takové světlo na fotce čeká, vidí šaty modré a černé.',
+  },
 ];
 
 /** Kresba začíná uprostřed: student nejdřív vidí barvy samé. */
 export const VYCHOZI_STUPEN = 2;
 
-/** Smíchá dvě barvy zapsané jako #rrggbb; t = 0 dá první, t = 1 druhou. */
-export function smichej(a: string, b: string, t: number): string {
-  const p = Math.min(1, Math.max(0, Number.isFinite(t) ? t : 0));
-  const slozky = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
-  const [x, y] = [slozky(a), slozky(b)];
-  return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * p).toString(16).padStart(2, '0')).join('');
-}
-
-export interface Okoli {
-  stena: string;
-  podlaha: string;
-  /** jak moc je vidět okno (chladné denní světlo), 0 až 1 */
-  okno: number;
-  /** jak moc je vidět lampa (teplé umělé světlo), 0 až 1 */
+export interface Scena {
+  /** barvy věcí v daném světle, zapsané jako #rrggbb */
+  veci: Record<Vec, string>;
+  /** jak moc svítí lampa (teplé umělé světlo), 0 až 1 */
   lampa: number;
 }
 
-/** Okolí šatů na daném stupni. Stupeň mimo rozsah se přichytí ke kraji. */
-export function okoli(stupen: number): Okoli {
+/** Místnost na daném stupni posuvníku. Stupeň mimo rozsah se přichytí ke kraji. */
+export function scena(stupen: number): Scena {
   const posledni = STUPNE_SVETLA.length - 1;
   const s = Math.min(posledni, Math.max(0, Math.round(Number.isFinite(stupen) ? stupen : VYCHOZI_STUPEN)));
   const kraj = s < VYCHOZI_STUPEN ? CHLADNE : TEPLE;
   // 0 uprostřed, 1 na kraji
   const sila = Math.abs(s - VYCHOZI_STUPEN) / VYCHOZI_STUPEN;
-  return {
-    stena: smichej(SEDE.stena, kraj.stena, sila),
-    podlaha: smichej(SEDE.podlaha, kraj.podlaha, sila),
-    okno: s < VYCHOZI_STUPEN ? sila : 0,
-    lampa: s > VYCHOZI_STUPEN ? sila : 0,
-  };
+  const nasobek = BILE.nasobek.map((v, i) => v + (kraj.nasobek[i] - v) * sila);
+  const zavoj = kraj.zavoj.map((v) => v * sila);
+  const veci = Object.fromEntries(
+    Object.entries(VECI).map(([jmeno, barva]) => [jmeno, hex(barva.map((v, i) => v * nasobek[i] + zavoj[i]))]),
+  ) as Record<Vec, string>;
+  return { veci, lampa: s > VYCHOZI_STUPEN ? sila : 0 };
 }
