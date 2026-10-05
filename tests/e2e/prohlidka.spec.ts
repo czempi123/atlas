@@ -9,6 +9,7 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/lide/', nazev: 'lide', nadpis: /Lidé a směry/ },
   { cesta: '/osobnost/sokrates/', nazev: 'sokrates', nadpis: /Sókratés/ },
   { cesta: '/osobnost/platon/', nazev: 'platon', nadpis: /Platón/ },
+  { cesta: '/osobnost/aristoteles/', nazev: 'aristoteles', nadpis: /Aristotelés/ },
   { cesta: '/osobnost/protagoras/', nazev: 'protagoras', nadpis: /Prótagorás/ },
   { cesta: '/osobnost/epikuros/', nazev: 'epikuros', nadpis: /Epikúros/ },
   { cesta: '/osobnost/diogenes/', nazev: 'diogenes', nadpis: /Diogenés/ },

@@ -1,0 +1,71 @@
+# Roztřiď · portrét Aristotela, kapitola 03 „Čtyři proč“: šest odpovědí na jedno proč do čtyř košů.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Tři myšlenky pro portrét › 2 (řádky 2 a 3, Vlastní pokus studenta).
+# Most, karty a zpětné vazby jsou autorské. Srovnání stojí na Fyzice II, 3: „příčina“ se říká čtyřmi způsoby
+# a jedna věc má víc příčin najednou, každou jinak. Školní názvy příčin blok neuvádí.
+# Koše odpovídají na otázku stejným tvarem. Brod a peníze se dají poctivě dát do dvou košů; zpětná vazba to říká.
+druh: roztrid
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: >-
+  Přes řeku vede most. Někdo se zeptá, proč tu stojí. Dostane šest odpovědí a každá je pravdivá.
+otazka: Na co která odpovídá?
+kose:
+  - id: z-ceho
+    nazev: Z čeho je
+    popis: Materiál, bez kterého by nebyl.
+  - id: co-to-je
+    nazev: Co to je
+    popis: Stavba, která z materiálu dělá most.
+  - id: odkud
+    nazev: Odkud se vzal
+    popis: Kdo nebo co ho přivedlo na svět.
+  - id: k-cemu
+    nazev: K čemu je
+    popis: Kvůli čemu tu stojí.
+karty:
+  - id: material
+    text: Protože je z oceli a betonu.
+    zpetna: >-
+      Bez oceli a betonu by nestál. Stál by ale i dřevěný. Co ti tahle odpověď o mostu neřekne?
+  - id: oblouk
+    text: Protože oblouk přenese tíhu na oba břehy.
+    zpetna: >-
+      Odpověď říká, jak je most udělaný, aby nespadl. Hromada oceli na břehu by mostem nebyla. Co jí chybí?
+  - id: firma
+    text: Protože ho postavila stavební firma.
+    zpetna: >-
+      Odpověď říká, kdo most udělal. Stavět ale firma začala, až když ho někdo chtěl. Je i to přání příčina?
+  - id: reka
+    text: Aby se lidé dostali přes řeku.
+    zpetna: >-
+      Tahle odpověď jako jediná začíná slovem aby. Dá se tak odpovědět i na otázku, proč prší?
+  - id: brod
+    text: Protože tu odjakživa býval brod.
+    zpetna: >-
+      Brod vysvětluje, proč most stojí právě tady. Říká, odkud se most vzal, nebo k čemu je? Hájit se dá obojí.
+  - id: penize
+    text: Protože ho město zaplatilo.
+    zpetna: >-
+      Bez peněz by nikdo stavět nezačal. Patří tedy k tomu, co most uvedlo do pohybu, stejně jako firma?
+    kdyz:
+      z-ceho: >-
+        Dal jsi peníze k tomu, z čeho most je. V hotovém mostě ale žádné nenajdeš: je v něm ocel a beton.
+        Kde tedy peníze zůstaly?
+vlastni:
+  pocet: 1
+  vyzva: Přidej vlastní odpověď, proč tu most stojí
+  zpetna: >-
+    Tuhle odpověď jsi přidal sám. Na co odpovídá: z čeho most je, co to je, odkud se vzal, nebo k čemu je?
+srovnani:
+  osoba: aristoteles
+  nadpis: Čtyři odpovědi podle Aristotela
+  text: >-
+    Aristotelés říká, že slovo příčina má čtyři významy: z čeho věc je, co to je, odkud přišel počátek změny
+    a kvůli čemu věc je.
+
+
+    Jedna věc má podle něj víc příčin najednou a každá je příčinou jinak. Šest odpovědí o mostu si proto nepřekáží.
+
+
+    Kterou z nich bys chtěl slyšet ty, kdyby ses na most zeptal?
+zdroje: [aristoteles-fyzika]

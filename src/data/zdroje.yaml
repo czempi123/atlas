@@ -2121,3 +2121,25 @@ obrazky:
     licence: "volné dílo (Open Access)"
     url: "https://www.nga.gov/artworks/62542-platos-cave"
     vyrez: "55% 45%"
+  # Celek 5: Aristotelés je sádrový odlitek ze Statens Museum for Kunst (volné dílo, údaje z API muzea 5. 10. 2026; stažen přes IIIF
+  # v 1280 px), druhý obraz Rembrandt z The Metropolitan Museum of Art (Open Access, CC0, ověřeno v API muzea; originál 3792 × 4000 px
+  # je mimo repozitář, tady zmenšenina 1213 × 1280 px, zesvětlená gamou 1,9, protože v duotónu desky byl obraz skoro černý).
+  # Autor souhlasil 5. 10. 2026. Popisek odlitku je bez slova „římská“: údaj o vídeňské hlavě
+  # (inv. I 246) se na stránkách Kunsthistorisches Museum nepodařilo ověřit (docs/podklady/k-overeni.md).
+  - id: aristoteles-smk
+    soubor: obrazky/aristoteles-smk.jpg
+    popisek: "Aristotelés. Sádrový odlitek mramorové hlavy z Vídně, která kopíruje řecký portrét z konce 4. století př. n. l."
+    autor: "Statens Museum for Kunst"
+    instituce: "Kodaň, Královská sbírka odlitků, inv. KAS825; mramorová hlava je v Kunsthistorisches Museum ve Vídni"
+    licence: "volné dílo (Public Domain)"
+    url: "https://open.smk.dk/artwork/image/KAS825"
+    vyrez: "50% 30%"
+    vyrezNaSirku: "50% 20%"
+  - id: aristoteles-rembrandt
+    soubor: obrazky/aristoteles-rembrandt-met.jpg
+    popisek: "Aristotelés, jak si ho roku 1653 představil Rembrandt: ruku má na bustě Homéra a na řetězu medailon se svým žákem Alexandrem."
+    autor: "Rembrandt van Rijn, 1653 (soubor: The Metropolitan Museum of Art)"
+    instituce: "The Metropolitan Museum of Art, New York, inv. 61.198"
+    licence: "CC0 (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/437394"
+    vyrez: "52% 30%"

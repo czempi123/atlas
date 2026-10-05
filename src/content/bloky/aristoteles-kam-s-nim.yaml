@@ -1,0 +1,81 @@
+# Roztřiď · portrét Aristotela, kapitola 02 „Delfín a škatulky“: šest živočichů mezi vodní a suchozemské.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Tři myšlenky pro portrét › 1 (řádky 4 a 5, Vlastní pokus studenta).
+# Delfína, tuleně, mořskou želvu a žábu jmenuje Aristotelés ve Zkoumání živočichů VIII, 2 mezi těmi, kdo žijí ve vodě
+# a dýchají vzduch; kapr a pes jsou karty, na kterých škatulky sedí. Zpětné vazby jsou autorské a stojí na běžné biologii.
+# Srovnání říká jen to, co je ve VIII, 2: zařadit je není snadné, dát je do obou skupin by bylo nesmyslné, je třeba
+# upřesnit, co znamená „vodní“. Koše odpovídají na otázku stejným tvarem; třetí dává poctivé místo každé kartě.
+druh: roztrid
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: Aristotelés dělil živočichy na vodní a suchozemské. Tady je šest z nich.
+otazka: Vodní, nebo suchozemský?
+kose:
+  - id: vodni
+    nazev: Vodní
+    popis: Žije ve vodě.
+  - id: suchozemsky
+    nazev: Suchozemský
+    popis: Žije na souši.
+  - id: nejde
+    nazev: Ani jedno
+    popis: Nesedí mu ani jedna škatulka.
+karty:
+  - id: kapr
+    text: Kapr
+    zpetna: >-
+      Žije ve vodě, dýchá žábrami a na břehu nevydrží. U kapra škatulky sedí.
+      Která z těch tří věcí ti k zařazení stačila?
+  - id: pes
+    text: Pes
+    zpetna: >-
+      Žije na souši a dýchá vzduch. Plave rád, a vodní z něj to nedělá. Proč vlastně ne?
+  - id: delfin
+    text: Delfín
+    zpetna: >-
+      Celý život je v moři, a přitom dýchá vzduch a má pro mláďata mléko.
+      Podle čeho jsi rozhodl: kde žije, co dýchá, nebo jak se stará o mláďata?
+    kdyz:
+      vodni: >-
+        Dal jsi ho mezi vodní: celý život je v moři. Dýchá ale vzduch a pod hladinou by se udusil.
+        Vadí to tvé škatulce?
+      suchozemsky: >-
+        Dal jsi ho mezi suchozemské: dýchá vzduch a má pro mláďata mléko jako pes. Na souš ale nevyleze nikdy.
+        Vadí to tvé škatulce?
+      nejde: >-
+        Nechal jsi ho mimo obě škatulky. Co bys na nich musel změnit, aby se do některé vešel?
+  - id: tulen
+    text: Tuleň
+    zpetna: >-
+      Loví v moři, odpočívá na břehu a dýchá vzduch. Která z těch věcí u tebe rozhodla?
+    kdyz:
+      nejde: >-
+        Nechal jsi ho mimo obě škatulky. Čím se liší od delfína: jen tím, že na břeh vyleze?
+  - id: zelva
+    text: Mořská želva
+    zpetna: >-
+      Žije v moři a dýchá vzduch. Vejce klade do písku na břehu.
+      Rozhoduje, kde živočich tráví nejvíc času, nebo kde přichází na svět?
+  - id: zaba
+    text: Žába
+    zpetna: >-
+      Jako pulec žije jen ve vodě, dospělá skáče po břehu.
+      Má se živočich třídit podle toho, kde začal, nebo kde skončil?
+vlastni:
+  pocet: 1
+  vyzva: Přidej živočicha, se kterým si nevíš rady
+  zpetna: >-
+    Tohohle jsi přidal sám. Podle čeho jsi mu vybral místo: kde žije, co dýchá, nebo kde má mláďata?
+srovnani:
+  osoba: aristoteles
+  nadpis: Jak to třídil Aristotelés
+  text: >-
+    Aristotelés tu narazil na potíž. Delfína, tuleně, mořskou želvu i žábu jmenuje mezi živočichy,
+    kteří žijí ve vodě a dýchají vzduch.
+
+
+    Dát je do obou skupin zároveň by podle něj bylo nesmyslné. Napsal proto, že je třeba upřesnit,
+    co slovo vodní znamená.
+
+
+    Podle čeho jsi třídil ty: kde živočich žije, co dýchá, nebo kde má mláďata?
+zdroje: [aristoteles-zivocichove]

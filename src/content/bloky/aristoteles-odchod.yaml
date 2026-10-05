@@ -1,0 +1,39 @@
+# Volba s důvodem · portrét Aristotela, kapitola 05 „Podruhé ne“.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Život, řádky 11–14; Nejsilnější příběhy 3 a 6.
+# Odchod do Chalkidy roku 323 je doložený (SEP); žalobu pro bezbožnost a její záminku podává Diogenés Laertios V, 5–6
+# asi 550 let po Aristotelovi, proto „vypráví se“ a „prý“. Oddíl Co udělal říká jen doložené: odešel do Chalkidy,
+# měl tam dům se zahradou (závěť, V, 14) a školu převzal Theofrastos. Větu o Athéňanech vypráví až text za blokem.
+# Sókratův soud byl roku 399, tedy 76 let před rokem 323. Možnosti a zpětné vazby jsou autorské.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: >-
+  Athény se obrátily proti všem, kdo měli blízko k Makedoncům. Vypráví se, že na Aristotela podali žalobu
+  pro bezbožnost a že záminkou byla báseň na památku přítele. Sókratés kdysi před soudem v tomtéž městě zůstal a zemřel.
+otazka: Co bys na Aristotelově místě udělal?
+moznosti:
+  - text: Zůstanu a budu se hájit. Kdo odejde, vypadá jako viník.
+    tah: zůstat a hájit se
+    zpetna: >-
+      Bereš soud vážně a nedáš žalobcům zadarmo, co chtějí. Jenže žaloba je záminka a o báseň v ní nejde.
+      Dá se u soudu vyhrát spor, který se vede o něco jiného, než co stojí v žalobě?
+  - text: Odejdu z Athén. O báseň tu nejde.
+    tah: odejít
+    jeho: true
+    zpetna: >-
+      Zachráníš život i roky práce, které máš před sebou. Platíš školou, kterou opustíš, a tím,
+      že o tobě budou říkat, že jsi utekl. Je odchod před takovým soudem zbabělost, nebo rozum?
+  - text: Zůstanu, ale přestanu učit a počkám, až se to přežene.
+    tah: stáhnout se a čekat
+    zpetna: >-
+      Nikoho nedráždíš a město neopustíš. Sázíš na to, že hněv vyprchá dřív, než dojde na tebe. Co když nevyprchá?
+      A čím bys byl ve městě, kde nesmíš dělat to hlavní, co umíš?
+coUdelal:
+  osoba: aristoteles
+  stejne: >-
+    Odešel jako ty. Usadil se v Chalkidě na ostrově Euboia, kde měl dům se zahradou.
+    V čele školy ho vystřídal Theofrastos.
+  jinak: >-
+    Odešel. Usadil se v Chalkidě na ostrově Euboia, kde měl dům se zahradou.
+    V čele školy ho vystřídal Theofrastos.
+zdroje: [sep-aristotle, dl-v, sep-theophrastus]

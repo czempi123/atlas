@@ -80,9 +80,10 @@
   atribut:
     ikona: scales
     nazev: váhy
-    proc: Ctnost je střed mezi dvěma krajnostmi.
+    proc: Správná míra leží mezi dvěma krajnostmi a není pro každého stejná.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie, aristoteles-meteorologika, dl-v, plutarchos-alexandr-vychova, strabon-xiii, aristoteles-etika-ii, aristoteles-etika-vii, aristoteles-etika-viii, aristoteles-politika-i, aristoteles-zivocichove, aristoteles-casti-zivocichu, aristoteles-fyzika]
+  obrazek: aristoteles-smk
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie, aristoteles-meteorologika, dl-v, plutarchos-alexandr-vychova, strabon-xiii, aristoteles-etika-ii, aristoteles-etika-vii, aristoteles-etika-viii, aristoteles-politika-i, aristoteles-zivocichove, aristoteles-casti-zivocichu, aristoteles-fyzika, aristoteles-analytiky, ailianos-vh, plutarchos-sulla, sep-theophrastus]
 
 - id: thales
   jmeno: Thalés
