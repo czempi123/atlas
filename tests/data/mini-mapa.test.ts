@@ -1,5 +1,6 @@
 // Mini mapa osoby: výřez podle míst a strana popisků (src/lib/mapa.ts).
 import { describe, expect, it } from 'vitest';
+import { rok } from '../../src/lib/casy';
 import { projekce, radkyPopisku, stranyPopisku, umisteniPopisku, vyrezMiniMapy, VYREZY_OBDOBI_1, type MistoMiniMapy } from '../../src/lib/mapa';
 
 const misto = (nazev: string, souradnice: [number, number], radky: string[] = ['působení']): MistoMiniMapy => ({ nazev, souradnice, radky });
@@ -41,6 +42,43 @@ describe('výřez mini mapy', () => {
     const korinthY = xy[2][1];
     expect(korinthY + korinth.radky.length * 22).toBeLessThan(v.vyska);
   });
+});
+
+describe('výřez mini mapy, když by popisek vyjel ven', () => {
+  // Aristotelés: všech šest míst je ve výchozím výřezu vidět, ale Pella má popisek vlevo (vpravo těsně leží Stageira)
+  // a ten by na telefonu vyjel přes levý okraj mapy.
+  const aristoteles = [
+    misto('Stageira', [23.75, 40.53], [`narození ${rok(-384)}`]),
+    misto('Athény', [23.727, 37.984], [`studia asi ${rok(-367)}`, `působení ${rok(-335)}`]),
+    misto('Assos', [26.34, 39.49], [`pobyt asi ${rok(-347)}`]),
+    misto('Lesbos', [26.3, 39.2], [`pobyt asi ${rok(-345)}`]),
+    misto('Pella', [22.52, 40.76], [`působení asi ${rok(-343)}`]),
+    misto('Chalkis', [23.6, 38.46], [`smrt ${rok(-322)}`]),
+  ];
+  const radky = (mista: MistoMiniMapy[], v = vyrezMiniMapy(mista)) => {
+    const p = projekce(v, 1e6);
+    const b = mista.map((m) => ({ xy: p(m.souradnice) as [number, number], nazev: m.nazev, radky: m.radky }));
+    const u = umisteniPopisku(b, v.sirka);
+    return b.flatMap((x, i) => radkyPopisku(x, u[i]));
+  };
+
+  it('ve výchozím výřezu popisek Pelly vyčnívá vlevo', () => {
+    expect(Math.min(...radky(aristoteles, VYREZY_OBDOBI_1.mini).map((r) => r[0]))).toBeLessThan(-12);
+  });
+
+  it('výřez se o málo oddálí a posune, až se vejdou všechny body i popisky', () => {
+    const v = vyrezMiniMapy(aristoteles);
+    expect(v).not.toBe(VYREZY_OBDOBI_1.mini);
+    expect(v.meritko).toBeGreaterThan(VYREZY_OBDOBI_1.mini.meritko * 0.75);
+    expect(v.meritko).toBeLessThan(VYREZY_OBDOBI_1.mini.meritko);
+    for (const r of radky(aristoteles, v)) {
+      expect(r[0]).toBeGreaterThanOrEqual(-12);
+      expect(r[2]).toBeLessThanOrEqual(v.sirka + 12);
+      expect(r[1]).toBeGreaterThanOrEqual(-12);
+      expect(r[3]).toBeLessThanOrEqual(v.vyska + 12);
+    }
+  });
+
 });
 
 describe('strana popisku', () => {
