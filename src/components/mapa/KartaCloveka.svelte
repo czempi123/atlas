@@ -5,6 +5,7 @@
   import type { OsobaV, MistoV, UdalostV, ObdobiV, VstupMapy } from '../../lib/mapa-vstup';
   import { kdeVRoce, odkudPrisla, vetaOVeku, poznamkaVRoce, vzdalenost, zijeVRoce } from '../../lib/cas-mapy';
   import { rok as rokText, rozpeti } from '../../lib/casy';
+  import { sporNaDalku } from '../../lib/vztahy';
   import Mince from './Mince.svelte';
 
   interface Props {
@@ -70,7 +71,12 @@
       if (v.typ === 'ucitel') role = jaOd ? tvar(druhy, 'žák', 'žákyně') : tvar(druhy, 'učitel', 'učitelka');
       else if (v.typ === 'znali-se') role = 'znali se';
       else if (v.typ === 'vliv-textem') role = jaOd ? `${tvar(druhy, 'četl', 'četla')} ${tvar(osoba, 'jeho', 'její')} spisy` : `${tvar(osoba, 'četl', 'četla')} ${tvar(druhy, 'jeho', 'její')} spisy`;
-      else role = jaOd ? `${tvar(osoba, 'polemizoval', 'polemizovala')} s ${tvar(druhy, 'ním', 'ní')}` : `${tvar(druhy, 'polemizoval', 'polemizovala')} s ${tvar(osoba, 'ním', 'ní')}`;
+      else if (sporNaDalku(v, osoba, druhy)) {
+        // Spor na dálku (Karneadés a Chrýsippos, Aristotelés a Sókratés): stejná slova jako v Době a lidech.
+        const kritik = jaOd ? osoba : druhy;
+        const cil = jaOd ? druhy : osoba;
+        role = `${tvar(kritik, 'přel', 'přela')} se s ${tvar(cil, 'jeho', 'jejím')} učením`;
+      } else role = jaOd ? `${tvar(osoba, 'polemizoval', 'polemizovala')} s ${tvar(druhy, 'ním', 'ní')}` : `${tvar(druhy, 'polemizoval', 'polemizovala')} s ${tvar(osoba, 'ním', 'ní')}`;
       out.push({ druhy, typ: v.typ, role, poznamka: v.poznamka, tradovany: v.tradovany });
     }
     const poradi = { ucitel: 0, 'znali-se': 1, 'vliv-textem': 2, polemika: 3 } as Record<string, number>;

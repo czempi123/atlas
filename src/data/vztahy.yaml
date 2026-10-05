@@ -23,6 +23,11 @@
 - { od: aristoteles, k: theofrastos, typ: znali-se, poznamka: "spolupracovník a nástupce v čele Lykeia", zdroj: sep-theophrastus }
 - { od: aristoteles, k: platon, typ: polemika, poznamka: "spor o ideje", zdroj: aristoteles-metafyzika-ideje }
 - { od: aristoteles, k: xenokrates, typ: znali-se, poznamka: "spolužáci z Akademie; vládce Hermeiás je oba pozval do Assu", zdroj: strabon-xiii }
+# Spor na dálku: Sókratés zemřel patnáct let před Aristotelovým narozením, Prótagorás ještě dřív. Doba a lidé
+# takovou polemiku řadí do vlastní skupiny (src/lib/vztahy.ts › sporNaDalku). Poznámka je otázka, o kterou šlo,
+# aby seděla na obou stránkách a neříkala, kdo s kým nesouhlasil (to říká nadpis skupiny).
+- { od: aristoteles, k: sokrates, typ: polemika, poznamka: "stačí vědět, co je dobré?", zdroj: aristoteles-etika-vii }
+- { od: aristoteles, k: protagoras, typ: polemika, poznamka: "je člověk měřítkem všech věcí?", zdroj: aristoteles-metafyzika }
 - { od: diogenes, k: platon, typ: polemika, tradovany: true, poznamka: "stolovost a pohárovost, oškubaný kohout", zdroj: dl-vi-53 }
 - { od: parmenides, k: platon, typ: vliv-textem, poznamka: "Platón po něm pojmenoval dialog a nechal ho v něm zkoušet ideje", zdroj: platon-parmenides }
 - { od: herakleitos, k: platon, typ: vliv-textem, poznamka: "podle Aristotela poznal jeho učení už v mládí", zdroj: aristoteles-metafyzika-ideje }
