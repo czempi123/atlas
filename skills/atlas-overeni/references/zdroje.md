@@ -65,9 +65,10 @@ Pořadí odpovídá spolehlivosti. Vždy otevři konkrétní text nebo heslo, ne
 | Jeskyně: filozof se osvobodí, uvidí pravdu a vrátí se probudit ostatní, kteří ho zabijí | Vězni jsou „podobní nám“; osvobodí ho někdo jiný a násilím; venku vidí nejdřív zase stíny; vrací se, protože musí; zabili by toho, kdo osvobozuje, „kdyby mohli“; a Sókratés dodává „bůh ví, jestli je to pravda“ (Ústava 514a–520e) | Kroky pramene; „Platón nechává Sókrata vyprávět…“ |
 | Gýgés našel prsten neviditelnosti; vypráví to Sókratés | Vypráví Glaukón a sám tomu nevěří (Ústava 358c); text má „předek Lýda Gýga“ (359d); Hérodotův Gýgés prsten nemá | „pastýř“, „Gýgův prsten“, „vypráví Glaukón“ |
 | Sedmý list jako Platónova vlastní zpověď | Pravost je sporná a novější bádání se od ní odklání | „V dopise, který se dochoval pod Platónovým jménem, stojí…“ |
-Seznam doplňuj, kdykoli při ověřování narazíš na další případ.
 | „Jsme to, co opakovaně děláme. Dokonalost není čin, ale zvyk.“ (Aristotelés) | Věta Willa Duranta z knihy The Story of Philosophy (1926), kterou shrnuje Etiku Nikomachovu | Citát z Etiky Nikomachovy 1103a32–b2: stavitelem se člověk stává stavěním |
 | Návyk vznikne za 21 dní | Číslo je z knihy plastického chirurga M. Maltze (1960) o zvykání na novou tvář; ve studii P. Lally a kol. (2010) to trvalo 18 až 254 dní, medián 66 | Studie z roku 2010 s celým rozptylem, ne s jedním číslem |
 | Aristotelův „zlatý střed“ znamená od všeho trochu | Aristotelés mluví o „středu vzhledem k nám“, který není pro všechny stejný (Etika Nikomachova 1106a29–b7); některé věci střed nemají vůbec (1107a8–17) | „střed“, bez „zlatý“; Milón a začátečník |
 | „Kořeny vzdělání jsou hořké, ovoce sladké“ (Aristotelés) | Tradovaný výrok u Diogena Laertia V, 18; Afthonios ho ve 4. století n. l. připisuje Isokratovi | „Vypráví se, že říkal…“, nebo vynechat |
 | Aristotelés učil Alexandra etice | Plútarchos (asi 450 let poté) píše „zdá se“, že Alexandr přijal nauku o povaze a o obci (Alexandr 7); podle SEP se o výuce ví málo a trvala dva nebo tři roky | „Co přesně ho učil, nevíme.“ |
+
+Seznam doplňuj, kdykoli při ověřování narazíš na další případ.
