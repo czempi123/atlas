@@ -31,3 +31,45 @@ Pravidla jako u celku 4: každé historické tvrzení a citát se zdrojem; u ka�
 
 Osnovu mi neposílej a na schválení nečekej. Kde váháš (které tři myšlenky, jaký Spor, jaký nový případ, co s hlasem na otázce 1), zvol nejlepší cestu a pracuj. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš stav do docs/plany/celek-5.md (oddíl Po P6), připrav tam zadání P7 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-5.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je ověřeno, co zůstalo otevřené, nad čím jsi váhal a co jsi zvolil, a co potřebuje moje rozhodnutí (obrázky ke stažení).
 ```
+
+## P7: Portrét Aristotela
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high. Provedeno 5. 10. 2026. Odpovědi na tři otázky zůstaly v zadání prázdné; na dotaz v chatu autor souhlasil se stažením odlitku i Rembrandta, u ostatních platilo doporučení z podkladů.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-5; jsou v ní podklady z P6.
+
+Přečti CLAUDE.md, docs/styl.md, docs/pouceni.md a v docs/plany/celek-5.md tabulku stavu a oddíl Po P6. Z docs/podklady/celek-5-staci-vedet.md si vypiš nadpisy a čti jen: Čeho se drží celý celek, Jak převádím klíčová slova, Nejsilnější příběhy, celý oddíl Tvrzení: Aristotelés (portrét), Citlivá místa, Citáty (sloupec Kde použít), Návrh dat, Obrázky a Rozpory a rozhodnutí; z oddílu o cestě 4 jen tabulky Vstupní příběh a Co se stalo potom. V docs/podklady/k-overeni.md jen oddíl Celek 5. Jako vzor si z src/content/osobnosti/platon.mdx přečti frontmatter, jednu kapitolu s blokem a závěr stránky. Postupuj podle skillu atlas-osobnost.
+
+Moje odpovědi na otevřené otázky z podkladů (kde nic není, platí doporučení z podkladů):
+- Obrázky: 
+- Spor přes texty v oddíle Doba a lidé: 
+- Pověst o Fyllidě v popisku: 
+
+Napiš portrét Aristotela src/content/osobnosti/aristoteles.mdx (v datech má hloubka: portret; stránka zatím neexistuje).
+
+1. Úvod scénou: laguna na Lesbu (Nejsilnější příběhy 2). Drž, co text říká: v jeho spisech se vrací laguna u Pyrrhy; že u ní sám stál nebo že tam rozbíjel vejce, pramen neříká. Hlavní citát stránky navrhuji casti-zivocichu-i-5; pointu zvol sám.
+
+2. Kapitoly. Návrh pěti; uprav ho, když najdeš lepší stavbu:
+- 01 Syn lékaře, dvacet let u Platóna: Stageira, otec lékař u makedonského krále, příchod do Akademie a odchod po Platónově smrti jen krátce a s odkazem na portrét Platóna (scénu ani větu o přátelích a pravdě neopakuj). Co po něm zbylo: přednášky bez dialogů, po Platónovi dialogy bez přednášek. První výskyt slova ctnost vyloží on sám (etika-1106a).
+- 02 Podívej se pořádně: Lesbos s Theofrastem; delfín, kuře ve vejci, hřebenatky; „nic není pod úroveň“ (O částech živočichů I, 5). Blok před výkladem: Roztřiď „Kam s ním?“ podle podkladů. Nejsilnější námitka patří sem: zuby, a hlavně otroci a ženy, které měl za přírodu. Nech promluvit jeho antické odpůrce (politika-1253b), řekni, kde si sám nebyl jistý, a jednou větou odkaž na Epiktéta. Žádná omluva a žádný soud naším hlasem.
+- 03 Čtyři „proč“: jeho vlastní příklad s procházkou; socha; k čemu je srdce. Blok před výkladem: Roztřiď „Jedno proč, čtyři odpovědi“ (most). Námitku s deštěm a zuby napsal sám a odmítl ji (fyzika-ii-8, fyzika-ii-8-prezilo); větu o dnešní biologii formuluj střídmě, pramen k ní v datech není.
+- 04 Škola, žák a přátelé: Makedonie jen třemi větami a odkazem na cestu 4 (příběh s Alexandrem vypráví cesta; tady ho neopakuj). Lykeion a ochoz; tři druhy přátelství. Blok před výkladem: Změň jednu věc „Co zbude?“ podle podkladů. Báseň pro Hermeia sem, nebo do kapitoly 05.
+- 05 Podruhé ne: Alexandrova smrt, žaloba, Chalkis; věta o Athéňanech jako „Vypráví se“ (ailianos-iii-36); závěť (dl-v-16, volitelně dl-v-15); rukopisy ve sklepě jako „Vypráví se“.
+
+3. Kdo žil dřív? s dvojicí, která na hotových stránkách není: navrhuji Sókratés × Aristotelés (minuli se o patnáct let; hodí se k cestě 4). Zkus to žít: tři dny u jedné věci, o které „víš“, jaká je, zapisuj jen to, co vidíš; nemiř na člověka. Kam dál: Platón, Epiktétos; cesta 4 a stránka otázky 1 se připojí v P8.
+
+4. Data a Doba a lidé. Pokud jsem souhlasil se sporem přes texty: uprav src/lib/vztahy.ts tak, aby polemika lidí, jejichž životy se nepřekrývají, měla vlastní skupinu (návrh názvů v podkladech, Návrh dat), dopiš test a přidej do vztahy.yaml oba navržené vztahy; zkontroluj, co se tím změnilo na stránkách Sókrata, Prótagora a v kartě Karneada. Postupuj podle skillu atlas-komponenta. Pokud ne, vztahy nepřidávej.
+
+5. Obrázky. Stáhni jen ty, se kterými jsem výše souhlasil (odlitek přes IIIF rovnou v 1280 px jako u Platóna; u ostatních napiš předem název souboru, zdroj a velikost do zprávy na konci, originál nech mimo repozitář). Zapiš je do obrazky v zdroje.yaml a Aristotelovi doplň obrazek. Popisek odlitku bez slova „římská“, dokud to neověříš na stránce vídeňského muzea. Bez souhlasu má deska minci s atributem.
+
+Co do portrétu nepatří: všechno, co atlas o Aristotelovi už říká (podklady, oddíl Co do portrétu nepatří), a všechno, co nese cesta 4: stavitelé a kitharisté, nemocní a lékař, Milón a střed, Sókratés a vědění jako otrok, hněv a psi, obec se zákony, studie o návycích, Kleitos (citáty etika-1103a, etika-1105b, etika-1106b, etika-1106b-milon, etika-1107a, etika-1109a, etika-1109b, etika-1109b-drevo, etika-1145b, etika-1147a, etika-1147b, etika-1149a, etika-1152a, etika-1179b, etika-1179b-reci, etika-1179b-puda, etika-1095a a všechny protagoras-…). Portrét smí etiku středu a zvyku pojmenovat jednou větou a poslat na cestu. Úsudek a tvor obce nejvýš jednou větou každý.
+
+Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč jen jako citát ze zdroje.yaml. Doporučená formulace nesmí být silnější než tvrzení v podkladech: „asi“ zůstává „asi“, „vypráví se“ zůstává. Tradované jako „Vypráví se, že…“ nebo s vypravěčem. Nepiš: že odešel od Platóna za jeho života, Hříbě, jed a akonit, dopisy mezi ním a Alexandrem, „kořeny vzdělání“, „zlatý střed“, „Jsme to, co opakovaně děláme“ jako jeho větu (smí být v jednom Odkryj jako věta, kterou nenapsal), proč odešel z Athén roku 347 a z Assu na Lesbos, kdy přednášky o etice vznikly, vzhled. Jména střídmě: Platón, Theofrastos, Hermeiás, Pýthias, Alexandr, Filip jednou; ostatní popiš. Texty mají znít jako psané člověkem (styl.md).
+
+Tón: žádné kázání a žádný pomník. Aristotelés se v portrétu dvakrát mýlí vlastním měřítkem a jednou si napíše nejlepší námitku proti sobě; obojí patří k němu. První obrazovku každé kapitoly čti očima studenta, kterého se téma bolestně týká (otroctví; přátelství u toho, kdo přátele nemá).
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když jednou spadne krok „astro-island[ssr]“ v tests/e2e/cesta.spec.ts, spusť test znovu, při P6 šlo o zpožděnou hydrataci pod zátěží); stránku přidej do STRANKY v tests/e2e/prohlidka.spec.ts a do PROFILY tam, kde se profily vyjmenovávají; prohlédni ji na 390 a 1440 px ve světlém i tmavém režimu (snímky skriptem scripts/snimky-listy.mjs), hlavně desku, mini mapu se šesti místy a to, co vygenerovala Doba a lidé. Po přidání stránky restartuj npm run dev.
+
+Osnovu mi neposílej a na schválení nečekej. Kde váháš, zvol nejlepší cestu a pracuj. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-5.md stav po P7 (použité citáty, co si nese P8), připrav tam zadání P8 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-5.md a plán větve aktualizuj i v projektu Claude. Pak mi pošli snímky stránky a napiš, co jsi zvolil, nad čím jsi váhal a co jsi vynechal nebo připsal do k-overeni.
+```

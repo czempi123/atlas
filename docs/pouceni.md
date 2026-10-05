@@ -44,9 +44,14 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 
 - Čti i to, co nikdo nepsal: Dobu a lidi, mini mapu, mini osu a popisek pod deskou. Nadpis skupiny musí sedět na typ vztahu a obraz nesmí odporovat textu.
 - Poznámka u vztahu je studentský text: neodporuje popisku typu vztahu („znal ho z textů · … od Kratyla“) a neodkazuje na místa v díle.
+- Poznámka se čte na obou stránkách vztahu. Věta s podmětem („nesouhlasil s ním, že…“) na jedné z nich říká opak; u sporu piš otázku, o kterou šlo („spor o ideje“, „stačí vědět, co je dobré?“).
+- Polemika s člověkem, kterého kritik nemohl potkat, není „Znali se a přeli se“: má vlastní skupinu (spor na dálku).
+- Text u desky (atribut, popisek) čte student dřív než první kapitolu: nesmí stát na slově, které stránka teprve vyloží (ctnost).
 
 ## Technika
 
+- Blok v čtenářském sloupci profilu má 680 px, v kroku cesty až 960 px. Blok, který jsi viděl jen v cestě nebo v dílně, si v profilu prohlédni na 1440 px (Roztřiď se čtyřmi koši se tam rozsypal).
+- Tmavý obraz (olejomalba) je v duotónu desky skoro černý: zesvětli ho před uložením a zapiš to k obrázku.
 - Po přidání stránky, bloku nebo změně dat restartuj běžící `npm run dev`. Starý náhled ukáže stránku bez obsahu a odkazy na kotvy nikam nevedou.
 - Playwright před každým během maže `test-results/`. Pracovní skripty patří do `scripts/`, snímky pro autora do `Claude outputs/`.
 - Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`. Dojem z barvy nevznikne z barevného pozadí: chce věci známé barvy ve stejném světle (šaty v cestě 1). Kresbu, která má vyvolat dojem, ukaž autorovi dřív, než ji popíšeš jako hotovou.

@@ -204,7 +204,8 @@ Poznámky k šabloně:
 
 - Velký citát z úvodu se v textu nemusí opakovat; když se k němu kapitola vrací, odkaž na něj slovy („začínala právě větou o člověku jako měřítku“). Znovu jako citát má smysl jen tam, kde zazněl (Sókratés, Obrana 38a v kapitole Soud).
 - Osoba bez autentického portrétu má na desce minci s atributem; nic nepřidávej. Fotografie jen s ověřenou licencí v `zdroje.yaml` › `obrazky`. Popisek obrázku (`popisek`) se ukazuje pod deskou vedle „Proč …?“: u rytiny, kresby nebo pozdější sochy v něm řekni, čí je to představa a z kdy, hlavně když obraz ukazuje něco, co text popírá (Epiktétos s perem × „Sám nenapsal nic“).
-- Doba a lidé skládá skupiny vztahů z dat: „Znali se a přeli se“ jen pro `znali-se` a `polemika`, vliv přes texty má skupiny „Četli ho a navázali“ a „Koho četl“. Lidem, kteří se nepotkali, dej v `vztahy.yaml` typ `vliv-textem`; po sestavení si oddíl přečti, nikdo jiný ho nepíše.
+- Doba a lidé skládá skupiny vztahů z dat: „Znali se a přeli se“ jen pro `znali-se` a `polemika` lidí, kteří se přít mohli, vliv přes texty má skupiny „Četli ho a navázali“ a „Koho četl“. Lidem, kteří se nepotkali, dej v `vztahy.yaml` typ `vliv-textem`; když jeden s druhým nesouhlasil, typ `polemika` (stránka ji sama zařadí pod „S kým se přel na dálku“ a „Kdo se s ním přel později“) a do poznámky otázku, o kterou šlo, ne větu s podmětem. Po sestavení si oddíl přečti, nikdo jiný ho nepíše.
+- Blok v portrétu stojí v čtenářském sloupci (680 px), v kroku cesty má až 960 px: podívej se na něj na 1440 px přímo ve stránce.
 - Letopočty s nezlomitelnými mezerami: `399 př. n. l.` (U+00A0 mezi číslem a „př.“ i uvnitř zkratky).
 - `id` bloků malými písmeny bez diakritiky a na celém webu jedinečné, `<osoba>-<tema>`.
 - Kapitolu se stavem `osnova` ukazuje stránka jen ve vývojovém režimu; po dopsání nastav `stav: hotovo` a pole `osnova` smaž.

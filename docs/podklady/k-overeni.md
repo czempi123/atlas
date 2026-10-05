@@ -385,3 +385,23 @@ Autorské, bez historického nároku: koše a karty Roztřiď a jejich zpětné 
 Autorské, bez historického nároku: možnosti a zpětné vazby Volby „Co ti tehdy chybělo?“, příklad s řekou a plavčíkem pro kresbu „Kde je střed?“, případ „Třetí týden“ pro Návrat, záložní „Představ si…“ se dvěma kytaristy, karty a koše bloků k portrétu (most, tři spolužáci, delfín), příklad s peněženkou a s ohněm ve výkladu. Spojení Kleita s Aristotelovým přirovnáním o psech a spojení studie o návycích s Aristotelovou ctností jsou naše, ne pramenů.
 
 **Do skillu `atlas-overeni`:** kopie `skills/atlas-overeni/references/zdroje.md` je doplněná o místa Aristotelových textů ve First1KGreek, o Ailiána, Strabóna a Plútarchova Sullu v PerseusDL, o poznámku ke čtení encyklopedií nástrojem a o čtyři zkreslení (Durantova věta, 21 dní, zlatý střed, kořeny vzdělání). Skill v účtu je třeba uložit zvlášť.
+
+### Po P7 (portrét Aristotela)
+
+5. 10. 2026. Portrét je v `src/content/osobnosti/aristoteles.mdx`. Vyřízeno z bodů výše: spor přes texty v oddíle Doba a lidé (vlastní skupiny „S kým se přel na dálku“ a „Kdo se s ním přel později“, vztahy Aristotelés → Sókratés a Aristotelés → Prótagorás jsou v datech). Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Vídeňská hlava Aristotela | Stránku předmětu v Kunsthistorisches Museum se nepodařilo najít (hledání vrátilo jen ancientrome.ru a katalog berlínské formírny; vyhledávání ve sbírce muzea přes nástroj nic neukázalo). | Popisek odlitku zůstává bez slova „římská“; ověřit může autor v prohlížeči (inv. I 246). |
+| Rembrandt je zesvětlený | Olej z roku 1653 je tmavý a v duotónu desky z něj zbyla skoro černá plocha. Uložená zmenšenina má upravenou gamu (1,9); originál je mimo repozitář. | Kdyby autor chtěl obraz bez úpravy, vrátit původní zmenšeninu a obraz dát jinam než na desku. |
+| Medailon s Alexandrem | Že medailon na řetězu nese Alexandrovu podobu, říká popis muzea; na obraze to rozeznat nejde. | Popisek to říká bez výhrady, jako u jiných obrázků; při revizi zvážit „podle muzea“. |
+| Zeus a déšť | Věta „Zeus byl pro Řeky bůh, který posílá déšť“ je vysvětlivka k citátu z Fyziky II, 8; v podkladech není, je to obecná znalost. | Stačí; kdyby revize chtěla pramen, vypustit a nechat jen citát. |
+| Dnešní biologie | Věta „Podobnou cestou dnes biologie vysvětluje, proč oko vypadá jako udělané k vidění“ nemá v datech pramen (podklady to říkají výslovně). | Nezesilovat; jméno ani letopočet nepřidávat bez pramene. |
+| Zpětné vazby v bloku „Vodní, nebo suchozemský?“ | Co dýchá kapr, kde klade vejce mořská želva a jak žije pulec, je běžná biologie, ne Aristotelés. Srovnání bloku stojí jen na Zkoumání živočichů VIII, 2. | Nic; hlídat, aby se běžná biologie nedostala do oddílu se jménem Aristotela. |
+| Sókratés „mohl z vězení utéct, a zůstal“ | Kapitola 05 se opírá o Sókratův portrét (celek 1, Kritón), ne o podklady celku 5. | Nic; při revizi číst s portrétem Sókrata. |
+| Odkazy na cestu 4 | Kapitoly 01 a 04 jmenují cestu „Stačí vědět, co je správné?“ zatím bez odkazu; Kam dál má jen Platóna a Epiktéta. | P8: odkaz na obou místech, cesta 4 a otázka 1 do Kam dál, upravit test `tests/e2e/aristoteles.spec.ts`. |
+| Věta „Jsme to, co opakovaně děláme“ | V portrétu není; zadání ji dovoluje v jednom Odkryj jako větu, kterou Aristotelés nenapsal. | P8: jednou v cestě 4, nebo vůbec. |
+
+Vynecháno z podkladů, aby portrét nenesl víc jmen a příběhů, než unese: bronzová koule, lékař a „nejdřív mi řekni příčinu“, pocty v Delfách, obnova Stageiry, Kallisthenés, Íliada a všechno o Mieze (nese cesta 4), věta o člunkách (`politika-1253b-clunky`: vedle otroctví by zněla jako omluva), citát ze závěti o otrocích (`dl-v-15`: fakta říká text, citát by zněl jako polehčující okolnost), „jedna duše ve dvou tělech“ (`dl-v-20`), `etika-1103b`, druhá námitka k pozorování (chybí pokus a měření), Cicero a jména Herpyllis a Níkomachos (popsáni, ne jmenováni).
+
+Autorské, bez historického nároku: příklad s nemocným Honzou ve výkladu čtyř „proč“, otázky v kurzívě na koncích kapitol, spojení Hermeia s třemi druhy přátelství (otázka pro studenta, ne tvrzení o Aristotelovi), spojení červené tečky ve vejci s otázkou „k čemu je“ a výzva Zkus to žít.
