@@ -148,7 +148,7 @@ Všechny cesty, profily i otázky se skládají z jedné knihovny asi dvanácti 
 
 - **Sbírka setkání:** po dokončení profilu nebo cesty získá student kartu filozofa do deníku; mapa postupně „barevní“ tam, kde už byl.
 - **Žádné žebříčky, série dní ani body za názor.** Odpovídají hodnotám projektu a nevytvářejí tlak.
-- **„Pokračuj, kde jsi skončil“** na úvodní stránce. Návrat nabízí jen deník, tiše a bez upozornění jinde; jde odložit nebo skrýt (rozhodnutí autora z 2. 10. 2026, `docs/plany/rozhrani-v2.md`).
+- **„Pokračuj, kde jsi skončil“** na úvodní stránce. Návrat nabízí jen deník, tiše a bez upozornění jinde; jde odložit nebo skrýt (rozhodnutí autora z 2. 10. 2026, `docs/archiv/plany/rozhrani-v2.md`).
 
 ### Obsahová složka
 
@@ -382,7 +382,7 @@ Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v soubo
 | `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/archiv/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
 | `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/archiv/plany/celek-4.md` | podklady (P6), portrét Platóna (P7), cesta 3 a stránka otázky 6 (P8) hotové 4. 10. 2026; revize celku (P10) hotová 4. 10. 2026 s verdiktem „po opravách“ (`docs/revize/celek-4-2026-10-04.md`); opravy všech osmi nálezů zapracované a celek **uzavřený a schválený autorem 4. 10. 2026**, sloučený do hlavní větve a poslaný na GitHub (spolu s `rozhrani-v2`) |
 | `celek-5` | „Stačí vědět, co je správné?“: Aristotelés, cesta 4, doplnění otázky 1 | `docs/plany/celek-5.md` | založeno 5. 10. 2026 (rozsah zvolil Claude na pokyn autora); zadání podkladů (P6) připravené |
-| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 schválený, R2 hotový 3. 10. 2026; větev je od 4. 10. 2026 sloučená do hlavní větve a na GitHubu spolu s celkem 4. V plánu větve zůstává otevřené schválení R2 autorem a revize větve (P10) |
+| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/archiv/plany/rozhrani-v2.md` | hotovo: R1 a R2 schválené, větev sloučená do hlavní větve a od 4. 10. 2026 na GitHubu spolu s celkem 4; autor ji uzavřel 5. 10. 2026 |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
 

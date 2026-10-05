@@ -5,9 +5,9 @@ Zadání schválil autor 2. 10. 2026; spustí se po celku 3. Větev mimo celky: 
 | Krok | Co | Stav |
 | --- | --- | --- |
 | R1 | Orientace: Domů, obsah profilu, ovládání mapy | hotovo 3. 10. 2026, schválil autor; stav níže |
-| R2 | Argument a návrat: reflexe ve Sporu, Na začátku × Teď, blok Návrat | hotovo 3. 10. 2026, čeká na schválení autorem; stav níže |
-| P10 | Revize větve skillem `atlas-revize` (průchod jako student) | po R2 |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po revizi |
+| R2 | Argument a návrat: reflexe ve Sporu, Na začátku × Teď, blok Návrat | hotovo 3. 10. 2026, schválil autor 5. 10. 2026; stav níže |
+| P10 | Revize větve skillem `atlas-revize` (průchod jako student) | samostatně neproběhla; autor větev uzavřel bez ní |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo: sloučeno a na GitHubu od 4. 10. 2026 spolu s celkem 4, autor větev schválil a uzavřel 5. 10. 2026 |
 
 ## Rozhodl autor (2. 10. 2026)
 
@@ -176,3 +176,7 @@ Nejdřív mi v pár bodech napiš: znění reflexe ve Sporu a upravené zpětné
 ```
 
 Po R2 následuje revize větve skillem `atlas-revize` (průchod jako student: působí atlas jednodušeji, nebo složitěji než před větví?) a schválení autorem.
+
+## Uzavření (5. 10. 2026)
+
+Větev je od 4. 10. 2026 sloučená do hlavní větve a s celkem 4 na GitHubu (ověřeno 5. 10. 2026: `main` na GitHubu je commit `96c942b` a `rozhrani-v2` je v něm celá). Autor 5. 10. 2026 potvrdil R2 a větev uzavřel jako schválenou. Samostatná revize větve (P10) neproběhla. Plán je v archivu; z větve nic nezbývá.

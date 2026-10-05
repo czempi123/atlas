@@ -4,6 +4,13 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 5. 10. 2026: Celek 5 a uzavření větve rozhrani-v2
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 5 je Aristotelés a cesta 4 „Stačí vědět, co je správné?“; stránka otázky 1 se jen doplní | Autor: „vybrat další a připravit ho“; rozsah zvolil Claude. Aristotelés mluví na čtyřech stránkách otázek a ve dvou Sporech bez vlastní stránky, období 1 jím dostane třetí portrét. Druhá možnost byla cesta 2 (Théseova loď, otázka 5) |
+| Větev `rozhrani-v2` je uzavřená jako schválená, bez samostatné revize větve; plán je v `docs/archiv/plany/rozhrani-v2.md` | Autor: „uzavři ji jako schválenou“. Větev je od 4. 10. 2026 sloučená a na GitHubu spolu s celkem 4 |
+
 ## 4. 10. 2026: Kresba „Zdvoj čtverec“ a oddíl Kresby v dílně
 
 Dva samostatné kroky po uzavření celku 4 (doporučení revize, autor je zadal).
