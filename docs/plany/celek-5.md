@@ -6,8 +6,8 @@ Celek 5: portrét Aristotela, cesta 4 „Stačí vědět, co je správné?“ (o
 | --- | --- | --- |
 | P6 | Podklady | hotovo 5. 10. 2026; podklady v `docs/podklady/celek-5-staci-vedet.md` |
 | P7 | Portrét Aristotela | hotovo 5. 10. 2026; `src/content/osobnosti/aristoteles.mdx` |
-| P8 | Cesta 4 „Stačí vědět, co je správné?“ a doplnění stránky velké otázky 1 | připraveno 5. 10. 2026, zadání níže; čeká na odpovědi autora (obrázek cesty) |
-| P10 | Revize celku | po P8 |
+| P8 | Cesta 4 „Stačí vědět, co je správné?“ a doplnění stránky velké otázky 1 | hotovo 8. 10. 2026; `src/content/cesty/staci-vedet-co-je-spravne*`; kresbu „Kde je střed?“ má autor na snímcích a ještě ji nepotvrdil |
+| P10 | Revize celku | připraveno 8. 10. 2026, zadání níže |
 | Opravy | Zapracování nálezů revize | po P10 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po opravách |
 
@@ -120,41 +120,116 @@ Portrét Aristotela stojí: `src/content/osobnosti/aristoteles.mdx`, bloky `aris
 5. Uložit skill `atlas-osobnost` v účtu (dvě nové věty).
 6. Popisek odlitku: ověřit na stránce Kunsthistorisches Museum, jestli je vídeňská hlava římská kopie (inv. I 246); nástroje stránku nenašly.
 
-## Zadání P8: Cesta 4 „Stačí vědět, co je správné?“ a stránka otázky 1
+## Po P8 (8. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high. Před odesláním doplň do zadání své odpovědi na čtyři otázky; kde nic nenapíšeš, platí doporučení z podkladů, jen obrázek se bez tvého souhlasu nestáhne.
+Cesta 4 „Stačí vědět, co je správné?“ stojí: přehled `src/content/cesty/staci-vedet-co-je-spravne.mdx`, osm kroků ve složce téhož jména, bloky `cesta4-co-chybelo`, `cesta4-kdy-je-to-jeho`, `cesta4-vedel-to`, `cesta4-navyk-odhad`, `cesta4-navyk-cteni` a `cesta4-navrat` v `src/content/bloky/`, Odkryj `cesta4-sokrates-alexandr` v MDX a kresba „Kde je střed?“ (`src/lib/stred.ts`, `src/components/ostrovy/KdeJeStred.svelte`). `npm test` prošel celý (466 testů dat, 336 v prohlížeči). Na GitHubu nic není. Zadání P8 je v `docs/archiv/zadani/celek-5.md`, rozhodnutí v `docs/rozhodnuti.md` (8. 10. 2026: Cesta 4), vynechané a neověřené v `docs/podklady/k-overeni.md` (Po P8).
+
+**Odpovědi autora.** Všechny čtyři zůstaly prázdné. Vstup cesty je proto bez obrázku (ornament a mince), pověst o Fyllidě v atlasu není, třetí Aristotelův argument ve Sporu cesty 3 zůstal, jak je, a složka `ucitel/` nevznikla.
+
+**Kresba „Kde je střed?“ čeká na autora.** Snímky šesti stavů dostal 8. 10. 2026 v chatu; dokud je nepotvrdí, není hotová. Testy jí procházejí (`tests/e2e/stred.spec.ts`, `tests/data/stred.test.ts`).
+
+**Co cesta má.**
+
+1. *Háj a hostina.* Příběh bez obrázku: Mieza, Plútarchovo „zdá se“, Íliada („Vypráví se“). Pod ním „O patnáct let později“: hostina čtyřmi krátkými odstavci, opilost jednou větou, Arriánův soud parafrází, otázka „Co se s tím věděním stalo mezi tím?“ a otázka pro studenta v kurzívě. Filip a Kleitos jménem jednou.
+2. *Co ti tehdy chybělo?* Volba bez pole „Proč“ (začátek cesty): nevěděl jsem to jistě · chtěl jsem něco jiného víc · neuměl jsem to · nebylo to v mé moci. Každá možnost má spojence.
+3. *Kdo ví, udělá to.* Sókratés v Platónově Prótagorovi („Platón ho nechává říct“): otrok, větší a menší, nikdo nejde dobrovolně za zlem. Odkryj „Co by Sókratés řekl o Alexandrovi?“.
+4. *Stavitelem se stáváš stavěním.* Rozum a povaha, ctnost na oku (parafráze), stavitel, nemocní a lékař, špatný stavitel. Změň jednu věc „Řekl bys o něm, že je statečný?“ (díval se učitel · někdo ho šťouchl · vyšlo to náhodou).
+5. *Věděl to doopravdy?* Aristotelova odpověď na vlastní námitku, Sókratés jménem (`etika-1145b`), neovládnutí není špatnost, nemoc není selhání povahy, hněv a pes (`etika-1149a`). Spor Sókratés × Aristotelés.
+6. *Kde je střed?* Dvě krajnosti, „zlatý střed“ jednou a opravený, střed věci a střed vzhledem k nám, Milón na běhu a zápase, pět rozměrů (`etika-1106b`), věci bez středu, kresba, námitka kruhu s jednou větou o svobodných mužích, přiznání (`etika-1109b`). Krok nemá blok s odpovědí.
+7. *Jak dlouho to trvá?* `etika-1147a`, 21 dní a plastický chirurg, studie z roku 2010 (co měli dělat, co se měřilo), Volba s odhadem, „Co vyšlo“ s grafem dvou účastníků, Volba „Komu ten pokus dává za pravdu?“.
+8. *Tvoje pravidlo.* `etika-1179b`, kdo dá za pravdu komu (Sókratés a kus Aristotela, Epiktétos jednou větou, Aristotelés tomu, kdo ví a neudělá, i tomu, kdo se ptá, kdo určí střed), odkaz na otázku 1, rada o křivém dřevě (`etika-1109b-drevo`), karta Zkus to žít „Kam tě to táhne?“, panel Na začátku × Teď. Návrat „Třetí týden“.
+
+Čas na štítku je 30 minut (asi 3 470 slov a ovládání; `node scripts/slova-cesta.mjs staci-vedet-co-je-spravne`). Je to nejdelší cesta atlasu; nejdelší krok je 5.
+
+**Použité citáty (12, každý jednou):** `protagoras-352b`, `protagoras-356c`, `protagoras-358d`, `etika-1103a`, `etika-1105b`, `etika-1145b`, `etika-1149a`, `etika-1106b`, `etika-1109b`, `etika-1147a`, `etika-1179b`, `etika-1109b-drevo`. S portrétem (14 citátů) nemá cesta žádný společný; `etika-1106a` (oko) je v cestě jen parafrází. Z citátů vyhrazených cestě zůstaly nepoužité `protagoras-352c`, `-352d`, `-358c`, `etika-1103b`, `-1106b-milon`, `-1107a`, `-1109a`, `-1095a`, `-1147b`, `-1152a`, `-1179b-reci` a `-1179b-puda`.
+
+**Co se v celku smí ještě jednou a co už ne** (tentýž doložený detail nejvýš dvakrát):
+
+- Patnáct let mezi Sókratovou smrtí a Aristotelovým narozením: portrét dvakrát (Doba a lidé, Kdo žil dřív?), cesta ani jednou. Už ne.
+- Rok 343, třináctiletý Alexandr, král Filip: portrét jednou (kapitola 04), cesta jednou (krok 1). Už ne.
+- Ctnost oka: portrét jednou (citát a výklad), cesta jednou (parafráze v kroku 4). Už ne.
+- Špatný stavitel: krok 4 a třetí Aristotelův argument ve Sporu. Už ne.
+- Vědění vláčené sem a tam jako otrok: `protagoras-352b` (krok 3), `etika-1145b` (krok 5, Aristotelés cituje Sókrata) a přitakání ve Sporu. Jsou to tři různá místa pramene, ale obraz zazní třikrát: revize ať řekne, jestli je to moc.
+- „Musí to s ním srůst, a to chce čas“: druhý Aristotelův argument ve Sporu (parafráze) a citát v kroku 7. Už ne.
+- Špatný člověk o své špatnosti neví: krok 5 a krok 8. Už ne.
+- Hostina: krok 1; kroky 2, 3 a 5 na ni jednou větou odkazují a Odkryj v kroku 3 se k ní vrací otázkou. Opilost jen v kroku 1.
+- Nemocní a lékař, Milón, 21 dní, čísla studie: jednou.
+
+**Co se změnilo mimo cestu.**
+
+- Portrét Aristotela: název cesty je v kapitolách 01 a 04 odkaz; Kam dál má cestu 4 první a otázku 1 poslední.
+- Sókratés je filozofem dvou cest: jeho hlavička má cesty 1 a 4, karta v Lidech dva řádky.
+- Stránka otázky 1 má dvě karty cest (4 a 6) pod nadpisem „Cesty k otázce“; hlas Aristotela se nezměnil. Přehled otázek má u otázky 1 dva odkazy.
+- Volba: nové pole schématu `bezDuvodu` (blok bez „Proč právě tohle?“).
+- Dílna bloků: osmá kresba. Domů: po dokončení cesty 1 „zbývají 4 cesty“.
+- Skripty: `scripts/slova-cesta.mjs` (čas cesty), `scripts/snimky-prvek.mjs` umí víc klepnutí za sebou.
+- `docs/design.md` (Volba, Zkus to žít v cestě, kresba Kde je střed?, Cesta), `docs/architektura.md` (řádek cesty 4), `docs/pouceni.md` (tři věty).
+
+**Co si nese revize (P10).**
+
+- Kresbu „Kde je střed?“ autor ještě nepotvrdil. Polohy bodu a činy lidí na břehu jsou naše volba; z Aristotela kresba drží jen to, že střed není v půli a není pro každého stejný.
+- Cesta má 30 minut. Kvůli délce se nekrátí, ale revize ať řekne, co je v ní dvakrát.
+- Otevřené body autora: obrázek pro vstup cesty, třetí Aristotelův argument ve Sporu cesty 3 (návrh v podkladovém listu), složka `ucitel/`, popisek odlitku (inv. I 246 ve Vídni), uložení skillů v účtu.
+- Naše převody a spojení, které má revize přečíst s podklady: „hazarduje“ pro krajnost odvahy, strom a hora k `protagoras-356c`, Sókratova domyšlená odpověď o Alexandrovi, graf dvou účastníků, jeden vynechaný den, „král“ a „Střední Asie“ (`k-overeni.md`, Po P8).
+- `scripts/kontrola-fokus.mjs` hlásí u kroků 7 a 8 pole pod lištou po `focus()`; stejně to hlásí u cest 3 a 5. Skutečný tabulátor hlídá `tests/e2e/fokus-lista.spec.ts` a průchod klávesnicí v `tests/e2e/cesta4.spec.ts` prošel.
+- Skilly: kopie ve `skills/` se v P8 neměnily. Do `atlas-cesta` by patřily dvě věty (Volba bez pole „Proč“ u bolestné otázky; výzva Zkus to žít v posledním kroku), pokud je autor chce.
+
+**Čeká na autora.**
+
+1. Kresba „Kde je střed?“: potvrdit, nebo říct, co změnit.
+2. Obrázek pro vstup cesty (skříňka ze slonoviny z The Met, jiný, nebo žádný).
+3. Třetí Aristotelův argument ve Sporu cesty 3: upravit při revizi, nebo nechat být.
+4. Složka `ucitel/`.
+5. Z P7: uložit skill `atlas-osobnost` v účtu; popisek odlitku.
+
+## Zadání P10: Revize celku 5
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Opus 5.5 · high. Zadání počítá s úsporným čtením (`CLAUDE.md` › Co číst a jak šetřit) a s tím, že se nálezy průběžně neschvalují. Před odesláním doplň, co platí pro kresbu.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-5; je v ní portrét Aristotela z P7.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-5. Portrét Aristotela, cesta 4 a kresba „Kde je střed?“ jsou v ní hotové a commitnuté.
 
-Přečti CLAUDE.md, docs/styl.md, docs/pouceni.md a v docs/plany/celek-5.md tabulku stavu a oddíl Po P7. Z docs/podklady/celek-5-staci-vedet.md si vypiš nadpisy a čti jen: Čeho se drží celý celek, Jak převádím klíčová slova, Nejsilnější příběhy 1, celý oddíl Tvrzení: cesta 4 (od Vstupního příběhu po Návrh kroků), Velká otázka 1, Citáty (sloupec Kde použít), z Obrázků řádky B2 a B3 a Rozpory a rozhodnutí; z Citlivých míst jen Další místa, na která si dát pozor. V docs/podklady/k-overeni.md jen oddíl Celek 5 a Po P7. Z portrétu src/content/osobnosti/aristoteles.mdx přečti kapitoly 01 a 04 (co už říká o ctnosti, o Alexandrovi a o přátelství). Jako vzor cesty si z src/content/cesty/je-to-co-vidim-cela-skutecnost/ přečti přehled cesty, jeden krok s blokem a poslední krok; jako vzor kresby s pohybem jednu hotovou kresbu s posuvníkem a její soubor v src/lib. Postupuj podle skillu atlas-cesta; kresbu stav podle skillu atlas-komponenta.
+Kresba „Kde je střed?“ (potvrzuji; chci změnit: …): 
 
-Moje odpovědi na otevřené otázky (kde nic není, platí doporučení z podkladů; obrázek bez mého souhlasu nestahuj a vstup cesty pak nech s ornamentem a mincí):
-- Obrázek pro vstup cesty (skříňka ze slonoviny z The Met, inv. 17.190.173; jiný; žádný): 
-- Pověst o Fyllidě v popisku obrázku: 
-- Třetí Aristotelův argument ve Sporu cesty 3 podle Metafyziky 981a (upravit teď; nechat na revizi; nechat být): 
-- Složka ucitel/ s citlivými místy (teď; později pro celý atlas): 
+Udělej revizi celku 5 podle skillu atlas-revize. Do celku patří:
+- portrét Aristotela (src/content/osobnosti/aristoteles.mdx a jeho bloky aristoteles-*.yaml);
+- cesta 4 „Stačí vědět, co je správné?“ (přehled, osm kroků, bloky cesta4-*.yaml, Odkryj v kroku 3, případ pro Návrat);
+- kresba „Kde je střed?“ v kroku 6 (src/lib/stred.ts, src/components/ostrovy/KdeJeStred.svelte) a graf v kroku 7;
+- stránka velké otázky 1 „Jak mám žít?“ jen v tom, co se změnilo: dvě cesty k otázce a Aristotelův hlas vedle cesty 4;
+- propojení: hlavičky profilů Aristotela a Sókrata, Kam dál portrétu, přehled otázek, Lidé, Domů;
+- co se od P7 chová jinak v celém atlasu: skupiny „S kým se přel na dálku“ a „Kdo se s ním přel později“ v Době a lidech (stránky Sókrata a Prótagora), mini mapa s posunutým výřezem, Roztřiď v čtenářském sloupci.
 
-Napiš cestu 4 „Stačí vědět, co je správné?“ (období 1, velká otázka 1) podle Návrhu kroků v podkladech. Osm kroků; uprav je, když najdeš lepší stavbu.
+Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md, docs/pouceni.md;
+- v docs/plany/celek-5.md oddíly „Co si celek nese z celků 1 až 4“, „Po P7“ a „Po P8“;
+- docs/podklady/celek-5-staci-vedet.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (portrét, cesta, citlivá místa, citáty, obrázky), ne celý list naráz;
+- z docs/podklady/k-overeni.md oddíl Celek 5 s částmi Po P7 a Po P8; z docs/rozhodnuti.md záznamy z 5. a 8. 10. 2026;
+- v docs/design.md oddíly Cesta, Velká otázka a z Komponent Kresbu s pohybem (jen Rám a Kde je střed?);
+- jako vzor záznamu jen začátek docs/revize/celek-4-2026-10-04.md (formát a hloubka nálezů).
+Podklady a obsah celků 1 až 4 jinak nečti; z portrétu Sókrata a Platóna jen místa, na která celek 5 odkazuje.
 
-1. Háj a hostina. První obrazovka je Mieza; opilost jednou větou; pokus o sebevraždu po činu se nevypráví; hned po scéně otázka pro studenta. Text netvrdí, čemu Aristotelés Alexandra učil, ani opak: Plútarchovo „zdá se“ zůstává. Arriánův soud jen parafrází s vypravěčem. Portrét říká o Alexandrovi tři věty a posílá sem: cesta musí stát i bez portrétu.
-2. Začátek cesty: Volba „Co ti tehdy chybělo?“ (cesta4-co-chybelo; pole zacatek v přehledu cesty), bez zápisu vlastního příběhu.
-3. Sókratés: kdo ví, udělá to. „Platón nechává Sókrata říct“; mluv o větším a menším, ne o slasti. Malý Odkryj podle podkladů.
-4. Aristotelés: stavitelem se stáváš stavěním; nemocní a lékař; Změň jednu věc „Kdy je to jeho?“. Zvyk není dril.
-5. Spor Sókratés × Aristotelés. Obě strany odpoví na nejsilnější námitku druhé a Aristotelés Sókratovi z půlky přitaká (1147b14–17). Na telefonu čte student jednu stranu celou před druhou: první strana neodpovídá na to, co ještě nezaznělo.
-6. Kde je střed? Milón na běhu a zápase, ne na jídle; kresba s pohybem na odvaze u řeky; přiznání, že se střed nedá vymezit slovy (etika-1109b). Střed není průměr a není pro každého stejný; „zlatý střed“ smí zaznít jednou jako to, co student zná, a hned se opravit. Kresbu mi pošli na snímcích dřív, než ji popíšeš jako hotovou.
-7. Nový případ: studie o návycích z roku 2010. Čísla (96, 82, 39, 18–254, 66) nejdřív ověř ještě jednou v plném textu; „zkoušela“, ne „dokázala“; řekni, co měli účastníci dělat a co se měřilo; rozdíl mezi druhy úkonů neuváděj; z vody po snídani ke ctnosti vede jen naše přirovnání.
-8. Tvoje pravidlo: kdo dá za pravdu komu (i studentovi, který s Aristotelem nesouhlasí, a tomu, kdo se ptá, kdo určí střed), panel Na začátku × Teď, výzva, Návrat „Třetí týden“ (cesta4-navrat).
+Na co se dívej zvlášť:
 
-Co do cesty nepatří: laguna, delfín, zuby, čtyři „proč“, most, tři druhy přátelství, Hermeiás, odchod z Athén a závěť (nese portrét); štěstí jako činnost a vlaštovka (stránka otázky 1); vnější dobra a hněv proti Epiktétovi (Spor cesty 5); „takovým ses udělal sám“ (stránka otázky 4); odkládání a obrazovky (cesta 34); „vůle“ (cesta 10); příklady o jídle, váze a závislosti; výčet z Etiky Nikomachovy VII, 5 (jen obecná věta). Místo „slabá vůle“ piš „neudržel se“ a „nedodržel, co sám uznal“. Citát etika-1106a (oko) je v portrétu: v cestě nejvýš jednou. Věta „Jsme to, co opakovaně děláme“ smí být v jednom Odkryj jako věta, kterou Aristotelés nenapsal. Kdo žil dřív? Sókratés × Aristotelés je v portrétu; v cestě ho neopakuj. Otroctví do cesty nepatří; nejvýš jedna věta u námitky „kdo určí střed“.
+1. Tón. Největší riziko celku je kázání. Projdi cestu jako student, který říká „vím, co je správné, a stejně to neudělám“: vyjde z ní někde jako slaboch? A jako student, který se ptá „kdo určí, kde je střed?“: najde myslitele, který mu dá za pravdu, a řekne mu to poslední krok? Čti první obrazovku každého kroku, všechny zpětné vazby a výzvu „Kam tě to táhne?“.
+2. Student, kterého se téma bolestně týká. Krok 1 (opilost a zabití přítele), krok 2 (čtvrtá možnost „nebylo to v mé moci“), krok 5 (nemoc není selhání povahy; hněv „za omluvu nemá“), krok 7 (komu se návyky nedaří), Návrat „Třetí týden“. Nikde příklad o jídle, váze, závislosti nebo odkládání; nikde „slabá vůle“.
+3. Vstupní příběh proti podkladům. Text nesmí tvrdit, čemu Aristotelés Alexandra učil, ani opak; Plútarchovo „zdá se“; Arriánův soud jen parafrází; co se nevypráví. Porovnej každou větu kroku 1 s tabulkami „Vstupní příběh“ a „Co se stalo potom“.
+4. Kdo mluví. Sókratova slova jsou z Platónova Prótagory a text to říká; měří se větší a menší, ne slast. Sókratova odpověď o Alexandrovi a jeho třetí argument ve Sporu jsou domyšlené a musí tak znít. Aristotelés Sókratovi z půlky přitaká (1147b14–17).
+5. Spor na telefonu. Sókratés stojí první: odpovídá jen na to, co už zaznělo? Má Aristotelés poslední slovo právem, nebo Sókratovi chybí odpověď?
+6. Střed. Není průměr, není pro každého stejný, některé věci ho nemají, nedá se vymezit slovy; „zlatý střed“ jednou. Kresba: říká text kroku i text pod kresbou totéž co ona? Nevypadá jako měřák správné odpovědi? Obstojí šest stavů (hlavně plavčík v rozvodněné řece a neplavec, který „jen“ volá o pomoc)? Jde pohyb zastavit, stojí při omezeném pohybu, jde všechno klávesnicí, jsou popisky čitelné na telefonu?
+7. Studie o návycích. Čísla a formulace porovnej s podklady a s oddílem Po P8 v k-overeni.md: co měli účastníci dělat, co se měřilo, „zkoušela“, ne „dokázala“; výhrady jen ve zpětné vazbě; rozdíl mezi druhy úkonů nikde. Graf dvou účastníků: je poctivý jako kresba směru, nebo vypadá jako data?
+8. Opakování. Drž se seznamu „Co se v celku smí ještě jednou a co už ne“ v oddílu Po P8 a seznamů citátů v oddílech Po P7 a Po P8: tentýž citát a tentýž doložený detail nejvýš dvakrát v celku. Projdi portrét, cestu a stránku otázky 1 za sebou, jak je projde student. Zvlášť obraz vědění vláčeného jako otrok (třikrát).
+9. Každá kombinace. Všechny možnosti čtyř Voleb, tři podmínky Změň jednu věc se všemi třemi odpověďmi, Odkryj, Spor, tři odpovědi Návratu, bloky portrétu (dva Roztřiď, Změň jednu věc, Volba, Odkryj) i s vlastní kartou.
+10. Citlivá místa portrétu. Otroctví a ženy v kapitole 02: stojí jako námitka, ne jako omluva ani jako odsudek bez pramene? Věta o Epiktétovi. V cestě jen jedna věta o svobodných mužích.
+11. Co se skládá z dat. Doba a lidé u Aristotela, Sókrata a Prótagora (nové skupiny sporu na dálku), mini osa, mini mapa (Pella), popisky pod deskami (odlitek, Rembrandt), vstupy v hlavičkách (Sókratés má dvě cesty), Kam dál, řádky cest u otázky 1, karty v Lidech.
+12. Délka. Cesta má na štítku 30 minut (node scripts/slova-cesta.mjs staci-vedet-co-je-spravne). Řekni, co je v ní dvakrát a co by šlo zkrátit bez ztráty myšlenky, ale sám nezkracuj.
+13. Strojový text. Všechny studentské texty celku přečti ještě jednou jen podle oddílu „Ať text nezní jako stroj“.
 
-Stránka otázky 1: přidej cestu 4 mezi cesty otázky a Aristotelův hlas nech, jak je (podklady, Velká otázka 1). Portrét: v kapitolách 01 a 04 udělej z názvu cesty odkaz, do Kam dál dej cestu 4 na první místo a otázku 1 na poslední a uprav tests/e2e/aristoteles.spec.ts. Vstupy v hlavičce profilu, karta v Lidech a přehled otázek se složí z dat: zkontroluj je. Pokud jsem souhlasil s úpravou Sporu cesty 3, uprav jen třetí Aristotelův argument podle návrhu v podkladech (Otevřené body z k-overeni, Metafyzika I, 1) a nezapomeň na druhou půlku: vědění přisuzuje tomu, kdo zná příčinu.
+Otevřené body, ke kterým chci doporučení: obrázek pro vstup cesty (skříňka ze slonoviny z The Met, inv. 17.190.173; jiný; žádný); třetí Aristotelův argument ve Sporu cesty 3 podle Metafyziky 981a (i s druhou půlkou: vědění přisuzuje tomu, kdo zná příčinu); složka ucitel/ s citlivými místy; Sókratés jako druhý filozof cesty 4; karta Zkus to žít v posledním kroku cesty; graf v kroku 7; převod „hazarduje“.
+Rozhodnuté, neotvírej (ledaže je nález blokující): tři myšlenky portrétu, Spor Sókratés × Aristotelés, začátek cesty Volbou bez zápisu, nový případ je studie o návycích, hlas Aristotela na stránce otázky 1, „ctnost“ jako převod areté, místo „slabá vůle“ „neudržel se“.
 
-Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč jen jako citát ze zdroje.yaml; věty Plútarcha a Arriána v datech nejsou a zůstanou parafrází s vypravěčem. Doporučená formulace nesmí být silnější než tvrzení v podkladech. Tradované jako „Vypráví se, že…“ nebo s vypravěčem. Jména střídmě: Alexandr, Filip, Kleitos, Milón jednou; ostatní popiš. Texty mají znít jako psané člověkem (styl.md).
+Drobnosti oprav rovnou (překlep, sazba, věta nad 25 slov, odkaz, test). Zásadní nálezy neopravuj: seřaď je podle dopadu, ke každému napiš místo, proč vadí a návrh opravy. Záznam ulož do docs/revize/celek-5-<datum>.md s verdiktem (hotovo · po opravách · přepracovat).
 
-Tón: žádné kázání. Student, který řekne „vím, co je správné, a stejně to neudělám“, nesmí vyjít jako slaboch, a ten, kdo řekne „kdo určí, kde je střed?“, má v cestě najít myslitele, který mu dá za pravdu. První obrazovku každého kroku čti očima studenta, kterého se téma bolestně týká (zabití přítele v opilosti; návyky, které se nedaří; co je z nemoci, není neovládnutí).
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když jednou spadne krok „astro-island[ssr]“ v tests/e2e/cesta.spec.ts, spusť test znovu); projdi portrét a cestu na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs, scripts/snimky-cesta.mjs, scripts/snimky-prvek.mjs) a jednou jen klávesnicí; scripts/kontrola-fokus.mjs na portrét a kroky cesty.
 
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když jednou spadne krok „astro-island[ssr]“ v tests/e2e/cesta.spec.ts, spusť test znovu); cestu přidej do STRANKY v tests/e2e/prohlidka.spec.ts a napiš její průchod podle vzoru tests/e2e/cesta3.spec.ts; čas cesty na štítku spočítej ze slov (150 za minutu a ovládání); projdi ji na 390 a 1440 px ve světlém i tmavém režimu (snímky skriptem scripts/snimky-cesta.mjs) a na 800 px se podívej na bloky. Po přidání cesty restartuj npm run dev.
-
-Osnovu mi neposílej a na schválení nečekej, kromě kresby (snímky dřív, než ji nazveš hotovou). Kde váháš, zvol nejlepší cestu a pracuj. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-5.md stav po P8 (použité citáty, co si nese revize), připrav tam zadání P10 (revize celku skillem atlas-revize) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-5.md a plán větve aktualizuj i v projektu Claude. Pak mi pošli snímky cesty a napiš, co jsi zvolil, nad čím jsi váhal a co jsi vynechal nebo připsal do k-overeni.
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-5.md stav po P10 a připrav tam zadání oprav s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-5.md, do docs/pouceni.md připiš, co se z revize má dodržovat příště, a plán větve aktualizuj i v projektu Claude. Pak mi napiš verdikt, nálezy podle dopadu a co jsi opravil sám.
 ```

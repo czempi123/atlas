@@ -405,3 +405,30 @@ Autorské, bez historického nároku: možnosti a zpětné vazby Volby „Co ti 
 Vynecháno z podkladů, aby portrét nenesl víc jmen a příběhů, než unese: bronzová koule, lékař a „nejdřív mi řekni příčinu“, pocty v Delfách, obnova Stageiry, Kallisthenés, Íliada a všechno o Mieze (nese cesta 4), věta o člunkách (`politika-1253b-clunky`: vedle otroctví by zněla jako omluva), citát ze závěti o otrocích (`dl-v-15`: fakta říká text, citát by zněl jako polehčující okolnost), „jedna duše ve dvou tělech“ (`dl-v-20`), `etika-1103b`, druhá námitka k pozorování (chybí pokus a měření), Cicero a jména Herpyllis a Níkomachos (popsáni, ne jmenováni).
 
 Autorské, bez historického nároku: příklad s nemocným Honzou ve výkladu čtyř „proč“, otázky v kurzívě na koncích kapitol, spojení Hermeia s třemi druhy přátelství (otázka pro studenta, ne tvrzení o Aristotelovi), spojení červené tečky ve vejci s otázkou „k čemu je“ a výzva Zkus to žít.
+
+### Po P8 (cesta 4)
+
+8. 10. 2026. Cesta je v `src/content/cesty/staci-vedet-co-je-spravne*`, bloky `cesta4-*.yaml`, kresba `src/lib/stred.ts`. Vyřízeno z bodů výše: čísla studie o návycích a londýnská univerzita. Plný text (P. Lally a kol. 2010) jsem tentokrát četl sám: repozitář ISPA má vedle PDF i holý text studie a šel stáhnout z autorova Macu. Sedí 96 dobrovolníků, 82 s dostatkem údajů, křivka proložená u 62 a dobře u 39, 18 až 254 dní, medián 66, dvanáct týdnů (84 dní). Autoři jsou z University College London a studie se nabízela studentům univerzity. Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Příklady úkonů ve studii | Podklady psaly „sklenice vody po snídani“. Ve studii je „after breakfast“ jen příklad situace; příklady úkonů jsou ovoce k obědu, láhev vody k obědu a patnáct minut běhu před večeří. | Cesta píše „vypít k obědu láhev vody“ a „čtvrt hodiny běhat před večeří“; ovoce vynechává (žádný příklad o jídle). Podkladový list neopravuji, platí tento řádek. |
+| „Většinou studentů“ | Studie: převážně postgraduální studenti, 21 až 45 let, průměr 27. | Stačí; věk text neuvádí. |
+| Jeden vynechaný den | Studie: po vynechání bylo skóre další den o něco nižší (statisticky neprůkazně) a dlouhodobě se to neprojevilo. Text: „Na tom, jak mu to šlo dál, se jedno vynechání neprojevilo.“ | Při revizi porovnat; nezesilovat na „nevadí vynechávat“. |
+| „U většiny rostla nejdřív rychle, pak pomaleji“ | Křivka toho tvaru šla proložit u 62 z 82 lidí; u dvanácti ne. | Stačí „u většiny“. |
+| Graf v kroku 7 | Dvě křivky („Jeden účastník“, „Jiný účastník“) nejsou data dvou skutečných lidí. Je to kresba směru: jedna se zastaví brzy, druhá roste do konce pokusu (jako u toho, komu vyšlo 254 dní). | Kdyby revize chtěla jen doložené, graf vypustit; text drží i bez něj. |
+| Král a Střední Asie | „Je králem a s vojskem došel až do Střední Asie“ stojí na Britannice (Marakanda) a na řádcích podkladů o tažení; samostatný řádek v podkladech to nemá. | Obecná znalost; nezesilovat. |
+| „Víc než čtyřicet let“ | Sókratés zemřel 399, Alexandr se narodil 356 (podklady, Rozpory): dopočítáno 43 let. | Nic. |
+| Strom a hora | „Strom u cesty vypadá vyšší než hora na obzoru“ je náš příklad k citátu `protagoras-356c`; v dialogu není. | Hlídat, aby nestál v uvozovkách ani u Sókratova jména. |
+| „Hazarduje“ | Krajnost odvahy na straně „příliš“ (thrasytés) podklady převádějí jako „smělost“; cesta píše „kdo se nebojí ničeho, není statečný, ale hazarduje“. | Je to náš převod; při revizi zvážit. |
+| Výběr z věcí bez středu | Aristotelés jmenuje škodolibost, nestoudnost, závist, cizoložství, krádež a vraždu (1107a6–17); cesta bere závist, krádež a vraždu. | Nic. |
+| Kruh | „Ten, kdo střed trefuje? Pak se točíme v kruhu.“ je námitka z výkladu (podklady, Kdo dá za pravdu komu), ne Aristotelova slova. Věta o svobodných mužích je jediná zmínka o tom, kdo se v obci počítal. | Text ji klade jako otázku; nepřipisovat ji Aristotelovi. |
+| Kresba „Kde je střed?“ | Kde bod na čáře leží a co kdo na břehu udělá (plavčík skočí i do rozvodněné řeky na laně, neplavec hází lano nebo volá o pomoc), je naše volba. Že neplavec nemá skákat, je běžná rada, ne pramen. Z Aristotela kresba drží jen: střed není v půli a není pro každého stejný. | Nic; kresba nesmí dostat čísla. |
+| Sókratova odpověď o Alexandrovi | Srovnání v Odkryj kroku 3 („Nejspíš tohle: … to nevěděl“) je domyšlené z Prótagory 356c–358d; Sókratés zemřel před Alexandrovým narozením. | Text to říká jako odhad; nezměnit na tvrzení. |
+| Sókratův třetí argument ve Sporu | „Sókratés by se mohl zeptat: a podle čeho poznáš, které jednání je dobré?“ je domyšlená odpověď (podklady: bez vědění je zvyk slepý). Příklad s ohněm a s písemkou je náš. | Zůstává s „by se mohl“. |
+| Epiktétos v závěru | „Učil, že lidi neznepokojují věci, ale to, co si o nich myslí“ stojí na `rukojet-5` (celek 3). Že tím stoikové navazují na Sókrata, text netvrdí. | Nic. |
+| Vstupní obrázek, Fyllis, Spor cesty 3, `ucitel/` | Odpovědi autora zůstaly prázdné. | Vstup má ornament a minci; třetí Aristotelův argument ve Sporu cesty 3 čeká na revizi nebo na autora (návrh v podkladovém listu, Otevřené body z k-overeni). |
+
+Nepoužito z podkladů: svatební hostina s Filipem, Anaxarchos, Kallisthenés, obnova Stageiry, Alexandrova věta o otci a učiteli, mnichovská studie z roku 1997, kritici nauky o středu, citáty `protagoras-352c`, `-352d`, `-358c`, `etika-1103b`, `-1106a`, `-1106b-milon`, `-1107a`, `-1109a`, `-1095a`, `-1147b`, `-1152a`, `-1179b-reci` a `-1179b-puda` (některé jen parafrází), obraz lechtání (1150b22), „od mládí… spíš všechno“ (1103b23–25), zákony a tresty (X, 9) a věta „Jsme to, co opakovaně děláme“.
+
+Autorské, bez historického nároku: možnosti a zpětné vazby všech čtyř Voleb, modelové odpovědi v Odkryj, scéna se spolužákem u tabule a její tři podmínky, příklad s řekou, případ „Třetí týden“, výzva „Kam tě to táhne?“ a otázky v kurzívě na koncích kroků 1 a 6. Spojení Aristotelova přirovnání o psech s hostinou a spojení studie o návycích s jeho ctností jsou naše; text to říká („O Alexandrovi tu Aristotelés nepíše“) a u studie to nese zpětná vazba.

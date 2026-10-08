@@ -21,6 +21,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Koše v Roztřiď odpovídají na otázku bloku stejným tvarem („Ze zkušenosti · Od lidí · Z obrazovky“) a každá karta má koš, kam se dá poctivě dát.
 - Změň jednu věc: možnosti dávají smysl v každé podmínce a zpětná vazba neusuzuje z možnosti, kterou student nezvolil. Nadpis „Co udělal…“ nestojí nad domněnkou; tam patří „Co by na to řekli“.
 - Zpětná vazba vidí, co student zvolil nebo kam kartu dal, vysvětluje důvod a ptá se dál. Žádná možnost nedostane pokárání.
+- Otázka na vlastní selhání nebo bolestnou chvíli nemá pole na psaní: Volba s `bezDuvodu: true` uloží jen zvolenou možnost a text kroku říká „Nikam ji nepiš“.
 - Vlastní karta v Roztřiď: zpětná vazba se ptá, proč ji student dal do koše, ne jak moc si jí je jistý. U karty s něčím bolestným to zní jako pochybnost o tom, co zažil.
 
 ## Celek
@@ -31,7 +32,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec.
 - Čtyři citáty za sebou student přeskakuje.
 - Délka se kvůli délce nekrátí: zvídavý student si přečte víc (rozhodnutí autora).
-- Čas cesty na štítku (`minut`) se počítá: slova, která student opravdu přečte, při 150 za minutu, a k tomu ovládání. Neopisuje se z minulé cesty.
+- Čas cesty na štítku (`minut`) se počítá: slova, která student opravdu přečte, při 150 za minutu, a k tomu ovládání. Neopisuje se z minulé cesty; počítá ho `node scripts/slova-cesta.mjs <slug>`.
+- Čísla ze studie ověř v plném textu sám, ne přes nástroj, který stránku převypráví: repozitáře mívají vedle PDF i holý text a jde stáhnout z autorova Macu (`curl`). Příklad, který zní jako ze studie („sklenice vody po snídani“), porovnej s tím, co ve studii opravdu stojí.
 
 ## Student, kterého se téma bolestně týká
 

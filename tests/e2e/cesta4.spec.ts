@@ -235,6 +235,7 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(obsah7).toContainText('požádali 96 dobrovolníků, většinou studentů');
   await expect(obsah7).toContainText('dvanáct týdnů každý den ve stejné situaci');
   await expect(obsah7).toContainText('jestli to dělají automaticky a bez přemýšlení');
+  await expect(obsah7).toContainText('plastického chirurga, který si v roce 1960 všiml');
   await expect(obsah7).toContainText('O návycích nepsal nic.');
   const odhad = page.locator('#cesta4-navyk-odhad');
   const zpetna7 = await volbaKlavesnici(page, odhad, /Nikdy úplně/);

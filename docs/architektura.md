@@ -93,7 +93,7 @@ Cesta je 15–20 minut vedeného průchodu: příběh, vlastní pokus, setkání
 | 1 | 1 | Kdy mám dobrý důvod věřit? | Chairefón se v Delfách ptá, zda je někdo moudřejší než Sókratés | Sókratés, Prótagorás | 7 |
 | 2 | 1 | Jsem pořád tentýž, když se měním? | Théseova loď a Hérakleitova řeka | Hérakleitos, Parmenidés | 5 |
 | 3 | 1 | Je to, co vidím, celá skutečnost? | Platónova jeskyně a dnešní bubliny ze sociálních sítí | Platón | 6 |
-| 4 | 1 | Stačí vědět, co je správné? | Aristotelés vychovává mladého Alexandra | Aristotelés | 1 |
+| 4 | 1 | Stačí vědět, co je správné? | Aristotelés učí mladého Alexandra; hostina o patnáct let později | Aristotelés, Sókratés | 1 |
 | 5 | 2 | Co mám ve svých rukou? | Epiktétův pán mu kroutil nohou; Marcus píše v noci u Dunaje | Epiktétos, Marcus Aurelius | 4 |
 | 6 | 2 | Kolik je dost? | Epikúrova zahrada, chléb a voda | Epikúros | 1 |
 | 7 | 2 | Čí život vlastně žiju? | Diogenés žádá Alexandra, ať mu nestíní | Diogenés, Kratés a Hipparchia | 1 |

@@ -4,6 +4,24 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Cesta 4 „Stačí vědět, co je správné?“ (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vstup cesty je bez obrázku: deska s ornamentem a mincí. Pověst o Fyllidě v atlasu není. Třetí Aristotelův argument ve Sporu cesty 3 zůstal, jak je. Složka `ucitel/` nevznikla | Všechny čtyři odpovědi autora v zadání P8 zůstaly prázdné. Obrázek se bez souhlasu nestahuje; úprava hotové cesty 3 a složka `ucitel/` čekají na revizi celku nebo na autora |
+| Filozofové cesty jsou Aristotelés a Sókratés (katalog cest měl jen Aristotela) | Sókratés nese celý krok 3 a polovinu Sporu. Cesta je tak dosažitelná i z jeho profilu: v hlavičce má cesty 1 a 4 |
+| Začátek cesty je Volba bez pole „Proč právě tohle?“ (`bezDuvodu: true`, nové pole schématu Volby) | Otázka se ptá na chvíli, kdy student věděl, co je správné, a neudělal to. Důvod by byl zpověď uložená v deníku; ukládá se jen druh důvodu |
+| Čtvrtá zpětná vazba začátku („nebylo to v mé moci“) se neptá, jestli by v jeho moci nebylo aspoň něco menšího, jak navrhovaly podklady. Ptá se po jiné chvíli pro zbytek cesty | U studenta, kterému někdo ubližuje, by otázka z podkladů zněla jako pochybnost o tom, co zažil |
+| Krok 4: stejný správný čin z různých důvodů je zastání spolužáka, ne nalezená peněženka z podkladů | Peněženku má Návrat cesty 3. Zastání je navíc odvaha, na které stojí i kresba v kroku 6, a je mezi příklady v Aristotelově větě o staviteli |
+| Krok 6 nemá blok s odpovědí; jeho úkolem je kresba „Kde je střed?“ a otázka pod ní | Návrh kroků v podkladech; tři Volby za sebou (kroky 6 a 7) by cestu zploštily. Námitku „kdo určí střed“ nese text kroku a závěr |
+| Kresba „Kde je střed?“: výchozí stav je dobrý plavec u klidné vody; bod leží pro šest stavů na šesti místech a nikdy v půli; neplavec neskáče nikdy; kresba nemá čísla | Oba přepínače mají bodem pohnout hned; kresba nesmí vypadat jako měřák správné odpovědi. Polohy bodu jsou naše volba (`src/lib/stred.ts`, `k-overeni.md`) |
+| Krajnost odvahy na straně „příliš“ se v cestě jmenuje slovesem „hazarduje“, ne „smělost“ ani „zbrklost“ | „Smělost“ zní česky jako pochvala; „zbrklost“ je v podkladech vyhrazená jednomu druhu neovládnutí |
+| Opilý, který odříkává verše (1147a20), ve Sporu není; stojí tam jen ten, kdo se věc právě naučil | Opilost má v cestě jednu větu (zadání). Podklad to dovoluje: postoj strany stojí na `etika-1147a` |
+| Studie o návycích: úkony se jmenují podle studie („vypít k obědu láhev vody“, „čtvrt hodiny běhat před večeří“), ne „sklenice vody po snídani“ z podkladů. Krok má vlastní graf dvou účastníků | V plném textu studie je „after breakfast“ jen příklad situace; uvedené příklady úkonů jsou tyhle. Graf je kresba směru: jedna křivka se zastaví brzy, druhá roste do konce pokusu |
+| Poslední krok má výzvu jako kartu Zkus to žít („Kam tě to táhne?“), ne jako odstavec | Přijatá výzva se zapíše do deníku jako u profilů. Stojí na Aristotelově radě (1109b1–7) a výslovně dovoluje nezkoušet nic |
+| „Patnáct let“ mezi Sókratovou smrtí a Aristotelovým narozením v cestě nestojí | Číslo má portrét dvakrát (Doba a lidé, Kdo žil dřív?); cesta říká jen, že se nepotkali |
+| Čas cesty je 30 minut | Spočítáno skriptem `scripts/slova-cesta.mjs`: asi 3 470 slov a ovládání. Je to nejdelší cesta; kvůli délce se nekrátí (rozhodnutí autora) |
+
 ## 5. 10. 2026: Portrét Aristotela (P7)
 
 | Rozhodnutí | Důvod |
