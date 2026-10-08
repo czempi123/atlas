@@ -1,0 +1,16 @@
+---
+// Zrcadlo času: kresba k Lucretiovu argumentu (cesta 8, krok 4). Pohled „Zrcadlo“ překlopí čas po smrti na čas
+// před narozením; pohled „Námitka“ nechá studenta zkusit život prodloužit dopředu a dozadu.
+// Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <Zrcadlo id="zrcadlo-casu" />
+import Ostrov from '../ostrovy/Zrcadlo.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'zrcadlo-casu', obdobi = 2 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />
