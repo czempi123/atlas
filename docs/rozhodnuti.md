@@ -4,6 +4,17 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Celek 6 po podkladech (P6): odpovědi autora
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Podobiznou Seneky bude berlínská dvojitá herma se jménem SENECA (Antikensammlung, SK 391); fotografie muzea má licenci CC BY-NC-SA | Autor ji vybral v chatu; je to jediná antická podobizna se jménem. Stáhne se v P7 po ověření verze licence a fotografa |
+| Studentský text smí o Senekově smrti použít slovo „sebevražda“, vždy s rozkazem v téže větě („vynucená sebevražda“), ne „spáchal“; způsob se nepopisuje | Autor ji čte jako smrt na Neronův příkaz, kterou Seneca předešel popravě a následkům pro rodinu. Podklady navrhovaly slovo nepoužít. Příkaz je doložen (Tacitus, Letopisy XV, 61); ochranu pohřbu a závěti popisuje Tacitus jen obecně a pro dobu Tiberia (VI, 29). Jestli ten motiv zazní ve studentském textu, nebo jen u učitele, zbývá rozhodnout |
+| Věta z Dopisu 78 („Poručil jsem si tedy žít. Někdy je totiž statečné i žít.“) patří do portrétu, do kapitoly o mládí | Autor souhlasil; je to příběh o tom, co člověka při životě udrželo |
+| Portrét a cesta 8 nesou tichý řádek s Linkou bezpečí (116 111): jedno znění, bez výzvy a bez rámečku | Autor: „můžeš to tam dát tak jenom btw pro info“; WHO i NÚDZ kontakt doporučují |
+| Spor cesty 8 je Epikúros × Plútarchos, i když Plútarchos není v datech (strana ponese označení). Nový případ je studie o blozích lidí, kteří umírali (2017), jen její první část | Autor: „nevadí“. Plútarchos jediný vede s Epikúrem spor o strach ze smrti; studie zkouší Epikúrovu větu o čekání |
+| Ostatní volby podkladů platí bez mezikroku schvalování: osa a tři myšlenky portrétu, pět strachů, vstup cesty dopisem, kresba se zrcadlem, případ a hlasy otázky 3; Egypt do dat ne, Démokritos → Epikúros jako vliv textem | Rozhodnutí ze 4. 10. 2026; důvody jsou v `docs/podklady/celek-6-proc-se-bat-smrti.md` (Rozpory a rozhodnutí) |
+
 ## 8. 10. 2026: Celek 6
 
 | Rozhodnutí | Důvod |
