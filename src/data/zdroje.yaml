@@ -2182,7 +2182,7 @@ citaty:
     autor: Seneca
     dilo: Dopisy Luciliovi
     misto: 47, 1
-    cesky: "„Jsou to otroci.“ Ne, lidé. „Jsou to otroci.“ Ne, ti, kdo s tebou bydlí pod jednou střechou. „Jsou to otroci.“ Ne, přátelé v nízkém postavení. „Jsou to otroci.“ Ne, otroci stejně jako ty, když si uvědomíš, že osud má nad vámi oběma stejnou moc."
+    cesky: "‚Jsou to otroci.‘ Ne, lidé. ‚Jsou to otroci.‘ Ne, ti, kdo s tebou bydlí pod jednou střechou. ‚Jsou to otroci.‘ Ne, přátelé v nízkém postavení. ‚Jsou to otroci.‘ Ne, otroci stejně jako ty, když si uvědomíš, že osud má nad vámi oběma stejnou moc."
     original: "Servi sunt. Immo homines. Servi sunt. Immo contubernales. Servi sunt. Immo humiles amici. Servi sunt. Immo conservi, si cogitaveris tantundem in utrosque licere fortunae."
     preklad:
       druh: vlastni
@@ -2915,3 +2915,26 @@ obrazky:
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/437394"
     vyrez: "52% 30%"
+  # Celek 6: dvojitá herma Sókrata a Seneky (Berlín, Antikensammlung, SK 391). Fotografie muzea, CC BY-NC-SA 4.0: verzi licence
+  # uvádí záznam na museum-digital (odkaz na by-nc-sa/4.0), záznam muzea (https://id.smb.museum/object/698814) má jen
+  # „Fotonachweis: Staatliche Museen zu Berlin, Antikensammlung“; jméno fotografa neuvádí ani jeden (ověřeno 8. 10. 2026).
+  # Autor souhlasil se stažením i s licencí 8. 10. 2026. Originál 2259 × 1750 px je mimo repozitář; tady zmenšenina
+  # 1280 × 991 px (seneca-herma-smb.jpg) a výřez Senekovy hlavy z téže fotografie 904 × 1130 px pro desku (seneca-smb.jpg).
+  # Výřez je úprava ve smyslu licence: je to řečeno v poli autor a šíří se pod stejnou licencí. Datování a rok nálezu podle muzea.
+  - id: seneca-smb
+    soubor: obrazky/seneca-smb.jpg
+    popisek: "Seneca. Mramorová hlava z let 225–250 n. l. podle podobizny, která vznikla snad ještě za jeho života. Je to jediná antická podobizna s jeho jménem."
+    autor: "Staatliche Museen zu Berlin, Antikensammlung (fotograf neuveden); výřez z fotografie"
+    instituce: "Berlín, Antikensammlung, inv. SK 391"
+    licence: "CC BY-NC-SA 4.0"
+    url: "https://smb.museum-digital.de/object/13081"
+    vyrez: "45% 30%"
+    vyrezNaSirku: "45% 34%"
+  - id: seneca-herma
+    soubor: obrazky/seneca-herma-smb.jpg
+    popisek: "Dvojitá herma: vlevo Seneca, vpravo Sókratés. Mramor z let 225–250 n. l., nalezený roku 1813 v Římě."
+    autor: "Staatliche Museen zu Berlin, Antikensammlung (fotograf neuveden)"
+    instituce: "Berlín, Antikensammlung, inv. SK 391"
+    licence: "CC BY-NC-SA 4.0"
+    url: "https://smb.museum-digital.de/object/13081"
+    vyrez: "50% 40%"

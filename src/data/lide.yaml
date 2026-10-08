@@ -628,7 +628,8 @@
     nazev: přesýpací hodiny
     proc: Psal o tom, že nemáme málo času, jen ho hodně promarníme.
     zdroj: seneca-brevitate
-  zdroje: [sep-seneca, seneca-brevitate, seneca-vita-beata, iep-seneca, tacitus-annales-seneca, seneca-epistulae-zivot, seneca-epistulae-smrt, seneca-helvia, seneca-de-ira]
+  obrazek: seneca-smb
+  zdroje: [sep-seneca, seneca-brevitate, seneca-vita-beata, iep-seneca, tacitus-annales-seneca, suetonius-nero, seneca-epistulae-zivot, seneca-epistulae-smrt, seneca-helvia, seneca-polybius, seneca-clementia, seneca-de-ira, quintilianus-x-1]
 
 - id: epiktetos
   jmeno: Epiktétos
