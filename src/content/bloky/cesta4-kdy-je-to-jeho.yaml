@@ -1,0 +1,59 @@
+# Změň jednu věc · cesta 4 „Stačí vědět, co je správné?“, krok 4: stejný správný čin z různých důvodů.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Jádro: co Aristotelés tvrdí › Ctnost vzniká jednáním, řádek 7
+# (Etika Nikomachova II, 4, 1105a17–b9: správný čin × správný člověk; kdo jedná náhodou nebo na cizí pokyn).
+# Scéna, možnosti a zpětné vazby jsou autorské (zastat se spolužáka místo peněženky z podkladů: peněženku má Návrat cesty 3).
+# Tři podmínky odmyslí po jedné z Aristotelových tří věcí: volí čin kvůli němu samému (díval se učitel),
+# jedná sám od sebe (někdo ho šťouchl) a ví, co dělá (vyšlo to náhodou). Zpětná vazba ví jen to, jestli se odpověď změnila.
+# Oddíl má nadpis „Co by na to řekl“: o vymyšleném spolužákovi Aristotelés nic neřekl; druhý odstavec je výklad.
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si, že se půlka třídy směje spolužákovi, který se spletl u tabule.
+  Jiný spolužák řekne nahlas, ať toho nechají. Smích přestane.
+otazka: Řekl bys o něm, že je statečný?
+moznosti:
+  - { id: ano, text: Ano. }
+  - { id: napul, text: Napůl. }
+  - { id: ne, text: Ne. }
+podminky:
+  - id: ucitel
+    prepinac: Díval se učitel
+    zmena: >-
+      Teď si představ, že to řekl jen proto, že ve dveřích stál učitel. Bez něj by mlčel.
+    posun: >-
+      Rozhodl ses jinak, když ses dozvěděl, proč to udělal. Čin zůstal stejný a spolužákovi u tabule pomohl stejně.
+      Co se tedy změnilo?
+    stejne: >-
+      Na tom, proč to udělal, tvoje odpověď nestojí. Na čem stojí: na tom, co udělal, nebo na tom, komu to pomohlo?
+  - id: povel
+    prepinac: Někdo ho šťouchl
+    zmena: >-
+      Teď si představ, že ho do toho šťouchl kamarád z vedlejší lavice, ať jim něco řekne.
+      Sám od sebe by neřekl nic.
+    posun: >-
+      Rozhodl ses jinak, když to nebyl jeho nápad.
+      A co kdyby ho kamarád šťouchl jen poprvé a příště už to řekl sám?
+    stejne: >-
+      Na tom, čí to byl nápad, tvoje odpověď nestojí. Změnilo by ji, kdyby ho někdo musel šťouchnout pokaždé?
+  - id: nahoda
+    prepinac: Vyšlo to náhodou
+    zmena: >-
+      Teď si představ, že si smíchu vůbec nevšiml. Okřikl třídu, protože ho rušila při psaní, a smích tím přestal.
+    posun: >-
+      Rozhodl ses jinak, když nevěděl, co dělá. Dá se být statečný omylem?
+    stejne: >-
+      Na tom, jestli věděl, co dělá, tvoje odpověď nestojí.
+      Platí to i obráceně: je zbabělý ten, kdo vůbec neslyšel, že někdo volá o pomoc?
+coUdelal:
+  osoba: aristoteles
+  nadpis: Co by na to řekl Aristotelés
+  text: >-
+    Aristotelés si tu námitku položil sám: kdo jedná spravedlivě, ten přece už spravedlivý je.
+    Odpověděl, že čin a člověk jsou dvě věci. Správný čin je takový, jaký by udělal spravedlivý člověk.
+    Spravedlivý je ale až ten, kdo ví, co dělá, volí ten čin kvůli němu samému a jedná tak ustáleně.
+
+
+    O spolužákovi ze třídy nic nenapsal. Podle jeho měřítka ale ten, kdo se někoho zastane kvůli učiteli,
+    na cizí pokyn nebo náhodou, udělal dobrou věc, a statečný ještě není. Stát se jím může, a právě takovými činy.
+zdroje: [aristoteles-etika-ii]

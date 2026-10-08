@@ -101,7 +101,7 @@ test('Domů: vracející se student má tlačítko podle deníku hned, bez ček�
   await otevri({ cesty: HOTOVA });
   await expect(hlavni).toHaveText('Vybrat další cestu');
   await expect(hlavni).toHaveAttribute('href', '/otazky/');
-  await expect(udaj).toHaveText('Cesta 1 je hotová · zbývají 3 cesty');
+  await expect(udaj).toHaveText('Cesta 1 je hotová · zbývají 4 cesty');
 
   // Cizí nebo rozbitý záznam začátek nerozbije.
   await page.evaluate(() => localStorage.setItem('atlas-denik', '{"verze":1,"cesty":"nesmysl"'));

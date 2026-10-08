@@ -1,0 +1,23 @@
+# Návrat · cesta 4 „Stačí vědět, co je správné?“: kamarádka, která přestala odsekávat mámě, a třetí týden.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Návrat (případ do deníku po několika dnech).
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen.
+# Jiného druhu než nový případ cesty (studie o návycích) i než úvod stránky otázky 1 (sklad, nebo tábor).
+# Je o povaze, o hněvu z únavy a o jednom dni, kdy to nevyšlo; nejde o jídlo, závislost ani odkládání. Doma se netvrdí
+# nic zlého: máma se jen ptá. Kamarádka říká větu studenta, který s cestou nesouhlasí; její zpráva je v nepřímé řeči.
+# Dá se posoudit pravidlem Sókratovým (něco ještě neví), Aristotelovým (chce to čas) i tím, podle kterého to v její moci není.
+druh: navrat
+obdobi: 1
+cesta: staci-vedet-co-je-spravne
+pravidlo: cesta4-moje-pravidlo
+nazev: Třetí týden
+scena: >-
+  Představ si, že si kamarádka v lednu řekla, že přestane odsekávat mámě. Ví proč a myslí to vážně.
+  Dva týdny to šlo. Třetí týden přišla ze školy unavená, máma se zeptala na úkoly a bylo to zpátky.
+
+
+  Večer ti píše, že to stejně nemá cenu: ví to, a neumí to.
+  Díváš se na tu zprávu a přemýšlíš, co jí odepsat.
+po:
+  ano: Co z tvého pravidla jí pomůže zítra, až se máma zeptá znovu?
+  upravim: "Co tvému pravidlu chybělo: čas, nebo to, co dělat ve chvíli, kdy je unavená?"
+  nevim: "Na čem to vázne: na tom, co ví, nebo na tom, co už umí?"

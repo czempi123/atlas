@@ -1,0 +1,48 @@
+# Spor · cesta 4 „Stačí vědět, co je správné?“, krok 5: Sókratés × Aristotelés.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Spor: Sókratés × Aristotelés.
+# Sókratés: Platón, Prótagorás 352b–358d (slova říká Sókratés, napsal je Platón; text kroku to říká větou
+# „Platón ho nechává říct“). O slasti se nemluví, jen o větším a menším (356c–357b). Příklad s ohněm a s písemkou je náš.
+# Aristotelés: Etika Nikomachova 1145b23–28, 1147a10–24, 1147b14–17 (Sókratovi z půlky přitaká: nesmí vypadnout),
+# 1103a32–b25 a 1105b9–16. Skutečný spor přes texty, ne setkání: scéna to říká a neohlašuje vítěze.
+# Na telefonu stojí Sókratés nad Aristotelem: jeho druhý argument začíná námitkou většiny, třetí Aristotelovou námitkou
+# (domyšlená odpověď, „by se mohl zeptat“). Aristotelés mluví poslední a na Sókratovu otázku „podle čeho poznáš“ odpovídá.
+# Opilý, který odříkává verše (1147a20), v argumentu není: opilost má v cestě jednu větu.
+druh: spor
+obdobi: 1
+nadtitulek: Spor
+scena: >-
+  Sókratés zemřel dřív, než se Aristotelés narodil. Aristotelés ho ale ve svých přednáškách jmenuje a odpovídá mu.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: "Když někdo ví, co je správné, a neudělá to: věděl to doopravdy?"
+strany:
+  - osoba: sokrates
+    postoj: Nevěděl. Kdo opravdu ví, udělá to.
+    argumenty:
+      - >-
+        Nikdo si nevybere horší, když vidí lepší. Kdo sahá po horším, má ho v tu chvíli za lepší, jinak by po něm nesáhl.
+        Říct „věděl, že je to špatné, a chtěl to“ znamená říct, že chtěl, co nechtěl.
+      - >-
+        Lidé namítají: já to přece věděl, a stejně jsem to udělal. Podle Sókrata jsi špatně změřil.
+        Zítřejší písemka je daleko a zdá se malá, dnešní večer je blízko a zdá se velký.
+        Věděl jsi to jako větu; kdybys to viděl tak jasně, jako vidíš, že oheň pálí, ruku bys do něj nestrčil.
+      - >-
+        Aristotelés namítá, že dobrým se člověk stává jednáním, ne poznáním.
+        Sókratés by se mohl zeptat: a podle čeho poznáš, které jednání je dobré?
+        Kdo opakuje, co mu řekli, a neví proč, cvičí naslepo. Nepomůže mu víc se přemáhat, pomůže mu líp vidět.
+  - osoba: aristoteles
+    postoj: Věděl, ale jen tak, jako ví ten, kdo se to právě naučil.
+    argumenty:
+      - >-
+        Tohle se prostě děje. Lidé vědí, že lžou, že ubližují nebo že by měli vstát, a neudělají to.
+        Výklad, podle kterého se to neděje, odporuje tomu, co vidíme.
+        Filozofie má to, co vidíme, vysvětlit, ne popřít.
+      - >-
+        Vědět se dá dvojím způsobem. Kdo se něco právě naučil, umí řadit slova za sebe, ale ještě to neví:
+        musí to s ním srůst, a to chce čas. Kdo se neudržel, věděl takhle. Slova měl, jen s ním ještě nesrostla.
+      - >-
+        Sókratés má pravdu v tom, že to plné vědění nebylo: plné vědění se sem a tam vláčet nedá.
+        Mýlí se v tom, jak se k němu dojde. Dalším výkladem ne, ale tím, že to člověk dělá, dokud to s ním nesroste.
+        A že nestačí cvičit naslepo, ví Aristotelés taky: kdo staví špatně, stane se špatným stavitelem.
+zdroje: [platon-protagoras-vedeni, aristoteles-etika-vii, aristoteles-etika-ii]

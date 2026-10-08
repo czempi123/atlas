@@ -162,7 +162,11 @@ test('otázka 1: úvodní případ, čtyři hlasy, které se poznají, a cesta 6
   await expect(page.locator('#hlas-seneca')).not.toContainText(/Nero|sesterci/);
   // Diogenés bez scén z profilu, citáty z profilů se neopakují.
   await expect(page.locator('#jak-zit-po')).not.toContainText(/pohárek|lucern|lamp|kohout|občan světa|Ječná placka|Tělo volá/i);
-  await expect(page.locator('.cesta-karta')).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+  // K otázce vedou dvě cesty, v pořadí podle čísla: cesta 4 (Aristotelés a Sókratés) a cesta 6 (Epikúros).
+  await expect(page.locator('#jak-zit-cesty-nadpis')).toHaveText('Cesty k otázce');
+  await expect(page.locator('.cesta-karta')).toHaveCount(2);
+  await expect(page.locator('.cesta-karta').first()).toHaveAttribute('href', '/cesta/staci-vedet-co-je-spravne/');
+  await expect(page.locator('.cesta-karta').last()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
   await axe(page);
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
 });
@@ -235,21 +239,24 @@ test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehl
   await page.goto('/osobnost/diogenes/');
   await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 6[\s\S]*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/]);
   await page.goto('/osobnost/sokrates/');
-  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 1[\s\S]*Kdy mám dobrý důvod věřit\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  // Sókratés je filozofem dvou cest: cesty 1 a cesty 4, kde stojí ve Sporu proti Aristotelovi.
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 1[\s\S]*Kdy mám dobrý důvod věřit\?/, /Cesta 4[\s\S]*Stačí vědět, co je správné\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
 
   // Přehled otázek: u otázky stojí cesty, které k ní vedou, i když otázka ještě nemá vlastní stránku.
   await page.goto('/otazky/');
-  await expect(page.locator('#jak-zit .cesta')).toHaveText(/Cesta 6\s*Kolik je dost\?/);
-  await expect(page.locator('#jak-zit .cesta')).toHaveAttribute('href', '/cesta/kolik-je-dost/');
+  await expect(page.locator('#jak-zit .cesta')).toHaveText([/Cesta 4\s*Stačí vědět, co je správné\?/, /Cesta 6\s*Kolik je dost\?/]);
+  await expect(page.locator('#jak-zit .cesta').first()).toHaveAttribute('href', '/cesta/staci-vedet-co-je-spravne/');
+  await expect(page.locator('#jak-zit .cesta').last()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
   await expect(page.locator('#jak-poznam-pravdu .cesta')).toHaveAttribute('href', '/cesta/kdy-mam-dobry-duvod-verit/');
   await expect(page.locator('#co-je-spravne .cesta')).toHaveCount(0);
-  expect((await page.locator('#jak-zit .cesta').boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  for (const c of await page.locator('#jak-zit .cesta').all()) expect((await c.boundingBox())!.height).toBeGreaterThanOrEqual(44);
 
   // Lidé: karta člověka s profilem říká, která cesta k němu patří.
   await page.goto('/lide/');
   await expect(page.locator('#epikuros .karta__cesta')).toHaveText('Cesta 6: Kolik je dost?');
   await expect(page.locator('#diogenes .karta__cesta')).toHaveText('Cesta 6: Kolik je dost?');
-  await expect(page.locator('#sokrates .karta__cesta')).toHaveText('Cesta 1: Kdy mám dobrý důvod věřit?');
+  await expect(page.locator('#sokrates .karta__cesta')).toHaveText(['Cesta 1: Kdy mám dobrý důvod věřit?', 'Cesta 4: Stačí vědět, co je správné?']);
+  await expect(page.locator('#aristoteles .karta__cesta')).toHaveText('Cesta 4: Stačí vědět, co je správné?');
   await expect(page.locator('#seneca .karta__cesta')).toHaveCount(0);
 });
 
