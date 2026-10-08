@@ -161,6 +161,9 @@ test('cesta 3: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(argumenty).toContainText('Platón by mohl odpovědět');
   await expect(argumenty).toContainText('Platón má pravdu, že bez obecného není vědění.');
   await expect(argumenty).toContainText('Čtverec není vedle nakreslených čtverců, ale v nich.');
+  // Aristotelés na Platónovu otázku odpoví (Metafyzika 981a) i s tím, co Platónovi přiznává.
+  await expect(argumenty).toContainText('udělá si o tom soud z mnoha nemocných');
+  await expect(argumenty).toContainText('kdo k tomu zná příčinu, ví podle Aristotela víc');
   await page.keyboard.press('Tab');
   await page.keyboard.press('ArrowRight');
   await page.keyboard.press('ArrowRight');

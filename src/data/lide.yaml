@@ -65,24 +65,25 @@
   obdobi: 1
   hloubka: portret
   smery: [peripatetici]
-  otazky: [1, 6, 10, 7]
+  otazky: [1, 4, 6, 10, 7]
   linie: [veda, spolecnost]
   mista:
     - { misto: stageira, role: narozeni, rok: -384, zdroj: sep-aristotle }
     - { misto: athenes, role: studium, od: -367, do: -347, priblizne: true, zdroj: sep-aristotle }
-    - { misto: assos, role: pobyt, od: -347, do: -344, priblizne: true, zdroj: sep-aristotle }
-    - { misto: lesbos, role: pobyt, od: -344, do: -343, priblizne: true, zdroj: sep-aristotle }
+    - { misto: assos, role: pobyt, od: -347, do: -345, priblizne: true, zdroj: dl-v }
+    - { misto: lesbos, role: pobyt, od: -345, do: -343, priblizne: true, zdroj: dl-v }
     - { misto: pella, role: pusobeni, od: -343, do: -341, priblizne: true, zdroj: sep-aristotle }
     - { misto: athenes, role: pusobeni, od: -335, do: -323, zdroj: sep-aristotle }
     - { misto: chalkis, role: smrt, rok: -322, zdroj: sep-aristotle }
   kdo: Platónův žák, vychovatel mladého Alexandra Makedonského a zakladatel školy v Lykeiu.
-  proc: Zkoumal skoro všechno, od logiky po živočichy, a učil, že ctnost je střed mezi dvěma krajnostmi.
+  proc: Zkoumal živou přírodu, úsudek i obec. Dobrým se podle něj člověk stává tím, že dobře jedná a hledá míru, která není pro každého stejná.
   atribut:
     ikona: scales
     nazev: váhy
-    proc: Ctnost je střed mezi dvěma krajnostmi.
+    proc: Správná míra leží mezi dvěma krajnostmi a není pro každého stejná.
     zdroj: sep-aristotle-ethics
-  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie, aristoteles-meteorologika]
+  obrazek: aristoteles-smk
+  zdroje: [sep-aristotle, sep-aristotle-ethics, aristoteles-metafyzika, aristoteles-etika, aristoteles-etika-stesti, aristoteles-etika-iii, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie, aristoteles-meteorologika, dl-v, plutarchos-alexandr-vychova, strabon-xiii, aristoteles-etika-ii, aristoteles-etika-vii, aristoteles-etika-viii, aristoteles-politika-i, aristoteles-zivocichove, aristoteles-casti-zivocichu, aristoteles-fyzika, aristoteles-analytiky, ailianos-vh, plutarchos-sulla, sep-theophrastus]
 
 - id: thales
   jmeno: Thalés

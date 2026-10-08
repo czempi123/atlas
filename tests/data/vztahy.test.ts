@@ -1,10 +1,10 @@
-// Skupiny vztahů v oddílu Doba a lidé: vliv přes texty nesmí skončit pod nadpisem „Znali se a přeli se“.
+// Skupiny vztahů v oddílu Doba a lidé: vliv přes texty ani spor na dálku nesmí skončit pod nadpisem „Znali se a přeli se“.
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { roleVztahu, skupinyVztahu, LEGENDA_VZTAHU, LEGENDA_TRADOVANY, type VztahOsoby } from '../../src/lib/vztahy';
+import { roleVztahu, skupinyVztahu, mohliSePrit, sporNaDalku, VEK_SPORU, LEGENDA_VZTAHU, LEGENDA_TRADOVANY, type VztahOsoby } from '../../src/lib/vztahy';
 import { TypVztahu } from '../../src/lib/schema';
-import { vztahyOsoby } from '../../src/lib/data';
+import { vztahyOsoby, osoba } from '../../src/lib/data';
 
 const v = (typ: 'ucitel' | 'znali-se' | 'vliv-textem' | 'polemika', smer: 'od' | 'k', druhy: string): VztahOsoby<string> =>
   ({ vztah: { od: smer === 'od' ? 'ja' : druhy, k: smer === 'od' ? druhy : 'ja', typ } as VztahOsoby['vztah'], druhy, smer });
@@ -35,7 +35,63 @@ describe('skupinyVztahu', () => {
   });
 });
 
+describe('spor na dálku', () => {
+  const zil = (od: number, do_: number) => ({ narozen: { rok: od }, zemrel: { rok: do_ } });
+  it('osobně se mohli přít jen ti, kdo žili zároveň a oběma bylo aspoň patnáct', () => {
+    expect(VEK_SPORU).toBe(15);
+    expect(mohliSePrit(zil(-427, -347), zil(-384, -322))).toBe(true); // Platón a Aristotelés
+    expect(mohliSePrit(zil(-469, -399), zil(-384, -322))).toBe(false); // Sókratés zemřel před Aristotelovým narozením
+    expect(mohliSePrit(zil(-280, -207), zil(-214, -129))).toBe(false); // Karneadovi bylo sedm, když Chrýsippos zemřel
+    expect(mohliSePrit(zil(-280, -199), zil(-214, -129))).toBe(true); // v patnácti už ano
+    expect(mohliSePrit(zil(-280, -200), zil(-214, -129))).toBe(false);
+    expect(mohliSePrit(zil(-384, -322), zil(-469, -399))).toBe(false); // na pořadí nezáleží
+  });
+  it('počítá přes přelom letopočtu bez roku nula a chybějící roky nechává být', () => {
+    expect(mohliSePrit(zil(-30, 14), zil(-1, 60))).toBe(false); // ve 14 n. l. je mladšímu čtrnáct
+    expect(mohliSePrit(zil(-30, 15), zil(-1, 60))).toBe(true);
+    expect(mohliSePrit({ narozen: { rok: -384 } }, zil(-469, -399))).toBe(true);
+    expect(mohliSePrit({ aktivni: { od: -450, do: -420 } }, zil(-469, -399))).toBe(true); // roky činnosti se berou celé
+  });
+  it('sporem na dálku je jen polemika', () => {
+    expect(sporNaDalku({ typ: 'polemika' }, zil(-384, -322), zil(-469, -399))).toBe(true);
+    expect(sporNaDalku({ typ: 'polemika' }, zil(-384, -322), zil(-427, -347))).toBe(false);
+    expect(sporNaDalku({ typ: 'vliv-textem' }, zil(-384, -322), zil(-469, -399))).toBe(false);
+  });
+  it('má vlastní dvě skupiny podle toho, kdo se přel', () => {
+    const dalku = (smer: 'od' | 'k', druhy: string) => ({ ...v('polemika', smer, druhy), naDalku: true });
+    const s = skupinyVztahu([dalku('k', 'pozdejsi-kritik'), v('polemika', 'k', 'soucasnik'), dalku('od', 'davny-protivnik'), v('znali-se', 'od', 'pritel')]);
+    expect(s.map((x) => x.nazev)).toEqual(['Znali se a přeli se', 'S kým se přel na dálku', 'Kdo se s ním přel později']);
+    expect(s.map((x) => x.lide.map((l) => l.druhy))).toEqual([['soucasnik', 'pritel'], ['davny-protivnik'], ['pozdejsi-kritik']]);
+  });
+  it('Aristotelés se se Sókratem a Prótagorem přel na dálku, s Platónem tváří v tvář', () => {
+    const jmena = (id: string, nazev: string) => skupinyVztahu(vztahyOsoby(id)).find((x) => x.nazev === nazev)?.lide.map((l) => l.druhy.id) ?? [];
+    expect(jmena('aristoteles', 'S kým se přel na dálku')).toEqual(['sokrates', 'protagoras']);
+    expect(jmena('aristoteles', 'Znali se a přeli se')).toEqual(expect.arrayContaining(['platon', 'theofrastos', 'xenokrates']));
+    expect(jmena('aristoteles', 'Znali se a přeli se')).not.toContain('sokrates');
+    expect(jmena('sokrates', 'Kdo se s ním přel později')).toEqual(['aristoteles']);
+    expect(jmena('sokrates', 'Znali se a přeli se')).toContain('aristofanes');
+    expect(jmena('protagoras', 'Kdo se s ním přel později')).toEqual(['aristoteles']);
+    expect(jmena('platon', 'Znali se a přeli se')).toEqual(expect.arrayContaining(['aristoteles', 'diogenes']));
+  });
+  it('pod „Znali se a přeli se“ nestojí nikdo, s kým se osoba stránky přít nemohla', () => {
+    for (const o of ['sokrates', 'platon', 'aristoteles', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius', 'karneades', 'chrysippos']) {
+      const znali = skupinyVztahu(vztahyOsoby(o)).find((x) => x.nazev === 'Znali se a přeli se');
+      for (const l of znali?.lide ?? []) expect(mohliSePrit(osoba(o), l.druhy), `${o} a ${l.druhy.id}`).toBe(true);
+    }
+  });
+  it('Karneadés a Chrýsippos: spor na dálku z obou stran', () => {
+    expect(vztahyOsoby('karneades').find((x) => x.druhy.id === 'chrysippos')?.naDalku).toBe(true);
+    expect(vztahyOsoby('chrysippos').find((x) => x.druhy.id === 'karneades')?.naDalku).toBe(true);
+  });
+});
+
 describe('roleVztahu', () => {
+  it('spor na dálku má vlastní popisek, polemika současníků starý', () => {
+    expect(roleVztahu({ typ: 'polemika' }, 'od', true)).toBe('přel se s jeho učením');
+    expect(roleVztahu({ typ: 'polemika' }, 'k', true)).toBe('přel se s jeho učením');
+    expect(roleVztahu({ typ: 'polemika' }, 'od')).toBe('polemizoval s ním');
+    expect(roleVztahu({ typ: 'znali-se' }, 'od', true)).toBe('znali se');
+  });
   it('u vlivu přes texty říká, kdo na koho navázal', () => {
     expect(roleVztahu({ typ: 'vliv-textem' }, 'od')).toBe('navázal na jeho texty');
     expect(roleVztahu({ typ: 'vliv-textem' }, 'k')).toBe('znal ho z textů');

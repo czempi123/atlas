@@ -1,0 +1,316 @@
+---
+osoba: aristoteles
+nadtitulek: Platónův žák · Aristotelův portrét
+titulek: Aristotelés
+pointa: Muž, který se nejdřív díval.
+citat: casti-zivocichu-i-5
+kapitoly:
+  - cislo: "01"
+    kotva: syn-lekare
+    nazev: Syn lékaře
+    stav: hotovo
+  - cislo: "02"
+    kotva: delfin
+    nazev: Delfín a škatulky
+    stav: hotovo
+  - cislo: "03"
+    kotva: ctyri-proc
+    nazev: Čtyři proč
+    stav: hotovo
+  - cislo: "04"
+    kotva: skola-a-pratele
+    nazev: Škola a přátelé
+    stav: hotovo
+  - cislo: "05"
+    kotva: podruhe-ne
+    nazev: Podruhé ne
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import { KdoZilDriv, ZmenJednuVec, Roztrid, Volba, Odkryj, Pribeh } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Na ostrově Lesbos je u města Pyrrha laguna. Ve spisech, které Aristotelés věnoval živočichům, se to místo vrací znovu a znovu.
+
+Stojí v nich, že tamní ježovky jsou nejlepší v zimě. Že hvězdice tam rybářům škodí. A že hřebenatky z laguny jednou vymizely: kvůli suchu a kvůli nástroji, kterým je rybáři vyškrabávali.
+
+Aristotelés žil na Lesbu asi dva roky. Bylo mu kolem čtyřiceti a měl za sebou dvacet let v Platónově škole v Athénách. Proč se někdo, kdo může přemýšlet o hvězdách, zabývá ježovkami? Odpověděl na to sám:
+
+</div>
+
+<div class="ctenarsky"><Citat id="casti-zivocichu-i-5" velky /></div>
+
+<Kapitola cislo="01" kotva="syn-lekare" nazev="Syn lékaře">
+  <Fragment slot="titulek">Zbyly po něm <em>zápisky.</em></Fragment>
+
+Jeho otec byl lékař u makedonského krále. Aristotelés se narodil roku 384 př. n. l. ve Stageiře, malém městě na severu Řecka.
+
+Asi v sedmnácti přišel do Athén, do Platónovy Akademie. Zůstal dvacet let, až do Platónovy smrti. V tom hlavním, co Platón učil, mu za pravdu nedal; jak to mezi nimi bylo, vypráví [portrét Platóna](/osobnost/platon/#stul-a-stolovost).
+
+Po Platónovi zbyly rozhovory a žádná přednáška. Po Aristotelovi je to obráceně. Psal taky rozhovory, ale nedochoval se ani jeden.
+
+To, co od něj čteme, nejsou knihy pro čtenáře. Jsou to nejspíš zápisky k přednáškám: husté, bez ozdob, občas skočí jinam. Z asi dvou set spisů se dochovala necelá šestina.
+
+Aristotelés v nich proto s nikým nemluví: vykládá a třídí. A některá slova u něj znamenají něco jiného, než čekáš. Jedno z nich je ctnost.
+
+<Odkryj
+  id="aristoteles-ctnost"
+  otazka="Co si představíš pod slovem ctnost? Napiš, jak vypadá člověk, o kterém bys to slovo řekl."
+  tlacitko="Porovnat s Aristotelem"
+  filozof="aristoteles"
+  modelove={[
+    { text: 'Slušný a poslušný člověk. Nedělá, co se nemá.', komentar: 'Tak to slovo dnes zní nejčastěji: jako seznam zákazů. Dá se takhle mluvit i o oku nebo o koni?' },
+    { text: 'Někdo skoro svatý. Mezi normálními lidmi takový není.', komentar: 'Pak by ctnost byla jen pro pár vyvolených. Aristotelés to slovo říká i o oku a o koni. Co by znamenalo u nich?' },
+    { text: 'Někdo, kdo je dobrý v tom, co dělá.', komentar: 'To má k Aristotelovi nejblíž. Zbývá otázka, v čem má být dobrý člověk: ne jako kuchař nebo běžec, ale jako člověk.' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem, co to slovo znamená pro mě, ne co bych měl říct.',
+    'Zkusil jsem totéž slovo říct o oku a o koni.',
+    'Vím, čím se moje odpověď liší od Aristotelovy.',
+  ]}
+>
+
+Aristotelés nezačíná u člověka. Začíná u oka a u koně: kdy řekneš, že je oko dobré? A kůň?
+
+Zkus odpovědět a pak se vrať ke své větě o člověku. Sedí k ní?
+
+</Odkryj>
+
+V přednáškách o etice vysvětluje to slovo na oku:
+
+<Citat id="etika-1106a" />
+
+Ctnost koně je podle něj to, díky čemu kůň dobře běží a unese jezdce. Ctnost tedy u Aristotela neznamená poslušnost ani cudnost. Znamená být dobrý v tom, čím jsi.
+
+Dobrým se podle něj člověk nestává výkladem, ale tím, že dobře jedná a pokaždé hledá správnou míru mezi příliš a málo. O tom je celá cesta [Stačí vědět, co je správné?](/cesta/staci-vedet-co-je-spravne/)
+
+Roku 347 př. n. l. Platón zemřel. Aristotelés z Athén odešel.
+</Kapitola>
+
+<Kapitola cislo="02" kotva="delfin" nazev="Delfín a škatulky">
+  <Fragment slot="titulek">Nejdřív zjisti, co <em>je.</em></Fragment>
+
+Asi dva roky žil Aristotelés na Lesbu. Byl tam s ním Theofrastos, který z ostrova pocházel, a spolu zkoumali živou přírodu.
+
+Ve spisech o živočiších je popsané slepičí vejce den po dni. Po třech dnech a nocích je v něm vidět tohle:
+
+<Citat id="zivocichove-vi-3" />
+
+Desátý den je kuře vidět celé.
+
+Stejně důkladně je tam popsaný delfín. Nemá žábry, ale dýchací otvor. Dýchá vzduch, rodí živá mláďata a má pro ně mléko. Někdo ho viděl spát s čenichem nad vodou: chrápal.
+
+Rybáři některým delfínům zaříznou ocas a pustí je. Tak se ví, že žijí pětadvacet i třicet let.
+
+Jenže kam s ním? Aristotelés dělil živočichy na vodní a suchozemské.
+
+<Roztrid id="aristoteles-kam-s-nim" />
+
+O delfínovi a o dalších, kteří žijí ve vodě a dýchají vzduch, Aristotelés napsal:
+
+<Citat id="zivocichove-viii-2" />
+
+Dát je do obou skupin zároveň by podle něj bylo nesmyslné. Kvůli delfínovi tedy sáhl na škatulky: napsal, že je třeba upřesnit, co slovo vodní znamená.
+
+Takhle postupoval všude. Nejdřív zjistit, co který živočich má. Potom se ptát proč.
+
+O hvězdách podle něj víme málo, protože jsou daleko. O rostlinách a zvířatech můžeme vědět hodně, protože žijeme mezi nimi. Stačí si dát práci.
+
+A štítit se při tom nemáme ničeho. Aristotelés k tomu připomněl, co se vyprávělo o Hérakleitovi. Když jeho hosté váhali u pece, řekl jim prý, ať jdou dál: i tady jsou bohové.
+
+Kdo se dívá, vidí ale i to, co čeká. Tentýž Aristotelés zapsal, že muži mají víc zubů než ženy. Stejně je to prý u ovcí, koz a prasat; u ostatních živočichů se to podle něj ještě nepozorovalo. Stačilo počítat.
+
+O ženách napsal i víc: žena je podle něj od přírody horší než muž a má být ovládána. Opačný názor přitom znal z první ruky. Jeho učitel Platón nechává Sókrata tvrdit, že ženy mohou vládnout a bojovat stejně jako muži. Aristotelés Sókrata jmenuje a nesouhlasí: statečnost muže podle něj velí, statečnost ženy slouží.
+
+Kolem sebe viděl taky otroky. A to, co viděl, měl za přírodu.
+
+V přednáškách o obci říká, že někteří lidé jsou otroky od přírody a že je to pro ně prospěšné i spravedlivé. Otrok je podle něj majetek, který má duši.
+
+Už tehdy s tím někteří nesouhlasili. Aristotelés jejich názor zapsal:
+
+<Citat id="politika-1253b" />
+
+A odmítl ho.
+
+Jeho vlastní výklad s tím přitom na třech místech neladí. Připustil, že ti druzí mají v jistém smyslu pravdu: kdo se stal otrokem jen podle zákona, třeba jako válečný zajatec, od přírody otrokem není. Příroda podle něj chce odlišit i těla svobodných a otroků, jenže často vyjde opak. A o přátelství napsal, že k otrokovi jako otrokovi není, ale k němu jako k člověku ano.
+
+Asi o čtyři sta let později žil v Římě otrok jménem [Epiktétos](/osobnost/epiktetos/). Stal se učitelem filozofie a zápisky z jeho přednášek četl císař.
+
+*Podle čeho poznáš, že něco bereš za přirozené jen proto, že to tak kolem sebe vidíš?*
+</Kapitola>
+
+<Kapitola cislo="03" kotva="ctyri-proc" nazev="Čtyři proč">
+  <Fragment slot="titulek">Jedna otázka, čtyři <em>odpovědi.</em></Fragment>
+
+Ve výkladech o přírodě Aristotelés říká:
+
+<Citat id="fyzika-ii-3-proc" />
+
+Proč je slovo, které znáš od tří let. Jenže na jedno proč se dá odpovědět několikrát, pokaždé jinak a pokaždé pravdivě. Zkus to na mostě.
+
+<Roztrid id="aristoteles-ctyri-proc" />
+
+Aristotelés rozlišil čtyři odpovědi: z čeho věc je, co to je, kdo nebo co ji způsobilo a k čemu je.
+
+Jeho příklad je socha. Proč tu stojí? Protože je tu bronz a protože je tu sochař, který to umí. Obojí je příčina, každé jinak.
+
+Čtvrtou odpověď ukazuje na procházce:
+
+<Citat id="fyzika-ii-3-prochazka" />
+
+Lidé se o proč často hádají jen kvůli tomu, že každý odpovídá na jinou otázku.
+
+Proč je Honza nemocný? Má v těle virus. Nakazil se od bratra. A někdo se zeptá, k čemu je dobrá horečka: i to je odpověď, a všechny tři můžou platit zároveň.
+
+Aristotelés si nemyslel, že příroda přemýšlí. Myslel si, že u živého nepochopíš část, dokud nevíš, k čemu slouží.
+
+Vzpomeň si na červenou tečku ve vejci. Popsat ji umíš hned: je krvavá a poskakuje. Co to je, ale víš, až když víš, k čemu kuřeti bude.
+
+A pak proti sobě sám postavil silnou námitku:
+
+<Citat id="fyzika-ii-8" />
+
+Zeus byl pro Řeky bůh, který posílá déšť. Prší, protože musí. Obilí z toho roste, ale kvůli obilí neprší.
+
+A co když je to tak i se zuby? Vyrostly vhodně jen náhodou, a potom:
+
+<Citat id="fyzika-ii-8-prezilo" />
+
+Tu námitku mu nikdo nevnutil. Zapsal ji sám, v plné síle, a teprve potom odpověděl. Co je od přírody, děje se podle něj vždy nebo většinou stejně, a to náhoda nedělá. Námitku odmítl.
+
+Jestli ti připomíná něco z biologie, nepleteš se. Podobnou cestou dnes biologie vysvětluje, proč oko vypadá jako udělané k vidění.
+
+Stejnou otázku položil Aristotelés i člověku: k čemu je? Z ní vychází jeho odpověď na otázku [Jak mám žít?](/otazka/jak-zit/)
+
+*Je rozdíl mezi otázkou „k čemu je srdce“ a otázkou „k čemu je déšť“? A kam patří otázka „k čemu je člověk“?*
+</Kapitola>
+
+<Kapitola cislo="04" kotva="skola-a-pratele" nazev="Škola a přátelé">
+  <Fragment slot="titulek">Přátelství vzniká <em>pomalu.</em></Fragment>
+
+Roku 343 př. n. l. pozval makedonský král Filip Aristotela, aby učil jeho třináctiletého syna. Syn se jmenoval Alexandr a Aristotelés ho učil dva nebo tři roky. Co se s tím žákem stalo o patnáct let později, vypráví cesta [Stačí vědět, co je správné?](/cesta/staci-vedet-co-je-spravne/)
+
+Roku 335 př. n. l. se Aristotelés vrátil do Athén a začal učit v Lykeiu, veřejném cvičišti zasvěceném Apollónovi. Škola měla krytý ochoz, řecky peripatos, a jeho žákům se začalo říkat peripatetici. Vypráví se, že vykládal při chůzi.
+
+V čele školy stál dvanáct nebo třináct let. Zkoumal skoro všechno. Jako první popsal, kdy závěr z předpokladů opravdu plyne. O člověku napsal, že je od přírody tvor obce.
+
+Aristotelův syn se jmenoval po dědovi lékaři. Nejspíš po něm mají jméno přednášky o etice, ze kterých tu čteš: Etika Nikomachova. Mluví se v nich i o přátelství.
+
+Než si přečteš, co o něm Aristotelés říká, zkus jeden pokus.
+
+<ZmenJednuVec id="aristoteles-co-zbude" />
+
+Aristotelés začíná u toho, co máme rádi: co je dobré, co je příjemné a co je užitečné. Rád můžeš mít i věc. Přátelství to ale není:
+
+<Citat id="etika-1155b" />
+
+Podle těch tří důvodů rozlišil tři druhy přátelství. Kdo se přátelí pro užitek nebo pro příjemnost, má rád to, co z druhého má. O takových přátelstvích říká:
+
+<Citat id="etika-1156a" />
+
+O lidech tvého věku napsal, že se přátelí hlavně pro příjemnost. Žijí podle citu, jdou za tím, co je příjemné teď, a přátelství uzavírají i ruší rychle, často týž den. Sedí to?
+
+Třetí druh je přátelství dobrých lidí, kteří si přejí dobro kvůli tomu druhému. Je trvalé, ale vzácné. A chce čas: podle přísloví se lidé nepoznají, dokud spolu nesnědí sůl.
+
+<Citat id="etika-1156b" />
+
+Prvními dvěma druhy přitom nepohrdá. Neříká, že spolužák na úkoly není kamarád. Říká, že je to jiný druh.
+
+Sám měl přítele, kterému napsal báseň. Než přišel na Lesbos, žil asi tři roky v Assu v Malé Asii. Vládl tam Hermeiás, o kterém se vyprávělo, že začínal jako otrok. Aristotelés si vzal jeho neteř Pýthiadu.
+
+Hermeia potom lstí zajali Peršané a popravili ho. Aristotelés složil na jeho památku hymnus na ctnost.
+
+*Který ze tří druhů to byl? Aristotelés u Hermeia tři roky žil a vzal si ženu z jeho rodiny. Báseň ale psal člověku, který mu už nemohl dát nic.*
+</Kapitola>
+
+<Kapitola cislo="05" kotva="podruhe-ne" nazev="Podruhé ne">
+  <Fragment slot="titulek">Podruhé už <em>ne.</em></Fragment>
+
+<Pribeh id="aristoteles-323" osoba="aristoteles" obrazek="aristoteles-rembrandt" pomer="1 / 1" nadtitulek="Athény, 323 př. n. l." popisek="Aristotelés, jak si ho roku 1653 představil Rembrandt: ruku má na bustě Homéra a na řetězu medailon se svým žákem Alexandrem.">
+
+Roku 323 př. n. l. zemřel Alexandr. Athény se obrátily proti všem, kdo měli blízko k Makedoncům.
+
+Aristotelés k nim patřil. Jeho otec léčil makedonského krále a on sám učil králova syna.
+
+Vypráví se, že na něj podali žalobu pro bezbožnost. Záminkou prý byla báseň pro Hermeia.
+
+</Pribeh>
+
+V tomtéž městě stál před šestasedmdesáti lety před soudem [Sókratés](/osobnost/sokrates/). Odsoudili ho k smrti. Z vězení mohl utéct, a zůstal.
+
+<Volba id="aristoteles-odchod" />
+
+Aristotelés odešel do Chalkidy na ostrově Euboia. Vypráví se, že když se ho ptali proč, odpověděl:
+
+<Citat id="ailianos-iii-36" />
+
+Poprvé, to byl Sókratés.
+
+*Sókratés zůstal a Aristotelés odešel. Udělal jeden z nich chybu?*
+
+O rok později Aristotelés v Chalkidě zemřel. Bylo mu asi dvaašedesát.
+
+Vypráví se, že jeho knihy zdědil po Theofrastovi muž z malého města v Malé Asii. Jeho dědicové je zakopali, aby je nedostali královští sběratelé, a nechali je vlhku a molům. Po několika generacích je koupil jiný sběratel, mezery doplnil po svém a vydal je plné chyb. Do Říma je pak odvezl vojevůdce, který dobyl Athény.
+
+Knihy, jak je známe, sestavili až pozdější vydavatelé.
+
+Dochovala se i Aristotelova závěť. Stojí v ní, komu se má provdat dcera a co dostane žena, se kterou žil po Pýthiadině smrti. Některé otroky propouští hned, jiné později; nikdo z těch, kdo mu sloužili, nemá být prodán. Otroky měl až do smrti.
+
+A je v ní jedna věta o Pýthiadě:
+
+<Citat id="dl-v-16" />
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Narodil se ve Stageiře a zemřel v Chalkidě. Mezitím dvakrát žil v Athénách, pokaždé přes deset let. V čele Lykeia ho vystřídal Theofrastos. Se Sókratem a s Prótagorem se přel, i když ani jednoho nezažil: Sókratés zemřel patnáct let před jeho narozením.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="sokrates" b="aristoteles" druh="vzdalenost" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Poznání">
+    <Fragment slot="titulek">Nejdřív se podívej. Soudit můžeš <em>potom.</em></Fragment>
+
+Aristotelés nezačíná u toho, jak svět musí být. Začíná u toho, co je vidět, a kvůli jednomu delfínovi je ochoten předělat škatulky. Ježovky jsou pro poznání stejně dobré jako hvězdy, a navíc jsou po ruce.
+
+*Stačí se dívat? On sám se díval, a ženám napočítal míň zubů. Jak poznáš, že vidíš věc, a ne to, co jsi čekal?*
+
+<MojeStanovisko client:visible id="aristoteles-pozorovani" otazka="Jak poznáš, že vidíš věc samu, a ne to, co jsi čekal? Napiš jeden způsob, jak si to ověřit." odkaz="/osobnost/aristoteles/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Etika">
+    <Fragment slot="titulek">Odmysli si důvod a podívej se, co <em>zbude.</em></Fragment>
+
+Podle Aristotela máme druhého rádi ze tří důvodů: je užitečný, je s ním příjemně, nebo je dobrý. První dvě přátelství jsou opravdová, jen stojí na něčem, co se mění. Třetí vydrží, ale je vzácné a chce čas.
+
+*Je třetí druh opravdu jiný, nebo jsou to jen první dva, které vydržely dlouho? [Epikúros](/osobnost/epikuros/) tvrdil, že každé přátelství začíná z potřeby.*
+
+<MojeStanovisko client:visible id="aristoteles-pratelstvi" otazka="Je přátelství kvůli druhému jiný druh, nebo jen užitek a radost, které vydržely dlouho? Napiš jeden důvod." odkaz="/osobnost/aristoteles/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="aristoteles-tri-dny" nazev="Tři dny se jen dívej" odkaz="/osobnost/aristoteles/#zkus-to-zit">
+
+Vyber si jednu věc, o které „víš“, jaká je: cestu do školy, strom před domem, jídelnu v poledne. Tři dny v tomhle týdnu si o ní pokaždé zapiš pět věcí, které opravdu vidíš nebo slyšíš. Nepiš, že je nudná nebo pořád stejná: jen co je vidět. Třetí den si přečti všechno najednou a zapiš, co tě překvapilo.
+
+Nevybírej si člověka. Lidi nejde pozorovat jako ježovky a první by to poznali oni.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/staci-vedet-co-je-spravne/', nadtitulek: 'Cesta 4', text: 'Stačí vědět, co je správné?' },
+  { href: '/osobnost/platon/', nadtitulek: 'Portrét', text: 'Platón: muž, který ve vlastních rozhovorech nemluví' },
+  { href: '/osobnost/epiktetos/', nadtitulek: 'Portrét', text: 'Epiktétos: otrok, kterému nikdo nevzal to hlavní' },
+  { href: '/otazka/jak-zit/', nadtitulek: 'Velká otázka 1', text: 'Jak mám žít?' },
+]} />

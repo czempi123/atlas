@@ -4,6 +4,66 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Opravy a uzavření celku 5
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor schválil nálezy revize celku 5 v chatu a požádal o nahrání celku na GitHub. Celek 5 je tím uzavřený: opravy zapracované, větev `celek-5` sloučená do hlavní větve a hlavní větev poslaná na GitHub | „Ano, ty nálezy, které potřebuješ schválit, schvaluju, oprav je, nahrajme to zas celé na github“ (8. 10. 2026) |
+| Otevřené body platí podle doporučení revize: vstup cesty 4 bez obrázku; třetí Aristotelův argument ve Sporu cesty 3 upravený podle Metafyziky 981a; složka `ucitel/` založená (`ucitel/celek-5.md`); Sókratés druhým filozofem cesty 4; karta Zkus to žít v posledním kroku zůstává a do skillu `atlas-cesta` jde jako možnost s podmínkou; graf zůstává s křivkami pojmenovanými podle tvaru; „hazarduje“ zůstává | Autor k nim nenapsal nic jiného; pravidlo bez mezikroku schvalování (4. 10. 2026). Nic z toho není nevratné |
+| Kresba „Kde je střed?“ je na GitHubu s textem šestého stavu z nálezu 9 („Proud by ho mohl strhnout i s lanem“) | Schválený nález 9; samostatné potvrzení kresby autor nenapsal, případná změna je oprava po uzavření |
+| Scéna Volby v kapitole 05 portrétu Aristotela si nechala větu o básni; z opakování vypadla jen věta o Athénách | Dvě možnosti Volby se na báseň odvolávají a scéna se ukládá do deníku |
+
+## 8. 10. 2026: Revize celku 5 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Verdikt revize je „po opravách“: jeden blokující nález (krok 7, chirurg „o návycích nepsal nic“), pět důležitých a čtyři drobné. Zásadní nálezy se neopravovaly; čekají na autora s hotovým zněním v `docs/revize/celek-5-2026-10-08.md` | Zadání P10: drobnosti opravit rovnou, zásadní seřadit podle dopadu a navrhnout |
+| Kleitos je v kroku 1 cesty 4 jménem dvakrát („Přátelé Kleita vyvedou ven“), proti P8, kde měl zaznít jednou | Za větou „Pohádají se, oba opilí“ šlo zájmeno „ho“ číst jako Alexandra a příběh tím obrátit; test `cesta4.spec.ts` drží nové znění |
+| Kresba „Kde je střed?“ zůstává nepotvrzená | Řádek o kresbě v zadání P10 přišel nevyplněný; revize k ní má nález 9 (důvod u šestého stavu) |
+| Doporučení k otevřeným bodům: vstup cesty bez obrázku, Spor cesty 3 upravit podle Metafyziky 981a, `ucitel/` založit, Sókrata, kartu Zkus to žít, graf (po přejmenování křivek) a „hazarduje“ nechat | Zdůvodnění v záznamu revize; rozhodne autor v zadání oprav |
+
+## 8. 10. 2026: Cesta 4 „Stačí vědět, co je správné?“ (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vstup cesty je bez obrázku: deska s ornamentem a mincí. Pověst o Fyllidě v atlasu není. Třetí Aristotelův argument ve Sporu cesty 3 zůstal, jak je. Složka `ucitel/` nevznikla | Všechny čtyři odpovědi autora v zadání P8 zůstaly prázdné. Obrázek se bez souhlasu nestahuje; úprava hotové cesty 3 a složka `ucitel/` čekají na revizi celku nebo na autora |
+| Filozofové cesty jsou Aristotelés a Sókratés (katalog cest měl jen Aristotela) | Sókratés nese celý krok 3 a polovinu Sporu. Cesta je tak dosažitelná i z jeho profilu: v hlavičce má cesty 1 a 4 |
+| Začátek cesty je Volba bez pole „Proč právě tohle?“ (`bezDuvodu: true`, nové pole schématu Volby) | Otázka se ptá na chvíli, kdy student věděl, co je správné, a neudělal to. Důvod by byl zpověď uložená v deníku; ukládá se jen druh důvodu |
+| Čtvrtá zpětná vazba začátku („nebylo to v mé moci“) se neptá, jestli by v jeho moci nebylo aspoň něco menšího, jak navrhovaly podklady. Ptá se po jiné chvíli pro zbytek cesty | U studenta, kterému někdo ubližuje, by otázka z podkladů zněla jako pochybnost o tom, co zažil |
+| Krok 4: stejný správný čin z různých důvodů je zastání spolužáka, ne nalezená peněženka z podkladů | Peněženku má Návrat cesty 3. Zastání je navíc odvaha, na které stojí i kresba v kroku 6, a je mezi příklady v Aristotelově větě o staviteli |
+| Krok 6 nemá blok s odpovědí; jeho úkolem je kresba „Kde je střed?“ a otázka pod ní | Návrh kroků v podkladech; tři Volby za sebou (kroky 6 a 7) by cestu zploštily. Námitku „kdo určí střed“ nese text kroku a závěr |
+| Kresba „Kde je střed?“: výchozí stav je dobrý plavec u klidné vody; bod leží pro šest stavů na šesti místech a nikdy v půli; neplavec neskáče nikdy; kresba nemá čísla | Oba přepínače mají bodem pohnout hned; kresba nesmí vypadat jako měřák správné odpovědi. Polohy bodu jsou naše volba (`src/lib/stred.ts`, `k-overeni.md`) |
+| Krajnost odvahy na straně „příliš“ se v cestě jmenuje slovesem „hazarduje“, ne „smělost“ ani „zbrklost“ | „Smělost“ zní česky jako pochvala; „zbrklost“ je v podkladech vyhrazená jednomu druhu neovládnutí |
+| Opilý, který odříkává verše (1147a20), ve Sporu není; stojí tam jen ten, kdo se věc právě naučil | Opilost má v cestě jednu větu (zadání). Podklad to dovoluje: postoj strany stojí na `etika-1147a` |
+| Studie o návycích: úkony se jmenují podle studie („vypít k obědu láhev vody“, „čtvrt hodiny běhat před večeří“), ne „sklenice vody po snídani“ z podkladů. Krok má vlastní graf dvou účastníků | V plném textu studie je „after breakfast“ jen příklad situace; uvedené příklady úkonů jsou tyhle. Graf je kresba směru: jedna křivka se zastaví brzy, druhá roste do konce pokusu |
+| Poslední krok má výzvu jako kartu Zkus to žít („Kam tě to táhne?“), ne jako odstavec | Přijatá výzva se zapíše do deníku jako u profilů. Stojí na Aristotelově radě (1109b1–7) a výslovně dovoluje nezkoušet nic |
+| „Patnáct let“ mezi Sókratovou smrtí a Aristotelovým narozením v cestě nestojí | Číslo má portrét dvakrát (Doba a lidé, Kdo žil dřív?); cesta říká jen, že se nepotkali |
+| Čas cesty je 30 minut | Spočítáno skriptem `scripts/slova-cesta.mjs`: asi 3 470 slov a ovládání. Je to nejdelší cesta; kvůli délce se nekrátí (rozhodnutí autora) |
+
+## 5. 10. 2026: Portrét Aristotela (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Obrázky portrétu: odlitek hlavy ze Statens Museum for Kunst (KAS825) na desku a Rembrandtův Aristotelés s bustou Homéra (The Met, 61.198) v kapitole 05. Rembrandt je zesvětlený (gama 1,9), jinak je v duotónu desky skoro černý | Autor souhlasil se stažením obou 5. 10. 2026. Popisek odlitku je bez slova „římská“: údaj se u vídeňského muzea nepodařilo ověřit |
+| Polemika lidí, kteří se osobně přít nemohli, má v Době a lidech vlastní skupiny: „S kým se přel na dálku“ a „Kdo se s ním přel později“, s popiskem „přel se s jeho učením“ | Odpověď autora zůstala prázdná, platí doporučení podkladů. Názvy z podkladů („Přel se s jeho texty“) nesedí na Sókrata, který nic nenapsal. Hranice je společný rok, kdy bylo oběma aspoň patnáct: prosté překrytí životů by nechalo Karneada (7 let při Chrýsippově smrti) pod „Znali se a přeli se“ |
+| Poznámka u vztahu sporu na dálku je otázka, o kterou šlo („stačí vědět, co je dobré?“), ne věta „nesouhlasil s ním, že…“ | Věta s podmětem čte na jedné ze dvou stránek obráceně (`docs/pouceni.md`, Co se skládá z dat) |
+| Atribut Aristotela zní „Správná míra leží mezi dvěma krajnostmi a není pro každého stejná“ místo „Ctnost je střed mezi dvěma krajnostmi“ | Věta stojí u desky dřív, než kapitola 01 slovo ctnost vyloží, a „střed“ bez dovětku se čte jako průměr; návrh z podkladů |
+| Portrét má pět kapitol podle zadání; Hermeiás stojí až v kapitole 04 jako přítel, kterému Aristotelés napsal báseň, a kapitola 05 se k básni vrací jako k zámince žaloby | Chronologicky patří Assos před Lesbos, ale příběh přítele nese myšlenku o přátelství a připravuje odchod z Athén |
+| Otroctví a ženy stojí v kapitole 02 hned za zuby jako námitka k pozorování: jeho tvrzení, námitka odpůrců jeho citátem, tři místa, kde si nebyl jistý, a věta o Epiktétovi. Závěť říká jen fakta a „Otroky měl až do smrti“ | Podklady, Citlivá místa: žádná omluva a žádný soud naším hlasem; závěť nesmí znít jako polehčující okolnost, proto bez citátu `dl-v-15` |
+| Blok „Co zbude?“ má jednoho vymyšleného spolužáka a tři podmínky, z nichž každá odmyslí jeden Aristotelův důvod (užitek, příjemnost, to, jaký je); podklady navrhovaly tři různé lidi | Změň jednu věc má jednu otázku; a většina skutečných přátelství stojí na všech třech důvodech zároveň |
+| Kapitola 01 má Odkryj ke slovu ctnost a kapitola 05 Volbu „Co bys na Aristotelově místě udělal?“ s oddílem Co udělal, který říká jen doložený odchod do Chalkidy | Každá kapitola portrétu má blok; žaloba je tradovaná, proto ji scéna uvádí „Vypráví se“ a větu o Athéňanech vypráví až text |
+| Dvě velké myšlenky jsou pozorování (Poznání) a přátelství (Etika); čtyři „proč“ mají kapitolu a blok, mezi myšlenkami nejsou | Skill žádá dvě myšlenky z různých disciplín, které jdou vyzkoušet na vlastním životě |
+| Roztřiď řadí koše podle šířky bloku, ne obrazovky | V čtenářském sloupci profilu (680 px) se čtyři koše vedle sebe rozsypaly; v kroku cesty se nic nemění |
+| Mini mapa posune a oddálí výřez, i když jsou všechna místa vidět, pokud by popisek vyjel z mapy | Pella má popisek vlevo kvůli Stageiře a na telefonu vyčníval přes okraj |
+| Věta „Jsme to, co opakovaně děláme“ v portrétu není | Zadání ji dovoluje v jednom Odkryj; patří k návyku, který nese cesta 4 |
+
+## 5. 10. 2026: Celek 5 a uzavření větve rozhrani-v2
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 5 je Aristotelés a cesta 4 „Stačí vědět, co je správné?“; stránka otázky 1 se jen doplní | Autor: „vybrat další a připravit ho“; rozsah zvolil Claude. Aristotelés mluví na čtyřech stránkách otázek a ve dvou Sporech bez vlastní stránky, období 1 jím dostane třetí portrét. Druhá možnost byla cesta 2 (Théseova loď, otázka 5) |
+| Větev `rozhrani-v2` je uzavřená jako schválená, bez samostatné revize větve; plán je v `docs/archiv/plany/rozhrani-v2.md` | Autor: „uzavři ji jako schválenou“. Větev je od 4. 10. 2026 sloučená a na GitHubu spolu s celkem 4 |
+
 ## 4. 10. 2026: Kresba „Zdvoj čtverec“ a oddíl Kresby v dílně
 
 Dva samostatné kroky po uzavření celku 4 (doporučení revize, autor je zadal).

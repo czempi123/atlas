@@ -1,0 +1,59 @@
+# Změň jednu věc · portrét Aristotela, kapitola 04 „Škola a přátelé“: odmysli si důvod a podívej se, co zbude.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Tři myšlenky pro portrét › 3 (řádky 1, 2 a 5, Vlastní pokus studenta).
+# Proti podkladům jeden vymyšlený spolužák místo tří: blok má jednu otázku a tři podmínky, a každá podmínka
+# odmyslí jeden z Aristotelových tří důvodů (užitečné, příjemné, dobré; Etika Nikomachova VIII, 2–3).
+# Scéna, možnosti a zpětné vazby jsou autorské. Blok se neptá na studentovy skutečné přátele a žádná odpověď
+# neříká, že je něco špatně. Zpětná vazba ví jen to, jestli se odpověď změnila, ne kterým směrem.
+# Oddíl má nadpis „Co by na to řekl“: Aristotelés o vymyšleném spolužákovi nic neřekl; text stojí na 1156a6–24 a 1157a14–33.
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si spolužáka, se kterým se přátelíš druhý rok. Děláte spolu všechny projekty, protože vám to jde.
+  Je s ním legrace. A vážíš si ho: co řekne, to platí.
+otazka: Co bude s vaším přátelstvím za rok?
+moznosti:
+  - { id: vydrzi, text: Vydrží. }
+  - { id: ochladne, text: Ochladne. }
+  - { id: skonci, text: Skončí. }
+podminky:
+  - id: skola
+    prepinac: Přestoupí na jinou školu
+    zmena: >-
+      Teď si představ, že po prázdninách přestoupí na jinou školu. Projekty spolu dělat nebudete
+      a ve třídě se neuvidíte.
+    posun: >-
+      Rozhodl ses jinak, když zmizelo to, co jste dělali spolu.
+      Společná práce a společná třída tedy pro to přátelství něco znamenají. Co přesně?
+    stejne: >-
+      Na společné práci tvůj odhad nestojí. Na čem tedy stojí?
+  - id: legrace
+    prepinac: Legrace s ním teď není
+    zmena: >-
+      Teď si představ, že má těžké období. Už půl roku je zamlklý, nikam nechce a legrace s ním není.
+    posun: >-
+      Rozhodl ses jinak, když s ním přestalo být příjemně.
+      Kolik z toho, co vás drželo pohromadě, byla ta legrace?
+    stejne: >-
+      Na tom, jestli je s ním legrace, tvůj odhad nestojí. Na čem tedy stojí?
+  - id: slovo
+    prepinac: Přestane držet slovo
+    zmena: >-
+      Teď si představ, že se změnil on sám. Slíbí a neudělá. Co mu svěříš, to se rozkřikne.
+    posun: >-
+      Rozhodl ses jinak, když se změnil on. Na tom, jaký je, tedy něco stojí.
+      Je to jiný důvod než užitek a zábava, nebo jen třetí věc, kterou z něj máš?
+    stejne: >-
+      Na tom, jestli drží slovo, tvůj odhad nestojí. Na čem tedy stojí?
+      A vydrželo by to i další změnu?
+coUdelal:
+  osoba: aristoteles
+  nadpis: Co by na to řekl Aristotelés
+  text: >-
+    Aristotelés rozlišuje, proč máme někoho rádi: protože je užitečný, protože je s ním příjemně,
+    nebo kvůli tomu, jaký je.
+
+
+    Přátelství, které stojí na užitku nebo na příjemnosti, se podle něj snadno rozpadne, jakmile ten důvod zmizí.
+    Neříká, že nebylo opravdové.
+zdroje: [aristoteles-etika-viii]

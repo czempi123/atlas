@@ -2,7 +2,7 @@
 // na telefonu (větší písmo) ani na notebooku.
 import { test, expect } from '@playwright/test';
 
-const PROFILY = ['sokrates', 'platon', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
+const PROFILY = ['sokrates', 'platon', 'aristoteles', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
 
 for (const sirka of [390, 1440]) {
   test(`mini mapa: popisky míst se nepřekrývají · ${sirka} px`, async ({ page }) => {
@@ -93,4 +93,31 @@ test('Doba a lidé: kdo jen četl, nestojí pod „Znali se a přeli se“', asy
   // Kdo se opravdu znal, zůstává pod původním nadpisem.
   await page.goto('/osobnost/sokrates/');
   await expect(skupina('Znali se a přeli se')).toContainText('Chairefón');
+});
+
+// Spor na dálku: polemika s člověkem, se kterým se kritik osobně přít nemohl, má vlastní skupinu
+// (celek 5: Sókratés zemřel patnáct let před Aristotelovým narozením). Mini mapa má všech šest míst.
+test('Doba a lidé: spor na dálku nestojí pod „Znali se a přeli se“', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const skupina = (nazev: string) => page.locator('.doba__vztahy > div').filter({ has: page.getByRole('heading', { name: nazev, exact: true }) });
+  await page.goto('/osobnost/aristoteles/');
+  await expect(skupina('Učitelé')).toContainText('Platón');
+  for (const jmeno of ['Platón', 'Theofrastos', 'Xenokratés']) await expect(skupina('Znali se a přeli se')).toContainText(jmeno);
+  await expect(skupina('Znali se a přeli se')).not.toContainText(/Sókratés|Prótagorás/);
+  for (const jmeno of ['Sókratés', 'Prótagorás']) await expect(skupina('S kým se přel na dálku')).toContainText(jmeno);
+  await expect(skupina('S kým se přel na dálku')).toContainText('přel se s jeho učením');
+  await expect(skupina('S kým se přel na dálku')).not.toContainText('polemizoval');
+  for (const misto of ['Stageira', 'Athény', 'Assos', 'Lesbos', 'Pella', 'Chalkis']) {
+    await expect(page.locator('.minimapa svg g.popisek', { hasText: misto })).toHaveCount(1);
+  }
+  await page.goto('/osobnost/sokrates/');
+  await expect(skupina('Kdo se s ním přel později')).toContainText('Aristotelés');
+  await expect(skupina('Znali se a přeli se')).toContainText('Aristofanés');
+  await expect(skupina('Znali se a přeli se')).not.toContainText('Aristotelés');
+  await page.goto('/osobnost/protagoras/');
+  await expect(skupina('Kdo se s ním přel později')).toContainText('Aristotelés');
+  // Současníci, kteří se přeli, zůstávají pod původním nadpisem.
+  await page.goto('/osobnost/platon/');
+  for (const jmeno of ['Aristotelés', 'Diogenés']) await expect(skupina('Znali se a přeli se')).toContainText(jmeno);
+  await expect(skupina('Kdo se s ním přel později')).toHaveCount(0);
 });

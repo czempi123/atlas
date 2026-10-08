@@ -1,0 +1,58 @@
+---
+cesta: staci-vedet-co-je-spravne
+krok: 7
+nazev: Jak dlouho to trvá?
+kdeJsme: Londýn, studie z roku 2010
+---
+import { Volba } from '../../../components/bloky';
+import Citat from '../../../components/ui/Citat.astro';
+import GrafKrivek from '../../../components/ui/GrafKrivek.astro';
+
+<div class="ctenarsky">
+
+O tom, co se člověk právě naučil, říká Aristotelés:
+
+<Citat id="etika-1147a" />
+
+Kolik času? Říká se, že nový zvyk trvá 21 dní. To číslo pochází z knihy plastického chirurga z roku 1960. Napsal v ní, že pacientům trvá asi tři týdny, než si zvyknou na novou tvář. Jak dlouho se tvoří návyk, neměřil.
+
+V roce 2010 vyšla studie, která to zkoušela změřit. Vědci z londýnské univerzity požádali 96 dobrovolníků, většinou studentů, aby si každý vybral jednu novou drobnost. Někdo si vybral vypít k obědu láhev vody, jiný čtvrt hodiny běhat před večeří.
+
+Měli ji dělat dvanáct týdnů každý den ve stejné situaci. A každý den odpovídali, jak samozřejmě jim to už jde: jestli to dělají automaticky a bez přemýšlení.
+
+</div>
+
+<Volba id="cesta4-navyk-odhad" dal={{ href: '#co-vyslo', text: 'Co z měření vyšlo' }} />
+
+<div class="ctenarsky">
+
+<h2 id="co-vyslo" tabindex="-1">Co vyšlo</h2>
+
+Dost údajů dalo 82 lidí. Samozřejmost u většiny z nich rostla nejdřív rychle, pak čím dál pomaleji, až se zastavila. Kdy se zastaví, šlo spolehlivě spočítat u 39 lidí.
+
+Nejrychlejšímu z nich to trvalo 18 dní. Nejpomalejšímu vycházelo 254 dní, víc než osm měsíců. Tak dlouho pokus neběžel: vědci to dopočítali z jeho křivky. Prostřední hodnota byla 66 dní.
+
+<GrafKrivek
+  id="graf-navyk"
+  osaY="Jak samozřejmě to jde"
+  smerY="samozřejměji"
+  osaX="Dny pokusu"
+  poznamkaX="Každý dílek jsou dva týdny."
+  dilku={6}
+  krivky={[
+    { nazev: 'Rychlý průběh', body: [[0, 0.1], [0.5, 0.42], [1, 0.62], [1.5, 0.73], [2, 0.78], [3, 0.81], [6, 0.82]] },
+    { nazev: 'Pomalý průběh', body: [[0, 0.1], [1, 0.2], [2, 0.29], [3, 0.37], [4, 0.44], [5, 0.5], [6, 0.55]], carkovana: true },
+  ]}
+>
+
+Dva průběhy, jaké studie popisuje. U někoho samozřejmost rychle vyroste a po pár týdnech se zastaví, u jiného roste pomalu a na konci pokusu roste pořád.
+
+</GrafKrivek>
+
+Jedno číslo pro všechny tedy nevyšlo. Vyšel rozptyl: nejpomalejšímu vycházelo čtrnáctkrát víc dní než nejrychlejšímu.
+
+A kdo jeden den vynechal, nezačínal od nuly. Na tom, jak mu to šlo dál, se jedno vynechání neprojevilo.
+
+</div>
+
+<Volba id="cesta4-navyk-cteni" />

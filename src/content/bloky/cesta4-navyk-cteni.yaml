@@ -1,0 +1,29 @@
+# Volba s důvodem · cesta 4 „Stačí vědět, co je správné?“, krok 7: komu dává studie o návycích za pravdu.
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Nový případ: řádky 3–7, Proč případ sedí a Co pokus neukázal
+# (tři čtení, žádné není správné). Výhrady jsou jen tady ve zpětné vazbě: měřil se pocit samozřejmosti podle vlastních
+# odpovědí, drobné úkony, dobrovolníci, kteří změnu chtěli, dvanáct týdnů, spolehlivý výpočet u 39 lidí; 66 dní není
+# nové kouzelné číslo. Od láhve vody k Aristotelově ctnosti vede jen přirovnání a to přirovnání je naše, ne autorů studie.
+# Rozdíl mezi druhy úkonů se neuvádí (v plném textu není průkazný).
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+otazka: Komu ten pokus dává za pravdu?
+moznosti:
+  - text: Aristotelovi. Chce to čas a dělání, ne další výklad.
+    tah: číst pokus s Aristotelem
+    zpetna: >-
+      Čteš pokus jako Aristotelés: lidé věděli, co chtějí, od prvního dne, a samozřejmé to bylo až po týdnech dělání.
+      Měřily se ale láhve vody a čtvrthodiny běhu, ne odvaha ani spravedlnost. A 66 dní není nové kouzelné číslo,
+      jen prostřední hodnota mezi 18 a 254. Je statečná povaha jen větší zvyk, nebo jiná věc?
+  - text: Sókratovi. Ti lidé věděli přesně co, kdy a kde, a i to je vědění.
+    tah: číst pokus se Sókratem
+    zpetna: >-
+      Všímáš si, co účastníci měli už první den: věděli přesně, co udělají a ve které chvíli dne.
+      To je vědění, a hodně určité. Proč jim ale samozřejmost rostla celé týdny, když všechno věděli hned?
+  - text: Nikomu. Láhev vody není odvaha.
+    tah: nevěřit přirovnání
+    zpetna: >-
+      Držíš se toho, co pokus opravdu měřil: jak samozřejmé lidem připadají drobné úkony, a to podle jejich vlastních odpovědí.
+      Spolehlivě to šlo spočítat jen u 39 dobrovolníků, kteří změnu sami chtěli, a pokus trval dvanáct týdnů.
+      Jaký pokus by ti o povaze něco řekl?
+zdroje: [lally-2010]

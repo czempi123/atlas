@@ -10,6 +10,7 @@ import krajiny from '../data/krajiny.yaml?raw';
 import { vsechnyKontroly } from './kontroly';
 import { cekajiciAtributy } from './cekajici';
 import type { TOsoba, TVztah } from './schema';
+import { sporNaDalku } from './vztahy';
 
 const smery = Object.keys(import.meta.glob('../content/smery/*.{md,mdx}')).map((p) =>
   p.split('/').pop()!.replace(/\.mdx?$/, ''),
@@ -33,10 +34,14 @@ export function osoba(id: string): TOsoba {
   return o;
 }
 
-export function vztahyOsoby(id: string): { vztah: TVztah; druhy: TOsoba; smer: 'od' | 'k' }[] {
+export function vztahyOsoby(id: string): { vztah: TVztah; druhy: TOsoba; smer: 'od' | 'k'; naDalku: boolean }[] {
+  const ja = osoba(id);
   return data.vztahy
     .filter((v) => v.od === id || v.k === id)
-    .map((v) => ({ vztah: v, druhy: osoba(v.od === id ? v.k : v.od), smer: v.od === id ? 'od' : 'k' }));
+    .map((v) => {
+      const druhy = osoba(v.od === id ? v.k : v.od);
+      return { vztah: v, druhy, smer: v.od === id ? 'od' : 'k', naDalku: sporNaDalku(v, ja, druhy) };
+    });
 }
 
 /**

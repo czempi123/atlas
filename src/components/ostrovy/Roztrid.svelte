@@ -195,7 +195,7 @@
       {/if}
     </div>
 
-    <ul class="kose" style={`--kosu: ${blok.kose.length}`}>
+    <ul class={['kose', blok.kose.length > 3 && 'kose--ctyri']} style={`--kosu: ${blok.kose.length}`}>
       {#each blok.kose as k (k.id)}
         <li class={['kos', nad === k.id && 'kos--nad']} data-kos={k.id}>
           <div class="kos__hlava">
@@ -240,7 +240,7 @@
     <button class="blok__tl blok__tl--hlavni roztrid__hotovo" type="button" onclick={porovnej} disabled={hromadka.length > 0}>Mám roztříděno</button>
   {:else}
     <div class="blok__zpetna" role="region" aria-label="Tvoje třídění" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
-      <div class="vysledky" style={`--kosu: ${blok.kose.length}`}>
+      <div class={['vysledky', blok.kose.length > 3 && 'vysledky--ctyri']} style={`--kosu: ${blok.kose.length}`}>
         {#each blok.kose as k (k.id)}
           {@const vKosi = kartyVKosi(karty, umisteni, k.id)}
           <div class="vysledek">
@@ -309,9 +309,19 @@
   .karta--tazena { border-color: var(--ink); cursor: grabbing; }
   .karta__uchyt { flex: none; fill: var(--pc); }
 
+  /* Koše se řídí šířkou bloku, ne obrazovky: v kroku cesty je blok široký až 960 px, v čtenářském sloupci profilu 680 px.
+     Vedle sebe stojí, když na každý vyjde aspoň asi 210 px (název koše a tlačítko Dát sem vedle sebe). V profilu jsou
+     proto dva nebo tři koše pod sebou jako na telefonu a čtyři po dvou. */
+  .roztrid { container-type: inline-size; }
   .kose { display: grid; gap: var(--s-3); margin: 0 0 var(--s-5); padding: 0; list-style: none; }
-  @media (min-width: 700px) {
-    .kose { grid-template-columns: repeat(var(--kosu), minmax(0, 1fr)); align-items: stretch; }
+  @container (min-width: 620px) {
+    .kose--ctyri { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+  }
+  @container (min-width: 660px) {
+    .kose:not(.kose--ctyri) { grid-template-columns: repeat(var(--kosu), minmax(0, 1fr)); align-items: stretch; }
+  }
+  @container (min-width: 860px) {
+    .kose--ctyri { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
   .kos {
     position: relative;
@@ -386,9 +396,13 @@
   /* Výsledek drží rozložení košů: na telefonu pod sebou, na notebooku vedle sebe. */
   .vysledky { display: grid; gap: var(--s-4); }
   .vysledek + .vysledek { padding-top: var(--s-4); border-top: 1px solid var(--pc-soft, var(--rule)); }
-  @media (min-width: 700px) {
-    .vysledky { grid-template-columns: repeat(var(--kosu), minmax(0, 1fr)); gap: var(--s-5); }
-    .vysledek + .vysledek { padding-top: 0; padding-left: var(--s-5); border-top: 0; border-left: 1px solid var(--pc-soft, var(--rule)); }
+  @container (min-width: 660px) {
+    .vysledky:not(.vysledky--ctyri) { grid-template-columns: repeat(var(--kosu), minmax(0, 1fr)); gap: var(--s-5); }
+    .vysledky:not(.vysledky--ctyri) .vysledek + .vysledek { padding-top: 0; padding-left: var(--s-5); border-top: 0; border-left: 1px solid var(--pc-soft, var(--rule)); }
+  }
+  @container (min-width: 860px) {
+    .vysledky--ctyri { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-5); }
+    .vysledky--ctyri .vysledek + .vysledek { padding-top: 0; padding-left: var(--s-5); border-top: 0; border-left: 1px solid var(--pc-soft, var(--rule)); }
   }
   .roztrid :global(.blok__oddil p) { max-width: var(--ctenarsky-sloupec); }
   .vysledek__karty { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--s-3); }

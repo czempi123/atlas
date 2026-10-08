@@ -9,6 +9,7 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/lide/', nazev: 'lide', nadpis: /Lidé a směry/ },
   { cesta: '/osobnost/sokrates/', nazev: 'sokrates', nadpis: /Sókratés/ },
   { cesta: '/osobnost/platon/', nazev: 'platon', nadpis: /Platón/ },
+  { cesta: '/osobnost/aristoteles/', nazev: 'aristoteles', nadpis: /Aristotelés/ },
   { cesta: '/osobnost/protagoras/', nazev: 'protagoras', nadpis: /Prótagorás/ },
   { cesta: '/osobnost/epikuros/', nazev: 'epikuros', nadpis: /Epikúros/ },
   { cesta: '/osobnost/diogenes/', nazev: 'diogenes', nadpis: /Diogenés/ },
@@ -21,6 +22,7 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/otazka/jsem-svobodny/', nazev: 'otazka-4', nadpis: /Jsem svobodný\?/, preskocit: 'otazka-jsem-svobodny' },
   { cesta: '/otazka/co-je-skutecne/', nazev: 'otazka-6', nadpis: /Co je skutečné\?/, preskocit: 'otazka-co-je-skutecne' },
   { cesta: '/cesta/je-to-co-vidim-cela-skutecnost/', nazev: 'cesta-3', nadpis: /Je to, co vidím, celá skutečnost\?/ },
+  { cesta: '/cesta/staci-vedet-co-je-spravne/', nazev: 'cesta-4', nadpis: /Stačí vědět, co je správné\?/ },
 ];
 const SIRKY = [
   { sirka: 390, vyska: 844 },

@@ -3,7 +3,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const PROFILY = ['sokrates', 'platon', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
+const PROFILY = ['sokrates', 'platon', 'aristoteles', 'protagoras', 'epikuros', 'diogenes', 'epiktetos', 'marcus-aurelius'];
 const SOKRATES = '/osobnost/sokrates/';
 const OBSAH_SOKRATA = ['01 Věštba z Delf', '02 Muž z agory', '03 Ústup od Délia', '04 Soud', '05 Poslední den', 'Doba a lidé', 'Dvě velké myšlenky', 'Zkus to žít', 'Kam dál', 'Prameny'];
 

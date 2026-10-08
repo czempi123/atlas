@@ -11,7 +11,7 @@
 | Čuang-c’ (okno období 2) | SEP („Zhuangzi“) uvádí jen „pozdní 4. století př. n. l.“; tradiční 369–286 z návrhu P1 jsem nedoložil. | Dohledat v Chan, *A Source Book in Chinese Philosophy*, nebo v IEP. |
 | Hieroklés (stoik) | Heslo IEP neexistuje na očekávané adrese; datace „2. st. n. l.“ nemá odborný zdroj. | Dohledat v Ramelli, *Hierocles the Stoic* (SBL 2009); obraz soustředných kruhů je u Stobaia 4.27.23. |
 | Sextus Empiricus | SEP: „víme málo nebo nic o tom, kdy a kde žil“ (asi 2.–3. st. n. l.). | Nechat bez dat jako medailonek bez místa na mapě, nebo vynechat z mapy. Schéma to umí. |
-| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. |
+| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. **5. 10. 2026 (celek 5):** cesta 4 ho nese ve vstupním příběhu; zůstává v textu bez odkazu, stejně jako Filip, Hermeiás, Pýthias, Kleitos a Kallisthenés. Kvůli tomu nejdou do dat ani věty Plútarcha a Arriána jako citáty (citát potřebuje osobu). |
 
 ## Chybějící roky a místa u lidí, kteří v datech jsou
 
@@ -181,7 +181,7 @@ Cestě 6 a stránce otázky 1 zůstává: nápis na Zahradě a správce, hrnek s
 | Hodnoty v grafu ke studii (`kkm-2023`) | Podklady mají jen hranici 100 000 dolarů, „asi pětinu“ a logaritmický růst. Kresba proto ukazuje směr dvou křivek, osy nemají čísla a sklon křivek je schematický. | Kdyby měl graf nést další čísla (50 000, 200 000 na ose) nebo třetí křivku nejšťastnějších, přečíst tab. 1 a obr. 2 studie a hodnoty zapsat do podkladů. |
 | Chyba je až v úsudku, ne ve vjemu | Epikúrova odpověď na stránce otázky 7 by byla ostřejší s větou, že smysly neklamou a mýlí se až to, co si k nim domyslíme (Dopis Hérodotovi, DL X, 50–51; Hlavní myšlenky 23–24). Nečetl jsem. | Ověřit v řeckém textu a v SEP „Epicurus“, oddíl 3; pak případně doplnit odpověď. Teď stojí jen na DL X, 31–32. |
 | Komu Epikúros psal o hrnku sýra | DL X, 11 cituje dopis bez adresáta, který bych měl ověřený. | V kroku 1 jen „V jednom z nich prosí:“. |
-| Aristotelés: „jednat dobře, a to po celý život“ | Zjednodušení věty „činnost duše podle ctnosti v celém životě“ (1098a16–20) pro studenty. | Při portrétu Aristotela (cesta 4) rozhodnout, jak česky podat ctnost (areté). |
+| Aristotelés: „jednat dobře, a to po celý život“ | Zjednodušení věty „činnost duše podle ctnosti v celém životě“ (1098a16–20) pro studenty. | Při portrétu Aristotela (cesta 4) rozhodnout, jak česky podat ctnost (areté). **Vyřízeno 5. 10. 2026:** zůstává „ctnost“; při prvním výskytu ji vyloží Aristotelés sám (ctnost oka a koně, 1106a15–24, citát `etika-1106a`). Zjednodušení na stránce otázky 1 zůstává. |
 | „Kynici se cvičili, dokud je nepohodlí nepřestalo bolet“ | Výklad vložky DL VI, 70–71 (kdo se vycvičí, tomu je pohrdání slastí nejslastnější); pramen neříká, jak dlouho. | Nechat jako výklad; při revizi případně zjemnit. |
 
 Vědomě vynecháno v P8: přímá řeč správce Zahrady (jeho otázka je v kroku 1 jen nepřímo) a Senekovo „v téhle slasti jsem zestárl“; žaludek jako věřitel (Dopisy 21, 11); Epikúrova chlouba, že se nají za méně než as, a jména Metrodóra a Polyaina; adresát Dopisu Menoikeovi; Kratés a rok jeho smrti; kdo v Zahradě žil a společná pokladna (nese profil); Vatikánský výrok 25, `vs-52` a `etika-1155a`; Suilliovo obvinění a scéna s Neronem (portrét Seneky); jména autorů studie, Gallup, počty odpovědí a hlášení, pojem spolupráce protivníků a to, že u nejšťastnějších roste nálada rychleji; Alexandr (cesta 7).
@@ -283,8 +283,8 @@ Při revizi znovu přečteno a sedí: Cassius Dio 72, 27–28 a 34–36; Histori
 | Rok první sicilské cesty | Sedmý list: „asi ve čtyřiceti“; od narození 428/427 vychází 388/387, D. Nails má návrat 383. | V datech „asi 387“; ve studentském textu bez roku. |
 | Druhá sicilská cesta | Rok 366 jen podle D. Nails; rok návratu neověřen. | V datech jen rok 366 s `priblizne`. |
 | Dión | Roky výpravy (357) a vraždy (354) jen z D. Nails. | Ve studentském textu bez roků. |
-| Kdy Aristotelés napsal kritiku idejí | Neověřeno (za Platónova života, nebo po něm). | Neříkat, že to psal za Platónova života; „později napsal“ také ne. Stačí „napsal“. |
-| Kategorie 5 | V PerseusDL nejsou; anglicky Edghill (MIT), řecká věta z řecké Wikisource; Bekkerovy řádky (2a11–14, 2b5–6) jsem ve vydání neviděl. | Při portrétu Aristotela ověřit v tištěném nebo jiném otevřeném vydání. |
+| Kdy Aristotelés napsal kritiku idejí | Neověřeno (za Platónova života, nebo po něm). | Neříkat, že to psal za Platónova života; „později napsal“ také ne. Stačí „napsal“. **5. 10. 2026:** datování se ověřit nepodařilo a rozhodnutí platí. V textu je vidět jen to, že v Metafyzice I, 9 píše „dokazujeme“ (990b9) a ve XIII, 4 neosobně „dokazuje se“ (1079a4–5); to lze říct, vyvozovat z toho pořadí nelze. |
+| Kategorie 5 | V PerseusDL nejsou; anglicky Edghill (MIT), řecká věta z řecké Wikisource; Bekkerovy řádky (2a11–14, 2b5–6) jsem ve vydání neviděl. | Při portrétu Aristotela ověřit v tištěném nebo jiném otevřeném vydání. **Vyřízeno 5. 10. 2026 v míře, jakou text potřebuje:** řecké znění ověřeno ve vydání I. Bekkera z roku 1837 (First1KGreek, `tlg0086/tlg006`), které řádky nemá; čísla 2a11 a 2b6 potvrzuje SEP „Aristotle's Categories“. Stránku berlínského vydání z roku 1831 jsem neviděl. |
 | Démokritos B125 (smysly odpovídají rozumu) | SEP zlomek jen zmiňuje; Galénův text jsem neotevřel. | Do dat nedán. Ověřit při profilu Démokrita; hodil by se na stránku otázky 6. |
 | Démokritos B9 | Řecky jsem viděl jen kratší znění u Diogena Laertia IX, 72 („chladné“, „teplé“); delší (sladké, hořké, barva) cituje SEP ze Sexta Empeirika. | Citát `dl-ix-72-demokritos` je Diogenovo znění. |
 | Platón Démokrita nejmenuje | Tvrdí to Diogenés Laertios IX, 40; v díle jsem to neověřoval. | Nejvýš „Diogenés Laertios si všiml, že…“. |
@@ -353,6 +353,97 @@ Autorské, bez historického nároku: koše a karty Roztřiď a jejich zpětné 
 | Bod | Proč | Co udělat |
 | --- | --- | --- |
 | Platón cituje Hérakleita | Doba a lidé vede Hérakleita pod „Koho četl“ s popiskem „znal ho z textů“. Podklady mají jen Aristotelovo svědectví, že Platón jeho učení poznal od Kratyla. V dialogu Kratylos (402a) má Sókratés Hérakleita citovat (všechno plyne, do téže řeky nevstoupíš dvakrát); znám to z literatury, text jsem neotevřel. | Ověřit Kratylos 402a skillem `atlas-overeni`. Potvrdí-li se, je popisek přesný a poznámka u vztahu může říct, že ho Platón sám cituje. |
-| Aristotelés: zkušenost z mnoha nemocných | Ve Sporu kroku 5 Platón (domyšleně) namítá, že lékař musí vědět, co je zdraví, a z jednoho pacienta to nevyčte. Aristotelova nejlepší odpověď by byla Metafyzika I, 1 (kolem 981a): umění roste ze zkušenosti s mnoha jednotlivými případy a lékař neléčí „člověka“, ale Kalliu nebo Sókrata. Znám to z literatury, v podkladech to není. | Ověřit Metafyzika I, 1, 981a. Pak může třetí Aristotelův argument odpovědět Platónovi přímo; do té doby platí znění z nálezu 7. |
+| Aristotelés: zkušenost z mnoha nemocných | Ve Sporu kroku 5 Platón (domyšleně) namítá, že lékař musí vědět, co je zdraví, a z jednoho pacienta to nevyčte. Aristotelova nejlepší odpověď by byla Metafyzika I, 1 (kolem 981a): umění roste ze zkušenosti s mnoha jednotlivými případy a lékař neléčí „člověka“, ale Kalliu nebo Sókrata. Znám to z literatury, v podkladech to není. | Ověřit Metafyzika I, 1, 981a. Pak může třetí Aristotelův argument odpovědět Platónovi přímo; do té doby platí znění z nálezu 7. **Ověřeno 5. 10. 2026** (řecky i anglicky, 981a1–30; citát `metafyzika-981a`). Pozor na druhou půlku místa: moudřejší je podle Aristotela přesto ten, kdo zná příčinu (981a24–30). Návrh znění je v `celek-5-staci-vedet.md` (Otevřené body z k-overeni); úpravu hotové cesty 3 rozhodne autor. |
 | Nákres ke čtverci | Viz Portrét Platóna (P7), řádek o Menónu 84d–85b. Revize doporučuje kresbu s pohybem pod blokem Odkryj. | Ověřit postup kreslení před stavbou kresby. |
 
+## Celek 5 „Stačí vědět, co je správné?“ (P6)
+
+5. 10. 2026. Podklady jsou v `docs/podklady/celek-5-staci-vedet.md`. Vyřízeno z dřívějších bodů: areté, Bekkerovy řádky u Kategorií 5, Metafyzika I, 1 (981a) a datování kritiky idejí (řádky výše). Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Encyklopedie a studie čtené nástrojem | SEP, Britannicu, studie o návycích a záznamy muzeí četl nástroj WebFetch, který stránku předává pomocnému modelu; žádal jsem doslovné citace, stránky jsem sám neviděl. Cloudový shell SEP ani API muzeí nepustí. | U čísel, která půjdou do studentského textu (96, 82, 39, 18–254, 66; 71 % a 32 %), projít před P8 ještě jednou plný text; autor je může ověřit v prohlížeči. |
+| Studie o návycích: druhy úkonů | Shrnutí z roku 2012 říká, že jednoduché úkony šly rychleji; nástroj z plného textu vyčetl, že rozdíl mezi skupinami nebyl průkazný. | V textu rozdíl mezi úkony neuvádět. |
+| Mnichovská studie z roku 1997 | Počty účastníků ve druhé studii vyšly ze čtení nejasně. | Použít jen po ověření v plném textu; v cestě je v záloze. |
+| Kde byla studie o návycích | Že jde o University College London, mám z blogu UCL, ne ze studie. | „londýnská univerzita“ ověřit, nebo psát „britští vědci“. |
+| Durant a Maltz | Knihy The Story of Philosophy (1926) a Psycho-Cybernetics (1960) jsem neotevřel; původ věty „Jsme to, co opakovaně děláme“ mám z Wikiquote, původ 21 dní z blogu UCL a článku z roku 2012. | Stačí pro „tu větu nenapsal“ a „číslo pochází od plastického chirurga“. Přesné Maltzovo znění do textu nedávat. |
+| České překlady | A. Kříže (Etika, Politika, Fyzika), A. Koláře (Diogenés Laertios) ani F. Novotného (Prótagorás) jsem neměl v ruce; srovnání u citátů chybí. Že Kříž překládá akrasii jako nezdrženlivost, vím z literatury. | Platí rozhodnutí z celků 1–4: vlastní převody. |
+| Bekkerovy řádky u spisů z First1KGreek | Zkoumání živočichů, O částech živočichů, Fyzika a První analytiky jsou ve vydáních bez Bekkerova číslování. Citáty mají místo jen knihou a kapitolou; běžné číslo řádků je v poznámce. | Kdyby text chtěl řádky, ověřit ve vydání s číslováním. |
+| Milón | Aristotelés ho jen jmenuje (1106b3). Že šlo o zápasníka z Krotónu a mnohonásobného olympijského vítěze, jsem neověřoval. | V textu jen „zápasník Milón“. |
+| Hermeiova smrt a odchod na Lesbos | SEP: Aristotelés odešel na Lesbos „zřejmě po smrti hostitele“; z literatury vím, že se Hermeiova smrt klade až do doby jeho pobytu v Makedonii. | Důvod odchodu neuvádět. |
+| Závěť | Znění u Diogena Laertia V, 11–16; pravost jsem s literaturou neporovnával. | Psát „dochovala se závěť“ a citovat s Diogenem v údaji. |
+| Vídeňská hlava Aristotela | Že je originál odlitku KAS825 římská kopie z 1. století n. l. (inv. I 246), mám jen z databáze ancientrome.ru. | Před popiskem ověřit na stránce Kunsthistorisches Museum; do té doby bez slova „římská“. |
+| Snímky slonovinové skříňky | Nevím, který snímek v The Metropolitan Museum of Art (inv. 17.190.173; 1988.16) ukazuje přední desku s Aristotelem a Alexandrem. | Zjistit po souhlasu autora se stažením. |
+| Pověst o Fyllidě | Znám ji z popisů muzeí; kdo a kdy ji sepsal, jsem neověřoval. | V popisku jen „středověká pověst“. |
+| Epiktétos o otrokovi jako bratru | Rozpravy I, 13 znám z literatury; v podkladech celku 3 nejsou. | Ověřit, jen pokud ji portrét Aristotela bude chtít citovat; jinak stačí odkaz na Epiktétův život. |
+| Kritici nauky o středu | B. Williamse znám jen ze zmínky v anotaci knihy P. Gottliebové (2009). Kanta jsem nehledal. | Jméno do textu nedávat. |
+| „Zlatý střed“ | Odkud české sousloví je, jsem neověřoval. | V atlasu jen „střed“. |
+| Cicero o Aristotelově řeči | „Zlatou řeku“ znám ze SEP; v latinském textu Academik ji nástroj nenašel. | Stačí „Cicero je chválil“. |
+| Spor přes texty v oddíle Doba a lidé | Vztahy Aristotelés → Sókratés a Aristotelés → Prótagorás by jako polemika stály pod nadpisem „Znali se a přeli se“, jako vliv přes texty s popiskem „navázal na jeho texty“. Totéž trápí Karneada s Chrýsippem a Hérakleita u Platóna. | Rozhodne autor: v P7 přidat vlastní skupinu pro polemiku lidí, kteří se nemohli potkat, a pak vztahy doplnit. |
+| Úsudek a člověk jako tvor obce | Citáty `analytiky-i-1`, `politika-1253a` a `politika-1253a-buh` jsou v datech, portrét je nepoužije. | Čekají na stránku pojmu a na velkou otázku 9. |
+
+Autorské, bez historického nároku: možnosti a zpětné vazby Volby „Co ti tehdy chybělo?“, příklad s řekou a plavčíkem pro kresbu „Kde je střed?“, případ „Třetí týden“ pro Návrat, záložní „Představ si…“ se dvěma kytaristy, karty a koše bloků k portrétu (most, tři spolužáci, delfín), příklad s peněženkou a s ohněm ve výkladu. Spojení Kleita s Aristotelovým přirovnáním o psech a spojení studie o návycích s Aristotelovou ctností jsou naše, ne pramenů.
+
+**Do skillu `atlas-overeni`:** kopie `skills/atlas-overeni/references/zdroje.md` je doplněná o místa Aristotelových textů ve First1KGreek, o Ailiána, Strabóna a Plútarchova Sullu v PerseusDL, o poznámku ke čtení encyklopedií nástrojem a o čtyři zkreslení (Durantova věta, 21 dní, zlatý střed, kořeny vzdělání). Skill v účtu je třeba uložit zvlášť.
+
+### Po P7 (portrét Aristotela)
+
+5. 10. 2026. Portrét je v `src/content/osobnosti/aristoteles.mdx`. Vyřízeno z bodů výše: spor přes texty v oddíle Doba a lidé (vlastní skupiny „S kým se přel na dálku“ a „Kdo se s ním přel později“, vztahy Aristotelés → Sókratés a Aristotelés → Prótagorás jsou v datech). Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Vídeňská hlava Aristotela | Stránku předmětu v Kunsthistorisches Museum se nepodařilo najít (hledání vrátilo jen ancientrome.ru a katalog berlínské formírny; vyhledávání ve sbírce muzea přes nástroj nic neukázalo). | Popisek odlitku zůstává bez slova „římská“; ověřit může autor v prohlížeči (inv. I 246). |
+| Rembrandt je zesvětlený | Olej z roku 1653 je tmavý a v duotónu desky z něj zbyla skoro černá plocha. Uložená zmenšenina má upravenou gamu (1,9); originál je mimo repozitář. | Kdyby autor chtěl obraz bez úpravy, vrátit původní zmenšeninu a obraz dát jinam než na desku. |
+| Medailon s Alexandrem | Že medailon na řetězu nese Alexandrovu podobu, říká popis muzea; na obraze to rozeznat nejde. | Popisek to říká bez výhrady, jako u jiných obrázků; při revizi zvážit „podle muzea“. |
+| Zeus a déšť | Věta „Zeus byl pro Řeky bůh, který posílá déšť“ je vysvětlivka k citátu z Fyziky II, 8; v podkladech není, je to obecná znalost. | Stačí; kdyby revize chtěla pramen, vypustit a nechat jen citát. |
+| Dnešní biologie | Věta „Podobnou cestou dnes biologie vysvětluje, proč oko vypadá jako udělané k vidění“ nemá v datech pramen (podklady to říkají výslovně). | Nezesilovat; jméno ani letopočet nepřidávat bez pramene. |
+| Zpětné vazby v bloku „Vodní, nebo suchozemský?“ | Co dýchá kapr, kde klade vejce mořská želva a jak žije pulec, je běžná biologie, ne Aristotelés. Srovnání bloku stojí jen na Zkoumání živočichů VIII, 2. | Nic; hlídat, aby se běžná biologie nedostala do oddílu se jménem Aristotela. |
+| Sókratés „mohl z vězení utéct, a zůstal“ | Kapitola 05 se opírá o Sókratův portrét (celek 1, Kritón), ne o podklady celku 5. | Nic; při revizi číst s portrétem Sókrata. |
+| Odkazy na cestu 4 | Kapitoly 01 a 04 jmenují cestu „Stačí vědět, co je správné?“ zatím bez odkazu; Kam dál má jen Platóna a Epiktéta. | P8: odkaz na obou místech, cesta 4 a otázka 1 do Kam dál, upravit test `tests/e2e/aristoteles.spec.ts`. |
+| Věta „Jsme to, co opakovaně děláme“ | V portrétu není; zadání ji dovoluje v jednom Odkryj jako větu, kterou Aristotelés nenapsal. | P8: jednou v cestě 4, nebo vůbec. |
+
+Vynecháno z podkladů, aby portrét nenesl víc jmen a příběhů, než unese: bronzová koule, lékař a „nejdřív mi řekni příčinu“, pocty v Delfách, obnova Stageiry, Kallisthenés, Íliada a všechno o Mieze (nese cesta 4), věta o člunkách (`politika-1253b-clunky`: vedle otroctví by zněla jako omluva), citát ze závěti o otrocích (`dl-v-15`: fakta říká text, citát by zněl jako polehčující okolnost), „jedna duše ve dvou tělech“ (`dl-v-20`), `etika-1103b`, druhá námitka k pozorování (chybí pokus a měření), Cicero a jména Herpyllis a Níkomachos (popsáni, ne jmenováni).
+
+Autorské, bez historického nároku: příklad s nemocným Honzou ve výkladu čtyř „proč“, otázky v kurzívě na koncích kapitol, spojení Hermeia s třemi druhy přátelství (otázka pro studenta, ne tvrzení o Aristotelovi), spojení červené tečky ve vejci s otázkou „k čemu je“ a výzva Zkus to žít.
+
+### Po P8 (cesta 4)
+
+8. 10. 2026. Cesta je v `src/content/cesty/staci-vedet-co-je-spravne*`, bloky `cesta4-*.yaml`, kresba `src/lib/stred.ts`. Vyřízeno z bodů výše: čísla studie o návycích a londýnská univerzita. Plný text (P. Lally a kol. 2010) jsem tentokrát četl sám: repozitář ISPA má vedle PDF i holý text studie a šel stáhnout z autorova Macu. Sedí 96 dobrovolníků, 82 s dostatkem údajů, křivka proložená u 62 a dobře u 39, 18 až 254 dní, medián 66, dvanáct týdnů (84 dní). Autoři jsou z University College London a studie se nabízela studentům univerzity. Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Příklady úkonů ve studii | Podklady psaly „sklenice vody po snídani“. Ve studii je „after breakfast“ jen příklad situace; příklady úkonů jsou ovoce k obědu, láhev vody k obědu a patnáct minut běhu před večeří. | Cesta píše „vypít k obědu láhev vody“ a „čtvrt hodiny běhat před večeří“; ovoce vynechává (žádný příklad o jídle). Podkladový list neopravuji, platí tento řádek. |
+| „Většinou studentů“ | Studie: převážně postgraduální studenti, 21 až 45 let, průměr 27. | Stačí; věk text neuvádí. |
+| Jeden vynechaný den | Studie: po vynechání bylo skóre další den o něco nižší (statisticky neprůkazně) a dlouhodobě se to neprojevilo. Text: „Na tom, jak mu to šlo dál, se jedno vynechání neprojevilo.“ | Při revizi porovnat; nezesilovat na „nevadí vynechávat“. |
+| „U většiny rostla nejdřív rychle, pak pomaleji“ | Křivka toho tvaru šla proložit u 62 z 82 lidí; u dvanácti ne. | Stačí „u většiny“. |
+| Graf v kroku 7 | Dvě křivky („Jeden účastník“, „Jiný účastník“) nejsou data dvou skutečných lidí. Je to kresba směru: jedna se zastaví brzy, druhá roste do konce pokusu (jako u toho, komu vyšlo 254 dní). | Kdyby revize chtěla jen doložené, graf vypustit; text drží i bez něj. |
+| Král a Střední Asie | „Je králem a s vojskem došel až do Střední Asie“ stojí na Britannice (Marakanda) a na řádcích podkladů o tažení; samostatný řádek v podkladech to nemá. | Obecná znalost; nezesilovat. |
+| „Víc než čtyřicet let“ | Sókratés zemřel 399, Alexandr se narodil 356 (podklady, Rozpory): dopočítáno 43 let. | Nic. |
+| Strom a hora | „Strom u cesty vypadá vyšší než hora na obzoru“ je náš příklad k citátu `protagoras-356c`; v dialogu není. | Hlídat, aby nestál v uvozovkách ani u Sókratova jména. |
+| „Hazarduje“ | Krajnost odvahy na straně „příliš“ (thrasytés) podklady převádějí jako „smělost“; cesta píše „kdo se nebojí ničeho, není statečný, ale hazarduje“. | Je to náš převod; při revizi zvážit. |
+| Výběr z věcí bez středu | Aristotelés jmenuje škodolibost, nestoudnost, závist, cizoložství, krádež a vraždu (1107a6–17); cesta bere závist, krádež a vraždu. | Nic. |
+| Kruh | „Ten, kdo střed trefuje? Pak se točíme v kruhu.“ je námitka z výkladu (podklady, Kdo dá za pravdu komu), ne Aristotelova slova. Věta o svobodných mužích je jediná zmínka o tom, kdo se v obci počítal. | Text ji klade jako otázku; nepřipisovat ji Aristotelovi. |
+| Kresba „Kde je střed?“ | Kde bod na čáře leží a co kdo na břehu udělá (plavčík skočí i do rozvodněné řeky na laně, neplavec hází lano nebo volá o pomoc), je naše volba. Že neplavec nemá skákat, je běžná rada, ne pramen. Z Aristotela kresba drží jen: střed není v půli a není pro každého stejný. | Nic; kresba nesmí dostat čísla. |
+| Sókratova odpověď o Alexandrovi | Srovnání v Odkryj kroku 3 („Nejspíš tohle: … to nevěděl“) je domyšlené z Prótagory 356c–358d; Sókratés zemřel před Alexandrovým narozením. | Text to říká jako odhad; nezměnit na tvrzení. |
+| Sókratův třetí argument ve Sporu | „Sókratés by se mohl zeptat: a podle čeho poznáš, které jednání je dobré?“ je domyšlená odpověď (podklady: bez vědění je zvyk slepý). Příklad s ohněm a s písemkou je náš. | Zůstává s „by se mohl“. |
+| Epiktétos v závěru | „Učil, že lidi neznepokojují věci, ale to, co si o nich myslí“ stojí na `rukojet-5` (celek 3). Že tím stoikové navazují na Sókrata, text netvrdí. | Nic. |
+| Vstupní obrázek, Fyllis, Spor cesty 3, `ucitel/` | Odpovědi autora zůstaly prázdné. | Vstup má ornament a minci; třetí Aristotelův argument ve Sporu cesty 3 čeká na revizi nebo na autora (návrh v podkladovém listu, Otevřené body z k-overeni). |
+
+Nepoužito z podkladů: svatební hostina s Filipem, Anaxarchos, Kallisthenés, obnova Stageiry, Alexandrova věta o otci a učiteli, mnichovská studie z roku 1997, kritici nauky o středu, citáty `protagoras-352c`, `-352d`, `-358c`, `etika-1103b`, `-1106a`, `-1106b-milon`, `-1107a`, `-1109a`, `-1095a`, `-1147b`, `-1152a`, `-1179b-reci` a `-1179b-puda` (některé jen parafrází), obraz lechtání (1150b22), „od mládí… spíš všechno“ (1103b23–25), zákony a tresty (X, 9) a věta „Jsme to, co opakovaně děláme“.
+
+Autorské, bez historického nároku: možnosti a zpětné vazby všech čtyř Voleb, modelové odpovědi v Odkryj, scéna se spolužákem u tabule a její tři podmínky, příklad s řekou, případ „Třetí týden“, výzva „Kam tě to táhne?“ a otázky v kurzívě na koncích kroků 1 a 6. Spojení Aristotelova přirovnání o psech s hostinou a spojení studie o návycích s jeho ctností jsou naše; text to říká („O Alexandrovi tu Aristotelés nepíše“) a u studie to nese zpětná vazba.
+
+### Po P10 (revize celku 5)
+
+8. 10. 2026. Záznam je v `docs/revize/celek-5-2026-10-08.md`. První čtyři řádky jsem ověřil v plném textu staženém z autorova Macu (`curl`), ne přes nástroj, který stránku převypráví. Tamtéž jsem ověřil, že věta `etika-1179b` (X, 9) Sókrata nejmenuje: hned za ní Aristotelés cituje Theognida (nález 7).
+
+| Bod | Co stojí v prameni | Co udělat |
+| --- | --- | --- |
+| Durant a Maltz | Blog UCL (B. Gardner, S. Meisel, 29. 6. 2012): věta o 21 dnech je z předmluvy knihy Psycho-Cybernetics (1960) a týká se obrazu sebe sama a nové tváře po operaci. Tentýž blog z knihy cituje i větu, že obraz sebe sama a návyky jdou spolu (s. 108). | Věta „O návycích nepsal nic“ v kroku 7 je nepravdivá (nález 1). Psát „z knihy z roku 1960“ a „jak dlouho se tvoří návyk, neměřil“. Knihu samu jsem neotevřel. |
+| Hněv a neovládnutí | Etika Nikomachova VII, 6 v překladu H. Rackhama (PerseusDL): neovládnutí v hněvu je „less disgraceful“ než v žádostech (1149a24–25); kdo neudrží hněv, je „in a way controlled by reason“ (1149b1–3); jít za přirozeným popudem je „more excusable“ a hněv je přirozenější (1149b4–8). | Věta „Za omluvu to nemá“ v kroku 5 je přísnější než pramen (nález 2). |
+| Tři rady k hledání středu | Etika Nikomachova II, 9, 1109a30–b13: držet se dál od horší krajnosti, všimnout si, kam to táhne nás, a hlídat se před příjemným. | Krok 8 teď říká „jedna z Aristotelových rad“ (opraveno). Třetí radu do cesty nedávat: vedla by k řeči o slasti. |
+| Umění měřit | Prótagorás 356d–357a v překladu W. R. M. Lamba (PerseusDL): co by bylo záchranou života, „the art of measurement, or the power of appearance?“; umění měřit by zdání zbavilo moci (356d–e) a je to vědění, „a knowledge of measurement“ (357a). Řecky jsem místo nečetl. | Stačí pro opravu nálezu 3 („v Platónově dialogu žádá Sókratés umění měřit“). O slasti dál nemluvit: v dialogu se měří slast a bolest. |
+| Graf v kroku 7 | Křivky jsou naše. Jestli studie ukazuje křivky jednotlivých účastníků a jak vypadají, jsem neověřoval. | Křivky přejmenovat podle tvaru (nález 4), nepsat „účastník“. |
+| Kresba, šestý stav | Že by proud strhl neplavce i s lanem, je náš důvod, ne pramen ani ověřená rada záchranářů. | Rozhodne autor s potvrzením kresby (nález 9). |
+
+Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká „z knihy plastického chirurga z roku 1960“ a „jak dlouho se tvoří návyk, neměřil“; graf má křivky „Rychlý průběh“ a „Pomalý průběh“; šestý stav kresby má důvod (náš, ne z pramene). Spor cesty 3 končí odpovědí podle Metafyziky I, 1 (981a5–30), kterou podklady celku 5 ověřily řecky i anglicky. Otevřené zůstává: popisek odlitku (inv. I 246 ve Vídni) a případná fotografie Miezy pro vstup cesty 4.

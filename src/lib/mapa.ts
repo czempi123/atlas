@@ -181,8 +181,59 @@ function obalPopisku(v: Vyrez, mista: MistoMiniMapy[]) {
 }
 
 /**
- * Výřez mini mapy osoby. Dokud jsou všechna její místa vidět ve výchozím egejském výřezu, zůstává ten.
- * Jinak se střed a měřítko spočítají tak, aby se vešla všechna místa i s popisky (Sinópé, Thurioi).
+ * O kolik jednotek výřezu vyčnívají řádky popisků ven (odhad `radkyPopisku`); 0 = všechny jsou uvnitř i s okrajem.
+ * S `odstup` navíc vrací nekonečno, když se řádky dvou míst přiblíží vodorovně na méně než `odstup`
+ * (odhad šířky má chybu pár jednotek a dva popisky těsně za sebou se čtou jako jeden).
+ */
+function presahPopisku(v: Vyrez, mista: MistoMiniMapy[], okraj = 0, odstup = 0): number {
+  const proj = projekce(v, 1e6);
+  const body = mista.map((m) => ({ xy: proj(m.souradnice) as [number, number], nazev: m.nazev, radky: m.radky }));
+  const umisteni = umisteniPopisku(body, v.sirka);
+  const radky = body.map((b, i) => radkyPopisku(b, umisteni[i]));
+  let presah = 0;
+  body.forEach((b, i) => {
+    if (b.xy[0] < 8 || b.xy[0] > v.sirka - 8 || b.xy[1] < 8 || b.xy[1] > v.vyska - 8) presah = Infinity;
+    for (const r of radky[i]) presah = Math.max(presah, okraj - r[0], r[2] - (v.sirka - okraj), okraj - r[1], r[3] - (v.vyska - okraj));
+    if (odstup > 0) for (let j = i + 1; j < body.length; j++) {
+      if (radky[i].some((a) => radky[j].some((c) => prekryv(a, c, odstup)))) presah = Infinity;
+    }
+    // Řádek popisku nesmí ležet těsně u cizího bodu: bod by se četl jako součást cizího názvu.
+    if (odstup > 0) body.forEach((cizi, j) => {
+      const bod: Obdelnik = [cizi.xy[0] - 10, cizi.xy[1] - 10, cizi.xy[0] + 10, cizi.xy[1] + 10];
+      if (j !== i && radky[i].some((a) => prekryv(a, bod, 0))) presah = Infinity;
+    });
+  });
+  return presah;
+}
+
+/**
+ * Odhad šířky řádku s letopočtem vychází asi o 15 jednotek širší, než jak se řádek vykreslí (pevné mezery v „př. n. l.“
+ * počítá jako široké znaky). Přesah do téhle meze se proto bere, jako by se popisek vešel: změřené stránky se nehnou.
+ */
+const PRESAH_BEZ_ZMENY = 12;
+
+/**
+ * Všechna místa jsou ve výchozím výřezu vidět, ale popisek u kraje by vyjel ven. Hledá nejmenší oddálení
+ * a k němu nejmenší posun středu, při kterém se body i popisky vejdou. Když nic nenajde, vrací null.
+ */
+function vyrezProPopisky(vychozi: Vyrez, mista: MistoMiniMapy[]): Vyrez | null {
+  const posuny: [number, number][] = [];
+  for (let dx = -30; dx <= 30; dx++) for (let dy = -10; dy <= 10; dy++) posuny.push([dx / 10, dy / 10]);
+  posuny.sort((a, b) => Math.hypot(a[0], a[1] * 2) - Math.hypot(b[0], b[1] * 2));
+  for (let meritko = vychozi.meritko; meritko >= vychozi.meritko * 0.6; meritko = Math.floor(meritko * 0.94)) {
+    for (const [dx, dy] of posuny) {
+      const v: Vyrez = { ...vychozi, meritko, stred: [Math.round((vychozi.stred[0] + dx) * 10) / 10, Math.round((vychozi.stred[1] + dy) * 10) / 10] };
+      if (presahPopisku(v, mista, 0, 18) <= PRESAH_BEZ_ZMENY) return v;
+    }
+  }
+  return null;
+}
+
+/**
+ * Výřez mini mapy osoby. Dokud jsou všechna její místa i s popisky vidět ve výchozím egejském výřezu, zůstává ten.
+ * Když by popisek u kraje vyjel ven (Pella u Aristotela má popisek vlevo kvůli Stageiře), výřez se o málo
+ * oddálí a posune. Když některé místo leží mimo výchozí výřez (Sinópé, Thurioi), střed a měřítko se spočítají
+ * tak, aby se vešla všechna místa i s popisky.
  */
 export function vyrezMiniMapy(mista: MistoMiniMapy[], vychozi: Vyrez = VYREZY_OBDOBI_1.mini): Vyrez {
   if (!mista.length) return vychozi;
@@ -191,7 +242,7 @@ export function vyrezMiniMapy(mista: MistoMiniMapy[], vychozi: Vyrez = VYREZY_OB
     const [x, y] = p0(m.souradnice) as [number, number];
     return x > 0 && x < vychozi.sirka && y > 0 && y < vychozi.vyska;
   });
-  if (vsechnaVidet) return vychozi;
+  if (vsechnaVidet) return presahPopisku(vychozi, mista) <= PRESAH_BEZ_ZMENY ? vychozi : (vyrezProPopisky(vychozi, mista) ?? vychozi);
 
   const delky = mista.map((m) => m.souradnice[0]);
   const sirky = mista.map((m) => m.souradnice[1]);

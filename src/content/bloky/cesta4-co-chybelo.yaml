@@ -1,0 +1,35 @@
+# Volba · cesta 4 „Stačí vědět, co je správné?“, krok 2: začátek cesty (pole `zacatek` v přehledu cesty).
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Vlastní pokus před výkladem: začátek cesty.
+# Student si vzpomene, nic nepíše a volí jen druh důvodu: blok proto nemá pole „Proč právě tohle?“ (bezDuvodu)
+# a do deníku se uloží jen zvolená možnost. Možnosti a zpětné vazby jsou autorské. Každá možnost má spojence:
+# 1 Sókratés (Prótagorás 358c–d), 2 většina lidí, jak ji popisuje sám Sókratés (352d), a Aristotelův výchozí bod (1145b27–28),
+# 3 Aristotelés (1103a32–b2), 4 to, co v moci není (stránka otázky 4, cesta 5). Žádná nedostane pokárání.
+# Čtvrtá zpětná vazba nepochybuje o tom, co student zažil: ptá se po jiné, menší chvíli pro zbytek cesty.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+bezDuvodu: true
+scena: Máš před očima chvíli, kdy jsi věděl, co je správné, a neudělal jsi to.
+otazka: Co ti tehdy chybělo?
+moznosti:
+  - text: Vlastně jsem to tak jistě nevěděl.
+    tah: pochybovat o svém vědění
+    zpetna: >-
+      Takhle odpovídá Sókratés v Platónově dialogu Prótagorás: kdo opravdu ví, co je správné, udělá to.
+      Kdo to neudělal, věděl podle něj jen napůl. Co bys tehdy musel vědět navíc, abys to udělal?
+  - text: Věděl jsem to, ale v tu chvíli jsem chtěl něco jiného víc.
+    tah: chtít v tu chvíli něco jiného
+    zpetna: >-
+      Tak to popisuje většina lidí a Sókratés to v Platónově dialogu sám říká: mnozí prý vědí, co je nejlepší, a dělají něco jiného.
+      Z téhle zkušenosti vychází Aristotelés. Bylo to „něco jiného“ opravdu větší, nebo jen blíž a hlasitější?
+  - text: Věděl jsem to, ale nikdy předtím jsem to nedělal a nešlo mi to.
+    tah: vědět, a neumět
+    zpetna: >-
+      Tohle je odpověď Aristotelova: vědět, co je správné, a umět to udělat jsou podle něj dvě věci.
+      To druhé se člověk naučí až tím, že to dělá. Kde ses to mohl naučit dřív, než to bylo potřeba?
+  - text: Věděl jsem to, ale nebylo to v mé moci.
+    tah: nemít to ve svých rukou
+    zpetna: >-
+      Tahle cesta je o chvílích, kdy to v tvé moci bylo. Tvoje k nim nepatří: za to, co není v jeho moci, člověk podle Aristotela nemůže.
+      Epiktétos na tom rozdílu postavil celou filozofii. Vybavíš si i jinou chvíli, třeba menší, kde to ve tvých rukou bylo?
+zdroje: [platon-protagoras-vedeni, aristoteles-etika-ii, aristoteles-etika-vii, aristoteles-etika-iii]

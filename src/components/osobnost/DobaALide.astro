@@ -13,7 +13,8 @@ interface Props { osoba: TOsoba }
 const { osoba } = Astro.props;
 const vztahy = vztahyOsoby(osoba.id);
 const retezy = kdoNavazoval(osoba.id);
-// Vliv přes texty má vlastní skupiny: „Znali se a přeli se“ smí stát jen nad lidmi, kteří se potkali nebo přeli.
+// Vliv přes texty a spor na dálku mají vlastní skupiny: „Znali se a přeli se“ smí stát jen nad lidmi,
+// kteří se potkali nebo se spolu přít mohli.
 const skupiny = skupinyVztahu(vztahy);
 // Název oddílu: nadtitulek na stránce i položka v obsahu stránky (ObsahProfilu.astro).
 const NAZEV = 'Doba a lidé';
@@ -40,14 +41,14 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
       <div>
         <h3 class="t-ovladani-l">{s.nazev}</h3>
         <ul class="lide">
-          {s.lide.map(({ vztah, druhy, smer }) => (
+          {s.lide.map(({ vztah, druhy, smer, naDalku }) => (
             <li>
               <Mince osoba={druhy} varianta="tint" velikost={40} />
               <span class="lide__text">
                 <span class="lide__jmeno">{druhy.jmeno}</span>
                 <span class="t-popisek">
                   <span class={`cara cara--${TYP_CARY[vztah.typ]}`} aria-hidden="true"></span>
-                  {roleVztahu(vztah, smer)}{vztah.poznamka ? ` · ${vztah.poznamka}` : ''} · {zivot(druhy)}
+                  {roleVztahu(vztah, smer, naDalku)}{vztah.poznamka ? ` · ${vztah.poznamka}` : ''} · {zivot(druhy)}
                 </span>
               </span>
             </li>

@@ -148,7 +148,7 @@ Všechny cesty, profily i otázky se skládají z jedné knihovny asi dvanácti 
 
 - **Sbírka setkání:** po dokončení profilu nebo cesty získá student kartu filozofa do deníku; mapa postupně „barevní“ tam, kde už byl.
 - **Žádné žebříčky, série dní ani body za názor.** Odpovídají hodnotám projektu a nevytvářejí tlak.
-- **„Pokračuj, kde jsi skončil“** na úvodní stránce. Návrat nabízí jen deník, tiše a bez upozornění jinde; jde odložit nebo skrýt (rozhodnutí autora z 2. 10. 2026, `docs/plany/rozhrani-v2.md`).
+- **„Pokračuj, kde jsi skončil“** na úvodní stránce. Návrat nabízí jen deník, tiše a bez upozornění jinde; jde odložit nebo skrýt (rozhodnutí autora z 2. 10. 2026, `docs/archiv/plany/rozhrani-v2.md`).
 
 ### Obsahová složka
 
@@ -358,11 +358,11 @@ Výchozí volba je Claude Opus 5.5 s vysokým úsilím; Fable 5.1 jen pro dvě n
 | P3 | Architektura celé filozofie: období, velké otázky, klíčové osobnosti | Fable 5.1 · high | Jednorázová syntéza 2 600 let s dopadem na celou navigaci | Hotovo 29. 9. 2026, `docs/architektura.md` |
 | P4 | Mapa a čas v2 | Opus 5.5 · high (xhigh při zaseknutí) | Hraniční případy času, výkon a mobilní rozvržení | Hotovo a schváleno 30. 9. 2026 |
 | P5 | Knihovna bloků, prvních šest | Opus 5.5 · high (xhigh při zaseknutí) | Základ všech cest, musí být přístupný a testovaný | Hotovo a schváleno 1. 10. 2026 (s ukázkovou cestou 1) |
-| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Celek 1, celek 2 a celek 3 hotovo a schváleno; celek 4 hotovo a schváleno (`docs/archiv/plany/celek-4.md`); další celek zvolí autor |
-| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Celek 1, celek 2 a celek 3 hotovo a schváleno; skill `atlas-osobnost` |
-| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Celek 1, celek 2 a celek 3 hotovo a schváleno; skill `atlas-cesta` |
+| P6 | Podklady k celku | Sonnet 5.5 · high s vyhledáváním; Opus 5.5 · high u sporných pramenů | Systematická rešerše, ověření každého tvrzení | Celky 1 až 4 hotovo a schváleno; celek 5 připravený 5. 10. 2026, zadání v `docs/plany/celek-5.md` |
+| P7 | Portrét nebo profil osobnosti | Opus 5.5 · medium, high u portrétu | Příběh a živá čeština | Celky 1 až 4 hotovo a schváleno; skill `atlas-osobnost` |
+| P8 | Cesta, velká otázka, myšlenkový pokus | Opus 5.5 · high | Spojení filozofie, didaktiky a příběhu | Celky 1 až 4 hotovo a schváleno; skill `atlas-cesta` |
 | P9 | Medailonky a data hromadně | Sonnet 5.5 · medium | Vyplňování podle vzoru a schématu | Se skillem `atlas-data` |
-| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Celek 1 hotovo a schváleno 1. 10. 2026; celek 2 hotovo a schváleno 2. 10. 2026 (`docs/archiv/plany/celek-2.md`); celek 3 hotovo a schváleno 3. 10. 2026 (`docs/archiv/plany/celek-3.md`) |
+| P10 | Revize celku | Opus 5.5 · high | Najde slabou námitku i nefunkční krok | Celek 1 hotovo a schváleno 1. 10. 2026; celek 2 hotovo a schváleno 2. 10. 2026 (`docs/archiv/plany/celek-2.md`); celek 3 hotovo a schváleno 3. 10. 2026 (`docs/archiv/plany/celek-3.md`); celek 4 hotovo a schváleno 4. 10. 2026 (`docs/archiv/plany/celek-4.md`) |
 | P11 | Souhrnná revize období | Fable 5.1 · high | Souvislosti napříč desítkami stránek | Na konci každé fáze |
 | P12 | Plán nového období | Opus 5.5 · high | Výběr a pořadí podle hotové architektury | Se skillem `atlas-obdobi` |
 | P13 | Úprava skillů po fázi | Opus 5.5 · high | Zobecnění opakovaných chyb | Na konci každé fáze |
@@ -381,7 +381,8 @@ Plné znění promptů, stav kroků a „co zůstalo na později“ jsou v soubo
 | `celek-2` | „Jak mám žít?“: Epikúros, Diogenés, cesta 6, otázka 1 | `docs/archiv/plany/celek-2.md` | hotovo, schváleno a sloučeno 2. 10. 2026; hlavní větev je na GitHubu |
 | `celek-3` | „Co mám ve svých rukou?“: Epiktétos, Marcus Aurelius, cesta 5, otázka 4 | `docs/archiv/plany/celek-3.md` | hotovo, schváleno a sloučeno 3. 10. 2026; hlavní větev je na GitHubu |
 | `celek-4` | „Je to, co vidím, celá skutečnost?“: Platón, cesta 3, otázka 6 | `docs/archiv/plany/celek-4.md` | podklady (P6), portrét Platóna (P7), cesta 3 a stránka otázky 6 (P8) hotové 4. 10. 2026; revize celku (P10) hotová 4. 10. 2026 s verdiktem „po opravách“ (`docs/revize/celek-4-2026-10-04.md`); opravy všech osmi nálezů zapracované a celek **uzavřený a schválený autorem 4. 10. 2026**, sloučený do hlavní větve a poslaný na GitHub (spolu s `rozhrani-v2`) |
-| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/plany/rozhrani-v2.md` | R1 schválený, R2 hotový 3. 10. 2026 a čeká na schválení autorem; pak revize větve (P10) |
+| `celek-5` | „Stačí vědět, co je správné?“: Aristotelés, cesta 4, doplnění otázky 1 | `docs/plany/celek-5.md` | podklady (P6) a portrét Aristotela (P7) hotové 5. 10. 2026, cesta 4 (P8) hotová 8. 10. 2026; revize celku (P10) hotová 8. 10. 2026 s verdiktem po opravách, zadání oprav připravené |
+| `rozhrani-v2` | Rozhraní mimo celky: jeden začátek na Domů, obsah profilu, ovládání mapy, reflexe ve Sporu, Na začátku × Teď, blok Návrat | `docs/archiv/plany/rozhrani-v2.md` | hotovo: R1 a R2 schválené, větev sloučená do hlavní větve a od 4. 10. 2026 na GitHubu spolu s celkem 4; autor ji uzavřel 5. 10. 2026 |
 
 Po závěrečné revizi a schválení celku se větev sloučí do hlavní větve a hlavní větev se pošle na GitHub. Mezi tím se na GitHub nic neposílá.
 

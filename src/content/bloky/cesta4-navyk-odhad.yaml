@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 4 „Stačí vědět, co je správné?“, krok 7: odhad před výsledkem studie o návycích (2010).
+# Podklad: docs/podklady/celek-5-staci-vedet.md › Nový případ: jak dlouho trvá, než se z jednání stane zvyk, řádky 1–2
+# a Návrh bloku (P. Lally a kol., European Journal of Social Psychology 40, 2010; čísla ověřena v plném textu 8. 10. 2026).
+# Zpětná vazba výsledek neprozrazuje; ten stojí v textu kroku pod blokem (blok na něj vede vlastním Kam dál).
+# Čtvrtá možnost patří studentovi, kterému se návyky nedaří: nedostane pokárání ani radu.
+# Žádný tah není něčí, blok nemá Co udělal.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj odhad
+otazka: Jak dlouho podle tebe trvá, než ti nová věc přejde do krve?
+moznosti:
+  - text: Asi tři týdny.
+    tah: věřit třem týdnům
+    zpetna: >-
+      Držíš se čísla, které zná skoro každý. Chirurg ho ale odpozoroval u lidí, kteří si zvykali na novou tvář.
+      Je zvyknout si na něco totéž co naučit se něco dělat?
+  - text: Asi dva měsíce.
+    tah: čekat měsíce
+    zpetna: >-
+      Počítáš s tím, že tři týdny jsou málo. Z čeho ten odhad máš: z vlastní zkušenosti, nebo odjinud?
+      A platil by pro každého stejně?
+  - text: U každého jinak.
+    tah: nečekat jedno číslo
+    zpetna: >-
+      Nevěříš, že jedno číslo platí pro všechny. O kolik se podle tebe můžou dva lidé lišit: o pár dní, nebo několikanásobně?
+  - text: Nikdy úplně. Vždycky se k tomu musím trochu nutit.
+    tah: nevěřit v samozřejmost
+    zpetna: >-
+      Mluvíš ze zkušenosti, kterou má hodně lidí: nová věc pořád něco stojí.
+      Je rozdíl mezi tím, když tě stojí hodně, a když už jen málo? A stačil by ti ten druhý stav?
+zdroje: [lally-2010, ucl-21-dni]
