@@ -1,6 +1,7 @@
 // Snímek jednoho prvku stránky (blok, kresba) pro kontrolu a pro autora, volitelně po klepnutí na jiný prvek.
 // node scripts/snimky-prvek.mjs <cesta> <selektor> <nazev> <sirka> <light|dark> [text přepínače nebo tlačítka, na které klepnout]
 //   node scripts/snimky-prvek.mjs /cesta/je-to-co-vidim-cela-skutecnost/1/ '#jeskyne-pohledy' jeskyne-bok 390 light 'Pohled z boku'
+//   node scripts/snimky-prvek.mjs /cesta/staci-vedet-co-je-spravne/6/ '#kde-je-stred' stred-plavcik-voda 390 light 'plavčík|rozvodněná'
 // Proměnné: ZAKLAD (běžící web; výchozí náhled sestaveného webu na portu 4323), VEN (složka pro výstup),
 // POHYB=1 nechá animace běžet (jinak je omezený pohyb zapnutý a kresba stojí), CEKEJ (ms před snímkem),
 // POSUVNIK (hodnota prvního posuvníku v prvku).
@@ -25,7 +26,8 @@ await page.waitForFunction((sel) => {
   const ostrov = e?.closest('astro-island');
   return !!e && (!ostrov || !ostrov.hasAttribute('ssr'));
 }, selektor);
-if (klik) await prvek.getByText(klik, { exact: true }).click({ force: true });
+// Víc klepnutí za sebou se oddělí svislítkem: 'plavčík|rozvodněná'.
+for (const k of klik ? klik.split('|') : []) await prvek.getByText(k, { exact: true }).click({ force: true });
 // POSUVNIK=3 nastaví první posuvník v prvku (kresba s posuvníkem).
 if (process.env.POSUVNIK) await prvek.locator('input[type="range"]').first().fill(process.env.POSUVNIK);
 await page.waitForTimeout(Number(process.env.CEKEJ ?? 300));
