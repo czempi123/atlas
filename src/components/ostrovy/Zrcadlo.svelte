@@ -68,7 +68,7 @@
       </g>
     {/if}
 
-    <rect class="k-svetlo" x={ZIVOT.x} y={Y} width={ZIVOT.sirka} height={V} />
+    <rect class="k-svetlo zivot" x={ZIVOT.x} y={Y} width={ZIVOT.sirka} height={V} />
     <text class="k-popisek k-popisek--tmavy" x={OSA.stred} y={Y + V / 2 + 4} text-anchor="middle">život</text>
   {/snippet}
 

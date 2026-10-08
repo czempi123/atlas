@@ -22,6 +22,9 @@ const { cesta, kroky } = Astro.props;
 const { Content } = await render(cesta);
 const c = cesta.data;
 const lide = c.filozofove.map(osoba);
+// Odkaz na stránku osobnosti jen tam, kde stránka je (Lucretius v cestě 8 ji nemá).
+const stranky = new Map((await getCollection('osobnosti')).map((o) => [o.data.osoba, o.id]));
+const adresaOsoby = (id: string) => (stranky.has(id) ? `/osobnost/${stranky.get(id)}/` : undefined);
 const otazky = await getCollection('otazky');
 const otazka = otazky.find((o) => o.data.cislo === c.otazka);
 const odkazOtazky = otazka ? adresaOtazky(otazka.id, otazka.data) : undefined;
@@ -43,7 +46,7 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
       <h1 class="t-h1">{c.nazev}</h1>
       <p class="t-perex">{nezlomitelne(c.vstup)}</p>
       <p class="lide t-ovladani">
-        {lide.map((o) => <span class="clovek"><Mince osoba={o} varianta="tint" velikost={36} /> <a href={`/osobnost/${o.id}/`}>{o.jmeno}</a></span>)}
+        {lide.map((o) => <span class="clovek"><Mince osoba={o} varianta="tint" velikost={36} /> {adresaOsoby(o.id) ? <a href={adresaOsoby(o.id)}>{o.jmeno}</a> : <span>{o.jmeno}</span>}</span>)}
       </p>
     </header>
     <div class="ctenarsky uvod"><Content /></div>
@@ -53,7 +56,7 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
     <section class="ctenarsky kam-dal" id="hotovo" aria-labelledby="kam-dal-nadpis">
       <h2 class="t-h3" id="kam-dal-nadpis">Kam dál</h2>
       <ul>
-        {lide.map((o) => <li><a href={`/osobnost/${o.id}/`}>{o.jmeno}: celý příběh</a></li>)}
+        {lide.filter((o) => adresaOsoby(o.id)).map((o) => <li><a href={adresaOsoby(o.id)}>{o.jmeno}: celý příběh</a></li>)}
         {c.mapa && <li><a href={`/mapa/?rok=${c.mapa.rok}&osoba=${c.mapa.osoba}`}>Mapa a čas: {c.mapa.text}</a></li>}
         {otazka && <li><a href={odkazOtazky}>Velká otázka {otazka.data.cislo}: {otazka.data.otazka}</a></li>}
       </ul>
