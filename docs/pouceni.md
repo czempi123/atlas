@@ -1,6 +1,6 @@
 # Poučení z revizí a z psaní
 
-Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů revizí celků 1 až 4 (`docs/archiv/revize/`, `docs/revize/`); totéž drží skilly. Záznamy revizí kvůli tomu číst netřeba. Nové poučení sem připiš jednou větou.
+Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů revizí celků 1 až 5 (`docs/archiv/revize/`, `docs/revize/`); totéž drží skilly. Záznamy revizí kvůli tomu číst netřeba. Nové poučení sem připiš jednou větou.
 
 ## Prameny a formulace
 
@@ -12,6 +12,11 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Výsledek pokusu se dvěma skupinami je rozdíl proti srovnávací skupině, ne „než dřív“. Ověř ve studii, s čím se srovnává, i když podklady nabízejí hotovou větu.
 - Jménem nazvi jen toho, kdo nese příběh nebo myšlenku.
 - Závěr cesty a text možností drží obraz pramene stejně jako scéna. Shrnutí na jednu větu („otočit se musí každý sám“) snadno řekne opak toho, co cesta o tři kroky dřív vyprávěla.
+- Záporné tvrzení o autorovi („o návycích nepsal nic“) je tvrzení jako každé jiné: ověř ho v tomtéž zdroji celém. Blog, ze kterého věta vznikla, citoval o odstavec níž opak.
+- Kde text filozofa zpřísní, aby nezněl jako omluva, ztratí rozdíl, kvůli kterému citát v kroku stojí. Napiš obojí: „V pořádku to není. Je to ale míň ošklivé než…“
+- Co si filozof myslel („úplně jistý si nebyl“), je domněnka. Piš, co stojí v textu: „jeho výklad s tím na třech místech neladí“.
+- Zájmeno za větou se dvěma muži čte student obráceně („Pohádají se. Přátelé ho vyvedou“). Jméno zopakuj, i když mělo zaznít jen jednou.
+- Graf nebo kresba, která ukazuje jen směr, nenese jméno měřené věci („Jeden účastník“). Pojmenuj tvar („rychlý průběh“) a text pod ní řekne, odkud ten tvar je.
 
 ## Bloky
 
@@ -29,7 +34,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Tentýž citát a tentýž doložený detail nejvýš dvakrát v celku. Scéna z portrétu se v cestě neopakuje doslova; cesta přitom musí stát i bez portrétu.
 - Úvodní případ stránky otázky je jiného druhu než nový případ cesty.
 - Každý hlas na stránce otázky se pozná a nezmenšuje se to, čím se liší. Odpověď hlasu má nejvýš dvě věty.
-- Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec.
+- Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec. Spojenec je jiný myslitel: když námitce přitaká jen filozof cesty („to přiznal sám“), promění se v souhlas s ním.
 - Čtyři citáty za sebou student přeskakuje.
 - Délka se kvůli délce nekrátí: zvídavý student si přečte víc (rozhodnutí autora).
 - Čas cesty na štítku (`minut`) se počítá: slova, která student opravdu přečte, při 150 za minutu, a k tomu ovládání. Neopisuje se z minulé cesty; počítá ho `node scripts/slova-cesta.mjs <slug>`.
@@ -49,6 +54,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Poznámka se čte na obou stránkách vztahu. Věta s podmětem („nesouhlasil s ním, že…“) na jedné z nich říká opak; u sporu piš otázku, o kterou šlo („spor o ideje“, „stačí vědět, co je dobré?“).
 - Polemika s člověkem, kterého kritik nemohl potkat, není „Znali se a přeli se“: má vlastní skupinu (spor na dálku).
 - Text u desky (atribut, popisek) čte student dřív než první kapitolu: nesmí stát na slově, které stránka teprve vyloží (ctnost).
+- Když se změní atribut nebo výklad osobnosti, přečti i `kdo` a `proc` v `lide.yaml`. Ukazuje je karta v Mapě a čase a stará věta tam přežije („ctnost je střed mezi dvěma krajnostmi“).
 
 ## Technika
 
@@ -59,3 +65,5 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`. Dojem z barvy nevznikne z barevného pozadí: chce věci známé barvy ve stejném světle (šaty v cestě 1). Kresbu, která má vyvolat dojem, ukaž autorovi dřív, než ji popíšeš jako hotovou.
 - Chromium nevyfotí najednou stránku vyšší než asi 16 000 px; dlouhé stránky foť po částech (`scripts/snimky-listy.mjs`).
 - Prvek s fokusem z klávesnice zůstane pod pevnou lištou, když leží ve viditelné části okna: prohlížeč stránku neposune a `scroll-padding` to nespraví. Dorovnává to základní rozvržení. Při revizi zkoušej skutečným tabulátorem na dvou výškách okna a skriptem `scripts/kontrola-fokus.mjs`.
+- Studentské věty hlídají testy přesným zněním. Než opravíš větu, najdi ji v `tests/` (`grep -rn`) a test uprav v tomtéž commitu.
+- Příkaz poslaný na autorův Mac musí skončit do minuty. `npm test` a sestavení pouštěj na pozadí s výstupem do souboru a na výsledek se ptej zvlášť.

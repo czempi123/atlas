@@ -4,6 +4,15 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Revize celku 5 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Verdikt revize je „po opravách“: jeden blokující nález (krok 7, chirurg „o návycích nepsal nic“), pět důležitých a čtyři drobné. Zásadní nálezy se neopravovaly; čekají na autora s hotovým zněním v `docs/revize/celek-5-2026-10-08.md` | Zadání P10: drobnosti opravit rovnou, zásadní seřadit podle dopadu a navrhnout |
+| Kleitos je v kroku 1 cesty 4 jménem dvakrát („Přátelé Kleita vyvedou ven“), proti P8, kde měl zaznít jednou | Za větou „Pohádají se, oba opilí“ šlo zájmeno „ho“ číst jako Alexandra a příběh tím obrátit; test `cesta4.spec.ts` drží nové znění |
+| Kresba „Kde je střed?“ zůstává nepotvrzená | Řádek o kresbě v zadání P10 přišel nevyplněný; revize k ní má nález 9 (důvod u šestého stavu) |
+| Doporučení k otevřeným bodům: vstup cesty bez obrázku, Spor cesty 3 upravit podle Metafyziky 981a, `ucitel/` založit, Sókrata, kartu Zkus to žít, graf (po přejmenování křivek) a „hazarduje“ nechat | Zdůvodnění v záznamu revize; rozhodne autor v zadání oprav |
+
 ## 8. 10. 2026: Cesta 4 „Stačí vědět, co je správné?“ (P8)
 
 | Rozhodnutí | Důvod |

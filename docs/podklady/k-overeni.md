@@ -432,3 +432,16 @@ Autorské, bez historického nároku: příklad s nemocným Honzou ve výkladu �
 Nepoužito z podkladů: svatební hostina s Filipem, Anaxarchos, Kallisthenés, obnova Stageiry, Alexandrova věta o otci a učiteli, mnichovská studie z roku 1997, kritici nauky o středu, citáty `protagoras-352c`, `-352d`, `-358c`, `etika-1103b`, `-1106a`, `-1106b-milon`, `-1107a`, `-1109a`, `-1095a`, `-1147b`, `-1152a`, `-1179b-reci` a `-1179b-puda` (některé jen parafrází), obraz lechtání (1150b22), „od mládí… spíš všechno“ (1103b23–25), zákony a tresty (X, 9) a věta „Jsme to, co opakovaně děláme“.
 
 Autorské, bez historického nároku: možnosti a zpětné vazby všech čtyř Voleb, modelové odpovědi v Odkryj, scéna se spolužákem u tabule a její tři podmínky, příklad s řekou, případ „Třetí týden“, výzva „Kam tě to táhne?“ a otázky v kurzívě na koncích kroků 1 a 6. Spojení Aristotelova přirovnání o psech s hostinou a spojení studie o návycích s jeho ctností jsou naše; text to říká („O Alexandrovi tu Aristotelés nepíše“) a u studie to nese zpětná vazba.
+
+### Po P10 (revize celku 5)
+
+8. 10. 2026. Záznam je v `docs/revize/celek-5-2026-10-08.md`. První čtyři řádky jsem ověřil v plném textu staženém z autorova Macu (`curl`), ne přes nástroj, který stránku převypráví. Tamtéž jsem ověřil, že věta `etika-1179b` (X, 9) Sókrata nejmenuje: hned za ní Aristotelés cituje Theognida (nález 7).
+
+| Bod | Co stojí v prameni | Co udělat |
+| --- | --- | --- |
+| Durant a Maltz | Blog UCL (B. Gardner, S. Meisel, 29. 6. 2012): věta o 21 dnech je z předmluvy knihy Psycho-Cybernetics (1960) a týká se obrazu sebe sama a nové tváře po operaci. Tentýž blog z knihy cituje i větu, že obraz sebe sama a návyky jdou spolu (s. 108). | Věta „O návycích nepsal nic“ v kroku 7 je nepravdivá (nález 1). Psát „z knihy z roku 1960“ a „jak dlouho se tvoří návyk, neměřil“. Knihu samu jsem neotevřel. |
+| Hněv a neovládnutí | Etika Nikomachova VII, 6 v překladu H. Rackhama (PerseusDL): neovládnutí v hněvu je „less disgraceful“ než v žádostech (1149a24–25); kdo neudrží hněv, je „in a way controlled by reason“ (1149b1–3); jít za přirozeným popudem je „more excusable“ a hněv je přirozenější (1149b4–8). | Věta „Za omluvu to nemá“ v kroku 5 je přísnější než pramen (nález 2). |
+| Tři rady k hledání středu | Etika Nikomachova II, 9, 1109a30–b13: držet se dál od horší krajnosti, všimnout si, kam to táhne nás, a hlídat se před příjemným. | Krok 8 teď říká „jedna z Aristotelových rad“ (opraveno). Třetí radu do cesty nedávat: vedla by k řeči o slasti. |
+| Umění měřit | Prótagorás 356d–357a v překladu W. R. M. Lamba (PerseusDL): co by bylo záchranou života, „the art of measurement, or the power of appearance?“; umění měřit by zdání zbavilo moci (356d–e) a je to vědění, „a knowledge of measurement“ (357a). Řecky jsem místo nečetl. | Stačí pro opravu nálezu 3 („v Platónově dialogu žádá Sókratés umění měřit“). O slasti dál nemluvit: v dialogu se měří slast a bolest. |
+| Graf v kroku 7 | Křivky jsou naše. Jestli studie ukazuje křivky jednotlivých účastníků a jak vypadají, jsem neověřoval. | Křivky přejmenovat podle tvaru (nález 4), nepsat „účastník“. |
+| Kresba, šestý stav | Že by proud strhl neplavce i s lanem, je náš důvod, ne pramen ani ověřená rada záchranářů. | Rozhodne autor s potvrzením kresby (nález 9). |
