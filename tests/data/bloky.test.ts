@@ -94,6 +94,12 @@ describe('Volba s důvodem', () => {
     expect(BlokVolba.safeParse({ ...bezOddilu, moznosti: bez.moznosti }).success).toBe(true);
     expect(BlokVolba.safeParse({ ...volba, moznosti: volba.moznosti.slice(0, 1) }).success).toBe(false);
   });
+  it('schéma: pole „Proč právě tohle?“ má blok vždy, pokud si ho výslovně neodřekne', () => {
+    expect(volba.bezDuvodu).toBe(false);
+    expect(BlokVolba.parse({ ...volba, bezDuvodu: true }).bezDuvodu).toBe(true);
+    // Zápis do deníku bez důvodu nese jen zvolenou možnost.
+    expect(zapisVolby(volba, 0, '')).not.toMatch(/Proč/);
+  });
 });
 
 describe('Odkryj', () => {

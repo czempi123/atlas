@@ -61,6 +61,11 @@ export const BlokVolba = z
       })
       .strict()
       .optional(),
+    /**
+     * Blok bez pole „Proč právě tohle?“: student volí jen možnost a do deníku se uloží jen ona.
+     * Pro otázky, u kterých by důvod byl zpověď (cesta 4: „Co ti tehdy chybělo?“).
+     */
+    bezDuvodu: z.boolean().default(false),
   })
   .strict()
   .refine((b) => !b.coUdelal || b.moznosti.filter((m) => m.jeho).length === 1, {

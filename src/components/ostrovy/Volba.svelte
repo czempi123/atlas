@@ -1,6 +1,7 @@
 <script lang="ts">
   // Volba s důvodem: karty A–D, nepovinné „Proč právě tohle?“, ke každé možnosti vlastní zpětná vazba
   // „Tvůj tah: …“ a oddíl „Co udělal …“. Zpětná vazba vysvětluje důvod, nikdy neznámkuje.
+  // Blok s `bezDuvodu: true` pole „Proč právě tohle?“ nemá (cesta 4, krok 2).
   // Použití v MDX (obsah v src/content/bloky/cesta1-jak-zjistit.yaml):
   // <Volba id="cesta1-jak-zjistit" />
   import { onMount, tick } from 'svelte';
@@ -86,8 +87,10 @@
   </div>
 
   {#if !potvrzeno}
-    <label class="blok__popis" for={`${id}-proc`}>Proč právě tohle? <span class="nepovinne">Nepovinné</span></label>
-    <textarea class="blok__pole blok__pole--kratke" id={`${id}-proc`} rows="2" bind:value={proc} onchange={ulozRozpracovane} placeholder="Stačí pár slov…"></textarea>
+    {#if !blok.bezDuvodu}
+      <label class="blok__popis" for={`${id}-proc`}>Proč právě tohle? <span class="nepovinne">Nepovinné</span></label>
+      <textarea class="blok__pole blok__pole--kratke" id={`${id}-proc`} rows="2" bind:value={proc} onchange={ulozRozpracovane} placeholder="Stačí pár slov…"></textarea>
+    {/if}
     <button class="blok__tl blok__tl--hlavni" type="button" onclick={potvrd} disabled={vyber === null}>Tohle je můj tah</button>
   {:else if proc.trim()}
     <p class="tvuj-duvod"><span class="t-popisek">Tvůj důvod:</span> {proc}</p>
