@@ -36,3 +36,44 @@ Pravidla jako u celku 5: každé historické tvrzení a citát se zdrojem, ově�
 
 Osnovu mi neposílej a na schválení nečekej. Kde váháš (které tři myšlenky, jaký Spor, jaký nový případ, čím cestu otevřít, které hlasy na otázku 3), zvol nejlepší cestu a pracuj. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš stav do docs/plany/celek-6.md (oddíl Po P6), připrav tam zadání P7 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-6.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je ověřeno, co zůstalo otevřené, nad čím jsi váhal a co jsi zvolil, a co potřebuje moje rozhodnutí (obrázky ke stažení, jak vyprávět Senekovu smrt, řádek s kontaktem pomoci).
 ```
+
+## P7: Portrét Seneky
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Je to nejcitlivější portrét atlasu (smrt na císařův rozkaz, věta o tom, že mladý Seneca nechtěl žít, otroci, služba Neronovi) a rozhoduje v něm tón jednotlivých vět; na Sonnetu bych ho nepsal. Čtyři řádky s odpověďmi jsou vyplněné podle chatu z 8. 10. 2026; u prvních dvou zbývá doplnit konec (Rubensova kresba, motiv ochrany rodiny). Nedoplněný konec znamená doporučení podkladů: kresbu ne, motiv jen učiteli.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-6. Podklady (P6) jsou hotové.
+
+Obrázek: berlínská herma se jménem SENECA, souhlasím se stažením i s licencí CC BY-NC-SA. Rubensova kresba Pseudo-Seneky (ano / ne): 
+Senekova smrt: znění z podkladů; slovo „sebevražda“ se použít smí, vždy s rozkazem. Motiv ochrany rodiny (jen učiteli / i ve studentském textu jako popis zákona): 
+Věta z Dopisu 78 „Někdy je statečné i žít“: ano, do kapitoly o mládí.
+Řádek s kontaktem pomoci pod poslední kapitolou portrétu: ano, jen jako informace na okraj, znění z podkladů.
+
+Napiš portrét Seneky podle skillu atlas-osobnost. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md a docs/pouceni.md (oddíl Student, kterého se téma bolestně týká pozorně);
+- v docs/plany/celek-6.md tabulku stavu a oddíl „Po P6“;
+- z docs/podklady/celek-6-proc-se-bat-smrti.md: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), Nejsilnější příběhy, celý oddíl Tvrzení: Seneca (portrét), celý oddíl Citlivá místa, z tabulky Citáty řádky 1 až 17, Návrh dat, Obrázky (Podobizna Seneky) a Rozpory a rozhodnutí. Oddíly o cestě 8 a o otázce 3 nečti; z nich jen seznam Překryvy, kterým se cesta vyhne;
+- jako vzor stavby hlavičku a jednu kapitolu src/content/osobnosti/aristoteles.mdx a jeden jeho blok v src/content/bloky/;
+- co atlas o Senekovi už říká, najdi grepem („Senec“) v src/content/otazky/jak-zit.mdx, src/content/osobnosti/epikuros.mdx a src/content/cesty/kolik-je-dost/; nic z toho neopakuj.
+
+Co portrét má mít:
+
+1. Osa. Ne učitel a vladař (to byla cesta 4), ale člověk, který psal, jak žít, a třináct let stál vedle moci, ze které pak nesměl odejít; a k tomu slovo a život. Rozdíly od Aristotela a Alexandra jsou v podkladech (Seneca a Nero nejsou Aristotelés a Alexandr): portrét je nevyjmenovává, stojí na nich. Žádná omluva a žádný soud naším hlasem.
+2. Vstup. Žádost o odchod roku 62 (Nejsilnější příběhy 7), bez přímé řeči: řeči složil Tacitus. Vila a platany patří kapitole o stáří a dopisech. Smrtí portrét nezačíná.
+3. Tři myšlenky, každá s vlastním pokusem studenta před výkladem a s námitkou, kterou nese jiný myslitel nebo Seneca sám: „Učíme se pro školu, ne pro život“ (Roztřiď), otroci jsou lidé (Změň jednu věc; Seneca otroky měl a propuštění nežádal; atlas má portrét Epiktéta), odklad jako lék na hněv (Volba). Karta Zkus to žít: večerní tři otázky; otázky jsou Sextiovy a věta před citátem to řekne.
+4. Život podle tabulky Život a tabulky Kdo to vypráví. U každé věty drž typ tvrzení z podkladů: „asi“ zůstává „asi“, co říká jen Tacitus, říká Tacitus, a Tacitovy řeči nejsou Senekova slova. Nepoužívej: pět dobrých let, půjčku Britům, poměry s Julií a Agrippinou, Egypt jako fakt, dopisy s Pavlem jako fakt, výši majetku jinak než jako Suilliovu výčitku.
+5. Senekova smrt: znění z podkladů a moje odpověď výše. Způsob nikde. Slovo „sebevražda“ jen s rozkazem v téže větě („vynucená sebevražda“), ne „spáchal“; žádné „klidně“, „statečně“, „důstojně“, „po vzoru Sókrata“, „zvolil“, „odešel“. Prázdný řádek o motivu znamená: jen učiteli. Hned po scéně to, co po něm zůstalo, a otázka pro studenta. Paulina jednou větou.
+6. Co portrét nechává jinde: argumenty o smrti a záchvat dušnosti (Dopisy 54, 30, 24) a útěchy cestě 8, čas cestě 34 (v portrétu jen atribut), představu nejhoršího cestě 33, bohatství a jeho odpověď stránce otázky 1 (odkaz).
+7. Kapitola nebo Odkryj „Tvář, která mu nepatřila“ s hermou: jediná podobizna se jménem a tvář, kterou Evropa neznala. Popisek říká, co to je, odkud a z kdy; autor a licence jsou vidět v Pramenech na téže stránce.
+8. Kdo žil dřív?, Doba a lidé a Kam dál podle skillu. Cestu 8 jmenuj zatím bez odkazu; vznikne v P8.
+
+Data: hlavní citát a obrázek Seneky. Hermu stáhni (souhlas je výše): originál mimo repozitář, do public/obrazky/ kopii zmenšenou na 1280 px; předtím ověř v záznamu muzea verzi licence a jméno fotografa a napiš mi název souboru, zdroj a velikost. Jiný obrázek jen po mém souhlasu. Nové osoby nepřidávej. Po změně dat restartuj běžící npm run dev.
+
+Založ ucitel/celek-6.md a zapiš do něj z oddílu Citlivá místa to, co se týká portrétu: Senekovu smrt celou podle Tacita a proč ji studentský text krátí, Dionovu verzi, proč text říká „vynucená sebevražda“ a ne „spáchal“, římský zvyk podle Tacita VI, 29 a proč není Senekovým motivem, obrazy Senekovy smrti a proč je atlas neukazuje, stoickou obhajobu dobrovolné smrti a co jí v Senekovi odporuje, otroky a Dopis 47, bohatství, Nerona, Paulinu, co odpovědět na otázku „a jak tedy zemřel?“ a linky pomoci (116 111, 116 123, Poradna Vigvam). Bez odkazu ze studentského webu; ověř, že se soubor nedostane do sestaveného webu. Cesta doplní svou část v P8.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když spadne jen tests/e2e/cesta.spec.ts:73, pusť ten soubor znovu samostatně); snímky portrétu na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs); oddíl Doba a lidé na stránkách Seneky a Epikúra (nové vztahy z P6); karta Seneky v Mapě a čase.
+
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-6.md oddíl „Po P7“ (co stránka má, použité citáty, co se změnilo mimo portrét, co si nese P8, co čeká na autora), připrav tam zadání P8 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-6.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md (Po P7) a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co stránka má, kde ses od podkladů odchýlil a proč a co čeká na mé rozhodnutí, a pošli snímek úvodu, poslední kapitoly a jednoho bloku.
+```
+
+Provedeno 8. 10. 2026. Autor poslal zadání beze změny; konce prvních dvou řádků zůstaly prázdné, platilo tedy doporučení podkladů: Rubensova kresba se nestáhla a motiv ochrany rodiny je jen v listu pro učitele. Stav je v `docs/plany/celek-6.md` (Po P7).

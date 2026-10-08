@@ -474,3 +474,24 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 | Aristotelův „úkol člověka“ | Etiku Nikomachovu I, 7 jsem v tomto kroku znovu nečetl. | Ověřit v P8, jestli ho stránka otázky 3 použije. |
 | Doba a lidé | Čtyři nové vztahy (Epikúros, Kleanthés a Lucretius → Seneca; Démokritos → Epikúros). | V P7 přečíst na stránkách Seneky a Epikúra, že poznámky dávají smysl z obou stran. |
 | Skill `atlas-overeni` | Návrh doplňků je na konci podkladového listu. | Uložit do skillu, pokud je autor chce. |
+
+### Po P7 (portrét Seneky)
+
+8. 10. 2026. Vyřízeno: berlínská herma (verze licence 4.0 podle odkazu v záznamu na museum-digital; fotograf není uveden ani tam, ani v záznamu muzea, který má jen „Fotonachweis: Staatliche Museen zu Berlin, Antikensammlung“; rok nálezu 1813 a datování „2. čtvrtina 3. století“ jsem v záznamu muzea viděl sám, předloha Senekovy hlavy je tam „kolem roku 60“); Doba a lidé na stránkách Seneky a Epikúra (přečteno, poznámky dávají smysl z obou stran). Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Výřez hermy na desce | Druhý soubor z téže fotografie (jen Senekova hlava); autor o výřezu nerozhodoval. | Potvrdit, nebo vrátit desce celou fotografii. |
+| Licence hermy | Dovoluje jen nekomerční užití a úpravy pod stejnou licencí; plný text licence jsem nečetl a muzea jsem se neptal. | Na autorovi (viz podkladový list, Obrázky). |
+| Quintilianus X, 1, 125 | Tabulka Kdo to vypráví měla větu obráceně („Seneku četli skoro jen mladí“). Latinsky „solus hic fere in manibus adulescentium fuit“: mladí nečetli skoro nikoho jiného. Opraveno v podkladovém listu, portrét jde podle pramene. | Při srovnání s českým překladem zkontrolovat. |
+| Datování spisu O hněvu | V podkladech není; víme jen, že je věnován bratrovi. | Portrét neříká, kdy vznikl; kapitola o hněvu stojí mezi vyhnanstvím a dvorem bez letopočtu. Nepsat „z vyhnanství“ ani „po návratu“, dokud se neověří. |
+| O mírnosti a Britannikova smrt | Spis je podle SEP z roku 55 nebo 56 (Neronovi bylo osmnáct), Britannicus zemřel roku 55. Portrét řadí spis za vraždu a neříká „rok poté“. | Když bude potřeba pořadí tvrdit, ověřit měsíc Britannikovy smrti a Neronovy narozeniny. |
+| „Dlouho malovala Evropa Seneku jako vyhublého starce“ | Stojí na stránce Metropolitního muzea (busta „tehdy pokládaná za Seneku“, Rubens ji vlastnil) a na Wikipedii. | Text říká „dlouho“, ne staletí, a nejmenuje učence. Nezesilovat. |
+| Epiktétos a Neronův dvůr | Portrét Seneky opakuje větu z portrétu Epiktéta (pán patřil k mocným lidem Neronova dvora). Jestli byl Epiktétos v Římě už za Senekova života, podklady neříkají. | Nepsat „tehdy“ ani „v téže době“. |
+| „Skoro o čtyři sta let dřív“ | Aristotelés zemřel roku 322 př. n. l., dopisy jsou z let 62–65: asi 385 let (moje počítání). | Beze změny. |
+| Platónova zdvižená ruka (O hněvu III, 12) | Ověřený příběh, ve studentském textu vynechán: otrok potrestán byl. | Jen učiteli; kdyby ho chtěla cesta 33 nebo Stoický týden, tak s touhle větou. |
+| Vtip o cizí mrtvole (Dopisy 12, 3) | Vynechán; Feliciovo postavení text neříká. | Jen učiteli. |
+| Dopis 70, Media Guide NÚDZ celý, doporučení MŠMT | Nečteno ani v P7; list pro učitele stojí na podkladovém listu. | Přečíst před revizí P10, nebo říct v listu pro učitele, že o Dopise 70 mluví jen podle tématu. |
+| Citáty s vnitřními uvozovkami | Komponenta Citát přidává vnější „ “. `seneca-ep-47-1` je opraven na ‚ ‘; `lucretius-iii-894` má vnitřní „ “ dál. | V P8 projít citáty cesty před použitím. |
+| Výroky připisované Senekovi | Tabulka je v podkladovém listu; v listu pro učitele zatím není. | Doplnit do `ucitel/celek-6.md` v P8 nebo při revizi. |
+| Linky pomoci | Řádek v portrétu uvádí 116 111, „zdarma a nonstop, i jako chat“. Chat má podle webu hodiny 9–13 a 15–19. | Při revizi ověřit čísla i hodiny; kdyby znění mátlo, upravit ho jednou v `RadekPomoci.astro`. |

@@ -5,8 +5,8 @@ Celek 6: portrét Seneky, cesta 8 „Proč se bát smrti?“ (období 2, velká 
 | Krok | Co | Stav |
 | --- | --- | --- |
 | P6 | Podklady | hotovo 8. 10. 2026; podklady v `docs/podklady/celek-6-proc-se-bat-smrti.md` |
-| P7 | Portrét Seneky | čeká; zadání je níže |
-| P8 | Cesta 8 „Proč se bát smrti?“ a stránka velké otázky 3 | čeká na P7 |
+| P7 | Portrét Seneky | hotovo 8. 10. 2026; `src/content/osobnosti/seneca.mdx`, učiteli `ucitel/celek-6.md` |
+| P8 | Cesta 8 „Proč se bát smrti?“ a stránka velké otázky 3 | čeká; zadání je níže |
 | P10 | Revize celku | čeká na P8 |
 | Opravy | Zapracování nálezů revize | čeká na P10 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
@@ -87,41 +87,109 @@ Podklady jsou v `docs/podklady/celek-6-proc-se-bat-smrti.md`; nové prameny (46)
 - Čísla linek pomoci ověřit znovu při každé revizi (`k-overeni.md`).
 - Tentýž citát nejvýš dvakrát v celku; které citáty patří portrétu a které cestě, je v tabulce Citáty.
 
-## Zadání P7: Portrét Seneky
+## Po P7 (8. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Je to nejcitlivější portrét atlasu (smrt na císařův rozkaz, věta o tom, že mladý Seneca nechtěl žít, otroci, služba Neronovi) a rozhoduje v něm tón jednotlivých vět; na Sonnetu bych ho nepsal. Čtyři řádky s odpověďmi jsou vyplněné podle chatu z 8. 10. 2026; u prvních dvou zbývá doplnit konec (Rubensova kresba, motiv ochrany rodiny). Nedoplněný konec znamená doporučení podkladů: kresbu ne, motiv jen učiteli.
+Portrét Seneky je v `src/content/osobnosti/seneca.mdx`, jeho čtyři bloky v `src/content/bloky/seneca-*.yaml`, list pro učitele v `ucitel/celek-6.md`. `npm test` prošel celý: 471 testů dat a 346 v prohlížeči; při celém běhu spadl jen známý `tests/e2e/cesta.spec.ts:73` a samostatně prošel. Zadání P7 je v `docs/archiv/zadani/celek-6.md`.
+
+**Co stránka má**
+
+- Hlavička: „Spisovatel u Neronova dvora · Senekův portrét“, pointa „Muž, který psal, jak žít, a stál vedle Nerona.“, na desce výřez Senekovy hlavy z berlínské hermy.
+- Úvod: žádost o odchod roku 62, vyprávěná nepřímo („Dějepisec Tacitus tu schůzku vypráví takhle“), a hlavní citát o řeči a životě (Dopisy 75, 4).
+- 01 Rok bez masa: původ, učitelé, rok bez masa, nemoc v mládí s větou z Dopisu 78 a hned tím, co pomohlo (filozofie a přátelé), Roztřiď „Pro školu, nebo pro život?“, Senekova věta o škole, námitka s Aristotelem.
+- 02 Skála: úřad, vyhnanství, syn, dvě útěchy vedle sebe a otázka kurzívou (kapitola nemá blok), návrat roku 49.
+- 03 Hněv: Volba „Kdy mu odpovíš?“, odklad, přirovnání k soudu, Aristotelova námitka, kterou Seneca sám uvádí, omezení rady na spor mezi rovnými, večerní soud.
+- 04 U dvora: učil mluvit a psát, projevy, „drželi na uzdě“, Britannikova smrt, Volba „Co bys na Senekově místě udělal?“ (bez oddílu Co udělal a bez možnosti označené jako jeho), spis o mírnosti jako zrcadlo, Suilliova výčitka s odkazem na otázku 1, dopis senátu po smrti Agrippiny, návrat k žádosti z úvodu.
+- 05 Dopisy: statek a platany, dopisy příteli, Změň jednu věc „Co uděláš?“ (pekárna), Dopis 47 se dvěma důvody a pravidlem, co Seneca nežádal a co dělal, odkaz na Epiktéta.
+- 06 Co zůstalo: Senekova smrt podle znění z podkladů, dopisy „pro ty, kdo přijdou po nás“, otázka, Příběh „Tvář, kterou Evropa neznala“ s celou hermou a pod kapitolou tichý řádek s Linkou bezpečí.
+- Doba a lidé (Současníci, Kde žil, Koho četl), Kdo žil dřív? Sókratés × Seneca (vzdálenost), Tři velké myšlenky s Mým stanoviskem (Poznání, Politika, Etika), Zkus to žít „Tři otázky večer“, Kam dál (cesta 5, Epiktétos, Marcus Aurelius, otázka 1).
+
+**Použité citáty** (každý jednou): `seneca-ep-75-4` (hlavní), `seneca-ep-78-2`, `seneca-ep-106-12`, `seneca-ep-8-3`, `seneca-ira-ii-29`, `seneca-ira-iii-36`, `seneca-clem-i-1`, `seneca-ep-12-1`, `seneca-ep-47-1`, `seneca-ep-47-11`, `seneca-ep-8-2`, v kartě Zkus to žít `seneca-ira-iii-36-otazky` a `seneca-ira-iii-36-odpoustim`. Nepoužité z řádků 1 až 17: `seneca-ep-75-1` a `seneca-ep-47-10` (jsou v textu nepřímou řečí), `seneca-ep-28-1` a `seneca-ep-7-3` (rezervy).
+
+**Kde se portrét liší od podkladů**
+
+- Platónovu zdviženou ruku (Nejsilnější příběhy 9) nevypráví: otrok v příběhu potrestán byl a příběh bere bití jako samozřejmost. Odklad nese přirovnání k soudu (O hněvu II, 29, 3). Příběh je v listu pro učitele.
+- Ze scény na statku vynechává vtip o cizí mrtvole (Citlivá místa ho nabízela jednou větou): v celku o smrti by chtěl vysvětlení a Feliciovo postavení text neříká.
+- Senekova smrt: věta „Kat nepřišel; odsouzený dostal rozkaz. Říká se tomu vynucená sebevražda.“ zní „…dostal rozkaz. Takové smrti na rozkaz se říká vynucená sebevražda.“, aby rozkaz stál doslova v téže větě. Druhý odstavec znění je rozdělený na dva (pravidlo čtyř vět) a scéna má vypravěče („Tacitus vypráví i to, co bylo dál“).
+- Otázka po scéně není „co bys chtěl, aby po tobě zůstalo místo závěti?“, ale „Zůstalo po něm, co napsal, a to, jak žil. Podle čeho z toho bys ho posuzoval ty?“: neptá se studenta na vlastní smrt a drží osu slovo a život.
+- Volba u dvora nemá oddíl Co udělal: co Seneca udělal, říká věta za blokem; proč, nevíme. Dionovu větu (61, 7, 5) blok nepoužívá.
+- Quintilianus: tabulka Kdo to vypráví měla „Seneku četli skoro jen mladí“, pramen říká, že mladí nečetli skoro nikoho jiného. Portrét jde podle pramene a tabulka je opravená.
+- Odkaz na cestu 5 u hněvu v kapitole není (Spor cesty 5 je o vnějších dobrech, ne o hněvu); cesta 5 je v Kam dál.
+- Caligulův výrok o písku bez vápna, Britannikovo jméno, Burrovo jméno, Polybiovo jméno a učitel Sótión jménem v textu nejsou (jména střídmě).
+
+**Co se změnilo mimo portrét**
+
+- Data: Seneca má `obrazek: seneca-smb` a čtyři další prameny; v `zdroje.yaml` dva obrázky (`seneca-smb`, `seneca-herma`) a u citátu `seneca-ep-47-1` jednoduché vnitřní uvozovky (komponenta Citát přidává vnější).
+- Obrázky: `public/obrazky/seneca-herma-smb.jpg` (1280 × 991 px, 303 kB) a `public/obrazky/seneca-smb.jpg` (výřez 904 × 1130 px, 360 kB). Originál 2259 × 1750 px je v `~/Downloads/atlas-obrazky-originaly/seneca-herma-smb-SK391-973363.jpg`. Zdroj: https://smb.museum-digital.de/object/13081 (záznam muzea https://id.smb.museum/object/698814); CC BY-NC-SA 4.0; fotograf v záznamech není uveden („Fotonachweis: Staatliche Museen zu Berlin, Antikensammlung“).
+- Nová komponenta `src/components/ui/RadekPomoci.astro` s jedním zněním řádku pomoci.
+- `MiniMapa.astro`: holý řádek role („působení“) vypadne, když na témže místě stojí tentýž s rokem („působení 49 n. l.“). Týká se jen Seneky.
+- Profil Epikúra odkazuje na Seneku jménem. Stránka otázky 1 teď u Senekova hlasu vede na portrét (test upraven).
+- Testy: nový `tests/e2e/seneca.spec.ts` (bloky ve čtyřech podobách, pravidla textu, deska, licence, Doba a lidé), Seneca v `prohlidka.spec.ts`.
+
+**Co si nese P8**
+
+- Portrét cestu 8 jen jmenuje (kapitola 05: „Těm patří cesta Proč se bát smrti?“). P8 z názvu udělá odkaz, dá cestu 8 na první místo Kam dál (místo cesty 5) a upraví dva řádky v `tests/e2e/seneca.spec.ts`.
+- Řádek pomoci se vkládá `<RadekPomoci />`; znění se nemění. V cestě patří do úvodu pod počet kroků a pod krok „Ti druzí“.
+- Co portrét už řekl a cesta to nemá opakovat: věta z Dopisu 78, smrt syna dvacet dní před vyhnanstvím, Paulina, večerní soud, „bránili vraždám“, celá scéna smrti. Záchvat dušnosti, Bassus, Serenus, útěchy a všechny argumenty o smrti portrét nemá.
+- Citát `lucretius-iii-894` má v datech vnitřní uvozovky „ “; s vnějšími od komponenty Citát by vyšly dvojí. Před použitím projít citáty cesty a vnitřní uvozovky převést na ‚ ‘.
+- `ucitel/celek-6.md` má zatím jen portrét. P8 doplní cestu: tabulku Student, kterému někdo zemřel…, co cesta vynechává (Dopis 77, druhou půlku řeči Přírody, Hégésia), věřícího studenta a studii z roku 2017.
+- Doba a lidé u Epikúra: Seneca stojí ve skupině „Četli ho a navázali“ s popiskem „navázal na jeho texty“. Seneca byl stoik a Epikúra citoval; popisek je obecný pro vliv textem. Když to v cestě vadí, patří to do revize.
+- Dopis 70 a celé příručky (Media Guide NÚDZ, doporučení MŠMT) zůstávají nečtené; list pro učitele stojí na podkladech.
+
+**Čeká na autora**
+
+1. Výřez na desce: z téže fotografie jsem udělal druhý soubor jen se Senekovou hlavou (licence úpravy dovoluje; je to řečeno v Pramenech). Když ho nechceš, deska ponese celou fotografii a z hermy bude vidět i Sókratův týl.
+2. Rubensova kresba Pseudo-Seneky: řádek zůstal prázdný, kresba se nestáhla. Tvář, kterou Evropa malovala, popisuje text slovy.
+3. Motiv ochrany rodiny: řádek zůstal prázdný, je jen v listu pro učitele.
+4. Tři karty v oddíle velkých myšlenek: na notebooku stojí třetí sama v druhém řádku. Dá se nechat, nebo vybrat dvě.
+5. Synovec Lucanus je v textu jménem (znění z podkladů); šlo by „i jeho synovce, básníka“.
+6. České překlady pro srovnání citátů (před revizí).
+7. Obrázek pro vstup cesty 8 (papyrus, lampa, nebo žádný): rozhoduje se v zadání P8.
+
+## Zadání P8: Cesta 8 „Proč se bát smrti?“ a stránka velké otázky 3
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Cesta mluví o smrti se šestnáctiletými, mezi kterými je někdo, komu zemřel blízký člověk, a rozhoduje v ní znění jednotlivých vět; na Sonnetu bych ji nepsal. Před odesláním doplň tři řádky; prázdný řádek znamená doporučení z podkladů (bez obrázku) a portrét beze změny.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-6. Podklady (P6) jsou hotové.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-6; je v ní portrét Seneky z P7.
 
-Obrázek: berlínská herma se jménem SENECA, souhlasím se stažením i s licencí CC BY-NC-SA. Rubensova kresba Pseudo-Seneky (ano / ne): 
-Senekova smrt: znění z podkladů; slovo „sebevražda“ se použít smí, vždy s rozkazem. Motiv ochrany rodiny (jen učiteli / i ve studentském textu jako popis zákona): 
-Věta z Dopisu 78 „Někdy je statečné i žít“: ano, do kapitoly o mládí.
-Řádek s kontaktem pomoci pod poslední kapitolou portrétu: ano, jen jako informace na okraj, znění z podkladů.
+Obrázek pro vstup cesty (papyrus s řeckým dopisem, The Met 251788 / římská lampa, The Met 241715 / žádný): 
+Portrét Seneky z P7 (nechat / co změnit): 
+Deska Seneky (výřez hlavy / celá fotografie hermy): 
 
-Napiš portrét Seneky podle skillu atlas-osobnost. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+Napiš cestu 8 „Proč se bát smrti?“ (období 2, velká otázka 3) podle skillu atlas-cesta a stránku velké otázky 3 „Má život smysl?“. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
 - CLAUDE.md, docs/styl.md a docs/pouceni.md (oddíl Student, kterého se téma bolestně týká pozorně);
-- v docs/plany/celek-6.md tabulku stavu a oddíl „Po P6“;
-- z docs/podklady/celek-6-proc-se-bat-smrti.md: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), Nejsilnější příběhy, celý oddíl Tvrzení: Seneca (portrét), celý oddíl Citlivá místa, z tabulky Citáty řádky 1 až 17, Návrh dat, Obrázky (Podobizna Seneky) a Rozpory a rozhodnutí. Oddíly o cestě 8 a o otázce 3 nečti; z nich jen seznam Překryvy, kterým se cesta vyhne;
-- jako vzor stavby hlavičku a jednu kapitolu src/content/osobnosti/aristoteles.mdx a jeden jeho blok v src/content/bloky/;
-- co atlas o Senekovi už říká, najdi grepem („Senec“) v src/content/otazky/jak-zit.mdx, src/content/osobnosti/epikuros.mdx a src/content/cesty/kolik-je-dost/; nic z toho neopakuj.
+- v docs/plany/celek-6.md tabulku stavu, z oddílu „Po P6“ seznam „Co si P7 a P8 nesou z podkladů“ a celý oddíl „Po P7“;
+- z docs/podklady/celek-6-proc-se-bat-smrti.md: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), Nejsilnější příběhy 1, 2, 10 a 12, celý oddíl Citlivá místa kromě Senekovy smrti, celý oddíl Tvrzení: cesta 8 (od Vstupního příběhu po Návrh kroků), celý oddíl Velká otázka 3, z tabulky Citáty řádky od 18 dál, Obrázky (Obraz pro vstup cesty) a Rozpory a rozhodnutí; v docs/podklady/k-overeni.md jen Celek 6 a Po P7;
+- z portrétu src/content/osobnosti/seneca.mdx kapitoly 01 a 06 (co už říká) a ucitel/celek-6.md celý (doplníš ho);
+- jako vzor cesty přehled, jeden krok s blokem a poslední krok z src/content/cesty/staci-vedet-co-je-spravne/, jako vzor kresby s pohybem jednu hotovou kresbu s posuvníkem a její soubor v src/lib, jako vzor stránky otázky hlavičku src/content/otazky/jsem-svobodny.mdx. Kresbu stav podle skillu atlas-komponenta.
 
-Co portrét má mít:
+Co cesta má (podle Návrhu kroků v podkladech; uprav stavbu, když najdeš lepší):
 
-1. Osa. Ne učitel a vladař (to byla cesta 4), ale člověk, který psal, jak žít, a třináct let stál vedle moci, ze které pak nesměl odejít; a k tomu slovo a život. Rozdíly od Aristotela a Alexandra jsou v podkladech (Seneca a Nero nejsou Aristotelés a Alexandr): portrét je nevyjmenovává, stojí na nich. Žádná omluva a žádný soud naším hlasem.
-2. Vstup. Žádost o odchod roku 62 (Nejsilnější příběhy 7), bez přímé řeči: řeči složil Tacitus. Vila a platany patří kapitole o stáří a dopisech. Smrtí portrét nezačíná.
-3. Tři myšlenky, každá s vlastním pokusem studenta před výkladem a s námitkou, kterou nese jiný myslitel nebo Seneca sám: „Učíme se pro školu, ne pro život“ (Roztřiď), otroci jsou lidé (Změň jednu věc; Seneca otroky měl a propuštění nežádal; atlas má portrét Epiktéta), odklad jako lék na hněv (Volba). Karta Zkus to žít: večerní tři otázky; otázky jsou Sextiovy a věta před citátem to řekne.
-4. Život podle tabulky Život a tabulky Kdo to vypráví. U každé věty drž typ tvrzení z podkladů: „asi“ zůstává „asi“, co říká jen Tacitus, říká Tacitus, a Tacitovy řeči nejsou Senekova slova. Nepoužívej: pět dobrých let, půjčku Britům, poměry s Julií a Agrippinou, Egypt jako fakt, dopisy s Pavlem jako fakt, výši majetku jinak než jako Suilliovu výčitku.
-5. Senekova smrt: znění z podkladů a moje odpověď výše. Způsob nikde. Slovo „sebevražda“ jen s rozkazem v téže větě („vynucená sebevražda“), ne „spáchal“; žádné „klidně“, „statečně“, „důstojně“, „po vzoru Sókrata“, „zvolil“, „odešel“. Prázdný řádek o motivu znamená: jen učiteli. Hned po scéně to, co po něm zůstalo, a otázka pro studenta. Paulina jednou větou.
-6. Co portrét nechává jinde: argumenty o smrti a záchvat dušnosti (Dopisy 54, 30, 24) a útěchy cestě 8, čas cestě 34 (v portrétu jen atribut), představu nejhoršího cestě 33, bohatství a jeho odpověď stránce otázky 1 (odkaz).
-7. Kapitola nebo Odkryj „Tvář, která mu nepatřila“ s hermou: jediná podobizna se jménem a tvář, kterou Evropa neznala. Popisek říká, co to je, odkud a z kdy; autor a licence jsou vidět v Pramenech na téže stránce.
-8. Kdo žil dřív?, Doba a lidé a Kam dál podle skillu. Cestu 8 jmenuj zatím bez odkazu; vznikne v P8.
+1. Pět strachů: že budu mrtvý, umírání, o co přijdu, ti, kdo zůstanou, smrt blízkých. U každého argumentu řekni, na který strach míří, a řekni to dřív, než to student namítne. Epikúrův argument míří jen na první.
+2. Vstup: Epikúrův dopis z posledního dne, psaný jako dopis (návrh A), bez popisu nemoci, s větou, že to bolelo, a hned otázka. Adresát je „přítel“. Pokud jsem nahoře vybral obrázek, stáhni ho stejně jako hermu v P7 (originál mimo repozitář, kopie 1280 px, licence ověřená u muzea a zapsaná u obrázku).
+3. Začátek cesty: Volba „Je rozumné bát se smrti?“ se čtyřmi možnostmi, pak Roztřiď cizích vět do čtyř košů.
+4. Jádro: Epikúros („netýká se nás“, ne „nic není“; „zvykej si“), Lucretius (zrcadlo; z řeči Přírody jen první půlka a hned námitka, že šestnáctiletý není nasycený host), Seneca (záchvat dušnosti bez popisu dušení, lampa, starý přítel, kterému věty pomohly, až když je řekl někdo blízko smrti).
+5. Kresba s pohybem: Lucretiovo zrcadlo na ose času se dvěma pohyby (zrcadlo a námitka ztráty), bez letopočtu na pravém konci. Snímky mi pošli dřív, než ji popíšeš jako hotovou.
+6. Spor Epikúros × Plútarchos (Plútarchos není v datech: strana ponese označení). Obě strany odpoví na nejsilnější námitku druhé.
+7. Krok „Ti druzí“: argument o smrti lidí, které máme rádi, nemluví. Seneca přizná, že přítele oplakával bez míry, Epikúros podle Plútarcha hájí slzy.
+8. Nový případ: studie A. Goransonové a kol. (2017), jen první část. Čísla nejdřív ověř ještě jednou v plném textu; „zkoušela“, ne „dokázala“; dvě skupiny; věta autorů o těch, kdo stojí vedle umírajícího.
+9. Tvoje pravidlo: kdo dá za pravdu komu (kdo se bojí a argument mu nepomáhá, kdo se nebojí, kdo věří, že smrtí nic nekončí, kdo neví), panel Na začátku × Teď, karta Zkus to žít o přátelích beze slova smrt, Návrat „zpráva od kamaráda o půlnoci“.
 
-Data: hlavní citát a obrázek Seneky. Hermu stáhni (souhlas je výše): originál mimo repozitář, do public/obrazky/ kopii zmenšenou na 1280 px; předtím ověř v záznamu muzea verzi licence a jméno fotografa a napiš mi název souboru, zdroj a velikost. Jiný obrázek jen po mém souhlasu. Nové osoby nepřidávej. Po změně dat restartuj běžící npm run dev.
+Co do cesty nepatří: způsob jakékoli smrti; obhajoba dobrovolné smrti (Dopisy 70 a 77, druhá půlka řeči Přírody, Hégésiás, „dveře jsou otevřené“); slova „nácvik smrti“, „mysli každý den na smrt“, „vysvobození“, „klid“ a „spánek“ jako to, co čeká; „o nic nejde“; „velká bolest je krátká“ jako útěcha; začátek Dopisu 99 a tvrdé věty z Dopisu 63; „pět věcí, kterých lidé před smrtí litují“; Sókratova smrt (jen Obrana 40c–42a, bez „zisku“ a spánku); Senekova smrt, věta z Dopisu 78, syn, Paulina a večerní soud (nese portrét); čas a O krátkosti života (cesta 34); představa nejhoršího (cesta 33); třídění tužeb (cesta 6). Tentýž citát nejvýš dvakrát v celku: které jsou v portrétu, je v oddíle Po P7.
 
-Založ ucitel/celek-6.md a zapiš do něj z oddílu Citlivá místa to, co se týká portrétu: Senekovu smrt celou podle Tacita a proč ji studentský text krátí, Dionovu verzi, proč text říká „vynucená sebevražda“ a ne „spáchal“, římský zvyk podle Tacita VI, 29 a proč není Senekovým motivem, obrazy Senekovy smrti a proč je atlas neukazuje, stoickou obhajobu dobrovolné smrti a co jí v Senekovi odporuje, otroky a Dopis 47, bohatství, Nerona, Paulinu, co odpovědět na otázku „a jak tedy zemřel?“ a linky pomoci (116 111, 116 123, Poradna Vigvam). Bez odkazu ze studentského webu; ověř, že se soubor nedostane do sestaveného webu. Cesta doplní svou část v P8.
+Tichý řádek pomoci vkládej komponentou <RadekPomoci /> (src/components/ui/RadekPomoci.astro), znění neměň: v úvodu cesty pod počtem kroků a pod krokem „Ti druzí“.
 
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když spadne jen tests/e2e/cesta.spec.ts:73, pusť ten soubor znovu samostatně); snímky portrétu na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs); oddíl Doba a lidé na stránkách Seneky a Epikúra (nové vztahy z P6); karta Seneky v Mapě a čase.
+Stránka otázky 3 (src/content/otazky/ma-zivot-smysl.md): úvodní případ s fotografií třídy z roku 1926 a pět hlasů (Platón, Aristotelés, Epikúros, Seneca, Epiktétos), každý poznatelný a s odpovědí nejvýš na dvě věty. Antičtí autoři se neptali „má život smysl?“: stránka jim tu otázku nevkládá do úst a nechává místo pozdějším obdobím. Úvodní případ je jiného druhu než nový případ cesty.
 
-Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-6.md oddíl „Po P7“ (co stránka má, použité citáty, co se změnilo mimo portrét, co si nese P8, co čeká na autora), připrav tam zadání P8 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-6.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md (Po P7) a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co stránka má, kde ses od podkladů odchýlil a proč a co čeká na mé rozhodnutí, a pošli snímek úvodu, poslední kapitoly a jednoho bloku.
+Portrét Seneky: v kapitole 05 udělej z názvu cesty odkaz, do Kam dál dej cestu 8 na první místo (místo cesty 5) a uprav tests/e2e/seneca.spec.ts. Pokud jsem nahoře napsal změny portrétu nebo desky, udělej je jako první krok. Vstupy v hlavičce profilů Seneky a Epikúra, karty v Lidech a přehled otázek se složí z dat: zkontroluj je.
+
+Doplň ucitel/celek-6.md o cestu: koho se téma může bolestně týkat a co s tím cesta dělá, co vynechává a proč (stoická a epikurejská místa o dobrovolné smrti), věřící student, co vědět o studii, otázky do hodiny. Čísla linek pomoci ověř znovu na jejich webech.
+
+Pravidla: každé historické tvrzení a citát musí být v podkladovém listu nebo v datech; co tam není, nepiš, a když to příběh potřebuje, zapiš to do docs/podklady/k-overeni.md. Přímou řeč jen jako citát ze zdroje.yaml (před použitím zkontroluj vnitřní uvozovky: lucretius-iii-894 má „ “ a potřebuje ‚ ‘); věty Plútarcha a studie v datech nejsou a zůstanou parafrází s vypravěčem. Doporučená formulace nesmí být silnější než tvrzení v podkladech. Zpětné vazby nesmí u žádné možnosti naznačit, že víra je útěk nebo že nevíra je odvaha. Texty mají znít jako psané člověkem (styl.md).
+
+Tón: žádná útěcha, která zlehčuje, žádná morbidnost a žádný patos. První obrazovku každého kroku čti očima studenta, kterému někdo zemřel nebo umírá, studenta vážně nemocného a studenta s myšlenkami na smrt. Otázka na vlastní bolest nemá pole na psaní.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen tests/e2e/cesta.spec.ts:73, pusť ten soubor znovu samostatně); cestu přidej do STRANKY v tests/e2e/prohlidka.spec.ts a napiš její průchod podle vzoru tests/e2e/cesta4.spec.ts; čas cesty spočítej skriptem scripts/slova-cesta.mjs; projdi ji na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs). Po přidání cesty restartuj npm run dev.
+
+Osnovu mi neposílej a na schválení nečekej, kromě kresby. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-6.md oddíl „Po P8“ (použité citáty, co si nese revize, co čeká na mě), připrav tam zadání P10 (revize celku skillem atlas-revize) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-6.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md a plán větve aktualizuj i v projektu Claude. Pak mi pošli snímky cesty a stránky otázky a napiš, co jsi zvolil, kde ses od podkladů odchýlil a co čeká na mé rozhodnutí.
 ```

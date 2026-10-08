@@ -4,6 +4,21 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Portrét Seneky (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Rubensova kresba Pseudo-Seneky se nestahuje a motiv ochrany rodiny u Senekovy smrti zůstává jen v listu pro učitele | Autor nechal oba řádky zadání prázdné; platí doporučení podkladů. Tvář, kterou Evropa malovala, popisuje text slovy |
+| Herma je v atlasu dvakrát z jedné fotografie: na desce výřez Senekovy hlavy (`seneca-smb.jpg`), v poslední kapitole celá dvojitá herma (`seneca-herma-smb.jpg`). Licence CC BY-NC-SA 4.0, fotograf v záznamech muzea není uveden; výřez je v Pramenech označený | Deska je na výšku a umí jen posunout střed: z celé fotografie by ukázala Seneku se Sókratovým týlem. Licence úpravy dovoluje pod stejnou licencí. Čeká na potvrzení autora |
+| Senekova smrt: slovo „sebevražda“ stojí v textu jednou, ve větě „Takové smrti na rozkaz se říká vynucená sebevražda“; scéna má vypravěče (Tacitus) a hned po ní přijde, co po Senekovi zůstalo, a otázka, podle čeho ho posuzovat | Zadání chtělo rozkaz v téže větě; otázka se neptá studenta na vlastní smrt a drží osu slovo a život |
+| Portrét má šest kapitol a čtyři bloky; kapitola o vyhnanství má místo bloku otázku kurzívou. Tři myšlenky jsou v oddíle myšlenek všechny (tři karty) | Tři bloky myšlenek určilo zadání, čtvrtý (zůstat, nebo odejít) žádají Citlivá místa; pátý blok by kapitole o dvou útěchách nic nepřidal |
+| Volba „Co bys na Senekově místě udělal?“ nemá oddíl Co udělal a žádná možnost není označená jako jeho | Víme, že zůstal; proč, nevíme. Text za blokem říká jen „Seneca zůstal“ |
+| Platónova zdvižená ruka a vtip o cizí mrtvole ve studentském textu nejsou; obojí má list pro učitele | Příběh o ruce končí potrestáním otroka a bere bití jako samozřejmost; vtip by v celku o smrti chtěl vysvětlení |
+| Rada o odkladu a karta Zkus to žít říkají výslovně, že neplatí pro člověka, kterému někdo ubližuje | `docs/pouceni.md`: výzva nemíří na člověka, který ubližuje |
+| Tichý řádek pomoci je komponenta `RadekPomoci` s jedním zněním; v portrétu stojí pod poslední kapitolou, za příběhem o hermě | Jedno znění na všech místech (rozhodnutí autora); cesta 8 ji použije také |
+| List pro učitele (`ucitel/celek-6.md`) způsob Senekovy smrti nepopisuje a odkazuje na Tacita (XV, 63–64); učiteli nabízí jednu větu jako odpověď na otázku „a jak tedy zemřel?“ | Podkladový list způsob také nevypisuje; učitel si místo najde a ve třídě ho říkat nemá |
+| Mini mapa osobnosti vynechá holý řádek role, když na témže místě stojí tentýž řádek s rokem | U Seneky stálo v Římě „působení“ a pod ním „působení 49 n. l.“ |
+
 ## 8. 10. 2026: Celek 6 po podkladech (P6): odpovědi autora
 
 | Rozhodnutí | Důvod |
