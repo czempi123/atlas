@@ -495,3 +495,31 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 | Citáty s vnitřními uvozovkami | Komponenta Citát přidává vnější „ “. `seneca-ep-47-1` je opraven na ‚ ‘; `lucretius-iii-894` má vnitřní „ “ dál. | V P8 projít citáty cesty před použitím. |
 | Výroky připisované Senekovi | Tabulka je v podkladovém listu; v listu pro učitele zatím není. | Doplnit do `ucitel/celek-6.md` v P8 nebo při revizi. |
 | Linky pomoci | Řádek v portrétu uvádí 116 111, „zdarma a nonstop, i jako chat“. Chat má podle webu hodiny 9–13 a 15–19. | Při revizi ověřit čísla i hodiny; kdyby znění mátlo, upravit ho jednou v `RadekPomoci.astro`. |
+
+
+### Po P8 (cesta 8 a stránka otázky 3)
+
+8. 10. 2026. Vyřízeno: čísla studie Goransonové a kol. (2017) jsem prošel znovu v plném textu (PDF z P6): 20 blogů o rakovině a 5 o ALS, 2 616 příspěvků, 597 z posledních dvanácti týdnů, 50 oslovených a 45 započtených lidí, 2,25 % proti 1,70 % záporných slov, kladná slova bez rozdílu; dvě skupiny čtenářů hodnotily příspěvky nemocných jako kladnější a méně záporné, tři vyškolení čtenáři jen jako méně záporné; věta autorů o těch, kdo stojí vedle umírajícího, je v závěrečné diskusi. Vnitřní uvozovky citátů `lucretius-iii-894` a `lucretius-iii-900` jsou ‚ ‘. Linka bezpečí (116 111) a Linka první psychické pomoci (116 123) ověřeny večer znovu na jejich webech. Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Kresba Zrcadlo času | Autor dostal snímky během práce a kresbu zatím nepotvrdil. | Potvrdit, nebo říct, co změnit (zadání P10 má na to řádek). |
+| Co je v kresbě naše volba | Letopočty 1348, 1620 a 1914, pět stupňů posuvníku, popisky „někdo jiný“ a „tentýž život, delší“, překlopení pravé strany na levou (Lucretius říká, že minulost je zrcadlem budoucnosti; kresba kvůli letopočtům překlápí budoucnost na minulost). | Při revizi posoudit, jestli to drží. |
+| Thomas Nagel | Cesta mu jednou větou připisuje odpověď na Lucretiovo zrcadlo („Takhle Lucretiovi ve 20. století odpověděl…“). Stojí jen na hesle Death ve SEP, které četl nástroj WebFetch; článek z roku 1970 je nečtený a SEP odpověď pokládá za spornou. | Před schválením přečíst článek, nebo větu zmírnit. |
+| „Víc než sto let po něm“ | Seneca po Lucretiovi: polovina 50. let př. n. l. až dopisy z let 62–65, asi 115 let (moje počítání). | Beze změny. |
+| Senekův záchvat | Podklady měly „trval asi hodinu“; latinsky *intra horam fere desinit* mluví o záchvatech obecně. Cesta: „Takový záchvat podle něj přejde asi do hodiny.“ Podkladový list opraven. | Při srovnání s českým překladem zkontrolovat. |
+| Epikúrova škola o bolesti | Diogenés Laertios X, 118 má „na mučidlech“; cesta říká „v bolestech“. | Beze změny; mučidla do první obrazovky nepatří. |
+| Plútarchos 1106b–c | V cestě bez srovnání s nešťastnými (viz rozhodnutí). | Jen učiteli. |
+| Obrana 42a a Seneca 24, 18 | Vynecháno, resp. jen nepřímou řečí (viz rozhodnutí). | Rozhodne autor. |
+| Hlas Seneky na stránce otázky 3 | Věta „Kolik let člověk dostane, podle stoiků nerozhoduje on“ je výklad; podklady mají pro hlas jen větu z Dopisu 61, 4. Souvislost toho místa v Dopise 61 jsem nečetl. | Při revizi přečíst Dopis 61 a větu potvrdit, nebo nahradit. |
+| Hlas Aristotela | „V jeho době se radilo, ať se člověk drží při zemi“ stojí jen na citátu samém („ty, kdo radí“). „Úkol člověka“ (Etika Nikomachova I, 7) stránka nepoužívá. | Beze změny. |
+| Hlas Epiktéta | Zvířata, Olympie a „k čemu jste se narodili“ (Rozpravy I, 6, věty 19–25 a jejich okolí) jsem v P8 přečetl v anglickém překladu z PerseusDL; „jedna slavná socha“ je Feidiovo dílo v Olympii, jméno text neuvádí. | Srovnat s českým překladem. |
+| Strach ze smrti a věk | Russac 2007 a Chopik 2017 stále jen z abstraktů; věta v cestě není. | Kdyby ji revize chtěla, přečíst aspoň jednu studii celou. |
+| Poradna Vigvam | Web odmítá automatické čtení; číslo 606 160 646 (pracovní dny 8–17) mám jen ze stránky uložené při P6 téhož dne. Je jen v listu pro učitele. | Ověřit ručně při revizi. |
+| Autorské texty bez pramene | Osm karet v Roztřiď, oslava v bloku Změň jednu věc, karta Zkus to žít, případ pro Návrat, úvodní případ stránky otázky 3. | Nepotřebují pramen; při revizi číst očima tří studentů z Citlivých míst. |
+| Nepoužité citáty celku | `menoikeus-124-touha`, `menoikeus-125-cekani`, `menoikeus-126`, `kd-2`, `vs-66`, `lucretius-iii-832`, `lucretius-iii-900`, `lucretius-iii-971`, `lucretius-iii-972`, `seneca-ep-54-3`, `seneca-ep-54-5`, `seneca-ep-24-18`, `seneca-ep-24-20`, `seneca-ep-24-20-hodiny`, `seneca-ep-26-6`, `seneca-ep-63-1`, `seneca-ep-63-7`, `seneca-ep-99-4`, `cicero-fin-ii-94`, `cicero-fin-ii-98`, `obrana-29a`, `obrana-41d`, `obrana-42a`, `etika-1115a`, `hovory-iv-17`, `hovory-ii-14`, `hovory-xii-36`. Některé jsou v cestě nepřímou řečí. | Rezervy; `seneca-ep-24-20` a hodiny pro cestu o čase. |
+| České překlady | Stále nesrovnáno; cesta používá 18 citátů a stránka otázky 3 pět. | Před schválením celku. |
+| Dopis 70, celý Media Guide NÚDZ, doporučení MŠMT | Stále nečteno; list pro učitele to u Dopisu 70 říká. | Přečíst při revizi, nebo nechat větu v listu. |
+| Výroky připisované Senekovi | Tabulka z podkladového listu v listu pro učitele pořád není. | Doplnit při revizi. |
+| Rok na fotografii (stránka otázky 3) | 1926 je sto let před rokem vydání. | Při každé revizi posunout. |
+| Řádek pomoci | Znění říká „i jako chat“; chat má hodiny 9–13 a 15–19. Na přehledu cesty stojí řádek pod úvodem, ne přímo pod počtem kroků (ten je v hlavičce stránky). | Kdyby to autor chtěl jinak, upravit šablonu přehledu. |

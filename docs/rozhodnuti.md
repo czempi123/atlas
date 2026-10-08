@@ -4,6 +4,29 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Cesta 8 a stránka otázky 3 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vstup cesty 8 je bez obrázku; papyrus ani lampa z Metropolitního muzea se nestahují. Portrét Seneky a výřez na desce zůstávají beze změny | Autor nechal tři řádky zadání prázdné; platí doporučení podkladů. První obrazovka má být dopis, ne obraz |
+| Cesta má devět kroků a 32 minut; kroky Zrcadlo a Host u stolu nejsou spojené a krok Ti druzí stojí sám | Čas vyšel pod 35 minut, které podklady daly jako mez pro spojení; krok o smrti blízkých má být nejkratší a nemá ho nic přehlušit |
+| Začátek cesty (Volba „Je rozumné bát se smrti?“) je v kroku 1 hned pod scénou, ne v kroku 2 | Scéna, ve které hrdina něco mlčky unese, má dostat otázku hned (`docs/pouceni.md`); panel Na začátku × Teď proto odkazuje na krok 1 |
+| Čtvrtá možnost první Volby zní „Záleží na tom, co je po ní.“; podklady navrhovaly „Nevím, co po ní je, tak nevím, jestli se bát.“ | Takhle ji může zvolit i student, který věří, že smrtí nic nekončí; původní znění mělo místo jen pro toho, kdo neví |
+| Roztřiď třídí osm cizích vět do košů „Na to, že nebude · Na umírání · Na to, o co přijde · Na ty druhé“ a nemá vlastní karty | Koše odpovídají na otázku „Na co ten, kdo to říká, myslí?“ stejným tvarem; vlastní karta by byla zpověď a otázka na vlastní bolest nemá mít pole na psaní |
+| Dva citáty mají v datech kratší podobu s vlastním id: `lucretius-iii-972-zrcadlo` (bez „Není to klidnější než každý spánek?“) a `seneca-ep-54-5-lampa` (bez „hlubokého klidu“). Plné podoby v datech zůstávají | Klid a spánek jako to, co čeká, do cesty nepatří; komponenta Citát zkracovat neumí a opis mimo data by obešel kontrolu pramenů |
+| Citáty z posledního Epikúrova dopisu mají dílo „Dopis z posledního dne“, ne „Dopis Ídomeneovi“ | Prameny se v adresátovi rozcházejí (Diogenés Laertios: Ídomeneus, Cicero: Hermarchos) a text říká „příteli“; jméno pod citátem by to rozhodlo |
+| Strana Sporu smí mít jen `oznaceni` bez osoby z dat; mince je pak prázdný prstenec. Aspoň jedna strana musí být osoba | Plútarchos v datech není a nové osoby se teď nepřidávají; mince jiné osoby by tvrdila, že mluví někdo jiný |
+| Plútarchova věta, že smrt bere víc šťastným než nešťastným (1106b–c), je v cestě bez srovnání: „čím víc dobrého člověk má, tím víc mu smrt bere“ | Obrácená říká studentovi, kterému je zle, že on moc neztratí |
+| Poslední věta Obrany (42a) v cestě není, ačkoli ji podklady nabízely jako možný závěr; Senekovo „buď stráví, nebo svlékne“ (24, 18) je jen nepřímou řečí | Věta nechává otevřené, jestli je lepší žít, nebo zemřít, a druhá mluví o odloženém břemeni; nevědění nese citát 40c a věta, že Sókratés mezi možnostmi nerozhodl. Čeká na potvrzení autora |
+| Krok Host u stolu má blok Změň jednu věc s oslavou (host od odpoledne × host, který právě přišel); podklady pro něj blok neměly | Námitku, že šestnáctiletý není nasycený host, si student vyzkouší sám; obraz hosta je Lucretiův a převod je uvedený „Představ si“ |
+| Krok Ti druzí nemá blok ani Ciceronovu výtku (závěť proti učení); ta je v listu pro učitele jako otázka do hodiny | Nejtišší krok cesty; výtka je spor o důslednost, ne o strach, a přidala by další jméno |
+| V cestě nejsou: věta o strachu a věku (Russac, Chopik), „umíráme každý den“, Vatikánský výrok 66, Ciceronova věta o dlouhých bolestech | První stojí jen na abstraktech; druhá patří cestě o čase; třetí jde číst jako „neplač“; čtvrtá odpovídá na útěchu, kterou cesta neuvádí |
+| Kresba Zrcadlo času má dva pohledy: Zrcadlo s tlačítkem „Přiložit zrcadlo“ a Námitku s posuvníkem o pěti stupních. Nic neběží samo; výchozí stav je před přiložením i při omezeném pohybu. Vlevo jsou letopočty 1348, 1620 a 1914, vpravo žádný | Podklady počítaly se samočinným překlopením a se stavem „po překlopení“ při omezeném pohybu; s tlačítkem přiloží zrcadlo student sám a přechod se při omezeném pohybu jen zkrátí na nulu. Čeká na potvrzení autora (snímky poslány) |
+| Návrat „Zpráva o půlnoci“ má případ z podkladů, ale ne čtyři hotové odpovědi: blok Návrat má pro všechny cesty možnosti Ano / Upravím ho / Nevím | Stavba bloku je společná; co kamarád potřebuje, se ptá věta po odpovědi |
+| Stránka otázky 3: `pripad` je krátká otázka („Byl jejich život k něčemu?“) a fotografie je v úvodu; třetí odstavec úvodu říká, jak se ptali staří Řekové a Římané. Slovo „smysl“ nemá žádný hlas | Pole `pripad` je nadpis odpovědí; antickým autorům stránka moderní otázku nevkládá do úst |
+| Přehled cesty odkazuje na stránku osobnosti jen u filozofů, kteří ji mají; ostatní jsou jménem bez odkazu a v Kam dál chybí | Lucretius je filozof cesty 8 a stránku nemá; odkaz vedl na neexistující adresu |
+| Tichý řádek pomoci stojí na přehledu cesty pod úvodem a před tlačítkem Začít cestu, a na konci kroku Ti druzí | Nadtitulek s počtem kroků je mimo obsah, který cesta píše; pod úvodem je řádek první věc pod ním a zůstává na okraji |
+
 ## 8. 10. 2026: Portrét Seneky (P7)
 
 | Rozhodnutí | Důvod |

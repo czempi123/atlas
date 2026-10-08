@@ -28,6 +28,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Zpětná vazba vidí, co student zvolil nebo kam kartu dal, vysvětluje důvod a ptá se dál. Žádná možnost nedostane pokárání.
 - Otázka na vlastní selhání nebo bolestnou chvíli nemá pole na psaní: Volba s `bezDuvodu: true` uloží jen zvolenou možnost a text kroku říká „Nikam ji nepiš“.
 - Vlastní karta v Roztřiď: zpětná vazba se ptá, proč ji student dal do koše, ne jak moc si jí je jistý. U karty s něčím bolestným to zní jako pochybnost o tom, co zažil.
+- Kde by vlastní karta byla zpověď (strachy ze smrti), blok ji nemá: student třídí cizí věty a text to říká.
+- Strana Sporu, za kterou mluví autor mimo data (Plútarchos), má jen `oznaceni` a prázdnou minci; cizí mince by tvrdila, že mluví někdo jiný.
 
 ## Celek
 
@@ -36,6 +38,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Každý hlas na stránce otázky se pozná a nezmenšuje se to, čím se liší. Odpověď hlasu má nejvýš dvě věty.
 - Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec. Spojenec je jiný myslitel: když námitce přitaká jen filozof cesty („to přiznal sám“), promění se v souhlas s ním.
 - Čtyři citáty za sebou student přeskakuje.
+- Citát, který končí obrazem, jemuž se celek vyhýbá (spánek a klid v celku o smrti), dostane v datech kratší podobu s vlastním id; komponenta Citát zkracovat neumí a ruční opis by obešel data.
 - Délka se kvůli délce nekrátí: zvídavý student si přečte víc (rozhodnutí autora).
 - Čas cesty na štítku (`minut`) se počítá: slova, která student opravdu přečte, při 150 za minutu, a k tomu ovládání. Neopisuje se z minulé cesty; počítá ho `node scripts/slova-cesta.mjs <slug>`.
 - Čísla ze studie ověř v plném textu sám, ne přes nástroj, který stránku převypráví: repozitáře mívají vedle PDF i holý text a jde stáhnout z autorova Macu (`curl`). Příklad, který zní jako ze studie („sklenice vody po snídani“), porovnej s tím, co ve studii opravdu stojí.
@@ -46,6 +49,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Scéna, kde silnější odmítne pomoct nebo kde hrdina křivdu mlčky unese, dostane hned otázku pro studenta.
 - Výzva Zkus to žít nemíří na člověka, který ubližuje.
 - Celek 4: jeskyně nesmí studentovi lichotit, že on vidí a ostatní spí.
+- Celek 6: první obrazovku čti i očima studenta, kterému někdo zemřel nebo umírá, studenta vážně nemocného a studenta s myšlenkami na smrt. Věta, která srovnává šťastné s nešťastnými („smrt bere víc šťastným“), říká tomu, komu je zle, že on moc neztratí: zůstane z ní jen první půlka. Věta, která nechává otevřené, jestli je lepší žít, nebo zemřít, do cesty nepatří, ani když je to věta o nevědění.
+- Argument, který o studentově bolesti nemluví (věta o mrtvém u toho, kdo truchlí), dostane větu, že o něm není, na téže obrazovce.
 
 ## Co se skládá z dat
 
@@ -54,6 +59,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Poznámka se čte na obou stránkách vztahu. Věta s podmětem („nesouhlasil s ním, že…“) na jedné z nich říká opak; u sporu piš otázku, o kterou šlo („spor o ideje“, „stačí vědět, co je dobré?“).
 - Polemika s člověkem, kterého kritik nemohl potkat, není „Znali se a přeli se“: má vlastní skupinu (spor na dálku).
 - Text u desky (atribut, popisek) čte student dřív než první kapitolu: nesmí stát na slově, které stránka teprve vyloží (ctnost).
+- Nová cesta a nový hlas mění stránky, které nikdo neotevřel: vstupy v hlavičkách všech jejích filozofů a hlasů, karty v Lidech, počet cest na Domů, počet kreseb v dílně. Celé testy pusť hned po přidání, ne až na konci. Filozof cesty bez vlastní stránky (Lucretius) nesmí na přehledu cesty dostat odkaz.
 - Když se změní atribut nebo výklad osobnosti, přečti i `kdo` a `proc` v `lide.yaml`. Ukazuje je karta v Mapě a čase a stará věta tam přežije („ctnost je střed mezi dvěma krajnostmi“).
 
 ## Technika
