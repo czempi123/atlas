@@ -24,7 +24,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
 | ~~Epiktétos~~ | ~~roky v Římě a v Níkopoli~~ | **Vyřízeno 2. 10. 2026 (celek 3):** Gellius XV, 11 a Suetonius, Domitianus 10, 3 rok neuvádějí; Tacitus, Plinius a Dio spojují vykázání s procesy roku 93; SEP „Epictetus“ a IEP mají 89, Hieronymova kronika 95 („znovu“). | V datech „asi 93“ (`priblizne`), ve studentském textu bez roku (`celek-3-co-mam-v-rukou.md`, Rozpory). Autor může přepsat na 89. |
 | Marcus Aurelius | místo smrti | Britannica: zemřel ve Vindoboně nebo v Sirmiu. **Carnuntum vyřízeno 2. 10. 2026 (celek 3):** údaje „u Kvádů na Granui“ a „v Carnuntu“ přečteny v řeckém textu (Leopold, konec knih I a II); Carnuntum je v datech jako tažení asi 172–174 (Britannica „Carnuntum“). | Místo smrti nechat bez záznamu. |
-| Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
+| ~~Seneca~~ | ~~pobyt v Egyptě~~ | **Vyřízeno 8. 10. 2026 (celek 6):** Útěcha Helvii 19, 2–6 pobyt neříká; říká, že teta ošetřovala Seneku v dlouhé nemoci, že její muž spravoval šestnáct let Egypt a že Seneca byl svědkem plavby, na které strýc zemřel. IEP: „má se za to“. | Do dat se nepřidává; ve studentském textu nejvýš „nejspíš“. |
 | Cicero | místo narození (Arpinum), studia v Athénách a na Rhodu, vyhnanství, smrt u Formií | IEP stránka nepodala. | Doplnit z Plútarchova Cicerona. |
 | Plótínos | místo narození | Místo smrti doplněno (Minturnae v Kampánii, Porfyrios, Život Plótínův 2). Lykopolis uvádí až Eunapios, ne Porfyrios. | Doplnit Lykopolis, pokud stačí Eunapios. |
 | Pyrrhón | tažení s Alexandrem | SEP: „údajně“ doprovázel Alexandra do Indie. | V datech jen jako „vypráví se“ v textu, bez místa. |
@@ -43,7 +43,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | ~~Prótagorás ↔ Sókratés~~ | **Vyřízeno 1. 10. 2026:** v datech jako `znali-se`, `tradovany: true`, pramen Platón, Prótagorás (`docs/podklady/celek-1-pravda.md`). Polemika o pravdě (Theaitétos) je Platónova konstrukce, do vztahů nejde. |
 | Aspasie ↔ Sókratés | Britannica zmiňuje jen Aischinův dialog Aspasie. |
 | Leukippos → Démokritos | Leukippos zatím není v datech (vztah SEP: „druh nebo učitel“). |
-| Démokritos → Epikúros (vliv textem) | Přes Nausifana; Nausifanés není v datech. |
+| ~~Démokritos → Epikúros (vliv textem)~~ | **Vyřízeno 8. 10. 2026 (celek 6):** v datech jako `vliv-textem` s poznámkou „atomy a prázdno“ (SEP; Cicero, O nejvyšším dobru a zlu II, 102; Diogenés Laertios X, 2). Nausifanés zůstává mimo data. |
 | Ammónios Sakkás → Plótínos, Theón → Hypatia, Hypatia → Synesios | Učitelé a žáci zatím nejsou v datech (prameny: SEP Plotinus, BEA Hypatia). |
 
 ## Citáty a překlady
@@ -213,8 +213,8 @@ Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s ka
 | ~~Obrázek Epiktéta~~ | **Vyřízeno 2. 10. 2026:** autor zvolil rytinu s berlou (Oxford 1715). Soubor je z World History Encyclopedia (uvádí Public Domain), protože Commons nástroj neotevře; vydání knihy dokládá katalog Eton College. | V datech jako `epiktetos-1715`. Jména kreslíře a rytce (značka MB) nejsou doložena odborným zdrojem, popisek je neuvádí. Původ řeckého dvojverší pod obrazem neověřen. Výřez zkontrolovat v P7. |
 | Antická podobizna Epiktéta | Že žádná spolehlivá není, jsem odborným zdrojem nedoložil; v pěti otevřených sbírkách není. | Popisek obrázku to netvrdí, říká jen, čí představa to je. |
 | Carnuntum | V datech bez ID z Pleiad, souřadnice přibližné. | Doplnit s ostatními místy. |
-| Stoický týden | Večerní ohlédnutí (Seneca, O hněvu) a představa nejhoršího nejsou ověřeny; patří jiným celkům. | Ověřit, až týden vznikne. |
-| Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). | Vztah `polemika` do dat až s cestou 8 nebo s profilem Démokrita. |
+| Stoický týden | **Večerní ohlédnutí vyřízeno 8. 10. 2026 (celek 6):** O hněvu III, 36 ověřeno v latinském textu; tři otázky jsou Sextiovy, zvyk Senekův (citáty `seneca-ira-iii-36`, `seneca-ira-iii-36-otazky`, `seneca-ira-iii-36-odpoustim`). Představa nejhoršího ověřena není. | Představu nejhoršího ověřit s cestou 33. |
+| Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). **8. 10. 2026 (celek 6):** cesta 8 polemiku nepotřebuje. Diogenés Laertios má jen výčet nepřátelských pomluv (X, 8) a zprávu, že se Epikúros prohlašoval za samouka (X, 13); Cicero jinde píše, že Démokrita „jediného následoval“ (O nejvyšším dobru a zlu II, 102). Vliv textem je v datech. | Vztah `polemika` do dat až s celkem, který otevře otázku 4 u atomistů, nebo s profilem Démokrita. |
 | ~~`docs/styl.md`, dvojice 3~~ | **Vyřízeno 2. 10. 2026:** na pokyn autora opraveno na „Cassiovy písemnosti dal zničit nepřečtené“. | — |
 
 Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozpravy I, 25, 18–20), místa o smrti dítěte (Rukojeť 3 a 11; Rozpravy III, 3, 15; III, 24, 85–88; Hovory XI, 34), část Hovorů VI, 13 o tělesné lásce, Ciceronova výtka „jen slova“ (O nejvyšším dobru a zlu IV, 72), Karneadés jako pátý hlas otázky 4.
@@ -447,3 +447,30 @@ Autorské, bez historického nároku: možnosti a zpětné vazby všech čtyř V
 | Kresba, šestý stav | Že by proud strhl neplavce i s lanem, je náš důvod, ne pramen ani ověřená rada záchranářů. | Rozhodne autor s potvrzením kresby (nález 9). |
 
 Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká „z knihy plastického chirurga z roku 1960“ a „jak dlouho se tvoří návyk, neměřil“; graf má křivky „Rychlý průběh“ a „Pomalý průběh“; šestý stav kresby má důvod (náš, ne z pramene). Spor cesty 3 končí odpovědí podle Metafyziky I, 1 (981a5–30), kterou podklady celku 5 ověřily řecky i anglicky. Otevřené zůstává: popisek odlitku (inv. I 246 ve Vídni) a případná fotografie Miezy pro vstup cesty 4.
+
+## Celek 6 „Proč se bát smrti?“ (P6)
+
+8. 10. 2026. Podklady jsou v `docs/podklady/celek-6-proc-se-bat-smrti.md`. Vyřízeno z dřívějších bodů: Senekův pobyt v Egyptě, vliv Démokrita na Epikúra a večerní ohlédnutí (řádky výše); Suilliovo obvinění je ověřeno u Tacita (Letopisy XIII, 42–43) a patří do portrétu jako výčitka, kterou Seneca slyšel za života. Dodatečně ověřeno v latinském textu: Suetonius, Caligula 53, 2 („písek bez vápna“) a Seneca, Dopisy 53, 4 („per aspera“). Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| České překlady | Všech 65 citátů celku jsou vlastní převody; publikované překlady jsem neměl v ruce. | Před revizí P10 srovnat citáty, které studentský text použije (Seneca: B. Ryba; Tacitus: A. Minařík; Platón: F. Novotný; další podle toho, co autor má). |
+| Motiv Senekovy smrti | Autor ji čte jako sebevraždu na příkaz, kterou Seneca předešel popravě a následkům pro rodinu (8. 10. 2026). Tacitus ten zvyk popisuje obecně a pro dobu Tiberia (Letopisy VI, 29: pohřeb a platná závěť pro toho, kdo o sobě rozhodl sám); u Seneky ho neuvádí. Co se stalo se Senekovým majetkem, jsem nezjišťoval. | Ve studentském textu jen jako popis zákona, nebo vůbec (rozhodne autor); učiteli ano. |
+| Thomas Nagel, Death (1970) | Nečteno, jen SEP „Death“. | Ve studentském textu jednou větou bez citátu; před čímkoli dalším přečíst. |
+| Strach ze smrti a věk | Russac a kol. 2007 a Chopik 2017: čteny jen abstrakty; mladší osmnácti ve vzorku nebyli. | Před větou „nejvíc se báli nejmladší“ přečíst aspoň jednu studii celou. |
+| Goransonová a kol. 2017 | Čteno celé (PDF). | Čísla (25 blogů, 2 616 příspěvků, 597 z posledních dvanácti týdnů, 45 účastníků, 2,25 % proti 1,70 %) před P8 projít ještě jednou. |
+| „Pět věcí, kterých lidé před smrtí litují“ | Není výzkum (blog a kniha B. Wareové, 2011); knihu jsem nečetl, přehled H. Bastianové četl nástroj WebFetch. | Nepoužívat jako fakt. |
+| Cassius Dio | Čten jen anglicky ve výtahu (LacusCurtius). | Jeho verze Senekovy smrti a půjčka Britům jen učiteli. |
+| Seneca, Dopisy 70, 91 a 12, 10–11 | Nečteno. | Dopis 70 přečíst pro `ucitel/celek-6.md`, Dopis 91 s cestou 33. |
+| Senekovy tragédie | IEP jich uvádí osm; co z rukopisné tradice není jeho, jsem neověřoval. | Ve studentském textu jen „psal i tragédie“. |
+| Zemětřesení v Pompejích | Rok (62 nebo 63) a vzdálenost od výbuchu Vesuvu beru z běžných příruček. | Do studentského textu bez čísla. |
+| Datování spisů | Cicero (rok 45 př. n. l.), Plútarchos (kolem roku 100), Quintilianus, Diogenés Laertios: z běžných příruček. | Ve studentském textu „asi“. |
+| Otec Seneky | Že řečnictví učil, jsem neověřil. | Text říká „zabýval se řečnictvím“. |
+| „Non scholae, sed vitae discimus“ | Kdo a kdy Senekovu větu obrátil, jsem nezjišťoval. | Text říká jen „škola ji později obrátila“. |
+| Berlínská herma (SK 391) | Autor ji 8. 10. 2026 schválil. Rok nálezu 1813 četl nástroj WebFetch; záznam muzea uvádí „CC BY-NC-SA“ bez jména fotografa; snímek jsem neviděl. | Před stažením (P7) ověřit verzi licence a fotografa; do `public/obrazky/` kopii zmenšenou na 1280 px. |
+| Pseudo-Seneca | Podrobnosti (bronz z Herculanea 1754, ztotožnění roku 1598, dnešní domněnky) jen z Wikipedie. | Ve studentském textu nejvýš „dnes se má za to, že je to někdo jiný“. |
+| Příručky o bezpečném psaní | Z Media Guide NÚDZ jsem četl dvě karty; celý dokument a metodické doporučení MŠMT k sebevražednému chování (2023) jsou nečtené. | Přečíst před psaním `ucitel/celek-6.md`. |
+| Linky pomoci | Ověřeno na webech 8. 10. 2026: Linka bezpečí 116 111, Linka první psychické pomoci 116 123, Poradna Vigvam 606 160 646. | **Ověřit znovu při každé revizi celku.** |
+| Aristotelův „úkol člověka“ | Etiku Nikomachovu I, 7 jsem v tomto kroku znovu nečetl. | Ověřit v P8, jestli ho stránka otázky 3 použije. |
+| Doba a lidé | Čtyři nové vztahy (Epikúros, Kleanthés a Lucretius → Seneca; Démokritos → Epikúros). | V P7 přečíst na stránkách Seneky a Epikúra, že poznámky dávají smysl z obou stran. |
+| Skill `atlas-overeni` | Návrh doplňků je na konci podkladového listu. | Uložit do skillu, pokud je autor chce. |
