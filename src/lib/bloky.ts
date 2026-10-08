@@ -642,7 +642,7 @@ export function osaDvou(a: OsobaMapy, b: OsobaMapy): { od: number; do: number; a
 /** Odkazy bloku z YAML na data: osoby v lide.yaml a prameny v zdroje.yaml. Vrací seznam chyb. */
 export function chybyBloku(
   id: string,
-  blok: { druh: string; zdroje: string[]; coUdelal?: { osoba: string }; strany?: { osoba: string }[]; srovnani?: { osoba?: string } },
+  blok: { druh: string; zdroje: string[]; coUdelal?: { osoba: string }; strany?: { osoba?: string }[]; srovnani?: { osoba?: string } },
   osoby: Set<string>,
   prameny: Set<string>,
 ): string[] {

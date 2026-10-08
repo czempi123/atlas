@@ -112,11 +112,15 @@ export const BlokZmena = z
 
 export const StranaSporu = z
   .object({
-    /** id osoby v lide.yaml; jméno se vezme z dat */
-    osoba: Id,
+    /**
+     * id osoby v lide.yaml; jméno se vezme z dat. Smí chybět jen u strany, za kterou mluví autor,
+     * kterého atlas v datech nemá (Plútarchos v cestě 8): ta pak musí mít `oznaceni` a její mince je prázdná.
+     */
+    osoba: Id.optional(),
     /**
      * Jak stranu nazvat místo jména osoby, když za ni mluví celý směr („kynici“). Malým písmenem,
      * jak stojí uprostřed věty; na škále a v nadpisech se první písmeno zvětší samo. Mince zůstává osoby.
+     * U strany bez osoby je to jméno autora („Plútarchos“).
      */
     oznaceni: Text.optional(),
     /** postoj jednou větou: „To, co pochopím.“ */
@@ -124,7 +128,8 @@ export const StranaSporu = z
     /** nejsilnější argumenty (1–3 odstavce) */
     argumenty: z.array(Text).min(1).max(3),
   })
-  .strict();
+  .strict()
+  .refine((s) => !!s.osoba || !!s.oznaceni, { message: 'Strana sporu potřebuje osobu z lide.yaml, nebo označení.' });
 
 export const BlokSpor = z
   .object({
@@ -134,7 +139,9 @@ export const BlokSpor = z
     strany: z.tuple([StranaSporu, StranaSporu]),
   })
   .strict()
-  .refine((b) => b.strany[0].osoba !== b.strany[1].osoba, { message: 'Spor potřebuje dvě různé osoby.' });
+  .refine((b) => !b.strany[0].osoba || b.strany[0].osoba !== b.strany[1].osoba, { message: 'Spor potřebuje dvě různé osoby.' })
+  .refine((b) => (b.strany[0].oznaceni ?? b.strany[0].osoba) !== (b.strany[1].oznaceni ?? b.strany[1].osoba), { message: 'Strany sporu se jmenují stejně.' })
+  .refine((b) => b.strany.some((s) => s.osoba), { message: 'Aspoň jedna strana sporu je osoba z lide.yaml.' });
 
 export const BlokRoztrid = z
   .object({

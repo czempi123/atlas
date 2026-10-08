@@ -312,6 +312,14 @@ describe('Spor: označení strany', () => {
     expect(b.strany[0].oznaceni).toBe('kynici');
     expect(b.strany[1].oznaceni).toBeUndefined();
   });
+  it('strana bez osoby (autor, kterého atlas v datech nemá) potřebuje označení a druhá strana osobu', () => {
+    const bezOsoby = (oznaceni?: string) => ({ postoj: 'Postoj.', argumenty: ['Argument.'], ...(oznaceni ? { oznaceni } : {}) });
+    const spor = (strany: unknown[]) => BlokSpor.safeParse({ druh: 'spor', obdobi: 2, otazka: 'Je důvod se bát?', strany }).success;
+    expect(spor([strana('epikuros'), bezOsoby('Plútarchos')])).toBe(true);
+    expect(spor([strana('epikuros'), bezOsoby()])).toBe(false);
+    expect(spor([bezOsoby('Plútarchos'), bezOsoby('Cicero')])).toBe(false);
+    expect(spor([strana('epikuros', 'Plútarchos'), bezOsoby('Plútarchos')])).toBe(false);
+  });
   it('popisy poloh, zpětná vazba a zápis drží označení malým písmenem uprostřed věty', () => {
     expect(popisPolohy(1, 'kynici', 'Epikúros')).toBe('spíš kynici');
     expect(zpetnaSporu(3, 1, 'kynici', 'Epikúros')).toMatch(/ke straně, kterou hájí kynici\./);

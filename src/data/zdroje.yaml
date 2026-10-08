@@ -2291,7 +2291,7 @@ citaty:
   - id: dl-x-22-den
     osoba: epikuros
     autor: Epikúros
-    dilo: Dopis Ídomeneovi
+    dilo: Dopis z posledního dne
     misto: Diogenés Laertios X, 22
     cesky: "Píšu vám tohle ve šťastný a zároveň poslední den svého života."
     original: "Τὴν μακαρίαν ἄγοντες καὶ ἅμα τελευταίαν ἡμέραν τοῦ βίου ἐγράφομεν ὑμῖν ταυτί."
@@ -2302,7 +2302,7 @@ citaty:
   - id: dl-x-22-radost
     osoba: epikuros
     autor: Epikúros
-    dilo: Dopis Ídomeneovi
+    dilo: Dopis z posledního dne
     misto: Diogenés Laertios X, 22
     cesky: "Proti tomu všemu se ale stavěla radost v duši ze vzpomínky na úvahy, které jsme spolu vedli."
     original: "ἀντιπαρετάττετο δὲ πᾶσι τούτοις τὸ κατὰ ψυχὴν χαῖρον ἐπὶ τῇ τῶν γεγονότων ἡμῖν διαλογισμῶν μνήμῃ"
@@ -2313,7 +2313,7 @@ citaty:
   - id: dl-x-22-deti
     osoba: epikuros
     autor: Epikúros
-    dilo: Dopis Ídomeneovi
+    dilo: Dopis z posledního dne
     misto: Diogenés Laertios X, 22
     cesky: "A ty se postarej o Métrodórovy děti, jak se sluší na to, jak jsi od mládí stál při mně i při filozofii."
     original: "σὺ δʼ ἀξίως τῆς ἐκ μειρακίου παραστάσεως πρὸς ἐμὲ καὶ φιλοσοφίαν ἐπιμελοῦ τῶν παίδων Μητροδώρου."
@@ -2443,12 +2443,23 @@ citaty:
       druh: vlastni
       podle: "latinský text (PerseusDL); próza místo veršů"
     zdroj: lucretius-iii-830
+  - id: lucretius-iii-972-zrcadlo
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 972–977
+    cesky: "Ohlédni se, jak nic pro nás neznamenal ten odvěký čas, který uplynul, než jsme se narodili. V něm nám příroda nastavuje zrcadlo času, který přijde po naší smrti. Je tam vidět něco hrozného? Zdá se tam něco smutné?"
+    original: "respice item quam nil ad nos ante acta vetustas temporis aeterni fuerit, quam nascimur ante. hoc igitur speculum nobis natura futuri temporis exponit post mortem denique nostram. numquid ibi horribile apparet, num triste videtur quicquam"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); próza místo veršů; kratší podoba citátu lucretius-iii-972 pro cestu 8: bez poslední otázky („Není to klidnější než každý spánek?“), viz podkladový list celku 6, Citlivá místa"
+    zdroj: lucretius-iii-830
   - id: lucretius-iii-894
     osoba: lucretius
     autor: Lucretius
     dilo: O přírodě
     misto: III, 894–899
-    cesky: "„Už tě nepřivítá veselý dům ani nejlepší z žen, už ti nepoběží naproti milé děti, aby ti ukradly první polibek, a nedotknou se tvého srdce tichou něhou. … Ubohému ti jediný nepřátelský den,“ říkají, „vzal všechny dary života.“"
+    cesky: "‚Už tě nepřivítá veselý dům ani nejlepší z žen, už ti nepoběží naproti milé děti, aby ti ukradly první polibek, a nedotknou se tvého srdce tichou něhou. … Ubohému ti jediný nepřátelský den,‘ říkají, ‚vzal všechny dary života.‘"
     original: "'Iam iam non domus accipiet te laeta neque uxor optima, nec dulces occurrent oscula nati praeripere et tacita pectus dulcedine tangent. … misero misere' aiunt 'omnia ademit una dies infesta tibi tot praemia vitae.'"
     preklad:
       druh: vlastni
@@ -2459,7 +2470,7 @@ citaty:
     autor: Lucretius
     dilo: O přírodě
     misto: III, 900–901
-    cesky: "Nedodají k tomu: „A po ničem z toho se ti už nestýská.“"
+    cesky: "Nedodají k tomu: ‚A po ničem z toho se ti už nestýská.‘"
     original: "illud in his rebus non addunt 'nec tibi earum iam desiderium rerum super insidet una.'"
     preklad:
       druh: vlastni
@@ -2520,6 +2531,17 @@ citaty:
     preklad:
       druh: vlastni
       podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-54-5-lampa
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 54, 5
+    cesky: "Neřekl bys, že je vrchol hlouposti myslet si, že lampě je hůř, když zhasla, než předtím, než ji rozsvítili? I nás zhášejí a rozsvěcují."
+    original: "Rogo, non stultissimum dicas, si quis existimet lucernae peius esse, cum extincta est, quam antequam accenditur? Nos quoque et extinguimur et accendimur"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); kratší podoba citátu seneca-ep-54-5 pro cestu 8: bez závěru o „hlubokém klidu“ z obou stran, viz podkladový list celku 6, Citlivá místa"
     zdroj: seneca-epistulae-smrt
   - id: seneca-ep-24-18
     osoba: seneca

@@ -222,7 +222,7 @@
   {/if}
   <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{@html radek(blok.otazka)}</h3>
   <div class="postoje">
-    {#each blok.strany as s, i (s.osoba)}
+    {#each blok.strany as s, i (i)}
       <p class="postoj obdobi-{lide[i].obdobi}"><span class="t-nadtitulek">{nadpisy[i]}</span> {@html radek(s.postoj)}</p>
     {/each}
   </div>
@@ -234,7 +234,7 @@
     <div class="argumenty" role="region" aria-label="Argumenty obou stran" tabindex="-1" bind:this={argumenty} in:odkryti>
       <p class="zacatek t-ovladani">Začal jsi: <strong>{popisPolohy(prvni, A, B)}</strong>. Teď si přečti, co říkají oba.</p>
       <div class="strany">
-        {#each blok.strany as s, i (s.osoba)}
+        {#each blok.strany as s, i (i)}
           <article class="strana obdobi-{lide[i].obdobi}" aria-labelledby={`${id}-strana-${i}`}>
             <div class="strana__hlava">
               <Mince ikona={lide[i].ikona} obdobi={lide[i].obdobi} varianta="sel" velikost={36} />
