@@ -4,6 +4,15 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Celek 6
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Šestý celek je „Proč se bát smrti?“: portrét Seneky, cesta 8 a stránka velké otázky 3 „Má život smysl?“. Plán a zadání P6 jsou v `docs/plany/celek-6.md`, větev `celek-6` vychází z hlavní větve po sloučení celku 5 | Autor vybral ze tří nabídnutých možností (cesta 2 s Hérakleitem a Parmenidem, kterou doporučoval Claude; Seneca a smrt; Seneca a čas). Seneku potřebují tři cesty katalogu (8, 33 a 34) |
+| Největší riziko celku 6 je útěcha, která zlehčuje: Epikúrův argument míří na strach z toho, že budu mrtvý, ne na smrt blízkých. Senekova smrt se ve studentském textu nepodává jako hrdinství ani řešení a stoická obhajoba dobrovolné smrti zůstává mimo něj, dokud podklady nenavrhnou jinak | Téma se bolestně týká studenta, kterému někdo zemřel, i studenta s myšlenkami na sebevraždu (`docs/pouceni.md`); u Epiktéta zůstalo „dveře jsou otevřené“ mimo studentský text už v celku 3 |
+| Podklady celku 6 (P6) běží celé na Opusu 5.5 · high, ne na Sonnetu | Sporná nebo citlivá je většina kroku, ne jen jednotlivé prameny |
+| Portrét Seneky nesmí být podruhé příběh učitele a vladaře z cesty 4; čas zůstává cestě 34 a představa nejhoršího cestě 33 | Překryv s hotovým celkem 5 a se dvěma cestami, které Seneku ještě čekají |
+
 ## 8. 10. 2026: Opravy a uzavření celku 5
 
 | Rozhodnutí | Důvod |
