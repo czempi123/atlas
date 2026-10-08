@@ -8,8 +8,8 @@ Celek 5: portrét Aristotela, cesta 4 „Stačí vědět, co je správné?“ (o
 | P7 | Portrét Aristotela | hotovo 5. 10. 2026; `src/content/osobnosti/aristoteles.mdx` |
 | P8 | Cesta 4 „Stačí vědět, co je správné?“ a doplnění stránky velké otázky 1 | hotovo 8. 10. 2026; `src/content/cesty/staci-vedet-co-je-spravne*`; kresbu „Kde je střed?“ má autor na snímcích a ještě ji nepotvrdil |
 | P10 | Revize celku | hotovo 8. 10. 2026; verdikt po opravách, záznam `docs/revize/celek-5-2026-10-08.md` |
-| Opravy | Zapracování nálezů revize | připraveno 8. 10. 2026, zadání níže; čeká na autora (nálezy, kresba, otevřené body) |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | po opravách |
+| Opravy | Zapracování nálezů revize | hotovo 8. 10. 2026; všech deset nálezů a otevřené body podle doporučení revize |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 8. 10. 2026 na pokyn autora („nahrajme to zas celé na github“) |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-5.md`. Větev `celek-5` je založená z hlavní větve 5. 10. 2026 (commit `96c942b`, po sloučení celku 4, `rozhrani-v2` a `kresby-ctverec`).
 
@@ -217,35 +217,42 @@ Revize celku je hotová: záznam `docs/revize/celek-5-2026-10-08.md`, **verdikt 
 3. Otevřené body podle doporučení výše.
 4. Z dřívějška: popisek odlitku (inv. I 246 ve Vídni); uložit skilly `atlas-osobnost` a `atlas-overeni` v účtu.
 
-## Zadání oprav celku 5
+## Po opravách (8. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. Sonnet 5.5 · medium: opravy mají v záznamu revize hotové znění a zbytek je úprava testů. Kdyby autor chtěl kresbu nebo některý nález jinak, než záznam navrhuje, Opus 5.5 · medium. Před odesláním doplň tři řádky s odpověďmi.
+Autor schválil nálezy revize v chatu 8. 10. 2026 a požádal o nahrání celku na GitHub. Zadání oprav neposílal; opravy proběhly v témže chatu jako revize a zadání je i s poznámkou v `docs/archiv/zadani/celek-5.md`. `npm test` prošel celý (466 testů dat, 336 v prohlížeči; test „cesta: průchod…“ jednou spadl na známém kroku `astro-island[ssr]` a napodruhé prošel). Čas cesty je po opravách 29,8 minuty (3 498 slov), štítek 30 zůstává.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-5. Revize celku 5 je hotová, záznam je v docs/revize/celek-5-2026-10-08.md.
+**Zapracováno podle záznamu revize.**
 
-Nálezy 1 až 10 (schvaluji všechny; jinak: …): 
-Kresba „Kde je střed?“ (potvrzuji i s textem šestého stavu z nálezu 9; chci změnit: …): 
-Otevřené body (souhlasím s doporučením; jinak: …): 
+1. Krok 7: „To číslo pochází z knihy plastického chirurga z roku 1960. … Jak dlouho se tvoří návyk, neměřil.“
+2. Krok 5: „V pořádku to podle něj není… Je ale míň ošklivé než jiné, protože hněv rozum aspoň zčásti poslouchá.“
+3. Kroky 6 a 8: střed „předem“ neurčí nikdo; kdo se ptá, kdo ho určí, chce to, co v Platónově dialogu žádá Sókratés: umění měřit.
+4. Graf v kroku 7: „Rychlý průběh“ a „Pomalý průběh“, pod grafem „Dva průběhy, jaké studie popisuje.“
+5. `lide.yaml`, `proc` Aristotela: „Zkoumal živou přírodu, úsudek i obec. Dobrým se podle něj člověk stává tím, že dobře jedná a hledá míru, která není pro každého stejná.“
+6. Portrét, kapitola 02: „Jeho vlastní výklad s tím přitom na třech místech neladí.“
+7. Spojovací věty: „Aristotelés s tím nesouhlasil. Ke konci přednášek o etice říká:“ a „Jak těžko se střed vymezuje předem, sám nezakrývá:“
+8. Spor cesty 4: první a třetí Aristotelův argument podle záznamu; obraz otroka je v cestě už jen ve dvou citátech.
+9. Kresba, šestý stav: „Proud by ho mohl strhnout i s lanem.“
+10. Opakování a odkaz: krok 4 (Co by na to řekl), kapitoly 02 a 05 portrétu, odkaz na cestu 4 v myšlence 2 portrétu Sókrata.
 
-Zapracuj nálezy revize a doporučení k otevřeným bodům. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md, docs/pouceni.md;
-- v docs/plany/celek-5.md oddíl „Po P10“;
-- celý záznam docs/revize/celek-5-2026-10-08.md: u každého nálezu je hotové znění opravy;
-- z docs/podklady/celek-5-staci-vedet.md jen oddíl Citlivá místa (pro složku ucitel/) a v oddílu „Otevřené body z k-overeni: rozhodnutí“ odstavec o Metafyzice 981a.
-Jiné podklady ani obsah celků 1 až 4 nečti, kromě tří míst, která se mění: src/content/bloky/cesta3-aristoteles-spor.yaml, myšlenka 2 v src/content/osobnosti/sokrates.mdx a řádek Aristotela v src/data/lide.yaml.
+**Kde jsem se od záznamu odchýlil.**
 
-Co udělat:
+- Scéna Volby v kapitole 05 portrétu si nechala větu o básni („a že záminkou byla báseň na památku přítele“): odvolávají se na ni dvě možnosti. Vypadla jen věta o Athénách a Makedoncích. „Žaloba je podaná“ jsem nepoužil, žaloba je tradovaná („Vypráví se“).
+- „Co by na to řekl Aristotelés“ začíná „Na svou námitku Aristotelés odpověděl…“, aby věta stála i v deníku.
+- Krok 5: za novou větou o hněvu začíná odstavec a „poslední slovo té věty“ je „poslední slovo jeho přirovnání“; jinak by „té věty“ ukazovalo na naši větu.
+- Věta o Epiktétovi v kroku 8 má spojení se Sókratem („hledal chybu taky v soudu“) a je rozdělená na dvě.
 
-1. Nálezy 1 až 10 podle záznamu. Znění oprav ber ze záznamu; kde jsem výše napsal jinak, platí moje odpověď. Nové věty drž do 25 slov.
-2. Drobnosti z oddílu „K třinácti bodům zadání“: podmínka „Vyšlo to náhodou“ v bloku cesta4-kdy-je-to-jeho („vůbec si nevšiml, že se někomu smějí“). Z oddílu Délka jen větu o Epiktétovi v kroku 8: dej jí spojení se Sókratem („chybu hledal taky v soudu“), nic dalšího nekrať.
-3. Spor cesty 3, třetí Aristotelův argument: poslední větu nahraď dvěma větami z doporučení 2 v záznamu a k bloku přidej pramen, ze kterého je citát metafyzika-981a.
-4. Složka ucitel/: založ ucitel/celek-5.md s citlivými místy (tabulky k otroctví a k ženám, další místa, tři otázky do hodiny, co cesta záměrně nevypráví o Kleitovi). Bez odkazu ze studentského webu; ověř, že se do sestaveného webu nedostane.
-5. Skill atlas-cesta (kopie ve skills/): dvě věty. Volba bez pole „Proč“ u otázky na vlastní selhání; výzva Zkus to žít v posledním kroku jen tam, kde stojí na radě filozofa cesty, a vždy s možností nic nezkoušet. Napiš mi, že je třeba skill uložit i v účtu.
-6. Testy, které hlídají přesné znění, uprav podle nových vět (seznam je v plánu, Po P10). Po změně dat restartuj běžící npm run dev.
-7. V docs/podklady/k-overeni.md doplň řádek „Durant a Maltz“ (blog UCL cituje z knihy i větu o návycích, s. 108) a u grafu a kresby zapiš, co se změnilo. V docs/design.md oprav popis kresby a grafu, pokud se změnil text.
+**Otevřené body, jak dopadly.**
 
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když jednou spadne krok „astro-island[ssr]“ v tests/e2e/cesta.spec.ts, spusť test znovu); node scripts/slova-cesta.mjs staci-vedet-co-je-spravne a štítek minut podle výsledku; snímky kroků 5 až 8 a kapitoly 02 portrétu na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs, scripts/snimky-listy.mjs), šestý stav kresby a graf zvlášť (scripts/snimky-prvek.mjs); kartu Aristotela v Mapě a čase (/mapa/?rok=-343&osoba=aristoteles).
+- Vstup cesty zůstal bez obrázku.
+- Spor cesty 3: třetí Aristotelův argument končí odpovědí podle Metafyziky 981a i s druhou půlkou (kdo zná příčinu, ví víc). Pramen `aristoteles-metafyzika-ideje` blok už měl.
+- `ucitel/celek-5.md`: citlivá místa portrétu, co vstupní příběh nevypráví, koho se téma může týkat, otázky do hodiny, meze studie, připisované výroky. Web na něj neodkazuje.
+- Skill `atlas-cesta` (kopie ve `skills/`): Volba bez pole „Proč“, Zkus to žít v posledním kroku s podmínkou, křivka nejsou data, spojenec je jiný myslitel. Verzi v účtu je třeba uložit.
+- Sókratés zůstal druhým filozofem cesty, karta Zkus to žít v posledním kroku, „hazarduje“ i graf (přejmenovaný).
+- Kresba „Kde je střed?“ jde na GitHub s textem šestého stavu z nálezu 9. Samostatné „potvrzuji“ k ní autor nenapsal; kdyby ji chtěl jinak, je to oprava po uzavření.
 
-Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub ani neslučuj: to udělám pokynem zvlášť. Na konci zapiš do docs/plany/celek-5.md stav „Po opravách“ a co zbývá do uzavření, toto zadání přesuň do docs/archiv/zadani/celek-5.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co se změnilo, co jsi udělal jinak než záznam a proč, a pošli snímek šestého stavu kresby, grafu a kroku 8.
-```
+**Co zbývá po uzavření.**
+
+1. Uložit v účtu skilly `atlas-cesta` (nové věty z oprav), `atlas-osobnost` a `atlas-overeni` (z P6 a P7).
+2. Popisek odlitku: ověřit na stránce Kunsthistorisches Museum inv. I 246.
+3. Pomůcky revize `vety.mjs` a `klavesnice.mjs` z `Claude outputs/revize-celek-5/` přenést do `scripts/`, až je bude chtít další revize.
+4. Obrázek pro vstup cesty 4 (fotografie Miezy), pokud ho autor bude chtít: samostatné ověření licence a určení místa.

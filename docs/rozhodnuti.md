@@ -4,6 +4,15 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 8. 10. 2026: Opravy a uzavření celku 5
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor schválil nálezy revize celku 5 v chatu a požádal o nahrání celku na GitHub. Celek 5 je tím uzavřený: opravy zapracované, větev `celek-5` sloučená do hlavní větve a hlavní větev poslaná na GitHub | „Ano, ty nálezy, které potřebuješ schválit, schvaluju, oprav je, nahrajme to zas celé na github“ (8. 10. 2026) |
+| Otevřené body platí podle doporučení revize: vstup cesty 4 bez obrázku; třetí Aristotelův argument ve Sporu cesty 3 upravený podle Metafyziky 981a; složka `ucitel/` založená (`ucitel/celek-5.md`); Sókratés druhým filozofem cesty 4; karta Zkus to žít v posledním kroku zůstává a do skillu `atlas-cesta` jde jako možnost s podmínkou; graf zůstává s křivkami pojmenovanými podle tvaru; „hazarduje“ zůstává | Autor k nim nenapsal nic jiného; pravidlo bez mezikroku schvalování (4. 10. 2026). Nic z toho není nevratné |
+| Kresba „Kde je střed?“ je na GitHubu s textem šestého stavu z nálezu 9 („Proud by ho mohl strhnout i s lanem“) | Schválený nález 9; samostatné potvrzení kresby autor nenapsal, případná změna je oprava po uzavření |
+| Scéna Volby v kapitole 05 portrétu Aristotela si nechala větu o básni; z opakování vypadla jen věta o Athénách | Dvě možnosti Volby se na báseň odvolávají a scéna se ukládá do deníku |
+
 ## 8. 10. 2026: Revize celku 5 (P10)
 
 | Rozhodnutí | Důvod |
