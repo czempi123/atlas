@@ -1,6 +1,6 @@
 # Provedená zadání větve celek-5
 
-Zadání kroků, které už proběhly, v plném znění. Stav a zadání dalšího kroku jsou v `docs/plany/celek-5.md`.
+Zadání kroků, které už proběhly, v plném znění. Celek je uzavřený 8. 10. 2026; plán větve se stavem po každém kroku je v `docs/archiv/plany/celek-5.md`.
 
 ## P6: Podklady k celku 5 „Stačí vědět, co je správné?“
 

@@ -11,7 +11,9 @@ Celek 5: portrét Aristotela, cesta 4 „Stačí vědět, co je správné?“ (o
 | Opravy | Zapracování nálezů revize | hotovo 8. 10. 2026; všech deset nálezů a otevřené body podle doporučení revize |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 8. 10. 2026 na pokyn autora („nahrajme to zas celé na github“) |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-5.md`. Větev `celek-5` je založená z hlavní větve 5. 10. 2026 (commit `96c942b`, po sloučení celku 4, `rozhrani-v2` a `kresby-ctverec`).
+**Celek je uzavřený 8. 10. 2026:** schválený autorem, sloučený do hlavní větve a poslaný na GitHub. Tento plán je od té doby v archivu (`docs/archiv/plany/celek-5.md`) a čte se jen na pokyn.
+
+Stav a zadání dalších kroků se zapisovaly sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-5.md`. Větev `celek-5` je založená z hlavní větve 5. 10. 2026 (commit `96c942b`, po sloučení celku 4, `rozhrani-v2` a `kresby-ctverec`).
 
 ## Co si celek nese z celků 1 až 4
 
