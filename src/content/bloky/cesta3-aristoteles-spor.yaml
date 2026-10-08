@@ -4,6 +4,8 @@
 # Kategorie 5 (2a11–14, 2b5–6), Etika Nikomachova 1097a8–13. Skutečný spor učitele a žáka, ne rozhovor: scéna neříká,
 # že se přeli tváří v tvář, ani kdy Aristotelés kritiku napsal. Třetí Platónův argument je domyšlená odpověď („by mohl“)
 # a začíná námitkou, na kterou odpovídá (na telefonu stojí Platón nad Aristotelem). Věta o Akademii je v textu kroku.
+# Třetí Aristotelův argument končí odpovědí na Platónovu otázku podle Metafyziky I, 1 (981a5–30): obecný soud vzniká
+# z mnoha zkušeností a vědění patří spíš tomu, kdo zná příčinu (revize celku 5, 8. 10. 2026).
 druh: spor
 obdobi: 1
 nadtitulek: Spor
@@ -41,5 +43,6 @@ strany:
       - >-
         Platón má pravdu, že bez obecného není vědění. Chyba je až v tom, že obecné oddělí od věcí; z toho jsou všechny potíže.
         Čtverec není vedle nakreslených čtverců, ale v nich.
-        A zdraví lékař nehledá mimo lidi, které léčí.
+        Co je zdraví, lékař nevyčte z jednoho pacienta ani z ideje: udělá si o tom soud z mnoha nemocných.
+        A kdo k tomu zná příčinu, ví podle Aristotela víc než ten, kdo jen zkoušel.
 zdroje: [platon-ustava-perseus, platon-faidon-perseus, platon-timaios, aristoteles-metafyzika-ideje, aristoteles-etika-i-6, aristoteles-kategorie]

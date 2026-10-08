@@ -76,7 +76,7 @@
     - { misto: athenes, role: pusobeni, od: -335, do: -323, zdroj: sep-aristotle }
     - { misto: chalkis, role: smrt, rok: -322, zdroj: sep-aristotle }
   kdo: Platónův žák, vychovatel mladého Alexandra Makedonského a zakladatel školy v Lykeiu.
-  proc: Zkoumal skoro všechno, od logiky po živočichy, a učil, že ctnost je střed mezi dvěma krajnostmi.
+  proc: Zkoumal živou přírodu, úsudek i obec. Dobrým se podle něj člověk stává tím, že dobře jedná a hledá míru, která není pro každého stejná.
   atribut:
     ikona: scales
     nazev: váhy

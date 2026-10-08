@@ -162,7 +162,8 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(zmena).toBeFocused();
   await expect(zmena).toContainText('Rozhodl ses jinak, když to nebyl jeho nápad.');
   await expect(jeho.getByRole('heading', { name: 'Co by na to řekl Aristotelés' })).toBeVisible();
-  await expect(jeho.locator('.co-udelal')).toContainText('O spolužákovi ze třídy nic nenapsal.');
+  await expect(jeho.locator('.co-udelal')).toContainText('Na svou námitku Aristotelés odpověděl, že čin a člověk jsou dvě věci.');
+  await expect(jeho.locator('.co-udelal')).toContainText('Podle jeho měřítka ten, kdo se někoho zastane kvůli učiteli');
   await expect(jeho.locator('.co-udelal')).toContainText('Stát se jím může, a právě takovými činy.');
   await dalKlavesnici(page, jeho, 'Věděl to doopravdy?', `${CESTA4}5/`);
 
@@ -175,7 +176,9 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(text5.locator('.citat').nth(1)).toContainText('jestli to není přítel');
   await expect(text5).toContainText('člověk se neudrží a nedodrží, co sám uznal za správné');
   await expect(text5).toContainText('Nemoc není selhání povahy.');
-  await expect(text5).toContainText('Za omluvu to nemá');
+  // Hněv: v pořádku to není, ale Aristotelés ho má za míň ošklivý než jiné neovládnutí (1149a24–b6).
+  await expect(text5).toContainText('V pořádku to podle něj není: i takové neovládnutí je ošklivé.');
+  await expect(text5).toContainText('Je ale míň ošklivé než jiné, protože hněv rozum aspoň zčásti poslouchá.');
   await expect(text5).toContainText('O Alexandrovi tu Aristotelés nepíše.');
   const spor = page.locator('#cesta4-vedel-to');
   await expect(spor).toContainText('Sókratés zemřel dřív, než se Aristotelés narodil.');
@@ -194,7 +197,9 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(argumenty).toContainText('Aristotelés namítá, že dobrým se člověk stává jednáním, ne poznáním.');
   await expect(argumenty).toContainText('Sókratés by se mohl zeptat');
   await expect(argumenty).toContainText('Sókratés má pravdu v tom, že to plné vědění nebylo');
-  await expect(argumenty).toContainText('A že nestačí cvičit naslepo, ví Aristotelés taky');
+  // Aristotelés na Sókratovu otázku odpoví; obraz otroka se v argumentu potřetí neopakuje.
+  await expect(argumenty).toContainText('A podle čeho pozná, co dělat? Podle toho, kdo to už umí');
+  await expect(argumenty).not.toContainText(/vláč/i);
   await expect(argumenty).not.toContainText(/slast|opil|\bvůl[eií]/i);
   await page.keyboard.press('Tab');
   await page.keyboard.press('ArrowRight');
@@ -220,9 +225,10 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(obsah6.locator('.citat')).toHaveCount(2);
   await expect(obsah6.locator('.citat').first()).toContainText('vůči komu se má');
   await expect(obsah6.locator('.citat').nth(1)).toContainText('není snadné vymezit slovy');
-  // Kdo se ptá, kdo střed určí, najde myslitele, který mu dá za pravdu: Aristotela samého.
+  // Kdo se ptá, kdo střed určí: Aristotelés přiznal, že předem to nejde; spojence v Sókratovi mu jmenuje krok 8.
   await expect(obsah6).toContainText('A kdo ho určí, když na břehu stojíš ty?');
-  await expect(obsah6).toContainText('říkáš nahlas to, co Aristotelés přiznal');
+  await expect(obsah6).toContainText('Jak těžko se střed vymezuje předem, sám nezakrývá:');
+  await expect(obsah6).toContainText('že střed tedy předem neurčí nikdo, říkáš nahlas to, co Aristotelés přiznal');
   await expect(obsah6).toContainText('Za rozumné se navíc v jeho obci počítali jen svobodní muži.');
   await expect(page.locator('#kde-je-stred')).toBeVisible();
   await expect(obsah6.locator('section.blok')).toHaveCount(0);
@@ -237,8 +243,12 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(obsah7).toContainText('požádali 96 dobrovolníků, většinou studentů');
   await expect(obsah7).toContainText('dvanáct týdnů každý den ve stejné situaci');
   await expect(obsah7).toContainText('jestli to dělají automaticky a bez přemýšlení');
-  await expect(obsah7).toContainText('plastického chirurga, který si v roce 1960 všiml');
-  await expect(obsah7).toContainText('O návycích nepsal nic.');
+  await expect(obsah7).toContainText('z knihy plastického chirurga z roku 1960');
+  await expect(obsah7).toContainText('Jak dlouho se tvoří návyk, neměřil.');
+  await expect(obsah7).not.toContainText('O návycích nepsal nic');
+  // Graf ukazuje tvar, ne data dvou lidí.
+  await expect(obsah7).toContainText('Dva průběhy, jaké studie popisuje.');
+  await expect(obsah7).not.toContainText(/účastník\b/);
   const odhad = page.locator('#cesta4-navyk-odhad');
   const zpetna7 = await volbaKlavesnici(page, odhad, /Nikdy úplně/);
   // Zpětná vazba k odhadu výsledek neprozradí a toho, komu se návyky nedaří, nekárá.
@@ -269,7 +279,8 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(text8).toContainText('Souhlasit s ním nemusíš.');
   await expect(text8).toContainText('máš na své straně i kus Aristotela');
   await expect(text8).toContainText('popisuješ to, z čeho Aristotelés vyšel');
-  await expect(text8).toContainText('ptáš se na to, co Aristotelés přiznal');
+  await expect(text8).toContainText('chceš to, co v Platónově dialogu žádá Sókratés: umění měřit');
+  await expect(text8).toContainText('Aristotelés s tím nesouhlasil. Ke konci přednášek o etice říká:');
   await expect(text8.getByRole('link', { name: 'Jak mám žít?' })).toHaveAttribute('href', '/otazka/jak-zit/');
   await expect(text8.getByRole('link', { name: 'Co mám ve svých rukou?' })).toHaveAttribute('href', '/cesta/co-mam-ve-svych-rukou/');
   await expect(text8.locator('.citat')).toHaveCount(2);

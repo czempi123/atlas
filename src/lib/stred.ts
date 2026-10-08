@@ -77,7 +77,7 @@ const CO_UDELA: Record<Kdo, Record<Voda, string>> = {
   },
   neplavec: {
     klidna: 'Skočit by pro něj nebyla odvaha, ale hazard: hodí lano.',
-    rozvodnena: 'Zůstane na břehu a volá o pomoc. Ani to není totéž co nic neudělat.',
+    rozvodnena: 'Proud by ho mohl strhnout i s lanem. Zůstane na břehu a volá o pomoc. Ani to není totéž co nic neudělat.',
   },
 };
 

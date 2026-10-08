@@ -152,7 +152,7 @@ test('Aristotelés: text drží pravidla celku (co nese cesta 4, tradované př�
   expect(text).not.toMatch(/Herpyll|Níkomachos\b|Cicer|Amynt|Eurymed|Apellik|Sull|Sképs/);
   // Citlivá místa: odpůrci mluví jeho citátem, kde si nebyl jistý, odkaz na Epiktéta, žádná omluva.
   await expect(page.locator('#delfin .citat').filter({ hasText: 'proti přírodě' })).toHaveCount(1);
-  for (const veta of ['A odmítl ho.', 'Úplně jistý si přitom nebyl.', 'k němu jako k člověku ano', 'Otroky měl až do smrti.']) expect(text).toContain(veta);
+  for (const veta of ['A odmítl ho.', 'Jeho vlastní výklad s tím přitom na třech místech neladí.', 'k němu jako k člověku ano', 'Otroky měl až do smrti.']) expect(text).toContain(veta);
   await expect(page.locator('#delfin a[href="/osobnost/epiktetos/"]')).toHaveText('Epiktétos');
   expect(text).not.toMatch(/dítě své doby|své době|tehdy to tak|omluv/i);
   // Námitku ve Fyzice napsal sám; věta o biologii je střídmá.

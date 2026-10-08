@@ -39,7 +39,7 @@ podminky:
   - id: nahoda
     prepinac: Vyšlo to náhodou
     zmena: >-
-      Teď si představ, že si smíchu vůbec nevšiml. Okřikl třídu, protože ho rušila při psaní, a smích tím přestal.
+      Teď si představ, že si vůbec nevšiml, že se někomu smějí. Okřikl třídu, protože ho rušila při psaní, a smích tím přestal.
     posun: >-
       Rozhodl ses jinak, když nevěděl, co dělá. Dá se být statečný omylem?
     stejne: >-
@@ -49,11 +49,10 @@ coUdelal:
   osoba: aristoteles
   nadpis: Co by na to řekl Aristotelés
   text: >-
-    Aristotelés si tu námitku položil sám: kdo jedná spravedlivě, ten přece už spravedlivý je.
-    Odpověděl, že čin a člověk jsou dvě věci. Správný čin je takový, jaký by udělal spravedlivý člověk.
+    Na svou námitku Aristotelés odpověděl, že čin a člověk jsou dvě věci. Správný čin je takový, jaký by udělal spravedlivý člověk.
     Spravedlivý je ale až ten, kdo ví, co dělá, volí ten čin kvůli němu samému a jedná tak ustáleně.
 
 
-    O spolužákovi ze třídy nic nenapsal. Podle jeho měřítka ale ten, kdo se někoho zastane kvůli učiteli,
+    Podle jeho měřítka ten, kdo se někoho zastane kvůli učiteli,
     na cizí pokyn nebo náhodou, udělal dobrou věc, a statečný ještě není. Stát se jím může, a právě takovými činy.
 zdroje: [aristoteles-etika-ii]

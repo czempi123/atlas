@@ -53,6 +53,8 @@ describe('kde je střed', () => {
     }
     expect(popisStredu({ kdo: 'neplavec', voda: 'klidna' })).toContain('Skočit by pro něj nebyla odvaha, ale hazard');
     expect(popisStredu({ kdo: 'neplavec', voda: 'rozvodnena' })).toContain('Ani to není totéž co nic neudělat.');
+    // Proč u rozvodněné řeky nehodí lano jako u klidné vody (revize celku 5).
+    expect(popisStredu({ kdo: 'neplavec', voda: 'rozvodnena' })).toContain('Proud by ho mohl strhnout i s lanem.');
   });
 
   it('texty drží pravidla: věty do 25 slov, žádná čísla, žádné „správně“ a žádný rod studenta', () => {
