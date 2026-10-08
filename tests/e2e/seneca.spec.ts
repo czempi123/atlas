@@ -136,9 +136,9 @@ test('Seneca: text drží pravidla celku (smrt na rozkaz, kdo co vypráví, co p
   // Co portrét nechává jinde: argumenty o smrti a útěchy (cesta 8), čas (cesta 34), jeho odpověď o bohatství (otázka 1).
   expect(text).not.toMatch(/dušnost|dusí|lamp|Bass|Seren|umíráme každý den|krátkost|kdo komu slouží/i);
   await expect(page.locator('#u-dvora').getByRole('link', { name: 'Jak mám žít?' })).toHaveAttribute('href', '/otazka/jak-zit/');
-  // Cesta 8 je zatím jen jmenovaná; odkaz přidá P8.
+  // Kapitola o dopisech vede na cestu 8 odkazem (P8).
   expect(text).toContain('Těm patří cesta Proč se bát smrti?');
-  await expect(page.locator('#dopisy').getByRole('link', { name: /Proč se bát smrti/ })).toHaveCount(0);
+  await expect(page.locator('#dopisy').getByRole('link', { name: 'Proč se bát smrti?' })).toHaveAttribute('href', '/cesta/proc-se-bat-smrti/');
 
   // Otroci: co řekl, co odmítl, co dělal a kdo mu odporuje.
   for (const veta of ['Nežádá, aby otroka propustil.', 'Otroky měl až do smrti.']) expect(text).toContain(veta);
@@ -157,7 +157,7 @@ test('Seneca: text drží pravidla celku (smrt na rozkaz, kdo co vypráví, co p
   await expect(page.locator('#co-zustalo .radek-pomoci')).toHaveText(/^\s*Pro případ, že by se to hodilo: Linka bezpečí 116\s111, zdarma a nonstop, i jako chat na linkabezpeci\.cz\.\s*$/);
 
   const kamDal = page.getByRole('navigation', { name: 'Kam dál' });
-  await expect(kamDal.getByRole('link')).toHaveText([/Cesta 5\s*Co mám ve svých rukou\?/, /Epiktétos/, /Marcus Aurelius/, /Velká otázka 1\s*Jak mám žít\?/]);
+  await expect(kamDal.getByRole('link')).toHaveText([/Cesta 8\s*Proč se bát smrti\?/, /Epiktétos/, /Marcus Aurelius/, /Velká otázka 1\s*Jak mám žít\?/]);
   await expect(page.locator('[id="kdo-sokrates-seneca-vzdalenost"]')).toContainText('Sókratés a Seneca');
 });
 
