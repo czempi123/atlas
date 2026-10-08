@@ -1,0 +1,29 @@
+# Volba s důvodem · cesta 8 „Proč se bát smrti?“, krok 8: co ze studie o blozích plyne.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Nový případ: Co to ukázalo a co ne (tři čtení, žádné není správné).
+# Výhrady jsou jen tady ve zpětné vazbě: 25 blogů, pisatelé se vybrali sami, skupiny se nedaly srovnat věkem ani jinak,
+# počítání slov nevidí souvislost („nejsem šťastný“), blog je text pro čtenáře, o strachu z nebytí a ze ztráty
+# studie neříká nic. Věta autorů o těch, kdo stojí vedle, je v textu kroku. Senekova věta o řeči (Dopisy 26, 6)
+# je tu nepřímou řečí. Studie „zkoušela“, ne „dokázala“; výsledek je rozdíl mezi dvěma skupinami.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Co z toho plyne pro strach z umírání?
+moznosti:
+  - text: Představa bývá temnější než to, co lidé opravdu píšou.
+    tah: číst studii se Senekou
+    zpetna: >-
+      Držíš se toho, co vyšlo: kdo si umírání představoval, psal temněji než ti, kdo ho prožívali.
+      Blogů ale bylo 25 a obě skupiny se nedaly srovnat věkem ani ničím jiným.
+      O strachu z toho, že člověk nebude, a o tom, o co přijde, studie neříká nic. Na který koš tedy míří?
+  - text: Nic. Psali jen ti, kdo psát chtěli a mohli.
+    tah: nevěřit vzorku
+    zpetna: >-
+      Tuhle výhradu mají i autoři: blogů bylo 25 a jejich pisatelé se vybrali sami.
+      Komu bylo nejhůř, možná nepsal. Jak by musela vypadat studie, které bys věřil?
+  - text: Slova nejsou city. Blog se píše pro čtenáře.
+    tah: nevěřit slovům
+    zpetna: >-
+      Program počítá slova a neví, že „nejsem šťastný“ není šťastná věta. Proto texty četli i lidé.
+      Ani ti ale neviděli, co pisatel cítil, když nepsal. Seneca sám napsal, že řeč je odvážná i u těch nejbojácnějších.
+      Dá se o tom, co člověk cítí, zjistit něco jinak než z jeho slov?
+zdroje: [goranson-2017, seneca-epistulae-smrt]

@@ -1,0 +1,48 @@
+# Spor · cesta 8 „Proč se bát smrti?“, krok 6: Epikúros × Plútarchos.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Spor: Epikúros × Plútarchos (tabulka tezí, nejsilnějších verzí,
+# námitek a odpovědí; převody z řečtiny 1105a, 1106e a 1107b). Epikúrova strana: Dopis Menoikeovi 124–126,
+# Hlavní myšlenky 2 a 19, Lucretius III, 900–901. Plútarchova strana: Že podle Epikúra nelze žít příjemně
+# 1104c–e, 1105a, 1106b–c, 1106e a 1107b (1106b–c bez srovnání s nešťastnými: viz Citlivá místa); řeč pronáší jeho přítel Theón (text kroku říká „svěřil svému příteli“).
+# Plútarchos v datech atlasu není: strana proto nemá osobu, jen označení, a její mince je prázdná.
+# Spor je na dálku, s učením, ne s člověkem; scéna to říká a vítěze neohlašuje. Námitku ztráty vysloví scéna
+# (truchlící u Lucretia, III, 894–899), aby Epikúros na telefonu neodpovídal na něco, co ještě nezaznělo.
+# Třetí argument každé strany odpovídá na nejsilnější námitku druhé; Epikúrova odpověď je výklad („by odpověděl“).
+# Postoje nejsou krajnější než prameny: Epikúros netvrdí, že smrt je dobrá; Plútarchos netvrdí, že je dokázáno,
+# co je po ní. Plútarchova slova nejsou citáty (v datech nejsou), jen parafráze s vypravěčem.
+druh: spor
+obdobi: 2
+nadtitulek: Spor
+scena: >-
+  Truchlící u Lucretia říkali, že jediný den vzal mrtvému všechny dary života. Plútarchos z té věty udělal námitku proti Epikúrovi.
+  Ti dva se nepotkali: dělí je přes tři sta padesát let.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: Je důvod bát se toho, že nebudeme?
+strany:
+  - osoba: epikuros
+    postoj: Ne. Smrt se nás netýká.
+    argumenty:
+      - >-
+        Zlé může být jen to, co někdo zakouší. Až smrt přijde, nebude tu nikdo, kdo by ji zakoušel.
+        Strach z ní je proto strach z něčeho, co se člověku nikdy nestane.
+      - >-
+        Kdo to pochopí, tomu podle Epikúra nic neubude. Přestane toužit po nesmrtelnosti a smrtelný život mu začne být k radosti.
+      - >-
+        Na námitku, že smrt bere všechno dobré, by Epikúros odpověděl otázkou: komu to bude chybět?
+        Ztráta bolí toho, kdo něco postrádá, a mrtvý nepostrádá nic.
+        A trápit se dnes tím, co nebude bolet, až to přijde, je podle něj trápení naprázdno.
+  - oznaceni: Plútarchos
+    postoj: Ano. Je to ztráta všeho dobrého, co máme.
+    argumenty:
+      - >-
+        Věta, že co se rozpadlo, nevnímá, strach nezahání. Spíš ho dokazuje: právě toho, že nebude vnímat, se člověk bojí.
+        Lidé by podle Plútarcha radši byli a trpěli, než aby nebyli.
+      - >-
+        Nebytí neděsí jako něco neznámého. Děsí jako ztráta všeho dobrého, co člověk má teď.
+        Čím víc dobrého člověk má, tím víc mu smrt bere.
+      - >-
+        Epikúros se ptá, komu ta ztráta bude chybět. Plútarchos odpovídá: tomu, kdo žije, a už dnes.
+        Vědět, že všechno, co mám, skončí, trápí živého, ne mrtvého.
+        A Epikúros podle něj měří dvojím metrem: uniknout zlu má za dobro, ale přijít o dobro za zlo nemá.
+zdroje: [dl-x-122, dl-x-139, lucretius-iii-830, plutarchos-non-posse]

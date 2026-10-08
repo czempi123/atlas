@@ -1,0 +1,83 @@
+# Roztřiď · cesta 8 „Proč se bát smrti?“, krok 2: osm cizích vět o strachu ze smrti do čtyř košů.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Čeho se člověk vlastně bojí: pět strachů (A–E) a Vlastní pokus
+# studenta před výkladem, blok 2. Strachy D (co bude s těmi, kdo zůstanou) a E (smrt blízkých) jsou v jednom koši,
+# aby koše odpovídaly na jednu otázku stejným tvarem; rozdíl mezi nimi dělá krok 7. Karty jsou autorské a nejsou
+# studentovy: blok proto nemá vlastní karty (otázka na vlastní bolest nemá pole na psaní). Karta „jak to dopadne“
+# má v sobě dvě věci (nebudu u toho; přijdu o to). Žádný koš není správně. Karta o smrti blízkého nedostane otázku,
+# která by se ptala na studentovu ztrátu. Srovnání stojí na Dopise Menoikeovi 124–125 a na tabulce strachů.
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: Osm odpovědí na otázku, čeho se člověk na smrti bojí.
+otazka: Na co ten, kdo to říká, myslí?
+kose:
+  - id: nebude
+    nazev: Na to, že nebude
+    popis: Děsí ho, co je po smrti, nebo že po ní není nic.
+  - id: umirani
+    nazev: Na umírání
+    popis: "Děsí ho cesta k ní: bolest a bezmoc."
+  - id: ztrata
+    nazev: Na to, o co přijde
+    popis: Děsí ho, co už nezažije.
+  - id: druzi
+    nazev: Na ty druhé
+    popis: Má strach o lidi, na kterých mu záleží.
+karty:
+  - id: skonci
+    text: Že to prostě skončí a nebude nic.
+    zpetna: >-
+      Tohle je strach z toho, že člověk nebude. Na něj míří Epikúrova věta z příštího kroku.
+      Je to totéž jako bát se, že o něco přijde, nebo něco jiného?
+    kdyz:
+      ztrata: >-
+        Dal jsi ji k tomu, o co člověk přijde. Dá se přijít o všechno najednou?
+        A komu to pak bude chybět?
+  - id: nevim
+    text: Že nevím, co přijde potom.
+    zpetna: >-
+      Tahle věta netvrdí, že po smrti nic není. Říká jen, že to neví.
+      Čeho se ten člověk bojí víc: toho, co by tam mohlo být, nebo samotné nejistoty?
+  - id: bolest
+    text: Že to bude bolet a bude to dlouhé.
+    zpetna: >-
+      Tady nejde o to, co je po smrti, ale o cestu k ní. Epikúrova věta o umírání nemluví.
+      Dá se bát umírání, a smrti ne?
+  - id: nestihnu
+    text: Že nestihnu, co chci stihnout.
+    zpetna: >-
+      Tenhle strach se dívá na život: na to, co v něm ještě mělo být.
+      Kolik by toho člověk musel stihnout, aby se bát přestal?
+    kdyz:
+      nebude: >-
+        Dal jsi ji k tomu, že člověk nebude. Vadí mu samo to, že nebude, nebo to, co kvůli tomu nestihne?
+  - id: beze-me
+    text: Že to tu poběží dál beze mě.
+    zpetna: >-
+      Svět půjde dál a ten, kdo to říká, v něm bude chybět. Komu: sobě, nebo těm druhým?
+  - id: jak-dopadne
+    text: Že už neuvidím, jak to všechno dopadne.
+    zpetna: >-
+      V téhle větě jsou dvě věci: že u toho člověk nebude, a že přijde o konec příběhu.
+      Kterou z nich jsi poslechl, když jsi kartu pokládal?
+  - id: mama
+    text: Co by pak dělala máma.
+    zpetna: >-
+      Tady se člověk nebojí o sebe. Bojí se o někoho, kdo tu zůstane.
+      Dá se takový strach vyvrátit argumentem, nebo se s ním dá jen něco udělat?
+  - id: blizky
+    text: Že mi umře někdo blízký.
+    zpetna: >-
+      Tahle věta je jiná než ostatních sedm: nemluví o vlastní smrti. Argumenty, které přijdou, se jí skoro nedotknou;
+      cesta se k ní vrátí v sedmém kroku. Čím se liší od věty o mámě?
+srovnani:
+  osoba: epikuros
+  nadpis: Kam míří Epikúros
+  text: >-
+    Epikúros má na strach ze smrti jednu slavnou větu a ta míří jen na první koš: na strach z toho, že člověk nebude.
+    O umírání říkal jiné věci. O tom, o co člověk přijde, se s ním přeli už ve starověku.
+    A o lidech, na kterých nám záleží, ta věta nemluví vůbec.
+
+
+    Podívej se do svého prvního koše. Kolik z osmi karet v něm leží?
+zdroje: [dl-x-122, dl-x-139, dl-x-22, plutarchos-non-posse]

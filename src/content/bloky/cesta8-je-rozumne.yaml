@@ -1,0 +1,37 @@
+# Volba s důvodem · cesta 8 „Proč se bát smrti?“, krok 1: začátek cesty (pole `zacatek` v přehledu cesty).
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Vlastní pokus studenta před výkladem: začátek cesty
+# a Kdo dá za pravdu komu. Otázka se ptá na názor, ne na zkušenost: do pole Proč student píše důvod, ne ztrátu.
+# Každá možnost má v cestě svého myslitele a žádná nedostane pokárání: 1 Aristotelés (Etika Nikomachova 1117b10–13)
+# a Plútarchos, 2 krok 8 a Diogenés Laertios X, 118, 3 Epikúros (Dopis Menoikeovi 125), 4 Sókratés (Obrana 29a, 40c)
+# a Platón (Faidón 114d). Čtvrtá možnost se od návrhu v podkladech liší („Nevím, co po ní je…“): takhle ji může
+# zvolit i student, který věří, že smrtí nic nekončí. Zpětná vazba u žádné možnosti nenaznačuje, že víra je útěk
+# nebo nevíra odvaha, a nikomu neříká, že se bojí zbytečně. Žádný tah není něčí, blok nemá Co udělal.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Je rozumné bát se smrti?
+moznosti:
+  - text: Ano. Přijdu o všechno, na čem mi záleží.
+    tah: bát se ztráty
+    zpetna: >-
+      Mluvíš o ztrátě: o tom, co člověk má a co by už neměl. Aristotelés to viděl stejně.
+      Čím líp někdo žije, tím víc ho podle něj smrt bolí, protože ví, o co přichází.
+      Epikúros by se zeptal, komu to všechno bude chybět. Co bys mu odpověděl?
+  - text: Smrti ne, umírání ano.
+    tah: bát se umírání
+    zpetna: >-
+      Odděluješ dvě věci, které se často pletou: být mrtvý a umírat.
+      Epikúrova věta mluví jen o té první a o umírání mlčí. Jeho škola netvrdila, že nebolí.
+      Čeho se na umírání lidé bojí nejvíc: bolesti, nebo bezmoci?
+  - text: Ne. Až přijde, nebudu u toho.
+    tah: nebát se
+    zpetna: >-
+      Skoro stejně to řekl Epikúros: dokud jsme tu my, smrt tu není. Ta věta míří na strach z toho, že člověk nebude.
+      Platí tvoje „ne“ i pro to, co bys už nestihl, a pro lidi, kteří by tu zůstali?
+  - text: Záleží na tom, co je po ní.
+    tah: ptát se, co je potom
+    zpetna: >-
+      Na téhle otázce stojí i Epikúrův argument: platí jen tehdy, když smrtí všechno končí.
+      Sókratés v Platónově Obraně říká, že neví, co po smrti je, a že bát se jí proto znamená tvářit se, že to ví.
+      V jiném Platónově dialogu hájí, že duše smrtí nekončí. Jak se rozhodnout o strachu z něčeho, co nikdo neviděl?
+zdroje: [dl-x-122, dl-x-22, aristoteles-etika-smrt, platon-obrana, platon-faidon-perseus]

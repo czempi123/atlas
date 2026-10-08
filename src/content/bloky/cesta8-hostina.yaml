@@ -1,0 +1,48 @@
+# Změň jednu věc · cesta 8 „Proč se bát smrti?“, krok 5: Lucretiův host u stolu, převedený na oslavu.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Jádro: Lucretius, řádek 4 (O přírodě III, 931–939: jen první
+# půlka řeči Přírody) a Čeho se člověk vlastně bojí (strach C: nasycený host sedí na toho, kdo žil dlouho a dobře,
+# ne na mladého). Autorský případ bez historických osob; obraz hosta je Lucretiův, oslava je náš převod.
+# Možnosti dávají smysl ve všech podmínkách; zpětná vazba neusuzuje z možnosti, kterou student zvolil.
+# Druhá podmínka dává slovo námitce, že kdo sotva přišel, nasycený není. Oddíl Co by na to řekli je výklad
+# (Lucretius III, 938; Dopis Menoikeovi 126; Etika Nikomachova 1117b10–13), proto má vlastní nadpis.
+# Slovo „klid“ blok nepoužívá a druhou půlku řeči Přírody (III, 940–943) necituje ani nenaznačuje.
+druh: zmena
+obdobi: 2
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si oslavu, na které je ti dobře. Jsou tam tvoji kamarádi, hraje hudba a na stole je jídlo.
+  Pak ti někdo řekne, že je čas jít.
+otazka: Jak odejdeš?
+moznosti:
+  - { id: bez-litosti, text: Bez lítosti. }
+  - { id: nerad, text: "Půjdu, ale bude mi to líto." }
+  - { id: nechci, text: Nechci odejít. }
+podminky:
+  - id: dlouho
+    prepinac: Jsi tam od odpoledne
+    zmena: Teď si představ, že jsi přišel odpoledne. Najedl ses, s každým sis popovídal a je dávno po půlnoci.
+    posun: >-
+      Rozhodlo, jak dlouho jsi u stolu seděl. Na tom stojí i otázka Lucretiovy Přírody: mluví k hostu, který se nasytil.
+      Kdo pozná, že má dost: host sám, nebo ten, kdo ho posílá domů?
+    stejne: >-
+      Na tom, jak dlouho tam jsi, tvoje odpověď nestojí. Lucretiova Příroda přitom mluví právě k hostu, který se nasytil.
+      Na čem tedy stojí: na tom, jak dobře ti tam je, nebo na tom, že o odchodu nerozhoduješ ty?
+  - id: chvili
+    prepinac: Přišel jsi před chvílí
+    zmena: Teď si představ, že jsi dorazil před deseti minutami. Sotva sis sedl a ještě jsi nikoho nepozdravil.
+    posun: >-
+      Tady má Lucretiův obraz slabé místo: host, který sotva přišel, nasycený není.
+      Komu tedy otázka Přírody patří: jen těm, kdo u stolu seděli dlouho?
+    stejne: >-
+      Tvoje odpověď se nehnula, ani když jsi sotva přišel.
+      Co ji drží: to, co na oslavě je, nebo to, jak ses rozhodl odcházet?
+coUdelal:
+  osoba: lucretius
+  nadpis: Co by na to řekli
+  text: >-
+    Lucretiova Příroda by se hosta, který sedí u stolu od odpoledne, zeptala, proč nevstane, když se nasytil.
+    Epikúros by dodal, že večer není lepší tím, že je delší.
+
+
+    Aristotelés by řekl opak: čím líp ti u stolu je, tím víc tě bude mrzet odejít.
+zdroje: [lucretius-iii-830, dl-x-122, aristoteles-etika-smrt]

@@ -1,0 +1,23 @@
+# Návrat · cesta 8 „Proč se bát smrti?“: zpráva od kamaráda o půlnoci.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Návrat (případ do deníku po několika dnech).
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen.
+# Jiného druhu než nový případ cesty (studie o blozích) i než úvod stránky otázky 3 (fotografie třídy): situace mezi
+# dvěma lidmi. Kamarádova zpráva je v nepřímé řeči; o jeho smrti mluví on, ne atlas. Nechce po studentovi nic vlastního:
+# zkouší, jestli jeho pravidlo unese i cizí strach. Dá se posoudit pravidlem Epikúrovým (argument), Aristotelovým
+# a Plútarchovým (strach je na místě), Sókratovým (nevím) i tím, které počítá s tím, že smrtí nic nekončí.
+# Čtyři hotové odpovědi z podkladů tu nejsou: otázku a možnosti Ano / Upravím ho / Nevím píše blok.
+druh: navrat
+obdobi: 2
+cesta: proc-se-bat-smrti
+pravidlo: cesta8-moje-pravidlo
+nazev: Zpráva o půlnoci
+scena: >-
+  Představ si, že ti o půlnoci napíše kamarád. Nemůže spát: došlo mu, že jednou umře, a nejde mu to dostat z hlavy.
+  Ptá se, jestli tebe to neděsí.
+
+
+  Držíš telefon a přemýšlíš, co mu odepsat.
+po:
+  ano: "Co mu z něj napíšeš: důvod, proč se nebát, nebo to, že v tom není sám?"
+  upravim: "Co tvému pravidlu chybělo: věta pro někoho druhého, nebo to, kdo ji říká?"
+  nevim: "Na čem to vázne: na tom, co si myslíš ty, nebo na tom, co teď potřebuje on?"
