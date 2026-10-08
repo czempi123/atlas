@@ -15,6 +15,7 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/osobnost/diogenes/', nazev: 'diogenes', nadpis: /Diogenés/ },
   { cesta: '/osobnost/epiktetos/', nazev: 'epiktetos', nadpis: /Epiktétos/ },
   { cesta: '/osobnost/marcus-aurelius/', nazev: 'marcus-aurelius', nadpis: /Marcus Aurelius/ },
+  { cesta: '/osobnost/seneca/', nazev: 'seneca', nadpis: /Seneca/ },
   { cesta: '/mapa/', nazev: 'mapa', nadpis: /Mapa a čas/ },
   { cesta: '/otazky/', nazev: 'otazky', nadpis: /Deset velkých otázek/ },
   { cesta: '/otazka/jak-poznam-pravdu/', nazev: 'otazka-7', nadpis: /Jak poznám, co je pravda\?/, preskocit: 'otazka-jak-poznam-pravdu' },

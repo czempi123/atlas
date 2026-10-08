@@ -1,0 +1,77 @@
+# Roztřiď · portrét Seneky, kapitola 01 „Rok bez masa“: osm věcí, které se člověk učí, mezi školu a život.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Tři myšlenky pro portrét › 1 (Vlastní pokus studenta).
+# Karty a zpětné vazby jsou autorské; blok stojí před Senekovou větou z Dopisů 106, 12 a nic z ní neprozrazuje.
+# Srovnání říká jen Senekovo měřítko z 106, 11–12 (takové věci dělají lidi učenými, ne dobrými) a neříká,
+# kam by kterou kartu dal: to nevíme. Koše odpovídají na otázku stejným tvarem; třetí dává poctivé místo každé kartě.
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: Osm věcí, které se člověk může za rok naučit.
+otazka: Pro školu, nebo pro život?
+kose:
+  - id: skola
+    nazev: Pro školu
+    popis: Potřebuješ to na test a na vysvědčení.
+  - id: zivot
+    nazev: Pro život
+    popis: Budeš to potřebovat, i když škola skončí.
+  - id: oboji
+    nazev: Pro obojí
+    popis: Sedí obojí.
+karty:
+  - id: vzorec
+    text: Vzorec na obsah kruhu
+    zpetna: >-
+      Na test ho potřebuješ určitě. Mimo školu ho použije ten, kdo počítá, kolik barvy koupit na kulatý stůl.
+      Rozhodlo u tebe, jestli ho budeš potřebovat, nebo jestli tě baví?
+  - id: omluva
+    text: Omluvit se, když něco pokazíš
+    zpetna: >-
+      V rozvrhu to hodinu nemá a nezkouší se to. Kde ses to tedy naučil, a od koho?
+    kdyz:
+      skola: >-
+        Dal jsi omluvu ke škole. Učí se tam, i když na ni není předmět? Od koho?
+  - id: slovicka
+    text: Dvacet slovíček na zítřejší test
+    zpetna: >-
+      Zítra je budeš umět. Kolik z nich za měsíc?
+      Podle čeho poznáš, že se slovíčko přestěhovalo z testu do řeči?
+  - id: rict-ne
+    text: Říct ne, když všichni říkají ano
+    zpetna: >-
+      Známku za to nedostaneš. Dá se to vůbec naučit předem, nebo se to jednou udělá a příště je to lehčí?
+  - id: basen
+    text: Rozbor básně podle osnovy
+    zpetna: >-
+      Osnova je školní věc. Číst pozorně, co někdo napsal a proč zrovna takhle, se hodí i u zprávy od kamaráda.
+      Kterou z těch dvou věcí ses u básně učil?
+  - id: lez
+    text: Poznat, že ti někdo lže
+    zpetna: >-
+      Učebnice na to není, a lidé se to přesto učí. Z čeho?
+      Hodilo by se k tomu něco z toho, co bereš ve škole?
+  - id: zivotopis
+    text: Napsat životopis
+    zpetna: >-
+      Píše se ve škole a poprvé naostro ho potřebuješ u brigády.
+      Vybral jsi koš podle toho, kde se to učí, nebo kde se to použije?
+  - id: prohra
+    text: Unést prohru
+    zpetna: >-
+      Příležitost k tomu máš ve škole skoro každý týden, jen se tomu neříká učivo.
+      Učí tě to škola, nebo to, že v ní občas prohraješ?
+vlastni:
+  pocet: 1
+  vyzva: Přidej jednu věc, kterou ses letos naučil
+  zpetna: >-
+    Tuhle jsi přidal sám. Podle čeho jsi jí vybral místo: kde ses ji učil, nebo kde ji použiješ?
+srovnani:
+  osoba: seneca
+  nadpis: Senekovo měřítko
+  text: >-
+    Seneca se u učení neptal, kde se co učí. Ptal se, co to s člověkem udělá:
+    jestli je po tom lepší, nebo jen učenější.
+
+
+    Podle čeho jsi třídil ty: kde se to učí, kde se to použije, nebo co to s tebou udělá?
+zdroje: [seneca-epistulae-zivot]

@@ -21,6 +21,11 @@ for (const m of Astro.props.osoba.mista) {
   b.radky.push(popis);
   mista.set(m.misto, b);
 }
+// Dva pobyty na jednom místě, z nichž první nemá rok začátku (Seneca v Římě do roku 41 a znovu od roku 49),
+// by daly „působení“ a pod ním „působení 49 n. l.“: holý řádek vedle téhož s rokem nic neříká, proto vypadne.
+for (const b of mista.values()) {
+  b.radky = b.radky.filter((r) => !b.radky.some((jiny) => jiny !== r && jiny.startsWith(`${r} `)));
+}
 const { osoba, vyrez = vyrezMiniMapy([...mista.values()]) } = Astro.props;
 const p = podklad(vyrez);
 const body = [...mista.values()].map((m) => ({ nazev: m.nazev, xy: p.bod(m.souradnice), popis: m.radky }));

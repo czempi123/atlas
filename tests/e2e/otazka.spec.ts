@@ -150,8 +150,8 @@ test('otázka 1: úvodní případ, čtyři hlasy, které se poznají, a cesta 6
     expect(vet).toBeLessThanOrEqual(2);
   }
   await expect(page.locator('.hlas__jmeno')).toHaveText(['Diogenés', 'Aristotelés', 'Epikúros', 'Seneca']);
-  // Odkaz na profil jen tam, kde profil je.
-  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Diogenés', 'Aristotelés', 'Epikúros']);
+  // Odkaz na profil jen tam, kde profil je; od celku 6 má stránku i Seneca.
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Diogenés', 'Aristotelés', 'Epikúros', 'Seneca']);
   await expect(page.locator('.hlas .citat')).toHaveCount(4);
   await expect(page.locator('#hlas-aristoteles .citat')).toContainText('Jedna vlaštovka jaro nedělá');
   await expect(page.locator('#hlas-diogenes .citat')).toContainText('medové koláčky');

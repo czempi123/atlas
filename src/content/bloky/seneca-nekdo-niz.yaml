@@ -1,0 +1,60 @@
+# Změň jednu věc · portrét Seneky, kapitola 05 „Dopisy“: jak mluvím s člověkem podle toho, kde stojí.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Tři myšlenky pro portrét › 2 (Vlastní pokus studenta).
+# Scéna, možnosti a zpětné vazby jsou autorské. Tři podmínky mění jednu věc: kdo stojí za pultem (někdo výš),
+# kdo se dívá, a výměnu míst (Senekův důvod z náhody, Dopisy 47, 10). Možnosti dávají smysl v každé podmínce
+# a zpětná vazba ví jen to, jestli se odpověď změnila. Oddíl má nadpis „Co by na to řekl“: o pekárně Seneca nepsal;
+# text stojí na 47, 16 (postavení máme na sobě jako šaty) a 47, 10 (ty ho můžeš vidět svobodného jako on tebe otrokem).
+# Pravidlo z 47, 11 blok neprozrazuje; přijde jako citát v textu za ním.
+druh: zmena
+obdobi: 2
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si, že ti za čtyři minuty jede autobus a v pekárně je fronta. Brigádník za pokladnou,
+  asi tak starý jako ty, se podruhé splete a celý nákup maže.
+otazka: Co uděláš?
+moznosti:
+  - { id: pockam, text: Počkám a nic neřeknu. }
+  - { id: popozenu, text: "Řeknu mu, ať si pospíší." }
+  - { id: nahlas, text: "Řeknu nahlas, co si o tom myslím." }
+podminky:
+  - id: majitel
+    prepinac: Za pokladnou je majitel
+    zmena: >-
+      Teď si představ, že za pokladnou nestojí brigádník, ale majitel pekárny. Včera ses ho ptal na letní brigádu
+      a ještě ti neodpověděl. Splete se úplně stejně.
+    posun: >-
+      Rozhodl ses jinak, když za pokladnou stál někdo, kdo ti může něco dát.
+      Chyba i autobus zůstaly stejné. Co se tedy změnilo?
+    stejne: >-
+      Na tom, kdo za pokladnou stojí, tvoje odpověď nestojí.
+      Na čem tedy stojí: na chybě, na autobusu, nebo na tom, jaký chceš být?
+  - id: divak
+    prepinac: Někdo se dívá
+    zmena: >-
+      Teď si představ, že za pokladnou je zase brigádník. Ve frontě za tebou ale stojí člověk,
+      na jehož mínění ti hodně záleží.
+    posun: >-
+      Rozhodl ses jinak, když se někdo díval.
+      Komu jsi tu odpověď přizpůsobil: brigádníkovi, nebo tomu za tebou?
+    stejne: >-
+      Divák tvou odpověď nezměnil. Zachoval by ses stejně, i kdyby v pekárně nebyl nikdo další?
+  - id: vymena
+    prepinac: Od zítřka tam stojíš ty
+    zmena: >-
+      Teď si představ, že stejnou brigádu od zítřka děláš ty. Dnes jsi ještě zákazník;
+      zítra budeš za pokladnou první den a fronta bude stejná.
+    posun: >-
+      Rozhodl ses jinak, když sis představil sebe na druhé straně pultu.
+      Co ti ta představa řekla, co jsi předtím nevěděl?
+    stejne: >-
+      Výměna míst tvou odpověď nezměnila. Řekl bys totéž i sám sobě za pokladnou?
+coUdelal:
+  osoba: seneca
+  nadpis: Co by na to řekl Seneca
+  text: >-
+    Seneca psal o lidech, kteří stáli mnohem níž než brigádník v pekárně: o otrocích.
+    Člověka podle něj nemá cenu soudit podle šatů ani podle postavení, které má na sobě jako šaty.
+
+
+    A připomínal, že o tom, kdo stojí na které straně, rozhodla náhoda.
+zdroje: [seneca-epistulae-zivot]
