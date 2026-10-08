@@ -77,9 +77,11 @@ test('cesta 4: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(text1).not.toContainText(/proti sobě|chtěl se|vrah/i);
   // Hned po scéně otázka pro studenta.
   await expect(text1.locator(':scope > p').last()).toHaveText('Co bys řekl ty: věděl to i ve chvíli, kdy sahal po kopí?');
-  // Jména střídmě: Filip a Kleitos jménem jen jednou, při vstupu.
+  // Jména střídmě: Filip jménem jen jednou. Kleitos dvakrát: podruhé tam, kde by zájmeno „ho“ šlo číst
+  // jako Alexandra (revize celku 5: vyvedli Kleita, ne krále).
   expect((await page.locator('.krok__obsah').innerText()).match(/Filip/g)).toHaveLength(1);
-  expect((await page.locator('.krok__obsah').innerText()).match(/Kleit/g)).toHaveLength(1);
+  expect((await page.locator('.krok__obsah').innerText()).match(/Kleit/g)).toHaveLength(2);
+  await expect(text1).toContainText('Přátelé Kleita vyvedou ven, ale on se vrátí.');
   await page.getByRole('link', { name: /Další krok/ }).focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(`${CESTA4}2/`);
@@ -301,13 +303,13 @@ test('cesta 4 bez odkrytí bloků: lišta vede až na konec a text mimo bloky dr
   await page.emulateMedia({ reducedMotion: 'reduce' });
   // Co musí stát v hlavním textu kroku (mimo interaktivní část bloků), aby další krok navazoval.
   const NAVAZUJE: (string | RegExp)[][] = [
-    ['Co přesně Aristotelés chlapce učil, nevíme.', 'Co se s tím věděním stalo mezi tím?'],
+    ['Co přesně Aristotelés chlapce učil, nevíme.', 'Co se s tím věděním stalo mezitím?'],
     ['ví, co je správné, a neudělá to', 'Která odpověď sedí na tu tvou?'],
     ['Co máš na dosah teď, zdá se větší', 'Špatně změřil', 'omyl se nenapravuje větším přemáháním'],
     ['nestačila mu', 'Nerodíme se podle něj dobří ani špatní.', 'Kdo jedná spravedlivě, ten přece už spravedlivý je. Nebo ne?'],
     ['správný čin ještě nedělá správného člověka', 'Kdo se neudržel, ví, že to bylo špatně.', 'Druhý říká, že se to děje denně.', 'Kdo z nich má pravdu, rozhodni sám.'],
     ['Co ale znamená dobře?', 'Střed vzhledem k nám jeden není.', 'Kresba má jednu čáru.', 'říkáš nahlas to, co Aristotelés přiznal'],
-    ['Kolik času?', 'každý den odpovídali, jak samozřejmě jim to už jde', 'Prostřední hodnota byla 66 dní.', 'nejpomalejší potřeboval čtrnáctkrát déle než nejrychlejší', 'Komu ten pokus dává za pravdu?'],
+    ['Kolik času?', 'každý den odpovídali, jak samozřejmě jim to už jde', 'Prostřední hodnota byla 66 dní.', 'nejpomalejšímu vycházelo čtrnáctkrát víc dní než nejrychlejšímu', 'Komu ten pokus dává za pravdu?'],
     ['Souhlasit s ním nemusíš.', 'Špatný člověk podle něj o své špatnosti neví.', 'Vrať se ke svému tahu z kroku 2.'],
   ];
   await page.goto(`${CESTA4}1/`);
