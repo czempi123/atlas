@@ -238,7 +238,7 @@ Revize celku je hotová: záznam `docs/revize/celek-6-2026-10-09.md`, **verdikt 
 
 **Co si nesou opravy.**
 
-- Texty, které se mají změnit, hlídají testy jen na dvou místech: `tests/e2e/zrcadlo.spec.ts:179` („Zrcadlo má slabé místo“) a `tests/data/zrcadlo.test.ts` (texty pod kresbou, když se změní). Kam dál profilu Epikúra žádný test nehlídá. `tests/e2e/cesta8.spec.ts:181` („tím víc ho smrt bude bolet“) a `:197` („host, který sotva přišel, nasycený není“) navržená znění drží.
+- Z textů, které se mají změnit, hlídá test přesným zněním jediný: `tests/e2e/zrcadlo.spec.ts:179` („Zrcadlo má slabé místo“). Texty pod kresbou berou testy z `src/lib/zrcadlo.ts` a hlídají v nich jen „Lucretius říká“, „podle námitky“, letopočty a délku vět. Kam dál profilu Epikúra žádný test nehlídá. `tests/e2e/cesta8.spec.ts:181` („tím víc ho smrt bude bolet“) a `:197` („host, který sotva přišel, nasycený není“) navržená znění drží.
 - Nový citát `etika-1117b-bolest` (když autor zvolí kratší podobu) potřebuje řádek v `zdroje.yaml` a poznámku, co chybí a proč; plná podoba zůstává.
 - Po opravách přepočítat čas cesty (`node scripts/slova-cesta.mjs proc-se-bat-smrti`) a po změně dat restartovat běžící `npm run dev`.
 - `scripts/kontrola-fokus.mjs` hlásí po `focus()` tři pole pod lištou (dvě v kroku 8 na telefonu, pravidlo v kroku 9 na notebooku); skutečný tabulátor je v pořádku na 390 × 844, 1440 × 900 i 1440 × 920. „Bez obrysu“ u tlačítek Dát sem je planý poplach (obrys nese koš).
