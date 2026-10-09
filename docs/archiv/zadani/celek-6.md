@@ -1,6 +1,6 @@
 # Provedená zadání větve celek-6
 
-Zadání kroků, které už proběhly, v plném znění. Plán větve se stavem po každém kroku je v `docs/plany/celek-6.md`.
+Zadání kroků, které už proběhly, v plném znění. Celek je uzavřený 9. 10. 2026; plán větve se stavem po každém kroku je v `docs/archiv/plany/celek-6.md`.
 
 ## P6: Podklady k celku 6 „Proč se bát smrti?“
 

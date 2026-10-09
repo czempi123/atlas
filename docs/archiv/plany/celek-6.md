@@ -9,9 +9,11 @@ Celek 6: portrét Seneky, cesta 8 „Proč se bát smrti?“ (období 2, velká 
 | P8 | Cesta 8 „Proč se bát smrti?“ a stránka velké otázky 3 | hotovo 8. 10. 2026; `src/content/cesty/proc-se-bat-smrti*`, `src/content/otazky/ma-zivot-smysl.mdx`, autor 9. 10. 2026 potvrdil kresbu i ostatní volby a Plútarchos přibyl do dat (oddíl Po P8) |
 | P10 | Revize celku | hotovo 9. 10. 2026; záznam `docs/revize/celek-6-2026-10-09.md`, verdikt po opravách (oddíl Po P10) |
 | Opravy | Zapracování nálezů revize | hotovo 9. 10. 2026: všech deset nálezů a otevřené body podle doporučení (oddíl Po opravách) |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 9. 10. 2026: autor celek schválil, větev je sloučená do hlavní větve a hlavní větev je na GitHubu |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-6.md`. Větev `celek-6` je založená z hlavní větve 8. 10. 2026 (commit `6730c40`, po sloučení celku 5).
+**Celek je uzavřený 9. 10. 2026:** schválený autorem, sloučený do hlavní větve a poslaný na GitHub. Tento plán je od té doby v archivu (`docs/archiv/plany/celek-6.md`) a čte se jen na pokyn.
+
+Stav a zadání dalších kroků se zapisovaly sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-6.md`. Větev `celek-6` je založená z hlavní větve 8. 10. 2026 (commit `6730c40`, po sloučení celku 5).
 
 ## Co si celek nese z celků 1 až 5
 
