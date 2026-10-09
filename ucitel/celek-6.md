@@ -231,7 +231,7 @@ Antičtí autoři se takhle neptali; sousloví „smysl života“ v textech, ze
 
 ## Kde hledat pomoc
 
-Ověřeno na webech služeb 8. 10. 2026, Linka bezpečí a Linka první psychické pomoci toho dne dvakrát. Před hodinou si čísla ověřte znovu.
+Ověřeno na webech služeb 8. 10. 2026 a znovu při revizi celku 9. 10. 2026 (Poradna Vigvam ručně v prohlížeči). Před hodinou si čísla ověřte znovu.
 
 - **Linka bezpečí 116 111.** Zdarma, nonstop, anonymně, pro děti a studenty do 26 let. Chat na linkabezpeci.cz denně 9–13 a 15–19 hodin.
 - **Linka první psychické pomoci 116 123.** Zdarma, nonstop, pro dospělé.
