@@ -4,6 +4,18 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 9. 10. 2026: Celek 7 po podkladech (P6): odpovědi autora
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Věta atributu u Hérakleita bude „Do týchž řek vstupujeme, a pořád na nás tečou jiné vody.“ (znění A z podkladů); zapíše ji P7 | „Do téže řeky nelze vstoupit dvakrát“ je Platónovo a Aristotelovo podání; dochovaný zlomek (B12) říká skoro opak. Autor souhlasil s doporučením |
+| Stáhnout se smí Hérakleitos z Art Institute of Chicago (inv. 1897.296, CC0) a číše s loděmi z Met (inv. 56.171.36). Parmenidés je bez obrazu, dokud autor neověří bránu ve Velii na Wikimedia Commons | Autor souhlasil; stažení proběhne v P7 a P8, kde obraz dostane popisek a místo |
+| Citlivé místo se vynechává jen tehdy, když není podstatné nebo když proti němu stojí víc než ohled. Co je důležité a chybělo by jen kvůli „vhodnosti“ nebo „slušnosti“, do atlasu patří | Autor: „Pokud je to důležitá věc a nevolíš ji pouze kvůli ‚vhodnosti‘ nebo ‚slušnosti‘, zahrni ji.“ |
+| Podle toho jsou v celku 7 nově: zlomek o válce (B53) a celá věta o Hermodórovi v profilu Hérakleita, Senekův závěr o těle a strachu ze smrti a souvislost Plútarchova argumentu ve Sporu, Epiktétos jako hlas na stránce otázky 5 | Každé z nich nese kus argumentu nebo pointu scény a chybělo jen z ohledu na citlivého čtenáře. Jak je podat, je v podkladech (Citlivá místa) |
+| Mimo zůstává: nemoc, demence, závislost a úraz jako příklad; věty, které tělem pohrdají; Hérakleitova smrt; hádanka o Diónovi a Theónovi; řádek s pomocí ve studentském textu | Příklad s nemocí antické prameny celku nemají a patří k Lockovi; podstatu vět o těle nesou jiné citáty a proti nim stojí doporučení k poruchám příjmu potravy; smrt je legenda bez pointy; hádanka je sporná a četl se jen Filón |
+| Čtyři vztahy, které mění hotové stránky (Parmenidés – Sókratés, Aristotelés → Hérakleitos, Hérakleitos → Seneca a → Marcus Aurelius), se zapíšou v P7 | Autor: „Ano“ |
+| Spor cesty 2 je Seneca × Plútarchos | Autor: „Spor“; ke kresbě lodi a k počtu hlasů se nevyjádřil, platí doporučení podkladů |
+
 ## 9. 10. 2026: Celek 7
 
 | Rozhodnutí | Důvod |

@@ -312,7 +312,7 @@ prameny:
   - { id: plutarchos-kolotes, druh: pramen, nazev: "Proti Kólótovi 13, 15 a 20 (1113e–1114f, 1116a, 1118c)", autor: Plútarchos, dilo: "Adversus Colotem, řecky G. N. Bernardakis (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg140/tlg0007.tlg140.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Epikurejec Kólótés (3. stol. př. n. l.) tvrdil, že Parmenidés tím, že všechno je jedno, ruší všechno a nedá se podle něj žít. Plútarchos: Parmenidés nezrušil oheň ani vodu ani sráz ani města; složil uspořádání světa ze světlého a temného, napsal mnoho o Zemi, nebi, Slunci, Měsíci a hvězdách a vylíčil vznik lidí; jeho řeč o jednom jsoucím není zrušení mnohého a smyslového, ale ukázání rozdílu mezi ním a tím, co se chápe rozumem (1114b–f). 1116a: Měsíc podle Parmenida „svítí v noci, bloudí kolem Země, cizí světlo“ (DK 28 B14). 1118c: Hérakleitos říká „hledal jsem sám sebe“ (DK 22 B101); delfské Poznej sám sebe dalo podle Aristotela Sókratovi podnět k jeho hledání." }
   - { id: eusebios-pe-xv-20, druh: pramen, nazev: "Příprava na evangelium XV, 20", autor: Eusebios z Kaisareie, dilo: "Praeparatio evangelica, řecky W. Dindorf (Teubner 1867; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2018/tlg001/tlg2018.tlg001.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Zlomek DK 22 B12. Eusebios (4. stol. n. l.) opisuje z výtahů Areia Didyma (1. stol. př. n. l.; XV, 20, 8), ten z Kleantha (3. stol. př. n. l.): Zénón říká o duši, že je výpar, jako Hérakleitos, který chtěl ukázat, že duše se stále obnovují, a přirovnal je k řekám. Věta je v iónském nářečí. Druhá půlka („a duše se vypařují z vlhkého“) může být už Kleanthův výklad." }
   - { id: herakleitos-alegorik, druh: pramen, nazev: "Homérské otázky 24", autor: "Hérakleitos (alegorik)", dilo: "Allegoriae Homericae, řecky E. Mehler (Leiden 1851; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg1414/tlg001/tlg1414.tlg001.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Zlomek DK 22 B49a. Autor (jmenovec filozofa, snad 1. stol. n. l.; dobu znám jen z příruček) uvádí „temného Hérakleita“ jako příklad řeči v hádankách: lidé jsou smrtelní bohové, a „do týchž řek vstupujeme i nevstupujeme, jsme i nejsme“." }
-  - { id: hippolytos-ix, druh: pramen, nazev: "Vyvrácení všech herezí IX, 9–10", autor: Hippolytos, dilo: "Refutatio omnium haeresium, řecky L. Duncker a F. G. Schneidewin (Göttingen 1859; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2115/tlg060/tlg2115.tlg060.perseus-grc1.xml", overeno: 2026-10-09, poznamka: "Křesťanský autor z počátku 3. stol. n. l. cituje Hérakleita, aby k němu připodobnil jednoho z kacířů: B50 (ne mne, ale řeč), B51 (luk a lyra), B1, B53 (válka otec všeho), B54 (skrytá harmonie), B60 (cesta nahoru a dolů), B61 (moře), B62 a další." }
+  - { id: hippolytos-ix, druh: pramen, nazev: "Vyvrácení všech herezí IX, 9–10", autor: Hippolytos, dilo: "Refutatio omnium haeresium, řecky L. Duncker a F. G. Schneidewin (Göttingen 1859; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2115/tlg060/tlg2115.tlg060.perseus-grc1.xml", overeno: 2026-10-09, poznamka: "Křesťanský autor z počátku 3. stol. n. l. cituje Hérakleita, aby k němu připodobnil jednoho z kacířů: B50 (ne mne, ale řeč), B51 (luk a lyra), B1, B52 (věk je dítě, které si hraje), B53 (válka otec všeho), B54 (skrytá harmonie), B60 (cesta nahoru a dolů), B61 (moře), B62 a další." }
   - { id: sextos-m-vii-111, druh: pramen, nazev: "Proti učencům VII, 111", autor: Sextos Empeirikos, dilo: "Adversus mathematicos, řecky H. Mutschmann (First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0544/tlg002/tlg0544.tlg002.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Parmenidovo prooimion (DK 28 B1, verše 1–30): klisny, vůz, dcery Slunce, brána cest Noci a Dne, Spravedlnost s klíči, bohyně bere básníka za pravou ruku a oslovuje ho „mladíku“. Sextos (kolem roku 200 n. l.) nazývá Parmenida Xenofanovým žákem (γνώριμος) a báseň vykládá jako alegorii." }
   - { id: simplikios-fyzika, druh: pramen, nazev: "Komentář k Aristotelově Fyzice, s. 30–31, 38–39, 77–78, 116–117, 144–148, 887 a 1313", autor: Simplikios, dilo: "In Aristotelis Physica commentaria, řecky H. Diels (Commentaria in Aristotelem Graeca IX–X; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg4013/tlg004/tlg4013.tlg004.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "6. stol. n. l., tedy tisíc let po Parmenidovi. S. 116–117: zlomky B2 a B6. S. 144–146: Simplikios opisuje 52 veršů zlomku B8 „kvůli vzácnosti Parmenidova spisu“. S. 38–39: B8, 50–61; výklad o mínění nazývá bohyně klamným „ne jako prostě nepravdivý“, ale jako sestup od pravdy k tomu, co se jeví. S. 146–147: Parmenidés nejsoucí ve světě mínění připouští. S. 887: Hérakleitova řeč, „že všechno plyne (πάντα ῥεῖν) a nikdy není totéž“. S. 1313: přírodní filozofové kolem Hérakleita říkají, že „vždy všechno plyne“ (ἀεὶ πάντα ῥεῖ) a že dvakrát do téže řeky nevstoupíš. Čteno řecky, hledáním v celém textu; latinské ani moderní překlady jsem neměl." }
   - { id: aristoteles-metafyzika-zmena, druh: pramen, nazev: "Metafyzika I, 5 (986b18–987a2); IV, 3 (1005b19–26); IV, 5 (1010a1–22)", autor: Aristotelés, dilo: "Metaphysica, řecky W. D. Ross, angl. H. Tredennick (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg025/tlg0086.tlg025.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "986b: o Parmenidovi „se říká“, že byl Xenofanovým žákem; Parmenidés soudí, že vedle jsoucího nejsoucí není nic, a tak je jsoucí jedno; „nucen jít za jevy“ má ale za to, že jedno je to podle rozumu a mnohé podle vnímání, a klade dva počátky, teplé a studené. 1005b: nelze mít za to, že totéž je i není, „jak se někteří domnívají, že říká Hérakleitos“; co kdo říká, nemusí si i myslet. 1010a: ti, kdo se hlásí k Hérakleitovi, a Kratylos, který nakonec jen hýbal prstem a Hérakleitovi vytýkal, že řekl „dvakrát“: podle něj ani jednou; Aristotelova odpověď: co něco ztrácí, má ještě něco z toho, co ztrácí." }
@@ -3009,11 +3009,11 @@ citaty:
     autor: Hérakleitos
     dilo: zlomek B121
     misto: u Diogena Laertia IX, 2
-    cesky: "Vyhnali Hermodóra, nejschopnějšího z nich, a řekli: Nikdo z nás ať není nejschopnější. A když už takový je, ať je jinde a mezi jinými."
-    original: "Ἑρμόδωρον ἄνδρα ἑωυτῶν ὀνήιστον ἐξέβαλον λέγοντες, Ἡμέων μηδὲ εἷς ὀνήιστος ἔστω· εἰ δέ τις τοιοῦτος, ἄλλῃ τε καὶ μετʼ ἄλλων"
+    cesky: "Efesané by zasloužili, aby všichni dospělí do jednoho zemřeli a město nechali nedospělým. Vyhnali přece Hermodóra, nejschopnějšího z nich, a řekli: Nikdo z nás ať není nejschopnější. A když už takový je, ať je jinde a mezi jinými."
+    original: "ἄξιον Ἐφεσίοις ἡβηδὸν ἀποθανεῖν πᾶσι καὶ τοῖς ἀνήβοις τὴν πόλιν καταλιπεῖν, οἵτινες Ἑρμόδωρον ἄνδρα ἑωυτῶν ὀνήιστον ἐξέβαλον λέγοντες, Ἡμέων μηδὲ εἷς ὀνήιστος ἔστω· εἰ δέ τις τοιοῦτος, ἄλλῃ τε καὶ μετʼ ἄλλων"
     preklad:
       druh: vlastni
-      podle: "řecký text a anglický překlad R. D. Hickse; DK 22 B121, jen druhá půlka; první půlku (co by si za to Efesané zasloužili) atlas vynechává, viz podklady, Citlivá místa"
+      podle: "řecký text a anglický překlad R. D. Hickse; DK 22 B121, celý zlomek; ἡβηδόν = všichni dospělí, ἄνηβοι = nedospělí, ὀνήιστος doslova nejprospěšnější. Diogenés má sloveso „zemřít“ (ἀποθανεῖν); že jiní autoři uvádějí ostřejší, vím jen z literatury. Hned za zlomkem Diogenés vypráví, že Hérakleitos odmítl psát Efesanům zákony a hrál s dětmi v Artemidině chrámu"
     zdroj: dl-ix-1
   - id: herakleitos-b51
     osoba: herakleitos
@@ -3047,6 +3047,28 @@ citaty:
     preklad:
       druh: vlastni
       podle: "řecký text (Duncker a Schneidewin), bez Hippolytova vloženého φησίν („říká“); DK 22 B61"
+    zdroj: hippolytos-ix
+  - id: herakleitos-b53
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B53
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 9
+    cesky: "Válka je všemu otcem a všemu králem. Jedny ukázala jako bohy, druhé jako lidi, z jedněch udělala otroky, z druhých svobodné."
+    original: "Πόλεμος πάντων μὲν πατήρ ἐστι, πάντων δὲ βασιλεύς, καὶ τοὺς μὲν θεοὺς ἔδειξε τοὺς δὲ ἀνθρώπους, τοὺς μὲν δούλους ἐποίησε τοὺς δὲ ἐλευθέρους"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin); DK 22 B53; πόλεμος = válka, boj (slovo je mužského rodu, proto otec a král); πάντων = všeho i všech"
+    zdroj: hippolytos-ix
+  - id: herakleitos-b52
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B52
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 9
+    cesky: "Věk je dítě, které si hraje a táhne kameny po desce. Království patří dítěti."
+    original: "Αἰὼν παῖς ἐστι παίζων, πεττεύων· παιδὸς ἡ βασιληΐη"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin); DK 22 B52; αἰών = věk, čas života; πεττεύων = kdo hraje deskovou hru s kameny; výklad zlomku je sporný; rezerva ke scéně s kostkami"
     zdroj: hippolytos-ix
   - id: dl-ix-3-kostky
     osoba: herakleitos
@@ -3268,6 +3290,17 @@ citaty:
       druh: vlastni
       podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Faidón o lodi, kterou Athéňané každý rok posílali na Délos"
     zdroj: platon-faidon-58
+  - id: de-sera-559-obec
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O pozdní odplatě bohů
+    misto: 559a
+    cesky: "Obec je jedna souvislá věc, jako živý tvor: změnami věku nepřestává být sama sebou. … Za všechno, co společně dělá nebo udělala, nese vinu i zásluhu."
+    original: "ἓν γάρ τι πρᾶγμα καὶ συνεχὲς ἡ πόλις ὥσπερ ζῷον οὐκ ἐξιστάμενον αὑτοῦ ταῖς καθʼ ἡλικίαν μεταβολαῖς … καὶ πᾶσαν ὧν πράττει κατὰ τὸ κοινὸν ἢ ἔπραξεν αἰτίαν καὶ χάριν ἀναδεχόμενον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); zkráceno; tím Plútarchos hájí, že obec smí nést následky toho, co udělala před generacemi"
+    zdroj: plutarchos-de-sera
   - id: de-sera-559-dluznik
     osoba: plutarchos
     autor: Plútarchos
@@ -3376,7 +3409,18 @@ citaty:
     original: "Hoc est, quod ait Heraclitus: In idem flumen bis descendimus et non descendimus. Manet enim idem fluminis nomen, aqua transmissa est. Hoc in amne manifestius est quam in homine."
     preklad:
       druh: vlastni
-      podle: "latinský text (Gummere); pokračování (o lásce k tělu a strachu ze smrti) atlas necituje, viz podklady, Citlivá místa"
+      podle: "latinský text (Gummere); pokračování (o lásce k tělu a strachu ze smrti) je citát seneca-ep-58-23-smrt"
+    zdroj: seneca-ep-58
+  - id: seneca-ep-58-23-smrt
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 58, 23
+    cesky: "Ale i nás unáší proud stejně rychlý. Proto žasnu nad naší pošetilostí: tolik milujeme věc ze všech nejprchavější, tělo, a bojíme se, že jednou zemřeme, ačkoli každý okamžik je smrtí toho, čím jsme byli předtím. Přestaň se bát, že se jednou stane, co se děje každý den."
+    original: "Sed nos quoque non minus velox cursus praetervehit, et ideo admiror dementiam nostram, quod tantopere amamus rem fugacissimam, corpus, timemusque, ne quando moriamur, cum omne momentum mors prioris habitus sit. Vis tu non timere, ne semel fiat, quod cotidie fit!"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); navazuje na větu o řece; prior habitus = předchozí stav. Závěr, ke kterému Seneca řeku potřebuje; argumenty o strachu ze smrti má cesta 8"
     zdroj: seneca-ep-58
   - id: symposion-207d
     osoba: platon
