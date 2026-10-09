@@ -54,6 +54,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Argument, který o studentově bolesti nemluví (věta o mrtvém u toho, kdo truchlí), dostane větu, že o něm není, na téže obrazovce.
 - Argument o konci vnímání piš souměrně („nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“): „nezbude nikdo, komu by mohlo být zle“ a „nebude to bolet“ čte student, kterému je zle, jako úlevu.
 - Stupňování v citátu („čím šťastnější, tím víc“, „nejvíc stojí za to žít“) čti i obráceně: je to totéž srovnání šťastných s nešťastnými, jen schované u autority.
+- Úvodní obraz kapitoly nestav na most nad řekou: stejnou myšlenku unese břeh. A Roztřiď o tom, „co není“, nemá vlastní kartu: student po ztrátě by do ní napsal člověka.
 
 ## Co se skládá z dat
 
@@ -64,6 +65,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Text u desky (atribut, popisek) čte student dřív než první kapitolu: nesmí stát na slově, které stránka teprve vyloží (ctnost).
 - Nová cesta a nový hlas mění stránky, které nikdo neotevřel: vstupy v hlavičkách všech jejích filozofů a hlasů, karty v Lidech, počet cest na Domů, počet kreseb v dílně. Celé testy pusť hned po přidání, ne až na konci. Filozof cesty bez vlastní stránky (Lucretius) nesmí na přehledu cesty dostat odkaz.
 - Když se změní atribut nebo výklad osobnosti, přečti i `kdo` a `proc` v `lide.yaml`. Ukazuje je karta v Mapě a čase a stará věta tam přežije („ctnost je střed mezi dvěma krajnostmi“).
+- Nový profil udělá ze jména hlasu na stránkách otázek odkaz: `otazka.spec.ts` drží přesný seznam odkazů u hlasů a spadne, dokud v něm nové jméno není.
 
 ## Technika
 

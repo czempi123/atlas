@@ -33,3 +33,44 @@ Osnovu mi neposílej a na schválení nečekej. Kde váháš (které myšlenky, 
 ```
 
 Provedeno 9. 10. 2026. Autor poslal zadání beze změny. Stav je v `docs/plany/celek-7.md` (Po P6).
+
+## P7: Profily Hérakleita a Parmenida
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Katalog dává profilu Opus 5.5 · medium. Tady jsou profily dva najednou, skoro každá věta musí držet rozdíl mezi zlomkem, svědectvím a pozdějším shrnutím a Parmenidův argument je nejtěžší výklad, jaký atlas zatím má. Kdo chce šetřit, pustí krok na medium a Parmenidovu kapitolu o změně si přečte zvlášť pozorně.
+
+Pět řádků na začátku zadání je vyplněných podle odpovědí autora z 9. 10. 2026. U Parmenidova obrázku zbývá místo na odkaz, kdyby autor bránu ve Velii na Wikimedia Commons ověřil.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-7. Podklady (P6) jsou hotové.
+
+Věta atributu u Hérakleita: znění A z podkladů („Do týchž řek vstupujeme, a pořád na nás tečou jiné vody.“).
+Obrázek Hérakleita: Art Institute of Chicago, inv. 1897.296, CC0. Se stažením souhlasím.
+Obrázek Parmenida: bez obrazu, pokud sem nepřipíšu odkaz na soubor z Wikimedia Commons, u kterého jsem ověřil licenci: 
+Čtyři vztahy, které mění oddíl Doba a lidé na hotových stránkách: zapsat.
+Citlivá místa: co je podstatné a chybělo by jen z ohledu, do profilu patří. Proto zlomek o válce (B53) uvnitř výkladu o protikladech a věta o Hermodórovi celá.
+
+Napiš profily Hérakleita a Parmenida podle skillu atlas-osobnost. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md a docs/pouceni.md;
+- v docs/plany/celek-7.md tabulku stavu a oddíl „Po P6“;
+- z docs/podklady/celek-7-jsem-porad-tentyz.md: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), z Nejsilnějších příběhů body 4 až 8, 10 a 14, celé oddíly Tvrzení: Hérakleitos (profil), Tvrzení: Parmenidés (profil) a Reagoval jeden na druhého?, z Citlivých míst Pravidla pro celý celek, tabulku Citáty a místa, která lákají, a Legendy o Hérakleitovi, z tabulky Citáty řádky 1 až 32, 41, 61 a 62, Návrh dat, z Obrázků Hérakleita a Parmenida, Rozpory a rozhodnutí a Odpovědi autora. Oddíly o cestě 2 a o otázce 5 nečti;
+- jako vzor profilu celý src/content/osobnosti/protagoras.mdx a jeho blok src/content/bloky/protagoras-vitr.yaml;
+- co atlas o obou už říká, najdi grepem („Hérakleit“, „Parmenid“) v src/content/osobnosti/platon.mdx a aristoteles.mdx, v src/content/otazky/co-je-skutecne.mdx a jak-poznam-pravdu.mdx a v src/content/smery/eleate.md; nic z toho neopakuj.
+
+Co profily mají mít:
+
+1. Hérakleitos. Úvod scénou: kostky s dětmi u Artemidina chrámu („Vypráví se…“), pointu jí dá jeho vlastní věta o Hermodórovi, celá i s kletbou nad Efesem: Diogenés klade hned za sebe větu, že by Efesané měli město nechat nedospělým, odmítnutí psát zákony a hru s dětmi. Profil to smí postavit vedle sebe; netvrdí, že historka z věty vznikla. Hned potom jednou větou, co o něm víme: z knihy zbyly věty, které si opsali jiní; ostatní se vypráví. Hlavní citát: zlomek B12 (`herakleitos-b12`). Kapitola 01 je věta o řece a její osud: vlastní pokus studenta před výkladem (Roztřiď: co trvá, jen když se v tom něco mění), pak Odkryj, který proti velkému citátu postaví známé znění „dvakrát“ a zeptá se, které napsal on, pak Kratylos s prstem a Aristotelova odpověď. Zlomek B12 smí v celku zaznít nejvýš dvakrát a podruhé ho ponese cesta: v profilu ho proto jako citát podruhé neopakuj. Kapitola 02 jsou protiklady, které drží pohromadě: luk a lyra (Změň jednu věc), moře a cesta jako hádanky, pak zlomek o válce uvnitř výkladu (doslova „válka“, celý i s otroky a svobodnými; ne jako heslo ani velký citát; že Hérakleitos válku nechválí, je výklad a tak ho podej) a Aristotelova námitka jako otázka, ne jako rozsudek. Konec: kniha v chrámu, Temný, „Hledal jsem sám sebe“.
+2. Jak psát o Hérakleitovi: „napsal“ u zlomku, „podle Platóna“ u svědectví, nikdy „učil, že“. Věta „dvakrát do téže řeky“ není podvrh, je to Platónovo a Aristotelovo podání; zlomek říká „do týchž řek, jiné vody“. O hesle „všechno plyne“ jen tolik: mezi dochovanými větami není a připsali mu ho pozdější čtenáři; ne „nikdy to neřekl“ a ne „poprvé u Simplikia“. Nevyprávěj smrt podle Diogena, nálepky o povaze ani dopisy s Dareiem. „Plačící filozof“ smí být jen v popisku obrazu s tím, čí je to představa.
+3. Parmenidés. Úvod scénou: brána Noci a Dne ze začátku básně. V básni mluví bohyně; nepiš „Parmenidés dokázal“. Život krátce a s typem tvrzení z podkladů (Elea, kolem roku 515, zákony pro město, Ameiniás, Xenofanés jako „říkalo se“). Hlavní citát doporučuji `parmenides-b8-ted`; `parmenides-b8` má stránka otázky 6. Kapitola 01: o tom, co není, se nedá mluvit (Roztřiď: věty o ničem; námitku nese Platónův host z Eleje). Kapitola 02: změna pod lupou (banán; Aristotelova odpověď, že při změně něco zůstává) a na konci druhé čtení jako spor čtenářů od starověku, bez redakční výhrady: atlas neříká „změnu popírá“ ani „nepopírá“, říká, co stojí v básni a že se čte dvojím způsobem. Rozhovor se Sókratem jen jednou větou jako Platónovu scénu, Zénóna jednou větou jako mladšího druha.
+4. Dvojice. Žádný z profilů netvrdí, že jeden na druhého reagoval. Smí zaznít: „Jestli jeden o druhém věděl, nevíme. O sto let později je Platón postavil proti sobě jako dva tábory.“ Théseova loď, dlužník a Seneca s Plútarchem patří cestě 2: jmenuj ji v Kam dál zatím bez odkazu; vznikne v P8.
+5. Dvě velké myšlenky u každého, každá z jiné disciplíny (názvy disciplín vezmi z hotových stránek), s vlastním stanoviskem studenta. Karta Zkus to žít podle návrhů v podkladech („Co drží napětím“, „Věty o ničem“): obě zůstávají u věcí a nápisů, ne u lidí.
+6. Citlivá místa: pravidla 1 až 7 z podkladů platí i pro profily. Bloky jsou o věcech (řeka, plamen, luk, banán, díra v ponožce), ne o studentovi a jeho těle. Co bohyně říká o změně, je věta o tom, co je; profil ji neobrací na člověka.
+7. Kdo žil dřív?, Doba a lidé a Kam dál podle skillu. Co atlas už vypráví jinde (Hérakleitos u pece, Platón a Kratylos, „z ničeho nic“ a duha, rozum proti smyslům), neopakuj; odkaž.
+
+Data: hlavní citáty obou profilů; věta atributu u Hérakleita podle mé odpovědi (znění A, B, C jsou v podkladech; po změně zkontroluj desku profilu a kartu v Mapě a čase); čtyři vztahy z Návrhu dat podle mé odpovědi, a po zápisu přečti oddíl Doba a lidé na stránkách Sókrata, Aristotela, Seneky a Marca Aurelia. Vztah Hérakleitos ↔ Parmenidés ani Hérakleitův spor s Pýthagorou a Xenofanem nezapisuj. Nové osoby nepřidávej. Obrázek stáhni jen se souhlasem výše: předtím ověř licenci v záznamu muzea a napiš mi název souboru, zdroj a velikost; originál mimo repozitář, do public/obrazky/ kopii zmenšenou na 1280 px; olejomalbu před uložením zesvětli a zapiš to k obrázku. Profil bez obrazu má desku s mincí atributu. Po změně dat restartuj běžící npm run dev.
+
+Založ ucitel/celek-7.md a zapiš do něj, co se týká profilů: osud věty o řece (tabulka znění) a co odpovědět na „takže to neřekl?“; druhé čtení Parmenida a kdo ho drží; dvě chronologie Parmenida; proč atlas netvrdí, že jeden reagoval na druhého; legendy o Hérakleitovi a proč je atlas nevypráví; zlomek o válce a kletbu nad Efesem: jak je číst a co říct ve třídě, kde sedí děti z války. Bez odkazu ze studentského webu; ověř, že se soubor nedostane do sestaveného webu. Cesta doplní svou část v P8.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); snímky obou profilů na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs); oddíl Doba a lidé na obou profilech a na stránkách, kterým přibyl vztah; karty obou v Mapě a čase; stránka směru eleaté.
+
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-7.md oddíl „Po P7“ (co stránky mají, použité citáty, co se změnilo mimo profily, co si nese P8, co čeká na autora), připrav tam zadání P8 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-7.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md (Po P7) a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co stránky mají, kde ses od podkladů odchýlil a proč a co čeká na mé rozhodnutí, a pošli snímek úvodu a jednoho bloku z každého profilu.
+```

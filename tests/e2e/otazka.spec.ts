@@ -51,7 +51,7 @@ test('otázka: první názor klávesnicí, hlasy v pořadí, návrat na konci a 
   await expect(page.locator('#hlas-protagoras')).toContainText('jako lékař');
   await expect(page.locator('#hlas-epikuros')).toContainText('Rozum podle něj žádný vjem vyvrátit nemůže, protože sám na vjemech závisí.');
   // Odkaz na profil jen tam, kde profil je.
-  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Prótagorás', 'Sókratés', 'Aristotelés', 'Epikúros']);
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Parmenidés', 'Prótagorás', 'Sókratés', 'Aristotelés', 'Epikúros']);
   // Epikúrova věta je výklad bez citátu.
   await expect(page.locator('.hlas .citat')).toHaveCount(4);
   await expect(page.locator('#hlas-epikuros .citat')).toHaveCount(0);
@@ -356,7 +356,7 @@ test('otázka 6: duha, čtyři hlasy, které se poznají, a cesta 3', async ({ p
   }
   await expect(page.locator('.hlas__jmeno')).toHaveText(['Parmenidés', 'Démokritos', 'Platón', 'Aristotelés']);
   // Odkaz na profil jen tam, kde profil je.
-  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Platón', 'Aristotelés']);
+  await expect(page.locator('.hlas__jmeno a')).toHaveText(['Parmenidés', 'Platón', 'Aristotelés']);
   await expect(page.locator('.hlas .citat')).toHaveCount(4);
   await expect(page.locator('#hlas-parmenides .citat')).toContainText('co by to přimělo vzniknout později, a ne dřív?');
   await expect(page.locator('#hlas-demokritos .citat')).toContainText('Ve skutečnosti jsou atomy a prázdno.');

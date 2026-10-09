@@ -4,6 +4,28 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 9. 10. 2026: Profily Hérakleita a Parmenida (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Zlomek B12 je velký citát profilu Hérakleita a jako citát na stránce stojí jen jednou. Roztřiď i Odkryj na něj ukazují slovy („věta z úvodu“; „řeky tytéž, vody jiné“) | Zlomek smí v celku zaznít dvakrát a podruhé ho ponese cesta 2 |
+| Odkryj staví proti větě z úvodu známé znění „Dvakrát do téže řeky nevstoupíš“ bez autora; Platónův citát (Kratylos 402a) přijde až po odkrytí | Citát s údajem „Platón“ by odpověď prozradil dřív, než ji student zkusí |
+| O hesle „všechno plyne“ říká profil dvě věty: mezi dochovanými větami není a připsali mu ho pozdější čtenáři. Profil nikde nepíše „učil, že“, „nikdy to neřekl“ ani „poprvé u“ | Celou knihu nemáme; doslovné znění se hledalo jen u Simplikia. Podrobnosti má list pro učitele |
+| Úvod Hérakleita: scéna s kostkami nepřímo („vypráví se“), věta o Hermodórovi celá jako citát, bez dovětku. Profil věty staví vedle sebe a netvrdí, že historka z věty vznikla | Rozhodnutí autora po P6; tři citáty za sebou by student přeskakoval, proto je citátem jen zlomek |
+| Zlomek o válce (B53) stojí v kapitole o protikladech za lukem, lyrou a mořem. Výklad je podaný jako výklad („kdo tu větu čte vedle luku a lyry, rozumí jí jinak“) a hned za ním je otázka, která nechává místo nesouhlasu | Zadání a odpověď autora; student, který zažil válku, nemá číst rozsudek, že válka svět drží |
+| Aristotelova námitka (Metafyzika 1005b) je v profilu nepřímo a končí otázkou: spor, nebo dva ohledy? | Aristotelés sám říká jen, že si to o Hérakleitovi „někteří myslí“; profil nerozhoduje, co si Hérakleitos myslel |
+| Roztřiď v obou profilech nemá vlastní kartu | U „co není“ by do ní student, kterému někdo zemřel, mohl napsat člověka a zpětná vazba by se ptala, o čem mluví; u „co se mění“ by to byla otázka na studenta |
+| Kapitola o řece začíná na břehu, ne na mostě | První obrazovka očima studenta s myšlenkami na smrt (poučení z celku 6) |
+| V Parmenidově profilu mluví bohyně; úvod říká, že báseň vypráví mladý muž, a život je rozdělený mezi úvod (Elea, rok, zákony) a oddíl Doba a lidé (Ameiniás, Xenofanés, Sókratés, Zénón) | Věta atributu v datech říká „vypráví, jak projel branou“: úvod s ní nesmí být v rozporu. Čtyři „vypráví se“ v jednom odstavci by scénu zadusily |
+| Aristotelés u Parmenida „se na změnu díval jinak“; profil netvrdí, že Parmenidovi odpovídal. Démokritos jen odkazem na otázku 6 | Fyzika I, 2–3 a 8 nejsou přečtené; spojovací věta netvrdí spor, který podklady nedoložily |
+| Dvojí čtení básně je v profilu spor čtenářů (Kólótés × Plútarchos, Měsíc, Simplikios) a kapitola končí otázkou. Atlas neříká „změnu popírá“ ani „nepopírá“ | Podklady, oddíl Jak číst druhou část básně; zadání autora |
+| Věta o dvojici („jestli jeden o druhém věděl, nevíme“) je v oddíle Doba a lidé obou profilů; cesta 2 ji už opakovat nebude | Tentýž detail nejvýš dvakrát v celku |
+| Disciplíny myšlenek: Hérakleitos Metafyzika a Argumentace, Parmenidés Poznání a Metafyzika | Jména z hotových stránek; „Metafyzika“ je ze stránky otázky 6 a na profilu je poprvé |
+| Kam dál umí položku bez odkazu: karta s čárkovaným okrajem a slovem „připravujeme“. Oba profily tak jmenují cestu 2 | Zadání: cestu jmenovat bez odkazu; odkaz na stránku, která není, by shodil kontrolu odkazů. Slovo je stejné jako u připravovaných období v Mapě a čase |
+| Obraz Hérakleita: španělská malba kolem 1630 z Art Institute of Chicago (CC0), zesvětlená gamou 1,9; popisek říká, že uplakaného filozofa z něj udělali až Římané. Parmenidés je bez obrazu | Souhlas autora; „plačící filozof“ smí být jen v popisku a s údajem, čí je to představa |
+| Originály stažených obrázků se ukládají do `~/Pictures/Atlas-originaly/` na autorově Macu | Zadání chce originál mimo repozitář; dřívější originály zůstaly jen v pracovním prostoru sezení |
+| Čtyři vztahy z Návrhu dat jsou zapsané; vztah Hérakleitos ↔ Parmenidés ani Hérakleitův spor s Pýthagorou a Xenofanem ne. Test `vztahy.test.ts` hlídá, že mezi Hérakleitem a Parmenidem žádný vztah není | Odpověď autora; podklady, oddíl Reagoval jeden na druhého? |
+
 ## 9. 10. 2026: Celek 7 po podkladech (P6): odpovědi autora
 
 | Rozhodnutí | Důvod |

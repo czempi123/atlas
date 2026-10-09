@@ -591,3 +591,30 @@ Otevřené zůstalo nebo přibylo:
 | Zlomek B52 (dítě, které si hraje) | V datech jako rezerva ke scéně s kostkami (čteno u Hippolyta IX, 9). Význam slova αἰών a výklad zlomku jsou sporné; že historka o kostkách vznikla z něj a z věty o městě pro nedospělé, je domněnka. | Profil smí věty postavit vedle sebe, netvrdit souvislost. |
 | Zlomek B121, jiné znění | Diogenés (IX, 2) má sloveso „zemřít“; že jiní autoři uvádějí ostřejší, vím jen z literatury. | Profil cituje Diogena. |
 | Senekův závěr a Plútarchova obec ve Sporu | Po odpovědi autora 9. 10. 2026 patří do studentského textu (dřív nikam a učiteli). | P8 a revize: číst scénu očima studenta po ztrátě; závěr nesmí zůstat bez otázky a bez Plútarchovy odpovědi. |
+
+### Po P7 (profily Hérakleita a Parmenida)
+
+9. 10. 2026. Vyřízeno: věta atributu u Hérakleita (znění A, pramen `eusebios-pe-xv-20`); čtyři vztahy, které mění hotové stránky (zapsány, oddíl Doba a lidé přečten u Sókrata, Aristotela, Seneky a Marca Aurelia); obrázek Hérakleita (licence ověřena 9. 10. 2026 v API Art Institute of Chicago, `is_public_domain: true`, i na stránce díla, „CC0 Public Domain Designation“; stažen přes IIIF muzea v plné šířce 2637 × 2250 px, 621 kB).
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Rozměry obrazu Hérakleita | Muzeum uvádí 87,7 × 75 cm, soubor je na šířku (2637 × 2250 px). Který rozměr je výška, jsem neověřoval. | Rozměr do popisku nedávat. |
+| Plná velikost obrazu | Adresa IIIF `full/full` vrací 403; staženo `full/2637,` (šířka podle `info.json`). Soubor má 621 kB, je tedy silněji komprimovaný než menší velikosti. | Pro desku stačí. Kdyby byl potřeba tisk, zkusit stránku muzea ručně. |
+| Výřez desky | Střed „45 % 30 %“ a na šířku „45 % 25 %“ je odhad podle snímků. | Autor potvrdí, nebo upravit v `zdroje.yaml`. |
+| Glóbus na obraze | Popisek ho nezmiňuje; nápis na něm jsem nečetl. | Nepopisovat, dokud ho někdo nepřečte. |
+| „Jako jediná z vět o řece má jeho jazyk: jeho nářečí a jeho způsob, jak větu postavit“ | Stojí na podkladech („rysy Hérakleitova jazyka“, „jeho nářečím“); heslo SEP jsem v P7 znovu nečetl. | Při revizi srovnat s heslem (Graham). |
+| Platónova námitka v profilu Hérakleita | „Nedalo by se o ničem říct ani ‚to‘, ani ‚takové‘“ je převyprávění Kratyla 439d–440b z podkladů; v datech není jako citát. | Při revizi srovnat s textem; nezesilovat. |
+| Aristotelés, Metafyzika 1005b | V profilu nepřímo; citát v datech není. | Kdyby revize chtěla citát, doplnit do `zdroje.yaml` s původním zněním. |
+| „Aristotelés se na změnu díval jinak“ | Fyzika I, 2–3 a 8 dál nečteny (bod z P6). | Větu „Aristotelés mu odpověděl“ nepsat ani v cestě, dokud to někdo nepřečte. |
+| Kólótés: „podle něj se nedá žít“ | Formulace z podkladů; jak přesně výčitka u Plútarcha zní, jsem v P7 neověřoval. | Při revizi srovnat s Proti Kólótovi 1113e–1114f. |
+| „Z její druhé půlky nejméně“ | Báseň má tři části (příjezd, řeč o tom, co je, výklad světa); „druhá půlka“ je zjednodušení pro studenty. Podle SEP zbyla z poslední části snad desetina. | Revize posoudí, jestli zjednodušení drží. |
+| Simplikios a dvaapadesát veršů | Profil neříká, ze které části básně jsou. | Nedoplňovat bez ověření. |
+| „Vypráví ji mladý muž“ | Kdo je mladík, báseň neříká; že je to Parmenidés, je obvyklé čtení a věta atributu ho používá. Úvod jméno k mladíkovi nedává. | Při revizi číst úvod a větu atributu vedle sebe. |
+| Portrét Platóna, Doba a lidé | Věta „Hérakleitovo učení, že všechno, co vidíme, stále plyne“ je Aristotelova zpráva; vedle profilu může znít jako Hérakleitova vlastní slova. | Revize P10: nechat, nebo přepsat na „jak mu rozuměl Platón“. |
+| Stránky otázek 6 a 7 | Parmenidés je tam v prvním čtení a jeho jméno teď vede na profil, který přidává druhé. | Revize: přečíst po sobě hlas a profil. |
+| Karta v Mapě a čase | Tlačítko u Parmenida říká „Otevřít portrét“, i když jde o profil. | Ověřit u ostatních profilů; případně sjednotit slovo. |
+| Citáty nepoužité v profilech | `herakleitos-b49a`, `herakleitos-b52`, `plutarchos-de-e-392b`, `seneca-ira-ii-10`, `parmenides-b8-zustava`, `parmenides-b6`; nepřímo převyprávěné jsou v plánu větve (Po P7). | K dispozici cestě a revizi; B49a jen jako pozdější podoba věty. |
+| List pro učitele: válka | Oddíl o zlomku B53 ve třídě stojí na obecné opatrnosti, ne na citovaném doporučení (SAMHSA nezískána). | P8: najít české doporučení k žákům s válečnou zkušeností a oddíl o něj opřít. |
+| List pro učitele: tři věci z paměti | „O tom, kdo byl otrok a kdo svobodný, rozhodovaly i války“; místo Metafyzika 987a u věty o Platónovi a Kratylovi; iniciály Guthrieho a Owena. V podkladech celku nejsou. | Při revizi ověřit, nebo škrtnout. |
+| List pro učitele: kontakty | Jen Linka bezpečí (z celku 6). Centrum Anabell, poradna pro pozůstalé a poradna pro dospívající, kteří řeší orientaci nebo identitu, neověřeny. | P8. |
+| Obraz Parmenida | Brána ve Velii na Wikimedia Commons neověřena; profil je bez obrazu. | Autor. |
