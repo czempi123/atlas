@@ -1,7 +1,9 @@
 ---
 // Kam dál: dvě až čtyři pokračování, vždy s jasným cílem.
+// Položka bez `href` je stránka, která teprve vznikne (cesta celku, než ji dopíše další krok): karta ji jmenuje,
+// nikam nevede a nese slovo „připravujeme“ jako připravovaná období v Mapě a čase. Až stránka vznikne, doplň `href`.
 import Ikona from '../ui/Ikona.astro';
-interface Props { odkazy: { href: string; nadtitulek: string; text: string }[] }
+interface Props { odkazy: { href?: string; nadtitulek: string; text: string }[] }
 const { odkazy } = Astro.props;
 // Název oddílu: nadpis na stránce i položka v obsahu stránky (ObsahProfilu.astro).
 const NAZEV = 'Kam dál';
@@ -11,11 +13,18 @@ const NAZEV = 'Kam dál';
   <ul>
     {odkazy.map((o) => (
       <li>
-        <a href={o.href}>
-          <span class="t-nadtitulek">{o.nadtitulek}</span>
-          <span class="text">{o.text}</span>
-          <Ikona id="dal" velikost={22} class="sipka" />
-        </a>
+        {o.href ? (
+          <a class="polozka" href={o.href}>
+            <span class="t-nadtitulek">{o.nadtitulek}</span>
+            <span class="text">{o.text}</span>
+            <Ikona id="dal" velikost={22} class="sipka" />
+          </a>
+        ) : (
+          <div class="polozka polozka--ceka">
+            <span class="t-nadtitulek">{o.nadtitulek} · připravujeme</span>
+            <span class="text">{o.text}</span>
+          </div>
+        )}
       </li>
     ))}
   </ul>
@@ -25,7 +34,7 @@ const NAZEV = 'Kam dál';
   .kamdal { margin: var(--s-9) 0; padding-top: var(--s-7); border-top: 1px solid var(--ink); }
   h2 { margin-bottom: var(--s-5); }
   ul { display: grid; gap: var(--s-3); margin: 0; padding: 0; list-style: none; }
-  a {
+  .polozka {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,9 +46,11 @@ const NAZEV = 'Kam dál';
     background: var(--surface);
     text-decoration: none;
   }
-  a:hover { border-color: var(--muted); }
+  a.polozka:hover { border-color: var(--muted); }
+  /* Stránka, která teprve vznikne: čárkovaný okraj a bez šipky, aby rozdíl nestál jen na barvě. */
+  .polozka--ceka { border-style: dashed; background: transparent; padding-right: var(--s-5); }
   .t-nadtitulek { color: var(--muted); }
   .text { font-size: var(--fs-perex); line-height: 1.3; }
-  a :global(.sipka) { position: absolute; right: var(--s-5); top: 50%; translate: 0 -50%; }
+  .polozka :global(.sipka) { position: absolute; right: var(--s-5); top: 50%; translate: 0 -50%; }
   @media (min-width: 900px) { ul { grid-template-columns: repeat(3, 1fr); } }
 </style>

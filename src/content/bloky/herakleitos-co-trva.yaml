@@ -1,0 +1,79 @@
+# Roztřiď · profil Hérakleita, kapitola 01 „Řeka“: osm věcí, které trvají tím, že se mění, nebo tím, že se nemění.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Tvrzení: Hérakleitos › Dvě myšlenky pro profil › 1 (Vlastní pokus studenta).
+# Karty a zpětné vazby jsou autorské. Proti podkladům osm karet místo devíti (schéma dovolí nejvýš osm; vypadl vír nad
+# výpustí) a třetí koš se jmenuje „Jak se to vezme“, aby koše odpovídaly na otázku stejným tvarem.
+# Karty jsou věci, ne lidé, a blok nemá vlastní kartu: „co se mění ve mně“ by byla otázka na studenta (Citlivá místa, pravidlo 1).
+# Srovnání říká jen to, co stojí ve zlomku B12 (řeky tytéž, vody jiné), a neříká, kam by kterou kartu dal Hérakleitos: to nevíme.
+druh: roztrid
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: Osm věcí. Některé vydrží, jen dokud se v nich něco mění. Jiné každá změna kazí.
+otazka: Čím to trvá?
+kose:
+  - id: meni
+    nazev: Tím, že se mění
+    popis: Kdyby se v tom nic neměnilo, přestalo by to být.
+  - id: nemeni
+    nazev: Tím, že se nemění
+    popis: Každá změna z toho něco ubere.
+  - id: jak
+    nazev: Jak se to vezme
+    popis: Záleží na tom, na co se díváš.
+karty:
+  - id: reka
+    text: Řeka
+    zpetna: >-
+      Kdyby voda v korytě zůstala stát, byl by z řeky rybník.
+      Co tedy dělá řeku řekou: voda, nebo to, že teče?
+    kdyz:
+      nemeni: >-
+        Dal jsi řeku mezi věci, které trvají tím, že se nemění. Co se na ní podle tebe měnit nesmí:
+        koryto, směr, nebo jméno?
+  - id: plamen
+    text: Plamen svíčky
+    zpetna: >-
+      Plamen každou chvíli spaluje jiný vosk a jiný vzduch. Když s tím přestane, zhasne.
+      Je po hodině na svíčce tentýž plamen?
+  - id: fronta
+    text: Fronta na oběd
+    zpetna: >-
+      Lidé se v ní střídají, a fronta stojí dál. Kdyby se nikdo nepohnul,
+      byla by to ještě fronta, nebo už jen hlouček?
+  - id: socha
+    text: Socha
+    zpetna: >-
+      U sochy znamená změna škodu: uražený nos, oprýskaná barva. Trvá tím, že zůstává, jaká je.
+      Platí to o ní úplně? I mramor zvětrává.
+    kdyz:
+      meni: >-
+        Dal jsi sochu mezi věci, které trvají tím, že se mění. Co se v ní podle tebe musí měnit,
+        aby zůstala sochou?
+  - id: rybnik
+    text: Zamrzlý rybník
+    zpetna: >-
+      Led vydrží, jen dokud se neoteplí. Rybník přečká zimu i léto.
+      O čem jsi rozhodoval: o ledu, nebo o rybníku?
+  - id: most
+    text: Kamenný most
+    zpetna: >-
+      Most má stát. Když se v něm něco pohne, volá se statik. Každý den po něm ale přejdou jiní lidé.
+      Patří k mostu i ti, kdo po něm chodí?
+  - id: rozhovor
+    text: Rozhovor
+    zpetna: >-
+      Rozhovor, ve kterém se nic nemění, je ticho, nebo jedna věta pořád dokola.
+      Podle čeho poznáš, že je to po hodině pořád tentýž rozhovor?
+  - id: skola
+    text: Tvoje škola za sto let
+    zpetna: >-
+      Za sto let v ní nebude nikdo z dnešních žáků ani učitelů, možná ani stejná budova.
+      Podle čeho by se poznalo, že je to pořád ona?
+srovnani:
+  osoba: herakleitos
+  nadpis: Hérakleitův příklad
+  text: >-
+    Hérakleitos si vybral řeku. Ve větě, která stojí na začátku téhle stránky, jsou řeky tytéž a vody jiné.
+
+
+    Které z tvých karet jsou jako ta řeka? A je mezi nimi nějaká, ve které se nemění vůbec nic?
+zdroje: [eusebios-pe-xv-20]

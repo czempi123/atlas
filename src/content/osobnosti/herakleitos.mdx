@@ -1,0 +1,191 @@
+---
+osoba: herakleitos
+nadtitulek: Myslitel z Efesu · Hérakleitův profil
+titulek: Hérakleitos
+pointa: Muž, který psal v hádankách.
+citat: herakleitos-b12
+kapitoly:
+  - cislo: "01"
+    kotva: reka
+    nazev: Řeka
+    stav: hotovo
+  - cislo: "02"
+    kotva: luk-a-lyra
+    nazev: Luk a lyra
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import { KdoZilDriv, Roztrid, ZmenJednuVec, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Vypráví se, že Efesané chtěli po Hérakleitovi, aby jim napsal zákony. Odmítl. Odešel k Artemidinu chrámu a hrál tam s dětmi kostky.
+
+Lidé se kolem něj seběhli a divili se. Řekl jim, že je to lepší než s nimi spravovat obec.
+
+Co si o Efesanech myslel, víme od něj samého. Vyhnali jeho přítele Hermodóra a Hérakleitos o tom napsal:
+
+</div>
+
+<div class="ctenarsky"><Citat id="herakleitos-b121" /></div>
+
+<div class="uvod ctenarsky">
+
+Hérakleitos žil kolem roku 500 př. n. l. v Efesu, řeckém přístavu na pobřeží dnešního Turecka. Z jeho knihy zbyly jen věty, které si z ní opsali jiní. Všechno ostatní se o něm vypráví.
+
+</div>
+
+<div class="ctenarsky"><Citat id="herakleitos-b12" velky /></div>
+
+<Kapitola cislo="01" kotva="reka" nazev="Řeka">
+  <Fragment slot="titulek">Co je na řece pořád <em>totéž?</em></Fragment>
+
+Představ si, že sedíš na břehu řeky. Voda, na kterou se díváš, bude za chvíli o kus dál a přiteče jiná. Zítra tu poteče zase jiná. A přece řekneš, že je to pořád táž řeka.
+
+Je řeka výjimka? Než budeš číst dál, zkus to na osmi věcech.
+
+<Roztrid id="herakleitos-co-trva" />
+
+Vrať se teď k větě z úvodu a přečti si ji pomalu. Řeky jsou v ní *tytéž*. Jiné jsou vody.
+
+Dá se to číst takhle: řeka, ve které by voda stála, by nebyla řeka. Je táž právě proto, že v ní teče pořád jiná voda. Nemění se tedy všechno. To, že se něco mění, dovoluje něčemu jinému trvat.
+
+Většina lidí ale zná Hérakleitovu řeku z jiné věty.
+
+<Odkryj
+  id="herakleitos-dve-vety"
+  otazka="Vedle věty z úvodu se traduje ještě jedna: „Dvakrát do téže řeky nevstoupíš.“ Kterou z nich napsal Hérakleitos? A říkají obě totéž?"
+  tlacitko="Porovnat s prameny"
+  filozof="herakleitos"
+  modelove={[
+    { text: 'Tu druhou. Je slavná a zní jako on.', komentar: 'Slavná je. O tom, kdo ji napsal, to ale nic neříká. Podle čeho bys poznal větu, kterou někdo o sto let později shrnul po svém?' },
+    { text: 'Tu první. A totéž neříkají: v první je řeka pořád táž, ve druhé už ne.', komentar: 'Všiml sis slova tytéž. Dá se druhá věta přečíst i tak, aby té první neodporovala?' },
+    { text: 'Možná obě. Mohl tu myšlenku napsat dvakrát, pokaždé jinak.', komentar: 'Vyloučit se to nedá: celou jeho knihu nemáme. Co by ti pomohlo rozhodnout?' },
+  ]}
+  sebekontrola={[
+    'Napsal jsem, v čem se ty dvě věty liší, ne jen která se mi líbí víc.',
+    'Řekl jsem, podle čeho bych poznal, kdo větu napsal.',
+  ]}
+>
+
+Věta z úvodu je zlomek jeho knihy. Jako jediná z vět o řece má jeho jazyk: jeho nářečí a jeho způsob, jak větu postavit.
+
+Druhou známe od Platóna. Psal asi sto let po Hérakleitovi a nechává ji říct Sókrata:
+
+<Citat id="kratylos-402a" />
+
+Všimni si slova *tuším*. Platón Hérakleita shrnuje, necituje. O něco později mu tutéž větu připisuje Aristotelés.
+
+Vymyšlená tedy není: tak Hérakleita podávají Platón a Aristotelés. Říká ale víc než zlomek. Ve zlomku jsou řeky tytéž. V Platónově podání nezůstává nic.
+
+A heslo „všechno plyne“? Mezi větami, které se z Hérakleitovy knihy dochovaly, není. Připsali mu ho pozdější čtenáři.
+
+Podívej se na svou odpověď. Rozhodoval jsi podle toho, která věta je slavnější, nebo podle toho, co která říká?
+
+</Odkryj>
+
+Po Hérakleitovi se k jeho jménu hlásili lidé, kteří z řeky udělali nauku, že netrvá vůbec nic. Aristotelés vypráví o jednom z nich, Kratylovi. Hérakleitovi prý vytýkal slovo *dvakrát*: do téže řeky podle něj nevstoupíš ani jednou. Nakonec usoudil, že se nemá říkat nic, a jen hýbal prstem.
+
+Platón nechává Sókrata říct, kam taková nauka vede. Kdyby všechno neustále unikalo, nedalo by se o ničem říct ani „to“, ani „takové“. Než by ses k věci přiblížil, byla by jiná.
+
+Aristotelés na to odpověděl:
+
+<Citat id="metafyzika-1010a-zbyva" />
+
+*Míří ta odpověď na Hérakleita, nebo na Kratyla? Přečti si ještě jednou větu z úvodu. Je v ní něco, co zůstává?*
+</Kapitola>
+
+<Kapitola cislo="02" kotva="luk-a-lyra" nazev="Luk a lyra">
+  <Fragment slot="titulek">Proč luk <em>střílí?</em></Fragment>
+
+Luk vypadá jako klidná věc: leží a drží tvar. Přitom se v něm bez přestání přetahují dvě síly.
+
+<ZmenJednuVec id="herakleitos-luk" />
+
+Luk střílí díky tomu, že se v něm dřevo a tětiva přetahují. Když jedna strana povolí, zbude hůl a provázek. Stejně drží struna na lyře: je napjatá mezi dvěma konci a každý ji táhne jinam. Hérakleitos napsal:
+
+<Citat id="herakleitos-b51" />
+
+Jeho věty jsou stavěné jako hádanky. V jedné říká, že cesta nahoru a cesta dolů je jedna a táž.
+
+*Jak to? Zkus odpovědět, než budeš číst dál.*
+
+U moře napověděl sám:
+
+<Citat id="herakleitos-b61" />
+
+Totéž moře, a záleží na tom, kdo v něm plave. Tatáž cesta, a záleží na tom, kterým směrem jdeš. V obou větách se dvě věci, které stavíme proti sobě, ukážou jako jedna.
+
+Pro to, co se v luku děje potichu, měl i tvrdší slovo:
+
+<Citat id="herakleitos-b53" />
+
+Zní to jako chvála války. Kdo tu větu čte vedle luku a lyry, rozumí jí jinak. Hérakleitos podle takového čtení neříká, že válka je dobrá. Říká, čím svět je: střetem, který věci od sebe odděluje a zároveň je drží pohromadě.
+
+*Dá se o střetu říct, že drží svět, a neříct tím, že je dobrý?*
+
+Aristotelés se u Hérakleitových protikladů zarazil. Podle něj nemůže totéž téže věci zároveň a v témž ohledu náležet i nenáležet. Nikdo si prý ani nemůže myslet, že totéž je i není, i když se někteří domnívají, že právě to Hérakleitos říká. A dodal, že člověk si nemusí myslet všechno, co říká.
+
+*Tvrdí Hérakleitos, že totéž je i není? Nebo je moře pitné pro ryby a nepitné pro lidi, cesta vede nahoru odsud a dolů odtamtud, a žádný spor v tom není?*
+
+Kniha, ve které ty věty stály, se nedochovala. Vypráví se, že ji Hérakleitos uložil v Artemidině chrámu. Už ve starověku mu říkali Temný.
+
+Vypráví se také, že se ta kniha dostala do ruky Sókratovi. Čemu porozuměl, bylo prý znamenité, a nejspíš i to, čemu neporozuměl. Jen by to prý chtělo potápěče z Délu.
+
+O slavných jménech své doby Hérakleitos napsal, že hodně vědí a ničemu nerozumějí. O sobě napsal:
+
+<Citat id="herakleitos-b101" />
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Efesu tehdy vládli Peršané. Vypráví se, že Hérakleitos měl po předcích zdědit čestný úřad a že ho přenechal bratrovi. Jednu historku o něm zapsal Aristotelés: jak přijal hosty [u pece](/osobnost/aristoteles/#delfin).
+
+Ve stejné době žil v jižní Itálii, na druhém konci řeckého světa, [Parmenidés](/osobnost/parmenides/). Jestli jeden o druhém věděl, nevíme. O sto let později je Platón postavil proti sobě jako dva tábory.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="herakleitos" b="parmenides" druh="poradi" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Metafyzika">
+    <Fragment slot="titulek">Některé věci trvají jen tím, že se <em>mění.</em></Fragment>
+
+Řeka zůstává řekou, protože v ní teče pořád jiná voda. Kdyby voda stála, byla by z ní tůň. Tak se dá číst Hérakleitova věta o týchž řekách a jiných vodách: změna jedné věci dovoluje jiné trvat.
+
+*Platí to i o věcech, které nikam netečou? Co se musí měnit ve městě, v jazyce nebo v kapele, aby zůstaly tím, čím jsou? A kolik se toho smí vyměnit?*
+
+<MojeStanovisko client:visible id="herakleitos-reka" otazka="Najdi jednu věc, která trvá jen tím, že se v ní něco mění, a jednu, kterou každá změna kazí. V čem je mezi nimi rozdíl?" odkaz="/osobnost/herakleitos/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Argumentace">
+    <Fragment slot="titulek">Protiklady drží <em>pohromadě.</em></Fragment>
+
+Luk drží tvar, protože se v něm dvě síly přetahují. Cesta nahoru a cesta dolů je jedna cesta. V Hérakleitových větách se dvě věci, které stavíme proti sobě, bez sebe neobejdou.
+
+*Aristotelés namítá, že totéž nemůže zároveň být i nebýt. Je každý protiklad spor? Jak poznáš, že dva lidé mluví o téže věci z různých stran, a kdy si opravdu odporují?*
+
+<MojeStanovisko client:visible id="herakleitos-protiklady" otazka="Vyber si dvojici protikladů: ticho a hluk, práce a odpočinek, začátek a konec. Dá se jeden pochopit bez druhého? Napiš proč." odkaz="/osobnost/herakleitos/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="herakleitos-napeti" nazev="Co drží napětím" odkaz="/osobnost/herakleitos/#zkus-to-zit">
+
+Hledej tento týden tři věci, které drží jen proto, že se v nich dvě síly přetahují. Třeba strunu na kytaře, stan se šňůrami nebo napnutou síť na hřišti. U každé si řekni, co by se stalo, kdyby jedna strana povolila. Na konci týdne si zapiš tu, která tě překvapila.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { nadtitulek: 'Cesta 2', text: 'Jsem pořád tentýž, když se měním?' },
+  { href: '/osobnost/parmenides/', nadtitulek: 'Profil', text: 'Parmenidés: muž, který nechal mluvit bohyni' },
+  { href: '/osobnost/platon/', nadtitulek: 'Portrét', text: 'Platón: muž, který ve vlastních rozhovorech nemluví' },
+  { href: '/otazka/co-je-skutecne/', nadtitulek: 'Velká otázka 6', text: 'Co je skutečné?' },
+]} />
