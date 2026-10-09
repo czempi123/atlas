@@ -135,7 +135,7 @@ Co je dobré vědět o znění:
 - Adresát posledního dopisu je v cestě „přítel“. Diogenés Laertios uvádí Ídomenea, Cicero Hermarcha; znění se kryje. Pod citátem proto stojí „Dopis z posledního dne“.
 - Lucretius žil asi dvě stě let po Epikúrovi a o jeho životě se neví skoro nic. Historka o nápoji lásky a šílenství, kterou o něm zapsal až Hieronymus, je podle Stanford Encyclopedia of Philosophy nevěrohodná; do hodiny nepatří ani jako zajímavost.
 - Aristotelova věta, že šťastného bolí smrt nejvíc, je z výkladu o statečnosti v boji (Etika Nikomachova 1117b). Aristotelés zemřel šestnáct let před tím, než Epikúros založil v Athénách školu; nepřeli se.
-- Plútarchos v datech atlasu není, proto má ve Sporu jen jméno a prázdnou minci. Psal kolem roku 100, přes tři sta padesát let po Epikúrovi. Jeho spis Že podle Epikúra nelze žít příjemně je rozhovor na procházce a řeč o smrti v něm pronáší jeho přítel Theón. Věty v cestě jsou parafráze, ne citáty.
+- Plútarchos (asi 45–120 n. l.) byl platonik z Chairóneie a kněz v Delfách; v atlasu má jen medailonek s trojnožkou na minci, vlastní stránku ne. Psal kolem roku 100, přes tři sta padesát let po Epikúrovi. Jeho spis Že podle Epikúra nelze žít příjemně je rozhovor na procházce a řeč o smrti v něm pronáší jeho přítel Theón. Věty v cestě jsou parafráze, ne citáty.
 - Odpověď na Lucretiovo zrcadlo (žít déle bych mohl já, narodit se dřív by musel někdo jiný) připisuje cesta Thomasi Nagelovi jednou větou. Stojí na hesle Death ve Stanford Encyclopedia of Philosophy; Nagelův článek z roku 1970 podklady atlasu nečetly a encyklopedie sama tu odpověď pokládá za spornou.
 - Kresba Zrcadlo času nemá vpravo od života letopočet ani věk a student konec života nenastavuje. Není to odhad, kdy kdo zemře.
 

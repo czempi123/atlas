@@ -381,7 +381,7 @@ zdroje: [platon-ustava]
 kOvereni: [ … ]                 # dokud není prázdné, jen v dílně
 ```
 
-Když za jednu stranu nemluví člověk, ale směr (kynici proti Epikúrovi), dostane strana `oznaceni` malým písmenem. Když za ni mluví autor, kterého atlas v datech nemá (Plútarchos proti Epikúrovi v cestě 8), smí strana `osoba` vynechat a mít jen `oznaceni` se jménem („Plútarchos“): na škále i v argumentech pak stojí označení a mince je prázdný prstenec v barvě období bloku. Aspoň jedna strana musí být osoba z dat. Na škále, v polohách („spíš kynici“), ve zpětné vazbě i v deníku pak stojí označení místo jména; v nadpisech se první písmeno zvětší samo. Scéna má říct, čí slova strana používá a že se ti dva nepotkali.
+Když za jednu stranu nemluví člověk, ale směr (kynici proti Epikúrovi), dostane strana `oznaceni` malým písmenem. Když za ni mluví autor, kterého atlas v datech nemá, smí strana `osoba` vynechat a mít jen `oznaceni` se jménem („Plútarchos“): na škále i v argumentech pak stojí označení a mince je prázdný prstenec v barvě období bloku. Aspoň jedna strana musí být osoba z dat. Obsah tuhle možnost teď nepoužívá: cesta 8 ji měla pro Plútarcha jen do 9. 10. 2026, od té doby je Plútarchos v datech a jeho mince nese trojnožku. Na škále, v polohách („spíš kynici“), ve zpětné vazbě i v deníku pak stojí označení místo jména; v nadpisech se první písmeno zvětší samo. Scéna má říct, čí slova strana používá a že se ti dva nepotkali.
 
 ### Kdo žil dřív?
 

@@ -4,6 +4,18 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 9. 10. 2026: Odpovědi autora po P8 a Plútarchos v datech
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kresba Zrcadlo času, délka cesty 32 minut, vynechaná poslední věta Obrany, dílo „Dopis z posledního dne“, blok s oslavou v kroku 5 a vstup bez obrázku zůstávají, jak jsou. Stejně tak body, které trvaly z P7: výřez hermy na desce, portrét bez Rubensovy kresby, ochrana rodiny jen učiteli, tři karty velkých myšlenek, Lucanovo jméno | Autor 9. 10. v chatu: „všechno se mi líbí“ |
+| Plútarchos je v datech jako medailonek s atributem; ve Sporu cesty 8 je strana osobou a mince není prázdná. Mění to záznam z 8. 10. (strana jen s označením) | Autor: „Plútarchovi dejme něco.“ Výjimka z pravidla „nové osoby teď ne“ platí jen pro něj |
+| Atribut je trojnožka (kněz v Delfách), ne svitek ani dvojice životopisů | Je to věc z jeho příběhu, dá se nakreslit pár tahy a Delfy student zná od Sókrata; svitek už má Isokratés |
+| Na mapě má jen Chairóneiu (narození a působení); Delfy nese věta „kdo“ | SEP: většinu života prožil v rodném městě. Chairóneia a Delfy leží asi třicet kilometrů od sebe a na mapě období by splývaly |
+| Vztahy: Platón → Plútarchos (vliv textem) a Plútarchos × Epikúros (polemika na dálku s otázkou Sporu) | SEP ho uvádí jako platonika; spor je předmětem kroku 6 |
+| Cesta 8 má Plútarcha mezi filozofy (`filozofove`), takže ho ukazuje přehled cesty | Ve Sporu mluví za jednu stranu; přehled má říct, koho student potká |
+| Schéma Sporu dál dovoluje stranu jen s označením, obsah ji teď nepoužívá | Je otestovaná a popsaná; odebrat ji může revize |
+
 ## 8. 10. 2026: Cesta 8 a stránka otázky 3 (P8)
 
 | Rozhodnutí | Důvod |

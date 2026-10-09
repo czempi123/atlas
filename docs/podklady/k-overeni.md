@@ -523,3 +523,15 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 | Výroky připisované Senekovi | Tabulka z podkladového listu v listu pro učitele pořád není. | Doplnit při revizi. |
 | Rok na fotografii (stránka otázky 3) | 1926 je sto let před rokem vydání. | Při každé revizi posunout. |
 | Řádek pomoci | Znění říká „i jako chat“; chat má hodiny 9–13 a 15–19. Na přehledu cesty stojí řádek pod úvodem, ne přímo pod počtem kroků (ten je v hlavičce stránky). | Kdyby to autor chtěl jinak, upravit šablonu přehledu. |
+
+### Plútarchos v datech (9. 10. 2026)
+
+| Co | Stav | Co s tím |
+| --- | --- | --- |
+| Roky | SEP: asi 45–120; narozen mezi lety 45 a 47, zemřel po roce 119. Britannica: asi 46, po 119. V datech 45 a 120, obojí přibližně. | Stačí; v textu vždy „asi“. |
+| Kněz v Delfách | SEP: zastával v Delfách různé úřady včetně kněze Apollónova. Od kdy a jak dlouho, heslo neříká. | Jen „byl knězem v Delfách“, bez let. |
+| Trojnožka | Diodóros XVI, 26, 4–5 (anglicky, Loeb): pro věštkyni zhotovili zařízení o třech podpěrách, na které vystupuje. Britannica to má jen v popisku obrazu. Řecký text jsem nečetl. | Věta atributu říká jen tolik; při revizi porovnat s řečtinou. |
+| Chairóneia | Souřadnice z Pleiad (540701: 22.841, 38.494). Dnešní jméno „Cheronia“ je můj přepis novořeckého Χαιρώνεια. | Ověřit český přepis dnešního jména. |
+| Platón → Plútarchos | SEP ho uvádí jako platonika; co z Platóna vykládal, jsem v hesle nečetl, vztah je proto bez poznámky. | Doplnit poznámku, kdyby Plútarchos dostal víc než medailonek. |
+| „Přel se s Epikúrovým učením“ | SEP jmenuje tři spisy proti epikurejcům; čten je jen Že podle Epikúra nelze žít příjemně (kap. 20 a 25–31). | Stačí. |
+| Strana Sporu bez osoby | Ve schématu, v testu dat a v `docs/design.md` zůstala, obsah ji nepoužívá. | Revize: nechat, nebo odebrat. |

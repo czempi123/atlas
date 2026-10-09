@@ -29,7 +29,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Otázka na vlastní selhání nebo bolestnou chvíli nemá pole na psaní: Volba s `bezDuvodu: true` uloží jen zvolenou možnost a text kroku říká „Nikam ji nepiš“.
 - Vlastní karta v Roztřiď: zpětná vazba se ptá, proč ji student dal do koše, ne jak moc si jí je jistý. U karty s něčím bolestným to zní jako pochybnost o tom, co zažil.
 - Kde by vlastní karta byla zpověď (strachy ze smrti), blok ji nemá: student třídí cizí věty a text to říká.
-- Strana Sporu, za kterou mluví autor mimo data (Plútarchos), má jen `oznaceni` a prázdnou minci; cizí mince by tvrdila, že mluví někdo jiný.
+- Autor, který ve Sporu mluví za jednu stranu, patří do dat aspoň jako medailonek s atributem (Plútarchos): prázdnou minci vedle plné autor 9. 10. 2026 odmítl. Strana jen s `oznaceni` zůstává pro nouzi; cizí mince by tvrdila, že mluví někdo jiný.
 
 ## Celek
 

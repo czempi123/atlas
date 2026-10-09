@@ -308,7 +308,7 @@ Ověřeno na webech 8. 10. 2026: Linka bezpečí 116 111, „volej kdykoliv a zd
 
 ## Tvrzení: cesta 8 „Proč se bát smrti?“
 
-Období 2, velká otázka 3. Filozofové cesty: Epikúros, Lucretius, Seneca. Proti nim Plútarchos (v datech není; ve Sporu jako označení) a Aristotelés; vedle nich Sókratés a Platón.
+Období 2, velká otázka 3. Filozofové cesty: Epikúros, Lucretius, Seneca. Proti nim Plútarchos (od 9. 10. 2026 v datech jako medailonek; do té doby ve Sporu jen jako označení) a Aristotelés; vedle nich Sókratés a Platón.
 
 ### Vstupní příběh: co prameny opravdu říkají
 
