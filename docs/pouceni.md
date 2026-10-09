@@ -6,7 +6,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 
 - Shrnutí pramene drží rozdíly, které pramen dělá. „Asi“ zůstává „asi“ a doporučená formulace není silnější než tvrzení v podkladech.
 - U dialogu řekni, kdo mluví: „Platón nechává Sókrata vyprávět…“. Názor, kterému mluvčí sám nevěří, mu nepřipisuj.
-- Co s příběhem děláme my, nepřipisuj filozofovi. Spojovací věta netvrdí spor ani otázku, které nebyly.
+- Co s příběhem děláme my, nepřipisuj filozofovi. Spojovací věta netvrdí spor ani otázku, které nebyly. Ani scéna Sporu: „z té věty udělal námitku“ tvrdí, že jeden autor četl druhého; „stejnou námitku vedl“ ne.
 - Co stojí jen na jednom sporném prameni, říká text s větou o prameni; blok k tomu nemá oddíl Co udělal.
 - Shrnutí studie drží i to, co měli účastníci dělat a co vědci změnili. Výhrady patří do zpětné vazby; pokus „zkoušel“, ne „ukázal“.
 - Výsledek pokusu se dvěma skupinami je rozdíl proti srovnávací skupině, ne „než dřív“. Ověř ve studii, s čím se srovnává, i když podklady nabízejí hotovou větu.
@@ -35,7 +35,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 
 - Tentýž citát a tentýž doložený detail nejvýš dvakrát v celku. Scéna z portrétu se v cestě neopakuje doslova; cesta přitom musí stát i bez portrétu.
 - Úvodní případ stránky otázky je jiného druhu než nový případ cesty.
-- Každý hlas na stránce otázky se pozná a nezmenšuje se to, čím se liší. Odpověď hlasu má nejvýš dvě věty.
+- Každý hlas na stránce otázky se pozná a nezmenšuje se to, čím se liší. Odpověď hlasu má nejvýš dvě věty. Výklad u hlasu ověř v tomtéž díle a místě, ze kterého je citát; myšlenka odjinud (Seneca, Dopisy 93, 2 u citátu z Dopisu 61) dostane svůj pramen a jméno autora, ne školy.
+- Když poslední krok slíbí, že každá odpověď má zastánce, projdi možnosti prvního bloku jednu po druhé; shrnutí možností z minulého kroku jmenuje všechny, i tu, kterou volí věřící student.
 - Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec. Spojenec je jiný myslitel: když námitce přitaká jen filozof cesty („to přiznal sám“), promění se v souhlas s ním.
 - Čtyři citáty za sebou student přeskakuje.
 - Citát, který končí obrazem, jemuž se celek vyhýbá (spánek a klid v celku o smrti), dostane v datech kratší podobu s vlastním id; komponenta Citát zkracovat neumí a ruční opis by obešel data.
@@ -51,6 +52,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Celek 4: jeskyně nesmí studentovi lichotit, že on vidí a ostatní spí.
 - Celek 6: první obrazovku čti i očima studenta, kterému někdo zemřel nebo umírá, studenta vážně nemocného a studenta s myšlenkami na smrt. Věta, která srovnává šťastné s nešťastnými („smrt bere víc šťastným“), říká tomu, komu je zle, že on moc neztratí: zůstane z ní jen první půlka. Věta, která nechává otevřené, jestli je lepší žít, nebo zemřít, do cesty nepatří, ani když je to věta o nevědění.
 - Argument, který o studentově bolesti nemluví (věta o mrtvém u toho, kdo truchlí), dostane větu, že o něm není, na téže obrazovce.
+- Argument o konci vnímání piš souměrně („nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“): „nezbude nikdo, komu by mohlo být zle“ a „nebude to bolet“ čte student, kterému je zle, jako úlevu.
+- Stupňování v citátu („čím šťastnější, tím víc“, „nejvíc stojí za to žít“) čti i obráceně: je to totéž srovnání šťastných s nešťastnými, jen schované u autority.
 
 ## Co se skládá z dat
 

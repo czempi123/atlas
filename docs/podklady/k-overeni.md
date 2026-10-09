@@ -535,3 +535,23 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 | Platón → Plútarchos | SEP ho uvádí jako platonika; co z Platóna vykládal, jsem v hesle nečetl, vztah je proto bez poznámky. | Doplnit poznámku, kdyby Plútarchos dostal víc než medailonek. |
 | „Přel se s Epikúrovým učením“ | SEP jmenuje tři spisy proti epikurejcům; čten je jen Že podle Epikúra nelze žít příjemně (kap. 20 a 25–31). | Stačí. |
 | Strana Sporu bez osoby | Ve schématu, v testu dat a v `docs/design.md` zůstala, obsah ji nepoužívá. | Revize: nechat, nebo odebrat. |
+
+### Po P10 (revize celku 6)
+
+9. 10. 2026. Záznam je v `docs/revize/celek-6-2026-10-09.md`. Vyřízeno: linky pomoci ověřeny na webech znovu (Linka bezpečí 116 111, nonstop, chat 9–13 a 15–19; Linka první psychické pomoci 116 123; Poradna Vigvam 606 160 646, pracovní dny 8–17, ručně v prohlížeči); čísla a formulace studie Goransonové a kol. v plném textu (i výhrada autorů „blogů nebylo mnoho a pisatelé se vybrali sami“ a věta o těch, kdo stojí vedle); Seneca, Dopisy 30, 54, 1–5 a 61 latinsky (The Latin Library); Diodóros XVI, 26, 4–5 anglicky; heslo Death ve SEP k Nagelovi. Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Hlas Seneky na stránce otázky 3 | Věta „podle stoiků nerozhoduje on“ v Dopise 61 není. 61, 4: *satis instructa vita est, sed nos in instrumenta eius avidi sumus; deesse aliquid nobis videtur et semper videbitur*. Myšlenka o osudu je v Dopise 93, 2: *ut diu vivas fato opus est, ut satis, animo* (čteno 93, 1–4). | Nález 4 revize: autor zvolí znění; při druhé možnosti doplnit Dopis 93 do pramene `seneca-epistulae-smrt`. |
+| Dopis 61 celý | Je o připravenosti zemřít (*paratus exire sum*; *bene mori est libenter mori*; *mortem plenus exspecto*). Stránka z něj má jen 61, 4. | Do listu pro učitele (nález 9). |
+| Dopis 30 celý | Kromě toho, co cesta používá, má lidi, kteří si smrt přejí (30, 12), kteří život přerušují (30, 15), a radu myslet na smrt stále (30, 18). „Vesele“ stojí na *alacer animo* a *hilarem* (30, 3), „tolik nepomáhaly“ na *neque aeque profuerunt* (30, 7). | Do listu pro učitele (nález 9). |
+| Thomas Nagel | SEP (čteno znovu): Nagel odpověděl, že člověk nemohl vzniknout o hodně dřív, kdežto existovat déle mohl; odpověď stojí na sporných předpokladech o původu člověka, „jak Nagel přiznává“. Článek z roku 1970 zůstává nečtený. | Věta v cestě stačí; před druhou větou o Nagelovi článek přečíst. |
+| Plútarchos a Lucretius | V anglickém textu spisu Že podle Epikúra nelze žít příjemně se Lucretius nevyskytuje. | Nález 3: scéna Sporu nemá tvrdit, že Plútarchos vyšel z Lucretiovy věty. |
+| Aristotelés, Etika Nikomachova 1117b10–13 | Citát končí „takovému člověku nejvíc stojí za to žít“ (*τῷ τοιούτῳ γὰρ μάλιστα ζῆν ἄξιον*). | Nález 2: autor rozhodne o kratší podobě s vlastním id. |
+| Platón, Faidón 61c–62c | Sókratés tam říká, že si člověk život brát nemá. V podkladech místo není a v tomto kroku jsem ho nečetl. | Ověřit v prameni; pak do listu pro učitele mezi místa, která táhnou opačným směrem. |
+| Diodóros XVI, 26 | Řecký text nečten ani při revizi. | Stačí; věta atributu říká jen to, co anglický překlad. |
+| Atribut Plútarcha | Věta stojí na SEP (kněz v Delfách) i na Diodórovi (trojnožka); pole `zdroj` jmenuje jen `sep-plutarch`, Diodóros je v seznamu pramenů osoby. | Beze změny, dokud atribut neumí dva prameny. |
+| Přesýpací hodiny u Seneky | Atribut je z P6 („zůstává“). Přesýpací hodiny nejsou z antiky doložené (běžný údaj, neověřoval jsem; Seneca píše o vodních, 24, 20) a mince stojí na přehledu cesty o smrti; podklady je z kresby vyloučily. | Na vědomí autorovi; měnit jen s cestou o čase. |
+| České překlady | Nesrovnáno. | Podle doporučení revize není podmínkou schválení; šest míst k porovnání je v záznamu. |
+| Dopis 70, celý Media Guide NÚDZ, doporučení MŠMT | Stále nečteno; list pro učitele to u Dopisu 70 říká. | Beze změny. |
+

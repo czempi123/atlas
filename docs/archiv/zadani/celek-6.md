@@ -128,3 +128,61 @@ Osnovu mi neposílej a na schválení nečekej, kromě kresby. Commituj česky p
 ```
 
 Provedeno 8. 10. 2026. Autor zadání poslal se třemi prázdnými řádky; platilo tedy: vstup cesty bez obrázku, portrét Seneky a jeho deska beze změny. Co vzniklo, je v oddíle „Po P8“ plánu větve.
+
+## P10: Revize celku 6
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Revize čte cestu o smrti očima studentů, kterých se bolestně týká, a hlídá znění jednotlivých vět proti pramenům; na menším modelu ani s nižším úsilím bych ji nepouštěl. Zadání počítá s úsporným čtením a s tím, že se nálezy průběžně neschvalují. Řádky k doplnění nemá: autor na otevřené body odpověděl 9. 10. 2026 a odpovědi jsou v zadání.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-6. Portrét Seneky, cesta 8, kresba Zrcadlo času a stránka otázky 3 jsou v ní hotové a commitnuté.
+
+Co jsem 9. 10. 2026 rozhodl: kresba Zrcadlo času zůstává, poslední věta Obrany zůstává vynechaná, dílo pod citáty z posledního dopisu je „Dopis z posledního dne“, blok s oslavou v kroku 5 zůstává, vstup cesty je bez obrázku a délka 32 minut mi nevadí. Plútarchos je od téhož dne v datech jako medailonek s trojnožkou.
+
+Udělej revizi celku 6 podle skillu atlas-revize. Do celku patří:
+- portrét Seneky (src/content/osobnosti/seneca.mdx a bloky seneca-*.yaml);
+- cesta 8 „Proč se bát smrti?“ (přehled, devět kroků, bloky cesta8-*.yaml, Odkryj v kroku 3, případ pro Návrat);
+- kresba Zrcadlo času v kroku 4 (src/lib/zrcadlo.ts, src/components/ostrovy/Zrcadlo.svelte);
+- stránka velké otázky 3 „Má život smysl?“ (src/content/otazky/ma-zivot-smysl.mdx);
+- list pro učitele ucitel/celek-6.md;
+- propojení: hlavičky profilů Seneky a Epikúra, Kam dál portrétu, přehled otázek, Lidé, Domů; nové vstupy u Platóna, Aristotela a Epiktéta (hlasy otázky 3);
+- co se od P8 chová jinak v celém atlasu: Plútarchos v datech (mapa, Lidé, Doba a lidé u Epikúra a Platóna, současníci Seneky, Epiktéta a Marca Aurelia), přehled cesty bez odkazu na osobnost, která nemá stránku; schéma Sporu dál dovoluje stranu bez osoby, obsah ji nepoužívá.
+
+Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md, docs/pouceni.md;
+- v docs/plany/celek-6.md tabulku stavu a oddíly „Po P7“ a „Po P8“;
+- docs/podklady/celek-6-proc-se-bat-smrti.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (Citlivá místa celá a pozorně; Tvrzení: Seneca; Tvrzení: cesta 8; Velká otázka 3; Citáty), ne celý list naráz;
+- z docs/podklady/k-overeni.md oddíl Celek 6 s částmi Po P7, Po P8 a Plútarchos v datech; z docs/rozhodnuti.md záznamy z 8. 10. 2026 k portrétu Seneky (P7) a k cestě 8 (P8) a záznam z 9. 10. 2026;
+- v docs/design.md oddíly Cesta, Velká otázka, Spor a z Komponent Kresbu s pohybem (jen Rám a Zrcadlo času);
+- jako vzor záznamu jen začátek docs/revize/celek-5-2026-10-08.md (formát a hloubka nálezů).
+Podklady a obsah celků 1 až 5 jinak nečti; z profilu Epikúra a portrétů Sókrata, Platóna a Aristotela jen místa, na která celek 6 odkazuje.
+
+Na co se dívej zvlášť:
+
+1. Student, kterého se téma bolestně týká. Projdi portrét, cestu a stránku otázky třikrát: jako student, kterému někdo zemřel nebo umírá, jako student vážně nemocný a jako student s myšlenkami na smrt. Čti první obrazovku každého kroku a kapitoly na telefonu, všechny zpětné vazby (i zavřené „Co kdybys zvolil jinak?“), text pod kresbou, kartu Zkus to žít a Návrat. Nikde způsob smrti, obhajoba dobrovolné smrti, „klid“, „spánek“ nebo „vysvobození“ jako to, co čeká, „o nic nejde“, srovnání šťastných s nešťastnými ani otázka na vlastní ztrátu s polem na psaní. Zvlášť: krok 5 (truchlící hned nahoře), krok 7, krok 8 a kapitoly 01 a 06 portrétu.
+2. Na který strach argument míří. U každého argumentu cesty musí stát, na který z pěti strachů míří, a musí to stát dřív, než to student namítne. O smrti blízkých: říká cesta nahlas, že o ní Epikúrova věta nemluví, a kdo je na straně toho, kdo truchlí?
+3. Znění proti pramenům. Epikúros: „netýká se nás“, ne „nic není“; „zvykej si“; adresát „přítel“; nemoc bez těla; škola netvrdila, že nebolí. Lucretius: jen první půlka řeči Přírody; odpověď truchlícím jen o mrtvém. Seneca: záchvat bez dušení, „přejde asi do hodiny“; starý přítel beze jména; přiznání z Dopisu 63. Aristotelés: věta je z výkladu o statečnosti a Epikúrovi neodpovídal. Sókratés: jen Obrana 40c, nerozhodl. Platón: „krásné riziko“ s výhradou. Porovnej každou větu s tabulkami podkladů; „asi“ zůstává „asi“.
+4. Plútarchos. Je z textu jasné, kdo to je, že psal o staletí později a že řeč pronáší jeho přítel? Jsou jeho věty parafráze, ne citáty? Sedí medailonek v datech s prameny (asi 45–120, Chairóneia, kněz v Delfách, trojnožka podle Diodóra) a je trojnožka na minci čitelná na telefonu i na notebooku?
+5. Spor na telefonu. Epikúros stojí první: odpovídá jen na to, co už zaznělo? Poslední slovo má Plútarchos („dvojí metr“): má na ně Epikúros odpověď ve svých argumentech?
+6. Kresba Zrcadlo času. Říká text kroku i text pod kresbou totéž co ona? Je poctivé, že se budoucnost překlápí na minulost (Lucretius to říká obráceně)? Nevypadá pohled Námitka jako odhad délky života? Je vpravo opravdu bez čísla? Jde všechno klávesnicí, jsou popisky čitelné na telefonu, mění se stav hned při omezeném pohybu?
+7. Studie z roku 2017. Čísla a formulace porovnej s podklady a s oddílem Po P8 v k-overeni.md: „zkoušela“, dvě skupiny, věta autorů o těch, kdo stojí vedle, v hlavním textu; výhrady jen ve zpětné vazbě; druhá polovina studie nikde.
+8. Věřící student. Žádná zpětná vazba nesmí naznačit, že víra je útěk nebo nevíra odvaha. Má věřící student v posledním kroku zastánce a ví to už od třetího kroku?
+9. Kdo dá za pravdu komu. Najde student, který se bojí a argument mu nepomáhá, jiného myslitele než filozofy cesty? A ten, kdo se nebojí, kdo neví a kdo věří?
+10. Opakování. Tentýž citát a tentýž doložený detail nejvýš dvakrát v celku (seznamy citátů jsou v oddílech Po P7 a Po P8). Projdi portrét, cestu a stránku otázky 3 za sebou, jak je projde student. Co portrét řekl (věta z Dopisu 78, syn, Paulina, večerní zkouška, Senekova smrt), cesta neopakuje.
+11. Stránka otázky 3. Pozná se každý z pěti hlasů? Má odpověď nejvýš dvě věty? Nevkládá stránka antickým autorům do úst „smysl života“? Je úvodní případ jiného druhu než případy cesty? Senekova myšlenka („podle stoiků nerozhoduje on“) je výklad: potvrď ji v Dopise 61, nebo navrhni jinou.
+12. Každá kombinace. Všechny možnosti tří Voleb cesty, osm karet ve čtyřech koších, dvě podmínky oslavy se třemi odpověďmi, Odkryj, Spor z obou stran, tři odpovědi Návratu; bloky portrétu.
+13. Co se skládá z dat. Vstupy v hlavičkách (Seneca, Epikúros, Platón, Aristotelés, Epiktétos), Doba a lidé u Seneky, Epikúra a Platóna (nově s Plútarchem), Plútarchova karta v Lidech a bod na mapě, Kam dál, řádek cesty u otázky 3 v přehledu, karty v Lidech (Lucretius cestu na kartě nemá), přehled cesty (Lucretius bez odkazu), Domů.
+14. List pro učitele. Je v něm všechno, co studentský text vynechává, i s důvodem? Odpovídá cestě (čísla kroků, znění)? Čísla linek pomoci ověř znovu na jejich webech; Poradnu Vigvam ručně.
+15. Délka. Cesta má na štítku 32 minut (node scripts/slova-cesta.mjs proc-se-bat-smrti) a tak ji chci. Řekni jen, co je v ní dvakrát; nezkracuj.
+16. Strojový text. Všechny studentské texty celku přečti ještě jednou jen podle oddílu „Ať text nezní jako stroj“.
+
+Otevřené body, ke kterým chci doporučení: věta o Nagelovi (nechat / zmírnit / přečíst článek); odkaz na cestu 8 v textu profilu Epikúra; strana Sporu bez osoby ve schématu (nechat / odebrat); české překlady citátů; tabulka výroků připisovaných Senekovi v listu pro učitele.
+Rozhodnuté, neotvírej: slovo „sebevražda“ jen o Senekově smrti a s rozkazem; věta z Dopisu 78 v kapitole o mládí; řádek pomoci jen jako informace na okraj; obhajoba dobrovolné smrti jen učiteli; nové osoby do dat teď ne (Plútarchos je výjimka a zůstává); vstup cesty je dopis, ne lůžko, a bez obrázku; kresba Zrcadlo času, vynechaná věta Obrany 42a, blok s oslavou a délka cesty; výřez hermy, tři karty myšlenek a Lucanovo jméno v portrétu.
+
+Drobnosti oprav rovnou (překlep, sazba, věta přes 25 slov, test, který hlídá opravenou větu). Zásadní nálezy neopravuj: seřaď je podle dopadu, ke každému napiš návrh opravy a zapiš je do docs/revize/celek-6-<datum>.md. Řekni verdikt: schválit / po opravách / přepracovat.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen tests/e2e/cesta.spec.ts:73, pusť ten soubor znovu samostatně). Snímky cesty na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs) si prohlédni.
+
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-6.md oddíl „Po P10“ (verdikt, nálezy, co jsi opravil, co čeká na mě) a připrav tam zadání oprav s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-6.md, nová poučení připiš jednou větou do docs/pouceni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš verdikt, nálezy seřazené podle dopadu a co čeká na mé rozhodnutí.
+```
+
+Provedeno 9. 10. 2026. Verdikt po opravách: žádný blokující nález, pět důležitých a pět drobných, čtyři drobnosti opraveny rovnou. Záznam je v `docs/revize/celek-6-2026-10-09.md`, stav a zadání oprav v oddíle „Po P10“ plánu větve.
