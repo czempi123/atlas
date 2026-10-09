@@ -125,6 +125,8 @@ Pole `kdo` a `proc` v `lide.yaml` („psal v úsečných a záhadných větách�
 
 **Rezerva (neověřeno v úplnosti):** „společný svět a soukromé světy“ (zlomky B1, B2, B89: řeč je společná, a lidé přesto žijí, jako by měl každý rozum jen pro sebe). Začátek B1 a B50 jsem viděl u Hippolyta; B2 a B89 jsem neotevřel. Kdyby autor chtěl třetí myšlenku, je třeba je ověřit.
 
+**Zkus to žít (návrh karty profilu): „Co drží napětím“.** Cvičí myšlenku 2 (luk a lyra, `herakleitos-b51`). „Hledej tento týden tři věci, které drží jen proto, že se v nich dvě síly přetahují: struna na kytaře, stan se šňůrami, napnutá síť na hřišti. U každé si řekni, co by se stalo, kdyby jedna strana povolila. Na konci týdne si zapiš tu, která tě překvapila.“ Karta zůstává u věcí. Na lidi ji nepřenášet („hádka drží přátelství“): student, kterému doma nebo ve třídě někdo ubližuje, by v tom četl, že střet je v pořádku. Karta cesty je jiná (věc, která je táž, ačkoli se v ní vyměnilo všechno).
+
 **Věta pro konec profilu a pro otázku 5:** „Hledal jsem sám sebe“ (`herakleitos-b101`) a „Hranice duše nenajdeš…“ (`herakleitos-b45`). Plútarchos první z nich klade vedle delfského Poznej sám sebe a vedle Sókrata (Proti Kólótovi 1118c); to je most ke stránce otázky 5.
 
 ### Co do profilu nepatří, protože to atlas už říká nebo řekne
@@ -201,6 +203,8 @@ Bohyně svou řeč o pravdě výslovně ukončí a ohlásí „klamný řád slo
 - **Nejsilnější námitka, kterou nese jiný myslitel:** *Aristotelés* (Fyzika I, 7; `fyzika-i-7`): neříkáme „z člověka vznikl vzdělaný“, ale „člověk se stal vzdělaným“. Při každé změně něco zůstává (člověk) a něco se vymění (nevzdělanost za vzdělanost); změna tedy není vznik z ničeho. A *Démokritos* (na stránce otázky 6: částice nevznikají, jen se přeskupují); stačí odkaz.
 - **Druhé čtení** (viz výše) patří sem jako závěr kapitoly, ne jako oprava.
 
+**Zkus to žít (návrh karty profilu): „Věty o ničem“.** Cvičí myšlenku 1 i Platónovu odpověď. „Sbírej tento týden věty a nápisy, které mluví o tom, co není: Nikdo tu není. Žádné nové zprávy. Nic se nestalo. U každé si řekni, o čem doopravdy mluví (o třídě, ve které teď nejsou lidé; o telefonu). Na konci týdne si zapiš jednu, u které jsi to říct nedokázal.“ Příklady brát z nápisů, zpráv a vtipů. Co myslí spolužák, když řekne „nic mi není“, karta nerozebírá a P7 to do příkladů nedá.
+
 **Rezerva:** „Dvojí řeč“ (pravda × mínění smrtelníků) jako samostatná myšlenka. Nedoporučuji: překrývá se s cestou 3 a s portrétem Platóna (vědění a mínění).
 
 ### Co do profilu nepatří, protože to atlas už říká nebo řekne
@@ -211,7 +215,7 @@ Bohyně svou řeč o pravdě výslovně ukončí a ohlásí „klamný řád slo
 
 ## Reagoval jeden na druhého?
 
-**Co je jisté.** Hérakleitos ve dochovaných zlomcích jmenuje ty, s kým nesouhlasí (Hésioda, Pýthagoru, Xenofana, Hekataia, Homéra, Archilocha); **Parmenida mezi nimi není** (IEP to říká výslovně; sám jsem četl jen zlomky u Diogena a Hippolyta, ne všechny). Parmenidés v dochovaných verších nejmenuje nikoho.
+**Co je jisté.** Hérakleitos v dochovaných zlomcích jmenuje ty, s kým nesouhlasí (Hésioda, Pýthagoru, Xenofana, Hekataia, Homéra, Archilocha); **Parmenida mezi nimi není** (IEP to říká výslovně; sám jsem četl jen zlomky u Diogena a Hippolyta, ne všechny). Parmenidés v dochovaných verších nejmenuje nikoho.
 
 **Kdo tvrdí, že Parmenidés odpovídá Hérakleitovi.** Opírá se to o verše B6, 4–9 (`parmenides-b6`): smrtelníci „o dvou hlavách“, pro které „být a nebýt je totéž i není totéž“ a jejichž cesta „se ve všem obrací zpátky“ (παλίντροπος). Totéž vzácné slovo má Hérakleitův zlomek o luku a lyře (B51, jak ho cituje Hippolytos) a „jsme i nejsme“ je znění B49a. SEP (Graham): Hérakleitos Parmenida „možná podnítil“ k opačné filozofii a odkazuje na A. Patina (1899) a na Grahama samého (2002); IEP: Parmenidés jeho slova „snad“ vrací ozvěnou a „pravděpodobněji“ psal po něm. Heslo SEP o Parmenidovi (Palmer) to netvrdí; zmiňuje Hérakleita jen mezi staršími mysliteli, ke kterým mohl být Parmenidés kritický.
 
