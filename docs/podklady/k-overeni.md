@@ -24,7 +24,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | ~~Epikúros~~ | ~~místo narození~~ | **Vyřízeno 1. 10. 2026 (celek 2):** DL X, 1 rodiště neuvádí, jen že byl athénský občan z Gargéttu a vyrůstal na Samu. | Místo narození v datech není a ve studentském textu se neuvádí („vyrůstal na Samu“). Pobyt na Samu opraven na „do 323“ a přidán pobyt v Athénách 323–321 (efébie), oboje podle DL X, 1 (`celek-2-jak-zit.md`). |
 | ~~Epiktétos~~ | ~~roky v Římě a v Níkopoli~~ | **Vyřízeno 2. 10. 2026 (celek 3):** Gellius XV, 11 a Suetonius, Domitianus 10, 3 rok neuvádějí; Tacitus, Plinius a Dio spojují vykázání s procesy roku 93; SEP „Epictetus“ a IEP mají 89, Hieronymova kronika 95 („znovu“). | V datech „asi 93“ (`priblizne`), ve studentském textu bez roku (`celek-3-co-mam-v-rukou.md`, Rozpory). Autor může přepsat na 89. |
 | Marcus Aurelius | místo smrti | Britannica: zemřel ve Vindoboně nebo v Sirmiu. **Carnuntum vyřízeno 2. 10. 2026 (celek 3):** údaje „u Kvádů na Granui“ a „v Carnuntu“ přečteny v řeckém textu (Leopold, konec knih I a II); Carnuntum je v datech jako tažení asi 172–174 (Britannica „Carnuntum“). | Místo smrti nechat bez záznamu. |
-| Seneca | pobyt v Egyptě | SEP stránka nepodala. | Doplnit z Consolatio ad Helviam 19, 2 po ověření. |
+| ~~Seneca~~ | ~~pobyt v Egyptě~~ | **Vyřízeno 8. 10. 2026 (celek 6):** Útěcha Helvii 19, 2–6 pobyt neříká; říká, že teta ošetřovala Seneku v dlouhé nemoci, že její muž spravoval šestnáct let Egypt a že Seneca byl svědkem plavby, na které strýc zemřel. IEP: „má se za to“. | Do dat se nepřidává; ve studentském textu nejvýš „nejspíš“. |
 | Cicero | místo narození (Arpinum), studia v Athénách a na Rhodu, vyhnanství, smrt u Formií | IEP stránka nepodala. | Doplnit z Plútarchova Cicerona. |
 | Plótínos | místo narození | Místo smrti doplněno (Minturnae v Kampánii, Porfyrios, Život Plótínův 2). Lykopolis uvádí až Eunapios, ne Porfyrios. | Doplnit Lykopolis, pokud stačí Eunapios. |
 | Pyrrhón | tažení s Alexandrem | SEP: „údajně“ doprovázel Alexandra do Indie. | V datech jen jako „vypráví se“ v textu, bez místa. |
@@ -43,7 +43,7 @@ Odhady let pro Hérakleita, Parmenida, Démokrita, Zénóna z Eleje, Anaximena, 
 | ~~Prótagorás ↔ Sókratés~~ | **Vyřízeno 1. 10. 2026:** v datech jako `znali-se`, `tradovany: true`, pramen Platón, Prótagorás (`docs/podklady/celek-1-pravda.md`). Polemika o pravdě (Theaitétos) je Platónova konstrukce, do vztahů nejde. |
 | Aspasie ↔ Sókratés | Britannica zmiňuje jen Aischinův dialog Aspasie. |
 | Leukippos → Démokritos | Leukippos zatím není v datech (vztah SEP: „druh nebo učitel“). |
-| Démokritos → Epikúros (vliv textem) | Přes Nausifana; Nausifanés není v datech. |
+| ~~Démokritos → Epikúros (vliv textem)~~ | **Vyřízeno 8. 10. 2026 (celek 6):** v datech jako `vliv-textem` s poznámkou „atomy a prázdno“ (SEP; Cicero, O nejvyšším dobru a zlu II, 102; Diogenés Laertios X, 2). Nausifanés zůstává mimo data. |
 | Ammónios Sakkás → Plótínos, Theón → Hypatia, Hypatia → Synesios | Učitelé a žáci zatím nejsou v datech (prameny: SEP Plotinus, BEA Hypatia). |
 
 ## Citáty a překlady
@@ -213,8 +213,8 @@ Autorské, bez historického nároku: šest karet v kroku 2 (spánek, pizza s ka
 | ~~Obrázek Epiktéta~~ | **Vyřízeno 2. 10. 2026:** autor zvolil rytinu s berlou (Oxford 1715). Soubor je z World History Encyclopedia (uvádí Public Domain), protože Commons nástroj neotevře; vydání knihy dokládá katalog Eton College. | V datech jako `epiktetos-1715`. Jména kreslíře a rytce (značka MB) nejsou doložena odborným zdrojem, popisek je neuvádí. Původ řeckého dvojverší pod obrazem neověřen. Výřez zkontrolovat v P7. |
 | Antická podobizna Epiktéta | Že žádná spolehlivá není, jsem odborným zdrojem nedoložil; v pěti otevřených sbírkách není. | Popisek obrázku to netvrdí, říká jen, čí představa to je. |
 | Carnuntum | V datech bez ID z Pleiad, souřadnice přibližné. | Doplnit s ostatními místy. |
-| Stoický týden | Večerní ohlédnutí (Seneca, O hněvu) a představa nejhoršího nejsou ověřeny; patří jiným celkům. | Ověřit, až týden vznikne. |
-| Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). | Vztah `polemika` do dat až s cestou 8 nebo s profilem Démokrita. |
+| Stoický týden | **Večerní ohlédnutí vyřízeno 8. 10. 2026 (celek 6):** O hněvu III, 36 ověřeno v latinském textu; tři otázky jsou Sextiovy, zvyk Senekův (citáty `seneca-ira-iii-36`, `seneca-ira-iii-36-otazky`, `seneca-ira-iii-36-odpoustim`). Představa nejhoršího ověřena není. | Představu nejhoršího ověřit s cestou 33. |
+| Epikúros × Démokritos | Démokrita jako protivníka jmenuje jen Cicero (O osudu 23). **8. 10. 2026 (celek 6):** cesta 8 polemiku nepotřebuje. Diogenés Laertios má jen výčet nepřátelských pomluv (X, 8) a zprávu, že se Epikúros prohlašoval za samouka (X, 13); Cicero jinde píše, že Démokrita „jediného následoval“ (O nejvyšším dobru a zlu II, 102). Vliv textem je v datech. | Vztah `polemika` do dat až s celkem, který otevře otázku 4 u atomistů, nebo s profilem Démokrita. |
 | ~~`docs/styl.md`, dvojice 3~~ | **Vyřízeno 2. 10. 2026:** na pokyn autora opraveno na „Cassiovy písemnosti dal zničit nepřečtené“. | — |
 
 Vědomě vynecháno nebo jen pro učitele: „dveře jsou otevřené“ (Rozpravy I, 25, 18–20), místa o smrti dítěte (Rukojeť 3 a 11; Rozpravy III, 3, 15; III, 24, 85–88; Hovory XI, 34), část Hovorů VI, 13 o tělesné lásce, Ciceronova výtka „jen slova“ (O nejvyšším dobru a zlu IV, 72), Karneadés jako pátý hlas otázky 4.
@@ -447,3 +447,115 @@ Autorské, bez historického nároku: možnosti a zpětné vazby všech čtyř V
 | Kresba, šestý stav | Že by proud strhl neplavce i s lanem, je náš důvod, ne pramen ani ověřená rada záchranářů. | Rozhodne autor s potvrzením kresby (nález 9). |
 
 Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká „z knihy plastického chirurga z roku 1960“ a „jak dlouho se tvoří návyk, neměřil“; graf má křivky „Rychlý průběh“ a „Pomalý průběh“; šestý stav kresby má důvod (náš, ne z pramene). Spor cesty 3 končí odpovědí podle Metafyziky I, 1 (981a5–30), kterou podklady celku 5 ověřily řecky i anglicky. Otevřené zůstává: popisek odlitku (inv. I 246 ve Vídni) a případná fotografie Miezy pro vstup cesty 4.
+
+## Celek 6 „Proč se bát smrti?“ (P6)
+
+8. 10. 2026. Podklady jsou v `docs/podklady/celek-6-proc-se-bat-smrti.md`. Vyřízeno z dřívějších bodů: Senekův pobyt v Egyptě, vliv Démokrita na Epikúra a večerní ohlédnutí (řádky výše); Suilliovo obvinění je ověřeno u Tacita (Letopisy XIII, 42–43) a patří do portrétu jako výčitka, kterou Seneca slyšel za života. Dodatečně ověřeno v latinském textu: Suetonius, Caligula 53, 2 („písek bez vápna“) a Seneca, Dopisy 53, 4 („per aspera“). Otevřené zůstalo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| České překlady | Všech 65 citátů celku jsou vlastní převody; publikované překlady jsem neměl v ruce. | Před revizí P10 srovnat citáty, které studentský text použije (Seneca: B. Ryba; Tacitus: A. Minařík; Platón: F. Novotný; další podle toho, co autor má). |
+| Motiv Senekovy smrti | Autor ji čte jako sebevraždu na příkaz, kterou Seneca předešel popravě a následkům pro rodinu (8. 10. 2026). Tacitus ten zvyk popisuje obecně a pro dobu Tiberia (Letopisy VI, 29: pohřeb a platná závěť pro toho, kdo o sobě rozhodl sám); u Seneky ho neuvádí. Co se stalo se Senekovým majetkem, jsem nezjišťoval. | Ve studentském textu jen jako popis zákona, nebo vůbec (rozhodne autor); učiteli ano. |
+| Thomas Nagel, Death (1970) | Nečteno, jen SEP „Death“. | Ve studentském textu jednou větou bez citátu; před čímkoli dalším přečíst. |
+| Strach ze smrti a věk | Russac a kol. 2007 a Chopik 2017: čteny jen abstrakty; mladší osmnácti ve vzorku nebyli. | Před větou „nejvíc se báli nejmladší“ přečíst aspoň jednu studii celou. |
+| Goransonová a kol. 2017 | Čteno celé (PDF). | Čísla (25 blogů, 2 616 příspěvků, 597 z posledních dvanácti týdnů, 45 účastníků, 2,25 % proti 1,70 %) před P8 projít ještě jednou. |
+| „Pět věcí, kterých lidé před smrtí litují“ | Není výzkum (blog a kniha B. Wareové, 2011); knihu jsem nečetl, přehled H. Bastianové četl nástroj WebFetch. | Nepoužívat jako fakt. |
+| Cassius Dio | Čten jen anglicky ve výtahu (LacusCurtius). | Jeho verze Senekovy smrti a půjčka Britům jen učiteli. |
+| Seneca, Dopisy 70, 91 a 12, 10–11 | Nečteno. | Dopis 70 přečíst pro `ucitel/celek-6.md`, Dopis 91 s cestou 33. |
+| Senekovy tragédie | IEP jich uvádí osm; co z rukopisné tradice není jeho, jsem neověřoval. | Ve studentském textu jen „psal i tragédie“. |
+| Zemětřesení v Pompejích | Rok (62 nebo 63) a vzdálenost od výbuchu Vesuvu beru z běžných příruček. | Do studentského textu bez čísla. |
+| Datování spisů | Cicero (rok 45 př. n. l.), Plútarchos (kolem roku 100), Quintilianus, Diogenés Laertios: z běžných příruček. | Ve studentském textu „asi“. |
+| Otec Seneky | Že řečnictví učil, jsem neověřil. | Text říká „zabýval se řečnictvím“. |
+| „Non scholae, sed vitae discimus“ | Kdo a kdy Senekovu větu obrátil, jsem nezjišťoval. | Text říká jen „škola ji později obrátila“. |
+| Berlínská herma (SK 391) | Autor ji 8. 10. 2026 schválil. Rok nálezu 1813 četl nástroj WebFetch; záznam muzea uvádí „CC BY-NC-SA“ bez jména fotografa; snímek jsem neviděl. | Před stažením (P7) ověřit verzi licence a fotografa; do `public/obrazky/` kopii zmenšenou na 1280 px. |
+| Pseudo-Seneca | Podrobnosti (bronz z Herculanea 1754, ztotožnění roku 1598, dnešní domněnky) jen z Wikipedie. | Ve studentském textu nejvýš „dnes se má za to, že je to někdo jiný“. |
+| Příručky o bezpečném psaní | Z Media Guide NÚDZ jsem četl dvě karty; celý dokument a metodické doporučení MŠMT k sebevražednému chování (2023) jsou nečtené. | Přečíst před psaním `ucitel/celek-6.md`. |
+| Linky pomoci | Ověřeno na webech 8. 10. 2026: Linka bezpečí 116 111, Linka první psychické pomoci 116 123, Poradna Vigvam 606 160 646. | **Ověřit znovu při každé revizi celku.** |
+| Aristotelův „úkol člověka“ | Etiku Nikomachovu I, 7 jsem v tomto kroku znovu nečetl. | Ověřit v P8, jestli ho stránka otázky 3 použije. |
+| Doba a lidé | Čtyři nové vztahy (Epikúros, Kleanthés a Lucretius → Seneca; Démokritos → Epikúros). | V P7 přečíst na stránkách Seneky a Epikúra, že poznámky dávají smysl z obou stran. |
+| Skill `atlas-overeni` | Návrh doplňků je na konci podkladového listu. | Uložit do skillu, pokud je autor chce. |
+
+### Po P7 (portrét Seneky)
+
+8. 10. 2026. Vyřízeno: berlínská herma (verze licence 4.0 podle odkazu v záznamu na museum-digital; fotograf není uveden ani tam, ani v záznamu muzea, který má jen „Fotonachweis: Staatliche Museen zu Berlin, Antikensammlung“; rok nálezu 1813 a datování „2. čtvrtina 3. století“ jsem v záznamu muzea viděl sám, předloha Senekovy hlavy je tam „kolem roku 60“); Doba a lidé na stránkách Seneky a Epikúra (přečteno, poznámky dávají smysl z obou stran). Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Výřez hermy na desce | Druhý soubor z téže fotografie (jen Senekova hlava); autor o výřezu nerozhodoval. | Potvrdit, nebo vrátit desce celou fotografii. |
+| Licence hermy | Dovoluje jen nekomerční užití a úpravy pod stejnou licencí; plný text licence jsem nečetl a muzea jsem se neptal. | Na autorovi (viz podkladový list, Obrázky). |
+| Quintilianus X, 1, 125 | Tabulka Kdo to vypráví měla větu obráceně („Seneku četli skoro jen mladí“). Latinsky „solus hic fere in manibus adulescentium fuit“: mladí nečetli skoro nikoho jiného. Opraveno v podkladovém listu, portrét jde podle pramene. | Při srovnání s českým překladem zkontrolovat. |
+| Datování spisu O hněvu | V podkladech není; víme jen, že je věnován bratrovi. | Portrét neříká, kdy vznikl; kapitola o hněvu stojí mezi vyhnanstvím a dvorem bez letopočtu. Nepsat „z vyhnanství“ ani „po návratu“, dokud se neověří. |
+| O mírnosti a Britannikova smrt | Spis je podle SEP z roku 55 nebo 56 (Neronovi bylo osmnáct), Britannicus zemřel roku 55. Portrét řadí spis za vraždu a neříká „rok poté“. | Když bude potřeba pořadí tvrdit, ověřit měsíc Britannikovy smrti a Neronovy narozeniny. |
+| „Dlouho malovala Evropa Seneku jako vyhublého starce“ | Stojí na stránce Metropolitního muzea (busta „tehdy pokládaná za Seneku“, Rubens ji vlastnil) a na Wikipedii. | Text říká „dlouho“, ne staletí, a nejmenuje učence. Nezesilovat. |
+| Epiktétos a Neronův dvůr | Portrét Seneky opakuje větu z portrétu Epiktéta (pán patřil k mocným lidem Neronova dvora). Jestli byl Epiktétos v Římě už za Senekova života, podklady neříkají. | Nepsat „tehdy“ ani „v téže době“. |
+| „Skoro o čtyři sta let dřív“ | Aristotelés zemřel roku 322 př. n. l., dopisy jsou z let 62–65: asi 385 let (moje počítání). | Beze změny. |
+| Platónova zdvižená ruka (O hněvu III, 12) | Ověřený příběh, ve studentském textu vynechán: otrok potrestán byl. | Jen učiteli; kdyby ho chtěla cesta 33 nebo Stoický týden, tak s touhle větou. |
+| Vtip o cizí mrtvole (Dopisy 12, 3) | Vynechán; Feliciovo postavení text neříká. | Jen učiteli. |
+| Dopis 70, Media Guide NÚDZ celý, doporučení MŠMT | Nečteno ani v P7; list pro učitele stojí na podkladovém listu. | Přečíst před revizí P10, nebo říct v listu pro učitele, že o Dopise 70 mluví jen podle tématu. |
+| Citáty s vnitřními uvozovkami | Komponenta Citát přidává vnější „ “. `seneca-ep-47-1` je opraven na ‚ ‘; `lucretius-iii-894` má vnitřní „ “ dál. | V P8 projít citáty cesty před použitím. |
+| Výroky připisované Senekovi | Tabulka je v podkladovém listu; v listu pro učitele zatím není. | Doplnit do `ucitel/celek-6.md` v P8 nebo při revizi. |
+| Linky pomoci | Řádek v portrétu uvádí 116 111, „zdarma a nonstop, i jako chat“. Chat má podle webu hodiny 9–13 a 15–19. | Při revizi ověřit čísla i hodiny; kdyby znění mátlo, upravit ho jednou v `RadekPomoci.astro`. |
+
+
+### Po P8 (cesta 8 a stránka otázky 3)
+
+8. 10. 2026. Vyřízeno: čísla studie Goransonové a kol. (2017) jsem prošel znovu v plném textu (PDF z P6): 20 blogů o rakovině a 5 o ALS, 2 616 příspěvků, 597 z posledních dvanácti týdnů, 50 oslovených a 45 započtených lidí, 2,25 % proti 1,70 % záporných slov, kladná slova bez rozdílu; dvě skupiny čtenářů hodnotily příspěvky nemocných jako kladnější a méně záporné, tři vyškolení čtenáři jen jako méně záporné; věta autorů o těch, kdo stojí vedle umírajícího, je v závěrečné diskusi. Vnitřní uvozovky citátů `lucretius-iii-894` a `lucretius-iii-900` jsou ‚ ‘. Linka bezpečí (116 111) a Linka první psychické pomoci (116 123) ověřeny večer znovu na jejich webech. Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Kresba Zrcadlo času | Autor dostal snímky během práce a kresbu zatím nepotvrdil. | Potvrdit, nebo říct, co změnit (zadání P10 má na to řádek). |
+| Co je v kresbě naše volba | Letopočty 1348, 1620 a 1914, pět stupňů posuvníku, popisky „někdo jiný“ a „tentýž život, delší“, překlopení pravé strany na levou (Lucretius říká, že minulost je zrcadlem budoucnosti; kresba kvůli letopočtům překlápí budoucnost na minulost). | Při revizi posoudit, jestli to drží. |
+| Thomas Nagel | Cesta mu jednou větou připisuje odpověď na Lucretiovo zrcadlo („Takhle Lucretiovi ve 20. století odpověděl…“). Stojí jen na hesle Death ve SEP, které četl nástroj WebFetch; článek z roku 1970 je nečtený a SEP odpověď pokládá za spornou. | Před schválením přečíst článek, nebo větu zmírnit. |
+| „Víc než sto let po něm“ | Seneca po Lucretiovi: polovina 50. let př. n. l. až dopisy z let 62–65, asi 115 let (moje počítání). | Beze změny. |
+| Senekův záchvat | Podklady měly „trval asi hodinu“; latinsky *intra horam fere desinit* mluví o záchvatech obecně. Cesta: „Takový záchvat podle něj přejde asi do hodiny.“ Podkladový list opraven. | Při srovnání s českým překladem zkontrolovat. |
+| Epikúrova škola o bolesti | Diogenés Laertios X, 118 má „na mučidlech“; cesta říká „v bolestech“. | Beze změny; mučidla do první obrazovky nepatří. |
+| Plútarchos 1106b–c | V cestě bez srovnání s nešťastnými (viz rozhodnutí). | Jen učiteli. |
+| Obrana 42a a Seneca 24, 18 | Vynecháno, resp. jen nepřímou řečí (viz rozhodnutí). | Rozhodne autor. |
+| Hlas Seneky na stránce otázky 3 | Věta „Kolik let člověk dostane, podle stoiků nerozhoduje on“ je výklad; podklady mají pro hlas jen větu z Dopisu 61, 4. Souvislost toho místa v Dopise 61 jsem nečetl. | Při revizi přečíst Dopis 61 a větu potvrdit, nebo nahradit. |
+| Hlas Aristotela | „V jeho době se radilo, ať se člověk drží při zemi“ stojí jen na citátu samém („ty, kdo radí“). „Úkol člověka“ (Etika Nikomachova I, 7) stránka nepoužívá. | Beze změny. |
+| Hlas Epiktéta | Zvířata, Olympie a „k čemu jste se narodili“ (Rozpravy I, 6, věty 19–25 a jejich okolí) jsem v P8 přečetl v anglickém překladu z PerseusDL; „jedna slavná socha“ je Feidiovo dílo v Olympii, jméno text neuvádí. | Srovnat s českým překladem. |
+| Strach ze smrti a věk | Russac 2007 a Chopik 2017 stále jen z abstraktů; věta v cestě není. | Kdyby ji revize chtěla, přečíst aspoň jednu studii celou. |
+| Poradna Vigvam | Web odmítá automatické čtení; číslo 606 160 646 (pracovní dny 8–17) mám jen ze stránky uložené při P6 téhož dne. Je jen v listu pro učitele. | Ověřit ručně při revizi. |
+| Autorské texty bez pramene | Osm karet v Roztřiď, oslava v bloku Změň jednu věc, karta Zkus to žít, případ pro Návrat, úvodní případ stránky otázky 3. | Nepotřebují pramen; při revizi číst očima tří studentů z Citlivých míst. |
+| Nepoužité citáty celku | `menoikeus-124-touha`, `menoikeus-125-cekani`, `menoikeus-126`, `kd-2`, `vs-66`, `lucretius-iii-832`, `lucretius-iii-900`, `lucretius-iii-971`, `lucretius-iii-972`, `seneca-ep-54-3`, `seneca-ep-54-5`, `seneca-ep-24-18`, `seneca-ep-24-20`, `seneca-ep-24-20-hodiny`, `seneca-ep-26-6`, `seneca-ep-63-1`, `seneca-ep-63-7`, `seneca-ep-99-4`, `cicero-fin-ii-94`, `cicero-fin-ii-98`, `obrana-29a`, `obrana-41d`, `obrana-42a`, `etika-1115a`, `hovory-iv-17`, `hovory-ii-14`, `hovory-xii-36`. Některé jsou v cestě nepřímou řečí. | Rezervy; `seneca-ep-24-20` a hodiny pro cestu o čase. |
+| České překlady | Stále nesrovnáno; cesta používá 18 citátů a stránka otázky 3 pět. | Před schválením celku. |
+| Dopis 70, celý Media Guide NÚDZ, doporučení MŠMT | Stále nečteno; list pro učitele to u Dopisu 70 říká. | Přečíst při revizi, nebo nechat větu v listu. |
+| Výroky připisované Senekovi | Tabulka z podkladového listu v listu pro učitele pořád není. | Doplnit při revizi. |
+| Rok na fotografii (stránka otázky 3) | 1926 je sto let před rokem vydání. | Při každé revizi posunout. |
+| Řádek pomoci | Znění říká „i jako chat“; chat má hodiny 9–13 a 15–19. Na přehledu cesty stojí řádek pod úvodem, ne přímo pod počtem kroků (ten je v hlavičce stránky). | Kdyby to autor chtěl jinak, upravit šablonu přehledu. |
+
+### Plútarchos v datech (9. 10. 2026)
+
+| Co | Stav | Co s tím |
+| --- | --- | --- |
+| Roky | SEP: asi 45–120; narozen mezi lety 45 a 47, zemřel po roce 119. Britannica: asi 46, po 119. V datech 45 a 120, obojí přibližně. | Stačí; v textu vždy „asi“. |
+| Kněz v Delfách | SEP: zastával v Delfách různé úřady včetně kněze Apollónova. Od kdy a jak dlouho, heslo neříká. | Jen „byl knězem v Delfách“, bez let. |
+| Trojnožka | Diodóros XVI, 26, 4–5 (anglicky, Loeb): pro věštkyni zhotovili zařízení o třech podpěrách, na které vystupuje. Britannica to má jen v popisku obrazu. Řecký text jsem nečetl. | Věta atributu říká jen tolik; při revizi porovnat s řečtinou. |
+| Chairóneia | Souřadnice z Pleiad (540701: 22.841, 38.494). Dnešní jméno „Cheronia“ je můj přepis novořeckého Χαιρώνεια. | Ověřit český přepis dnešního jména. |
+| Platón → Plútarchos | SEP ho uvádí jako platonika; co z Platóna vykládal, jsem v hesle nečetl, vztah je proto bez poznámky. | Doplnit poznámku, kdyby Plútarchos dostal víc než medailonek. |
+| „Přel se s Epikúrovým učením“ | SEP jmenuje tři spisy proti epikurejcům; čten je jen Že podle Epikúra nelze žít příjemně (kap. 20 a 25–31). | Stačí. |
+| Strana Sporu bez osoby | Ve schématu, v testu dat a v `docs/design.md` zůstala, obsah ji nepoužívá. | Revize: nechat, nebo odebrat. |
+
+### Po P10 (revize celku 6)
+
+9. 10. 2026. Záznam je v `docs/revize/celek-6-2026-10-09.md`. Vyřízeno: linky pomoci ověřeny na webech znovu (Linka bezpečí 116 111, nonstop, chat 9–13 a 15–19; Linka první psychické pomoci 116 123; Poradna Vigvam 606 160 646, pracovní dny 8–17, ručně v prohlížeči); čísla a formulace studie Goransonové a kol. v plném textu (i výhrada autorů „blogů nebylo mnoho a pisatelé se vybrali sami“ a věta o těch, kdo stojí vedle); Seneca, Dopisy 30, 54, 1–5 a 61 latinsky (The Latin Library); Diodóros XVI, 26, 4–5 anglicky; heslo Death ve SEP k Nagelovi. Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Hlas Seneky na stránce otázky 3 | Věta „podle stoiků nerozhoduje on“ v Dopise 61 není. 61, 4: *satis instructa vita est, sed nos in instrumenta eius avidi sumus; deesse aliquid nobis videtur et semper videbitur*. Myšlenka o osudu je v Dopise 93, 2: *ut diu vivas fato opus est, ut satis, animo* (čteno 93, 1–4). | Nález 4 revize: autor zvolí znění; při druhé možnosti doplnit Dopis 93 do pramene `seneca-epistulae-smrt`. |
+| Dopis 61 celý | Je o připravenosti zemřít (*paratus exire sum*; *bene mori est libenter mori*; *mortem plenus exspecto*). Stránka z něj má jen 61, 4. | Do listu pro učitele (nález 9). |
+| Dopis 30 celý | Kromě toho, co cesta používá, má lidi, kteří si smrt přejí (30, 12), kteří život přerušují (30, 15), a radu myslet na smrt stále (30, 18). „Vesele“ stojí na *alacer animo* a *hilarem* (30, 3), „tolik nepomáhaly“ na *neque aeque profuerunt* (30, 7). | Do listu pro učitele (nález 9). |
+| Thomas Nagel | SEP (čteno znovu): Nagel odpověděl, že člověk nemohl vzniknout o hodně dřív, kdežto existovat déle mohl; odpověď stojí na sporných předpokladech o původu člověka, „jak Nagel přiznává“. Článek z roku 1970 zůstává nečtený. | Věta v cestě stačí; před druhou větou o Nagelovi článek přečíst. |
+| Plútarchos a Lucretius | V anglickém textu spisu Že podle Epikúra nelze žít příjemně se Lucretius nevyskytuje. | Nález 3: scéna Sporu nemá tvrdit, že Plútarchos vyšel z Lucretiovy věty. |
+| Aristotelés, Etika Nikomachova 1117b10–13 | Citát končí „takovému člověku nejvíc stojí za to žít“ (*τῷ τοιούτῳ γὰρ μάλιστα ζῆν ἄξιον*). | Nález 2: autor rozhodne o kratší podobě s vlastním id. |
+| Platón, Faidón 61c–62c | Sókratés tam říká, že si člověk život brát nemá. V podkladech místo není a v tomto kroku jsem ho nečetl. | Ověřit v prameni; pak do listu pro učitele mezi místa, která táhnou opačným směrem. |
+| Diodóros XVI, 26 | Řecký text nečten ani při revizi. | Stačí; věta atributu říká jen to, co anglický překlad. |
+| Atribut Plútarcha | Věta stojí na SEP (kněz v Delfách) i na Diodórovi (trojnožka); pole `zdroj` jmenuje jen `sep-plutarch`, Diodóros je v seznamu pramenů osoby. | Beze změny, dokud atribut neumí dva prameny. |
+| Přesýpací hodiny u Seneky | Atribut je z P6 („zůstává“). Přesýpací hodiny nejsou z antiky doložené (běžný údaj, neověřoval jsem; Seneca píše o vodních, 24, 20) a mince stojí na přehledu cesty o smrti; podklady je z kresby vyloučily. | Na vědomí autorovi; měnit jen s cestou o čase. |
+| České překlady | Nesrovnáno. | Podle doporučení revize není podmínkou schválení; šest míst k porovnání je v záznamu. |
+| Dopis 70, celý Media Guide NÚDZ, doporučení MŠMT | Stále nečteno; list pro učitele to u Dopisu 70 říká. | Beze změny. |
+
+### Po opravách celku 6 (9. 10. 2026)
+
+Vyřízeno: hlas Seneky (podle Dopisu 61, 4); Aristotelův citát (kratší podoba `etika-1117b-bolest`, plná `etika-1117b` zůstává nepoužitá vedle ostatních rezerv); scéna Sporu; list pro učitele (Dopisy 61 a 30, Nagel, tabulka výroků). Faidón 61c–62c čten anglicky v překladu H. N. Fowlera (PerseusDL): „říká se, že to není dovoleno“; lidé jsou podle tajného učení jakoby ve vězení a nemají se sami propouštět; bohové jsou naši strážci; člověk se nemá zabít, dokud bůh nepošle nutnost. Totéž místo říká, že filozof je ochoten zemřít: v listu pro učitele je obojí. Řecky nečteno. Ostatní řádky tabulky Po P10 trvají (české překlady, Nagelův článek, Dopis 70 a příručky, Diodóros řecky, atribut Plútarcha, přesýpací hodiny).
+

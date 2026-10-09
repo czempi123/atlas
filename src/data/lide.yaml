@@ -617,7 +617,7 @@
   linie: [stoicismus]
   mista:
     - { misto: corduba, role: narozeni, zdroj: sep-seneca }
-    - { misto: rim, role: pusobeni, zdroj: sep-seneca }
+    - { misto: rim, role: pusobeni, do: 41, zdroj: sep-seneca }
     - { misto: korsika, role: exil, od: 41, do: 49, zdroj: sep-seneca }
     - { misto: rim, role: pusobeni, od: 49, do: 65, zdroj: sep-seneca }
     - { misto: rim, role: smrt, rok: 65, zdroj: sep-seneca }
@@ -628,7 +628,8 @@
     nazev: přesýpací hodiny
     proc: Psal o tom, že nemáme málo času, jen ho hodně promarníme.
     zdroj: seneca-brevitate
-  zdroje: [sep-seneca, seneca-brevitate, seneca-vita-beata]
+  obrazek: seneca-smb
+  zdroje: [sep-seneca, seneca-brevitate, seneca-vita-beata, iep-seneca, tacitus-annales-seneca, suetonius-nero, seneca-epistulae-zivot, seneca-epistulae-smrt, seneca-helvia, seneca-polybius, seneca-clementia, seneca-de-ira, quintilianus-x-1]
 
 - id: epiktetos
   jmeno: Epiktétos
@@ -758,7 +759,27 @@
     nazev: zrcadlo
     proc: Čas před naším narozením je zrcadlo času po smrti; ten první nás neděsí.
     zdroj: lucretius-iii
-  zdroje: [sep-lucretius, lucretius-iii]
+  zdroje: [sep-lucretius, lucretius-iii, lucretius-iii-830]
+
+- id: plutarchos
+  jmeno: Plútarchos
+  jmeno2: Plútarcha
+  narozen: { rok: 45, priblizne: true }
+  zemrel: { rok: 120, priblizne: true }
+  obdobi: 2
+  hloubka: medailonek
+  otazky: [3]
+  mista:
+    - { misto: chaironeia, role: narozeni, zdroj: sep-plutarch }
+    - { misto: chaironeia, role: pusobeni, zdroj: sep-plutarch }
+  kdo: Řecký spisovatel a platonik z Chairóneie, kněz v Delfách.
+  proc: Psal po dvojicích životopisy řeckých a římských státníků a přel se s Epikúrovým učením.
+  atribut:
+    ikona: tripod
+    nazev: trojnožka
+    proc: Byl knězem v Delfách, kde věštkyně věštila z trojnožky.
+    zdroj: sep-plutarch
+  zdroje: [sep-plutarch, plutarchos-non-posse, diodoros-xvi-26]
 
 - id: cicero
   jmeno: Cicero

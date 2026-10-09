@@ -4,6 +4,88 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 9. 10. 2026: Opravy a uzavření celku 6
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor schválil všech deset nálezů revize celku 6 i doporučení k otevřeným bodům a požádal o sloučení a GitHub. Celek 6 je tím uzavřený: opravy zapracované, větev `celek-6` sloučená do hlavní větve a hlavní větev poslaná na GitHub | „Super, vše schvaluji, slučme to na githubu a vymysleme další celek“ (9. 10. 2026) |
+| Argument o konci vnímání říká cesta souměrně: „nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“ (krok 3), „Dobré i zlé může být jen to, co někdo zakouší… pro nikoho nebude zlá ani dobrá“ (Spor), „necítili nic, dobré ani zlé“ (kresba) | Nálezy 1 a 5. „Nezbude nikdo, komu by mohlo být zle“ čte student, kterému je zle, jako úlevu; Epikúros sám mluví o dobrém i zlém (Dopis Menoikeovi 124) a táž věta je odpovědí na Plútarchův „dvojí metr“ |
+| Aristotelův citát v kroku 5 má kratší podobu s vlastním id (`etika-1117b-bolest`), bez věty „takovému člověku nejvíc stojí za to žít“; plná podoba v datech zůstává | Nález 2. Obrácená říká studentovi, kterému se nedaří, že jeho život stojí za to míň; je to totéž srovnání, které rozhodnutí z 8. 10. vzalo Plútarchovi |
+| Scéna Sporu a úvod kroku 6 netvrdí, že Plútarchos vyšel z Lucretiovy věty ani že námitku rozvedl „nejdůkladněji“ | Nález 3. Plútarchos Lucretia necituje; spojení obou míst je naše |
+| Senekova myšlenka na stránce otázky 3 se drží Dopisu 61, 4 (k životu je všeho dost, a nám se pořád zdá, že něco chybí); věta o osudu z Dopisu 93, 2 se nepoužila | Nález 4. Výklad stojí v témže místě jako citát a pramen se nemění |
+| Otevřené body podle doporučení revize: věta o Nagelovi zůstává a krok říká „podle ní“; profil Epikúra má větu s odkazem na cestu 8 a řádek v Kam dál; strana Sporu bez osoby zůstává ve schématu; vlastní překlady zůstávají a srovnání není podmínkou schválení; list pro učitele má tabulku výroků připisovaných Senekovi | Autor k nim nenapsal nic jiného; nic z toho není nevratné |
+| List pro učitele uvádí i místo z Faidónu 61c–62c (člověk si život brát nemá), s větou, že totéž místo říká i to, že filozof se smrti nebrání | Ověřeno při opravách v anglickém překladu (PerseusDL); patří mezi místa, která táhnou opačným směrem než stoická obhajoba |
+
+## 9. 10. 2026: Odpovědi autora po P8 a Plútarchos v datech
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Kresba Zrcadlo času, délka cesty 32 minut, vynechaná poslední věta Obrany, dílo „Dopis z posledního dne“, blok s oslavou v kroku 5 a vstup bez obrázku zůstávají, jak jsou. Stejně tak body, které trvaly z P7: výřez hermy na desce, portrét bez Rubensovy kresby, ochrana rodiny jen učiteli, tři karty velkých myšlenek, Lucanovo jméno | Autor 9. 10. v chatu: „všechno se mi líbí“ |
+| Plútarchos je v datech jako medailonek s atributem; ve Sporu cesty 8 je strana osobou a mince není prázdná. Mění to záznam z 8. 10. (strana jen s označením) | Autor: „Plútarchovi dejme něco.“ Výjimka z pravidla „nové osoby teď ne“ platí jen pro něj |
+| Atribut je trojnožka (kněz v Delfách), ne svitek ani dvojice životopisů | Je to věc z jeho příběhu, dá se nakreslit pár tahy a Delfy student zná od Sókrata; svitek už má Isokratés |
+| Na mapě má jen Chairóneiu (narození a působení); Delfy nese věta „kdo“ | SEP: většinu života prožil v rodném městě. Chairóneia a Delfy leží asi třicet kilometrů od sebe a na mapě období by splývaly |
+| Vztahy: Platón → Plútarchos (vliv textem) a Plútarchos × Epikúros (polemika na dálku s otázkou Sporu) | SEP ho uvádí jako platonika; spor je předmětem kroku 6 |
+| Cesta 8 má Plútarcha mezi filozofy (`filozofove`), takže ho ukazuje přehled cesty | Ve Sporu mluví za jednu stranu; přehled má říct, koho student potká |
+| Schéma Sporu dál dovoluje stranu jen s označením, obsah ji teď nepoužívá | Je otestovaná a popsaná; odebrat ji může revize |
+
+## 8. 10. 2026: Cesta 8 a stránka otázky 3 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Vstup cesty 8 je bez obrázku; papyrus ani lampa z Metropolitního muzea se nestahují. Portrét Seneky a výřez na desce zůstávají beze změny | Autor nechal tři řádky zadání prázdné; platí doporučení podkladů. První obrazovka má být dopis, ne obraz |
+| Cesta má devět kroků a 32 minut; kroky Zrcadlo a Host u stolu nejsou spojené a krok Ti druzí stojí sám | Čas vyšel pod 35 minut, které podklady daly jako mez pro spojení; krok o smrti blízkých má být nejkratší a nemá ho nic přehlušit |
+| Začátek cesty (Volba „Je rozumné bát se smrti?“) je v kroku 1 hned pod scénou, ne v kroku 2 | Scéna, ve které hrdina něco mlčky unese, má dostat otázku hned (`docs/pouceni.md`); panel Na začátku × Teď proto odkazuje na krok 1 |
+| Čtvrtá možnost první Volby zní „Záleží na tom, co je po ní.“; podklady navrhovaly „Nevím, co po ní je, tak nevím, jestli se bát.“ | Takhle ji může zvolit i student, který věří, že smrtí nic nekončí; původní znění mělo místo jen pro toho, kdo neví |
+| Roztřiď třídí osm cizích vět do košů „Na to, že nebude · Na umírání · Na to, o co přijde · Na ty druhé“ a nemá vlastní karty | Koše odpovídají na otázku „Na co ten, kdo to říká, myslí?“ stejným tvarem; vlastní karta by byla zpověď a otázka na vlastní bolest nemá mít pole na psaní |
+| Dva citáty mají v datech kratší podobu s vlastním id: `lucretius-iii-972-zrcadlo` (bez „Není to klidnější než každý spánek?“) a `seneca-ep-54-5-lampa` (bez „hlubokého klidu“). Plné podoby v datech zůstávají | Klid a spánek jako to, co čeká, do cesty nepatří; komponenta Citát zkracovat neumí a opis mimo data by obešel kontrolu pramenů |
+| Citáty z posledního Epikúrova dopisu mají dílo „Dopis z posledního dne“, ne „Dopis Ídomeneovi“ | Prameny se v adresátovi rozcházejí (Diogenés Laertios: Ídomeneus, Cicero: Hermarchos) a text říká „příteli“; jméno pod citátem by to rozhodlo |
+| Strana Sporu smí mít jen `oznaceni` bez osoby z dat; mince je pak prázdný prstenec. Aspoň jedna strana musí být osoba | Plútarchos v datech není a nové osoby se teď nepřidávají; mince jiné osoby by tvrdila, že mluví někdo jiný |
+| Plútarchova věta, že smrt bere víc šťastným než nešťastným (1106b–c), je v cestě bez srovnání: „čím víc dobrého člověk má, tím víc mu smrt bere“ | Obrácená říká studentovi, kterému je zle, že on moc neztratí |
+| Poslední věta Obrany (42a) v cestě není, ačkoli ji podklady nabízely jako možný závěr; Senekovo „buď stráví, nebo svlékne“ (24, 18) je jen nepřímou řečí | Věta nechává otevřené, jestli je lepší žít, nebo zemřít, a druhá mluví o odloženém břemeni; nevědění nese citát 40c a věta, že Sókratés mezi možnostmi nerozhodl. Čeká na potvrzení autora |
+| Krok Host u stolu má blok Změň jednu věc s oslavou (host od odpoledne × host, který právě přišel); podklady pro něj blok neměly | Námitku, že šestnáctiletý není nasycený host, si student vyzkouší sám; obraz hosta je Lucretiův a převod je uvedený „Představ si“ |
+| Krok Ti druzí nemá blok ani Ciceronovu výtku (závěť proti učení); ta je v listu pro učitele jako otázka do hodiny | Nejtišší krok cesty; výtka je spor o důslednost, ne o strach, a přidala by další jméno |
+| V cestě nejsou: věta o strachu a věku (Russac, Chopik), „umíráme každý den“, Vatikánský výrok 66, Ciceronova věta o dlouhých bolestech | První stojí jen na abstraktech; druhá patří cestě o čase; třetí jde číst jako „neplač“; čtvrtá odpovídá na útěchu, kterou cesta neuvádí |
+| Kresba Zrcadlo času má dva pohledy: Zrcadlo s tlačítkem „Přiložit zrcadlo“ a Námitku s posuvníkem o pěti stupních. Nic neběží samo; výchozí stav je před přiložením i při omezeném pohybu. Vlevo jsou letopočty 1348, 1620 a 1914, vpravo žádný | Podklady počítaly se samočinným překlopením a se stavem „po překlopení“ při omezeném pohybu; s tlačítkem přiloží zrcadlo student sám a přechod se při omezeném pohybu jen zkrátí na nulu. Čeká na potvrzení autora (snímky poslány) |
+| Návrat „Zpráva o půlnoci“ má případ z podkladů, ale ne čtyři hotové odpovědi: blok Návrat má pro všechny cesty možnosti Ano / Upravím ho / Nevím | Stavba bloku je společná; co kamarád potřebuje, se ptá věta po odpovědi |
+| Stránka otázky 3: `pripad` je krátká otázka („Byl jejich život k něčemu?“) a fotografie je v úvodu; třetí odstavec úvodu říká, jak se ptali staří Řekové a Římané. Slovo „smysl“ nemá žádný hlas | Pole `pripad` je nadpis odpovědí; antickým autorům stránka moderní otázku nevkládá do úst |
+| Přehled cesty odkazuje na stránku osobnosti jen u filozofů, kteří ji mají; ostatní jsou jménem bez odkazu a v Kam dál chybí | Lucretius je filozof cesty 8 a stránku nemá; odkaz vedl na neexistující adresu |
+| Tichý řádek pomoci stojí na přehledu cesty pod úvodem a před tlačítkem Začít cestu, a na konci kroku Ti druzí | Nadtitulek s počtem kroků je mimo obsah, který cesta píše; pod úvodem je řádek první věc pod ním a zůstává na okraji |
+
+## 8. 10. 2026: Portrét Seneky (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Rubensova kresba Pseudo-Seneky se nestahuje a motiv ochrany rodiny u Senekovy smrti zůstává jen v listu pro učitele | Autor nechal oba řádky zadání prázdné; platí doporučení podkladů. Tvář, kterou Evropa malovala, popisuje text slovy |
+| Herma je v atlasu dvakrát z jedné fotografie: na desce výřez Senekovy hlavy (`seneca-smb.jpg`), v poslední kapitole celá dvojitá herma (`seneca-herma-smb.jpg`). Licence CC BY-NC-SA 4.0, fotograf v záznamech muzea není uveden; výřez je v Pramenech označený | Deska je na výšku a umí jen posunout střed: z celé fotografie by ukázala Seneku se Sókratovým týlem. Licence úpravy dovoluje pod stejnou licencí. Čeká na potvrzení autora |
+| Senekova smrt: slovo „sebevražda“ stojí v textu jednou, ve větě „Takové smrti na rozkaz se říká vynucená sebevražda“; scéna má vypravěče (Tacitus) a hned po ní přijde, co po Senekovi zůstalo, a otázka, podle čeho ho posuzovat | Zadání chtělo rozkaz v téže větě; otázka se neptá studenta na vlastní smrt a drží osu slovo a život |
+| Portrét má šest kapitol a čtyři bloky; kapitola o vyhnanství má místo bloku otázku kurzívou. Tři myšlenky jsou v oddíle myšlenek všechny (tři karty) | Tři bloky myšlenek určilo zadání, čtvrtý (zůstat, nebo odejít) žádají Citlivá místa; pátý blok by kapitole o dvou útěchách nic nepřidal |
+| Volba „Co bys na Senekově místě udělal?“ nemá oddíl Co udělal a žádná možnost není označená jako jeho | Víme, že zůstal; proč, nevíme. Text za blokem říká jen „Seneca zůstal“ |
+| Platónova zdvižená ruka a vtip o cizí mrtvole ve studentském textu nejsou; obojí má list pro učitele | Příběh o ruce končí potrestáním otroka a bere bití jako samozřejmost; vtip by v celku o smrti chtěl vysvětlení |
+| Rada o odkladu a karta Zkus to žít říkají výslovně, že neplatí pro člověka, kterému někdo ubližuje | `docs/pouceni.md`: výzva nemíří na člověka, který ubližuje |
+| Tichý řádek pomoci je komponenta `RadekPomoci` s jedním zněním; v portrétu stojí pod poslední kapitolou, za příběhem o hermě | Jedno znění na všech místech (rozhodnutí autora); cesta 8 ji použije také |
+| List pro učitele (`ucitel/celek-6.md`) způsob Senekovy smrti nepopisuje a odkazuje na Tacita (XV, 63–64); učiteli nabízí jednu větu jako odpověď na otázku „a jak tedy zemřel?“ | Podkladový list způsob také nevypisuje; učitel si místo najde a ve třídě ho říkat nemá |
+| Mini mapa osobnosti vynechá holý řádek role, když na témže místě stojí tentýž řádek s rokem | U Seneky stálo v Římě „působení“ a pod ním „působení 49 n. l.“ |
+
+## 8. 10. 2026: Celek 6 po podkladech (P6): odpovědi autora
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Podobiznou Seneky bude berlínská dvojitá herma se jménem SENECA (Antikensammlung, SK 391); fotografie muzea má licenci CC BY-NC-SA | Autor ji vybral v chatu; je to jediná antická podobizna se jménem. Stáhne se v P7 po ověření verze licence a fotografa |
+| Studentský text smí o Senekově smrti použít slovo „sebevražda“, vždy s rozkazem v téže větě („vynucená sebevražda“), ne „spáchal“; způsob se nepopisuje | Autor ji čte jako smrt na Neronův příkaz, kterou Seneca předešel popravě a následkům pro rodinu. Podklady navrhovaly slovo nepoužít. Příkaz je doložen (Tacitus, Letopisy XV, 61); ochranu pohřbu a závěti popisuje Tacitus jen obecně a pro dobu Tiberia (VI, 29). Jestli ten motiv zazní ve studentském textu, nebo jen u učitele, zbývá rozhodnout |
+| Věta z Dopisu 78 („Poručil jsem si tedy žít. Někdy je totiž statečné i žít.“) patří do portrétu, do kapitoly o mládí | Autor souhlasil; je to příběh o tom, co člověka při životě udrželo |
+| Portrét a cesta 8 nesou tichý řádek s Linkou bezpečí (116 111): jedno znění, bez výzvy a bez rámečku | Autor: „můžeš to tam dát tak jenom btw pro info“; WHO i NÚDZ kontakt doporučují |
+| Spor cesty 8 je Epikúros × Plútarchos, i když Plútarchos není v datech (strana ponese označení). Nový případ je studie o blozích lidí, kteří umírali (2017), jen její první část | Autor: „nevadí“. Plútarchos jediný vede s Epikúrem spor o strach ze smrti; studie zkouší Epikúrovu větu o čekání |
+| Ostatní volby podkladů platí bez mezikroku schvalování: osa a tři myšlenky portrétu, pět strachů, vstup cesty dopisem, kresba se zrcadlem, případ a hlasy otázky 3; Egypt do dat ne, Démokritos → Epikúros jako vliv textem | Rozhodnutí ze 4. 10. 2026; důvody jsou v `docs/podklady/celek-6-proc-se-bat-smrti.md` (Rozpory a rozhodnutí) |
+
+## 8. 10. 2026: Celek 6
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Šestý celek je „Proč se bát smrti?“: portrét Seneky, cesta 8 a stránka velké otázky 3 „Má život smysl?“. Plán a zadání P6 jsou v `docs/plany/celek-6.md`, větev `celek-6` vychází z hlavní větve po sloučení celku 5 | Autor vybral ze tří nabídnutých možností (cesta 2 s Hérakleitem a Parmenidem, kterou doporučoval Claude; Seneca a smrt; Seneca a čas). Seneku potřebují tři cesty katalogu (8, 33 a 34) |
+| Největší riziko celku 6 je útěcha, která zlehčuje: Epikúrův argument míří na strach z toho, že budu mrtvý, ne na smrt blízkých. Senekova smrt se ve studentském textu nepodává jako hrdinství ani řešení a stoická obhajoba dobrovolné smrti zůstává mimo něj, dokud podklady nenavrhnou jinak | Téma se bolestně týká studenta, kterému někdo zemřel, i studenta s myšlenkami na sebevraždu (`docs/pouceni.md`); u Epiktéta zůstalo „dveře jsou otevřené“ mimo studentský text už v celku 3 |
+| Podklady celku 6 (P6) běží celé na Opusu 5.5 · high, ne na Sonnetu | Sporná nebo citlivá je většina kroku, ne jen jednotlivé prameny |
+| Portrét Seneky nesmí být podruhé příběh učitele a vladaře z cesty 4; čas zůstává cestě 34 a představa nejhoršího cestě 33 | Překryv s hotovým celkem 5 a se dvěma cestami, které Seneku ještě čekají |
+
 ## 8. 10. 2026: Opravy a uzavření celku 5
 
 | Rozhodnutí | Důvod |

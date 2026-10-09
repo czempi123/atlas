@@ -22,13 +22,13 @@ prameny:
   - { id: sep-xenocrates, druh: encyklopedie, nazev: "Xenocrates", autor: "Russell Dancy, Giulia De Cesaris", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/xenocrates/", overeno: 2026-09-29 }
   - { id: sep-theophrastus, druh: encyklopedie, nazev: "Theophrastus", autor: "Katerina Ierodiakonou", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/theophrastus/", overeno: 2026-09-29 }
   - { id: sep-cyrenaics, druh: encyklopedie, nazev: "The Cyrenaics", autor: "Voula Tsouna", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/cyrenaics/", overeno: 2026-09-29 }
-  - { id: sep-epicurus, druh: encyklopedie, nazev: "Epicurus", autor: "David Konstan", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epicurus/", overeno: 2026-09-29 }
-  - { id: sep-seneca, druh: encyklopedie, nazev: "Seneca", autor: "Katja Vogt", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/seneca/", overeno: 2026-09-29 }
+  - { id: sep-epicurus, druh: encyklopedie, nazev: "Epicurus", autor: "David Konstan", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epicurus/", overeno: 2026-09-29, poznamka: "8. 10. 2026 (celek 6), četl nástroj WebFetch (rev. 8. 7. 2022): zemřel roku 270 př. n. l. v 70 nebo 71 letech; atomismus zdědil především od Démokrita." }
+  - { id: sep-seneca, druh: encyklopedie, nazev: "Seneca", autor: "Katja Vogt", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/seneca/", overeno: 2026-09-29, poznamka: "8. 10. 2026 (celek 6), četl nástroj WebFetch (rev. 13. 2. 2024): narozen asi 1 př. n. l.; v dopisech si buduje literární postavu, spisy nejsou autobiografie; Útěcha Marcii je nejspíš nejstarší dochovaný spis, útěchy Helvii a Polybiovi snad z let 43–44; O mírnosti z roku 55 nebo 56." }
   - { id: sep-epictetus, druh: encyklopedie, nazev: "Epictetus", autor: "Margaret Graver", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/epictetus/", overeno: 2026-10-02, poznamka: "Narozen v 50. letech v Hierapoli; otrok Epafrodita; kdy přišel do Říma, se neví; žák Musonia Rufa; vykázán nejspíš ediktem roku 89 (SEP „Stoicism“ uvádí 93); škola v Níkopoli, zemřel kolem 135; kulhání připisováno artritidě, nebo týrání v otroctví; neoženil se, ve stáří se ujal dítěte. Oddíly 4.3–4.6: vůle, hodnota, city, vztahy." }
   - { id: sep-marcus-aurelius, druh: encyklopedie, nazev: "Marcus Aurelius", autor: "Rachana Kamtekar", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/marcus-aurelius/", overeno: 2026-10-02, poznamka: "Narozen 121, císařem 161–180; útoky Germánů, vzpoury, mor; Hovory aspoň zčásti z posledních let tažení; události svého života popisuje tak, že je nelze poznat; učitelé Fronto, Rusticus, Apollónios, Sextos; Epiktétovy zápisky (I, 7)." }
   - { id: sep-stoicism, druh: encyklopedie, nazev: "Stoicism", autor: "Dirk Baltzly", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/stoicism/", overeno: 2026-09-29 }
   - { id: sep-pyrrho, druh: encyklopedie, nazev: "Pyrrho", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/pyrrho/", overeno: 2026-09-29 }
-  - { id: sep-lucretius, druh: encyklopedie, nazev: "Lucretius", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/lucretius/", overeno: 2026-09-29 }
+  - { id: sep-lucretius, druh: encyklopedie, nazev: "Lucretius", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/lucretius/", overeno: 2026-09-29, poznamka: "8. 10. 2026 (celek 6), četl nástroj WebFetch (heslo S. Trépaniera, 2023): žil od poloviny 90. do poloviny 50. let př. n. l.; o životě se neví skoro nic; Hieronymova historka o nápoji lásky a šílenství je nevěrohodná." }
   - { id: sep-plotinus, druh: encyklopedie, nazev: "Plotinus", autor: "Paul Kalligas", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/plotinus/", overeno: 2026-09-29 }
   - { id: sep-carneades, druh: encyklopedie, nazev: "Carneades", autor: "James Allen", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/carneades/", overeno: 2026-09-29 }
   - { id: sep-philo, druh: encyklopedie, nazev: "Philo of Alexandria", autor: "Carlos Lévy", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/philo/", overeno: 2026-09-29 }
@@ -83,7 +83,7 @@ prameny:
   - { id: britannica-gaul, druh: encyklopedie, nazev: "Gaul", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/place/Gaul-ancient-region-Europe", overeno: 2026-09-30, poznamka: "Latinsky Gallia; dnešní Francie, části Belgie, západního Německa a severní Itálie." }
 
   # Primární texty
-  - { id: platon-obrana, druh: pramen, nazev: "Obrana Sókratova", autor: Platón, dilo: "Apology, angl. B. Jowett (Project Gutenberg 1656)", url: "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm", overeno: 2026-10-01, poznamka: "20e–23b věštba a zkoušení moudrých (21a Chairefón, 21d politik), 23c mladí ho napodobují, 24b–c obžaloba, 28e Potidaia, Amfipolis, Délion, 33d Kritón, 36a třicet hlasů, 36b–37a prytaneum, 37c–38a proč ne vyhnanství, 38a nezkoumaný život, 38b třicet min a ručitelé. 1. 10. 2026 ověřeno i v řeckém textu (Burnet) a překladu H. N. Fowlera (PerseusDL, tlg0059.tlg002). 3. 10. 2026 (celek 4): 34a Adeimantos, jehož bratr Platón je u soudu přítomen." }
+  - { id: platon-obrana, druh: pramen, nazev: "Obrana Sókratova", autor: Platón, dilo: "Apology, angl. B. Jowett (Project Gutenberg 1656)", url: "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm", overeno: 2026-10-01, poznamka: "20e–23b věštba a zkoušení moudrých (21a Chairefón, 21d politik), 23c mladí ho napodobují, 24b–c obžaloba, 28e Potidaia, Amfipolis, Délion, 33d Kritón, 36a třicet hlasů, 36b–37a prytaneum, 37c–38a proč ne vyhnanství, 38a nezkoumaný život, 38b třicet min a ručitelé. 1. 10. 2026 ověřeno i v řeckém textu (Burnet) a překladu H. N. Fowlera (PerseusDL, tlg0059.tlg002). 3. 10. 2026 (celek 4): 34a Adeimantos, jehož bratr Platón je u soudu přítomen. 8. 10. 2026 (celek 6): bát se smrti je zdát se moudrým a nebýt (29a–b); dvě možnosti, co je smrt, s výhradou „jsou-li ty řeči pravdivé“ (40c–41c); dobrému se nemůže stát nic zlého (41d); prosba o syny (41e); poslední věta (42a)." }
   - { id: platon-kriton, druh: pramen, nazev: "Kritón", autor: Platón, dilo: "Crito, angl. B. Jowett (Project Gutenberg 1657)", url: "https://www.gutenberg.org/files/1657/1657-h/1657-h.htm", overeno: 2026-10-01, poznamka: "Kritón u spícího Sókrata (43a–b); přemlouvá k útěku (44b–46a); neoplácet křivdu křivdou (49a–e); řeč Zákonů (50a–54d); z Athén vycházel jen do války a jednou na Isthmus (52b); u soudu mohl navrhnout vyhnanství (52c); sedmdesát let (52e). 1. 10. 2026 ověřeno i v řeckém textu a překladu H. N. Fowlera (PerseusDL, tlg0059.tlg003)." }
   - { id: platon-faidon, druh: pramen, nazev: "Faidón", autor: Platón, dilo: "Phaedo, angl. B. Jowett (Project Gutenberg 1658)", url: "https://www.gutenberg.org/files/1658/1658-h/1658-h.htm", overeno: 2026-10-01, poznamka: "Loď na Délos (58a–c); Platón byl nemocný (59b); Xanthippa (60a); rozloučení, žalářník (116b–d); poslední den a smrt (116e–118a), kohout pro Asklépia (118a); Kritón je přítomen. 1. 10. 2026 ověřeno i v řeckém textu a překladu H. N. Fowlera (PerseusDL, tlg0059.tlg004)." }
   - { id: platon-symposion, druh: pramen, nazev: "Symposion", autor: Platón, dilo: "Symposium, angl. B. Jowett (Project Gutenberg 1600)", url: "https://www.gutenberg.org/files/1600/1600-h/1600-h.htm", overeno: 2026-10-01, poznamka: "Asklépios jako praotec a zakladatel lékařství (186e, mluví Eryximachos). Alkibiadés o Sókratovi u Potidaie (219e–220e: hlad, mráz, stání do úsvitu, záchrana Alkibiada) a při ústupu od Délia (221a–c, s citátem z Aristofanových Oblak 362; klidné nikdo nenapadá, pronásledují ty, kdo prchají bez hlavy, 221b–c). 1. 10. 2026 ověřeno i v řeckém textu a překladu W. R. M. Lamba (PerseusDL, tlg0059.tlg011)." }
@@ -121,10 +121,10 @@ prameny:
   - { id: dl-x-1, druh: pramen, nazev: "Životy filozofů X, 1–26", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Epikúros: Samos, v 18 letech do Athén, Kolofón (1); k filozofii ve 14 letech, učitelé a Hésiodův chaos (2); otrok Mys (3, 10); pomluvy (3–8), obhajoba (9–10); přátelé žijí v zahradě, 80 min (10); voda a trocha vína, majetek nedávají dohromady, jak žádala Pýthagorova zásada „přátelé mají všechno společné“ (κοινὰ τὰ φίλων), chléb a voda, hrnek sýra (11); narozen 341, škola od 32 let, zemřel 271/270 v 72 letech (14–15); závěť a propuštění otroků (16–21); Metrodóros, Polyainos, Hermarchos, Leonteus a Themista (22–25); asi 300 svitků (26)." }
   - { id: hesiodos-theogonia, druh: pramen, nazev: "Theogonia 116", autor: Hésiodos, dilo: "Theogonia, řecky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0020/tlg001/tlg0020.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Jako úplně první vznikl Chaos (ἦ τοι μὲν πρώτιστα Χάος γένετʼ); k Epikúrově otázce učitelům (Diogenés Laertios X, 2)." }
   - { id: dl-x-117, druh: pramen, nazev: "Životy filozofů X, 117–121", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Moudrý podle Epikúra a jeho školy: nebude se účastnit politiky, nebude žít jako kynik ani žebrat (119, podle spisu O způsobech života I a II); přátelství kvůli potřebám, ale někdo musí začít jako při setí; v chudobě si vydělá moudrostí (120)." }
-  - { id: dl-x-122, druh: pramen, nazev: "Dopis Menoikeovi (Životy filozofů X, 122–135)", autor: Epikúros, dilo: "u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Dělení tužeb (127); cílem je nemít bolest ani strach, bouře duše (128); ne každou slast volíme (129); soběstačnost, přepych si nejvíc užije, kdo ho nepotřebuje (130); ječná placka (μᾶζα) a voda, slast není prostopášnost (131); rozumnost a ctnosti (132)." }
+  - { id: dl-x-122, druh: pramen, nazev: "Dopis Menoikeovi (Životy filozofů X, 122–135)", autor: Epikúros, dilo: "u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Dělení tužeb (127); cílem je nemít bolest ani strach, bouře duše (128); ne každou slast volíme (129); soběstačnost, přepych si nejvíc užije, kdo ho nepotřebuje (130); ječná placka (μᾶζα) a voda, slast není prostopášnost (131); rozumnost a ctnosti (132). 8. 10. 2026 (celek 6): smrt se nás netýká, všechno dobré a zlé je ve vnímání, „zvykej si“ (124); dokud jsme my, není smrt; co netrápí přítomné, trápí naprázdno očekávané (125); moudrý život neodmítá a nežití se nebojí, z času sklízí nejpříjemnější, ne nejdelší; posměšek tomu, kdo říká, že nejlepší je se nenarodit (126–127; do studentského textu ne)." }
   - { id: dl-x-136, druh: pramen, nazev: "Životy filozofů X, 136–138", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Klidová slast (ataraxia, aponia) a slast v pohybu (radost, veselí), citát ze spisu O volbě (136); rozdíl od kyrénaiků (136–137)." }
-  - { id: dl-x-139, druh: pramen, nazev: "Hlavní myšlenky (Životy filozofů X, 139–154)", autor: Epikúros, dilo: "Kyriai doxai u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "KD 3 strop slasti (139); KD 15 bohatství přírody, KD 18 slast se jen obměňuje (144); KD 26–28 nenutné touhy, přátelství (148); KD 29 trojí dělení tužeb se scholiem (149). 3. 10. 2026 (celek 4): KD 34–35, nespravedlnost a strach z odhalení (151)." }
-  - { id: gnomologium-vaticanum, druh: pramen, nazev: "Vatikánské výroky", autor: Epikúros, dilo: "Gnomologium Vaticanum Epicureum, vyd. P. von der Mühll (Teubner 1922), First1KGreek", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0537/tlg014/tlg0537.tlg014.1st1K-grc1.xml", overeno: 2026-10-01, poznamka: "VS 23 přátelství (rukopis ἀρετή, vydavatel αἱρετή); VS 25 chudoba a bohatství; VS 33 hlas těla (jméno Dia doplněk); VS 52 přátelství tančí kolem světa; VS 68 komu je málo, co stačí." }
+  - { id: dl-x-139, druh: pramen, nazev: "Hlavní myšlenky (Životy filozofů X, 139–154)", autor: Epikúros, dilo: "Kyriai doxai u Diogena Laertia, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "KD 3 strop slasti (139); KD 15 bohatství přírody, KD 18 slast se jen obměňuje (144); KD 26–28 nenutné touhy, přátelství (148); KD 29 trojí dělení tužeb se scholiem (149). 3. 10. 2026 (celek 4): KD 34–35, nespravedlnost a strach z odhalení (151). 8. 10. 2026 (celek 6): KD 2 smrt se nás netýká (139); KD 4 velká bolest je krátká (140); KD 19–21 omezený čas pojme stejně slasti jako nekonečný (145–146)." }
+  - { id: gnomologium-vaticanum, druh: pramen, nazev: "Vatikánské výroky", autor: Epikúros, dilo: "Gnomologium Vaticanum Epicureum, vyd. P. von der Mühll (Teubner 1922), First1KGreek", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0537/tlg014/tlg0537.tlg014.1st1K-grc1.xml", overeno: 2026-10-01, poznamka: "VS 23 přátelství (rukopis ἀρετή, vydavatel αἱρετή); VS 25 chudoba a bohatství; VS 33 hlas těla (jméno Dia doplněk); VS 52 přátelství tančí kolem světa; VS 68 komu je málo, co stačí. 8. 10. 2026 (celek 6): VS 14 rodíme se jednou a život se promarní odkládáním; VS 31 kvůli smrti bydlíme ve městě bez hradeb; VS 38 malý je, kdo má mnoho důvodů odejít ze života (do studentského textu ne); VS 55 neštěstí léčit vděčností za to, co bylo; VS 66 soucit s přáteli péčí, ne nářkem." }
   - { id: seneca-epistulae, druh: pramen, nazev: "Dopisy Luciliovi 18 a 21", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-01, poznamka: "Epikúros měl dny skrovného jídla, méně než as, Metrodóros celý (18, 9, podle dopisu Polyainovi z roku archonta Charína); nápis na zahradách, správce, polenta a voda (21, 10; rukopisy se v místě nápisu rozcházejí); žaludek je skromný věřitel (21, 11)." }
   - { id: seneca-vita-beata, druh: pramen, nazev: "O blaženém životě", autor: Seneca, dilo: "De vita beata (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.vita.shtml", overeno: 2026-10-01, poznamka: "Blažený život je v souladu s přírodou, dary štěstěny užívá, neslouží jim (3, 3); Epikúrova slast je střízlivá, škola má neprávem špatnou pověst (12, 4 – 13, 2); výčitka pokrytectví (17, 1–2); moudrý bohatství neodmítá (23, 3), bohatství není dobro, ale je užitečné (24, 5); u moudrého slouží, u hlupáka vládne (26, 1)." }
   - { id: tacitus-annales, druh: pramen, nazev: "Letopisy XIII, 42 a XIV, 53–54", autor: Tacitus, dilo: "Annales, lat. C. D. Fisher (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml", overeno: 2026-10-01, poznamka: "Suillius vyčítá Senekovi 300 milionů sesterciů za čtyři roky u dvora (XIII, 42); Seneca prosí Nerona, ať si majetek vezme zpět (XIV, 53–54, stylizovaná řeč)." }
@@ -142,9 +142,9 @@ prameny:
   - { id: met-epikuros, druh: data, nazev: "Marble head of Epikouros (11.90)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/248475", overeno: 2026-10-01, poznamka: "Římská kopie z 2. st. n. l. podle řecké sochy z 1. pol. 3. st. př. n. l.; Public Domain, Open Access CC0." }
 
   # Celek 3 „Co mám ve svých rukou?“ (docs/podklady/celek-3-co-mam-v-rukou.md): řecké a latinské texty z PerseusDL a First1KGreek.
-  - { id: epiktetos-rozpravy, druh: pramen, nazev: "Rozpravy", autor: Epiktétos, dilo: "Dissertationes ab Arriano digestae, řecky H. Schenkl (Teubner 1916), angl. G. Long (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg001/tlg0557.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Arriánův úvodní dopis (zapisoval, co slyšel, jako poznámky pro sebe); co je v naší moci, vítr, „nohu mi spoutáš“ (I, 1); Helvidius Priscus, vousy (I, 2); Musonius (I, 7, 32; I, 9, 29–30); chromý stařec (I, 16, 20); lampa (I, 18, 15–16; I, 29, 21); Epafroditos a švec (I, 19, 19–22; I, 26, 11–12); hra s míčem (II, 5); Níkopolis a zemětřesení (II, 6, 20); role (II, 10); ne jako socha (III, 2, 4); cvičení od svítání (III, 3, 14–16); škola jako ordinace (III, 23, 30); o svobodě (IV, 1)." }
+  - { id: epiktetos-rozpravy, druh: pramen, nazev: "Rozpravy", autor: Epiktétos, dilo: "Dissertationes ab Arriano digestae, řecky H. Schenkl (Teubner 1916), angl. G. Long (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg001/tlg0557.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Arriánův úvodní dopis (zapisoval, co slyšel, jako poznámky pro sebe); co je v naší moci, vítr, „nohu mi spoutáš“ (I, 1); Helvidius Priscus, vousy (I, 2); Musonius (I, 7, 32; I, 9, 29–30); chromý stařec (I, 16, 20); lampa (I, 18, 15–16; I, 29, 21); Epafroditos a švec (I, 19, 19–22; I, 26, 11–12); hra s míčem (II, 5); Níkopolis a zemětřesení (II, 6, 20); role (II, 10); ne jako socha (III, 2, 4); cvičení od svítání (III, 3, 14–16); škola jako ordinace (III, 23, 30); o svobodě (IV, 1). 8. 10. 2026 (celek 6): člověk jako divák a vykladač; „k čemu jste se narodili“ (I, 6, 19–25)." }
   - { id: epiktetos-rukojet, druh: pramen, nazev: "Rukojeť", autor: Epiktétos, dilo: "Encheiridion, řecky H. Schenkl (Teubner 1916), angl. G. Long (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg002/tlg0557.tlg002.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Co je a není v naší moci, cvičení s dojmem (1); touha a odpor (2); věci a soudy (5); kulhání je překážkou nohy, ne vůle (9); kdo chce být svobodný (14); herec (17); urážka (20); povinnosti a vztahy (30); dvě ucha (43)." }
-  - { id: marcus-hovory, druh: pramen, nazev: "Hovory k sobě", autor: Marcus Aurelius, dilo: "Ad se ipsum, řecky J. H. Leopold (Teubner 1908), PerseusDL", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0562/tlg001/tlg0562.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Rusticus a Epiktétovy zápisky (I, 7); místní údaje „u Kvádů na Granui“ (konec knihy I) a „v Carnuntu“ (konec knihy II); ráno (II, 1; V, 1); Epiktétos jmenován (IV, 41; VII, 19; XI, 34 a 36), opsaná místa XI, 33–38; soudy (IV, 3; IV, 7; VIII, 47); pevnost (VIII, 48); pohled shora (VII, 48; IX, 30; XII, 24); VI, 6; VI, 30; VI, 41; VI, 44; VII, 7; VIII, 59; IX, 5; IX, 7; X, 16." }
+  - { id: marcus-hovory, druh: pramen, nazev: "Hovory k sobě", autor: Marcus Aurelius, dilo: "Ad se ipsum, řecky J. H. Leopold (Teubner 1908), PerseusDL", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0562/tlg001/tlg0562.tlg001.perseus-grc2.xml", overeno: 2026-10-02, poznamka: "Rusticus a Epiktétovy zápisky (I, 7); místní údaje „u Kvádů na Granui“ (konec knihy I) a „v Carnuntu“ (konec knihy II); ráno (II, 1; V, 1); Epiktétos jmenován (IV, 41; VII, 19; XI, 34 a 36), opsaná místa XI, 33–38; soudy (IV, 3; IV, 7; VIII, 47); pevnost (VIII, 48); pohled shora (VII, 48; IX, 30; XII, 24); VI, 6; VI, 30; VI, 41; VI, 44; VII, 7; VIII, 59; IX, 5; IX, 7; X, 16. 8. 10. 2026 (celek 6): II, 11; nikdo neztrácí jiný život než ten, který žije (II, 14); II, 17; nežij, jako bys měl žít deset tisíc let (IV, 17); VII, 56; IX, 3; tři dějství jsou celá hra (XII, 36)." }
   - { id: origenes-kelsos, druh: pramen, nazev: "Proti Kelsovi VII, 53–54", autor: Órigenés, dilo: "Contra Celsum, řecky P. Koetschau (1899), First1KGreek", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2042/tlg001/tlg2042.tlg001.perseus-grc1.xml", overeno: 2026-10-02, poznamka: "Kelsos: pán kroutil Epiktétovi nohou, ten s pousmáním řekl „zlomíš ji“ a potom „neříkal jsem, že ji zlomíš?“; pán není jmenován. Tradovaný příběh: Kelsos psal asi roku 178, Órigenés asi 248." }
   - { id: gellius-epiktetos, druh: pramen, nazev: "Attické noci I, 2; II, 18; XV, 11; XVII, 19; XIX, 1", autor: Aulus Gellius, dilo: "Noctes Atticae, lat. a angl. J. C. Rolfe (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1254/phi001/phi1254.phi001.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Héródés Attikos: Epiktétos, největší ze stoiků (I, 2, 6); Epiktétos byl otrok (II, 18, 10); za Domitiana byli filozofové usnesením senátu vyhnáni z Říma a Itálie a Epiktétos odešel do Níkopole (XV, 11, 3–5, bez roku); „snášej a zdrž se“ podle Favorina (XVII, 19, 5–6); z páté knihy Rozprav: dojmy nejsou v naší moci, souhlas ano, i moudrý zbledne (XIX, 1, 14–21)." }
   - { id: gellius-vii-2, druh: pramen, nazev: "Attické noci VII, 2", autor: Aulus Gellius, dilo: "Noctes Atticae, lat. a angl. J. C. Rolfe (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1254/phi001/phi1254.phi001.perseus-lat2.xml", overeno: 2026-10-02, poznamka: "Chrýsippova definice osudu (řecky, ze 4. knihy O prozřetelnosti); námitka, že pak je nespravedlivé trestat; odpověď válcem; nesmí se poslouchat ti, kdo se vymlouvají na osud (13)." }
@@ -175,7 +175,7 @@ prameny:
   - { id: whe-epiktetos-1715, druh: data, nazev: "Epictetus (rytina z roku 1715)", dilo: "World History Encyclopedia", url: "https://www.worldhistory.org/image/3388/epictetus/", overeno: 2026-10-02, poznamka: "Úvodní list knihy Epicteti Enchiridion Latinis versibus adumbratum (E. Ivie, Oxford 1715; vydání doloženo katalogem Eton College, B13574). V desce podpis kreslíře („… delin.“) a rytce („MB. sculp.“), pod obrazem řecké dvojverší o otroku Epiktétovi. Stránka uvádí Public Domain (a omylem rok 1751)." }
   # Celek 4 „Je to, co vidím, celá skutečnost?“ (docs/podklady/celek-4-co-je-skutecne.md): řecké texty z PerseusDL, není-li uvedeno jinak.
   - { id: platon-ustava-perseus, druh: pramen, nazev: "Ústava II, IV–VII a X", autor: Platón, dilo: "Respublica, řecky J. Burnet, angl. P. Shorey (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg030/tlg0059.tlg030.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Mluví Sókratés, vypráví celý rozhovor; Glaukón a Adeimantos jsou Platónovi bratři. Glaukón obnovuje Thrasymachovu řeč a sám jí nevěří (357a–358d); původ spravedlnosti jako úmluva slabých (358e–359b); Gygův prsten: předek Lýda Gýga, pastýř, bronzový kůň, prsten, král (359c–360b), dva prsteny (360b–d), vyostření (360e–361d); cenzura básníků (377b–c, 398a); ušlechtilá lež a kovy (414b–415c); spravedlnost je dělat to své (433a–b); tři části duše a Leontios (439d–441a); spravedlnost jako pořádek v duši (441d–444a); strážkyně (451d–457b); společné ženy a děti strážců (457c–d, 461d); řízené sňatky, zmanipulované losy, děti horších skryjí na tajném místě (459c–460c); filozofové králi (473c–474a); dobro samo Sókratés říct odmítne (506b–e); slunce (507b–509c); úsečka, čtverec sám (509d–511e); jeskyně (514a–517a), výklad a „bůh ví, jestli je to pravda“ (517a–c), dvojí zakalení očí (518a–b), vzdělání jako otočení duše (518b–d), povinný návrat (519c–520e), vládnout mají ti, kdo o to nestojí (520d–521a); láska k Homérovi, muže nelze ctít víc než pravdu (595b–c); idea stolu a lehátka (596a–b); starý spor filozofie a básnictví (607b); Gýgův prsten (612b)." }
-  - { id: platon-faidon-perseus, druh: pramen, nazev: "Faidón 59b, 74a–75b, 91b–c a 100b–e", autor: Platón, dilo: "Phaedo, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg004/tlg0059.tlg004.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Výčet přítomných v den popravy, „Platón, myslím, stonal“ (59b; mluví Faidón); stejné klacky a kameny a stejné samo (74a–75b); málo dbejte na Sókrata, mnohem víc na pravdu (91c); krásné věci jsou krásné krásou, nejbezpečnější odpověď (100b–e)." }
+  - { id: platon-faidon-perseus, druh: pramen, nazev: "Faidón 59b, 74a–75b, 91b–c a 100b–e", autor: Platón, dilo: "Phaedo, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg004/tlg0059.tlg004.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Výčet přítomných v den popravy, „Platón, myslím, stonal“ (59b; mluví Faidón); stejné klacky a kameny a stejné samo (74a–75b); málo dbejte na Sókrata, mnohem víc na pravdu (91c); krásné věci jsou krásné krásou, nejbezpečnější odpověď (100b–e). 8. 10. 2026 (celek 6): filozofovat je chystat se na smrt (64a, 67e; do studentského textu ne); je-li duše nesmrtelná, potřebuje péči pro všechen čas (107c); věřit tomu je „krásné riziko“ (114d)." }
   - { id: platon-parmenides, druh: pramen, nazev: "Parmenidés 127a–135d", autor: Platón, dilo: "Parmenides, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg009/tlg0059.tlg009.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Rámec: Parmenidovi asi 65, Zénónovi asi 40, Sókratés velmi mladý (127a–c). Mladý Sókratés hájí ideje (128e–130a). Námitky: čeho jsou ideje, vlas, bláto, špína, „utíkám“ (130b–e); celek a část, den a plachta (131a–e); regres velikosti, tzv. třetí člověk (132a–b); ideje jako myšlenky (132b–c); vzory a podobnost (132d–133a); největší potíž, pán a otrok (133b–134e). Bez idejí zanikne možnost rozhovoru (135b–c); Sókratés začal definovat příliš brzy (135c–d)." }
   - { id: platon-sedmy-list, druh: pramen, nazev: "Sedmý list (pravost sporná)", autor: "dochováno pod Platónovým jménem", dilo: "Epistulae VII, řecky J. Burnet, angl. R. G. Bury (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg036/tlg0059.tlg036.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "První příchod do Syrákús „asi ve čtyřiceti“ (324a); mládí, vláda Třiceti, příbuzní zvou do vlády, Sókratés odmítne zatknout občana, Sókratova smrt, filozofové a vládci (324b–326b); Itálie a Sicílie, Dión (326b–327b); druhá cesta, „abych si nepřipadal jako pouhé slovo“, Dión vyhnán asi po třech měsících, „prosby tyranů jsou smíšené s nutností“ (327c–329e); třetí cesta, triéra, dopisy od Archyty (338a–339e); žádný spis o těchto věcech, kruh (341b–342c); mezi žoldnéři, Archytova loď, Lamiskos, Olympie (349e–350e). O prodeji do otroctví list mlčí. Pravost: viz podkladový list." }
   - { id: platon-timaios, druh: pramen, nazev: "Tímaios 51b–52a", autor: Platón, dilo: "Timaeus, řecky J. Burnet, angl. R. G. Bury (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg031/tlg0059.tlg031.perseus-grc2.xml", overeno: 2026-10-03, poznamka: "Mluví Tímaios. Jsou-li rozum a pravdivé mínění dvojí, ideje jsou; jedno vzniká poučením, druhé přemlouváním, jedno se přemluvit nedá, druhé ano (51d–e)." }
@@ -244,6 +244,56 @@ prameny:
   - { id: met-skrinka-aristoteles, druh: data, nazev: "Box with Romance Scenes (17.190.173a, b; 1988.16)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/464125", overeno: 2026-10-05, poznamka: "Skříňka ze slonoviny, Paříž, asi 1310–1330. Přední deska (1988.16) má podle muzea čtyři výjevy: Aristotelés učí Alexandra, Fyllis jede na Aristotelovi, lev trhá Thisbin plášť, Pýramova smrt. API muzea: isPublicDomain true. Který snímek ukazuje přední desku, jsem neviděl. Soubor zatím nestažen." }
   - { id: met-aquamanile-fyllis, druh: data, nazev: "Aquamanile in the Form of Aristotle and Phyllis (1975.1.1416)", dilo: "The Metropolitan Museum of Art, New York, Robert Lehman Collection", url: "https://www.metmuseum.org/art/collection/search/459202", overeno: 2026-10-05, poznamka: "Bronzová nádoba na vodu, jižní Nizozemí, konec 14. nebo počátek 15. století. Muzeum vypráví středověkou pověst: Aristotelés, učitel Alexandra, se nechal ponížit svůdnou Fyllidou. API muzea: isPublicDomain true. Soubor zatím nestažen." }
   - { id: walters-skrinka-aristoteles, druh: data, nazev: "Box Front with Scenes of Alexander and Pyramus (71.196)", dilo: "The Walters Art Museum, Baltimore", url: "https://art.thewalters.org/object/71.196/", overeno: 2026-10-05, poznamka: "Deska ze slonoviny, Paříž, 1330–1350, 9,4 × 20,2 cm. Podle muzea: Aristotelés učí Alexandra; Fyllis jede na Aristotelovi a Alexandr přihlíží; Pýramos a Thisbé. Licence CC0. Stránku četl nástroj WebFetch; soubor nástrojům muzeum nevydá." }
+  # Celek 6 „Proč se bát smrti?“ (docs/podklady/celek-6-proc-se-bat-smrti.md): latinské texty z PerseusDL a The Latin Library, řecké z PerseusDL
+  # a First1KGreek, není-li uvedeno jinak. Čteno 8. 10. 2026 v plném znění; encyklopedie četl nástroj WebFetch (viz úvod podkladového listu).
+  - { id: iep-seneca, druh: encyklopedie, nazev: "Lucius Annaeus Seneca", autor: "Robert Wagoner", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/seneca/", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Nejčastější odhad narození 4 př. n. l.; do Říma přišel velmi brzy, asi do pěti let; učitelé Attalos a Fabianus; kvůli chatrnému zdraví „se má za to“, že strávil několik let v Egyptě; roku 41 odsouzen senátem pro cizoložství s Julií Livillou a Claudiem vypovězen na Korsiku do roku 49; po návratu Neronův vychovatel, později s Burrem rádce a pisatel projevů; o výši jeho majetku je mimo Suilliovo obvinění málo nezávislých dokladů; 124 dopisů ve 20 knihách, nejspíš nejsou všechny; osm tragédií; korespondence s apoštolem Pavlem je podvrh, dlouho pokládaný za pravý." }
+  - { id: sep-death, druh: encyklopedie, nazev: "Death", autor: "Steven Luper", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/death/", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch (rev. 28. 7. 2026). Epikúrův argument je nejsilnější, když „smrt“ znamená být mrtvý, ne umírat; bolestné umírání může být zlé i podle něj. Námitka ztráty (deprivationism, comparativism): smrt je zlá tím, o jaká dobra nás připraví; mezi první zastánce řadí T. Nagela (Death, 1970). K Lucretiovu zrcadlu: Nagel odpovídá, že člověk nemohl vzniknout výrazně dřív, než vznikl; heslo tu odpověď pokládá za spornou. Otázka, kdy je smrt pro zemřelého zlá, zůstává otevřená. Nagelův článek jsem nečetl." }
+  - { id: seneca-epistulae-smrt, druh: pramen, nazev: "Dopisy Luciliovi 1, 4, 12, 24, 26, 30, 54, 61, 63, 66, 77, 78, 92, 99 a 104", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Čas je to jediné, co je naše; umíráme každý den (1, 2–3). Smrt buď nedojde, nebo přejde (4, 3); příklady dobrovolné smrti se způsobem (4, 4: do studentského textu ne). Stará vila, platany, vrátný Felicio (12, 1–3). Smrt nás buď stráví, nebo svlékne (24, 18); umíráme každý den, vodní hodiny, Luciliův verš (24, 19–21; myšlenku připisuje Luciliovi); Epikúros kárá i ty, kdo po smrti touží (24, 22–23); „libido moriendi“ (24, 25). Řeč je odvážná i u bojácných, rozhodne až konec (26, 5–6). Aufidius Bassus: starý nemocný muž mluví o smrti klidně a drží se Epikúra; slova nepomáhala, dokud je neřekl někdo, kdo je smrti blízko; nebojíme se smrti, ale myšlenky na ni (30). Záchvat dušnosti, „meditatio mortis“, smrt je nebýt, lampa (54). Dost žít není věc let (61, 4). Smrt přítele Flacca; slzy ano, bez míry ne; sám oplakával Serena bez míry (63, 1 a 14); vzpomínka na mrtvé přátele (63, 4–7). Epikúrův poslední den (66, 47; 92, 25). Dopis 77: Marcellinus (obhajoba dobrovolné smrti, do studentského textu ne); „ne jak dlouho, ale jak dobře“ (77, 20). Nemoc v mládí: chtěl skoncovat se životem, zůstal kvůli otci, „někdy je statečné i žít“; pomohli přátelé a filozofie (78, 1–4). Tvrdý dopis otci, kterému zemřel malý syn (99, 1–2); nepohnout se nad pohřbem svých je nelidskost, ne ctnost (99, 15); co bylo, je naše (99, 4); Métrodórův výrok o slasti v zármutku (99, 25). Paulina; kvůli blízkým se má člověk držet života (104, 1–5); Sókratés: cestuješ sám se sebou (104, 7)." }
+  - { id: seneca-epistulae-zivot, druh: pramen, nazev: "Dopisy Luciliovi 6, 7, 8, 21, 28, 38, 40, 47, 67, 75, 106, 107 a 108", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Přátelství; Kleanthés by Zénóna nepochopil, kdyby ho jen slyšel: žil s ním (6, 6). Dav a polední hry; „lidé se učí, když učí“ (7, 3 a 8); Epikúrův výrok příteli (7, 11). Píše pro ty, kdo přijdou po něm (8, 2–3). Epikúros slibuje Ídomeneovi slávu z dopisů, Seneca totéž Luciliovi (21, 3–5). „Musíš změnit mysl, ne oblohu“; Sókratés (28, 1–2). Dopis jako rozhovor (38, 1; 40, 1; 67, 2; 75, 1); ať řeč ladí se životem (75, 4). Otroci jsou lidé; pravidlo (47, 11); sám popírá, že volá po osvobození (47, 18); zneužívání otroka u stolu (47, 7: do studentského textu ne). „Non vitae sed scholae discimus“ (106, 12). Kleanthovy verše o osudu v Senekově převodu (107, 10–11). Attalos, Sótión, rok bez masa, otec, který „nenáviděl filozofii“, tvrdá matrace; „z filozofie se stala filologie“ (108, 13–23)." }
+  - { id: seneca-de-ira, druh: pramen, nazev: "O hněvu I, 1 a 9; II, 22 a 28–29; III, 12–13 a 36", autor: Seneca, dilo: "De ira (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.ira3.shtml", overeno: 2026-10-08, poznamka: "Věnováno bratru Novatovi. Hněv jako krátké šílenství, „jak říkali někteří moudří“ (I, 1, 2). Aristotelova věta, že hněv je potřeba jako voják, ne jako vůdce, a Senekovo „to není pravda“ (I, 9, 2). Příčinou hněvu je domněnka, že mi bylo ublíženo; dej tomu čas (II, 22, 2). Nikdo z nás není bez viny (II, 28). „Maximum remedium irae mora est“ (II, 29, 1; podobně III, 12, 4). Platón, zdvižená ruka a Speusippos (III, 12, 5–7; příběh o bití otroka). Sókratés ztišil hlas (III, 13, 3). Večerní ohlédnutí podle Sextia: tři otázky, soudce sám sobě, „teď ti odpouštím“ (III, 36). Knihy I a II na adresách sen.ira1.shtml a sen.ira2.shtml." }
+  - { id: seneca-helvia, druh: pramen, nazev: "Útěcha matce Helvii 2, 6–7, 17 a 19–20", autor: Seneca, dilo: "Ad Helviam matrem de consolatione (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.consolatione3.shtml", overeno: 2026-10-08, poznamka: "Psáno z vyhnanství. Dvacet dní před jeho odsouzením zemřel v matčině náručí jeho syn (2, 5). Ostrov nejmenuje: „tahle skála“, „vyprahlé a trnité skalisko“, kde dřív sídlili Řekové z Fókaie (6, 5; 7, 8–9). Otcova „starodávná přísnost“ nedovolila matce studovat (17, 3–4). Teta ho jako dítě donesla do Říma, ošetřovala ho v dlouhé nemoci a přimluvila se za jeho kvestorský úřad; její muž spravoval šestnáct let Egypt a zemřel na plavbě, jejímž byl Seneca svědkem (19, 2–6). Pobyt v Egyptě text výslovně neuvádí. O sobě: je veselý, zkoumá přírodu (20)." }
+  - { id: seneca-marcia, druh: pramen, nazev: "Útěcha Marcii 1, 7, 10, 12, 19 a 25–26", autor: Seneca, dilo: "Ad Marciam de consolatione (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.consolatione2.shtml", overeno: 2026-10-08, poznamka: "Marcia, dcera dějepisce Cremutia Corda, truchlí třetí rok pro syna (1, 7). Stesk po svých je přirozený, pokud je mírný (7, 1); ženy a „barbaři“ truchlí víc (7, 3: do studentského textu ne). Všechno máme půjčené (10, 1–3). Lepší mít dobro, které odejde, než žádné (12, 3). Epikurejský argument ve stoické útěše: smrt není dobro ani zlo, vrací nás do klidu, ve kterém jsme byli před narozením (19, 4–5). Syn mezi blaženými dušemi (25–26). Cordova smrt hladem (26, 3: do studentského textu ne). Podle SEP nejspíš nejstarší dochovaný Senekův spis, tedy ne z vyhnanství." }
+  - { id: seneca-polybius, druh: pramen, nazev: "Útěcha Polybiovi 13 a 18", autor: Seneca, dilo: "Ad Polybium de consolatione (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.consolatione1.shtml", overeno: 2026-10-08, poznamka: "Psáno z vyhnanství císařovu propuštěnci. Chvála Claudia a prosba o milost; Claudius se za něj přimluvil u senátu a „život mi nejen daroval, ale i vyprosil“ (13, 2–4). Kolem zní řeč barbarů a latina mu vázne (18, 9). Začátek spisu chybí." }
+  - { id: seneca-clementia, druh: pramen, nazev: "O mírnosti I, 1 a 9; II, 1", autor: Seneca, dilo: "De clementia (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.clem.shtml", overeno: 2026-10-08, poznamka: "Věnováno Neronovi: chce mu být „jaksi zrcadlem“ (I, 1, 1). Neronovi právě minulo osmnáct (I, 9, 1). Když měl podepsat rozsudek nad dvěma lupiči, zvolal prý „Kéž bych neuměl psát!“ (II, 1, 2; vypráví Seneca jako svědek)." }
+  - { id: seneca-tranquillitate, druh: pramen, nazev: "O duševním klidu 2, 13–15", autor: Seneca, dilo: "De tranquillitate animi (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.tranq.shtml", overeno: 2026-10-08, poznamka: "Lidé střídají místa a zábavy; „jak říká Lucretius: tak každý pořád utíká sám před sebou“ (2, 14; Lucretius III, 1068). Věnováno příteli Annaeu Serenovi." }
+  - { id: seneca-beneficiis, druh: pramen, nazev: "O dobrodiních VII, 1", autor: Seneca, dilo: "De beneficiis, lat. (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi013/phi1017.phi013.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Kynik Démétrios: velký zápasník není ten, kdo zná všechny chvaty, ale kdo jeden nebo dva dobře nacvičil a pozorně čeká na příležitost je použít (VII, 1, 4). Nejbližší místo k výroku o štěstí, přípravě a příležitosti; výrok sám u Seneky není." }
+  - { id: seneca-nq, druh: pramen, nazev: "Otázky přírody VI, 1", autor: Seneca, dilo: "Naturales quaestiones (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.qn6.shtml", overeno: 2026-10-08, poznamka: "Luciliovi: zemětřesení 5. února za konzulů Regula a Verginia poškodilo Pompeje a Herculaneum (VI, 1, 1–2); „vyděšeným je třeba hledat útěchu a zbavit je velkého strachu“ (VI, 1, 4)." }
+  - { id: seneca-hercules-furens, druh: pramen, nazev: "Zuřící Herkules 437", autor: Seneca, dilo: "Hercules furens, lat. (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi001/phi1017.phi001.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Megara: „Non est ad astra mollis e terris via.“ Rčení „Per aspera ad astra“ u Seneky není; v Dopise 53, 4 jen „per aspera erepo“ (šplhá po skalách na břeh)." }
+  - { id: tacitus-annales-seneca, druh: pramen, nazev: "Letopisy VI, 29; XII, 8; XIII, 2–6, 11–18, 20–21 a 42–43; XIV, 2–3, 7, 10–11, 14, 31, 42–45, 51–57 a 65; XV, 23, 45, 56, 60–65, 67, 70, 71 a 73; XVI, 17", autor: Tacitus, dilo: "Annales, lat. C. D. Fisher (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml", overeno: 2026-10-08, poznamka: "Tacitus se narodil roku 56 a zemřel kolem roku 120 (Britannica); Letopisy psal ve stáří, tedy asi půl století po Senekově smrti. Agrippina mu vymohla návrat a praeturu, aby vychovával Domitia (XII, 8). Burrus a Seneca brání vraždám a drží mladého císaře „povolenými požitky“; Seneca učí výmluvnosti (XIII, 2). Pohřební řeč na Claudia a nástupní řeč napsal Seneca (XIII, 3–4); řeči o mírnosti (XIII, 11). Britannicus: Seneku Tacitus nejmenuje (XIII, 15–17); po vraždě Nero obdaroval přední přátele a někteří vyčítali „mužům, kteří hlásají vážnost“, že si rozdělili domy a vily (XIII, 18). Fabius Rusticus Senekovi straní, protože za jeho přátelství vzkvétal (XIII, 20). Suillius: „nejspravedlivější vyhnanství“, cizoložník v Germanikově domě, 300 milionů sesterciů za čtyři roky, závěti a lichva; výčitkami nešetří a Senekovi je donesou; sám je pak odsouzen (XIII, 42–43). Po nezdařeném ztroskotání volá Nero Burra a Seneku, „nejisto, zda o věci věděli už dřív“; Seneca se ptá Burra, má-li vraždu provést vojsko (XIV, 7). Dopis senátu: v pověsti byl hůř Seneca, že takovou řečí sepsal přiznání (XIV, 11). Povstání Icenů: Seneku Tacitus mezi příčinami neuvádí (XIV, 31). Čtyři sta otroků Pedania Secunda: Seneku v debatě nejmenuje (XIV, 42–45). Burrova smrt, obvinění, žádost o odchod a Neronova odpověď (stylizované řeči; „čtrnáctý rok, co jsem byl přidán k tvé naději“; XIV, 52–56). Po požáru prý žádal o odchod na venkov a jed prý připravil propuštěnec Cleonicus („ferebatur“, „tradidere quidam“; XV, 45). Natalis ho jmenuje (XV, 56). Nero se ptá, zda se Seneca chystá k „dobrovolné smrti“, a poručí „oznámit smrt“ (XV, 61). Smrt: „caedes“, Nero neměl důkaz; večeře s Paulinou a dvěma přáteli; odkázal přátelům „obraz svého života“; Paulinu dal Nero zachránit; pohřben bez obřadu (XV, 60–64). Pověst, že měl po Pisonovi dostat vládu (XV, 65). Bratr Mela, synovec Lucanus (XVI, 17). Obecný zvyk za Tiberia: kdo o sobě rozhodl sám, toho pohřbili a jeho závěť platila, kdežto odsouzeným propadl majetek a pohřeb jim byl odepřen; „odměna za spěch“ (VI, 29); u Seneky Tacitus ten důvod neuvádí. Roky podle běžné datace konzulů; seznam jsem neověřoval. Způsob smrti (XV, 63–64) do studentského textu nepatří." }
+  - { id: suetonius-nero, druh: pramen, nazev: "Nero 7, 35 a 52", autor: Suetonius, dilo: "De vita Caesarum, lat. (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1348/abo016/phi1348.abo016.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Suetonius se narodil roku 69 a zemřel po roce 122 (Britannica); psal tedy asi půl století po Senekově smrti. V jedenácti letech Nero adoptován a svěřen Senekovi, „už tehdy senátorovi“; Seneca prý tu noc snil, že učí Caligulu („ferunt“; 7). Seneku „dohnal k smrti“, ač mu přísahal, že mu neublíží, když žádal o propuštění a nabízel majetek (35). Od filozofie Nerona odvrátila matka: budoucímu vladaři prý škodí; od starých řečníků Seneca, aby ho déle obdivoval (52)." }
+  - { id: suetonius-caligula, druh: pramen, nazev: "Caligula 53", autor: Suetonius, dilo: "De vita Caesarum, lat. (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1348/abo014/phi1348.abo014.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Caligula pohrdal uhlazeným slohem: o Senekovi, „tehdy nejoblíbenějším“, říkal, že skládá „commissiones meras“ (pouhé kousky na předvádění) a že je to „písek bez vápna“ (53, 2). Suetonius psal asi 80 let po Caligulově vládě." }
+  - { id: cassius-dio-seneca, druh: pramen, nazev: "Římské dějiny 59, 19; 60, 8 a 35; 61, 3–4, 7, 10, 12, 18 a 20; 62, 2 a 24–25", autor: Cassius Dio, dilo: "Historia Romana, angl. překlad z Loeb Classical Library (sv. VIII, 1925), LacusCurtius", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/61*.html", overeno: 2026-10-08, poznamka: "Dio se narodil kolem roku 150 a zemřel roku 235 (Britannica); psal tedy nejdřív 130 let po Senekově smrti. Knihy 61 a 62 jsou na LacusCurtius označené jako výtah (Epitome); pozdní knihy se podle Britanniky dochovaly hlavně u Xifilina a Zonara. Čteno jen anglicky. K Senekovi nepřátelský. Caligula ho chtěl dát zabít pro dobrou řeč v senátu a ušetřil ho, když mu řekli, že stejně brzy zemře na souchotiny (59, 19, 7–8). Vyhnán pro cizoložství s Julií, na kterou žárlila Messalina (60, 8, 5). Satira „Apocolocyntosis“ (60, 35, 3). Výčet výčitek: vztah s Agrippinou, učitel tyrana, pochlebná kniha z ostrova, kterou pak ze studu potlačil, 300 milionů, pět set stolků z citronového dřeva (61, 10). Po Britannikově smrti se Seneca a Burrus spokojili s tím, že řídí věci umírněně a zůstanou naživu (61, 7, 5). K vraždě matky Nerona podněcoval i Seneca, „jak tvrdí mnoho důvěryhodných mužů“ (61, 12, 1). Půjčka Britům 40 milionů sesterciů, které nechtěli, a její náhlé vymáhání jako jedna z příčin Boudičina povstání (62, 2, 1; jediný pramen). Smrt: chtěl, aby s ním zemřela i Paulina (62, 25)." }
+  - { id: aurelius-victor-caes, druh: pramen, nazev: "O císařích 5", autor: Aurelius Victor, dilo: "Liber de Caesaribus (The Latin Library)", url: "https://www.thelatinlibrary.com/victor.caes.html", overeno: 2026-10-08, poznamka: "Psáno ve 4. století (tak The Latin Library), asi 300 let po Neronovi. Nero byl pět let tak velký, „hlavně rozšiřováním města“, že Trajanus často říkal, že se Neronovu pětiletí žádný císař zdaleka nevyrovná (5, 2). Seneku ani Burra nejmenuje a neříká, kterých pět let myslí." }
+  - { id: hieronymus-viri-12, druh: pramen, nazev: "O slavných mužích 12", autor: Hieronymus, dilo: "De viris illustribus, angl. překlad (New Advent)", url: "https://www.newadvent.org/fathers/2708.htm", overeno: 2026-10-08, poznamka: "Konec 4. století. Seneku by mezi svaté neřadil, kdyby ho k tomu nepobízely „mnohými čtené“ listy Pavla Senekovi a Seneky Pavlovi. Nejstarší zmínka o té korespondenci; IEP ji označuje za podvrh. Latinský text jsem nečetl." }
+  - { id: quintilianus-x-1, druh: pramen, nazev: "Základy rétoriky X, 1, 125–131", autor: Quintilianus, dilo: "Institutio oratoria (The Latin Library)", url: "https://www.thelatinlibrary.com/quintilian/quintilian.institutio10.shtml", overeno: 2026-10-08, poznamka: "Podle běžného datování asi třicet let po Senekovi (neověřoval jsem). Seneca byl tehdy „skoro jediný v rukou mladých“; měli ho radši, než ho uměli napodobit. Kolují jeho řeči, básně, dopisy a dialogy. „Ve filozofii málo důkladný, zato vynikající kárat neřestí.“ Lepší by bylo, kdyby psal svým nadáním a cizím úsudkem." }
+  - { id: skutky-18, druh: pramen, nazev: "Skutky apoštolů 18, 12–17", dilo: "Vulgata (The Latin Library)", url: "https://www.thelatinlibrary.com/bible/acts.shtml", overeno: 2026-10-08, poznamka: "Pavel v Korintu před soudnou stolicí Galliona, prokonzula Achaje, který žalobu odmítne řešit. Gallio je Senekův bratr Novatus (Seneca, Dopisy 104, 1: „můj pán Gallio“ v Achaji; Tacitus, Letopisy XV, 73)." }
+  - { id: seneca-starsi-controv, druh: pramen, nazev: "Kontroverze IV, 3 (výtah)", autor: Seneca starší, dilo: "Controversiae (The Latin Library)", url: "https://www.thelatinlibrary.com/seneca.contr4.html", overeno: 2026-10-08, poznamka: "V řečnickém cvičení jen slova „per humanos errores“ (pro lidské chyby). Rčení „Errare humanum est“ tu není." }
+  - { id: cicero-philippicae-xii, druh: pramen, nazev: "Filipiky XII, 5", autor: Cicero, dilo: "Philippicae (The Latin Library)", url: "https://www.thelatinlibrary.com/cicero/phil12.shtml", overeno: 2026-10-08, poznamka: "„Cuiusvis hominis est errare, nullius nisi insipientis in errore perseverare“: mýlit se může každý, setrvat v omylu jen hlupák." }
+  - { id: popik-luck-2011, druh: data, nazev: "“Luck is what happens when preparation meets opportunity”", autor: "Barry Popik", dilo: "The Big Apple (26. 5. 2011)", url: "https://barrypopik.com/blog/luck_is_what_happens_when_preparation_meets_opportunity", overeno: 2026-10-08, poznamka: "Výrok se Senekovi připisuje až od roku 1999 a bez udání místa; nejstarší nalezená podoba je z časopisu Youth's Companion (1912), ve 20. letech ho používaly reklamy bank. Autor neznámý." }
+  - { id: dl-x-22, druh: pramen, nazev: "Životy filozofů X, 15–22 a 118–120", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-08, poznamka: "Psáno asi 500 let po Epikúrovi. Zemřel na kámen, který mu zadržel moč, po čtrnácti dnech nemoci (podle Hermarchových dopisů); podle Hermippa vstoupil do bronzové vany s teplou vodou, vypil neředěné víno, vyzval přátele, ať pamatují na jeho učení, a zemřel (15–16). Závěť: zahrada škole, oslava narozenin a dvacátého dne v měsíci na památku jeho a Métrodóra, péče o Métrodórova syna a dceru, propuštění otroků (16–21). Dopis Ídomeneovi psaný při umírání (22). Moudrý bude sténat na mučidlech (118), ani oslepený si život nevezme (119), bude cítit žal a někdy za přítele i zemře (120)." }
+  - { id: cicero-de-finibus-ii, druh: pramen, nazev: "O nejvyšším dobru a zlu II, 94–103", autor: Cicero, dilo: "De finibus bonorum et malorum, lat. Th. Schiche (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0474/phi048/phi0474.phi048.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Podle běžného datování z roku 45 př. n. l., asi 225 let po Epikúrově smrti (rok jsem neověřoval); mluví Cicero proti epikurejci Torquatovi. „Velká bolest je krátká, dlouhá lehká“ neplatí: vidí bolesti velké a dlouhé, Filoktétés leží v jeskyni desátý rok (94–95; obsahuje „ať tedy zemře“, do studentského textu ne). Umírající Epikúros píše Hermarchovi („Epicurus Hermarcho salutem“); Cicero dopis přeložil „skoro slovo od slova“ (96, 100). Dopis chválí, ale s učením se podle něj neshoduje: radost z úvah není tělesná a péče o cizí děti ukazuje, že dobré je dobré samo o sobě (98–99). Závěť odporuje větě, že smrt se nás netýká: proč se stará o oslavy po smrti (100–103). Démokrita, „jediného, koho následoval“, nic takového nenapadlo (102)." }
+  - { id: cicero-tusculanae-i, druh: pramen, nazev: "Tuskulské hovory I, 82–91", autor: Cicero, dilo: "Tusculanae disputationes, lat. M. Pohlenz (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0474/phi049/phi0474.phi049.perseus-lat2.xml", overeno: 2026-10-08, poznamka: "Podle běžného datování rok 45 př. n. l. Námitka ztráty zazní jako cizí hlas: „trápí, nebo spíš mučí odchod od všeho, co je v životě dobré“ (83). Odpověď: smrt odvádí spíš od zlého; „postrádat“ může jen ten, kdo vnímá, mrtvý tedy nic nepostrádá (87–88). Moudrý se stará o potomstvo, i když z něj nic mít nebude (90–91). Zmínka o Hégésiovi (83–84) do studentského textu nepatří." }
+  - { id: lucretius-iii-830, druh: pramen, nazev: "O přírodě III, 830–1094", autor: Lucretius, dilo: "De rerum natura, lat. (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi0550/phi001/phi0550.phi001.perseus-lat1.xml", overeno: 2026-10-08, poznamka: "Smrt se nás netýká; za punských válek jsme nic necítili, tak ani po smrti (830–842). Kdo se zlobí, co bude s jeho tělem, představuje si sám sebe vedle něj (870–893). Řeč truchlících: už tě nepřivítá dům, žena ani děti, jeden den ti vzal všechno; básník odpovídá, že po tom už nebudeš toužit, a ptá se, proč by měl kdo chřadnout věčným žalem (894–911). Řeč Přírody: proč neodejdeš jako nasycený host; starci ostřeji (931–962); její druhá půlka radí nespokojenému život skončit (940–943: do studentského textu ne). Život je všem jen k užívání (971). Zrcadlo času před narozením (972–977). Podsvětí je tady, v životě (978–1023). Zemřeli i Scipio, Homér, Démokritos, Epikúros (1024–1052; Démokritos dobrovolně, 1039–1041: do studentského textu ne). Každý utíká sám před sebou (1053–1070). Delší život smrt nezkrátí (1087–1094)." }
+  - { id: plutarchos-non-posse, druh: pramen, nazev: "Že podle Epikúra nelze žít příjemně 20 a 25–31 (1100e–1101c, 1104a–1107c)", autor: Plútarchos, dilo: "Non posse suaviter vivi secundum Epicurum, řecky a anglicky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg139/tlg0007.tlg139.perseus-grc2.xml", overeno: 2026-10-08, poznamka: "Plútarchos psal kolem roku 100 n. l. (běžné datování, neověřoval jsem), přes 350 let po Epikúrovi. Rozhovor na procházce po přednášce; vypráví Plútarchos, mluví hlavně jeho přátelé Aristodémos a Theón. Aristodémos: epikurejci sami odmítají ty, kdo ruší zármutek, slzy a nářek nad smrtí přátel; bezcitnost je podle nich z horšího zla, ze surovosti; Epikúros to psal i v dopisech otci a bratrovi zemřelého Hégésianakta (1101a–b). Theón: lidé chtějí být, i kdyby jim bylo zle (1104c–e); věta, že rozpadlé nevnímá, strach neodstraní, spíš ho dokazuje (1105a); naděje na shledání s rodiči a ženou; Epikúros řekl, že vzpomínka na mrtvého přítele je sladká (1105c–e); šťastným bere smrt víc než nešťastným (1106b–c); přirozenost se bojí ztráty přítomných dober a to „netýká se nás“ se nás týká už teď v myšlence (1106e); únik před zlem mají za dobro, ale ztrátu dobra za zlo ne (1107b). Řecky čteny kap. 20 a 27–31, ostatní anglicky." }
+  - { id: sep-plutarch, druh: encyklopedie, nazev: "Plutarch", autor: "George Karamanolis", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/plutarch/", overeno: 2026-10-09, poznamka: "Rev. 5. 12. 2024. Asi 45–120 n. l.: narozen mezi lety 45 a 47, zemřel po roce 119. Z Chairóneie v Boiótii; většinu života prožil tam a v blízkých Delfách, kde zastával různé úřady včetně kněze Apollónova. V Athénách studoval u platonika Ammónia; sám platonik. Paralelní životopisy: dvojice řeckých a římských státníků a vojevůdců. Proti epikurejcům: Že podle Epikúra nelze žít příjemně, Proti Kólótovi a spis o rčení Žij skrytě." }
+  - { id: diodoros-xvi-26, druh: pramen, nazev: "Historická knihovna XVI, 26, 4–5", autor: Diodóros Sicilský, dilo: "Bibliotheca historica, angl. Loeb Classical Library VII (1952; LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/16B*.html", overeno: 2026-10-09, poznamka: "Pro věštkyni v Delfách bylo zhotoveno zařízení, na které může bezpečně vystoupit; má tři podpěry, proto se mu říká trojnožka. Čteno anglicky." }
+  - { id: aristoteles-etika-smrt, druh: pramen, nazev: "Etika Nikomachova III, 6 a 9; X, 7", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-08, poznamka: "Čteno řecky. Nejstrašnější je smrt, protože je to hranice (1115a26–27; výklad o statečnosti). Čím je člověk ctnostnější a šťastnější, tím víc ho smrt bolí: ví, že přichází o největší dobra (1117b9–13; o statečném v boji). Nemáme myslet jen na smrtelné, ale nakolik to jde, stávat se nesmrtelnými a žít podle toho nejlepšího v sobě (1177b31–1178a2)." }
+  - { id: goranson-2017, druh: monografie, nazev: "Dying Is Unexpectedly Positive", autor: "Amelia Goranson, Ryan S. Ritter, Adam Waytz, Michael I. Norton, Kurt Gray", dilo: "Psychological Science 28 (2017), 988–999", url: "https://doi.org/10.1177/0956797617701186", overeno: 2026-10-08, poznamka: "Čteno v plném textu (PDF na webu jednoho z autorů). Studie 1: 25 blogů lidí s rakovinou (20) a ALS (5), kteří během psaní zemřeli, celkem 2 616 příspěvků; posledních dvanáct týdnů (597 příspěvků) srovnáno s texty 45 lidí, kteří si měli představit, že mají smrtelnou rakovinu a zbývá jim pár měsíců, a napsat příspěvek na blog. Počítačový rozbor slov: nemocní použili méně záporných citových slov (1,70 % proti 2,25 %), v kladných se nelišili. Lidští hodnotitelé: příspěvky nemocných kladnější a méně záporné; vyškolení hodnotitelé potvrdili jen menší zápornost. Kladných slov u nemocných s blížící se smrtí přibývalo, záporných významně ne. Meze podle autorů: málo blogů, pisatelé se vybrali sami, skupiny se nedaly srovnat věkem ani jinak, počítání slov nevidí souvislost; výsledek nemusí platit pro každého a o tom, kdo stojí vedle umírajícího, neříká nic. Studie 2 (poslední slova popravených v Texasu) do studentského textu nepatří." }
+  - { id: russac-2007, druh: monografie, nazev: "Death anxiety across the adult years: an examination of age and gender effects", autor: "R. J. Russac, C. Gatliff, M. Reece, D. Spottswood", dilo: "Death Studies 31 (2007), 549–561", url: "https://pubmed.ncbi.nlm.nih.gov/17726829/", overeno: 2026-10-08, poznamka: "Čten jen abstrakt. 304 mužů a žen ve věku 18 až 87 let vyplnilo dotazník strachu ze smrti: úzkost byla nejvyšší u dvacátníků a potom klesala; u žen se znovu zvedla kolem padesátky. Druhá studie se 113 ženami ukázala totéž. Jednorázové srovnání věkových skupin v USA, ne sledování týchž lidí; mladší osmnácti let ve vzorku nebyli." }
+  - { id: chopik-2017, druh: monografie, nazev: "Death across the lifespan: Age differences in death-related thoughts and anxiety", autor: "William J. Chopik", dilo: "Death Studies 41 (2017), 69–77", url: "https://pubmed.ncbi.nlm.nih.gov/27573253/", overeno: 2026-10-08, poznamka: "Čten jen abstrakt. Průřezový průzkum 2 363 dospělých: myšlenek na smrt s věkem ubývá. Čtyřleté sledování 9 815 dospělých: úzkost ze smrti s věkem klesala; kdo měl větší oporu v blízkých, měl jí později méně, i po zohlednění zdraví." }
+  - { id: bastian-2020, druh: data, nazev: "Why Do Scientists Cite “The Top 5 Regrets of the Dying”?", autor: "Hilda Bastian", dilo: "Absolutely Maybe, PLOS Blogs (5. 3. 2020)", url: "https://absolutelymaybe.plos.org/2020/03/05/why-do-scientists-cite-the-top-5-regrets-of-the-dying/", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. „Pět věcí, kterých lidé před smrtí litují“ pochází z blogu a knihy (2011) Bronnie Wareové, která o umírající pečovala bez odborného vzdělání; není to studie: žádný počet pacientů, záznam ani rozbor. Autorka nenašla výzkum, který by běžné lítosti umírajících zjišťoval; jedna studie irských pacientů s rakovinou uvádí, že lítost u většiny nebyla hlavní starostí. Knihu Wareové jsem nečetl." }
+  - { id: who-media-2023, druh: data, nazev: "Preventing suicide: a resource for media professionals, update 2023", dilo: "World Health Organization (2023)", url: "https://iris.who.int/handle/10665/372691", overeno: 2026-10-08, poznamka: "Čteno v plném textu (textová verze v repozitáři WHO). Nedělat: sebevraždu jako hlavní zprávu, popis způsobu, místo, jazyk, který sebevraždu dělá senzací, romantizuje ji, bere jako běžnou věc nebo ji podává jako schůdné řešení potíží, zjednodušení příčiny na jednu, podrobnosti z dopisu na rozloučenou. Dělat: příběhy o tom, jak lidé zvládli těžkou chvíli nebo myšlenky na sebevraždu a řekli si o pomoc; přesný údaj, kde hledat pomoc, nejlépe služby dostupné nepřetržitě, a údaje pravidelně kontrolovat." }
+  - { id: nudz-media-guide, druh: data, nazev: "Media Guide: Mediální zpracování tématu sebevražd; Jazyk a obrazový materiál (karty)", dilo: "Národní ústav duševního zdraví, sebevrazdy.cz (2025)", url: "https://sebevrazdy.cz/materialy/", overeno: 2026-10-08, poznamka: "Čteny dvě karty. Nepopisovat metody, místa ani další podrobnosti; nezjednodušovat příčiny; psát i o překonání sebevražedných myšlenek a krizí; nezobrazovat sebevraždu jako jediné možné řešení; upozorňovat na pomoc, i pro pozůstalé; u známých osobností se vyhnout idealizaci a heroizaci; u dětí a mladistvých je riziko nápodoby výrazně vyšší. Jazyk: místo „spáchat sebevraždu“ a „sebevrah“ raději „vzít si život“, „zemřít vlastní rukou“, „člověk, který si vzal život“. Obraz: žádné způsoby, žádní truchlící pozůstalí. Vzorový rámeček: tísňová linka 112, Linka první psychické pomoci 116 123, Linka bezpečí 116 111 pro děti a studenty do 26 let. Celý Media Guide (40 stran) a metodické doporučení MŠMT k sebevražednému chování (2023) jsem nečetl." }
+  - { id: linka-bezpeci, druh: data, nazev: "Linka bezpečí", dilo: "linkabezpeci.cz", url: "https://www.linkabezpeci.cz/", overeno: 2026-10-08, poznamka: "Úvodní stránka 8. 10. 2026: telefon 116 111, „volej kdykoliv a zdarma“, nonstop; pro děti a studenty do 26 let; anonymně; chat denně 9–13 a 15–19 hodin, e-mail pomoc@linkabezpeci.cz. Rodičovská linka 606 021 021." }
+  - { id: linka-116123, druh: data, nazev: "Linka první psychické pomoci", dilo: "linkapsychickepomoci.cz", url: "https://www.linkapsychickepomoci.cz/", overeno: 2026-10-08, poznamka: "Úvodní stránka 8. 10. 2026: telefon 116 123, nonstop, zdarma, anonymně; pro dospělé v krizi a jejich blízké." }
+  - { id: poradna-vigvam, druh: data, nazev: "Poradna Vigvam", dilo: "poradna-vigvam.cz", url: "https://poradna-vigvam.cz/", overeno: 2026-10-08, poznamka: "Úvodní stránka 8. 10. 2026: pomáhá pozůstalým dětem a rodinám po ztrátě blízkého; telefon +420 606 160 646 v pracovní dny 8–17 hodin, info@poradna-vigvam.cz; materiály pro školy („Mám ve třídě pozůstalého žáka“)." }
+  - { id: smb-sk-391, druh: data, nazev: "Doppelherme des Sokrates und Seneca (SK 391)", dilo: "Antikensammlung, Staatliche Museen zu Berlin", url: "https://smb.museum-digital.de/object/13081", overeno: 2026-10-08, poznamka: "Mramor, 2. čtvrtina 3. století n. l., nalezeno v Římě roku 1813 (rok podle záznamu search.smb.museum/object/obj-698814, který četl nástroj WebFetch). Dvojitá herma se jmény SENECA a řecky Sókratés; předloha Senekovy podobizny vznikla podle muzea po polovině 1. století, snad ještě za jeho života. Fotografie muzea: CC BY-NC-SA 4.0 (jen nekomerčně, s uvedením muzea, úpravy pod stejnou licencí). Soubor nestažen." }
+  - { id: met-rubens-pseudo-seneca, druh: data, nazev: "Bust of Pseudo-Seneca (1975.1.843)", autor: "Peter Paul Rubens", dilo: "The Metropolitan Museum of Art, New York, Robert Lehman Collection", url: "https://www.metmuseum.org/art/collection/search/459195", overeno: 2026-10-08, poznamka: "Kresba perem a křídou, 1600–1626, podle antické busty, kterou Rubens vlastnil a kterou tehdy měli za Seneku. Public Domain (Open Access), ověřeno v API muzea (isPublicDomain: true). Tvář Senekovi nepatří. Soubor nestažen." }
+  - { id: met-lampa, druh: data, nazev: "Terracotta oil lamp (74.51.2162)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/241715", overeno: 2026-10-08, poznamka: "Římská hliněná olejová lampa, 1. polovina 1. století n. l. Public Domain (Open Access), ověřeno v API muzea. Kandidát pro krok se Senekovou lampou; snímek jsem neviděl. Soubor nestažen." }
+  - { id: met-papyrus-dopis, druh: data, nazev: "Papyrus letter in Greek (25.8)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/251788", overeno: 2026-10-08, poznamka: "Řecký dopis na papyru, počátek 3. století n. l., tedy asi o 500 let mladší než Epikúros. Public Domain (Open Access), ověřeno v API muzea. Kandidát pro vstup cesty; snímek jsem neviděl. Soubor nestažen." }
+  - { id: britannica-dio-cassius, druh: encyklopedie, nazev: "Dio Cassius", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Dio-Cassius", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Narozen kolem roku 150, zemřel 235; dějiny Říma v 80 knihách; knihy 36–60 se dochovaly z velké části, mnoho dalšího u Jana Xifilina a Jana Zonara." }
+  - { id: britannica-tacitus, druh: encyklopedie, nazev: "Tacitus", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Tacitus-Roman-historian", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Narozen roku 56, zemřel kolem roku 120. Kdy psal Letopisy, stránka v přečtené části neuvádí." }
+  - { id: britannica-suetonius, druh: encyklopedie, nazev: "Suetonius", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Suetonius", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Narozen roku 69, zemřel po roce 122." }
 
 citaty:
   - id: obrana-38a
@@ -2048,6 +2098,763 @@ citaty:
       druh: vlastni
       podle: "řecký text (R. Hercher), bez srovnání s publikovaným překladem; u Ailiana v nepřímé řeči („odpověděl, že nechce…“), tradovaný výrok; Ailiános dodává, že tím narážel na Sókratův osud"
     zdroj: ailianos-vh
+  # Celek 6 „Proč se bát smrti?“ (docs/podklady/celek-6-proc-se-bat-smrti.md). Vlastní převody z latinského a řeckého textu;
+  # publikované české překlady jsem neměl v ruce. „Smrt se nás netýká“ = ὁ θάνατος οὐδὲν πρὸς ἡμᾶς (doslova „smrt není nic vůči nám“).
+  # U Platónova Faidónu je osoba platon a v poli podle stojí, že větu říká Sókratés; u Obrany je osoba sokrates jako v celku 1.
+  # Seneca, portrét
+  - id: seneca-ep-106-12
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 106, 12
+    cesky: "Neučíme se pro život, ale pro školu."
+    original: "non vitae sed scholae discimus"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); Seneca si tu stěžuje na filozofické hříčky; školní heslo větu obrátilo"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-75-4
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 75, 4
+    cesky: "Mluvme, jak smýšlíme, a smýšlejme, jak mluvíme. Ať řeč ladí se životem."
+    original: "quod sentimus loquamur, quod loquimur sentiamus; concordet sermo cum vita"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-8-3
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 8, 3
+    cesky: "Správnou cestu, kterou jsem poznal pozdě a unavený blouděním, ukazuji druhým."
+    original: "Rectum iter, quod sero cognovi et lassus errando, aliis monstro."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-8-2
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 8, 2
+    cesky: "Pracuji pro ty, kdo přijdou po nás. Pro ně zapisuji, co by jim mohlo být k užitku."
+    original: "posterorum negotium ago; illis aliqua, quae possint prodesse, conscribo"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-75-1
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 75, 1
+    cesky: "Chci, aby mé dopisy byly takové, jaká by byla má řeč, kdybychom spolu seděli nebo se procházeli: nenucené a lehké."
+    original: "Qualis sermo meus esset, si una sederemus aut ambularemus, inlaboratus et facilis, tales esse epistulas meas volo"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); zkráceno"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-12-1
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 12, 1
+    cesky: "Kam se otočím, vidím důkazy svého stáří."
+    original: "Quocumque me verti, argumenta senectutis meae video."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-78-2
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 78, 2
+    cesky: "Poručil jsem si tedy žít. Někdy je totiž statečné i žít."
+    original: "Itaque imperavi mihi, ut viverem. Aliquando enim et vivere fortiter facere est."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); o nemoci v mládí, kdy ho při životě držel ohled na starého otce"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-47-1
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 47, 1
+    cesky: "‚Jsou to otroci.‘ Ne, lidé. ‚Jsou to otroci.‘ Ne, ti, kdo s tebou bydlí pod jednou střechou. ‚Jsou to otroci.‘ Ne, přátelé v nízkém postavení. ‚Jsou to otroci.‘ Ne, otroci stejně jako ty, když si uvědomíš, že osud má nad vámi oběma stejnou moc."
+    original: "Servi sunt. Immo homines. Servi sunt. Immo contubernales. Servi sunt. Immo humiles amici. Servi sunt. Immo conservi, si cogitaveris tantundem in utrosque licere fortunae."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); contubernales = kdo sdílejí stan nebo dům, conservi = spoluotroci"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-47-10
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 47, 10
+    cesky: "Pomysli, že ten, komu říkáš svůj otrok, vzešel ze stejných semen jako ty, má nad sebou stejné nebe, stejně dýchá, stejně žije a stejně umírá."
+    original: "Vis tu cogitare istum, quem servum tuum vocas, ex isdem seminibus ortum eodem frui caelo, aeque spirare, aeque vivere, aeque mori!"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-47-11
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 47, 11
+    cesky: "Žij s tím, kdo je níž než ty, tak, jak bys chtěl, aby s tebou žil ten, kdo je výš."
+    original: "sic cum inferiore vivas, quemadmodum tecum superiorem velis vivere"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ira-ii-29
+    osoba: seneca
+    autor: Seneca
+    dilo: O hněvu
+    misto: II, 29, 1
+    cesky: "Největší lék na hněv je odklad."
+    original: "Maximum remedium irae mora est."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); podobně III, 12, 4: „maximum remedium irae dilatio est“"
+    zdroj: seneca-de-ira
+  - id: seneca-ira-iii-36
+    osoba: seneca
+    autor: Seneca
+    dilo: O hněvu
+    misto: III, 36, 3
+    cesky: "Když odnesou světlo a žena, která můj zvyk už zná, zmlkne, projdu celý svůj den a znovu přeměřím, co jsem udělal a řekl. Nic před sebou neskrývám, nic nepřecházím."
+    original: "Cum sublatum e conspectu lumen est et conticuit uxor moris iam mei conscia, totum diem meum scrutor factaque ac dicta mea remetior; nihil mihi ipse abscondo, nihil transeo."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library)"
+    zdroj: seneca-de-ira
+  - id: seneca-ira-iii-36-otazky
+    osoba: seneca
+    autor: Seneca
+    dilo: O hněvu
+    misto: III, 36, 1
+    cesky: "Kterou svou chybu jsi dnes vyléčil? Které špatnosti ses postavil? V čem jsi lepší?"
+    original: "quod hodie malum tuum sanasti? Cui vitio obstitisti? Qua parte melior es?"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); otázky, které si podle Seneky večer kladl filozof Sextius; věta před citátem to musí říct"
+    zdroj: seneca-de-ira
+  - id: seneca-ira-iii-36-odpoustim
+    osoba: seneca
+    autor: Seneca
+    dilo: O hněvu
+    misto: III, 36, 3
+    cesky: "Hleď, ať to už neuděláš. Teď ti odpouštím."
+    original: "vide ne istud amplius facias, nunc tibi ignosco"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); tak Seneca večer mluví sám k sobě"
+    zdroj: seneca-de-ira
+  - id: seneca-ep-28-1
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 28, 1
+    cesky: "Musíš změnit mysl, ne oblohu."
+    original: "Animum debes mutare, non caelum."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-ep-7-3
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 7, 3
+    cesky: "Vracím se lakotnější, ctižádostivější, rozmařilejší, ba i krutější a nelidštější, protože jsem byl mezi lidmi."
+    original: "Avarior redeo, ambitiosior, luxuriosior, immo vero crudelior et inhumanior, quia inter homines fui."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-zivot
+  - id: seneca-clem-i-1
+    osoba: seneca
+    autor: Seneca
+    dilo: O mírnosti
+    misto: I, 1, 1
+    cesky: "Rozhodl jsem se psát o mírnosti, císaři Nerone, abych ti byl jaksi zrcadlem a ukázal ti tebe samého."
+    original: "Scribere de clementia, Nero Caesar, institui, ut quodam modo speculi vice fungerer et te tibi ostenderem"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); zkráceno"
+    zdroj: seneca-clementia
+  # Cesta 8: Epikúros
+  - id: dl-x-22-den
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis z posledního dne
+    misto: Diogenés Laertios X, 22
+    cesky: "Píšu vám tohle ve šťastný a zároveň poslední den svého života."
+    original: "Τὴν μακαρίαν ἄγοντες καὶ ἅμα τελευταίαν ἡμέραν τοῦ βίου ἐγράφομεν ὑμῖν ταυτί."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks); μακαρία = blažený; Cicero (O nejvyšším dobru a zlu II, 96) uvádí týž dopis s adresátem Hermarchem"
+    zdroj: dl-x-22
+  - id: dl-x-22-radost
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis z posledního dne
+    misto: Diogenés Laertios X, 22
+    cesky: "Proti tomu všemu se ale stavěla radost v duši ze vzpomínky na úvahy, které jsme spolu vedli."
+    original: "ἀντιπαρετάττετο δὲ πᾶσι τούτοις τὸ κατὰ ψυχὴν χαῖρον ἐπὶ τῇ τῶν γεγονότων ἡμῖν διαλογισμῶν μνήμῃ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks); διαλογισμοί jsou úvahy i rozhovory: Hicks má „past conversations“, Cicero „rationum inventorumque nostrorum“ (naše úvahy a objevy)"
+    zdroj: dl-x-22
+  - id: dl-x-22-deti
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis z posledního dne
+    misto: Diogenés Laertios X, 22
+    cesky: "A ty se postarej o Métrodórovy děti, jak se sluší na to, jak jsi od mládí stál při mně i při filozofii."
+    original: "σὺ δʼ ἀξίως τῆς ἐκ μειρακίου παραστάσεως πρὸς ἐμὲ καὶ φιλοσοφίαν ἐπιμελοῦ τῶν παίδων Μητροδώρου."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks)"
+    zdroj: dl-x-22
+  - id: menoikeus-124
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 124 (Diogenés Laertios X, 124)
+    cesky: "Zvykej si na myšlenku, že smrt se nás netýká. Všechno dobré i zlé je totiž ve vnímání, a smrt je ztráta vnímání."
+    original: "Συνέθιζε δὲ ἐν τῷ νομίζειν μηδὲν πρὸς ἡμᾶς εἶναι τὸν θάνατον· ἐπεὶ πᾶν ἀγαθὸν καὶ κακὸν ἐν αἰσθήσει· στέρησις δέ ἐστιν αἰσθήσεως ὁ θάνατος."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks); συνέθιζε = zvykej si: Epikúros žádá cvik, ne jen souhlas"
+    zdroj: dl-x-122
+  - id: menoikeus-124-touha
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 124 (Diogenés Laertios X, 124)
+    cesky: "Kdo správně pochopí, že smrt se nás netýká, tomu je smrtelný život k radosti: nepřidá mu to nekonečný čas, ale zbaví ho to touhy po nesmrtelnosti."
+    original: "ὅθεν γνῶσις ὀρθὴ τοῦ μηθὲν εἶναι πρὸς ἡμᾶς τὸν θάνατον ἀπολαυστὸν ποιεῖ τὸ τῆς ζωῆς θνητόν, οὐκ ἄπειρον προστιθεῖσα χρόνον ἀλλὰ τὸν τῆς ἀθανασίας ἀφελομένη πόθον."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks); volněji"
+    zdroj: dl-x-122
+  - id: menoikeus-125
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 125 (Diogenés Laertios X, 125)
+    cesky: "Smrt, to nejděsivější ze všeho zlého, se nás tedy netýká: dokud jsme tu my, smrt tu není, a když je tu smrt, nejsme tu už my."
+    original: "τὸ φρικωδέστατον οὖν τῶν κακῶν ὁ θάνατος οὐθὲν πρὸς ἡμᾶς, ἐπειδή περ ὅταν μὲν ἡμεῖς ὦμεν, ὁ θάνατος οὐ πάρεστιν· ὅταν δʼ ὁ θάνατος παρῇ, τόθʼ ἡμεῖς οὐκ ἐσμέν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks)"
+    zdroj: dl-x-122
+  - id: menoikeus-125-cekani
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 125 (Diogenés Laertios X, 125)
+    cesky: "Co netrápí, když je to tady, trápí naprázdno, když se na to čeká."
+    original: "ὃ γὰρ παρὸν οὐκ ἐνοχλεῖ, προσδοκώμενον κενῶς λυπεῖ."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks)"
+    zdroj: dl-x-122
+  - id: menoikeus-126
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Menoikeovi
+    misto: 126 (Diogenés Laertios X, 126)
+    cesky: "Jako si z jídla nevybírá za každou cenu to nejvíc, ale to nejlepší, tak ani z času nesklízí ten nejdelší, ale ten nejpříjemnější."
+    original: "ὥσπερ δὲ τὸ σιτίον οὐ τὸ πλεῖον πάντως ἀλλὰ τὸ ἥδιστον αἱρεῖται, οὕτω καὶ χρόνον οὐ τὸν μήκιστον ἀλλὰ τὸν ἥδιστον καρπίζεται."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks); podmětem je moudrý člověk"
+    zdroj: dl-x-122
+  - id: kd-2
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Hlavní myšlenky
+    misto: 2 (Diogenés Laertios X, 139)
+    cesky: "Smrt se nás netýká. Co se rozpadlo, nevnímá, a co nevnímá, se nás netýká."
+    original: "Ὁ θάνατος οὐδὲν πρὸς ἡμᾶς· τὸ γὰρ διαλυθὲν ἀναισθητεῖ· τὸ δʼ ἀναισθητοῦν οὐδὲν πρὸς ἡμᾶς."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks)"
+    zdroj: dl-x-139
+  - id: kd-19
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Hlavní myšlenky
+    misto: 19 (Diogenés Laertios X, 145)
+    cesky: "Nekonečný čas v sobě má stejně slasti jako čas omezený, když člověk její meze změří rozumem."
+    original: "Ὁ ἄπειρος χρόνος ἴσην ἔχει τὴν ἡδονὴν καὶ ὁ πεπερασμένος, ἐάν τις αὐτῆς τὰ πέρατα καταμετρήσῃ τῷ λογισμῷ."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Hicks)"
+    zdroj: dl-x-139
+  - id: vs-31
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Vatikánské výroky
+    misto: "31"
+    cesky: "Proti všemu ostatnímu si lze opatřit bezpečí. Kvůli smrti ale my lidé všichni bydlíme ve městě bez hradeb."
+    original: "Πρὸς μὲν τἆλλα δυνατὸν ἀσφάλειαν πορίσασθαι, χάριν δὲ θανάτου πάντες ἄνθρωποι πόλιν ἀτείχιστον οἰκοῦμεν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (von der Mühll); sbírka výroků Epikúrovy školy, u jednotlivých vět není autorství jisté"
+    zdroj: gnomologium-vaticanum
+  - id: vs-66
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Vatikánské výroky
+    misto: "66"
+    cesky: "Soucit s přáteli neprojevujme nářkem, ale tím, že se o ně staráme."
+    original: "Συμπαθῶμεν τοῖς φίλοις οὐ θρηνοῦντες ἀλλὰ φροντίζοντες."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (von der Mühll)"
+    zdroj: gnomologium-vaticanum
+  # Cesta 8: Lucretius
+  - id: lucretius-iii-832
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 832–841
+    cesky: "Jako jsme v čase, který minul, necítili nic zlého, když se ze všech stran valili do boje Punové … tak až nebudeme … nebude se nám, kteří tu tehdy nebudeme, moci stát vůbec nic a nic námi nepohne."
+    original: "et vel ut ante acto nihil tempore sensimus aegri, ad confligendum venientibus undique Poenis … sic, ubi non erimus … scilicet haud nobis quicquam, qui non erimus tum, accidere omnino poterit sensumque movere"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); zkráceno, próza místo veršů"
+    zdroj: lucretius-iii-830
+  - id: lucretius-iii-972
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 972–977
+    cesky: "Ohlédni se, jak nic pro nás neznamenal ten odvěký čas, který uplynul, než jsme se narodili. V něm nám příroda nastavuje zrcadlo času, který přijde po naší smrti. Je tam vidět něco hrozného? Zdá se tam něco smutné? Není to klidnější než každý spánek?"
+    original: "respice item quam nil ad nos ante acta vetustas temporis aeterni fuerit, quam nascimur ante. hoc igitur speculum nobis natura futuri temporis exponit post mortem denique nostram. numquid ibi horribile apparet, num triste videtur quicquam, non omni somno securius exstat?"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); próza místo veršů"
+    zdroj: lucretius-iii-830
+  - id: lucretius-iii-972-zrcadlo
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 972–977
+    cesky: "Ohlédni se, jak nic pro nás neznamenal ten odvěký čas, který uplynul, než jsme se narodili. V něm nám příroda nastavuje zrcadlo času, který přijde po naší smrti. Je tam vidět něco hrozného? Zdá se tam něco smutné?"
+    original: "respice item quam nil ad nos ante acta vetustas temporis aeterni fuerit, quam nascimur ante. hoc igitur speculum nobis natura futuri temporis exponit post mortem denique nostram. numquid ibi horribile apparet, num triste videtur quicquam"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); próza místo veršů; kratší podoba citátu lucretius-iii-972 pro cestu 8: bez poslední otázky („Není to klidnější než každý spánek?“), viz podkladový list celku 6, Citlivá místa"
+    zdroj: lucretius-iii-830
+  - id: lucretius-iii-894
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 894–899
+    cesky: "‚Už tě nepřivítá veselý dům ani nejlepší z žen, už ti nepoběží naproti milé děti, aby ti ukradly první polibek, a nedotknou se tvého srdce tichou něhou. … Ubohému ti jediný nepřátelský den,‘ říkají, ‚vzal všechny dary života.‘"
+    original: "'Iam iam non domus accipiet te laeta neque uxor optima, nec dulces occurrent oscula nati praeripere et tacita pectus dulcedine tangent. … misero misere' aiunt 'omnia ademit una dies infesta tibi tot praemia vitae.'"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); slova truchlících, která básník uvádí a pak odmítá; věta před citátem to musí říct"
+    zdroj: lucretius-iii-830
+  - id: lucretius-iii-900
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 900–901
+    cesky: "Nedodají k tomu: ‚A po ničem z toho se ti už nestýská.‘"
+    original: "illud in his rebus non addunt 'nec tibi earum iam desiderium rerum super insidet una.'"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL)"
+    zdroj: lucretius-iii-830
+  - id: lucretius-iii-938
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 938
+    cesky: "Proč neodejdeš jako host, který se života nasytil?"
+    original: "cur non ut plenus vitae conviva recedis"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); otázku klade zosobněná Příroda člověku, kterému byl život milý; verš 939 ho oslovuje „blázne“"
+    zdroj: lucretius-iii-830
+  - id: lucretius-iii-971
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 971
+    cesky: "Život nedostává nikdo do vlastnictví, všichni jen do užívání."
+    original: "vitaque mancipio nulli datur, omnibus usu"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL)"
+    zdroj: lucretius-iii-830
+  # Cesta 8: Seneca
+  - id: seneca-ep-54-3
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 54, 3
+    cesky: "Ani když jsem se dusil, nepřestal jsem hledat úlevu v radostných a statečných myšlenkách."
+    original: "Ego vero et in ipsa suffocatione non desii cogitationibus laetis ac fortibus adquiescere."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-54-4
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 54, 4
+    cesky: "Smrt je nebýt. Jaké to je, už vím: po mně bude to, co bylo přede mnou."
+    original: "Mors est non esse; id quale sit, iam scio. Hoc erit post me, quod ante me fuit."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-54-5
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 54, 5
+    cesky: "Neřekl bys, že je vrchol hlouposti myslet si, že lampě je hůř, když zhasla, než předtím, než ji rozsvítili? I nás zhášejí a rozsvěcují. V čase mezi tím něco zakoušíme; z obou stran je hluboký klid."
+    original: "Rogo, non stultissimum dicas, si quis existimet lucernae peius esse, cum extincta est, quam antequam accenditur? Nos quoque et extinguimur et accendimur; medio illo tempore aliquid patimur, utrimque vero alta securitas est."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-54-5-lampa
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 54, 5
+    cesky: "Neřekl bys, že je vrchol hlouposti myslet si, že lampě je hůř, když zhasla, než předtím, než ji rozsvítili? I nás zhášejí a rozsvěcují."
+    original: "Rogo, non stultissimum dicas, si quis existimet lucernae peius esse, cum extincta est, quam antequam accenditur? Nos quoque et extinguimur et accendimur"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); kratší podoba citátu seneca-ep-54-5 pro cestu 8: bez závěru o „hlubokém klidu“ z obou stran, viz podkladový list celku 6, Citlivá místa"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-24-18
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 24, 18
+    cesky: "Smrt nás buď stráví, nebo svlékne. Jestli nás propustí, zbývá nám to lepší a břemeno je pryč. Jestli nás stráví, nezbývá nic: dobré i zlé je odklizeno stejně."
+    original: "Mors nos aut consumit aut exuit. Emissis meliora restant onere detracto, consumptis nihil restat, bona pariter malaque submota sunt."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-24-20
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 24, 20
+    cesky: "Umíráme každý den. Každý den nám totiž ubývá kus života, a i když rosteme, život se krátí."
+    original: "Cotidie morimur; cotidie enim demitur aliqua pars vitae, et tunc quoque, cum crescimus, vita decrescit."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); Seneca tu Luciliovi připomíná jeho vlastní úvahu (24, 19)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-24-20-hodiny
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 24, 20
+    cesky: "Vodní hodiny nevyprázdní poslední kapka, ale všechno, co odteklo před ní. Stejně tak poslední hodina, ve které přestáváme být, smrt nedělá sama; jen ji dokončuje."
+    original: "Quemadmodum clepsydram non extremum stillicidium exhaurit, sed quicquid ante defluxit, sic ultima hora, qua esse desinimus, non sola mortem facit, sed sola consummat"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-26-6
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 26, 6
+    cesky: "Řeč je totiž odvážná i u těch nejbojácnějších."
+    original: "Est enim oratio etiam timidissimis audax."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); o sobě: jestli svá statečná slova myslí vážně, ukáže až konec"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-30-7
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 30, 7
+    cesky: "Vím, že se to říkalo často a často se to ještě říkat bude. Nepomáhalo mi to ale tolik, když jsem to četl, ani když jsem to slyšel od lidí, kteří tvrdili, že se není čeho bát, a sami byli od toho, čeho se bát nemáme, daleko."
+    original: "Haec ego scio et saepe dicta et saepe dicenda, sed neque cum legerem, aeque mihi profuerunt, neque cum audirem iis dicentibus, qui negabant timenda, a quorum metu aberant"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); o argumentu, že co nebudeme cítit, se nemáme bát"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-30-17
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 30, 17
+    cesky: "Nebojíme se smrti, ale myšlenky na smrt."
+    original: "Non mortem timemus, sed cogitationem mortis."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-61-4
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 61, 4
+    cesky: "O tom, jestli jsme žili dost, nerozhodují roky ani dny, ale mysl."
+    original: "Ut satis vixerimus, nec anni nec dies faciunt, sed animus."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-63-1
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 63, 1
+    cesky: "Když ztratíme přítele, ať oči nejsou suché, ale ať ani nepřetékají."
+    original: "Nec sicci sint oculi amisso amico nec fluant."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-63-7
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 63, 7
+    cesky: "Měl jsem je, jako bych je měl ztratit; ztratil jsem je, jako bych je pořád měl."
+    original: "Habui enim illos tamquam amissurus, amisi tamquam habeam."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); o zemřelých přátelích"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-63-14
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 63, 14
+    cesky: "Tohle ti píšu já, který jsem svého drahého Annaea Serena oplakával tak bez míry, že patřím, ač o to nejméně stojím, k příkladům lidí, které bolest přemohla."
+    original: "Haec tibi scribo is, qui Annaeum Serenum, carissimum mihi, tam inmodice flevi, ut, quod minime velim, inter exempla sim eorum, quos dolor vicit."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-99-4
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 99, 4
+    cesky: "Čas, který minul, je náš, a nic není na bezpečnějším místě než to, co bylo."
+    original: "Nostrum est, quod praeteriit, tempus nec quicquam est loco tutiore quam quod fuit."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere)"
+    zdroj: seneca-epistulae-smrt
+  - id: seneca-ep-99-15
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 99, 15
+    cesky: "To není ctnost, to je nelidskost: dívat se na pohřeb svých blízkých stejnýma očima jako na ně samé a nepohnout se, když nám je berou."
+    original: "Inhumanitas est ista, non virtus, funera suorum isdem oculis, quibus ipsos, videre nec commoveri ad primam familiarium divulsionem."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); pořadí vět obráceno; dopis jinak otce, kterému zemřel malý syn, tvrdě kárá"
+    zdroj: seneca-epistulae-smrt
+  # Cesta 8: Cicero, Sókratés, Platón, Aristotelés
+  - id: cicero-fin-ii-94
+    osoba: cicero
+    autor: Cicero
+    dilo: O nejvyšším dobru a zlu
+    misto: II, 94
+    cesky: "Vidím přece bolesti velké a přitom pořádně dlouhé."
+    original: "video enim et magnos et eosdem bene longinquos dolores"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Schiche); proti Epikúrově větě, že velká bolest je krátká a dlouhá lehká"
+    zdroj: cicero-de-finibus-ii
+  - id: cicero-fin-ii-98
+    osoba: cicero
+    autor: Cicero
+    dilo: O nejvyšším dobru a zlu
+    misto: II, 98
+    cesky: "Slyším hlas filozofa, Epikúre, ale zapomněl jsi, co bys měl říkat."
+    original: "Audio equidem philosophi vocem, Epicure, sed quid tibi dicendum sit oblitus es."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Schiche); o Epikúrově dopise z posledního dne"
+    zdroj: cicero-de-finibus-ii
+  - id: obrana-29a
+    osoba: sokrates
+    autor: Platón
+    dilo: Obrana Sókratova
+    misto: 29a
+    cesky: "Bát se smrti, mužové, není nic jiného než zdát se moudrým a nebýt: je to zdát se, že vím, co nevím."
+    original: "τὸ γάρ τοι θάνατον δεδιέναι, ὦ ἄνδρες, οὐδὲν ἄλλο ἐστὶν ἢ δοκεῖν σοφὸν εἶναι μὴ ὄντα· δοκεῖν γὰρ εἰδέναι ἐστὶν ἃ οὐκ οἶδεν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera"
+    zdroj: platon-obrana
+  - id: obrana-40c
+    osoba: sokrates
+    autor: Platón
+    dilo: Obrana Sókratova
+    misto: 40c
+    cesky: "Být mrtvý je jedno z dvojího: buď je to, jako by mrtvý nebyl nic a nic nevnímal, nebo je to, jak se vypráví, jakási změna a přestěhování duše odsud na jiné místo."
+    original: "δυοῖν γὰρ θάτερόν ἐστιν τὸ τεθνάναι· ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα, ἢ κατὰ τὰ λεγόμενα μεταβολή τις τυγχάνει οὖσα καὶ μετοίκησις τῇ ψυχῇ τοῦ τόπου τοῦ ἐνθένδε εἰς ἄλλον τόπον."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; Sókratés mluví k soudcům, kteří hlasovali pro něj"
+    zdroj: platon-obrana
+  - id: obrana-41d
+    osoba: sokrates
+    autor: Platón
+    dilo: Obrana Sókratova
+    misto: 41d
+    cesky: "Dobrému člověku se nemůže stát nic zlého, ani když žije, ani když zemře."
+    original: "οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera"
+    zdroj: platon-obrana
+  - id: obrana-42a
+    osoba: sokrates
+    autor: Platón
+    dilo: Obrana Sókratova
+    misto: 42a
+    cesky: "Ale už je čas jít: já půjdu zemřít, vy žít. Kdo z nás jde za lepším, neví nikdo kromě boha."
+    original: "ἀλλὰ γὰρ ἤδη ὥρα ἀπιέναι, ἐμοὶ μὲν ἀποθανουμένῳ, ὑμῖν δὲ βιωσομένοις· ὁπότεροι δὲ ἡμῶν ἔρχονται ἐπὶ ἄμεινον πρᾶγμα, ἄδηλον παντὶ πλὴν ἢ τῷ θεῷ."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; poslední věta Obrany"
+    zdroj: platon-obrana
+  - id: faidon-107c
+    osoba: platon
+    autor: Platón
+    dilo: Faidón
+    misto: 107c
+    cesky: "Je-li duše nesmrtelná, potřebuje péči nejen pro ten čas, kterému říkáme život, ale pro čas všechen."
+    original: "εἴπερ ἡ ψυχὴ ἀθάνατος, ἐπιμελείας δὴ δεῖται οὐχ ὑπὲρ τοῦ χρόνου τούτου μόνον ἐν ᾧ καλοῦμεν τὸ ζῆν, ἀλλ’ ὑπὲρ τοῦ παντός"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Sókratés v posledním dni života"
+    zdroj: platon-faidon-perseus
+  - id: faidon-114d
+    osoba: platon
+    autor: Platón
+    dilo: Faidón
+    misto: 114d
+    cesky: "Tvrdit, že je to přesně tak, jak jsem to vylíčil, se na rozumného člověka nesluší. Že je to ale s našimi dušemi takhle nebo nějak podobně, když se přece duše ukazuje jako nesmrtelná, tomu se podle mě sluší věřit a stojí za to se toho odvážit. Je to krásné riziko."
+    original: "τὸ μὲν οὖν ταῦτα διισχυρίσασθαι οὕτως ἔχειν ὡς ἐγὼ διελήλυθα, οὐ πρέπει νοῦν ἔχοντι ἀνδρί· ὅτι μέντοι ἢ ταῦτ᾽ ἐστὶν ἢ τοιαῦτ’ ἄττα περὶ τὰς ψυχὰς ἡμῶν καὶ τὰς οἰκήσεις, ἐπείπερ ἀθάνατόν γε ἡ ψυχὴ φαίνεται οὖσα, τοῦτο καὶ πρέπειν μοι δοκεῖ καὶ ἄξιον κινδυνεῦσαι οἰομένῳ οὕτως ἔχειν — καλὸς γὰρ ὁ κίνδυνος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Sókratés po vyprávění o osudu duší; „a jejich příbytky“ vynecháno"
+    zdroj: platon-faidon-perseus
+  - id: etika-1115a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: III, 6, 1115a26–27
+    cesky: "Nejstrašnější je smrt. Je to totiž hranice a zdá se, že pro mrtvého už není nic dobré ani zlé."
+    original: "φοβερώτατον δʼ ὁ θάνατος· πέρας γάρ, καὶ οὐδὲν ἔτι τῷ τεθνεῶτι δοκεῖ οὔτʼ ἀγαθὸν οὔτε κακὸν εἶναι."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater); z výkladu o statečnosti"
+    zdroj: aristoteles-etika-smrt
+  - id: etika-1117b
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: III, 9, 1117b10–13
+    cesky: "Čím úplnější je jeho ctnost a čím je šťastnější, tím víc ho smrt bude bolet. Takovému člověku totiž nejvíc stojí za to žít, a on ví, že přichází o největší dobra."
+    original: "ὅσῳ ἂν μᾶλλον τὴν ἀρετὴν ἔχῃ πᾶσαν καὶ εὐδαιμονέστερος ᾖ, μᾶλλον ἐπὶ τῷ θανάτῳ λυπήσεται· τῷ τοιούτῳ γὰρ μάλιστα ζῆν ἄξιον, καὶ οὗτος μεγίστων ἀγαθῶν ἀποστερεῖται εἰδώς"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater); řeč je o statečném člověku v boji"
+    zdroj: aristoteles-etika-smrt
+  - id: etika-1117b-bolest
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: III, 9, 1117b10–11
+    cesky: "Čím úplnější je jeho ctnost a čím je šťastnější, tím víc ho smrt bude bolet."
+    original: "ὅσῳ ἂν μᾶλλον τὴν ἀρετὴν ἔχῃ πᾶσαν καὶ εὐδαιμονέστερος ᾖ, μᾶλλον ἐπὶ τῷ θανάτῳ λυπήσεται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater); řeč je o statečném člověku v boji; kratší podoba citátu etika-1117b pro cestu 8: bez věty „takovému člověku nejvíc stojí za to žít“ (obráceně říká studentovi, kterému je zle, že jeho život stojí za to míň), viz záznam revize celku 6 z 9. 10. 2026, nález 2"
+    zdroj: aristoteles-etika-smrt
+  - id: etika-1177b
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: X, 7, 1177b31–34
+    cesky: "Nemáme poslouchat ty, kdo radí, ať člověk myslí na lidské věci a smrtelník na smrtelné. Máme se, nakolik to jde, stávat nesmrtelnými a dělat všechno pro to, abychom žili podle toho nejlepšího, co v nás je."
+    original: "οὐ χρὴ δὲ κατὰ τοὺς παραινοῦντας ἀνθρώπινα φρονεῖν ἄνθρωπον ὄντα οὐδὲ θνητὰ τὸν θνητόν, ἀλλʼ ἐφʼ ὅσον ἐνδέχεται ἀθανατίζειν καὶ πάντα ποιεῖν πρὸς τὸ ζῆν κατὰ τὸ κράτιστον τῶν ἐν αὑτῷ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater)"
+    zdroj: aristoteles-etika-smrt
+  # Velká otázka 3: Epiktétos a Marcus Aurelius
+  - id: rozpravy-i-6-19
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 6, 19 a 22
+    cesky: "Člověka ale bůh uvedl na svět jako diváka sebe i svých děl, a nejen jako diváka, ale i jako jejich vykladače. … Hleďte tedy, ať nezemřete, aniž jste to viděli."
+    original: "τὸν δʼ ἄνθρωπον θεατὴν εἰσήγαγεν αὐτοῦ τε καὶ τῶν ἔργων τῶν αὐτοῦ, καὶ οὐ μόνον θεατήν, ἀλλὰ καὶ ἐξηγητὴν αὐτῶν. … ὁρᾶτε οὖν, μὴ ἀθέατοι τούτων ἀποθάνητε."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Schenkl) a anglický překlad z PerseusDL; podmět „bůh“ doplněn ze souvislosti"
+    zdroj: epiktetos-rozpravy
+  - id: hovory-iv-17
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: IV, 17
+    cesky: "Nežij, jako bys měl žít deset tisíc let. Nevyhnutelné nad tebou visí. Dokud žiješ, dokud to jde, staň se dobrým."
+    original: "Μὴ ὡς μύρια μέλλων ἔτη ζῆν. τὸ χρεὼν ἐπήρτηται· ἕως ζῇς, ἕως ἔξεστιν, ἀγαθὸς γενοῦ."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-ii-14
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: II, 14
+    cesky: "Nikdo neztrácí jiný život než ten, který právě žije, a nežije jiný než ten, který ztrácí."
+    original: "οὐδεὶς ἄλλον ἀποβάλλει βίον ἢ τοῦτον ὃν ζῇ, οὐδὲ ἄλλον ζῇ ἢ ὃν ἀποβάλλει"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Leopold)"
+    zdroj: marcus-hovory
+  - id: hovory-xii-36
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: XII, 36
+    cesky: "V životě jsou ale i tři dějství celá hra. … Odejdi tedy smířený: i ten, kdo tě propouští, je smířený."
+    original: "ἐν μέντοι τῷ βίῳ τὰ τρία ὅλον τὸ δρᾶμά ἐστι. … ἄπιθι οὖν ἵλεως· καὶ γὰρ ὁ ἀπολύων ἵλεως."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Leopold); poslední zápis Hovorů: herec namítá, že neodehrál pět dějství, jen tři"
+    zdroj: marcus-hovory
 
 obrazky:
   - id: sokrates-louvre
@@ -2143,3 +2950,26 @@ obrazky:
     licence: "CC0 (Open Access)"
     url: "https://www.metmuseum.org/art/collection/search/437394"
     vyrez: "52% 30%"
+  # Celek 6: dvojitá herma Sókrata a Seneky (Berlín, Antikensammlung, SK 391). Fotografie muzea, CC BY-NC-SA 4.0: verzi licence
+  # uvádí záznam na museum-digital (odkaz na by-nc-sa/4.0), záznam muzea (https://id.smb.museum/object/698814) má jen
+  # „Fotonachweis: Staatliche Museen zu Berlin, Antikensammlung“; jméno fotografa neuvádí ani jeden (ověřeno 8. 10. 2026).
+  # Autor souhlasil se stažením i s licencí 8. 10. 2026. Originál 2259 × 1750 px je mimo repozitář; tady zmenšenina
+  # 1280 × 991 px (seneca-herma-smb.jpg) a výřez Senekovy hlavy z téže fotografie 904 × 1130 px pro desku (seneca-smb.jpg).
+  # Výřez je úprava ve smyslu licence: je to řečeno v poli autor a šíří se pod stejnou licencí. Datování a rok nálezu podle muzea.
+  - id: seneca-smb
+    soubor: obrazky/seneca-smb.jpg
+    popisek: "Seneca. Mramorová hlava z let 225–250 n. l. podle podobizny, která vznikla snad ještě za jeho života. Je to jediná antická podobizna s jeho jménem."
+    autor: "Staatliche Museen zu Berlin, Antikensammlung (fotograf neuveden); výřez z fotografie"
+    instituce: "Berlín, Antikensammlung, inv. SK 391"
+    licence: "CC BY-NC-SA 4.0"
+    url: "https://smb.museum-digital.de/object/13081"
+    vyrez: "45% 30%"
+    vyrezNaSirku: "45% 34%"
+  - id: seneca-herma
+    soubor: obrazky/seneca-herma-smb.jpg
+    popisek: "Dvojitá herma: vlevo Seneca, vpravo Sókratés. Mramor z let 225–250 n. l., nalezený roku 1813 v Římě."
+    autor: "Staatliche Museen zu Berlin, Antikensammlung (fotograf neuveden)"
+    instituce: "Berlín, Antikensammlung, inv. SK 391"
+    licence: "CC BY-NC-SA 4.0"
+    url: "https://smb.museum-digital.de/object/13081"
+    vyrez: "50% 40%"

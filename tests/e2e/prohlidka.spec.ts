@@ -15,14 +15,17 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/osobnost/diogenes/', nazev: 'diogenes', nadpis: /Diogenés/ },
   { cesta: '/osobnost/epiktetos/', nazev: 'epiktetos', nadpis: /Epiktétos/ },
   { cesta: '/osobnost/marcus-aurelius/', nazev: 'marcus-aurelius', nadpis: /Marcus Aurelius/ },
+  { cesta: '/osobnost/seneca/', nazev: 'seneca', nadpis: /Seneca/ },
   { cesta: '/mapa/', nazev: 'mapa', nadpis: /Mapa a čas/ },
   { cesta: '/otazky/', nazev: 'otazky', nadpis: /Deset velkých otázek/ },
   { cesta: '/otazka/jak-poznam-pravdu/', nazev: 'otazka-7', nadpis: /Jak poznám, co je pravda\?/, preskocit: 'otazka-jak-poznam-pravdu' },
   { cesta: '/otazka/jak-zit/', nazev: 'otazka-1', nadpis: /Jak mám žít\?/, preskocit: 'otazka-jak-zit' },
+  { cesta: '/otazka/ma-zivot-smysl/', nazev: 'otazka-3', nadpis: /Má život smysl\?/, preskocit: 'otazka-ma-zivot-smysl' },
   { cesta: '/otazka/jsem-svobodny/', nazev: 'otazka-4', nadpis: /Jsem svobodný\?/, preskocit: 'otazka-jsem-svobodny' },
   { cesta: '/otazka/co-je-skutecne/', nazev: 'otazka-6', nadpis: /Co je skutečné\?/, preskocit: 'otazka-co-je-skutecne' },
   { cesta: '/cesta/je-to-co-vidim-cela-skutecnost/', nazev: 'cesta-3', nadpis: /Je to, co vidím, celá skutečnost\?/ },
   { cesta: '/cesta/staci-vedet-co-je-spravne/', nazev: 'cesta-4', nadpis: /Stačí vědět, co je správné\?/ },
+  { cesta: '/cesta/proc-se-bat-smrti/', nazev: 'cesta-8', nadpis: /Proč se bát smrti\?/ },
 ];
 const SIRKY = [
   { sirka: 390, vyska: 844 },

@@ -1,0 +1,34 @@
+# Volba s důvodem · portrét Seneky, kapitola 03 „Hněv“: kdy odpovědět na zprávu, která rozzuří.
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Tři myšlenky pro portrét › 3 (Vlastní pokus studenta).
+# Scéna, možnosti a zpětné vazby jsou autorské. Případ je mezi rovnými a není to šikana (poučení: výzva nemíří
+# na člověka, který ubližuje). Jiná scéna než snímek z chatu v cestě 5. Blok nemá oddíl Co udělal: Seneca takový
+# případ neřešil; jeho radu (O hněvu II, 22 a 29) vykládá až text za blokem. Zpětné vazby rozlišují odklad od mlčení.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Představ si, že jste s kamarádem měsíc plánovali sobotní výlet. V pátek večer ti napíše, že nejede:
+  něco mu do toho přišlo. Nic víc. O hodinu později vidíš na síti jeho fotky z koncertu s někým jiným.
+otazka: Kdy mu odpovíš?
+moznosti:
+  - text: Hned. Ať ví, co si o tom myslím.
+    tah: odpovědět hned
+    zpetna: >-
+      Dozví se, jak ti teď je, a nic v sobě nenosíš do rána. Píšeš ale o věci, ze které znáš jednu zprávu
+      a pár fotek. Co když ti v ní něco chybí?
+  - text: Za hodinu, až vychladnu.
+    tah: odpovědět za hodinu
+    zpetna: >-
+      Zpráva bude za hodinu stejná, jiný budeš ty. Stačí hodina na to, aby ses dozvěděl, co se stalo,
+      nebo jen na to, abys totéž napsal slušněji?
+  - text: Zítra. A nejdřív se zeptám, co se stalo.
+    tah: počkat do zítřka a zeptat se
+    zpetna: >-
+      Než ho odsoudíš, necháš ho říct jeho verzi. Stojí tě to večer, kdy to v tobě vře.
+      Co s tím vztekem uděláš do rána?
+  - text: Vůbec. Nestojí mi to za to.
+    tah: neodpovědět
+    zpetna: >-
+      Nepohádáte se a nic neřekneš ve vzteku. On se ale nedozví, že ti to vadilo, a ty se nedozvíš, proč to udělal.
+      Je to odklad, nebo mlčení, které mezi vámi zůstane?
+zdroje: []

@@ -17,6 +17,7 @@ Každý návrh je jedna věc z příběhu, kterou lze nakreslit jednou čarou a 
 | Chrýsippos | válec | Svobodu vysvětloval na válci: někdo ho postrčí, ale jak se kutálí, záleží na jeho tvaru. | Cicero, O osudu 42–43 | cylinder |
 | Pyrrhón | prasátko | Vypráví se, že za bouře na lodi ukázal na prasátko, které klidně žralo: takový klid má mít moudrý. | Diogenés Laertios IX, 68 | pig |
 | Lucretius | zrcadlo | Čas před naším narozením je zrcadlo času po smrti; ten první nás neděsí. | Lucretius, O přírodě III, 972–977 | mirror |
+| Plútarchos (doplněno 9. 10. 2026 na pokyn autora) | trojnožka | Byl knězem v Delfách, kde věštkyně věštila z trojnožky. | SEP Plutarch (kněz Apollónův v Delfách); Diodóros XVI, 26, 4–5 (trojnožka) | tripod |
 | Cicero | řečnická tribuna | Proslul jako řečník a politik; filozofii psal, když ho násilím vyřadili z politiky. | IEP Cicero | podium |
 | Hypatia | astroláb | Učila astronomii a matematiku; její žák Synésios s její pomocí navrhl astroláb. | BEA Hypatia; Synésios, O daru astrolábu 3 | astrolabe |
 | Plótínos | prázdný rám | Odmítl se nechat portrétovat: nestačí prý, že musí nosit obraz, do kterého ho uzavřela příroda? | Porfyrios, Život Plótínův 1 | frame |

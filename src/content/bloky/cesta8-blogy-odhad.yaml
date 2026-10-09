@@ -1,0 +1,32 @@
+# Volba s důvodem · cesta 8 „Proč se bát smrti?“, krok 8: odhad před výsledkem studie o blozích (2017).
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Nový případ (A. Goranson a kol., Psychological Science 28,
+# 2017, jen první studie; čísla ověřena v plném textu znovu 8. 10. 2026: 25 blogů, příspěvky z posledních
+# dvanácti týdnů, 45 lidí, kteří si to představovali).
+# Zpětná vazba výsledek neprozrazuje; ten stojí v textu kroku pod blokem (blok na něj vede vlastním Kam dál).
+# Žádný tah není něčí, blok nemá Co udělal. Druhá studie (poslední slova popravených) do studentského textu nepatří.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj odhad
+otazka: Kdo podle tebe použil víc slov pro strach, smutek a zlost?
+moznosti:
+  - text: Ti, kdo si to jen představovali.
+    tah: čekat, že představa je temnější
+    zpetna: >-
+      Sázíš na Senekovu větu: víc děsí myšlenka než věc sama. Z čeho ten odhad máš?
+      A platil by i pro člověka, kterému je tak zle, že psát nemůže?
+  - text: Ti, kdo to opravdu prožívali.
+    tah: čekat, že skutečnost je horší
+    zpetna: >-
+      Čekáš, že skutečnost je horší než představa, a Senekově větě nevěříš.
+      Co by muselo vyjít, abys svůj odhad změnil?
+  - text: Vyšlo to nastejno.
+    tah: nečekat rozdíl
+    zpetna: >-
+      Nečekáš rozdíl. Může za tím být i to, že blog je text pro čtenáře a lidé do něj nepíšou všechno.
+      Co se podle tebe z blogu poznat dá a co ne?
+  - text: Ze slov se to poznat nedá.
+    tah: nevěřit slovům
+    zpetna: >-
+      Pochybuješ o samotném měření: slova nejsou city. Vědci na to mysleli a nechali texty číst i lidi.
+      Čemu bys věřil víc než slovům?
+zdroje: [goranson-2017, seneca-epistulae-smrt]

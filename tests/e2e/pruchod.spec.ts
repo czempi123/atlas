@@ -9,6 +9,7 @@ const CESTY = [
   { slug: 'co-mam-ve-svych-rukou', kroku: 8, pravidlo: 'cesta5-moje-pravidlo', spor: 'cesta5-aristoteles-spor', zacatek: 'Krok 2 · Tři koše' },
   { slug: 'je-to-co-vidim-cela-skutecnost', kroku: 8, pravidlo: 'cesta3-moje-pravidlo', spor: 'cesta3-aristoteles-spor', zacatek: 'Krok 2 · Odkud to vím?' },
   { slug: 'staci-vedet-co-je-spravne', kroku: 8, pravidlo: 'cesta4-moje-pravidlo', spor: 'cesta4-vedel-to', zacatek: 'Krok 2 · Co ti tehdy chybělo?' },
+  { slug: 'proc-se-bat-smrti', kroku: 9, pravidlo: 'cesta8-moje-pravidlo', spor: 'cesta8-epikuros-plutarchos', zacatek: 'Krok 1 · Dopis' },
 ];
 
 async function pripravit(page: Page) {

@@ -1,0 +1,36 @@
+# Volba s důvodem · portrét Seneky, kapitola 04 „U dvora“: zůstat u císaře, nebo odejít?
+# Podklad: docs/podklady/celek-6-proc-se-bat-smrti.md › Seneca a Nero nejsou Aristotelés a Alexandr; Život, řádky 14 a 16;
+# Citlivá místa › Podíl na Neronově vládě („Student má dostat Volbu (zůstat, nebo odejít), ne verdikt“).
+# Britannikovu smrt (rok 55) a rozdané domy vypráví Tacitus, Letopisy XIII, 15–18; Seneku u toho nejmenuje.
+# Že Seneca s velitelem gardy bránili vraždám, je z XIII, 2. Nero se stal císařem roku 54 v necelých sedmnácti (XIII, 6).
+# Blok nemá oddíl Co udělal: co Seneca udělal (zůstal), říká text za blokem; proč, nevíme, a žádná možnost
+# proto není označená jako jeho. Cassius Dio (61, 7, 5) se tu nepoužívá. Žádná možnost nedostane pokárání.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Šest let jsi učil chlapce, ze kterého je teď císař. Je mu sedmnáct a jeho projevy píšeš ty.
+  Tacitus píše, že právě dal otrávit svého nevlastního bratra.
+otazka: Co bys na Senekově místě udělal?
+moznosti:
+  - text: Zůstanu. Dokud jsem u něj, můžu aspoň něčemu zabránit.
+    tah: zůstat a mírnit
+    zpetna: >-
+      Kdo zůstane, může něco zmírnit, a kdo odejde, nezmírní nic. Tvoje jméno ale potom stojí i u toho,
+      čemu jsi nezabránil. Podle čeho poznáš, že ještě mírníš, a ne už sloužíš?
+  - text: Odejdu. Nechci, aby pod tím stálo moje jméno.
+    tah: odejít
+    zpetna: >-
+      S tím, co přijde, nebudeš mít nic společného, a císař ztratí člověka, který mu psal slova.
+      Na tvé místo ale přijde někdo jiný. A od císaře se neodchází jako z brigády: pustí tě?
+  - text: Zůstanu a řeknu mu do očí, že to byla vražda.
+    tah: zůstat a říct to nahlas
+    zpetna: >-
+      Řekneš nahlas, co si u dvora ostatní jen myslí. Říkáš to ale člověku, který právě dal zabít bratra,
+      a může to být tvoje poslední věta u něj. Má větší cenu ta jedna věta, nebo roky, ve kterých ještě něco ovlivníš?
+  - text: Zůstanu. Odejít je teď nebezpečnější než zůstat.
+    tah: zůstat, abych přežil
+    zpetna: >-
+      Strach je taky důvod, a u dvora, kde se tráví, to není malý důvod. Kdo zůstává, aby přežil,
+      nikomu neslibuje, že něco zlepší. Jak dlouho se dá stát vedle něčeho takového a nepatřit k tomu?
+zdroje: [tacitus-annales-seneca]

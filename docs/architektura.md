@@ -74,7 +74,7 @@ Každé období má 3–5 portrétů (celý příběh v kapitolách jako dnes Ma
 | Období | Portréty | Profily | Medailonky (výběr) |
 | --- | --- | --- | --- |
 | 1. Počátky a klasické Řecko | Sókratés, Platón, Aristotelés | Thalés, Pýthagorás, Hérakleitos, Parmenidés, Démokritos, Prótagorás, Zénón z Eleje | Anaximandros, Anaximenés, Xenofanés, Empedoklés, Anaxagorás, Gorgiás, Aspasie; okno: Konfucius, Lao-c’, Buddha |
-| 2. Helenismus a Řím | Diogenés, Epikúros, Seneca, Epiktétos, Marcus Aurelius | Zénón z Kitia, Chrýsippos, Pyrrhón, Lucretius, Cicero, Hypatia, Plótínos | Kratés a Hipparchia, Kleanthés, Musonius Rufus, Hieroklés, Theofrastos, Karneadés, Sextus Empiricus, Filón Alexandrijský; okno: Čuang-c’ |
+| 2. Helenismus a Řím | Diogenés, Epikúros, Seneca, Epiktétos, Marcus Aurelius | Zénón z Kitia, Chrýsippos, Pyrrhón, Lucretius, Cicero, Hypatia, Plótínos | Kratés a Hipparchia, Kleanthés, Musonius Rufus, Hieroklés, Theofrastos, Karneadés, Sextus Empiricus, Filón Alexandrijský, Plútarchos; okno: Čuang-c’ |
 | 3. Středověk | Augustin, Abelárd a Héloïsa, Tomáš Akvinský | Boëthius, Anselm z Canterbury, Avicenna, Averroes, Maimonides, Hildegarda z Bingenu, Vilém Ockham, Jan Hus | Eriugena, al-Fárábí, al-Ghazálí, Roger Bacon, Duns Scotus, Mistr Eckhart, Buridan, Christine de Pizan; okno: Šankara |
 | 4. Renesance a raný novověk | Montaigne, Descartes, Spinoza | Machiavelli, Erasmus Rotterdamský, Giordano Bruno, Francis Bacon, Thomas Hobbes, Blaise Pascal, Jan Amos Komenský, Alžběta Falcká, Leibniz | Petrarca, Pico della Mirandola, Thomas More, Luther, Justus Lipsius, Koperník, Galilei, Marie de Gournay, Grotius, Newton; okno: Wang Jang-ming |
 | 5. Osvícenství | Hume, Rousseau, Kant | Locke, Berkeley, Voltaire, Montesquieu, Diderot, Adam Smith, Mary Wollstonecraftová, Émilie du Châtelet | Bayle, d’Alembert, La Mettrie, Condorcet, Olympe de Gouges, Beccaria, Mendelssohn, Herder, Benjamin Constant; okno: Amo |
@@ -97,7 +97,7 @@ Cesta je 15–20 minut vedeného průchodu: příběh, vlastní pokus, setkání
 | 5 | 2 | Co mám ve svých rukou? | Epiktétův pán mu kroutil nohou; Marcus píše v noci u Dunaje | Epiktétos, Marcus Aurelius | 4 |
 | 6 | 2 | Kolik je dost? | Epikúrova zahrada, chléb a voda | Epikúros | 1 |
 | 7 | 2 | Čí život vlastně žiju? | Diogenés žádá Alexandra, ať mu nestíní | Diogenés, Kratés a Hipparchia | 1 |
-| 8 | 2 | Proč se bát smrti? | Umírající Epikúros píše příteli, že prožívá šťastný den | Epikúros, Lucretius, Seneca | 3 |
+| 8 | 2 | Proč se bát smrti? | Umírající Epikúros píše příteli, že prožívá šťastný den | Epikúros, Lucretius, Seneca, Plútarchos | 3 |
 | 9 | 3 | Může rozum dokázat Boha? | Anselmův důkaz a Gaunilův dokonalý ostrov | Anselm, Avicenna, Tomáš Akvinský | 9 |
 | 10 | 3 | Proč dělám, co nechci? | Mladý Augustin krade hrušky, které ani nechtěl jíst | Augustin | 4 |
 | 11 | 3 | Smím neposlechnout, když mi to zakazuje svědomí? | Hus před koncilem v Kostnici 1415 | Hus, Tomáš Akvinský, Abelárd | 2 |
