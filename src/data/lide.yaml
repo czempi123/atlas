@@ -145,9 +145,10 @@
   atribut:
     ikona: river
     nazev: řeka
-    proc: Do téže řeky nelze vstoupit dvakrát.
-    zdroj: sep-heraclitus
-  zdroje: [sep-heraclitus, britannica-heraclitus, iep-heraclitus, dl-ix-1, eusebios-pe-xv-20, platon-kratylos, plutarchos-de-e, plutarchos-kolotes, hippolytos-ix, aristoteles-metafyzika-zmena]
+    proc: "Do týchž řek vstupujeme, a pořád na nás tečou jiné vody."
+    zdroj: eusebios-pe-xv-20
+  obrazek: herakleitos-aic
+  zdroje: [sep-heraclitus, britannica-heraclitus, iep-heraclitus, dl-ix-1, eusebios-pe-xv-20, platon-kratylos, plutarchos-de-e, plutarchos-kolotes, hippolytos-ix, aristoteles-metafyzika-zmena, seneca-plac]
 
 - id: parmenides
   jmeno: Parmenidés
@@ -168,7 +169,7 @@
     nazev: brána
     proc: Ve své básni vypráví, jak projel branou Noci a Dne k bohyni, která ho poučila, co skutečně je.
     zdroj: sextos-m-vii-111
-  zdroje: [sep-parmenides, dl-ix-22, dl-ix-21, parmenides-b8, sextos-m-vii-111, simplikios-fyzika, plutarchos-kolotes, aristoteles-metafyzika-zmena, platon-parmenides, platon-theaitetos-tabory]
+  zdroje: [sep-parmenides, dl-ix-22, dl-ix-21, parmenides-b8, sextos-m-vii-111, simplikios-fyzika, plutarchos-kolotes, aristoteles-metafyzika-zmena, platon-parmenides, platon-theaitetos-tabory, platon-sofistes-parmenides, aristoteles-fyzika-i]
 
 - id: demokritos
   jmeno: Démokritos

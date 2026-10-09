@@ -36,11 +36,19 @@
 - { od: thales, k: anaximandros, typ: ucitel, tradovany: true, zdroj: iep-thales }
 - { od: anaximandros, k: anaximenes, typ: ucitel, tradovany: true, zdroj: iep-anaximenes }
 - { od: parmenides, k: zenon-z-eleje, typ: ucitel, tradovany: true, poznamka: "mladší druh", zdroj: sep-zeno-elea }
-# Celek 7 (P6): zapsáno jen to, co nemění hotové stránky. Další návrhy (Sókratés, Aristotelés, Seneca, Marcus Aurelius;
-# polemika Hérakleita s Pýthagorou a Xenofanem) jsou v docs/podklady/celek-7-jsem-porad-tentyz.md, oddíl Návrh dat.
+# Celek 7. Vztah Hérakleitos ↔ Parmenidés se nezapisuje: jestli jeden o druhém věděl, nevíme (podklady, oddíl
+# Reagoval jeden na druhého?). Nezapisuje se ani Hérakleitova polemika s Pýthagorou a Xenofanem (zlomek B40): žili
+# zároveň s ním, stránka by ji dala pod „Znali se a přeli se“, a o tom, že se znali, žádný pramen nemluví.
 - { od: xenofanes, k: parmenides, typ: ucitel, tradovany: true, poznamka: "říkalo se to už za Aristotela", zdroj: aristoteles-metafyzika-zmena }
 - { od: herakleitos, k: kleanthes, typ: vliv-textem, poznamka: "výklad Hérakleitovy knihy", zdroj: dl-ix-1 }
 - { od: herakleitos, k: plutarchos, typ: vliv-textem, poznamka: "věta o řece", zdroj: plutarchos-de-e }
+# P7 (souhlas autora 9. 10. 2026): čtyři vztahy, které mění oddíl Doba a lidé na stránkách Sókrata, Aristotela, Seneky
+# a Marca Aurelia. Setkání Parmenida se Sókratem je Platónova scéna, proto tradované. Aristotelés se s Hérakleitem
+# potkat nemohl: stránka polemiku řadí pod spor na dálku a poznámka je otázka, o kterou šlo.
+- { od: parmenides, k: sokrates, typ: znali-se, tradovany: true, poznamka: "Platón líčí jejich setkání v Athénách", zdroj: platon-parmenides }
+- { od: aristoteles, k: herakleitos, typ: polemika, poznamka: "může totéž zároveň být i nebýt?", zdroj: aristoteles-metafyzika-zmena }
+- { od: herakleitos, k: seneca, typ: vliv-textem, poznamka: "věta o řece", zdroj: seneca-ep-58 }
+- { od: herakleitos, k: marcus-aurelius, typ: vliv-textem, poznamka: "řeka a proměna v Hovorech", zdroj: marcus-hovory-promena }
 
 # Od Sókrata ke kynikům a stoikům
 - { od: gorgias, k: antisthenes, typ: ucitel, zdroj: iep-antisthenes }

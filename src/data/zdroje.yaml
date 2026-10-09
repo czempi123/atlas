@@ -3727,3 +3727,17 @@ obrazky:
     licence: "CC BY-NC-SA 4.0"
     url: "https://smb.museum-digital.de/object/13081"
     vyrez: "50% 40%"
+  # Celek 7: Hérakleitos z The Art Institute of Chicago (CC0 Public Domain Designation; ověřeno 9. 10. 2026 v API muzea,
+  # is_public_domain: true, i na stránce díla). Autor souhlasil se stažením 9. 10. 2026. Originál 2637 × 2250 px je mimo
+  # repozitář (~/Pictures/Atlas-originaly/herakleitos-aic-1897-296-original.jpg); tady zmenšenina 1280 × 1092 px,
+  # zesvětlená gamou 1,9 (scripts/obrazek-zesvetli.mjs), protože olejomalba byla v duotónu desky skoro černá.
+  # „Plačící filozof“ je římská představa (Seneca, O hněvu II, 10, 5): popisek říká, čí je. Parmenidés je bez obrazu.
+  - id: herakleitos-aic
+    soubor: obrazky/herakleitos-aic.jpg
+    popisek: "Hérakleitos jako plačící filozof, jak si ho kolem roku 1630 představil španělský malíř. Uplakaného z něj udělali až Římané, přes pět set let po něm, a po nich malíři."
+    autor: "neznámý španělský malíř, kolem 1630 (soubor: The Art Institute of Chicago); zesvětleno"
+    instituce: "The Art Institute of Chicago, inv. 1897.296"
+    licence: "CC0 (Public Domain Designation)"
+    url: "https://www.artic.edu/artworks/111428/heraclitus-the-weeping-philosopher"
+    vyrez: "45% 30%"
+    vyrezNaSirku: "45% 25%"
