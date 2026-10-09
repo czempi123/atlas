@@ -559,3 +559,32 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 
 Vyřízeno: hlas Seneky (podle Dopisu 61, 4); Aristotelův citát (kratší podoba `etika-1117b-bolest`, plná `etika-1117b` zůstává nepoužitá vedle ostatních rezerv); scéna Sporu; list pro učitele (Dopisy 61 a 30, Nagel, tabulka výroků). Faidón 61c–62c čten anglicky v překladu H. N. Fowlera (PerseusDL): „říká se, že to není dovoleno“; lidé jsou podle tajného učení jakoby ve vězení a nemají se sami propouštět; bohové jsou naši strážci; člověk se nemá zabít, dokud bůh nepošle nutnost. Totéž místo říká, že filozof je ochoten zemřít: v listu pro učitele je obojí. Řecky nečteno. Ostatní řádky tabulky Po P10 trvají (české překlady, Nagelův článek, Dopis 70 a příručky, Diodóros řecky, atribut Plútarcha, přesýpací hodiny).
 
+
+## Celek 7 „Jsem pořád tentýž, když se měním?“ (P6)
+
+9. 10. 2026. Podklady jsou v `docs/podklady/celek-7-jsem-porad-tentyz.md`. Vyřízeno z dřívějších bodů:
+
+- **Platón cituje Hérakleita (Kratylos 402a).** Čteno řecky i anglicky. Sókratés říká: „Hérakleitos tuším říká, že všechno je v pohybu a nic nezůstává. Přirovnává věci k proudu řeky a říká, že dvakrát do téže řeky nevstoupíš.“ (citát `kratylos-402a`) Popisek „znal ho z textů“ u vztahu Hérakleitos → Platón tedy obstojí vedle Aristotelova svědectví o Kratylovi; poznámka u vztahu zůstává.
+- **Xenofanés → Parmenidés.** Zapsáno jako tradovaný vztah učitele: Aristotelés (Metafyzika 986b22) píše „říká se, že byl jeho žákem“. Diogenés Laertios (IX, 21) to opakuje a dodává, že ho Parmenidés nenásledoval.
+- **Hérakleitos ↔ Parmenidés.** Nezapsáno a zapisovat se nemá. Žádný starý pramen neříká, že jeden četl druhého; do dvojice je postavil Platón (Theaitétos 152e a 180e–181a). Čtení, že Parmenidův zlomek B6 míří na Hérakleita, je novověký výklad a SEP ho podává jako možnost. Rozbor je v podkladech v oddíle „Reagoval jeden na druhého?“.
+- **Parmenidés: „a déšť před ní taky ne“.** Druhé čtení je doložené starověkým pramenem: Plútarchos (Proti Kólótovi 1114b–d) píše, že Parmenidés oheň, vodu ani města nezrušil, a Aristotelés (Metafyzika 986b27–34), že podle rozumu je jedno, podle vnímání mnohé. Hlas na stránce otázky 6 je nejsilnější verze prvního čtení; profil řekne obojí.
+
+Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Věta atributu u Hérakleita | „Do téže řeky nelze vstoupit dvakrát“ je Platónovo shrnutí (Kratylos 402a), ne dochovaná Hérakleitova věta; zlomek B12 říká „do týchž řek…, jiné a jiné vody“. | Rozhodne autor (varianty A, B, C v podkladech); do té doby věta v datech zůstává. |
+| Spor na dálku mezi současníky | Hérakleitos napadá Pýthagoru a Xenofana (B40), ale nic neříká, že se znali. Model řadí polemiku současníků pod „Znali se a přeli se“ (pozná to jen podle let). Souvisí s bodem „Spor přes texty v oddíle Doba a lidé“ výše. | Příznak u vztahu (například `na-dalku: true`) a pak vztahy doplnit; do té doby nezapisovat. |
+| Vztahy, které mění hotové stránky | Parmenidés – Sókratés (`znali-se`, tradovaný: Platónova scéna), Aristotelés → Hérakleitos (`polemika`), Hérakleitos → Seneca a → Marcus Aurelius (`vliv-textem`). Prameny jsou ověřené, ale řádek přibude v oddíle Doba a lidé na stránkách Sókrata, Aristotela, Seneky a Marca Aurelia. | P7: zapsat, stránky přečíst, pustit testy. |
+| Aristotelés × Parmenidés | Fyzika I, 2–3 a 8 (kde s ním Aristotelés polemizuje) nečteny; čteno jen I, 7 a Metafyzika 986b. | Před zápisem polemiky nebo větou „Aristotelés mu odpověděl“ přečíst. |
+| Vydání Dielse a Kranze | Čísla zlomků jsou z Hicksových poznámek, ze SEP a z běžné literatury; vydání jsem neviděl. Vymezení zlomku B91 je proto jen přibližné. | Při revizi ověřit čísla a rozsah B91 v tištěném vydání nebo u Kirka, Ravena a Schofielda. |
+| České překlady | Všech 60 citátů jsou vlastní převody. | Před revizí srovnat hlavně B12, B51 a Parmenidovy verše (Svoboda, Kratochvíl; Platón: Novotný). |
+| „Všechno plyne“ až u Simplikia | Ověřeno hledáním v jeho komentáři k Fyzice; jiné pozdní autory jsem neprohledával. | Studentský text: „připsali mu ho až pozdější čtenáři“, bez „poprvé u“. |
+| Dlužník a bití | Scénu, kdy věřitel dlužníka zbije a ten se brání stejným argumentem, znám jen ze SEP (anonymní komentář k Theaitétu); pramen nečten. V Epicharmových verších u Diogena (III, 11) dlužník není. | Bití do textu ne; „hádanka z komedií“ ano. |
+| Stobaios, Theofrastos, Strabón, Rétorika 1407b, Sextos VII, 126–134 | Neotevřeno (stoická nauka o jedinečně určeném jedinci; zlomky B116, B119, B125, B1 a B2 v úplnosti; efeští „králové“; Hérakleitův sloh). | Použít jen to, co stojí v podkladech; ostatní před použitím ověřit. |
+| Příručkové údaje | Počet Hérakleitových zlomků, doba Hérakleita alegorika, roky Démétria z Faléra, rok latinského vydání Hobbesova spisu, rok Raffaelovy fresky. | Ve studentském textu jen zaokrouhleně („o dva tisíce let později“). |
+| Stáří buněk | Čtyři studie čteny celé. Souhrnná práce Sendera a Mila (2021) a délka života červených krvinek v plném textu nezískány. | Žádné číslo, které není v podkladech; „sedm let“ jen jako pověra, kterou cesta vyvrací. |
+| Doporučení pro školy | Přílohy MŠMT č. 3 a č. 8 čteny v kopiích na webu jedné školy; aktuální adresu na webu ministerstva jsem nenašel. Australské zásady řeči o demenci: sedm stran z osmnácti. Příručka SAMHSA nezískána. Kontakt na poradnu pro LGBT+ mladé jsem neověřoval. | List pro učitele (P8/P9): odkázat na aktuální znění; kontakty ověřit ručně v prohlížeči jako u celku 6. |
+| Obrázky | Nic nestaženo. Brána a herma z Velie jsou na Wikimedia Commons neověřené; nález hermy znám jen z literatury. | Po rozhodnutí autora stáhnout zvolené kandidáty (Art Institute of Chicago, Met) a zapsat do `obrazky`. |
+| Zénón a Achilleus se želvou | Celek je nezakládá. Věta atributu u Zénóna je neověřená; Diogenés (IX, 23) píše, že argument podle Favorina užil už Parmenidés; Plútarchos má variantu s Adrástovým koněm (čteno jen anglicky). | Ověřit, až se bude stránka zakládat. |
+| Parmenidés v Athénách | Jediný pramen je Platónův dialog; SEP setkání se Sókratem považuje za smyšlenou scénu, ze které se odvozuje jen chronologie. | Místo Athény u Parmenida do dat ne; v textu „Platón líčí“. |

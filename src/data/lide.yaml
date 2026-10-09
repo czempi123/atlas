@@ -167,7 +167,7 @@
     ikona: gate
     nazev: brána
     proc: Ve své básni vypráví, jak projel branou Noci a Dne k bohyni, která ho poučila, co skutečně je.
-    zdroj: sep-parmenides
+    zdroj: sextos-m-vii-111
   zdroje: [sep-parmenides, dl-ix-22, dl-ix-21, parmenides-b8, sextos-m-vii-111, simplikios-fyzika, plutarchos-kolotes, aristoteles-metafyzika-zmena, platon-parmenides, platon-theaitetos-tabory]
 
 - id: demokritos

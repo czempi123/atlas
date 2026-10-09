@@ -341,6 +341,7 @@ prameny:
   - { id: aic-herakleitos, druh: data, nazev: "Heraclitus, the Weeping Philosopher (1897.296)", dilo: "The Art Institute of Chicago", url: "https://www.artic.edu/artworks/111428/heraclitus-the-weeping-philosopher", overeno: 2026-10-09, poznamka: "Olej na plátně, španělský malíř, kolem roku 1630, 87,7 × 75 cm. CC0 Public Domain Designation podle stránky muzea (četl nástroj WebFetch) a API. Kandidát na obraz profilu; soubor nestažen." }
   - { id: rijks-herakleitos, druh: data, nazev: "Heraclitus (SK-A-2784)", autor: "Hendrick ter Brugghen", dilo: "Rijksmuseum, Amsterdam", url: "https://www.rijksmuseum.nl/en/collection/SK-A-2784", overeno: 2026-10-09, poznamka: "Olej na plátně, 1628, 85,5 × 70 cm; protějšek k Démokritovi (SK-A-2783). Public domain podle stránky muzea (četl nástroj WebFetch). Kandidát na obraz profilu; soubor nestažen." }
   - { id: met-volpato-skola, druh: data, nazev: "The School of Athens, after the fresco by Raphael (35.85.45)", autor: "Giovanni Volpato", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/716834", overeno: 2026-10-09, poznamka: "Rytina a lept, asi 1781, podle Raffaelovy fresky (1509–1511; rok z příruček). Public Domain podle API muzea. Které postavy jsou Hérakleitos a Parmenidés, freska neříká; určení je pozdější a u Parmenida nejisté (znám jen z literatury). Soubor nestažen." }
+  - { id: dl-x-63, druh: pramen, nazev: "Životy filozofů X, 63–66 (Dopis Hérodotovi)", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Epikúros: duše je jemné těleso rozptýlené po celém celku; vnímá, jen pokud ji kryje ostatní tělo, a to má od ní na vnímání podíl; když se celek rozpadne, duše se rozptýlí a nevnímá; vnímající duši si nelze myslet mimo toto složení." }
 
 citaty:
   - id: obrana-38a
@@ -2979,7 +2980,7 @@ citaty:
     original: "ἐδιζησάμην ἐμεωυτόν"
     preklad:
       druh: vlastni
-      podle: "řecký text (Bernardakis); DK 22 B101; δίζημαι = hledat, pátrat, vyptávat se; Diogenés Laertios IX, 5 totéž v nepřímé řeči"
+      podle: "řecký text (Bernardakis), bez Plútarchova vloženého φησίν („říká“); DK 22 B101; δίζημαι = hledat, pátrat, vyptávat se; Diogenés Laertios IX, 5 totéž v nepřímé řeči"
     zdroj: plutarchos-kolotes
   - id: herakleitos-b45
     osoba: herakleitos
@@ -3031,10 +3032,10 @@ citaty:
     dilo: zlomek B60
     misto: u Hippolyta, Vyvrácení všech herezí IX, 10
     cesky: "Cesta nahoru a dolů je jedna a táž."
-    original: "ὁδὸς ἄνω κάτω μία καὶ ὡυτή"
+    original: "ὁδὸς ἄνω κάτω μίη καὶ ὡυτή"
     preklad:
       druh: vlastni
-      podle: "řecký text (Duncker a Schneidewin); DK 22 B60"
+      podle: "řecký text (Duncker a Schneidewin: μίη; DK 22 B60 tiskne μία)"
     zdroj: hippolytos-ix
   - id: herakleitos-b61
     osoba: herakleitos
@@ -3045,7 +3046,7 @@ citaty:
     original: "θάλασσα ὕδωρ καθαρώτατον καὶ μιαρώτατον, ἰχθῦσι μὲν πότιμον καὶ σωτήριον, ἀνθρώποις δὲ ἄποτον καὶ ὀλέθριον"
     preklad:
       druh: vlastni
-      podle: "řecký text (Duncker a Schneidewin); DK 22 B61"
+      podle: "řecký text (Duncker a Schneidewin), bez Hippolytova vloženého φησίν („říká“); DK 22 B61"
     zdroj: hippolytos-ix
   - id: dl-ix-3-kostky
     osoba: herakleitos
@@ -3056,7 +3057,7 @@ citaty:
     original: "τί, ὦ κάκιστοι, θαυμάζετε; ἢ οὐ κρεῖττον τοῦτο ποιεῖν ἢ μεθʼ ὑμῶν πολιτεύεσθαι;"
     preklad:
       druh: vlastni
-      podle: "řecký text a anglický překlad R. D. Hickse; tradovaný příběh: Hérakleitos hraje s dětmi kostky u Artemidina chrámu a Efesané stojí kolem"
+      podle: "řecký text (bez vloženého εἶπεν, „řekl“) a anglický překlad R. D. Hickse; tradovaný příběh: Hérakleitos hraje s dětmi kostky u Artemidina chrámu a Efesané stojí kolem"
     zdroj: dl-ix-1
   - id: dl-ii-22-potapec
     osoba: sokrates
@@ -3108,7 +3109,7 @@ citaty:
     dilo: O přírodě
     misto: zlomek B2, 3–8 (u Simplikia)
     cesky: "Jedna cesta: že je a že nemůže nebýt. To je cesta přesvědčení, protože jde za pravdou. Druhá: že není a že nebýt musí. O té ti říkám, že je to stezka, ze které se nedá nic zvědět: co není, bys nepoznal ani nevyslovil."
-    original: "ἡ μὲν ὅπως ἔστιν τε καὶ ὡς οὐκ ἔστι μὴ εἶναι, πειθοῦς ἐστι κέλευθος (ἀληθείῃ γὰρ ὀπηδεῖ), ἡ δʼ ὡς οὐκ ἔστιν τε καὶ ὡς χρεών ἐστι μὴ εἶναι, τὴν δή τοι φράζω παναπευθέα ἔμμεν ἀταρπόν· οὔτε γὰρ ἂν γνοίης τό γε μὴ ἐὸν (οὐ γὰρ ἀνυστόν) οὔτε φράσαις"
+    original: "ἡ μὲν ὅπως ἔστι τε καὶ ὡς οὐκ ἔστι μὴ εἶναι, πειθοῦς ἐστι κέλευθος (ἀληθείῃ γὰρ ὀπηδεῖ), ἡ δʼ ὡς οὐκ ἔστι τε καὶ ὡς χρεών ἐστι μὴ εἶναι, τὴν δή τοι φράζω παναπευθέα ἔμμεν ἀταρπόν· οὔτε γὰρ ἂν γνοίης τό γε μὴ ἐὸν (οὐ γὰρ ἀνυστόν) οὔτε φράσαις"
     preklad:
       druh: vlastni
       podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 116–117; DK 28 B2; mluví bohyně; vynecháno „neboť to nelze uskutečnit“"
@@ -3426,11 +3427,11 @@ citaty:
     autor: Aristotelés
     dilo: Kategorie
     misto: 5, 4a17–21
-    cesky: "Určitý člověk, jeden a tentýž, je jednou světlý a jindy tmavý, jednou teplý a jindy studený, jednou špatný a jindy dobrý."
+    cesky: "Určitý člověk, jeden a tentýž, je jednou bledý a jindy opálený, jednou je mu teplo a jindy zima, jednou je špatný a jindy dobrý."
     original: "ὁ τὶς ἄνθρωπος, εἷς καὶ ὁ αὐτὸς ὤν, ὁτὲ μὲν λευκὸς ὁτὲ δὲ μέλας γίνεται, καὶ θερμὸς καὶ ψυχρός, καὶ φαῦλος καὶ σπουδαῖος"
     preklad:
       druh: vlastni
-      podle: "řecký text (Bekker 1837, First1KGreek), bez srovnání s překladem; řádky podle běžného číslování, ve vydání nejsou; λευκός a μέλας = světlý (bledý) a tmavý (osmahlý)"
+      podle: "řecký text (Bekker 1837, First1KGreek), bez srovnání s překladem; řádky podle běžného číslování, ve vydání nejsou; λευκός a μέλας = doslova bílý a černý, tady o pleti (bledý a osmahlý); θερμός a ψυχρός = doslova teplý a studený"
     zdroj: aristoteles-kategorie-4a
   - id: fyzika-i-7
     osoba: aristoteles
@@ -3553,6 +3554,17 @@ citaty:
       druh: vlastni
       podle: "latinský text (The Latin Library); zkráceno; doklad pozdní představy o „plačícím filozofovi“"
     zdroj: seneca-plac
+  - id: herodotos-64
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Hérodotovi
+    misto: Diogenés Laertios X, 64
+    cesky: "Duše by vnímat nemohla, kdyby ji nějak nekrylo ostatní tělo. A tělo, které jí to umožnilo, má od ní na vnímání podíl i samo."
+    original: "οὐ μὴν εἰλήφει ἂν ταύτην, εἰ μὴ ὑπὸ τοῦ λοιποῦ ἀθροίσματος ἐστεγάζετό πως. τὸ δὲ λοιπὸν ἄθροισμα παρασκευάσαν ἐκείνῃ τὴν αἰτίαν ταύτην μετείληφε καὶ αὐτὸ τοιούτου συμπτώματος παρʼ ἐκείνης"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; volněji: ταύτην odkazuje k „příčině vnímání“ z předchozí věty; τὸ λοιπὸν ἄθροισμα = „zbytek celku“, tedy tělo bez duše"
+    zdroj: dl-x-63
 
 obrazky:
   - id: sokrates-louvre
