@@ -2788,6 +2788,17 @@ citaty:
       druh: vlastni
       podle: "řecký text (Bywater); řeč je o statečném člověku v boji"
     zdroj: aristoteles-etika-smrt
+  - id: etika-1117b-bolest
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: III, 9, 1117b10–11
+    cesky: "Čím úplnější je jeho ctnost a čím je šťastnější, tím víc ho smrt bude bolet."
+    original: "ὅσῳ ἂν μᾶλλον τὴν ἀρετὴν ἔχῃ πᾶσαν καὶ εὐδαιμονέστερος ᾖ, μᾶλλον ἐπὶ τῷ θανάτῳ λυπήσεται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater); řeč je o statečném člověku v boji; kratší podoba citátu etika-1117b pro cestu 8: bez věty „takovému člověku nejvíc stojí za to žít“ (obráceně říká studentovi, kterému je zle, že jeho život stojí za to míň), viz záznam revize celku 6 z 9. 10. 2026, nález 2"
+    zdroj: aristoteles-etika-smrt
   - id: etika-1177b
     osoba: aristoteles
     autor: Aristotelés

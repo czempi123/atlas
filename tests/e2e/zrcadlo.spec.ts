@@ -176,7 +176,7 @@ test('zrcadlo času: celé jen klávesnicí; s povoleným pohybem se odraz přek
   const text = page.locator('.krok__obsah > .ctenarsky');
   expect(await text.evaluate((t) => {
     const pred = [...t.querySelectorAll('p')].find((p) => p.textContent!.includes('Lucretiovo zrcadlo si můžeš přiložit sám'))!;
-    const po = [...t.querySelectorAll('p')].find((p) => p.textContent!.includes('Zrcadlo má slabé místo'))!;
+    const po = [...t.querySelectorAll('p')].find((p) => p.textContent!.includes('Proti zrcadlu stojí námitka'))!;
     const k = t.querySelector('#zrcadlo-casu')!;
     return !!(pred.compareDocumentPosition(k) & Node.DOCUMENT_POSITION_FOLLOWING) && !!(k.compareDocumentPosition(po) & Node.DOCUMENT_POSITION_FOLLOWING);
   })).toBe(true);

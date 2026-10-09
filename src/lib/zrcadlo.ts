@@ -73,7 +73,7 @@ export function useckyNamitky(posun: number): UseckyNamitky {
 /** Texty pod kresbou: říkají slovy totéž co kresba. Věty do 25 slov, jen to, co je v podkladech. */
 export const POPISY_ZRCADLA = {
   pred: 'Uprostřed je život. Vlevo od něj leží čas před narozením, vpravo čas po smrti. Přilož k životu zrcadlo.',
-  po: 'V zrcadle se čas po smrti kryje s časem před narozením. V letech 1348, 1620 ani 1914 jsme nic zlého necítili. Lucretius říká, že stejné to bude potom.',
+  po: 'V zrcadle se čas po smrti kryje s časem před narozením. V letech 1348, 1620 ani 1914 jsme necítili nic, dobré ani zlé. Lucretius říká, že stejné to bude potom.',
 };
 
 export const POPISY_NAMITKY: string[] = [

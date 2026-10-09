@@ -77,6 +77,7 @@ Co v týchž autorech táhne opačným směrem:
 - Seneca o Paulině (Dopisy 104, 3–4): kvůli těm, kdo nás mají rádi, se má člověk držet života, i když je to těžké.
 - Seneca proti „chuti zemřít“, která se prý zmocňuje i ušlechtilých lidí (24, 25), a Epikúros, který podle něj kárá ty, kdo po smrti touží, stejně jako ty, kdo se jí bojí (24, 22–23).
 - Epikúros: moudrý si život nevezme, ani kdyby oslepl (Diogenés Laertios X, 119); „Malý je ve všem ten, kdo má mnoho dobrých důvodů k odchodu ze života“ (Vatikánské výroky 38).
+- Platón ve Faidónu, ze kterého cesta i stránka otázky 3 citují: Sókratés na začátku rozhovoru hájí, že si člověk život brát nemá. Jsme podle něj pod ochranou bohů a nemáme se propouštět sami (61c–62c). Na témže místě ale stojí i to, že filozof se smrti nebrání; do hodiny proto jen s tímhle vědomím.
 
 ## Otroci a Dopis 47
 
@@ -108,6 +109,18 @@ V Tacitovi chce Paulina zemřít s mužem, Seneca jí nebrání a ještě to poc
 
 Senekovy útěchy Marcii a Helvii jsou filozofické spisy psané ženám a Seneca v jedné z nich otci vyčítá, že matce filozofii nedovolil (Útěcha Helvii 17, 4). Jsou v nich ale i věty o „ženské slabosti ducha“; atlas je necituje.
 
+## Výroky, které se Senekovi připisují
+
+Studenti hledají citáty na internetu. Co z toho, co u Seneky najdou, opravdu napsal:
+
+| Rozšířená podoba | Skutečnost |
+| --- | --- |
+| „Neučíme se pro školu, ale pro život“ (*Non scholae, sed vitae discimus*) | U Seneky stojí opak a jako výčitka: „Neučíme se pro život, ale pro školu“ (Dopisy 106, 12). Na té větě stojí první kapitola portrétu. |
+| „Štěstí je, když se připravenost potká s příležitostí“ | V Senekových spisech není. Připisuje se mu až od konce 20. století. |
+| „Mýlit se je lidské“ (*Errare humanum est*) | U Seneky není. Nejbližší antické znění je Ciceronovo: mýlit se může každý, setrvat v omylu jen hlupák (Filipiky XII, 5). |
+| *Per aspera ad astra* | U Seneky není. Nejblíž je verš z jeho tragédie Zuřící Herkules: ze země ke hvězdám nevede pohodlná cesta (v. 437). |
+| „Osud vede toho, kdo chce, a vleče toho, kdo nechce“ (*Ducunt volentem fata, nolentem trahunt*) | U Seneky je (Dopisy 107, 11), ale jako závěr veršů, které podle svých slov přeložil z Kleantha. |
+
 ## Koho se portrét může bolestně týkat
 
 - **Student s myšlenkami na smrt.** Proto portrét nepopisuje způsob, nepodává Senekovu smrt jako volbu a hned po scéně mluví o tom, co po něm zůstalo. Věta z Dopisu 78 stojí uprostřed kapitoly o mládí, ne na jejím začátku, a končí tím, co Senekovi pomohlo.
@@ -136,7 +149,7 @@ Co je dobré vědět o znění:
 - Lucretius žil asi dvě stě let po Epikúrovi a o jeho životě se neví skoro nic. Historka o nápoji lásky a šílenství, kterou o něm zapsal až Hieronymus, je podle Stanford Encyclopedia of Philosophy nevěrohodná; do hodiny nepatří ani jako zajímavost.
 - Aristotelova věta, že šťastného bolí smrt nejvíc, je z výkladu o statečnosti v boji (Etika Nikomachova 1117b). Aristotelés zemřel šestnáct let před tím, než Epikúros založil v Athénách školu; nepřeli se.
 - Plútarchos (asi 45–120 n. l.) byl platonik z Chairóneie a kněz v Delfách; v atlasu má jen medailonek s trojnožkou na minci, vlastní stránku ne. Psal kolem roku 100, přes tři sta padesát let po Epikúrovi. Jeho spis Že podle Epikúra nelze žít příjemně je rozhovor na procházce a řeč o smrti v něm pronáší jeho přítel Theón. Věty v cestě jsou parafráze, ne citáty.
-- Odpověď na Lucretiovo zrcadlo (žít déle bych mohl já, narodit se dřív by musel někdo jiný) připisuje cesta Thomasi Nagelovi jednou větou. Stojí na hesle Death ve Stanford Encyclopedia of Philosophy; Nagelův článek z roku 1970 podklady atlasu nečetly a encyklopedie sama tu odpověď pokládá za spornou.
+- Odpověď na Lucretiovo zrcadlo (žít déle bych mohl já, narodit se dřív by musel někdo jiný) připisuje cesta Thomasi Nagelovi jednou větou. Stojí na hesle Death ve Stanford Encyclopedia of Philosophy (čteno znovu 9. 10. 2026): Nagel odpověděl, že narodit se o hodně dřív člověk nemohl, žít déle ano. Encyklopedie dodává, že odpověď stojí na sporném předpokladu o původu člověka a že to Nagel sám přiznává. Text kroku proto říká „podle ní“, ne že zrcadlo má slabé místo. Nagelův článek z roku 1970 podklady atlasu nečetly.
 - Kresba Zrcadlo času nemá vpravo od života letopočet ani věk a student konec života nenastavuje. Není to odhad, kdy kdo zemře.
 
 ## Cesta 8: koho se může bolestně týkat a co s tím dělá
@@ -168,11 +181,15 @@ Opačným směrem táhnou místa, která jsou vypsaná výš u stoické obhajoby
 
 **Způsob jakékoli smrti.** Cesta nevypráví, jak zemřel Epikúros. Pozdní pramen (Hermippos u Diogena Laertia X, 15–16) líčí lázeň a víno; je to scéna umírání se způsobem a nápadně se podobá tomu, co Tacitus vypráví o Senekovi. Nevypráví ani Sókratovu smrt: z Obrany bere jen místo po rozsudku (40c).
 
-**Klid a spánek jako to, co čeká.** Epikúrův argument říká, že není čeho se bát. Neříká, že je se na co těšit, a text ten rozdíl drží. Dva citáty jsou proto v cestě kratší než v prameni. Lucretiovo zrcadlo končí před poslední otázkou („Není to klidnější než každý spánek?“) a Senekova lampa před závěrem o „hlubokém klidu“ z obou stran. Z Obrany chybí první možnost v plném znění (smrt jako spánek beze snů, který by byl ziskem) a poslední věta (kdo jde za lepším, neví nikdo kromě boha): obojí může student, kterému je zle, číst jako slib. Věta „pak už nic nebolí“ je pro něj nebezpečná jinak než pro ostatní.
+**Klid a spánek jako to, co čeká.** Epikúrův argument říká, že není čeho se bát. Neříká, že je se na co těšit, a text ten rozdíl drží. Dva citáty jsou proto v cestě kratší než v prameni. Lucretiovo zrcadlo končí před poslední otázkou („Není to klidnější než každý spánek?“) a Senekova lampa před závěrem o „hlubokém klidu“ z obou stran. Z Obrany chybí první možnost v plném znění (smrt jako spánek beze snů, který by byl ziskem) a poslední věta (kdo jde za lepším, neví nikdo kromě boha): obojí může student, kterému je zle, číst jako slib. Věta „pak už nic nebolí“ je pro něj nebezpečná jinak než pro ostatní. Proto třetí krok říká „nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“, a ne „nezbude nikdo, komu by bylo zle“: Epikúros sám mluví o dobrém i zlém (Dopis Menoikeovi 124).
 
 **„Velká bolest je krátká, dlouhá je snesitelná.“** Je to Epikúrova útěcha (Hlavní myšlenky 4) a starý přítel v Senekově dopise ji opakuje. Kdo má doma těžce nemocného, vidí každý den, že neplatí. Už Cicero odpověděl: „Vidím přece bolesti velké a přitom pořádně dlouhé“ (O nejvyšším dobru a zlu II, 94). V cestě ta útěcha není.
 
 **Tvrdé věty z útěch.** Senekův Dopis 99 začíná výčitkou otci, kterému zemřel malý syn; cesta z něj má jedinou větu, že nepohnout se je nelidskost. Z Dopisu 63 nemá radu hledat si nového přítele ani posměch dlouhému truchlení. Z Útěchy Marcii nemá nic.
+
+**Aristotelovu větu o tom, komu stojí za to žít.** Citát v pátém kroku končí slovy „tím víc ho smrt bude bolet“. V Etice Nikomachově pokračuje: „Takovému člověku totiž nejvíc stojí za to žít, a on ví, že přichází o největší dobra“ (1117b11–13). Obráceně ta věta říká studentovi, kterému se nedaří, že jeho život stojí za to míň. Ze stejného důvodu nemá cesta Plútarchovo srovnání šťastných s nešťastnými.
+
+**Zbytek Dopisu 30.** Dopis o starém příteli (v cestě krok 8) mluví i o lidech, kteří si smrt přejí (30, 12) a kteří život sami ukončují (30, 15), a končí radou myslet na smrt stále, aby se jí člověk nebál (30, 18). Seneca v něm dává přednost těm, kdo smrt přijímají, před těmi, kdo ji přivolávají. Cesta z dopisu bere loď, přiznání (30, 7) a větu o myšlence na smrt (30, 17).
 
 **Druhou polovinu studie, pět lítostí a věk.** Viz níž u studie.
 
@@ -227,6 +244,7 @@ Antičtí autoři se takhle neptali; sousloví „smysl života“ v textech, ze
 - Stránka nezastupuje pozdější odpovědi antickým hlasem: Platón není Pascal a Epikúros není Camus. Až je atlas bude mít, přibudou.
 - Úvodní případ se ptá na cizí životy, ne na studentův. Varianta „za sto let si na tebe nikdo nevzpomene“ byla zamítnuta: míří na studenta a tomu, kdo je na tom zle, zní jako výsměch.
 - Netvrďte, že v antice nikdo nepochyboval, že život stojí za to. Epikúros sám cituje a odmítá větu, že nejlepší je se nenarodit (Dopis Menoikeovi 126–127), a Cicero jmenuje Hégésia. Stránka o tom mlčí ze stejných důvodů jako cesta.
+- Senekův citát („O tom, jestli jsme žili dost, nerozhodují roky ani dny, ale mysl“) je z Dopisu 61 a ten je celý o připravenosti zemřít: „žil jsem dost; čekám na smrt nasycen“, „dobře zemřít znamená zemřít rád“. Stránka z něj má jen větu 61, 4 a její souvislost: k životu je všeho dost, a nám se pořád zdá, že něco chybí. Student si dopis najde za minutu; je dobré vědět, co v něm je.
 - Rok na fotografii má být vždy asi o sto let starší než rok, kdy se s atlasem pracuje.
 
 ## Kde hledat pomoc
