@@ -3,7 +3,7 @@
 # námitek a odpovědí; převody z řečtiny 1105a, 1106e a 1107b). Epikúrova strana: Dopis Menoikeovi 124–126,
 # Hlavní myšlenky 2 a 19, Lucretius III, 900–901. Plútarchova strana: Že podle Epikúra nelze žít příjemně
 # 1104c–e, 1105a, 1106b–c, 1106e a 1107b (1106b–c bez srovnání s nešťastnými: viz Citlivá místa); řeč pronáší jeho přítel Theón (text kroku říká „svěřil svému příteli“).
-# Plútarchos v datech atlasu není: strana proto nemá osobu, jen označení, a její mince je prázdná.
+# Plútarchos je v datech jako medailonek s atributem trojnožka (rozhodnutí autora z 9. 10. 2026).
 # Spor je na dálku, s učením, ne s člověkem; scéna to říká a vítěze neohlašuje. Námitku ztráty vysloví scéna
 # (truchlící u Lucretia, III, 894–899), aby Epikúros na telefonu neodpovídal na něco, co ještě nezaznělo.
 # Třetí argument každé strany odpovídá na nejsilnější námitku druhé; Epikúrova odpověď je výklad („by odpověděl“).
@@ -32,7 +32,7 @@ strany:
         Na námitku, že smrt bere všechno dobré, by Epikúros odpověděl otázkou: komu to bude chybět?
         Ztráta bolí toho, kdo něco postrádá, a mrtvý nepostrádá nic.
         A trápit se dnes tím, co nebude bolet, až to přijde, je podle něj trápení naprázdno.
-  - oznaceni: Plútarchos
+  - osoba: plutarchos
     postoj: Ano. Je to ztráta všeho dobrého, co máme.
     argumenty:
       - >-

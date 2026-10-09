@@ -120,7 +120,7 @@ export const StranaSporu = z
     /**
      * Jak stranu nazvat místo jména osoby, když za ni mluví celý směr („kynici“). Malým písmenem,
      * jak stojí uprostřed věty; na škále a v nadpisech se první písmeno zvětší samo. Mince zůstává osoby.
-     * U strany bez osoby je to jméno autora („Plútarchos“).
+     * U strany bez osoby je to jméno autora, kterého atlas v datech nemá.
      */
     oznaceni: Text.optional(),
     /** postoj jednou větou: „To, co pochopím.“ */

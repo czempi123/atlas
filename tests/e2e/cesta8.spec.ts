@@ -199,13 +199,14 @@ test('cesta 8: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(hostina.locator('.co-udelal')).toContainText('Aristotelés by řekl opak');
   await dalKlavesnici(page, hostina, 'Týká se nás?', `${CESTA8}6/`);
 
-  // Krok 6: Spor na dálku; Plútarchos není v datech, strana má jen označení. Obě strany odpoví na námitku druhé.
+  // Krok 6: Spor na dálku; Plútarchos je v datech jako medailonek a jeho mince nese trojnožku. Obě strany odpoví na námitku druhé.
   await expect(page.locator('.krok__obsah > .ctenarsky')).toContainText('takže se přel s jeho učením, ne s ním');
   const spor = page.locator('#cesta8-epikuros-plutarchos');
   await expect(spor).toContainText('Ti dva se nepotkali');
   await expect(spor).toContainText('Kdo z nich má pravdu, rozhodni sám.');
   await expect(spor).not.toContainText(/tváří v tvář|řekl mu|odpověděl mu|vyvrá/);
   await expect(spor.locator('.skala__konce').first()).toHaveText(/Epikúros\s*Plútarchos/);
+  await expect(spor.locator('.skala__konce use[href$="#tripod"]').first()).toBeAttached();
   await spor.getByRole('radio').first().focus();
   await page.keyboard.press('ArrowRight');
   await expect(spor.getByRole('radio', { name: 'spíš Epikúros' })).toBeChecked();

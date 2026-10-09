@@ -7,6 +7,7 @@
 - { id: korinth, nazev: Korinth, dnes: "Korint, Řecko", souradnice: [22.88, 37.906] }
 - { id: theby, nazev: Théby, dnes: "Théva, Řecko", souradnice: [23.32, 38.32] }
 - { id: delfy, nazev: Delfy, dnes: "Delfy, Řecko", souradnice: [22.50, 38.48] }
+- { id: chaironeia, nazev: Chairóneia, dnes: "Cheronia, Řecko", souradnice: [22.841, 38.494], pleiades: "540701" }
 - { id: delion, nazev: Délion, dnes: "u Dilesi, Řecko", souradnice: [23.64, 38.36] }
 - { id: potidaia, nazev: Potidaia, dnes: "Nea Potidea, Řecko", souradnice: [23.33, 40.19] }
 - { id: amfipolis, nazev: Amfipolis, dnes: "Amfipoli, Řecko", souradnice: [23.85, 40.82] }

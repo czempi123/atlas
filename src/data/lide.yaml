@@ -761,6 +761,26 @@
     zdroj: lucretius-iii
   zdroje: [sep-lucretius, lucretius-iii, lucretius-iii-830]
 
+- id: plutarchos
+  jmeno: Plútarchos
+  jmeno2: Plútarcha
+  narozen: { rok: 45, priblizne: true }
+  zemrel: { rok: 120, priblizne: true }
+  obdobi: 2
+  hloubka: medailonek
+  otazky: [3]
+  mista:
+    - { misto: chaironeia, role: narozeni, zdroj: sep-plutarch }
+    - { misto: chaironeia, role: pusobeni, zdroj: sep-plutarch }
+  kdo: Řecký spisovatel a platonik z Chairóneie, kněz v Delfách.
+  proc: Psal po dvojicích životopisy řeckých a římských státníků a přel se s Epikúrovým učením.
+  atribut:
+    ikona: tripod
+    nazev: trojnožka
+    proc: Byl knězem v Delfách, kde věštkyně věštila z trojnožky.
+    zdroj: sep-plutarch
+  zdroje: [sep-plutarch, plutarchos-non-posse, diodoros-xvi-26]
+
 - id: cicero
   jmeno: Cicero
   jmeno2: Cicerona

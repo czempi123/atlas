@@ -56,3 +56,6 @@
 - { od: kleanthes, k: seneca, typ: vliv-textem, poznamka: "Kleanthovy verše o osudu v latinském převodu", zdroj: seneca-epistulae-zivot }
 - { od: lucretius, k: seneca, typ: vliv-textem, poznamka: "verš o útěku před sebou samým", zdroj: seneca-tranquillitate }
 - { od: demokritos, k: epikuros, typ: vliv-textem, poznamka: "atomy a prázdno", zdroj: sep-epicurus }
+- { od: platon, k: plutarchos, typ: vliv-textem, zdroj: sep-plutarch }
+# Spor na dálku: Plútarchos psal přes tři sta padesát let po Epikúrovi (cesta 8, krok 6).
+- { od: plutarchos, k: epikuros, typ: polemika, poznamka: "je důvod bát se toho, že nebudeme?", zdroj: plutarchos-non-posse }
