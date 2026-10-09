@@ -238,7 +238,7 @@ Udělej revizi celku 6 podle skillu atlas-revize. Do celku patří:
 - CLAUDE.md, docs/styl.md, docs/pouceni.md;
 - v docs/plany/celek-6.md tabulku stavu a oddíly „Po P7“ a „Po P8“;
 - docs/podklady/celek-6-proc-se-bat-smrti.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (Citlivá místa celá a pozorně; Tvrzení: Seneca; Tvrzení: cesta 8; Velká otázka 3; Citáty), ne celý list naráz;
-- z docs/podklady/k-overeni.md oddíl Celek 6 s částmi Po P7 a Po P8; z docs/rozhodnuti.md oba záznamy z 8. 10. 2026 k celku 6;
+- z docs/podklady/k-overeni.md oddíl Celek 6 s částmi Po P7 a Po P8; z docs/rozhodnuti.md záznamy z 8. 10. 2026 k portrétu Seneky (P7) a k cestě 8 (P8);
 - v docs/design.md oddíly Cesta, Velká otázka, Spor a z Komponent Kresbu s pohybem (jen Rám a Zrcadlo času);
 - jako vzor záznamu jen začátek docs/revize/celek-5-2026-10-08.md (formát a hloubka nálezů).
 Podklady a obsah celků 1 až 5 jinak nečti; z profilu Epikúra a portrétů Sókrata, Platóna a Aristotela jen místa, na která celek 6 odkazuje.
