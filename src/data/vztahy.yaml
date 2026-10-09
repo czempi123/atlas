@@ -36,6 +36,11 @@
 - { od: thales, k: anaximandros, typ: ucitel, tradovany: true, zdroj: iep-thales }
 - { od: anaximandros, k: anaximenes, typ: ucitel, tradovany: true, zdroj: iep-anaximenes }
 - { od: parmenides, k: zenon-z-eleje, typ: ucitel, tradovany: true, poznamka: "mladší druh", zdroj: sep-zeno-elea }
+# Celek 7 (P6): zapsáno jen to, co nemění hotové stránky. Další návrhy (Sókratés, Aristotelés, Seneca, Marcus Aurelius;
+# polemika Hérakleita s Pýthagorou a Xenofanem) jsou v docs/podklady/celek-7-jsem-porad-tentyz.md, oddíl Návrh dat.
+- { od: xenofanes, k: parmenides, typ: ucitel, tradovany: true, poznamka: "říkalo se to už za Aristotela", zdroj: aristoteles-metafyzika-zmena }
+- { od: herakleitos, k: kleanthes, typ: vliv-textem, poznamka: "výklad Hérakleitovy knihy", zdroj: dl-ix-1 }
+- { od: herakleitos, k: plutarchos, typ: vliv-textem, poznamka: "věta o řece", zdroj: plutarchos-de-e }
 
 # Od Sókrata ke kynikům a stoikům
 - { od: gorgias, k: antisthenes, typ: ucitel, zdroj: iep-antisthenes }
