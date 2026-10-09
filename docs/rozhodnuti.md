@@ -4,6 +4,13 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 9. 10. 2026: Celek 7
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Sedmý celek je „Jsem pořád tentýž, když se měním?“: profily Hérakleita a Parmenida, cesta 2 a stránka velké otázky 5 „Kdo vlastně jsem?“. Větev `celek-7`, plán v `docs/plany/celek-7.md` | Autor vybral 9. 10. 2026 ze tří možností (cesta 2; cesta 7 s Diogenem, Kratétem a Hipparchií; cesta 34 se Senekou a Marcem Aureliem). Cestou 2 budou hotové všechny čtyři cesty klasického Řecka, oba myslitelé už jsou v datech a po celku o smrti je to lehčí téma |
+| Cesta 33 (pilot Stockdale) se zatím nenabízí | Potřebuje novou osobu v datech a je znovu těžká; nové osoby se teď nepřidávají |
+
 ## 9. 10. 2026: Opravy a uzavření celku 6
 
 | Rozhodnutí | Důvod |
