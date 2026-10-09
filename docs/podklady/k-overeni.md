@@ -555,3 +555,7 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 | České překlady | Nesrovnáno. | Podle doporučení revize není podmínkou schválení; šest míst k porovnání je v záznamu. |
 | Dopis 70, celý Media Guide NÚDZ, doporučení MŠMT | Stále nečteno; list pro učitele to u Dopisu 70 říká. | Beze změny. |
 
+### Po opravách celku 6 (9. 10. 2026)
+
+Vyřízeno: hlas Seneky (podle Dopisu 61, 4); Aristotelův citát (kratší podoba `etika-1117b-bolest`, plná `etika-1117b` zůstává nepoužitá vedle ostatních rezerv); scéna Sporu; list pro učitele (Dopisy 61 a 30, Nagel, tabulka výroků). Faidón 61c–62c čten anglicky v překladu H. N. Fowlera (PerseusDL): „říká se, že to není dovoleno“; lidé jsou podle tajného učení jakoby ve vězení a nemají se sami propouštět; bohové jsou naši strážci; člověk se nemá zabít, dokud bůh nepošle nutnost. Totéž místo říká, že filozof je ochoten zemřít: v listu pro učitele je obojí. Řecky nečteno. Ostatní řádky tabulky Po P10 trvají (české překlady, Nagelův článek, Dopis 70 a příručky, Diodóros řecky, atribut Plútarcha, přesýpací hodiny).
+

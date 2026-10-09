@@ -8,7 +8,7 @@ Celek 6: portrét Seneky, cesta 8 „Proč se bát smrti?“ (období 2, velká 
 | P7 | Portrét Seneky | hotovo 8. 10. 2026; `src/content/osobnosti/seneca.mdx`, učiteli `ucitel/celek-6.md` |
 | P8 | Cesta 8 „Proč se bát smrti?“ a stránka velké otázky 3 | hotovo 8. 10. 2026; `src/content/cesty/proc-se-bat-smrti*`, `src/content/otazky/ma-zivot-smysl.mdx`, autor 9. 10. 2026 potvrdil kresbu i ostatní volby a Plútarchos přibyl do dat (oddíl Po P8) |
 | P10 | Revize celku | hotovo 9. 10. 2026; záznam `docs/revize/celek-6-2026-10-09.md`, verdikt po opravách (oddíl Po P10) |
-| Opravy | Zapracování nálezů revize | čeká na odpovědi autora; zadání je níže |
+| Opravy | Zapracování nálezů revize | hotovo 9. 10. 2026: všech deset nálezů a otevřené body podle doporučení (oddíl Po opravách) |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-6.md`. Větev `celek-6` je založená z hlavní větve 8. 10. 2026 (commit `6730c40`, po sloučení celku 5).
@@ -251,36 +251,25 @@ Revize celku je hotová: záznam `docs/revize/celek-6-2026-10-09.md`, **verdikt 
 3. Na vědomí: Senekova mince s přesýpacími hodinami stojí na přehledu cesty o smrti; atribut je rozhodnutý z P6.
 4. Po opravách: schválení celku, sloučení do hlavní větve a GitHub jen na pokyn.
 
-## Zadání oprav celku 6
+## Po opravách (9. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Sonnet 5.5 · medium**, když nálezy schválíš tak, jak jsou: opravy mají v záznamu revize hotové znění a zbytek je úprava dat a testů. **Opus 5.5 · medium**, když některé znění chceš jinak: nové věty do cesty o smrti bych na menším modelu nepsal. Před odesláním doplň čtyři řádky s odpověďmi.
+Autor schválil všech deset nálezů revize i doporučení k otevřeným bodům v chatu („Super, vše schvaluji, slučme to na githubu a vymysleme další celek“) a opravy proběhly v témže chatu jako revize; zadání oprav proto neposílal a je v `docs/archiv/zadani/celek-6.md`. `npm test` po opravách: 495 testů dat a 368 v prohlížeči, všechno prošlo. Čas cesty: 3 765 slov, 32,3 minuty; štítek 32 zůstává.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-6. Revize celku 6 je hotová, záznam je v docs/revize/celek-6-2026-10-09.md.
+**Co se změnilo.**
 
-Nálezy 1 až 10 (schvaluji všechny; jinak: …): 
-Nález 2, Aristotelův citát (kratší podoba s vlastním id; nebo: citát celý a upravit jen věty kolem): 
-Nález 4, Senekova myšlenka (podle Dopisu 61; nebo: s osudem podle Dopisu 93): 
-Otevřené body (souhlasím s doporučením; jinak: …): 
+- **Nález 1:** krok 3 říká „Nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“; Odkryj a třetí Epikúrův argument ve Sporu mají „co netrápí, když je to tady, trápí naprázdno, když se na to čeká“; text pod kresbou „necítili nic, dobré ani zlé“.
+- **Nález 2 (kratší podoba):** nový citát `etika-1117b-bolest` v `zdroje.yaml`, krok 5 ho používá; věta pod ním a věta v kroku 9 jsou bez „nejvíc“. Plná podoba `etika-1117b` zůstává v datech nepoužitá.
+- **Nález 3:** scéna Sporu říká „Stejnou námitku vedl proti Epikúrovi Plútarchos“; úvod kroku 6 „Tu druhou vedl proti Epikúrovi…“.
+- **Nález 4 (podle Dopisu 61):** Senekova myšlenka na stránce otázky 3 stojí na větě 61, 4 a její souvislosti; Dopis 93 se nepoužil a pramen se nemění.
+- **Nález 5:** první Epikúrův argument začíná „Dobré i zlé…“ a říká, že smrt „pro nikoho nebude zlá ani dobrá“. Záznam navrhoval „pro něj“; po přečtení v bloku se zájmeno vázalo na „nikdo“, proto „pro nikoho“.
+- **Nález 6:** krok 9 má zvlášť odstavec pro „umírání, a smrti ne“ a zvlášť pro strach o ty druhé, oba se jmény.
+- **Nález 7:** krok 4 říká předem, na který koš zrcadlo míří, námitku uvádí „Proti zrcadlu stojí námitka“ a „podle ní“, otázka je v množném čísle; krok 6 „Podle první… Podle druhé…“.
+- **Nález 8:** dvě zpětné vazby podmínky „Přišel jsi před chvílí“ v bloku s oslavou.
+- **Nález 9:** list pro učitele má Dopis 61, zbytek Dopisu 30, Aristotelovu vynechanou větu, přesnější větu o Nagelovi, tabulku výroků připisovaných Senekovi a místo z Faidónu 61c–62c (ověřeno při opravách v překladu H. N. Fowlera, PerseusDL).
+- **Nález 10:** „Kde jsme“ kroku 6 je bez počtu let; karta „Že to prostě skončí“ má ve větvi `kdyz.ztrata` jednu otázku.
+- **Otevřené body:** profil Epikúra má na konci kapitoly 01 větu s odkazem na cestu 8 a v Kam dál řádek Cesta 8. Věta o Nagelovi, schéma Sporu a vlastní překlady zůstávají.
 
-Zapracuj nálezy revize a doporučení k otevřeným bodům. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md, docs/pouceni.md;
-- v docs/plany/celek-6.md oddíl „Po P10“;
-- celý záznam docs/revize/celek-6-2026-10-09.md: u každého nálezu je hotové znění opravy;
-- z docs/podklady/celek-6-proc-se-bat-smrti.md jen oddíl Citlivá místa a tabulku „Výroky, které se mu připisují“.
-Jiné podklady ani obsah celků 1 až 5 nečti, kromě jednoho místa, které se mění: konec kapitoly 01 a Kam dál v src/content/osobnosti/epikuros.mdx.
+**Testy.** Přesným zněním hlídaly měněné věty dva testy, ne jeden, jak tvrdil oddíl Po P10: `tests/e2e/zrcadlo.spec.ts:179` a průchod bez odkrytí v `tests/e2e/cesta8.spec.ts:314` (tři věty z kroků 4, 5 a 6). Oba jsou upravené v commitu oprav.
 
-Co udělat:
+**Co zůstává po uzavření** (nic z toho nebrání sloučení; je to v `k-overeni.md`): srovnání šesti míst s českými překlady, až budou knihy po ruce; Nagelův článek před druhou větou o něm; Dopis 70, celý Media Guide NÚDZ a doporučení MŠMT nečtené; rok na fotografii u otázky 3 posouvat; linky pomoci ověřovat při každé další revizi; přesýpací hodiny u Seneky s cestou o čase.
 
-1. Nálezy 1 až 10 podle záznamu. Znění oprav ber ze záznamu; kde jsem výše napsal jinak, platí moje odpověď. Nové věty drž do 25 slov a každou přečti očima tří studentů z Citlivých míst.
-2. Nález 2: když platí kratší podoba, přidej do src/data/zdroje.yaml citát etika-1117b-bolest (plná podoba zůstává) a do listu pro učitele řádek, co chybí a proč.
-3. Nález 4: když platí druhá možnost, doplň Dopis 93, 2 do názvu a poznámky pramene seneca-epistulae-smrt.
-4. Otevřené body: věta s odkazem na cestu 8 na konci kapitoly 01 profilu Epikúra a řádek v jeho Kam dál; tabulka výroků připisovaných Senekovi do ucitel/celek-6.md (pět řádků ze záznamu). Schéma Sporu, překlady a věta o Nagelovi zůstávají.
-5. List pro učitele podle nálezu 9 (Dopis 61, Dopis 30, Nagel). Místo z Faidónu 61c–62c jen když ho ověříš v prameni; jinak ho zapiš do k-overeni.md.
-6. Testy, které hlídají přesné znění, uprav v tomtéž commitu jako větu (seznam je v plánu, Po P10). Po změně dat restartuj běžící npm run dev.
-7. V docs/podklady/k-overeni.md zapiš, co se změnilo; v docs/design.md oprav popis kresby, pokud se změnil text pod ní.
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen tests/e2e/cesta.spec.ts:73, pusť ten soubor znovu samostatně); node scripts/slova-cesta.mjs proc-se-bat-smrti a štítek minut podle výsledku; snímky kroků 3 až 6 a 9 na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs), stránky otázky 3 (scripts/snimky-listy.mjs) a kresby po přiložení zrcadla (scripts/snimky-prvek.mjs).
-
-Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub ani neslučuj: to udělám pokynem zvlášť. Na konci zapiš do docs/plany/celek-6.md stav „Po opravách“ a co zbývá do uzavření, toto zadání přesuň do docs/archiv/zadani/celek-6.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co se změnilo a co jsi udělal jinak než záznam a proč.
-```

@@ -4,6 +4,18 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 9. 10. 2026: Opravy a uzavření celku 6
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor schválil všech deset nálezů revize celku 6 i doporučení k otevřeným bodům a požádal o sloučení a GitHub. Celek 6 je tím uzavřený: opravy zapracované, větev `celek-6` sloučená do hlavní větve a hlavní větev poslaná na GitHub | „Super, vše schvaluji, slučme to na githubu a vymysleme další celek“ (9. 10. 2026) |
+| Argument o konci vnímání říká cesta souměrně: „nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“ (krok 3), „Dobré i zlé může být jen to, co někdo zakouší… pro nikoho nebude zlá ani dobrá“ (Spor), „necítili nic, dobré ani zlé“ (kresba) | Nálezy 1 a 5. „Nezbude nikdo, komu by mohlo být zle“ čte student, kterému je zle, jako úlevu; Epikúros sám mluví o dobrém i zlém (Dopis Menoikeovi 124) a táž věta je odpovědí na Plútarchův „dvojí metr“ |
+| Aristotelův citát v kroku 5 má kratší podobu s vlastním id (`etika-1117b-bolest`), bez věty „takovému člověku nejvíc stojí za to žít“; plná podoba v datech zůstává | Nález 2. Obrácená říká studentovi, kterému se nedaří, že jeho život stojí za to míň; je to totéž srovnání, které rozhodnutí z 8. 10. vzalo Plútarchovi |
+| Scéna Sporu a úvod kroku 6 netvrdí, že Plútarchos vyšel z Lucretiovy věty ani že námitku rozvedl „nejdůkladněji“ | Nález 3. Plútarchos Lucretia necituje; spojení obou míst je naše |
+| Senekova myšlenka na stránce otázky 3 se drží Dopisu 61, 4 (k životu je všeho dost, a nám se pořád zdá, že něco chybí); věta o osudu z Dopisu 93, 2 se nepoužila | Nález 4. Výklad stojí v témže místě jako citát a pramen se nemění |
+| Otevřené body podle doporučení revize: věta o Nagelovi zůstává a krok říká „podle ní“; profil Epikúra má větu s odkazem na cestu 8 a řádek v Kam dál; strana Sporu bez osoby zůstává ve schématu; vlastní překlady zůstávají a srovnání není podmínkou schválení; list pro učitele má tabulku výroků připisovaných Senekovi | Autor k nim nenapsal nic jiného; nic z toho není nevratné |
+| List pro učitele uvádí i místo z Faidónu 61c–62c (člověk si život brát nemá), s větou, že totéž místo říká i to, že filozof se smrti nebrání | Ověřeno při opravách v anglickém překladu (PerseusDL); patří mezi místa, která táhnou opačným směrem než stoická obhajoba |
+
 ## 9. 10. 2026: Odpovědi autora po P8 a Plútarchos v datech
 
 | Rozhodnutí | Důvod |
