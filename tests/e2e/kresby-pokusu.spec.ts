@@ -185,7 +185,8 @@ for (const { sirka, vyska } of SIRKY) {
       await expect(kresba.getByRole('img', { name: 'Kdy je dost?' })).toBeVisible();
       await expect(kresba.getByRole('radiogroup')).toHaveCount(0);
       await expect(kresba.getByRole('button')).toHaveText(['Dolít vodu']);
-      await expect(popis).toHaveText(/^Máš žízeň a pohár je prázdný\./);
+      // Text pod kresbou má za jednopísmennou spojkou nezlomitelnou mezeru (doplňuje rám kresby): ve vzoru proto \s.
+      await expect(popis).toHaveText(/^Máš žízeň a\spohár je prázdný\./);
       // Přechody mají při omezeném pohybu 0,01 ms a projeví se až s dalším snímkem prohlížeče: polohu čteme přes poll.
       await expect.poll(() => posunY(voda)).toBe(201);
       expect(await pruhlednost(kresba.locator('.chybi'))).toBe('1');
@@ -264,7 +265,7 @@ test('stejný vítr: vítr běží a jde zastavit; lidé se mění jen klávesni
   await page.keyboard.press('Tab');
   await expect(kresba.getByRole('radiogroup', { name: 'Kamarád' }).getByRole('radio', { name: 'chůze' })).toBeFocused();
   await page.keyboard.press('ArrowLeft');
-  await expect(kresba.locator('.kresba__popis')).toHaveText(/^Tebe zahřála chůze a zima ti není\. Kamarádovi je po čekání na místě zima\./);
+  await expect(kresba.locator('.kresba__popis')).toHaveText(/^Tebe zahřála chůze a\szima ti není\. Kamarádovi je po čekání na místě zima\./);
   await page.keyboard.press('Tab');
   const tlacitko = kresba.getByRole('button', { name: 'Zastavit pohyb' });
   await expect(tlacitko).toBeFocused();

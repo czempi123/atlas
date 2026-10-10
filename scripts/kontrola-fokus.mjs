@@ -1,5 +1,5 @@
 // Strojová kontrola pro revizi: na každé stránce a šířce zkusí všechny ovladatelné prvky a hlásí,
-// když prvek po focus() zůstane pod pevnou lištou, když se dva ovládací prvky překrývají,
+// když prvek po fokusu z klávesnice zůstane pod pevnou lištou, když se dva ovládací prvky překrývají,
 // když stránka přetéká do šířky nebo když konzole hlásí chybu.
 // node scripts/kontrola-fokus.mjs <cesta> [<cesta> …]
 //   node scripts/kontrola-fokus.mjs /osobnost/platon/ /cesta/je-to-co-vidim-cela-skutecnost/1/
@@ -41,11 +41,17 @@ for (const sirka of SIRKY) {
       });
       const prvky = [...document.querySelectorAll(sel)].filter(viditelny);
       const podListou = [];
+      // Základní rozvržení dorovnává prvek nad lištu jen po fokusu z klávesnice (příznak nastaví keydown).
+      // Samotné focus() by proto hlásilo planý poplach: ohlásíme stránce klávesu a počkáme na její dorovnání.
+      dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }));
       for (const e of prvky) {
         e.focus({ preventScroll: false });
         if (document.activeElement !== e) continue;
         await new Promise((r) => requestAnimationFrame(r));
+        await new Promise((r) => requestAnimationFrame(r));
         const r = e.getBoundingClientRect();
+        // Odkaz „Přeskočit na obsah“ se při fokusu schválně položí přes hlavičku.
+        if (e.classList.contains('preskocit')) continue;
         for (const l of pevne) {
           if (l.contains(e) || e.contains(l)) continue;
           const lr = l.getBoundingClientRect();
