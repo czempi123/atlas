@@ -4,6 +4,28 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 10. 10. 2026: Cesta 2, kresba lodi a stránka otázky 5 (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Filozofové cesty 2 v datech jsou Hérakleitos a Parmenidés. Seneca a Plútarchos mluví ve Sporu, v `filozofove` ale nejsou | Katalog cest a Návrh dat. Seneca by jinak dostal do hlavičky portrétu cestu 2 před svou cestu 8 (řadí se podle čísla) a u Plútarcha by přibyla cesta na kartě v Lidech; cesta 8 Plútarcha mezi filozofy má, protože tam nese celou protistranu |
+| Vstup cesty: příběh začíná „Plútarchos vypráví…“, poslední prkno je uvedené jako krok studenta („Dotáhni to do konce sám“, „Představ si…“). Kde loď stála, text jako Plútarchovo tvrzení neříká; přístav je jen v představě, v možnostech a v kresbě | Plútarchos neříká, že vyměnili všechna prkna, a neříká, kde loď byla |
+| Obraz vstupu je výřez snímku DP278403 z Met (obě lodě pod uchem), ne hlavní snímek záznamu. Popisek říká jen „malíř, který žil ve stejné době jako Hérakleitos“ | Na hlavním snímku jsou z lodí jen kraje plachet. Číše je asi z roku 520 a Parmenidés se narodil kolem roku 515: věta „tehdy žil i Parmenidés“ by nemusela platit |
+| Krok 2: zlomek B12 je citát, známé znění je jedna věta s odkazem na profil, dovětek „jsme i nejsme“ nepřímo jako pozdější podoba. Blok je Odkryj „Platí věta o řece i o lodi?“ a srovnání nese Aristotelovu větu o řekách z Politiky | Dvě znění věty, Kratyla a Aristotelovu odpověď vypráví profil. Aristotelés je první, kdo řeku v podkladech přenáší na něco jiného než řeku, a dává zastánce odpovědi „je to pořád ona“ |
+| Krok 3: otázka bohyně je postavená na prkně lodi, banán jen odkazem. Most mezi Hérakleitem a Parmenidem je Platónova přetahovaná jako citát; věta „jestli jeden o druhém věděl, nevíme“ v cestě není. Blok je Roztřiď „tentýž × stejný“ bez vlastní karty | Zadání; věta o dvojici už zazněla dvakrát. Vlastní věta se slovem „stejný“ by snadno byla věta studenta o sobě |
+| Krok 4: kresba má posuvník, ne tlačítko, a nic neukládá. Kde se student zastavil, se ptá kurzíva pod kresbou; otázku „Která z nich je Théseova?“ klade až Volba | Posuvník je pro pořadí a míru, jde vrátit a ovládat klávesnicí. Kresba není blok (design, Kresba s pohybem); podklady chtěly místo zastavení ukládat |
+| Kresba nemá stěžeň ani vesla a prken má čtyřiadvacet; zdvižené konce lodi jsou součást krajních prken a mění se poslední | Všechno dřevo, které v kresbě je, se musí dát vyměnit, jinak věta „vyměnili i poslední prkno“ neplatí pro obraz |
+| Krok 5: blok je Odkryj (co odpovíš hostovi a dlužníkovi), Diotima je až ve srovnání. Druhá Diotimina věta (o duši) je nepřímo | Podklady navrhovaly Roztřiď, co se na člověku mění; třídit tělo a povahu je blízko testu, který celek nemá mít. Tři citáty v kroku jsou strop |
+| Krok 6: Senekův závěr a Plútarchova věta o obci jsou citáty v textu kroku, každý s otázkou hned za sebou; u Seneky navíc věta, že o ztrátě blízkého nemluví, a odkaz na cestu 8. Argumenty bloku je neopakují. Věta, kterou Plútarchos svěřil Ammóniovi, je až v posledním kroku jako zastánce odpovědi „už jsem někdo jiný“ | Odpověď autora po P6; text bloku Spor neumí citát s místem. Druhý blok v kroku (Odkryj „tentýž Plútarchos“) by krok o dvou těžkých větách přetížil |
+| Krok 7 má dva bloky: Volbu „Které pravidlo si z toho vezmeš?“ s vlastním Kam dál na kotvu a Závěr cesty. Možnosti Volby jsou pravidla o totožnosti | Zadání chce sedm kroků; případ je o buňkách, ne o studentovi. Otázka „Pomáhá ti to?“ z podkladů by se ptala na něj |
+| Čtyři odpovědi z prvního kroku mají v posledním kroku každá svého zastánce, žádný není Hérakleitos ani Parmenidés: Plútarchos a Aristotelés, druhá strana sporu a Epicharmova úvaha, Hobbes dvakrát. Hobbesova vlastní odpověď je až tady | Poučení z celků 2 až 6; podklady, Kdo dá za pravdu komu |
+| Návrat (lístek na koncert) je bez čísel a bez studie; studie Quoidbacha, Gilberta a Wilsona je v listu pro učitele | Návrat je vymyšlený případ bez pramenů (schéma a test `navrat.test.ts`); číslo ze studie by z odhadu udělalo poučení, že se student změní |
+| Čas na štítku je 34 minut; `scripts/slova-cesta.mjs` nově počítá i blok v posledním kroku před závěrečným pravidlem | Délka se kvůli délce nekrátí (rozhodnutí autora); skript dřív poslední krok bral jako krok bez bloků |
+| Stránka otázky 5: sedm hlasů, žádný neříká „identita“, „vědomí“ ani „já“ jako podstatné jméno; Aristotelův přítel je „jako druhý ty“. Odpovědi jsou psané ke studentovi, ne v první osobě myslitele | Podklady (Jak stránka unese název); první osoba v odpovědi by vypadala jako citát |
+| Hlas Marca Aurelia se v myšlence opírá i o sousední zápis XII, 4 (cizího mínění o sobě si ceníme víc než vlastního); pramen `marcus-hovory-promena` ho nově nese | Je to přesně otázka úvodního případu a hlas se díky tomu pozná. Čteno řecky při psaní |
+| Hlas Epiktéta mluví o jménech, která člověk nese, a o poslušnosti mlčí; § 7 a § 17 kapitoly jsou jen v listu pro učitele | Podklady, tabulka lákavých citátů; odpověď autora po P6 |
+| List pro učitele: oddíl o dětech z války se opírá o příručku NPI ČR z roku 2022 (Stresové a jiné zátěžové situace u dětí v době válečné krize); kontakty jsou ověřené 10. 10. 2026 a přibylo Centrum Anabell a poradna S barvou ven | Zadání P8; bod z `k-overeni.md` (Po P7) |
+
 ## 9. 10. 2026: Profily Hérakleita a Parmenida (P7)
 
 | Rozhodnutí | Důvod |

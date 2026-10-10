@@ -6,8 +6,8 @@ Celek 7: profily Hérakleita a Parmenida, cesta 2 „Jsem pořád tentýž, kdy�
 | --- | --- | --- |
 | P6 | Podklady | hotovo 9. 10. 2026 (oddíl Po P6) |
 | P7 | Profily Hérakleita a Parmenida | hotovo 9. 10. 2026 (oddíl Po P7) |
-| P8 | Cesta 2 „Jsem pořád tentýž, když se měním?“, kresba a stránka velké otázky 5 | čeká; zadání je níže |
-| P10 | Revize celku | čeká na P8 |
+| P8 | Cesta 2 „Jsem pořád tentýž, když se měním?“, kresba a stránka velké otázky 5 | hotovo 10. 10. 2026 (oddíl Po P8) |
+| P10 | Revize celku | čeká; zadání je níže |
 | Opravy | Zapracování nálezů revize | čeká na P10 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
 
@@ -157,49 +157,143 @@ Nepoužité zůstaly `herakleitos-b49a`, `herakleitos-b52`, `plutarchos-de-e-392
 
 **Kontrola.** `npm test` prošel celý: 502 testů dat a 388 testů v prohlížeči (z toho 12 nových v `celek7-profily.spec.ts` a osm v prohlídce). První běh skončil 386 z 388: dva testy stránek otázek 6 a 7 čekaly Parmenida bez odkazu na profil; po úpravě seznamu prošlo všechno a známý test „cesta: průchod, Kam dál z bloku…“ nespadl. List pro učitele v sestaveném webu není (hledáno v `dist/`). Náhled `npm run dev` je restartovaný. Snímky obou profilů na 390 a 1440 px ve světlém i tmavém režimu jsou v `Claude outputs/snimky-celek-7/`.
 
-## Zadání P8: Cesta 2, kresba a stránka velké otázky 5
+## Po P8 (10. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Krok je největší v celku: sedm kroků cesty, nová kresba s pohybem, Spor se dvěma citlivými větami, nový případ ze čtyř studií, Návrat a stránka otázky se sedmi hlasy. Skoro v každém kroku je třeba držet, kdo co napsal o věci a kdo o člověku.
+Cesta 2 je v `src/content/cesty/jsem-porad-tentyz-kdyz-se-menim.mdx` a ve složce téhož jména (sedm kroků), její bloky v `src/content/bloky/cesta2-*.yaml`, kresba v `src/lib/lod.ts` a `src/components/ostrovy/Lod.svelte`, stránka otázky 5 v `src/content/otazky/kdo-vlastne-jsem.mdx`. List pro učitele `ucitel/celek-7.md` má nově část o cestě a o stránce otázky. Zadání P8 je v `docs/archiv/zadani/celek-7.md`.
 
-První čtyři řádky zadání jsou vyplněné podle odpovědí autora a podle doporučení podkladů; přepiš je, kdyby ses rozhodl jinak.
+**Co cesta má.** Sedm kroků, na štítku 34 minut (`node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim` dává 33,9). Filozofové cesty v datech jsou Hérakleitos a Parmenidés.
+
+| Krok | Co v něm je | Blok |
+| --- | --- | --- |
+| 1 Loď | „Plútarchos vypráví…“: loď, kterou Athéňané uchovávali, a spor filozofů; obraz číše s loděmi z Met. Loď z Délu a Sókratovo čekání jednou větou s odkazem na portrét. Poslední prkno si student domyslí sám („Představ si…“). | Volba „Je to pořád Théseova loď?“ (čtyři tahy: držet se toho, že trvala · držet se dřeva · hledat hranici · rozdělit otázku); začátek cesty |
+| 2 Řeka | Řeka jako první odpověď: zlomek B12 citátem, známé znění jednou větou s odkazem na profil, „jsme i nejsme“ jako pozdější podoba. | Odkryj „Platí věta o řece i o lodi?“; ve srovnání Aristotelova věta o řekách (Politika III, 3) |
+| 3 Proč je změna záhada | Otázka bohyně postavená na prkně lodi (`parmenides-b8-jak`), Platónova přetahovaná (`theaitetos-181a`), Aristotelova odpověď (co při změně zůstává, `kategorie-4a`), rozdíl tentýž × stejný. | Roztřiď „O kolika věcech ta věta mluví?“ (šest vět, koše O jedné · O dvou · Záleží, co počítáš), bez vlastní karty |
+| 4 Loď po prknech | Kresba s pohybem; Hobbes a druhá loď (1656), výměna všech prken řečená jako náš přídavek. | Volba „Která z nich je Théseova?“ (nepřerušená · z původního dřeva · obě · žádná) |
+| 5 A co člověk? | Dlužník a pozvaný host z komedií, jak je vypráví Plútarchos (`de-sera-559-dluznik`); bití nikde. | Odkryj (co odpovíš hostovi a dlužníkovi), „Porovnat s Diotimou“: `symposion-207d`, 207e nepřímo, `symposion-208b` |
+| 6 Dva čtenáři jedné řeky | Seneca (`seneca-ep-58-22`), jeho závěr o těle a strachu ze smrti (`seneca-ep-58-23-smrt`) s otázkou hned za ním, větou, že o ztrátě blízkého nemluví, a odkazem na cestu 8; Plútarchova věta o obci (`de-sera-559-obec`) s otázkou. | Spor „Je člověk po letech tentýž?“: Seneca první, Plútarchos druhý, každý tři argumenty; scéna netvrdí, že jeden četl druhého |
+| 7 Jak staré je tvoje tělo | Čtyři studie o stáří buněk (uhlík z jaderných zkoušek); „za sedm let se tělo vymění“ jako pověra. Pak „Kdo je na tvé straně“: zastánci čtyř odpovědí z kroku 1, věta, kterou Plútarchos svěřil Ammóniovi (`de-e-392d-mnozi`), Locke a Hume jednou větou, karta Zkus to žít „Táž, a všechno je v ní jiné“. | Volba „Které pravidlo si z toho vezmeš?“ s vlastním Kam dál na kotvu; Závěr cesty „Podle čeho poznáš, že je něco pořád totéž? Napiš svoje pravidlo.“ |
+
+- **Kresba „Loď po prknech“** (`<Lod />`, na rámu `Kresba.svelte`): trup z 24 prken ve třech řadách, posuvník 0–24 „Posuň: vyměň prkna“, dva pohledy (Výměna prken · Druhá loď). Stará prkna odcházejí na hromadu na břehu, v druhém pohledu se z nich skládá loď na podpěrách. Samo se hýbe jen moře; jde zastavit a při omezeném pohybu stojí. Text pod kresbou říká stav slovy a u posledního prkna říká, že tohle už Plútarchos nevypráví. Nic neukládá. Je i v dílně bloků.
+- **Návrat** (`cesta2-navrat`, „Lístek na koncert“): kolik bys dnes dal za lístek na kapelu, kterou máš rád teď, kdyby hrála za deset let. Bez čísel a bez studie.
+- **Stránka otázky 5.** Případ „Kdo tě zná líp?“: spolužačka, babička a trenér o tobě řeknou každý něco jiného a ty sám ještě něco čtvrtého. Sedm hlasů v pořadí podle narození: Hérakleitos (`herakleitos-b45`), Sókratés (`faidros-229e`), Platón (`faidon-115c`), Aristotelés (`etika-1166a`), Epikúros (`herodotos-64`), Epiktétos (`rozpravy-ii-10-1`), Marcus Aurelius (`hovory-xii-3`). Odpovědi mají nejvýš dvě věty a jsou psané ke studentovi. Hlasy, které říkají „nejsi své tělo“ (Platón, Marcus Aurelius), mají vedle sebe Epikúra, podle kterého jsi tělo i duše. Stránka odkazuje na cestu 2.
+
+**Použité citáty a kolikrát který v celku zazněl.** Celek = oba profily, cesta 2 a stránka otázky 5.
+
+| Kde | Jako citát | Kolikrát v celku |
+| --- | --- | --- |
+| Krok 2 | `herakleitos-b12` | dvakrát (velký citát profilu a krok 2); víckrát už ne |
+| Krok 2 (srovnání v Odkryj) | `politika-1276a-reky` | jednou |
+| Krok 3 | `parmenides-b8-jak`, `theaitetos-181a`, `kategorie-4a` | jednou; první dva má profil Parmenida jen nepřímo |
+| Krok 5 | `de-sera-559-dluznik`, `symposion-207d`, `symposion-208b` | jednou |
+| Krok 6 | `seneca-ep-58-22`, `seneca-ep-58-23-smrt`, `de-sera-559-obec` | jednou |
+| Krok 7 | `de-e-392d-mnozi` | jednou |
+| Otázka 5 | `herakleitos-b45`, `faidros-229e`, `faidon-115c`, `etika-1166a`, `herodotos-64`, `rozpravy-ii-10-1`, `hovory-xii-3` | jednou; žádný není jinde v atlasu |
+
+Jen nepřímo, bez citátu: Théseus 23 (`plutarchos-theseus-23`), Faidón 58a, `herakleitos-b49a`, `symposion-207e`, Fyzika I, 7, `politika-1276b-sbor`, `seneca-ep-58-23`, `de-sera-559-zmeny`, `-jeden` a `-reka` (argumenty Sporu), `comm-not-1083-dvoji`, Hobbes, Epicharmos, `herakleitos-b101` (odkaz na profil). Žádný krok nemá víc než tři citáty.
+
+**Co se změnilo mimo cestu a stránku.**
+
+- `zdroje.yaml`: obrázek `cise-lode-met` (Metropolitan Museum of Art, inv. 56.171.36, Open Access, Public Domain; licence ověřena v záznamu muzea i v jeho API), poznámka u pramene `met-kylix-lode`, pramen `marcus-hovory-promena` nese i zápis XII, 4. Originál snímku `DP278403.jpg` (1955 × 1607 px, 1,66 MB) je v `~/Pictures/Atlas-originaly/`, v repozitáři výřez 1280 × 960 px `public/obrazky/cise-lode-met.jpg`; dělá ho nový skript `scripts/obrazek-vyrez.mjs`.
+- Profily Hérakleita a Parmenida: první položka Kam dál vede na cestu 2 (karta „připravujeme“ zmizela).
+- Vstupy složené z dat: cesta 2 v hlavičkách Hérakleita a Parmenida a na jejich kartách v Lidech; velká otázka 5 nově v hlavičkách Sókrata, Platóna, Aristotela, Epikúra, Epiktéta a Marca Aurelia (Aristotelés má šest otázek, Epikúros pět); Domů „zbývá 6 cest“; dílna bloků má deset kreseb.
+- `scripts/slova-cesta.mjs` počítá i blok v posledním kroku před závěrečným pravidlem (dřív ho vynechal). Časy ostatních cest se nezměnily.
+- `docs/design.md`: kresba Loď po prknech v Komponentách, věta o cestě 2 v oddíle Cesta.
+- Testy: nové `tests/data/lod.test.ts` (9), `tests/e2e/lod.spec.ts` (5) a `tests/e2e/cesta2.spec.ts` (5: průchod s odpověďmi na telefonu, průchod bez odkrytí s pravidly textu a počty citátů, Návrat v deníku, stránka otázky 5, vstupy). Upravené: `cesta.spec.ts`, `pruchod.spec.ts`, `prohlidka.spec.ts`, `ctverec.spec.ts`, `domu.spec.ts`, `celek7-profily.spec.ts`, `otazka.spec.ts`, `platon.spec.ts`.
+
+**Kde jsem se odchýlil od podkladů a zadání.** Důvody jsou v `docs/rozhodnuti.md` (10. 10. 2026).
+
+- Návrat je bez studie z roku 2013 a bez jejích čísel; studie je v listu pro učitele. Návrat nesmí mít prameny (schéma a test) a číslo by z odhadu udělalo poučení.
+- Krok 2 má Odkryj „platí věta o řece i o lodi?“ s Aristotelovou větou z Politiky, ne dvě znění věty a Kratyla (to vypráví profil).
+- Krok 3 třídí věty se slovem „stejný“, bez vlastní karty; krok 5 má Odkryj místo Roztřiď a druhá Diotimina věta je nepřímo (strop tří citátů).
+- „Tentýž Plútarchos“ (věta Ammóniova) není druhý blok kroku 6, ale zastánce v kroku 7.
+- Volba v kroku 7 se ptá na pravidlo, ne „pomáhá ti to?“.
+- Kresba má posuvník, nic neukládá, nemá stěžeň ani vesla a je to model o 24 prknech.
+- Obraz vstupu je výřez jiného snímku téhož záznamu a popisek mluví jen o Hérakleitovi.
+- `filozofove` cesty jsou jen Hérakleitos a Parmenidés; Seneca a Plútarchos tedy cestu 2 v hlavičce nemají.
+- Hlas Marca Aurelia se opírá i o zápis XII, 4; hlasy nemluví v první osobě.
+- Hobbes má v kroku 7 několik vět (zastánce dvou odpovědí), Locke a Hume jednu.
+- V podkladech je u studie z roku 2013 špatně vzorek pokusu s lístky (viz `k-overeni.md`, Po P8); list pro učitele ho má podle studie.
+
+**Co si nese revize (P10).**
+
+- Citlivá místa očima pěti studentů z podkladů, hlavně krok 6 (Senekův závěr na telefonu, student po ztrátě), krok 5 (host a dlužník: nikdo nikoho nebije), krok 7 (buňky nejsou o tom, kým kdo je) a stránka otázky 5 (nikomu neříká, kdo je).
+- Kdo co napsal o věci a kdo o člověku: Hérakleitos a Parmenidés o člověku v cestě nemluví; Plútarchos neříká „všechna prkna“ ani druhou loď; přístav je náš obraz.
+- Čísla kroku 7 proti studiím (jsou v listu pro učitele i s místem ve studii) a body Po P8 v `k-overeni.md`: Faidros 229b–c, Politika 1276a–b, Marcus XII, 4 v publikovaném překladu, linka 116 123.
+- Zastánci čtyř odpovědí z kroku 1 v kroku 7 jeden po druhém; všechny kombinace bloků; Spor na telefonu (Seneca první, Plútarchos má poslední slovo).
+- Opakování v celku: B12 dvakrát, věta o dvojici dvakrát (jen profily), banán jen odkazem.
+- Kontrola fokusu skutečným tabulátorem (skript hlásí dvě pole pod lištou, viz `k-overeni.md`).
+- Délka: 34 minut, krok 7 je nejdelší (případ, Volba, zastánci, karta, závěr).
+
+**Co čeká na autora.**
+
+1. Kresba Loď po prknech: podívat se na ni (snímky v `Claude outputs/snimky-celek-7/p8/`, živě v kroku 4 a v dílně bloků). Dokud ji neuvidíš, není hotová.
+2. Seneca a Plútarchos nejsou filozofové cesty v datech. Kdyby být měli, dostanou cestu 2 do hlavičky a na kartu v Lidech; u Seneky by stála před cestou 8.
+3. Návrat bez studie: kdyby měl číslo ze studie mít, muselo by se změnit pravidlo, že Návrat nemá prameny.
+4. Délka 34 minut a krok 7. Jde rozdělit na krok 7 (buňky a Volba) a krok 8 (kdo je na tvé straně a závěr); zadání chtělo sedm kroků, proto jsem to neudělal.
+5. Obraz vstupu: výřez a popisek. Obraz Parmenida dál chybí.
+6. Aristotelés má v hlavičce šest velkých otázek. Je to důsledek hlasu; stojí za pohled na telefonu.
+7. Poradna Vigvam má podle svého webu plnou kapacitu a na kontaktní stránce překlep v čísle. V listu pro učitele to je; rozhodni, jestli ji tam nechat.
+
+**Kontrola.** `npm test` prošel celý: 521 testů dat a 411 testů v prohlížeči (z toho 5 nových v `cesta2.spec.ts`, 5 v `lod.spec.ts` a 8 v prohlídce). Hned po přidání cesty a hlasů spadlo pět testů vstupů (`otazka.spec.ts`, `platon.spec.ts`): čekaly hlavičky bez otázky 5; po úpravě seznamů prošly. Známý test „cesta: průchod, Kam dál z bloku…“ spadl v jednom celém běhu a samostatně prošel (36 z 36); v posledním celém běhu nespadl. List pro učitele v sestaveném webu není (hledáno v `dist/`). Náhled `npm run dev` je restartovaný. Průchod klávesnicí: `scripts/kontrola-fokus.mjs` a skutečný tabulátor na 390 a 1440 px. Závěr „Na začátku × Teď“ a Návrat v deníku hlídá `cesta2.spec.ts`. Snímky kroků s odpověďmi i bez nich, kresby a stránky otázky jsou v `Claude outputs/snimky-celek-7/p8/`.
+
+## Zadání P10: Revize celku 7
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Revize čte celek o tom, kdo jsem, očima studentů, kterých se změna bolestně týká, a v každé větě hlídá, kdo co napsal o věci a kdo o člověku; na menším modelu ani s nižším úsilím bych ji nepouštěl. Zadání počítá s úsporným čtením a s tím, že se nálezy průběžně neschvalují.
+
+První řádky zadání jsou místo pro tvoje odpovědi na body z oddílu „Po P8 › Co čeká na autora“. Co necháš prázdné, bere revize jako otevřené a dá k tomu doporučení.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-7. Podklady (P6) a profily Hérakleita a Parmenida (P7) jsou hotové.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-7. Profily Hérakleita a Parmenida, cesta 2, kresba Loď po prknech a stránka otázky 5 jsou v ní hotové a commitnuté.
 
-Kresba s pohybem (loď po prknech a druhá loď): ano.
-Hlasy na stránce otázky 5: sedm, s Epiktétem; Plútarchos zůstává v rezervě.
-Obrázek ke vstupu cesty: číše s loděmi z Metropolitního muzea, inv. 56.171.36. Se stažením souhlasím.
-Obrázek Parmenida: bez obrazu, pokud sem nepřipíšu odkaz na soubor z Wikimedia Commons, u kterého jsem ověřil licenci: 
+Co jsem rozhodl po P8 (prázdné = otevřené, chci doporučení):
+- Kresba Loď po prknech (viděl jsem ji): 
+- Seneca a Plútarchos jako filozofové cesty v datech: 
+- Návrat bez studie z roku 2013: 
+- Délka 34 minut a dlouhý krok 7 (nechat / rozdělit na dva kroky): 
+- Obraz vstupu (výřez a popisek) a obraz Parmenida: 
+- Poradna Vigvam v listu pro učitele: 
 
-Napiš cestu 2 „Jsem pořád tentýž, když se měním?“ a stránku velké otázky 5 „Kdo vlastně jsem?“ podle skillu atlas-cesta; kresbu s pohybem postav podle skillu atlas-komponenta. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md a docs/pouceni.md;
-- v docs/plany/celek-7.md tabulku stavu a oddíly „Po P6“ a „Po P7“;
-- z docs/podklady/celek-7-jsem-porad-tentyz.md: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), z Nejsilnějších příběhů body 1 až 3, 8, 9 a 11 až 13, celé oddíly Tvrzení: cesta 2, Velká otázka 5 a Citlivá místa, z tabulky Citáty řádky 1, 4 až 6, 8, 22, 32 až 60 a 63 až 64, Návrh dat, z Obrázků Vstup cesty, Rozpory a rozhodnutí a Odpovědi autora. Oddíly Tvrzení: Hérakleitos a Tvrzení: Parmenidés nečti: co z nich cesta potřebuje, je v oddíle Po P7;
-- oba profily celé (src/content/osobnosti/herakleitos.mdx a parmenides.mdx): cesta je nesmí opakovat;
-- jako vzor cesty src/content/cesty/proc-se-bat-smrti.mdx a z jejích kroků jen ty, které potřebuješ (krok se Sporem, krok s kresbou, poslední krok se Závěrem cesty), její Návrat src/content/bloky/cesta8-navrat.yaml a jako vzor stránky otázky src/content/otazky/ma-zivot-smysl.mdx;
-- ucitel/celek-7.md, abys věděl, co už v něm je.
+Udělej revizi celku 7 podle skillu atlas-revize. Do celku patří:
+- profily Hérakleita a Parmenida (src/content/osobnosti/herakleitos.mdx, parmenides.mdx, bloky herakleitos-*.yaml a parmenides-*.yaml);
+- cesta 2 „Jsem pořád tentýž, když se měním?“ (přehled, sedm kroků, bloky cesta2-*.yaml, Odkryj v krocích 2 a 5, případ pro Návrat);
+- kresba Loď po prknech v kroku 4 (src/lib/lod.ts, src/components/ostrovy/Lod.svelte);
+- stránka velké otázky 5 „Kdo vlastně jsem?“ (src/content/otazky/kdo-vlastne-jsem.mdx);
+- list pro učitele ucitel/celek-7.md;
+- propojení: hlavičky a Kam dál obou profilů, přehled otázek, Lidé, Domů, dílna bloků; nové vstupy u Sókrata, Platóna, Aristotela, Epikúra, Epiktéta a Marca Aurelia (hlasy otázky 5); Doba a lidé u Sókrata, Aristotela, Seneky a Marca Aurelia (vztahy z P7); stránky otázek 6 a 7 (Parmenidés s odkazem na profil).
 
-Co cesta má mít:
+Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md, docs/pouceni.md;
+- v docs/plany/celek-7.md tabulku stavu a oddíly „Po P7“ a „Po P8“;
+- docs/podklady/celek-7-jsem-porad-tentyz.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (Citlivá místa celá a pozorně; Tvrzení: Hérakleitos; Tvrzení: Parmenidés; Tvrzení: cesta 2; Velká otázka 5; Citáty), ne celý list naráz;
+- z docs/podklady/k-overeni.md části Po P6, Po P7 a Po P8 celku 7; z docs/rozhodnuti.md záznamy z 9. a 10. 10. 2026 k celku 7;
+- v docs/design.md oddíly Cesta, Velká otázka, Spor a z Komponent Kresbu s pohybem (jen Rám a Loď po prknech);
+- jako vzor záznamu jen začátek docs/revize/celek-6-2026-10-09.md (formát a hloubka nálezů).
+Podklady a obsah celků 1 až 6 jinak nečti; z portrétů Sókrata, Platóna, Aristotela a Seneky a z cesty 8 jen místa, na která celek 7 odkazuje.
 
-1. Sedm kroků podle Návrhu kroků v podkladech: loď · řeka · proč je změna záhada · loď po prknech · a co člověk · Spor · jak staré je tvoje tělo. Čas na štítku spočítej skriptem scripts/slova-cesta.mjs.
-2. Vstup lodí: „Plútarchos vypráví…“ (Théseus 23). Plútarchos neříká, že byla vyměněna všechna prkna, a druhou loď nezná; cesta mu to nepřipíše. Loď z Délu a Sókratovo čekání jen jednou větou s odkazem na portrét Sókrata. První blok je vlastní pokus studenta podle podkladů a je začátkem cesty pro „Na začátku × Teď“.
-3. Řeka je první odpověď, ne scéna. Zlomek B12 tu zazní jako citát podruhé a naposled v celku. Kostky, Hermodóra, dvě znění věty, Kratyla, luk a zlomek o válce vypráví profil: neopakuj je, odkaž. Že známé znění „dvakrát“ je Platónovo podání, smí zaznít jednou větou. „Jsme i nejsme“ (B49a) jen jako pozdější podoba věty, ne jako Hérakleitova odpověď na otázku cesty.
-4. Proč je změna záhada: argument Parmenidovy bohyně (smí doslova `parmenides-b8-jak`) a Aristotelova odpověď. Banán má profil Parmenida jako blok: tady ho neopakuj, postav argument na prkně lodi nebo na jiné věci cesty. V básni mluví bohyně; cesta neříká „změnu popírá“ ani „nepopírá“ a mezi čteními nerozhoduje. Větu „jestli jeden o druhém věděl, nevíme“ už mají oba profily: most mezi nimi postav Platónovou přetahovanou (`theaitetos-181a`), ne touž větou potřetí. Sem patří i rozdíl tentýž × stejný.
-5. Loď po prknech s kresbou: student vyměňuje prkna, druhá loď se skládá ze starých. Pramen je Plútarchos (výměna prken, spor filozofů) a Hobbes (druhá loď, 1656; jméno bez odkazu); výměna všech prken je náš přídavek a popis pohledu to řekne. Kresba podle pravidel v docs/pouceni.md (pohyb jde zastavit, při omezeném pohybu stojí, text pod ní říká totéž slovy, na telefonu čitelné popisky). Neptej se „která je pravá“, ale „která je Théseova“. Kresbu mi ukaž snímkem dřív, než ji popíšeš jako hotovou.
-6. A co člověk: dlužník a pozvaný host („hádanka, kterou staří Řekové znali z komedií“; bití ne), Diotima v Symposiu. Slova o člověku bere cesta jen od těch, kdo je napsali; Hérakleitovi ani Parmenidovi otázku osobní identity nevkládej. Paměť a vědomí jako měřítko nech pozdějším obdobím (Locke, Hume: jména bez odkazu, nejvýš jednou větou).
-7. Spor Seneca × Plútarchos: dva čtenáři jedné řeky s opačným závěrem. Scéna netvrdí, že jeden četl druhého. Podle odpovědi autora patří do Sporu Senekův závěr o těle a o strachu ze smrti (`seneca-ep-58-23-smrt`), s otázkou hned za ním, s Plútarchovou odpovědí a s odkazem na cestu 8, a souvislost Plútarchova argumentu (`de-sera-559-obec`). Scénu čti očima studenta po ztrátě. Obě strany odpoví na nejsilnější námitku druhé; na telefonu čte student jednu stranu celou před druhou.
-8. Nový případ: jak staré je tvoje tělo (uhlík z jaderných zkoušek, čtyři studie; „tělo se vymění za sedm let“ je pověra, kterou případ opraví). Čísla ověř v plném textu studií sám, žádné číslo mimo podklady. Odkud jsou tkáně, patří učiteli. Případ je o buňkách, ne o tom, kým kdo je.
-9. Závěr cesty se ptá na pravidlo („Podle čeho poznáš, že je něco pořád totéž?“), ne na studentův život. Každá odpověď z prvního bloku má na konci zastánce, a spojenec je jiný myslitel než filozof cesty; projdi možnosti jednu po druhé.
-10. Návrat: lístek na koncert oblíbené kapely za deset let (studie z roku 2013), úzce o odhadu, ne o tom, kým kdo bude; žádné „to tě přejde“. Karta Zkus to žít cesty je jiná než karty profilů (věc, která je táž, ačkoli se v ní vyměnilo všechno).
-11. Citlivá místa: pravidla 1 až 7 a tabulka míst očima pěti studentů z podkladů. Příklady změny jsou cizí nebo neutrální; žádné pole na psaní o vlastní změně; slovo „pravý“ se nepojí s člověkem; nemoc, demence, závislost a úraz nejsou příkladem; věty, které tělem pohrdají, cesta necituje. Řádek s pomocí do studentského textu nepatří.
+Na co se dívej zvlášť:
 
-Stránka velké otázky 5: úvodní případ „Kdo tě zná líp?“ (jiného druhu než nový případ cesty) a sedm hlasů podle podkladů: Hérakleitos (`herakleitos-b45`), Sókratés, Platón, Aristotelés, Epikúros, Marcus Aurelius a Epiktétos (`rozpravy-ii-10-1`). Odpověď hlasu má nejvýš dvě věty a výklad ověř v tomtéž díle a místě, ze kterého je citát. Každý hlas se pozná a nezmenšuje se to, čím se liší; hlasy, které říkají „nejsem své tělo“, mají vedle sebe hlas, pro který k člověku tělo patří. Stránka nikomu neříká, kdo je.
+1. Student, kterého se změna bolestně týká. Projdi profily, cestu a stránku otázky pětkrát, očima pěti studentů z podkladů (Citlivá místa): kdo se mění tak, že to bolí (tělo, nemoc, úraz, příjem potravy); kdo řeší svou genderovou identitu nebo orientaci; komu se změnil blízký (demence, závislost, těžká nemoc); kdo je po ztrátě nebo traumatu; adopce, stěhování, dvojí domov a jazyk. Čti první obrazovku každého kroku a kapitoly na telefonu, všechny zpětné vazby (i zavřené „Co kdybys zvolil jinak?“), texty pod kresbou, obě karty Zkus to žít profilů i kartu cesty a Návrat. Nikde se slovo „pravý“ nepojí s člověkem, nikde „to přejde“, nikde pole na psaní o vlastní změně, nikde nemoc, demence, závislost nebo úraz jako příklad, nikde věta, která tělem pohrdá. Zvlášť: krok 6 (Senekův závěr o těle a strachu ze smrti: stojí otázka a Plútarchova odpověď na téže obrazovce? co čte student po ztrátě?), krok 5 (host a dlužník), krok 7 (buňky nejsou o tom, kým kdo je), Roztřiď v kroku 3 a stránka otázky 5.
+2. Kdo co napsal o věci a kdo o člověku. Hérakleitovi ani Parmenidovi cesta nevkládá otázku osobní identity. Plútarchos neříká, že vyměnili všechna prkna, nezná druhou loď a neříká, kde loď stála: je z kroku 1, z kroku 4 a z textu pod kresbou jasné, co je jeho, co Hobbesovo a co naše (poslední prkno, přístav)? V básni mluví bohyně; nikde „změnu popírá“ ani „nepopírá“. Paměť a vědomí jako měřítko nikde kromě jedné věty o Lockovi a Humovi.
+3. Znění proti pramenům. Porovnej každou větu s tabulkami podkladů; „asi“ zůstává „asi“. Zvlášť: zlomek B12 a „jsme i nejsme“ jako pozdější podoba; Platónova přetahovaná; Aristotelés v Politice (řeky a obec; v P8 nečteno znovu, přečti 1276a–b) a v Kategoriích; dlužník podle Plútarcha a Epicharmos; Diotima (207d–208b); Seneca Dopis 58, 22–23 a co v něm je o Hérakleitovi; Plútarchos O pozdních trestech 559 a O delfském E 392; stoikové jen „jak o nich píše Plútarchos“; Hobbes.
+4. Čísla kroku 7. Každé číslo o buňkách porovnej s podklady a s oddílem „Jak staré je tvoje tělo“ v listu pro učitele (tam je i místo ve studii). Říká text, co se měřilo a na kom, bez věty o nemocech a bez závěru o tom, kým kdo je? Je „sedm let“ řečeno jako pověra?
+5. Spor na telefonu. Seneca stojí první: odpovídá jen na to, co už zaznělo, nebo námitku uvádí („Plútarchos namítá, že…“)? Poslední slovo má Plútarchos: má na ně Seneca odpověď ve svých argumentech? Je postoj každé strany stejně silný jako její citát? Netvrdí scéna, že jeden četl druhého?
+6. Kresba Loď po prknech. Říká text kroku i text pod kresbou totéž co ona? Je v ní všechno dřevo vyměnitelné? Jsou popisky čitelné na telefonu a nepřekrývají se v žádném stavu (0, 1, 12, 23, 24 v obou pohledech)? Jde posuvník i přepínač klávesnicí, stojí moře při omezeném pohybu a po zastavení? Neprozrazuje kresba odpověď Volby pod sebou?
+7. Kdo dá za pravdu komu. Krok 7 slibuje zastánce každé ze čtyř odpovědí z kroku 1: projdi je jednu po druhé. Je zastánce jiný myslitel než Hérakleitos a Parmenidés? Najde ho i student, který v kroku 4 zvolil „žádná“ nebo „obě“? Řekne krok, že souhlasit student nemusí?
+8. Stránka otázky 5. Pozná se každý ze sedmi hlasů a nezmenšuje se, čím se liší? Má odpověď nejvýš dvě věty? Výklad každého hlasu ověř v tomtéž díle a místě jako citát (Faidros 229b–230a kvůli „procházce za město“; Marcus Aurelius XII, 3–4 v publikovaném překladu; Epiktétos II, 10 bez § 7 a § 17; Aristotelés 1166a bez pokračování o špatných lidech). Stojí vedle hlasů „nejsi své tělo“ hlas, pro který tělo k člověku patří? Neříká stránka nikomu, kdo je? Je úvodní případ jiného druhu než případy cesty a Návrat?
+9. Opakování. Tentýž citát a tentýž doložený detail nejvýš dvakrát v celku (seznamy jsou v oddílech Po P7 a Po P8): B12 dvakrát, věta „jestli jeden o druhém věděl, nevíme“ dvakrát a jen v profilech, banán jen v profilu. Projdi profily, cestu a stránku otázky za sebou, jak je projde student. Co profily vyprávějí (kostky, Hermodóros, dvě znění, Kratylos, luk, brána, věty o ničem), cesta neopakuje.
+10. Každá kombinace. Čtyři možnosti každé ze tří Voleb cesty, šest vět ve třech koších, oba Odkryj, Spor z obou stran, tři odpovědi Návratu, závěr „Na začátku × Teď“ s panelem i bez něj; bloky obou profilů (dva Roztřiď, dvě Změň jednu věc, Volba, Odkryj, dvakrát Kdo žil dřív?).
+11. Co se skládá z dat. Hlavičky osmi stránek (Hérakleitos, Parmenidés a šest hlasů), Doba a lidé, karty v Lidech, bod cesty na mapě (Efesos kolem roku 500 př. n. l.), Kam dál, řádek cesty u otázky 5 v přehledu, Domů, dílna bloků. Aristotelés má šest tlačítek otázek: vypadá hlavička na telefonu dobře?
+12. List pro učitele. Je v něm všechno, co studentský text vynechává, i s důvodem? Odpovídá cestě (čísla kroků, znění)? Studie z roku 2013: vzorek pokusu s lístky podle studie, ne podle podkladů (viz k-overeni.md, Po P8); oprav i podkladový list a poznámku u pramene. Čísla linek ověř znovu na jejich webech, 116 123 poprvé; větu o smlouvě z roku 1963 ověř, nebo navrhni škrtnout. Ověř, že soubor není v sestaveném webu.
+13. Fokus z klávesnice. scripts/kontrola-fokus.mjs hlásí pole prvního názoru na stránce otázky 5 (390 px) a pole pravidla v kroku 7 (1440 px) pod lištou. Zkus skutečný tabulátor na výškách 844, 900 a 920 px a řekni, jestli je to chyba stránky, nebo skriptu.
+14. Délka. Cesta má na štítku 34 minut (node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim). Řekni, co je v ní dvakrát a jestli krok 7 unese všechno, co nese; nezkracuj.
+15. Strojový text. Všechny studentské texty celku přečti ještě jednou jen podle oddílu „Ať text nezní jako stroj“.
 
-Data a co se změní jinde: cesta a její filozofové v datech podle Návrhu dat; nové osoby nepřidávej (Hobbes, Locke, Hume, Epicharmos, Diotima a Kratylos zůstanou v textu bez odkazu). V obou profilech doplň odkaz u první položky Kam dál a uprav test tests/e2e/celek7-profily.spec.ts, který čeká kartu bez odkazu. Nová cesta a nový hlas mění stránky, které nikdo neotevřel: vstupy v hlavičkách všech filozofů a hlasů, karty v Lidech, počet cest na Domů, počet kreseb v dílně. Celé testy pusť hned po přidání, ne až na konci. Obrázek stáhni jen se souhlasem výše: předtím ověř licenci v záznamu muzea a napiš mi název souboru, zdroj a velikost; originál do ~/Pictures/Atlas-originaly/, do public/obrazky/ kopii zmenšenou na 1280 px. Po změně dat restartuj běžící npm run dev.
+Otevřené body, ke kterým chci doporučení, pokud jsem je výš nevyplnil: Seneca a Plútarchos v poli filozofove; Návrat bez studie; rozdělení kroku 7; přístav jako náš obraz; popisek obrazu vstupu; nepoužité citáty z podkladů (seznam v k-overeni.md, Po P8).
+Rozhodnuté, neotvírej: sedm hlasů s Epiktétem a Plútarchos v rezervě; kresba s pohybem ano; nové osoby do dat ne (Hobbes, Locke, Hume, Epicharmos, Diotima a Kratylos bez odkazu); řádek s pomocí do studentského textu nepatří; Hérakleitova smrt se nevypráví; kletba nad Efesem v úvodu profilu; Zénónovy paradoxy mimo celek.
 
-Doplň ucitel/celek-7.md o cestu a stránku otázky 5: co Plútarchos o lodi říká a co ne; dlužník a co je z něj doložené; souvislost Senekovy a Plútarchovy věty; odkud jsou tkáně ve studiích o buňkách a co studie říkají o nemocech; „iluze konce dějin“ a její meze; co prameny hlasů říkají a atlas necituje (Epiktétos II, 10, 7 a 17; Marcus Aurelius II, 2; Dión a Theón jednou větou); co dělat, když student řekne „už to nejsem já“. Kontakty ověř při psaní (Linka bezpečí, Centrum Anabell, poradna pro pozůstalé, poradna pro dospívající, kteří řeší orientaci nebo identitu) a k válečné zkušenosti žáků najdi české doporučení, o které se oddíl o zlomku B53 může opřít. Ověř, že se soubor nedostane do sestaveného webu.
+Drobnosti oprav rovnou (překlep, sazba, věta přes 25 slov, test, který hlídá opravenou větu). Zásadní nálezy neopravuj: seřaď je podle dopadu, ke každému napiš návrh opravy a zapiš je do docs/revize/celek-7-<datum>.md. Řekni verdikt: schválit / po opravách / přepracovat.
 
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); snímky kroků cesty s odpověďmi i bez nich (scripts/snimky-cesta.mjs) a stránky otázky (scripts/snimky-listy.mjs) na 390 a 1440 px ve světlém i tmavém režimu; kresba na obou šířkách a s omezeným pohybem; průchod klávesnicí (scripts/kontrola-fokus.mjs); závěr „Na začátku × Teď“; Návrat v deníku.
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně). Snímky cesty a stránky otázky na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs, scripts/snimky-listy.mjs) a kresby (scripts/snimky-prvek.mjs) si prohlédni.
 
-Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-7.md oddíl „Po P8“ (co cesta a stránka mají, použité citáty a kolikrát který v celku zazněl, co se změnilo mimo ně, co si nese revize, co čeká na autora), připrav tam zadání P10 (revize celku podle skillu atlas-revize) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-7.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md (Po P8) a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co cesta a stránka mají, kde ses od podkladů odchýlil a proč a co čeká na mé rozhodnutí, a pošli snímek vstupu, kresby, Sporu a stránky otázky.
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-7.md oddíl „Po P10“ (verdikt, nálezy, co jsi opravil, co čeká na mě) a připrav tam zadání oprav s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-7.md, nová poučení připiš jednou větou do docs/pouceni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš verdikt, nálezy seřazené podle dopadu a co čeká na mé rozhodnutí.
 ```
