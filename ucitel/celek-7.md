@@ -30,6 +30,8 @@ Rozdíl není slovíčkaření. Na „nic netrvá“ míří Platónova námitka
 
 Výklad „řeka, ve které by voda stála, by nebyla řeka“ je Grahamův, ne Hérakleitův. Profil ho proto uvádí slovy „dá se to číst takhle“.
 
+Zlomek B12 mluví i o lidech: o těch, kdo do řek vstupují. Podle téhož hesla se řecké „týchž“ dá vztáhnout k řekám i k nim; ve druhém čtení jsou titíž lidé a jiné jsou vody (heslo odkazuje na Ch. Kahna). A Kleanthés větu cituje kvůli duším. Bezpečné je proto říkat, že věta je o řekách a vodách a že o tom, jestli zůstává týž i ten, kdo do řeky vstupuje, se její čtenáři neshodnou; ne že o člověku v ní není nic.
+
 ### „Všechno plyne“
 
 Mezi dochovanými zlomky ta slova nejsou. Doslova (πάντα ῥεῖ) je podklady našly až u Simplikia; hledalo se v celém jeho komentáři k Fyzice, jiní pozdní autoři prohledáni nebyli, takže „až Simplikios“ znamená „nejstarší, co se našlo“. Věcně to říká už Platón („všechno je v pohybu a nic nezůstává“). Hesla Stanfordské ani Internetové encyklopedie spojení „panta rhei“ nemají.
@@ -185,7 +187,7 @@ Cesta se otevírá lodí a první věta zní „Plútarchos vypráví…“. Cel
 | --- | --- |
 | Loď měla třicet vesel a Athéňané ji uchovávali. | Kde stála. Přístav v cestě a v kresbě je náš obraz. |
 | Vydržela do časů Démétria z Faléra (vládl v Athénách 317–307 př. n. l.; roky jsou z příruček). Cesta proto říká „ještě na konci 4. století př. n. l.“. | Jak dlouho ji měli celkem. Théseus je postava bájí. |
-| Stará prkna odstraňovali a vsazovali nová, pevná. | Že vyměnili všechna. Poslední prkno je krok cesty a text ho tak uvádí („Představ si…“, „Dotáhni to do konce sám“). |
+| Stará prkna odstraňovali a vsazovali nová, pevná. | Že vyměnili všechna. Poslední prkno je krok cesty a text ho tak uvádí („Představ si…“, „Dotáhni to do konce sám“). Výslovně ho má až Hobbes: ptá se na loď, „když byla vyměněna všechna prkna“. |
 | Filozofové se o ni přeli v „úvaze o růstu“. | Kteří filozofové to byli a kdy. Cesta je nejmenuje. |
 | | Nic o druhé lodi. Tu přidal až Thomas Hobbes. |
 
@@ -195,9 +197,9 @@ Plútarchos psal kolem roku 100 n. l., asi čtyři sta let po době, do které l
 
 **Druhá loď.** Je z Hobbesova spisu O tělese (II, 11, 7; anglicky 1656, latinsky o rok dřív podle příruček). Hobbes ji užívá jako námitku proti názoru, že o totožnosti rozhoduje tvar: kdyby někdo stará prkna schovával a pak je složil ve stejném pořadí, byly by dvě lodě číselně tytéž, a to je nesmysl. Jeho vlastní odpověď má až poslední krok cesty: záleží na tom, pod jakým jménem se ptáme. Totéž těleso to není, když se látka vyměnila. Táž řeka to je, teče-li z téhož pramene. Tentýž člověk to je, vycházejí-li jeho činy a myšlenky z téhož počátku. A loď je podle něj jméno pro látku určitého tvaru: po výměně všeho je jiná, po výměně části zčásti táž a zčásti ne. Hobbes tedy odpovídá na loď jinak než na člověka; stojí za to nechat studenty, ať si toho všimnou sami.
 
-**Kresba „Loď po prknech“.** Pramen je v ní jen výměna prken. Počet prken (čtyřiadvacet), jejich tvar, pořadí výměny i to, že se vymění všechna, je model; text pod kresbou to říká. Kresba se neptá, která loď je „pravá“, a nikomu neříká, která je Théseova. Nic se neukládá.
+**Kresba „Loď po prknech“.** Pramen je v ní jen výměna prken. Počet prken (čtyřiadvacet), jejich tvar a pořadí výměny je model; text pod kresbou to říká. Že se vymění všechna prkna, Plútarchos neříká; tak úlohu staví Hobbes. Kresba se neptá, která loď je „pravá“, a nikomu neříká, která je Théseova. Nic se neukládá.
 
-**Aristotelés a řeky.** Ve druhém kroku cituje srovnání bloku Aristotelovu Politiku (III, 3, 1276a–b). Aristotelés se tam ptá, kdy je obec táž, a spor, od kterého vychází, je o dluzích: po pádu tyrana nechce nová vláda platit, co si půjčil. Podle Aristotela rozhoduje ústava. Jestli má obec po změně ústavy staré dluhy platit, nechává jako „jinou otázku“. Hodí se to ke kroku 6, kde Plútarchos hájí opak.
+**Aristotelés a řeky.** Ve druhém kroku cituje srovnání bloku Aristotelovu Politiku (III, 3, 1276a–b). Aristotelés se tam ptá, kdy je obec táž, a spor, od kterého vychází, je o dluzích: po pádu tyrana nechce nová vláda platit, co si půjčil. Podle Aristotela rozhoduje ústava. Jestli má obec po změně ústavy staré dluhy platit, nechává jako „jinou otázku“. Věta o řekách u něj stojí v otázce (máme obci říkat táž, dokud v ní žije týž rod, jako říkáme tytéž řekám?) a odpověď zní, že rozhoduje ústava. Hodí se to ke kroku 6: Plútarchos tam hájí, že obec za staré činy ručí.
 
 ## Dlužník: co je z něj doložené
 
@@ -242,7 +244,7 @@ Poslední krok opravuje rčení, že se tělo celé vymění za sedm let. Stojí
 
 | Co cesta říká | Odkud to je | Mez |
 | --- | --- | --- |
-| Množství 14C v ovzduší se v letech 1955–1963 přibližně zdvojnásobilo; po smlouvě z roku 1963 ho ubývá. | Bhardwaj a kol. 2006, úvod | Smlouva zakázala zkoušky v ovzduší, ne všechny. |
+| Množství 14C v ovzduší se v letech 1955–1963 přibližně zdvojnásobilo; po smlouvě z roku 1963, která zkoušky v ovzduší zakázala, ho ubývá. | Bhardwaj a kol. 2006, úvod (mluví o zkouškách nad zemí a o „Test Ban Treaty“) | Smlouva z roku 1963 zakázala pokusy v ovzduší, v kosmickém prostoru a pod vodou; podzemní ne (u nás vyhláška č. 90/1963 Sb., ověřeno 10. 10. 2026). Zkoušelo se už od roku 1945 a pod zemí i po roce 1963; studie jmenuje léta, za která se uhlíku v ovzduší přibližně zdvojnásobilo. |
 | Buňky výstelky střeva žijí jen několik dní. | Spalding a kol. 2005 uvádí asi pět dní a přejímá to ze starší práce. | Není to měření těchto studií; cesta proto říká „vědělo se už dřív“. |
 | Sval mezi žebry dvou lidí (37 a 38 let) tvořily buňky průměrně 15,1 roku staré. | Spalding a kol. 2005 | Dva lidé; průměr. |
 | Neurony mozkové kůry jsou staré jako člověk; ostatní buňky kůry se obměňují. | Bhardwaj a kol. 2006 | Sedm lidí; metoda nezachytí podíl nových buněk pod 1 %. |
@@ -335,7 +337,7 @@ Ověřeno na webech služeb 10. 10. 2026. Před hodinou si čísla ověřte znov
 - **Centrum Anabell** (poruchy příjmu potravy, pro nemocné i jejich blízké). Linka Anabell 774 467 293: pondělí, středa, čtvrtek a pátek 8–16 hodin, úterý 10–18 hodin. Chat v pondělí a ve středu 17–20 hodin, internetová poradna na anabell.cz. Kontaktní centra v Brně, Praze a Ostravě.
 - **Poradna Vigvam** (děti a rodiny, kterým někdo zemřel). První kontakt 606 160 646 v pracovní dny 8–17 hodin, info@poradna-vigvam.cz. Kontaktní stránka poradny 10. 10. 2026 píše, že o uvolnění služeb bude informovat, a posílá mezitím na krizové linky, na linku Sluchátko a do poradny Cesty domů; počítejte s čekáním. Pod formulářem má na jednom místě číslo 606 160 656, všude jinde 606 160 646.
 - **S barvou ven** (sbarvouven.cz). Online poradna pro ty, kdo řeší svou sexuální orientaci nebo genderovou identitu, a pro jejich rodiče a přátele. Odpovídají mentoři a mentorky, kteří sami prošli coming outem; nejsou to psychologové. Provozuje ji spolek Prague Pride. Web nabízí i podpůrné skupiny vedené psychology.
-- **Linka první psychické pomoci 116 123.** Zdarma, nonstop, pro dospělé (ověřeno pro list k celku 6, dnes jen podle příručky NPI).
+- **Linka první psychické pomoci 116 123.** Zdarma, nonstop, telefonicky i na chatu. Je určena dospělým v krizi a jejich blízkým (linkapsychickepomoci.cz).
 
 ## Otázky do hodiny k cestě a ke stránce otázky 5
 

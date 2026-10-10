@@ -440,9 +440,9 @@ Jiného druhu než loď (věc) a buňky (tělo): **povaha**.
 
 > Představ si, že si dnes můžeš koupit lístek na koncert své nejoblíbenější kapely nebo zpěvačky. Koncert bude za deset let. Kolik bys za něj dal?
 
-Po odpovědi: psychologové se na totéž zeptali dospělých. Za koncert dnešní oblíbené kapely za deset let nabízeli průměrně 129 dolarů. Jiní lidé dostali opačnou otázku: kolik by dnes dali za koncert kapely, kterou měli nejradši před deseti lety? Průměrně 80 dolarů. V dalších částech studie říkali lidé všech věkových skupin, že se za posledních deset let změnili hodně, a když měli jiní odhadnout příštích deset let, čekali změnu menší.
+Po odpovědi: psychologové se na totéž zeptali dospělých. Za koncert dnešní oblíbené kapely za deset let nabízeli průměrně 129 dolarů. Jiní lidé dostali opačnou otázku: kolik by dnes dali za koncert kapely, kterou měli nejradši před deseti lety, kdyby hrála příští týden? Průměrně 80 dolarů. V dalších částech studie říkali lidé všech věkových skupin, že se za posledních deset let změnili hodně, a když měli jiní odhadnout příštích deset let, čekali změnu menší.
 
-- **Co držet:** 170 dospělých v pokusu s lístky, celkem přes 19 000 lidí ve věku 18–68 let, většinou ženy, z webu televizního pořadu; srovnávaly se *odhady* jedněch s *vzpomínkami* jiných, o deset let starších, ne titíž lidé po deseti letech; proč to tak je, autoři nevědí (nabízejí dvě domněnky). „Studie zkoušela“, ne „ukázala, že se změníš“.
+- **Co držet:** pokus s lístky (studie 4) měl 170 dospělých ve věku 18–64 let (52 % žen), získaných přes Amazon Mechanical Turk, a druhá skupina v něm oceňovala koncert, který bude příští týden. Ostatních pět pokusů (dohromady přes 19 000 lidí ve věku 18–68 let, kolem 80 % žen) získalo účastníky přes web televizního pořadu. (Opraveno při revizi 10. 10. 2026 podle plného textu; původně tu u pokusu s lístky stál vzorek celé studie.) Dál: srovnávaly se *odhady* jedněch s *vzpomínkami* jiných, o deset let starších, ne titíž lidé po deseti letech; proč to tak je, autoři nevědí (nabízejí dvě domněnky). „Studie zkoušela“, ne „ukázala, že se změníš“.
 - **Otázka Návratu:** „Platí pravidlo, které sis napsal na konci cesty, i tady? Ten, kdo lístek kupuje, a ten, kdo na koncert půjde: je to tentýž člověk? A je stejný?“
 - Omezení z oddílu Citlivá místa: případ se drží zálib a nikoho neujišťuje, že „se změní“.
 
