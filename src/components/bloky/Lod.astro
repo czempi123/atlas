@@ -1,0 +1,15 @@
+---
+// Loď po prknech: kresba k Théseově lodi (cesta 2, krok 4). Posuvník vyměňuje prkna lodi v přístavu;
+// pohled „Druhá loď“ skládá ze starých prken loď na břehu. Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <Lod id="lod-po-prknech" />
+import Ostrov from '../ostrovy/Lod.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'lod-po-prknech', obdobi = 1 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

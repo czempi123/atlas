@@ -9,7 +9,7 @@
   // Posuvník ve snippetu ovladani dostane třídu k-posuvnik, přepínač třídy k-volba a k-prepinac (global.css).
   // Kresba bez vlastního pohybu: maPohyb={false}.
   // Použití: viz src/components/ostrovy/Jeskyne.svelte, JeskyneVen.svelte, Saty.svelte, StejnyVitr.svelte,
-  // DvePulky.svelte a KolikJeDost.svelte.
+  // DvePulky.svelte, KolikJeDost.svelte a Lod.svelte (posuvník, dva pohledy a pohyb, který běží sám).
   import { onMount, type Snippet } from 'svelte';
   import { omezenyPohyb } from '../../lib/pohyb';
 
