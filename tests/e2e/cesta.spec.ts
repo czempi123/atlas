@@ -1,4 +1,4 @@
-// Cesty 1, 3, 4, 5, 6 a 8: přehled, kroky, soustředěná hlavička a lišta Předchozí / Další,
+// Cesty 1, 2, 3, 4, 5, 6 a 8: přehled, kroky, soustředěná hlavička a lišta Předchozí / Další,
 // Kam dál z bloků, Pokračuj na Domů a v deníku. Každý krok na 390 a 1440 px ve světlém
 // i tmavém režimu s axe, bez vodorovného posouvání a se snímky. Cesta 6 navíc celá jen klávesnicí
 // a jednou bez odkrytí bloků.
@@ -17,6 +17,8 @@ const CESTA4 = '/cesta/staci-vedet-co-je-spravne/';
 const KROKY4 = ['Háj a hostina', 'Co ti tehdy chybělo?', 'Kdo ví, udělá to', 'Stavitelem se stáváš stavěním', 'Věděl to doopravdy?', 'Kde je střed?', 'Jak dlouho to trvá?', 'Tvoje pravidlo'];
 const CESTA8 = '/cesta/proc-se-bat-smrti/';
 const KROKY8 = ['Dopis', 'Čeho se vlastně bojíme', '„Netýká se nás“', 'Zrcadlo', 'Host u stolu', 'Týká se nás?', 'Ti druzí', 'Blízko', 'Tvoje pravidlo'];
+const CESTA2 = '/cesta/jsem-porad-tentyz-kdyz-se-menim/';
+const KROKY2 = ['Loď', 'Řeka', 'Proč je změna záhada', 'Loď po prknech', 'A co člověk?', 'Dva čtenáři jedné řeky', 'Jak staré je tvoje tělo'];
 const CESTY = [
   { adresa: CESTA, nazev: 'Kdy mám dobrý důvod věřit?', kroky: KROKY, snimek: 'cesta' },
   { adresa: CESTA6, nazev: 'Kolik je dost?', kroky: KROKY6, snimek: 'cesta6' },
@@ -24,6 +26,7 @@ const CESTY = [
   { adresa: CESTA3, nazev: 'Je to, co vidím, celá skutečnost?', kroky: KROKY3, snimek: 'cesta3' },
   { adresa: CESTA4, nazev: 'Stačí vědět, co je správné?', kroky: KROKY4, snimek: 'cesta4' },
   { adresa: CESTA8, nazev: 'Proč se bát smrti?', kroky: KROKY8, snimek: 'cesta8' },
+  { adresa: CESTA2, nazev: 'Jsem pořád tentýž, když se měním?', kroky: KROKY2, snimek: 'cesta2' },
 ];
 
 async function pripravit(page: Page) {

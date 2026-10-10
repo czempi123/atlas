@@ -25,9 +25,11 @@ const STRANKY: { cesta: string; nazev: string; nadpis: RegExp; preskocit?: strin
   { cesta: '/otazka/ma-zivot-smysl/', nazev: 'otazka-3', nadpis: /Má život smysl\?/, preskocit: 'otazka-ma-zivot-smysl' },
   { cesta: '/otazka/jsem-svobodny/', nazev: 'otazka-4', nadpis: /Jsem svobodný\?/, preskocit: 'otazka-jsem-svobodny' },
   { cesta: '/otazka/co-je-skutecne/', nazev: 'otazka-6', nadpis: /Co je skutečné\?/, preskocit: 'otazka-co-je-skutecne' },
+  { cesta: '/otazka/kdo-vlastne-jsem/', nazev: 'otazka-5', nadpis: /Kdo vlastně jsem\?/, preskocit: 'otazka-kdo-vlastne-jsem' },
   { cesta: '/cesta/je-to-co-vidim-cela-skutecnost/', nazev: 'cesta-3', nadpis: /Je to, co vidím, celá skutečnost\?/ },
   { cesta: '/cesta/staci-vedet-co-je-spravne/', nazev: 'cesta-4', nadpis: /Stačí vědět, co je správné\?/ },
   { cesta: '/cesta/proc-se-bat-smrti/', nazev: 'cesta-8', nadpis: /Proč se bát smrti\?/ },
+  { cesta: '/cesta/jsem-porad-tentyz-kdyz-se-menim/', nazev: 'cesta-2', nadpis: /Jsem pořád tentýž, když se měním\?/ },
 ];
 const SIRKY = [
   { sirka: 390, vyska: 844 },

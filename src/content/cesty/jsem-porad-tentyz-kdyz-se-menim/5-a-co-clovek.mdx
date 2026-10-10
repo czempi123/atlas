@@ -1,0 +1,56 @@
+---
+cesta: jsem-porad-tentyz-kdyz-se-menim
+krok: 5
+nazev: A co člověk?
+kdeJsme: Řecké divadlo a hádanka, kterou diváci znali z komedií
+---
+import { Odkryj } from '../../../components/bloky';
+import Citat from '../../../components/ui/Citat.astro';
+
+<div class="ctenarsky">
+
+Loď je věc. Nic nikomu neslíbila a nikdo ji nikam nepozval. U člověka na téže otázce záleží víc.
+
+Staří Řekové znali z komedií jednu hádanku. Připisovala se básníku Epicharmovi a začíná nevinně, u hromádky oblázků: přidej jeden, a už je jich jiný počet. Člověk taky pořád něco přibírá a něco ztrácí. Je tedy dnes jiný než včera.
+
+Co se s tím dá dělat, zapsal Plútarchos:
+
+<Citat id="de-sera-559-dluznik" />
+
+Plútarchos s tou úvahou nesouhlasil. Ten, kdo tak mluví, přitom v jedné věci nelže: opravdu se změnil.
+
+Kde tedy dělá chybu? A dělá ji vůbec?
+
+</div>
+
+<Odkryj
+  id="cesta2-host-a-dluznik"
+  otazka="Host stojí u dveří a tvrdí, že pozvaný byl někdo jiný. Dlužník tvrdí, že si půjčil někdo jiný. Co jim odpovíš?"
+  tlacitko="Porovnat s Diotimou"
+  obdobi={1}
+  modelove={[
+    { text: 'Je to pořád on. Má stejné jméno a stejný obličej.', komentar: 'Jméno a obličej jsou to, podle čeho ho poznáš ty. Stačilo by mu změnit jméno, aby nedlužil? Co dalšího ho spojuje s tím, kdo si půjčil?' },
+    { text: 'Kdyby měl pravdu, nedlužil by nikdy nikdo nic. A on sám by nemohl chtít zpátky, co kdy půjčil.', komentar: 'Ukazuješ, kam by ta úvaha vedla. Podobně s ní naložil Plútarchos. Dokazuje nepříjemný důsledek, že je úvaha chybná, nebo jen to, že se nám nehodí?' },
+    { text: 'Změnil se, ale ne naráz. Nikdy nebyla chvíle, kdy by jeden člověk skončil a druhý začal.', komentar: 'Opíráš se o to, že změna šla kousek po kousku. Stejně se dala hájit loď v přístavu. Co bys tímhle důvodem řekl o druhé lodi z minulého kroku?' },
+  ]}
+  sebekontrola={[
+    'Řekl jsem, v čem má dlužník pravdu, ne jen že je vychytralý.',
+    'Moje odpověď platí i pro hosta u dveří.',
+  ]}
+>
+
+Na člověka, který se mění, a přece je to on, se ptal už Platón. V dialogu Symposion nechává Sókrata vyprávět, co ho kdysi naučila moudrá žena jménem Diotima. Dlužníkovi by přiznala všechno, co říká o změně:
+
+<Citat id="symposion-207d" />
+
+O duši říká totéž: způsoby, povaha, názory, touhy, radosti, bolesti a strachy nezůstávají nikomu tytéž. Jedno vzniká, druhé zaniká.
+
+A přece se člověku říká tentýž. Diotima říká proč:
+
+<Citat id="symposion-208b" />
+
+Tentýž u ní neznamená stejný. Znamená toho, kdo trvá tím, že se obnovuje.
+
+*Podívej se na svou odpověď. Vytkl jsi dlužníkovi, že se nezměnil, nebo že na jeho změně nezáleží?*
+
+</Odkryj>

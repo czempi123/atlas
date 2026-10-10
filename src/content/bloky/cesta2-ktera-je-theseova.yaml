@@ -1,0 +1,36 @@
+# Volba s důvodem · cesta 2 „Jsem pořád tentýž, když se měním?“, krok 4: dvě lodě.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Vstupní příběh (tvrzení 6 a 7), Kresba s pohybem a
+# O čem je řeč, když se řekne „tentýž“. Druhá loď je Hobbesova (O tělese II, 11, 7; anglicky 1656): užil ji proti
+# názoru, že totožnost je ve formě, protože pak by byly dvě lodě číselně tytéž. Že se vymění všechna prkna, je náš krok.
+# Otázka zní „Která je Théseova?“, ne „která je pravá“ (Citlivá místa, pravidlo 3). Žádná možnost nedostane pokárání
+# a blok nemá Co udělal: co si o lodi myslel Hobbes sám, říká až poslední krok.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: V přístavu stojí loď z nových prken. Na břehu stojí loď složená ze starých.
+otazka: Která z nich je Théseova?
+moznosti:
+  - text: Ta v přístavu. Nikdy nepřestala být lodí.
+    tah: jít po tom, co nebylo přerušeno
+    zpetna: >-
+      Rozhoduje pro tebe, že mezi Théseovou plavbou a dneškem není den, kdy by ta loď nebyla lodí.
+      Druhá takový příběh nemá: dlouho to byla hromada prken.
+      Zkus ale tohle: kdyby loď v přístavu shořela, řekl bys o lodi složené z původních prken, že Théseova není?
+  - text: Ta na břehu. Je z jeho prken.
+    tah: jít po původním dřevu
+    zpetna: >-
+      Rozhoduje pro tebe dřevo, na kterém Théseus opravdu plul. Podívej se, kam to vede.
+      Loď v přístavu by přestala být jeho někdy během oprav, a jeho loď by pak celé roky nebyla lodí, jen hromadou.
+      Může věc přestat být a potom zase začít?
+  - text: Obě.
+    tah: nechat obě
+    zpetna: >-
+      Každá má něco, co k Théseově lodi patří: jedna to, že nikdy nepřestala, druhá dřevo.
+      Lodě jsou ale dvě a Théseus měl jednu. Právě na to mířil Hobbes: jedna věc nemůže být dvěma věcmi.
+      Dá se říct, že každá je jeho v jiném smyslu? V jakém?
+  - text: Žádná. Théseova loď už není.
+    tah: nenechat žádnou
+    zpetna: >-
+      Podle tebe k Théseově lodi patřilo obojí: dřevo i to, že nepřestala být lodí. Jakmile se to rozešlo, zanikla.
+      Kdy přesně se to stalo: s prvním vyměněným prknem, nebo až s posledním?
+zdroje: [plutarchos-theseus, hobbes-de-corpore]

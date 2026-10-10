@@ -1,0 +1,49 @@
+# Spor · cesta 2 „Jsem pořád tentýž, když se měním?“, krok 6: Seneca × Plútarchos, dva čtenáři jedné řeky.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Spor: Seneca × Plútarchos a tabulka Citlivých míst
+# (Seneca, Dopisy 58; Plútarchos, O pozdní odplatě). Seneca: Dopisy Luciliovi 58, 22–23 a 27. Plútarchos:
+# O pozdní odplatě bohů 559a–c (mluví sám za sebe).
+# Je to střet dvou textů, ne dvou lidí: že by jeden četl druhého, nevíme a scéna ani text kroku to netvrdí.
+# Plútarchos míří na „Epicharmovy věci“ a rostoucí argument, ne na Seneku. Do vztahů se nic nezapisuje.
+# Dlužníka vysloví scéna, aby Seneca (na telefonu první) neodpovídal na něco, co ještě nezaznělo.
+# Třetí argument každé strany odpovídá na nejsilnější námitku druhé a je podán jako výklad („by mohl“):
+# Seneca o dlužníkovi nepíše (dopis míří na to, k čemu se nemá člověk upínat); Plútarchos neodpovídá Senekovi.
+# Postoje nejsou krajnější než citáty: Seneca neříká „nedlužíš“, Plútarchos neříká „nezměnil ses“.
+# Senekův závěr o těle a o strachu ze smrti (58, 23) a souvislost Plútarchova argumentu (559a) stojí v textu kroku
+# jako citáty s otázkou hned za nimi; argumenty bloku je neopakují. Žádná strana neříká o jiném člověku,
+# že „už to není on“; nemoc, demence, závislost ani úraz nejsou příkladem.
+druh: spor
+obdobi: 2
+nadtitulek: Spor
+scena: >-
+  Mezi nimi leží hádanka z minulého kroku: kdo si kdysi půjčil, dnes nic nedluží, protože se stal jiným.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: Je člověk po letech tentýž?
+strany:
+  - osoba: seneca
+    postoj: Ne. Nikdo z nás není ráno týž, kým byl den předtím.
+    argumenty:
+      - >-
+        Všechno, co vidíme a čeho se dotýkáme, teče jako řeka, a naše těla s tím.
+        Seneca to říká i o sobě: zatímco říká, že se to mění, změnil se sám.
+      - >-
+        U řeky to vidí každý: jméno jí zůstává stejné, voda protekla. U člověka je to podle Seneky totéž, jen to není tak zřejmé.
+        Co trvá, se podle něj nemá hledat v tom, co teče.
+      - >-
+        O dlužníkovi Seneca nepíše. Odpovědět by mu mohl tím, co říká o řece: jméno zůstává.
+        Dluh by pak patřil ke jménu, pod kterým si člověk půjčil, i když se v tom, kdo ho nese, všechno vyměnilo.
+  - osoba: plutarchos
+    postoj: Ano. O člověku se říká, že je od narození až do konce jeden.
+    argumenty:
+      - >-
+        Člověk je jedna souvislá věc, jako živý tvor. Kdo ho rozdělí podle času na včerejšího a dnešního,
+        skončí u dlužníka, který nedluží, a u hosta, kterého nikdo nezval.
+      - >-
+        Co mluví proti němu, říká Plútarchos sám: věk změní člověka víc než celé město. Po čase by ho stěží poznal přítel
+        a povahu mu mění každá řeč, námaha a cit. A přece mu říkáme jeden.
+        Jinak podle Plútarcha naházíme všechno do Hérakleitovy řeky.
+      - >-
+        Seneca by mohl namítnout, že jméno nic nedokazuje: řece taky říkáme stejně, a voda je jiná.
+        Plútarchos by ukázal na důsledky. Kdyby člověk nebyl jeden, nebyl by tu nikdo, kdo něco slíbil, dluží nebo si něco zasloužil.
+zdroje: [seneca-ep-58, plutarchos-de-sera]

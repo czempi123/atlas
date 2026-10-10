@@ -1,0 +1,38 @@
+# Volba s důvodem · cesta 2 „Jsem pořád tentýž, když se měním?“, krok 1: začátek cesty (pole `zacatek` v přehledu cesty).
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Vlastní pokus studenta před výkladem (krok 1) a Vstupní příběh.
+# Že vyměnili všechna prkna, Plútarchos neříká: je to náš krok a text kroku ho tak uvádí („Představ si…“).
+# Otázka je o lodi, ne o studentovi. Každá možnost má v posledním kroku zastánce, jiného než Hérakleitos a Parmenidés:
+# 1 jedna strana Plútarchových filozofů, Plútarchos (O pozdní odplatě 559a–c), Aristotelés (Politika 1276a–b);
+# 2 druhá strana těch filozofů, Epicharmova úvaha (Diogenés Laertios III, 11), Hobbes pro loď;
+# 3 Hobbes (zčásti táž, zčásti ne); 4 Hobbes (záleží na jménu, pod kterým se ptáme).
+# Zpětná vazba filozofy nejmenuje (student ještě žádného nepotkal) kromě sporu, o kterém ví z příběhu.
+# Žádná možnost nedostane pokárání; třetí se ptá, u kterého prkna, a posílá ke kresbě v kroku 4. Blok nemá Co udělal.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+otazka: Je to pořád Théseova loď?
+moznosti:
+  - text: Ano. Nikdy nepřestala být tou lodí v přístavu.
+    tah: držet se toho, že trvala
+    zpetna: >-
+      Opíráš se o to, že loď ani na den nezmizela: kotvila na svém místě a lidé jí říkali stejně.
+      Tak mluvila jedna strana sporu, o kterém vypráví Plútarchos.
+      Zkus proti sobě námitku. Kdyby vedle postavili naráz stejnou loď z nového dřeva, Théseova by nebyla.
+      V čem se od ní liší loď, kterou vyměnili po jednom prknu?
+  - text: Ne. Z Théseovy lodi nezbylo nic.
+    tah: držet se dřeva
+    zpetna: >-
+      Opíráš se o dřevo: Théseova je ta loď, na které plul, a z té tu není ani tříska.
+      Tak mluvila druhá strana sporu, o kterém vypráví Plútarchos.
+      Zkus proti sobě námitku. Po výměně prvního prkna by nikdo neřekl, že je to jiná loď. Kdy tedy přestala být jeho?
+  - text: Přestala jí být někde cestou.
+    tah: hledat hranici
+    zpetna: >-
+      Podle tebe se z ní někde mezi prvním a posledním prknem stala jiná loď. Nejtěžší je říct kde.
+      U kterého prkna to bylo, a proč ne o jedno dřív? Ve čtvrtém kroku si to zkusíš prkno po prknu.
+  - text: "Záleží na tom, na co se ptám: na dřevo, nebo na loď."
+    tah: rozdělit otázku
+    zpetna: >-
+      Z jedné otázky děláš dvě: z čeho ta loď je, a která loď to je. Na první se odpovídá snadno, dřevo je jiné.
+      Athéňané ale museli vědět, kterou loď poslat na Délos. Dá se říct, která loď to je, a o dřevu přitom mlčet?
+zdroje: [plutarchos-theseus, platon-faidon-58]

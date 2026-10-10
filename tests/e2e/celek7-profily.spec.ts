@@ -179,13 +179,14 @@ test('Hérakleitos: text drží pravidla celku (zlomek × svědectví, válka uv
   for (const jmeno of ['Platón', 'Plútarchos', 'Seneca', 'Marcus Aurelius']) await expect(skupina(page, 'Četli ho a navázali')).toContainText(jmeno);
   await expect(skupina(page, 'Znali se a přeli se')).toHaveCount(0);
 
-  // Dvě myšlenky z různých disciplín, karta u věcí, Kam dál jmenuje cestu 2 bez odkazu.
+  // Dvě myšlenky z různých disciplín, karta u věcí, Kam dál vede na cestu 2.
   await expect(page.locator('.myslenka__nad')).toHaveText([/1 · Metafyzika/, /2 · Argumentace/]);
   await expect(page.locator('#zkus-to-zit')).toContainText('Třeba strunu na kytaře, stan se šňůrami nebo napnutou síť na hřišti.');
   await expect(page.locator('#zkus-to-zit')).not.toContainText(/hádk|přátel|rodin|spolužá/i);
   const kamDal = page.getByRole('navigation', { name: 'Kam dál' });
-  await expect(kamDal.locator('.polozka--ceka')).toHaveText(/Cesta 2 · připravujeme\s*Jsem pořád tentýž, když se měním\?/);
-  await expect(kamDal.getByRole('link')).toHaveText([/Profil\s*Parmenidés/, /Portrét\s*Platón/, /Velká otázka 6\s*Co je skutečné\?/]);
+  await expect(kamDal.locator('.polozka--ceka')).toHaveCount(0);
+  await expect(kamDal.getByRole('link')).toHaveText([/Cesta 2\s*Jsem pořád tentýž, když se měním\?/, /Profil\s*Parmenidés/, /Portrét\s*Platón/, /Velká otázka 6\s*Co je skutečné\?/]);
+  await expect(kamDal.getByRole('link').first()).toHaveAttribute('href', '/cesta/jsem-porad-tentyz-kdyz-se-menim/');
   await expect(page.locator('[id="kdo-herakleitos-parmenides-poradi"]')).toContainText('Hérakleitos, nebo Parmenidés?');
 });
 
@@ -236,8 +237,9 @@ test('Parmenidés: text drží pravidla celku (mluví bohyně, dvojí čtení, �
   await expect(page.locator('#zkus-to-zit')).toContainText('Nikdo tu není. Žádné nové zprávy. Žádný signál.');
   await expect(page.locator('#zkus-to-zit')).not.toContainText(/nic mi není|Nic se nestalo|spolužá|kamarád/i);
   const kamDal = page.getByRole('navigation', { name: 'Kam dál' });
-  await expect(kamDal.locator('.polozka--ceka')).toHaveText(/Cesta 2 · připravujeme\s*Jsem pořád tentýž, když se měním\?/);
-  await expect(kamDal.getByRole('link')).toHaveText([/Profil\s*Hérakleitos/, /Velká otázka 6\s*Co je skutečné\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(kamDal.locator('.polozka--ceka')).toHaveCount(0);
+  await expect(kamDal.getByRole('link')).toHaveText([/Cesta 2\s*Jsem pořád tentýž, když se měním\?/, /Profil\s*Hérakleitos/, /Velká otázka 6\s*Co je skutečné\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(kamDal.getByRole('link').first()).toHaveAttribute('href', '/cesta/jsem-porad-tentyz-kdyz-se-menim/');
   await expect(page.locator('#zmena-pod-lupou').getByRole('link', { name: 'Co je skutečné?' })).toHaveAttribute('href', '/otazka/co-je-skutecne/');
 });
 
