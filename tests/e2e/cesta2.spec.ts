@@ -169,7 +169,7 @@ test('cesta 2: průchod s odpověďmi na telefonu, Spor, závěr Na začátku ×
   // Na telefonu čte student Seneku celého před Plútarchem; odpověď na dlužníka proto stojí u Seneky.
   const poradi = await argumenty.evaluate((a) => {
     const t = a.textContent!.replace(/\u00a0/g, ' ');
-    return [t.indexOf('O dlužníkovi Seneca nepíše.'), t.indexOf('Člověk je jedna souvislá věc, jako živý tvor.'), t.indexOf('Seneca by mohl namítnout')];
+    return [t.indexOf('O dlužníkovi Seneca nepíše.'), t.indexOf('Člověk je jako každý živý tvor jedna souvislá věc.'), t.indexOf('Seneca by mohl namítnout')];
   });
   expect(poradi[0]).toBeGreaterThan(-1);
   expect(poradi[0]).toBeLessThan(poradi[1]);
@@ -245,7 +245,7 @@ test('cesta 2 bez odkrytí bloků: lišta vede až na konec, text drží souvisl
     ['Mezi těmi tábory teď stojí i loď z prvního kroku.', 'Po posledním prknu z ní nezůstalo ani dřevo', 'Co se změnilo, není stejné jako dřív. Jestli je to totéž, je otázka téhle cesty.'],
     ['Kolik prken vyměnili, neříká.', 'Teď jsou tedy lodě dvě.'],
     ['U člověka na téže otázce záleží víc.', 'Kde tedy dělá chybu? A dělá ji vůbec?'],
-    ['Dva z nich z ní vyvodili opak a oba psali o člověku.', 'Postav se mezi ně dřív, než si přečteš jejich důvody.'],
+    ['Dva z nich z ní vyvodili opačné závěry a oba psali o člověku.', 'Postav se mezi ně dřív, než si přečteš jejich důvody.'],
     ['něco se v těle mění za dny, něco za roky a něco vůbec', 'Žádnou z nich cesta nevyvrátila a každou někdo hájil.', 'Třetí odpověď má Diotima v Platónově Symposiu: tentýž, a přitom ne stejný.', 'Tu otázku otevřeli až o dva tisíce let později Locke a Hume.', 'Vrať se ke svému tahu z kroku 1.'],
   ];
   await page.goto(`${CESTA2}1/`);
