@@ -644,3 +644,21 @@ Otevřené zůstalo nebo přibylo:
 | Kontrola fokusu skriptem | `scripts/kontrola-fokus.mjs` hlásí pole prvního názoru na stránce otázky 5 (390 px) a pole pravidla v posledním kroku (1440 px) pod lištou. Skutečným tabulátorem na výškách 844, 900 a 920 px je pole vždy nad lištou; skript volá `focus()`, na které se dorovnání nevztahuje. Totéž hlásí u cest 4 a 8. | Revize: skutečný tabulátor; případně skript naučit rozdíl. |
 | Vynechané citáty a místa | Jako citát nezazněly `symposion-207e` a `symposion-208a`, `politika-1276b-sbor`, `seneca-ep-58-23`, `de-sera-559-zmeny`, `-jeden` a `-reka` (jsou v argumentech Sporu nepřímo), `comm-not-1083-dvoji`, `hovory-x-7`, `de-e-392d-otazka`, `de-e-392a-jsi`, `herakleitos-b49a`, `metafyzika-1010a-kratylos`, `lucretius-iii-847`. Nagelova námitka z cesty 8 v cestě 2 není; odkaz na cestu 8 je jen u Senekova závěru. | K dispozici revizi. |
 | Obraz Parmenida | Řádek s odkazem na Wikimedia Commons zůstal v zadání P8 prázdný; profil je bez obrazu. | Autor. |
+
+### Po P10 (revize celku 7)
+
+10. 10. 2026. Vyřízeno z bodů Po P7 a Po P8: Politika III, 3 čtena řecky (1276a8–b15; věta o řekách stojí v otázce, rozhoduje ústava, dluhy jsou „jiná otázka“); Faidros 227a a 229b–c („za hradby“, báj o Boreovi u Ilíssu) potvrzen; Marcus Aurelius XII, 4 řecky a začátek v Longově anglickém překladu; linka 116 123 na vlastním webu; smlouva z roku 1963 (vyhláška č. 90/1963 Sb.: ovzduší, kosmický prostor, pod vodou; podzemní ne); vzorek pokusu s lístky opraven v podkladovém listu i u pramene; „jako jediná z vět o řece má jeho jazyk“ odpovídá heslu Stanfordské encyklopedie (B49a je podle něj atticky, ne Hérakleitovým nářečím, a jen B12 má „jazykovou hustotu“ jeho vět); Kólótova výčitka je u Plútarcha doslova (1113f–1114a: řekl, že všechno je jedno, a tím nám znemožnil žít); „druhá půlka básně“ přepsána; místo Metafyzika 987a32 v listu pro učitele potvrzeno řecky; kontrola fokusu (chyba skriptu, opraven); hlasy Parmenida na stránkách otázek 6 a 7 přečteny vedle profilu (drží první čtení, profil přidává druhé).
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Poslední prkno | Hobbes (Concerning Body II, 11, 7) má výslovně „after all the Planks were changed“; kresba, design a rozhodnutí z 10. 10. říkají, že ten krok je náš. | Nález 4 revize; list pro učitele už to má. |
+| Zlomek B12 a „titíž“ | Heslo Stanfordské encyklopedie uvádí čtení, podle kterého se „týchž“ vztahuje k těm, kdo vstupují (odkaz na Ch. Kahna 1979); Kahna jsem nečetl. | Nález 3; ve studentském textu jen „čtou její čtenáři každý jinak“. |
+| Etika Nikomachova IX, 9 | 1169b33–1170a4 čteno jen anglicky (Rackham, Perseus). | Při doplnění pramene k hlasu Aristotela to uvést (nález 7). |
+| Publikované české překlady | Dál neviděny; Marcus XII, 4 srovnán jen s Longem. | Před vydáním srovnat hlavně B12, B51, Parmenidovy verše a Marca XII, 3–4. |
+| Kratylos 439d–440b v profilu Hérakleita | V P10 znovu nečteno; znění odpovídá podkladům z P6. | Nic; nezesilovat. |
+| Hlavička profilu s mnoha otázkami | Aristotelés a Epikúros mají na telefonu sedm tlačítek nad deskou. | Nález 6; rozhodne autor. |
+| Kdo žil dřív? a „asi“ | Věta o věku píše rok úmrtí bez „asi“ i u přibližného roku (`bloky.ts:462`). | Nález 10; týká se všech dvojic s přibližnými roky. |
+| Karta v Mapě a čase: „Otevřít portrét“ u profilu | Bod z Po P7; v P10 jsem tlačítko nečetl. | Ověřit při opravách, případně sjednotit slovo. |
+| Poradna Vigvam v listu k celku 6 | Překlep v čísle a věta o uvolnění služeb trvají i 10. 10. 2026. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
+| Obraz vstupu | Na telefonu vládne obrazu ucho číše; náhled užšího výřezu je v `Claude outputs/revize-celek-7/`. | Autor. |
+

@@ -123,3 +123,67 @@ Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej
 ```
 
 Provedeno 10. 10. 2026. Autor poslal zadání s řádkem o obrazu Parmenida prázdným (profil zůstal bez obrazu). Stav, odchylky a zadání P10 jsou v `docs/plany/celek-7.md` (Po P8).
+
+## P10: Revize celku 7
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Revize čte celek o tom, kdo jsem, očima studentů, kterých se změna bolestně týká, a v každé větě hlídá, kdo co napsal o věci a kdo o člověku; na menším modelu ani s nižším úsilím bych ji nepouštěl. Zadání počítá s úsporným čtením a s tím, že se nálezy průběžně neschvalují.
+
+První řádky zadání jsou místo pro tvoje odpovědi na body z oddílu „Po P8 › Co čeká na autora“. Co necháš prázdné, bere revize jako otevřené a dá k tomu doporučení.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-7. Profily Hérakleita a Parmenida, cesta 2, kresba Loď po prknech a stránka otázky 5 jsou v ní hotové a commitnuté.
+
+Co jsem rozhodl po P8 (prázdné = otevřené, chci doporučení):
+- Kresba Loď po prknech (viděl jsem ji): 
+- Seneca a Plútarchos jako filozofové cesty v datech: 
+- Návrat bez studie z roku 2013: 
+- Délka 34 minut a dlouhý krok 7 (nechat / rozdělit na dva kroky): 
+- Obraz vstupu (výřez a popisek) a obraz Parmenida: 
+- Poradna Vigvam v listu pro učitele: 
+
+Udělej revizi celku 7 podle skillu atlas-revize. Do celku patří:
+- profily Hérakleita a Parmenida (src/content/osobnosti/herakleitos.mdx, parmenides.mdx, bloky herakleitos-*.yaml a parmenides-*.yaml);
+- cesta 2 „Jsem pořád tentýž, když se měním?“ (přehled, sedm kroků, bloky cesta2-*.yaml, Odkryj v krocích 2 a 5, případ pro Návrat);
+- kresba Loď po prknech v kroku 4 (src/lib/lod.ts, src/components/ostrovy/Lod.svelte);
+- stránka velké otázky 5 „Kdo vlastně jsem?“ (src/content/otazky/kdo-vlastne-jsem.mdx);
+- list pro učitele ucitel/celek-7.md;
+- propojení: hlavičky a Kam dál obou profilů, přehled otázek, Lidé, Domů, dílna bloků; nové vstupy u Sókrata, Platóna, Aristotela, Epikúra, Epiktéta a Marca Aurelia (hlasy otázky 5); Doba a lidé u Sókrata, Aristotela, Seneky a Marca Aurelia (vztahy z P7); stránky otázek 6 a 7 (Parmenidés s odkazem na profil).
+
+Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md, docs/pouceni.md;
+- v docs/plany/celek-7.md tabulku stavu a oddíly „Po P7“ a „Po P8“;
+- docs/podklady/celek-7-jsem-porad-tentyz.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (Citlivá místa celá a pozorně; Tvrzení: Hérakleitos; Tvrzení: Parmenidés; Tvrzení: cesta 2; Velká otázka 5; Citáty), ne celý list naráz;
+- z docs/podklady/k-overeni.md části Po P6, Po P7 a Po P8 celku 7; z docs/rozhodnuti.md záznamy z 9. a 10. 10. 2026 k celku 7;
+- v docs/design.md oddíly Cesta, Velká otázka, Spor a z Komponent Kresbu s pohybem (jen Rám a Loď po prknech);
+- jako vzor záznamu jen začátek docs/revize/celek-6-2026-10-09.md (formát a hloubka nálezů).
+Podklady a obsah celků 1 až 6 jinak nečti; z portrétů Sókrata, Platóna, Aristotela a Seneky a z cesty 8 jen místa, na která celek 7 odkazuje.
+
+Na co se dívej zvlášť:
+
+1. Student, kterého se změna bolestně týká. Projdi profily, cestu a stránku otázky pětkrát, očima pěti studentů z podkladů (Citlivá místa): kdo se mění tak, že to bolí (tělo, nemoc, úraz, příjem potravy); kdo řeší svou genderovou identitu nebo orientaci; komu se změnil blízký (demence, závislost, těžká nemoc); kdo je po ztrátě nebo traumatu; adopce, stěhování, dvojí domov a jazyk. Čti první obrazovku každého kroku a kapitoly na telefonu, všechny zpětné vazby (i zavřené „Co kdybys zvolil jinak?“), texty pod kresbou, obě karty Zkus to žít profilů i kartu cesty a Návrat. Nikde se slovo „pravý“ nepojí s člověkem, nikde „to přejde“, nikde pole na psaní o vlastní změně, nikde nemoc, demence, závislost nebo úraz jako příklad, nikde věta, která tělem pohrdá. Zvlášť: krok 6 (Senekův závěr o těle a strachu ze smrti: stojí otázka a Plútarchova odpověď na téže obrazovce? co čte student po ztrátě?), krok 5 (host a dlužník), krok 7 (buňky nejsou o tom, kým kdo je), Roztřiď v kroku 3 a stránka otázky 5.
+2. Kdo co napsal o věci a kdo o člověku. Hérakleitovi ani Parmenidovi cesta nevkládá otázku osobní identity. Plútarchos neříká, že vyměnili všechna prkna, nezná druhou loď a neříká, kde loď stála: je z kroku 1, z kroku 4 a z textu pod kresbou jasné, co je jeho, co Hobbesovo a co naše (poslední prkno, přístav)? V básni mluví bohyně; nikde „změnu popírá“ ani „nepopírá“. Paměť a vědomí jako měřítko nikde kromě jedné věty o Lockovi a Humovi.
+3. Znění proti pramenům. Porovnej každou větu s tabulkami podkladů; „asi“ zůstává „asi“. Zvlášť: zlomek B12 a „jsme i nejsme“ jako pozdější podoba; Platónova přetahovaná; Aristotelés v Politice (řeky a obec; v P8 nečteno znovu, přečti 1276a–b) a v Kategoriích; dlužník podle Plútarcha a Epicharmos; Diotima (207d–208b); Seneca Dopis 58, 22–23 a co v něm je o Hérakleitovi; Plútarchos O pozdních trestech 559 a O delfském E 392; stoikové jen „jak o nich píše Plútarchos“; Hobbes.
+4. Čísla kroku 7. Každé číslo o buňkách porovnej s podklady a s oddílem „Jak staré je tvoje tělo“ v listu pro učitele (tam je i místo ve studii). Říká text, co se měřilo a na kom, bez věty o nemocech a bez závěru o tom, kým kdo je? Je „sedm let“ řečeno jako pověra?
+5. Spor na telefonu. Seneca stojí první: odpovídá jen na to, co už zaznělo, nebo námitku uvádí („Plútarchos namítá, že…“)? Poslední slovo má Plútarchos: má na ně Seneca odpověď ve svých argumentech? Je postoj každé strany stejně silný jako její citát? Netvrdí scéna, že jeden četl druhého?
+6. Kresba Loď po prknech. Říká text kroku i text pod kresbou totéž co ona? Je v ní všechno dřevo vyměnitelné? Jsou popisky čitelné na telefonu a nepřekrývají se v žádném stavu (0, 1, 12, 23, 24 v obou pohledech)? Jde posuvník i přepínač klávesnicí, stojí moře při omezeném pohybu a po zastavení? Neprozrazuje kresba odpověď Volby pod sebou?
+7. Kdo dá za pravdu komu. Krok 7 slibuje zastánce každé ze čtyř odpovědí z kroku 1: projdi je jednu po druhé. Je zastánce jiný myslitel než Hérakleitos a Parmenidés? Najde ho i student, který v kroku 4 zvolil „žádná“ nebo „obě“? Řekne krok, že souhlasit student nemusí?
+8. Stránka otázky 5. Pozná se každý ze sedmi hlasů a nezmenšuje se, čím se liší? Má odpověď nejvýš dvě věty? Výklad každého hlasu ověř v tomtéž díle a místě jako citát (Faidros 229b–230a kvůli „procházce za město“; Marcus Aurelius XII, 3–4 v publikovaném překladu; Epiktétos II, 10 bez § 7 a § 17; Aristotelés 1166a bez pokračování o špatných lidech). Stojí vedle hlasů „nejsi své tělo“ hlas, pro který tělo k člověku patří? Neříká stránka nikomu, kdo je? Je úvodní případ jiného druhu než případy cesty a Návrat?
+9. Opakování. Tentýž citát a tentýž doložený detail nejvýš dvakrát v celku (seznamy jsou v oddílech Po P7 a Po P8): B12 dvakrát, věta „jestli jeden o druhém věděl, nevíme“ dvakrát a jen v profilech, banán jen v profilu. Projdi profily, cestu a stránku otázky za sebou, jak je projde student. Co profily vyprávějí (kostky, Hermodóros, dvě znění, Kratylos, luk, brána, věty o ničem), cesta neopakuje.
+10. Každá kombinace. Čtyři možnosti každé ze tří Voleb cesty, šest vět ve třech koších, oba Odkryj, Spor z obou stran, tři odpovědi Návratu, závěr „Na začátku × Teď“ s panelem i bez něj; bloky obou profilů (dva Roztřiď, dvě Změň jednu věc, Volba, Odkryj, dvakrát Kdo žil dřív?).
+11. Co se skládá z dat. Hlavičky osmi stránek (Hérakleitos, Parmenidés a šest hlasů), Doba a lidé, karty v Lidech, bod cesty na mapě (Efesos kolem roku 500 př. n. l.), Kam dál, řádek cesty u otázky 5 v přehledu, Domů, dílna bloků. Aristotelés má šest tlačítek otázek: vypadá hlavička na telefonu dobře?
+12. List pro učitele. Je v něm všechno, co studentský text vynechává, i s důvodem? Odpovídá cestě (čísla kroků, znění)? Studie z roku 2013: vzorek pokusu s lístky podle studie, ne podle podkladů (viz k-overeni.md, Po P8); oprav i podkladový list a poznámku u pramene. Čísla linek ověř znovu na jejich webech, 116 123 poprvé; větu o smlouvě z roku 1963 ověř, nebo navrhni škrtnout. Ověř, že soubor není v sestaveném webu.
+13. Fokus z klávesnice. scripts/kontrola-fokus.mjs hlásí pole prvního názoru na stránce otázky 5 (390 px) a pole pravidla v kroku 7 (1440 px) pod lištou. Zkus skutečný tabulátor na výškách 844, 900 a 920 px a řekni, jestli je to chyba stránky, nebo skriptu.
+14. Délka. Cesta má na štítku 34 minut (node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim). Řekni, co je v ní dvakrát a jestli krok 7 unese všechno, co nese; nezkracuj.
+15. Strojový text. Všechny studentské texty celku přečti ještě jednou jen podle oddílu „Ať text nezní jako stroj“.
+
+Otevřené body, ke kterým chci doporučení, pokud jsem je výš nevyplnil: Seneca a Plútarchos v poli filozofove; Návrat bez studie; rozdělení kroku 7; přístav jako náš obraz; popisek obrazu vstupu; nepoužité citáty z podkladů (seznam v k-overeni.md, Po P8).
+Rozhodnuté, neotvírej: sedm hlasů s Epiktétem a Plútarchos v rezervě; kresba s pohybem ano; nové osoby do dat ne (Hobbes, Locke, Hume, Epicharmos, Diotima a Kratylos bez odkazu); řádek s pomocí do studentského textu nepatří; Hérakleitova smrt se nevypráví; kletba nad Efesem v úvodu profilu; Zénónovy paradoxy mimo celek.
+
+Drobnosti oprav rovnou (překlep, sazba, věta přes 25 slov, test, který hlídá opravenou větu). Zásadní nálezy neopravuj: seřaď je podle dopadu, ke každému napiš návrh opravy a zapiš je do docs/revize/celek-7-<datum>.md. Řekni verdikt: schválit / po opravách / přepracovat.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně). Snímky cesty a stránky otázky na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs, scripts/snimky-listy.mjs) a kresby (scripts/snimky-prvek.mjs) si prohlédni.
+
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-7.md oddíl „Po P10“ (verdikt, nálezy, co jsi opravil, co čeká na mě) a připrav tam zadání oprav s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-7.md, nová poučení připiš jednou větou do docs/pouceni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš verdikt, nálezy seřazené podle dopadu a co čeká na mé rozhodnutí.
+```
+
+Provedeno 10. 10. 2026. Autor zadání poslal s prázdnými řádky odpovědí; revize proto vzala všech šest bodů jako otevřené a dala k nim doporučení (záznam `docs/revize/celek-7-2026-10-10.md`, oddíl Doporučení k otevřeným bodům). Verdikt: po opravách; stav je v plánu větve (Po P10).

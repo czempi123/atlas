@@ -4,6 +4,16 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 10. 10. 2026: Revize celku 7 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Verdikt revize je „po opravách“: šest důležitých a čtyři drobné nálezy, žádný blokující. Záznam je v `docs/revize/celek-7-2026-10-10.md` | Skill `atlas-revize`; autor nálezy teprve schválí |
+| Nezlomitelné mezery v textu pod kresbou doplňuje rám `Kresba.svelte`, ne jednotlivé kresby | Text jde z JavaScriptu a plugin pro MDX ho nevidí; rám to spraví pro všech deset kreseb naráz |
+| `scripts/kontrola-fokus.mjs` před fokusem ohlásí stránce klávesu a počká na dorovnání; odkaz „Přeskočit na obsah“ přes hlavičku nehlásí | Stránka dorovnává prvek nad lištu jen po fokusu z klávesnice; skutečný tabulátor na šesti rozměrech okna nenašel nic |
+| Drobné opravy znění (třináct, seznam v záznamu) šly do větve bez schvalování; nálezy, které mění význam, strukturu nebo rozhraní, čekají | Zadání P10 |
+| Podkladový list a poznámka u pramene `quoidbach-2013` mají vzorek pokusu s lístky podle studie (170 dospělých z Amazon Mechanical Turk, koncert „příští týden“) | Plný text studie; bod z `k-overeni.md` (Po P8) |
+
 ## 10. 10. 2026: Cesta 2, kresba lodi a stránka otázky 5 (P8)
 
 | Rozhodnutí | Důvod |

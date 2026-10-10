@@ -17,6 +17,9 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Co si filozof myslel („úplně jistý si nebyl“), je domněnka. Piš, co stojí v textu: „jeho výklad s tím na třech místech neladí“.
 - Zájmeno za větou se dvěma muži čte student obráceně („Pohádají se. Přátelé ho vyvedou“). Jméno zopakuj, i když mělo zaznít jen jednou.
 - Graf nebo kresba, která ukazuje jen směr, nenese jméno měřené věci („Jeden účastník“). Pojmenuj tvar („rychlý průběh“) a text pod ní řekne, odkud ten tvar je.
+- Krok, který podle nás „přidáváme“ k prameni, hledej i u pozdějšího autora, kterého celek cituje: poslední prkno Théseovy lodi má výslovně Hobbes („after all the Planks were changed“), ne my.
+- Záporné tvrzení o zlomku („o člověku v něm není nic“) čti proti jeho vlastním slovům a proti témuž heslu celému: B12 začíná těmi, kdo do řek vstupují.
+- Úvod cesty netvrdí dějinné pořadí, které je jen pořadím kroků („k člověku se dostali až potom“).
 
 ## Bloky
 
@@ -58,6 +61,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Argument o konci vnímání piš souměrně („nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“): „nezbude nikdo, komu by mohlo být zle“ a „nebude to bolet“ čte student, kterému je zle, jako úlevu.
 - Stupňování v citátu („čím šťastnější, tím víc“, „nejvíc stojí za to žít“) čti i obráceně: je to totéž srovnání šťastných s nešťastnými, jen schované u autority.
 - Úvodní obraz kapitoly nestav na most nad řekou: stejnou myšlenku unese břeh. A Roztřiď o tom, „co není“, nemá vlastní kartu: student po ztrátě by do ní napsal člověka.
+- Celek 7: citát, který soudí dvě věci (tělo a strach ze smrti), dostane otázku ke každé z nich. A otázka bloku za případem, ze kterého podle textu „nic neplyne“, se neptá, co si z něj student vezme.
 
 ## Co se skládá z dat
 
@@ -70,6 +74,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Když se změní atribut nebo výklad osobnosti, přečti i `kdo` a `proc` v `lide.yaml`. Ukazuje je karta v Mapě a čase a stará věta tam přežije („ctnost je střed mezi dvěma krajnostmi“).
 - Nový profil udělá ze jména hlasu na stránkách otázek odkaz: `otazka.spec.ts` drží přesný seznam odkazů u hlasů a spadne, dokud v něm nové jméno není.
 - Nový hlas přidá otázku do hlavičky profilu každého myslitele, který na stránce mluví: testy vstupů (`otazka.spec.ts`, `platon.spec.ts`) drží přesné seznamy i počet tlačítek otázek. Skutečné hlavičky si po sestavení vypiš z `dist/` a seznamy uprav podle nich.
+- Další hlas přidá tlačítko do hlavičky profilu: od pěti otázek výš si hlavičku vyfoť na telefonu, deska a první odstavec nesmějí spadnout pod první obrazovku.
 
 ## Technika
 
@@ -82,3 +87,5 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Prvek s fokusem z klávesnice zůstane pod pevnou lištou, když leží ve viditelné části okna: prohlížeč stránku neposune a `scroll-padding` to nespraví. Dorovnává to základní rozvržení. Při revizi zkoušej skutečným tabulátorem na dvou výškách okna a skriptem `scripts/kontrola-fokus.mjs`.
 - Studentské věty hlídají testy přesným zněním. Než opravíš větu, najdi ji v `tests/` (`grep -rn`) a test uprav v tomtéž commitu. Věta s jednopísmennou předložkou má v sestavené stránce nezlomitelnou mezeru: `toContainText` ji snese, `textContent.includes` ne. Výpis nezkracuj: průchod cesty bez odkrytí hlídá věty každého kroku až na konci souboru (`cesta8.spec.ts:314`).
 - Příkaz poslaný na autorův Mac musí skončit do minuty. `npm test` a sestavení pouštěj na pozadí s výstupem do souboru a na výsledek se ptej zvlášť.
+- Text, který skládá JavaScript (popis pod kresbou), plugin pro nezlomitelné mezery nevidí: doplňuje je rám `Kresba.svelte`. Vzor v testu, který začíná `^`, proto píše za jednopísmennou předložkou `\s`.
+- `scripts/kontrola-fokus.mjs` ohlásí stránce klávesu sám (stránka dorovnává jen po fokusu z klávesnice): pole pod lištou, které hlásí, už není planý poplach.
