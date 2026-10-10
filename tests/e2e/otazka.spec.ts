@@ -224,7 +224,7 @@ test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehl
   // Hlavička profilu: cesta jako první a nejvýraznější vstup, nad kapitolami; otázka její cesty před ostatními.
   await page.goto('/osobnost/epikuros/');
   const vstupy = page.getByRole('navigation', { name: 'Cesty a otázky, kde potkáš Epikúra' });
-  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Cesta 8 · 9 kroků · asi \d+ minut\s*Proč se bát smrti\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Cesta 8 · 9 kroků · asi \d+ minut\s*Proč se bát smrti\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 5\s*Kdo vlastně jsem\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
   await expect(vstupy.getByRole('link').first()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
   const cesta = (await vstupy.getByRole('link').first().boundingBox())!;
   const kapitoly = (await page.getByRole('navigation', { name: 'Obsah při čtení' }).boundingBox())!;
@@ -240,7 +240,7 @@ test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehl
   await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 6[\s\S]*Kolik je dost\?/, /Velká otázka 1\s*Jak mám žít\?/]);
   await page.goto('/osobnost/sokrates/');
   // Sókratés je filozofem dvou cest: cesty 1 a cesty 4, kde stojí ve Sporu proti Aristotelovi.
-  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 1[\s\S]*Kdy mám dobrý důvod věřit\?/, /Cesta 4[\s\S]*Stačí vědět, co je správné\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 1[\s\S]*Kdy mám dobrý důvod věřit\?/, /Cesta 4[\s\S]*Stačí vědět, co je správné\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/, /Velká otázka 5\s*Kdo vlastně jsem\?/]);
 
   // Přehled otázek: u otázky stojí cesty, které k ní vedou, i když otázka ještě nemá vlastní stránku.
   await page.goto('/otazky/');
@@ -268,8 +268,8 @@ test('vstupy v hlavičce profilu: tlačítka otázek jsou na telefonu stejně vy
   await page.evaluate(() => document.fonts.ready);
   // Kratší otázka zůstávala na jednom řádku s nadtitulkem, delší se zalomila: dvě tlačítka pod sebou vypadala každé jinak.
   const vysky = await page.locator('.vstup--otazka').evaluateAll((e) => e.map((x) => Math.round(x.getBoundingClientRect().height)));
-  // Epikúros je hlasem čtyř otázek (1, 3, 4 a 7).
-  expect(vysky).toHaveLength(4);
+  // Epikúros je hlasem pěti otázek (1, 3, 4, 5 a 7).
+  expect(vysky).toHaveLength(5);
   expect(new Set(vysky).size).toBe(1);
 });
 
@@ -395,7 +395,7 @@ test('portréty Epiktéta a Marca Aurelia vedou na cestu 5 a na stránku otázky
   await expect(karta).toHaveAttribute('href', '/cesta/co-mam-ve-svych-rukou/');
   await expect(karta).toContainText('Pokračuj cestou');
   await expect(page.locator('.cesta-karta')).toHaveCount(1);
-  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 5[\s\S]*Co mám ve svých rukou\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 3\s*Má život smysl\?/]);
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 5[\s\S]*Co mám ve svých rukou\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 5\s*Kdo vlastně jsem\?/]);
   await page.goto('/osobnost/marcus-aurelius/');
   await expect(page.locator('.cesta-karta')).toHaveCount(0);
   // Přehled otázek a Lidé: otázka 4 má vlastní stránku a cestu, oba lidé cestu na kartě.
@@ -473,7 +473,7 @@ test('cesta 8 a otázka 3 jsou dosažitelné z profilů Seneky a Epikúra, z př
   await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 8 · 9 kroků · asi \d+ minut\s*Proč se bát smrti\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 1\s*Jak mám žít\?/]);
   await expect(page.locator('.vstupy-osoby a').first()).toHaveAttribute('href', '/cesta/proc-se-bat-smrti/');
   await page.goto('/osobnost/epikuros/');
-  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 6[\s\S]*Kolik je dost\?/, /Cesta 8[\s\S]*Proč se bát smrti\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  await expect(page.locator('.vstupy-osoby a')).toHaveText([/Cesta 6[\s\S]*Kolik je dost\?/, /Cesta 8[\s\S]*Proč se bát smrti\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 5\s*Kdo vlastně jsem\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
   await page.goto('/otazky/');
   await expect(page.locator('#ma-zivot-smysl .cesta')).toHaveText(/Cesta 8\s*Proč se bát smrti\?/);
   await expect(page.locator('#ma-zivot-smysl a[href="/otazka/ma-zivot-smysl/"]')).toHaveCount(1);
