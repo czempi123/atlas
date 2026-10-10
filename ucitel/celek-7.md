@@ -1,6 +1,6 @@
 # Pro učitele: celek 7 „Jsem pořád tentýž, když se měním?“
 
-Podklady pro toho, kdo s celkem pracuje ve třídě. Zatím pokrývají profily Hérakleita a Parmenida; část o cestě 2 „Jsem pořád tentýž, když se měním?“ a o stránce velké otázky 5 „Kdo vlastně jsem?“ přibude, až vzniknou. Studenti tenhle soubor nevidí, web na něj neodkazuje a do sestaveného atlasu se nedostane. Stojí na podkladovém listu `docs/podklady/celek-7-jsem-porad-tentyz.md`, kde je u každého tvrzení pramen; tady je výběr toho, co se hodí vědět před hodinou.
+Podklady pro toho, kdo s celkem pracuje ve třídě: profily Hérakleita a Parmenida, cesta 2 „Jsem pořád tentýž, když se měním?“ a stránka velké otázky 5 „Kdo vlastně jsem?“. Studenti tenhle soubor nevidí, web na něj neodkazuje a do sestaveného atlasu se nedostane. Stojí na podkladovém listu `docs/podklady/celek-7-jsem-porad-tentyz.md`, kde je u každého tvrzení pramen; tady je výběr toho, co se hodí vědět před hodinou.
 
 Oba profily mají společnou potíž: o obou se ve škole říká víc, než prameny nesou. Hérakleitos „řekl, že dvakrát nevstoupíš do téže řeky“ a „že všechno plyne“; Parmenidés „popřel změnu“; a ti dva se „přeli“. Atlas u každé z těch vět říká, co stojí v dochovaném textu a od koho je zbytek. Studentský text to dělá bez výhrad a bez poznámek o pramenech; výhrady jsou tady.
 
@@ -175,6 +175,172 @@ Otázka celku se šestnáctiletých týká víc než kterákoli dosud. Profily s
 - Banán zežloutl, shnil, někdo ho snědl. Kde se změna mění v zánik? Kdo o té hranici rozhoduje?
 - Dva lidé čtou stejnou báseň a jeden v ní najde, že svět není, druhý, že je. Co by museli najít, aby se shodli?
 
-## Co doplní cesta 2 a stránka otázky 5
+## Cesta 2: co Plútarchos o lodi říká a co ne
 
-Théseova loď a co o ní Plútarchos opravdu říká; dlužník z komedií; Seneca a Plútarchos jako dva čtenáři jedné řeky a souvislost jejich vět (tělo a strach ze smrti u Seneky, odplata na potomcích u Plútarcha); studie o stáří buněk; „iluze konce dějin“; hlasy stránky otázky 5 a co z jejich pramenů atlas necituje; kontakty pro studenty, kteří řeší poruchy příjmu potravy, ztrátu nebo svou identitu.
+Cesta se otevírá lodí a první věta zní „Plútarchos vypráví…“. Celé místo (Théseus 23, 1) má tři věty:
+
+> „Loď o třiceti veslech, na které Théseus vyplul s mladými lidmi a šťastně se vrátil, uchovávali Athéňané až do časů Démétria z Faléra. Stará prkna odstraňovali a vsazovali místo nich jiná, pevná. Filozofům se tak ta loď stala sporným příkladem v úvaze o růstu: jedni říkali, že zůstává táž, druzí, že táž nezůstává.“
+
+| Co Plútarchos říká | Co neříká |
+| --- | --- |
+| Loď měla třicet vesel a Athéňané ji uchovávali. | Kde stála. Přístav v cestě a v kresbě je náš obraz. |
+| Vydržela do časů Démétria z Faléra (vládl v Athénách 317–307 př. n. l.; roky jsou z příruček). Cesta proto říká „ještě na konci 4. století př. n. l.“. | Jak dlouho ji měli celkem. Théseus je postava bájí. |
+| Stará prkna odstraňovali a vsazovali nová, pevná. | Že vyměnili všechna. Poslední prkno je krok cesty a text ho tak uvádí („Představ si…“, „Dotáhni to do konce sám“). |
+| Filozofové se o ni přeli v „úvaze o růstu“. | Kteří filozofové to byli a kdy. Cesta je nejmenuje. |
+| | Nic o druhé lodi. Tu přidal až Thomas Hobbes. |
+
+Plútarchos psal kolem roku 100 n. l., asi čtyři sta let po době, do které loď podle něj vydržela. Sám ji neviděl.
+
+**Loď z Délu.** Platón (Faidón 58a–c) píše o lodi, kterou Athéňané každý rok posílali na Délos, a dodává, že je to „jak říkají Athéňané“ ta Théseova. Že jde o tutéž loď, o které mluví Plútarchos, je přirozené čtení; ani jeden z textů to ale výslovně neříká. Cesta proto píše „Athéňané říkali, že právě tuhle loď posílají…“ a víc netvrdí. Scénu vypráví portrét Sókrata (kapitola Soud).
+
+**Druhá loď.** Je z Hobbesova spisu O tělese (II, 11, 7; anglicky 1656, latinsky o rok dřív podle příruček). Hobbes ji užívá jako námitku proti názoru, že o totožnosti rozhoduje tvar: kdyby někdo stará prkna schovával a pak je složil ve stejném pořadí, byly by dvě lodě číselně tytéž, a to je nesmysl. Jeho vlastní odpověď má až poslední krok cesty: záleží na tom, pod jakým jménem se ptáme. Totéž těleso to není, když se látka vyměnila. Táž řeka to je, teče-li z téhož pramene. Tentýž člověk to je, vycházejí-li jeho činy a myšlenky z téhož počátku. A loď je podle něj jméno pro látku určitého tvaru: po výměně všeho je jiná, po výměně části zčásti táž a zčásti ne. Hobbes tedy odpovídá na loď jinak než na člověka; stojí za to nechat studenty, ať si toho všimnou sami.
+
+**Kresba „Loď po prknech“.** Pramen je v ní jen výměna prken. Počet prken (čtyřiadvacet), jejich tvar, pořadí výměny i to, že se vymění všechna, je model; text pod kresbou to říká. Kresba se neptá, která loď je „pravá“, a nikomu neříká, která je Théseova. Nic se neukládá.
+
+**Aristotelés a řeky.** Ve druhém kroku cituje srovnání bloku Aristotelovu Politiku (III, 3, 1276a–b). Aristotelés se tam ptá, kdy je obec táž, a spor, od kterého vychází, je o dluzích: po pádu tyrana nechce nová vláda platit, co si půjčil. Podle Aristotela rozhoduje ústava. Jestli má obec po změně ústavy staré dluhy platit, nechává jako „jinou otázku“. Hodí se to ke kroku 6, kde Plútarchos hájí opak.
+
+## Dlužník: co je z něj doložené
+
+Pátý krok stojí na větě, kterou cesta cituje z Plútarcha (O pozdní odplatě bohů 559b): kdo si kdysi půjčil, teď nedluží, protože se stal jiným, a kdo byl včera pozván na večeři, přichází dnes nepozván.
+
+- **Čí je to věta.** Plútarchova, a nesouhlasí s ní. Podává jí „Epicharmovy věci“, ze kterých podle něj sofistům vyrostla úvaha o růstu (řecky αὐξανόμενος λόγος). Cesta proto říká „zapsal Plútarchos“ a „připisovala se básníku Epicharmovi“.
+- **Co má Epicharmos sám.** Jeho verše cituje Diogenés Laertios (III, 11): přidej k hromádce oblázek, a je to jiný počet; přidej k lokti kus, a není to loket; a lidé rostou a ubývají, takže „i ty a já jsme byli včera jiní a jiní jsme teď“. Dlužník v těch verších není.
+- **Scéna s bitím.** Stanfordská encyklopedie (heslo Material Constitution) připisuje Epicharmovi i pokračování, ve kterém věřitel dlužníka uhodí a hájí se stejně: uhodil přece někdo jiný. Pramen heslo neuvádí; podle literatury je v anonymním komentáři k Platónovu Theaitétu, který podklady neotevřely. Cesta tu scénu nemá. Když ji student zná z internetu, dá se říct právě tohle.
+- **Proč vedle dlužníka stojí host.** Ve třídě může sedět student z rodiny s dluhy nebo exekucí. Vtip míří na vychytralost, ne na chudobu, a cesta k němu nepřidává žádnou dnešní scénku s půjčkou. Otázka bloku jmenuje hosta jako prvního.
+- **Stoikové.** Chrýsippos o úvaze napsal zvláštní spis O rostoucím (Filón, O věčnosti světa 48). Stoickou odpověď (látka teče, jedinec trvá od narození do smrti) známe jen z úst odpůrce, Plútarcha (O obecných pojmech proti stoikům 1083c–e); poslední krok to říká slovy „jak o nich píše Plútarchos“. Chrýsippova hádanka o Diónovi a Theónovi (celý člověk a týž člověk bez nohy) stojí na amputaci, známe ji jen z Filónovy zprávy a její výklad je sporný; do třídy nepatří.
+- **Diotima.** Platón nechává v Symposiu (207d–208b) Sókrata vyprávět, co ho naučila Diotima. Mluví o tom, jak se smrtelné zachovává: tím, že po sobě nechává nové, takové, jaké bylo samo. Cesta ji cituje a nechává stát. Větu, že ani bolesti a strachy nikomu nezůstávají, nerozvádějte na „i tohle tě přejde“: student, kterému je zle, by v tom slyšel slib, který nikdo dát nemůže, nebo zlehčení.
+
+Co cesta vědomě nemá: paměť a vědomí jako měřítko totožnosti. Staří autoři se tak skoro neptali (výjimkou je Lucretius III, 847–851, a ten mluví o době po smrti); atlas to nechává Lockovi a Humovi. Proto v cestě není ani klasický příklad s člověkem, který ztratil paměť nebo se změnil nemocí.
+
+## Seneca a Plútarchos: z čeho jsou jejich věty
+
+Spor v šestém kroku je střet dvou textů, ne dvou lidí. Že by Plútarchos Senekův dopis znal, nevíme a z textu to neplyne: Plútarchos míří výslovně na „Epicharmovy věci“. Cesta proto říká „Plútarchos tu nemíří na Seneku“ a v datech mezi nimi není vztah.
+
+**Seneca, Dopisy Luciliovi 58.** Seneca v dopise vykládá, jak Platón dělil to, co je. Co vidíme a čeho se dotýkáme, mezi skutečně jsoucí nepočítal, protože to teče. Odtud věta o nás (58, 22), Hérakleitova řeka (58, 23) a hned závěr: milujeme věc ze všech nejprchavější, tělo, a bojíme se smrti, ačkoli každý okamžik je smrtí toho, čím jsme byli předtím. Dopis pak vede k tomu, že se mysl má obracet k věčnému (58, 27).
+
+Závěr cesta cituje celý, na přání autora atlasu: bez něj by Senekova strana říkala jen „měníme se“. Stojí za ním tři věci, všechny na téže obrazovce:
+
+1. otázka „Plyne z toho, že se měním, že se nemám čeho bát?“;
+2. věta, že Seneca mluví o strachu z vlastní smrti a že o ztrátě blízkého ta věta neříká nic;
+3. odkaz na cestu 8, kde jsou argumenty o strachu ze smrti i námitky proti nim.
+
+Na co dát pozor:
+
+- **Student, kterému někdo zemřel.** „Každý okamžik je smrtí toho, čím jsme byli“ dělá ze smrti všední věc. Nečtěte tu větu nahlas jako útěchu a neptejte se na ni osobně. Platí zásady z listu k celku 6.
+- **Student, který bojuje s vlastním tělem.** Příloha č. 3 metodického doporučení MŠMT (Poruchy příjmu potravy, H. Papežová) jmenuje mezi riziky „přílišný důraz na vzhled“ a „černobílý pohled na sebe a svět“ a připomíná, že „učitel není terapeut“. Senekovo „tolik milujeme věc ze všech nejprchavější, tělo“ je věta Seneky, ne atlasu. Hned vedle stojí Plútarchos, podle kterého je člověk jeden jako živý tvor, a na stránce otázky 5 Epikúros, podle kterého jsme tělo i duše dohromady. Věty, které tělem pohrdají (Marcus Aurelius II, 2; Epiktétos III, 1, 40), atlas necituje.
+
+**Plútarchos, O pozdní odplatě bohů 558f–559e.** Mluví Plútarchos sám a hájí, že bohové smějí trestat pozdě a že obec smí být volána k odpovědnosti za činy předků. Důvod: obec je jedna souvislá věc jako živý tvor a změnami věku nepřestává být sama sebou. Dělit ji časem na mnoho obcí je podle něj jako dělat z jednoho člověka mnoho lidí; odtud dlužník a host. Sám přitom uznává nejsilnější námitku: věk změní každého z nás víc než celou obec.
+
+Cesta tu souvislost říká jednou větou a citátem a ptá se, jestli totéž platí o městě, o rodině a o jednom člověku. Svým hlasem neříká, že děti mají pykat za rodiče.
+
+- **Kolektivní vina.** Přenesený na dnešek slouží argument větám o vině národů, rodin a menšin. Pomáhá rozlišení, které studenti znají: město, stát nebo firma mají smlouvy a dluhy, které trvají, i když se v nich vystřídali lidé (to je Aristotelova otázka z Politiky). Něco jiného je vinit člověka za to, co udělali jeho předci. Když diskuse sklouzne k tomu, „kdo za co může“ ve třídě, zastavte ji.
+- **Tentýž Plútarchos.** Větu „Nikdo nezůstává a nikdo není jeden; stáváme se mnohými“, kterou cituje poslední krok, napsal taky Plútarchos (O delfském E 392d). Dal ji do úst svému učiteli Ammóniovi. Ammóniova řeč pokračuje větou, že včerejší člověk zemřel do dnešního; tu atlas necituje, říká totéž co Senekův závěr.
+
+## Jak staré je tvoje tělo: studie, tkáně a nemoci
+
+Poslední krok opravuje rčení, že se tělo celé vymění za sedm let. Stojí na čtyřech studiích, které měřily uhlík 14C z jaderných zkoušek v DNA nebo v bílkovinách. Čísla v cestě jsou ověřená v plných textech 10. 10. 2026.
+
+| Co cesta říká | Odkud to je | Mez |
+| --- | --- | --- |
+| Množství 14C v ovzduší se v letech 1955–1963 přibližně zdvojnásobilo; po smlouvě z roku 1963 ho ubývá. | Bhardwaj a kol. 2006, úvod | Smlouva zakázala zkoušky v ovzduší, ne všechny. |
+| Buňky výstelky střeva žijí jen několik dní. | Spalding a kol. 2005 uvádí asi pět dní a přejímá to ze starší práce. | Není to měření těchto studií; cesta proto říká „vědělo se už dřív“. |
+| Sval mezi žebry dvou lidí (37 a 38 let) tvořily buňky průměrně 15,1 roku staré. | Spalding a kol. 2005 | Dva lidé; průměr. |
+| Neurony mozkové kůry jsou staré jako člověk; ostatní buňky kůry se obměňují. | Bhardwaj a kol. 2006 | Sedm lidí; metoda nezachytí podíl nových buněk pod 1 %. |
+| Většina buněk srdečního svalu vydrží celý život (asi 1 % ročně ve dvaceti, 0,3 % v pětasedmdesáti). | Bergmann a kol. 2009 | Výpočet z modelu nad daty, ne přímé měření. Procenta cesta neuvádí. |
+| Bílkoviny v jádru oční čočky vznikají kolem narození a neobměňují se; do té doby se to vědělo jen o zubní sklovině. | Lynnerup a kol. 2008 | Třináct čoček; nepatrná tvorba pokračuje i později. |
+| Většina molekul v buňce se stále obměňuje, výjimkou je DNA. | Spalding a kol. 2005 | Je to předpoklad metody, ne její výsledek. |
+
+Jedno číslo pro celé tělo cesta nemá a mít nemá: studii o celkové obměně buněk (Sender a Milo 2021) podklady v plném textu nezískaly. Nové neurony v hipokampu dospělých jsou sporné a v cestě nejsou.
+
+**Odkud jsou tkáně.** Studentský text to neříká. Ve Stockholmu šlo o tkáně odebrané při soudních pitvách v letech 2003 a 2004 se souhlasem příbuzných (Spalding, Bhardwaj). Studie o mozkové kůře jmenuje příčiny smrti sedmi zařazených lidí; byla to náhlá úmrtí a do třídy ten výčet nepatří. Táž studie zkoumala i mozky pacientů s nádorem, kteří kdysi kvůli vyšetření dostali látku, jež se vestavuje do DNA dělících se buněk. V Kodani šlo o třináct čoček třinácti zemřelých, odebraných při soudních pitvách. U srdcí hlavní text původ tkání neuvádí (je v přílohách, které podklady nečetly); píše jen, že několik zařazených lidí mělo nemoc srdce.
+
+**Co studie říkají o nemocech.** Úvody je zmiňují jako důvod, proč se stáří buněk vyplatí měřit: porušená obměna buněk se spojuje například s depresí a se srdečním selháním (Spalding), nové neurony by mohly nahrazovat buňky ztracené po mrtvici (Bhardwaj) a obnova srdečních buněk dává smysl hledání léčby (Bergmann). Cesta z toho neříká nic. Důvod: ve třídě může sedět student s nemocným srdcem, s nádorem nebo s blízkým, kterému odumírají neurony. Věty jsou proto kladné („většina buněk srdečního svalu ti vydrží celý život“) a nikde nestojí, co se stane, když buňky odumřou.
+
+Případ je o buňkách. O váze, vzhledu ani tvaru těla v něm není slovo a možnosti bloku jsou pravidla o totožnosti, ne věty o studentovi. Jestli o tom, kým kdo je, rozhoduje tělo, případ nechává otevřené; jedna z možností říká výslovně, že ne.
+
+## Lístek na koncert a „iluze konce dějin“
+
+Návrat (případ, který deník nabídne nejdřív tři dny po dokončení cesty) se ptá, kolik by student dnes dal za lístek na koncert své oblíbené kapely za deset let. Studie, ze které otázka pochází, v něm není: Návrat je vymyšlený případ a čísla patří sem.
+
+**Studie.** J. Quoidbach, D. T. Gilbert a T. D. Wilson, The End of History Illusion, Science 339 (2013), 96–98; čteno celé.
+
+- Přes 19 000 lidí ve věku 18–68 let v šesti dílčích studiích, většinou získaných přes web televizního pořadu (v první studii 80 % žen).
+- Jedni měli říct, jak se za posledních deset let změnili, druzí odhadnout, jak se změní za příštích deset. Odhady lidí ve věku *a* se srovnávaly s tím, co o uplynulých deseti letech říkali lidé ve věku *a* + 10. Odhad vyšel v každém věku menší: u povahy, u hodnot i u zálib.
+- **Lístek** (studie 4): 170 dospělých ve věku 18–64 let, získaných přes Amazon Mechanical Turk, 52 % žen. Jedni měli říct, kolik by dnes nejvýš zaplatili za koncert své dnešní oblíbené kapely za deset let (průměr 129 dolarů). Druzí, kolik by dnes zaplatili za koncert kapely, kterou měli nejradši před deseti lety, kdyby hrála příští týden (80 dolarů).
+
+**Meze.**
+
+- Hlavní srovnání je mezi dvěma skupinami různě starých lidí, ne mezi týmiž lidmi po deseti letech. Jen u povahy autoři přiložili cizí data, ve kterých tytéž lidi měřili dvakrát (americká studie MIDUS, 3 808 dospělých, 1995–1996 a 2004–2006): změna, kterou lidé popisovali zpětně, tam odpovídala změřené, odhad dopředu byl menší. Přímo srovnat to nešlo, škály byly jiné.
+- Proč lidé budoucí změnu podceňují, autoři nevědí. Nabízejí dvě domněnky: lidé o sobě rádi smýšlejí dobře a věří, že se znají; a představit si něco nového je těžší než vybavit si staré.
+- Účastníci byli dospělí, většinou ženy, z jedné země a přihlásili se sami. O šestnáctiletých studie neříká nic.
+- Studie měří *odhad*. Neříká, že se kdokoli změní, ani jak.
+
+**Proč je případ tak úzký.** „Lidé se mění víc, než čekají“ je krok od „to tě přejde“. Student, který řeší svou orientaci nebo identitu, tu větu slyší od dospělých často a jako popření. Studentovi, kterému je dobře tak, jak je, zní jako hrozba, a tomu, komu je zle, jako slib. Případ proto zůstává u lístku a ptá se, jestli je ten, kdo ho kupuje, tentýž jako ten, kdo na koncert půjde. Neobracejte ho na konkrétního studenta („ty se taky změníš“). Příklad s odstraňováním tetování, kterým studie začíná, do třídy nenoste.
+
+## Stránka otázky 5: co prameny hlasů říkají a atlas necituje
+
+Stránka „Kdo vlastně jsem?“ má úvodní případ „Kdo tě zná líp?“ a sedm hlasů. Výklad u každého hlasu je ověřený v tomtéž místě, ze kterého je citát. Stránka nikomu neříká, kdo je, a žádný hlas nemluví o „identitě“ ani o „vědomí“: ta slova přinesou až pozdější období (Descartes, Locke, Hume, Buddha).
+
+| Hlas | Místo | Co tam ještě stojí a atlas to necituje |
+| --- | --- | --- |
+| Hérakleitos | zlomek B45 (Diogenés Laertios IX, 7); „hledal jsem sám sebe“ je zlomek B101 (Plútarchos, Proti Kólótovi 1118c) | Diogenés větu uvádí mezi Hérakleitovými naukami bez souvislosti; o kom a proč ji řekl, nevíme. |
+| Sókratés | Platón, Faidros 229e–230a | Sókratés odmítá vykládat staré báje rozumem po jedné: nemá na to čas, dokud nezná sám sebe. Zkoumá, jestli není obluda spletitější než Týfón. Mluví Platónova postava. |
+| Platón | Faidón 115c | Kritón se ptá, jak mají Sókrata pohřbít, a Sókratés odpovídá, že pohřbí jen jeho tělo. Atlas bere větu o tom, kdo „já“ je, a pohřeb vynechává. Je to scéna Sókratova posledního dne; ve třídě se studentem po ztrátě stačí říct, že věta je z rozhovoru, který vypráví portrét Sókrata. |
+| Aristotelés | Etika Nikomachova IX, 4, 1166a | Kapitola je o dobrém člověku a jeho vztahu k sobě. O špatných lidech hned potom říká (1166b), že jsou se sebou v rozporu a vyhýbají se vlastní společnosti; je tam i věta, že ti, kdo spáchali mnoho zločinů, prchají před životem. Hlas z té části nebere nic. Přítel jako „jiný on sám“ je v 1166a31–32. Odpověď hlasu neříká, že tě přítel zná líp než ty; tolik text nenese. |
+| Epikúros | Dopis Hérodotovi (Diogenés Laertios X, 63–66) | Hned potom: když se celek rozpadne, duše se rozptýlí a nevnímá. To je argument cesty 8 a hlas ho neopakuje. |
+| Epiktétos | Rozpravy II, 10, 1–3 | Viz níže. |
+| Marcus Aurelius | Hovory k sobě XII, 3 a 4 | Viz níže. |
+
+**Epiktétos, Rozpravy II, 10.** Kapitola se jmenuje „Jak lze ze jmen najít, co komu přísluší“. Začíná člověkem a občanem světa (to cituje atlas) a pokračuje synem, bratrem, radním, mladým a starým. Dvě místa atlas necituje a učitel o nich má vědět:
+
+- **§ 7:** synovi kapitola ukládá pokládat všechno své za otcovo, ve všem ho poslouchat a nikdy si na něj nikomu nestěžovat. Pro studenta, kterému doma někdo ubližuje, je to věta, která říká „mlč“. Odpověď hlasu proto mluví o jménech, která člověk nese, ne o poslušnosti, a neříká, že role zavazuje.
+- **§ 17:** kapitola užívá hanlivé slovo pro muže, kteří mají poměr s muži, jako příklad toho, kdo „ztratil muže“ v sobě. Když se student k celé kapitole dostane, je namístě říct, že Epiktétos tu mluví předsudkem své doby a že atlas tu větu za jeho myšlenku nevydává.
+
+Stejně je to s místem III, 1, 40 („nejsi maso ani vlasy, ale vůle“), které se často cituje jako osvobodivé: stojí v kázání mladíkovi, který si upravuje vlasy a tělo, a věta před ním zní „nech muže mužem a ženu ženou“. Atlas ho nepoužívá.
+
+**Marcus Aurelius.** Hlas stojí na XII, 3 (skládáš se z těla, dechu a rozumu; o první dvě se máš starat, jen třetí je doopravdy tvoje) a jeho myšlenka připomíná sousední zápis XII, 4: každý má sebe rád víc než ostatní, a přesto si cizího mínění o sobě cení víc než vlastního. V XII, 3 se „máš starat“ o tělo. Jinde Marcus mluví jinak: v II, 2 radí tělem pohrdnout a popisuje ho jako sraženou krev, kůstky a pletivo ze šlach, žil a tepen. Atlas II, 2 necituje. Je to přesně ten druh věty, před kterým varuje příloha č. 3.
+
+**Případ „Kdo tě zná líp?“.** Popis v případu je schválně nevinný (kliďas). Nenahrazujte ho ve třídě nálepkou, která bolí, a nenechte studenty popisovat jeden druhého: ze cvičení by se stalo hodnocení spolužáků. Případ se neptá na původ, rodinu ani tělo. Když student sám přinese, že neví, „odkud je“ (dva domovy, adopce, stěhování, dva jazyky), poděkujte a nevykládejte mu to žádným hlasem ze stránky.
+
+## Když student řekne „už to nejsem já“
+
+Otázka cesty je pro některé studenty víc než hra s lodí: po ztrátě, po úrazu, po těžkém roce, při hledání vlastní identity nebo vedle blízkého, kterého změnila nemoc. Cesta proto nemá žádné pole na psaní o vlastní změně a závěrečná otázka se ptá na pravidlo o věcech. Stát se to přesto může.
+
+- **Neopravujte ho.** Neříkejte „ale jsi“ ani „to přejde“. Nevykládejte mu, co prožívá, řekou, Diotimou ani Senekou; žádná teorie z cesty není diagnóza ani útěcha.
+- **Poděkujte a vraťte se k lodi.** Stačí věta typu: „Díky, že to říkáš. Tohle je těžší než loď.“ Před třídou to nerozvádějte.
+- **Po hodině se zeptejte, jak se má.** Ne co tím myslel. Když mluví o tom, že je mu dlouho zle nebo že si ubližuje, je to věc pro školního psychologa nebo výchovného poradce; příloha č. 8 říká, že krize identity „může vést k depresi, sebepoškozování či dokonce k sebevražednému chování“ a že její řešení patří odborníkům.
+- **„Babička už to není ona.“** Zásady organizace Dementia Australia říkají, že člověk s demencí je především člověk a diagnóza není to, co ho určuje. Mezi výrazy, kterým se má řeč vyhnout, jmenují „ztrácí se nebo mizí“, „prázdná schránka“ a „ztrácíme ho“. Studentovi se dá říct: změnila se, je to pořád člověk a pořád tvoje babička. Neopravujte jeho slova před třídou; doma je nejspíš slyší od dospělých.
+- **Když třída začne řešit konkrétního spolužáka** (jeho tělo, jméno, orientaci, to, „jaký byl dřív“), zastavte to hned. Platí věta z přílohy č. 8 citovaná výše.
+- **Spolužák, který z argumentu udělá zbraň** („takže ty už nejsi ten, kdo mi to slíbil“): to je dlužník z pátého kroku a dá se to tak pojmenovat.
+
+## Třída, kde sedí děti z války: o co se opřít
+
+Oddíl o zlomku B53 výše vznikl bez českého doporučení. Při psaní cesty se jedno našlo a četl jsem ho v plném textu: **Stresové a jiné zátěžové situace u dětí v době válečné krize. Metodická příručka pro pracovníky ve školství** (Národní pedagogický institut ČR, 2022, ISBN 978-80-7578-108-6; text vychází z publikace UNICEF, kterou napsala M. Macksoud, a pro NPI ho upravily M. Štáfková a K. Ježková). Je volně na webu ukrajina.npi.cz.
+
+Co z ní plyne pro hodinu, ve které zazní „Válka je všemu otcem“:
+
+- **Mlčení neznamená, že se nic nestalo.** Příručka píše: „pokud děti o násilí nemluví, neznamená to, že ho nezažily, neviděly.“ V bezpečném prostředí mohou fungovat dobře, „do té doby, než jim náhodný spouštěč (např. film v kině) připomene násilí, kterého byly svědky“. Věta o válce na tabuli může být takový spouštěč. Proto ji student v profilu čte sám a ve svém tempu.
+- **Dospívající jsou zranitelnější, než vypadají.** Příručka o věku 13–16 let říká, že díky schopnosti domýšlet důsledky války jsou „v mnoha ohledech ve vztahu ke stresujícím zážitkům zranitelnější než mladší děti“; dokážou o tom, co se jim stalo, mluvit, „mohou však potřebovat pomoc s otevřeným sdílením svých pocitů“. Běžná je vina za to, že přežili.
+- **Osobní zkušenost nepatří před celou třídu.** Ve třídě, kde je válkou přímo postiženo jen několik dětí, lze podle příručky pro rozhovor o jejich zkušenostech „vyhradit zvláštní čas po vyučování“. Na hodině filozofie se proto nikoho neptejte, jak to vidí „on, když to zažil“.
+- **Obecná diskuse ano.** Příručka učitelům radí podněcovat diskuse o morálních otázkách: co je podle žáků podstatou války, jak si vysvětlují násilí, jaká pravidla platí vůči nepříteli. A dodává: „Zdůrazněte, že je důležité naučit se řešit konflikty bez násilí.“ Otázka profilu (dá se o střetu říct, že drží svět, a neříct tím, že je dobrý?) je takovou diskusí. Student, kterému válka vzala domov, v ní má plné právo říct, že válka nic nedrží.
+- **Struktura pomáhá.** Příručka chce, aby učitel držel ve třídě strukturované prostředí a po rozhovoru pokračoval ve výuce. Po zlomku B53 se dá vrátit k luku a lyře.
+
+Příručka je psaná pro děti přímo zasažené válkou a místy radí víc, než se do hodiny filozofie hodí (kreslení nejhoršího zážitku, sdílení zkušeností s ostřelováním). To patří školnímu psychologovi, ne k Hérakleitovi.
+
+## Kontakty
+
+Ověřeno na webech služeb 10. 10. 2026. Před hodinou si čísla ověřte znovu. Do studentského textu cesty ani stránky otázky řádek s pomocí nepatří: žádné krizové téma neotevírají a řádek by říkal, že přemýšlet o tom, kdo jsem, je nebezpečné.
+
+- **Linka bezpečí 116 111.** Zdarma, nonstop, anonymně, pro děti a studenty do 26 let. Chat na linkabezpeci.cz denně 9–13 a 15–19 hodin; e-mailová poradna odpovídá do tří pracovních dnů.
+- **Centrum Anabell** (poruchy příjmu potravy, pro nemocné i jejich blízké). Linka Anabell 774 467 293: pondělí, středa, čtvrtek a pátek 8–16 hodin, úterý 10–18 hodin. Chat v pondělí a ve středu 17–20 hodin, internetová poradna na anabell.cz. Kontaktní centra v Brně, Praze a Ostravě.
+- **Poradna Vigvam** (děti a rodiny, kterým někdo zemřel). První kontakt 606 160 646 v pracovní dny 8–17 hodin, info@poradna-vigvam.cz. Kontaktní stránka poradny 10. 10. 2026 píše, že o uvolnění služeb bude informovat, a posílá mezitím na krizové linky, na linku Sluchátko a do poradny Cesty domů; počítejte s čekáním. Pod formulářem má na jednom místě číslo 606 160 656, všude jinde 606 160 646.
+- **S barvou ven** (sbarvouven.cz). Online poradna pro ty, kdo řeší svou sexuální orientaci nebo genderovou identitu, a pro jejich rodiče a přátele. Odpovídají mentoři a mentorky, kteří sami prošli coming outem; nejsou to psychologové. Provozuje ji spolek Prague Pride. Web nabízí i podpůrné skupiny vedené psychology.
+- **Linka první psychické pomoci 116 123.** Zdarma, nonstop, pro dospělé (ověřeno pro list k celku 6, dnes jen podle příručky NPI).
+
+## Otázky do hodiny k cestě a ke stránce otázky 5
+
+- Třída, ve které se za čtyři roky vystřídají všichni žáci a polovina učitelů: je to pořád táž třída? Podle čeho?
+- Kapela, ve které nezůstal nikdo z původní sestavy, a kapela původních členů pod jiným jménem. Která z nich je „ta“ kapela? (Je to druhá loď. Držte se kapel, které studenti neznají osobně.)
+- Kdy smíme chtít po městě, firmě nebo státu, aby splnily, co slíbily lidé, kteří tam už nejsou? Platí totéž o rodině?
+- Najděte v běžné řeči tři věty se slovem „stejný“, které znamenají „tentýž“, a tři, které ne.
+- Kdo tě zná líp: ten, kdo tě zná nejdéle, nebo ten, kdo tě zná teď? (O spolužácích obecně, ne o konkrétních lidech ve třídě.)
