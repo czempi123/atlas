@@ -9,9 +9,11 @@ Celek 7: profily Hérakleita a Parmenida, cesta 2 „Jsem pořád tentýž, kdy�
 | P8 | Cesta 2 „Jsem pořád tentýž, když se měním?“, kresba a stránka velké otázky 5 | hotovo 10. 10. 2026 (oddíl Po P8) |
 | P10 | Revize celku | hotovo 10. 10. 2026: po opravách (oddíl Po P10; záznam `docs/revize/celek-7-2026-10-10.md`) |
 | Opravy | Zapracování nálezů revize | hotovo 15. 10. 2026 (oddíl Po opravách; zadání v `docs/archiv/zadani/celek-7.md`) |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 15. 10. 2026: autor celek schválil i s kresbou, větev je sloučená do hlavní větve a hlavní větev je na GitHubu |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-7.md`. Větev `celek-7` je založená z hlavní větve 9. 10. 2026 (commit `7e95762`, po sloučení celku 6).
+**Celek je uzavřený 15. 10. 2026:** schválený autorem, sloučený do hlavní větve a poslaný na GitHub. Tento plán je od té doby v archivu (`docs/archiv/plany/celek-7.md`) a čte se jen na pokyn.
+
+Stav a zadání dalších kroků se zapisovaly sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-7.md`. Větev `celek-7` je založená z hlavní větve 9. 10. 2026 (commit `7e95762`, po sloučení celku 6).
 
 ## Co si celek nese z celků 1 až 6
 
@@ -299,7 +301,9 @@ Zadání oprav je v `docs/archiv/zadani/celek-7.md`. Autor ho poslal s prázdný
 
 **Kontrola.** `npm test` celé prošlo napoprvé: 522 testů dat a 411 v prohlížeči (test „cesta: průchod, Kam dál z bloku…“ nespadl). `scripts/kontrola-fokus.mjs` na přehledu cesty 2, krocích 1, 2, 4, 6, 7 a 8, stránce otázky 5 a profilech Aristotela, Epikúra, Sókrata, Hérakleita, Platóna a Parmenida na 390 i 1440 px: všechno v pořádku. `node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim`: 8 kroků, 4 133 slov, 27,6 minuty čtení a 7,2 minuty ovládání, dohromady 34,7; štítek 35 (dřív 34). Po krocích 280, 527, 745, 323, 503, 706, 424 a 625 slov. Snímky kroků 1–8 s odpověďmi na 390 a 1440 px ve světlém i tmavém režimu, bez odpovědí na 390 px, stránky otázky 5, kresby ve stavech 12 a 24 v obou pohledech a hlaviček Aristotela, Epikúra, Sókrata a Hérakleita jsou v `Claude outputs/opravy-celek-7/` (skript `snimky.sh` tamtéž). Bloky Kdo žil dřív? na deseti profilech čte `scripts/precti-kdo-zil.mjs`.
 
-**Co zbývá do uzavření**
+**Uzavření (15. 10. 2026).** Autor v chatu napsal „Ano, vše schvaluji, můžeme to sloučit na githubu“: schválil opravy, kroky 7 a 8, hlavičku, obraz vstupu i kresbu Loď po prknech. Body 1 a 2 níže jsou tím vyřízené; bod 3 zůstává v `k-overeni.md`.
+
+**Co zbývalo do uzavření**
 
 1. Autor: projít kroky 7 a 8, hlavičku profilu na telefonu a nový obraz vstupu; potvrdit kresbu Loď po prknech, kterou dosud nepotvrdil.
 2. Autor: schválit celek 7. Pak sloučení větve `celek-7` do hlavní a hlavní větev na GitHub, jen na jeho pokyn.

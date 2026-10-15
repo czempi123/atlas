@@ -1,6 +1,6 @@
 # Provedená zadání větve celek-7
 
-Zadání kroků, které už proběhly, v plném znění. Plán větve se stavem po každém kroku je v `docs/plany/celek-7.md`.
+Zadání kroků, které už proběhly, v plném znění. Celek je uzavřený 15. 10. 2026; plán větve se stavem po každém kroku je v `docs/archiv/plany/celek-7.md`.
 
 ## P6: Podklady k celku 7 „Jsem pořád tentýž, když se měním?“
 
