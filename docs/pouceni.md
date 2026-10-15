@@ -17,6 +17,9 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Co si filozof myslel („úplně jistý si nebyl“), je domněnka. Piš, co stojí v textu: „jeho výklad s tím na třech místech neladí“.
 - Zájmeno za větou se dvěma muži čte student obráceně („Pohádají se. Přátelé ho vyvedou“). Jméno zopakuj, i když mělo zaznít jen jednou.
 - Graf nebo kresba, která ukazuje jen směr, nenese jméno měřené věci („Jeden účastník“). Pojmenuj tvar („rychlý průběh“) a text pod ní řekne, odkud ten tvar je.
+- Krok, který podle nás „přidáváme“ k prameni, hledej i u pozdějšího autora, kterého celek cituje: poslední prkno Théseovy lodi má výslovně Hobbes („after all the Planks were changed“), ne my.
+- Záporné tvrzení o zlomku („o člověku v něm není nic“) čti proti jeho vlastním slovům a proti témuž heslu celému: B12 začíná těmi, kdo do řek vstupují.
+- Úvod cesty netvrdí dějinné pořadí, které je jen pořadím kroků („k člověku se dostali až potom“).
 
 ## Bloky
 
@@ -37,12 +40,17 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Úvodní případ stránky otázky je jiného druhu než nový případ cesty.
 - Každý hlas na stránce otázky se pozná a nezmenšuje se to, čím se liší. Odpověď hlasu má nejvýš dvě věty. Výklad u hlasu ověř v tomtéž díle a místě, ze kterého je citát; myšlenka odjinud (Seneca, Dopisy 93, 2 u citátu z Dopisu 61) dostane svůj pramen a jméno autora, ne školy.
 - Když poslední krok slíbí, že každá odpověď má zastánce, projdi možnosti prvního bloku jednu po druhé; shrnutí možností z minulého kroku jmenuje všechny, i tu, kterou volí věřící student.
+- Zastánci v posledním kroku patří i odpovědím z ostatních Voleb cesty, ne jen z první: kdo ve čtvrtém kroku zvolil „obě“ nebo „žádná“, jinak odejde s pocitem, že odpověděl špatně.
+- Nový případ a zastánci odpovědí jsou dva kroky, ne jeden: pod nadpisem případu student zastánce z deníku nenajde (cesta 2, krok 7 a 8).
 - Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec. Spojenec je jiný myslitel: když námitce přitaká jen filozof cesty („to přiznal sám“), promění se v souhlas s ním.
 - Čtyři citáty za sebou student přeskakuje.
 - Citát, který končí obrazem, jemuž se celek vyhýbá (spánek a klid v celku o smrti), dostane v datech kratší podobu s vlastním id; komponenta Citát zkracovat neumí a ruční opis by obešel data.
 - Délka se kvůli délce nekrátí: zvídavý student si přečte víc (rozhodnutí autora).
 - Čas cesty na štítku (`minut`) se počítá: slova, která student opravdu přečte, při 150 za minutu, a k tomu ovládání. Neopisuje se z minulé cesty; počítá ho `node scripts/slova-cesta.mjs <slug>`.
 - Čísla ze studie ověř v plném textu sám, ne přes nástroj, který stránku převypráví: repozitáře mívají vedle PDF i holý text a jde stáhnout z autorova Macu (`curl`). Příklad, který zní jako ze studie („sklenice vody po snídani“), porovnej s tím, co ve studii opravdu stojí.
+- U studie s několika pokusy ověř, ze kterého pokusu číslo je a kdo v něm byl: vzorek celé studie (web televizního pořadu) není vzorek pokusu s lístky (Amazon Mechanical Turk).
+- Návrat nemá prameny ani čísla: studie, ze které si případ půjčuje otázku, patří do listu pro učitele.
+- Filozofové cesty v datech (`filozofove`) jsou ti z katalogu. Strana Sporu, která má vlastní portrét, mezi ně nepatří jen proto, že ve Sporu mluví: její hlavička by novou cestu řadila před tu, která je opravdu její.
 
 ## Student, kterého se téma bolestně týká
 
@@ -54,6 +62,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Argument, který o studentově bolesti nemluví (věta o mrtvém u toho, kdo truchlí), dostane větu, že o něm není, na téže obrazovce.
 - Argument o konci vnímání piš souměrně („nezbude nikdo, kdo by cokoli zakoušel, dobré ani zlé“): „nezbude nikdo, komu by mohlo být zle“ a „nebude to bolet“ čte student, kterému je zle, jako úlevu.
 - Stupňování v citátu („čím šťastnější, tím víc“, „nejvíc stojí za to žít“) čti i obráceně: je to totéž srovnání šťastných s nešťastnými, jen schované u autority.
+- Úvodní obraz kapitoly nestav na most nad řekou: stejnou myšlenku unese břeh. A Roztřiď o tom, „co není“, nemá vlastní kartu: student po ztrátě by do ní napsal člověka.
+- Celek 7: citát, který soudí dvě věci (tělo a strach ze smrti), dostane otázku ke každé z nich. A otázka bloku za případem, ze kterého podle textu „nic neplyne“, se neptá, co si z něj student vezme.
 
 ## Co se skládá z dat
 
@@ -64,6 +74,9 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Text u desky (atribut, popisek) čte student dřív než první kapitolu: nesmí stát na slově, které stránka teprve vyloží (ctnost).
 - Nová cesta a nový hlas mění stránky, které nikdo neotevřel: vstupy v hlavičkách všech jejích filozofů a hlasů, karty v Lidech, počet cest na Domů, počet kreseb v dílně. Celé testy pusť hned po přidání, ne až na konci. Filozof cesty bez vlastní stránky (Lucretius) nesmí na přehledu cesty dostat odkaz.
 - Když se změní atribut nebo výklad osobnosti, přečti i `kdo` a `proc` v `lide.yaml`. Ukazuje je karta v Mapě a čase a stará věta tam přežije („ctnost je střed mezi dvěma krajnostmi“).
+- Nový profil udělá ze jména hlasu na stránkách otázek odkaz: `otazka.spec.ts` drží přesný seznam odkazů u hlasů a spadne, dokud v něm nové jméno není.
+- Nový hlas přidá otázku do hlavičky profilu každého myslitele, který na stránce mluví: testy vstupů (`otazka.spec.ts`, `platon.spec.ts`) drží přesné seznamy i počet tlačítek otázek. Skutečné hlavičky si po sestavení vypiš z `dist/` a seznamy uprav podle nich.
+- Další hlas přidá tlačítko do hlavičky profilu: od pěti otázek výš si hlavičku vyfoť na telefonu, deska a první odstavec nesmějí spadnout pod první obrazovku.
 
 ## Technika
 
@@ -71,8 +84,10 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Tmavý obraz (olejomalba) je v duotónu desky skoro černý: zesvětli ho před uložením a zapiš to k obrázku.
 - Po přidání stránky, bloku nebo změně dat restartuj běžící `npm run dev`. Starý náhled ukáže stránku bez obsahu a odkazy na kotvy nikam nevedou.
 - Playwright před každým během maže `test-results/`. Pracovní skripty patří do `scripts/`, snímky pro autora do `Claude outputs/`.
-- Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`. Dojem z barvy nevznikne z barevného pozadí: chce věci známé barvy ve stejném světle (šaty v cestě 1). Kresbu, která má vyvolat dojem, ukaž autorovi dřív, než ji popíšeš jako hotovou.
+- Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. V kresbě, která tvrdí „vyměnilo se všechno“, nesmí zůstat nic, co vyměnit nejde (stěžeň, vesla): co není součást modelu, do obrazu nepatří. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`. Dojem z barvy nevznikne z barevného pozadí: chce věci známé barvy ve stejném světle (šaty v cestě 1). Kresbu, která má vyvolat dojem, ukaž autorovi dřív, než ji popíšeš jako hotovou.
 - Chromium nevyfotí najednou stránku vyšší než asi 16 000 px; dlouhé stránky foť po částech (`scripts/snimky-listy.mjs`).
 - Prvek s fokusem z klávesnice zůstane pod pevnou lištou, když leží ve viditelné části okna: prohlížeč stránku neposune a `scroll-padding` to nespraví. Dorovnává to základní rozvržení. Při revizi zkoušej skutečným tabulátorem na dvou výškách okna a skriptem `scripts/kontrola-fokus.mjs`.
-- Studentské věty hlídají testy přesným zněním. Než opravíš větu, najdi ji v `tests/` (`grep -rn`) a test uprav v tomtéž commitu.
+- Studentské věty hlídají testy přesným zněním. Než opravíš větu, najdi ji v `tests/` (`grep -rn`) a test uprav v tomtéž commitu. Věta s jednopísmennou předložkou má v sestavené stránce nezlomitelnou mezeru: `toContainText` ji snese, `textContent.includes` ne. Výpis nezkracuj: průchod cesty bez odkrytí hlídá věty každého kroku až na konci souboru (`cesta8.spec.ts:314`).
 - Příkaz poslaný na autorův Mac musí skončit do minuty. `npm test` a sestavení pouštěj na pozadí s výstupem do souboru a na výsledek se ptej zvlášť.
+- Text, který skládá JavaScript (popis pod kresbou), plugin pro nezlomitelné mezery nevidí: doplňuje je rám `Kresba.svelte`. Vzor v testu, který začíná `^`, proto píše za jednopísmennou předložkou `\s`.
+- `scripts/kontrola-fokus.mjs` ohlásí stránce klávesu sám (stránka dorovnává jen po fokusu z klávesnice): pole pod lištou, které hlásí, už není planý poplach.

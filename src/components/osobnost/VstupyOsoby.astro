@@ -1,25 +1,30 @@
 ---
 // Vstupy osobnosti: cesty, ve kterých člověk vystupuje, a velké otázky, na které odpovídá.
-// Stojí hned pod jménem v hlavičce profilu, aby cesta ani otázka nezapadly až na konec stránky.
+// Hlavička profilu je skládá ze dvou částí: cesty stojí hned pod jménem, otázky pod deskou (na telefonu)
+// nebo pod cestou vlevo od desky (od 900 px). Tak cesta nezapadne a otázky neodsunou desku a první
+// odstavec z první obrazovky telefonu (revize celku 7, nález 6: Aristotelés a Epikúros měli sedm tlačítek).
 // Vše se bere z dat (filozofove v přehledu cesty, hlasy na stránce otázky); nic se nepíše ručně.
-// Použití: <VstupyOsoby osoba={osoba} />
+// Použití: <VstupyOsoby osoba={osoba} cast="cesty" /> a <VstupyOsoby osoba={osoba} cast="otazky" />
 import { getCollection } from 'astro:content';
 import Ikona from '../ui/Ikona.astro';
 import { maStranku } from '../../lib/otazky';
 import { vstupyOsoby } from '../../lib/vstupy';
 import type { TOsoba } from '../../lib/schema';
 
-interface Props { osoba: Pick<TOsoba, 'id' | 'jmeno' | 'jmeno2'> }
-const { osoba } = Astro.props;
+interface Props { osoba: Pick<TOsoba, 'id' | 'jmeno' | 'jmeno2'>; cast: 'cesty' | 'otazky' }
+const { osoba, cast } = Astro.props;
 const kroky = await getCollection('kroky');
-const { cesty, otazky } = vstupyOsoby(
+const vse = vstupyOsoby(
   osoba.id,
   (await getCollection('cesty')).map((c) => ({ slug: c.id, ...c.data, kroku: kroky.filter((k) => k.data.cesta === c.id).length })),
   (await getCollection('otazky')).filter((o) => maStranku(o.data)).map((o) => ({ slug: o.id, ...o.data })),
 );
+const cesty = cast === 'cesty' ? vse.cesty : [];
+const otazky = cast === 'otazky' ? vse.otazky : [];
+const popisek = `${cast === 'cesty' ? (cesty.length > 1 ? 'Cesty' : 'Cesta') : (otazky.length > 1 ? 'Velké otázky' : 'Velká otázka')}, kde potkáš ${osoba.jmeno2 ?? osoba.jmeno}`;
 ---
 {(cesty.length > 0 || otazky.length > 0) && (
-  <nav class="vstupy-osoby" aria-label={`Cesty a otázky, kde potkáš ${osoba.jmeno2 ?? osoba.jmeno}`} data-pagefind-ignore>
+  <nav class:list={['vstupy-osoby', `vstupy-osoby--${cast}`]} aria-label={popisek} data-pagefind-ignore>
     <ul>
       {cesty.map((c) => (
         <li>
@@ -48,7 +53,7 @@ const { cesty, otazky } = vstupyOsoby(
 )}
 
 <style>
-  .vstupy-osoby { margin-top: var(--s-5); }
+  .vstupy-osoby--cesty { margin-top: var(--s-5); }
   ul { display: flex; flex-wrap: wrap; gap: var(--s-3); margin: 0; padding: 0; list-style: none; }
   li { display: flex; flex: 1 1 100%; min-width: 0; }
   .vstup {

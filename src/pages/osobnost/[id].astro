@@ -71,7 +71,7 @@ const dev = import.meta.env.DEV;
         </p>
         {/* Vyplní a ukáže skript v ObsahProfilu, když se student vrací a naposledy četl jiný než první oddíl. */}
         <p class="cteni t-ovladani" data-cteni hidden><a href="#obsah">Pokračovat ve čtení: <span data-cteni-nazev></span></a></p>
-        <VstupyOsoby osoba={osoba} />
+        <VstupyOsoby osoba={osoba} cast="cesty" />
       </div>
       <div class="osobnost__deska">
         <Deska osoba={osoba}>
@@ -85,6 +85,8 @@ const dev = import.meta.env.DEV;
           {obrazekOsoby && <span class="obraz-popisek">{nezlomitelne(obrazekOsoby.popisek)}</span>}
         </Deska>
       </div>
+      {/* Otázky stojí na telefonu až pod deskou, aby obraz, atribut a první odstavec zůstaly na první obrazovce. */}
+      <VstupyOsoby osoba={osoba} cast="otazky" />
     </header>
 
     <ObsahProfilu adresa={`/osobnost/${zaznam.id}/`}>
@@ -158,7 +160,10 @@ const dev = import.meta.env.DEV;
     font-size: 15px;
   }
   @media (min-width: 900px) {
-    .osobnost__hlavicka { grid-template-columns: 1fr 380px; align-items: end; gap: var(--s-8); padding-top: var(--s-7); }
-    .osobnost__deska { justify-self: end; width: 100%; }
+    /* Vlevo jméno s cestou a pod nimi otázky, vpravo deska přes oba řádky; pořadí je stejné jako na telefonu. */
+    .osobnost__hlavicka { grid-template-columns: 1fr 380px; grid-template-rows: 1fr auto; align-items: end; gap: 0 var(--s-8); padding-top: var(--s-7); }
+    .osobnost__titulek { grid-column: 1; grid-row: 1; }
+    .osobnost__deska { grid-column: 2; grid-row: 1 / span 2; justify-self: end; width: 100%; }
+    .osobnost__hlavicka :global(.vstupy-osoby--otazky) { grid-column: 1; grid-row: 2; align-self: start; margin-top: var(--s-3); }
   }
 </style>

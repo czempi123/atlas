@@ -1,0 +1,47 @@
+# Změň jednu věc · profil Hérakleita, kapitola 02 „Luk a lyra“: uber jednu ze dvou sil a podívej se, co z luku zbude.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Tvrzení: Hérakleitos › Dvě myšlenky pro profil › 2 (Vlastní pokus studenta).
+# Scéna, možnosti a zpětné vazby jsou autorské; podmínky jsou z podkladů (povol tětivu, tužší dřevo, přeřízni tětivu).
+# Blok stojí před zlomkem B51 a nic z něj neprozrazuje; proto nemá oddíl Co udělal. Zpětná vazba ví jen to,
+# jestli se odpověď změnila, ne kterým směrem. Luk je tu věc: na lidi („hádka drží přátelství“) se blok ani text nepřenáší.
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si luk připravený ke střelbě. Dřevo se chce narovnat a táhne oba konce od sebe. Tětiva je drží u sebe.
+  Založíš šíp, natáhneš a pustíš.
+otazka: Co udělá luk s šípem?
+moznosti:
+  - { id: daleko, text: Pošle ho daleko. }
+  - { id: kousek, text: Pošle ho jen kousek. }
+  - { id: nikam, text: Nepošle ho nikam. }
+podminky:
+  - id: povol
+    prepinac: Povol tětivu
+    zmena: >-
+      Teď si představ, že tětivu povolíš, až volně visí. Dřevo je stejné jako předtím, jen nemá proti čemu táhnout.
+    posun: >-
+      Rozhodl ses jinak, když tětiva povolila. Dřevo se přitom nezměnilo.
+      Kde se tedy bere síla, která šíp pošle: v dřevě, v tětivě, nebo mezi nimi?
+    stejne: >-
+      Tvoje odpověď zůstala stejná, i když tětiva povolila. Na čem tedy podle tebe let šípu stojí?
+  - id: tuzsi
+    prepinac: Vezmi tužší dřevo
+    zmena: >-
+      Teď si představ luk z tužšího dřeva a k němu pevnější tětivu. Dřevo táhne konce od sebe víc
+      a tětiva je musí víc držet.
+    posun: >-
+      Rozhodl ses jinak, když zesílilo dřevo. Tětiva ale musela zesílit s ním, jinak by praskla.
+      Dá se v luku přidat jedné síle, a druhé ne?
+    stejne: >-
+      Tvoje odpověď zůstala stejná, i když dřevo zesílilo. Zesílily tu obě síly naráz.
+      Co by se stalo, kdyby zesílila jen jedna?
+  - id: prerizni
+    prepinac: Přeřízni tětivu
+    zmena: >-
+      Teď si představ, že tětivu přeřízneš. Dřevo se narovná a zůstane ležet.
+    posun: >-
+      Rozhodl ses jinak, když tětiva zmizela úplně. Dřevu už nic neodporuje.
+      Je to ještě luk, nebo už jen hůl?
+    stejne: >-
+      Tvoje odpověď zůstala stejná i bez tětivy. Co tedy podle tebe dělá z luku luk?
+zdroje: [hippolytos-ix]

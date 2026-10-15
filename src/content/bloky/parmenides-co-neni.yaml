@@ -1,0 +1,66 @@
+# Roztřiď · profil Parmenida, kapitola 01 „Co není“: šest věcí, o kterých se říká, že nejsou.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Tvrzení: Parmenidés › Dvě myšlenky pro profil › 1 (Vlastní pokus studenta).
+# Karty a koše jsou z podkladů, zpětné vazby autorské. Blok stojí před zlomkem B2 a před námitkou Platónova hosta z Eleje.
+# Karty jsou věci a nápisy, ne lidé, a blok nemá vlastní kartu: student, kterému někdo zemřel, by do ní mohl napsat
+# člověka, a otázka „o čem mluvíš, když mluvíš o něm“ by byla krutá (poučení z celku 6: kde by vlastní karta byla zpověď, blok ji nemá).
+# Srovnání říká jen to, co stojí v básni (B2, 7–8: co není, se nedá poznat ani vyslovit), a říká, že to říká bohyně.
+druh: roztrid
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: Šest věcí, o kterých se dá říct, že nejsou. Aspoň na první pohled.
+otazka: Je to, nebo není?
+kose:
+  - id: je
+    nazev: Je
+    popis: Je to na světě jako stůl nebo strom.
+  - id: neni
+    nazev: Není
+    popis: Na světě to nenajdeš.
+  - id: jinak
+    nazev: Je, ale jinak
+    popis: Nějak to je, jen ne jako stůl nebo strom.
+karty:
+  - id: jednorozec
+    text: Jednorožec
+    zpetna: >-
+      Nikde nežije, a přesto víš, že má jeden roh, a ne dva.
+      O čem to víš: o zvířeti, nebo o tom, co o něm lidé vyprávějí?
+    kdyz:
+      je: >-
+        Dal jsi jednorožce mezi věci, které jsou. V knížkách je jeho obrázek a v hlavách představa.
+        Je obrázek jednorožce totéž co jednorožec?
+  - id: dira
+    text: Díra v ponožce
+    zpetna: >-
+      Díra je místo, kde ponožka není. A přece se dá změřit, zvětšit i zašít.
+      Mluvíš o díře, nebo o ponožce kolem ní?
+  - id: obed
+    text: Včerejší oběd
+    zpetna: >-
+      Včera byl, dnes není. Věta, že včera byla svíčková, je přitom pravdivá i dnes.
+      O čem ta věta je, když oběd už není?
+  - id: nula
+    text: Číslo nula
+    zpetna: >-
+      Nula říká, že něčeho není ani kus. Sama se ale dá napsat, přičíst i vynásobit.
+      Je číslo pro nic taky nic?
+  - id: ticho
+    text: Ticho
+    zpetna: >-
+      Ticho je, když není slyšet nic. Dá se ale přerušit a dá se na něj čekat.
+      Je ticho věc, nebo jen zvuk, který chybí?
+  - id: dum
+    text: Dům, který se teprve postaví
+    zpetna: >-
+      Zatím je jen na výkresu. Kdy začne být: s prvním výkopem, se střechou,
+      nebo až se v něm poprvé rozsvítí?
+srovnani:
+  osoba: parmenides
+  nadpis: Co říká bohyně v Parmenidově básni
+  text: >-
+    Bohyně v básni říká, že to, co není, se nedá poznat ani vyslovit.
+
+
+    Projdi si své koše. U které karty jsi mluvil opravdu o ničem? A u které o něčem, co je:
+    o obrázku, o okraji, o vzpomínce, o výkresu?
+zdroje: [simplikios-fyzika]

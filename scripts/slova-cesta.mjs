@@ -51,12 +51,13 @@ for (let n = 1; n < 20; n++) {
   if (!odp || odp.status() !== 200) break;
   kroku = n;
   await projed(page);
-  // Poslední krok má místo bloků závěrečné pravidlo (jeho čas je v ovládání).
+  // Poslední krok končí závěrečným pravidlem (jeho čas je v ovládání). Blok s odpovědí před ním se počítá
+  // jako každý jiný (cesta 2 má v posledním kroku nový případ s Volbou).
   const pravidlo = page.getByRole('textbox', { name: /Napiš svoje pravidlo/ });
-  const bloky = page.locator('.krok__obsah section.blok');
-  const b = (await pravidlo.count()) ? 0 : await bloky.count();
-  if (await pravidlo.count()) await pravidlo.fill('Moje pravidlo po cestě.');
+  const bloky = page.locator('.krok__obsah section.blok').filter({ hasNot: pravidlo });
+  const b = await bloky.count();
   for (let i = 0; i < b; i++) await odpovez(bloky.nth(i));
+  if (await pravidlo.count()) await pravidlo.fill('Moje pravidlo po cestě.');
   await page.waitForTimeout(300);
   const k = await page.locator('.krok__obsah figure.kresba').count();
   const text = await page.locator('main').innerText();

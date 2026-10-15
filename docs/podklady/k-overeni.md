@@ -559,3 +559,130 @@ Po opravách (8. 10. 2026): nálezy 1 až 10 jsou zapracované. Krok 7 říká �
 
 Vyřízeno: hlas Seneky (podle Dopisu 61, 4); Aristotelův citát (kratší podoba `etika-1117b-bolest`, plná `etika-1117b` zůstává nepoužitá vedle ostatních rezerv); scéna Sporu; list pro učitele (Dopisy 61 a 30, Nagel, tabulka výroků). Faidón 61c–62c čten anglicky v překladu H. N. Fowlera (PerseusDL): „říká se, že to není dovoleno“; lidé jsou podle tajného učení jakoby ve vězení a nemají se sami propouštět; bohové jsou naši strážci; člověk se nemá zabít, dokud bůh nepošle nutnost. Totéž místo říká, že filozof je ochoten zemřít: v listu pro učitele je obojí. Řecky nečteno. Ostatní řádky tabulky Po P10 trvají (české překlady, Nagelův článek, Dopis 70 a příručky, Diodóros řecky, atribut Plútarcha, přesýpací hodiny).
 
+
+## Celek 7 „Jsem pořád tentýž, když se měním?“ (P6)
+
+9. 10. 2026. Podklady jsou v `docs/podklady/celek-7-jsem-porad-tentyz.md`. Vyřízeno z dřívějších bodů:
+
+- **Platón cituje Hérakleita (Kratylos 402a).** Čteno řecky i anglicky. Sókratés říká: „Hérakleitos tuším říká, že všechno je v pohybu a nic nezůstává. Přirovnává věci k proudu řeky a říká, že dvakrát do téže řeky nevstoupíš.“ (citát `kratylos-402a`) Popisek „znal ho z textů“ u vztahu Hérakleitos → Platón tedy obstojí vedle Aristotelova svědectví o Kratylovi; poznámka u vztahu zůstává.
+- **Xenofanés → Parmenidés.** Zapsáno jako tradovaný vztah učitele: Aristotelés (Metafyzika 986b22) píše „říká se, že byl jeho žákem“. Diogenés Laertios (IX, 21) to opakuje a dodává, že ho Parmenidés nenásledoval.
+- **Hérakleitos ↔ Parmenidés.** Nezapsáno a zapisovat se nemá. Žádný starý pramen neříká, že jeden četl druhého; do dvojice je postavil Platón (Theaitétos 152e a 180e–181a). Čtení, že Parmenidův zlomek B6 míří na Hérakleita, je novověký výklad a SEP ho podává jako možnost. Rozbor je v podkladech v oddíle „Reagoval jeden na druhého?“.
+- **Parmenidés: „a déšť před ní taky ne“.** Druhé čtení je doložené starověkým pramenem: Plútarchos (Proti Kólótovi 1114b–d) píše, že Parmenidés oheň, vodu ani města nezrušil, a Aristotelés (Metafyzika 986b27–34), že podle rozumu je jedno, podle vnímání mnohé. Hlas na stránce otázky 6 je nejsilnější verze prvního čtení; profil řekne obojí.
+
+Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Věta atributu u Hérakleita | „Do téže řeky nelze vstoupit dvakrát“ je Platónovo shrnutí (Kratylos 402a), ne dochovaná Hérakleitova věta; zlomek B12 říká „do týchž řek…, jiné a jiné vody“. | Autor zvolil znění A (9. 10. 2026); zapíše P7. |
+| Spor na dálku mezi současníky | Hérakleitos napadá Pýthagoru a Xenofana (B40), ale nic neříká, že se znali. Model řadí polemiku současníků pod „Znali se a přeli se“ (pozná to jen podle let). Souvisí s bodem „Spor přes texty v oddíle Doba a lidé“ výše. | Příznak u vztahu (například `na-dalku: true`) a pak vztahy doplnit; do té doby nezapisovat. |
+| Vztahy, které mění hotové stránky | Parmenidés – Sókratés (`znali-se`, tradovaný: Platónova scéna), Aristotelés → Hérakleitos (`polemika`), Hérakleitos → Seneca a → Marcus Aurelius (`vliv-textem`). Prameny jsou ověřené, ale řádek přibude v oddíle Doba a lidé na stránkách Sókrata, Aristotela, Seneky a Marca Aurelia. | P7: zapsat, stránky přečíst, pustit testy. |
+| Aristotelés × Parmenidés | Fyzika I, 2–3 a 8 (kde s ním Aristotelés polemizuje) nečteny; čteno jen I, 7 a Metafyzika 986b. | Před zápisem polemiky nebo větou „Aristotelés mu odpověděl“ přečíst. |
+| Vydání Dielse a Kranze | Čísla zlomků jsou z Hicksových poznámek, ze SEP a z běžné literatury; vydání jsem neviděl. Vymezení zlomku B91 je proto jen přibližné. | Při revizi ověřit čísla a rozsah B91 v tištěném vydání nebo u Kirka, Ravena a Schofielda. |
+| České překlady | Všech 60 citátů jsou vlastní převody. | Před revizí srovnat hlavně B12, B51 a Parmenidovy verše (Svoboda, Kratochvíl; Platón: Novotný). |
+| „Všechno plyne“ až u Simplikia | Ověřeno hledáním v jeho komentáři k Fyzice; jiné pozdní autory jsem neprohledával. | Studentský text: „připsali mu ho až pozdější čtenáři“, bez „poprvé u“. |
+| Dlužník a bití | Scénu, kdy věřitel dlužníka zbije a ten se brání stejným argumentem, znám jen ze SEP (anonymní komentář k Theaitétu); pramen nečten. V Epicharmových verších u Diogena (III, 11) dlužník není. | Bití do textu ne; „hádanka z komedií“ ano. |
+| Stobaios, Theofrastos, Strabón, Rétorika 1407b, Sextos VII, 126–134 | Neotevřeno (stoická nauka o jedinečně určeném jedinci; zlomky B116, B119, B125, B1 a B2 v úplnosti; efeští „králové“; Hérakleitův sloh). | Použít jen to, co stojí v podkladech; ostatní před použitím ověřit. |
+| Příručkové údaje | Počet Hérakleitových zlomků, doba Hérakleita alegorika, roky Démétria z Faléra, rok latinského vydání Hobbesova spisu, rok Raffaelovy fresky. | Ve studentském textu jen zaokrouhleně („o dva tisíce let později“). |
+| Stáří buněk | Čtyři studie čteny celé. Souhrnná práce Sendera a Mila (2021) a délka života červených krvinek v plném textu nezískány. | Žádné číslo, které není v podkladech; „sedm let“ jen jako pověra, kterou cesta vyvrací. |
+| Doporučení pro školy | Přílohy MŠMT č. 3 a č. 8 čteny v kopiích na webu jedné školy; aktuální adresu na webu ministerstva jsem nenašel. Australské zásady řeči o demenci: sedm stran z osmnácti. Příručka SAMHSA nezískána. Kontakt na poradnu pro LGBT+ mladé jsem neověřoval. | List pro učitele (P8/P9): odkázat na aktuální znění; kontakty ověřit ručně v prohlížeči jako u celku 6. |
+| Obrázky | Nic nestaženo. Brána a herma z Velie jsou na Wikimedia Commons neověřené; nález hermy znám jen z literatury. | Autor souhlasí se stažením Hérakleita z Art Institute of Chicago (P7) a číše z Met (P8); Parmenidés bez obrazu, dokud autor bránu neověří. |
+| Zénón a Achilleus se želvou | Celek je nezakládá. Věta atributu u Zénóna je neověřená; Diogenés (IX, 23) píše, že argument podle Favorina užil už Parmenidés; Plútarchos má variantu s Adrástovým koněm (čteno jen anglicky). | Ověřit, až se bude stránka zakládat. |
+| Parmenidés v Athénách | Jediný pramen je Platónův dialog; SEP setkání se Sókratem považuje za smyšlenou scénu, ze které se odvozuje jen chronologie. | Místo Athény u Parmenida do dat ne; v textu „Platón líčí“. |
+| Zlomek B52 (dítě, které si hraje) | V datech jako rezerva ke scéně s kostkami (čteno u Hippolyta IX, 9). Význam slova αἰών a výklad zlomku jsou sporné; že historka o kostkách vznikla z něj a z věty o městě pro nedospělé, je domněnka. | Profil smí věty postavit vedle sebe, netvrdit souvislost. |
+| Zlomek B121, jiné znění | Diogenés (IX, 2) má sloveso „zemřít“; že jiní autoři uvádějí ostřejší, vím jen z literatury. | Profil cituje Diogena. |
+| Senekův závěr a Plútarchova obec ve Sporu | Po odpovědi autora 9. 10. 2026 patří do studentského textu (dřív nikam a učiteli). | P8 a revize: číst scénu očima studenta po ztrátě; závěr nesmí zůstat bez otázky a bez Plútarchovy odpovědi. |
+
+### Po P7 (profily Hérakleita a Parmenida)
+
+9. 10. 2026. Vyřízeno: věta atributu u Hérakleita (znění A, pramen `eusebios-pe-xv-20`); čtyři vztahy, které mění hotové stránky (zapsány, oddíl Doba a lidé přečten u Sókrata, Aristotela, Seneky a Marca Aurelia); obrázek Hérakleita (licence ověřena 9. 10. 2026 v API Art Institute of Chicago, `is_public_domain: true`, i na stránce díla, „CC0 Public Domain Designation“; stažen přes IIIF muzea v plné šířce 2637 × 2250 px, 621 kB).
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Rozměry obrazu Hérakleita | Muzeum uvádí 87,7 × 75 cm, soubor je na šířku (2637 × 2250 px). Který rozměr je výška, jsem neověřoval. | Rozměr do popisku nedávat. |
+| Plná velikost obrazu | Adresa IIIF `full/full` vrací 403; staženo `full/2637,` (šířka podle `info.json`). Soubor má 621 kB, je tedy silněji komprimovaný než menší velikosti. | Pro desku stačí. Kdyby byl potřeba tisk, zkusit stránku muzea ručně. |
+| Výřez desky | Střed „45 % 30 %“ a na šířku „45 % 25 %“ je odhad podle snímků. | Autor potvrdí, nebo upravit v `zdroje.yaml`. |
+| Glóbus na obraze | Popisek ho nezmiňuje; nápis na něm jsem nečetl. | Nepopisovat, dokud ho někdo nepřečte. |
+| „Jako jediná z vět o řece má jeho jazyk: jeho nářečí a jeho způsob, jak větu postavit“ | Stojí na podkladech („rysy Hérakleitova jazyka“, „jeho nářečím“); heslo SEP jsem v P7 znovu nečetl. | Při revizi srovnat s heslem (Graham). |
+| Platónova námitka v profilu Hérakleita | „Nedalo by se o ničem říct ani ‚to‘, ani ‚takové‘“ je převyprávění Kratyla 439d–440b z podkladů; v datech není jako citát. | Při revizi srovnat s textem; nezesilovat. |
+| Aristotelés, Metafyzika 1005b | V profilu nepřímo; citát v datech není. | Kdyby revize chtěla citát, doplnit do `zdroje.yaml` s původním zněním. |
+| „Aristotelés se na změnu díval jinak“ | Fyzika I, 2–3 a 8 dál nečteny (bod z P6). | Větu „Aristotelés mu odpověděl“ nepsat ani v cestě, dokud to někdo nepřečte. |
+| Kólótés: „podle něj se nedá žít“ | Formulace z podkladů; jak přesně výčitka u Plútarcha zní, jsem v P7 neověřoval. | Při revizi srovnat s Proti Kólótovi 1113e–1114f. |
+| „Z její druhé půlky nejméně“ | Báseň má tři části (příjezd, řeč o tom, co je, výklad světa); „druhá půlka“ je zjednodušení pro studenty. Podle SEP zbyla z poslední části snad desetina. | Revize posoudí, jestli zjednodušení drží. |
+| Simplikios a dvaapadesát veršů | Profil neříká, ze které části básně jsou. | Nedoplňovat bez ověření. |
+| „Vypráví ji mladý muž“ | Kdo je mladík, báseň neříká; že je to Parmenidés, je obvyklé čtení a věta atributu ho používá. Úvod jméno k mladíkovi nedává. | Při revizi číst úvod a větu atributu vedle sebe. |
+| Portrét Platóna, Doba a lidé | Věta „Hérakleitovo učení, že všechno, co vidíme, stále plyne“ je Aristotelova zpráva; vedle profilu může znít jako Hérakleitova vlastní slova. | Revize P10: nechat, nebo přepsat na „jak mu rozuměl Platón“. |
+| Stránky otázek 6 a 7 | Parmenidés je tam v prvním čtení a jeho jméno teď vede na profil, který přidává druhé. | Revize: přečíst po sobě hlas a profil. |
+| Karta v Mapě a čase | Tlačítko u Parmenida říká „Otevřít portrét“, i když jde o profil. | Ověřit u ostatních profilů; případně sjednotit slovo. |
+| Citáty nepoužité v profilech | `herakleitos-b49a`, `herakleitos-b52`, `plutarchos-de-e-392b`, `seneca-ira-ii-10`, `parmenides-b8-zustava`, `parmenides-b6`; nepřímo převyprávěné jsou v plánu větve (Po P7). | K dispozici cestě a revizi; B49a jen jako pozdější podoba věty. |
+| List pro učitele: válka | Oddíl o zlomku B53 ve třídě stojí na obecné opatrnosti, ne na citovaném doporučení (SAMHSA nezískána). | P8: najít české doporučení k žákům s válečnou zkušeností a oddíl o něj opřít. |
+| List pro učitele: tři věci z paměti | „O tom, kdo byl otrok a kdo svobodný, rozhodovaly i války“; místo Metafyzika 987a u věty o Platónovi a Kratylovi; iniciály Guthrieho a Owena. V podkladech celku nejsou. | Při revizi ověřit, nebo škrtnout. |
+| List pro učitele: kontakty | Jen Linka bezpečí (z celku 6). Centrum Anabell, poradna pro pozůstalé a poradna pro dospívající, kteří řeší orientaci nebo identitu, neověřeny. | P8. |
+| Obraz Parmenida | Brána ve Velii na Wikimedia Commons neověřena; profil je bez obrazu. | Autor. |
+
+### Po P8 (cesta 2 a stránka otázky 5)
+
+10. 10. 2026. Vyřízeno z bodů Po P7: české doporučení k žákům s válečnou zkušeností (příručka NPI ČR 2022, čtena v plném textu; list pro učitele má nový oddíl) a kontakty (Linka bezpečí, Centrum Anabell, Poradna Vigvam a S barvou ven ověřeny na jejich webech 10. 10. 2026). Čísla čtyř studií o buňkách a studie z roku 2013 jsem ověřil v plných textech (rukopisy OSTI, PubMed Central, PDF projektu MIDUS); licenci obrázku v záznamu Met i v API.
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Studie z roku 2013, pokus s lístky | Podklady (oddíl Návrat) píšou „170 dospělých… z webu televizního pořadu“. Ve studii je 170 dospělých pokusu 4 získáno přes Amazon Mechanical Turk (18–64 let, 52 % žen); web pořadu se týká ostatních pokusů. Druhá skupina oceňovala koncert, který bude „příští týden“. | List pro učitele to má správně. Opravit oddíl Návrat v podkladovém listu při revizi. |
+| Studie z roku 2013, „nejde o sledování týchž lidí“ | Platí pro hlavní srovnání; u povahy autoři přiložili data MIDUS, kde tytéž lidi měřili dvakrát. | List pro učitele to říká; poznámka u pramene `quoidbach-2013` to nemá. Doplnit při revizi. |
+| Kde stála Théseova loď | Plútarchos to neříká. „Přístav“ je v představě před první Volbou („Kotví na stejném místě“), v možnostech Voleb a v kresbě („loď v přístavu“). | Revize: je z textu dost jasné, že přístav je náš obraz? |
+| Kresba „Loď po prknech“ | Model: 24 prken ve třech řadách, pevné pořadí výměny, zdvižené konce na krajních prknech, žádný stěžeň ani vesla (loď má podle Plútarcha třicet vesel; kresba je nemá, aby se dalo vyměnit všechno dřevo), hromada po pěti, podpěry druhé lodi. | Autor ji má vidět dřív, než se označí za hotovou. |
+| Popisek obrazu vstupu | „Malíř, který žil ve stejné době jako Hérakleitos“ stojí na datování číše (asi 520) a na odhadu Hérakleitových let (asi 540–480). Záznam Met mluví o válečníkovi mezi očima a o lodích pod uchy; že jde o válečné lodě s klounem, text neříká a popisek to taky netvrdí. | Nic; při změně let v datech popisek přečíst. |
+| Aristotelés, Politika III, 3 | V P8 jsem místo znovu nečetl; srovnání v kroku 2 (uspořádání obce, sbor) stojí na poznámce u pramene a na citátech z P6. | Revize může přečíst 1276a–b a porovnat. |
+| Platón, Faidros: „na procházku za město“, „báj o tom místě“ | V P8 jsem četl 229e–230a (anglicky). Že rozhovor probíhá za hradbami u řeky a že báj se váže k tomu místu, je v dialogu dřív (227a–229c); P6 četlo 229c–230b. | Revize: potvrdit na 229b–c, nebo myšlenku zkrátit na „přítel se ho zeptá, jestli věří jedné staré báji“. |
+| Marcus Aurelius XII, 4 | Čteno jen řecky; v myšlence hlasu je nepřímo, vlastním převodem. | Při revizi porovnat s publikovaným překladem. |
+| Bergmann a kol. 2009: původ tkání | Hlavní text (rukopis v PubMed Central) původ srdcí neuvádí; je v přílohách, které jsem nečetl. List pro učitele to tak říká. | Kdyby to učitel potřeboval přesně, přečíst přílohy. |
+| „Po smlouvě o zákazu zkoušek z roku 1963“ | Studie mluví o Test Ban Treaty a o konci nadzemních zkoušek. Že smlouva zakázala jen zkoušky v ovzduší (a pod vodou a ve vesmíru), vím z obecné znalosti; list pro učitele to zmiňuje jednou větou. | Ověřit, nebo větu v listu škrtnout. |
+| Locke a Hume | Jedna věta v posledním kroku („o dva tisíce let později“), jména bez odkazu podle zadání. V podkladech o nich není nic ověřeného kromě řádku z architektury. | Až přijdou jejich období, větu přečíst znovu. |
+| Stoikové v posledním kroku | „Učili to i stoikové, jak o nich píše Plútarchos“: známe je jen z úst odpůrce (O obecných pojmech 1083c–e). | Nic; nezesilovat. |
+| Hlasy otázky 5: Aristotelés 1166b | Při ověřování jsem četl i pokračování kapitoly: o špatných lidech, kteří se vyhýbají vlastní společnosti, a větu, že ti, kdo spáchali mnoho zločinů, prchají před životem. Hlas z té části nebere nic; list pro učitele to říká. | Nic. |
+| Poradna Vigvam | Kontaktní stránka 10. 10. 2026 píše, že o uvolnění služeb bude informovat (kapacita je nejspíš plná), a na jednom místě má číslo 606 160 656 místo 606 160 646. | List pro učitele to říká. Totéž doplnit do listu k celku 6 při nejbližší příležitosti. |
+| Linka první psychické pomoci 116 123 | V P8 neověřena na vlastním webu; číslo je z listu k celku 6 a z příručky NPI (stav 2022). | Ověřit při revizi. |
+| List pro učitele: rady bez pramene | „Rozlišit dluhy města od viny člověka za předky“, „spolužák, který z argumentu udělá zbraň“ a otázky do hodiny jsou moje rady, ne citované doporučení. | Autor jako pedagog posoudí. |
+| Kontrola fokusu skriptem | `scripts/kontrola-fokus.mjs` hlásí pole prvního názoru na stránce otázky 5 (390 px) a pole pravidla v posledním kroku (1440 px) pod lištou. Skutečným tabulátorem na výškách 844, 900 a 920 px je pole vždy nad lištou; skript volá `focus()`, na které se dorovnání nevztahuje. Totéž hlásí u cest 4 a 8. | Revize: skutečný tabulátor; případně skript naučit rozdíl. |
+| Vynechané citáty a místa | Jako citát nezazněly `symposion-207e` a `symposion-208a`, `politika-1276b-sbor`, `seneca-ep-58-23`, `de-sera-559-zmeny`, `-jeden` a `-reka` (jsou v argumentech Sporu nepřímo), `comm-not-1083-dvoji`, `hovory-x-7`, `de-e-392d-otazka`, `de-e-392a-jsi`, `herakleitos-b49a`, `metafyzika-1010a-kratylos`, `lucretius-iii-847`. Nagelova námitka z cesty 8 v cestě 2 není; odkaz na cestu 8 je jen u Senekova závěru. | K dispozici revizi. |
+| Obraz Parmenida | Řádek s odkazem na Wikimedia Commons zůstal v zadání P8 prázdný; profil je bez obrazu. | Autor. |
+
+### Po P10 (revize celku 7)
+
+10. 10. 2026. Vyřízeno z bodů Po P7 a Po P8: Politika III, 3 čtena řecky (1276a8–b15; věta o řekách stojí v otázce, rozhoduje ústava, dluhy jsou „jiná otázka“); Faidros 227a a 229b–c („za hradby“, báj o Boreovi u Ilíssu) potvrzen; Marcus Aurelius XII, 4 řecky a začátek v Longově anglickém překladu; linka 116 123 na vlastním webu; smlouva z roku 1963 (vyhláška č. 90/1963 Sb.: ovzduší, kosmický prostor, pod vodou; podzemní ne); vzorek pokusu s lístky opraven v podkladovém listu i u pramene; „jako jediná z vět o řece má jeho jazyk“ odpovídá heslu Stanfordské encyklopedie (B49a je podle něj atticky, ne Hérakleitovým nářečím, a jen B12 má „jazykovou hustotu“ jeho vět); Kólótova výčitka je u Plútarcha doslova (1113f–1114a: řekl, že všechno je jedno, a tím nám znemožnil žít); „druhá půlka básně“ přepsána; místo Metafyzika 987a32 v listu pro učitele potvrzeno řecky; kontrola fokusu (chyba skriptu, opraven); hlasy Parmenida na stránkách otázek 6 a 7 přečteny vedle profilu (drží první čtení, profil přidává druhé).
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Poslední prkno | Hobbes (Concerning Body II, 11, 7) má výslovně „after all the Planks were changed“; kresba, design a rozhodnutí z 10. 10. říkají, že ten krok je náš. | Nález 4 revize; list pro učitele už to má. |
+| Zlomek B12 a „titíž“ | Heslo Stanfordské encyklopedie uvádí čtení, podle kterého se „týchž“ vztahuje k těm, kdo vstupují (odkaz na Ch. Kahna 1979); Kahna jsem nečetl. | Nález 3; ve studentském textu jen „čtou její čtenáři každý jinak“. |
+| Etika Nikomachova IX, 9 | 1169b33–1170a4 čteno jen anglicky (Rackham, Perseus). | Při doplnění pramene k hlasu Aristotela to uvést (nález 7). |
+| Publikované české překlady | Dál neviděny; Marcus XII, 4 srovnán jen s Longem. | Před vydáním srovnat hlavně B12, B51, Parmenidovy verše a Marca XII, 3–4. |
+| Kratylos 439d–440b v profilu Hérakleita | V P10 znovu nečteno; znění odpovídá podkladům z P6. | Nic; nezesilovat. |
+| Hlavička profilu s mnoha otázkami | Aristotelés a Epikúros mají na telefonu sedm tlačítek nad deskou. | Nález 6; rozhodne autor. |
+| Kdo žil dřív? a „asi“ | Věta o věku píše rok úmrtí bez „asi“ i u přibližného roku (`bloky.ts:462`). | Nález 10; týká se všech dvojic s přibližnými roky. |
+| Karta v Mapě a čase: „Otevřít portrét“ u profilu | Bod z Po P7; v P10 jsem tlačítko nečetl. | Ověřit při opravách, případně sjednotit slovo. |
+| Poradna Vigvam v listu k celku 6 | Překlep v čísle a věta o uvolnění služeb trvají i 10. 10. 2026. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
+| Obraz vstupu | Na telefonu vládne obrazu ucho číše; náhled užšího výřezu je v `Claude outputs/revize-celek-7/`. | Autor. |
+
+
+### Po opravách celku 7 (15. 10. 2026)
+
+Vyřízeno z bodů Po P10: poslední prkno (nález 4: text pod kresbou, krok 4, list pro učitele, design, rozhodnutí); zlomek B12 (nález 3: krok 2 říká jen „čtou její čtenáři každý jinak“, Kahna jsem nečetl ani teď); Etika Nikomachova IX, 9 (pramen `aristoteles-etika-ix` má místo 1169b33–1170a4 s poznámkou, že je čteno jen anglicky v Rackhamově překladu; řádek Aristotela v listu pro učitele taky); hlavička profilu (nález 6: otázky na telefonu pod deskou); Kdo žil dřív? a „asi“ (nález 10; přečteno na deseti profilech skriptem `scripts/precti-kdo-zil.mjs`); obraz vstupu (užší výřez, zapsáno u obrázku v `zdroje.yaml`).
+
+Co se změnilo v textu a datech, aby to šlo dohledat:
+
+| Místo | Dřív | Teď |
+| --- | --- | --- |
+| Krok 2 | „O lodi v ní není nic a o člověku taky ne.“ | „Jsou v ní i ti, kdo do řek vstupují, a jestli říká něco i o nich, čtou její čtenáři každý jinak.“ |
+| Text pod kresbou, stav 24 | „ten krok jsme přidali my“ | „až sem úlohu dovedl v 17. století Thomas Hobbes“ |
+| Krok 4 | Plútarchova výhrada o počtu prken; Hobbes „přidal druhou loď“ | Výhrada jen v kroku 1 a pod kresbou; Hobbes „dovedl výměnu až k poslednímu prknu a přidal druhou loď“ |
+| Otázka 5, Aristotelés | „Zeptej se dobrého přítele“ (v 1166a není) | „na druhém člověk vidí víc než na sobě“ (IX, 9, 1169b33–35) |
+| Otázka 5, Hérakleitos | „Kam při tom došel, říká jiná jeho věta“ (spojovalo B101 a B45) | „Jiná jeho věta mluví o duši.“ |
+| Otázka 5, Epiktétos | „znají každý jedno z nich“ | výčet doplněn o „spolužák“, „jedno takové jméno“ |
+| Krok 7 → 8 | „Podle Seneky není ráno týž, kým byl den předtím.“ | „Podle Seneky tentýž není ani po jediné noci.“ (Dopis 58, 22, nepřímo) |
+| Obraz vstupu | výřez 332, 96, 1330 × 998 px, „Dvě lodě pod uchem…“ | výřez 432, 377, 728 × 546 px, „Loď pod uchem…“ |
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Karta v Mapě a čase: „Otevřít portrét“ u profilu | `KartaCloveka.svelte` píše „Otevřít portrét“ u každé osoby se stránkou, i u profilů (třeba Parmenidés, Hérakleitos, Epikúros). Mapa nezná hloubku stránky. | Mimo celek 7; při nejbližší změně mapy předat hloubku a psát „Otevřít profil“. |
+| Poradna Vigvam v listu k celku 6 | Trvá. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
+| „Na druhém člověk vidí víc než na sobě“ | Věta stojí na anglickém překladu IX, 9 z revize, řecky jsem místo nečetl. | Před vydáním srovnat s řeckým textem nebo s českým překladem. |
+| Publikované české překlady | Dál neviděny. | Před vydáním srovnat hlavně B12, B51, Parmenidovy verše a Marca XII, 3–4. |

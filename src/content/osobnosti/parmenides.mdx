@@ -1,0 +1,157 @@
+---
+osoba: parmenides
+nadtitulek: Básník z Eleje · Parmenidův profil
+titulek: Parmenidés
+pointa: Muž, který nechal mluvit bohyni.
+citat: parmenides-b8-ted
+kapitoly:
+  - cislo: "01"
+    kotva: co-neni
+    nazev: Co není
+    stav: hotovo
+  - cislo: "02"
+    kotva: zmena-pod-lupou
+    nazev: Změna pod lupou
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import { KdoZilDriv, Roztrid, ZmenJednuVec } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Báseň začíná jízdou. Vypráví ji mladý muž: veze ho vůz tažený klisnami a cestu ukazují dcery Slunce. Před nimi stojí brána, kterou chodí Noc a Den. Klíče od ní má Spravedlnost.
+
+Dívky ji přemluví. Brána se rozletí, vůz projede a za ní čeká bohyně.
+
+</div>
+
+<div class="ctenarsky"><Citat id="parmenides-b1-bohyne" /></div>
+
+<div class="uvod ctenarsky">
+
+Tu báseň napsal Parmenidés z Eleje, řeckého města v jižní Itálii. Narodil se tam kolem roku 515 př. n. l. Vypráví se, že svému městu napsal zákony tak dobré, že občané každý rok přísahali, že je dodrží.
+
+Od brány dál v básni mluví bohyně. Slíbí mladíkovi, že se dozví všechno: pravdu i to, co si myslí lidé. O tom, co je, mu řekne:
+
+</div>
+
+<div class="ctenarsky"><Citat id="parmenides-b8-ted" velky /></div>
+
+<Kapitola cislo="01" kotva="co-neni" nazev="Co není">
+  <Fragment slot="titulek">Řekni větu o něčem, co <em>není.</em></Fragment>
+
+Jde to snadno. Jednorožec není. Včerejší oběd už není. V ponožce je díra, a díra je místo, kde nic není.
+
+Opravdu? Než budeš číst dál, zkus šest takových věcí roztřídit.
+
+<Roztrid id="parmenides-co-neni" />
+
+Skoro u každé karty člověk nakonec mluví o něčem, co je: o obrázku v knížce, o okraji díry, o vzpomínce, o výkresu. Bohyně jde ještě dál. Cesty hledání jsou podle ní jen dvě:
+
+<Citat id="parmenides-b2" />
+
+Druhá cesta nikam nevede. Zbývá jediná řeč: že je. Z té jedné věty bohyně vyvodí všechno ostatní.
+
+Platónovi to nedalo. V jednom svém rozhovoru nechává mluvit hosta z Parmenidova města. Ten host ví, do čeho se pouští:
+
+<Citat id="sofistes-241d" />
+
+Důvod má dobrý. Kdyby se o tom, co není, nedalo mluvit, nedalo by se říct nic nepravdivého. A lidé přece lžou a mýlí se.
+
+Hostovo řešení: „není“ často znamená „je něco jiného“. Díra není ponožka. Neznamená to, že není nic.
+
+*Stačí ti hostova odpověď? Vrať se ke svým kartám. U které „není“ znamená jen „je něco jiného“, a u které ne?*
+</Kapitola>
+
+<Kapitola cislo="02" kotva="zmena-pod-lupou" nazev="Změna pod lupou">
+  <Fragment slot="titulek">Kam se poděl zelený <em>banán?</em></Fragment>
+
+O věcech říkáme, že se změnily, a ani o tom nepřemýšlíme. List zežloutl, banán dozrál. Zkus se na jednu takovou změnu podívat zblízka.
+
+<ZmenJednuVec id="parmenides-banan" />
+
+Mezi „změnil se“ a „zanikl“ rozlišujeme každý den. Bohyně ten rozdíl nedělá. Dívá se na každou změnu pod lupou.
+
+Aby se zelený banán stal žlutým, musí zelený přestat být a žlutý začít být. Žlutý tu ale předtím nebyl.
+
+Odkud se vzal? Z toho, co není? O tom se přece nedá ani mluvit.
+
+Proto bohyně říká větu z úvodu: to, co je, nemá žádné předtím a potom. A o vznikání, zanikání a změně říká tohle:
+
+<Citat id="parmenides-b8-jmena" />
+
+Aristotelés se na změnu díval jinak. Neříkáme přece, že z nevzdělaného vznikl vzdělaný. Říkáme, že se člověk stal vzdělaným.
+
+<Citat id="fyzika-i-7" />
+
+Při každé změně něco zůstává a něco se vymění. Banán zůstal, zelená odešla, žlutá přišla. Z ničeho tu nevzniklo nic. Jinou odpověď má Démokritos; najdeš ji na stránce otázky [Co je skutečné?](/otazka/co-je-skutecne/)
+
+Chtěl tím Parmenidés říct, že se svět kolem nás nemění? Čtenáři se o to přou od starověku.
+
+Dál v básni totiž bohyně řeč o pravdě ukončí a vyloží mladíkovi celý svět tak, jak se jeví lidem. O tom výkladu říká, že je klamný. A přece ho podá tak, aby mladíka žádný lidský úsudek nepředstihl. Je v něm i Měsíc:
+
+<Citat id="parmenides-b14" />
+
+Epikurejec Kólótés Parmenidovi vyčítal, že podle něj se nedá žít. Plútarchos mu odpověděl:
+
+<Citat id="plutarchos-kolotes-1114b" />
+
+Jedni tedy v básni čtou, že svět, který vidíme, není. Druzí, že je, jen se o něm nedá vědět tolik jako o tom, co nemůže nebýt.
+
+Rozhodnout se to dá těžko. Z básně se dochovaly jen části a z výkladu světa nejméně. Většinu toho, co máme, známe díky učenci Simplikiovi: tisíc let po Parmenidovi opsal do svého komentáře dvaapadesát veršů. Udělal to prý proto, že Parmenidův spis byl už vzácný.
+
+*Co by v těch ztracených verších muselo stát, abys jednomu čtení uvěřil víc než druhému?*
+</Kapitola>
+
+<DobaALide osoba={props.osoba}>
+
+Vypráví se, že Parmenida přivedl k tichému životu chudý muž jménem Ameiniás a že mu Parmenidés po jeho smrti postavil svatyni. Říkalo se také, že byl žákem Xenofana. Platón líčí, jak jako starý muž přijel do Athén a mluvil tam s velmi mladým Sókratem. Jeho mladším druhem byl Zénón z Eleje.
+
+Ve stejné době žil v Efesu, na druhém konci řeckého světa, [Hérakleitos](/osobnost/herakleitos/). Jestli jeden o druhém věděl, nevíme. Proti sobě je postavil až Platón, asi o sto let později.
+
+</DobaALide>
+
+<div class="ctenarsky"><KdoZilDriv a="parmenides" b="sokrates" druh="vzdalenost" /></div>
+
+<Myslenky>
+  <Myslenka cislo={1} disciplina="Poznání">
+    <Fragment slot="titulek">O tom, co není, se nedá <em>mluvit.</em></Fragment>
+
+Co není, podle bohyně nepoznáš ani nevyslovíš: každá věta a každá myšlenka je o něčem. Platónův host z Eleje namítl, že pak by nešlo lhát ani se mýlit. Navrhl, že „není“ často znamená „je něco jiného“.
+
+*Zkus větu „Na tabuli nic není“. O čem je: o tabuli, o křídě, nebo o ničem?*
+
+<MojeStanovisko client:visible id="parmenides-co-neni" otazka="Dá se mluvit o tom, co není? Napiš jednu větu, která to podle tebe dokazuje, a řekni, o čem ta věta je." odkaz="/osobnost/parmenides/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Metafyzika">
+    <Fragment slot="titulek">Změna je <em>záhada.</em></Fragment>
+
+Co se změnilo, přestalo být tím, čím bylo, a stalo se tím, čím nebylo. Bohyně z toho vyvozuje, že vznikat, zanikat a střídat barvu jsou jen jména, která věcem dali lidé. Podle Aristotela při každé změně něco zůstává.
+
+*Kolik se toho na věci smí změnit, aby zůstala tím, čím je? A kdo o tom rozhoduje: věc, nebo ten, kdo ji pojmenoval?*
+
+<MojeStanovisko client:visible id="parmenides-zmena" otazka="Vyber si jednu věc, která se za rok hodně změnila: strom, ulici, telefon po aktualizacích. Je to pořád tatáž věc? Podle čeho to poznáš?" odkaz="/osobnost/parmenides/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="parmenides-vety-o-nicem" nazev="Věty o ničem" odkaz="/osobnost/parmenides/#zkus-to-zit">
+
+Sbírej tento týden nápisy a zprávy, které mluví o tom, co není: Nikdo tu není. Žádné nové zprávy. Žádný signál. U každé si řekni, o čem doopravdy mluví: o třídě, ve které teď nejsou lidé, nebo o telefonu. Na konci týdne si zapiš jednu, u které jsi to říct nedokázal.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/jsem-porad-tentyz-kdyz-se-menim/', nadtitulek: 'Cesta 2', text: 'Jsem pořád tentýž, když se měním?' },
+  { href: '/osobnost/herakleitos/', nadtitulek: 'Profil', text: 'Hérakleitos: muž, který psal v hádankách' },
+  { href: '/otazka/co-je-skutecne/', nadtitulek: 'Velká otázka 6', text: 'Co je skutečné?' },
+  { href: '/otazka/jak-poznam-pravdu/', nadtitulek: 'Velká otázka 7', text: 'Jak poznám, co je pravda?' },
+]} />

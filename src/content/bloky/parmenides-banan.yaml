@@ -1,0 +1,48 @@
+# Změň jednu věc · profil Parmenida, kapitola 02 „Změna pod lupou“: kdy se banán jen změnil a kdy zanikl.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Tvrzení: Parmenidés › Dvě myšlenky pro profil › 2 (Vlastní pokus studenta).
+# Scéna, možnosti a zpětné vazby jsou autorské. Podmínky „shnije“ a „někdo ho sní“ jsou z podkladů; mixér je přidaný,
+# aby student oddělil látku od tvaru. Blok stojí před veršem o jménech (B8, 38–41) a před Aristotelovou odpovědí (Fyzika I, 7)
+# a nic z nich neprozrazuje; proto nemá oddíl Co udělal. Zpětná vazba ví jen to, jestli se odpověď změnila, ne kterým směrem.
+# Banán je věc: blok ani text za ním nepřenáší argument na člověka (Citlivá místa, pravidlo 5).
+druh: zmena
+obdobi: 1
+nadtitulek: Myšlenkový pokus
+scena: >-
+  Představ si zelený banán na okně. Za týden je žlutý.
+otazka: Co se s tím banánem stalo?
+moznosti:
+  - { id: zmenil, text: "Změnil se. Je to pořád on." }
+  - { id: zanikl, text: "Zanikl. Tohle už je něco jiného." }
+  - { id: nejde, text: "Jedním slovem se to říct nedá." }
+podminky:
+  - id: shnije
+    prepinac: Shnije
+    zmena: >-
+      Teď si představ, že na okně leží další dva týdny. Je hnědý, měkký a teče.
+    posun: >-
+      Rozhodl ses jinak, když banán shnil. Zežloutnout a shnít jsou tedy pro tebe dvě různé věci.
+      Kde přesně mezi žlutou a hnědou leží hranice?
+    stejne: >-
+      Tvoje odpověď zůstala stejná, i když banán shnil. Zežloutnout a shnít je pro tebe změna téhož druhu.
+      Podle čeho tedy poznáš, že věc ještě je, nebo už není?
+  - id: mixer
+    prepinac: Skončí v mixéru
+    zmena: >-
+      Teď si představ, že žlutý banán skončí v mixéru. V koktejlu je z něj všechno, jen tvar je pryč.
+    posun: >-
+      Rozhodl ses jinak, když zmizel tvar a látka zůstala.
+      Čím je tedy banán banánem: tím, z čeho je, nebo tím, jak drží pohromadě?
+    stejne: >-
+      Tvoje odpověď zůstala stejná, i když z banánu zbyla jen látka bez tvaru.
+      Na tvaru tedy tvůj soud nestojí. Na čem stojí?
+  - id: sni
+    prepinac: Někdo ho sní
+    zmena: >-
+      Teď si představ, že ho někdo oloupe a sní.
+    posun: >-
+      Rozhodl ses jinak, když banán někdo snědl. Látka, ze které byl, je přitom pořád na světě.
+      Co tedy zaniklo?
+    stejne: >-
+      Tvoje odpověď zůstala stejná, i když banán někdo snědl.
+      Dá se podle tebe o nějaké věci vůbec říct, že zanikla?
+zdroje: [simplikios-fyzika, aristoteles-fyzika-i]

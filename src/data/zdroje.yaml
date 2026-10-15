@@ -9,8 +9,8 @@ prameny:
   - { id: sep-aristotle-ethics, druh: encyklopedie, nazev: "Aristotle's Ethics", autor: "Richard Kraut", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/aristotle-ethics/", overeno: 2026-10-05, poznamka: "Nauka o středu (EN 1106a26–b28). 5. 10. 2026 (celek 5, četl nástroj WebFetch): ctnost povahy je sklon vzniklý zvykem (hexis); Aristotelés nenabízí rozhodovací postup a tvrdí, že to žádná etická teorie neumí; některé city a činy jsou špatné vždy; akrasia má dva druhy, zbrklost a slabost; v jejím výkladu se Aristotelés kupodivu drží blízko Sókrata." }
   - { id: sep-aristotle, druh: encyklopedie, nazev: "Aristotle", autor: "Christopher Shields", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/aristotle/", overeno: 2026-10-05, poznamka: "Rev. 25. 8. 2020. Oddíl Life: Stageira 384, Akademie asi od sedmnácti do Platónovy smrti 347, Assos asi tři roky, Lesbos další dva roky s Theofrastem, sňatek s Pýthiadou, Hermeiovou neteří; roku 343 na Filipovu žádost do Pelly učit třináctiletého Alexandra; výuka trvala spíš jen dva nebo tři roky a ví se o ní málo; 335 návrat do Athén a škola v Lykeiu; jméno peripatetiků asi od krytého ochozu (peripatos); Herpyllis a syn Níkomachos; 323 odchod do Chalkidy, výrok o druhém hříchu proti filozofii jako často opakované vyprávění; zemřel 322 přirozenou smrtí. Oddíl o díle: snad až dvě stě spisů, dochováno asi 31; dialogy ztraceny; Cicero o zlaté řece; dochované texty jsou nejspíš zápisky k přednáškám. 5. 10. 2026 četl stránku nástroj WebFetch." }
   - { id: sep-pythagoras, druh: encyklopedie, nazev: "Pythagoras", autor: "Carl Huffman", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/pythagoras/", overeno: 2026-09-29 }
-  - { id: sep-heraclitus, druh: encyklopedie, nazev: "Heraclitus", autor: "Daniel W. Graham", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/heraclitus/", overeno: 2026-09-29 }
-  - { id: sep-parmenides, druh: encyklopedie, nazev: "Parmenides", autor: "John Palmer", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/parmenides/", overeno: 2026-09-29 }
+  - { id: sep-heraclitus, druh: encyklopedie, nazev: "Heraclitus", autor: "Daniel W. Graham", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/heraclitus/", overeno: 2026-09-29, poznamka: "9. 10. 2026 (celek 7), četl nástroj WebFetch (rev. 8. 12. 2023): působil kolem roku 500 př. n. l.; o životě se ví málo, většina dochovaných historek byla zjevně vymyšlena, aby ilustrovala jeho povahu; podle jedné zprávy zdědil čestný úřad „krále“ Iónů a přenechal ho bratrovi; „říká se“, že napsal jedinou knihu a uložil ji v Artemidině chrámu. Ze tří znění o řece (B12, B49a, B91) je podle hesla jediným pravým B12; B49a mu odporuje, B91 je parafráze; Platón mohl své čtení převzít z Kratylovy kritiky. Řeka zůstává tím, čím je, právě tím, že mění, co obsahuje. „Možná podnítil“ Parmenida k opačné filozofii (Patin 1899, Graham 2002), ač mají víc společného, než se uznává (Nehamas 2002). Spojení „panta rhei“ heslo nemá." }
+  - { id: sep-parmenides, druh: encyklopedie, nazev: "Parmenides", autor: "John Palmer", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/parmenides/", overeno: 2026-09-29, poznamka: "9. 10. 2026 (celek 7), četl nástroj WebFetch (rev. 4. 3. 2025; konec hesla, asi dvacetina textu, nepřečten): z Platónova Parmenida (asi pětašedesátiletý Parmenidés, velmi mladý Sókratés) lze vyvodit narození kolem roku 515 př. n. l.; návštěvu Athén heslo nazývá smyšlenou; báseň v hexametrech, dochováno asi 160 veršů z možná 800; z kosmologie snad desetina. Výklady: přísný monismus (svět zkušenosti neexistuje; Guthrie), dialektický (Owen: kosmologie je jen dialektický prostředek), „predikační“ (Mourelatos, Curd: jsoucen může být víc), „modální“ (věcí, které jsou, je nespočet; kosmologie je Parmenidův vlastní nejlepší výklad proměnlivého světa). Mnozí vykladači odmítají, že by popíral existenci světa, který zakoušíme; proč kosmologii napsal, zůstává podle Kirka, Ravena a Schofielda záhadou. Že reagoval na Hérakleita, heslo netvrdí." }
   - { id: sep-zeno-elea, druh: encyklopedie, nazev: "Zeno of Elea", autor: "John Palmer", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/zeno-elea/", overeno: 2026-09-29 }
   - { id: sep-democritus, druh: encyklopedie, nazev: "Democritus", autor: "Sylvia Berryman", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/democritus/", overeno: 2026-09-29 }
   - { id: sep-xenophanes, druh: encyklopedie, nazev: "Xenophanes", autor: "James Lesher", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/xenophanes/", overeno: 2026-09-29 }
@@ -294,6 +294,54 @@ prameny:
   - { id: britannica-dio-cassius, druh: encyklopedie, nazev: "Dio Cassius", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Dio-Cassius", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Narozen kolem roku 150, zemřel 235; dějiny Říma v 80 knihách; knihy 36–60 se dochovaly z velké části, mnoho dalšího u Jana Xifilina a Jana Zonara." }
   - { id: britannica-tacitus, druh: encyklopedie, nazev: "Tacitus", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Tacitus-Roman-historian", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Narozen roku 56, zemřel kolem roku 120. Kdy psal Letopisy, stránka v přečtené části neuvádí." }
   - { id: britannica-suetonius, druh: encyklopedie, nazev: "Suetonius", dilo: Encyclopaedia Britannica, url: "https://www.britannica.com/biography/Suetonius", overeno: 2026-10-08, poznamka: "Četl nástroj WebFetch. Narozen roku 69, zemřel po roce 122." }
+  # Celek 7 „Jsem pořád tentýž, když se měním?“ (P6, 9. 10. 2026). Primární texty čteny v plném znění z PerseusDL a First1KGreek
+  # (stažené mimo repozitář atlasu), není-li řečeno jinak. Rozbor je v docs/podklady/celek-7-jsem-porad-tentyz.md.
+  - { id: dl-ix-1, druh: pramen, nazev: "Životy filozofů IX, 1–17 a II, 22", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Hérakleitos, syn Blosónův (nebo Hérakóntův), z Efesu; vrchol sil v 69. olympiádě (504–500 př. n. l.). Zlomky B40–B46, B121 a B101 (v nepřímé řeči: „sám sebe zkoumal a všechno se naučil od sebe“). Hermodóros; odmítl psát Efesanům zákony; kostky s dětmi v Artemidině chrámu; odchod do hor, vodnatelnost, hnůj, smrt v šedesáti (tři různé verze: bez jména, Hermippos, Neanthés); knihu uložil v Artemidině chrámu; Theofrastos o „melancholii“; Antisthenés z Rhodu: úřadu krále se vzdal ve prospěch bratra; shrnutí nauky: „celek teče jako řeka“ (IX, 8); podvržené dopisy s Dareiem; mezi vykladači Kleanthés (IX, 15). II, 22: Eurípidés prý dal Sókratovi Hérakleitův spis; „délský potápěč“ (totéž IX, 12 o jakémsi Kratétovi). Diogenés psal asi 700 let po Hérakleitovi." }
+  - { id: dl-ix-21, druh: pramen, nazev: "Životy filozofů IX, 21–23", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Parmenidés, syn Pýrétův, z Eleje; poslouchal Xenofana, ale nenásledoval ho; podle Sótióna se stýkal s pýthagorejcem Ameiniou, chudým a řádným mužem, kterému po smrti postavil svatyni; sám byl z významného a bohatého rodu; Ameiniás ho obrátil ke klidnému životu. První prý řekl, že Země je kulatá a leží uprostřed; Večernice a Jitřenka jsou táž hvězda (podle Favorina; jiní to připisují Pýthagorovi); podle Speusippa dal spoluobčanům zákony; vrchol sil v 69. olympiádě (504–500 př. n. l.)." }
+  - { id: dl-iii-9, druh: pramen, nazev: "Životy filozofů III, 9–11", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Alkimos (4. stol. př. n. l.) tvrdí, že Platón hodně převzal od komediografa Epicharma, a cituje jeho verše (DK 23 B2): kdo k lichému nebo sudému počtu oblázků jeden přidá nebo ubere, nemá už týž počet; s loktem je to stejně; a tak i lidé: jeden roste, druhý ubývá, všichni se celý čas mění; co se mění, je jiné než to, z čeho vyšlo; „i ty a já jsme byli včera jiní a jiní jsme teď a zase budeme jiní a nikdy titíž, podle této úvahy“. Dlužník ve verších není. Pravost veršů jsem nezkoumal." }
+  - { id: platon-kratylos, druh: pramen, nazev: "Kratylos 401d–402c, 411b–c a 439c–440e", autor: Platón, dilo: "Cratylus, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg005/tlg0059.tlg005.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "402a (DK 22 A6), mluví Sókratés uprostřed žertovných výkladů jmen bohů, uvozeno „je to směšné říct“: Hérakleitos „tuším říká“ (λέγει που), že všechno je v pohybu a nic netrvá (πάντα χωρεῖ καὶ οὐδὲν μένει), a přirovnává věci k proudu řeky: dvakrát do téže řeky nevstoupíš. Nejstarší dochované svědectví o větě o řece (asi sto let po Hérakleitovi). Spojení πάντα ῥεῖ v dialogu není; 439d: zdá se, že všechno plyne (δοκεῖ ταῦτα πάντα ῥεῖν); 440e: Kratylos zůstává u toho, co říká Hérakleitos." }
+  - { id: platon-theaitetos-tabory, druh: pramen, nazev: "Theaitétos 152d–e, 160d, 179d–181b a 183e–184a", autor: Platón, dilo: "Theaetetus, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg006/tlg0059.tlg006.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "152e: nic nikdy není, vždy se stává; na tom se shodnou všichni moudří kromě Parmenida: Prótagorás, Hérakleitos, Empedoklés, z básníků Epicharmos a Homér. 179d–180c: Theodóros o hérakleitovcích v Iónii (s nimi se mluvit nedá, střílejí záhadné výroky jako šípy). 180e–181a: proti „tekoucím“ stojí Melissos a Parmenidés; Sókratés a Theodóros se ocitli mezi oběma tábory jako při přetahované. 183e–184a: Parmenidés je „ctihodný a hrozný“; Sókratés ho prý potkal jako velmi mladý velmi starého." }
+  - { id: platon-sofistes-parmenides, druh: pramen, nazev: "Sofistés 217c, 241d, 242c–243a a 258c–259a", autor: Platón, dilo: "Sophista, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg007/tlg0059.tlg007.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Mluví host z Eleje. 217c: Sókratés slyšel Parmenida vést rozhovor otázkami, „já byl mladý, on už hodně starý“. 241d: „nemysli, že se stávám otcovrahem“; řeč otce Parmenida je třeba vyzkoušet a vynutit, že co není, v jistém ohledu je. 242d–e: elejský kmen, „od Xenofana a ještě dřív“, říká, že všechno je jedno; iónské a později sicilské Múzy to spojily. 258d–259a: co není, není opak toho, co je, ale něco jiného." }
+  - { id: platon-symposion-207, druh: pramen, nazev: "Symposion 207c–208b", autor: Platón, dilo: "Symposium, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg011/tlg0059.tlg011.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Sókratés vypráví, co ho učila Diotima; řeč je o lásce jako touze smrtelného po nesmrtelnosti. Každému živému tvoru se říká, že žije a je tentýž, „jako se o člověku říká, že je od dětství do stáří tentýž“, a přitom v sobě nikdy nemá totéž: vlasy, maso, kosti, krev, celé tělo; a v duši způsoby, povahy, názory, touhy, slasti, bolesti, strachy; dokonce ani vědění: zapomínání je odchod vědění a opakování (μελέτη) vkládá novou vzpomínku místo odcházející. Smrtelné se zachovává ne tím, že je stále totéž jako božské, ale tím, že po sobě nechává nové, takové, jaké bylo samo." }
+  - { id: platon-faidros, druh: pramen, nazev: "Faidros 229c–230a", autor: Platón, dilo: "Phaedrus, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg012/tlg0059.tlg012.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Sókratés nemá čas vykládat báje: ještě nedokáže podle delfského nápisu poznat sám sebe; zkoumá, jestli je obluda spletitější a nadutější než Týfón, nebo tvor krotší a prostší." }
+  - { id: platon-faidon-58, druh: pramen, nazev: "Faidón 58a–c a 115c–e", autor: Platón, dilo: "Phaedo, řecky J. Burnet, angl. H. N. Fowler (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg004/tlg0059.tlg004.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "58a–c (mluví Faidón): loď, kterou Athéňané každý rok posílají na Délos, je „jak říkají Athéňané“ ta, na které Théseus kdysi odplul na Krétu s dvakrát sedmi; dokud se nevrátí, nesmí se v obci popravovat; kněz ji ověnčil den před soudem, proto Sókratés čekal ve vězení dlouho. 115c–e: Kritón se ptá, jak ho mají pohřbít; „jak chcete, jestli mě chytíte“; Sókratés je ten, kdo teď rozmlouvá, ne ten, koho za chvíli uvidí mrtvého." }
+  - { id: plutarchos-theseus, druh: pramen, nazev: "Théseus 23", autor: Plútarchos, dilo: "Vitae parallelae, řecky a angl. B. Perrin (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg001/tlg0007.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Loď o třiceti veslech, na které Théseus plul s mladými lidmi a vrátil se, uchovávali Athéňané až do časů Démétria z Faléra (vládl v Athénách 317–307 př. n. l.; rok z příruček); stará prkna odstraňovali a vsazovali nová, pevná; filozofům byla sporným příkladem pro „rostoucí argument“ (αὐξόμενος λόγος): jedni říkali, že zůstává táž, druzí, že ne. Plútarchos neříká, že byla vyměněna všechna prkna, a druhou loď nezná. Psal asi 400 let po Démétriovi." }
+  - { id: plutarchos-de-e, druh: pramen, nazev: "O delfském E 17–20 (391e–393b)", autor: Plútarchos, dilo: "De E apud Delphos, řecky G. N. Bernardakis (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg090/tlg0007.tlg090.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Mluví Plútarchův učitel Ammónios. Bůh zdraví příchozího nápisem Poznej sám sebe, my mu odpovídáme „Jsi“ (392a). My na bytí podíl nemáme; do téže řeky podle Hérakleita dvakrát nevstoupíš (392b, DK 22 B91) a smrtelné podstaty se nelze dvakrát dotknout; ze semene dítě, chlapec, mladík, muž, stařec; bojíme se směšně jedné smrti, a přitom jsme jich tolik prodělali; včerejší zemřel do dnešního; „nikdo nezůstává a není jeden, stáváme se mnohými“; kdybychom zůstávali titíž, proč by nás těšilo něco jiného než dřív (392c–e). Doopravdy je jen věčné a neměnné (392e–393a). Čteno řecky." }
+  - { id: plutarchos-de-sera, druh: pramen, nazev: "O pozdní odplatě bohů 15–16 (558f–559e)", autor: Plútarchos, dilo: "De sera numinis vindicta, řecky G. N. Bernardakis (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg107/tlg0007.tlg107.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Mluví Plútarchos sám; hájí, že obec smí být volána k odpovědnosti za činy předků. Obec je jedna souvislá věc jako živý tvor, který se s věkem nestává jiným; dělit ji časem na mnoho obcí je jako dělat z jednoho člověka mnoho, protože je teď starší a dřív byl mladší. Podobá se to „Epicharmovým věcem“, z nichž sofistům vyrostl rostoucí argument: kdo si kdysi půjčil, teď nedluží, protože se stal jiným; kdo byl včera pozván na večeři, přijde dnes nepozván. Přitom věk mění každého z nás víc než obec: člověka by po čase stěží poznal přítel a povahy se mění každou řečí, námahou, citem a zákonem. A přece se člověku říká jeden od narození do konce; jinak všechno naházíme do Hérakleitovy řeky, do které prý dvakrát nevstoupíš. Čteno řecky." }
+  - { id: plutarchos-comm-not, druh: pramen, nazev: "O obecných pojmech proti stoikům 43–44 (1082e–1084a)", autor: Plútarchos, dilo: "De communibus notitiis adversus Stoicos, řecky G. N. Bernardakis, anglicky v témž repozitáři (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg138/tlg0007.tlg138.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Mluví Diadúmenos, akademik. Úvaha o růstu je stará: položil ji, „jak říká Chrýsippos“, Epicharmos. Akademikové mají hádanku za nesnadnou. Předpoklady, které stoikové uznávají: každá jednotlivá látka teče, něco pouští a něco přijímá; k čemu něco přibývá a z čeho ubývá, nezůstává totéž; „růst“ a „ubývání“ jsou tedy správně vznik a zánik. Stoická odpověď podle Diadúmena: každý z nás je dvojí, látka (οὐσία), která stále teče, a jakost (ποιότης), která trvá, roste a ubývá; nikdo ten rozdíl v sobě nikdy nerozlišil; jiný způsob, jak zachránit růst, se ale nenabízí. Stoické znění samo se tu nedochovalo." }
+  - { id: plutarchos-kolotes, druh: pramen, nazev: "Proti Kólótovi 13, 15 a 20 (1113e–1114f, 1116a, 1118c)", autor: Plútarchos, dilo: "Adversus Colotem, řecky G. N. Bernardakis (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0007/tlg140/tlg0007.tlg140.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Epikurejec Kólótés (3. stol. př. n. l.) tvrdil, že Parmenidés tím, že všechno je jedno, ruší všechno a nedá se podle něj žít. Plútarchos: Parmenidés nezrušil oheň ani vodu ani sráz ani města; složil uspořádání světa ze světlého a temného, napsal mnoho o Zemi, nebi, Slunci, Měsíci a hvězdách a vylíčil vznik lidí; jeho řeč o jednom jsoucím není zrušení mnohého a smyslového, ale ukázání rozdílu mezi ním a tím, co se chápe rozumem (1114b–f). 1116a: Měsíc podle Parmenida „svítí v noci, bloudí kolem Země, cizí světlo“ (DK 28 B14). 1118c: Hérakleitos říká „hledal jsem sám sebe“ (DK 22 B101); delfské Poznej sám sebe dalo podle Aristotela Sókratovi podnět k jeho hledání." }
+  - { id: eusebios-pe-xv-20, druh: pramen, nazev: "Příprava na evangelium XV, 20", autor: Eusebios z Kaisareie, dilo: "Praeparatio evangelica, řecky W. Dindorf (Teubner 1867; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2018/tlg001/tlg2018.tlg001.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Zlomek DK 22 B12. Eusebios (4. stol. n. l.) opisuje z výtahů Areia Didyma (1. stol. př. n. l.; XV, 20, 8), ten z Kleantha (3. stol. př. n. l.): Zénón říká o duši, že je výpar, jako Hérakleitos, který chtěl ukázat, že duše se stále obnovují, a přirovnal je k řekám. Věta je v iónském nářečí. Druhá půlka („a duše se vypařují z vlhkého“) může být už Kleanthův výklad." }
+  - { id: herakleitos-alegorik, druh: pramen, nazev: "Homérské otázky 24", autor: "Hérakleitos (alegorik)", dilo: "Allegoriae Homericae, řecky E. Mehler (Leiden 1851; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg1414/tlg001/tlg1414.tlg001.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Zlomek DK 22 B49a. Autor (jmenovec filozofa, snad 1. stol. n. l.; dobu znám jen z příruček) uvádí „temného Hérakleita“ jako příklad řeči v hádankách: lidé jsou smrtelní bohové, a „do týchž řek vstupujeme i nevstupujeme, jsme i nejsme“." }
+  - { id: hippolytos-ix, druh: pramen, nazev: "Vyvrácení všech herezí IX, 9–10", autor: Hippolytos, dilo: "Refutatio omnium haeresium, řecky L. Duncker a F. G. Schneidewin (Göttingen 1859; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg2115/tlg060/tlg2115.tlg060.perseus-grc1.xml", overeno: 2026-10-09, poznamka: "Křesťanský autor z počátku 3. stol. n. l. cituje Hérakleita, aby k němu připodobnil jednoho z kacířů: B50 (ne mne, ale řeč), B51 (luk a lyra), B1, B52 (věk je dítě, které si hraje), B53 (válka otec všeho), B54 (skrytá harmonie), B60 (cesta nahoru a dolů), B61 (moře), B62 a další." }
+  - { id: sextos-m-vii-111, druh: pramen, nazev: "Proti učencům VII, 111", autor: Sextos Empeirikos, dilo: "Adversus mathematicos, řecky H. Mutschmann (First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0544/tlg002/tlg0544.tlg002.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Parmenidovo prooimion (DK 28 B1, verše 1–30): klisny, vůz, dcery Slunce, brána cest Noci a Dne, Spravedlnost s klíči, bohyně bere básníka za pravou ruku a oslovuje ho „mladíku“. Sextos (kolem roku 200 n. l.) nazývá Parmenida Xenofanovým žákem (γνώριμος) a báseň vykládá jako alegorii." }
+  - { id: simplikios-fyzika, druh: pramen, nazev: "Komentář k Aristotelově Fyzice, s. 30–31, 38–39, 77–78, 116–117, 144–148, 887 a 1313", autor: Simplikios, dilo: "In Aristotelis Physica commentaria, řecky H. Diels (Commentaria in Aristotelem Graeca IX–X; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg4013/tlg004/tlg4013.tlg004.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "6. stol. n. l., tedy tisíc let po Parmenidovi. S. 116–117: zlomky B2 a B6. S. 144–146: Simplikios opisuje 52 veršů zlomku B8 „kvůli vzácnosti Parmenidova spisu“. S. 38–39: B8, 50–61; výklad o mínění nazývá bohyně klamným „ne jako prostě nepravdivý“, ale jako sestup od pravdy k tomu, co se jeví. S. 146–147: Parmenidés nejsoucí ve světě mínění připouští. S. 887: Hérakleitova řeč, „že všechno plyne (πάντα ῥεῖν) a nikdy není totéž“. S. 1313: přírodní filozofové kolem Hérakleita říkají, že „vždy všechno plyne“ (ἀεὶ πάντα ῥεῖ) a že dvakrát do téže řeky nevstoupíš. Čteno řecky, hledáním v celém textu; latinské ani moderní překlady jsem neměl." }
+  - { id: aristoteles-metafyzika-zmena, druh: pramen, nazev: "Metafyzika I, 5 (986b18–987a2); IV, 3 (1005b19–26); IV, 5 (1010a1–22)", autor: Aristotelés, dilo: "Metaphysica, řecky W. D. Ross, angl. H. Tredennick (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg025/tlg0086.tlg025.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "986b: o Parmenidovi „se říká“, že byl Xenofanovým žákem; Parmenidés soudí, že vedle jsoucího nejsoucí není nic, a tak je jsoucí jedno; „nucen jít za jevy“ má ale za to, že jedno je to podle rozumu a mnohé podle vnímání, a klade dva počátky, teplé a studené. 1005b: nelze mít za to, že totéž je i není, „jak se někteří domnívají, že říká Hérakleitos“; co kdo říká, nemusí si i myslet. 1010a: ti, kdo se hlásí k Hérakleitovi, a Kratylos, který nakonec jen hýbal prstem a Hérakleitovi vytýkal, že řekl „dvakrát“: podle něj ani jednou; Aristotelova odpověď: co něco ztrácí, má ještě něco z toho, co ztrácí." }
+  - { id: aristoteles-kategorie-4a, druh: pramen, nazev: "Kategorie 5 (3b33–4a21)", autor: Aristotelés, dilo: "Categoriae, řecky I. Bekker (1837; First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0086/tlg006/tlg0086.tlg006.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Čteno jen řecky; číslování stran ve vydání není, řádky znám z literatury. Člověk není teď víc člověkem než dřív. Podstatě je nejvíc vlastní, že jedna a táž přijímá protiklady: tentýž člověk je jednou světlý, jindy tmavý, teplý a studený, špatný a dobrý. Barva to neumí: táž barva nebude bílá i černá." }
+  - { id: aristoteles-fyzika-i, druh: pramen, nazev: "Fyzika I, 7 a V, 4", autor: Aristotelés, dilo: "Physica, řecky W. D. Ross (First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0086/tlg031/tlg0086.tlg031.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Čteno jen řecky; číslování stran ve vydání není. I, 7 (běžně 189b30–190a21): říkáme „člověk se stal vzdělaným“ (μουσικός), ne „z člověka vznikl vzdělaný“; člověk při tom zůstává a je to člověk, nevzdělanost nezůstává; něco musí vždy být podkladem toho, co vzniká. V, 4 (běžně 228a6–19): je ranní a večerní zdraví jedno a totéž, když těla tečou? Simplikios k tomu místu jmenuje Hérakleita." }
+  - { id: aristoteles-politika-iii, druh: pramen, nazev: "Politika III, 3 (1276a8–b15)", autor: Aristotelés, dilo: "Politica, řecky W. D. Ross, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg035/tlg0086.tlg035.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Kdy jednala obec a kdy ne: po pádu oligarchie nebo tyranidy nechtějí někteří plnit smlouvy s tím, že si nepůjčila obec, ale tyran. Je obec táž, dokud v ní žije týž rod, i když jedni umírají a druzí se rodí, jako říkáme řekám a pramenům, že jsou tytéž, ačkoli voda stále přitéká a odtéká? Podle Aristotela rozhoduje ústava: sbor je jiný, když hraje komedii, a jiný, když tragédii, i když jsou v něm často titíž lidé. Jestli má obec po změně ústavy platit staré dluhy, je „jiná otázka“." }
+  - { id: aristoteles-etika-ix, druh: pramen, nazev: "Etika Nikomachova IX, 4 (1166a10–b2), IX, 9 (1169b33–1170a4) a X, 7 (1177b31–1178a8)", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "IX, 4 a X, 7 čteny řecky; IX, 9, 1169b33–1170a4 čteno 10. 10. 2026 anglicky v Rackhamově překladu na Perseu: na bližních a jejich činech můžeme pozorovat lépe než na sobě a na svých činech, a dobrý člověk proto potřebuje dobré přátele. Dobrý člověk je se sebou zajedno a chce totéž celou duší; každý si přeje dobro pro sebe a nikdo si nezvolí mít všechno, kdyby se tím stal jiným; každý je, zdá se, to, co v něm myslí, nebo to nejvíc (1166a13–23). Přítel je druhé já (1166a31–32). 1178a2–7: každý je, zdá se, tím nejlepším v sobě, a bylo by divné volit si život někoho jiného." }
+  - { id: seneca-ep-58, druh: pramen, nazev: "Dopisy Luciliovi 58, 22–27 a 12, 7", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-09, poznamka: "Seneca vykládá Platónovo dělení toho, co je: co vidíme a čeho se dotýkáme, Platón mezi skutečně jsoucí nepočítá, protože to teče. Nikdo z nás není ve stáří týž, kým byl v mládí, ani ráno týž, kým byl den předtím; těla se ženou jako řeky; „já sám, zatímco říkám, že se to mění, jsem se změnil“. Hérakleitos: do téže řeky dvakrát vstupujeme i nevstupujeme; jméno řeky zůstává, voda protekla; u řeky je to zřejmější než u člověka. Závěr: milujeme nejprchavější věc, tělo, a bojíme se smrti, ačkoli každý okamžik je smrtí předchozího stavu (58, 23); obraťme mysl k tomu, co je věčné (58, 27). 12, 7: Hérakleitos, kterému temná řeč vynesla přízvisko, řekl, že jeden den se rovná každému." }
+  - { id: seneca-plac, druh: pramen, nazev: "O hněvu II, 10, 5 a O duševním klidu 15, 2", autor: Seneca, dilo: "De ira; De tranquillitate animi (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.ira2.shtml", overeno: 2026-10-09, poznamka: "Hérakleitos prý plakal, kdykoli vyšel mezi lidi a viděl, jak špatně žijí; Démokritos se podle vyprávění („aiunt“) na veřejnosti vždy smál. Seneca radí napodobit spíš Démokrita. Psáno v 1. stol. n. l., přes 500 let po Hérakleitovi; z Hérakleitových zlomků to není." }
+  - { id: marcus-hovory-promena, druh: pramen, nazev: "Hovory k sobě II, 2 a 17; IV, 43 a 46; V, 23; VI, 15 a 42; IX, 19; X, 7; XII, 3–4", autor: Marcus Aurelius, dilo: "Ad se ipsum, řecky J. H. Leopold (Teubner 1908), PerseusDL", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0562/tlg001/tlg0562.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Čteno jen řecky. II, 2: ať jsem cokoli, je to trochu masa, trochu dechu a vládnoucí část. XII, 3: skládáš se ze tří věcí, těla, dechu a rozumu; první dvě jsou tvoje potud, že se o ně máš starat, jen třetí je opravdu tvoje; od rozumu máš oddělit, co dělají nebo říkají druzí, co jsi udělal nebo řekl sám a co tě znepokojuje jako budoucí. XII, 4 (čteno řecky 10. 10. 2026): „Často jsem se divil, jak to, že každý má sebe rád víc než všechny ostatní, a vlastního mínění o sobě si cení méně než mínění druhých“; víc se stydíme před bližními, co si o nás pomyslí, než před sebou. IV, 43: čas je řeka toho, co vzniká. V, 23 a II, 17: látka je jako řeka v ustavičném toku; všechno tělesné je řeka. IX, 19: všechno je v proměně, i ty sám. X, 7: pevné a vzdušné v tobě není to z narození, přiteklo včera a předevčírem z jídla a vzduchu; mění se to, co přijalo, ne to, co porodila matka (následuje stoický výraz ἰδίως ποιόν, místo je nejasné). IV, 46 a VI, 42: Marcus jmenuje Hérakleita a připomíná si jeho věty." }
+  - { id: epiktetos-rozpravy-ii-10, druh: pramen, nazev: "Rozpravy II, 10 a III, 1", autor: Epiktétos, dilo: "Dissertationes ab Arriano digestae, řecky H. Schenkl (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg001/tlg0557.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Čteno jen řecky. II, 10 (Jak ze jmen najít, co se sluší): „Uvaž, kdo jsi“: nejdřív člověk, pak občan světa, syn, bratr, mladý nebo starý; každé takové jméno říká, co k němu patří; kdo pomlouvá bratra, „zapomněl, kdo je“. Kapitola žádá po synovi poslušnost ve všem (§ 7) a v § 17 užívá hanlivé slovo κίναιδος. III, 1, 40: „nejsi maso ani vlasy, ale vůle“; věta stojí v kázání mladíkovi, který si upravuje vlasy a tělo, a hned před ní je „nech muže mužem a ženu ženou“." }
+  - { id: filon-aet-48, druh: pramen, nazev: "O věčnosti světa 48–51", autor: Filón Alexandrijský, dilo: "De aeternitate mundi, řecky L. Cohn a S. Reiter (First1KGreek)", url: "https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0018/tlg029/tlg0018.tlg029.1st1K-grc1.xml", overeno: 2026-10-09, poznamka: "Chrýsippos ve spise O rostoucím (Περὶ αὐξανομένου): dva jedinečně určení (ἰδίως ποιά) nemohou být na téže látce; hádanka o Diónovi a Theónovi (celý člověk a člověk bez nohy). Doklad, že Chrýsippos o rostoucím argumentu psal zvlášť. Hádanku samu atlas nepoužije." }
+  - { id: hobbes-de-corpore, druh: pramen, nazev: "Elements of Philosophy, the First Section, Concerning Body II, 11, 7", autor: Thomas Hobbes, dilo: "Londýn 1656, anglický překlad latinského De corpore; přepis EEBO-TCP (A43987)", url: "https://github.com/textcreationpartnership/A43987", overeno: 2026-10-09, poznamka: "Čteno v anglickém vydání z roku 1656 (latinský originál vyšel roku 1655; rok z příruček). Spor o „počátek individuace“: je zestárlý člověk týž jako zamlada, je obec v různých dobách táž? Tři názory: totožnost je v látce, ve formě, v souhrnu vlastností. Proti formě: kdyby někdo schovával stará prkna Théseovy lodi a pak je složil ve stejném pořadí, byly by dvě lodi číselně tytéž, což je nesmysl. Hobbes: záleží na tom, pod jakým jménem se ptáme: ptát se, zda je Sókratés týž člověk, je něco jiného než zda je totéž těleso. Člověk je týž, vycházejí-li jeho činy a myšlenky z téhož počátku pohybu; řeka je táž, teče-li z téhož pramene; loď je táž, dokud je táž látka." }
+  - { id: iep-heraclitus, druh: encyklopedie, nazev: "Heraclitus", autor: "Daniel W. Graham", dilo: Internet Encyclopedia of Philosophy, url: "https://iep.utm.edu/heraclit/", overeno: 2026-10-09, poznamka: "Četl nástroj WebFetch. O jeho životě nevíme nic kromě toho, co lze vyčíst z jeho vlastních výroků; antické životopisy jsou dohady nebo výmysly složené z jeho vět. Působil kolem roku 500 př. n. l.; ti, které kritizuje jménem, žili v 6. století nebo dřív; Parmenida nejmenuje. Platón ho kladl za Parmenida, pravděpodobnější je, že psal před ním; Parmenidés v básni jeho slova „snad“ ozvěnou vrací. K B12: nemění se všechno; to, že se něco mění, umožňuje jinému trvat." }
+  - { id: sep-material-constitution, druh: encyklopedie, nazev: "Material Constitution", autor: "Ryan Wasserman", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/material-constitution/", overeno: 2026-10-09, poznamka: "Četl nástroj WebFetch (rev. 14. 1. 2026). Théseova loď podle Plútarcha; druhou loď ze starých prken přidal v novověku Hobbes; Dlužníkův paradox připisuje heslo Epicharmovi včetně scény, kdy věřitel dlužníka uhodí a hájí se stejně. Pramen té scény heslo neuvádí; v Epicharmových verších u Diogena Laertia ani u Plútarcha bití není (znám jen z literatury, že je v anonymním komentáři k Theaitétu; ten jsem neotevřel)." }
+  - { id: sep-identity-personal, druh: encyklopedie, nazev: "Personal Identity", autor: "Eric T. Olson", dilo: Stanford Encyclopedia of Philosophy, url: "https://plato.stanford.edu/entries/identity-personal/", overeno: 2026-10-09, poznamka: "Četl nástroj WebFetch (rev. 30. 6. 2023). Pod „osobní identitou“ se skrývá několik různých otázek: Kdo jsem? (co mě dělá tím, kým jsem), co je osoba, co je třeba k tomu, aby člověk trval z jednoho času do druhého, podle čeho poznáme, kdo je kdo, co vlastně jsme, na čem na našem trvání záleží. Odpovědi na otázku trvání: psychická spojitost, tělesná (biologická) spojitost, žádné kritérium. Otázky se probírají „od počátků západní filozofie“." }
+  - { id: bhardwaj-2006, druh: monografie, nazev: "Neocortical neurogenesis in humans is restricted to development", autor: "Ratan D. Bhardwaj, Maurice A. Curtis, Kirsty L. Spalding, Bruce A. Buchholz, David Fink, Thomas Björk-Eriksson, Claes Nordborg, Fred H. Gage, Henrik Druid, Peter S. Eriksson, Jonas Frisén", dilo: "Proceedings of the National Academy of Sciences 103 (2006), 12564–12568; rukopis v repozitáři OSTI pod názvem The age of human cerebral cortex neurons", url: "https://www.osti.gov/servlets/purl/897939", overeno: 2026-10-09, poznamka: "Čten celý rukopis (28 stran, zpráva LLNL UCRL-JRNL-220450); název, ročník a strany tištěné verze podle záznamu Europe PMC (PMC1567918). Uhlík 14C z jaderných zkoušek (1955–1963) v DNA ukazuje, kdy buňka vznikla. Neurony ve všech zkoumaných oblastech mozkové kůry jsou „staré jako člověk sám“: vznikly 0,3 ± 0,2 roku před narozením; nové neurony by tvořily méně než 1 % (nejstarší zkoumaný 72 let). Ostatní buňky kůry se obměňují: u lidí narozených po zkouškách vznikly průměrně 5,5 ± 1,3 roku po narození (pět měření). Autoři připomínají meze metody (pod 1 % nevidí)." }
+  - { id: spalding-2005, druh: monografie, nazev: "Retrospective birth dating of cells in humans", autor: "Kirsty L. Spalding, Ratan D. Bhardwaj, Bruce A. Buchholz, Henrik Druid, Jonas Frisén", dilo: "Cell 122 (2005), 133–143; rukopis v repozitáři OSTI", url: "https://www.osti.gov/servlets/purl/877846", overeno: 2026-10-09, poznamka: "Čten rukopis (zpráva LLNL), ne sazba časopisu; text webu Cell nástrojům nevydal. Metoda: 14C v DNA odpovídá ovzduší v době posledního dělení buňky; ověřeno na letokruzích švédských borovic. Výstelka střeva žije asi pět dní (číslo přejaté ze starší práce, ne měření této studie). Buňky lačníku jako celek: průměrně 10,7 ± 3,6 roku u tří lidí průměrného věku 34,8 roku; mezižeberní sval dvou lidí (37 a 38 let): průměrně 15,1 roku; šedá hmota mozečku skoro stejně stará jako člověk (vznikla ve věku 2,9 ± 1,2 roku); neurony týlní kůry staré jako člověk. Přesnost datování ± 2 roky." }
+  - { id: bergmann-2009, druh: monografie, nazev: "Evidence for cardiomyocyte renewal in humans", autor: "Olaf Bergmann, Ratan D. Bhardwaj, Samuel Bernard a kol.", dilo: "Science 324 (2009), 98–102; autorský rukopis v PubMed Central (PMC2991140)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2991140/", overeno: 2026-10-09, poznamka: "Čten autorský rukopis (XML z PubMed Central). Buňky srdečního svalu se obnovují: asi 1 % ročně ve dvaceti letech, 0,3 % v pětasedmdesáti; za běžný život se jich vymění méně než polovina; v padesáti zbývá 60 % z doby kolem narození. Čísla jsou výsledek modelu nad daty o 14C." }
+  - { id: lynnerup-2008, druh: monografie, nazev: "Radiocarbon dating of the human eye lens crystallines reveal proteins without carbon turnover throughout life", autor: "Niels Lynnerup, Henrik Kjeldsen, Steffen Heegaard, Christina Jacobsen, Jan Heinemeier", dilo: "PLoS ONE 3 (2008), e1529; volně přístupné (PMC2211393)", url: "https://doi.org/10.1371/journal.pone.0001529", overeno: 2026-10-09, poznamka: "Čteno v plném textu (XML z Europe PMC). Bílkoviny v jádru oční čočky vznikají skoro celé kolem narození a pak už jen nepatrně; jednou vzniklé se neobměňují. Takovou celoživotní stálost tkáně do té doby popsali jen u zubní skloviny. Rok narození šlo z čočky určit s přesností asi tří let." }
+  - { id: quoidbach-2013, druh: monografie, nazev: "The End of History Illusion", autor: "Jordi Quoidbach, Daniel T. Gilbert, Timothy D. Wilson", dilo: "Science 339 (2013), 96–98; PDF na webu projektu MIDUS", url: "https://midus.wisc.edu/wp-content/uploads/2024/04/1256.pdf", overeno: 2026-10-09, poznamka: "Čteno celé (3 strany). Šest dílčích studií, dohromady přes 19 000 lidí ve věku 18–68 let; kromě studie 4 je autoři získali přes web televizního pořadu (kolem 80 % žen). Jedni měli říct, jak se za posledních deset let změnili, druzí odhadnout, jak se změní za příštích deset; odhady lidí ve věku a se srovnávaly s tím, co o uplynulé dekádě říkali lidé ve věku a + 10. Odhad byl v každém věku menší než vzpomínka lidí o deset let starších: u povahy, hodnot i zálib (oblíbená hudba, jídlo, dovolená, koníček, nejlepší přítel). Studie 4 (170 dospělých ve věku 18–64 let, 52 % žen, získaných přes Amazon Mechanical Turk): za koncert dnešní oblíbené kapely za deset let by dnes dali průměrně 129 dolarů, za koncert kapely oblíbené před deseti lety, kdyby hrála příští týden, 80 dolarů. Hlavní srovnání není sledování týchž lidí v čase; jen u povahy autoři přiložili data studie MIDUS (3 808 dospělých měřených dvakrát, 1995–1996 a 2004–2006). Proč k tomu dochází, studie neví. Místa ve studii ověřena znovu při revizi 10. 10. 2026." }
+  - { id: msmt-priloha-3, druh: data, nazev: "Příloha č. 3 k Metodickému doporučení k primární prevenci rizikového chování u dětí a mládeže: Poruchy příjmu potravy", autor: "Hana Papežová", dilo: "MŠMT, č. j. 21291/2010-28 (novější znění přílohy); kopie na webu ZŠ Svitavy, Sokolovská", url: "https://www.zs5.svitavy.cz/uredni_deska/prevence/03_poruchy_prijmu_potravy.pdf", overeno: 2026-10-09, poznamka: "Čteno celé (8 stran). Web MŠMT po přestavbě starou adresu nevydává, proto kopie. Nevhodné jsou příběhy nemocných ve všeobecné prevenci ve třídě (neúčinné, mohou vést k nápodobě); neúčinná je mechanická prezentace informací o poruchách a o známých lidech, kteří jimi trpí; předcházet posměchu kvůli vzhledu, oblečení, výkonu a tomu, co kdo jí; rizikem je přílišný důraz na vzhled a sebekontrolu a černobílý pohled na sebe; učitel není terapeut. Kontakty: Centrum Anabell, Linka bezpečí 116 111." }
+  - { id: msmt-priloha-8, druh: data, nazev: "Co dělat, když: intervence pedagoga. Příloha č. 8: Homofobie", dilo: "MŠMT, příloha Metodického doporučení k primární prevenci rizikového chování (2010); kopie na webu ZŠ Svitavy, Sokolovská", url: "https://www.zs5.svitavy.cz/uredni_deska/prevence/08_homofobie.pdf", overeno: 2026-10-09, poznamka: "Čteno celé (6 stran). Text je starší a užívá dobové výrazy. Pedagog má být citlivý k žákům, jejichž pohlavní či sexuální identita je odlišná, a jejich odlišnost veřejně nekomentovat; „v žádném případě není vhodné snažit se před třídním kolektivem analyzovat sexuální orientaci nebo genderovou identitu některého ze studentů“; domněnky se bez domluvy se studujícím neprobírají s rodiči; na homofobní poznámky se reaguje; krize identity může vést k depresi a sebepoškozování, řešení patří odborníkům." }
+  - { id: dementia-australia-jazyk, druh: data, nazev: "Dementia Language Guidelines", dilo: "Dementia Australia (PDF z října 2023)", url: "https://www.dementia.org.au/sites/default/files/2023-10/Dementia-language-guidelines.pdf", overeno: 2026-10-09, poznamka: "Čteny strany 1–7 z 18. Člověk s demencí je především člověk a diagnóza není to, co ho určuje. Mezi výrazy, které se užívat nemají: „ztrácí se nebo mizí“ (fading away or disappearing), „prázdná schránka“ (empty shell), „není celý při sobě“ (not all there), „ztrácíme ho“ (losing him/her), „oběť“, „trpící“. O blízkých: „žije po boku člověka s demencí“, „pečuje o něj“." }
+  - { id: met-kylix-lode, druh: data, nazev: "Terracotta kylix: eye-cup (56.171.36)", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/254894", overeno: 2026-10-09, poznamka: "Attická černofigurová číše s očima, asi 520 př. n. l.; pod uchy lodě. Public Domain (Open Access) podle API muzea; popis stránky četl nástroj WebFetch. Obraz vstupu cesty 2. 10. 10. 2026 čten záznam muzea v prohlížeči: štítek Public Domain u snímku a věta, že volná data a snímky jsou k užití bez svolení a poplatku; podle záznamu se pod každým uchem „slévají“ dvě lodě. Stažen snímek DP278403.jpg (1 660 215 bajtů), obrázek cise-lode-met." }
+  - { id: aic-herakleitos, druh: data, nazev: "Heraclitus, the Weeping Philosopher (1897.296)", dilo: "The Art Institute of Chicago", url: "https://www.artic.edu/artworks/111428/heraclitus-the-weeping-philosopher", overeno: 2026-10-09, poznamka: "Olej na plátně, španělský malíř, kolem roku 1630, 87,7 × 75 cm. CC0 Public Domain Designation podle stránky muzea (četl nástroj WebFetch) a API. Kandidát na obraz profilu; soubor nestažen." }
+  - { id: rijks-herakleitos, druh: data, nazev: "Heraclitus (SK-A-2784)", autor: "Hendrick ter Brugghen", dilo: "Rijksmuseum, Amsterdam", url: "https://www.rijksmuseum.nl/en/collection/SK-A-2784", overeno: 2026-10-09, poznamka: "Olej na plátně, 1628, 85,5 × 70 cm; protějšek k Démokritovi (SK-A-2783). Public domain podle stránky muzea (četl nástroj WebFetch). Kandidát na obraz profilu; soubor nestažen." }
+  - { id: met-volpato-skola, druh: data, nazev: "The School of Athens, after the fresco by Raphael (35.85.45)", autor: "Giovanni Volpato", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/716834", overeno: 2026-10-09, poznamka: "Rytina a lept, asi 1781, podle Raffaelovy fresky (1509–1511; rok z příruček). Public Domain podle API muzea. Které postavy jsou Hérakleitos a Parmenidés, freska neříká; určení je pozdější a u Parmenida nejisté (znám jen z literatury). Soubor nestažen." }
+  - { id: dl-x-63, druh: pramen, nazev: "Životy filozofů X, 63–66 (Dopis Hérodotovi)", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Epikúros: duše je jemné těleso rozptýlené po celém celku; vnímá, jen pokud ji kryje ostatní tělo, a to má od ní na vnímání podíl; když se celek rozpadne, duše se rozptýlí a nevnímá; vnímající duši si nelze myslet mimo toto složení." }
 
 citaty:
   - id: obrana-38a
@@ -2855,6 +2903,712 @@ citaty:
       druh: vlastni
       podle: "řecký text (Leopold); poslední zápis Hovorů: herec namítá, že neodehrál pět dějství, jen tři"
     zdroj: marcus-hovory
+  # Celek 7 (P6, 9. 10. 2026). Převody jsou vlastní, z řeckého nebo latinského textu uvedeného u pramene.
+  # U zlomků předsókratiků je v údaji číslo podle Dielse a Kranze a autor, u kterého se zlomek dochoval.
+  - id: herakleitos-b12
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B12
+    misto: u Eusebia, Příprava na evangelium XV, 20
+    cesky: "Na ty, kdo vstupují do týchž řek, tečou jiné a zase jiné vody."
+    original: "ποταμοῖσι τοῖσιν αὐτοῖσιν ἐμβαίνουσιν ἕτερα καὶ ἕτερα ὕδατα ἐπιρρεῖ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Dindorf); číslo zlomku DK 22 B12; Eusebios (4. stol. n. l.) opisuje z Areia Didyma a ten z Kleantha; podle hesla SEP jediné znění o řece s rysy Hérakleitova jazyka"
+    zdroj: eusebios-pe-xv-20
+  - id: herakleitos-b49a
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B49a
+    misto: u Hérakleita alegorika, Homérské otázky 24
+    cesky: "Do týchž řek vstupujeme i nevstupujeme, jsme i nejsme."
+    original: "ποταμοῖς τοῖς αὐτοῖς ἐμβαίνομέν τε καὶ οὐκ ἐμβαίνομεν, εἶμέν τε καὶ οὐκ εἶμεν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Mehler); DK 22 B49a; pravost sporná (podle hesla SEP odporuje B12), v atlasu jen s uvozením „připisuje se mu“ nebo „pozdější autor ho cituje takto“; první půlku má latinsky Seneca (Dopisy 58, 23)"
+    zdroj: herakleitos-alegorik
+  - id: kratylos-402a
+    osoba: platon
+    autor: Platón
+    dilo: Kratylos
+    misto: 402a
+    cesky: "Hérakleitos tuším říká, že všechno je v pohybu a nic nezůstává. Přirovnává věci k proudu řeky a říká, že dvakrát do téže řeky nevstoupíš."
+    original: "λέγει που Ἡράκλειτος ὅτι πάντα χωρεῖ καὶ οὐδὲν μένει, καὶ ποταμοῦ ῥοῇ ἀπεικάζων τὰ ὄντα λέγει ὡς δὶς ἐς τὸν αὐτὸν ποταμὸν οὐκ ἂν ἐμβαίης"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Sókratés; DK 22 A6 (svědectví, ne zlomek); λέγει που = „říká někde“, „tuším říká“"
+    zdroj: platon-kratylos
+  - id: plutarchos-de-e-392b
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O delfském E
+    misto: 392b
+    cesky: "Do téže řeky totiž podle Hérakleita dvakrát vstoupit nelze."
+    original: "ποταμῷ γὰρ οὐκ ἔστιν ἐμβῆναι δὶς τῷ αὐτῷ καθʼ Ἡράκλειτον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); mluví Ammónios; DK 22 B91; nejspíš parafráze po Platónovi a Aristotelovi, ne Hérakleitova slova"
+    zdroj: plutarchos-de-e
+  - id: metafyzika-1010a-kratylos
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Metafyzika
+    misto: IV, 5, 1010a12–15
+    cesky: "Kratylos nakonec soudil, že se nemá říkat nic, a jen hýbal prstem. Hérakleitovi vytýkal, že řekl, že do téže řeky nelze vstoupit dvakrát: sám soudil, že ani jednou."
+    original: "ὃς τὸ τελευταῖον οὐθὲν ᾤετο δεῖν λέγειν ἀλλὰ τὸν δάκτυλον ἐκίνει μόνον, καὶ Ἡρακλείτῳ ἐπετίμα εἰπόντι ὅτι δὶς τῷ αὐτῷ ποταμῷ οὐκ ἔστιν ἐμβῆναι· αὐτὸς γὰρ ᾤετο οὐδʼ ἅπαξ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Ross) a anglický překlad H. Tredennicka; jméno Kratylos doplněno z předchozí věty"
+    zdroj: aristoteles-metafyzika-zmena
+  - id: metafyzika-1010a-zbyva
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Metafyzika
+    misto: IV, 5, 1010a18–19
+    cesky: "Co něco ztrácí, má ještě něco z toho, co ztrácí, a z toho, co vzniká, už něco musí být."
+    original: "τό τε γὰρ ἀποβάλλον ἔχει τι τοῦ ἀποβαλλομένου, καὶ τοῦ γιγνομένου ἤδη ἀνάγκη τι εἶναι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Ross) a anglický překlad H. Tredennicka; Aristotelova odpověď těm, kdo se hlásí k Hérakleitovi"
+    zdroj: aristoteles-metafyzika-zmena
+  - id: herakleitos-b101
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B101
+    misto: u Plútarcha, Proti Kólótovi 1118c
+    cesky: "Hledal jsem sám sebe."
+    original: "ἐδιζησάμην ἐμεωυτόν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis), bez Plútarchova vloženého φησίν („říká“); DK 22 B101; δίζημαι = hledat, pátrat, vyptávat se; Diogenés Laertios IX, 5 totéž v nepřímé řeči"
+    zdroj: plutarchos-kolotes
+  - id: herakleitos-b45
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B45
+    misto: u Diogena Laertia IX, 7
+    cesky: "Hranice duše nenajdeš, i kdybys prošel každou cestu: tak hlubokou má míru."
+    original: "ψυχῆς πείρατα ἰὼν οὐκ ἂν ἐξεύροιο, πᾶσαν ἐπιπορευόμενος ὁδόν· οὕτω βαθὺν λόγον ἔχει"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; DK 22 B45; λόγος tu převádím „míra“ (jinak řeč, důvod, poměr)"
+    zdroj: dl-ix-1
+  - id: herakleitos-b40
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B40
+    misto: u Diogena Laertia IX, 1
+    cesky: "Mnoho vědět ještě nenaučí rozumu. Jinak by to naučilo Hésioda a Pýthagoru a také Xenofana a Hekataia."
+    original: "πολυμαθίη νόον οὐ διδάσκει· Ἡσίοδον γὰρ ἂν ἐδίδαξε καὶ Πυθαγόρην, αὖτίς τε Ξενοφάνεά τε καὶ Ἑκαταῖον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; DK 22 B40"
+    zdroj: dl-ix-1
+  - id: herakleitos-b121
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B121
+    misto: u Diogena Laertia IX, 2
+    cesky: "Efesané by zasloužili, aby všichni dospělí do jednoho zemřeli a město nechali nedospělým. Vyhnali přece Hermodóra, nejschopnějšího z nich, a řekli: Nikdo z nás ať není nejschopnější. A když už takový je, ať je jinde a mezi jinými."
+    original: "ἄξιον Ἐφεσίοις ἡβηδὸν ἀποθανεῖν πᾶσι καὶ τοῖς ἀνήβοις τὴν πόλιν καταλιπεῖν, οἵτινες Ἑρμόδωρον ἄνδρα ἑωυτῶν ὀνήιστον ἐξέβαλον λέγοντες, Ἡμέων μηδὲ εἷς ὀνήιστος ἔστω· εἰ δέ τις τοιοῦτος, ἄλλῃ τε καὶ μετʼ ἄλλων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; DK 22 B121, celý zlomek; ἡβηδόν = všichni dospělí, ἄνηβοι = nedospělí, ὀνήιστος doslova nejprospěšnější. Diogenés má sloveso „zemřít“ (ἀποθανεῖν); že jiní autoři uvádějí ostřejší, vím jen z literatury. Hned za zlomkem Diogenés vypráví, že Hérakleitos odmítl psát Efesanům zákony a hrál s dětmi v Artemidině chrámu"
+    zdroj: dl-ix-1
+  - id: herakleitos-b51
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B51
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 9
+    cesky: "Nechápou, jak se to, co se rozchází, samo se sebou shoduje: je to spojení napjaté proti sobě jako u luku a lyry."
+    original: "οὐ ξυνίασιν ὅκως διαφερόμενον ἑωυτῷ ὁμολογέει· παλίντροπος ἁρμονίη ὅκωσπερ τόξου καὶ λύρης"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin); DK 22 B51; παλίντροπος = obrácený zpět; ἁρμονίη = spojení, sladění"
+    zdroj: hippolytos-ix
+  - id: herakleitos-b60
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B60
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 10
+    cesky: "Cesta nahoru a dolů je jedna a táž."
+    original: "ὁδὸς ἄνω κάτω μίη καὶ ὡυτή"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin: μίη; DK 22 B60 tiskne μία)"
+    zdroj: hippolytos-ix
+  - id: herakleitos-b61
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B61
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 10
+    cesky: "Moře je voda nejčistší i nejšpinavější: rybám k pití a k životu, lidem nepitná a zhoubná."
+    original: "θάλασσα ὕδωρ καθαρώτατον καὶ μιαρώτατον, ἰχθῦσι μὲν πότιμον καὶ σωτήριον, ἀνθρώποις δὲ ἄποτον καὶ ὀλέθριον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin), bez Hippolytova vloženého φησίν („říká“); DK 22 B61"
+    zdroj: hippolytos-ix
+  - id: herakleitos-b53
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B53
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 9
+    cesky: "Válka je všemu otcem a všemu králem. Jedny ukázala jako bohy, druhé jako lidi, z jedněch udělala otroky, z druhých svobodné."
+    original: "Πόλεμος πάντων μὲν πατήρ ἐστι, πάντων δὲ βασιλεύς, καὶ τοὺς μὲν θεοὺς ἔδειξε τοὺς δὲ ἀνθρώπους, τοὺς μὲν δούλους ἐποίησε τοὺς δὲ ἐλευθέρους"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin); DK 22 B53; πόλεμος = válka, boj (slovo je mužského rodu, proto otec a král); πάντων = všeho i všech"
+    zdroj: hippolytos-ix
+  - id: herakleitos-b52
+    osoba: herakleitos
+    autor: Hérakleitos
+    dilo: zlomek B52
+    misto: u Hippolyta, Vyvrácení všech herezí IX, 9
+    cesky: "Věk je dítě, které si hraje a táhne kameny po desce. Království patří dítěti."
+    original: "Αἰὼν παῖς ἐστι παίζων, πεττεύων· παιδὸς ἡ βασιληΐη"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Duncker a Schneidewin); DK 22 B52; αἰών = věk, čas života; πεττεύων = kdo hraje deskovou hru s kameny; výklad zlomku je sporný; rezerva ke scéně s kostkami"
+    zdroj: hippolytos-ix
+  - id: dl-ix-3-kostky
+    osoba: herakleitos
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: IX, 3
+    cesky: "Co se divíte, vy ničemové? Není to lepší než s vámi spravovat obec?"
+    original: "τί, ὦ κάκιστοι, θαυμάζετε; ἢ οὐ κρεῖττον τοῦτο ποιεῖν ἢ μεθʼ ὑμῶν πολιτεύεσθαι;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (bez vloženého εἶπεν, „řekl“) a anglický překlad R. D. Hickse; tradovaný příběh: Hérakleitos hraje s dětmi kostky u Artemidina chrámu a Efesané stojí kolem"
+    zdroj: dl-ix-1
+  - id: dl-ii-22-potapec
+    osoba: sokrates
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: II, 22
+    cesky: "Čemu jsem porozuměl, je znamenité; a myslím, že i to, čemu jsem neporozuměl. Jen by to chtělo délského potápěče."
+    original: "ἃ μὲν συνῆκα, γενναῖα· οἶμαι δὲ καὶ ἃ μὴ συνῆκα· πλὴν Δηλίου γέ τινος δεῖται κολυμβητοῦ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; tradovaný příběh („říká se“): Eurípidés dal Sókratovi Hérakleitův spis a ptal se, co o něm soudí; v IX, 12 se výrok o potápěči připisuje jakémusi Kratétovi"
+    zdroj: dl-ix-1
+  - id: parmenides-b1-brana
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B1, 11 (u Sexta Empeirika)
+    cesky: "Tam stojí brána cest Noci a Dne."
+    original: "ἔνθα πύλαι Νυκτός τε καὶ Ἤματός εἰσι κελεύθων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Mutschmann); DK 28 B1; Proti učencům VII, 111"
+    zdroj: sextos-m-vii-111
+  - id: parmenides-b1-bohyne
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B1, 22–23 (u Sexta Empeirika)
+    cesky: "A bohyně mě vlídně přijala, vzala mou pravou ruku do své a takto ke mně promluvila."
+    original: "καί με θεὰ πρόφρων ὑπεδέξατο, χεῖρα δὲ χειρὶ δεξιτερὴν ἕλεν, ὧδε δʼ ἔπος φάτο καί με προσηύδα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Mutschmann); DK 28 B1; bohyně ho pak oslovuje „mladíku“ (ὦ κοῦρε)"
+    zdroj: sextos-m-vii-111
+  - id: parmenides-b1-vsechno
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B1, 28–30 (u Sexta Empeirika)
+    cesky: "Máš se dozvědět všechno: neochvějné srdce přesvědčivé pravdy i mínění smrtelníků, na která není spolehnutí."
+    original: "χρεὼ δέ σε πάντα πυθέσθαι ἠμὲν Ἀληθείης εὐπειθέος ἀτρεμὲς ἦτορ ἠδὲ βροτῶν δόξας, ταῖς οὐκ ἔνι πίστις ἀληθής"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Mutschmann); DK 28 B1; mluví bohyně; totéž cituje Diogenés Laertios IX, 22 se čtením „dobře zaoblené pravdy“ (εὐκυκλέος)"
+    zdroj: sextos-m-vii-111
+  - id: parmenides-b2
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B2, 3–8 (u Simplikia)
+    cesky: "Jedna cesta: že je a že nemůže nebýt. To je cesta přesvědčení, protože jde za pravdou. Druhá: že není a že nebýt musí. O té ti říkám, že je to stezka, ze které se nedá nic zvědět: co není, bys nepoznal ani nevyslovil."
+    original: "ἡ μὲν ὅπως ἔστι τε καὶ ὡς οὐκ ἔστι μὴ εἶναι, πειθοῦς ἐστι κέλευθος (ἀληθείῃ γὰρ ὀπηδεῖ), ἡ δʼ ὡς οὐκ ἔστι τε καὶ ὡς χρεών ἐστι μὴ εἶναι, τὴν δή τοι φράζω παναπευθέα ἔμμεν ἀταρπόν· οὔτε γὰρ ἂν γνοίης τό γε μὴ ἐὸν (οὐ γὰρ ἀνυστόν) οὔτε φράσαις"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 116–117; DK 28 B2; mluví bohyně; vynecháno „neboť to nelze uskutečnit“"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b6
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B6, 4–9 (u Simplikia)
+    cesky: "Smrtelníci, kteří nic nevědí, bloudí o dvou hlavách. … Hluší i slepí, užaslí, zástupy bez úsudku, pro které být a nebýt je totéž i není totéž a jejichž cesta se ve všem obrací zpátky."
+    original: "βροτοὶ εἰδότες οὐδὲν πλάττονται, δίκρανοι· … κωφοὶ ὁμῶς τυφλοί τε, τεθηπότες, ἄκριτα φῦλα, οἷς τὸ πέλειν τε καὶ οὐκ εἶναι ταὐτὸν νενόμισται κοὐ ταὐτόν, πάντων δὲ παλίντροπός ἐστι κέλευθος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 117; DK 28 B6; zkráceno; mluví bohyně; verše, ve kterých část badatelů vidí narážku na Hérakleita (viz podklady)"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b8-ted
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B8, 5–6 (u Simplikia)
+    cesky: "Nebylo a nebude, protože je teď, celé najednou, jedno, souvislé."
+    original: "οὐδέ ποτʼ ἦν οὐδʼ ἔσται, ἐπεὶ νῦν ἔστιν ὁμοῦ πᾶν, ἕν, συνεχές"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 145; DK 28 B8; mluví bohyně o tom, co je"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b8-jak
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B8, 19–20 (u Simplikia)
+    cesky: "Jak by mohlo to, co je, být až potom? Jak by mohlo vzniknout? Jestli vzniklo, není; a není, ani jestli teprve někdy má být."
+    original: "πῶς δʼ ἂν ἔπειτα πέλοι τὸ ἐόν; πῶς δʼ ἄν κε γένοιτο; εἰ γὰρ ἔγεντʼ, οὐκ ἔστʼ, οὐδʼ εἴ ποτε μέλλει ἔσεσθαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 145; DK 28 B8"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b8-zustava
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B8, 29–30 (u Simplikia)
+    cesky: "Totéž, v témž zůstává, samo o sobě leží, a tak tam pevně trvá."
+    original: "ταὐτόν τʼ ἐν ταὐτῷ τε μένον καθʼ ἑαυτό τε κεῖται χοὔτως ἔμπεδον αὖθι μένει"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 146; DK 28 B8"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b8-jmena
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B8, 38–41 (u Simplikia)
+    cesky: "Proto je jen jménem všechno, co si smrtelníci ustanovili ve víře, že je to pravda: vznikat a zanikat, být a nebýt, měnit místo a střídat jasnou barvu."
+    original: "τῷ πάντʼ ὄνομ(α) ἔσται, ὅσσα βροτοὶ κατέθεντο πεποιθότες εἶναι ἀληθῆ, γίγνεσθαί τε καὶ ὄλλυσθαι, εἶναί τε καὶ οὐχί, καὶ τόπον ἀλλάσσειν διά τε χρόα φανὸν ἀμείβειν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 146 (tam porušené ὠνόμασται; ὄνομ’ ἔσται podle DK 28 B8); stránka otázky 6 tato slova volně převádí v odpovědi hlasu"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b8-mineni
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B8, 50–52 (u Simplikia)
+    cesky: "Tady končím spolehlivou řeč a myšlenku o pravdě. Odtud se uč mínění smrtelníků a poslouchej klamný řád mých slov."
+    original: "ἐν τῷ σοι παύω πιστὸν λόγον ἠδὲ νόημα ἀμφὶς ἀληθείης· δόξας δʼ ἀπὸ τοῦδε βροτείας μάνθανε, κόσμον ἐμῶν ἐπέων ἀπατηλὸν ἀκούων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 146 a 38; DK 28 B8; mluví bohyně"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b8-predstihl
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B8, 60–61 (u Simplikia)
+    cesky: "Celé to uspořádání ti vykládám tak, jak se jeví, aby tě žádný lidský úsudek nikdy nepředstihl."
+    original: "τόν σοι ἐγὼ διάκοσμον ἐοικότα πάντα φατίζω, ὡς οὐ μή ποτέ τίς σε βροτῶν γνώμη παρελάσσῃ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Diels), Simplikios, Komentář k Fyzice, s. 39; DK 28 B8; ἐοικότα = podobné (pravdě), jak se jeví; mluví bohyně"
+    zdroj: simplikios-fyzika
+  - id: parmenides-b14
+    osoba: parmenides
+    autor: Parmenidés
+    dilo: O přírodě
+    misto: zlomek B14 (u Plútarcha, Proti Kólótovi 1116a)
+    cesky: "Svítí v noci, bloudí kolem Země, světlo cizí."
+    original: "νυκτιφαὲς περὶ γαῖαν ἀλώμενον ἀλλότριον φῶς"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); DK 28 B14; verš o Měsíci z druhé části básně"
+    zdroj: plutarchos-kolotes
+  - id: plutarchos-kolotes-1114b
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: Proti Kólótovi
+    misto: 1114b
+    cesky: "Parmenidés ale nezrušil oheň ani vodu ani sráz ani města, obývaná v Evropě a v Asii, jak tvrdí Kólótés."
+    original: "ἀλλʼ ὅ γε Παρμενίδης οὔτε πῦρ ἀνῄρηκεν οὔτε ὕδωρ οὔτε κρημνὸν οὔτε πόλεις, ὥς φησι Κωλώτης, ἐν Εὐρώπῃ καὶ Ἀσίᾳ κατοικουμένας"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis)"
+    zdroj: plutarchos-kolotes
+  - id: sofistes-241d
+    osoba: platon
+    autor: Platón
+    dilo: Sofistés
+    misto: 241d
+    cesky: "Nemysli si o mně, že se stávám něčím jako otcovrahem. … Budeme muset vyzkoušet řeč otce Parmenida a vynutit si, že to, co není, v jistém ohledu je, a to, co je, zase nějak není."
+    original: "μή με οἷον πατραλοίαν ὑπολάβῃς γίγνεσθαί τινα. … τὸν τοῦ πατρὸς Παρμενίδου λόγον ἀναγκαῖον ἡμῖν ἀμυνομένοις ἔσται βασανίζειν, καὶ βιάζεσθαι τό τε μὴ ὂν ὡς ἔστι κατά τι καὶ τὸ ὂν αὖ πάλιν ὡς οὐκ ἔστι πῃ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví host z Eleje; zkráceno"
+    zdroj: platon-sofistes-parmenides
+  - id: theaitetos-183e
+    osoba: platon
+    autor: Platón
+    dilo: Theaitétos
+    misto: 183e–184a
+    cesky: "Parmenidés mi připadá, řečeno s Homérem, ctihodný a zároveň hrozný. Setkal jsem se s ním jako velmi mladý s velmi starým a zdálo se mi, že je v něm jakási vznešená hloubka."
+    original: "Παρμενίδης δέ μοι φαίνεται, τὸ τοῦ Ὁμήρου, αἰδοῖός τέ μοι εἶναι ἅμα δεινός τε. συμπροσέμειξα γὰρ δὴ τῷ ἀνδρὶ πάνυ νέος πάνυ πρεσβύτῃ, καί μοι ἐφάνη βάθος τι ἔχειν παντάπασι γενναῖον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Sókratés"
+    zdroj: platon-theaitetos-tabory
+  - id: theaitetos-181a
+    osoba: platon
+    autor: Platón
+    dilo: Theaitétos
+    misto: 180e–181a
+    cesky: "Postupovali jsme kousek po kousku a ani jsme si nevšimli, že jsme se ocitli mezi oběma tábory. Jestli se nějak neubráníme a neutečeme, dopadneme jako ti, kdo si v palaistrách hrají na čáře: chytí je obě strany a táhnou každá na opačnou stranu."
+    original: "κατὰ σμικρὸν γὰρ προϊόντες λελήθαμεν ἀμφοτέρων εἰς τὸ μέσον πεπτωκότες, καὶ ἂν μή πῃ ἀμυνόμενοι διαφύγωμεν, δίκην δώσομεν ὥσπερ οἱ ἐν ταῖς παλαίστραις διὰ γραμμῆς παίζοντες, ὅταν ὑπʼ ἀμφοτέρων ληφθέντες ἕλκωνται εἰς τἀναντία"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Sókratés; oba tábory jsou „tekoucí“ (Hérakleitovi stoupenci) a ti, kdo podle Parmenida a Melissa říkají, že všechno je jedno a stojí"
+    zdroj: platon-theaitetos-tabory
+  - id: plutarchos-theseus-23
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: Théseus
+    misto: 23, 1
+    cesky: "Loď o třiceti veslech, na které Théseus vyplul s mladými lidmi a šťastně se vrátil, uchovávali Athéňané až do časů Démétria z Faléra. Stará prkna odstraňovali a vsazovali místo nich jiná, pevná. Filozofům se tak ta loď stala sporným příkladem v úvaze o růstu: jedni říkali, že zůstává táž, druzí, že táž nezůstává."
+    original: "τὸ δὲ πλοῖον ἐν ᾧ μετὰ τῶν ἠϊθέων ἔπλευσε καὶ πάλιν ἐσώθη, τὴν τριακόντορον, ἄχρι τῶν Δημητρίου τοῦ Φαληρέως χρόνων διεφύλαττον οἱ Ἀθηναῖοι, τὰ μὲν παλαιὰ τῶν ξύλων ὑφαιροῦντες, ἄλλα δὲ ἐμβάλλοντες ἰσχυρὰ καὶ συμπηγνύντες οὕτως ὥστε καὶ τοῖς φιλοσόφοις εἰς τὸν αὐξόμενον λόγον ἀμφιδοξούμενον παράδειγμα τὸ πλοῖον εἶναι, τῶν μὲν ὡς τὸ αὐτό, τῶν δὲ ὡς οὐ τὸ αὐτὸ διαμένοι λεγόντων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad B. Perrina; αὐξόμενος λόγος = „rostoucí argument“, tady „úvaha o růstu“"
+    zdroj: plutarchos-theseus
+  - id: faidon-58a
+    osoba: platon
+    autor: Platón
+    dilo: Faidón
+    misto: 58a–b
+    cesky: "To je ta loď, jak říkají Athéňané, na které kdysi Théseus odplul na Krétu s oněmi dvakrát sedmi a zachránil je i sebe."
+    original: "τοῦτ’ ἔστι τὸ πλοῖον, ὥς φασιν Ἀθηναῖοι, ἐν ᾧ Θησεύς ποτε εἰς Κρήτην τοὺς δὶς ἑπτὰ ἐκείνους ᾤχετο ἄγων καὶ ἔσωσέ τε καὶ αὐτὸς ἐσώθη"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Faidón o lodi, kterou Athéňané každý rok posílali na Délos"
+    zdroj: platon-faidon-58
+  - id: de-sera-559-obec
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O pozdní odplatě bohů
+    misto: 559a
+    cesky: "Obec je jedna souvislá věc, jako živý tvor: změnami věku nepřestává být sama sebou. … Za všechno, co společně dělá nebo udělala, nese vinu i zásluhu."
+    original: "ἓν γάρ τι πρᾶγμα καὶ συνεχὲς ἡ πόλις ὥσπερ ζῷον οὐκ ἐξιστάμενον αὑτοῦ ταῖς καθʼ ἡλικίαν μεταβολαῖς … καὶ πᾶσαν ὧν πράττει κατὰ τὸ κοινὸν ἢ ἔπραξεν αἰτίαν καὶ χάριν ἀναδεχόμενον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); zkráceno; tím Plútarchos hájí, že obec smí nést následky toho, co udělala před generacemi"
+    zdroj: plutarchos-de-sera
+  - id: de-sera-559-dluznik
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O pozdní odplatě bohů
+    misto: 559b
+    cesky: "Kdo si kdysi půjčil, teď nic nedluží, protože se stal jiným. A kdo byl včera pozván na večeři, přichází dnes nepozván: je to přece někdo jiný."
+    original: "ὁ γὰρ λαβὼν πάλαι τὸ χρέος νῦν οὐκ ὀφείλει γεγονὼς ἕτερος· ὁ δὲ κληθεὶς ἐπὶ δεῖπνον ἐχθὲς ἄκλητος ἥκει τήμερον· ἄλλος γάρ ἐστι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); Plútarchos tak shrnuje „Epicharmovy věci“ a rostoucí argument, se kterým nesouhlasí"
+    zdroj: plutarchos-de-sera
+  - id: de-sera-559-zmeny
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O pozdní odplatě bohů
+    misto: 559b–c
+    cesky: "Věk přitom dělá s každým z nás větší změny než s celými obcemi. … Člověka by po čase stěží poznal podle podoby příbuzný nebo přítel."
+    original: "καίτοι μείζονάς γε παραλλαγὰς αἱ ἡλικίαι περὶ ἕκαστον ἡμῶν ποιοῦσιν ἢ κοινῇ περὶ τὰς πόλεις … ἀνθρώπου δὲ μόλις ἄν τις οἰκεῖος ἢ φίλος ἐντυχὼν διὰ χρόνου μορφὴν γνωρίσειεν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); zkráceno; námitku proti sobě vyslovuje Plútarchos sám"
+    zdroj: plutarchos-de-sera
+  - id: de-sera-559-jeden
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O pozdní odplatě bohů
+    misto: 559c
+    cesky: "A přece se o člověku říká, že je od narození až do konce jeden."
+    original: "ἀλλʼ ἄνθρωπός τε λέγεται μέχρι τέλους εἷς ἀπὸ γενέσεως"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis)"
+    zdroj: plutarchos-de-sera
+  - id: de-sera-559-reka
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O pozdní odplatě bohů
+    misto: 559c
+    cesky: "Jinak, aniž si toho všimneme, naházíme všechno do Hérakleitovy řeky, do které se prý dvakrát vstoupit nedá, protože příroda vším hýbe a všechno proměňuje."
+    original: "ἢ λήσομεν εἰς τὸν Ἡρακλείτειον ἅπαντα πράγματα ποταμὸν ἐμβαλόντες, εἰς ὃν οὔ φησι δὶς ἐμβῆναι τῷ πάντα κινεῖν καὶ ἑτεροιοῦν τὴν φύσιν μεταβάλλουσαν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis)"
+    zdroj: plutarchos-de-sera
+  - id: de-e-392d-mnozi
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O delfském E
+    misto: 392d
+    cesky: "Nikdo nezůstává a nikdo není jeden; stáváme se mnohými."
+    original: "μένει δʼ οὐδεὶς οὐδʼ ἔστιν εἷς, ἀλλὰ γιγνόμεθα πολλοί"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); mluví Ammónios, Plútarchův učitel"
+    zdroj: plutarchos-de-e
+  - id: de-e-392d-otazka
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O delfském E
+    misto: 392d–e
+    cesky: "Jak to, že když zůstáváme titíž, těší nás teď jiné věci než dřív, opačné věci máme rádi i nenávidíme, obdivujeme i haníme?"
+    original: "ἐπεὶ πῶς οἱ αὐτοὶ μένοντες ἑτέροις χαίρομεν νῦν, ἑτέροις πρότερον, τἀναντία φιλοῦμεν ἢ μισοῦμεν καὶ θαυμάζομεν καὶ ψέγομεν;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); mluví Ammónios"
+    zdroj: plutarchos-de-e
+  - id: de-e-392a-jsi
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O delfském E
+    misto: 392a
+    cesky: "Bůh každého z nás, kdo sem přichází, zdraví slovy Poznej sám sebe. … A my mu na oplátku říkáme: Jsi."
+    original: "ὁ μὲν γὰρ θεὸς ἕκαστον ἡμῶν ἐνταῦθα προσιόντα οἷον ἀσπαζόμενος προσαγορεύει τὸ γνῶθι σαυτόν … ἡμεῖς δὲ πάλιν ἀμειβόμενοι τὸν θεὸν εἶ φαμέν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); zkráceno; mluví Ammónios o nápisech v delfském chrámu"
+    zdroj: plutarchos-de-e
+  - id: comm-not-1083-dvoji
+    osoba: plutarchos
+    autor: Plútarchos
+    dilo: O obecných pojmech proti stoikům
+    misto: 1083d–e
+    cesky: "Jedno v nás prý stále teče a je unášeno, druhé trvá, roste a ubývá. … Jenže nikdo z nás si nevšiml, že je dvojí: že jednou částí stále teče a druhou zůstává od narození až do konce týž."
+    original: "τὸ μὲν ἀεὶ ῥεῖ καὶ φέρεται … τὸ δὲ διαμένει καὶ αὐξάνεται καὶ μειοῦται … οὐδʼ ἡμεῖς ᾐσθόμεθα διττοὶ γεγονότες καὶ τῷ μὲν ἀεὶ ῥέοντες μέρει τῷ δʼ ἀπὸ γενέσεως ἄχρι τελευτῆς οἱ αὐτοὶ διαμένοντες"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bernardakis); zkráceno; mluví akademik Diadúmenos proti stoikům, jejichž odpověď tu sám podává"
+    zdroj: plutarchos-comm-not
+  - id: seneca-ep-58-22
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 58, 22
+    cesky: "Nikdo z nás není ve stáří týž, kým byl v mládí. Nikdo z nás není ráno týž, kým byl den předtím. Naše těla se ženou jako řeky. … Já sám, zatímco říkám, že se to mění, jsem se změnil."
+    original: "Nemo nostrum idem est in senectute, qui fuit iuvenis; nemo nostrum est idem mane, qui fuit pridie. Corpora nostra rapiuntur fluminum more. … Ego ipse, dum loquor mutari ista, mutatus sum."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); zkráceno; Seneca tu vykládá, proč Platón nepočítá věci vnímané smysly mezi to, co skutečně je"
+    zdroj: seneca-ep-58
+  - id: seneca-ep-58-23
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 58, 23
+    cesky: "To je to, co říká Hérakleitos: Do téže řeky dvakrát vstupujeme i nevstupujeme. Jméno řeky totiž zůstává stejné, voda protekla. U řeky je to zřejmější než u člověka."
+    original: "Hoc est, quod ait Heraclitus: In idem flumen bis descendimus et non descendimus. Manet enim idem fluminis nomen, aqua transmissa est. Hoc in amne manifestius est quam in homine."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); pokračování (o lásce k tělu a strachu ze smrti) je citát seneca-ep-58-23-smrt"
+    zdroj: seneca-ep-58
+  - id: seneca-ep-58-23-smrt
+    osoba: seneca
+    autor: Seneca
+    dilo: Dopisy Luciliovi
+    misto: 58, 23
+    cesky: "Ale i nás unáší proud stejně rychlý. Proto žasnu nad naší pošetilostí: tolik milujeme věc ze všech nejprchavější, tělo, a bojíme se, že jednou zemřeme, ačkoli každý okamžik je smrtí toho, čím jsme byli předtím. Přestaň se bát, že se jednou stane, co se děje každý den."
+    original: "Sed nos quoque non minus velox cursus praetervehit, et ideo admiror dementiam nostram, quod tantopere amamus rem fugacissimam, corpus, timemusque, ne quando moriamur, cum omne momentum mors prioris habitus sit. Vis tu non timere, ne semel fiat, quod cotidie fit!"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (Gummere); navazuje na větu o řece; prior habitus = předchozí stav. Závěr, ke kterému Seneca řeku potřebuje; argumenty o strachu ze smrti má cesta 8"
+    zdroj: seneca-ep-58
+  - id: symposion-207d
+    osoba: platon
+    autor: Platón
+    dilo: Symposion
+    misto: 207d
+    cesky: "O člověku se říká, že je od dětství až do stáří tentýž. Nikdy v sobě nemá totéž, a přece se mu říká tentýž: stále se obnovuje a něco ztrácí, na vlasech, na mase, na kostech, na krvi, na celém těle."
+    original: "οἷον ἐκ παιδαρίου ὁ αὐτὸς λέγεται ἕως ἂν πρεσβύτης γένηται· οὗτος μέντοι οὐδέποτε τὰ αὐτὰ ἔχων ἐν αὑτῷ ὅμως ὁ αὐτὸς καλεῖται, ἀλλὰ νέος ἀεὶ γιγνόμενος, τὰ δὲ ἀπολλύς, καὶ κατὰ τὰς τρίχας καὶ σάρκα καὶ ὀστᾶ καὶ αἷμα καὶ σύμπαν τὸ σῶμα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; Sókratés vypráví, co mu řekla Diotima"
+    zdroj: platon-symposion-207
+  - id: symposion-207e
+    osoba: platon
+    autor: Platón
+    dilo: Symposion
+    misto: 207e
+    cesky: "A nejen na těle. Ani v duši nezůstávají nikomu tytéž způsoby, povaha, názory, touhy, radosti, bolesti a strachy: jedno vzniká, druhé zaniká."
+    original: "καὶ μὴ ὅτι κατὰ τὸ σῶμα, ἀλλὰ καὶ κατὰ τὴν ψυχὴν οἱ τρόποι, τὰ ἤθη, δόξαι, ἐπιθυμίαι, ἡδοναί, λῦπαι, φόβοι, τούτων ἕκαστα οὐδέποτε τὰ αὐτὰ πάρεστιν ἑκάστῳ, ἀλλὰ τὰ μὲν γίγνεται, τὰ δὲ ἀπόλλυται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; slova Diotimy"
+    zdroj: platon-symposion-207
+  - id: symposion-208a
+    osoba: platon
+    autor: Platón
+    dilo: Symposion
+    misto: 208a
+    cesky: "Zapomínání je odchod vědění. Opakování vkládá na místo toho, co odchází, novou vzpomínku a vědění tak zachraňuje, takže se zdá, že je pořád totéž."
+    original: "λήθη γὰρ ἐπιστήμης ἔξοδος, μελέτη δὲ πάλιν καινὴν ἐμποιοῦσα ἀντὶ τῆς ἀπιούσης μνήμην σῴζει τὴν ἐπιστήμην, ὥστε τὴν αὐτὴν δοκεῖν εἶναι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; slova Diotimy; μελέτη = cvičení, opakování"
+    zdroj: platon-symposion-207
+  - id: symposion-208b
+    osoba: platon
+    autor: Platón
+    dilo: Symposion
+    misto: 208a–b
+    cesky: "Tak se zachovává všechno smrtelné: ne tím, že je navždy úplně totéž jako božské, ale tím, že to, co odchází a stárne, po sobě nechává něco nového, takového, jaké bylo samo."
+    original: "τούτῳ γὰρ τῷ τρόπῳ πᾶν τὸ θνητὸν σῴζεται, οὐ τῷ παντάπασιν τὸ αὐτὸ ἀεὶ εἶναι ὥσπερ τὸ θεῖον, ἀλλὰ τῷ τὸ ἀπιὸν καὶ παλαιούμενον ἕτερον νέον ἐγκαταλείπειν οἷον αὐτὸ ἦν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; slova Diotimy"
+    zdroj: platon-symposion-207
+  - id: kategorie-4a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Kategorie
+    misto: 5, 4a17–21
+    cesky: "Určitý člověk, jeden a tentýž, je jednou bledý a jindy opálený, jednou je mu teplo a jindy zima, jednou je špatný a jindy dobrý."
+    original: "ὁ τὶς ἄνθρωπος, εἷς καὶ ὁ αὐτὸς ὤν, ὁτὲ μὲν λευκὸς ὁτὲ δὲ μέλας γίνεται, καὶ θερμὸς καὶ ψυχρός, καὶ φαῦλος καὶ σπουδαῖος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bekker 1837, First1KGreek), bez srovnání s překladem; řádky podle běžného číslování, ve vydání nejsou; λευκός a μέλας = doslova bílý a černý, tady o pleti (bledý a osmahlý); θερμός a ψυχρός = doslova teplý a studený"
+    zdroj: aristoteles-kategorie-4a
+  - id: fyzika-i-7
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Fyzika
+    misto: I, 7
+    cesky: "Člověk totiž zůstává, když se stává vzdělaným, a je to člověk. Nevzdělanost nezůstává."
+    original: "ὁ μὲν γὰρ ἄνθρωπος ὑπομένει μουσικὸς γιγνόμενος ἄνθρωπος καὶ ἔστι, τὸ δὲ μὴ μουσικὸν καὶ τὸ ἄμουσον οὔτε ἁπλῶς οὔτε συντεθειμένον ὑπομένει"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (W. D. Ross), bez srovnání s překladem; běžně se cituje jako 190a9–13, ve vydání číslování není; μουσικός = vzdělaný v múzických uměních; konec věty zkrácen"
+    zdroj: aristoteles-fyzika-i
+  - id: politika-1276a-reky
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Politika
+    misto: III, 3, 1276a36–39
+    cesky: "I o řekách a pramenech jsme zvyklí říkat, že jsou tytéž, ačkoli voda stále přitéká a odtéká."
+    original: "ὥσπερ καὶ ποταμοὺς εἰώθαμεν λέγειν τοὺς αὐτοὺς καὶ κρήνας τὰς αὐτάς, καίπερ αἰεὶ τοῦ μὲν ἐπιγινομένου νάματος τοῦ δʼ ὑπεξιόντος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Ross) a anglický překlad H. Rackhama; Aristotelés se ptá, kdy je obec táž"
+    zdroj: aristoteles-politika-iii
+  - id: politika-1276b-sbor
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Politika
+    misto: III, 3, 1276b4–6
+    cesky: "O sboru říkáme, že je jiný, když hraje komedii, a jiný, když hraje tragédii, i když v něm často jsou titíž lidé."
+    original: "ὥσπερ γε καὶ χορὸν ὁτὲ μὲν κωμικὸν ὁτὲ δὲ τραγικὸν ἕτερον εἶναί φαμεν, τῶν αὐτῶν πολλάκις ἀνθρώπων ὄντων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Ross) a anglický překlad H. Rackhama"
+    zdroj: aristoteles-politika-iii
+  - id: etika-1166a
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: IX, 4, 1166a19–23
+    cesky: "Každý si přeje dobré věci pro sebe. Nikdo si nezvolí mít všechno za tu cenu, že se stane někým jiným; chce zůstat tím, čím je. A každý je, zdá se, tím, co v něm myslí, nebo aspoň tím nejvíc."
+    original: "ἕκαστος δʼ ἑαυτῷ βούλεται τἀγαθά, γενόμενος δʼ ἄλλος αἱρεῖται οὐδεὶς πάντʼ ἔχειν ἐκεῖνο τὸ γενόμενον … ἀλλʼ ὢν ὅ τι ποτʼ ἐστίν· δόξειε δʼ ἂν τὸ νοοῦν ἕκαστος εἶναι ἢ μάλιστα"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Bywater), bez srovnání s překladem; vynechána vsuvka o bohu, který dobro má už teď"
+    zdroj: aristoteles-etika-ix
+  - id: faidros-229e
+    osoba: sokrates
+    autor: Platón
+    dilo: Faidros
+    misto: 229e–230a
+    cesky: "Ještě nedokážu, jak žádá delfský nápis, poznat sám sebe. … Nezkoumám tedy tyhle věci, ale sebe: jestli jsem obluda spletitější a nadutější než Týfón, nebo tvor krotší a prostší."
+    original: "οὐ δύναμαί πω κατὰ τὸ Δελφικὸν γράμμα γνῶναι ἐμαυτόν … σκοπῶ οὐ ταῦτα ἀλλʼ ἐμαυτόν, εἴτε τι θηρίον ὂν τυγχάνω Τυφῶνος πολυπλοκώτερον καὶ μᾶλλον ἐπιτεθυμμένον, εἴτε ἡμερώτερόν τε καὶ ἁπλούστερον ζῷον"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; zkráceno; Platón nechává mluvit Sókrata; Týfón je stohlavá obluda z bájí"
+    zdroj: platon-faidros
+  - id: faidon-115c
+    osoba: platon
+    autor: Platón
+    dilo: Faidón
+    misto: 115c
+    cesky: "Nedaří se mi, přátelé, přesvědčit Kritóna, že já jsem tenhle Sókratés, který s vámi teď rozmlouvá a pořádá každé slovo."
+    original: "οὐ πείθω, ὦ ἄνδρες, Κρίτωνα, ὡς ἐγώ εἰμι οὗτος Σωκράτης, ὁ νυνὶ διαλεγόμενος καὶ διατάττων ἕκαστον τῶν λεγομένων"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Burnet) a anglický překlad H. N. Fowlera; mluví Sókratés v posledním dni; věta pokračuje tím, že Kritón za něj má tělo, které za chvíli uvidí mrtvé (atlas necituje)"
+    zdroj: platon-faidon-58
+  - id: hovory-xii-3
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: XII, 3
+    cesky: "Skládáš se ze tří věcí: z těla, z dechu a z rozumu. První dvě jsou tvoje jen potud, že se o ně máš starat. Jen ta třetí je doopravdy tvoje."
+    original: "Τρία ἐστὶν ἐξ ὧν συνέστηκας· σωμάτιον, πνευμάτιον, νοῦς. τούτων τἄλλα μέχρι τοῦ ἐπιμελεῖσθαι δεῖν σά ἐστι, τὸ δὲ τρίτον μόνον κυρίως σόν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Leopold), bez srovnání s překladem"
+    zdroj: marcus-hovory-promena
+  - id: hovory-x-7
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: X, 7
+    cesky: "Nepředstavuj si, že to pevné a to vzdušné v tobě je ještě to z narození. Všechno to přiteklo včera a předevčírem z jídla a ze vzduchu, který vdechuješ. Mění se tedy to, co tělo přijalo, ne to, co porodila matka."
+    original: "καὶ τὸ στερέμνιον δὲ καὶ τὸ πνευματικὸν μὴ φαντάζου τὸ ἀπὸ τῆς πρώτης γενέσεως· πᾶν γὰρ τοῦτο ἐχθὲς καὶ τρίτην ἡμέραν ἐκ τῶν σιτίων καὶ τοῦ ἑλκομένου ἀέρος τὴν ἐπιρροὴν ἔλαβεν· τοῦτο οὖν ὃ ἔλαβε μεταβάλλει, οὐχ ὃ ἡ μήτηρ ἔτεκεν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Leopold), bez srovnání s překladem; „tělo“ doplněno; věta, která následuje, je nejasná a atlas ji necituje"
+    zdroj: marcus-hovory-promena
+  - id: rozpravy-ii-10-1
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: II, 10, 1–3
+    cesky: "Uvaž, kdo jsi. Především člověk, tedy někdo, kdo nemá nic svrchovanějšího než svou vůli. … K tomu jsi občan světa a jeho část."
+    original: "σκέψαι τίς εἶ. τὸ πρῶτον ἄνθρωπος, τοῦτο δʼ ἔστιν οὐδὲν ἔχων κυριώτερον προαιρέσεως … ἐπὶ τούτοις πολίτης εἶ τοῦ κόσμου καὶ μέρος αὐτοῦ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Schenkl), bez srovnání s překladem; zkráceno; προαίρεσις = vůle, volba; k dalšímu obsahu kapitoly viz podklady, Citlivá místa"
+    zdroj: epiktetos-rozpravy-ii-10
+  - id: lucretius-iii-847
+    osoba: lucretius
+    autor: Lucretius
+    dilo: O přírodě
+    misto: III, 847–851
+    cesky: "A kdyby čas po naší smrti sebral naši látku a složil ji zase tak, jak je teď, a znovu nám bylo dáno světlo života, ani to by se nás vůbec netýkalo, jakmile se jednou přetrhla vzpomínka na nás samé."
+    original: "nec, si materiem nostram collegerit aetas post obitum rursumque redegerit ut sita nunc est, atque iterum nobis fuerint data lumina vitae, pertineat quicquam tamen ad nos id quoque factum, interrupta semel cum sit repetentia nostri"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (PerseusDL); próza místo veršů"
+    zdroj: lucretius-iii-830
+  - id: seneca-ira-ii-10
+    osoba: seneca
+    autor: Seneca
+    dilo: O hněvu
+    misto: II, 10, 5
+    cesky: "Kdykoli Hérakleitos vyšel ven a viděl kolem sebe tolik lidí, kteří špatně žijí, plakal. … O Démokritovi zase vyprávějí, že se na veřejnosti nikdy neobjevil bez smíchu."
+    original: "Heraclitus quotiens prodierat et tantum circa se male viventium, immo male pereuntium viderat, flebat … Democritum contra aiunt numquam sine risu in publico fuisse"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); zkráceno; doklad pozdní představy o „plačícím filozofovi“"
+    zdroj: seneca-plac
+  - id: herodotos-64
+    osoba: epikuros
+    autor: Epikúros
+    dilo: Dopis Hérodotovi
+    misto: Diogenés Laertios X, 64
+    cesky: "Duše by vnímat nemohla, kdyby ji nějak nekrylo ostatní tělo. A tělo, které jí to umožnilo, má od ní na vnímání podíl i samo."
+    original: "οὐ μὴν εἰλήφει ἂν ταύτην, εἰ μὴ ὑπὸ τοῦ λοιποῦ ἀθροίσματος ἐστεγάζετό πως. τὸ δὲ λοιπὸν ἄθροισμα παρασκευάσαν ἐκείνῃ τὴν αἰτίαν ταύτην μετείληφε καὶ αὐτὸ τοιούτου συμπτώματος παρʼ ἐκείνης"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; volněji: ταύτην odkazuje k „příčině vnímání“ z předchozí věty; τὸ λοιπὸν ἄθροισμα = „zbytek celku“, tedy tělo bez duše"
+    zdroj: dl-x-63
 
 obrazky:
   - id: sokrates-louvre
@@ -2973,3 +3727,31 @@ obrazky:
     licence: "CC BY-NC-SA 4.0"
     url: "https://smb.museum-digital.de/object/13081"
     vyrez: "50% 40%"
+  # Celek 7: Hérakleitos z The Art Institute of Chicago (CC0 Public Domain Designation; ověřeno 9. 10. 2026 v API muzea,
+  # is_public_domain: true, i na stránce díla). Autor souhlasil se stažením 9. 10. 2026. Originál 2637 × 2250 px je mimo
+  # repozitář (~/Pictures/Atlas-originaly/herakleitos-aic-1897-296-original.jpg); tady zmenšenina 1280 × 1092 px,
+  # zesvětlená gamou 1,9 (scripts/obrazek-zesvetli.mjs), protože olejomalba byla v duotónu desky skoro černá.
+  # „Plačící filozof“ je římská představa (Seneca, O hněvu II, 10, 5): popisek říká, čí je. Parmenidés je bez obrazu.
+  - id: herakleitos-aic
+    soubor: obrazky/herakleitos-aic.jpg
+    popisek: "Hérakleitos jako plačící filozof, jak si ho kolem roku 1630 představil španělský malíř. Uplakaného z něj udělali až Římané, přes pět set let po něm, a po nich malíři."
+    autor: "neznámý španělský malíř, kolem 1630 (soubor: The Art Institute of Chicago); zesvětleno"
+    instituce: "The Art Institute of Chicago, inv. 1897.296"
+    licence: "CC0 (Public Domain Designation)"
+    url: "https://www.artic.edu/artworks/111428/heraclitus-the-weeping-philosopher"
+    vyrez: "45% 30%"
+    vyrezNaSirku: "45% 25%"
+  # Cesta 2 (celek 7), vstup: číše s loděmi z Metropolitního muzea. Záznam muzea má u snímku štítek Public Domain
+  # (Open Access: užití bez svolení a poplatku), API vrací isPublicDomain: true; obojí čteno 10. 10. 2026.
+  # Snímek DP278403.jpg (1955 × 1607 px) je mimo repozitář v ~/Pictures/Atlas-originaly/. Od 15. 10. 2026 je
+  # v repozitáři užší výřez na jednu loď celou, s plachtou, vesly a přídí (432, 377, 728 × 546 px originálu),
+  # nezvětšený (scripts/obrazek-vyrez.mjs). Do té doby výřez s oběma loděmi (332, 96, 1330 × 998 px, zmenšený
+  # na 1280 × 960 px); na telefonu v něm vládlo černé ucho a lodě byly po stranách malé (revize celku 7).
+  # Hlavní snímek záznamu (DP278896) ukazuje bojovníka mezi očima a z lodí jen kraje plachet.
+  - id: cise-lode-met
+    soubor: obrazky/cise-lode-met.jpg
+    popisek: "Loď pod uchem athénské číše z doby kolem roku 520 př. n. l. Tak kreslil lodě malíř, který žil ve stejné době jako Hérakleitos."
+    autor: "neznámý athénský malíř, asi 520 př. n. l. (snímek: The Metropolitan Museum of Art); výřez"
+    instituce: "The Metropolitan Museum of Art, inv. 56.171.36"
+    licence: "Public Domain (Open Access)"
+    url: "https://www.metmuseum.org/art/collection/search/254894"

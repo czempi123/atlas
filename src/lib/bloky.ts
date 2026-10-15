@@ -456,10 +456,12 @@ export function faktaDvojice(a: OsobaMapy, b: OsobaMapy): FaktaDvojice | null {
     const zp = zivotOsoby(prvni)!;
     if (vek !== null && zp.konec === 'umrti') {
       const asi = druhy.narozen?.priblizne || zp.doPriblizne ? `asi${NBSP}` : '';
+      // Rok úmrtí, který je v datech přibližný, nese „asi“ i v závorce (revize celku 7, nález 10).
+      const rok = `${zp.doPriblizne ? `asi${NBSP}` : ''}${rokText(rokMapy)}`;
       vetaOVeku =
         vek === 0
-          ? `Když ${prvni.jmeno} ${tvar(prvni, 'zemřel', 'zemřela')} (${rokText(rokMapy)}), ${druhy.jmeno} se právě ${tvar(druhy, 'narodil', 'narodila')}.`
-          : `Když ${prvni.jmeno} ${tvar(prvni, 'zemřel', 'zemřela')} (${rokText(rokMapy)}), ${tvar(druhy, 'žil', 'žila')} ${druhy.jmeno} na světě ${asi}${let_(vek)}.`;
+          ? `Když ${prvni.jmeno} ${tvar(prvni, 'zemřel', 'zemřela')} (${rok}), ${druhy.jmeno} se právě ${tvar(druhy, 'narodil', 'narodila')}.`
+          : `Když ${prvni.jmeno} ${tvar(prvni, 'zemřel', 'zemřela')} (${rok}), ${tvar(druhy, 'žil', 'žila')} ${druhy.jmeno} na světě ${asi}${let_(vek)}.`;
     }
   } else {
     const [driv, pozdeji] = starsi === 'a' ? [a, b] : [b, a];

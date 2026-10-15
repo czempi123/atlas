@@ -1,0 +1,39 @@
+# Volba · cesta 2 „Jsem pořád tentýž, když se měním?“, krok 7: nový případ (stáří buněk podle uhlíku z jaderných zkoušek).
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Nový případ (poslední krok): jak staré je tvoje tělo.
+# Studie v plném textu: Spalding 2005 (střevo: číslo ze starší práce; mezižeberní sval dvou lidí 37 a 38 let: 15,1 roku;
+# většina molekul v buňce se obměňuje, výjimkou je DNA), Bhardwaj 2006 (zdvojnásobení 14C v letech 1955–1963; neurony kůry
+# staré jako člověk, nové pod 1 %; ostatní buňky kůry se obměňují), Bergmann 2009 (srdce: model; většina buněk se za život
+# nevymění), Lynnerup 2008 (jádro čočky; do té doby jen zubní sklovina). Čísla ověřena v plných textech 10. 10. 2026.
+# Možnosti jsou pravidla, ne věty o studentovi; blok nemá pole na psaní o sobě jiné než nepovinné „Proč“.
+# Zpětná vazba zkouší pravidlo na lodi, na druhé lodi a na dlužníkovi; o vzhledu, váze ani nemoci nemluví.
+# První blok kroku: Kam dál vede na kotvu pod sebou (dal v MDX), další krok nabízí až Závěr cesty.
+druh: volba
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: Některé buňky žijí pár dní, některé jsou staré jako ty. A uvnitř každé se většina látky stále obměňuje.
+otazka: Které pravidlo si na buňkách vyzkoušíš?
+moznosti:
+  - text: Tentýž je ten, komu zůstalo aspoň něco původního.
+    tah: hledat, co zůstalo
+    zpetna: >-
+      Tělu by tohle pravidlo vyšlo: neurony v kůře a jádro čočky jsou podle těch měření původní.
+      Měřilo se ale u několika lidí a i v původní buňce se většina látky vymění. Kolik toho původního musí být?
+      A zkus pravidlo na lodi: stačilo by jí jedno staré prkno?
+  - text: Tentýž by byl, i kdyby se vyměnilo všechno, pokud to šlo postupně.
+    tah: držet se postupnosti
+    zpetna: >-
+      Na původní látce podle tebe nezáleží, jen na tom, že výměna šla kousek po kousku.
+      Měření ti pak nepomáhají ani nevadí: i kdyby se měnily všechny buňky, platilo by totéž.
+      Co uděláš s druhou lodí? Vznikla naráz, a je celá z původních prken.
+  - text: Tělo o tom nerozhoduje.
+    tah: hledat jinde než v těle
+    zpetna: >-
+      Stáří buněk je podle tebe zajímavost, ne odpověď. Co tedy rozhoduje?
+      A obešlo by se to bez těla úplně? Host z pátého kroku přišel ke dveřím celý, i s tělem.
+  - text: Tentýž se jen říká. Doopravdy to tak není.
+    tah: brát to jako způsob řeči
+    zpetna: >-
+      Podle tebe je „tentýž“ jméno, které věcem a lidem necháváme, i když se pod ním všechno vymění.
+      U řeky to tak řekl Seneca: jméno zůstává, voda protekla.
+      Proč ale jména necháváme zrovna takhle? Dlužník z pátého kroku by se toho svého rád vzdal.
+zdroje: [spalding-2005, bhardwaj-2006, bergmann-2009, lynnerup-2008, seneca-ep-58]

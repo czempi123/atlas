@@ -136,17 +136,19 @@
   aktivni: { od: -500, priblizne: true }
   obdobi: 1
   hloubka: profil
-  otazky: [5]
+  otazky: [5, 6]
   mista:
+    - { misto: efesos, role: narozeni, zdroj: dl-ix-1 }
     - { misto: efesos, role: pusobeni, zdroj: sep-heraclitus }
   kdo: Myslitel z Efesu, který psal v úsečných a záhadných větách.
   proc: Viděl svět jako ustavičnou proměnu, v níž vládne skrytý řád.
   atribut:
     ikona: river
     nazev: řeka
-    proc: Do téže řeky nelze vstoupit dvakrát.
-    zdroj: sep-heraclitus
-  zdroje: [sep-heraclitus, britannica-heraclitus]
+    proc: "Do týchž řek vstupujeme, a pořád na nás tečou jiné vody."
+    zdroj: eusebios-pe-xv-20
+  obrazek: herakleitos-aic
+  zdroje: [sep-heraclitus, britannica-heraclitus, iep-heraclitus, dl-ix-1, eusebios-pe-xv-20, platon-kratylos, plutarchos-de-e, plutarchos-kolotes, hippolytos-ix, aristoteles-metafyzika-zmena, seneca-plac]
 
 - id: parmenides
   jmeno: Parmenidés
@@ -156,17 +158,18 @@
   obdobi: 1
   hloubka: profil
   smery: [eleate]
-  otazky: [6, 7]
+  otazky: [6, 7, 5]
   mista:
     - { misto: elea, role: narozeni, zdroj: sep-parmenides }
+    - { misto: elea, role: pusobeni, zdroj: dl-ix-21 }
   kdo: Myslitel z Eleje v jižní Itálii, který svou filozofii napsal jako báseň.
   proc: Tvrdil, že co skutečně je, nevzniká ani nezaniká.
   atribut:
     ikona: gate
     nazev: brána
     proc: Ve své básni vypráví, jak projel branou Noci a Dne k bohyni, která ho poučila, co skutečně je.
-    zdroj: sep-parmenides
-  zdroje: [sep-parmenides, dl-ix-22, parmenides-b8]
+    zdroj: sextos-m-vii-111
+  zdroje: [sep-parmenides, dl-ix-22, dl-ix-21, parmenides-b8, sextos-m-vii-111, simplikios-fyzika, plutarchos-kolotes, aristoteles-metafyzika-zmena, platon-parmenides, platon-theaitetos-tabory, platon-sofistes-parmenides, aristoteles-fyzika-i]
 
 - id: demokritos
   jmeno: Démokritos

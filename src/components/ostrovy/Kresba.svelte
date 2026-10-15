@@ -9,9 +9,10 @@
   // Posuvník ve snippetu ovladani dostane třídu k-posuvnik, přepínač třídy k-volba a k-prepinac (global.css).
   // Kresba bez vlastního pohybu: maPohyb={false}.
   // Použití: viz src/components/ostrovy/Jeskyne.svelte, JeskyneVen.svelte, Saty.svelte, StejnyVitr.svelte,
-  // DvePulky.svelte a KolikJeDost.svelte.
+  // DvePulky.svelte, KolikJeDost.svelte a Lod.svelte (posuvník, dva pohledy a pohyb, který běží sám).
   import { onMount, type Snippet } from 'svelte';
   import { omezenyPohyb } from '../../lib/pohyb';
+  import { nezlomitelne } from '../../lib/sazba.js';
 
   interface Props {
     id: string;
@@ -71,7 +72,8 @@
 
   {#if ovladani}{@render ovladani()}{/if}
 
-  <p class="kresba__popis" id="{id}-popis" aria-live="polite">{popis}</p>
+  <!-- Text přichází z JavaScriptu kresby, plugin pro MDX ho nevidí: nezlomitelné mezery doplní rám. -->
+  <p class="kresba__popis" id="{id}-popis" aria-live="polite">{nezlomitelne(popis)}</p>
 
   {#if smiPohyb && maPohyb}
     <button type="button" class="blok__tl blok__tl--tiche kresba__pohyb" onclick={() => (bezi = !bezi)}>

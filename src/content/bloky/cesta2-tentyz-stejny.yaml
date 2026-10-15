@@ -1,0 +1,73 @@
+# Roztřiď · cesta 2 „Jsem pořád tentýž, když se měním?“, krok 3: tentýž × stejný.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › O čem je řeč, když se řekne „tentýž“ (dvojice tentýž × stejný;
+# Aristotelés, Kategorie 4a: „jeden a tentýž počtem“ přijímá protiklady a zůstává jedním).
+# Karty jsou věty z běžné řeči o věcech, ne o lidech a ne o tom, jak se kdo změnil (Citlivá místa, pravidla 1 a 2);
+# žádná není z Roztřiď v profilu Hérakleita (řeka, plamen, fronta, socha, rybník, most, rozhovor, škola za sto let:
+# karta se školou tu mluví o škole dnes a kdysi, ne o tom, čím škola trvá). Vlastní kartu blok nemá:
+# věta se slovem „stejný“, kterou by student přidal, by snadno byla věta o něm samém.
+# Koše odpovídají na otázku stejným tvarem a žádný není správně: škola, písnička, místo a zpráva se dají poctivě
+# dát do dvou košů. Karta s telefonem je loď po prvním prknu a zpětná vazba to říká.
+druh: roztrid
+obdobi: 1
+nadtitulek: Tvůj tah
+scena: V každé z těch vět je slovo stejný. Někde znamená jednu věc v jinou chvíli, jinde dvě věci, které se shodují.
+otazka: O kolika věcech ta věta mluví?
+kose:
+  - { id: jedna, nazev: O jedné, popis: "Je to tatáž věc, jen v jinou chvíli." }
+  - { id: dve, nazev: O dvou, popis: "Jsou dvě a v něčem se shodují." }
+  - { id: zalezi, nazev: "Záleží, co počítáš", popis: "Jde to číst oběma způsoby." }
+karty:
+  - id: bunda
+    text: Máme s bráchou stejnou bundu.
+    zpetna: >-
+      Bundy jsou dvě a shodují se střihem a barvou. Kdyby si je bráchové doma prohodili, poznal by to někdo?
+      A bylo by to někomu z nich jedno?
+    kdyz:
+      jedna: >-
+        Dal jsi bundy mezi věty o jedné věci. Bereš za tu věc střih, který mají obě společný?
+        Kolik bund pak visí na věšáku?
+  - id: skola
+    text: Chodím na stejnou školu jako kdysi táta.
+    zpetna: >-
+      Z tátových let v ní nejspíš neučí nikdo a nesedí v ní žádný z tehdejších žáků.
+      Podle čeho je to pořád ona: podle budovy, podle jména, nebo podle něčeho třetího?
+    kdyz:
+      dve: >-
+        Podle tebe jsou to dvě školy, tátova a tvoje. Kdy ta první skončila: když odešel poslední z jeho učitelů,
+        nebo když vymalovali?
+  - id: pisnicka
+    text: Kapela hraje pořád stejnou písničku.
+    zpetna: >-
+      Písnička je jedna, a každé její zahrání je jiné a nedá se zahrát podruhé.
+      Je písnička věc, nebo návod, podle kterého věci vznikají?
+  - id: misto
+    text: Sedím na stejném místě jako loni.
+    zpetna: >-
+      Letos tam možná stojí jiná židle a sedí na ní o rok starší člověk. Čím je místo dané, když ne tím, co na něm zrovna je?
+    kdyz:
+      dve: >-
+        Počítáš loňské a letošní místo za dvě. Co by se muselo nezměnit, aby to bylo jedno a totéž místo?
+  - id: telefon
+    text: Mám stejný telefon jako loni, jen s novým displejem.
+    zpetna: >-
+      Tohle je loď po prvním vyměněném prknu: jeden telefon a jeden díl nový.
+      Kolik dílů by se smělo vyměnit, abys o něm pořád říkal, že je to tentýž telefon?
+    kdyz:
+      dve: >-
+        Podle tebe jsou to dva telefony, loňský a letošní. Stal by se z něj jiný telefon i po výměně baterie?
+        A po výměně krytu?
+  - id: zprava
+    text: Přišla mi dvakrát stejná zpráva.
+    zpetna: >-
+      Na displeji jsou zprávy dvě, a text je jeden. Počítáš za věc to, co přišlo, nebo to, co se v tom píše?
+srovnani:
+  osoba: aristoteles
+  nadpis: Jak počítal Aristotelés
+  text: >-
+    Aristotelés mluví o tom, co je jedno počtem: jeden a tentýž člověk je podle něj jednou bledý a jindy opálený
+    a nepřestává být jedním. Dá se z toho udělat zkouška. Zeptej se nejdřív, kolik věcí tu je, a teprve potom,
+    v čem se shodují.
+
+
+    *U které věty ti počítání nevyšlo napoprvé? A u které se s tebou někdo může poctivě přít?*
+zdroje: [aristoteles-kategorie-4a]

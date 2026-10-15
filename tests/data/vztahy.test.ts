@@ -30,7 +30,7 @@ describe('skupinyVztahu', () => {
     expect(e.find((x) => x.nazev === 'Četli ho a navázali')?.lide.map((l) => l.druhy.id)).toEqual(['marcus-aurelius']);
     expect(e.some((x) => x.nazev === 'Znali se a přeli se')).toBe(false);
     const m = skupinyVztahu(vztahyOsoby('marcus-aurelius'));
-    expect(m.find((x) => x.nazev === 'Koho četl')?.lide.map((l) => l.druhy.id)).toEqual(['epiktetos']);
+    expect(m.find((x) => x.nazev === 'Koho četl')?.lide.map((l) => l.druhy.id)).toEqual(['herakleitos', 'epiktetos']);
     expect(m.some((x) => x.nazev === 'Znali se a přeli se')).toBe(false);
   });
 });
@@ -65,7 +65,7 @@ describe('spor na dálku', () => {
   });
   it('Aristotelés se se Sókratem a Prótagorem přel na dálku, s Platónem tváří v tvář', () => {
     const jmena = (id: string, nazev: string) => skupinyVztahu(vztahyOsoby(id)).find((x) => x.nazev === nazev)?.lide.map((l) => l.druhy.id) ?? [];
-    expect(jmena('aristoteles', 'S kým se přel na dálku')).toEqual(['sokrates', 'protagoras']);
+    expect(jmena('aristoteles', 'S kým se přel na dálku')).toEqual(['sokrates', 'protagoras', 'herakleitos']);
     expect(jmena('aristoteles', 'Znali se a přeli se')).toEqual(expect.arrayContaining(['platon', 'theofrastos', 'xenokrates']));
     expect(jmena('aristoteles', 'Znali se a přeli se')).not.toContain('sokrates');
     expect(jmena('sokrates', 'Kdo se s ním přel později')).toEqual(['aristoteles']);
@@ -78,6 +78,20 @@ describe('spor na dálku', () => {
       const znali = skupinyVztahu(vztahyOsoby(o)).find((x) => x.nazev === 'Znali se a přeli se');
       for (const l of znali?.lide ?? []) expect(mohliSePrit(osoba(o), l.druhy), `${o} a ${l.druhy.id}`).toBe(true);
     }
+  });
+  it('Hérakleitos a Parmenidés: žádný vztah mezi nimi; Aristotelés se s Hérakleitem přel na dálku', () => {
+    const jmena = (id: string, nazev: string) => skupinyVztahu(vztahyOsoby(id)).find((x) => x.nazev === nazev)?.lide.map((l) => l.druhy.id) ?? [];
+    // Jestli jeden o druhém věděl, nevíme: proti sobě je postavil až Platón (podklady celku 7).
+    expect(vztahyOsoby('herakleitos').some((x) => x.druhy.id === 'parmenides')).toBe(false);
+    expect(vztahyOsoby('parmenides').some((x) => x.druhy.id === 'herakleitos')).toBe(false);
+    expect(jmena('herakleitos', 'Kdo se s ním přel později')).toEqual(['aristoteles']);
+    expect(jmena('herakleitos', 'Znali se a přeli se')).toEqual([]);
+    expect(jmena('herakleitos', 'Četli ho a navázali')).toEqual(expect.arrayContaining(['platon', 'seneca', 'marcus-aurelius']));
+    // Setkání se Sókratem je Platónova scéna: v datech tradované, ne doložené.
+    const setkani = vztahyOsoby('sokrates').find((x) => x.druhy.id === 'parmenides');
+    expect(setkani?.vztah.typ).toBe('znali-se');
+    expect(setkani?.vztah.tradovany).toBe(true);
+    expect(jmena('seneca', 'Koho četl')).toContain('herakleitos');
   });
   it('Karneadés a Chrýsippos: spor na dálku z obou stran', () => {
     expect(vztahyOsoby('karneades').find((x) => x.druhy.id === 'chrysippos')?.naDalku).toBe(true);

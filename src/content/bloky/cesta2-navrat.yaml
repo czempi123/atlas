@@ -1,0 +1,24 @@
+# Návrat · cesta 2 „Jsem pořád tentýž, když se měním?“: lístek na koncert za deset let.
+# Podklad: docs/podklady/celek-7-jsem-porad-tentyz.md › Návrat (případ do deníku po několika dnech) a Citlivá místa
+# (řádek Návrat: kapela za deset let). Jiného druhu než loď (věc), buňky (tělo) i úvod stránky otázky 5 (kdo mě zná): záliby.
+# Autorský případ bez historických osob a bez tvrzení, která by potřebovala pramen. Otázku na lístek si půjčuje
+# ze studie Quoidbacha, Gilberta a Wilsona (2013, pokus 4), ale čísla studie v něm nejsou: návrat je vymyšlený případ
+# a studie s jejími mezemi je v listu pro učitele (ucitel/celek-7.md › Lístek na koncert a „iluze konce dějin“).
+# Případ se drží odhadu ceny. Neříká, že se student změní, ani kým bude. Lístek nejde vrátit ani dát jinému,
+# aby šlo jen o to, kdo ho kupuje a kdo na koncert půjde.
+# Dá se posoudit pravidlem, které drží látku, postupnost, jméno i tím, podle kterého se „tentýž“ jen říká.
+druh: navrat
+obdobi: 1
+cesta: jsem-porad-tentyz-kdyz-se-menim
+pravidlo: cesta2-moje-pravidlo
+nazev: Lístek na koncert
+scena: >-
+  Představ si, že si dnes můžeš koupit lístek na koncert své nejoblíbenější kapely.
+  Koncert bude až za deset let a lístek nejde vrátit ani dát někomu jinému.
+
+
+  Máš říct, kolik za něj dáš. Kupuješ ho dnes; na koncert se půjde za deset let.
+po:
+  ano: "Co tvoje pravidlo říká o tom, kdo na koncert půjde: je to tentýž člověk, i kdyby tu kapelu už neposlouchal?"
+  upravim: "Co tvému pravidlu chybělo: rozdíl mezi tím, kdo je tentýž, a tím, kdo je stejný?"
+  nevim: "Na čem to vázne: na tom, kdo na koncert půjde, nebo na tom, co se mu tou dobou bude líbit?"
