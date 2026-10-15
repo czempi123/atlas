@@ -140,8 +140,8 @@ export const POPISKY_LODI = { pristav: 'loď v přístavu', hromada: 'stará prk
 export const POPISY_LODI = {
   vymena: {
     nic: 'Loď v přístavu má všechna prkna původní. Kolik jich měla doopravdy, nevíme; tahle jich má čtyřiadvacet. Posuň a vyměň první.',
-    cast: 'Stará prkna jdou ven, na jejich místo přicházejí nová, světlejší. Tolik vypráví Plútarchos; kolik prken Athéňané vyměnili, neříká.',
-    vse: 'Vyměněné je i poslední prkno. To už Plútarchos nevypráví, ten krok jsme přidali my. Z původního dřeva v lodi v přístavu nezbylo nic.',
+    cast: 'Stará prkna jdou ven, na jejich místo přicházejí nová; v kresbě jsou světlejší. Tolik vypráví Plútarchos; kolik prken Athéňané vyměnili, neříká.',
+    vse: 'Vyměněné je i poslední prkno. To už Plútarchos nevypráví: až sem úlohu dovedl v 17. století Thomas Hobbes. Z původního dřeva v lodi v přístavu nezbylo nic.',
   },
   druha: {
     nic: 'Na břehu zatím nestojí nic: z lodi ještě nikdo žádné prkno nevyndal. Posuň a vyměň první.',

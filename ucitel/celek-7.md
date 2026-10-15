@@ -30,7 +30,7 @@ Rozdíl není slovíčkaření. Na „nic netrvá“ míří Platónova námitka
 
 Výklad „řeka, ve které by voda stála, by nebyla řeka“ je Grahamův, ne Hérakleitův. Profil ho proto uvádí slovy „dá se to číst takhle“.
 
-Zlomek B12 mluví i o lidech: o těch, kdo do řek vstupují. Podle téhož hesla se řecké „týchž“ dá vztáhnout k řekám i k nim; ve druhém čtení jsou titíž lidé a jiné jsou vody (heslo odkazuje na Ch. Kahna). A Kleanthés větu cituje kvůli duším. Bezpečné je proto říkat, že věta je o řekách a vodách a že o tom, jestli zůstává týž i ten, kdo do řeky vstupuje, se její čtenáři neshodnou; ne že o člověku v ní není nic.
+Zlomek B12 mluví i o lidech: o těch, kdo do řek vstupují. Podle téhož hesla se řecké „týchž“ dá vztáhnout k řekám i k nim; ve druhém čtení jsou titíž lidé a jiné jsou vody (heslo odkazuje na Ch. Kahna). A Kleanthés větu cituje kvůli duším. Bezpečné je proto říkat, že věta je o řekách a vodách a že o tom, jestli zůstává týž i ten, kdo do řeky vstupuje, se její čtenáři neshodnou; ne že o člověku v ní není nic. Tak to od oprav po revizi říká i druhý krok cesty: „Jsou v ní i ti, kdo do řek vstupují, a jestli říká něco i o nich, čtou její čtenáři každý jinak.“
 
 ### „Všechno plyne“
 
@@ -187,7 +187,7 @@ Cesta se otevírá lodí a první věta zní „Plútarchos vypráví…“. Cel
 | --- | --- |
 | Loď měla třicet vesel a Athéňané ji uchovávali. | Kde stála. Přístav v cestě a v kresbě je náš obraz. |
 | Vydržela do časů Démétria z Faléra (vládl v Athénách 317–307 př. n. l.; roky jsou z příruček). Cesta proto říká „ještě na konci 4. století př. n. l.“. | Jak dlouho ji měli celkem. Théseus je postava bájí. |
-| Stará prkna odstraňovali a vsazovali nová, pevná. | Že vyměnili všechna. Poslední prkno je krok cesty a text ho tak uvádí („Představ si…“, „Dotáhni to do konce sám“). Výslovně ho má až Hobbes: ptá se na loď, „když byla vyměněna všechna prkna“. |
+| Stará prkna odstraňovali a vsazovali nová, pevná. | Že vyměnili všechna. V prvním kroku je poslední prkno krok studenta („Představ si…“, „Dotáhni to do konce sám“). Až k poslednímu prknu dovedl úlohu Hobbes: ptá se na loď, „když byla vyměněna všechna prkna“. Tak to říká čtvrtý krok i text pod kresbou. |
 | Filozofové se o ni přeli v „úvaze o růstu“. | Kteří filozofové to byli a kdy. Cesta je nejmenuje. |
 | | Nic o druhé lodi. Tu přidal až Thomas Hobbes. |
 
@@ -195,9 +195,9 @@ Plútarchos psal kolem roku 100 n. l., asi čtyři sta let po době, do které l
 
 **Loď z Délu.** Platón (Faidón 58a–c) píše o lodi, kterou Athéňané každý rok posílali na Délos, a dodává, že je to „jak říkají Athéňané“ ta Théseova. Že jde o tutéž loď, o které mluví Plútarchos, je přirozené čtení; ani jeden z textů to ale výslovně neříká. Cesta proto píše „Athéňané říkali, že právě tuhle loď posílají…“ a víc netvrdí. Scénu vypráví portrét Sókrata (kapitola Soud).
 
-**Druhá loď.** Je z Hobbesova spisu O tělese (II, 11, 7; anglicky 1656, latinsky o rok dřív podle příruček). Hobbes ji užívá jako námitku proti názoru, že o totožnosti rozhoduje tvar: kdyby někdo stará prkna schovával a pak je složil ve stejném pořadí, byly by dvě lodě číselně tytéž, a to je nesmysl. Jeho vlastní odpověď má až poslední krok cesty: záleží na tom, pod jakým jménem se ptáme. Totéž těleso to není, když se látka vyměnila. Táž řeka to je, teče-li z téhož pramene. Tentýž člověk to je, vycházejí-li jeho činy a myšlenky z téhož počátku. A loď je podle něj jméno pro látku určitého tvaru: po výměně všeho je jiná, po výměně části zčásti táž a zčásti ne. Hobbes tedy odpovídá na loď jinak než na člověka; stojí za to nechat studenty, ať si toho všimnou sami.
+**Druhá loď.** Je z Hobbesova spisu O tělese (II, 11, 7; anglicky 1656, latinsky o rok dřív podle příruček). Hobbes ji užívá jako námitku proti názoru, že o totožnosti rozhoduje tvar: kdyby někdo stará prkna schovával a pak je složil ve stejném pořadí, byly by dvě lodě číselně tytéž, a to je nesmysl. Jeho vlastní odpověď má až poslední krok cesty: záleží na tom, pod jakým jménem se ptáme. Totéž těleso to není, když se látka vyměnila. Táž řeka to je, teče-li z téhož pramene. Tentýž člověk to je, vycházejí-li jeho činy a myšlenky z téhož počátku. A loď je podle něj jméno pro látku určitého tvaru: po výměně všeho je jiná, po výměně části zčásti táž a zčásti ne. Hobbes tedy odpovídá na loď jinak než na člověka; stojí za to nechat studenty, ať si toho všimnou sami. Poslední krok podle toho najde spojence i studentovi, který ve čtvrtém kroku řekl „obě“ nebo „žádná“.
 
-**Kresba „Loď po prknech“.** Pramen je v ní jen výměna prken. Počet prken (čtyřiadvacet), jejich tvar a pořadí výměny je model; text pod kresbou to říká. Že se vymění všechna prkna, Plútarchos neříká; tak úlohu staví Hobbes. Kresba se neptá, která loď je „pravá“, a nikomu neříká, která je Théseova. Nic se neukládá.
+**Kresba „Loď po prknech“.** Pramen je v ní jen výměna prken. Počet prken (čtyřiadvacet), jejich tvar a pořadí výměny je model; text pod kresbou to říká. Že se vymění všechna prkna, Plútarchos neříká; tak úlohu staví Hobbes a text pod kresbou ve stavu 24 to říká jeho jménem. Kresba se neptá, která loď je „pravá“, a nikomu neříká, která je Théseova. Nic se neukládá.
 
 **Aristotelés a řeky.** Ve druhém kroku cituje srovnání bloku Aristotelovu Politiku (III, 3, 1276a–b). Aristotelés se tam ptá, kdy je obec táž, a spor, od kterého vychází, je o dluzích: po pádu tyrana nechce nová vláda platit, co si půjčil. Podle Aristotela rozhoduje ústava. Jestli má obec po změně ústavy staré dluhy platit, nechává jako „jinou otázku“. Věta o řekách u něj stojí v otázce (máme obci říkat táž, dokud v ní žije týž rod, jako říkáme tytéž řekám?) a odpověď zní, že rozhoduje ústava. Hodí se to ke kroku 6: Plútarchos tam hájí, že obec za staré činy ručí.
 
@@ -222,14 +222,14 @@ Spor v šestém kroku je střet dvou textů, ne dvou lidí. Že by Plútarchos S
 
 Závěr cesta cituje celý, na přání autora atlasu: bez něj by Senekova strana říkala jen „měníme se“. Stojí za ním tři věci, všechny na téže obrazovce:
 
-1. otázka „Plyne z toho, že se měním, že se nemám čeho bát?“;
+1. dvě otázky, ke každé půlce závěru jedna: „Plyne z toho, že se měním, že se nemám čeho bát? A plyne z toho, že tělo nestojí za to, aby ho měl člověk rád?“;
 2. věta, že Seneca mluví o strachu z vlastní smrti a že o ztrátě blízkého ta věta neříká nic;
 3. odkaz na cestu 8, kde jsou argumenty o strachu ze smrti i námitky proti nim.
 
 Na co dát pozor:
 
 - **Student, kterému někdo zemřel.** „Každý okamžik je smrtí toho, čím jsme byli“ dělá ze smrti všední věc. Nečtěte tu větu nahlas jako útěchu a neptejte se na ni osobně. Platí zásady z listu k celku 6.
-- **Student, který bojuje s vlastním tělem.** Příloha č. 3 metodického doporučení MŠMT (Poruchy příjmu potravy, H. Papežová) jmenuje mezi riziky „přílišný důraz na vzhled“ a „černobílý pohled na sebe a svět“ a připomíná, že „učitel není terapeut“. Senekovo „tolik milujeme věc ze všech nejprchavější, tělo“ je věta Seneky, ne atlasu. Hned vedle stojí Plútarchos, podle kterého je člověk jeden jako živý tvor, a na stránce otázky 5 Epikúros, podle kterého jsme tělo i duše dohromady. Věty, které tělem pohrdají (Marcus Aurelius II, 2; Epiktétos III, 1, 40), atlas necituje.
+- **Student, který bojuje s vlastním tělem.** Příloha č. 3 metodického doporučení MŠMT (Poruchy příjmu potravy, H. Papežová) jmenuje mezi riziky „přílišný důraz na vzhled“ a „černobílý pohled na sebe a svět“ a připomíná, že „učitel není terapeut“. Senekovo „tolik milujeme věc ze všech nejprchavější, tělo“ je věta Seneky, ne atlasu, a druhá otázka pod citátem se ptá právě na ni. Hned vedle stojí Plútarchos, podle kterého je člověk jeden jako živý tvor, a na stránce otázky 5 Epikúros, podle kterého jsme tělo i duše dohromady. Věty, které tělem pohrdají (Marcus Aurelius II, 2; Epiktétos III, 1, 40), atlas necituje.
 
 **Plútarchos, O pozdní odplatě bohů 558f–559e.** Mluví Plútarchos sám a hájí, že bohové smějí trestat pozdě a že obec smí být volána k odpovědnosti za činy předků. Důvod: obec je jedna souvislá věc jako živý tvor a změnami věku nepřestává být sama sebou. Dělit ji časem na mnoho obcí je podle něj jako dělat z jednoho člověka mnoho lidí; odtud dlužník a host. Sám přitom uznává nejsilnější námitku: věk změní každého z nás víc než celou obec.
 
@@ -240,7 +240,7 @@ Cesta tu souvislost říká jednou větou a citátem a ptá se, jestli totéž p
 
 ## Jak staré je tvoje tělo: studie, tkáně a nemoci
 
-Poslední krok opravuje rčení, že se tělo celé vymění za sedm let. Stojí na čtyřech studiích, které měřily uhlík 14C z jaderných zkoušek v DNA nebo v bílkovinách. Čísla v cestě jsou ověřená v plných textech 10. 10. 2026.
+Sedmý krok opravuje rčení, že se tělo celé vymění za sedm let. Stojí na čtyřech studiích, které měřily uhlík 14C z jaderných zkoušek v DNA nebo v bílkovinách. Čísla v cestě jsou ověřená v plných textech 10. 10. 2026.
 
 | Co cesta říká | Odkud to je | Mez |
 | --- | --- | --- |
@@ -258,7 +258,7 @@ Jedno číslo pro celé tělo cesta nemá a mít nemá: studii o celkové obměn
 
 **Co studie říkají o nemocech.** Úvody je zmiňují jako důvod, proč se stáří buněk vyplatí měřit: porušená obměna buněk se spojuje například s depresí a se srdečním selháním (Spalding), nové neurony by mohly nahrazovat buňky ztracené po mrtvici (Bhardwaj) a obnova srdečních buněk dává smysl hledání léčby (Bergmann). Cesta z toho neříká nic. Důvod: ve třídě může sedět student s nemocným srdcem, s nádorem nebo s blízkým, kterému odumírají neurony. Věty jsou proto kladné („většina buněk srdečního svalu ti vydrží celý život“) a nikde nestojí, co se stane, když buňky odumřou.
 
-Případ je o buňkách. O váze, vzhledu ani tvaru těla v něm není slovo a možnosti bloku jsou pravidla o totožnosti, ne věty o studentovi. Jestli o tom, kým kdo je, rozhoduje tělo, případ nechává otevřené; jedna z možností říká výslovně, že ne.
+Případ je o buňkách. O váze, vzhledu ani tvaru těla v něm není slovo a možnosti bloku jsou pravidla o totožnosti, ne věty o studentovi. Otázka bloku se ptá, které pravidlo si student na buňkách vyzkouší; ne které si z měření vezme, protože o člověku z nich nic neplyne. Jestli o tom, kým kdo je, rozhoduje tělo, případ nechává otevřené; jedna z možností říká výslovně, že ne.
 
 ## Lístek na koncert a „iluze konce dějin“
 
@@ -288,7 +288,7 @@ Stránka „Kdo vlastně jsem?“ má úvodní případ „Kdo tě zná líp?“
 | Hérakleitos | zlomek B45 (Diogenés Laertios IX, 7); „hledal jsem sám sebe“ je zlomek B101 (Plútarchos, Proti Kólótovi 1118c) | Diogenés větu uvádí mezi Hérakleitovými naukami bez souvislosti; o kom a proč ji řekl, nevíme. |
 | Sókratés | Platón, Faidros 229e–230a | Sókratés odmítá vykládat staré báje rozumem po jedné: nemá na to čas, dokud nezná sám sebe. Zkoumá, jestli není obluda spletitější než Týfón. Mluví Platónova postava. |
 | Platón | Faidón 115c | Kritón se ptá, jak mají Sókrata pohřbít, a Sókratés odpovídá, že pohřbí jen jeho tělo. Atlas bere větu o tom, kdo „já“ je, a pohřeb vynechává. Je to scéna Sókratova posledního dne; ve třídě se studentem po ztrátě stačí říct, že věta je z rozhovoru, který vypráví portrét Sókrata. |
-| Aristotelés | Etika Nikomachova IX, 4, 1166a | Kapitola je o dobrém člověku a jeho vztahu k sobě. O špatných lidech hned potom říká (1166b), že jsou se sebou v rozporu a vyhýbají se vlastní společnosti; je tam i věta, že ti, kdo spáchali mnoho zločinů, prchají před životem. Hlas z té části nebere nic. Přítel jako „jiný on sám“ je v 1166a31–32. Odpověď hlasu neříká, že tě přítel zná líp než ty; tolik text nenese. |
+| Aristotelés | Etika Nikomachova IX, 4, 1166a a IX, 9, 1169b33–1170a4 | Kapitola je o dobrém člověku a jeho vztahu k sobě. O špatných lidech hned potom říká (1166b), že jsou se sebou v rozporu a vyhýbají se vlastní společnosti; je tam i věta, že ti, kdo spáchali mnoho zločinů, prchají před životem. Hlas z té části nebere nic. Přítel jako „jiný on sám“ je v 1166a31–32. Že na druhém člověk vidí víc než na sobě, říká Aristotelés až v IX, 9, 1169b33–1170a4 (čteno anglicky v Rackhamově překladu): bližní a jejich činy můžeme pozorovat lépe než sebe a své činy, a proto dobrý člověk potřebuje dobré přátele. Odpověď hlasu bere obojí. Neříká, že tě přítel zná líp než ty sám; tolik text nenese. |
 | Epikúros | Dopis Hérodotovi (Diogenés Laertios X, 63–66) | Hned potom: když se celek rozpadne, duše se rozptýlí a nevnímá. To je argument cesty 8 a hlas ho neopakuje. |
 | Epiktétos | Rozpravy II, 10, 1–3 | Viz níže. |
 | Marcus Aurelius | Hovory k sobě XII, 3 a 4 | Viz níže. |

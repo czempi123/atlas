@@ -18,7 +18,7 @@ const KROKY4 = ['Háj a hostina', 'Co ti tehdy chybělo?', 'Kdo ví, udělá to'
 const CESTA8 = '/cesta/proc-se-bat-smrti/';
 const KROKY8 = ['Dopis', 'Čeho se vlastně bojíme', '„Netýká se nás“', 'Zrcadlo', 'Host u stolu', 'Týká se nás?', 'Ti druzí', 'Blízko', 'Tvoje pravidlo'];
 const CESTA2 = '/cesta/jsem-porad-tentyz-kdyz-se-menim/';
-const KROKY2 = ['Loď', 'Řeka', 'Proč je změna záhada', 'Loď po prknech', 'A co člověk?', 'Dva čtenáři jedné řeky', 'Jak staré je tvoje tělo'];
+const KROKY2 = ['Loď', 'Řeka', 'Proč je změna záhada', 'Loď po prknech', 'A co člověk?', 'Dva čtenáři jedné řeky', 'Jak staré je tvoje tělo', 'Kdo je na tvé straně'];
 const CESTY = [
   { adresa: CESTA, nazev: 'Kdy mám dobrý důvod věřit?', kroky: KROKY, snimek: 'cesta' },
   { adresa: CESTA6, nazev: 'Kolik je dost?', kroky: KROKY6, snimek: 'cesta6' },

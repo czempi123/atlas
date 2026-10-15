@@ -261,6 +261,11 @@ describe('Kdo žil dřív?', () => {
     const cyril = osoba('x', 'Synesios', 370, 413);
     expect(faktaDvojice(cyril, hypatia)!.vetaOVeku).toBe(`Když Synesios zemřel (413${N}n.${N}l.), žila Hypatia na světě asi${N}43${N}let.`);
   });
+  it('přibližný rok úmrtí nese „asi“ i v závorce (Hérakleitos a Parmenidés)', () => {
+    const herakleitos = osoba('herakleitos', 'Hérakleitos', -540, -480, { narozen: { rok: -540, priblizne: true }, zemrel: { rok: -480, priblizne: true } });
+    const parmenides = osoba('parmenides', 'Parmenidés', -515, -450, { narozen: { rok: -515, priblizne: true }, zemrel: { rok: -450, priblizne: true } });
+    expect(faktaDvojice(herakleitos, parmenides)!.vetaOVeku).toBe(`Když Hérakleitos zemřel (asi${N}480${N}př.${N}n.${N}l.), žil Parmenidés na světě asi${N}35${N}let.`);
+  });
   it('bez let není co porovnat', () => {
     expect(faktaDvojice(sokrates, { id: 'x', jmeno: 'X', mista: [] })).toBeNull();
     expect(osaDvou(sokrates, { id: 'x', jmeno: 'X', mista: [] })).toBeNull();

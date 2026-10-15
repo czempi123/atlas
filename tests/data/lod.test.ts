@@ -89,10 +89,11 @@ describe('loď po prknech: texty', () => {
     expect(popisLodi('druha', 0)).toBe(POPISY_LODI.druha.nic);
     expect(popisLodi('druha', 12)).toBe(POPISY_LODI.druha.cast);
     expect(popisLodi('druha', POCET)).toBe(POPISY_LODI.druha.vse);
-    // Počet prken je náš model; Plútarchos neříká, kolik jich vyměnili, a poslední prkno je náš krok.
+    // Počet prken je náš model; Plútarchos neříká, kolik jich vyměnili, a k poslednímu prknu úlohu dovedl Hobbes.
     expect(POPISY_LODI.vymena.nic).toContain('nevíme');
     expect(POPISY_LODI.vymena.cast).toContain('kolik prken Athéňané vyměnili, neříká');
-    expect(POPISY_LODI.vymena.vse).toContain('ten krok jsme přidali my');
+    expect(POPISY_LODI.vymena.vse).toContain('dovedl v 17. století Thomas Hobbes');
+    for (const t of vsechny) expect(t).not.toMatch(/přidali my|náš krok/);
     // Druhou loď Plútarchos nezná: je Hobbesova.
     expect(POPISY_LODI.druha.cast).toContain('Thomas Hobbes');
     expect(POPISY_LODI.druha.vse).toContain('Plútarchos ji nezná');

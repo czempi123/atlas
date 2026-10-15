@@ -1,4 +1,4 @@
-// Vyřízne z originálu obdélník a zmenší ho na delší stranu 1280 px. Pro obraz, na kterém je to podstatné malé
+// Vyřízne z originálu obdélník a zmenší ho na delší stranu 1280 px (menší výřez nezvětšuje). Pro obraz, na kterém je to podstatné malé
 // (lodě pod uchem číše), takže by je deska s celým snímkem neukázala.
 // Použití: node scripts/obrazek-vyrez.mjs <originál mimo repozitář> <public/obrazky/soubor.jpg> <vlevo> <nahoře> <šířka> <výška>
 // Čísla jsou pixely originálu. Co skript s obrazem udělal, zapiš k obrázku v src/data/zdroje.yaml.
@@ -12,7 +12,7 @@ if (!zdroj || !cil || cisla.length !== 4 || cisla.some((c) => !Number.isFinite(N
 }
 const info = await sharp(zdroj)
   .extract({ left, top, width, height })
-  .resize({ width: 1280, height: 1280, fit: 'inside' })
+  .resize({ width: 1280, height: 1280, fit: 'inside', withoutEnlargement: true })
   .jpeg({ quality: 86, mozjpeg: true })
   .toFile(cil);
 console.log(`${cil}: ${info.width} × ${info.height} px, výřez ${left}, ${top}, ${width} × ${height} z originálu`);

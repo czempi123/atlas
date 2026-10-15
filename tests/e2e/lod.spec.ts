@@ -185,14 +185,14 @@ test('loď po prknech: vlny běží a jdou zastavit; přepínač a posuvník jen
   await expect(kresba.getByRole('navigation')).toHaveCount(0);
   const text = page.locator('.krok__obsah > .ctenarsky');
   expect(await text.evaluate((t) => {
-    const pred = [...t.querySelectorAll('p')].find((p) => p.textContent!.includes('můžeš dotáhnout do konce'))!;
+    const pred = [...t.querySelectorAll('p')].find((p) => p.textContent!.includes('můžeš výměnu dotáhnout do konce'))!;
     const po = [...t.querySelectorAll('p')].find((p) => p.textContent!.includes('dva tisíce let později'))!;
     const k = t.querySelector('#lod-po-prknech')!;
     return !!(pred.compareDocumentPosition(k) & Node.DOCUMENT_POSITION_FOLLOWING) && !!(k.compareDocumentPosition(po) & Node.DOCUMENT_POSITION_FOLLOWING);
   })).toBe(true);
   // Text kroku říká totéž co oba pohledy kresby, i pro toho, kdo ji přeskočí.
-  await expect(text).toContainText('Kolik prken vyměnili, neříká.');
-  await expect(text).toContainText('přidal k té hádance anglický filozof Thomas Hobbes druhou loď');
+  await expect(text).toContainText('Zpátky k lodi z prvního kroku.');
+  await expect(text).toContainText('dovedl anglický filozof Thomas Hobbes výměnu až k poslednímu prknu a přidal druhou loď');
   await expect(text).toContainText('Jedna nikdy nepřestala být lodí a nemá jediné původní prkno. Druhá je celá z původních prken a ještě nedávno to byla hromada dřeva.');
   // Otázku klade až blok pod kresbou a neptá se, která loď je „pravá“.
   await expect(page.locator('#cesta2-ktera-je-theseova')).toContainText('Která z nich je Théseova?');

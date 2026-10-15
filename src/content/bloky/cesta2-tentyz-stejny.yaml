@@ -52,6 +52,10 @@ karty:
     zpetna: >-
       Tohle je loď po prvním vyměněném prknu: jeden telefon a jeden díl nový.
       Kolik dílů by se smělo vyměnit, abys o něm pořád říkal, že je to tentýž telefon?
+    kdyz:
+      dve: >-
+        Podle tebe jsou to dva telefony, loňský a letošní. Stal by se z něj jiný telefon i po výměně baterie?
+        A po výměně krytu?
   - id: zprava
     text: Přišla mi dvakrát stejná zpráva.
     zpetna: >-
