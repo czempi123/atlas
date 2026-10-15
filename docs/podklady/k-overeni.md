@@ -11,7 +11,7 @@
 | Čuang-c’ (okno období 2) | SEP („Zhuangzi“) uvádí jen „pozdní 4. století př. n. l.“; tradiční 369–286 z návrhu P1 jsem nedoložil. | Dohledat v Chan, *A Source Book in Chinese Philosophy*, nebo v IEP. |
 | Hieroklés (stoik) | Heslo IEP neexistuje na očekávané adrese; datace „2. st. n. l.“ nemá odborný zdroj. | Dohledat v Ramelli, *Hierocles the Stoic* (SBL 2009); obraz soustředných kruhů je u Stobaia 4.27.23. |
 | Sextus Empiricus | SEP: „víme málo nebo nic o tom, kdy a kde žil“ (asi 2.–3. st. n. l.). | Nechat bez dat jako medailonek bez místa na mapě, nebo vynechat z mapy. Schéma to umí. |
-| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. **5. 10. 2026 (celek 5):** cesta 4 ho nese ve vstupním příběhu; zůstává v textu bez odkazu, stejně jako Filip, Hermeiás, Pýthias, Kleitos a Kallisthenés. Kvůli tomu nejdou do dat ani věty Plútarcha a Arriána jako citáty (citát potřebuje osobu). |
+| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`; **15. 10. 2026, celek 8:** cesta 7 otevírá Hipparchiinou volbou, Alexandr v ní zůstává jen jednou větou o Thébách ve Sporu, bez odkazu)); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. **5. 10. 2026 (celek 5):** cesta 4 ho nese ve vstupním příběhu; zůstává v textu bez odkazu, stejně jako Filip, Hermeiás, Pýthias, Kleitos a Kallisthenés. Kvůli tomu nejdou do dat ani věty Plútarcha a Arriána jako citáty (citát potřebuje osobu). |
 
 ## Chybějící roky a místa u lidí, kteří v datech jsou
 
@@ -686,3 +686,28 @@ Co se změnilo v textu a datech, aby to šlo dohledat:
 | Poradna Vigvam v listu k celku 6 | Trvá. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
 | „Na druhém člověk vidí víc než na sobě“ | Věta stojí na anglickém překladu IX, 9 z revize, řecky jsem místo nečetl. | Před vydáním srovnat s řeckým textem nebo s českým překladem. |
 | Publikované české překlady | Dál neviděny. | Před vydáním srovnat hlavně B12, B51, Parmenidovy verše a Marca XII, 3–4. |
+
+## Celek 8 „Čí život vlastně žiju?“ (P6)
+
+15. 10. 2026. Podklady jsou v `docs/podklady/celek-8-ci-zivot-ziju.md`. Vyřízeno z dřívějších bodů:
+
+- **Kratés v Athénách** (bod z celku 2, „Kratés v Athénách po roce 306“). Diogenés Laertios ho v Athénách ukazuje výslovně: athénští dozorci trhu (VI, 90), Zénón ho potká u athénského knihkupce a nese polévku přes Kerameikos (VII, 2–3). Rok zůstává nejistý (viz Roky Kratéta níže); věta v cestě 6 („chodili po městě kynici“) obstojí.
+- **Alexandr Veliký.** Cesta 7 ho jako vstup nepotřebuje (vstupem je Hipparchiina volba); v textu jen ve Sporu, bez odkazu.
+- **Hipparchiiny spisy.** Diogenés Laertios jí žádné nepřipisuje (ověřeno v řečtině VI, 96–98); připisuje je Suda (iota 517).
+
+Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Roky Kratéta | Data mají asi 350–301 (Britannica). DL: akmé 328–325 (VI, 87), zemřel starý (VI, 92, 98). Wikipedie podle Dorandiho (1999) asi 365–285; Dorandiho jsem neviděl. | P7: ověřit v odborné chronologii (Dorandi v Cambridge History of Hellenistic Philosophy, OCD, Goulet-Cazé) a přepsat na asi 365–285; do té doby rok ve studentském textu neuvádět. |
+| Théby 335 př. n. l. | Arriános I, 9, 9 (řecky) dokládá, že spojenci rozhodli Théby srovnat se zemí; rok znám z příruček. | Rok jen s ověřeným zdrojem (Britannica „Thebes“), jinak bez roku. |
+| Nástěnná malba z Villa Farnesina | Identifikace jako Kratés a Hipparchia jen v popiscích (Wikipedie, Commons); kdo ji navrhl, nezjištěno; licence fotografií neověřena; v téže místnosti erotické výjevy. | Nepoužívat, dokud ji autor sám neověří. |
+| Juliánova Řeč 9 (Kratétova modlitba k Múzám: „užitečný přátelům, ne sladký“) | Text v repozitářích, které nástroje čtou, jsem nenašel. | Kdyby ji profil chtěl, ověřit v Loebově vydání nebo v TLG. |
+| Kratétovy zlomky | Atribuci veršů u Diogena Laertia jsem nesrovnával se sbírkou Giannantoniho (SSR V H). | Při revizi stačí Britannica a shoda parodií; před vydáním případně SSR. |
+| Aschův pokus se spojencem | Čísla (5,5 %, 10,4 %, 28,5 %, 8,7 %, 12,8 %) jsou z textu Asch 1951; tabulky v kopii nejsou čitelné a monografii 1956 jsem četl jen do s. 10. | Stačí pro text; do listu pro učitele uvést, že jde o první soubor (50 lidí) a že základní pokus téhož souboru měl 32 %. |
+| Bond a Smith (1996) | Metaanalýzu znám jen z Franzena a Madera (44 přesných replikací, průměr 25 %). | Do listu pro učitele jen s tímto údajem a s odkazem přes Franzena a Madera. |
+| Bateson a kol. (2006), „oči u pokladničky“ | Nepoužito; že se nepotvrdila spolehlivě, vím jen z literatury. | Nic, dokud ji někdo nechce. |
+| Mladí pečující | Českou metodiku pro školy jsem nenašel. | Při psaní listu pro učitele dohledat (např. projekty pro „mladé pečující“), jinak platí pravidlo PSHE neptat se na osobní věci. |
+| Rijksmuseum, datace RP-P-1878-A-651 | Záznam má „c. 1635 – 1537“; kniha Catsova je z roku 1637. | V popisku obrázku „1637“ podle knihy. |
+| České překlady | Koláře, Kříže ani Novotného jsem neměl v ruce. | Platí rozhodnutí z celků 1–7: vlastní převody. |
+| Ikony atributů | Mošna a člunek v sadě `atributy-ikony.json` nejsou. | P7: nakreslit dvě nové ikony. |
