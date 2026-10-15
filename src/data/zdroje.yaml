@@ -342,6 +342,31 @@ prameny:
   - { id: rijks-herakleitos, druh: data, nazev: "Heraclitus (SK-A-2784)", autor: "Hendrick ter Brugghen", dilo: "Rijksmuseum, Amsterdam", url: "https://www.rijksmuseum.nl/en/collection/SK-A-2784", overeno: 2026-10-09, poznamka: "Olej na plátně, 1628, 85,5 × 70 cm; protějšek k Démokritovi (SK-A-2783). Public domain podle stránky muzea (četl nástroj WebFetch). Kandidát na obraz profilu; soubor nestažen." }
   - { id: met-volpato-skola, druh: data, nazev: "The School of Athens, after the fresco by Raphael (35.85.45)", autor: "Giovanni Volpato", dilo: "The Metropolitan Museum of Art, New York", url: "https://www.metmuseum.org/art/collection/search/716834", overeno: 2026-10-09, poznamka: "Rytina a lept, asi 1781, podle Raffaelovy fresky (1509–1511; rok z příruček). Public Domain podle API muzea. Které postavy jsou Hérakleitos a Parmenidés, freska neříká; určení je pozdější a u Parmenida nejisté (znám jen z literatury). Soubor nestažen." }
   - { id: dl-x-63, druh: pramen, nazev: "Životy filozofů X, 63–66 (Dopis Hérodotovi)", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-09, poznamka: "Epikúros: duše je jemné těleso rozptýlené po celém celku; vnímá, jen pokud ji kryje ostatní tělo, a to má od ní na vnímání podíl; když se celek rozpadne, duše se rozptýlí a nevnímá; vnímající duši si nelze myslet mimo toto složení." }
+  # Celek 8 „Čí život vlastně žiju?“ (P6, 15. 10. 2026). Primární texty čteny v plném znění z PerseusDL (stažené mimo
+  # repozitář atlasu), studie v plném textu (PubMed Central, PDF), není-li řečeno jinak. Rozbor je v
+  # docs/podklady/celek-8-ci-zivot-ziju.md. Encyklopedie (SEP, IEP, Britannica, Suda On Line) četl nástroj WebFetch.
+  - { id: dl-vi-85, druh: pramen, nazev: "Životy filozofů VI, 85–98 (Kratés, Métroklés, Hipparchia)", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Kratés z Théb, syn Askóndův, jeden z proslulých žáků Psa; podle Hippobota žák Brysóna (85). Hravé verše: báseň o městě Péra (parodie Odyssey XIX, 172–173), „deník“ s cenami, „mám, co jsem se naučil“ (parodie nápisu Sardanapallova), lupiny a „o nikoho se nestarat“, láska a hlad (85–86). Otvírač dveří: chodil do každého domu a domlouval (86). Akmé ve 113. olympiádě; podle Antisthena z Rhodu ho ke kynismu pohnul Télefos v tragédii; zpeněžil majetek a asi dvě stě talentů rozdal spoluobčanům; Filémón; podle Dioklea mu Diogenés poradil pustit pole ovcím a peníze hodit do moře (87). Příbuzné, kteří ho odrazovali, honil holí; podle Démétria z Magnésie uložil peníze u bankéře pro syny, nebo pro lid (88). Granátové jablko; Níkodromos (89). Démétrios Falérský, Theofrastos v mušelínu, bičování (90–91). Ošklivý, při cvičení se mu smáli; vojevůdci jako oslaři; lichotníci jako telata mezi vlky; zemřel shrbený stářím (91–92). Alexandr a obnova Théb; vlast neslavnost a chudoba, spoluobčan Diogena; Menandrovy Dvojčata (93). Métroklés z Maróneie, Hipparchiin bratr, dřív posluchač Theofrastův, potom Kratétův (94–95). Hipparchia: milovala Kratéta, jeho řeči i život, odmítala nápadníky; vyhrožovala rodičům, že se zabije; rodiče prosili Kratéta, ať jí to rozmluví; odložil svou výbavu: tady je ženich, tohle majetek, rozhodni se; druhem mu nebude, nebude-li se věnovat témuž (96). Zvolila, oblékla se stejně, chodila s ním a žili spolu veřejně; u Lýsimacha přemohla Theodóra sofismatem; strhl jí plášť; nezalekla se (97). Verš o stavu a její odpověď; „to a tisíce dalších o té filozofce“; Kratétovy Listy a tragédie; zemřel starý, pohřben v Boiótii (98). Spisy Hipparchii Diogenés nepřipisuje (ověřeno v řečtině 96–98)." }
+  - { id: dl-vi-8, druh: pramen, nazev: "Životy filozofů VI, 8 a II, 36", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Antisthenés natočil roztrženou část pláště tak, aby byla vidět; Sókratés: „skrz tvůj plášť vidím tvou ctižádost“ (VI, 8; totéž II, 36). Na „mnoho lidí tě chválí“ odpověděl Antisthenés: „Co jsem provedl špatného?“ (VI, 8)." }
+  - { id: dl-ii-97, druh: pramen, nazev: "Životy filozofů II, 97–103 (Theodóros)", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Theodóros, zvaný Bezbožník, kyrénaik; přátelství odmítal, za vlast měl svět; usuzoval otázkami typu „kdo užívá věci k tomu, k čemu je, nekřivdí“ (98–100). Byl na dvoře Ptolemaia I. a jako jeho vyslanec u Lýsimacha (102). Kynikovi Métrokleovi, který myl zeleninu, řekl: kdybys uměl jednat s lidmi, nepotřeboval bys tuhle zeleninu (102)." }
+  - { id: dl-vii-2, druh: pramen, nazev: "Životy filozofů VII, 2–4 (Zénón a Kratés)", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Zénón po ztroskotání u knihkupce čte Xenofóntovy Vzpomínky, kolem jde Kratés: „jdi za ním“ (2–3). Byl k filozofii vlohy, ale příliš stydlivý na kynickou nestoudnost; Kratés mu dal nést hrnec čočkové polévky přes Kerameikos, a když se Zénón styděl a zakrýval ho, rozbil ho holí: „Proč utíkáš, Féničánku? Nic hrozného se ti nestalo“ (3). Ústava „na psím ocase“, spis Vzpomínky na Kratéta; nakonec od Kratéta odešel (4)." }
+  - { id: homer-odyssea-xix, druh: pramen, nazev: "Odyssea XIX, 172–173", autor: Homér, dilo: "Odyssea, řecky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0012/tlg002/tlg0012.tlg002.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "„Je jedna země, Kréta, uprostřed vínově tmavého moře, krásná a úrodná, obtékaná vodou.“ Předloha Kratétovy básně o mošně: Kréta → Péra, moře (πόντος) → dým (τῦφος), obtékaná (περίρρυτος) → celá špinavá (περίρρυπος)." }
+  - { id: strabon-xiv-5-9, druh: pramen, nazev: "Geógrafie XIV, 5, 9", autor: Strabón, dilo: "Geographica, řecky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0099/tlg001/tlg0099.tlg001.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Verše, které se šíří jako Sardanapallův náhrobek: „Mám to, co jsem snědl, čím jsem zpupně hýřil a co sladkého jsem zažil s láskou; to ostatní, mnoho a bohatého, zůstalo tam.“ Předloha Kratétova „mám, co jsem se naučil“ (DL VI, 86)." }
+  - { id: euripides-bakchantky, druh: pramen, nazev: "Bakchantky 1233–1237", autor: Eurípidés, dilo: "Bacchae, řecky (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Agaué se vrací z hor a chlubí se otci, že ona, „která opustila člunky u stavů“, se dala na lov zvěře; v náručí nese hlavu syna, kterého v šílenství roztrhala. Verš 1236 cituje Theodóros Hipparchii (DL VI, 98)." }
+  - { id: aristoteles-etika-iv, druh: pramen, nazev: "Etika Nikomachova IV, 1 (1119b22–1121a)", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Marnotratník hyne vlastní vinou: zničit majetek je jako zničit kus sebe, protože z něj žijeme (1120a1–3). Štědrý dává těm, komu má; o své nedbá, protože jím chce pomáhat, a nedává komukoli (1120b1–4). Pro štědrého je ale typické i to, že dá tolik, až sobě nechá méně: nehledět na sebe je štědré (1120b4–6); štědrost se měří majetkem dárce, ne velikostí daru (1120b7–11)." }
+  - { id: aristoteles-etika-v, druh: pramen, nazev: "Etika Nikomachova V, 7 (1134b18–1135a5)", autor: Aristotelés, dilo: "Ethica Nicomachea, řecky I. Bywater, angl. H. Rackham (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg010/tlg0086.tlg010.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Spravedlnost v obci je zčásti od přírody, zčásti podle zákona (výkupné mina, oběť kozy). Některým se zdá, že všechno spravedlivé je jen úmluva, protože co je od přírody, je všude stejné (oheň pálí tady i v Persii), kdežto spravedlivé se mění. Tak to podle Aristotela neplatí, jen do jisté míry: u nás je něco i od přírody, i když se všechno může měnit; pravá ruka je od přírody silnější, a přece se všichni mohou stát obouručními. Kdo jsou ti „někteří“, Aristotelés neříká." }
+  - { id: aristoteles-rhetorika-iii, druh: pramen, nazev: "Rétorika III, 10, 1411a24–25", autor: Aristotelés, dilo: "Ars rhetorica, řecky W. D. Ross, angl. J. H. Freese (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg038/tlg0086.tlg038.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Mezi příklady metafor: „Pes nazýval attické krčmy společnými jídelnami“ (ὁ Κύων; Freese doplňuje Diogena). Aristotelés kyniky znal aspoň z jejich průpovídek." }
+  - { id: epiktetos-rozpravy-iii-22, druh: pramen, nazev: "Rozpravy III, 22 (O kynismu)", autor: Epiktétos, dilo: "Dissertationes ab Arriano digestae, řecky H. Schenkl (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0557/tlg001/tlg0557.tlg001.perseus-grc2.xml", overeno: 2026-10-15, poznamka: "Čteno jen řecky. Žák, který se kloní ke kynismu: kdo se do toho pustí bez boha, chce se jen veřejně ztrapnit (1–2). Kdo si myslí, že kynismus je plášť, tvrdé spaní, mošna, hůl, žebrání a nadávání lidem, ať se drží daleko (9–11). Nejdřív se zbavit touhy, hněvu, závisti; místo zdí a dveří má kynik stud (αἰδώς), nic nesmí chtít skrývat (13–16); nejdřív vyčistit, co v tobě vládne (19). Kynik je posel od Dia, zvěd, který lidem ukazuje, že hledají dobro tam, kde není (23–26). „Podívejte se na mě: bez domu, bez obce…; co mi chybí?“ (45–49); ne mošna, hůl a velká ústa, nadávat lidem v nevhodnou chvíli a ukazovat pěkné rameno (50). Má se kynik ženit? V obci mudrců ano; za dnešních poměrů ne (67–75). „Ale Kratés se oženil.“ – Zvláštní případ z lásky, a žena byla druhý Kratés (76). Kynik má za děti všechny lidi (81–82). Místa o odkládání dětí (74) a o dnešních kynicích (80) jsou hrubá." }
+  - { id: apuleius-florida-22, druh: pramen, nazev: "Florida 22", autor: Apuleius, dilo: "Florida, latinsky (The Latin Library)", url: "https://www.thelatinlibrary.com/apuleius/apuleius.florida.shtml", overeno: 2026-10-15, poznamka: "Asi 450 let po Kratétovi. Kratés, Diogenův žák, byl v Athénách ctěn jako domácí bůh (lar familiaris); žádný dům mu nebyl zavřený a žádné rodinné tajemství tak skryté, aby do něj Kratés v pravou chvíli nevstoupil jako rozhodčí všech sporů a hádek mezi příbuznými; jako Héraklés obludy vyháněl z myslí hněv, závist, lakotu a chtíč. Předtím patřil k thébské smetánce. Text se uprostřed věty láme." }
+  - { id: suda-hipparchia, druh: encyklopedie, nazev: "Suda, heslo Hipparchia (iota 517)", dilo: "Suda On Line, angl. R. Scaife (2002, revize do 2022)", url: "https://www.cs.uky.edu/~raphael/sol/sol-entries/iota/517", overeno: 2026-10-15, poznamka: "Byzantský slovník z 10. století. Hipparchia, sestra kynika Métroklea, z Maróneie, žena kynika Kratéta (heslo ho mylně má za Athéňana); podle hesla žačka Brysóna, podle jiných Diogena; akmé ve 111. olympiádě. Napsala filozofické úvahy, nějaké rozpravy a otázky Theodórovi Bezbožníkovi. Žádný spis se nedochoval." }
+  - { id: sep-authenticity, druh: encyklopedie, nazev: "Authenticity", autor: "Somogy Varga, Charles Guignon", dilo: Stanford Encyclopedia of Philosophy (rev. 20. 2. 2020), url: "https://plato.stanford.edu/entries/authenticity/", overeno: 2026-10-15, poznamka: "Nový ideál autenticity vznikl s kulturními změnami 17. a 18. století (podle Trillinga); viditelný je u Rousseaua. Autenticita jako být věrný sám sobě kvůli sobě (na rozdíl od upřímnosti vůči druhým). Kyniky ani Sókrata heslo jako předchůdce neuvádí." }
+  - { id: asch-1951, druh: monografie, nazev: "Effects of Group Pressure upon the Modification and Distortion of Judgments", autor: "Solomon E. Asch", dilo: "In: H. Guetzkow (ed.), Groups, Leadership and Men, Pittsburgh 1951; čten přetisk se stránkováním 222–236", url: "https://gwern.net/doc/psychology/1952-asch.pdf", overeno: 2026-10-15, poznamka: "Čteno celé (15 stran; tabulky v kopii nejsou čitelné). Skupina osmi mužů, studentů, porovnává délku čar nahlas; sedm je domluvených a v kritických kolech (12) odpovídá jednomyslně špatně. Padesát pokusných osob: třetina odhadů ve směru většiny, 68 % správně, čtvrtina úplně nezávislá, třetina se většině přizpůsobila aspoň v polovině kol; kontrolní skupiny, které psaly odhady samy, skoro bez chyb. Pravý spojenec (domluvený člen skupiny odpovídá správně a mluví před pokusnou osobou): chyby 5,5 % všech odhadů, se dvěma nezasvěcenými 10,4 %, proti 32 % u jednomyslné většiny; když spojenec v půli přeběhl k většině, 28,5 %; spojenec, který se přidal až ke konci, 8,7 %. Proti jedinému člověku účinek skoro mizí, proti dvěma 12,8 %, od tří plný. Šestnáct nezasvěcených proti jednomu domluvenému, který odpovídal špatně: smáli se mu. Tři druhy podvolení: zkreslené vnímání (velmi málo), zkreslený úsudek (většina), zkreslené jednání z potřeby nevypadat jinak nebo hůř než ostatní." }
+  - { id: asch-1956, druh: monografie, nazev: "Studies of Independence and Conformity: I. A Minority of One Against a Unanimous Majority", autor: "Solomon E. Asch", dilo: "Psychological Monographs 70 (1956), č. 9 (celé č. 416), 1–70; PDF na webu University of Western Macedonia", url: "https://eclass.uowm.gr/modules/document/file.php/NURED262/%CE%A0%CE%A1%CE%A9%CE%A4%CE%9F%CE%A4%CE%A5%CE%A0%CE%91%20%CE%91%CE%A1%CE%98%CE%A1%CE%91/Asch%20studies%20in%20independence%20and%20conformity%201956%20PM.pdf", overeno: 2026-10-15, poznamka: "Čteny strany 1–10 ze 70 (postup, materiál, kvantitativní výsledky). 123 bílých studentů, muži 17–25 let, ze tří vysokých škol; většina 7 až 9 domluvených; pokusná osoba sedí předposlední; 18 kol, 12 kritických. Kontrolní skupina 37 lidí psala odhady sama: 35 bez chyby, chyby pod 1 % (0,7 %). Pokusné osoby: 36,8 % odhadů v kritických kolech ve směru většiny, průměr 4,41 chyby z 12, 29 lidí (asi čtvrtina) bez chyby; většina odhadů přesto správná. Pokus s „pravým spojencem“ v této části monografie není." }
+  - { id: franzen-mader-2023, druh: monografie, nazev: "The power of social influence: A replication and extension of the Asch experiment", autor: "Axel Franzen, Sebastian Mader", dilo: "PLOS ONE 18 (2023), e0294325; plný text v PubMed Central (PMC10686423), CC BY 4.0", url: "https://doi.org/10.1371/journal.pone.0294325", overeno: 2026-10-15, poznamka: "Čteno v plném textu (XML z PMC). Bern, jaro 2021, 210 lidí z kampusu (po vyřazení 202; 61 % ženy, průměrný věk 22,6). Pět domluvených a jeden nezasvěcený na pátém místě ze šesti; deset úloh s čarami, v šesti skupina odpovídá špatně. Bez odměny 33 % špatných odpovědí v kritických úlohách (rozpětí 10 až 47 %), v úlohách, kde skupina odpověděla správně, skoro nikdo nechyboval; s odměnou franku za správnou odpověď o 8 procentních bodů méně (asi 25 %). Politické otázky: podíl „ano“ se lišil v průměru o 38 procentních bodů podle toho, co řekla skupina (občanské svobody: 81 % proti 33 %). Z povahových rysů souvisela jen otevřenost. Odkazují na Bond a Smithovu metaanalýzu (44 přesných replikací, průměr 25 %)." }
+  - { id: andersen-1837, druh: pramen, nazev: "Keiserens nye Klæder (Císařovy nové šaty)", autor: "Hans Christian Andersen", dilo: "Eventyr, fortalte for Børn (1837); dánsky (Wikisource)", url: "https://da.wikisource.org/wiki/Keiserens_nye_Kl%C3%A6der", overeno: 2026-10-15, poznamka: "Čtena celá pohádka v dánštině. Látku prý neuvidí nikdo, kdo se nehodí do svého úřadu nebo je hloupý. V průvodu nikdo nechce dát najevo, že nic nevidí. Malé dítě: „Ale on nemá nic na sobě.“ Otec: „Pane Bože, slyšte hlas nevinnosti.“ Lidé si to šeptají, nakonec to volá celý lid. Císaře zamrazí, protože mu připadá, že mají pravdu, ale řekne si: „teď musím průvod vydržet“; komoří dál nesou vlečku, která tam vůbec není." }
+  - { id: pshe-sensitive-2012, druh: data, nazev: "Handling sensitive or controversial issues", dilo: "PSHE Association (2012), PDF na webu ghll.org.uk", url: "https://www.ghll.org.uk/sensitive%20issues%20pshe%20Association.pdf", overeno: 2026-10-15, poznamka: "Čteno celé (2 strany). Bezpečné prostředí: pravidla rozhovoru dohodnutá s třídou, mezi nimi „neklást osobní otázky“ a právo „vynechat“, když se člověk nechce vyjádřit; anonymní schránka na otázky; být citlivý k tomu, že někteří žáci mají s tématem přímou zkušenost; vyvážené informace a různé názory. Techniky odstupu: příběhy, postavy, scénáře podle skutečných situací „odosobňují“ rozhovor (otázky: co se jim děje, co si myslí, kdo by jim mohl pomoct)." }
+  - { id: msmt-priloha-6, druh: data, nazev: "Co dělat, když: intervence pedagoga. Příloha č. 6: Školní šikana", dilo: "MŠMT, příloha Metodického doporučení k primární prevenci rizikového chování (č. j. 21291/2010-28), navazuje na metodický pokyn k šikaně MSMT-21149/2016; kopie na webu ZŠ Svitavy, Sokolovská", url: "https://www.zs5.svitavy.cz/uredni_deska/prevence/06_sikana.pdf", overeno: 2026-10-15, poznamka: "Čteno strany 1–10 z 33. Nepřímá šikana: záměrná ignorace, izolování, pomluvy, ponižování před ostatními. První stadium vzniká v každé skupině: odmítání, nekomunikace, pomluvy vůči nejméně oblíbenému a nejméně vlivnému členu. Důvodem může být jakákoli odlišnost, i socioekonomická, víra nebo orientace. Nevhodné je nutit žáky, aby veřejně řekli, co viděli, a mluvit s žákem o situaci před ostatními. Oběť není viníkem; je třeba pracovat i s těmi, kdo přihlíželi." }
+  - { id: rijks-hipparchia-cats, druh: data, nazev: "Hipparchia en Krates (RP-P-1878-A-651)", autor: "Daniël van den Bremden podle Adriaena Pietersze van de Venne", dilo: "Rijksmuseum, Amsterdam", url: "https://id.rijksmuseum.nl/200166152", overeno: 2026-10-15, poznamka: "Rytina a knihtisk, strana z knihy Jacoba Catse ’s Werelts begin, midden, eynde, besloten in den trou-ringh (Dordrecht 1637), nadpis strany „Ongelyck houwelick“ (nerovný sňatek); deska 100 × 134 mm, list 230 × 162 mm. Podle muzea: Hipparchia sedí u stolu, Kratés ji žádá o ruku, dvě služebné je sledují zpoza závěsu. Na náhledu (500 px) leží na zemi plášť, mošna a hůl. Licence CC0 (údaje muzea, linked data). Snímek IIIF 4090 × 5802 px (celá strana). Datace v záznamu je chybná („c. 1635 – 1537“); kniha je z roku 1637. Nestaženo." }
+  - { id: rijks-hipparchia-beverwijck, druh: data, nazev: "Hipparchia en Krates (RP-P-1938-2026)", autor: "Crispijn van den Queborn podle Jacoba Gerritsze Cuypa", dilo: "Rijksmuseum, Amsterdam", url: "https://id.rijksmuseum.nl/200400499", overeno: 2026-10-15, poznamka: "Rytina a knihtisk, 1643, ilustrace z knihy Johana van Beverwijcka Van de wtnementheyt des vrouwelicken geslachts (O znamenitosti ženského pohlaví), Dordrecht 1643; deska 66 × 78 mm. Podle muzea: Hipparchia sedí u stolu s mnoha knihami, Kratés ji žádá o ruku. Na náhledu (500 px) leží na zemi plášť, mošna a hůl. Licence CC0 (údaje muzea, linked data). Snímek IIIF 3486 × 5812 px (celá strana). Nestaženo." }
 
 citaty:
   - id: obrana-38a
@@ -3609,6 +3634,307 @@ citaty:
       druh: vlastni
       podle: "řecký text a anglický překlad R. D. Hickse; volněji: ταύτην odkazuje k „příčině vnímání“ z předchozí věty; τὸ λοιπὸν ἄθροισμα = „zbytek celku“, tedy tělo bez duše"
     zdroj: dl-x-63
+  # Celek 8 „Čí život vlastně žiju?“ (P6, 15. 10. 2026). Vlastní převody z řeckého textu uvedeného u pramene; publikované
+  # české překlady (A. Kolář, A. Kříž, F. Novotný) jsem neměl v ruce. τῦφος převádím v Kratétových verších jako „dým“
+  # (doslova kouř, mlha; přeneseně nadutost, klam) a v Platónově odpovědi Diogenovi jako „nadutost“; obojí je totéž slovo.
+  # Diogenés Laertios psal asi 500 let po Kratétovi a Hipparchii: jeho průpovídky jsou tradované.
+  - id: dl-vi-85-pera
+    osoba: krates
+    autor: Kratés
+    dilo: Hravé verše
+    misto: Diogenés Laertios VI, 85
+    cesky: "Je jedno město, Péra, uprostřed vínově tmavého dýmu, krásné a úrodné, celé špinavé, nemá nic. Nepřipluje do něj žádný hloupý příživník … Rodí tymián, česnek, fíky a chleba. Kvůli tomu se lidé mezi sebou neperou a nechápou se zbraní pro drobné ani pro slávu."
+    original: "Πήρη τις πόλις ἐστὶ μέσῳ ἐνὶ οἴνοπι τύφῳ, καλὴ καὶ πίειρα, περίρρυπος, οὐδὲν ἔχουσα, εἰς ἣν οὔτε τις εἰσπλεῖ ἀνὴρ μωρὸς παράσιτος … ἀλλὰ θύμον καὶ σκόρδα φέρει καὶ σῦκα καὶ ἄρτους, ἐξ ὧν οὐ πολεμοῦσι πρὸς ἀλλήλους περὶ τούτων, οὐχ ὅπλα κέκτηνται περὶ κέρματος, οὐ περὶ δόξης."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; πήρα = mošna žebráka a kynika; parodie Odyssey XIX, 172–173 (Kréta uprostřed vínově tmavého moře); zkráceno o verš o mlsounovi, který se chlubí nevěstkou"
+    zdroj: dl-vi-85
+  - id: dl-vi-86-cenik
+    osoba: krates
+    autor: Kratés
+    dilo: Deník
+    misto: Diogenés Laertios VI, 86
+    cesky: "Kuchaři počítej deset min, lékaři drachmu, lichotníkovi pět talentů, rádci dým, … filozofovi tři oboly."
+    original: "τίθει μαγείρῳ μνᾶς δέκʼ, ἰατρῷ δραχμήν, κόλακι τάλαντα πέντε, συμβούλῳ καπνόν, … φιλοσόφῳ τριώβολον."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; rádci καπνός (kouř); vynechána položka „nevěstce talent“; talent je šest tisíc drachem, obol šestina drachmy"
+    zdroj: dl-vi-85
+  - id: dl-vi-86-co-mam
+    osoba: krates
+    autor: Kratés
+    dilo: Hravé verše
+    misto: Diogenés Laertios VI, 86
+    cesky: "Mám to, co jsem se naučil a promyslel a co vznešeného jsem poznal s Múzami. To ostatní, mnoho a bohatého, sebral dým."
+    original: "ταῦτʼ ἔχω ὅσσʼ ἔμαθον καὶ ἐφρόντισα καὶ μετὰ Μουσῶν σέμνʼ ἐδάην· τὰ δὲ πολλὰ καὶ ὄλβια τῦφος ἔμαρψεν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; parodie verše o Sardanapallovi („mám, co jsem snědl…“, Strabón XIV, 5, 9)"
+    zdroj: dl-vi-85
+  - id: dl-vi-92-oslari
+    osoba: krates
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 92
+    cesky: "Filozofovat se má tak dlouho, dokud se vojevůdci nezačnou zdát oslaři."
+    original: "μέχρι τούτου δεῖν φιλοσοφεῖν, μέχρι ἂν δόξωσιν οἱ στρατηγοὶ εἶναι ὀνηλάται"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; v originále nepřímá řeč („říkal, že…“)"
+    zdroj: dl-vi-85
+  - id: dl-vi-93-vlast
+    osoba: krates
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 93
+    cesky: "Mou vlastí je neslavnost a chudoba, ty osud nedobude. A jsem spoluobčanem Diogena, proti kterému závist nic nezmůže."
+    original: "ἔχειν δὲ πατρίδα ἀδοξίαν καὶ πενίαν ἀνάλωτα τῇ τύχῃ καὶ Διογένους εἶναι πολίτης ἀνεπιβουλεύτου φθόνῳ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; v originále nepřímá řeč; ἀδοξία = být bez slávy, bez pověsti; stojí hned za odpovědí Alexandrovi, který mu nabízel obnovit Théby"
+    zdroj: dl-vi-85
+  - id: dl-vi-96-zenich
+    osoba: krates
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 96
+    cesky: "Tady je ženich a tohle je jeho majetek. Podle toho se rozhodni. Mou družkou nebudeš, jestli se nebudeš věnovat témuž co já."
+    original: "ὁ μὲν νυμφίος οὗτος, ἡ δὲ κτῆσις αὕτη, πρὸς ταῦτα βουλεύου· οὐδὲ γὰρ ἔσεσθαι κοινωνόν, εἰ μὴ καὶ τῶν αὐτῶν ἐπιτηδευμάτων γενηθείη."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; Kratés to říká Hipparchii, když před ní vstal a odložil svou výbavu (σκευή); druhá věta je v originále nepřímá řeč; κοινωνός = společník, druh"
+    zdroj: dl-vi-85
+  - id: dl-vii-3-zenon
+    osoba: krates
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VII, 3
+    cesky: "Proč utíkáš, Féničánku? Nic hrozného se ti nestalo."
+    original: "τί φεύγεις, Φοινικίδιον; οὐδὲν δεινὸν πέπονθας."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; Kratés Zénónovi, když mu holí rozbil hrnec s čočkovou polévkou, který se Zénón styděl nést přes Kerameikos"
+    zdroj: dl-vii-2
+  - id: dl-vi-97-sofisma
+    osoba: hipparchia
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 97
+    cesky: "Co kdyby udělal Theodóros, a nikdo by neřekl, že jedná nespravedlivě, to když udělá Hipparchia, taky nikdo neřekne, že jedná nespravedlivě. Theodóros nejedná nespravedlivě, když bije sám sebe. Tedy ani Hipparchia nejedná nespravedlivě, když bije Theodóra."
+    original: "ὃ ποιῶν Θεόδωρος οὐκ ἂν ἀδικεῖν λέγοιτο, οὐδʼ Ἱππαρχία ποιοῦσα τοῦτο ἀδικεῖν λέγοιτʼ ἄν· Θεόδωρος δὲ τύπτων ἑαυτὸν οὐκ ἀδικεῖ, οὐδʼ ἄρα Ἱππαρχία Θεόδωρον τύπτουσα ἀδικεῖ."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; Diogenés Laertios to nazývá sofismatem (σόφισμα); hostina u Lýsimacha"
+    zdroj: dl-vi-85
+  - id: dl-vi-98
+    osoba: hipparchia
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 98
+    cesky: "Jsem to já, Theodóre. Snad si nemyslíš, že jsem o sobě rozhodla špatně, když jsem čas, který jsem měla strávit u stavu, dala vzdělání?"
+    original: "ἐγώ, φησίν, εἰμί, Θεόδωρε· ἀλλὰ μὴ κακῶς σοι δοκῶ βεβουλεῦσθαι περὶ αὑτῆς, εἰ, τὸν χρόνον ὃν ἔμελλον ἱστοῖς προσαναλώσειν, τοῦτον εἰς παιδείαν κατεχρησάμην;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; odpověď na Theodórův verš z Eurípidových Bakchantek (1236) o ženě, která opustila člunky u stavů; παιδεία = vzdělání, výchova"
+    zdroj: dl-vi-85
+  - id: dl-vi-26-diogenes
+    osoba: diogenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 26
+    cesky: "Šlapu po Platónově marnivosti."
+    original: "πατῶ τὴν Πλάτωνος κενοσπουδίαν"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; Diogenés šlape po kobercích v Platónově domě, kam Platón pozval přátele od Dionýsia; podle jiných řekl „po Platónově nadutosti“ (τῦφον)"
+    zdroj: dl-vi-20
+  - id: dl-vi-26-platon
+    osoba: platon
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 26
+    cesky: "Kolik nadutosti, Diogene, ukazuješ tím, že se zdáš bez nadutosti!"
+    original: "ὅσον, ὦ Διόγενες, τοῦ τύφου διαφαίνεις, δοκῶν μὴ τετυφῶσθαι."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; první verze Platónovy odpovědi; διαφαίνεις = necháváš prosvítat"
+    zdroj: dl-vi-20
+  - id: dl-vi-26-jinou
+    osoba: platon
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 26
+    cesky: "Ano, Diogene, jinou nadutostí."
+    original: "ἑτέρῳ γε τύφῳ, Διόγενες"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; druhá verze („jiní říkají“), odpověď na Diogenovo „šlapu po Platónově nadutosti“"
+    zdroj: dl-vi-20
+  - id: dl-vi-8-plast
+    osoba: sokrates
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 8
+    cesky: "Skrz tvůj plášť vidím, jak toužíš po slávě."
+    original: "ὁρῶ σου διὰ τοῦ τρίβωνος τὴν φιλοδοξίαν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse; Sókratés Antisthenovi, který natočil roztrženou část pláště tak, aby byla vidět; totéž II, 36"
+    zdroj: dl-vi-8
+  - id: dl-vi-8-chvala
+    osoba: antisthenes
+    autor: Diogenés Laertios
+    dilo: Životy filozofů
+    misto: VI, 8
+    cesky: "„Mnoho lidí tě chválí.“ – „A co jsem provedl špatného?“"
+    original: "πρὸς τὸν εἰπόντα, πολλοί σε ἐπαινοῦσι, τί γάρ, ἔφη, κακὸν πεποίηκα;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text a anglický překlad R. D. Hickse"
+    zdroj: dl-vi-8
+  - id: etika-1103a-priroda
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: II, 1, 1103a23–26
+    cesky: "Ctnosti v nás tedy nevznikají přírodou, ani proti přírodě. Od přírody jsme schopni je přijmout, a dokonalými nás v nich dělá zvyk."
+    original: "οὔτʼ ἄρα φύσει οὔτε παρὰ φύσιν ἐγγίνονται αἱ ἀρεταί, ἀλλὰ πεφυκόσι μὲν ἡμῖν δέξασθαι αὐτάς, τελειουμένοις δὲ διὰ τοῦ ἔθους."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama; ἔθος = zvyk, návyk"
+    zdroj: aristoteles-etika-ii
+  - id: etika-1120a-marnotratnik
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: IV, 1, 1120a1–3
+    cesky: "Marnotratník je ten, kdo hyne vlastní vinou. Zdá se totiž, že i zničit majetek je kus zkázy sebe sama, protože z něj žijeme."
+    original: "ἄσωτος γὰρ ὁ διʼ αὑτὸν ἀπολλύμενος, δοκεῖ δʼ ἀπώλειά τις αὑτοῦ εἶναι καὶ ἡ τῆς οὐσίας φθορά, ὡς τοῦ ζῆν διὰ τούτων ὄντος."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama; οὐσία = jmění; marnotratnost je podle Aristotela přemíra v dávání a nedostatek v braní"
+    zdroj: aristoteles-etika-iv
+  - id: etika-1120b-stedry
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: IV, 1, 1120b1–4
+    cesky: "O své nebude nedbat, protože jím chce druhým pomáhat. A nebude dávat komukoli, aby mohl dát těm, komu má, kdy a kde je to správné."
+    original: "οὐδʼ ἀμελήσει τῶν ἰδίων, βουλόμενός γε διὰ τούτων τισὶν ἐπαρκεῖν. οὐδὲ τοῖς τυχοῦσι δώσει, ἵνα ἔχῃ διδόναι οἷς δεῖ καὶ ὅτε καὶ οὗ καλόν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama; o štědrém (ἐλευθέριος). Hned dál (1120b4–6): pro štědrého je typické dát tolik, že sobě nechá méně"
+    zdroj: aristoteles-etika-iv
+  - id: etika-1134b-ruka
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Etika Nikomachova
+    misto: V, 7, 1134b24–35
+    cesky: "Některým se zdá, že všechno spravedlivé je jen podle zákona: co je od přírody, je neměnné a všude má stejnou moc, jako oheň pálí tady i v Persii, kdežto spravedlivé věci se podle nich mění. Tak to ale není, jen do jisté míry. … Pravá ruka je od přírody silnější, a přece se mohou všichni stát obouručními."
+    original: "δοκεῖ δʼ ἐνίοις εἶναι πάντα τοιαῦτα, ὅτι τὸ μὲν φύσει ἀκίνητον καὶ πανταχοῦ τὴν αὐτὴν ἔχει δύναμιν, ὥσπερ τὸ πῦρ καὶ ἐνθάδε καὶ ἐν Πέρσαις καίει, τὰ δὲ δίκαια κινούμενα ὁρῶσιν. τοῦτο δʼ οὐκ ἔστιν οὕτως ἔχον, ἀλλʼ ἔστιν ὥς· … φύσει γὰρ ἡ δεξιὰ κρείττων, καίτοι ἐνδέχεται πάντας ἀμφιδεξίους γενέσθαι."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (I. Bywater) a anglický překlad H. Rackhama; „takové“ = podle zákona, ne od přírody (1134b18–24); vynecháno: u bohů snad ne, u nás je něco i od přírody, i když se všechno může měnit (1134b28–30)"
+    zdroj: aristoteles-etika-v
+  - id: politika-1260a-ctnost
+    osoba: aristoteles
+    autor: Aristotelés
+    dilo: Politika
+    misto: I, 13, 1260a20–24
+    cesky: "Uměřenost ženy a muže není táž, ani jejich statečnost a spravedlnost, jak si myslel Sókratés. Jedna statečnost je k vládnutí, druhá ke službě."
+    original: "καὶ οὐχ ἡ αὐτὴ σωφροσύνη γυναικὸς καὶ ἀνδρός, οὐδʼ ἀνδρεία καὶ δικαιοσύνη, καθάπερ ᾤετο Σωκράτης, ἀλλʼ ἡ μὲν ἀρχικὴ ἀνδρεία ἡ δʼ ὑπηρετική"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (Ross) a anglický překlad H. Rackhama; navazuje na 1260a12–14 (žena rozvahu má, ale bez rozhodující váhy)"
+    zdroj: aristoteles-politika-i
+  - id: ustava-455d-zeny
+    osoba: platon
+    autor: Platón
+    dilo: Ústava
+    misto: V, 455d–456a
+    cesky: "Žádné zaměstnání ve správě obce tedy nepatří ženě proto, že je žena, ani muži proto, že je muž. Přirozené vlohy jsou rozesety u obou podobně a žena má od přírody podíl na všech zaměstnáních a muž také, jen je ve všem slabší žena než muž. … Jedna žena má sklon k filozofii, druhá moudrost nesnáší."
+    original: "οὐδὲν ἄρα ἐστίν, ὦ φίλε, ἐπιτήδευμα τῶν πόλιν διοικούντων γυναικὸς διότι γυνή, οὐδʼ ἀνδρὸς διότι ἀνήρ, ἀλλʼ ὁμοίως διεσπαρμέναι αἱ φύσεις ἐν ἀμφοῖν τοῖν ζῴοιν, καὶ πάντων μὲν μετέχει γυνὴ ἐπιτηδευμάτων κατὰ φύσιν, πάντων δὲ ἀνήρ, ἐπὶ πᾶσι δὲ ἀσθενέστερον γυνὴ ἀνδρός. … φιλόσοφός τε καὶ μισόσοφος"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. Burnet) a anglický překlad P. Shoreyho; mluví Sókratés, Glaukón přisvědčuje; poslední věta v originále otázka („a jedna filozofická, druhá nenávidí moudrost?“)"
+    zdroj: platon-ustava-perseus
+  - id: rozpravy-iii-22-10
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 22, 10–11
+    cesky: "„Plášť nosím už teď a budu ho mít i potom. Spím natvrdo už teď a budu i potom. Vezmu si k tomu mošnu a hůl, budu obcházet, žebrat od lidí a nadávat jim…“ Jestli si to představuješ takhle, drž se od toho daleko."
+    original: "τριβώνιον καὶ νῦν φορῶ καὶ τόθʼ ἕξω, κοιμῶμαι καὶ νῦν σκληρῶς καὶ τότε κοιμήσομαι, πηρίδιον προσλήψομαι καὶ ξύλον καὶ περιερχόμενος αἰτεῖν ἄρξομαι τοὺς ἀπαντῶντας, λοιδορεῖν … εἰ τοιοῦτόν τι φαντάζῃ τὸ πρᾶγμα, μακρὰν ἀπʼ αὐτοῦ"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl); Epiktétos odpovídá žákovi, který se chce stát kynikem; zkráceno o to, koho bude kynik kárat (kdo si škube chloupky, česá kadeře, chodí v šarlatu)"
+    zdroj: epiktetos-rozpravy-iii-22
+  - id: rozpravy-iii-22-19
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 22, 19
+    cesky: "Nejdřív musíš udělat čistým to, co v tobě vládne."
+    original: "πρῶτον οὖν τὸ ἡγεμονικόν σε δεῖ τὸ σαυτοῦ καθαρὸν ποιῆσαι"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl); τὸ ἡγεμονικόν = to, co v člověku vládne, rozum"
+    zdroj: epiktetos-rozpravy-iii-22
+  - id: rozpravy-iii-22-50
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 22, 50
+    cesky: "Tohle je kynický hlas, tohle kynická povaha a záměr. Ne mošnička, hůl a velká ústa: sníst všechno, co dostaneš, nebo si to schovat, nadávat lidem v nepravou chvíli a ukazovat pěkné rameno."
+    original: "ἴδε κυνικαὶ φωναί, ἴδε χαρακτήρ, ἴδʼ ἐπιβολή. οὔ· ἀλλὰ πηρίδιον καὶ ξύλον καὶ γνάθοι μεγάλαι· καταφαγεῖν πᾶν ὃ εἂν δῷς ἢ ἀποθησαυρίσαι ἢ τοῖς ἀπαντῶσι λοιδορεῖσθαι ἀκαίρως ἢ καλὸν τὸν ὦμον δεικνύειν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl); „tohle“ = slova kynika, kterého Epiktétos právě nechal mluvit (45–49: bez domu a obce, a co mi chybí?); druhá věta říká, co si pod kynismem představují jiní"
+    zdroj: epiktetos-rozpravy-iii-22
+  - id: rozpravy-iii-22-76
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: III, 22, 76
+    cesky: "„Ale Kratés se oženil.“ – „Mluvíš o zvláštním případu, který vznikl z lásky, a o ženě, která byla druhý Kratés.“"
+    original: "ναί· ἀλλὰ Κράτης ἔγημεν. — περίστασίν μοι λέγεις ἐξ ἔρωτος γενομένην καὶ γυναῖκα τιθεῖς ἄλλον Κράτητα."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl); doslova „a ženu kladeš jako jiného Kratéta“"
+    zdroj: epiktetos-rozpravy-iii-22
+  - id: rozpravy-i-2-11
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 2, 11
+    cesky: "Ty jsi ten, kdo se zná: kolik máš sám pro sebe cenu a za kolik se prodáváš. Každý se prodává za jinou cenu."
+    original: "σὺ γὰρ εἶ ὁ σαυτὸν εἰδώς, πόσου ἄξιος εἶ σεαυτῷ καὶ πόσου σεαυτὸν πιπράσκεις· ἄλλοι γὰρ ἄλλων πιπράσκουσιν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; kapitola o tom, jak si člověk uchová, co mu sluší (τὸ κατὰ πρόσωπον)"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-i-2-32
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 2, 32
+    cesky: "Býkem se nikdo nestane najednou, ani ušlechtilým člověkem. Musí se přes zimu cvičit, připravit se a nevrhat se bezhlavě na to, co mu nepřísluší."
+    original: "ἄφνω δὲ ταῦρος οὐ γίνεται οὐδὲ γενναῖος ἄνθρωπος, ἀλλὰ δεῖ χειμασκῆσαι, παρασκευάσασθαι καὶ μὴ εἰκῇ προσπηδᾶν ἐπὶ τὰ μηδὲν προσήκοντα."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; odpověď na otázku, jak člověk pozná, co mu sluší (30–31: býk pozná svou sílu, když přijde lev)"
+    zdroj: epiktetos-rozpravy
+  - id: rozpravy-i-2-33
+    osoba: epiktetos
+    autor: Epiktétos
+    dilo: Rozpravy
+    misto: I, 2, 33
+    cesky: "Jen uvaž, za kolik prodáváš svou vůli. Člověče, když už nic jiného, neprodávej ji levně."
+    original: "μόνον σκέψαι, πόσου πωλεῖς τὴν σεαυτοῦ προαίρεσιν. ἄνθρωπε, εἰ μηδὲν ἄλλο, μὴ ὀλίγου αὐτὴν πωλήσῃς."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; προαίρεσις = vůle, jako v celku 3"
+    zdroj: epiktetos-rozpravy
 
 obrazky:
   - id: sokrates-louvre

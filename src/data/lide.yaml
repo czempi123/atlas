@@ -857,11 +857,11 @@
   hloubka: medailonek
   smery: [kynismus]
   mista:
-    - { misto: theby, role: narozeni, zdroj: britannica-crates }
-    - { misto: athenes, role: pusobeni, zdroj: britannica-zeno-citium }
+    - { misto: theby, role: narozeni, zdroj: dl-vi-85 }
+    - { misto: athenes, role: pusobeni, zdroj: dl-vi-85 }
   kdo: Kynický filozof, Diogenův žák.
   proc: Jeho posluchačem byl Zénón z Kitia, zakladatel stoicismu.
-  zdroje: [britannica-crates, britannica-zeno-citium]
+  zdroje: [britannica-crates, britannica-zeno-citium, dl-vi-85, dl-vii-2, iep-cynics, apuleius-florida-22, epiktetos-rozpravy-iii-22]
 
 - id: hipparchia
   jmeno: Hipparchia
@@ -872,10 +872,10 @@
   hloubka: medailonek
   smery: [kynismus]
   mista:
-    - { misto: maroneia, role: narozeni, zdroj: iep-cynics }
+    - { misto: maroneia, role: narozeni, zdroj: dl-vi-85 }
   kdo: Z Maróneie, první známá filozofka kynické školy.
   proc: Z bohaté rodiny odešla za Kratétem a žila s ním jako kynička.
-  zdroje: [britannica-crates, iep-cynics]
+  zdroje: [britannica-crates, iep-cynics, dl-vi-85, suda-hipparchia]
 
 - id: kleanthes
   jmeno: Kleanthés
