@@ -40,6 +40,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Úvodní případ stránky otázky je jiného druhu než nový případ cesty.
 - Každý hlas na stránce otázky se pozná a nezmenšuje se to, čím se liší. Odpověď hlasu má nejvýš dvě věty. Výklad u hlasu ověř v tomtéž díle a místě, ze kterého je citát; myšlenka odjinud (Seneca, Dopisy 93, 2 u citátu z Dopisu 61) dostane svůj pramen a jméno autora, ne školy.
 - Když poslední krok slíbí, že každá odpověď má zastánce, projdi možnosti prvního bloku jednu po druhé; shrnutí možností z minulého kroku jmenuje všechny, i tu, kterou volí věřící student.
+- Zastánci v posledním kroku patří i odpovědím z ostatních Voleb cesty, ne jen z první: kdo ve čtvrtém kroku zvolil „obě“ nebo „žádná“, jinak odejde s pocitem, že odpověděl špatně.
+- Nový případ a zastánci odpovědí jsou dva kroky, ne jeden: pod nadpisem případu student zastánce z deníku nenajde (cesta 2, krok 7 a 8).
 - Cesta dá slovo i studentovi, který s jejím filozofem nesouhlasí, a řekne mu, kdo je jeho spojenec. Spojenec je jiný myslitel: když námitce přitaká jen filozof cesty („to přiznal sám“), promění se v souhlas s ním.
 - Čtyři citáty za sebou student přeskakuje.
 - Citát, který končí obrazem, jemuž se celek vyhýbá (spánek a klid v celku o smrti), dostane v datech kratší podobu s vlastním id; komponenta Citát zkracovat neumí a ruční opis by obešel data.

@@ -4,6 +4,20 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 15. 10. 2026: Opravy celku 7 po revizi
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor poslal zadání oprav s prázdnými řádky odpovědí; platí u každého bodu první nabízená možnost, totožná s doporučením revize | Pravidlo bez mezikroku schvalování (4. 10. 2026); autor řekne, co změnit |
+| Cesta 2 má osm kroků: krok 7 „Jak staré je tvoje tělo“ (případ a Volba, která nabízí další krok sama) a krok 8 „Kdo je na tvé straně“ (zastánci odpovědí z kroků 1 a 4, karta Zkus to žít, Závěr cesty). Ruší se záznam z 10. 10. 2026 o kroku 7 se dvěma bloky | Krok dělal dvě nesouvisející práce a na telefonu měl sedm obrazovek pod nadpisem, který druhou půlku nepopisoval; cesty 3, 4 a 5 mají osm kroků. Čas 34,7 minuty, štítek 35 |
+| Otázka Volby v kroku 7 je „Které pravidlo si na buňkách vyzkoušíš?“ (dřív „…si z toho vezmeš?“) | Text nad blokem říká, že z měření o člověku nic neplyne; otázka nesmí brát pravidlo o člověku z buněk |
+| Marcus Aurelius (Hovory X, 7) v kroku 7 není | Citát staví tělo z toho, co „přiteklo z jídla“; student, který bojuje s tělem, by v kroku o těle četl právě tohle. A „všechno to přiteklo včera“ by krok musel hned opravit (neurony, srdce, čočka). Zadání říká: když si nejsi jistý, vynech |
+| Poslední prkno Théseovy lodi je Hobbesovo, ne krok atlasu: text pod kresbou říká „až sem úlohu dovedl v 17. století Thomas Hobbes“ a krok 4, že Hobbes „dovedl výměnu až k poslednímu prknu a přidal druhou loď“. V kroku 1 zůstává poslední prkno krokem studenta. Ruší se věta „ten krok jsme přidali my“ a v tom smyslu i záznam z 10. 10. 2026 o vstupu cesty | Hobbes, Concerning Body II, 11, 7: „after all the Planks were changed“; atlas nemá připisovat sobě, co napsal filozof (revize celku 7, nález 4) |
+| Vstupy osobnosti jsou dvě navigace: cesty pod jménem, velké otázky na telefonu až pod deskou, od 900 px pod cestou vlevo od desky | Aristotelés a Epikúros měli pod jménem sedm tlačítek a deska s prvním odstavcem byla až na druhé obrazovce; rozbalovací řádek by vstupy skrýval. Pořadí je na obou šířkách stejné |
+| Obraz vstupu cesty 2 je užší výřez na jednu loď z originálu, nezvětšený (728 × 546 px), s popiskem „Loď pod uchem athénské číše…“; `scripts/obrazek-vyrez.mjs` už malý výřez nezvětšuje | Na telefonu vládlo širšímu výřezu černé ucho a lodě byly malé; zvětšení by nepřidalo kresbu, jen velikost souboru |
+| „Asi“ stojí i u roku úmrtí v závorce bloku Kdo žil dřív?, když je rok v datech přibližný | Revize celku 7, nález 10; atlas jinde „asi“ drží |
+| Seneca a Plútarchos zůstávají mimo `filozofove` cesty 2, Návrat bez studie, přístav jako obraz, Parmenidés bez obrazu, Poradna Vigvam v listu s poznámkou | Doporučení revize (oddíl Doporučení k otevřeným bodům) |
+
 ## 10. 10. 2026: Revize celku 7 (P10)
 
 | Rozhodnutí | Důvod |

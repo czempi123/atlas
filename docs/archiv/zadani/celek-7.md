@@ -187,3 +187,44 @@ Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej
 ```
 
 Provedeno 10. 10. 2026. Autor zadání poslal s prázdnými řádky odpovědí; revize proto vzala všech šest bodů jako otevřené a dala k nim doporučení (záznam `docs/revize/celek-7-2026-10-10.md`, oddíl Doporučení k otevřeným bodům). Verdikt: po opravách; stav je v plánu větve (Po P10).
+
+## Opravy po revizi celku 7
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Znění oprav je v záznamu revize hotové, ale práce není jen opis: rozdělení kroku sahá do testů, do designu a do listu pro učitele, nález 6 mění rozhraní hlavičky a nové věty přibývají v kroku o Senekovi a o těle. **Sonnet 5.5 · high** by stačil, kdybys krok nerozděloval a hlavičku odložil. Před odesláním doplň šest řádků s odpověďmi.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-7. Revize celku 7 je hotová, záznam je v docs/revize/celek-7-2026-10-10.md.
+
+Nálezy 1 až 10 (schvaluji všechny; jinak: …): 
+Krok 7 (rozdělit na krok 7 „Jak staré je tvoje tělo“ a krok 8 „Kdo je na tvé straně“; nebo: nechat jeden krok): 
+Nález 6, hlavička se sedmi tlačítky (otázky na telefonu pod desku; nebo: rozbalovací řádek; nebo: odložit): 
+Obraz vstupu (užší výřez na jednu loď podle náhledu; nebo: nechat): 
+Kresba Loď po prknech (viděl jsem ji a schvaluji; jinak: …): 
+Ostatní otevřené body (souhlasím s doporučením; jinak: …): 
+
+Zapracuj nálezy revize a doporučení k otevřeným bodům. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md, docs/pouceni.md;
+- v docs/plany/celek-7.md tabulku stavu a oddíl „Po P10“;
+- celý záznam docs/revize/celek-7-2026-10-10.md: u každého nálezu je hotové znění opravy;
+- z docs/podklady/celek-7-jsem-porad-tentyz.md jen oddíl Citlivá místa (pravidla pro celý celek a tabulku pěti studentů);
+- v docs/design.md oddíl Cesta, z Komponent Loď po prknech a pro nález 6 místo o vstupech osobnosti v hlavičce profilu.
+Jiné podklady ani obsah celků 1 až 6 nečti.
+
+Co udělat:
+
+1. Nálezy 1 až 5 a 7 až 10 podle záznamu. Znění ber ze záznamu; kde jsem výše napsal jinak, platí moje odpověď. Nové věty drž do 25 slov a každou přečti očima pěti studentů z Citlivých míst.
+2. Krok 7, když platí rozdělení: nový soubor 8-kdo-je-na-tve-strane.mdx (zastánci čtyř odpovědí, dva odstavce z nálezu 5, karta Zkus to žít, shrnutí a Závěr cesty) s kdeJsme „Zpátky u čtyř odpovědí z prvního kroku“. V kroku 7 zůstane případ a Volba bez vlastního dal (další krok nabídne blok sám). Do kroku 7 smí jednou větou a citátem Marcus Aurelius (hovory-x-7); přečti ho nejdřív očima studenta, kterého se tělo bolestně týká, a když si nejsi jistý, vynech ho. Uprav tests/e2e/cesta2.spec.ts (KROKY2, NAVAZUJE, kotva #kdo-je-na-tve-strane), odkaz karty Zkus to žít, docs/design.md (oddíl Cesta), čísla kroků v ucitel/celek-7.md a štítek minut podle skriptu.
+3. Nález 4: texty v src/lib/lod.ts, věta v kroku 4, tests/data/lod.test.ts, docs/design.md (Loď po prknech) a řádek v docs/rozhodnuti.md, že poslední prkno je Hobbesovo.
+4. Nález 6 podle mé odpovědi. Změnu ověř na 390 a 1440 px ve světlém i tmavém režimu u Aristotela, Epikúra, Sókrata a Hérakleita a uprav testy vstupů (otazka.spec.ts, platon.spec.ts), pokud hlídají pořadí prvků; zapiš ji do docs/design.md.
+5. Nález 7: pramen aristoteles-etika-ix doplň o místo IX, 9, 1169b33–1170a4 (čteno 10. 10. 2026 anglicky v Rackhamově překladu na Perseu) a uprav řádek Aristotela v tabulce hlasů v listu pro učitele.
+6. Nález 10: v src/lib/bloky.ts u věty o věku doplň „asi“ před rok úmrtí, když je zp.doPriblizne; projdi testy bloku Kdo žil dřív? a přečti blok u dvou jiných dvojic s přibližnými roky.
+7. Obraz vstupu, když platí užší výřez: vyřízni ho z originálu v ~/Pictures/Atlas-originaly/ skriptem scripts/obrazek-vyrez.mjs (náhled je v Claude outputs/revize-celek-7/navrh-vyrez-jedna-lod.jpg, výřez z dnešního obrázku v navrh-vyrez.mjs tamtéž), popisek změň na „Loď pod uchem athénské číše…“ a zapiš to k obrázku v src/data/zdroje.yaml.
+8. Ostatní otevřené body podle doporučení v záznamu; většina zní „nechat“.
+9. List pro učitele srovnej s novým zněním (nálezy 1, 3 a 4, čísla kroků). V docs/podklady/k-overeni.md zapiš, co se změnilo.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim a štítek minut podle výsledku; snímky kroků 2, 4, 6, 7 a 8 na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs), stránky otázky 5 (scripts/snimky-listy.mjs), kresby ve stavech 12 a 24 v obou pohledech (scripts/snimky-prvek.mjs) a hlaviček z nálezu 6; node scripts/kontrola-fokus.mjs na stránkách, které se změnily. Po změně dat restartuj běžící npm run dev.
+
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub ani neslučuj: to udělám pokynem zvlášť. Na konci zapiš do docs/plany/celek-7.md stav „Po opravách“ a co zbývá do uzavření, toto zadání přesuň do docs/archiv/zadani/celek-7.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co se změnilo a co jsi udělal jinak než záznam a proč.
+```
+
+Provedeno 15. 10. 2026. Autor zadání poslal s prázdnými řádky odpovědí; opravy proto vzaly u každého bodu první nabízenou možnost, která se shodovala s doporučením revize (všech deset nálezů, krok 7 rozdělit, otázky na telefonu pod desku, užší výřez, ostatní body podle doporučení). Řádek o kresbě zůstal nepotvrzený. Výsledek je v plánu větve, oddíl Po opravách.

@@ -662,3 +662,27 @@ Otevřené zůstalo nebo přibylo:
 | Poradna Vigvam v listu k celku 6 | Překlep v čísle a věta o uvolnění služeb trvají i 10. 10. 2026. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
 | Obraz vstupu | Na telefonu vládne obrazu ucho číše; náhled užšího výřezu je v `Claude outputs/revize-celek-7/`. | Autor. |
 
+
+### Po opravách celku 7 (15. 10. 2026)
+
+Vyřízeno z bodů Po P10: poslední prkno (nález 4: text pod kresbou, krok 4, list pro učitele, design, rozhodnutí); zlomek B12 (nález 3: krok 2 říká jen „čtou její čtenáři každý jinak“, Kahna jsem nečetl ani teď); Etika Nikomachova IX, 9 (pramen `aristoteles-etika-ix` má místo 1169b33–1170a4 s poznámkou, že je čteno jen anglicky v Rackhamově překladu; řádek Aristotela v listu pro učitele taky); hlavička profilu (nález 6: otázky na telefonu pod deskou); Kdo žil dřív? a „asi“ (nález 10; přečteno na deseti profilech skriptem `scripts/precti-kdo-zil.mjs`); obraz vstupu (užší výřez, zapsáno u obrázku v `zdroje.yaml`).
+
+Co se změnilo v textu a datech, aby to šlo dohledat:
+
+| Místo | Dřív | Teď |
+| --- | --- | --- |
+| Krok 2 | „O lodi v ní není nic a o člověku taky ne.“ | „Jsou v ní i ti, kdo do řek vstupují, a jestli říká něco i o nich, čtou její čtenáři každý jinak.“ |
+| Text pod kresbou, stav 24 | „ten krok jsme přidali my“ | „až sem úlohu dovedl v 17. století Thomas Hobbes“ |
+| Krok 4 | Plútarchova výhrada o počtu prken; Hobbes „přidal druhou loď“ | Výhrada jen v kroku 1 a pod kresbou; Hobbes „dovedl výměnu až k poslednímu prknu a přidal druhou loď“ |
+| Otázka 5, Aristotelés | „Zeptej se dobrého přítele“ (v 1166a není) | „na druhém člověk vidí víc než na sobě“ (IX, 9, 1169b33–35) |
+| Otázka 5, Hérakleitos | „Kam při tom došel, říká jiná jeho věta“ (spojovalo B101 a B45) | „Jiná jeho věta mluví o duši.“ |
+| Otázka 5, Epiktétos | „znají každý jedno z nich“ | výčet doplněn o „spolužák“, „jedno takové jméno“ |
+| Krok 7 → 8 | „Podle Seneky není ráno týž, kým byl den předtím.“ | „Podle Seneky tentýž není ani po jediné noci.“ (Dopis 58, 22, nepřímo) |
+| Obraz vstupu | výřez 332, 96, 1330 × 998 px, „Dvě lodě pod uchem…“ | výřez 432, 377, 728 × 546 px, „Loď pod uchem…“ |
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Karta v Mapě a čase: „Otevřít portrét“ u profilu | `KartaCloveka.svelte` píše „Otevřít portrét“ u každé osoby se stránkou, i u profilů (třeba Parmenidés, Hérakleitos, Epikúros). Mapa nezná hloubku stránky. | Mimo celek 7; při nejbližší změně mapy předat hloubku a psát „Otevřít profil“. |
+| Poradna Vigvam v listu k celku 6 | Trvá. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
+| „Na druhém člověk vidí víc než na sobě“ | Věta stojí na anglickém překladu IX, 9 z revize, řecky jsem místo nečetl. | Před vydáním srovnat s řeckým textem nebo s českým překladem. |
+| Publikované české překlady | Dál neviděny. | Před vydáním srovnat hlavně B12, B51, Parmenidovy verše a Marca XII, 3–4. |

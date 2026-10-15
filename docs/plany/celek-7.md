@@ -8,7 +8,7 @@ Celek 7: profily Hérakleita a Parmenida, cesta 2 „Jsem pořád tentýž, kdy�
 | P7 | Profily Hérakleita a Parmenida | hotovo 9. 10. 2026 (oddíl Po P7) |
 | P8 | Cesta 2 „Jsem pořád tentýž, když se měním?“, kresba a stránka velké otázky 5 | hotovo 10. 10. 2026 (oddíl Po P8) |
 | P10 | Revize celku | hotovo 10. 10. 2026: po opravách (oddíl Po P10; záznam `docs/revize/celek-7-2026-10-10.md`) |
-| Opravy | Zapracování nálezů revize | čeká na odpovědi autora; zadání je níže |
+| Opravy | Zapracování nálezů revize | hotovo 15. 10. 2026 (oddíl Po opravách; zadání v `docs/archiv/zadani/celek-7.md`) |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-7.md`. Větev `celek-7` je založená z hlavní větve 9. 10. 2026 (commit `7e95762`, po sloučení celku 6).
@@ -276,41 +276,31 @@ Záznam revize je v `docs/revize/celek-7-2026-10-10.md`. Zadání P10 je v `docs
 
 **Kontrola.** `npm test` prošel celý před opravami i po nich: 521 testů dat a 411 testů v prohlížeči; známý test „cesta: průchod, Kam dál z bloku…“ nespadl ani jednou. Po úpravě rámu kresby spadlo pět testů v `kresby-pokusu.spec.ts` (vzor čekal obyčejnou mezeru za „a“); po úpravě dvou vzorů prošly. Čas cesty: 4 012 slov, 33,9 minuty, štítek 34 sedí. List pro učitele v sestaveném webu není. Náhled `npm run dev` je restartovaný. Snímky kroků s odpověďmi i bez nich, stránky otázky, obou profilů, kresby ve stavech 0, 1, 12, 23 a 24 a hlaviček jsou v `Claude outputs/revize-celek-7/snimky/`, pomůcky revize (hledání slov, věty, texty z dat, klávesnice) o složku výš.
 
-## Zadání oprav po revizi celku 7
+## Po opravách (15. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Znění oprav je v záznamu revize hotové, ale práce není jen opis: rozdělení kroku sahá do testů, do designu a do listu pro učitele, nález 6 mění rozhraní hlavičky a nové věty přibývají v kroku o Senekovi a o těle. **Sonnet 5.5 · high** by stačil, kdybys krok nerozděloval a hlavičku odložil. Před odesláním doplň šest řádků s odpověďmi.
+Zadání oprav je v `docs/archiv/zadani/celek-7.md`. Autor ho poslal s prázdnými řádky odpovědí; opravy proto vzaly u každého bodu první nabízenou možnost, která je zároveň doporučením revize: všech deset nálezů podle záznamu, krok 7 rozdělit, otázky na telefonu pod desku, užší výřez obrazu vstupu, ostatní body podle doporučení. Řádek o kresbě Loď po prknech zůstal nepotvrzený.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-7. Revize celku 7 je hotová, záznam je v docs/revize/celek-7-2026-10-10.md.
+**Co se změnilo ve studentském textu**
 
-Nálezy 1 až 10 (schvaluji všechny; jinak: …): 
-Krok 7 (rozdělit na krok 7 „Jak staré je tvoje tělo“ a krok 8 „Kdo je na tvé straně“; nebo: nechat jeden krok): 
-Nález 6, hlavička se sedmi tlačítky (otázky na telefonu pod desku; nebo: rozbalovací řádek; nebo: odložit): 
-Obraz vstupu (užší výřez na jednu loď podle náhledu; nebo: nechat): 
-Kresba Loď po prknech (viděl jsem ji a schvaluji; jinak: …): 
-Ostatní otevřené body (souhlasím s doporučením; jinak: …): 
+| # | Kde | Co |
+| --- | --- | --- |
+| 1 | krok 6 | Pod Senekovým závěrem dvě otázky: k strachu i k tělu („A plyne z toho, že tělo nestojí za to, aby ho měl člověk rád?“). |
+| 2 | krok 7, `cesta2-co-z-toho-plyne` | Otázka Volby: „Které pravidlo si na buňkách vyzkoušíš?“ |
+| 3 | krok 2 | „Hérakleitova věta je o řekách a vodách. O lodi v ní není nic. Jsou v ní i ti, kdo do řek vstupují, a jestli říká něco i o nich, čtou její čtenáři každý jinak.“ Věta o dovětku je teď samostatný odstavec (jinak by měl odstavec pět vět). |
+| 4 | text pod kresbou, krok 4 | Poslední prkno je Hobbesovo: „až sem úlohu dovedl v 17. století Thomas Hobbes“; nová prkna jsou světlejší „v kresbě“; v kroku 4 Hobbes „dovedl výměnu až k poslednímu prknu a přidal druhou loď“. |
+| 5 | krok 8 | Za Hobbesovou odpovědí dva odstavce o dvou lodích ze čtvrtého kroku, i pro odpověď „obě“ a „žádná“. |
+| 6 | hlavička profilu | Cesty pod jménem, velké otázky na telefonu až pod deskou; od 900 px pod cestou vlevo od desky. |
+| 7 | stránka otázky 5 | Hérakleitos: „Jiná jeho věta mluví o duši. Slib, že se člověk jednou pozná celý, v ní není“; Aristotelés: „Dobrý přítel je pro tebe jako druhý ty, a na druhém člověk vidí víc než na sobě“; Epiktétos: „…sourozenec, spolužák. … znají každý jedno takové jméno“. Pramen `aristoteles-etika-ix` má i IX, 9, 1169b33–1170a4. |
+| 8 | krok 3, karta s telefonem | Zpětná vazba pro koš „O dvou“. |
+| 9 | profil Hérakleita, kroky 4 a 8 | Bez tůně v myšlence 1; krok 4 začíná „Zpátky k lodi z prvního kroku. V kresbě můžeš výměnu dotáhnout do konce.“; „Podle Seneky tentýž není ani po jediné noci.“ |
+| 10 | Kdo žil dřív? | „Když Hérakleitos zemřel (asi 480 př. n. l.)“; týž příznak u všech dvojic. Přečteno i u Prótagory se Sókratem („asi 420 př. n. l.“) a u Diogena s Platónem a Epikúrem (rok úmrtí přesný, „asi“ v závorce není). |
+| – | kroky 7 a 8 | Krok 7 „Jak staré je tvoje tělo“: případ a Volba, která nabízí další krok sama. Krok 8 „Kdo je na tvé straně“ (kdeJsme „Zpátky u čtyř odpovědí z prvního kroku“): zastánci, dvě lodě, citát z O delfském E, Locke a Hume, karta Zkus to žít (odkaz `/8/#zkus-to-zit`), shrnutí a Závěr cesty. Marcus Aurelius (Hovory X, 7) v kroku 7 není. |
+| – | krok 1, obraz vstupu | Výřez na jednu loď z originálu (432, 377, 728 × 546 px), popisek „Loď pod uchem athénské číše…“. |
 
-Zapracuj nálezy revize a doporučení k otevřeným bodům. Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md, docs/pouceni.md;
-- v docs/plany/celek-7.md tabulku stavu a oddíl „Po P10“;
-- celý záznam docs/revize/celek-7-2026-10-10.md: u každého nálezu je hotové znění opravy;
-- z docs/podklady/celek-7-jsem-porad-tentyz.md jen oddíl Citlivá místa (pravidla pro celý celek a tabulku pěti studentů);
-- v docs/design.md oddíl Cesta, z Komponent Loď po prknech a pro nález 6 místo o vstupech osobnosti v hlavičce profilu.
-Jiné podklady ani obsah celků 1 až 6 nečti.
+**Kontrola.** `npm test` celé prošlo napoprvé: 522 testů dat a 411 v prohlížeči (test „cesta: průchod, Kam dál z bloku…“ nespadl). `scripts/kontrola-fokus.mjs` na přehledu cesty 2, krocích 1, 2, 4, 6, 7 a 8, stránce otázky 5 a profilech Aristotela, Epikúra, Sókrata, Hérakleita, Platóna a Parmenida na 390 i 1440 px: všechno v pořádku. `node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim`: 8 kroků, 4 133 slov, 27,6 minuty čtení a 7,2 minuty ovládání, dohromady 34,7; štítek 35 (dřív 34). Po krocích 280, 527, 745, 323, 503, 706, 424 a 625 slov. Snímky kroků 1–8 s odpověďmi na 390 a 1440 px ve světlém i tmavém režimu, bez odpovědí na 390 px, stránky otázky 5, kresby ve stavech 12 a 24 v obou pohledech a hlaviček Aristotela, Epikúra, Sókrata a Hérakleita jsou v `Claude outputs/opravy-celek-7/` (skript `snimky.sh` tamtéž). Bloky Kdo žil dřív? na deseti profilech čte `scripts/precti-kdo-zil.mjs`.
 
-Co udělat:
+**Co zbývá do uzavření**
 
-1. Nálezy 1 až 5 a 7 až 10 podle záznamu. Znění ber ze záznamu; kde jsem výše napsal jinak, platí moje odpověď. Nové věty drž do 25 slov a každou přečti očima pěti studentů z Citlivých míst.
-2. Krok 7, když platí rozdělení: nový soubor 8-kdo-je-na-tve-strane.mdx (zastánci čtyř odpovědí, dva odstavce z nálezu 5, karta Zkus to žít, shrnutí a Závěr cesty) s kdeJsme „Zpátky u čtyř odpovědí z prvního kroku“. V kroku 7 zůstane případ a Volba bez vlastního dal (další krok nabídne blok sám). Do kroku 7 smí jednou větou a citátem Marcus Aurelius (hovory-x-7); přečti ho nejdřív očima studenta, kterého se tělo bolestně týká, a když si nejsi jistý, vynech ho. Uprav tests/e2e/cesta2.spec.ts (KROKY2, NAVAZUJE, kotva #kdo-je-na-tve-strane), odkaz karty Zkus to žít, docs/design.md (oddíl Cesta), čísla kroků v ucitel/celek-7.md a štítek minut podle skriptu.
-3. Nález 4: texty v src/lib/lod.ts, věta v kroku 4, tests/data/lod.test.ts, docs/design.md (Loď po prknech) a řádek v docs/rozhodnuti.md, že poslední prkno je Hobbesovo.
-4. Nález 6 podle mé odpovědi. Změnu ověř na 390 a 1440 px ve světlém i tmavém režimu u Aristotela, Epikúra, Sókrata a Hérakleita a uprav testy vstupů (otazka.spec.ts, platon.spec.ts), pokud hlídají pořadí prvků; zapiš ji do docs/design.md.
-5. Nález 7: pramen aristoteles-etika-ix doplň o místo IX, 9, 1169b33–1170a4 (čteno 10. 10. 2026 anglicky v Rackhamově překladu na Perseu) a uprav řádek Aristotela v tabulce hlasů v listu pro učitele.
-6. Nález 10: v src/lib/bloky.ts u věty o věku doplň „asi“ před rok úmrtí, když je zp.doPriblizne; projdi testy bloku Kdo žil dřív? a přečti blok u dvou jiných dvojic s přibližnými roky.
-7. Obraz vstupu, když platí užší výřez: vyřízni ho z originálu v ~/Pictures/Atlas-originaly/ skriptem scripts/obrazek-vyrez.mjs (náhled je v Claude outputs/revize-celek-7/navrh-vyrez-jedna-lod.jpg, výřez z dnešního obrázku v navrh-vyrez.mjs tamtéž), popisek změň na „Loď pod uchem athénské číše…“ a zapiš to k obrázku v src/data/zdroje.yaml.
-8. Ostatní otevřené body podle doporučení v záznamu; většina zní „nechat“.
-9. List pro učitele srovnej s novým zněním (nálezy 1, 3 a 4, čísla kroků). V docs/podklady/k-overeni.md zapiš, co se změnilo.
-
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); node scripts/slova-cesta.mjs jsem-porad-tentyz-kdyz-se-menim a štítek minut podle výsledku; snímky kroků 2, 4, 6, 7 a 8 na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-cesta.mjs), stránky otázky 5 (scripts/snimky-listy.mjs), kresby ve stavech 12 a 24 v obou pohledech (scripts/snimky-prvek.mjs) a hlaviček z nálezu 6; node scripts/kontrola-fokus.mjs na stránkách, které se změnily. Po změně dat restartuj běžící npm run dev.
-
-Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub ani neslučuj: to udělám pokynem zvlášť. Na konci zapiš do docs/plany/celek-7.md stav „Po opravách“ a co zbývá do uzavření, toto zadání přesuň do docs/archiv/zadani/celek-7.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co se změnilo a co jsi udělal jinak než záznam a proč.
-```
+1. Autor: projít kroky 7 a 8, hlavičku profilu na telefonu a nový obraz vstupu; potvrdit kresbu Loď po prknech, kterou dosud nepotvrdil.
+2. Autor: schválit celek 7. Pak sloučení větve `celek-7` do hlavní a hlavní větev na GitHub, jen na jeho pokyn.
+3. Otevřené z `docs/podklady/k-overeni.md` (nic z toho celek neblokuje): tlačítko „Otevřít portrét“ na kartě v Mapě a čase i u profilů; Poradna Vigvam v listu k celku 6; publikované české překlady před vydáním.
