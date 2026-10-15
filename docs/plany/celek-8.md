@@ -1,6 +1,6 @@
 # Plán větve celek-8: „Čí život vlastně žiju?“
 
-Celek 8: společný profil Kratéta a Hipparchie, cesta 7 „Čí život vlastně žiju?“ (období 2, velká otázka 1 „Jak mám žít?“) a doplnění stránky otázky 1. Rozsah navrhl Claude 15. 10. 2026 ze tří možností, které z antiky zbývají (oddíl Proč tento rozsah); autor ho potvrdí nebo změní prvním řádkem zadání P6. Podklady vzniknou v `docs/podklady/celek-8-ci-zivot-ziju.md`, rozhodnutí se zapisují do `docs/rozhodnuti.md`, otevřené body do `docs/podklady/k-overeni.md`.
+Celek 8: společný profil Kratéta a Hipparchie, cesta 7 „Čí život vlastně žiju?“ (období 2, velká otázka 1 „Jak mám žít?“) a doplnění stránky otázky 1. Rozsah navrhl Claude 15. 10. 2026 ze tří možností, které z antiky zbývají (oddíl Proč tento rozsah), a autor ho týž den potvrdil („Líbí se mi cesta 7“). Podklady vzniknou v `docs/podklady/celek-8-ci-zivot-ziju.md`, rozhodnutí se zapisují do `docs/rozhodnuti.md`, otevřené body do `docs/podklady/k-overeni.md`.
 
 | Krok | Co | Stav |
 | --- | --- | --- |
