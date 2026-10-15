@@ -222,17 +222,36 @@ test('profily Epikúra a Diogena vedou na cestu 6 a na stránku otázky 1; karta
 test('vstupy: cesta a otázky jsou v hlavičce profilu, cesty u otázek v přehledu a na kartách v Lidech', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   // Hlavička profilu: cesta jako první a nejvýraznější vstup, nad kapitolami; otázka její cesty před ostatními.
+  // Cesty stojí pod jménem, otázky na telefonu až pod deskou (revize celku 7, nález 6).
   await page.goto('/osobnost/epikuros/');
-  const vstupy = page.getByRole('navigation', { name: 'Cesty a otázky, kde potkáš Epikúra' });
-  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Cesta 8 · 9 kroků · asi \d+ minut\s*Proč se bát smrti\?/, /Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 5\s*Kdo vlastně jsem\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
+  const vstupy = page.getByRole('navigation', { name: 'Cesty, kde potkáš Epikúra' });
+  const otazkyNav = page.getByRole('navigation', { name: 'Velké otázky, kde potkáš Epikúra' });
+  await expect(vstupy.getByRole('link')).toHaveText([/Cesta 6 · 7 kroků · asi 20 minut\s*Kolik je dost\?/, /Cesta 8 · 9 kroků · asi \d+ minut\s*Proč se bát smrti\?/]);
+  await expect(otazkyNav.getByRole('link')).toHaveText([/Velká otázka 1\s*Jak mám žít\?/, /Velká otázka 3\s*Má život smysl\?/, /Velká otázka 4\s*Jsem svobodný\?/, /Velká otázka 5\s*Kdo vlastně jsem\?/, /Velká otázka 7\s*Jak poznám, co je pravda\?/]);
   await expect(vstupy.getByRole('link').first()).toHaveAttribute('href', '/cesta/kolik-je-dost/');
   const cesta = (await vstupy.getByRole('link').first().boundingBox())!;
+  const deska = (await page.locator('.osobnost__deska').boundingBox())!;
+  const prvniOtazka = (await otazkyNav.getByRole('link').first().boundingBox())!;
+  // Telefon: jméno, cesty, deska, otázky, obsah. Deska začíná na první obrazovce.
+  expect(cesta.y + cesta.height).toBeLessThan(deska.y);
+  expect(prvniOtazka.y).toBeGreaterThan(deska.y + deska.height);
+  expect(deska.y).toBeLessThan(844);
   const kapitoly = (await page.getByRole('navigation', { name: 'Obsah při čtení' }).boundingBox())!;
   expect(cesta.y).toBeLessThan(kapitoly.y);
   // Na telefonu je cesta vidět bez posouvání a je dost velká na prst.
   expect(cesta.y + cesta.height).toBeLessThan(844);
   expect(cesta.height).toBeGreaterThanOrEqual(56);
-  for (const o of await vstupy.getByRole('link').all()) expect((await o.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  for (const o of await otazkyNav.getByRole('link').all()) expect((await o.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  expect(prvniOtazka.y).toBeLessThan(kapitoly.y);
+  // Notebook: cesty a pod nimi otázky vlevo, deska vpravo vedle nich.
+  await page.setViewportSize({ width: 1440, height: 900 });
+  const deskaN = (await page.locator('.osobnost__deska').boundingBox())!;
+  const otazkaN = (await otazkyNav.getByRole('link').first().boundingBox())!;
+  const cestaN = (await vstupy.getByRole('link').last().boundingBox())!;
+  expect(otazkaN.x + otazkaN.width).toBeLessThan(deskaN.x);
+  expect(otazkaN.y).toBeGreaterThan(cestaN.y + cestaN.height);
+  expect(otazkaN.y).toBeLessThan(deskaN.y + deskaN.height);
+  await page.setViewportSize({ width: 390, height: 844 });
   await vstupy.getByRole('link').first().click();
   await expect(page).toHaveURL('/cesta/kolik-je-dost/');
 
