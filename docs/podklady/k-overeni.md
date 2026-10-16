@@ -749,3 +749,21 @@ Otevřené nebo nové:
 | Konec Andersenovy pohádky a otcova věta | V listu pro učitele podle podkladů (čteno dánsky v P6); v Návratu bez pramene. | Nic. |
 | Bond a Smith | V listu pro učitele jen přes Franzena a Madera, rok a rozsah metaanalýzy jsem neověřoval. | Nic, pokud učitel nechce číslo. |
 
+
+### Po P10 (revize celku 8, 16. 10. 2026)
+
+Vyřízeno:
+
+- **Spojenec sedí v kresbě čtvrtý.** Asch 1951, s. 231 přetisku: „The partner was always seated in the fourth position; he therefore announced his estimates in each case before the critical subject.“ Čtvrtá židle je Aschova, ne náš obraz.
+- **Délky čar v kresbě.** Asch 1956, Tabulka 1: standard 3 palce, možnosti 3¾, 4¼ a 3, většina +¾ (odpoví jedničkou). Je to Trial 1, první kritické kolo; před ním jsou neutrální kola a a b.
+- **„Tkát látky doma byla práce, kterou se od žen čekalo“ (profil) a „Od ženy se tehdy čekalo, že svůj čas stráví doma u tkalcovského stavu“ (hlas).** Xenofón, Oikonomikos VII, 6 (manželka umí z vlny udělat plášť), 21–22 (výroba šatů z vlny patří k pracím pod střechou; povaha ženy přizpůsobená pracím uvnitř) a 36 (dohlížet, aby se z vlny dělaly pláště); PerseusDL, angl. E. C. Marchant.
+- **Antisthenés jako Diogenův učitel.** Vztah je ve `vztahy.yaml` (`ucitel`, `tradovany: true`, `iep-antisthenes`).
+- **Platón jako spojenec (krok 7).** Revize doporučuje nahradit ho Sókratem z Kritóna 47b–d (PerseusDL, angl. H. N. Fowler, ověřeno): atlet dá na jednoho lékaře nebo trenéra, „who knows the business“, ne na mínění všech. Pramen `platon-kriton` v datech je.
+
+Otevřené zůstává:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Linka první psychické pomoci 116 123 | V listu pro učitele „ověřeno 16. 10. 2026“ podle adresáře MV ČR; web linky ověřila revize celku 7 (10. 10. 2026). | Před vydáním listu znovu na webu linky. |
+| Mladí pečující | Českou metodiku revize nehledala; nález 2 drží pravidlo PSHE a podkladů („vědomě“). | Při vydání listu pro učitele případně doplnit. |
+| Jména v Době a lidech jako odkazy | Týká se všech profilů. | Samostatný krok po sloučení celku 8 (doporučení revize). |

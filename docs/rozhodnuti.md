@@ -4,6 +4,16 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 16. 10. 2026: Revize celku 8 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal šest řádků odpovědí prázdných: revize ke všem dává doporučení (záznam `docs/revize/celek-8-2026-10-16.md`), nálezy čekají na schválení v zadání oprav. | Pravidlo z 4. 10. 2026; zásadní nálezy revize se bez autora neopravují. |
+| Spojenec v kresbě Třetí čára sedí čtvrtý podle Asche 1951 (s. 231 přetisku: „The partner was always seated in the fourth position“). Ruší se věta záznamu z 16. 10. 2026 (P8), že čtvrté místo je náš obraz. Délky čar jsou z prvního kritického kola (Asch 1956, Tabulka 1, Trial 1), ne z „prvního kola“. | Revize četla Asche 1951 a 1956 v přetisku; atlas nemá připisovat sobě, co udělal autor pokusu (poučení z celku 7). |
+| Diogenovo Kam dál vede i na cestu 7 a na společný profil; úvod jeho profilu říká „nedával jim takovou váhu jako přírodě“ (dřív „žádnou váhu“). | Diogenés je filozof cesty 7 a Kratétův učitel; DL VI, 71 dělá rozdíl, který cesta 7 drží. |
+| Tentýž detail nejvýš dvakrát v celku platí i pro Péru, spoluobčana Diogena, Epiktétovu podmínku (III, 22, 19) a „hůl a velká ústa“ (III, 22, 50): třetí výskyty revize škrtla rovnou. „Čas u stavu“ (atribut, kapitola 05, myšlenka 3, hlas) čeká na nález 5. | Poučení „Celek“. |
+| Doporučení: Platóna jako spojence odpovědi „Kratétovi“ nahradit Sókratem z Kritóna 47b–d; jména v Době a lidech jako odkazy samostatným krokem po sloučení celku 8; hlavička dvojice, pointa, nadtitulek, kresba a protihlas druhé Kratétovy myšlenky beze změny. | Kritón mluví přesně o tom, na koho dát, a je doložený; odkazy v Době a lidech mění všech dvanáct profilů. |
+
 ## 16. 10. 2026: Cesta 7, kresba Třetí čára a hlas Hipparchie (P8)
 
 | Rozhodnutí | Důvod |

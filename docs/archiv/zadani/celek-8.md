@@ -119,3 +119,50 @@ Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěn
 
 Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P8“, připrav tam zadání P10 (revize celku 8) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je hotové, nad čím jsi váhal a co potřebuje moje rozhodnutí.
 ```
+
+## P10: Revize celku 8
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Revize čte celek o tom, čí život člověk žije, očima studentů pod tlakem rodiny, vylučovaných a pečujících, a v každé větě hlídá, co je pramen, co výklad a co náš krok; na menším modelu ani s nižším úsilím bych ji nepouštěl. Zadání počítá s úsporným čtením a s tím, že se nálezy průběžně neschvalují.
+
+První řádky zadání jsou místo pro tvoje odpovědi na body z oddílu „Po P8 › Čeká na autora“ a z Po P7. Co necháš prázdné, bere revize jako otevřené a dá k tomu doporučení.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Společný profil Kratéta a Hipparchie, cesta 7, kresba Třetí čára a hlas Hipparchie na otázce 1 jsou v ní hotové a commitnuté.
+
+Co jsem rozhodl (prázdné = otevřené, chci doporučení):
+- Platón jako spojenec odpovědi „Kratétovi“ v kroku 7: 
+- Atribut „Proč člunek?“ (týž obraz jako citát dl-vi-98): 
+- Hlavička dvojice na telefonu (cesta a otázka vedle sebe): 
+- Jména v Době a lidech jako odkazy (z Po P7): 
+- Pointa „Dva lidé, jedna mošna.“ a nadtitulek (z Po P7): 
+- Kresba Třetí čára (viděl jsem ji): 
+
+Udělej revizi celku 8 podle skillu atlas-revize. Do celku patří:
+- společný profil Kratéta a Hipparchie (src/content/osobnosti/krates-a-hipparchia.mdx, blok krates-otvirac-dveri.yaml, šablona src/pages/osobnost/[id].astro v části pro dvojici);
+- cesta 7 „Čí život vlastně žiju?“ (přehled, osm kroků, bloky cesta7-*.yaml, Odkryj v kroku 3, případ pro Návrat);
+- kresba Třetí čára v kroku 6 (src/lib/treti-cara.ts, src/components/ostrovy/TretiCara.svelte);
+- hlas Hipparchie na stránce otázky 1 (src/content/otazky/jak-zit.mdx);
+- list pro učitele ucitel/celek-8.md;
+- propojení: hlavičky profilů Diogena a dvojice, Kam dál profilu, Lidé, Mapa a čas, přehled otázek, Domů, dílna bloků; Doba a lidé u Diogena a Zénóna.
+
+Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md, docs/pouceni.md;
+- v docs/plany/celek-8.md tabulku stavu a oddíly „Po P7“ a „Po P8“;
+- docs/podklady/celek-8-ci-zivot-ziju.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (Citlivá místa celá a pozorně; Tvrzení: Kratés, Hipparchia, cesta 7; Velká otázka 1; Citáty), ne celý list naráz;
+- z docs/podklady/k-overeni.md části Po P6, Po P7 a Po P8 celku 8; z docs/rozhodnuti.md záznamy z 15. a 16. 10. 2026;
+- v docs/design.md oddíly Cesta, Velká otázka, Spor, z Komponent Společný profil a z Kresby s pohybem Rám a Třetí čáru;
+- jako vzor záznamu jen začátek docs/revize/celek-7-2026-10-10.md (formát a hloubka nálezů).
+Podklady a obsah celků 1 až 7 jinak nečti; z profilů Diogena, Aristotela a Epiktéta a z cest 4, 5 a 6 jen místa, na která celek 8 odkazuje.
+
+Na co se dívej zvlášť:
+
+1. Studenti z citlivých míst. Projdi profil, cestu, Návrat a hlas otázky pětkrát, očima studentů z podkladů (Vstup, jádro, nový případ a Návrat očima pěti studentů): pod tlakem rodiny (obor, víra, vztah); kdo se s rodinou rozchází kvůli tomu, kým je; kdo si nemůže dovolit; koho skupina vylučuje; kdo pečuje o sourozence nebo pracuje. Čti první obrazovku každého kroku a kapitoly na telefonu, všechny zpětné vazby (i zavřené „Co kdybys zvolil jinak?“), text pod kresbou, obě karty Zkus to žít a Návrat. Nikde rada odejít, poslechnout ani vzdorovat, nikde rodiče jako záporné postavy, nikde pole na psaní o rodině, víře, vztahu, identitě, penězích ani profilu na sítích, nikde „ovce“ a nikde vyloučení jako normální. Zvlášť: krok 1 a jeho Volba, krok 5 (dostane student, který se vymezuje vůči rodině, „jsi jen pozér“?), krok 6 (třetina a spojenec: neslyší vylučovaný „bez kamaráda nemáš šanci“?), hlas Hipparchie (pečující student).
+2. Co je pramen, co výklad a co náš krok. Kratés a Aristotelés se nepotkali; Kratétův třetí argument je „by mohl“; Aristotelés „některé“ nejmenuje. Platón v kroku 7 (Ústava), druhá podmínka ve Změň jednu věc, spojenec na čtvrté židli v kresbě, „Ze všech tří výtek plyne totéž“. Epiktétův kynik je ideál a historický Kratés chtěl ze Zénóna stud vyhnat: drží to krok 5?
+3. Znění proti pramenům. Porovnej každou větu s tabulkami podkladů; „asi“ zůstává „asi“. Zvlášť: přepočet ceníku (mina, talent, obol), DL VI, 22 a 70–72 v kroku 2, Théby a Arriános ve Sporu, Aristotelés EN II, 1 a V, 7 a Politika I, 2 a III, 3, Epiktétos III, 22, 15, 23–26 a 50 a I, 2, 11 a 32, Asch 1951 a 1956 a Franzen a Mader 2023 (co měli lidé dělat, kdo byl ve vzorku, s čím se srovnává). Andersenův konec.
+4. Tentýž citát a detail nejvýš dvakrát v celku: cesta, profil a otázka 1 dohromady (nápadníci, plášť a hostiny, čas u stavu, Théby, ceník a Péra).
+5. Spor na telefonu. Kratés stojí první: odpovídá jen na to, co řekla scéna (zvíře, nebo bůh)? Má Kratés odpověď na Aristotelovu ruku a na „obec nejsou zdi“? Je postoj každé strany stejně silný jako její citát?
+6. Kresba Třetí čára: na telefonu jednotka asi na pixel, nic se nepřekrývá, při omezeném pohybu svítí všechno, zastavená stojí, text pod ní říká totéž a neprozrazuje výsledek.
+7. Hlavička dvojice na 390, 700, 899 a 1440 px ve světlém i tmavém režimu: deska, oba atributy a začátek odstavce na první obrazovce telefonu; dlaždice cesty a otázky stejně vysoké; fokus z klávesnice (scripts/kontrola-fokus.mjs).
+
+Drobnosti oprav rovnou a commituj česky. Zásadní nálezy seřaď podle dopadu s návrhem opravy do záznamu docs/revize/celek-8-<datum>.md a nic z nich neopravuj bez mého schválení. Na schválení nečekej, nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P10“ a připrav zadání oprav, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš nálezy a co potřebuje moje rozhodnutí.
+```

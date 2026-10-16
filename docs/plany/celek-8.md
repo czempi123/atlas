@@ -7,8 +7,8 @@ Celek 8: společný profil Kratéta a Hipparchie, cesta 7 „Čí život vlastn�
 | P6 | Podklady | hotovo 15. 10. 2026 (oddíl Po P6); šest bodů autor 16. 10. nechal na doporučení podkladů |
 | P7 | Společný profil Kratéta a Hipparchie | hotovo 16. 10. 2026 (oddíl Po P7); tři body čekají na autora |
 | P8 | Cesta 7 „Čí život vlastně žiju?“, kresba Třetí čára a hlas Hipparchie na stránce otázky 1 | hotovo 16. 10. 2026 (oddíl Po P8); čtyři body čekají na autora |
-| P10 | Revize celku | čeká; zadání je níže |
-| Opravy | Zapracování nálezů revize | čeká na P10 |
+| P10 | Revize celku | hotovo 16. 10. 2026 (oddíl Po P10, záznam `docs/revize/celek-8-2026-10-16.md`); šest bodů autor nechal na doporučení revize |
+| Opravy | Zapracování nálezů revize | čeká na autora; zadání je níže |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
 
 Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-8.md`. Větev `celek-8` je založená z hlavní větve 15. 10. 2026 (commit `b883943`, po sloučení celku 7).
@@ -169,49 +169,55 @@ Návrat `cesta7-navrat` „Císařovy nové šaty“: student jde v průvodu kou
 3. Hlavička dvojice na telefonu: cesta a otázka jsou dvě menší dlaždice vedle sebe, bez délky cesty. Kdyby se ti víc líbila cesta přes celou šířku, musela by deska klesnout ještě níž, nebo by otázka odešla pod popisek obrazu a odstavec by spadl pod lištu.
 4. Tři body z Po P7 zůstávají (odkazy v Době a lidech, pointa titulku, protihlas druhé myšlenky).
 
-## Zadání P10: Revize celku 8
+## Po P10 (16. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Revize čte celek o tom, čí život člověk žije, očima studentů pod tlakem rodiny, vylučovaných a pečujících, a v každé větě hlídá, co je pramen, co výklad a co náš krok; na menším modelu ani s nižším úsilím bych ji nepouštěl. Zadání počítá s úsporným čtením a s tím, že se nálezy průběžně neschvalují.
+Záznam revize je v `docs/revize/celek-8-2026-10-16.md`. Zadání P10 je v `docs/archiv/zadani/celek-8.md`; autor ho poslal se šesti prázdnými řádky odpovědí, revize proto ke všem dává doporučení.
 
-První řádky zadání jsou místo pro tvoje odpovědi na body z oddílu „Po P8 › Čeká na autora“ a z Po P7. Co necháš prázdné, bere revize jako otevřené a dá k tomu doporučení.
+**Verdikt: po opravách.** Blokující nález není. Nikde rada odejít, poslechnout ani vzdorovat, nikde „ovce“, žádné pole na psaní o rodině, víře, vztahu, identitě, penězích ani profilu na sítích; výhrůžka jen v listu pro učitele, Theodórův čin jen „zkusil ji zahanbit“. Aschova čísla, ceník, Aristotelés i Epiktétos sedí na prameny.
+
+**Nálezy** (čtyři důležité, pět drobných; hotová znění jsou v záznamu):
+
+| # | Váha | Nález | Kde |
+| --- | --- | --- | --- |
+| 1 | důležité | „Kdo dělá opak toho, co se čeká, řídí se pořád tím, co se čeká“ čte student odlišující se od rodiny jako „jsi jen pozér“; „plyne totéž“ je náš závěr | krok 5 |
+| 2 | důležité | „Čas je tvůj, když ho dáváš, protože chceš“: pečující student čte, že jeho čas není jeho | profil (myšlenka 3, Zkus to žít), hlas Hipparchie |
+| 3 | důležité | Rodiče „svěřili rozhodnutí“ Kratétovi a „jeho přece poslechne“: pramen říká jen, že ho prosili, ať jí to rozmluví | kroky 1, 7, 8, `cesta7-komu-patri.yaml`, list pro učitele |
+| 4 | důležité | Kratés ve Sporu nemá odpověď na „dobrými nás dělá zvyk“, ačkoli krok 2 říká, že se kynici cvičili | `cesta7-zvyky-spor.yaml` |
+| 5 | drobné | Atribut „Proč člunek?“ prozrazuje pointu hostiny; obraz čtyřikrát | `lide.yaml`, myšlenka 3 |
+| 6 | drobné | Zénónova stydlivost a Epiktétův stud pod jedním slovem, Zénón v cestě neuvedený | krok 5 |
+| 7 | drobné | Platón jako spojenec odpovědi „Kratétovi“ stojí na obecném výkladu Ústavy; Sókratés z Kritóna 47b–d sedí přesně | krok 7, `cesta7.spec.ts`, list pro učitele |
+| 8 | drobné | Možnost „chce, aby ho viděli“ v podmínce „Nikdo se nedívá“ | `cesta7-nikdo-se-nediva.yaml` |
+| 9 | drobné | Spojenec u Asche nebyl kamarád: přidat „Stačil k tomu kdokoli, kdo nahlas řekl, co vidí.“ | krok 6 |
+
+**Co revize opravila rovnou** (commit `55e10ba`): myš v kroku 2 jednou větou; třetí výskyty Péry, spoluobčana Diogena a Epiktétova III, 22, 19 a 50 pryč (kroky 5 a 7, myšlenka 2 profilu); „máš na své straně čtvrtinu“ v kroku 7; věty v kroku 8 a v kartě Nejdřív ty; Diogenovo Kam dál na cestu 7 a společný profil a „takovou váhu jako přírodě“ v jeho úvodu (DL VI, 71). Spojenec na čtvrté židli je Aschův (1951, s. 231: „always seated in the fourth position“), délky čar jsou z prvního kritického kola (1956, Tabulka 1, Trial 1): komentáře kresby, `docs/design.md`, list pro učitele, podklady.
+
+**Doporučení k otevřeným bodům:** Platóna v kroku 7 nahradit Sókratem z Kritóna (nález 7); atribut přepsat (nález 5); hlavičku dvojice na telefonu nechat (odstavec na 732 px, lišta 772; dlaždice stejně vysoké na 390, 700, 899 i 1440 px); jména v Době a lidech jako odkazy ano, ale samostatným krokem po sloučení celku 8 (dvanáct profilů); pointu a nadtitulek nechat; kresbu nechat; protihlas druhé Kratétovy myšlenky nechat. Mimo celek: Diogenés, Epikúros a Platón mají na telefonu dvě cesty pod sebou (deska od 546 do 595 px); kompaktní dlaždice z hlavičky dvojice patří do příští větve rozhraní.
+
+**Ověřeno navíc:** Xenofón, Oikonomikos VII, 6, 21–22 a 36 dokládá větu o tkaní v kapitole Hostina i v hlasu (bod z P7 a P8 v `k-overeni.md`); vztah Antisthenés → Diogenés je v datech.
+
+**Kontrola.** `npm test` před opravami prošel celý (551 jednotkových testů a 433 v prohlížeči). Po drobných opravách prošly `cesta7`, `krates-hipparchia`, `otazka`, `treti-cara` a `prohlidka` (143 testů) a pak znovu celé `npm test` (551 a 433, vše prošlo, i „cesta: průchod, Kam dál z bloku…“). `kontrola-fokus.mjs` bez nálezu na všech stránkách celku (390, 700, 899 a 1440 px). Čas cesty 3 407 slov, 29,2 minuty, štítek 30 sedí. Snímky a pomůcky revize jsou v `Claude outputs/revize-celek-8/`.
+
+## Zadání oprav celku 8
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Znění oprav je v záznamu revize hotové; práce je hlavně přepsat věty, upravit testy, které je hlídají, a ověřit telefon. Vyšší úsilí by přidalo čas, ne kvalitu. Kdybys u nálezu 1 nebo 2 chtěl jiné znění, přepni na high.
+
+Co necháš prázdné, bere se jako souhlas s návrhem revize.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Společný profil Kratéta a Hipparchie, cesta 7, kresba Třetí čára a hlas Hipparchie na otázce 1 jsou v ní hotové a commitnuté.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Revize celku 8 je hotová, záznam je v docs/revize/celek-8-2026-10-16.md.
 
-Co jsem rozhodl (prázdné = otevřené, chci doporučení):
-- Platón jako spojenec odpovědi „Kratétovi“ v kroku 7: 
-- Atribut „Proč člunek?“ (týž obraz jako citát dl-vi-98): 
-- Hlavička dvojice na telefonu (cesta a otázka vedle sebe): 
-- Jména v Době a lidech jako odkazy (z Po P7): 
-- Pointa „Dva lidé, jedna mošna.“ a nadtitulek (z Po P7): 
-- Kresba Třetí čára (viděl jsem ji): 
+Moje odpovědi (prázdné = souhlas s návrhem revize):
+- Nálezy 1 až 9 podle záznamu: 
+- Platón v kroku 7 nahradit Sókratem z Kritóna (nález 7): 
+- Atribut „Proč člunek?“ podle nálezu 5: 
+- Hlavička dvojice na telefonu zůstává: 
+- Jména v Době a lidech jako odkazy samostatným krokem po sloučení celku 8: 
+- Pointa „Dva lidé, jedna mošna.“ a nadtitulek zůstávají: 
+- Kresba Třetí čára zůstává: 
 
-Udělej revizi celku 8 podle skillu atlas-revize. Do celku patří:
-- společný profil Kratéta a Hipparchie (src/content/osobnosti/krates-a-hipparchia.mdx, blok krates-otvirac-dveri.yaml, šablona src/pages/osobnost/[id].astro v části pro dvojici);
-- cesta 7 „Čí život vlastně žiju?“ (přehled, osm kroků, bloky cesta7-*.yaml, Odkryj v kroku 3, případ pro Návrat);
-- kresba Třetí čára v kroku 6 (src/lib/treti-cara.ts, src/components/ostrovy/TretiCara.svelte);
-- hlas Hipparchie na stránce otázky 1 (src/content/otazky/jak-zit.mdx);
-- list pro učitele ucitel/celek-8.md;
-- propojení: hlavičky profilů Diogena a dvojice, Kam dál profilu, Lidé, Mapa a čas, přehled otázek, Domů, dílna bloků; Doba a lidé u Diogena a Zénóna.
+Zapracuj nálezy revize podle záznamu (oddíl Nálezy, hotová znění). Čti úsporně podle oddílu „Co číst a jak šetřit“ v CLAUDE.md: CLAUDE.md, docs/styl.md, docs/pouceni.md, v docs/plany/celek-8.md tabulku stavu a oddíl „Po P10“, celý záznam revize a jen soubory, které nálezy jmenují. Podkladový list otevři jen u nálezu, kde potřebuješ ověřit místo.
 
-Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
-- CLAUDE.md, docs/styl.md, docs/pouceni.md;
-- v docs/plany/celek-8.md tabulku stavu a oddíly „Po P7“ a „Po P8“;
-- docs/podklady/celek-8-ci-zivot-ziju.md: je to měřítko revize. Čti vždy oddíl k tomu, co právě kontroluješ (Citlivá místa celá a pozorně; Tvrzení: Kratés, Hipparchia, cesta 7; Velká otázka 1; Citáty), ne celý list naráz;
-- z docs/podklady/k-overeni.md části Po P6, Po P7 a Po P8 celku 8; z docs/rozhodnuti.md záznamy z 15. a 16. 10. 2026;
-- v docs/design.md oddíly Cesta, Velká otázka, Spor, z Komponent Společný profil a z Kresby s pohybem Rám a Třetí čáru;
-- jako vzor záznamu jen začátek docs/revize/celek-7-2026-10-10.md (formát a hloubka nálezů).
-Podklady a obsah celků 1 až 7 jinak nečti; z profilů Diogena, Aristotela a Epiktéta a z cest 4, 5 a 6 jen místa, na která celek 8 odkazuje.
+Než opravíš větu, najdi ji v tests/ (grep -rn) a test uprav v tomtéž commitu (cesta7.spec.ts, otazka.spec.ts, krates-hipparchia.spec.ts). U nálezu 4 přidej do zdrojů Sporu dl-vi-71 a do komentáře YAML, že výklad cviku je Diogenův (DL VI, 70–71). U nálezu 7 uprav i list pro učitele (oddíl Cesta 7). Po opravách přečti krok 5, profil (myšlenka 3, Zkus to žít) a hlas Hipparchie znovu očima studenta, který se od rodiny odlišuje tím, kým je, a studenta, který pečuje o sourozence. Spočítej čas cesty (node scripts/slova-cesta.mjs ci-zivot-vlastne-ziju) a štítek uprav, jen když vyjde jinak. Hlavičku dvojice vyfoť na 390 px ve světlém i tmavém režimu (atribut se mění).
 
-Na co se dívej zvlášť:
-
-1. Studenti z citlivých míst. Projdi profil, cestu, Návrat a hlas otázky pětkrát, očima studentů z podkladů (Vstup, jádro, nový případ a Návrat očima pěti studentů): pod tlakem rodiny (obor, víra, vztah); kdo se s rodinou rozchází kvůli tomu, kým je; kdo si nemůže dovolit; koho skupina vylučuje; kdo pečuje o sourozence nebo pracuje. Čti první obrazovku každého kroku a kapitoly na telefonu, všechny zpětné vazby (i zavřené „Co kdybys zvolil jinak?“), text pod kresbou, obě karty Zkus to žít a Návrat. Nikde rada odejít, poslechnout ani vzdorovat, nikde rodiče jako záporné postavy, nikde pole na psaní o rodině, víře, vztahu, identitě, penězích ani profilu na sítích, nikde „ovce“ a nikde vyloučení jako normální. Zvlášť: krok 1 a jeho Volba, krok 5 (dostane student, který se vymezuje vůči rodině, „jsi jen pozér“?), krok 6 (třetina a spojenec: neslyší vylučovaný „bez kamaráda nemáš šanci“?), hlas Hipparchie (pečující student).
-2. Co je pramen, co výklad a co náš krok. Kratés a Aristotelés se nepotkali; Kratétův třetí argument je „by mohl“; Aristotelés „některé“ nejmenuje. Platón v kroku 7 (Ústava), druhá podmínka ve Změň jednu věc, spojenec na čtvrté židli v kresbě, „Ze všech tří výtek plyne totéž“. Epiktétův kynik je ideál a historický Kratés chtěl ze Zénóna stud vyhnat: drží to krok 5?
-3. Znění proti pramenům. Porovnej každou větu s tabulkami podkladů; „asi“ zůstává „asi“. Zvlášť: přepočet ceníku (mina, talent, obol), DL VI, 22 a 70–72 v kroku 2, Théby a Arriános ve Sporu, Aristotelés EN II, 1 a V, 7 a Politika I, 2 a III, 3, Epiktétos III, 22, 15, 23–26 a 50 a I, 2, 11 a 32, Asch 1951 a 1956 a Franzen a Mader 2023 (co měli lidé dělat, kdo byl ve vzorku, s čím se srovnává). Andersenův konec.
-4. Tentýž citát a detail nejvýš dvakrát v celku: cesta, profil a otázka 1 dohromady (nápadníci, plášť a hostiny, čas u stavu, Théby, ceník a Péra).
-5. Spor na telefonu. Kratés stojí první: odpovídá jen na to, co řekla scéna (zvíře, nebo bůh)? Má Kratés odpověď na Aristotelovu ruku a na „obec nejsou zdi“? Je postoj každé strany stejně silný jako její citát?
-6. Kresba Třetí čára: na telefonu jednotka asi na pixel, nic se nepřekrývá, při omezeném pohybu svítí všechno, zastavená stojí, text pod ní říká totéž a neprozrazuje výsledek.
-7. Hlavička dvojice na 390, 700, 899 a 1440 px ve světlém i tmavém režimu: deska, oba atributy a začátek odstavce na první obrazovce telefonu; dlaždice cesty a otázky stejně vysoké; fokus z klávesnice (scripts/kontrola-fokus.mjs).
-
-Drobnosti oprav rovnou a commituj česky. Zásadní nálezy seřaď podle dopadu s návrhem opravy do záznamu docs/revize/celek-8-<datum>.md a nic z nich neopravuj bez mého schválení. Na schválení nečekej, nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P10“ a připrav zadání oprav, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš nálezy a co potřebuje moje rozhodnutí.
+Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky, nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po opravách“, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md, vyřízené body označ v docs/podklady/k-overeni.md, plán větve aktualizuj i v projektu Claude a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a připrav uzavření celku (sloučení a GitHub jen na můj pokyn).
 ```

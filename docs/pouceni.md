@@ -20,6 +20,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Krok, který podle nás „přidáváme“ k prameni, hledej i u pozdějšího autora, kterého celek cituje: poslední prkno Théseovy lodi má výslovně Hobbes („after all the Planks were changed“), ne my.
 - Záporné tvrzení o zlomku („o člověku v něm není nic“) čti proti jeho vlastním slovům a proti témuž heslu celému: B12 začíná těmi, kdo do řek vstupují.
 - Úvod cesty netvrdí dějinné pořadí, které je jen pořadím kroků („k člověku se dostali až potom“).
+- Co kresba označí za „náš obraz“, ověř u autora pokusu: spojenec na čtvrté židli je Aschův (1951), ne náš. A „kolo 1“ v tabulce studie může být první kritické kolo, ne první vůbec.
+- Prosba o pomoc není předání rozhodnutí: rodiče, kteří Kratéta prosili, ať jí to rozmluví, mu rozhodnutí „nesvěřili“. Spojovací věta, která to tvrdí, dělá z rodičů ty, kdo rozhodují přes hlavu dítěte.
 
 ## Bloky
 
