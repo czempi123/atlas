@@ -4,9 +4,9 @@ Celek 8: společný profil Kratéta a Hipparchie, cesta 7 „Čí život vlastn�
 
 | Krok | Co | Stav |
 | --- | --- | --- |
-| P6 | Podklady | hotovo 15. 10. 2026 (oddíl Po P6); šest bodů čeká na autora |
-| P7 | Společný profil Kratéta a Hipparchie | čeká; zadání je níže |
-| P8 | Cesta 7 „Čí život vlastně žiju?“ a doplnění stránky otázky 1 | čeká na P7 |
+| P6 | Podklady | hotovo 15. 10. 2026 (oddíl Po P6); šest bodů autor 16. 10. nechal na doporučení podkladů |
+| P7 | Společný profil Kratéta a Hipparchie | hotovo 16. 10. 2026 (oddíl Po P7); tři body čekají na autora |
+| P8 | Cesta 7 „Čí život vlastně žiju?“, kresba Třetí čára a hlas Hipparchie na stránce otázky 1 | čeká; zadání je níže |
 | P10 | Revize celku | čeká na P8 |
 | Opravy | Zapracování nálezů revize | čeká na P10 |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
@@ -88,41 +88,85 @@ Podklady jsou v `docs/podklady/celek-8-ci-zivot-ziju.md`; nové prameny (22) a c
 
 Po schválení vstupu se má v `docs/architektura.md` (katalog cest, řádek cesty 7) změnit vstupní příběh na „Hipparchia a Kratétova podmínka“; zatím nezměněno.
 
-## Zadání P7: Společný profil Kratéta a Hipparchie
+## Po P7 (16. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Katalog dává profilu Opus 5.5 · medium. Tady jde o dva lidi na jedné stránce, rozšíření šablony profilu, novou funkci pro adresy osob (mění odkazy na pěti místech webu) a citlivá místa u Hipparchie. Kdo chce šetřit, nechá technickou část (šablona, adresy, testy) na Sonnetu 5.5 · high a text profilu na Opus.
+Společný profil je na `/osobnost/krates-a-hipparchia/` (`src/content/osobnosti/krates-a-hipparchia.mdx`, blok `src/content/bloky/krates-otvirac-dveri.yaml`). Autor nechal všech šest řádků odpovědí prázdných, platí doporučení z podkladů (záznam v `docs/rozhodnuti.md` z 16. 10. 2026). Zadání P7 je v `docs/archiv/zadani/celek-8.md`. Celé `npm test` prošlo (530 jednotkových testů a 423 testů v prohlížeči).
 
-Šest řádků na začátku je místo pro tvé odpovědi. Prázdný řádek znamená doporučení z podkladů.
+**Co stránka má.** Titulek „Kratés a Hipparchia. *Dva lidé, jedna mošna.*“, nadtitulek „Kynici z Théb a Maróneie · společný profil“, dva řádky dat a rytina Beverwijck 1643 s atributy obou (mošna, člunek). Úvod scénou: Kratés rozdává jmění spoluobčanům (verze Antisthena z Rhodu, Dioklés jednou větou), velký citát „Mám to, co jsem se naučil…“, věta o Hipparchii. Kapitoly:
+
+1. **Péra a dým** (Kratés): hravé verše, parodie Homérovy Kréty, citát o Péře, dým jako nadutost; Odkryj „Přepiš to po Kratétovi“ (přísloví nebo heslo z reklamy).
+2. **Otvírač dveří** (Kratés): přezdívka, Volba „Co uděláš?“ (dva bratři a otcovo pole, „Představ si“, bez Co udělal), potom Apuleius jako pozdní vyprávění.
+3. **Zénón a hrnec polévky** (Kratés): knihkupec, stydlivý Zénón, rozbitý hrnec, citát, hned otázka „Byl to dobrý způsob…? A co kdyby to učitel udělal tobě před celou třídou?“; Zénónova kniha vzpomínek a stoa, odkaz na cestu 5.
+4. **Hipparchiina volba**: krátce, bez výhrůžky; Kratétova podmínka nepřímou řečí, plášť, hostiny, Menandros.
+5. **Hostina**: Theodóros a jeho chytáky, sofisma jako citát, Odkryj „Kde je chyba?“, „Zkusil ji tedy zahanbit. Hipparchia se nezalekla.“, verš z tragédie a odpověď o čase a vzdělání, otázka „Kdo v té hádce prohrál?“.
+6. **Ta filozofka**: „té filozofce“ a tisíce příběhů, spisy ze Sudy, Epiktétovo „žena, která byla druhý Kratés“ jako konec příběhu.
+
+Doba a lidé pro oba, **Tři velké myšlenky** (Etika · Kratés „Co ses naučil, ti nikdo nevezme“ s Aristotelem EN IV, 1; Výchova · Kratés „Pohrdat zvyky neznamená pohrdat lidmi“ s Epiktétovou podmínkou; Politika · Hipparchia „Rozhodnout o sobě znamená rozhodnout o svém čase“ s Aristotelem Politika I, 13 a Platónem jako spojencem napůl), Zkus to žít „Čí byla ta hodina“, Kam dál (Diogenés, cesta 6, Epiktétos, otázka 1).
+
+**Použité citáty:** `dl-vi-86-co-mam` (velký), `dl-vi-85-pera`, `dl-vii-3-zenon`, `dl-vi-97-sofisma`, `dl-vi-98`, `rozpravy-iii-22-76`, `dl-vi-93-vlast`, `etika-1120a-marnotratnik`, `rozpravy-iii-22-19`, `politika-1260a-ctnost`, `ustava-455d-zeny`. Nepoužité a volné pro cestu: `dl-vi-96-zenich` (krok 1; profil jen nepřímou řečí), `dl-vi-86-cenik`, `etika-1120b-stedry` (v profilu jen parafráze), `rozpravy-iii-22-10` a `-50`, `dl-vi-92-oslari`. `dl-vi-98` smí v celku ještě jednou (hlas na otázce 1).
+
+**Co se změnilo mimo profil:**
+
+- Šablona `src/pages/osobnost/[id].astro`: pole `dalsi` (v `content.config.ts`), hlavička dvojice, atributy všech osob pod deskou, sjednocené vstupy (`VstupyOsoby` s `dalsi`, `vstupyOsoby` bere pole osob), `DobaALide`, `MiniOsa` a `MiniMapa` s `dalsi`. U ženy „S kým … žila“ a „Kde žila“.
+- `src/lib/adresa-osoby.ts` (`adresaOsoby`) skládá adresu na všech místech: Lidé a směry, přehled cesty (Kam dál dává jeden odkaz na stránku dvou filozofů), stránka otázky s `HlasyOsa`, Mapa a čas (`mapa-vstup-build.ts`).
+- `Myslenky`: tři karty, třetí přes obě kolony; titulek „Tři velké myšlenky“ se předává z MDX.
+- Data: Kratés a Hipparchia hloubka profil, atributy (`bag`, `shuttle`), `kdo`, `proc`, obraz; Kratés asi 365–285 (OCD), dřív 350–301. Vztahy Diogenés → Kratés a Kratés → Hipparchia z `dl-vi-85`, Kratés → Zénón z `dl-vii-2`. Prameny `ocd-crates`, `arrianos-anabaze-i-9`. Obrázky `krates-hipparchia-beverwijck` a `krates-hipparchia-cats` (výřezy rytin; originály v `~/Pictures/Atlas-originaly/`).
+- Citát `rozpravy-iii-22-76` má vnitřní uvozovky ‚ ‘; Kratétovy verše mají místo „u Diogena Laertia VI, 85/86“ (týká se i `dl-vi-86-cenik` v cestě).
+- Lidé a směry: Kratés a Hipparchia jsou karty profilů s odkazem; Mapa a čas: karta obou má „Otevřít portrét“ na společný profil; Doba a lidé u Diogena a Zénóna ukazuje Kratéta s novými roky (jména v Době a lidech odkazy nejsou nikde, viz Čeká na autora).
+- `ucitel/celek-8.md`: část k profilu.
+- Testy: `tests/data/adresa-osoby.test.ts`, společný profil ve `vstupy.test.ts`, `tests/e2e/krates-hipparchia.spec.ts` (hlavička dvojice na 390 a 1440 px v obou režimech včetně první obrazovky telefonu, Doba a lidé, bloky, odkazy z Lidí, Mapy a času a cesty), stránka v `prohlidka.spec.ts`.
+
+**Co si nese P8:**
+
+- **Hlavička profilu se změní.** Cesta 7 a hlas Hipparchie přidají do hlavičky společného profilu tlačítko cesty (pod jménem) a otázky 1 (pod deskou). Na telefonu dnes první odstavec začíná na 721 px při výšce 844; tlačítko cesty (64 px a mezera) ho posune pod spodní lištu a `krates-hipparchia.spec.ts` spadne. P8 musí hlavičku na telefonu znovu změřit a upravit (třeba nižší cestu u dvojice nebo kratší popisek obrazu), ne test.
+- Kapitola 04 „Hipparchiina volba“ a Kam dál dostanou odkaz na cestu 7; kapitola je schválně krátká a cesta příběh vypráví celou (s citátem `dl-vi-96-zenich`). Cesta nesmí opakovat scénu z profilu doslova a musí stát i bez něj.
+- Vstup cesty 7 je rytina `krates-hipparchia-cats` (výřez je hotový, popisek v `zdroje.yaml`). V `docs/architektura.md` (řádek cesty 7) se má vstupní příběh změnit na „Hipparchia a Kratétova podmínka“.
+- Profil Theodórův čin podává jen „Zkusil ji tedy zahanbit“; cesta ho neopakuje. Ceník, dým jako argument a Spor Kratés × Aristotelés patří cestě; profil Péru ukázal jen jako báseň.
+- Epiktétův citát III, 22, 50 („hůl a velká ústa“) je volný pro krok 5; profil vzal III, 22, 19.
+- Přehled cesty 7 dá „Kratés a Hipparchia: celý příběh“ jako jeden odkaz (hotové). Mince Diogena, Kratéta a Hipparchie v hlavičce cesty vedou na svou stránku přes `adresaOsoby`.
+- `ucitel/celek-8.md` doplní část k cestě: Aschův obrácený pokus (smích šestnácti lidí jednomu), čísla studií, Andersenův konec, otázky do hodiny.
+
+**Čeká na autora:**
+
+1. Jestli mají být jména v oddílu Doba a lidé odkazy na stránky lidí (týkalo by se všech profilů; podklady s tím u Kratéta počítaly). Doporučuji ano, ale jako samostatný malý krok, ne v P8.
+2. Pointa „Dva lidé, jedna mošna.“ a nadtitulek „Kynici z Théb a Maróneie“ jsou můj návrh.
+3. Druhá Kratétova myšlenka má jako protihlas Epiktétovu podmínku („Nejdřív musíš udělat čistým to, co v tobě vládne“), protože zadání u ní námitku nejmenovalo.
+
+## Zadání P8: Cesta 7 „Čí život vlastně žiju?“, kresba Třetí čára a hlas Hipparchie
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Cesta má osm kroků se Sporem, Změň jednu věc, novým případem ze studie a zastánci všech Voleb, k tomu nová kresba s pohybem a pátý hlas na hotové stránce otázky; citlivá místa jsou tu hustší než v profilu (rodina, skupina, peníze). Kdo chce šetřit, nechá kresbu a úpravy testů na Sonnetu 5.5 · high a texty cesty na Opus.
+
+Pět řádků na začátku je místo pro tvé odpovědi. Prázdný řádek znamená doporučení z podkladů a z oddílu Po P7.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Podklady (P6) jsou hotové.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Společný profil Kratéta a Hipparchie (P7) je hotový.
 
-Obrázky (Rijksmuseum, CC0: Beverwijck 1643 pro profil, Cats 1637 pro vstup cesty): 
-Citlivá místa (návrh v podkladech, hlavně Theodórův čin): 
-Podoba společného profilu (jedna stránka, pole dalsi, bez nového ostrova): 
-Pořadí jmen v titulku: 
-Hlas Hipparchie na stránce otázky 1 (přidá se až v P8): 
-Roky Kratéta: 
+Vstup cesty (Hipparchiina volba s rytinou Cats 1637, rodiče nejsou záporné postavy): 
+Spor Kratés × Aristotelés „Svazují mě zvyky, nebo mě dělají člověkem?“: 
+Nový případ (Aschův pokus se spojencem) a Návrat (Císařovy nové šaty, císař jde dál): 
+Kresba Třetí čára (odpovědi skupiny jedna po druhé, přepínač se spojencem): 
+Hlas Hipparchie na stránce otázky 1 (čas a kdo o něm rozhoduje): 
 
-Kde řádek zůstal prázdný, platí doporučení z podkladů (docs/podklady/celek-8-ci-zivot-ziju.md, Otevřené otázky pro autora). U obrázků platí prázdný řádek jako souhlas se stažením obou rytin.
+Kde řádek zůstal prázdný, platí doporučení z podkladů (docs/podklady/celek-8-ci-zivot-ziju.md) a z oddílu „Po P7“ v docs/plany/celek-8.md.
 
-Postav společný profil Kratéta a Hipparchie podle skillů atlas-osobnost (text) a atlas-komponenta (šablona). Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+Postav cestu 7 podle skillu atlas-cesta, kresbu podle atlas-komponenta a hlas na stránce otázky podle atlas-cesta (oddíl o stránce velké otázky). Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
 - CLAUDE.md, docs/styl.md a docs/pouceni.md;
-- v docs/plany/celek-8.md tabulku stavu a oddíl „Po P6“;
-- z podkladů: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), Nejsilnější příběhy, celé oddíly Tvrzení: Kratés (profil), Tvrzení: Hipparchia (profil) a Společný profil: data a šablona, z Citlivých míst Pravidla pro celý celek, Zvlášť: tři místa ze zadání a Další místa v pramenech, tabulku Citáty, Návrh dat a Obrázky;
-- jako vzor profilu src/content/osobnosti/diogenes.mdx a šablonu src/pages/osobnost/[id].astro; komponenty VstupyOsoby, DobaALide, MiniMapa, MiniOsa, Deska a Mince jen v rozsahu, který měníš.
+- v docs/plany/celek-8.md tabulku stavu a oddíl „Po P7“;
+- z podkladů: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), Nejsilnější příběhy 1, 4, 6 a 9, celý oddíl Tvrzení: cesta 7 (od Podle přírody po Návrh kroků), Velká otázka 1: doplnit hlas Hipparchie, z Citlivých míst Pravidla pro celý celek, Vstup, jádro, nový případ a Návrat očima pěti studentů a Co patří učiteli, tabulku Citáty a Obrázky (Cats);
+- ze společného profilu (src/content/osobnosti/krates-a-hipparchia.mdx) jen kapitolu 04 a Kam dál, ať cesta neopakuje scénu doslova; z profilu Diogena a z cesty 6 (krok 4) nic nepřebírej, jen na ně odkaž;
+- jako vzor cesty src/content/cesty/jsem-porad-tentyz-kdyz-se-menim.mdx a dva její kroky (vstup a krok se zastánci); jako vzor kresby src/components/ostrovy/Lod.svelte nebo DvePulky.svelte na rámu Kresba.svelte; stránku otázky src/content/otazky/jak-zit.mdx.
 
 Co udělat:
 
-1. Šablona dvojice. V content.config.ts nepovinné pole dalsi (seznam id osob). Jedna pomocná funkce pro adresu stránky osoby, která zná i dalsi; přepni na ni všech pět míst, kde se dnes adresa skládá (lide/index.astro, cesta/[cesta]/index.astro, otazka/[otazka].astro s HlasyOsa.astro, mapa/index.astro s mapa-vstup-build.ts). Hlavička se dvěma jmény a dvěma řádky dat, deska s jedním obrazem a pod ní atributy obou, sjednocené vstupy do cest a otázek, jedna Doba a lidé pro obě osoby (vztah mezi nimi se v seznamu neukáže, řekne ho úvodní věta), mini mapa a mini osa s oběma. Dvě nové ikony atributů (mošna, člunek) do docs/design/atributy-ikony.json a npm run ikony. Jednotkový test pro adresu osoby a test v prohlížeči pro hlavičku dvojice a pro odkazy z Lidí, Mapy a času a cesty.
-2. Data podle Návrhu dat: obě osoby hloubka profil, atributy, kdo a proc, obrázek; vztahy Diogenés → Kratés a Kratés → Zénón s novými prameny. Roky Kratéta podle mé odpovědi; když zůstane prázdná, ověř odbornou chronologii (Dorandi, OCD) a teprve pak přepiš. Po změně přečti Dobu a lidi na stránkách Diogena a v Mapě a čase karty obou.
-3. Obrázky podle mé odpovědi: výřez rytiny z celé strany přes IIIF muzea, delší strana 1280 px, originál mimo repozitář (~/Pictures/Atlas-originaly/), popisek řekne, čí je to představa a z kdy. Výřez rytiny pro vstup cesty připrav taky, použije ho P8.
-4. Text profilu: úvod scénou (doporučuji Kratéta, který se vzdal jmění, nebo Otvírače dveří), kapitoly o Kratétovi (Péra a dým, Otvírač dveří, Zénón a hrnec polévky s otázkou hned za scénou) a o Hipparchii (volba jen krátce s odkazem na cestu 7, která ji vypráví celou; hostina s Theodórem a odpověď o čase a vzdělání; hádanka „Kde je chyba?“ v bloku Odkryj). Tři velké myšlenky (dvě Kratétovy, jedna Hipparchiina) s vlastním stanoviskem studenta a s námitkou jiného myslitele (Aristotelés EN IV, 1; Aristotelés Politika I, 13 a spojenec Platón Ústava V, 455d–456a s výhradou, kterou citát nese). Karta Zkus to žít. Konec Epiktétovým „žena, která byla druhý Kratés“. Hipparchie stejný prostor jako Kratétovi.
-5. Citlivá místa podle mé odpovědi a pravidel z podkladů. Ceník a argumenty Sporu patří cestě 7; profil je nepoužije. Co atlas o kynicích už říká (profil Diogena, cesta 6, krok 4), neopakuj; odkaž.
+1. Cesta 7 v src/content/cesty/ci-zivot-vlastne-ziju.mdx a kroky podle Návrhu kroků v podkladech: vstup Hipparchiina volba (Volba „Komu patří to rozhodnutí?“ jako začátek cesty, rytina krates-hipparchia-cats), podle přírody, ne podle zvyku (Roztřiď bez vlastní karty), tři oboly (ceník a dým), Spor Kratés × Aristotelés, jinou nadutostí (Změň jednu věc „Nikdo se nedívá“, Epiktétos III, 22, 50), třetí čára (kresba a Volba před výsledky), kdo je na tvé straně (zastánci odpovědí ze všech Voleb, spojenec je vždy jiný myslitel než kynik), závěr s Na začátku × Teď a Zkus to žít „Nejdřív ty“. Nový případ a zastánci jsou dva kroky. Návrat Císařovy nové šaty. Čas spočítej skriptem scripts/slova-cesta.mjs. Filozofové cesty: Diogenés, Kratés a Hipparchia.
+2. Kresba s pohybem „Třetí čára“ v kroku 6 na rámu Kresba.svelte: odpovědi skupiny přicházejí jedna po druhé, přepínač se spojencem; texty a geometrie v src/lib/, s jednotkovým testem; pramen je Aschovo uspořádání a karta z kola 1, siluety jsou náš obraz. Zapiš ji do dílny (Kresby) a do docs/design.md.
+3. Hlas Hipparchie jako pátý hlas na stránce otázky 1: odpověď na úvodní případ nejvýš dvě věty, myšlenka z DL VI, 96–98, citát dl-vi-98 (v celku podruhé a naposledy). Neříkej studentovi, že má mít čas „pro sebe“; mluv o tom, kdo o čase rozhoduje. Uprav seznamy v testech (otazka.spec.ts a hlavičky profilů) podle skutečných hlaviček v dist/.
+4. Společný profil: odkaz na cestu 7 v kapitole 04 a v Kam dál. Hlavička profilu dostane tlačítko cesty a otázky: na telefonu znovu změř, že deska, oba atributy a začátek prvního odstavce zůstanou na první obrazovce (tests/e2e/krates-hipparchia.spec.ts to hlídá); uprav rozvržení, ne test.
+5. V docs/architektura.md změň v katalogu cest vstupní příběh cesty 7 na „Hipparchia a Kratétova podmínka“. Do ucitel/celek-8.md doplň část k cestě: Aschův obrácený pokus (smích šestnácti lidí jednomu) jen jako materiál, pokud třída chce; čísla studií a odkud jsou (Asch 1951 a 1956, Franzen a Mader 2023, Bond a Smith přes ně); konec Andersenovy pohádky; otázky do hodiny.
 
-Založ ucitel/celek-8.md a zapiš do něj, co se týká profilu: výhrůžka sebevraždou a proč ji atlas neříká; Theodórův čin a Eurípidův verš v kontextu; tři verze Kratétova rozdání majetku; Hipparchiiny spisy (Suda, ne Diogenés Laertios); co dělat, když student řekne „u nás doma by to nešlo“ nebo „já si to nemůžu dovolit“; dokumenty z oddílu Citlivá místa.
+Citlivá místa podle pravidel z podkladů: cesta se ptá, podle čeho poznám, že je rozhodnutí moje, ne jestli má student odejít, poslechnout, nebo vzdorovat; žádné pole na psaní o rodině, víře, vztahu, identitě, penězích ani profilu na sítích; rebelie není ctnost; péče o druhé není cizí život; přizpůsobivé lidi nenazývej ovcemi a vyloučení nepopisuj jako normální.
 
-Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); snímky profilu na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs); hlavička na telefonu (deska, oba atributy a první odstavec na první obrazovce); fokus z klávesnice (scripts/kontrola-fokus.mjs); Doba a lidé na profilu i u Diogena; odkazy na profil z Lidí a směrů, z Mapy a času a z Diogenova a Zénónova záznamu. Po změnách restartuj npm run dev.
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); snímky kroků cesty s odpověďmi i bez (scripts/snimky-cesta.mjs), kresby (scripts/snimky-prvek.mjs, s pohybem i bez), stránky otázky 1 a hlavičky profilu na 390 a 1440 px ve světlém i tmavém režimu; fokus z klávesnice (scripts/kontrola-fokus.mjs) na cestě, otázce 1 a profilu; vstupy v hlavičkách profilů Diogena a dvojice; karty v Lidech a počet cest na Domů. Po změnách restartuj npm run dev.
 
-Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P7“ (co stránka má, použité citáty, co se změnilo mimo profil, co si nese P8, co čeká na autora), připrav tam zadání P8 (cesta 7, kresba Třetí čára a hlas Hipparchie na stránce otázky 1) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je hotové, nad čím jsi váhal a co potřebuje moje rozhodnutí.
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P8“, připrav tam zadání P10 (revize celku 8) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je hotové, nad čím jsi váhal a co potřebuje moje rozhodnutí.
 ```

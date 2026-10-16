@@ -711,3 +711,25 @@ Otevřené zůstalo nebo přibylo:
 | Rijksmuseum, datace RP-P-1878-A-651 | Záznam má „c. 1635 – 1537“; kniha Catsova je z roku 1637. | V popisku obrázku „1637“ podle knihy. |
 | České překlady | Koláře, Kříže ani Novotného jsem neměl v ruce. | Platí rozhodnutí z celků 1–7: vlastní převody. |
 | Ikony atributů | Mošna a člunek v sadě `atributy-ikony.json` nejsou. | P7: nakreslit dvě nové ikony. |
+
+### Po P7 (společný profil Kratéta a Hipparchie, 16. 10. 2026)
+
+Vyřízeno:
+
+- **Roky Kratéta.** Oxford Classical Dictionary (Oxford Research Encyclopedia of Classics, heslo „Crates (2), of Thebes, Greek philosopher and poet, c. 368/365–288/285 BCE“) a Brill's New Pauly (stejné rozpětí podle katalogu Perseus); Dorandi asi 365–285 (podle Wikipedie). Data: asi 365–285 s rozmezím 368–365 a 288–285 (`ocd-crates`). Ověřen jen název hesla OCD, text hesla je za přihlášením.
+- **Ikony atributů.** Mošna (`bag`) a člunek (`shuttle`) v `docs/design/atributy-ikony.json`.
+- **Rijksmuseum, datace Catsovy strany.** Popisek obrázku `krates-hipparchia-cats` říká 1637 podle knihy.
+- **Théby.** Profil říká, že je Alexandr dal srovnat se zemí, bez roku (`arrianos-anabaze-i-9`).
+
+Otevřené nebo nové:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| „Tkát látky doma byla práce, kterou se od žen čekalo“ (kapitola Hostina) | Obecná věta o řecké domácnosti, kterou podklady nesou jen jako výklad Hipparchiina „čas, který jsem měla strávit u stavu“. | Při revizi doložit (např. Xenofón, Oikonomikos VII; nebo příručka o ženách v klasickém Řecku), nebo větu zmírnit. |
+| Apuleius jako „domácí bůh“ | Pozdní a řečnický pramen (asi 450 let po Kratétovi). Text ho uvádí „Ještě o mnoho století později se o Kratétovi vyprávělo…“ a „prý“. | Nic; jen hlídat, aby věta nezněla jako fakt. |
+| Kratétova „výbava“ | Řecky σκευή (DL VI, 96); profil říká „odložil před ní svou výbavu“ a nevyjmenovává ji. Rytina ukazuje na zemi plášť, mošnu a hůl, Kratés na ní ale stojí oblečený a v klobouku. | Cesta 7 (P8) může výbavu vyjmenovat jen jako obraz rytiny, ne jako údaj pramene. |
+| Volba „Otvírač dveří“ | Bratři a otcovo pole jsou vymyšlená situace („Představ si“); Apuleius mluví obecně o sporech příbuzných. Blok proto nemá oddíl Co udělal. | Nic. |
+| Hipparchia v Athénách | V datech má jen Maróneii (narození). Že s Kratétem žila v Athénách, podklady výslovně nedokládají (hostina byla u Lýsimacha); profil to neříká. | Kdyby to chtěla cesta 7 nebo mapa, dohledat (Menandrova komedie je athénská, ale to je nepřímé). |
+| Mladí pečující | Českou metodiku jsem nedohledal; list pro učitele se drží pravidla PSHE (neptat se na osobní věci) a věty „péče o druhé není cizí život“. | Při revizi celku případně doplnit. |
+| Jména v Době a lidech nejsou odkazy | Podklady čekaly, že se Kratés na Diogenově stránce stane odkazem na společný profil. Doba a lidé ale jména neodkazuje na žádné stránce. Na profil vede Mapa a čas (karta a „Otevřít portrét“) a Lidé a směry. | Rozhodnout v revizi nebo ve větvi rozhraní: odkazy v Době a lidech by se týkaly všech profilů. |
+| Linka první psychické pomoci 116 123 | V listu pro učitele podle Media Guide NÚDZ (celek 6) a adresáře pomoci MV ČR (výsledek hledání 16. 10. 2026); stránku linky jsem neotevřel. | Před vydáním listu ověřit na webu linky. |

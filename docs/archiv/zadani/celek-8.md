@@ -37,3 +37,44 @@ Pravidla jako u celku 7: každé historické tvrzení a citát se zdrojem, ově�
 
 Osnovu mi neposílej a na schválení nečekej. Kde váháš (čím cestu otevřít, jaký Spor, jaký nový případ, jak udělat společný profil, jestli doplnit otázku 1), zvol nejlepší cestu a pracuj. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš stav do docs/plany/celek-8.md (oddíl Po P6), připrav tam zadání P7 s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-8.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je ověřeno, co zůstalo otevřené, nad čím jsi váhal a co jsi zvolil, a co potřebuje moje rozhodnutí (obrázky ke stažení, citlivá místa, podoba společného profilu).
 ```
+
+## P7: Společný profil Kratéta a Hipparchie
+
+Provedeno 16. 10. 2026; výsledek v `docs/plany/celek-8.md`, oddíl Po P7.
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.** Katalog dává profilu Opus 5.5 · medium. Tady jde o dva lidi na jedné stránce, rozšíření šablony profilu, novou funkci pro adresy osob (mění odkazy na pěti místech webu) a citlivá místa u Hipparchie. Kdo chce šetřit, nechá technickou část (šablona, adresy, testy) na Sonnetu 5.5 · high a text profilu na Opus.
+
+Šest řádků na začátku je místo pro tvé odpovědi. Prázdný řádek znamená doporučení z podkladů.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Podklady (P6) jsou hotové.
+
+Obrázky (Rijksmuseum, CC0: Beverwijck 1643 pro profil, Cats 1637 pro vstup cesty): 
+Citlivá místa (návrh v podkladech, hlavně Theodórův čin): 
+Podoba společného profilu (jedna stránka, pole dalsi, bez nového ostrova): 
+Pořadí jmen v titulku: 
+Hlas Hipparchie na stránce otázky 1 (přidá se až v P8): 
+Roky Kratéta: 
+
+Kde řádek zůstal prázdný, platí doporučení z podkladů (docs/podklady/celek-8-ci-zivot-ziju.md, Otevřené otázky pro autora). U obrázků platí prázdný řádek jako souhlas se stažením obou rytin.
+
+Postav společný profil Kratéta a Hipparchie podle skillů atlas-osobnost (text) a atlas-komponenta (šablona). Čti úsporně, podle oddílu „Co číst a jak šetřit“ v CLAUDE.md. Přečti:
+- CLAUDE.md, docs/styl.md a docs/pouceni.md;
+- v docs/plany/celek-8.md tabulku stavu a oddíl „Po P6“;
+- z podkladů: úvod (Čeho se drží celý celek, Jak převádím klíčová slova), Nejsilnější příběhy, celé oddíly Tvrzení: Kratés (profil), Tvrzení: Hipparchia (profil) a Společný profil: data a šablona, z Citlivých míst Pravidla pro celý celek, Zvlášť: tři místa ze zadání a Další místa v pramenech, tabulku Citáty, Návrh dat a Obrázky;
+- jako vzor profilu src/content/osobnosti/diogenes.mdx a šablonu src/pages/osobnost/[id].astro; komponenty VstupyOsoby, DobaALide, MiniMapa, MiniOsa, Deska a Mince jen v rozsahu, který měníš.
+
+Co udělat:
+
+1. Šablona dvojice. V content.config.ts nepovinné pole dalsi (seznam id osob). Jedna pomocná funkce pro adresu stránky osoby, která zná i dalsi; přepni na ni všech pět míst, kde se dnes adresa skládá (lide/index.astro, cesta/[cesta]/index.astro, otazka/[otazka].astro s HlasyOsa.astro, mapa/index.astro s mapa-vstup-build.ts). Hlavička se dvěma jmény a dvěma řádky dat, deska s jedním obrazem a pod ní atributy obou, sjednocené vstupy do cest a otázek, jedna Doba a lidé pro obě osoby (vztah mezi nimi se v seznamu neukáže, řekne ho úvodní věta), mini mapa a mini osa s oběma. Dvě nové ikony atributů (mošna, člunek) do docs/design/atributy-ikony.json a npm run ikony. Jednotkový test pro adresu osoby a test v prohlížeči pro hlavičku dvojice a pro odkazy z Lidí, Mapy a času a cesty.
+2. Data podle Návrhu dat: obě osoby hloubka profil, atributy, kdo a proc, obrázek; vztahy Diogenés → Kratés a Kratés → Zénón s novými prameny. Roky Kratéta podle mé odpovědi; když zůstane prázdná, ověř odbornou chronologii (Dorandi, OCD) a teprve pak přepiš. Po změně přečti Dobu a lidi na stránkách Diogena a v Mapě a čase karty obou.
+3. Obrázky podle mé odpovědi: výřez rytiny z celé strany přes IIIF muzea, delší strana 1280 px, originál mimo repozitář (~/Pictures/Atlas-originaly/), popisek řekne, čí je to představa a z kdy. Výřez rytiny pro vstup cesty připrav taky, použije ho P8.
+4. Text profilu: úvod scénou (doporučuji Kratéta, který se vzdal jmění, nebo Otvírače dveří), kapitoly o Kratétovi (Péra a dým, Otvírač dveří, Zénón a hrnec polévky s otázkou hned za scénou) a o Hipparchii (volba jen krátce s odkazem na cestu 7, která ji vypráví celou; hostina s Theodórem a odpověď o čase a vzdělání; hádanka „Kde je chyba?“ v bloku Odkryj). Tři velké myšlenky (dvě Kratétovy, jedna Hipparchiina) s vlastním stanoviskem studenta a s námitkou jiného myslitele (Aristotelés EN IV, 1; Aristotelés Politika I, 13 a spojenec Platón Ústava V, 455d–456a s výhradou, kterou citát nese). Karta Zkus to žít. Konec Epiktétovým „žena, která byla druhý Kratés“. Hipparchie stejný prostor jako Kratétovi.
+5. Citlivá místa podle mé odpovědi a pravidel z podkladů. Ceník a argumenty Sporu patří cestě 7; profil je nepoužije. Co atlas o kynicích už říká (profil Diogena, cesta 6, krok 4), neopakuj; odkaž.
+
+Založ ucitel/celek-8.md a zapiš do něj, co se týká profilu: výhrůžka sebevraždou a proč ji atlas neříká; Theodórův čin a Eurípidův verš v kontextu; tři verze Kratétova rozdání majetku; Hipparchiiny spisy (Suda, ne Diogenés Laertios); co dělat, když student řekne „u nás doma by to nešlo“ nebo „já si to nemůžu dovolit“; dokumenty z oddílu Citlivá místa.
+
+Kontrola: celé npm test (testy v prohlížeči běží na portu 4322, spuštěné npm run dev jim nevadí; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně); snímky profilu na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs); hlavička na telefonu (deska, oba atributy a první odstavec na první obrazovce); fokus z klávesnice (scripts/kontrola-fokus.mjs); Doba a lidé na profilu i u Diogena; odkazy na profil z Lidí a směrů, z Mapy a času a z Diogenova a Zénónova záznamu. Po změnách restartuj npm run dev.
+
+Na schválení nečekej. Commituj česky po ucelených krocích a nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P7“ (co stránka má, použité citáty, co se změnilo mimo profil, co si nese P8, co čeká na autora), připrav tam zadání P8 (cesta 7, kresba Třetí čára a hlas Hipparchie na stránce otázky 1) s doporučeným modelem a úsilím, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md, vynechané a neověřené do docs/podklady/k-overeni.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš, co je hotové, nad čím jsi váhal a co potřebuje moje rozhodnutí.
+```

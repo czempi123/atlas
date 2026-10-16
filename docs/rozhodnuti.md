@@ -4,6 +4,23 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 16. 10. 2026: Společný profil Kratéta a Hipparchie (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všech šest řádků odpovědí prázdných: platí doporučení z podkladů. Obě rytiny z Rijksmusea (CC0) jsou stažené, citlivá místa podle návrhu (Theodórův čin studentům jen „Zkusil ji tedy zahanbit“), jedna stránka s polem `dalsi`, titulek „Kratés a Hipparchia“, hlas Hipparchie na otázce 1 až v P8, roky Kratéta po ověření | Pravidlo bez mezikroku schvalování (4. 10. 2026); u obrázků platí prázdný řádek jako souhlas podle zadání P7 |
+| Roky Kratéta asi 365–285 př. n. l. (rozmezí 368–365 a 288–285) podle Oxford Classical Dictionary; Brill's New Pauly a Dorandi mají totéž. Ruší se 350–301 z Britanniky | Britannica nesedí s tím, že zemřel starý (DL VI, 92, 98); tři odborné chronologie se shodují |
+| Společný profil: `src/content/osobnosti/krates-a-hipparchia.mdx`, `osoba: krates`, `dalsi: [hipparchia]`. Obě osoby zůstávají v datech samostatně (hloubka profil, atribut, obraz, `kdo`, `proc`) | Příběh se rozdělit nedá a Mapa a čas, Lidé a směry i Doba a lidé na cizích stránkách dál pracují s jednotlivými lidmi |
+| Adresu stránky osoby skládá jen `adresaOsoby` (`src/lib/adresa-osoby.ts`): Lidé a směry, přehled cesty, stránka otázky, Mapa a čas. Osoba se dvěma stránkami zastaví sestavení | Dřív se adresa skládala na pěti místech dvěma způsoby a pro Hipparchii by vedla na neexistující `/osobnost/hipparchia/` |
+| Odkaz na Hipparchii vede na začátek společné stránky, ne na kotvu její kapitoly (ani v Mapě a čase) | Hlavička i Doba a lidé patří oběma; kotva v jedné části webu a začátek v jiné by byly dvě pravidla pro tutéž věc |
+| Hlavička dvojice: řádek dat pro každou osobu, „období 2“ jednou na prvním řádku; deska 6 : 5 (na telefonu 16 : 9 se středem výřezu na hlavách); pod ní atributy obou s mincí, pak popisek. Na telefonu menší titulek (38 px) a užší mezery | Jinak by na telefonu deska, dva atributy a první odstavec nebyly na první obrazovce (první odstavec začínal na 988 px, teď na 721 px při výšce 844) |
+| Doba a lidé u dvojice: vztahy obou sloučené, vztah Kratés – Hipparchia se nevypíše, u učitele a žáka stojí čí („učitel Kratéta“), u ostatních typů jméno před rolí; mapa „narození Hipparchie“; nadpisy „S kým Kratés a Hipparchia žili“, „Kde žili“ (u ženy „žila“) | Na stránce dvou lidí musí být jasné, ke komu vztah patří; vztah mezi nimi říká úvodní věta oddílu |
+| Myšlenky: tři (Kratés: „Co ses naučil, ti nikdo nevezme“ s Aristotelem EN IV, 1; „Pohrdat zvyky neznamená pohrdat lidmi“ s Epiktétovou podmínkou III, 22, 19; Hipparchia: „Rozhodnout o sobě znamená rozhodnout o svém čase“ s Aristotelem Politika I, 13 a Platónem Ústava V jako spojencem napůl). Komponenta `Myslenky` má titulek „Tři velké myšlenky“; třetí karta jde přes obě kolony a text v ní drží šířku čtenářského sloupce | Zadání: dvě Kratétovy a jedna Hipparchiina. Pro druhou Kratétovu myšlenku zadání námitku nejmenuje; Epiktétův citát III, 22, 50 nechávám cestě 7 (krok 5) a beru III, 22, 19 |
+| Kapitoly: tři Kratétovy (Péra a dým, Otvírač dveří, Zénón a hrnec polévky) a tři Hipparchiiny (volba, hostina s hádankou Kde je chyba?, Ta filozofka s Epiktétovým „druhý Kratés“). Úvod scénou o rozdání jmění podle verze Antisthena z Rhodu | Stejný prostor pro oba; úvod podle doporučení zadání; verze o rozdání spoluobčanům je o dávání druhým, ne o ničení |
+| Kapitola Hipparchiina volba je krátká a zatím bez odkazu na cestu 7; odkaz přidá P8 | Cesta 7 ještě neexistuje a test odkazů by spadl na neexistující stránce |
+| Kam dál na přehledu cesty dává jeden odkaz na stránku, i když na ní stojí dva filozofové („Kratés a Hipparchia: celý příběh“) | Cesta 7 má v katalogu Diogena, Kratéta i Hipparchii; dva stejné odkazy pod sebou by mátly |
+| Citát `rozpravy-iii-22-76` má vnitřní uvozovky ‚ ‘; místo u Kratétových veršů je „u Diogena Laertia VI, 85“ | Komponenta Citát přidává vnější uvozovky (vznikalo „„Ale…“); „Hravé verše Diogenés Laertios VI, 85“ se četlo jako jedno dílo |
+
 ## 15. 10. 2026: Opravy celku 7 po revizi
 
 | Rozhodnutí | Důvod |
