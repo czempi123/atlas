@@ -1,6 +1,6 @@
 # Pro učitele: celek 8 „Čí život vlastně žiju?“
 
-Podklady pro toho, kdo s celkem pracuje ve třídě. Zatím je tu společný profil Kratéta a Hipparchie (`/osobnost/krates-a-hipparchia/`); cestu 7 „Čí život vlastně žiju?“ a hlas Hipparchie na stránce velké otázky 1 doplní krok P8. Studenti tenhle soubor nevidí, web na něj neodkazuje a do sestaveného atlasu se nedostane. Stojí na podkladovém listu `docs/podklady/celek-8-ci-zivot-ziju.md`, kde je u každého tvrzení pramen.
+Podklady pro toho, kdo s celkem pracuje ve třídě. Patří k němu společný profil Kratéta a Hipparchie (`/osobnost/krates-a-hipparchia/`), cesta 7 „Čí život vlastně žiju?“ (`/cesta/ci-zivot-vlastne-ziju/`, osm kroků, asi třicet minut) a hlas Hipparchie na stránce velké otázky 1 (`/otazka/jak-zit/`). Studenti tenhle soubor nevidí, web na něj neodkazuje a do sestaveného atlasu se nedostane. Stojí na podkladovém listu `docs/podklady/celek-8-ci-zivot-ziju.md`, kde je u každého tvrzení pramen.
 
 Skoro všechno, co o Kratétovi a Hipparchii víme, zapsal Diogenés Laertios asi pět set let po nich (Životy filozofů VI, 85–98). Skládal kapitolu z mnoha starších autorů a často je jmenuje i s tím, že se rozcházejí. Studentský text proto říká „vypráví se“ a vybírá jednu verzi; ostatní jsou tady.
 
@@ -94,3 +94,41 @@ Do studentského textu řádek s pomocí nedáváme: profil krizové téma neote
 - Byl rozbitý hrnec dobrý způsob, jak Zénóna zbavit studu?
 - Najděte chybu v Hipparchiině důkazu a vymyslete stejný chyták o něčem jiném.
 - Aristotelés a Platón se přou, jestli má o tom, co budeš dělat, rozhodovat to, kým ses narodil, nebo k čemu máš vlohy. Kde se ta otázka řeší dnes?
+
+## Cesta 7: co v ní je a co je naše
+
+Osm kroků: Hipparchiina volba a Kratétova podmínka (Volba „Komu patřilo to rozhodnutí?“), kynická příroda proti zvyku a proti dnešnímu „buď sám sebou“ (Roztřiď bez vlastní karty), Kratétův ceník a dým (Odkryj), Spor Kratés × Aristotelés, slabé místo kynika (Sókratés, Platón, Epiktétos; Změň jednu věc „Nikdo se nedívá“), Aschův pokus s kresbou Třetí čára, zastánci všech odpovědí a závěr s výzvou Nejdřív ty. Za pár dní nabídne deník Návrat: Císařovy nové šaty.
+
+Co si cesta domýšlí a říká to: Kratés a Aristotelés se podle žádného pramene nepotkali, Spor to ve scéně říká a třetí Kratétův argument je domyšlená odpověď („by mohl odpovědět“). Aristotelova odpověď na proměnlivost zvyků (Etika Nikomachova V, 7) mluví o „některých“ a kyniky nejmenuje. Druhá podmínka ve Změň jednu věc (hosté se na Diogenovo číslo těší) je náš krok. V posledním kroku dostává odpověď „Kratétovi“ za spojence Platóna: v Ústavě vládnou obci ti, kdo nejvíc vědí. To je výklad Ústavy, ne Platónova věta o sňatcích.
+
+Výhrůžka z DL VI, 96 v cestě není (oddíl výše). Rodiče v ní nejsou záporné postavy: mají strach a hledají pomoc u člověka, kterému věří.
+
+## Aschův pokus: čísla a odkud jsou
+
+Studentský text říká čísla slovy („víc než třetina“, „čtvrtina“, „asi pět odpovědí ze sta“). Přesně:
+
+- **Asch 1951** (kapitola ve sborníku *Groups, Leadership and Men*, Pittsburgh 1951; čteno celé v přetisku): 50 nezasvěcených, vždy jeden ve skupině osmi mužů, studentů; sedm domluvených v 12 kritických kolech z 18 jednomyslně odpovídá špatně. S většinou šla třetina odhadů, 68 % odhadů bylo správně, čtvrtina lidí byla úplně nezávislá; kontrolní skupiny, které psaly odhady samy, skoro nechybovaly. **Spojenec** (jeden z domluvených odpovídá správně a mluví před nezasvěceným): chyby 5,5 % odhadů proti 32 % u jednomyslné většiny; když spojenec v půli přeběhl k většině, 28,5 %; se dvěma nezasvěcenými 10,4 %. Proti jedinému domluvenému účinek skoro mizí, proti dvěma 12,8 %, od tří je plný. Z rozhovorů po pokusu: zkreslené vnímání u velmi mála lidí, zkreslený úsudek („mýlím se asi já“) u většiny, a část lidí věděla, že má pravdu, a ustoupila, aby nevypadala jinak nebo hůř než ostatní.
+- **Asch 1956** (*Psychological Monographs* 70, č. 9; čteny strany 1–10 ze 70): 123 studentů, muži 17 až 25 let, ze tří vysokých škol; domluvených 7 až 9, nezasvěcený sedí předposlední. V kritických kolech 36,8 % odhadů ve směru většiny, průměrně 4,41 chyby z 12; 29 lidí (asi čtvrtina) bez jediné chyby. Kontrolní skupina 37 lidí: 35 bez chyby, chyby 0,7 %. Délky čar v kresbě jsou z prvního kola (Tabulka 1): vzor 3 palce, možnosti 3¾, 4¼ a 3 palce, většina řekne první.
+- **Franzen a Mader 2023** (*PLOS ONE* 18, e0294325; plný text): Bern, jaro 2021, 210 lidí z univerzitního kampusu (po vyřazení 202; 61 % žen, průměrný věk 22,6). Pět domluvených a jeden nezasvěcený na pátém místě ze šesti, deset úloh, v šesti skupina odpovídá špatně. Bez odměny 33 % špatných odpovědí v kritických úlohách (rozpětí 10 až 47 %), s odměnou franku za správnou odpověď o 8 procentních bodů méně. U politických otázek se podíl „ano“ lišil v průměru o 38 procentních bodů podle toho, co řekla skupina.
+- **Bond a Smith** (metaanalýza): jen přes Franzena a Madera, sami jsme ji nečetli. Podle nich 44 přesných replikací s průměrem 25 % chyb.
+
+Výhrady, které patří do hodiny: Asch měřil jen mladé muže v USA padesátých let a úloha byla odhad čar, ne názor; pokus nic neříká o rodině ani o tom, že přizpůsobit se je slabost. Většina těch, kdo ustoupili, si poctivě myslela, že se mýlí sami.
+
+## Aschův obrácený pokus: jen jako materiál, pokud třída chce
+
+Asch (1951) to zkusil i obráceně: šestnáct nezasvěcených proti jednomu domluvenému, který odpovídal špatně. Smáli se mu. Ve studentském textu to není, aby student, kterého skupina vylučuje, neslyšel, že je to normální. Do hodiny to patří jen tehdy, když třída sama chce mluvit o vyloučení, a nikdy s ukazováním na konkrétního žáka (příloha MŠMT č. 6: o situaci nemluvit před ostatními). Kresba Třetí čára schválně nemá obličeje ani smích.
+
+## Císařovy nové šaty: konec, který se obvykle nevypráví
+
+Návrat stojí na Andersenově pohádce (*Eventyr, fortalte for Børn*, 1837; čtena v dánském originále). Látku prý neuvidí nikdo, kdo se nehodí do svého úřadu nebo je hloupý, a proto nikdo nepřizná, že nic nevidí. Malé dítě řekne: „Ale on nemá nic na sobě.“ Otec zvolá: „Pane Bože, slyšte hlas nevinnosti.“ Lidé si to šeptají, až to volá celý lid. Císaře zamrazí, protože mu připadá, že mají pravdu, ale řekne si: „Teď musím průvod vydržet.“ A komoří dál nesou vlečku, která tam vůbec není.
+
+Pointa je poslední věta: císař ví, a jde dál. Návrat se proto ptá, kdo v průvodu žije čí život, ne „buď jako to dítě“. Kdyby třída dítě oslavovala, stojí za to dodat, že v jiném průvodu by ho mohli umlčet a že promluvit je snazší, když už to řekl někdo jiný (Aschův spojenec).
+
+## Otázky do hodiny k cestě
+
+- Hipparchiini rodiče poprosili Kratéta, ať jí to rozmluví. Udělali chybu? A co udělal Kratés s rozhodnutím, které mu nabídli?
+- Je „žij podle přírody“ totéž co „buď sám sebou“? V čem se liší?
+- Jak by vypadal Kratétův ceník dnes? Za co se platí nejvíc a čím se platí (penězi, časem, pozorností)? Bez jmen lidí ze školy.
+- Kdy je vzdor jen jiná nadutost? Dá se to poznat zvenku?
+- Proč jediný spojenec v Aschově pokusu tolik změnil? Kde to platí mimo učebnu?
+- Kdo v průvodu z pohádky žije čí život? A čí život žije císař v poslední větě?

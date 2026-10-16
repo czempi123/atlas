@@ -36,7 +36,7 @@ const popisek = dalsi.length
         <li>
           <a class="vstup vstup--cesta" href={`/cesta/${c.slug}/`}>
             <span class="vstup__text">
-              <span class="t-nadtitulek vstup__nad">Cesta {c.cislo} · {c.kroku} kroků{c.minut && ` · asi ${c.minut} minut`}</span>
+              <span class="t-nadtitulek vstup__nad">Cesta {c.cislo}<span class="vstup__meta"> · {c.kroku} kroků{c.minut && ` · asi ${c.minut} minut`}</span></span>
               <span class="vstup__nazev">{c.nazev}</span>
             </span>
             <Ikona id="dal" velikost={22} />

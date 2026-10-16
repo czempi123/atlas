@@ -170,14 +170,33 @@ const dev = import.meta.env.DEV;
      Titulek je proto menší (jen tady má dvě jména) a mezery v hlavičce užší. */
   @media (max-width: 899px) {
     .osobnost--dvojice .osobnost__hlavicka { gap: var(--s-4); padding-top: var(--s-3); }
-    .osobnost--dvojice h1 { font-size: 38px; line-height: 1.05; margin-bottom: var(--s-3); }
-    .osobnost--dvojice .proc { font-size: 14px; line-height: 1.45; }
+    .osobnost--dvojice h1 { font-size: 34px; line-height: 1.05; margin-bottom: var(--s-2); }
+    .osobnost--dvojice .nadtitulek { margin-bottom: var(--s-2); }
+    .osobnost--dvojice .data--dvojice li + li { margin-top: 2px; }
+    .osobnost--dvojice .proc { font-size: 14px; line-height: 1.4; }
     .osobnost--dvojice .proc + .proc { margin-top: var(--s-2); }
     .osobnost--dvojice .obraz-popisek { margin-top: var(--s-2); }
     /* Rytina s oběma na šířku: nižší deska, střed výřezu drží hlavy i výbavu na zemi (vyrezNaSirku). */
-    .osobnost--dvojice .osobnost__deska :global(.deska__plocha) { aspect-ratio: 16 / 9 !important; }
-    .osobnost--dvojice :global(.obsah-lista) { margin-top: var(--s-4) !important; }
-    .osobnost--dvojice .obsah :global(.uvod) { margin-top: var(--s-4); }
+    .osobnost--dvojice .osobnost__deska :global(.deska__plocha) { aspect-ratio: 2 / 1 !important; }
+    .osobnost--dvojice :global(.obsah-lista) { margin-top: var(--s-3) !important; }
+    .osobnost--dvojice .obsah :global(.uvod) { margin-top: var(--s-3); }
+    /* Cesta a otázka stojí vedle sebe nad deskou: pod sebou by odsunuly první odstavec z první obrazovky
+       (P8 celku 8). Titulek se rozpadne do mřížky hlavičky (display: contents), aby cesta a otázka byly v jednom řádku;
+       otázka se do volného sloupce vedle cesty doplní sama (dense). Délka cesty a šipky na telefonu chybí. */
+    .osobnost--dvojice .osobnost__hlavicka { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-auto-flow: row dense; gap: 0 var(--s-3); }
+    .osobnost--dvojice .osobnost__titulek { display: contents; }
+    .osobnost--dvojice .osobnost__titulek > *,
+    .osobnost--dvojice .osobnost__deska { grid-column: 1 / -1; }
+    .osobnost--dvojice .osobnost__titulek > :global(.vstupy-osoby--cesty) { grid-column: 1; margin-top: var(--s-3); }
+    .osobnost--dvojice .osobnost__hlavicka > :global(.vstupy-osoby--otazky) { grid-column: 2; margin-top: var(--s-3); }
+    .osobnost--dvojice .osobnost__deska { margin-top: var(--s-3); }
+    .osobnost--dvojice :global(.vstupy-osoby ul),
+    .osobnost--dvojice :global(.vstupy-osoby li) { height: 100%; }
+    .osobnost--dvojice :global(.vstup) { min-height: 0; padding: var(--s-2) var(--s-3); align-items: flex-start; }
+    .osobnost--dvojice :global(.vstup .vstup__meta),
+    .osobnost--dvojice :global(.vstup svg) { display: none; }
+    .osobnost--dvojice :global(.vstup__nazev) { font-size: 17px; line-height: 1.2; }
+    .osobnost--dvojice :global(.vstup--otazka .vstup__nazev) { font-size: 17px; }
   }
   .obraz-popisek { display: block; margin-top: var(--s-3); color: var(--ink-2); }
   /* „Pokračovat ve čtení“: tichý textový odkaz pod letopočty, vidět bez posouvání i na telefonu. */
