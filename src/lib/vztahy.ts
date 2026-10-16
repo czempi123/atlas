@@ -65,8 +65,8 @@ export function roleVztahu(v: Pick<TVztah, 'typ'>, smer: Smer, naDalku = false):
 }
 
 /** Neprázdné skupiny v pořadí, v jakém stojí na stránce. */
-export function skupinyVztahu<T>(vztahy: VztahOsoby<T>[]): SkupinaVztahu<T>[] {
-  const typ = (x: VztahOsoby<T>) => x.vztah.typ;
+export function skupinyVztahu<T, V extends VztahOsoby<T> = VztahOsoby<T>>(vztahy: V[]): { nazev: string; lide: V[] }[] {
+  const typ = (x: V) => x.vztah.typ;
   return [
     { nazev: 'Učitelé', lide: vztahy.filter((x) => typ(x) === 'ucitel' && x.smer === 'k') },
     { nazev: 'Žáci', lide: vztahy.filter((x) => typ(x) === 'ucitel' && x.smer === 'od') },

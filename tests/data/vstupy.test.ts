@@ -35,6 +35,13 @@ describe('vstupy do cest a otázek', () => {
     expect(s.otazky.map((o) => o.cislo)).toEqual([7]);
     expect(vstupyOsoby('platon', cesty, otazky)).toEqual({ cesty: [], otazky: [] });
   });
+
+  it('společný profil nabídne cesty a otázky všech svých osob, každou jednou', () => {
+    const spolecne = vstupyOsoby(['diogenes', 'epikuros'], cesty, otazky);
+    expect(spolecne.cesty.map((c) => c.cislo)).toEqual([6, 8]);
+    expect(spolecne.otazky.map((o) => o.cislo)).toEqual(vstupyOsoby('epikuros', cesty, otazky).otazky.map((o) => o.cislo));
+    expect(vstupyOsoby(['platon'], cesty, otazky)).toEqual({ cesty: [], otazky: [] });
+  });
 });
 
 // Skutečný obsah: každá cesta má filozofy z dat a ke každé cestě vede aspoň jeden profil.
@@ -42,7 +49,15 @@ const slozkaCest = new URL('../../src/content/cesty/', import.meta.url);
 const slozkaProfilu = new URL('../../src/content/osobnosti/', import.meta.url);
 const fm = (u: URL) => parse(readFileSync(u, 'utf8').split('---')[1]);
 const skutecne = readdirSync(slozkaCest).filter((s) => /^[a-z0-9-]+\.mdx$/.test(s)).map((s) => ({ slug: s.replace('.mdx', ''), ...fm(new URL(s, slozkaCest)) })) as CestaVstupu[];
-const profily = new Set(readdirSync(slozkaProfilu).filter((s) => /^[^_].*\.mdx?$/.test(s)).map((s) => fm(new URL(s, slozkaProfilu)).osoba as string));
+// Osoby se stránkou: hlavní osoba profilu i další osoby společného profilu (pole `dalsi`).
+const profily = new Set(
+  readdirSync(slozkaProfilu)
+    .filter((s) => /^[^_].*\.mdx?$/.test(s))
+    .flatMap((s) => {
+      const z = fm(new URL(s, slozkaProfilu));
+      return [z.osoba as string, ...((z.dalsi as string[] | undefined) ?? [])];
+    }),
+);
 
 describe('vstupy v atlasu', () => {
   for (const c of skutecne) {

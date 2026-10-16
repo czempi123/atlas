@@ -10,10 +10,10 @@ import { odstavce } from '../../lib/bloky';
 
 interface Props {
   hlasy: { osoba: TOsoba; myslenka: string; citat?: string }[];
-  /** id osob, které mají stránku /osobnost/<id>/ */
-  profily: Set<string>;
+  /** adresa stránky osoby, nebo undefined, když ji osoba nemá (adresaOsoby v src/lib/adresa-osoby.ts) */
+  adresa: (osoba: string) => string | undefined;
 }
-const { hlasy, profily } = Astro.props;
+const { hlasy, adresa } = Astro.props;
 ---
 <ol class="osa">
   {hlasy.map((h) => (
@@ -22,7 +22,7 @@ const { hlasy, profily } = Astro.props;
       <div class="hlas__text">
         <p class="hlas__roky t-popisek t-letopocet">{zivot(h.osoba)}</p>
         <h3 class="hlas__jmeno t-h3">
-          {profily.has(h.osoba.id) ? <a href={`/osobnost/${h.osoba.id}/`}>{h.osoba.jmeno}</a> : h.osoba.jmeno}
+          {adresa(h.osoba.id) ? <a href={adresa(h.osoba.id)}>{h.osoba.jmeno}</a> : h.osoba.jmeno}
         </h3>
         <div class="hlas__myslenka">{odstavce(h.myslenka).map((o) => <p set:html={o} />)}</div>
         {h.citat && <Citat id={h.citat} kompaktni />}

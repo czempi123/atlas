@@ -1,6 +1,9 @@
 ---
 // Blok „Doba a lidé“: generuje se z dat (lide, vztahy, mista), takže se nikdy nerozejde s mapou.
 // Mini osa se současníky, výřez mapy, učitelé a žáci, známí, vliv přes texty a kdo navazoval.
+// Společný profil předá další osoby (`dalsi`): vztahy obou se sloučí, vztah mezi nimi se nevypíše
+// (řekne ho úvodní věta) a u každého člověka stojí, ke komu ze dvojice vztah patří („učitel Kratéta“).
+// Použití v MDX: <DobaALide osoba={props.osoba} dalsi={props.dalsi}> úvodní věty </DobaALide>
 import type { TOsoba, TVztah } from '../../lib/schema';
 import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
 import { zivot } from '../../lib/casy';
@@ -9,30 +12,45 @@ import Mince from '../ui/Mince.astro';
 import MiniOsa from './MiniOsa.astro';
 import MiniMapa from './MiniMapa.astro';
 
-interface Props { osoba: TOsoba }
-const { osoba } = Astro.props;
-const vztahy = vztahyOsoby(osoba.id);
-const retezy = kdoNavazoval(osoba.id);
+interface Props { osoba: TOsoba; dalsi?: TOsoba[] }
+const { osoba, dalsi = [] } = Astro.props;
+const osoby = [osoba, ...dalsi];
+const dvojice = osoby.length > 1;
+const naStrance = new Set(osoby.map((o) => o.id));
+const vztahy = osoby.flatMap((ja) =>
+  vztahyOsoby(ja.id)
+    .filter((v) => !naStrance.has(v.druhy.id))
+    .map((v) => ({ ...v, ja })),
+);
+const retezy = osoby.flatMap((o) => kdoNavazoval(o.id));
 // Vliv přes texty a spor na dálku mají vlastní skupiny: „Znali se a přeli se“ smí stát jen nad lidmi,
 // kteří se potkali nebo se spolu přít mohli.
-const skupiny = skupinyVztahu(vztahy);
+const skupiny = skupinyVztahu<TOsoba, (typeof vztahy)[number]>(vztahy);
+const role = (v: (typeof vztahy)[number]) => {
+  const r = roleVztahu(v.vztah, v.smer, v.naDalku);
+  if (!dvojice) return r;
+  return v.vztah.typ === 'ucitel' ? `${r} ${v.ja.jmeno2 ?? v.ja.jmeno}` : `${v.ja.jmeno}: ${r}`;
+};
+const nadpis = dvojice
+  ? `S kým ${osoby.map((o) => o.jmeno).join(' a ')} žili`
+  : `S kým ${osoba.jmeno} žil${osoba.zena ? 'a' : ''}`;
 // Název oddílu: nadtitulek na stránce i položka v obsahu stránky (ObsahProfilu.astro).
 const NAZEV = 'Doba a lidé';
 const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 'teckovana', 'vliv-textem': 'carkovana', polemika: 'vlnovka' };
 ---
 <section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide" data-oddil={NAZEV} data-oddil-kotva="doba-a-lide">
   <p class="t-nadtitulek nadtitulek">{NAZEV}</p>
-  <h2 class="t-h2" id="doba-a-lide">S kým {osoba.jmeno} žil</h2>
+  <h2 class="t-h2" id="doba-a-lide">{nadpis}</h2>
   <div class="doba__uvod ctenarsky"><slot /></div>
 
   <div class="doba__mrizka">
     <div class="doba__osa">
       <h3 class="t-ovladani-l">Současníci</h3>
-      <MiniOsa osoba={osoba} />
+      <MiniOsa osoba={osoba} dalsi={dalsi} />
     </div>
     <div class="doba__mapa">
-      <h3 class="t-ovladani-l">Kde žil</h3>
-      <MiniMapa osoba={osoba} />
+      <h3 class="t-ovladani-l">{dvojice ? 'Kde žili' : osoba.zena ? 'Kde žila' : 'Kde žil'}</h3>
+      <MiniMapa osoba={osoba} dalsi={dalsi} />
     </div>
   </div>
 
@@ -41,14 +59,14 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
       <div>
         <h3 class="t-ovladani-l">{s.nazev}</h3>
         <ul class="lide">
-          {s.lide.map(({ vztah, druhy, smer, naDalku }) => (
+          {s.lide.map((v) => (
             <li>
-              <Mince osoba={druhy} varianta="tint" velikost={40} />
+              <Mince osoba={v.druhy} varianta="tint" velikost={40} />
               <span class="lide__text">
-                <span class="lide__jmeno">{druhy.jmeno}</span>
+                <span class="lide__jmeno">{v.druhy.jmeno}</span>
                 <span class="t-popisek">
-                  <span class={`cara cara--${TYP_CARY[vztah.typ]}`} aria-hidden="true"></span>
-                  {roleVztahu(vztah, smer, naDalku)}{vztah.poznamka ? ` · ${vztah.poznamka}` : ''} · {zivot(druhy)}
+                  <span class={`cara cara--${TYP_CARY[v.vztah.typ]}`} aria-hidden="true"></span>
+                  {role(v)}{v.vztah.poznamka ? ` · ${v.vztah.poznamka}` : ''} · {zivot(v.druhy)}
                 </span>
               </span>
             </li>
@@ -63,7 +81,7 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
       <h3 class="t-ovladani-l">Kdo navazoval</h3>
       <ul>
         {retezy.map((r) => (
-          <li>{r.lide.map((o, i) => <>{i > 0 && <span class:list={['sipka', { 'sipka--tradice': r.tradovany[i - 1] }]} title={r.tradovany[i - 1] ? 'učitel a žák podle tradice' : 'učitel a žák'}>{r.tradovany[i - 1] ? '⇢' : '→'}</span>}<span class:list={{ ja: o.id === osoba.id }}>{o.jmeno}</span></>)}</li>
+          <li>{r.lide.map((o, i) => <>{i > 0 && <span class:list={['sipka', { 'sipka--tradice': r.tradovany[i - 1] }]} title={r.tradovany[i - 1] ? 'učitel a žák podle tradice' : 'učitel a žák'}>{r.tradovany[i - 1] ? '⇢' : '→'}</span>}<span class:list={{ ja: naStrance.has(o.id) }}>{o.jmeno}</span></>)}</li>
         ))}
       </ul>
       {retezy.some((r) => r.tradovany.some(Boolean)) && <p class="t-popisek legenda">Čárkovaná šipka ⇢: učitel a žák podle antické tradice.</p>}
