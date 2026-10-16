@@ -5,7 +5,9 @@
 # domyšlená odpověď („by mohl“); Aristotelova odpověď na proměnlivost zvyků je jeho vlastní (EN V, 7), „některé“
 # nejmenuje, proto text netvrdí, že odpovídal kynikům. Aristotelés mluví o obci a přátelích, ne o rodině a původu;
 # věta o obci, která nejsou zdi, je výklad z Politiky III, 3 (obec je společenství a jeho uspořádání).
-# Pořadí na telefonu: námitky, na které Kratés odpovídá (zvíře, nebo bůh), řekne už scéna.
+# Pořadí na telefonu: námitky, na které Kratés odpovídá (zvíře, nebo bůh; dobrým nás dělá zvyk), řekne už scéna.
+# Odpověď na zvyk ve druhém argumentu Kratéta je výklad cviku, který Diogenés Laertios připisuje Diogenovi
+# (DL VI, 70–71, pramen dl-vi-69, citát dl-vi-71: atlet, flétnista, cvik v tom, co je podle přírody); strana tu mluví za kyniky, Kratétův výrok to není.
 druh: spor
 obdobi: 2
 nadtitulek: Spor
@@ -14,8 +16,8 @@ scena: >-
   Aristotelés kyniky znal a jeden jejich vtip cituje. A Hipparchiin bratr chodil do Aristotelovy školy, než přešel ke Kratétovi.
 
 
-  Aristotelés tvrdil, že kdo žije bez obce, je buď zvíře, nebo bůh. Kynici, že zvyky obcí se liší město od města
-  a člověka z nikoho nedělají.
+  Aristotelés tvrdil, že kdo žije bez obce, je buď zvíře, nebo bůh, a že dobrým se člověk stává zvykem.
+  Kynici, že zvyky obcí se liší město od města a člověka z nikoho nedělají.
 
 
   Kdo z nich má pravdu, rozhodni sám.
@@ -30,7 +32,7 @@ strany:
         Obec, kterou může někdo vypálit, není to, na čem stojí jeho život.
       - >-
         Lidé platí nejvíc tomu, kdo jim lichotí, a perou se o drobné a o slávu. Že se něco všude dělá, ještě neznamená, že je to dobré.
-        Každý zvyk se dá vyzkoušet: k čemu je a komu slouží?
+        I kynik se cvičí celý život, jako atlet nebo flétnista. Cvičí se ale v tom, co člověk opravdu potřebuje, ne v tom, co se v obci dělá.
       - >-
         Aristotelovi by Kratés mohl odpovědět: bez obce nejsem zvíře ani bůh. Jsem spoluobčan Diogena.
         Své společenství mám, jen jsem si ho vybral podle toho, jak lidé žijí, ne podle toho, kde se narodili.
@@ -48,4 +50,4 @@ strany:
         Aristotelés znal i námitku, že příroda je všude stejná a zvyky se mění. Některým se podle něj zdá, že spravedlivé je všechno jen podle zákona,
         protože oheň pálí stejně u nás i v Persii. Odpověděl, že to platí jen do jisté míry.
         Pravá ruka je od přírody silnější, a přece se každý může naučit obouruč. Že se něco mění, ještě neznamená, že je to jen úmluva.
-zdroje: [dl-vi-85, arrianos-anabaze-i-9, dl-vi-104, aristoteles-politika-i, aristoteles-politika-iii, aristoteles-etika-ii, aristoteles-etika-v, aristoteles-rhetorika-iii]
+zdroje: [dl-vi-85, dl-vi-69, arrianos-anabaze-i-9, dl-vi-104, aristoteles-politika-i, aristoteles-politika-iii, aristoteles-etika-ii, aristoteles-etika-v, aristoteles-rhetorika-iii]

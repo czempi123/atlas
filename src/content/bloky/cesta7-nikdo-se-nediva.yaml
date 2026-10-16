@@ -12,7 +12,7 @@ scena: >-
 otazka: Je to kynický čin, nebo jiná nadutost?
 moznosti:
   - { id: kynicky, text: "Kynický čin: ukazuje, že na drahých věcech nezáleží." }
-  - { id: nadutost, text: "Jiná nadutost: chce, aby ho viděli." }
+  - { id: nadutost, text: "Jiná nadutost: potřebuje dokázat, že je nad věcí." }
   - { id: zalezi, text: "Nedá se to poznat, záleží na tom, proč to dělá." }
 podminky:
   - id: bez-divaku

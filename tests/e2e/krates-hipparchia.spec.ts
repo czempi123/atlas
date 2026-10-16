@@ -47,6 +47,8 @@ for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska
       await expect(atributy).toHaveCount(2);
       await expect(atributy.nth(0)).toContainText('Proč mošna?');
       await expect(atributy.nth(1)).toContainText('Proč člunek?');
+      await expect(atributy.nth(1)).toContainText('Hipparchia si vybrala filozofii.');
+      await expect(atributy.nth(1)).not.toContainText('dala vzdělání');
       await expect(atributy.locator('.mince')).toHaveCount(2);
       await expect(hlavicka.locator('.obraz-popisek')).toContainText('nizozemský rytec');
 

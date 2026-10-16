@@ -105,6 +105,8 @@ test('cesta 7: průchod s odpověďmi na telefonu, zastánci všech Voleb, záv�
   const argumenty = spor.getByRole('region', { name: 'Argumenty obou stran' });
   await expect(argumenty).toContainText('Jsem spoluobčan Diogena.');
   await expect(argumenty).toContainText('Pravá ruka je od přírody silnější');
+  await expect(argumenty).toContainText('I kynik se cvičí celý život, jako atlet nebo flétnista.');
+  await expect(spor).toContainText('dobrým se člověk stává zvykem');
   await expect(argumenty).not.toContainText(/rodin|narodil ses tam|patříš tam/i);
   await spor.locator('.skala').getByRole('radio').nth(3).check({ force: true });
   await spor.getByRole('button', { name: 'Zapsat konečnou polohu' }).click();
@@ -115,6 +117,9 @@ test('cesta 7: průchod s odpověďmi na telefonu, zastánci všech Voleb, záv�
   const text5 = page.locator('.krok__obsah > .ctenarsky');
   await expect(text5.locator('.citat')).toHaveCount(3);
   await expect(text5).toContainText('Vzdor ještě není svoboda.');
+  await expect(text5).toContainText('Kdo dělá opak jen proto, aby se vymezil');
+  await expect(text5).toContainText('Epiktétův kynik se má stydět za to, co je špatné.');
+  await expect(page.locator('#cesta7-nikdo-se-nediva')).toContainText('potřebuje dokázat, že je nad věcí');
   const zmena = page.locator('#cesta7-nikdo-se-nediva');
   await zmena.getByRole('radio').first().check({ force: true });
   await zmena.getByRole('button', { name: 'Rozhodnuto' }).click();
@@ -140,6 +145,7 @@ test('cesta 7: průchod s odpověďmi na telefonu, zastánci všech Voleb, záv�
   const text6 = page.locator('.krok__obsah');
   await expect(text6).toContainText('Čtvrtina lidí neustoupila ani jednou.');
   await expect(text6).toContainText('S většinou pak šlo jen asi pět odpovědí ze sta.');
+  await expect(text6).toContainText('Stačil k tomu kdokoli, kdo nahlas řekl, co vidí.');
   await expect(text6).toContainText('Pokus neříká, kdo je slabý. Říká, jak těžké je být jediný.');
   await page.locator('.cesta-lista').getByRole('link', { name: /Další krok/ }).click();
   await expect(page).toHaveURL(`${CESTA7}7/`);
@@ -150,7 +156,9 @@ test('cesta 7: průchod s odpověďmi na telefonu, zastánci všech Voleb, záv�
   for (const veta of [
     'Jestli jsi řekl, že jí, máš na své straně Hipparchii samotnou',
     'Jestli jsi řekl, že rodičům, stojí za tebou Aristotelés.',
-    'Jestli jsi řekl, že Kratétovi, máš Platóna.',
+    'Jestli jsi řekl, že Kratétovi, máš Sókrata.',
+    'Ne podle toho, co si myslí všichni ostatní.',
+    'Kratés ale za Hipparchii nerozhodl.',
     'Jestli jsi řekl, že nikomu z nich samotnému, máš Aristotela podruhé.',
     'Jestli je to podle tebe kynický čin, máš Epiktéta',
     'Jestli jiná nadutost, máš Platóna i Sókrata.',

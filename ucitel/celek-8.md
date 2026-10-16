@@ -99,7 +99,7 @@ Do studentského textu řádek s pomocí nedáváme: profil krizové téma neote
 
 Osm kroků: Hipparchiina volba a Kratétova podmínka (Volba „Komu patřilo to rozhodnutí?“), kynická příroda proti zvyku a proti dnešnímu „buď sám sebou“ (Roztřiď bez vlastní karty), Kratétův ceník a dým (Odkryj), Spor Kratés × Aristotelés, slabé místo kynika (Sókratés, Platón, Epiktétos; Změň jednu věc „Nikdo se nedívá“), Aschův pokus s kresbou Třetí čára, zastánci všech odpovědí a závěr s výzvou Nejdřív ty. Za pár dní nabídne deník Návrat: Císařovy nové šaty.
 
-Co si cesta domýšlí a říká to: Kratés a Aristotelés se podle žádného pramene nepotkali, Spor to ve scéně říká a třetí Kratétův argument je domyšlená odpověď („by mohl odpovědět“). Aristotelova odpověď na proměnlivost zvyků (Etika Nikomachova V, 7) mluví o „některých“ a kyniky nejmenuje. Druhá podmínka ve Změň jednu věc (hosté se na Diogenovo číslo těší) je náš krok. V posledním kroku dostává odpověď „Kratétovi“ za spojence Platóna: v Ústavě vládnou obci ti, kdo nejvíc vědí. To je výklad Ústavy, ne Platónova věta o sňatcích.
+Co si cesta domýšlí a říká to: Kratés a Aristotelés se podle žádného pramene nepotkali, Spor to ve scéně říká a třetí Kratétův argument je domyšlená odpověď („by mohl odpovědět“). Aristotelova odpověď na proměnlivost zvyků (Etika Nikomachova V, 7) mluví o „některých“ a kyniky nejmenuje. Druhá podmínka ve Změň jednu věc (hosté se na Diogenovo číslo těší) je náš krok. V předposledním kroku dostává odpověď „Kratétovi“ za spojence Sókrata z Platónova Kritóna (47b–d): atlet má cvičit a jíst podle lékaře nebo trenéra, který tomu rozumí, ne podle mínění všech. Je to Sókratova věta o tom, komu dát na radu, ne o sňatcích; cesta ji nepřenáší dál, než sahá.
 
 Výhrůžka z DL VI, 96 v cestě není (oddíl výše). Rodiče v ní nejsou záporné postavy: mají strach a hledají pomoc u člověka, kterému věří.
 
@@ -126,7 +126,7 @@ Pointa je poslední věta: císař ví, a jde dál. Návrat se proto ptá, kdo v
 
 ## Otázky do hodiny k cestě
 
-- Hipparchiini rodiče poprosili Kratéta, ať jí to rozmluví. Udělali chybu? A co udělal Kratés s rozhodnutím, které mu nabídli?
+- Hipparchiini rodiče poprosili Kratéta, ať jí to rozmluví. Udělali chybu? A co udělal Kratés, když ho požádali, ať jí to rozmluví?
 - Je „žij podle přírody“ totéž co „buď sám sebou“? V čem se liší?
 - Jak by vypadal Kratétův ceník dnes? Za co se platí nejvíc a čím se platí (penězi, časem, pozorností)? Bez jmen lidí ze školy.
 - Kdy je vzdor jen jiná nadutost? Dá se to poznat zvenku?
