@@ -1,0 +1,51 @@
+# Spor · cesta 7 „Čí život vlastně žiju?“, krok 4: Kratés × Aristotelés „Svazují mě zvyky, nebo mě dělají člověkem?“
+# Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Spor: Kratés × Aristotelés a Citlivá místa (Jádro: Spor).
+# Že spolu mluvili, žádný pramen neříká: scéna to říká a smyšlené setkání nepíše. Aristotelés kyniky znal
+# (Rétorika III, 10, 1411a24–25), Hipparchiin bratr chodil do jeho školy (DL VI, 94–95). Třetí argument Kratéta je
+# domyšlená odpověď („by mohl“); Aristotelova odpověď na proměnlivost zvyků je jeho vlastní (EN V, 7), „některé“
+# nejmenuje, proto text netvrdí, že odpovídal kynikům. Aristotelés mluví o obci a přátelích, ne o rodině a původu;
+# věta o obci, která nejsou zdi, je výklad z Politiky III, 3 (obec je společenství a jeho uspořádání).
+# Pořadí na telefonu: námitky, na které Kratés odpovídá (zvíře, nebo bůh), řekne už scéna.
+druh: spor
+obdobi: 2
+nadtitulek: Spor
+scena: >-
+  Kratés a Aristotelés učili v Athénách ve stejných letech. Jestli spolu mluvili, nevíme.
+  Aristotelés kyniky znal a jeden jejich vtip cituje. A Hipparchiin bratr chodil do Aristotelovy školy, než přešel ke Kratétovi.
+
+
+  Aristotelés tvrdil, že kdo žije bez obce, je buď zvíře, nebo bůh. Kynici, že zvyky obcí se liší město od města
+  a člověka z nikoho nedělají.
+
+
+  Kdo z nich má pravdu, rozhodni sám.
+otazka: Svazují mě zvyky, nebo mě dělají člověkem?
+strany:
+  - osoba: krates
+    postoj: Zvyky mě člověkem nedělají.
+    argumenty:
+      - >-
+        Kratétovy Théby srovnalo se zemí Alexandrovo vojsko. Když mu Alexandr později nabízel, že je obnoví, Kratés se zeptal proč:
+        přijde jiný Alexandr a zboří je znovu. Jeho vlastí je podle něj neslavnost a chudoba a ty mu osud nevezme.
+        Obec, kterou může někdo vypálit, není to, na čem stojí jeho život.
+      - >-
+        Lidé platí nejvíc tomu, kdo jim lichotí, a perou se o drobné a o slávu. Že se něco všude dělá, ještě neznamená, že je to dobré.
+        Každý zvyk se dá vyzkoušet: k čemu je a komu slouží?
+      - >-
+        Aristotelovi by Kratés mohl odpovědět: bez obce nejsem zvíře ani bůh. Jsem spoluobčan Diogena.
+        Své společenství mám, jen jsem si ho vybral podle toho, jak lidé žijí, ne podle toho, kde se narodili.
+        A podobat se bohům, kteří nic nepotřebují, je pro kynika cíl, ne urážka.
+  - osoba: aristoteles
+    postoj: Bez obce a zvyků se člověkem nestanu.
+    argumenty:
+      - >-
+        Člověk je od přírody tvor obce. Kdo nedokáže žít s druhými, nebo nic nepotřebuje, není částí obce: je to zvíře, nebo bůh.
+        Obec přitom nejsou zdi, které může někdo zbořit. Jsou to lidé, kteří spolu žijí podle společného uspořádání.
+      - >-
+        Zvyk není nepřítel přírody. Ctnosti v nás nevznikají přírodou ani proti ní: od přírody jsme schopni je přijmout a dokonalými nás dělá zvyk.
+        Stavitelem se člověk stane stavěním a spravedlivým tím, že jedná spravedlivě.
+      - >-
+        Aristotelés znal i námitku, že příroda je všude stejná a zvyky se mění. Některým se podle něj zdá, že spravedlivé je všechno jen podle zákona,
+        protože oheň pálí stejně u nás i v Persii. Odpověděl, že to platí jen do jisté míry.
+        Pravá ruka je od přírody silnější, a přece se každý může naučit obouruč. Že se něco mění, ještě neznamená, že je to jen úmluva.
+zdroje: [dl-vi-85, arrianos-anabaze-i-9, dl-vi-104, aristoteles-politika-i, aristoteles-politika-iii, aristoteles-etika-ii, aristoteles-etika-v, aristoteles-rhetorika-iii]

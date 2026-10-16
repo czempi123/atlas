@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 7 „Čí život vlastně žiju?“, krok 6: Aschův pokus, odpověď před výsledky.
+# Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Nový případ (krok 6): třetí čára a Citlivá místa (Nový případ).
+# Kresba „Třetí čára“ stojí nad blokem a výsledek pokusu neprozrazuje; text s výsledky je pod blokem na kotvě
+# #co-vyslo (vlastní Kam dál). Zpětná vazba neříká, jak pokus dopadl, a nikoho nenazývá ovcí:
+# jít s většinou je poctivá úvaha (většina ustoupivších si myslela, že se mýlí oni). Zastánci jsou v kroku 7.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Co řekneš, až na tebe přijde řada?
+moznosti:
+  - text: Řeknu, co vidím.
+    tah: věřit svým očím
+    zpetna: >-
+      Věříš očím víc než skupině. Zkus si ale představit dvanáct kol, ve kterých se všichni pokaždé shodnou proti tobě.
+      Zůstaneš u svého v každém? A podle čeho poznáš, že se nemýlíš ty?
+  - text: Řeknu totéž co ostatní.
+    tah: jít s většinou
+    zpetna: >-
+      Dáváš na skupinu: když šest lidí vidí něco jiného, možná se mýlíš ty. Tak se člověk učí od druhých celý život a hloupé to není.
+      Zeptej se ale, kdy ta úvaha přestává platit. Šel bys s nimi, i kdybys věděl jistě, že se mýlí?
+  - text: Zaváhám a řeknu, že nevím.
+    tah: nechat to otevřené
+    zpetna: >-
+      Nechceš lhát a nechceš se postavit proti všem. Jenže i „nevím“ by v učebně zaznělo nahlas a všichni by ho slyšeli.
+      Co by ti pomohlo říct, co vidíš?
+  - text: Řeknu, co vidím, když to řekne ještě někdo.
+    tah: počkat na spojence
+    zpetna: >-
+      Čekáš na spojence. Jeden hlas navíc by ti dodal odvahu, a to je dobře známá věc.
+      Co když ale nepřijde? Zůstane pak tvoje odpověď tvoje?
+zdroje: [asch-1951, asch-1956]

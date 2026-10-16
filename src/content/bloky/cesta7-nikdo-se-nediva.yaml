@@ -1,0 +1,46 @@
+# Změň jednu věc · cesta 7 „Čí život vlastně žiju?“, krok 5: Diogenés na Platónových kobercích, „Nikdo se nedívá“.
+# Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Slabé místo kynika (DL VI, 8 a 26; Epiktétos, Rozpravy III, 22,
+# 19, 23–26 a 50) a Citlivá místa (Jádro: slabé místo kynika). Druhá podmínka (čin, na který se hosté těší)
+# je náš krok. Oddíl pod blokem je domněnka, proto nadpis „Co by na to řekli“. Možnosti dávají smysl v každé
+# podmínce a posun/stejne neusuzují z možnosti, kterou student zvolil. Hodnotí se důvody, ne povaha kynika
+# ani studenta.
+druh: zmena
+obdobi: 2
+nadtitulek: Změň jednu věc
+scena: >-
+  Diogenés stojí v Platónově domě na drahém koberci a šlape po něm. Hosté se dívají.
+otazka: Je to kynický čin, nebo jiná nadutost?
+moznosti:
+  - { id: kynicky, text: "Kynický čin: ukazuje, že na drahých věcech nezáleží." }
+  - { id: nadutost, text: "Jiná nadutost: chce, aby ho viděli." }
+  - { id: zalezi, text: "Nedá se to poznat, záleží na tom, proč to dělá." }
+podminky:
+  - id: bez-divaku
+    prepinac: Nikdo se nedívá
+    zmena: >-
+      Teď si představ, že hosté odešli a Platón taky. Diogenés je v domě sám, nikdo ho nevidí a nikdo se to nedozví.
+      Po koberci šlape stejně.
+    posun: >-
+      Tvoje odpověď se změnila, když zmizeli diváci. Rozhodlo tedy, pro koho to dělá.
+      Poznal by to ale někdo zvenku, nebo to ví jen Diogenés sám?
+    stejne: >-
+      Diváci tvou odpověď nezměnili. Soudíš tedy podle něčeho jiného než podle toho, kdo se dívá.
+      Podle čeho: podle činu samého, nebo podle toho, co Diogenés chce?
+  - id: pokazde
+    prepinac: Hosté to už čekají
+    zmena: >-
+      Teď si představ, že Diogenés tohle dělá v každém bohatém domě, kam ho pozvou. Hosté o tom vědí a těší se na to.
+    posun: >-
+      Tvoje odpověď se změnila, když se z činu stalo číslo, na které se hosté těší. Co se tím změnilo: čin, nebo to, komu slouží?
+    stejne: >-
+      Ani opakování tvou odpověď nezměnilo. Je podle tebe rozdíl mezi tím udělat něco jednou a dělat z toho svoje číslo?
+coUdelal:
+  osoba: platon
+  nadpis: Co by na to řekli
+  text: >-
+    Platón by nejspíš řekl, že kdo předvádí, jak nadutý není, ukazuje jinou nadutost. Takový čin míří na druhé, i když se zrovna nikdo nedívá.
+
+
+    Epiktétos by se ptal jinak: ne co Diogenés dělá, ale co ho k tomu vede. Kynik je podle něj zvěd, který lidem ukazuje,
+    že hledají dobro tam, kde není. Plášť a hůl k tomu nestačí, nejdřív musí mít v pořádku to, co v něm vládne.
+zdroje: [dl-vi-20, dl-vi-8, epiktetos-rozpravy-iii-22]

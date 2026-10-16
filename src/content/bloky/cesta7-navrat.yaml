@@ -1,0 +1,21 @@
+# Návrat · cesta 7 „Čí život vlastně žiju?“: Císařovy nové šaty, i s koncem, který se obvykle nevypráví.
+# Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Návrat a Citlivá místa (Návrat). Jiný druh než nový případ
+# cesty (pohádka, ne studie). Andersen (1837) čten v dánském originále; pramen patří do listu pro učitele,
+# ve studentském textu nejsou prameny ani čísla. Případ se ptá, kdo v průvodu žije čí život, ne „buď jako to dítě“:
+# student stojí v průvodu, ne na místě dítěte.
+druh: navrat
+obdobi: 2
+cesta: ci-zivot-vlastne-ziju
+pravidlo: cesta7-moje-pravidlo
+nazev: Císařovy nové šaty
+scena: >-
+  Představ si, že jdeš v průvodu z pohádky o císařových nových šatech. Látku prý neuvidí nikdo, kdo je hloupý
+  nebo se nehodí do svého úřadu. Nikdo proto nepřizná, že nic nevidí, dokud malé dítě neřekne, že císař nemá nic na sobě.
+
+
+  Lidé si to šeptají, až to volá celé město. Císaře zamrazí, protože mu připadá, že mají pravdu.
+  Řekne si ale, že teď musí průvod vydržet, a komoří za ním dál nesou vlečku, která tam není. Jdeš kousek za nimi.
+po:
+  ano: Co tvoje pravidlo říká ve chvíli, kdy už to všichni vědí, a průvod přesto jde dál?
+  upravim: Co mu chybělo pro chvíli, kdy pravdu řekl někdo jiný a ty se jen můžeš přidat?
+  nevim: "Čí život podle tebe žije císař v poslední větě: svůj, nebo průvodu?"
