@@ -733,3 +733,19 @@ Otevřené nebo nové:
 | Mladí pečující | Českou metodiku jsem nedohledal; list pro učitele se drží pravidla PSHE (neptat se na osobní věci) a věty „péče o druhé není cizí život“. | Při revizi celku případně doplnit. |
 | Jména v Době a lidech nejsou odkazy | Podklady čekaly, že se Kratés na Diogenově stránce stane odkazem na společný profil. Doba a lidé ale jména neodkazuje na žádné stránce. Na profil vede Mapa a čas (karta a „Otevřít portrét“) a Lidé a směry. | Rozhodnout v revizi nebo ve větvi rozhraní: odkazy v Době a lidech by se týkaly všech profilů. |
 | Linka první psychické pomoci 116 123 | V listu pro učitele podle Media Guide NÚDZ (celek 6) a adresáře pomoci MV ČR (výsledek hledání 16. 10. 2026); stránku linky jsem neotevřel. | Před vydáním listu ověřit na webu linky. |
+
+### Po P8 (cesta 7, kresba Třetí čára a hlas Hipparchie, 16. 10. 2026)
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Platón jako spojenec odpovědi „Kratétovi“ (krok 7) | Věta „V jeho Ústavě vládnou obci ti, kdo nejvíc vědí“ je obecný výklad Ústavy (V, 473c–d; VII, 519c–520d), v podkladech celku 8 není. | Při revizi ověřit místo a formulaci, případně nahradit jiným doloženým spojencem. |
+| Spojenec sedí v kresbě čtvrtý | Asch 1951 podle podkladů říká jen, že spojenec mluvil před nezasvěceným; jeho místo v řadě jsem neověřil. Kresba to má jako náš obraz (komentář v `src/lib/treti-cara.ts`). | Nic, pokud revize nenajde v Aschovi jiné místo. |
+| Délky čar v kresbě | Z podkladů (Asch 1956, Tabulka 1, kolo 1: 3; 3¾, 4¼, 3 palce); tabulku samu jsem neviděl. | Při revizi porovnat s monografií. |
+| „Od ženy se tehdy čekalo, že svůj čas stráví doma u tkalcovského stavu“ (hlas Hipparchie) | Stejná obecná věta jako v kapitole Hostina profilu (bod z P7), opřená jen o Hipparchiino „čas, který jsem měla strávit u stavu“. | Doložit spolu s bodem z P7 (Xenofón, Oikonomikos VII), nebo zmírnit. |
+| Detail „čas u stavu dala vzdělání“ v celku | Citát `dl-vi-98` je v celku dvakrát (kapitola Hostina, hlas otázky 1); tentýž detail ale nese i atribut „Proč člunek?“ v hlavičce profilu a myšlenka hlasu ho uvádí. | Rozhodnout při revizi, jestli atribut přepsat jinak (třeba člunek jako věc, kterou odložila). |
+| „Kynický plášť tehdy nosilo mnoho lidí“ (krok 5) | Opřeno o Epiktétovy poznámky o kynicích jeho doby (Rozpravy III, 22, 50 a 80), ne o číslo. | Nic; při revizi hlídat, aby věta nezněla jako statistika. |
+| „Buď sám sebou“ se objevilo „až o dva tisíce let později“ (krok 2) | SEP „Authenticity“: ideál autenticity vzniká v 17. a 18. století; od Kratéta je to asi dva tisíce let. | Nic. |
+| Antisthenés jako Diogenův učitel (kroky 3 a 5) | Tradice podle DL VI; vztah v datech jsem v P8 neotevíral. | Při revizi ověřit vztah Antisthenés → Diogenés ve `vztahy.yaml`. |
+| Konec Andersenovy pohádky a otcova věta | V listu pro učitele podle podkladů (čteno dánsky v P6); v Návratu bez pramene. | Nic. |
+| Bond a Smith | V listu pro učitele jen přes Franzena a Madera, rok a rozsah metaanalýzy jsem neověřoval. | Nic, pokud učitel nechce číslo. |
+

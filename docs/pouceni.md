@@ -90,4 +90,5 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Studentské věty hlídají testy přesným zněním. Než opravíš větu, najdi ji v `tests/` (`grep -rn`) a test uprav v tomtéž commitu. Věta s jednopísmennou předložkou má v sestavené stránce nezlomitelnou mezeru: `toContainText` ji snese, `textContent.includes` ne. Výpis nezkracuj: průchod cesty bez odkrytí hlídá věty každého kroku až na konci souboru (`cesta8.spec.ts:314`).
 - Příkaz poslaný na autorův Mac musí skončit do minuty. `npm test` a sestavení pouštěj na pozadí s výstupem do souboru a na výsledek se ptej zvlášť.
 - Text, který skládá JavaScript (popis pod kresbou), plugin pro nezlomitelné mezery nevidí: doplňuje je rám `Kresba.svelte`. Vzor v testu, který začíná `^`, proto píše za jednopísmennou předložkou `\s`.
+- Zkratka `animation` bez jména animace (jméno přijde zvlášť pro každý prvek) se při sestavení zminifikuje na `animation: none`: piš rozepsané vlastnosti (`animation-duration` a další).
 - `scripts/kontrola-fokus.mjs` ohlásí stránce klávesu sám (stránka dorovnává jen po fokusu z klávesnice): pole pod lištou, které hlásí, už není planý poplach.

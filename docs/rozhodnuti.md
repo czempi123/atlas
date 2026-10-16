@@ -4,6 +4,22 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 16. 10. 2026: Cesta 7, kresba Třetí čára a hlas Hipparchie (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všech pět řádků odpovědí prázdných: platí doporučení z podkladů a z oddílu Po P7. | Pravidlo z 4. 10. 2026 (bez mezikroku schvalování). |
+| Cesta 7 má osm kroků podle Návrhu kroků v podkladech; zastánci (krok 7) a závěr (krok 8) jsou dva kroky, nový případ a zastánci taky. Čas 30 minut (`slova-cesta.mjs`: 3 427 slov, 29,3 minuty). | Poučení z celku 7: pod nadpisem případu student zastánce nenajde. |
+| Vstup říká Kratétovu podmínku citátem `dl-vi-96-zenich` (v celku poprvé; profil ji má nepřímou řečí). Výbava se nevyjmenovává, plášť a hůl ukazuje jen rytina a její popisek. Výhrůžka z DL VI, 96 nikde. | Pramen má σκευή, ne seznam věcí; citlivá místa v podkladech. |
+| Roztřiď „Kdo to po mně chce?“ (Tělo · Druzí · Já) je bez vlastní karty. | Pravidlo 6: vlastní karta by byla pole na psaní o rodině, víře nebo vztahu. |
+| Spor: postoje „Zvyky mě člověkem nedělají.“ × „Bez obce a zvyků se člověkem nestanu.“ Na Kratétovy vypálené Théby odpovídá Aristotelés větou, že obec nejsou zdi, ale lidé a jejich uspořádání (výklad z Politiky III, 3). | Každá strana odpoví na nejsilnější námitku druhé; Kratétova domyšlená odpověď stojí jako „by mohl odpovědět“. |
+| Krok 5 má tři výtky v pořadí Sókratés, Platón (verze „Kolik nadutosti… ukazuješ“), Epiktétos (III, 22, 50). Změň jednu věc má dvě podmínky: Nikdo se nedívá a Hosté to už čekají (náš krok); oddíl „Co by na to řekli“. Věta „Ze všech tří výtek plyne totéž“ je naše, ne jejich. | Rebelie není ctnost (pravidlo 3); co s příběhem děláme my, nepřipisujeme filozofům. |
+| Krok 6: kresba nad Volbou, Volba vede vlastním Kam dál na `#co-vyslo`; čtvrtá možnost „Řeknu, co vidím, když to řekne ještě někdo“. Výsledky slovy, ne procenty (kromě „asi pět odpovědí ze sta“). | Kresba výsledek neprozrazuje; čtvrtá možnost dá slovo tomu, kdo by čekal na spojence. |
+| Krok 7: odpověď „Kratétovi“ má spojence Platóna (v Ústavě vládnou ti, kdo nejvíc vědí) a rodiče z příběhu; ostatní odpovědi Aristotela, Epiktéta, Sókrata a Asche. | Spojenec má být jiný myslitel než kynik; podklady pro tuhle možnost nabízely jen Kratéta. |
+| Hlas Hipparchie: odpověď „kdo určil, kam má tvůj čas patřit“, bez „pro sebe“; myšlenka bez nápadníků (ty už nesou profil a krok 1). Pořadí podle narození dává Hipparchii za Epikúra. | Citlivá místa (pečující student); detail nejvýš dvakrát v celku. |
+| Hlavička dvojice na telefonu: cesta a otázka vedle sebe nad deskou, deska 2 : 1, titulek 34 px; délka cesty a šipky skryté. Začátek prvního odstavce na 732 px (lišta 772). | Zadání: upravit rozvržení, ne test; tlačítka pod sebou odsunula odstavec na 883 px. |
+| Kresba Třetí čára: osm postav, student předposlední, spojenec čtvrtý (náš obraz), bez obličejů; délky čar z prvního kola Asche 1956. Animace má rozepsané vlastnosti. | Asch nezasvěceného posadil předposledního; zkratka `animation` bez jména se zminifikovala na `none`. |
+
 ## 16. 10. 2026: Společný profil Kratéta a Hipparchie (P7)
 
 | Rozhodnutí | Důvod |
