@@ -154,13 +154,13 @@ test('zdvoj čtverec: stojí v kapitole 02 za úhlopříčkami, pod blokem Odkry
   await expect(kresba).not.toHaveClass(/\bblok\b/);
 });
 
-test('dílna bloků: oddíl Kresby ukáže všech deset kreseb', async ({ page }) => {
+test('dílna bloků: oddíl Kresby ukáže všech jedenáct kreseb', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/dilna/bloky/');
   const oddil = page.locator('section[aria-labelledby="h-kresby"]');
   await expect(oddil.getByRole('heading', { name: 'Kresby s pohybem' })).toBeVisible();
   const kresby = oddil.locator('figure.kresba');
-  await expect(kresby).toHaveCount(10);
-  await expect(kresby.locator('.kresba__nazev')).toHaveText(['Dva pohledy do jeskyně', 'Cesta ven', 'Stejné šaty, jiné světlo', 'Stejný vítr', 'Roztrhni kartu', 'Kdy je dost?', 'Zdvoj čtverec', 'Kde je střed?', 'Zrcadlo času', 'Loď po prknech']);
-  await expect(kresby.locator('svg.kresba__platno')).toHaveCount(10);
+  await expect(kresby).toHaveCount(11);
+  await expect(kresby.locator('.kresba__nazev')).toHaveText(['Dva pohledy do jeskyně', 'Cesta ven', 'Stejné šaty, jiné světlo', 'Stejný vítr', 'Roztrhni kartu', 'Kdy je dost?', 'Zdvoj čtverec', 'Kde je střed?', 'Zrcadlo času', 'Loď po prknech', 'Třetí čára']);
+  await expect(kresby.locator('svg.kresba__platno')).toHaveCount(11);
 });
