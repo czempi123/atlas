@@ -17,5 +17,7 @@ const { titulek = 'Dvě velké myšlenky' } = Astro.props;
     .myslenky__mrizka { grid-template-columns: 1fr 1fr; }
     /* Třetí myšlenka (společný profil: dvě Kratétovy, jedna Hipparchiina) jde přes obě kolony, ne do půlky řádku. */
     .myslenky__mrizka > :global(.myslenka:nth-child(3):last-child) { grid-column: 1 / -1; }
+    /* Přes celou šířku by řádky byly dlouhé přes 150 znaků: text drží šířku čtenářského sloupce. */
+    .myslenky__mrizka > :global(.myslenka:nth-child(3):last-child > *) { max-width: var(--ctenarsky-sloupec); }
   }
 </style>
