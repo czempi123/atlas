@@ -1,10 +1,11 @@
 // Třetí čára (cesta 7, krok 6): kresba k Aschovu pokusu. Nahoře karta s jednou čárou a karta se třemi,
 // dole řada osmi židlí. Domluvení odpovídají nahlas jeden po druhém, student sedí na předposlední židli
 // a na něm se řada zastaví. Pohled „Se spojencem“ změní jednu věc: čtvrtý v řadě řekne, co vidí.
-// Co je pramen a co náš obraz: karta se standardní čárou a třemi čarami k porovnání a délky z prvního kola
-// (standard 3 palce, možnosti 3¾, 4¼ a 3 palce, většina řekne první) jsou Asch 1956, Tabulka 1; odpovědi nahlas
-// po řadě a nezasvěcený předposlední jsou Asch 1956 (postup a obr. 1, kde sedí ve dvou řadách); spojenec, který odpovídá správně a mluví
-// před nezasvěceným, je Asch 1951. Siluety, bubliny s čísly, osm židlí a to, že spojenec sedí čtvrtý, je náš obraz.
+// Co je pramen a co náš obraz: karta se standardní čárou a třemi čarami k porovnání a délky z prvního kritického kola
+// (Trial 1, před ním dvě neutrální; standard 3 palce, možnosti 3¾, 4¼ a 3 palce, většina řekne první) jsou Asch 1956, Tabulka 1;
+// odpovědi nahlas po řadě a nezasvěcený předposlední jsou Asch 1956 (postup a obr. 1, kde sedí ve dvou řadách); spojenec,
+// který odpovídá správně, sedí vždy čtvrtý a mluví před nezasvěceným, je Asch 1951 („The partner was always seated in the
+// fourth position“, s. 231 přetisku). Siluety, bubliny s čísly a osm židlí v jedné řadě jsou náš obraz.
 // Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Kresba s pohybem: „Třetí čára“ (krok 6).
 // Čistá data a funkce bez DOM.
 
@@ -49,7 +50,7 @@ const cara = (cislo: number, x: number, palce: number): Cara => ({ cislo, x, del
 export const VZOR: Cara = cara(0, KARTA_VZOR.x + KARTA_VZOR.sirka / 2, KOLO_1.vzor);
 export const CARY: Cara[] = KOLO_1.moznosti.map((p, i) => cara(i + 1, KARTA_TRI.x + (KARTA_TRI.sirka * (i + 1)) / 4, p));
 
-/** Řada židlí: osm míst, student sedí předposlední, spojenec čtvrtý. */
+/** Řada židlí: osm míst, student sedí předposlední, spojenec čtvrtý (jako u Asche 1951). */
 export const POCET_MIST = 8;
 export const TY = POCET_MIST - 2;
 export const SPOJENEC = 3;

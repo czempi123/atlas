@@ -31,7 +31,7 @@
   {#snippet kresba()}
     <rect class="k-stin" width={PLATNO.sirka} height={PLATNO.vyska} />
 
-    <!-- Tabule: vlevo karta se vzorem, vpravo karta se třemi čarami. Délky jsou z Aschova prvního kola. -->
+    <!-- Tabule: vlevo karta se vzorem, vpravo karta se třemi čarami. Délky jsou z Aschova prvního kritického kola. -->
     <rect class="k-svetlo karta" x={KARTA_VZOR.x} y={KARTA_VZOR.y} width={KARTA_VZOR.sirka} height={KARTA_VZOR.vyska} rx="2" />
     <rect class="k-svetlo karta" x={KARTA_TRI.x} y={KARTA_TRI.y} width={KARTA_TRI.sirka} height={KARTA_TRI.vyska} rx="2" />
     <rect class="k-tma cara" x={VZOR.x - TLOUSTKA_CARY / 2} y={VZOR.y} width={TLOUSTKA_CARY} height={VZOR.delka} />

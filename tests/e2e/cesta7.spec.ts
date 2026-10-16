@@ -155,7 +155,7 @@ test('cesta 7: průchod s odpověďmi na telefonu, zastánci všech Voleb, záv�
     'Jestli je to podle tebe kynický čin, máš Epiktéta',
     'Jestli jiná nadutost, máš Platóna i Sókrata.',
     'A jestli záleží na tom, proč to dělá, máš zase Epiktéta.',
-    'Jestli řekneš, co vidíš, jsi ve čtvrtině Aschových studentů',
+    'Jestli řekneš, co vidíš, máš na své straně čtvrtinu Aschových studentů',
     'Jestli řekneš totéž co ostatní, nejsi sám, a hloupé to není.',
     'Jestli zaváháš, nevědět je začátek, ne chyba.',
     'A jestli počkáš na spojence, máš za sebou Asche samotného.',
