@@ -22,6 +22,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Úvod cesty netvrdí dějinné pořadí, které je jen pořadím kroků („k člověku se dostali až potom“).
 - Co kresba označí za „náš obraz“, ověř u autora pokusu: spojenec na čtvrté židli je Aschův (1951), ne náš. A „kolo 1“ v tabulce studie může být první kritické kolo, ne první vůbec.
 - Prosba o pomoc není předání rozhodnutí: rodiče, kteří Kratéta prosili, ať jí to rozmluví, mu rozhodnutí „nesvěřili“. Spojovací věta, která to tvrdí, dělá z rodičů ty, kdo rozhodují přes hlavu dítěte.
+- Výtka proti předvádění („kdo dělá opak toho, co se čeká, řídí se pořád tím, co se čeká“) zasáhne i toho, kdo se od rodiny liší tím, kým je: zužuj ji na to, kvůli čemu výtka padla („jen proto, aby se vymezil“).
 
 ## Bloky
 
@@ -53,12 +54,14 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - U studie s několika pokusy ověř, ze kterého pokusu číslo je a kdo v něm byl: vzorek celé studie (web televizního pořadu) není vzorek pokusu s lístky (Amazon Mechanical Turk).
 - Návrat nemá prameny ani čísla: studie, ze které si případ půjčuje otázku, patří do listu pro učitele.
 - Filozofové cesty v datech (`filozofove`) jsou ti z katalogu. Strana Sporu, která má vlastní portrét, mezi ně nepatří jen proto, že ve Sporu mluví: její hlavička by novou cestu řadila před tu, která je opravdu její.
+- Id ze zadání ověř v datech: `dl-vi-71` je citát, pramen k němu je `dl-vi-69`. Do `zdroje` bloku patří pramen, jinak spadne sestavení.
 
 ## Student, kterého se téma bolestně týká
 
 - První obrazovku kroku nebo kapitoly čti očima studenta, kterému někdo ubližuje. Citát o ráně nepatří na začátek kroku.
 - Scéna, kde silnější odmítne pomoct nebo kde hrdina křivdu mlčky unese, dostane hned otázku pro studenta.
 - Výzva Zkus to žít nemíří na člověka, který ubližuje.
+- Celek 8: věta o čase „tvůj, když ho dáváš, protože chceš“ bere pečujícímu studentovi jeho čas. Piš „když víš, komu a proč ho dáváš“ a výzvě nech menší míru („klidně i kratší chvíli“).
 - Celek 4: jeskyně nesmí studentovi lichotit, že on vidí a ostatní spí.
 - Celek 6: první obrazovku čti i očima studenta, kterému někdo zemřel nebo umírá, studenta vážně nemocného a studenta s myšlenkami na smrt. Věta, která srovnává šťastné s nešťastnými („smrt bere víc šťastným“), říká tomu, komu je zle, že on moc neztratí: zůstane z ní jen první půlka. Věta, která nechává otevřené, jestli je lepší žít, nebo zemřít, do cesty nepatří, ani když je to věta o nevědění.
 - Argument, který o studentově bolesti nemluví (věta o mrtvém u toho, kdo truchlí), dostane větu, že o něm není, na téže obrazovce.
@@ -79,6 +82,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Nový profil udělá ze jména hlasu na stránkách otázek odkaz: `otazka.spec.ts` drží přesný seznam odkazů u hlasů a spadne, dokud v něm nové jméno není.
 - Nový hlas přidá otázku do hlavičky profilu každého myslitele, který na stránce mluví: testy vstupů (`otazka.spec.ts`, `platon.spec.ts`) drží přesné seznamy i počet tlačítek otázek. Skutečné hlavičky si po sestavení vypiš z `dist/` a seznamy uprav podle nich.
 - Další hlas přidá tlačítko do hlavičky profilu: od pěti otázek výš si hlavičku vyfoť na telefonu, deska a první odstavec nesmějí spadnout pod první obrazovku.
+- Delší atribut je na telefonu o řádek víc: nové znění atributu přeměř testem hlavičky (odstavec nad lištou) dřív, než ho přijmeš jako hotové.
 
 ## Technika
 

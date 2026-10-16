@@ -4,6 +4,22 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 16. 10. 2026: Opravy celku 8 po revizi
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor poslal zadání oprav se sedmi prázdnými řádky odpovědí: platí všech devět nálezů revize v hotových zněních a všechna doporučení k otevřeným bodům. | Pravidlo z 4. 10. 2026 (prázdné = souhlas s návrhem). |
+| Krok 5: výtky Sókrata, Platóna a Epiktéta míří na pohrdání, které potřebuje diváky; „Kdo dělá opak jen proto, aby se vymezil, řídí se pořád tím, co se čeká.“ Ruší se „Ze všech tří výtek plyne totéž. Kdo dělá opak toho, co se čeká…“ | Student, který se od rodiny liší tím, kým je, nedělá opak kvůli divákům; „plyne totéž“ byl náš závěr podaný jako jejich. |
+| Čas dávaný druhým je „tvůj, když víš, komu a proč ho dáváš“ (myšlenka 3, Zkus to žít „Čí byla ta hodina“, hlas Hipparchie na otázce 1). Ruší se „protože chceš“. Karta Zkus to žít připouští „klidně i kratší chvíli“. | Pečující student to dělá vědomě, ne proto, že chce; pravidlo podkladů zní „vědomě“. |
+| Hipparchiini rodiče Kratéta jen požádali, ať jí to rozmluví (DL VI, 96). Nikde „svěřili rozhodnutí“, „nabídli“ ani „jeho přece poslechne“ (kroky 1, 7, 8, Volba `cesta7-komu-patri`, list pro učitele). | Silnější než pramen a dělalo z rodičů lidi, kteří rozhodují přes hlavu dcery. |
+| Spor Kratés × Aristotelés: scéna říká i „dobrým se člověk stává zvykem“, Kratés odpovídá cvikem („I kynik se cvičí celý život, jako atlet nebo flétnista…“). Zdroje Sporu mají `dl-vi-69` (pramen DL VI, 69–75); `dl-vi-71` ze zadání je v datech id citátu, ne pramene. Komentář YAML říká, že výklad cviku je Diogenův (DL VI, 70–71) a strana mluví za kyniky. | Kynik má odpověď na nejsilnější Aristotelův argument a cesta ji sama říká v kroku 2. |
+| Atribut Hipparchie „Proč člunek?“: „Od žen se čekalo, že stráví čas u stavu. Hipparchia si vybrala filozofii.“ Myšlenka 3 bez věty „Čas, který ji čekal u stavu, dala vzdělání.“ Znění revize („Patřil ke stavu, u kterého…“) je zkrácené. | Atribut prozrazoval pointu hostiny a obraz byl v celku čtyřikrát. Delší znění revize posunulo na 390 px první odstavec o řádek pod lištu (752 px, test `krates-hipparchia` hlídá 742); kratší drží 732 px jako dřív. |
+| Krok 5: Zénónův stud je vysvětlený hrncem polévky („Takový stud chtěl kynik vyhnat. Epiktétův kynik se má stydět za to, co je špatné.“). Hrnec je v celku dvakrát (kapitola 03, krok 5). | Dva různé druhy studu pod jedním slovem; Zénón v cestě dřív nezazněl. |
+| Krok 7: spojencem odpovědi „Kratétovi“ je Sókratés z Platónova Kritóna 47b–d (atlet podle lékaře nebo trenéra, ne podle mínění všech); ruší se Platón s Ústavou. List pro učitele to říká. Věta o rodičích končí „o pomoc požádali právě Kratéta“ (ne „jeho“), aby zájmeno nepadlo na Sókrata. | Kritón mluví přesně o tom, na koho dát; poučení o zájmenech za větou se dvěma muži. |
+| Změň jednu věc „Nikdo se nedívá“: možnost „Jiná nadutost: potřebuje dokázat, že je nad věcí.“ | Možnost „chce, aby ho viděli“ v podmínce bez diváků nedávala smysl. |
+| Krok 6: „Stačil k tomu kdokoli, kdo nahlas řekl, co vidí.“ | Spojenec u Asche nebyl kamarád; vylučovaný student to tak nemá číst. |
+| Hlavička dvojice na telefonu, pointa „Dva lidé, jedna mošna.“, nadtitulek a kresba Třetí čára zůstávají; jména v Době a lidech jako odkazy jsou samostatný krok po sloučení celku 8. | Doporučení revize, autor nechal prázdné. |
+
 ## 16. 10. 2026: Revize celku 8 (P10)
 
 | Rozhodnutí | Důvod |

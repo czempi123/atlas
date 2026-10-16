@@ -767,3 +767,31 @@ Otevřené zůstává:
 | Linka první psychické pomoci 116 123 | V listu pro učitele „ověřeno 16. 10. 2026“ podle adresáře MV ČR; web linky ověřila revize celku 7 (10. 10. 2026). | Před vydáním listu znovu na webu linky. |
 | Mladí pečující | Českou metodiku revize nehledala; nález 2 drží pravidlo PSHE a podkladů („vědomě“). | Při vydání listu pro učitele případně doplnit. |
 | Jména v Době a lidech jako odkazy | Týká se všech profilů. | Samostatný krok po sloučení celku 8 (doporučení revize). |
+
+### Po opravách celku 8 (16. 10. 2026)
+
+Vyřízeno:
+
+- **Platón jako spojenec odpovědi „Kratétovi“ (bod z P8 a P10).** Krok 7 a list pro učitele mají Sókrata z Kritóna 47b–d (`platon-kriton`).
+- **Detail „čas u stavu dala vzdělání“ v celku (bod z P8).** Atribut i myšlenka 3 ho už nemají; zůstává citát `dl-vi-98` v kapitole Hostina a v hlasu otázky 1 (dvakrát).
+- **„Od ženy se tehdy čekalo…“ (bod z P8).** Doloženo Xenofóntem v P10 (viz výš); nový atribut „Od žen se čekalo, že stráví čas u stavu“ stojí na témže místě.
+- **Mladí pečující.** Nález 2 zapracován („když víš, komu a proč ho dáváš“, „klidně i kratší chvíli“). Česká metodika k mladým pečujícím pořád nehledána: bod v tabulce Po P10 trvá jen pro list pro učitele.
+
+Co se změnilo v textu a datech, aby to šlo dohledat:
+
+| Místo | Dřív | Teď |
+| --- | --- | --- |
+| Krok 1, příběh | „Ať jí to rozmluví on, jeho přece poslechne.“ | „Požádali ho, ať jí to rozmluví.“ |
+| Krok 1, text | „Rodiče chtěli, aby rozhodl za ni.“ | „Rodiče chtěli, aby jí to rozmluvil. Kratés jí nakonec místo přemlouvání ukázal…“ |
+| Volba `cesta7-komu-patri`, Kratétovi | „A rodiče mu rozhodnutí sami nabídli. Všimni si ale, co s ním udělal.“ | „A rodiče se sami obrátili na něj. Všimni si ale, co udělal.“ |
+| Spor, scéna a 2. argument Kratéta | bez zvyku; „Každý zvyk se dá vyzkoušet: k čemu je a komu slouží?“ | „…a že dobrým se člověk stává zvykem“; „I kynik se cvičí celý život, jako atlet nebo flétnista…“; zdroj `dl-vi-69` |
+| Krok 5 | Zénónův stud „vyhnat“ vedle Epiktétova; „Ze všech tří výtek plyne totéž…“ | hrnec polévky a dva druhy studu; „Všechny tři výtky míří na pohrdání, které potřebuje diváky…“ |
+| Změň jednu věc, `nadutost` | „chce, aby ho viděli“ | „potřebuje dokázat, že je nad věcí“ |
+| Krok 6 | — | „Stačil k tomu kdokoli, kdo nahlas řekl, co vidí.“ |
+| Krok 7 | Platón, Ústava; rodiče „rozhodnutí sami svěřili“ | Sókratés, Kritón; rodiče „o pomoc požádali právě Kratéta“ |
+| Krok 8 | „ani když ho o to prosili“ | „i když ho rodiče prosili, ať jí to rozmluví“ |
+| Profil, myšlenka 3 a Zkus to žít | „protože chceš“, „protože jsi chtěl“ | „když víš, komu a proč ho dáváš“, „a víš proč“, „klidně i kratší chvíli“ |
+| Atribut Hipparchie | „Čas, který měla strávit u tkalcovského stavu, dala vzdělání.“ | „Od žen se čekalo, že stráví čas u stavu. Hipparchia si vybrala filozofii.“ |
+| Hlas Hipparchie | „ty, nebo to, co se od tebe čeká“ | „ty, nebo jen to, co se od tebe čeká“; „klidně i kvůli někomu jinému“ |
+
+Otevřené dál: linka 116 123 a mladí pečující v listu pro učitele, jména v Době a lidech jako odkazy (tabulka Po P10).

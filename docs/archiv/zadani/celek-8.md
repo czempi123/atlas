@@ -166,3 +166,30 @@ Na co se dívej zvlášť:
 
 Drobnosti oprav rovnou a commituj česky. Zásadní nálezy seřaď podle dopadu s návrhem opravy do záznamu docs/revize/celek-8-<datum>.md a nic z nich neopravuj bez mého schválení. Na schválení nečekej, nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po P10“ a připrav zadání oprav, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md a plán větve aktualizuj i v projektu Claude. Pak mi napiš nálezy a co potřebuje moje rozhodnutí.
 ```
+
+## Opravy po revizi celku 8
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Znění oprav je v záznamu revize hotové; práce je hlavně přepsat věty, upravit testy, které je hlídají, a ověřit telefon. Vyšší úsilí by přidalo čas, ne kvalitu. Kdybys u nálezu 1 nebo 2 chtěl jiné znění, přepni na high.
+
+Co necháš prázdné, bere se jako souhlas s návrhem revize.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi celek-8. Revize celku 8 je hotová, záznam je v docs/revize/celek-8-2026-10-16.md.
+
+Moje odpovědi (prázdné = souhlas s návrhem revize):
+- Nálezy 1 až 9 podle záznamu: 
+- Platón v kroku 7 nahradit Sókratem z Kritóna (nález 7): 
+- Atribut „Proč člunek?“ podle nálezu 5: 
+- Hlavička dvojice na telefonu zůstává: 
+- Jména v Době a lidech jako odkazy samostatným krokem po sloučení celku 8: 
+- Pointa „Dva lidé, jedna mošna.“ a nadtitulek zůstávají: 
+- Kresba Třetí čára zůstává: 
+
+Zapracuj nálezy revize podle záznamu (oddíl Nálezy, hotová znění). Čti úsporně podle oddílu „Co číst a jak šetřit“ v CLAUDE.md: CLAUDE.md, docs/styl.md, docs/pouceni.md, v docs/plany/celek-8.md tabulku stavu a oddíl „Po P10“, celý záznam revize a jen soubory, které nálezy jmenují. Podkladový list otevři jen u nálezu, kde potřebuješ ověřit místo.
+
+Než opravíš větu, najdi ji v tests/ (grep -rn) a test uprav v tomtéž commitu (cesta7.spec.ts, otazka.spec.ts, krates-hipparchia.spec.ts). U nálezu 4 přidej do zdrojů Sporu dl-vi-71 a do komentáře YAML, že výklad cviku je Diogenův (DL VI, 70–71). U nálezu 7 uprav i list pro učitele (oddíl Cesta 7). Po opravách přečti krok 5, profil (myšlenka 3, Zkus to žít) a hlas Hipparchie znovu očima studenta, který se od rodiny odlišuje tím, kým je, a studenta, který pečuje o sourozence. Spočítej čas cesty (node scripts/slova-cesta.mjs ci-zivot-vlastne-ziju) a štítek uprav, jen když vyjde jinak. Hlavičku dvojice vyfoť na 390 px ve světlém i tmavém režimu (atribut se mění).
+
+Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky, nic neposílej na GitHub. Na konci zapiš do docs/plany/celek-8.md oddíl „Po opravách“, toto zadání přesuň do docs/archiv/zadani/celek-8.md, rozhodnutí zapiš do docs/rozhodnuti.md, vyřízené body označ v docs/podklady/k-overeni.md, plán větve aktualizuj i v projektu Claude a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a připrav uzavření celku (sloučení a GitHub jen na můj pokyn).
+```
+
+Autor zadání poslal 16. 10. 2026 se všemi sedmi řádky odpovědí prázdnými (souhlas s návrhy revize).
