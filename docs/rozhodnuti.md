@@ -4,6 +4,17 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok M0 (inventura, skill atlas-data, šablona, plán)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Medailonek je stránka `/osobnost/<id>/` složená jen z dat (`StrankaMedailonku.astro`): jméno, roky, místo, období, věty kdo a proč, cesty a otázky, deska s atributem, Doba a lidé, Kam dál, Prameny. Ručně se nepíše nic. | Zadání P9; medailonek „vzniká z dat“ už v `docs/plan.md` (Šablona osobnosti ve třech hloubkách). |
+| Stránku zapíná příznak `medailonek: true` v `lide.yaml`, ne automaticky splněná kritéria. Kritéria (roky, místo narození či působení, jedna věta kdo a proč do 25 slov bez tykání, aspoň jeden vztah) hlídá `tests/data/medailonky.test.ts`. | Formálně by prošlo 23 osob z 35 i s neověřenými větami; stránka má vzniknout až po ověření dat. |
+| Profil a medailonek sdílí jednu trasu `src/pages/osobnost/[id].astro`, která jen rozhoduje mezi `StrankaProfilu.astro` a `StrankaMedailonku.astro`. Osoba s profilem nesmí mít příznak; sestavení se zastaví. Adresu všude skládá `adresaStranekOsob()` (`src/lib/stranky-osob.ts`). | Dvě dynamické trasy na téže adrese Astro neumí; jedno místo pro adresu znamená, že odkazy na nový medailonek přibudou všude samy. |
+| Medailonek bez atributu a bez obrazu nemá desku; věty kdo a proč stojí v hlavičce pod jménem. Kam dál má nejvýš tři položky (lidé se stránkou, Mapa a čas, do tří Lidé a směry). | Prázdná mince vypadala jako chybějící obrázek (iniciála je zakázaná); na telefonu jsou obě věty na první obrazovce; Kam dál má na notebooku tři sloupce. |
+| První dva medailonky: Kleanthés a Zénón z Kitia (nejúplnější data), data beze změny. Zbylých 35 osob ve třech vlnách podle toho, kde jejich jméno už stojí bez odkazu: 8, 11 a 16 osob (`docs/plany/medailonky.md`). | Zadání M0: nejdřív ti, na které už vedou jména bez odkazu. |
+| Skill `atlas-data` vznikl (`skills/atlas-data/`); vlny vyplňuje Sonnet 5.5 · medium, sporné prameny Opus 5.5 · high se skillem `atlas-overeni`. | Katalog promptů (P9); skill je psaný tak, aby hromadné vyplňování nepotřebovalo další vysvětlování. |
+
 ## 17. 10. 2026: Větev doba-odkazy uzavřena
 
 | Rozhodnutí | Důvod |

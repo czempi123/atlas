@@ -83,6 +83,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Nový hlas přidá otázku do hlavičky profilu každého myslitele, který na stránce mluví: testy vstupů (`otazka.spec.ts`, `platon.spec.ts`) drží přesné seznamy i počet tlačítek otázek. Skutečné hlavičky si po sestavení vypiš z `dist/` a seznamy uprav podle nich.
 - Další hlas přidá tlačítko do hlavičky profilu: od pěti otázek výš si hlavičku vyfoť na telefonu, deska a první odstavec nesmějí spadnout pod první obrazovku.
 - Delší atribut je na telefonu o řádek víc: nové znění atributu přeměř testem hlavičky (odstavec nad lištou) dřív, než ho přijmeš jako hotové.
+- Test, který tvrdí, že konkrétní člověk odkaz nebo stránku nemá („Zénón z Kitia odkaz nemá“), spadne, jakmile mu data stránku dají. Kde jde o pravidlo, vybírej člověka bez stránky z dat (`medailonek` a kolekce `osobnosti`); kde jde o konkrétní stránku, uprav test v témže commitu jako data (medailonky, M0).
 
 ## Technika
 
