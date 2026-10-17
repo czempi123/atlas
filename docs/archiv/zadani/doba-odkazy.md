@@ -1,6 +1,6 @@
 # Provedená zadání větve doba-odkazy
 
-Zadání kroků, které už proběhly, v plném znění. Plán větve se stavem po každém kroku je v `docs/plany/doba-odkazy.md`.
+Zadání kroků, které už proběhly, v plném znění. Větev je uzavřená 17. 10. 2026; plán větve se stavem po každém kroku je v `docs/archiv/plany/doba-odkazy.md`.
 
 Autor zadání poslal 17. 10. 2026 se čtyřmi prázdnými řádky odpovědí (souhlas s návrhem).
 
@@ -28,4 +28,12 @@ Testy: najdi v tests/ místa, která čtou jména v Době a lidech textem (krate
 Snímky: Doba a lidé u Diogena, u společného profilu a u Platóna na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-prvek.mjs se selektorem .doba). scripts/kontrola-fokus.mjs na stejných třech stránkách na 390 a 1440 px.
 
 Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky, nic neposílej na GitHub. Na konci zapiš do docs/plany/doba-odkazy.md oddíl „Po O1“ (co se změnilo, co jsi zvažoval, snímky), toto zadání přesuň do docs/archiv/zadani/doba-odkazy.md, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve aktualizuj i v projektu Claude a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a připrav uzavření větve (sloučení a GitHub jen na můj pokyn).
+```
+
+## Uzavření větve
+
+Jen na pokyn autora. **Opus 5.5 · low.** Sloučení a odeslání, bez psaní obsahu.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas) přes Desktop Commander. Větev doba-odkazy schvaluji. Slouč ji do main, zapiš do docs/rozhodnuti.md, že je uzavřená, přesuň docs/plany/doba-odkazy.md do docs/archiv/plany/, v docs/plan.md u větve doba-odkazy zapiš stav a další v pořadí (medailonky), pošli main na GitHub, aktualizuj docs/plan.md v projektu Claude, odeber z něj plán větve a restartuj náhled npm run dev.
 ```

@@ -4,6 +4,13 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Větev doba-odkazy uzavřena
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor schválil větev `doba-odkazy` (O1: jména v Době a lidech jako odkazy). Je sloučená do hlavní větve, plán větve je v `docs/archiv/plany/doba-odkazy.md` a hlavní větev je na GitHubu. | Pravidlo z 2. 10. 2026: GitHub po schválení autorem. |
+| Další v pořadí: `medailonky` (P9). | Pořadí v `docs/plan.md`; medailonky autor chtěl 15. 10. 2026. |
+
 ## 17. 10. 2026: Jména v Době a lidech jako odkazy (větev doba-odkazy, O1)
 
 | Rozhodnutí | Důvod |

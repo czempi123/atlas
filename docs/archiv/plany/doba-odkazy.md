@@ -5,7 +5,7 @@ Malý krok mimo celky. Jména lidí v oddílu Doba a lidé (učitelé a žáci, 
 | Krok | Co | Stav |
 | --- | --- | --- |
 | O1 | Odkazy v Době a lidech, testy, snímky | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/doba-odkazy.md` |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | čeká na pokyn autora |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/doba-odkazy.md` |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/doba-odkazy.md`.
 
@@ -31,10 +31,7 @@ Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v pln�
 
 **Snímky** (`Claude outputs/doba-odkazy/`): `list-diogenes-390.jpg`, `list-diogenes-1440.jpg`, `list-krates-a-hipparchia-390.jpg`, `list-krates-a-hipparchia-1440.jpg`, `list-platon-390.jpg`, `list-platon-1440.jpg` (vždy světlý vlevo, tmavý vpravo) a jednotlivé snímky `doba-<stránka>-<šířka>-<režim>.png`. Na snímcích 1440 px přes mini osu leží lišta Obsahu: je to pevná lišta zachycená snímkem prvku, na stránce je v pořádku. `scripts/kontrola-fokus.mjs` na Diogenovi, společném profilu a Platónovi na 390 a 1440 px: vše v pořádku.
 
-## Zadání uzavření
+## Uzavření větve (17. 10. 2026)
 
-Jen na pokyn autora. **Opus 5.5 · low.** Sloučení a odeslání, bez psaní obsahu.
+Autor 17. 10. 2026 větev schválil. Je sloučená do hlavní větve bez konfliktů (hlavní větev se od založení větve nehnula, kód je tedy totožný s větví, na které `npm test` prošel celý). Plán je v archivu a hlavní větev je na GitHubu. Další v pořadí: `medailonky` (P9).
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas) přes Desktop Commander. Větev doba-odkazy schvaluji. Slouč ji do main, zapiš do docs/rozhodnuti.md, že je uzavřená, přesuň docs/plany/doba-odkazy.md do docs/archiv/plany/, v docs/plan.md u větve doba-odkazy zapiš stav a další v pořadí (medailonky), pošli main na GitHub, aktualizuj docs/plan.md v projektu Claude, odeber z něj plán větve a restartuj náhled npm run dev.
-```
