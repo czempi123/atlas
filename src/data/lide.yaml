@@ -186,7 +186,7 @@
   mista:
     - { misto: abdera, role: pusobeni, zdroj: sep-democritus }
   kdo: Myslitel z Abdér, žák a spolupracovník Leukippův.
-  proc: Učil, že všechno se skládá z nedělitelných atomů a prázdna.
+  proc: Učil, že teplé a studené je jen podle zvyku a doopravdy jsou jen atomy a prázdno.
   atribut:
     ikona: atoms
     nazev: zrnka
@@ -314,7 +314,7 @@
     - { misto: lampsakos, role: exil, zdroj: sep-anaxagoras }
     - { misto: lampsakos, role: smrt, rok: -428, priblizne: true, zdroj: sep-anaxagoras }
   kdo: Myslitel z Klazomen, přítel athénského státníka Perikla.
-  proc: Tvrdil, že svět uspořádal rozum (nús) a že Slunce je rozžhavený kámen; za to ho v Athénách obžalovali.
+  proc: Tvrdil, že svět uspořádal rozum (nús); za tvrzení, že Slunce je rozžhavený kámen, ho v Athénách obžalovali.
   zdroje: [sep-anaxagoras, platon-faidon]
 
 - id: gorgias
@@ -440,7 +440,7 @@
     - { misto: athenes, role: pobyt, zdroj: mactutor-eudoxus }
     - { misto: kyzikos, role: pusobeni, zdroj: mactutor-eudoxus }
   kdo: Matematik a astronom z Knidu, žák Archytův.
-  proc: Zabýval se zdvojením krychle a v Kyziku vedl školu, kam se hrnuli žáci.
+  proc: Vymyslel teorii poměrů, která umí srovnat i nesouměřitelné délky, a Eukleidés ji převzal do Základů.
   atribut:
     ikona: orbit
     nazev: nebeské sféry
