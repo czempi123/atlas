@@ -110,7 +110,6 @@ Celkem 335 zastavení na 89 stránkách. Každé má `rodic` (krok, kapitola neb
 
 Autor nechal všechny tři odpovědi prázdné, takže platí návrh (H2, 17. 10. 2026).
 
-
 1. **Id celých stránek** `k:<cesta>`, `o:<profil>`, `h:<otázka>` (stejná předpona jako jejich části). Odpověď:
 2. **Oddíl Doba a lidé jde do hodiny**; Moje stanovisko, Kam dál, Prameny a Návrat ne. Odpověď:
 3. **Čtené kapitoly v deníku:** H3 přidá nepovinné pole `prectene` (adresa profilu → kotvy kapitol, které student dočetl, verze deníku zůstane 1), aby „Doma projdi“ umělo odškrtnout i kapitoly. Bez něj odškrtne jen kroky cest. Odpověď:
@@ -127,7 +126,7 @@ Hotovo 17. 10. 2026. Skladatel hodiny stojí na `/hodina/nova/` (stránka `src/p
 | Vypnuté tiché tlačítko s čárkovaným okrajem | `src/styles/global.css` | |
 | Snímky pro autora s naplněným úložištěm: `ULOZISTE=<soubor.json>` a `AKCE=<výraz>` | `scripts/snimky-listy.mjs` | |
 
-Snímky: `Claude outputs/hodiny/` (skladatel 390 a 1440 px ve světlém i tmavém režimu s uloženou hodinou o šesti zastaveních včetně jednoho, které v atlasu není, a s otevřenou cestou 5; deník s Moje hodiny na 390 px světle a 1440 px tmavě). Celé `npm test` prošlo (viz Kontrola níže).
+Snímky: `Claude outputs/hodiny/` (skladatel 390 a 1440 px ve světlém i tmavém režimu s uloženou hodinou o šesti zastaveních včetně jednoho, které v atlasu není, a s otevřenou cestou 5; deník s Moje hodiny na 390 px světle a 1440 px tmavě). Celé `npm test`: Vitest bez chyby, Playwright 487 z 488; spadl jen `zaver.spec.ts` (klávesnice na telefonu), protože mezi polem a lištou kroku je teď i odkaz v patičce. Test hledá „Dokončit cestu“ tabulátorem až šestkrát a samostatně prošel. `node scripts/hodiny-katalog.mjs`: Chyb: 0.
 
 **Co jsem zvažoval.**
 
