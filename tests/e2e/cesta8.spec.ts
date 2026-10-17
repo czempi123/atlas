@@ -65,10 +65,10 @@ test('cesta 8: celý průchod jen klávesnicí na telefonu, zápisy v deníku', 
   await expect(uvod.locator('.radek-pomoci a')).toHaveAttribute('href', 'https://www.linkabezpeci.cz/');
   await expect(page.locator('main')).not.toContainText(NEPATRI);
   await expect(page.locator('#hotovo a[href^="/mapa/"]')).toHaveAttribute('href', '/mapa/?rok=-270&osoba=epikuros');
-  // Lucretius nemá vlastní stránku: v hlavičce je jménem bez odkazu a v Kam dál chybí.
+  // Lucretius nemá vlastní stránku (v pramenech není jeho místo, medailonek nevznikl): v hlavičce je jménem bez odkazu a v Kam dál chybí. Plútarchos má medailonek (M1).
   await expect(page.locator('.cesta__hlava .lide')).toHaveText(/Epikúros\s*Lucretius\s*Seneca/);
-  await expect(page.locator('.cesta__hlava .lide a')).toHaveText(['Epikúros', 'Seneca']);
-  await expect(page.locator('#hotovo a[href^="/osobnost/"]')).toHaveText(['Epikúros: celý příběh', 'Seneca: celý příběh']);
+  await expect(page.locator('.cesta__hlava .lide a')).toHaveText(['Epikúros', 'Seneca', 'Plútarchos']);
+  await expect(page.locator('#hotovo a[href^="/osobnost/"]')).toHaveText(['Epikúros: celý příběh', 'Seneca: celý příběh', 'Plútarchos: medailonek']);
   await page.getByRole('link', { name: 'Začít cestu' }).focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(`${CESTA8}1/`);

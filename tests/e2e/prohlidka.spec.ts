@@ -118,7 +118,7 @@ test('klávesnice: odkaz Přeskočit na obsah a hledání klávesou /', async ({
   await expect(dialog).toBeVisible();
   await dialog.locator('input').fill('Chairefón');
   await expect(dialog.locator('.pagefind-ui__result').first()).toBeVisible({ timeout: 15_000 });
-  await expect(dialog.locator('.pagefind-ui__result-link').first()).toContainText('Sókratés');
+  await expect(dialog.locator('.pagefind-ui__result-link').first()).toContainText('Chairefón');
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
 });
