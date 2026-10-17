@@ -56,7 +56,7 @@
 - { od: diogenes, k: krates, typ: ucitel, zdroj: dl-vi-85 }
 - { od: krates, k: hipparchia, typ: znali-se, poznamka: "manželé", zdroj: dl-vi-85 }
 - { od: krates, k: zenon-z-kitia, typ: ucitel, zdroj: dl-vii-2 }
-- { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "vypráví se, že Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: dl-vii-2 }
+- { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: dl-vii-2 }
 - { od: zenon-z-kitia, k: kleanthes, typ: ucitel, zdroj: britannica-cleanthes }
 - { od: kleanthes, k: chrysippos, typ: ucitel, zdroj: iep-chrysippus }
 - { od: karneades, k: chrysippos, typ: polemika, poznamka: "je-li všechno dáno předchozími příčinami, není nic v naší moci", zdroj: cicero-de-fato-perseus }

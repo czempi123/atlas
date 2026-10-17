@@ -10,7 +10,7 @@ import type { TOsoba, TVztah } from '../../lib/schema';
 import { adresaStranekOsob } from '../../lib/stranky-osob';
 import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
 import { zivot } from '../../lib/casy';
-import { roleVztahu, skupinyVztahu } from '../../lib/vztahy';
+import { roleVztahu, skupinyVztahu, LEGENDA_TRADOVANY } from '../../lib/vztahy';
 import Mince from '../ui/Mince.astro';
 import MiniOsa from './MiniOsa.astro';
 import MiniMapa from './MiniMapa.astro';
@@ -30,11 +30,13 @@ const vztahy = osoby.flatMap((ja) =>
 const retezy = osoby.flatMap((o) => kdoNavazoval(o.id));
 // Vliv přes texty a spor na dálku mají vlastní skupiny: „Znali se a přeli se“ smí stát jen nad lidmi,
 // kteří se potkali nebo se spolu přít mohli.
-const skupiny = skupinyVztahu<TOsoba, (typeof vztahy)[number]>(vztahy);
+// Nadpisy skupin mají rod osoby stránky; u dvojice zůstávají jako dosud.
+const skupiny = skupinyVztahu<TOsoba, (typeof vztahy)[number]>(vztahy, !dvojice && !!osoba.zena);
+// Popisek s rodem podle toho, kdo je podmět; tradovaný vztah dostane stejné „vypráví se“ jako karta v Mapě a čase.
 const role = (v: (typeof vztahy)[number]) => {
-  const r = roleVztahu(v.vztah, v.smer, v.naDalku);
-  if (!dvojice) return r;
-  return v.vztah.typ === 'ucitel' ? `${r} ${v.ja.jmeno2 ?? v.ja.jmeno}` : `${v.ja.jmeno}: ${r}`;
+  const r = roleVztahu(v.vztah, v.smer, v.naDalku, { ja: v.ja, druhy: v.druhy });
+  const s = !dvojice ? r : v.vztah.typ === 'ucitel' ? `${r} ${v.ja.jmeno2 ?? v.ja.jmeno}` : `${v.ja.jmeno}: ${r}`;
+  return v.vztah.tradovany ? `${s} · ${LEGENDA_TRADOVANY}` : s;
 };
 const nadpis = dvojice
   ? `S kým ${osoby.map((o) => o.jmeno).join(' a ')} žili`

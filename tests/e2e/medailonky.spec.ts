@@ -58,3 +58,13 @@ test('Mapa a čas: karta člověka s medailonkem otevře jeho stránku', async (
   await page.goto('/mapa/?rok=-280&osoba=kleanthes');
   await expect(page.getByRole('link', { name: 'Otevřít portrét' })).toHaveAttribute('href', '/osobnost/kleanthes/');
 });
+
+test('Doba a lidé: tradovaný vztah má „vypráví se“, u Hypatie ženský rod', async ({ page }) => {
+  await page.goto('/osobnost/aspasie/');
+  await expect(page.locator('.doba')).toContainText('znali se · vypráví se');
+  await page.goto('/osobnost/hypatia/');
+  await expect(page.locator('.doba').getByRole('heading', { name: 'Koho četla', exact: true })).toBeVisible();
+  await expect(page.locator('.doba')).toContainText('znala ho z textů · vypráví se');
+  await page.goto('/osobnost/plotinos/');
+  await expect(page.locator('.doba')).toContainText('navázala na jeho texty · vypráví se');
+});
