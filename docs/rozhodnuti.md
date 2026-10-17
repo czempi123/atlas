@@ -4,6 +4,17 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok M2 (data druhé vlny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Všech jedenáct osob druhé vlny dostalo medailonek; Zénón z Eleje s hloubkou `profil`, profil později | Data prošla kritérii a ověřením proti pramenům; stejný postup jako u Chrýsippa v M1 |
+| Roky Eudoxa jako `rozmezi` (408–390, 355–340) při základním roce z MacTutoru | MacTutor (408–355) a SEP v hesle Archytas (ca. 390–340) se rozcházejí o osmnáct let; rozmezí ukáže rozpor, aniž by atlas vybíral |
+| Věta „proč“ nesmí opakovat ani vztah, ani atribut; přepsáno u osmi osob | Na stránce stojí obojí pod sebou |
+| Alkibiadovo „proč“ říká jeho vlastní čin (výprava na Sicílii, přeběh ke Spartě), ne ochranu Sókrata u Délia | Symposion 221a: Alkibiadés jel na koni a Sókrata nechránil, jen slíbil, že s ním zůstane |
+| Medailonek bez atributu zůstává bez desky (pět osob), atribut se nevymýšlí | Prameny nenesou předmět, který by seděl na hotovou ikonu |
+| Britannica údaje z dřívějšího ověření zůstávají, u Aristofana je podložen souhrn | Britannica `curl` nepustí; Wikipedii mezi prameny nezapisujeme |
+
 ## 17. 10. 2026: Medailonky, krok M1 (data první vlny)
 
 | Rozhodnutí | Důvod |
