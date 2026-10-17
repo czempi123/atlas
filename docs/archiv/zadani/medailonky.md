@@ -118,3 +118,28 @@ Krok R: revize větve medailonky (34 medailonků).
 
 Kontrola: celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ nebo přehled cesty v cesta.spec.ts, nebo test v obsah.spec.ts, pusť ten soubor znovu samostatně. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav R a oddíl „Po R“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš verdikt, nálezy podle dopadu a co mám rozhodnout. Při kladném verdiktu navrhni uzavření větve (zadání je níže, oddíl Uzavření větve).
 ```
+
+## O: opravy po revizi
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skilly `atlas-komponenta` (popisky v komponentách a testy) a `atlas-data` (věty v datech). Tři opravy v kódu podle revize a věty, o kterých rozhodne autor. Co necháš prázdné, bere se jako souhlas s návrhem revize.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíl Po R), nálezy v docs/revize/medailonky-2026-10-17.md, postup ve skillech atlas-komponenta a atlas-data.
+
+Moje odpovědi k nálezům revize (prázdné = souhlas s návrhem):
+- Nález 5, Eudoxovo „proč“ podle teorie poměrů:
+- Nález 6, Démokritovo „proč“ podle Diogena Laertia IX, 45 a 72:
+- Nález 9, „Otevřít stránku“ místo „Otevřít portrét“:
+- Nález 10, Anaxagorovo „proč“ („za tvrzení, že Slunce je rozžhavený kámen“):
+
+Krok O: opravy po revizi větve medailonky.
+
+1. Kam dál medailonků (nález 1): nadtitulek karty podle toho, kdo je ve vztahu činný, s rodem jako v KartaCloveka.svelte (učitel/učitelka, žák/žákyně, znali se, „Četl ho a navázal“, „Koho četl“, „S kým se přel na dálku“, „Přel se s jeho učením“, „Polemizoval s ním“, „S kým se přel“). Test v tests/data/medailonky.test.ts na Cicerona, Hypatii a Aristofana.
+2. Tradované vztahy v Době a lidech (nález 2): za popisek role „ · vypráví se“, když je vztah tradovaný, stejně jako karta v Mapě a čase; poznámku vztahu Xenofón → Zénón z Kitia zkrať na „Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata“.
+3. Rod v Době a lidech (nález 3): roleVztahu a nadpisy skupin s rodem („navázala na jeho texty“, „Koho četla“, „Kdo se s ní přel později“); test v tests/data/vztahy.test.ts s Hypatií.
+4. Věty v datech a popisek karty podle mých odpovědí výše.
+
+Ke každé opravě najdi nejdřív dotčené testy (grep v tests/) a uprav je v tomtéž commitu. Na konci node scripts/doba-odkazy-vypis.mjs (Chyb: 0), scripts/kontrola-fokus.mjs na medailoncích Cicerona, Hypatie, Plótína a Aristofana a snímky Doby a lidí a Kam dál u Hypatie, Plótína a Aristofana na 390 px do Claude outputs/medailonky/opravy/. Celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ v cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky po skupinách, nic neposílej na GitHub a nic nesluč.
+
+Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav O a oddíl „Po O“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a navrhni uzavření větve (oddíl Uzavření větve).
+```

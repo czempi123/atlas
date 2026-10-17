@@ -9,7 +9,7 @@ Každý člověk na mapě má dostat vlastní stránku (rozhodnutí z P4, 30. 9.
 | M2 | Data druhé vlny (11 osob) | totéž | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-2.md` |
 | M3 | Data třetí vlny (16 osob) | totéž | hotovo 17. 10. 2026 (14 medailonků, Konfucius a Pýthagorás bez vztahu); zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-3.md` |
 | R | Revize větve (vzorek dat proti pramenům, stránky, odkazy) | Opus 5.5 · high se skillem `atlas-revize` | hotovo 17. 10. 2026, verdikt „po opravách“ (`docs/revize/medailonky-2026-10-17.md`); zadání je v `docs/archiv/zadani/medailonky.md` |
-| O | Opravy po revizi (Kam dál, tradované vztahy a rod v Době a lidech, rozhodnutí autora) | Opus 5.5 · high se skillem `atlas-komponenta` | čeká; zadání je níže (O) |
+| O | Opravy po revizi (Kam dál, tradované vztahy a rod v Době a lidech, rozhodnutí autora) | Opus 5.5 · high se skillem `atlas-komponenta` | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md` |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | — | čeká |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/medailonky.md`. Po každé vlně může autor větev sloučit dřív (medailonky jsou samostatné stránky); o tom rozhoduje on.
@@ -118,32 +118,27 @@ Co chybí (podrobně v inventuře): většině chybí jen ověření a lepší �
 
 **Co jsem zvažoval.** Opravy v kódu (nálezy 1 až 3) jsem v revizi neprováděl: mění popisky, které vidí i schválené profily (Platón, Aristotelés, Diogenés), a sahají do testů, takže patří do vlastního kroku O. Poznámky vztahů jsem opravil hned, protože jde o data a pravidlo z `docs/pouceni.md` (poznámka se čte na obou stránkách) je jednoznačné. Popisek „polemizoval s ním“ v řádcích Doby a lidí jsem nechal: jeho podmět je vždy ten, kdo polemizoval, a po nové poznámce u Aristofana to sedí na obou stranách; chybný je jen v Kam dál, kde stojí bez nadpisu skupiny.
 
-**Další krok.** O: opravy po revizi (zadání níže), pak uzavření větve.
+**Další krok.** O: opravy po revizi (zadání je v `docs/archiv/zadani/medailonky.md`), pak uzavření větve.
 
-## O: opravy po revizi
+## Po O (17. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skilly `atlas-komponenta` (popisky v komponentách a testy) a `atlas-data` (věty v datech). Tři opravy v kódu podle revize a věty, o kterých rozhodne autor. Co necháš prázdné, bere se jako souhlas s návrhem revize.
+**Výsledek.** Všech šest otevřených nálezů revize je opravených; autor nechal odpovědi k nálezům 5, 6, 9 a 10 prázdné, takže platí návrhy revize. Čtyři commity:
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíl Po R), nálezy v docs/revize/medailonky-2026-10-17.md, postup ve skillech atlas-komponenta a atlas-data.
+- **Kam dál** (nález 1): nadtitulek karty říká, kdo je ve vztahu činný, s rodem obou lidí (nová funkce `roleNaKarte` v `src/lib/medailonek.ts`). Na Ciceronovi „Profil · S kým se přel na dálku · Epikúros“ a „Portrét · Koho četl · Platón“, u Hypatie „Medailonek · Koho četla · Plótínos“, u Plótína „Medailonek · Četla ho a navázala · Hypatia“, u Aristofana „Portrét · S kým se přel · Sókratés“.
+- **Doba a lidé** (nálezy 2 a 3): tradovaný vztah má za popiskem „ · vypráví se“ (konstanta `LEGENDA_TRADOVANY`, stejná jako v kartě Mapy a času a v legendě); týká se pěti schválených profilů (Sókratés, Platón, Prótagorás, Diogenés, Parmenidés) a sedmnácti medailonků. `roleVztahu` zná rod podle toho, kdo je podmět, nadpisy skupin rod osoby stránky: u Hypatie „Koho četla“ a „znala ho z textů“, u Plótína „Hypatia · navázala na jeho texty“. Poznámka vztahu Xenofón → Zénón z Kitia začíná „Zénón po ztroskotání…“, „vypráví se“ už nese popisek.
+- **Karta v Mapě a čase** (nález 9): „Otevřít stránku“ místo „Otevřít portrét“; testy `medailonky.spec.ts` a `krates-hipparchia.spec.ts` a popis v `docs/design.md` upravené.
+- **Věty v datech** (nálezy 5, 6, 10): Eudoxos „Vymyslel teorii poměrů, která umí srovnat i nesouměřitelné délky, a Eukleidés ji převzal do Základů.“, Démokritos „Učil, že teplé a studené je jen podle zvyku a doopravdy jsou jen atomy a prázdno.“, Anaxagorás „Tvrdil, že svět uspořádal rozum (nús); za tvrzení, že Slunce je rozžhavený kámen, ho v Athénách obžalovali.“
 
-Moje odpovědi k nálezům revize (prázdné = souhlas s návrhem):
-- Nález 5, Eudoxovo „proč“ podle teorie poměrů:
-- Nález 6, Démokritovo „proč“ podle Diogena Laertia IX, 45 a 72:
-- Nález 9, „Otevřít stránku“ místo „Otevřít portrét“:
-- Nález 10, Anaxagorovo „proč“ („za tvrzení, že Slunce je rozžhavený kámen“):
+**Testy a kontroly.** Nové testy: `tests/data/medailonky.test.ts` (Kam dál na Ciceronovi, Hypatii, Plótínovi, Aristofanovi a Sókratovi z dat), `tests/data/vztahy.test.ts` (rod v popiscích a nadpisech, Hypatia a Plótínos z dat), `tests/e2e/medailonky.spec.ts` („vypráví se“ u Aspasie, ženský rod u Hypatie a Plótína ve vykreslené stránce). Žádný dosavadní test nečetl popisek, který se změnil, kromě tří s „Otevřít portrét“. Celé `npm test` prošlo napoprvé bez jediného pádu (602 jednotkových, 478 v prohlížeči). `node scripts/doba-odkazy-vypis.mjs`: Chyb: 0. `scripts/kontrola-fokus.mjs` na Ciceronovi, Hypatii, Plótínovi a Aristofanovi (390 i 1440 px): v pořádku. Snímky Doby a lidí a Kam dál u Hypatie, Plótína a Aristofana (a Kam dál u Cicerona) na 390 px jsou v `Claude outputs/medailonky/opravy/`.
 
-Krok O: opravy po revizi větve medailonky.
+**Co jsem zvažoval.**
 
-1. Kam dál medailonků (nález 1): nadtitulek karty podle toho, kdo je ve vztahu činný, s rodem jako v KartaCloveka.svelte (učitel/učitelka, žák/žákyně, znali se, „Četl ho a navázal“, „Koho četl“, „S kým se přel na dálku“, „Přel se s jeho učením“, „Polemizoval s ním“, „S kým se přel“). Test v tests/data/medailonky.test.ts na Cicerona, Hypatii a Aristofana.
-2. Tradované vztahy v Době a lidech (nález 2): za popisek role „ · vypráví se“, když je vztah tradovaný, stejně jako karta v Mapě a čase; poznámku vztahu Xenofón → Zénón z Kitia zkrať na „Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata“.
-3. Rod v Době a lidech (nález 3): roleVztahu a nadpisy skupin s rodem („navázala na jeho texty“, „Koho četla“, „Kdo se s ní přel později“); test v tests/data/vztahy.test.ts s Hypatií.
-4. Věty v datech a popisek karty podle mých odpovědí výše.
+- **Kam dál má vlastní funkci, ne rozšířenou `roleVztahu`.** Řádek pod nadpisem skupiny a nadtitulek karty bez nadpisu potřebují jiná slova („znal ho z textů“ pod „Koho četl“ proti „Koho četl“ na kartě); jedna funkce s přepínačem by se četla hůř než dvě krátké.
+- **„Vypráví se“ jen v Době a lidech, ne v nadtitulku karty Kam dál.** Zadání to na kartě nežádalo a nadtitulek („Medailonek · Koho četla · vypráví se“) by byl na telefonu dlouhý; kdo klepne, uvidí označení na cílové stránce.
+- **Společný profil Kratéta a Hipparchie** má nadpisy skupin dál v mužském rodě, protože nemají jeden podmět; stojí tam jen Učitelé a Žáci, kterých se rod nadpisu netýká. Popisky řádků už rod znají („Hipparchia: …“).
+- **Poučení** do `docs/pouceni.md` přibylo jedno: slovo, které přidá komponenta (tady „vypráví se“), nesmí být i v datech.
 
-Ke každé opravě najdi nejdřív dotčené testy (grep v tests/) a uprav je v tomtéž commitu. Na konci node scripts/doba-odkazy-vypis.mjs (Chyb: 0), scripts/kontrola-fokus.mjs na medailoncích Cicerona, Hypatie, Plótína a Aristofana a snímky Doby a lidí a Kam dál u Hypatie, Plótína a Aristofana na 390 px do Claude outputs/medailonky/opravy/. Celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ v cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky po skupinách, nic neposílej na GitHub a nic nesluč.
-
-Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav O a oddíl „Po O“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a navrhni uzavření větve (oddíl Uzavření větve).
-```
+**Další krok.** Uzavření větve po autorově schválení (zadání níže).
 
 ## Uzavření větve
 

@@ -4,6 +4,18 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok O (opravy po revizi)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všechny čtyři odpovědi k nálezům 5, 6, 9 a 10 prázdné: platí návrhy revize (nové „proč“ Eudoxa, Démokrita a Anaxagora, „Otevřít stránku“) | Pravidlo: prázdná odpověď znamená souhlas |
+| Nadtitulek karty Kam dál u medailonku říká, kdo je ve vztahu činný („Koho četl“, „Četla ho a navázala“, „S kým se přel na dálku“, „Přel se s jeho učením“, „S kým se přel“, „Polemizoval s ním“), s rodem obou lidí; funkce `roleNaKarte` v `src/lib/medailonek.ts`. Řádky Doby a lidí si dál berou `roleVztahu`, protože pod nadpisem skupiny se čtou správně | Karta stojí bez nadpisu skupiny a jméno pod nadtitulkem čte student jako podmět (nález 1) |
+| Řádek Doby a lidí u tradovaného vztahu končí „ · vypráví se“ (stejné slovo jako karta v Mapě a čase a legenda, konstanta `LEGENDA_TRADOVANY`); platí i na schválených profilech (Sókratés, Platón, Prótagorás, Diogenés, Parmenidés) a na 17 medailoncích | Rozhodnutí M3 počítalo s tím, že stránka tradovaný vztah označí (nález 2) |
+| `roleVztahu` zná rod podle toho, kdo je podmět (čtenář u vlivu přes texty, kritik u polemiky), a nadpisy skupin mají rod osoby stránky („Koho četla“, „Kdo se s ní přel později“, „Četli ji a navázali“). Společný profil Kratéta a Hipparchie má nadpisy beze změny (mužský rod), popisky řádků už s rodem | Nález 3; u dvojice nemají nadpisy jednoho podmětu a dnes tam žádná dotčená skupina nestojí |
+| Poznámka vztahu Xenofón → Zénón z Kitia bez úvodního „vypráví se, že“ | Slovo teď přidává popisek tradovaného vztahu; jinak by se zdvojilo |
+| Tlačítko karty v Mapě a čase je „Otevřít stránku“ pro portrét, profil i medailonek | Nález 9; atlas hloubky viditelně rozlišuje |
+| Další v pořadí: uzavření větve po autorově schválení | Plán větve `docs/plany/medailonky.md` |
+
 ## 17. 10. 2026: Medailonky, krok R (revize větve)
 
 | Rozhodnutí | Důvod |

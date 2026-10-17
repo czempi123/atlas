@@ -88,6 +88,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Popisek vztahu psaný pod nadpisem skupiny („znal ho z textů“ pod „Koho četl“) nepřenášej tam, kde jméno stojí za ním bez nadpisu: v kartě Kam dál čte student jméno jako podmět („Znal ho z textů · Platón“ na stránce Cicerona). Nadtitulek karty pojmenuje, kdo je ve vztahu činný (medailonky, revize R).
 - Popisky vztahů a nadpisy skupin musí znát rod obou lidí („Hypatia navázal“, „Koho četl“ u Hypatie); vzor je `tvar()` v `KartaCloveka.svelte`.
 - Co má stránka ukázat (třeba „vypráví se“ u tradovaného vztahu), ověř ve vykreslené stránce, ne v kartě Mapy a času: karta příznak čte, řádky Doby a lidí ne.
+- Slovo, které k vztahu přidává komponenta („ · vypráví se“ u tradovaného vztahu), nepiš i do poznámky v datech: na stránce se zdvojí („vypráví se · vypráví se, že…“). Poznámka tradovaného vztahu začíná rovnou dějem (medailonky, O).
 - Rozdíl dvou přibližných letopočtů z pramene není údaj z pramene: „o deset let mladší“ z hlaviček „c. 620“ a „c. 610“ pramen netvrdí.
 - Test, který tvrdí, že konkrétní člověk odkaz nebo stránku nemá („Zénón z Kitia odkaz nemá“), spadne, jakmile mu data stránku dají. Kde jde o pravidlo, vybírej člověka bez stránky z dat (`medailonek` a kolekce `osobnosti`); kde jde o konkrétní stránku, uprav test v témže commitu jako data (medailonky, M0).
 
