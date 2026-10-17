@@ -4,6 +4,15 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Jména v Době a lidech jako odkazy (větev doba-odkazy, O1)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Jméno člověka s vlastní stránkou je v Době a lidech odkaz na ni, ve skupinách vztahů i v řetězu Kdo navazoval. Adresu dává `adresaOsoby` (Kratés i Hipparchia vedou na `/osobnost/krates-a-hipparchia/`). | Doporučení revize celku 8; autor potvrdil návrh prázdnými odpověďmi. Až P9 přidá medailonky, odkazy přibudou samy. |
+| Odkaz je jen jméno: bez „Otevřít“ a bez šipky, inkoustový text s tenkým podtržením v barvě období (při najetí silnějším), stejné písmo jako jména bez odkazu. | Rozpoznatelný jako odkaz, ale tišší než nadpis; stejný jazyk jako jména vztahů na kartě v Mapě a čase. |
+| Lidé bez stránky a osoby, o kterých stránka je, zůstávají prostým textem; osoba stránky v řetězu zůstává zvýrazněná tučně. Mince, mini osa a mini mapa se nemění. | Odkaz na stránku, na které člověk už je, by nikam nevedl; mince by zdvojila cíl dotyku. |
+| Cíl dotyku odkazu je 24 px (inline-block a 2 px nahoře i dole), ne 44 px. | Jméno v seznamu je odkaz v textu, ne ovládací prvek; 44 px by roztáhlo řádky seznamu. WCAG 2.5.8 žádá 24 px. |
+
 ## 17. 10. 2026: Celek 8 uzavřen
 
 | Rozhodnutí | Důvod |

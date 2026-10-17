@@ -4,8 +4,8 @@ Malý krok mimo celky. Jména lidí v oddílu Doba a lidé (učitelé a žáci, 
 
 | Krok | Co | Stav |
 | --- | --- | --- |
-| O1 | Odkazy v Době a lidech, testy, snímky | čeká; zadání je níže |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | jen na pokyn autora |
+| O1 | Odkazy v Době a lidech, testy, snímky | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/doba-odkazy.md` |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | čeká na pokyn autora |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/doba-odkazy.md`.
 
@@ -15,28 +15,26 @@ Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v pln�
 - **Proč před medailonky:** odkaz se řídí tím, jestli osoba stránku má (`src/lib/adresa-osoby.ts`). Až P9 přidá medailonky, odkazy přibudou samy a medailonky z nich budou dosažitelné hned.
 - **Co se nemění:** data (`lide.yaml`, `vztahy.yaml`), texty, mini osa a mini mapa.
 
-## Zadání O1
+## Po O1 (17. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Jedna komponenta, odkazy z hotové funkce, úprava testů a snímky; vyšší úsilí by přidalo čas, ne kvalitu.
+**Co se změnilo.** `src/components/osobnost/DobaALide.astro` volá `adresaOsoby` nad kolekcí `osobnosti`. Jméno člověka se stránkou je odkaz ve skupinách vztahů i v řetězu Kdo navazoval; osoby stránky (`osoba` a `dalsi`) a lidé bez stránky zůstávají prostým textem, osoba stránky v řetězu dál tučně. Odkaz je inkoustový text s tenkým podtržením v barvě období (při najetí 2 px), `inline-block` s 2 px nahoře a dole, takže cíl dotyku má aspoň 24 px. Fokus je globální `:focus-visible`. Mince, mini osa, mini mapa, data a texty beze změny.
 
-Co necháš prázdné, bere se jako souhlas s návrhem.
+**Testy.** Nový `tests/e2e/doba-odkazy.spec.ts`: Kratés na Diogenovi vede na společný profil (ve skupině i v řetězu), Antisthenés odkaz nemá, Diogenés v řetězu zůstává zvýrazněný; na společném profilu vede Diogenés na `/osobnost/diogenes/`, Zénón z Kitia odkaz nemá, Kratés v řetězu zvýrazněný bez odkazu; na Sókratovi vede Platón na `/osobnost/platon/`; na žádném z dvanácti profilů nevede odkaz na sebe a každý vede na existující profil; odkazy mají aspoň 24 px a stránky na 390 px nepřetékají. Testy, které čtou jména textem (krates-hipparchia, celek7-profily, platon, seneca, aristoteles, obsah, mini-mapa), platí beze změny: odkaz je uvnitř `.lide__jmeno` a v řetězu nepřidává mezery („Kratés→Zénón z Kitia“).
+
+**Kontrola proti datům.** `node scripts/doba-odkazy-vypis.mjs` (po `npm run build`) vypíše odkazy ze všech profilů v `dist/` a porovná je se seznamem osob se stránkou: 0 chyb. Bez odkazu zůstávají jen lidé bez stránky (Antisthenés, Xenofón, Speusippos, Zénón z Kitia, Kleanthés, Lucretius, Plútarchos…) a osoby stránky. Po P9 (medailonky) stačí skript pustit znovu.
+
+**Co jsem zvažoval.**
+- Barva podtržení: inkoust (jako ostatní odkazy v textu) nebo barva období. Zvolil jsem barvu období: v seznamu, kde stojí jména bez odkazu stejným písmem, je odkaz poznat i bez barevného textu a jazyk odpovídá kartě v Mapě a čase. Text zůstává inkoustový, takže odkaz nepřekřičí nadpis.
+- Cíl dotyku 24 px místo 44 px (skill `atlas-komponenta`): jméno je odkaz v seznamu, ne tlačítko; 44 px by rozhodilo řádky. Vyhovuje WCAG 2.5.8. Kdyby chtěl autor větší cíl, šlo by udělat odkazem celý řádek včetně mince.
+- Mince jako druhý odkaz: ne, zdvojený cíl by čtečka hlásila dvakrát.
+- Řetěz Kdo navazoval na společném profilu začíná Kratétem (Diogenés v něm není), takže tam odkaz nese jen skupina Učitelé.
+
+**Snímky** (`Claude outputs/doba-odkazy/`): `list-diogenes-390.jpg`, `list-diogenes-1440.jpg`, `list-krates-a-hipparchia-390.jpg`, `list-krates-a-hipparchia-1440.jpg`, `list-platon-390.jpg`, `list-platon-1440.jpg` (vždy světlý vlevo, tmavý vpravo) a jednotlivé snímky `doba-<stránka>-<šířka>-<režim>.png`. Na snímcích 1440 px přes mini osu leží lišta Obsahu: je to pevná lišta zachycená snímkem prvku, na stránce je v pořádku. `scripts/kontrola-fokus.mjs` na Diogenovi, společném profilu a Platónovi na 390 a 1440 px: vše v pořádku.
+
+## Zadání uzavření
+
+Jen na pokyn autora. **Opus 5.5 · low.** Sloučení a odeslání, bez psaní obsahu.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi doba-odkazy (založená z main po sloučení celku 8). Plán je v docs/plany/doba-odkazy.md.
-
-Moje odpovědi (prázdné = souhlas s návrhem):
-- Odkaz má jen jméno, bez „Otevřít“ a bez šipky: 
-- Lidé bez stránky (Antisthenés, Zénón z Kitia…) zůstávají bez odkazu, stejným písmem: 
-- Řetěz Kdo navazoval dostane odkazy taky, osoba stránky v něm zůstává zvýrazněná bez odkazu: 
-- Mini osa a mini mapa beze změny: 
-
-Úkol: jména lidí v oddílu Doba a lidé (src/components/osobnost/DobaALide.astro) udělej odkazy na jejich stránku, když ji mají. Adresu ber z src/lib/adresa-osoby.ts (Kratés i Hipparchia vedou na /osobnost/krates-a-hipparchia/). Osoby, o kterých stránka je, odkaz nedostanou. Postupuj podle skillu atlas-komponenta: design tokeny, odkaz rozpoznatelný jako odkaz, ale tišší než nadpis, viditelný fokus, cíl dotyku aspoň 24 px, nic nepřetéká na 390 px.
-
-Čti úsporně podle oddílu „Co číst a jak šetřit“ v CLAUDE.md: CLAUDE.md, docs/styl.md, docs/pouceni.md (oddíly Co se skládá z dat a Technika), tento plán, DobaALide.astro, adresa-osoby.ts a testy, které Dobu a lidi hlídají (grep -rln "doba\|navazovali" tests). Jako vzor použití adresaOsoby stačí jedna komponenta, která ji už volá.
-
-Testy: najdi v tests/ místa, která čtou jména v Době a lidech textem (krates-hipparchia, celek7-profily, platon, seneca, aristoteles, obsah), a ověř, že po změně pořád platí. Přidej test, který hlídá cíle odkazů: na Diogenovi vede Kratés na společný profil a Antisthenés odkaz nemá; na společném profilu vede Diogenés na /osobnost/diogenes/ a Zénón z Kitia odkaz nemá; na Sókratovi vede Platón na /osobnost/platon/; žádný odkaz nevede na stránku, na které je. Po sestavení si skutečné odkazy vypiš z dist/ a porovnej se seznamem osob se stránkou.
-
-Snímky: Doba a lidé u Diogena, u společného profilu a u Platóna na 390 a 1440 px ve světlém i tmavém režimu (scripts/snimky-prvek.mjs se selektorem .doba). scripts/kontrola-fokus.mjs na stejných třech stránkách na 390 a 1440 px.
-
-Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky, nic neposílej na GitHub. Na konci zapiš do docs/plany/doba-odkazy.md oddíl „Po O1“ (co se změnilo, co jsi zvažoval, snímky), toto zadání přesuň do docs/archiv/zadani/doba-odkazy.md, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve aktualizuj i v projektu Claude a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a připrav uzavření větve (sloučení a GitHub jen na můj pokyn).
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas) přes Desktop Commander. Větev doba-odkazy schvaluji. Slouč ji do main, zapiš do docs/rozhodnuti.md, že je uzavřená, přesuň docs/plany/doba-odkazy.md do docs/archiv/plany/, v docs/plan.md u větve doba-odkazy zapiš stav a další v pořadí (medailonky), pošli main na GitHub, aktualizuj docs/plan.md v projektu Claude, odeber z něj plán větve a restartuj náhled npm run dev.
 ```
