@@ -4,6 +4,14 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Větev hodiny-v1, plán
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Větev `hodiny-v1` má kroky H1 (katalog zastavení a kotvy), H2 (skladatel hodiny), H3 (hodina pro studenta), revizi, opravy a uzavření; plán je v `docs/plany/hodiny-v1.md` | Autor: „Ok, tak prosím napiš ho“ |
+| Návrh k potvrzení (oddíl Co rozhodnout v plánu): zastavení jsou odkazy na místa v atlasu s lištou hodiny, ne poskládaná stránka; poznámky učitele nejdou do odkazu pro studenty; vstup pro učitele v patičce a v deníku; tisk jen jako přehled pro učitele; celé stránky jdou do hodiny bez kotvy, medailonky ne | Bloky jsou ostrovy se stavem v deníku a mimo svou stránku by přišly o souvislost; studentská navigace zůstává čistá. Prázdná odpověď autora znamená souhlas |
+| Režim třídy není součástí větve; naváže na lištu hodiny | Plán v `docs/plan.md`: „Režim třídy na ni naváže“ |
+
 ## 17. 10. 2026: Větev medailonky uzavřena
 
 | Rozhodnutí | Důvod |
