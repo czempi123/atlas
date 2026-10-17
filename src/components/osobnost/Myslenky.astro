@@ -1,11 +1,12 @@
 ---
 // Velké myšlenky osobnosti: obal pro dvě až tři karty Myslenka.
 // Nadpis je zároveň název oddílu v obsahu stránky (ObsahProfilu.astro).
+import { ODDILY } from '../../lib/oddily';
 interface Props { titulek?: string }
-const { titulek = 'Dvě velké myšlenky' } = Astro.props;
+const { titulek = ODDILY.myslenky.nazev } = Astro.props;
 ---
-<section class="myslenky" aria-labelledby="myslenky" data-oddil={titulek} data-oddil-kotva="myslenky">
-  <h2 class="t-h2" id="myslenky">{titulek}</h2>
+<section class="myslenky" aria-labelledby={ODDILY.myslenky.kotva} data-oddil={titulek} data-oddil-kotva={ODDILY.myslenky.kotva}>
+  <h2 class="t-h2" id={ODDILY.myslenky.kotva}>{titulek}</h2>
   <div class="myslenky__mrizka"><slot /></div>
 </section>
 

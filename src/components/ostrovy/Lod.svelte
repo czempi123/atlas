@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB } from '../../lib/kresby';
   // Loď po prknech: kresba k Théseově lodi (cesta 2, krok 4). Vpravo stojí loď v přístavu, vlevo je břeh.
   // Posuvník vyměňuje prkna: staré prkno odjede na břeh a na jeho místě se ukáže nové, světlejší.
   // Pohled „Výměna prken“ skládá stará prkna na hromadu, pohled „Druhá loď“ z nich na břehu skládá loď,
@@ -31,7 +32,7 @@
   };
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev="Loď po prknech" pohledy={POHLEDY_LODI} bind:pohled {popis} viewBox="0 0 {PLATNO.sirka} {PLATNO.vyska}">
+<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZVY_KRESEB.Lod} pohledy={POHLEDY_LODI} bind:pohled {popis} viewBox="0 0 {PLATNO.sirka} {PLATNO.vyska}">
   {#snippet kresba()}
     <defs>
       <clipPath id="{id}-more"><rect x={BREH} y={HLADINA} width={PLATNO.sirka - BREH} height={PLATNO.vyska - HLADINA} /></clipPath>

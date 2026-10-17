@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB } from '../../lib/kresby';
   // Cesta ven z jeskyně: druhá kresba s pohybem k Platónově jeskyni. „Cesta ven“ je řez jeskyní: někdo vězně
   // vleče strmou cestou nahoru. „Venku“ je pohled vězně; posuvníkem si student projde, jak si oči zvykají
   // (záře, stíny, odrazy ve vodě, věci samé, noční nebe, slunce). Rám dává Kresba.svelte.
@@ -23,7 +24,7 @@
   const PAPRSKY = [0, 45, 90, 135, 180, 225, 270, 315];
 </script>
 
-<Kresba {id} {obdobi} nazev="Cesta ven" pohledy={POHLEDY_VEN} bind:pohled {popis}>
+<Kresba {id} {obdobi} nazev={NAZVY_KRESEB.JeskyneVen} pohledy={POHLEDY_VEN} bind:pohled {popis}>
   {#snippet kresba()}
     {#if pohled === 'cesta'}
       <g class="pohled-cesta">

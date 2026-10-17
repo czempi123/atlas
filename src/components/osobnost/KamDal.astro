@@ -3,13 +3,14 @@
 // Položka bez `href` je stránka, která teprve vznikne (cesta celku, než ji dopíše další krok): karta ji jmenuje,
 // nikam nevede a nese slovo „připravujeme“ jako připravovaná období v Mapě a čase. Až stránka vznikne, doplň `href`.
 import Ikona from '../ui/Ikona.astro';
+import { ODDILY } from '../../lib/oddily';
 interface Props { odkazy: { href?: string; nadtitulek: string; text: string }[] }
 const { odkazy } = Astro.props;
 // Název oddílu: nadpis na stránce i položka v obsahu stránky (ObsahProfilu.astro).
-const NAZEV = 'Kam dál';
+const NAZEV = ODDILY.kamDal.nazev;
 ---
-<nav class="kamdal" aria-labelledby="kam-dal" data-oddil={NAZEV} data-oddil-kotva="kam-dal">
-  <h2 class="t-h2" id="kam-dal">{NAZEV}</h2>
+<nav class="kamdal" aria-labelledby={ODDILY.kamDal.kotva} data-oddil={NAZEV} data-oddil-kotva={ODDILY.kamDal.kotva}>
+  <h2 class="t-h2" id={ODDILY.kamDal.kotva}>{NAZEV}</h2>
   <ul>
     {odkazy.map((o) => (
       <li>

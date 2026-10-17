@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB } from '../../lib/kresby';
   // Stejné šaty, jiné světlo: kresba k šatům z roku 2015 (cesta 1, krok 6). Postava v šatech stojí v místnosti
   // s obrazem, lampou, kočkou a vázou. Šaty mají pořád stejné dvě barvy, modrou a hnědou, jako body té fotky.
   // Posuvník mění světlo v místnosti a s ním barvy všeho ostatního. V chladném světle se šaty shodují s bílým
@@ -17,7 +18,7 @@
   }
   let { id, obdobi = 1 }: Props = $props();
 
-  const NAZEV = 'Stejné šaty, jiné světlo';
+  const NAZEV = NAZVY_KRESEB.Saty;
   const POHLEDY = [{ id: 'saty', nazev: NAZEV }];
   let pohled = $state<string>('saty');
   let stupen = $state(VYCHOZI_STUPEN);

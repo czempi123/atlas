@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB } from '../../lib/kresby';
   // Zdvoj čtverec: kresba k chlapci z Menóna (portrét Platóna, kapitola 02). Mřížka stopa na stopu, tři pokusy
   // o čtverec s dvojnásobným obsahem: strana čtyři, strana tři a čtverec na úhlopříčce. Student přepíná pokusy
   // a tlačítkem si nechá čtverečky spočítat; před spočítáním kresba výsledek neříká. Původní čtverec (obsah čtyři)
@@ -39,7 +40,7 @@
   let vysledek = $derived(p.id === 'uhlopricka' ? [`${pocty.cele} celé`, `${pocty.pulky} půlek`, `= ${pocty.soucet}`] : [`${pocty.soucet}`]);
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev="Zdvoj čtverec" pohledy={POHLEDY} bind:pohled popis={popisPokusu(p, spocitano)} maPohyb={false}>
+<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZVY_KRESEB.ZdvojCtverec} pohledy={POHLEDY} bind:pohled popis={popisPokusu(p, spocitano)} maPohyb={false}>
   {#snippet kresba()}
     <defs>
       <clipPath id="{id}-klip"><polygon points={bodyNaPlatno(p.body)} /></clipPath>

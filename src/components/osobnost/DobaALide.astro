@@ -7,6 +7,7 @@
 // lidé bez stránky a osoby, o kterých stránka je, zůstávají prostým textem.
 // Použití v MDX: <DobaALide osoba={props.osoba} dalsi={props.dalsi}> úvodní věty </DobaALide>
 import type { TOsoba, TVztah } from '../../lib/schema';
+import { ODDILY } from '../../lib/oddily';
 import { adresaStranekOsob } from '../../lib/stranky-osob';
 import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
 import { zivot } from '../../lib/casy';
@@ -42,12 +43,12 @@ const nadpis = dvojice
   ? `S kým ${osoby.map((o) => o.jmeno).join(' a ')} žili`
   : `S kým ${osoba.jmeno} žil${osoba.zena ? 'a' : ''}`;
 // Název oddílu: nadtitulek na stránce i položka v obsahu stránky (ObsahProfilu.astro).
-const NAZEV = 'Doba a lidé';
+const NAZEV = ODDILY.doba.nazev;
 const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 'teckovana', 'vliv-textem': 'carkovana', polemika: 'vlnovka' };
 ---
-<section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide" data-oddil={NAZEV} data-oddil-kotva="doba-a-lide">
+<section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby={ODDILY.doba.kotva} data-oddil={NAZEV} data-oddil-kotva={ODDILY.doba.kotva}>
   <p class="t-nadtitulek nadtitulek">{NAZEV}</p>
-  <h2 class="t-h2" id="doba-a-lide">{nadpis}</h2>
+  <h2 class="t-h2" id={ODDILY.doba.kotva}>{nadpis}</h2>
   {/* Medailonek úvodní věty nemá (vše z dat): prázdný úvod by jen přidal mezeru. */}
   {Astro.slots.has('default') && <div class="doba__uvod ctenarsky"><slot /></div>}
 

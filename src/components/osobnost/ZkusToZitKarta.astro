@@ -1,13 +1,14 @@
 ---
 // Zkus to žít: karta v tintu období s jednou týdenní výzvou a tlačítkem „Přijmout výzvu“.
 import ZkusToZit from '../ostrovy/ZkusToZit.svelte';
+import { ODDILY } from '../../lib/oddily';
 
 interface Props { id: string; nazev: string; delka?: string; odkaz: string }
 const { id, nazev, delka = 'jeden týden', odkaz } = Astro.props;
 // Název oddílu: nadtitulek na stránce i položka v obsahu stránky (ObsahProfilu.astro).
-const NAZEV = 'Zkus to žít';
+const NAZEV = ODDILY.zkus.nazev;
 ---
-<section class="zkus" id="zkus-to-zit" aria-labelledby="zkus-titulek" data-oddil={NAZEV}>
+<section class="zkus" id={ODDILY.zkus.kotva} aria-labelledby="zkus-titulek" data-oddil={NAZEV}>
   <p class="t-nadtitulek zkus__nad">{NAZEV} · {delka}</p>
   <h2 class="t-h2" id="zkus-titulek">{nazev}</h2>
   <div class="ctenarsky zkus__text"><slot /></div>

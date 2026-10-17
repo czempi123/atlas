@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB } from '../../lib/kresby';
   // Kde je střed?: kresba k Aristotelovu středu „vzhledem k nám“ (cesta 4, krok 6). V řece někdo volá o pomoc,
   // na břehu stojí člověk. Student mění, kdo to je (plavčík, dobrý plavec, neplavec) a jaká je voda (klidná, rozvodněná).
   // Na čáře pod scénou stojí slabá značka v půli a výrazný bod „střed“: značka se nehýbe, bod se posouvá
@@ -16,7 +17,7 @@
   }
   let { id, obdobi = 1 }: Props = $props();
 
-  const NAZEV = 'Kde je střed?';
+  const NAZEV = NAZVY_KRESEB.KdeJeStred;
   const POHLEDY = [{ id: 'reka', nazev: NAZEV }];
   let pohled = $state<string>('reka');
   let stav = $state<StavStredu>({ ...VYCHOZI_STRED });

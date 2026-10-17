@@ -9,7 +9,7 @@
   import { stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import {
     faktaDvojice, hodnotPoradi, hodnotVzdalenost, platnyStavKdoZil, osaDvou,
-    osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy,
+    osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy, otazkaKdoZil,
     type OdhadPoradi,
   } from '../../lib/bloky';
   import { let_, zAstro, type OsobaMapy } from '../../lib/cas-mapy';
@@ -35,8 +35,7 @@
   const fakta = faktaDvojice(a, b)!;
   const osa = osaDvou(a, b)!;
   const tahOsa = osaOdhadu(a, b)!;
-  const nazevOtazky =
-    otazka ?? (druh === 'poradi' ? `Kdo žil dřív: ${a.jmeno}, nebo ${b.jmeno}?` : `Jak daleko od sebe žili ${a.jmeno} a ${b.jmeno}?`);
+  const nazevOtazky = otazka ?? otazkaKdoZil(a.jmeno, b.jmeno, druh);
 
   let poradi = $state<OdhadPoradi | null>(null);
   let start = $state(tahOsa.vychozi);

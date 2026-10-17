@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB } from '../../lib/kresby';
   // Stejný vítr: kresba k větru z Theaitéta (profil Prótagora, kapitola 01). Dva lidé stojí v jednom větru,
   // jednomu je zima, druhému ne. Student mění jen to, co má kdo za sebou (čekání na místě, nebo chůzi);
   // proudy větru a šály obou se při tom hýbou pořád stejně. Text pod kresbou neříká, kdo má pravdu.
@@ -15,7 +16,7 @@
   }
   let { id, obdobi = 1 }: Props = $props();
 
-  const NAZEV = 'Stejný vítr';
+  const NAZEV = NAZVY_KRESEB.StejnyVitr;
   const POHLEDY = [{ id: 'vitr', nazev: NAZEV }];
   let pohled = $state<string>('vitr');
   let stav = $state<StavVetru>({ ...VYCHOZI_VITR });
