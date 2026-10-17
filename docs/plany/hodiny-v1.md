@@ -6,8 +6,8 @@ Učitel si z atlasu složí hodinu: vybere kroky cest, bloky, kapitoly profilů 
 | --- | --- | --- | --- |
 | H1 | Katalog zastavení a kotvy: co všechno jde dát do hodiny, pevné id a adresa každého zastavení, formát hodiny a její adresy, kontrola katalogu proti sestavenému webu | Opus 5.5 · high | hotovo 17. 10. 2026; viz Po H1 |
 | H2 | Skladatel hodiny `/hodina/nova/`: výběr z katalogu, pořadí, poznámky, uložení, soubor, odkaz ke sdílení | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 17. 10. 2026; viz Po H2 |
-| H3 | Hodina pro studenta: stránka hodiny, lišta hodiny při průchodu, „Doma projdi“ podle deníku, režim Promítat pro plátno, tisk přehledu pro učitele | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | čeká; zadání níže |
-| R | Revize větve očima učitele, studenta a uživatele telefonu | Opus 5.5 · high se skillem `atlas-revize` | čeká |
+| H3 | Hodina pro studenta: stránka hodiny, lišta hodiny při průchodu, „Doma projdi“ podle deníku, režim Promítat pro plátno, tisk přehledu pro učitele | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 17. 10. 2026; viz Po H3 |
+| R | Revize větve očima učitele, studenta a uživatele telefonu | Opus 5.5 · high se skillem `atlas-revize` | čeká; zadání níže |
 | O | Opravy po revizi | Opus 5.5 · high | čeká |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
 
@@ -144,31 +144,60 @@ Snímky: `Claude outputs/hodiny/` (skladatel 390 a 1440 px ve světlém i tmavé
 
 ## Co rozhodnout po H2 (prázdná odpověď znamená souhlas s návrhem)
 
+Autor nechal všechny čtyři odpovědi prázdné, takže platí návrh (H3, 17. 10. 2026).
+
 1. **Na telefonu výběr nad hodinou** a počet zvolených zastavení v přilepeném řádku nad výběrem (ne hodina nahoře, ne pevná lišta dole). Odpověď:
 2. **Nahraný soubor se neuloží sám**, do Mých hodin se dostane až tlačítkem Uložit. Odpověď:
 3. **Odkaz pro studenty nese i zastavení, které v atlasu už není** (student uvidí „Tohle místo už v atlasu není“); jinak by ho skladatel z odkazu tiše vypustil. Odpověď:
 4. **Lišta hodiny v H3** pozná, že student prochází hodinu, podle hodiny uložené v `sessionStorage` (jen pro tuto kartu, po zavření zmizí), ne podle parametru v adrese každého zastavení. Odpověď:
 
-## Zadání H3: hodina pro studenta
+## Po H3
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high**, se skillem `atlas-komponenta` (xhigh při zaseknutí).
+Hotovo 17. 10. 2026. Student otevře hodinu odkazem `/hodina/?v=1&n=…&z=…` (stránka `src/pages/hodina/index.astro`, ostrov `src/components/hodina/HodinaStudent.svelte`), prochází ji lištou na stránkách atlasu, doma dostane „Doma projdi“ a hodinu najde v deníku. Učitel ji promítá na plátně a ze skladatele vytiskne přehled. Popis a API v `docs/design.md` › Komponenty a › Co se ukládá, rozhodnutí v `docs/rozhodnuti.md`.
+
+| Co | Kde | Testy |
+| --- | --- | --- |
+| Aktivní hodina karty v `sessionStorage` (`atlas-hodina-aktivni`) s adresami zastavení; aktuální zastavení stránky (`aktualniZastaveni`: z lišty, podle kotvy, první), sousední zastavení bez neznámých, „3 ze 7“ s předložkou podle čísla, krok promítání (`krokPromitani`, `polohaPrichodu`, `prekryv`), klávesy v polích (`klavesaPatriPrvku`), `vstupDoHodiny` | `src/lib/pruchod-hodiny.ts` | `tests/data/pruchod-hodiny.test.ts` (20) |
+| Deník: `prectene` a `kapitolaDoctena` (konec vidět a čas přelétnutí při 500 slovech za minutu, nejméně 10 s), `hodiny` (nejvýš deset); verze 1, starší deníky beze změny | `src/lib/denik.ts`; měření času v kapitole ve skriptu `src/components/osobnost/ObsahProfilu.astro` | `tests/data/denik.test.ts` (+7) |
+| Stránka hodiny: název, zastavení v pořadí, „Tohle místo už v atlasu není“ bez odkazu, Začít hodinu, Promítat hodinu, Doma projdi s „✓ prošel jsi“ a „✓ dočteno“, neplatná adresa s odkazem Domů | `src/components/hodina/HodinaStudent.svelte` | `tests/e2e/hodina-student.spec.ts` |
+| Oddíl Hodiny v deníku | `src/components/ostrovy/Denik.svelte` | tamtéž |
+| Lišta hodiny pod hlavičkou: Předchozí, Další, Přehled hodiny, Zavřít; místo pro ni od prvního vykreslení (skript v hlavičce `Zakladni.astro`), lišta Obsah pod ní, fokus nezůstane pod ní ani při couvání | `src/components/rozvrzeni/ListaHodiny.astro`, `src/scripts/hodina-lista.ts`, `src/layouts/Zakladni.astro` | `tests/e2e/hodina-student.spec.ts`, `tests/e2e/fokus-lista.spec.ts` (+1) |
+| Promítání: `--meritko` (1,5) ve všech velikostech písma, sloupec přes plátno, jen úsek zastavení, šipky / PageDown / mezerník, F, Esc, Ukončit promítání | `src/styles/promitani.css`, `src/styles/tokens.css`, `src/scripts/hodina-lista.ts` | `tests/e2e/hodina-student.spec.ts` |
+| Skladatel: Promítat hodinu (u uložené hodiny), Vytisknout přehled a tisková podoba; světlé tokeny v tisku | `src/components/hodina/Skladatel.svelte`, `src/styles/tokens.css` | tamtéž |
+
+Snímky: `Claude outputs/hodiny/` (stránka hodiny, krok cesty s lištou, profil s lištou i lištou Obsah a tisková podoba na 390 a 1440 px ve světlém i tmavém režimu; promítání kroku, bloku, kapitoly a hlasu na 1280 × 720 a 1920 × 1080 v obou režimech). Celé `npm test`: Vitest 666 z 666, Playwright 513 z 513 (nový `hodina-student.spec.ts` má 24 testů, `fokus-lista.spec.ts` jeden navíc). `node scripts/hodiny-katalog.mjs`: Chyb: 0.
+
+**Co jsem zvažoval.**
+
+- *Kde lišta stojí:* dole by se sešla se spodní lištou telefonu a s lištou kroku cesty (na telefonu by spodní pruh měl přes 120 px). Nahoře pod hlavičkou má 48 px a lišta Obsah na profilu drží pod ní. Hlavička kroku cesty je o pár pixelů vyšší než token `--hlavicka`, proto se měří.
+- *Kudy zjistit zastavení na stránce:* parametr v adrese každého zastavení by hodinu nesl do sdílených odkazů a záložek. `sessionStorage` patří kartě a stránky se dívají jen na adresu stránky a kotvu.
+- *Krok a blok na téže stránce:* přechod se nenačítá znovu (`history.pushState`), jinak by blok přišel o rozepsanou odpověď a plátno by probliklo.
+- *Úsek na plátně:* kotva u bloku, příběhu, kapitoly a hlasu stojí na kořeni úseku; u Doby a lidí a Myšlenek na nadpisu, úsekem je pak celý oddíl (`data-oddil-kotva`). Hlas dostane roky nad jménem, v okraji by na plátně vyjely ven.
+- *Couvání:* na předchozí zastavení přijde učitel na jeho konec. Je to přesný opak postupu vpřed; začátek by znamenal přeskočit všechno, co právě ukázal.
+- *Celá obrazovka:* prohlížeč ji při přechodu na jinou stránku vždy zavře a znovu ji dovolí jen po klávese nebo klepnutí. Atlas ji tedy zapne první klávesou na další stránce. Celá obrazovka prohlížeče (⌃⌘F, F11) přechody přežije a na promítání je lepší; viz Co rozhodnout po H3.
+- *Omezený pohyb:* `global.css` zkracuje všem prvkům přechody na 0,01 ms, takže i `visibility` se mění přechodem a objeví se až po několika snímcích. Skrytý obsah (lišta před vyplněním, plátno před nastavením polohy) je proto přes `display`. Zapsáno v `docs/pouceni.md`.
+- *Dočtená kapitola:* jen „konec byl vidět“ by počítal i proletění, jen čas by počítal kapitolu, kterou student nechal otevřenou a odešel. Obojí dohromady; čas běží, jen když je kapitola právě čtený oddíl a karta je vidět.
+- *Tisk:* tmavý režim by dal na papír světlý text; v tisku jsou tokeny vždy světlé, pro celý atlas.
+
+## Co rozhodnout po H3 (prázdná odpověď znamená souhlas s návrhem)
+
+1. **Couvání na konec předchozího zastavení** (šipka vlevo, PageUp); jinak na jeho začátek. Odpověď:
+2. **Celá obrazovka:** F zapne celou obrazovku stránky a po přechodu na další zastavení se zapne znovu první klávesou (prohlížeč ji mezi stránkami zavírá). V listu pro učitele bych doporučil celou obrazovku prohlížeče (⌃⌘F na Macu, F11 ve Windows), která přechody přežije. Odpověď:
+3. **Hlas otázky s lištou** nechá stránku otázky, jak je (nejdřív Tvůj první názor); na plátně se hlasy ukážou hned. Odpověď:
+4. **Dočtená kapitola:** konec vidět a čas přelétnutí při 500 slovech za minutu, nejméně 10 s. Odpověď:
+5. **Lišta hodiny nahoře pod hlavičkou**, ne dole. Odpověď:
+6. **Přehled hodiny při promítání** otevře stránku hodiny v normální podobě a promítání tím skončí. Odpověď:
+
+## Zadání R: revize větve
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-revize`. Revize čte větev očima lidí, kteří ji budou používat: učitele, který skládá a promítá hodinu, studenta, který dostane odkaz a doma prochází zbytek, a uživatele telefonu. Neopravuje funkce, jen ohlásí a opraví drobnosti; zásadní nálezy seřadí podle dopadu s návrhem opravy.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Jsi ve větvi hodiny-v1 (příprava hodiny, plán docs/plany/hodiny-v1.md; přečti z něj oddíly Co větev staví, Po H2 a Co rozhodnout po H1 a po H2, odpovědi autora tam mají přednost před návrhem). Tento krok je H3: hodina pro studenta. Použij skill atlas-komponenta. Katalog, formát a adresu hodiny, najdiZastaveni a domaProjdi už máš v src/lib/hodiny.ts, uložené hodiny v src/lib/hodiny-uloziste.ts, štítky a místa zastavení v src/lib/skladatel.ts; nepiš je znovu.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi hodiny-v1. Plán je v docs/plany/hodiny-v1.md (tabulka, Co větev staví, oddíly Po H1 až Po H3 a Co rozhodnout po H3; moje odpovědi tam mají přednost před návrhem), postup ve skillu atlas-revize (skills/atlas-revize/). Krok R: revize větve hodiny-v1.
 
-1. Stránka hodiny /hodina/ (ostrov ve Svelte; hodinu čte z adresy přes hodinaZAdresy, katalog si stáhne z /hodina/katalog.json). Název hodiny, zastavení v pořadí (štítek druhu, kde stojí, název jako odkaz na místo v atlasu) a hlavní tlačítko na první zastavení. Zastavení, které v katalogu není, ukaž s textem NENI_V_ATLASU, bez odkazu. Adresa bez hodiny nebo s neznámou verzí ukáže krátkou větu a odkaz Domů. Poznámky učitele tu nikdy nejsou. Stránka nepatří do vyhledávání.
-
-2. Doma projdi. Pod zastaveními oddíl „Doma projdi“ z domaProjdi: ke každé cestě a profilu, kterých se hodina dotkla, kroky a kapitoly, které v hodině nebyly, jako odkazy; co student už prošel, je odškrtnuté (text, ne jen barva). Kroky ber z deníku (cesty[slug].navstivene). Pro kapitoly přidej do deníku nepovinné pole prectene (adresa profilu → kotvy dočtených kapitol; verze deníku zůstává 1, starší deníky se načtou beze změny, pole je v exportu): kapitola je dočtená, když student dočte její konec (rozhodni sám, jak to poznat tak, aby kapitola nepočítala jen proletění; zapiš do docs/rozhodnuti.md). Bez zbytku oddíl nic neukazuje.
-
-3. Hodina v deníku. Otevřená hodina se zapíše do deníku jako nepovinné pole hodiny (adresa hodiny, název, kdy naposledy otevřená; nejvýš deset, nejstarší vypadne). Deník ji ukáže studentovi v oddílu „Hodiny“ s odkazem zpět; Moje hodiny učitele zůstávají zvlášť.
-
-4. Lišta hodiny. Když student hodinu otevře, uloží se jako aktivní pro tuto kartu (sessionStorage, pokud autor v Co rozhodnout po H2 neřekl jinak). Na každé stránce atlasu, kde stojí některé její zastavení, se ukáže lišta „Hodina: <název> · 3 ze 7“ s Předchozí, Další (na adresu sousedního zastavení), Přehled hodiny a Zavřít. Když na stránce stojí víc zastavení hodiny (krok s blokem), platí to, na které student přišel z lišty nebo podle kotvy. Lišta se nesmí tlouct se spodní lištou telefonu, s lištou kroku cesty ani s lištou Obsah na profilu; když je pevná dole, přidej ji do skriptu, který v src/layouts/Zakladni.astro hlídá fokus pod lištou, a do tests/e2e/fokus-lista.spec.ts. Zavřená lišta se v té kartě už neukáže, dokud student hodinu znovu neotevře.
-
-5. Promítat (přání autora ze 17. 10. 2026; plán › Co větev staví › Promítání na plátně). Na stránce hodiny tlačítko „Promítat hodinu“ (a totéž ve skladateli u uložené hodiny), které otevře první zastavení v režimu pro plátno. Režim drží sessionStorage spolu s aktivní hodinou a pozná ho i stránka po přechodu na další zastavení (třída na <html>, nastavená skriptem před vykreslením, aby nic neprobliklo). Na plátně: bez hlavičky, drobečků, patičky a spodní lišty webu, jen tenká lišta hodiny „Delfy · 3 ze 7“ se stejnými tlačítky jako lišta hodiny; písmo zhruba o polovinu větší (přes tokeny, ne zoomem prohlížeče) a čtenářský sloupec přes šířku plátna s rozumnými okraji; u zastavení s kotvou (blok, příběh, kapitola, oddíl, hlas) jen ten úsek stránky, ostatní obsah skrytý, u kroku cesty a celé stránky celá stránka (lišta kroku cesty se skryje, posun obstará lišta hodiny). Ovládání: šipka vpravo, PageDown a mezerník posunou uvnitř zastavení o obrazovku (kousek předchozí zůstane vidět, aby se neztratil řádek), na konci zastavení přejdou na další; šipka vlevo, PageUp a Shift+mezerník obráceně (na předchozí zastavení přijde student na jeho konec, nebo začátek – rozhodni a zapiš); F zapne a vypne celou obrazovku (Fullscreen API), Esc nebo tlačítko Ukončit promítání vrátí normální stránku. Klávesy nesmí brát fokus z polí: když je fokus v poli, posuvníku nebo přepínači bloku, šipky a mezerník patří jemu. Bloky fungují dál. Pohyb kreseb běží jako jinde a při omezeném pohybu stojí. Ověř na 1280 × 720 a 1920 × 1080 (typický projektor) ve světlém i tmavém režimu, že text zastavení je čitelný z dálky a nic nepřetéká do strany.
-
-6. Tisk přehledu pro učitele. Ve skladateli tlačítko „Vytisknout přehled“: tisková podoba s názvem, poznámkou k hodině a zastaveními v pořadí (číslo, štítek, kde stojí, název, celá adresa, poznámka). Na papíře bez navigace, výběru a tlačítek. Pracovní list pro studenty se nedělá.
-
-7. Kontroly. Jednotkové testy pro nové čisté funkce (prectene, hodiny v deníku, výběr aktuálního zastavení lišty, kam vede další a předchozí krok promítání). E2e test tests/e2e/hodina-student.spec.ts: otevřít hodinu z odkazu, neznámé zastavení, neplatná adresa, průchod lištou tam a zpět jen klávesnicí, zavřít lištu, Doma projdi s odškrtnutým krokem a kapitolou, hodina v deníku, tisková podoba (emulateMedia print), poznámky se studentovi nikdy neukážou; promítání: celá hodina tam a zpět jen šipkami a PageDown/PageUp přes krok, blok, kapitolu a hlas, skrytá hlavička a patička, viditelný jen úsek zastavení, šipky v poli bloku nepřeskočí zastavení, Esc vrátí normální stránku. Axe na stránce hodiny a na stránce s lištou. Snímky 390 a 1440 px ve světlém i tmavém režimu do Claude outputs/hodiny/ (stránka hodiny, krok cesty s lištou, profil s lištou i s lištou Obsah, tisková podoba) a promítání na 1280 × 720 a 1920 × 1080 (krok cesty, blok, kapitola, hlas) a prohlédni je.
-
-Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky, nic neposílej na GitHub. Na konci toto zadání přesuň do docs/archiv/zadani/hodiny-v1.md, do plánu větve zapiš stav H3, oddíl „Po H3“ a plné zadání revize R, rozhodnutí zapiš do docs/rozhodnuti.md, popis do docs/design.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/hodiny-v1.md a restartuj náhled npm run dev. Pak mi napiš, co vzniklo a co je potřeba rozhodnout.
+1. Učitel: na náhledu (npm run dev, nebo sestavený web přes npx astro preview --port 4323) slož ve skladateli dvě skutečné hodiny k celkům 1 a 6 (pět až osm zastavení různých druhů, s poznámkami), ulož je, stáhni a nahraj soubor, zkopíruj odkaz pro studenty, vytiskni přehled (emulateMedia print, i z tmavého režimu) a obě hodiny promítni na 1280 × 720 a 1920 × 1080 jen klávesami (šipky, PageDown, mezerník, F, Esc) tam i zpět. Hlídej: dá se hodina složit bez návodu, sedí štítky a „kde stojí“ s tím, co je na stránce, je text na plátně čitelný z dálky, neztratí se řádek při posunu, nepřekáží nic, co na plátno nepatří, a dají se bloky ovládat, když třída hlasuje.
+2. Student: otevři odkazy obou hodin v čisté kartě na telefonu (390 × 844) i notebooku, projdi je lištou a pak doma podle Doma projdi; zkus zastavení, které v atlasu není, zavřenou lištu, novou kartu, návrat z deníku a odkaz na kotvu uvnitř stránky (Kam dál z bloku). Přečti všechny texty, které větev přidala (stránka hodiny, lišta, Doma projdi, deník, tisk, zprávy skladatele), podle docs/styl.md: zní jako pokyn studentovi, ne jako popis rozhraní? Ověř, že se poznámky učitele studentovi nikde neukážou (stránka, lišta, deník, export deníku).
+3. Telefon a klávesnice: scripts/kontrola-fokus.mjs na stránce hodiny, kroku s lištou a profilu s lištou i lištou Obsah (390 i 1440 px); axe tak, jak ho dělají testy; lišta hodiny proti hlavičce kroku, liště kroku, spodní liště a liště Obsah při posunu i po skoku na kotvu; omezený pohyb; čtečka (názvy tlačítek lišty na telefonu, kde jsou jen ikony).
+4. Data a soulad: node scripts/hodiny-katalog.mjs po npm run build (Chyb: 0), katalog proti stránkám (názvy, štítky, kotvy), dočtené kapitoly v deníku (dočte se kapitola, kterou student opravdu čte, a ne ta, kterou proletí?), zápisy v docs/rozhodnuti.md a popis v docs/design.md proti stavu kódu.
+5. Výstup: docs/revize/hodiny-v1-<datum>.md (nálezy podle dopadu, každý s návrhem opravy a s tím, co je drobnost a co rozhodnutí pro mě; verdikt „schváleno“ nebo „po opravách“). Drobnosti oprav rovnou, celé npm test na pozadí s výstupem do souboru, commituj česky po skupinách, nic neposílej na GitHub a nic nesluč. Do plánu větve zapiš stav R, oddíl „Po R“ a zadání O; zadání R přesuň do docs/archiv/zadani/hodiny-v1.md; plán nahraj do projektu Claude jako docs/plany/hodiny-v1.md. Pak mi napiš, co jsi našel a co je potřeba rozhodnout.
 ```
