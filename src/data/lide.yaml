@@ -222,12 +222,13 @@
   zemrel: { rok: -430, priblizne: true }
   obdobi: 1
   hloubka: profil
+  medailonek: true
   smery: [eleate]
   otazky: [6, 7]
   mista:
     - { misto: elea, role: narozeni, zdroj: sep-zeno-elea }
   kdo: Mladší druh Parmenidův z Eleje.
-  proc: Proslavil se paradoxy o pohybu, třeba o Achilleovi, který nedohoní želvu.
+  proc: Svými paradoxy ukazoval, že obyčejná představa pohybu i mnoha věcí vede k rozporům.
   atribut:
     ikona: tortoise
     nazev: želva
@@ -271,6 +272,7 @@
   aktivni: { od: -540, do: -537 }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   otazky: [9]
   linie: [vira-a-rozum]
   mista:
@@ -364,10 +366,11 @@
   zemrel: { rok: -350, nejpozdeji: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: athenes, role: narozeni, zdroj: britannica-xenophon }
   kdo: Athéňan, Sókratův žák, voják a spisovatel.
-  proc: Vedl ústup deseti tisíc řeckých vojáků z Persie a popsal ho v knize Anabasis.
+  proc: Napsal Vzpomínky na Sókrata, jeden ze tří hlavních pramenů o Sókratově životě a učení.
   atribut:
     ikona: helmet
     nazev: přilba
@@ -382,11 +385,12 @@
   zemrel: { rok: -355, priblizne: true, rozmezi: [-360, -350] }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [pythagorejci]
   mista:
     - { misto: tarent, role: pusobeni, zdroj: sep-archytas }
   kdo: Pythagorejský filozof, matematik a státník z Tarentu.
-  proc: Roku 361 př. n. l. poslal loď, která vysvobodila Platóna ze Syrákús.
+  proc: Sedmkrát po sobě ho Tarent zvolil stratégem a jako první vyřešil zdvojení krychle.
   atribut:
     ikona: dove
     nazev: holubice
@@ -416,10 +420,11 @@
 - id: eudoxos
   jmeno: Eudoxos
   jmeno2: Eudoxa
-  narozen: { rok: -408, priblizne: true }
-  zemrel: { rok: -355, priblizne: true }
+  narozen: { rok: -408, priblizne: true, rozmezi: [-408, -390] }
+  zemrel: { rok: -355, priblizne: true, rozmezi: [-355, -340] }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   linie: [veda]
   mista:
     - { misto: knidos, role: narozeni, zdroj: mactutor-eudoxus }
@@ -427,13 +432,13 @@
     - { misto: athenes, role: pobyt, zdroj: mactutor-eudoxus }
     - { misto: kyzikos, role: pusobeni, zdroj: mactutor-eudoxus }
   kdo: Matematik a astronom z Knidu, žák Archytův.
-  proc: Navrhl první model nebe ze soustředných sfér.
+  proc: Zabýval se zdvojením krychle a v Kyziku vedl školu, kam se hrnuli žáci.
   atribut:
     ikona: orbit
     nazev: nebeské sféry
     proc: Navrhl první model nebe ze soustředných sfér.
     zdroj: mactutor-eudoxus
-  zdroje: [mactutor-eudoxus]
+  zdroje: [mactutor-eudoxus, sep-archytas]
 
 - id: aristippos
   jmeno: Aristippos
@@ -443,6 +448,7 @@
   aktivni: { od: -399, do: -355, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [kyrenaici]
   mista:
     - { misto: kyrene, role: narozeni, zdroj: sep-cyrenaics }
@@ -508,13 +514,14 @@
   zemrel: { rok: -404 }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: athenes, role: narozeni, zdroj: britannica-alcibiades }
     - { misto: potidaia, role: tazeni, rok: -432, zdroj: britannica-alcibiades }
     - { misto: delion, role: tazeni, rok: -424, zdroj: britannica-alcibiades }
   kdo: Athénský politik a vojevůdce, svěřenec Periklův.
-  proc: U Potidaie mu Sókratés zachránil život a při ústupu od Délia Alkibiadés chránil Sókrata.
-  zdroje: [britannica-alcibiades, platon-symposion]
+  proc: Přemluvil Athéňany k velké výpravě na Sicílii a po obvinění z rouhání přeběhl ke Spartě.
+  zdroje: [britannica-alcibiades, platon-symposion, sep-socrates, plutarchos-alkibiades]
 
 - id: aristofanes
   jmeno: Aristofanés
@@ -523,10 +530,11 @@
   zemrel: { rok: -388, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: athenes, role: pusobeni, zdroj: britannica-aristophanes }
   kdo: Největší autor athénských komedií.
-  proc: V komedii Oblaka (423 př. n. l.) zesměšnil Sókrata.
+  proc: Napsal asi čtyřicet komedií, z nichž se dochovalo jedenáct, mezi nimi Lysistrata a Žáby.
   zdroje: [britannica-aristophanes, sep-socrates]
 
 - id: speusippos
@@ -536,6 +544,7 @@
   zemrel: { rok: -339, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [akademie]
   mista:
     - { misto: athenes, role: pusobeni, od: -347, do: -339, priblizne: true, zdroj: sep-speusippus }
@@ -927,6 +936,7 @@
   zemrel: { rok: 101, nejpozdeji: true }
   obdobi: 2
   hloubka: medailonek
+  medailonek: true
   smery: [stoicismus]
   linie: [stoicismus]
   mista:
@@ -934,7 +944,7 @@
     - { misto: rim, role: pusobeni, zdroj: iep-musonius }
     - { misto: gyaros, role: exil, od: 65, zdroj: iep-musonius }
   kdo: Římský stoik, kterého Nero poslal do vyhnanství na pustý ostrov Gyaros.
-  proc: Byl učitelem Epiktétovým.
+  proc: Učil, že filozofie je cvičení v ušlechtilém jednání, a chtěl stejné filozofické vzdělání pro ženy i muže.
   zdroje: [iep-musonius]
 
 - id: theofrastos
@@ -944,6 +954,7 @@
   zemrel: { rok: -287, priblizne: true }
   obdobi: 2
   hloubka: medailonek
+  medailonek: true
   smery: [peripatetici]
   linie: [veda]
   mista:
@@ -951,7 +962,7 @@
     - { misto: assos, role: pobyt, zdroj: sep-theophrastus }
     - { misto: athenes, role: pusobeni, od: -323, do: -287, priblizne: true, zdroj: sep-theophrastus }
   kdo: Filozof z Eresu na Lesbu, Aristotelův spolupracovník a nástupce v čele Lykeia.
-  proc: Napsal první velká díla o rostlinách.
+  proc: Napsal Povahy, třicet krátkých a často vtipných obrazů záporných typů z všedního života Athén.
   atribut:
     ikona: sprig
     nazev: rostlina
