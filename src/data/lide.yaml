@@ -248,7 +248,7 @@
   smery: [miletska-skola]
   mista:
     - { misto: miletos, role: narozeni, zdroj: iep-anaximander }
-  kdo: Myslitel z Milétu, o deset let mladší než Thalés.
+  kdo: Myslitel z Milétu, Thalétův krajan.
   proc: Jako první řecký myslitel napsal spis prózou a počátkem všeho mu bylo neomezené (apeiron).
   zdroje: [iep-anaximander]
 
@@ -469,7 +469,7 @@
     nazev: loď
     proc: Po ztroskotání našel v písku geometrické obrazce a poznal, že je mezi vzdělanými lidmi.
     zdroj: vitruvius-vi
-  zdroje: [sep-cyrenaics, vitruvius-vi]
+  zdroje: [sep-cyrenaics, vitruvius-vi, britannica-aristippus]
 
 - id: antisthenes
   jmeno: Antisthenés
@@ -848,7 +848,7 @@
     - { misto: alexandrie, role: pusobeni, zdroj: bea-hypatia }
     - { misto: alexandrie, role: smrt, rok: 415, zdroj: bea-hypatia }
   kdo: Matematička, astronomka a filozofka z Alexandrie, dcera matematika Theóna.
-  proc: Stála v čele alexandrijské novoplatonské školy a roku 415 ji zabil rozzuřený dav.
+  proc: Stála v čele alexandrijské novoplatonské školy a roku 415 n. l. ji zabil rozzuřený dav.
   atribut:
     ikona: astrolabe
     nazev: astroláb
