@@ -9,9 +9,11 @@ Celek 8: společný profil Kratéta a Hipparchie, cesta 7 „Čí život vlastn�
 | P8 | Cesta 7 „Čí život vlastně žiju?“, kresba Třetí čára a hlas Hipparchie na stránce otázky 1 | hotovo 16. 10. 2026 (oddíl Po P8); čtyři body čekají na autora |
 | P10 | Revize celku | hotovo 16. 10. 2026 (oddíl Po P10, záznam `docs/revize/celek-8-2026-10-16.md`); šest bodů autor nechal na doporučení revize |
 | Opravy | Zapracování nálezů revize | hotovo 16. 10. 2026 (oddíl Po opravách); autor nechal sedm řádků odpovědí prázdných |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | připraveno, jen na pokyn autora (oddíl Uzavření celku 8) |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | hotovo 17. 10. 2026: autor celek schválil („vše schvaluji“), větev je sloučená do hlavní větve a hlavní větev je na GitHubu |
 
-Stav a zadání dalších kroků se zapisují sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-8.md`. Větev `celek-8` je založená z hlavní větve 15. 10. 2026 (commit `b883943`, po sloučení celku 7).
+**Celek je uzavřený 17. 10. 2026:** schválený autorem, sloučený do hlavní větve a poslaný na GitHub. Tento plán je od té doby v archivu (`docs/archiv/plany/celek-8.md`) a čte se jen na pokyn.
+
+Stav a zadání dalších kroků se zapisovaly sem, ne do `docs/plan.md`. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/celek-8.md`. Větev `celek-8` je založená z hlavní větve 15. 10. 2026 (commit `b883943`, po sloučení celku 7).
 
 ## Proč tento rozsah
 
@@ -221,11 +223,8 @@ Zadání oprav je v `docs/archiv/zadani/celek-8.md`. Autor ho poslal se sedmi pr
 
 **Kontrola.** Celé `npm test` po opravách prošlo napoprvé: 551 jednotkových testů a 433 v prohlížeči, i „cesta: průchod, Kam dál z bloku…“. Testy hlídají nová znění (`cesta7`: kroky 4, 5, 6 a 7; `krates-hipparchia`: atribut). Čas cesty (`slova-cesta.mjs`): 3 477 slov, 23,2 minuty čtení a 6,5 ovládání = 29,7 minuty; štítek 30 sedí. Hlavička dvojice na 390, 700, 899 a 1440 px v obou režimech (`Claude outputs/opravy-celek-8/snimky/`): na 390 px deska 343–664, odstavec od 732 px, lišta od 772; oba atributy celé nad lištou.
 
-## Uzavření celku 8
+## Uzavření celku 8 (17. 10. 2026)
 
-Čeká na pokyn autora. Až řekne „vše schvaluji“, postup je stejný jako u celku 7:
+Autor 17. 10. 2026 napsal „vše schvaluji“. Větev `celek-8` je sloučená do hlavní větve bez konfliktů (hlavní větev se od založení větve nehnula), kód je tedy totožný s větví, na které `npm test` prošel celý; na hlavní větvi prošel znovu celý (551 jednotkových testů, 433 v prohlížeči). Hlavní větev je na GitHubu.
 
-1. Ve větvi `celek-8` zapsat schválení do tabulky stavu a do `docs/rozhodnuti.md`, plán větve přesunout do `docs/archiv/plany/`, z projektu Claude ho odebrat a v `docs/plan.md` označit celek 8 jako uzavřený (a aktualizovat ho i v projektu).
-2. `git switch main`, `git merge --no-ff celek-8`, celé `npm test` na hlavní větvi.
-3. `git push origin main` (a případně smazat větev `celek-8`).
-4. Další krok podle autora: jména v Době a lidech jako odkazy (malý samostatný krok), nebo medailonky (P9), nebo další celek.
+Další krok vybere autor: jména v Době a lidech jako odkazy (malý samostatný krok, doporučení revize), medailonky (P9), nebo další celek.

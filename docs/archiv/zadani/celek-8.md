@@ -1,6 +1,6 @@
 # Provedená zadání větve celek-8
 
-Zadání kroků, které už proběhly, v plném znění. Stav po každém kroku je v plánu větve `docs/plany/celek-8.md`.
+Zadání kroků, které už proběhly, v plném znění. Celek je uzavřený 17. 10. 2026; plán větve se stavem po každém kroku je v `docs/archiv/plany/celek-8.md`.
 
 ## P6: Podklady k celku 8 „Čí život vlastně žiju?“
 

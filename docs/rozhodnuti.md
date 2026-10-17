@@ -4,6 +4,13 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Celek 8 uzavřen
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor schválil celek 8 „Čí život vlastně žiju?“ i s opravami po revizi („vše schvaluji“). Větev `celek-8` je sloučená do hlavní větve, plán větve je v `docs/archiv/plany/celek-8.md` a hlavní větev je na GitHubu. | Pravidlo z 2. 10. 2026: GitHub po závěrečné revizi celku a schválení autorem. |
+| Další v pořadí: jména v Době a lidech jako odkazy (malý krok přes všechny profily), pak `medailonky` (P9). | Doporučení revize celku 8; medailonky autor chtěl 15. 10. 2026. |
+
 ## 16. 10. 2026: Opravy celku 8 po revizi
 
 | Rozhodnutí | Důvod |
