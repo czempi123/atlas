@@ -130,12 +130,12 @@ test('odkazy na společný profil: Lidé a směry, Mapa a čas, přehled cesty',
   await expect(page.locator('a[href="/osobnost/hipparchia/"]')).toHaveCount(0);
 
   await page.goto('/mapa/?rok=-320&osoba=hipparchia');
-  await expect(page.getByRole('link', { name: 'Otevřít portrét' })).toHaveAttribute('href', PROFIL);
+  await expect(page.getByRole('link', { name: 'Otevřít stránku' })).toHaveAttribute('href', PROFIL);
   // Z Diogenovy a Zénónovy karty: vztah ke Kratétovi otevře jeho kartu a ta vede na společný profil.
   for (const [odkud, rok] of [['diogenes', -330], ['zenon-z-kitia', -300]] as const) {
     await page.goto(`/mapa/?rok=${rok}&osoba=${odkud}`);
     await page.locator('.vztahy').getByRole('button', { name: 'Kratés', exact: true }).click();
-    await expect(page.getByRole('link', { name: 'Otevřít portrét' })).toHaveAttribute('href', PROFIL);
+    await expect(page.getByRole('link', { name: 'Otevřít stránku' })).toHaveAttribute('href', PROFIL);
   }
 
   // Přehled cesty skládá adresy stejnou funkcí (cesta 7 s Kratétem a Hipparchií přibude v P8).

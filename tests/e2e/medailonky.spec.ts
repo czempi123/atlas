@@ -56,7 +56,7 @@ test('Lidé a směry vedou na medailonek', async ({ page }) => {
 test('Mapa a čas: karta člověka s medailonkem otevře jeho stránku', async ({ page }) => {
   // Kleanthés žije v roce -280 (331 až 232 př. n. l.); první medailonek v datech být nemusí (Démokritos tehdy už nežil).
   await page.goto('/mapa/?rok=-280&osoba=kleanthes');
-  await expect(page.getByRole('link', { name: 'Otevřít portrét' })).toHaveAttribute('href', '/osobnost/kleanthes/');
+  await expect(page.getByRole('link', { name: 'Otevřít stránku' })).toHaveAttribute('href', '/osobnost/kleanthes/');
 });
 
 test('Doba a lidé: tradovaný vztah má „vypráví se“, u Hypatie ženský rod', async ({ page }) => {
