@@ -4,6 +4,23 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Hodiny v1, krok H2 (skladatel hodiny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Tři body Co rozhodnout po H1 platí, jak byly navržené: id celých stránek s předponou bez části, Doba a lidé v katalogu, nepovinné pole `prectene` v deníku přidá H3 | Autor nechal odpovědi prázdné; prázdná odpověď znamená souhlas |
+| Uložené hodiny jsou v localStorage pod `atlas-hodiny` jako `{ verze: 1, hodiny: [...] }` (`src/lib/hodiny-uloziste.ts`), odděleně od deníku; bez úložiště vydrží do zavření stránky. Každá položka se při čtení pročistí stejně jako soubor (`hodinaZeSouboru`) | Zadání H2; poškozená položka nesmí shodit seznam |
+| Hodina dostane id při prvním uložení nebo stažení souboru, ne dřív; nahraná hodina si id ze souboru nechá, takže opakované nahrání téhož souboru hodinu přepíše, místo aby vznikla druhá | Stažený soubor a pozdější uložení musí mluvit o téže hodině |
+| Nahraný soubor se otevře k úpravě jako neuložený; do úložiště se dostane až tlačítkem Uložit | Učitel nejdřív vidí, co nahrál; nic se nepřepíše samo |
+| Hledání ve výběru počítá i s názvem stránky, kroku a kapitoly, do které zastavení patří („Epiktétos“ najde profil i s kapitolami, „Sókratés soud“ kapitolu Soud). Shoda filtru ukáže i předky jako souvislost slabším řezem | Při hledání jen v názvu zastavení ukázalo „Epiktétos“ jen řádek profilu a jeho hlasy; kapitoly nejmenují osobu |
+| Náhled zastavení je jeho název jako odkaz do nové karty (šipka ↗, pro čtečky „otevře se v nové kartě“), ve výběru i v hodině; ne zvláštní tlačítko | Jedna zastávka tabulátoru méně u každého z 335 zastavení |
+| Tlačítko u zastavení ve výběru je přepínač Přidat / Odebrat, jedno tlačítko, které změní text | Dvě různá tlačítka by po klepnutí vyměnila prvek s fokusem a fokus by se ztratil |
+| Na telefonu je výběr nad hodinou (stejné pořadí jako v DOM a na notebooku) a počet zvolených zastavení drží řádek přilepený nad výběrem s odkazem K hodině; ne pevná lišta dole | Pořadí čtení a tabulátoru zůstane stejné jako na notebooku; dole už je spodní lišta webu a další pevná lišta by potřebovala úpravu skriptu, který hlídá fokus pod lištou |
+| Smazání hodiny v deníku se potvrzuje přímo v řádku (Smazat hodinu · Nechat), ne dialogem prohlížeče | Vlastní potvrzení jde ovládat klávesnicí a vrací fokus; dialog prohlížeče testy ani čtečky dobře nesnesou |
+| Odchod se skladatele s neuloženými změnami ohlídá dialog prohlížeče (`beforeunload`); hodinu nic neukládá samo | Zadání má Uložit jako akci; automatické ukládání by vytvářelo hodiny, které učitel uložit nechtěl |
+| Vypnuté tiché tlačítko (`.blok__tl--tiche:disabled`) má v `global.css` čárkovaný okraj a tlumený text | Pravidlo z `atlas-komponenta`: vypnuté tlačítko musí vypadat vypnutě v každé variantě; tichá varianta styl neměla |
+| `scripts/snimky-listy.mjs` umí `ULOZISTE` (hodnoty do localStorage před načtením) a `AKCE` (výraz ve stránce po načtení) | Skladatel a Moje hodiny bez uložené hodiny nic neukážou; snímky pro autora je potřebují naplněné |
+
 ## 17. 10. 2026: Hodiny v1, krok H1 (katalog zastavení a kotvy)
 
 | Rozhodnutí | Důvod |
