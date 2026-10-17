@@ -3,12 +3,11 @@
 // Mini osa se současníky, výřez mapy, učitelé a žáci, známí, vliv přes texty a kdo navazoval.
 // Společný profil předá další osoby (`dalsi`): vztahy obou se sloučí, vztah mezi nimi se nevypíše
 // (řekne ho úvodní věta) a u každého člověka stojí, ke komu ze dvojice vztah patří („učitel Kratéta“).
-// Jméno člověka, který má vlastní stránku, je odkaz na ni (adresaOsoby: Hipparchia vede na společný profil);
+// Jméno člověka, který má vlastní stránku, je odkaz na ni (adresaStranekOsob: Hipparchia vede na společný profil, medailonek na /osobnost/<id>/);
 // lidé bez stránky a osoby, o kterých stránka je, zůstávají prostým textem.
 // Použití v MDX: <DobaALide osoba={props.osoba} dalsi={props.dalsi}> úvodní věty </DobaALide>
-import { getCollection } from 'astro:content';
 import type { TOsoba, TVztah } from '../../lib/schema';
-import { adresaOsoby } from '../../lib/adresa-osoby';
+import { adresaStranekOsob } from '../../lib/stranky-osob';
 import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
 import { zivot } from '../../lib/casy';
 import { roleVztahu, skupinyVztahu } from '../../lib/vztahy';
@@ -21,7 +20,7 @@ const { osoba, dalsi = [] } = Astro.props;
 const osoby = [osoba, ...dalsi];
 const dvojice = osoby.length > 1;
 const naStrance = new Set(osoby.map((o) => o.id));
-const adresa = adresaOsoby(await getCollection('osobnosti'));
+const adresa = await adresaStranekOsob();
 const odkaz = (id: string) => (naStrance.has(id) ? undefined : adresa(id));
 const vztahy = osoby.flatMap((ja) =>
   vztahyOsoby(ja.id)
@@ -47,7 +46,8 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
 <section class={`doba obdobi-${osoba.obdobi}`} aria-labelledby="doba-a-lide" data-oddil={NAZEV} data-oddil-kotva="doba-a-lide">
   <p class="t-nadtitulek nadtitulek">{NAZEV}</p>
   <h2 class="t-h2" id="doba-a-lide">{nadpis}</h2>
-  <div class="doba__uvod ctenarsky"><slot /></div>
+  {/* Medailonek úvodní věty nemá (vše z dat): prázdný úvod by jen přidal mezeru. */}
+  {Astro.slots.has('default') && <div class="doba__uvod ctenarsky"><slot /></div>}
 
   <div class="doba__mrizka">
     <div class="doba__osa">

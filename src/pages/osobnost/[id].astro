@@ -1,0 +1,23 @@
+---
+// /osobnost/<id>/: profil či portrét z kolekce osobnosti (StrankaProfilu), nebo medailonek z dat (StrankaMedailonku)
+// pro osobu s `medailonek: true` v lide.yaml. Osoba s profilem medailonek mít nesmí; hlídá to adresaOsoby.
+import { getCollection, type CollectionEntry } from 'astro:content';
+import StrankaProfilu from '../../components/osobnost/StrankaProfilu.astro';
+import StrankaMedailonku from '../../components/osobnost/StrankaMedailonku.astro';
+import { adresaOsoby } from '../../lib/adresa-osoby';
+import { medailonky } from '../../lib/stranky-osob';
+import { osoba } from '../../lib/data';
+import type { TOsoba } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const profily = await getCollection('osobnosti');
+  adresaOsoby(profily, medailonky); // zastaví sestavení, když má osoba profil i medailonek
+  return [
+    ...profily.map((zaznam) => ({ params: { id: zaznam.id }, props: { zaznam } })),
+    ...medailonky.map((id) => ({ params: { id }, props: { medailonek: osoba(id) } })),
+  ];
+}
+interface Props { zaznam?: CollectionEntry<'osobnosti'>; medailonek?: TOsoba }
+const { zaznam, medailonek } = Astro.props;
+---
+{zaznam ? <StrankaProfilu zaznam={zaznam} /> : <StrankaMedailonku osoba={medailonek!} />}

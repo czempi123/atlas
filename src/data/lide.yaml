@@ -689,6 +689,7 @@
   zemrel: { rok: -263, priblizne: true }
   obdobi: 2
   hloubka: profil
+  medailonek: true
   smery: [stoicismus]
   otazky: [1]
   linie: [stoicismus]
@@ -900,6 +901,7 @@
   zemrel: { rok: -232, priblizne: true }
   obdobi: 2
   hloubka: medailonek
+  medailonek: true
   smery: [stoicismus]
   linie: [stoicismus]
   mista:

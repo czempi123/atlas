@@ -6,11 +6,11 @@ import Mince from '../../components/ui/Mince.astro';
 import { data } from '../../lib/data';
 import { zivot, interval, rozpeti } from '../../lib/casy';
 import { cestyOsoby } from '../../lib/vstupy';
-import { adresaOsoby } from '../../lib/adresa-osoby';
+import { adresaStranekOsob } from '../../lib/stranky-osob';
 import { nezlomitelne } from '../../lib/sazba.js';
 
 const smery = (await getCollection('smery')).sort((a, b) => a.data.poradi - b.data.poradi);
-const adresa = adresaOsoby(await getCollection('osobnosti'));
+const adresa = await adresaStranekOsob();
 const nazevSmeru = new Map(smery.map((s) => [s.id, s.data.nazev]));
 const cesty = (await getCollection('cesty')).map((c) => ({ slug: c.id, ...c.data }));
 const obdobi = data.obdobi.filter((o) => data.lide.some((l) => l.obdobi === o.id));
