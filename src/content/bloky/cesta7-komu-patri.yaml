@@ -1,0 +1,34 @@
+# Volba s důvodem · cesta 7 „Čí život vlastně žiju?“, krok 1: začátek cesty (pole `zacatek` v přehledu cesty).
+# Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Vstupní příběh: volba a Citlivá místa (Vstup; pravidla 1, 2 a 6).
+# Otázka je o postavě, ne o studentovi, proto smí mít pole na důvod. Rodiče nejsou záporné postavy: zpětná vazba
+# u „Rodičům“ uznává jejich strach (v pramenu ho mají). Žádná zpětná vazba nechválí odchod ani poslušnost.
+# Výhrůžka z DL VI, 96 není nikde (jen v listu pro učitele). Zastánci všech čtyř možností jsou v kroku 7.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Komu patřilo to rozhodnutí?
+moznosti:
+  - text: Jí. Je to její život.
+    tah: nechat rozhodnout toho, koho se to týká
+    zpetna: >-
+      Opíráš se o to, že plášť a hůl ponese ona, ne rodiče. Kdo bude žít s následky, má mít poslední slovo.
+      Zkus proti sobě námitku. Kdo je zamilovaný, vidí ženicha jinak než ostatní.
+      Podle čeho by poznala, že chce Kratétův život, a ne jen Kratéta?
+  - text: Rodičům. Mají o ni strach a znají svět.
+    tah: dát slovo těm, kdo se bojí
+    zpetna: >-
+      Bereš vážně jejich strach, a ten byl skutečný: z bohatého domu by šla do života bez majetku. Proto taky hledali pomoc.
+      Zkus proti sobě námitku. Život v plášti by nežili rodiče, ale ona, a to celý.
+      Může někdo rozhodnout za člověka, kterému to rozhodnutí potom zůstane?
+  - text: Kratétovi. Ví, co ji čeká.
+    tah: svěřit to tomu, kdo ví víc
+    zpetna: >-
+      Kratés opravdu věděl nejvíc: ten život sám žil. A rodiče se sami obrátili na něj.
+      Všimni si ale, co udělal. Nerozhodl, ukázal jí, co ví, a podmínku dal jí.
+      Je rozdíl mezi tím, když za tebe rozhodne ten, kdo ví víc, a tím, když ti jen řekne, co ví?
+  - text: Nikomu z nich samotnému.
+    tah: hledat společné rozhodnutí
+    zpetna: >-
+      Podle tebe se o tom mělo rozhodnout spolu. Sňatek se týkal celé rodiny, nejen jí, a takové věci se rozhodují mezi víc lidmi.
+      Zkus proti sobě námitku: co když se neshodnou? Kdo má mít poslední slovo, a proč právě on?
+zdroje: [dl-vi-85]

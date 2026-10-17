@@ -1,0 +1,74 @@
+# Roztřiď · cesta 7 „Čí život vlastně žiju?“, krok 2: kdo co po mně chce (kynická příroda × zvyk × vlastní přání).
+# Podklad: docs/podklady/celek-8-ci-zivot-ziju.md › Podle přírody, ne podle zvyku × buď sám sebou (DL VI, 22, 70–72)
+# a Citlivá místa (Jádro: podle přírody; pravidla 6 a 7). Bez vlastní karty: student by do ní mohl napsat rodinu,
+# víru nebo vztah. Karty jsou neutrální (žádné náboženské zvyky, žádná otázka na vlastní profil na sítích);
+# jiné než Odkryj „diogenes-zvyk“ v profilu Diogena. Dvě věci v jedné kartě: mikina (teplo a značka),
+# pozdrav (zvyk a ohled na druhého). Žádný koš není správný.
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: Tady je šest věcí z obyčejného týdne.
+otazka: Kdo to po mně chce?
+kose:
+  - id: telo
+    nazev: Tělo
+    popis: Bez toho mi není dobře.
+  - id: druzi
+    nazev: Druzí
+    popis: Chci to, protože se to čeká nebo to mají ostatní.
+  - id: ja
+    nazev: Já
+    popis: Chtěl bych to, i kdyby to nikdo neviděl.
+karty:
+  - id: spanek
+    text: Vyspat se
+    zpetna: >-
+      Tělo si o spánek řekne samo a diváky k tomu nepotřebuje. Tady by kynik nic neměnil.
+      Je v tvém týdnu ještě něco, co chceš takhle samo od sebe?
+  - id: mikina
+    text: Mikina značky, kterou nosí celá parta
+    zpetna: >-
+      Jsou v ní dvě věci: teplo a značka. Zahřeje tě každá mikina. Kvůli komu chceš právě tuhle?
+    kdyz:
+      telo: >-
+        Dal jsi ji k tělu. Zahřála by tě ale i mikina bez značky. Co z téhle karty patří tělu a co ne?
+      ja: >-
+        Dal jsi ji k sobě: chceš ji ty. Kynik by se zeptal, odkud se to přání vzalo.
+        Chtěl bys ji, i kdyby ji nenosil nikdo z party?
+  - id: pozdrav
+    text: Pozdravit souseda na schodech
+    zpetna: >-
+      Pozdrav je zvyk: jinde se zdraví jinak a někde vůbec. Zvyk ale nemusí být prázdný, když je v něm ohled na druhého.
+      Zdravíš proto, že se to dělá, nebo kvůli sousedovi?
+  - id: sledujici
+    text: Mít hodně sledujících
+    zpetna: >-
+      Sledující nenasytí ani nezahřejí a bez druhých by nebyli. Kynik by se zeptal, co by se změnilo, kdyby zmizeli.
+      Co by z té věci zbylo, kdyby se na ni nikdo nedíval?
+    kdyz:
+      ja: >-
+        Dal jsi je k sobě. Kynik by namítl, že právě tohle přání do člověka dávají druzí.
+        Chtěl bys je, i kdyby nikdo nevěděl, kolik jich máš?
+  - id: jidlo
+    text: Najíst se, když mám hlad
+    zpetna: >-
+      Hlad je příroda, jak ji kynici myslí. Diogenova myš o lahůdky nestála.
+      Je v tvé chuti něco, co k hladu přidal až zvyk?
+  - id: umet
+    text: Umět něco opravdu dobře
+    zpetna: >-
+      Umět něco dobře se dá kvůli pochvale, i proto, že tě ta věc baví. Kynici se cvičili celý život.
+      Kdyby se nikdo nedozvěděl, že to umíš, učil by ses dál?
+    kdyz:
+      druzi: >-
+        Dal jsi to k druhým. Kvůli komu se to učíš: kvůli pochvale, nebo protože to po tobě někdo potřebuje?
+srovnani:
+  osoba: diogenes
+  nadpis: Jak by třídil kynik
+  text: >-
+    Kynik by se u každé karty zeptal, jestli ji potřebuje člověk jako živý tvor, nebo ji přidal zvyk a pohled druhých.
+    Do koše Já by nic nedal bez otázky: i touha po slávě sedí v tobě, a přece ji tam podle něj dali druzí.
+
+
+    Projdi svůj koš Já. Je v něm něco, o čem nevíš, odkud se vzalo? A nechal bys to tam i tak?
+zdroje: [dl-vi-20, dl-vi-69, epiktetos-rozpravy-iii-22]

@@ -1,0 +1,16 @@
+---
+// Třetí čára: kresba k Aschovu pokusu (cesta 7, krok 6). Odpovědi skupiny přicházejí jedna po druhé
+// a zastaví se na předposlední židli; pohled „Se spojencem“ přidá jednoho, kdo řekne, co vidí.
+// Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <TretiCara id="treti-cara" obdobi={2} />
+import Ostrov from '../ostrovy/TretiCara.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'treti-cara', obdobi = 2 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

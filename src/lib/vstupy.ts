@@ -37,10 +37,12 @@ export function cestyOtazky<C extends CestaVstupu>(cislo: number, cesty: C[]): C
  * Co nabídnout v hlavičce profilu: cesty osoby a otázky, na jejichž stránce má osoba hlas.
  * Otázka, ke které vede cesta osoby, jde první; ostatní podle čísla.
  */
-export function vstupyOsoby<C extends CestaVstupu, O extends OtazkaVstupu>(osoba: string, cesty: C[], otazky: O[]): { cesty: C[]; otazky: O[] } {
-  const moje = cestyOsoby(osoba, cesty);
+export function vstupyOsoby<C extends CestaVstupu, O extends OtazkaVstupu>(osoba: string | string[], cesty: C[], otazky: O[]): { cesty: C[]; otazky: O[] } {
+  // Společný profil (Kratés a Hipparchia) předá všechny své osoby: každá cesta a otázka se nabídne jednou.
+  const osoby = Array.isArray(osoba) ? osoba : [osoba];
+  const moje = cesty.filter((c) => c.filozofove.some((f) => osoby.includes(f))).sort(podleCisla);
   const zCest = new Set(moje.map((c) => c.otazka));
-  const sHlasem = otazky.filter((o) => (o.hlasy ?? []).some((h) => h.osoba === osoba));
+  const sHlasem = otazky.filter((o) => (o.hlasy ?? []).some((h) => osoby.includes(h.osoba)));
   const poradi = (o: O) => (zCest.has(o.cislo) ? 0 : 1);
   return { cesty: moje, otazky: [...sHlasem].sort((a, b) => poradi(a) - poradi(b) || podleCisla(a, b)) };
 }

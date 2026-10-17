@@ -53,9 +53,9 @@
 # Od Sókrata ke kynikům a stoikům
 - { od: gorgias, k: antisthenes, typ: ucitel, zdroj: iep-antisthenes }
 - { od: antisthenes, k: diogenes, typ: ucitel, tradovany: true, zdroj: iep-antisthenes }
-- { od: diogenes, k: krates, typ: ucitel, zdroj: britannica-crates }
-- { od: krates, k: hipparchia, typ: znali-se, poznamka: "manželé", zdroj: britannica-crates }
-- { od: krates, k: zenon-z-kitia, typ: ucitel, zdroj: britannica-zeno-citium }
+- { od: diogenes, k: krates, typ: ucitel, zdroj: dl-vi-85 }
+- { od: krates, k: hipparchia, typ: znali-se, poznamka: "manželé", zdroj: dl-vi-85 }
+- { od: krates, k: zenon-z-kitia, typ: ucitel, zdroj: dl-vii-2 }
 - { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "vypráví se, že Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: iep-cynics }
 - { od: zenon-z-kitia, k: kleanthes, typ: ucitel, zdroj: britannica-cleanthes }
 - { od: kleanthes, k: chrysippos, typ: ucitel, zdroj: iep-chrysippus }

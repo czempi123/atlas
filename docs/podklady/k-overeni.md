@@ -11,7 +11,7 @@
 | Čuang-c’ (okno období 2) | SEP („Zhuangzi“) uvádí jen „pozdní 4. století př. n. l.“; tradiční 369–286 z návrhu P1 jsem nedoložil. | Dohledat v Chan, *A Source Book in Chinese Philosophy*, nebo v IEP. |
 | Hieroklés (stoik) | Heslo IEP neexistuje na očekávané adrese; datace „2. st. n. l.“ nemá odborný zdroj. | Dohledat v Ramelli, *Hierocles the Stoic* (SBL 2009); obraz soustředných kruhů je u Stobaia 4.27.23. |
 | Sextus Empiricus | SEP: „víme málo nebo nic o tom, kdy a kde žil“ (asi 2.–3. st. n. l.). | Nechat bez dat jako medailonek bez místa na mapě, nebo vynechat z mapy. Schéma to umí. |
-| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. **5. 10. 2026 (celek 5):** cesta 4 ho nese ve vstupním příběhu; zůstává v textu bez odkazu, stejně jako Filip, Hermeiás, Pýthias, Kleitos a Kallisthenés. Kvůli tomu nejdou do dat ani věty Plútarcha a Arriána jako citáty (citát potřebuje osobu). |
+| Alexandr Veliký | Není v kostře osobností (architektura), ale vztah učitel a žák s Aristotelem nese cestu 4. | Rozhodnout, zda přidat jako medailonek „nefilozofa s přesahem“ (Britannica: 356–323 př. n. l., Babylón). **1. 10. 2026:** potřebuje ho i cesta 7 (Diogenés a Alexandr, `celek-2-jak-zit.md`; **15. 10. 2026, celek 8:** cesta 7 otevírá Hipparchiinou volbou, Alexandr v ní zůstává jen jednou větou o Thébách ve Sporu, bez odkazu)); autor rozhodl, že nové osoby přibudou až dodatečně, až bude vše hotové. **5. 10. 2026 (celek 5):** cesta 4 ho nese ve vstupním příběhu; zůstává v textu bez odkazu, stejně jako Filip, Hermeiás, Pýthias, Kleitos a Kallisthenés. Kvůli tomu nejdou do dat ani věty Plútarcha a Arriána jako citáty (citát potřebuje osobu). |
 
 ## Chybějící roky a místa u lidí, kteří v datech jsou
 
@@ -686,3 +686,112 @@ Co se změnilo v textu a datech, aby to šlo dohledat:
 | Poradna Vigvam v listu k celku 6 | Trvá. | Doplnit do `ucitel/celek-6.md` při nejbližší příležitosti. |
 | „Na druhém člověk vidí víc než na sobě“ | Věta stojí na anglickém překladu IX, 9 z revize, řecky jsem místo nečetl. | Před vydáním srovnat s řeckým textem nebo s českým překladem. |
 | Publikované české překlady | Dál neviděny. | Před vydáním srovnat hlavně B12, B51, Parmenidovy verše a Marca XII, 3–4. |
+
+## Celek 8 „Čí život vlastně žiju?“ (P6)
+
+15. 10. 2026. Podklady jsou v `docs/podklady/celek-8-ci-zivot-ziju.md`. Vyřízeno z dřívějších bodů:
+
+- **Kratés v Athénách** (bod z celku 2, „Kratés v Athénách po roce 306“). Diogenés Laertios ho v Athénách ukazuje výslovně: athénští dozorci trhu (VI, 90), Zénón ho potká u athénského knihkupce a nese polévku přes Kerameikos (VII, 2–3). Rok zůstává nejistý (viz Roky Kratéta níže); věta v cestě 6 („chodili po městě kynici“) obstojí.
+- **Alexandr Veliký.** Cesta 7 ho jako vstup nepotřebuje (vstupem je Hipparchiina volba); v textu jen ve Sporu, bez odkazu.
+- **Hipparchiiny spisy.** Diogenés Laertios jí žádné nepřipisuje (ověřeno v řečtině VI, 96–98); připisuje je Suda (iota 517).
+
+Otevřené zůstalo nebo přibylo:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Roky Kratéta | Data mají asi 350–301 (Britannica). DL: akmé 328–325 (VI, 87), zemřel starý (VI, 92, 98). Wikipedie podle Dorandiho (1999) asi 365–285; Dorandiho jsem neviděl. | P7: ověřit v odborné chronologii (Dorandi v Cambridge History of Hellenistic Philosophy, OCD, Goulet-Cazé) a přepsat na asi 365–285; do té doby rok ve studentském textu neuvádět. |
+| Théby 335 př. n. l. | Arriános I, 9, 9 (řecky) dokládá, že spojenci rozhodli Théby srovnat se zemí; rok znám z příruček. | Rok jen s ověřeným zdrojem (Britannica „Thebes“), jinak bez roku. |
+| Nástěnná malba z Villa Farnesina | Identifikace jako Kratés a Hipparchia jen v popiscích (Wikipedie, Commons); kdo ji navrhl, nezjištěno; licence fotografií neověřena; v téže místnosti erotické výjevy. | Nepoužívat, dokud ji autor sám neověří. |
+| Juliánova Řeč 9 (Kratétova modlitba k Múzám: „užitečný přátelům, ne sladký“) | Text v repozitářích, které nástroje čtou, jsem nenašel. | Kdyby ji profil chtěl, ověřit v Loebově vydání nebo v TLG. |
+| Kratétovy zlomky | Atribuci veršů u Diogena Laertia jsem nesrovnával se sbírkou Giannantoniho (SSR V H). | Při revizi stačí Britannica a shoda parodií; před vydáním případně SSR. |
+| Aschův pokus se spojencem | Čísla (5,5 %, 10,4 %, 28,5 %, 8,7 %, 12,8 %) jsou z textu Asch 1951; tabulky v kopii nejsou čitelné a monografii 1956 jsem četl jen do s. 10. | Stačí pro text; do listu pro učitele uvést, že jde o první soubor (50 lidí) a že základní pokus téhož souboru měl 32 %. |
+| Bond a Smith (1996) | Metaanalýzu znám jen z Franzena a Madera (44 přesných replikací, průměr 25 %). | Do listu pro učitele jen s tímto údajem a s odkazem přes Franzena a Madera. |
+| Bateson a kol. (2006), „oči u pokladničky“ | Nepoužito; že se nepotvrdila spolehlivě, vím jen z literatury. | Nic, dokud ji někdo nechce. |
+| Mladí pečující | Českou metodiku pro školy jsem nenašel. | Při psaní listu pro učitele dohledat (např. projekty pro „mladé pečující“), jinak platí pravidlo PSHE neptat se na osobní věci. |
+| Rijksmuseum, datace RP-P-1878-A-651 | Záznam má „c. 1635 – 1537“; kniha Catsova je z roku 1637. | V popisku obrázku „1637“ podle knihy. |
+| České překlady | Koláře, Kříže ani Novotného jsem neměl v ruce. | Platí rozhodnutí z celků 1–7: vlastní převody. |
+| Ikony atributů | Mošna a člunek v sadě `atributy-ikony.json` nejsou. | P7: nakreslit dvě nové ikony. |
+
+### Po P7 (společný profil Kratéta a Hipparchie, 16. 10. 2026)
+
+Vyřízeno:
+
+- **Roky Kratéta.** Oxford Classical Dictionary (Oxford Research Encyclopedia of Classics, heslo „Crates (2), of Thebes, Greek philosopher and poet, c. 368/365–288/285 BCE“) a Brill's New Pauly (stejné rozpětí podle katalogu Perseus); Dorandi asi 365–285 (podle Wikipedie). Data: asi 365–285 s rozmezím 368–365 a 288–285 (`ocd-crates`). Ověřen jen název hesla OCD, text hesla je za přihlášením.
+- **Ikony atributů.** Mošna (`bag`) a člunek (`shuttle`) v `docs/design/atributy-ikony.json`.
+- **Rijksmuseum, datace Catsovy strany.** Popisek obrázku `krates-hipparchia-cats` říká 1637 podle knihy.
+- **Théby.** Profil říká, že je Alexandr dal srovnat se zemí, bez roku (`arrianos-anabaze-i-9`).
+
+Otevřené nebo nové:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| „Tkát látky doma byla práce, kterou se od žen čekalo“ (kapitola Hostina) | Obecná věta o řecké domácnosti, kterou podklady nesou jen jako výklad Hipparchiina „čas, který jsem měla strávit u stavu“. | Při revizi doložit (např. Xenofón, Oikonomikos VII; nebo příručka o ženách v klasickém Řecku), nebo větu zmírnit. |
+| Apuleius jako „domácí bůh“ | Pozdní a řečnický pramen (asi 450 let po Kratétovi). Text ho uvádí „Ještě o mnoho století později se o Kratétovi vyprávělo…“ a „prý“. | Nic; jen hlídat, aby věta nezněla jako fakt. |
+| Kratétova „výbava“ | Řecky σκευή (DL VI, 96); profil říká „odložil před ní svou výbavu“ a nevyjmenovává ji. Rytina ukazuje na zemi plášť, mošnu a hůl, Kratés na ní ale stojí oblečený a v klobouku. | Cesta 7 (P8) může výbavu vyjmenovat jen jako obraz rytiny, ne jako údaj pramene. |
+| Volba „Otvírač dveří“ | Bratři a otcovo pole jsou vymyšlená situace („Představ si“); Apuleius mluví obecně o sporech příbuzných. Blok proto nemá oddíl Co udělal. | Nic. |
+| Hipparchia v Athénách | V datech má jen Maróneii (narození). Že s Kratétem žila v Athénách, podklady výslovně nedokládají (hostina byla u Lýsimacha); profil to neříká. | Kdyby to chtěla cesta 7 nebo mapa, dohledat (Menandrova komedie je athénská, ale to je nepřímé). |
+| Mladí pečující | Českou metodiku jsem nedohledal; list pro učitele se drží pravidla PSHE (neptat se na osobní věci) a věty „péče o druhé není cizí život“. | Při revizi celku případně doplnit. |
+| Jména v Době a lidech nejsou odkazy | Podklady čekaly, že se Kratés na Diogenově stránce stane odkazem na společný profil. Doba a lidé ale jména neodkazuje na žádné stránce. Na profil vede Mapa a čas (karta a „Otevřít portrét“) a Lidé a směry. | Rozhodnout v revizi nebo ve větvi rozhraní: odkazy v Době a lidech by se týkaly všech profilů. |
+| Linka první psychické pomoci 116 123 | V listu pro učitele podle Media Guide NÚDZ (celek 6) a adresáře pomoci MV ČR (výsledek hledání 16. 10. 2026); stránku linky jsem neotevřel. | Před vydáním listu ověřit na webu linky. |
+
+### Po P8 (cesta 7, kresba Třetí čára a hlas Hipparchie, 16. 10. 2026)
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Platón jako spojenec odpovědi „Kratétovi“ (krok 7) | Věta „V jeho Ústavě vládnou obci ti, kdo nejvíc vědí“ je obecný výklad Ústavy (V, 473c–d; VII, 519c–520d), v podkladech celku 8 není. | Při revizi ověřit místo a formulaci, případně nahradit jiným doloženým spojencem. |
+| Spojenec sedí v kresbě čtvrtý | Asch 1951 podle podkladů říká jen, že spojenec mluvil před nezasvěceným; jeho místo v řadě jsem neověřil. Kresba to má jako náš obraz (komentář v `src/lib/treti-cara.ts`). | Nic, pokud revize nenajde v Aschovi jiné místo. |
+| Délky čar v kresbě | Z podkladů (Asch 1956, Tabulka 1, kolo 1: 3; 3¾, 4¼, 3 palce); tabulku samu jsem neviděl. | Při revizi porovnat s monografií. |
+| „Od ženy se tehdy čekalo, že svůj čas stráví doma u tkalcovského stavu“ (hlas Hipparchie) | Stejná obecná věta jako v kapitole Hostina profilu (bod z P7), opřená jen o Hipparchiino „čas, který jsem měla strávit u stavu“. | Doložit spolu s bodem z P7 (Xenofón, Oikonomikos VII), nebo zmírnit. |
+| Detail „čas u stavu dala vzdělání“ v celku | Citát `dl-vi-98` je v celku dvakrát (kapitola Hostina, hlas otázky 1); tentýž detail ale nese i atribut „Proč člunek?“ v hlavičce profilu a myšlenka hlasu ho uvádí. | Rozhodnout při revizi, jestli atribut přepsat jinak (třeba člunek jako věc, kterou odložila). |
+| „Kynický plášť tehdy nosilo mnoho lidí“ (krok 5) | Opřeno o Epiktétovy poznámky o kynicích jeho doby (Rozpravy III, 22, 50 a 80), ne o číslo. | Nic; při revizi hlídat, aby věta nezněla jako statistika. |
+| „Buď sám sebou“ se objevilo „až o dva tisíce let později“ (krok 2) | SEP „Authenticity“: ideál autenticity vzniká v 17. a 18. století; od Kratéta je to asi dva tisíce let. | Nic. |
+| Antisthenés jako Diogenův učitel (kroky 3 a 5) | Tradice podle DL VI; vztah v datech jsem v P8 neotevíral. | Při revizi ověřit vztah Antisthenés → Diogenés ve `vztahy.yaml`. |
+| Konec Andersenovy pohádky a otcova věta | V listu pro učitele podle podkladů (čteno dánsky v P6); v Návratu bez pramene. | Nic. |
+| Bond a Smith | V listu pro učitele jen přes Franzena a Madera, rok a rozsah metaanalýzy jsem neověřoval. | Nic, pokud učitel nechce číslo. |
+
+
+### Po P10 (revize celku 8, 16. 10. 2026)
+
+Vyřízeno:
+
+- **Spojenec sedí v kresbě čtvrtý.** Asch 1951, s. 231 přetisku: „The partner was always seated in the fourth position; he therefore announced his estimates in each case before the critical subject.“ Čtvrtá židle je Aschova, ne náš obraz.
+- **Délky čar v kresbě.** Asch 1956, Tabulka 1: standard 3 palce, možnosti 3¾, 4¼ a 3, většina +¾ (odpoví jedničkou). Je to Trial 1, první kritické kolo; před ním jsou neutrální kola a a b.
+- **„Tkát látky doma byla práce, kterou se od žen čekalo“ (profil) a „Od ženy se tehdy čekalo, že svůj čas stráví doma u tkalcovského stavu“ (hlas).** Xenofón, Oikonomikos VII, 6 (manželka umí z vlny udělat plášť), 21–22 (výroba šatů z vlny patří k pracím pod střechou; povaha ženy přizpůsobená pracím uvnitř) a 36 (dohlížet, aby se z vlny dělaly pláště); PerseusDL, angl. E. C. Marchant.
+- **Antisthenés jako Diogenův učitel.** Vztah je ve `vztahy.yaml` (`ucitel`, `tradovany: true`, `iep-antisthenes`).
+- **Platón jako spojenec (krok 7).** Revize doporučuje nahradit ho Sókratem z Kritóna 47b–d (PerseusDL, angl. H. N. Fowler, ověřeno): atlet dá na jednoho lékaře nebo trenéra, „who knows the business“, ne na mínění všech. Pramen `platon-kriton` v datech je.
+
+Otevřené zůstává:
+
+| Bod | Proč | Co udělat |
+| --- | --- | --- |
+| Linka první psychické pomoci 116 123 | V listu pro učitele „ověřeno 16. 10. 2026“ podle adresáře MV ČR; web linky ověřila revize celku 7 (10. 10. 2026). | Před vydáním listu znovu na webu linky. |
+| Mladí pečující | Českou metodiku revize nehledala; nález 2 drží pravidlo PSHE a podkladů („vědomě“). | Při vydání listu pro učitele případně doplnit. |
+| Jména v Době a lidech jako odkazy | Týká se všech profilů. | Samostatný krok po sloučení celku 8 (doporučení revize). |
+
+### Po opravách celku 8 (16. 10. 2026)
+
+Vyřízeno:
+
+- **Platón jako spojenec odpovědi „Kratétovi“ (bod z P8 a P10).** Krok 7 a list pro učitele mají Sókrata z Kritóna 47b–d (`platon-kriton`).
+- **Detail „čas u stavu dala vzdělání“ v celku (bod z P8).** Atribut i myšlenka 3 ho už nemají; zůstává citát `dl-vi-98` v kapitole Hostina a v hlasu otázky 1 (dvakrát).
+- **„Od ženy se tehdy čekalo…“ (bod z P8).** Doloženo Xenofóntem v P10 (viz výš); nový atribut „Od žen se čekalo, že stráví čas u stavu“ stojí na témže místě.
+- **Mladí pečující.** Nález 2 zapracován („když víš, komu a proč ho dáváš“, „klidně i kratší chvíli“). Česká metodika k mladým pečujícím pořád nehledána: bod v tabulce Po P10 trvá jen pro list pro učitele.
+
+Co se změnilo v textu a datech, aby to šlo dohledat:
+
+| Místo | Dřív | Teď |
+| --- | --- | --- |
+| Krok 1, příběh | „Ať jí to rozmluví on, jeho přece poslechne.“ | „Požádali ho, ať jí to rozmluví.“ |
+| Krok 1, text | „Rodiče chtěli, aby rozhodl za ni.“ | „Rodiče chtěli, aby jí to rozmluvil. Kratés jí nakonec místo přemlouvání ukázal…“ |
+| Volba `cesta7-komu-patri`, Kratétovi | „A rodiče mu rozhodnutí sami nabídli. Všimni si ale, co s ním udělal.“ | „A rodiče se sami obrátili na něj. Všimni si ale, co udělal.“ |
+| Spor, scéna a 2. argument Kratéta | bez zvyku; „Každý zvyk se dá vyzkoušet: k čemu je a komu slouží?“ | „…a že dobrým se člověk stává zvykem“; „I kynik se cvičí celý život, jako atlet nebo flétnista…“; zdroj `dl-vi-69` |
+| Krok 5 | Zénónův stud „vyhnat“ vedle Epiktétova; „Ze všech tří výtek plyne totéž…“ | hrnec polévky a dva druhy studu; „Všechny tři výtky míří na pohrdání, které potřebuje diváky…“ |
+| Změň jednu věc, `nadutost` | „chce, aby ho viděli“ | „potřebuje dokázat, že je nad věcí“ |
+| Krok 6 | — | „Stačil k tomu kdokoli, kdo nahlas řekl, co vidí.“ |
+| Krok 7 | Platón, Ústava; rodiče „rozhodnutí sami svěřili“ | Sókratés, Kritón; rodiče „o pomoc požádali právě Kratéta“ |
+| Krok 8 | „ani když ho o to prosili“ | „i když ho rodiče prosili, ať jí to rozmluví“ |
+| Profil, myšlenka 3 a Zkus to žít | „protože chceš“, „protože jsi chtěl“ | „když víš, komu a proč ho dáváš“, „a víš proč“, „klidně i kratší chvíli“ |
+| Atribut Hipparchie | „Čas, který měla strávit u tkalcovského stavu, dala vzdělání.“ | „Od žen se čekalo, že stráví čas u stavu. Hipparchia si vybrala filozofii.“ |
+| Hlas Hipparchie | „ty, nebo to, co se od tebe čeká“ | „ty, nebo jen to, co se od tebe čeká“; „klidně i kvůli někomu jinému“ |
+
+Otevřené dál: linka 116 123 a mladí pečující v listu pro učitele, jména v Době a lidech jako odkazy (tabulka Po P10).

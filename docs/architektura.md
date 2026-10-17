@@ -96,7 +96,7 @@ Cesta je 15–20 minut vedeného průchodu: příběh, vlastní pokus, setkání
 | 4 | 1 | Stačí vědět, co je správné? | Aristotelés učí mladého Alexandra; hostina o patnáct let později | Aristotelés, Sókratés | 1 |
 | 5 | 2 | Co mám ve svých rukou? | Epiktétův pán mu kroutil nohou; Marcus píše v noci u Dunaje | Epiktétos, Marcus Aurelius | 4 |
 | 6 | 2 | Kolik je dost? | Epikúrova zahrada, chléb a voda | Epikúros | 1 |
-| 7 | 2 | Čí život vlastně žiju? | Diogenés žádá Alexandra, ať mu nestíní | Diogenés, Kratés a Hipparchia | 1 |
+| 7 | 2 | Čí život vlastně žiju? | Hipparchia a Kratétova podmínka | Diogenés, Kratés a Hipparchia | 1 |
 | 8 | 2 | Proč se bát smrti? | Umírající Epikúros píše příteli, že prožívá šťastný den | Epikúros, Lucretius, Seneca, Plútarchos | 3 |
 | 9 | 3 | Může rozum dokázat Boha? | Anselmův důkaz a Gaunilův dokonalý ostrov | Anselm, Avicenna, Tomáš Akvinský | 9 |
 | 10 | 3 | Proč dělám, co nechci? | Mladý Augustin krade hrušky, které ani nechtěl jíst | Augustin | 4 |

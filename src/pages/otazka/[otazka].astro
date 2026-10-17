@@ -12,6 +12,7 @@ import CestaKarta from '../../components/cesta/CestaKarta.astro';
 import Prameny from '../../components/osobnost/Prameny.astro';
 import { osoba as najdiOsobu, osoby, citatyPodleId, pramenyPodleId } from '../../lib/data';
 import { maStranku, seradHlasy, chybyHlasu, klicOtazky } from '../../lib/otazky';
+import { adresaOsoby } from '../../lib/adresa-osoby';
 
 export async function getStaticPaths() {
   const vse = await getCollection('otazky');
@@ -28,7 +29,7 @@ const { Content } = await render(zaznam);
 const hlasy = seradHlasy(o.hlasy, osoby).map((h) => ({ ...h, osoba: najdiOsobu(h.osoba) }));
 const POCET = ['', 'jeden', 'dva', 'tři', 'čtyři', 'pět', 'šest', 'sedm', 'osm', 'devět', 'deset'];
 const kolik = POCET[hlasy.length] ?? String(hlasy.length);
-const profily = new Set((await getCollection('osobnosti')).map((p) => p.data.osoba));
+const adresaProfilu = adresaOsoby(await getCollection('osobnosti'));
 const cesty = (await getCollection('cesty')).filter((c) => c.data.otazka === o.cislo).sort((a, b) => a.data.cislo - b.data.cislo);
 
 const citatyNaStrance = [
@@ -79,7 +80,7 @@ const klic = klicOtazky(slug);
 
       <section class="ctenarsky oddil" aria-labelledby={`${slug}-proc-nadpis`}>
         <h2 class="t-h2 oddil__nadpis" id={`${slug}-proc-nadpis`}>Proč to tak <em>viděli</em></h2>
-        <HlasyOsa hlasy={hlasy} profily={profily} />
+        <HlasyOsa hlasy={hlasy} adresa={adresaProfilu} />
       </section>
 
       {cesty.length > 0 && (

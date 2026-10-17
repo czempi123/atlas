@@ -5,23 +5,33 @@ import type { TOsoba } from '../../lib/schema';
 import { data } from '../../lib/data';
 import { interval, zivot, rok as fmtRok } from '../../lib/casy';
 
-interface Props { osoba: TOsoba; max?: number }
-const { osoba, max = 12 } = Astro.props;
-const [n, z] = interval(osoba)!;
+// Společný profil (`dalsi`): zvýrazněné jsou pásy všech osob stránky, současníci se hledají k jejich společnému rozpětí.
+interface Props { osoba: TOsoba; dalsi?: TOsoba[]; max?: number }
+const { osoba, dalsi = [], max = 12 } = Astro.props;
+const osoby = [osoba, ...dalsi];
+const naStrance = new Set(osoby.map((o) => o.id));
+const n = Math.min(...osoby.map((o) => interval(o)![0]));
+const z = Math.max(...osoby.map((o) => interval(o)![1]));
 const soucasnici = data.lide
-  .filter((o) => o.id !== osoba.id && o.narozen && o.zemrel)
+  .filter((o) => !naStrance.has(o.id) && o.narozen && o.zemrel)
   .map((o) => ({ o, i: interval(o)! }))
   .filter(({ i }) => i[0] <= z && i[1] >= n)
   // nejdřív ti, kdo mají k osobě vztah, pak podle délky společného života
   .map((x) => ({
     ...x,
-    vztah: data.vztahy.some((v) => (v.od === osoba.id && v.k === x.o.id) || (v.k === osoba.id && v.od === x.o.id)),
+    vztah: data.vztahy.some((v) => (naStrance.has(v.od) && v.k === x.o.id) || (naStrance.has(v.k) && v.od === x.o.id)),
     spolecne: Math.min(z, x.i[1]) - Math.max(n, x.i[0]),
   }))
   .sort((a, b) => Number(b.vztah) - Number(a.vztah) || b.spolecne - a.spolecne)
   .slice(0, max)
   .sort((a, b) => a.i[0] - b.i[0]);
-const radky = [{ o: osoba, i: [n, z] as [number, number], ja: true }, ...soucasnici.map((s) => ({ ...s, ja: false }))].sort((a, b) => a.i[0] - b.i[0]);
+const radky = [
+  ...osoby.map((o) => ({ o, i: interval(o)!, ja: true })),
+  ...soucasnici.map((s) => ({ ...s, ja: false })),
+].sort((a, b) => a.i[0] - b.i[0]);
+const popisPasu = osoby.length > 1
+  ? `Zvýrazněné pásy: ${osoby.map((o) => `${o.jmeno} (${fmtRok(interval(o)![0])} až ${fmtRok(interval(o)![1])})`).join(' a ')}.`
+  : `Zvýrazněný pás ukazuje život ${osoba.jmeno2 ?? osoba.jmeno} (${fmtRok(n)} až ${fmtRok(z)}).`;
 const od = Math.floor((Math.min(...radky.map((r) => r.i[0])) - 10) / 50) * 50;
 const do_ = Math.ceil((Math.max(...radky.map((r) => r.i[1])) + 10) / 50) * 50;
 const pct = (r: number) => ((r - od) / (do_ - od)) * 100;
@@ -48,7 +58,7 @@ const popisZnacky = (r: number) => (r === 0 ? '' : smisena && r < 0 ? `${Math.ab
       </li>
     ))}
   </ol>
-  <figcaption class="t-popisek">{do_ <= 0 ? 'Letopočty před naším letopočtem, osa' : 'Osa'} po 50 letech. Zvýrazněný pás ukazuje život {osoba.jmeno2 ?? osoba.jmeno} ({fmtRok(n)} až {fmtRok(z)}).</figcaption>
+  <figcaption class="t-popisek">{do_ <= 0 ? 'Letopočty před naším letopočtem, osa' : 'Osa'} po 50 letech. {popisPasu}</figcaption>
 </figure>
 
 <style>

@@ -22,25 +22,33 @@ const { zaznam } = Astro.props;
 const { Content } = await render(zaznam);
 const fm = zaznam.data;
 const osoba = najdiOsobu(fm.osoba);
+// Společný profil (Kratés a Hipparchia): další osoby stránky z pole `dalsi`. Hlavní osoba dává období, obraz a adresu.
+const dalsi = (fm.dalsi ?? []).map(najdiOsobu);
+const osoby = [osoba, ...dalsi];
+const dvojice = dalsi.length > 0;
+const nazevStranky = dvojice ? fm.titulek : osoba.jmeno;
 const obdobi = obdobiPodleId.get(osoba.obdobi)!;
 // Místo v hlavičce: rodiště; když ho neznáme, místo, kde člověk působil naposledy (Epikúros: Athény, ne Mytiléna).
-const rodiste = osoba.mista.find((m) => m.role === 'narozeni') ?? osoba.mista.findLast((m) => m.role === 'pusobeni');
-const misto = rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
+const mistoOsoby = (o: typeof osoba) => {
+  const rodiste = o.mista.find((m) => m.role === 'narozeni') ?? o.mista.findLast((m) => m.role === 'pusobeni');
+  return rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
+};
 // Popisek portrétu stojí pod deskou vedle atributu: u rytiny nebo kresby říká, čí je to představa a z kdy.
 const obrazekOsoby = osoba.obrazek ? data.zdroje.obrazky.find((o) => o.id === osoba.obrazek) : undefined;
-const vztahy = data.vztahy.filter((v) => v.od === osoba.id || v.k === osoba.id);
+const naStrance = new Set(osoby.map((o) => o.id));
+const vztahy = data.vztahy.filter((v) => naStrance.has(v.od) || naStrance.has(v.k));
 const citatyNaStrance = [fm.citat, ...[...(zaznam.body ?? '').matchAll(/<Citat id="([^"]+)"/g)].map((m) => m[1])].filter(Boolean) as string[];
 // Prameny bloků z YAML (Volba, Změň jednu věc, Spor) vložených do textu.
 const blokyNaStrance = [...(zaznam.body ?? '').matchAll(/<(?:Volba|ZmenJednuVec|Spor) id="([^"]+)"/g)].map((m) => m[1]);
 const zdrojeBloku = (await Promise.all(blokyNaStrance.map((id) => getEntry('bloky', id)))).flatMap((b) => b?.data.zdroje ?? []);
 const prameny = [
   ...zdrojeBloku,
-  ...osoba.zdroje,
-  ...osoba.mista.map((m) => m.zdroj),
+  ...osoby.flatMap((o) => [...o.zdroje, ...o.mista.map((m) => m.zdroj), ...(o.atribut ? [o.atribut.zdroj] : [])]),
   ...vztahy.map((v) => v.zdroj),
-  ...(osoba.atribut ? [osoba.atribut.zdroj] : []),
   ...citatyNaStrance.map((id) => data.zdroje.citaty.find((c) => c.id === id)!.zdroj),
 ];
+// Atributy pod deskou: u společného profilu jeden obraz a pod ním atribut každé osoby.
+const atributy = osoby.filter((o) => o.atribut);
 // Obrázky na stránce: portrét na desce a obrazy scén v blocích Příběh; licence každého patří do Pramenů.
 const obrazkyNaStrance = [
   ...(osoba.obrazek ? [osoba.obrazek] : []),
@@ -49,49 +57,66 @@ const obrazkyNaStrance = [
 const dev = import.meta.env.DEV;
 ---
 <Zakladni
-  titulek={osoba.jmeno}
-  popis={`${osoba.jmeno} (${zivot(osoba)}): ${osoba.kdo}`}
+  titulek={nazevStranky}
+  popis={dvojice
+    ? `${nazevStranky}: ${osoby.map((o) => `${o.jmeno} (${zivot(o)}), ${o.kdo.charAt(0).toLowerCase()}${o.kdo.slice(1).replace(/\.$/, '')}`).join('; ')}.`
+    : `${osoba.jmeno} (${zivot(osoba)}): ${osoba.kdo}`}
   sekce="lide"
   zpet={{ href: '/lide/', text: 'Lidé a směry' }}
   drobecky={[
     { text: 'Lidé a směry', href: '/lide/' },
     { text: obdobi.nazev, href: `/lide/#obdobi-${obdobi.id}` },
-    { text: osoba.jmeno },
+    { text: nazevStranky },
   ]}
 >
-  <article class={`osobnost stranka obdobi-${osoba.obdobi}`} data-navsteva={`/osobnost/${zaznam.id}/`} data-nazev={osoba.jmeno}>
+  <article class:list={['osobnost', 'stranka', `obdobi-${osoba.obdobi}`, { 'osobnost--dvojice': dvojice }]} data-navsteva={`/osobnost/${zaznam.id}/`} data-nazev={nazevStranky}>
     <header class="osobnost__hlavicka">
       <div class="osobnost__titulek">
         <p class="t-nadtitulek nadtitulek">{fm.nadtitulek}</p>
         <h1 class="t-display-2">{fm.titulek}.<br /><em>{nezlomitelne(fm.pointa)}</em></h1>
-        <p class="data t-ovladani">
-          <span class="t-letopocet">{zivot(osoba)}</span>
-          {misto && <> · {misto}</>}
-          {' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a>
-        </p>
+        {dvojice ? (
+          /* Dvojice: řádek dat pro každou osobu; období jednou, na kratším prvním řádku. */
+          <ul class="data data--dvojice t-ovladani">
+            {osoby.map((o, i) => (
+              <li>
+                <span class="data__jmeno">{o.jmeno}</span>
+                {' · '}<span class="t-letopocet">{zivot(o)}</span>
+                {mistoOsoby(o) && <> · {mistoOsoby(o)}</>}
+                {i === 0 && <>{' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a></>}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="data t-ovladani">
+            <span class="t-letopocet">{zivot(osoba)}</span>
+            {mistoOsoby(osoba) && <> · {mistoOsoby(osoba)}</>}
+            {' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a>
+          </p>
+        )}
         {/* Vyplní a ukáže skript v ObsahProfilu, když se student vrací a naposledy četl jiný než první oddíl. */}
         <p class="cteni t-ovladani" data-cteni hidden><a href="#obsah">Pokračovat ve čtení: <span data-cteni-nazev></span></a></p>
-        <VstupyOsoby osoba={osoba} cast="cesty" />
+        <VstupyOsoby osoba={osoba} dalsi={dalsi} cast="cesty" />
       </div>
       <div class="osobnost__deska">
-        <Deska osoba={osoba}>
-          {osoba.atribut && (
-            <span class:list={['proc', { 'proc--mince': osoba.obrazek }]}>
+        {/* Dvojice: jeden obraz s oběma (rytina na šířku), pod ním atribut každé osoby. */}
+        <Deska osoba={osoba} pomer={dvojice ? '6 / 5' : undefined}>
+          {atributy.map((o) => (
+            <span class:list={['proc', { 'proc--mince': o.obrazek || dvojice }]}>
               {/* S fotografií na desce chybí mince; atribut proto zůstane u popisku. */}
-              {osoba.obrazek && <Mince osoba={osoba} varianta="ring" velikost={40} />}
-              <span><strong>Proč {osoba.atribut.nazev}?</strong> {nezlomitelne(osoba.atribut.proc)}</span>
+              {(o.obrazek || dvojice) && <Mince osoba={o} varianta="ring" velikost={dvojice ? 36 : 40} />}
+              <span><strong>Proč {o.atribut!.nazev}?</strong> {nezlomitelne(o.atribut!.proc)}</span>
             </span>
-          )}
+          ))}
           {obrazekOsoby && <span class="obraz-popisek">{nezlomitelne(obrazekOsoby.popisek)}</span>}
         </Deska>
       </div>
       {/* Otázky stojí na telefonu až pod deskou, aby obraz, atribut a první odstavec zůstaly na první obrazovce. */}
-      <VstupyOsoby osoba={osoba} cast="otazky" />
+      <VstupyOsoby osoba={osoba} dalsi={dalsi} cast="otazky" />
     </header>
 
     <ObsahProfilu adresa={`/osobnost/${zaznam.id}/`}>
     <div class="obsah">
-      <Content osoba={osoba} />
+      <Content osoba={osoba} dalsi={dalsi} />
     </div>
 
     {dev && fm.kapitoly.filter((k) => k.stav === 'osnova').length > 0 && (
@@ -137,6 +162,42 @@ const dev = import.meta.env.DEV;
   .proc strong { color: var(--ink); font-weight: 600; }
   .proc--mince { display: flex; gap: var(--s-3); align-items: flex-start; }
   .proc--mince :global(.mince) { flex: none; }
+  .proc + .proc { margin-top: var(--s-3); }
+  .data--dvojice { padding: 0; list-style: none; }
+  .data--dvojice li + li { margin-top: var(--s-1); }
+  .data__jmeno { color: var(--ink); font-weight: 600; }
+  /* Dvojice na telefonu: dva atributy a popisek pod deskou by odsunuly první odstavec z první obrazovky.
+     Titulek je proto menší (jen tady má dvě jména) a mezery v hlavičce užší. */
+  @media (max-width: 899px) {
+    .osobnost--dvojice .osobnost__hlavicka { gap: var(--s-4); padding-top: var(--s-3); }
+    .osobnost--dvojice h1 { font-size: 34px; line-height: 1.05; margin-bottom: var(--s-2); }
+    .osobnost--dvojice .nadtitulek { margin-bottom: var(--s-2); }
+    .osobnost--dvojice .data--dvojice li + li { margin-top: 2px; }
+    .osobnost--dvojice .proc { font-size: 14px; line-height: 1.4; }
+    .osobnost--dvojice .proc + .proc { margin-top: var(--s-2); }
+    .osobnost--dvojice .obraz-popisek { margin-top: var(--s-2); }
+    /* Rytina s oběma na šířku: nižší deska, střed výřezu drží hlavy i výbavu na zemi (vyrezNaSirku). */
+    .osobnost--dvojice .osobnost__deska :global(.deska__plocha) { aspect-ratio: 2 / 1 !important; }
+    .osobnost--dvojice :global(.obsah-lista) { margin-top: var(--s-3) !important; }
+    .osobnost--dvojice .obsah :global(.uvod) { margin-top: var(--s-3); }
+    /* Cesta a otázka stojí vedle sebe nad deskou: pod sebou by odsunuly první odstavec z první obrazovky
+       (P8 celku 8). Titulek se rozpadne do mřížky hlavičky (display: contents), aby cesta a otázka byly v jednom řádku;
+       otázka se do volného sloupce vedle cesty doplní sama (dense). Délka cesty a šipky na telefonu chybí. */
+    .osobnost--dvojice .osobnost__hlavicka { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-auto-flow: row dense; gap: 0 var(--s-3); }
+    .osobnost--dvojice .osobnost__titulek { display: contents; }
+    .osobnost--dvojice .osobnost__titulek > *,
+    .osobnost--dvojice .osobnost__deska { grid-column: 1 / -1; }
+    .osobnost--dvojice .osobnost__titulek > :global(.vstupy-osoby--cesty) { grid-column: 1; margin-top: var(--s-3); }
+    .osobnost--dvojice .osobnost__hlavicka > :global(.vstupy-osoby--otazky) { grid-column: 2; margin-top: var(--s-3); }
+    .osobnost--dvojice .osobnost__deska { margin-top: var(--s-3); }
+    .osobnost--dvojice :global(.vstupy-osoby ul),
+    .osobnost--dvojice :global(.vstupy-osoby li) { height: 100%; }
+    .osobnost--dvojice :global(.vstup) { min-height: 0; padding: var(--s-2) var(--s-3); align-items: flex-start; }
+    .osobnost--dvojice :global(.vstup .vstup__meta),
+    .osobnost--dvojice :global(.vstup svg) { display: none; }
+    .osobnost--dvojice :global(.vstup__nazev) { font-size: 17px; line-height: 1.2; }
+    .osobnost--dvojice :global(.vstup--otazka .vstup__nazev) { font-size: 17px; }
+  }
   .obraz-popisek { display: block; margin-top: var(--s-3); color: var(--ink-2); }
   /* „Pokračovat ve čtení“: tichý textový odkaz pod letopočty, vidět bez posouvání i na telefonu. */
   .cteni { margin: var(--s-2) 0 0; }

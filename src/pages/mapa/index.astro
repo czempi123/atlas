@@ -6,9 +6,9 @@ import { getCollection } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
 import MapaACas from '../../components/mapa/MapaACas.svelte';
 import { vstupMapy } from '../../lib/mapa-vstup-build';
+import { adresaOsoby } from '../../lib/adresa-osoby';
 
-const osobnosti = (await getCollection('osobnosti')).map((o) => o.data.osoba);
-const vstup = vstupMapy(osobnosti);
+const vstup = vstupMapy(adresaOsoby(await getCollection('osobnosti')));
 ---
 <Zakladni
   titulek="Mapa a čas"

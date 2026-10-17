@@ -11,17 +11,23 @@ import { maStranku } from '../../lib/otazky';
 import { vstupyOsoby } from '../../lib/vstupy';
 import type { TOsoba } from '../../lib/schema';
 
-interface Props { osoba: Pick<TOsoba, 'id' | 'jmeno' | 'jmeno2'>; cast: 'cesty' | 'otazky' }
-const { osoba, cast } = Astro.props;
+type Osoba = Pick<TOsoba, 'id' | 'jmeno' | 'jmeno2'>;
+/** `dalsi`: další osoby společného profilu; cesty a otázky všech osob se sjednotí, každá jednou. */
+interface Props { osoba: Osoba; dalsi?: Osoba[]; cast: 'cesty' | 'otazky' }
+const { osoba, dalsi = [], cast } = Astro.props;
 const kroky = await getCollection('kroky');
 const vse = vstupyOsoby(
-  osoba.id,
+  [osoba.id, ...dalsi.map((o) => o.id)],
   (await getCollection('cesty')).map((c) => ({ slug: c.id, ...c.data, kroku: kroky.filter((k) => k.data.cesta === c.id).length })),
   (await getCollection('otazky')).filter((o) => maStranku(o.data)).map((o) => ({ slug: o.id, ...o.data })),
 );
 const cesty = cast === 'cesty' ? vse.cesty : [];
 const otazky = cast === 'otazky' ? vse.otazky : [];
-const popisek = `${cast === 'cesty' ? (cesty.length > 1 ? 'Cesty' : 'Cesta') : (otazky.length > 1 ? 'Velké otázky' : 'Velká otázka')}, kde potkáš ${osoba.jmeno2 ?? osoba.jmeno}`;
+const druh = cast === 'cesty' ? (cesty.length > 1 ? 'Cesty' : 'Cesta') : (otazky.length > 1 ? 'Velké otázky' : 'Velká otázka');
+// Dvojice: 2. pád ženského jména není 4. pád (Hipparchie × Hipparchii), proto jména v 1. pádě za dvojtečkou.
+const popisek = dalsi.length
+  ? `${druh}, kde je potkáš: ${[osoba, ...dalsi].map((o) => o.jmeno).join(' a ')}`
+  : `${druh}, kde potkáš ${osoba.jmeno2 ?? osoba.jmeno}`;
 ---
 {(cesty.length > 0 || otazky.length > 0) && (
   <nav class:list={['vstupy-osoby', `vstupy-osoby--${cast}`]} aria-label={popisek} data-pagefind-ignore>
@@ -30,7 +36,7 @@ const popisek = `${cast === 'cesty' ? (cesty.length > 1 ? 'Cesty' : 'Cesta') : (
         <li>
           <a class="vstup vstup--cesta" href={`/cesta/${c.slug}/`}>
             <span class="vstup__text">
-              <span class="t-nadtitulek vstup__nad">Cesta {c.cislo} · {c.kroku} kroků{c.minut && ` · asi ${c.minut} minut`}</span>
+              <span class="t-nadtitulek vstup__nad">Cesta {c.cislo}<span class="vstup__meta"> · {c.kroku} kroků{c.minut && ` · asi ${c.minut} minut`}</span></span>
               <span class="vstup__nazev">{c.nazev}</span>
             </span>
             <Ikona id="dal" velikost={22} />

@@ -6,10 +6,11 @@ import Mince from '../../components/ui/Mince.astro';
 import { data } from '../../lib/data';
 import { zivot, interval, rozpeti } from '../../lib/casy';
 import { cestyOsoby } from '../../lib/vstupy';
+import { adresaOsoby } from '../../lib/adresa-osoby';
 import { nezlomitelne } from '../../lib/sazba.js';
 
 const smery = (await getCollection('smery')).sort((a, b) => a.data.poradi - b.data.poradi);
-const osobnosti = new Map((await getCollection('osobnosti')).map((o) => [o.data.osoba, o.id]));
+const adresa = adresaOsoby(await getCollection('osobnosti'));
 const nazevSmeru = new Map(smery.map((s) => [s.id, s.data.nazev]));
 const cesty = (await getCollection('cesty')).map((c) => ({ slug: c.id, ...c.data }));
 const obdobi = data.obdobi.filter((o) => data.lide.some((l) => l.obdobi === o.id));
@@ -52,7 +53,7 @@ const HLOUBKY = [
                 <h3 class="t-ovladani-l">{h.nazev}</h3>
                 <ul class="karty">
                   {skupina.map((l) => {
-                    const stranka = osobnosti.has(l.id) ? `/osobnost/${osobnosti.get(l.id)}/` : undefined;
+                    const stranka = adresa(l.id);
                     const Tag = stranka ? 'a' : 'div';
                     return (
                       <li id={l.id}>

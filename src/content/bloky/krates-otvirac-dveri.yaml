@@ -1,0 +1,34 @@
+# Volba s důvodem · společný profil Kratéta a Hipparchie, kapitola 02 „Otvírač dveří“.
+# Podklad: Diogenés Laertios VI, 86 (přezdívka Otvírač dveří, chodil do domů a domlouval) a Apuleius, Florida 22
+# (pozdní obraz: rozsuzoval hádky a spory mezi příbuznými). Situace s bratry je vymyšlená („Představ si“), proto
+# blok nemá oddíl Co udělal: co o Kratétovi vyprávěl Apuleius, říká text za blokem.
+# docs/podklady/celek-8-ci-zivot-ziju.md, Tvrzení: Kratés, řádky 8 a 9; Myšlenky pro profil (Kratés), 3.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: >-
+  Představ si, že jsi Kratés. Vejdeš do domu, kde se dva bratři hádají o otcovo pole.
+  Každý z nich je přesvědčený, že ho dostat má on. Když tě uvidí, zmlknou a čekají, co řekneš.
+otazka: Co uděláš?
+moznosti:
+  - text: Vyslechnu oba a řeknu, kdo má pravdu.
+    tah: rozsoudit je
+    zpetna: >-
+      Bereš jejich spor vážně a nenecháš je v něm samotné. Soudce ale jednoho z nich udělá vítězem a druhého poraženým.
+      Usmíří se bratři, když jeden odejde s polem a druhý s pocitem křivdy?
+  - text: Zeptám se každého, proč to pole tolik chce.
+    tah: zeptat se, oč jim jde
+    zpetna: >-
+      Nehledáš vítěze, hledáš, co za hádkou stojí. Možná zjistíš, že jeden chce pole a druhý uznání od mrtvého otce.
+      Co ale uděláš, když oba opravdu chtějí jen to pole?
+  - text: Řeknu jim, že se perou o hlínu, a připomenu, že jsou bratři.
+    tah: ukázat, oč přicházejí
+    zpetna: >-
+      Ukazuješ jim, co v hádce ztrácejí. Kynik by tak mluvil: pole se dá oželet, bratr těžko.
+      Jenže ten, kdo pole potřebuje k živobytí, ti může říct, že se snadno mluví, když nic nemáš. Co mu odpovíš?
+  - text: Odejdu. Do cizí hádky se nepletu.
+    tah: odejít
+    zpetna: >-
+      Respektuješ, že je to jejich věc, a nikomu nevnucuješ svůj názor. Vešel jsi ale dovnitř a oni čekají.
+      Je mlčení v takové chvíli ohleduplnost, nebo pohodlí?
+zdroje: [dl-vi-85, apuleius-florida-22]

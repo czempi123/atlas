@@ -5,8 +5,8 @@ import { ornamenty } from './ornamenty.js';
 import { zijeVRoce } from './cas-mapy';
 import type { VstupMapy } from './mapa-vstup';
 
-export function vstupMapy(strankyOsobnosti: string[]): VstupMapy {
-  const stranky = new Set(strankyOsobnosti);
+/** `adresa`: adresa stránky osoby (adresaOsoby v src/lib/adresa-osoby.ts); Hipparchia tak vede na společný profil. */
+export function vstupMapy(adresa: (osoba: string) => string | undefined): VstupMapy {
   const lide = data.lide.map((o) => ({
     id: o.id,
     jmeno: o.jmeno,
@@ -22,7 +22,7 @@ export function vstupMapy(strankyOsobnosti: string[]): VstupMapy {
     kdo: o.kdo,
     proc: o.proc,
     atribut: o.atribut ? { ikona: o.atribut.ikona, nazev: o.atribut.nazev, proc: o.atribut.proc } : undefined,
-    stranka: stranky.has(o.id) ? `/osobnost/${o.id}/` : undefined,
+    stranka: adresa(o.id),
     zivot: zivot(o),
   }));
   const obdobiSLidmi = new Set(data.lide.map((o) => o.obdobi));

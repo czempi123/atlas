@@ -1,0 +1,285 @@
+---
+osoba: krates
+dalsi: [hipparchia]
+nadtitulek: Kynici z Théb a Maróneie · společný profil
+titulek: Kratés a Hipparchia
+pointa: Dva lidé, jedna mošna.
+citat: dl-vi-86-co-mam
+kapitoly:
+  - cislo: "01"
+    kotva: pera
+    nazev: Péra a dým
+    stav: hotovo
+  - cislo: "02"
+    kotva: otvirac-dveri
+    nazev: Otvírač dveří
+    stav: hotovo
+  - cislo: "03"
+    kotva: hrnec-polevky
+    nazev: Zénón a hrnec polévky
+    stav: hotovo
+  - cislo: "04"
+    kotva: volba
+    nazev: Hipparchiina volba
+    stav: hotovo
+  - cislo: "05"
+    kotva: hostina
+    nazev: Hostina
+    stav: hotovo
+  - cislo: "06"
+    kotva: filozofka
+    nazev: Ta filozofka
+    stav: hotovo
+---
+import Kapitola from '../../components/osobnost/Kapitola.astro';
+import Citat from '../../components/ui/Citat.astro';
+import DobaALide from '../../components/osobnost/DobaALide.astro';
+import Myslenky from '../../components/osobnost/Myslenky.astro';
+import Myslenka from '../../components/osobnost/Myslenka.astro';
+import MojeStanovisko from '../../components/ostrovy/MojeStanovisko.svelte';
+import ZkusToZitKarta from '../../components/osobnost/ZkusToZitKarta.astro';
+import KamDal from '../../components/osobnost/KamDal.astro';
+import { Volba, Odkryj } from '../../components/bloky';
+
+<div class="uvod ctenarsky">
+
+Vypráví se, že Kratés pocházel z bohaté a vážené rodiny v Thébách. Jednou prý v divadle viděl tragédii o králi, který chodil v hadrech jako žebrák. Pohnulo ho to.
+
+Prodal, co měl, a peníze rozdal spoluobčanům. Bylo to ohromné jmění. Podle jiného vyprávění mu poradil Diogenés: ať pustí na pole ovce a peníze hodí do moře.
+
+Kratés se stal [Diogenovým](/osobnost/diogenes/) žákem a žil jako on, bez domu a bez majetku. Co mu zbylo, popsal sám v jednom ze svých hravých veršů:
+
+</div>
+
+<div class="ctenarsky"><Citat id="dl-vi-86-co-mam" velky /></div>
+
+<div class="ctenarsky">
+
+Do Kratéta se později zamilovala dívka z bohaté rodiny z Maróneie na severu Egejského moře. Jmenovala se Hipparchia. Kvůli jeho řečem i kvůli jeho životu odmítla všechny nápadníky a stala se kynickou filozofkou.
+
+</div>
+
+<Kapitola cislo="01" kotva="pera" nazev="Péra a dým">
+  <Fragment slot="titulek">Město, kde se nikdo <em>nepere.</em></Fragment>
+
+Kratés skládal hravé verše a rád si bral na mušku slavné básně. Řekové znali z Homéra verš o Krétě, krásné a úrodné zemi uprostřed vínově tmavého moře. Kratés ho přepsal po svém.
+
+V jeho verších leží uprostřed vínově tmavého dýmu město Péra. Péra znamená řecky mošna: pytel, ve kterém kynik nosil jídlo.
+
+<Citat id="dl-vi-85-pera" />
+
+Řecké slovo pro dým znamená kouř a mlhu, ale taky nadutost. Dým je všechno, čím se lidé nafukují a o co se perou. Z mošny se nikdo nenafoukne.
+
+<Odkryj
+  id="krates-prepis-to"
+  otazka="Vyber si známé přísloví nebo heslo z reklamy a přepiš ho po Kratétovi: ať říká, na čem podle tebe opravdu záleží."
+  tlacitko="Porovnat s Kratétem"
+  filozof="krates"
+  modelove={[
+    { text: '„Kdo šetří, má za tři.“ → „Kdo nic nepotřebuje, má za deset.“', komentar: 'Obrátil jsi přísloví jako Kratés: místo hromadění nepotřebovat. Je ale nepotřebovat totéž co mít? Kratés by řekl, že ano. Co bys mu namítl ty?' },
+    { text: '„Dopřej si to, zasloužíš si to.“ → „Zasloužíš si to nepotřebovat.“', komentar: 'Heslo slibuje odměnu, tvoje verze svobodu od ní. Komu by tvoje heslo něco řeklo: tomu, kdo má hodně, nebo tomu, kdo má málo?' },
+    { text: '„Čas jsou peníze.“ → „Čas je čas.“', komentar: 'Krátké a vtipné. Řekne ale, co je na čase cennějšího než peníze? Kratés v Péře vyjmenoval, co tam roste: tymián, česnek, fíky a chleba.' },
+  ]}
+  sebekontrola={[
+    'Moje heslo říká, co je důležité, ne jen co je špatně.',
+    'Zkusil jsem, jestli by moje heslo obstálo i u člověka, který nemá skoro nic.',
+  ]}
+>
+
+Kratés vzal verš, který znal každý, a vyměnil v něm jen pár slov: moře za dým, úrodnou zemi za špinavou mošnu. Posluchač slyšel obě verze najednou, a proto se smál.
+
+Přečti si svou větu vedle původní. Je slyšet, co jsi vyměnil a proč?
+
+</Odkryj>
+
+Péra nemá nic. Nepřipluje do ní žádný příživník a nikdo se v ní nepere o drobné ani o slávu.
+
+*Kdo z lidí, které znáš, by se do Péry přestěhoval? A kdo by v ní nevydržel ani den?*
+</Kapitola>
+
+<Kapitola cislo="02" kotva="otvirac-dveri" nazev="Otvírač dveří">
+  <Fragment slot="titulek">Kynik, který chodil <em>na návštěvy.</em></Fragment>
+
+Kynik má pověst samotáře, který na lidi štěká z ulice. Kratés byl jiný. Říkali mu Otvírač dveří, protože chodil lidem do domů a domlouval jim.
+
+<Volba id="krates-otvirac-dveri" />
+
+Ještě o mnoho století později se o Kratétovi vyprávělo, že ho Athéňané ctili jako domácího boha. Žádný dům prý pro něj nebyl zavřený. Do hádek mezi příbuznými prý vstupoval jako rozhodčí.
+
+Kynik, který se vysmíval zvykům, tak lidi neopustil. Chodil k nim.
+
+*Komu bys otevřel dveře ty, kdyby ti chtěl domlouvat?*
+</Kapitola>
+
+<Kapitola cislo="03" kotva="hrnec-polevky" nazev="Zénón a hrnec polévky">
+  <Fragment slot="titulek">Hrnec, který se <em>rozbil.</em></Fragment>
+
+Vypráví se, že do Athén jednou dorazil kupec z Kypru jménem Zénón. Loď s nákladem mu ztroskotala. Posadil se u knihkupce, četl si knihu o Sókratovi a zeptal se, kde by našel takové lidi.
+
+Knihkupec ukázal na muže, který šel zrovna kolem, a řekl mu, ať jde za ním. Byl to Kratés.
+
+Zénón se stal Kratétovým žákem. Ke kynikům se ale nehodil: byl stydlivý. Kratés ho té stydlivosti chtěl zbavit.
+
+Dal mu proto nést hrnec čočkové polévky přes Kerameikos, rušnou athénskou čtvrť. Zénón se styděl a hrnec schovával. Kratés do hrnce udeřil holí a rozbil ho.
+
+Polévka Zénónovi tekla po nohou a on se dal na útěk. Kratés za ním volal:
+
+<Citat id="dl-vii-3-zenon" />
+
+*Byl to dobrý způsob, jak někoho zbavit studu? A co kdyby to učitel udělal tobě před celou třídou?*
+
+Zénón byl Kratétovým žákem a později o něm napsal knihu vzpomínek. Nedochovala se. Sám pak v Athénách založil školu, které se podle sloupoví, kde učil, začalo říkat stoa.
+
+Jak stoici přemýšleli o tom, co máme v rukou a co ne, vypráví cesta [Co mám ve svých rukou?](/cesta/co-mam-ve-svych-rukou/)
+</Kapitola>
+
+<Kapitola cislo="04" kotva="volba" nazev="Hipparchiina volba">
+  <Fragment slot="titulek">Ženich, který <em>nic neměl.</em></Fragment>
+
+Hipparchia měla nápadníky bohaté, urozené i krásné. Nevšímala si jich. Milovala Kratéta, jeho řeči i jeho život.
+
+Rodiče ji přemlouvali. Nakonec požádali samotného Kratéta, aby jí to rozmluvil. Kratés se snažil, jak mohl. Když nic nepomáhalo, vstal a odložil před ní svou výbavu.
+
+Řekl jí, že tohle je celý ženich i celý jeho majetek a ať se podle toho rozhodne. Jeho družkou bude, jen když bude žít stejně jako on.
+
+Hipparchia si vybrala. Oblékla si stejný plášť jako on a chodila s ním mezi lidi i na hostiny. Komediograf Menandros, jejich současník, o tom vtipkoval v jedné komedii.
+
+Kratés ji nepřemluvil, ani k sobě, ani od sebe. Ukázal jí, co si bere, a nechal ji vybrat.
+
+Komu to rozhodnutí vlastně patřilo, se ptá cesta [Čí život vlastně žiju?](/cesta/ci-zivot-vlastne-ziju/)
+</Kapitola>
+
+<Kapitola cislo="05" kotva="hostina" nazev="Hostina">
+  <Fragment slot="titulek">Porazila ho jeho vlastní <em>zbraní.</em></Fragment>
+
+Na jedné hostině u krále Lýsimacha byl i filozof Theodóros, kterému se říkalo Bezbožník. Proslul chytáky: kladl otázky, na které člověk odpovídá ano, až z nich vyplyne něco, co nikdo nečekal.
+
+Hipparchia ho tam porazila v hádce. Použila na něj takový chyták:
+
+<Citat id="dl-vi-97-sofisma" />
+
+<Odkryj
+  id="hipparchia-kde-je-chyba"
+  otazka="Hipparchiin důkaz zní pevně, a přece v něm je chyba. Kde?"
+  tlacitko="Ukázat, kde je chyba"
+  filozof="hipparchia"
+  modelove={[
+    { text: 'Hipparchia a Theodóros nejsou stejní lidé.', komentar: 'Důkaz ale tvrdí, že na osobě nezáleží: co smí jeden, smí i druhý. To pravidlo zní férově. Kde přesně se v důkazu Theodóros a Hipparchia liší?' },
+    { text: 'Bít sebe a bít někoho jiného není totéž, i když se v obou říká bít.', komentar: 'Míříš na slovo, které se v důkazu opakuje a pokaždé znamená něco jiného. Ukázal bys místo, kde se z jednoho činu stal jiný?' },
+    { text: 'Chyba tam není. Jen se nikdo nemá bít.', komentar: 'Kdyby důkaz platil, smí Hipparchia Theodóra bít. Věříš tomu? Když závěr nesedí, je chyba někde po cestě k němu.' },
+  ]}
+  sebekontrola={[
+    'Ukázal jsem místo, kde se důkaz láme, ne jen řekl, že závěr je hloupý.',
+    'Zkusil jsem stejný chyták na jiném příkladu.',
+  ]}
+>
+
+Pravidlo „co smí udělat Theodóros, smí i Hipparchia“ platí jen pro tentýž čin. Theodóros bije sám sebe, Hipparchia by bila jeho. Slovo „bít“ se v důkazu opakuje, ale čin je pokaždé jiný.
+
+Diogenés Laertios, který příběh zapsal, tomu říká sofisma: past, která vypadá jako argument. Hipparchia ji nastražila filozofovi, který takové pasti sám stavěl.
+
+</Odkryj>
+
+Theodóros na to neměl odpověď. Zkusil ji tedy zahanbit. Hipparchia se nezalekla.
+
+Pak jí připomněl verš z jedné tragédie, o ženě, která opustila člunky u tkalcovských stavů. Tkát látky doma byla práce, kterou se od žen čekalo. Hipparchia odpověděla:
+
+<Citat id="dl-vi-98" />
+
+*Kdo v té hádce prohrál? Ten, komu došly argumenty, nebo ta, které se posmíval?*
+</Kapitola>
+
+<Kapitola cislo="06" kotva="filozofka" nazev="Ta filozofka">
+  <Fragment slot="titulek">Tisíce dalších <em>příběhů.</em></Fragment>
+
+Diogenés Laertios o Hipparchii píše jako o filozofce. Dodává, že se o ní vyprávěly tisíce dalších příběhů. Zachovalo se jich pár.
+
+Pozdější byzantský slovník jí připisuje i spisy: úvahy, rozpravy a otázky pro Theodóra. Žádný se nedochoval.
+
+Asi o čtyři sta let později radil stoik Epiktétos jednomu žákovi, že kynik by se za dnešních poměrů ženit neměl. Žák mu odporoval:
+
+<Citat id="rozpravy-iii-22-76" />
+</Kapitola>
+
+<DobaALide osoba={props.osoba} dalsi={props.dalsi}>
+
+Kratés se narodil v Thébách asi o padesát let později než Diogenés a stal se jeho žákem. Hipparchia byla z Maróneie. Žili spolu jako manželé a Kratétovým žákem byl i Zénón, zakladatel stoické školy. Kratés zemřel starý a pochovali ho v Boiótii, kraji kolem Théb.
+
+</DobaALide>
+
+<Myslenky titulek="Tři velké myšlenky">
+  <Myslenka cislo={1} disciplina="Etika · Kratés">
+    <Fragment slot="titulek">Co ses naučil, ti nikdo <em>nevezme.</em></Fragment>
+
+Kratétovy Théby dal Alexandr Veliký srovnat se zemí. Vypráví se, že se ho Alexandr později ptal, jestli chce, aby město obnovil. Kratés odmítl: proč, když ho jiný Alexandr zase zboří? Za vlast prý měl něco, co zbořit nejde:
+
+<Citat id="dl-vi-93-vlast" />
+
+Je to tatáž myšlenka jako ve verši z úvodu. Opravdu tvoje je to, co ses naučil a promyslel. Domy, pole i města sebere dým.
+
+Aristotelés, který žil ve stejné době, viděl rozdávání majetku jinak:
+
+<Citat id="etika-1120a-marnotratnik" />
+
+Štědrý člověk podle něj o majetek dbá, protože jím chce pomáhat druhým. Dává tolik, až si sám nechá méně, jen ne všechno a ne komukoli. Kratés dal spoluobčanům, ne komukoli. Dal ale všechno.
+
+Kratés se vzdal jmění, které měl. Kdo nemá nic, si chudobu nevybral, a to je jiný příběh.
+
+*Je člověk svobodnější bez majetku? Nebo jen bez strachu o něj?*
+
+<MojeStanovisko client:visible id="krates-co-mi-nikdo-nevezme" otazka="Kdo tě přesvědčuje víc: Kratés, který rozdal všechno, nebo Aristotelés, podle kterého si má štědrý člověk něco nechat, aby mohl dávat i zítra? Proč?" odkaz="/osobnost/krates-a-hipparchia/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={2} disciplina="Výchova · Kratés">
+    <Fragment slot="titulek">Pohrdat zvyky neznamená pohrdat <em>lidmi.</em></Fragment>
+
+Kynici se vysmívali zvykům, majetku i slávě. Kratés z toho nevyvodil, že se má lidem vyhýbat. Chodil k nim domů a domlouval jim. Lidi chtěl měnit zevnitř jejich domů, ne z ulice.
+
+*Má ale k tomu kdokoli právo? Kdy je domlouvání pomoc a kdy jen poučování?*
+
+Epiktétos, který o kynicích přemýšlel o čtyři sta let později, dával každému, kdo chce žít jako kynik a domlouvat druhým, podmínku:
+
+<Citat id="rozpravy-iii-22-19" />
+
+Kdo sám nemá v pořádku, co v něm vládne, nemá podle Epiktéta druhým co radit.
+
+<MojeStanovisko client:visible id="krates-domlouvani" otazka="Od koho by sis nechal domluvit, i kdyby to nebylo příjemné? Co musí ten člověk mít, abys ho poslouchal?" odkaz="/osobnost/krates-a-hipparchia/#myslenky" />
+
+  </Myslenka>
+  <Myslenka cislo={3} disciplina="Politika · Hipparchia">
+    <Fragment slot="titulek">Rozhodnout o sobě znamená rozhodnout o svém <em>čase.</em></Fragment>
+
+Hipparchiina odpověď Theodórovi je o čase. Neptala se, jestli smí. Ptala se, jestli o sobě rozhodla špatně.
+
+Ten čas přitom nedala jen sobě. Dala ho učení a společnému životu s Kratétem. I čas, který dáváš druhým, je tvůj, když víš, komu a proč ho dáváš.
+
+Nejsilnější hlas proti jejímu životu patří největšímu mysliteli té doby:
+
+<Citat id="politika-1260a-ctnost" />
+
+Domácnost a obec byly pro Aristotela celek, ve kterém má každý jinou úlohu, a podle úlohy i jinou ctnost. Všimni si, s kým se tu přel: se Sókratem. Platón ho totiž v Ústavě nechal tvrdit opak:
+
+<Citat id="ustava-455d-zeny" />
+
+Hned v téže větě ale Sókratés dodává, že žena je ve všem slabší. Spojencem Hipparchie je tak jen napůl.
+
+*Má o tom, co budeš dělat, rozhodovat to, kým ses narodil, nebo to, k čemu máš vlohy?*
+
+<MojeStanovisko client:visible id="hipparchia-cas" otazka="Na co by Hipparchia dnes nechtěla dát svůj čas, a na co ano? Je ti v tom bližší ona, nebo Aristotelés?" odkaz="/osobnost/krates-a-hipparchia/#myslenky" />
+
+  </Myslenka>
+</Myslenky>
+
+<ZkusToZitKarta id="hipparchia-ci-byla-hodina" nazev="Čí byla ta hodina" odkaz="/osobnost/krates-a-hipparchia/#zkus-to-zit">
+
+Každý večer tohoto týdne si vzpomeň na jednu hodinu dne a zeptej se, kdo o ní rozhodl: ty, někdo jiný, nebo nikdo, jen to tak přišlo. Čas, který dáváš druhým a víš proč, se počítá jako tvůj. Na konci týdne vyber jednu hodinu, klidně i kratší chvíli, a dej ji něčemu, co se chceš naučit. Zapiš si, co se změnilo.
+
+</ZkusToZitKarta>
+
+<KamDal odkazy={[
+  { href: '/cesta/ci-zivot-vlastne-ziju/', nadtitulek: 'Cesta 7', text: 'Čí život vlastně žiju?' },
+  { href: '/osobnost/diogenes/', nadtitulek: 'Profil', text: 'Diogenés: Kratétův učitel, který vyhodil i pohárek' },
+  { href: '/cesta/kolik-je-dost/', nadtitulek: 'Cesta 6', text: 'Kolik je dost?' },
+  { href: '/osobnost/epiktetos/', nadtitulek: 'Portrét', text: 'Epiktétos: stoik, který kynikům věnoval celou rozpravu' },
+  { href: '/otazka/jak-zit/', nadtitulek: 'Velká otázka 1', text: 'Jak mám žít?' },
+]} />

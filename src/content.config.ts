@@ -16,6 +16,11 @@ const osobnosti = defineCollection({
   schema: z.object({
     /** id osoby v src/data/lide.yaml */
     osoba: id,
+    /**
+     * Další osoby téže stránky (společný profil Kratéta a Hipparchie: `dalsi: [hipparchia]`).
+     * Hlavní osoba (`osoba`) dává stránce období a pořadí; adresu všech osob skládá adresaOsoby (src/lib/adresa-osoby.ts).
+     */
+    dalsi: z.array(id).optional(),
     nadtitulek: z.string(),
     /** titulek bez tečky, např. „Sókratés“ */
     titulek: z.string(),

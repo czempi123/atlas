@@ -4,6 +4,65 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 16. 10. 2026: Opravy celku 8 po revizi
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor poslal zadání oprav se sedmi prázdnými řádky odpovědí: platí všech devět nálezů revize v hotových zněních a všechna doporučení k otevřeným bodům. | Pravidlo z 4. 10. 2026 (prázdné = souhlas s návrhem). |
+| Krok 5: výtky Sókrata, Platóna a Epiktéta míří na pohrdání, které potřebuje diváky; „Kdo dělá opak jen proto, aby se vymezil, řídí se pořád tím, co se čeká.“ Ruší se „Ze všech tří výtek plyne totéž. Kdo dělá opak toho, co se čeká…“ | Student, který se od rodiny liší tím, kým je, nedělá opak kvůli divákům; „plyne totéž“ byl náš závěr podaný jako jejich. |
+| Čas dávaný druhým je „tvůj, když víš, komu a proč ho dáváš“ (myšlenka 3, Zkus to žít „Čí byla ta hodina“, hlas Hipparchie na otázce 1). Ruší se „protože chceš“. Karta Zkus to žít připouští „klidně i kratší chvíli“. | Pečující student to dělá vědomě, ne proto, že chce; pravidlo podkladů zní „vědomě“. |
+| Hipparchiini rodiče Kratéta jen požádali, ať jí to rozmluví (DL VI, 96). Nikde „svěřili rozhodnutí“, „nabídli“ ani „jeho přece poslechne“ (kroky 1, 7, 8, Volba `cesta7-komu-patri`, list pro učitele). | Silnější než pramen a dělalo z rodičů lidi, kteří rozhodují přes hlavu dcery. |
+| Spor Kratés × Aristotelés: scéna říká i „dobrým se člověk stává zvykem“, Kratés odpovídá cvikem („I kynik se cvičí celý život, jako atlet nebo flétnista…“). Zdroje Sporu mají `dl-vi-69` (pramen DL VI, 69–75); `dl-vi-71` ze zadání je v datech id citátu, ne pramene. Komentář YAML říká, že výklad cviku je Diogenův (DL VI, 70–71) a strana mluví za kyniky. | Kynik má odpověď na nejsilnější Aristotelův argument a cesta ji sama říká v kroku 2. |
+| Atribut Hipparchie „Proč člunek?“: „Od žen se čekalo, že stráví čas u stavu. Hipparchia si vybrala filozofii.“ Myšlenka 3 bez věty „Čas, který ji čekal u stavu, dala vzdělání.“ Znění revize („Patřil ke stavu, u kterého…“) je zkrácené. | Atribut prozrazoval pointu hostiny a obraz byl v celku čtyřikrát. Delší znění revize posunulo na 390 px první odstavec o řádek pod lištu (752 px, test `krates-hipparchia` hlídá 742); kratší drží 732 px jako dřív. |
+| Krok 5: Zénónův stud je vysvětlený hrncem polévky („Takový stud chtěl kynik vyhnat. Epiktétův kynik se má stydět za to, co je špatné.“). Hrnec je v celku dvakrát (kapitola 03, krok 5). | Dva různé druhy studu pod jedním slovem; Zénón v cestě dřív nezazněl. |
+| Krok 7: spojencem odpovědi „Kratétovi“ je Sókratés z Platónova Kritóna 47b–d (atlet podle lékaře nebo trenéra, ne podle mínění všech); ruší se Platón s Ústavou. List pro učitele to říká. Věta o rodičích končí „o pomoc požádali právě Kratéta“ (ne „jeho“), aby zájmeno nepadlo na Sókrata. | Kritón mluví přesně o tom, na koho dát; poučení o zájmenech za větou se dvěma muži. |
+| Změň jednu věc „Nikdo se nedívá“: možnost „Jiná nadutost: potřebuje dokázat, že je nad věcí.“ | Možnost „chce, aby ho viděli“ v podmínce bez diváků nedávala smysl. |
+| Krok 6: „Stačil k tomu kdokoli, kdo nahlas řekl, co vidí.“ | Spojenec u Asche nebyl kamarád; vylučovaný student to tak nemá číst. |
+| Hlavička dvojice na telefonu, pointa „Dva lidé, jedna mošna.“, nadtitulek a kresba Třetí čára zůstávají; jména v Době a lidech jako odkazy jsou samostatný krok po sloučení celku 8. | Doporučení revize, autor nechal prázdné. |
+
+## 16. 10. 2026: Revize celku 8 (P10)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal šest řádků odpovědí prázdných: revize ke všem dává doporučení (záznam `docs/revize/celek-8-2026-10-16.md`), nálezy čekají na schválení v zadání oprav. | Pravidlo z 4. 10. 2026; zásadní nálezy revize se bez autora neopravují. |
+| Spojenec v kresbě Třetí čára sedí čtvrtý podle Asche 1951 (s. 231 přetisku: „The partner was always seated in the fourth position“). Ruší se věta záznamu z 16. 10. 2026 (P8), že čtvrté místo je náš obraz. Délky čar jsou z prvního kritického kola (Asch 1956, Tabulka 1, Trial 1), ne z „prvního kola“. | Revize četla Asche 1951 a 1956 v přetisku; atlas nemá připisovat sobě, co udělal autor pokusu (poučení z celku 7). |
+| Diogenovo Kam dál vede i na cestu 7 a na společný profil; úvod jeho profilu říká „nedával jim takovou váhu jako přírodě“ (dřív „žádnou váhu“). | Diogenés je filozof cesty 7 a Kratétův učitel; DL VI, 71 dělá rozdíl, který cesta 7 drží. |
+| Tentýž detail nejvýš dvakrát v celku platí i pro Péru, spoluobčana Diogena, Epiktétovu podmínku (III, 22, 19) a „hůl a velká ústa“ (III, 22, 50): třetí výskyty revize škrtla rovnou. „Čas u stavu“ (atribut, kapitola 05, myšlenka 3, hlas) čeká na nález 5. | Poučení „Celek“. |
+| Doporučení: Platóna jako spojence odpovědi „Kratétovi“ nahradit Sókratem z Kritóna 47b–d; jména v Době a lidech jako odkazy samostatným krokem po sloučení celku 8; hlavička dvojice, pointa, nadtitulek, kresba a protihlas druhé Kratétovy myšlenky beze změny. | Kritón mluví přesně o tom, na koho dát, a je doložený; odkazy v Době a lidech mění všech dvanáct profilů. |
+
+## 16. 10. 2026: Cesta 7, kresba Třetí čára a hlas Hipparchie (P8)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všech pět řádků odpovědí prázdných: platí doporučení z podkladů a z oddílu Po P7. | Pravidlo z 4. 10. 2026 (bez mezikroku schvalování). |
+| Cesta 7 má osm kroků podle Návrhu kroků v podkladech; zastánci (krok 7) a závěr (krok 8) jsou dva kroky, nový případ a zastánci taky. Čas 30 minut (`slova-cesta.mjs`: 3 427 slov, 29,3 minuty). | Poučení z celku 7: pod nadpisem případu student zastánce nenajde. |
+| Vstup říká Kratétovu podmínku citátem `dl-vi-96-zenich` (v celku poprvé; profil ji má nepřímou řečí). Výbava se nevyjmenovává, plášť a hůl ukazuje jen rytina a její popisek. Výhrůžka z DL VI, 96 nikde. | Pramen má σκευή, ne seznam věcí; citlivá místa v podkladech. |
+| Roztřiď „Kdo to po mně chce?“ (Tělo · Druzí · Já) je bez vlastní karty. | Pravidlo 6: vlastní karta by byla pole na psaní o rodině, víře nebo vztahu. |
+| Spor: postoje „Zvyky mě člověkem nedělají.“ × „Bez obce a zvyků se člověkem nestanu.“ Na Kratétovy vypálené Théby odpovídá Aristotelés větou, že obec nejsou zdi, ale lidé a jejich uspořádání (výklad z Politiky III, 3). | Každá strana odpoví na nejsilnější námitku druhé; Kratétova domyšlená odpověď stojí jako „by mohl odpovědět“. |
+| Krok 5 má tři výtky v pořadí Sókratés, Platón (verze „Kolik nadutosti… ukazuješ“), Epiktétos (III, 22, 50). Změň jednu věc má dvě podmínky: Nikdo se nedívá a Hosté to už čekají (náš krok); oddíl „Co by na to řekli“. Věta „Ze všech tří výtek plyne totéž“ je naše, ne jejich. | Rebelie není ctnost (pravidlo 3); co s příběhem děláme my, nepřipisujeme filozofům. |
+| Krok 6: kresba nad Volbou, Volba vede vlastním Kam dál na `#co-vyslo`; čtvrtá možnost „Řeknu, co vidím, když to řekne ještě někdo“. Výsledky slovy, ne procenty (kromě „asi pět odpovědí ze sta“). | Kresba výsledek neprozrazuje; čtvrtá možnost dá slovo tomu, kdo by čekal na spojence. |
+| Krok 7: odpověď „Kratétovi“ má spojence Platóna (v Ústavě vládnou ti, kdo nejvíc vědí) a rodiče z příběhu; ostatní odpovědi Aristotela, Epiktéta, Sókrata a Asche. | Spojenec má být jiný myslitel než kynik; podklady pro tuhle možnost nabízely jen Kratéta. |
+| Hlas Hipparchie: odpověď „kdo určil, kam má tvůj čas patřit“, bez „pro sebe“; myšlenka bez nápadníků (ty už nesou profil a krok 1). Pořadí podle narození dává Hipparchii za Epikúra. | Citlivá místa (pečující student); detail nejvýš dvakrát v celku. |
+| Hlavička dvojice na telefonu: cesta a otázka vedle sebe nad deskou, deska 2 : 1, titulek 34 px; délka cesty a šipky skryté. Začátek prvního odstavce na 732 px (lišta 772). | Zadání: upravit rozvržení, ne test; tlačítka pod sebou odsunula odstavec na 883 px. |
+| Kresba Třetí čára: osm postav, student předposlední, spojenec čtvrtý (náš obraz), bez obličejů; délky čar z prvního kola Asche 1956. Animace má rozepsané vlastnosti. | Asch nezasvěceného posadil předposledního; zkratka `animation` bez jména se zminifikovala na `none`. |
+
+## 16. 10. 2026: Společný profil Kratéta a Hipparchie (P7)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všech šest řádků odpovědí prázdných: platí doporučení z podkladů. Obě rytiny z Rijksmusea (CC0) jsou stažené, citlivá místa podle návrhu (Theodórův čin studentům jen „Zkusil ji tedy zahanbit“), jedna stránka s polem `dalsi`, titulek „Kratés a Hipparchia“, hlas Hipparchie na otázce 1 až v P8, roky Kratéta po ověření | Pravidlo bez mezikroku schvalování (4. 10. 2026); u obrázků platí prázdný řádek jako souhlas podle zadání P7 |
+| Roky Kratéta asi 365–285 př. n. l. (rozmezí 368–365 a 288–285) podle Oxford Classical Dictionary; Brill's New Pauly a Dorandi mají totéž. Ruší se 350–301 z Britanniky | Britannica nesedí s tím, že zemřel starý (DL VI, 92, 98); tři odborné chronologie se shodují |
+| Společný profil: `src/content/osobnosti/krates-a-hipparchia.mdx`, `osoba: krates`, `dalsi: [hipparchia]`. Obě osoby zůstávají v datech samostatně (hloubka profil, atribut, obraz, `kdo`, `proc`) | Příběh se rozdělit nedá a Mapa a čas, Lidé a směry i Doba a lidé na cizích stránkách dál pracují s jednotlivými lidmi |
+| Adresu stránky osoby skládá jen `adresaOsoby` (`src/lib/adresa-osoby.ts`): Lidé a směry, přehled cesty, stránka otázky, Mapa a čas. Osoba se dvěma stránkami zastaví sestavení | Dřív se adresa skládala na pěti místech dvěma způsoby a pro Hipparchii by vedla na neexistující `/osobnost/hipparchia/` |
+| Odkaz na Hipparchii vede na začátek společné stránky, ne na kotvu její kapitoly (ani v Mapě a čase) | Hlavička i Doba a lidé patří oběma; kotva v jedné části webu a začátek v jiné by byly dvě pravidla pro tutéž věc |
+| Hlavička dvojice: řádek dat pro každou osobu, „období 2“ jednou na prvním řádku; deska 6 : 5 (na telefonu 16 : 9 se středem výřezu na hlavách); pod ní atributy obou s mincí, pak popisek. Na telefonu menší titulek (38 px) a užší mezery | Jinak by na telefonu deska, dva atributy a první odstavec nebyly na první obrazovce (první odstavec začínal na 988 px, teď na 721 px při výšce 844) |
+| Doba a lidé u dvojice: vztahy obou sloučené, vztah Kratés – Hipparchia se nevypíše, u učitele a žáka stojí čí („učitel Kratéta“), u ostatních typů jméno před rolí; mapa „narození Hipparchie“; nadpisy „S kým Kratés a Hipparchia žili“, „Kde žili“ (u ženy „žila“) | Na stránce dvou lidí musí být jasné, ke komu vztah patří; vztah mezi nimi říká úvodní věta oddílu |
+| Myšlenky: tři (Kratés: „Co ses naučil, ti nikdo nevezme“ s Aristotelem EN IV, 1; „Pohrdat zvyky neznamená pohrdat lidmi“ s Epiktétovou podmínkou III, 22, 19; Hipparchia: „Rozhodnout o sobě znamená rozhodnout o svém čase“ s Aristotelem Politika I, 13 a Platónem Ústava V jako spojencem napůl). Komponenta `Myslenky` má titulek „Tři velké myšlenky“; třetí karta jde přes obě kolony a text v ní drží šířku čtenářského sloupce | Zadání: dvě Kratétovy a jedna Hipparchiina. Pro druhou Kratétovu myšlenku zadání námitku nejmenuje; Epiktétův citát III, 22, 50 nechávám cestě 7 (krok 5) a beru III, 22, 19 |
+| Kapitoly: tři Kratétovy (Péra a dým, Otvírač dveří, Zénón a hrnec polévky) a tři Hipparchiiny (volba, hostina s hádankou Kde je chyba?, Ta filozofka s Epiktétovým „druhý Kratés“). Úvod scénou o rozdání jmění podle verze Antisthena z Rhodu | Stejný prostor pro oba; úvod podle doporučení zadání; verze o rozdání spoluobčanům je o dávání druhým, ne o ničení |
+| Kapitola Hipparchiina volba je krátká a zatím bez odkazu na cestu 7; odkaz přidá P8 | Cesta 7 ještě neexistuje a test odkazů by spadl na neexistující stránce |
+| Kam dál na přehledu cesty dává jeden odkaz na stránku, i když na ní stojí dva filozofové („Kratés a Hipparchia: celý příběh“) | Cesta 7 má v katalogu Diogena, Kratéta i Hipparchii; dva stejné odkazy pod sebou by mátly |
+| Citát `rozpravy-iii-22-76` má vnitřní uvozovky ‚ ‘; místo u Kratétových veršů je „u Diogena Laertia VI, 85“ | Komponenta Citát přidává vnější uvozovky (vznikalo „„Ale…“); „Hravé verše Diogenés Laertios VI, 85“ se četlo jako jedno dílo |
+
 ## 15. 10. 2026: Opravy celku 7 po revizi
 
 | Rozhodnutí | Důvod |

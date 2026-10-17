@@ -851,17 +851,26 @@
 - id: krates
   jmeno: Kratés
   jmeno2: Kratéta
-  narozen: { rok: -350, priblizne: true }
-  zemrel: { rok: -301, priblizne: true }
+  # Roky podle Oxford Classical Dictionary (c. 368/365–288/285); do 16. 10. 2026 asi 350–301 podle Britanniky,
+  # což nesedělo s tím, že zemřel starý (DL VI, 92, 98). Akmé ve 113. olympiádě, 328–325 (DL VI, 87).
+  narozen: { rok: -365, priblizne: true, rozmezi: [-368, -365] }
+  zemrel: { rok: -285, priblizne: true, rozmezi: [-288, -285] }
   obdobi: 2
-  hloubka: medailonek
+  hloubka: profil
   smery: [kynismus]
+  otazky: [1]
   mista:
-    - { misto: theby, role: narozeni, zdroj: britannica-crates }
-    - { misto: athenes, role: pusobeni, zdroj: britannica-zeno-citium }
-  kdo: Kynický filozof, Diogenův žák.
-  proc: Jeho posluchačem byl Zénón z Kitia, zakladatel stoicismu.
-  zdroje: [britannica-crates, britannica-zeno-citium]
+    - { misto: theby, role: narozeni, zdroj: dl-vi-85 }
+    - { misto: athenes, role: pusobeni, zdroj: dl-vi-85 }
+  kdo: Kynik z Théb, Diogenův žák, který se vzdal velkého jmění.
+  proc: Říkali mu Otvírač dveří, protože chodil lidem do domů a domlouval jim; učil i Zénóna z Kitia, zakladatele stoicismu.
+  atribut:
+    ikona: bag
+    nazev: mošna
+    proc: Složil o ní báseň jako o městě, kde se nikdo nepere o peníze ani o slávu.
+    zdroj: dl-vi-85
+  obrazek: krates-hipparchia-beverwijck
+  zdroje: [ocd-crates, britannica-crates, britannica-zeno-citium, dl-vi-85, dl-vii-2, iep-cynics, apuleius-florida-22, epiktetos-rozpravy-iii-22, arrianos-anabaze-i-9, homer-odyssea-xix, dl-ii-97, euripides-bakchantky]
 
 - id: hipparchia
   jmeno: Hipparchia
@@ -869,13 +878,20 @@
   zena: true
   aktivni: { od: -330, do: -300, priblizne: true }
   obdobi: 2
-  hloubka: medailonek
+  hloubka: profil
   smery: [kynismus]
+  otazky: [1]
   mista:
-    - { misto: maroneia, role: narozeni, zdroj: iep-cynics }
-  kdo: Z Maróneie, první známá filozofka kynické školy.
-  proc: Z bohaté rodiny odešla za Kratétem a žila s ním jako kynička.
-  zdroje: [britannica-crates, iep-cynics]
+    - { misto: maroneia, role: narozeni, zdroj: dl-vi-85 }
+  kdo: Filozofka z Maróneie, první známá kynička.
+  proc: Odmítla bohaté nápadníky, aby mohla žít jako kynička, a v hádce porazila filozofa jeho vlastní zbraní.
+  atribut:
+    ikona: shuttle
+    nazev: člunek
+    proc: Od žen se čekalo, že stráví čas u stavu. Hipparchia si vybrala filozofii.
+    zdroj: dl-vi-85
+  obrazek: krates-hipparchia-beverwijck
+  zdroje: [britannica-crates, iep-cynics, dl-vi-85, suda-hipparchia, epiktetos-rozpravy-iii-22]
 
 - id: kleanthes
   jmeno: Kleanthés
