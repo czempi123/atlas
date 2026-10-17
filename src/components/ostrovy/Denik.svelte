@@ -23,6 +23,8 @@
   let zpravaPrvek = $state<HTMLElement>();
   let cesty = $derived(denik ? Object.entries(denik.cesty).sort((a, b) => b[1].kdy.localeCompare(a[1].kdy)) : []);
   let rozpracovane = $derived(denik ? denik.aktivita.filter((a) => !a.hotovo) : []);
+  // Hodiny, které student otevřel z odkazu učitele (nejnovější první); Moje hodiny učitele jsou zvlášť.
+  let hodiny = $derived(denik?.hodiny ?? []);
   const datum = (iso: string) => new Date(iso).toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' });
 
   onMount(() => {
@@ -51,7 +53,7 @@
 </script>
 
 {#if denik}
-  {#if denik.zapisy.length === 0 && denik.vyzvy.length === 0 && cesty.length === 0 && rozpracovane.length === 0}
+  {#if denik.zapisy.length === 0 && denik.vyzvy.length === 0 && cesty.length === 0 && rozpracovane.length === 0 && hodiny.length === 0}
     <p class="t-perex">Zatím je prázdný. Když u osobnosti nebo otázky napíšeš vlastní odpověď nebo přijmeš výzvu, najdeš ji tady.</p>
   {:else}
     {#if nabidka}
@@ -89,6 +91,17 @@
           <li>
             <p class="t-popisek">Otázka, ke které ses ještě nevrátil</p>
             <p class="otazka"><a href={a.odkaz}>{a.otazka}</a></p>
+          </li>
+        {/each}
+      </ul>
+    {/if}
+    {#if hodiny.length}
+      <h2 class="t-h3 nadpis" id="denik-hodiny">Hodiny</h2>
+      <ul class="seznam seznam--hodiny" aria-labelledby="denik-hodiny">
+        {#each hodiny as h (h.adresa)}
+          <li>
+            <p class="t-popisek">otevřeno {datum(h.kdy)}</p>
+            <p class="otazka"><a href={h.adresa}>{h.nazev || 'Hodina bez názvu'}</a></p>
           </li>
         {/each}
       </ul>

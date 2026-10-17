@@ -76,7 +76,7 @@ const skript = `(function () {
 <Fragment set:html={html} />
 
 <script>
-  import { ulozCteni } from '../../lib/denik';
+  import { ulozCteni, ulozPrectenou, prectene, kapitolaDoctena } from '../../lib/denik';
   import { ctenyOddil } from '../../lib/obsah';
 
   const lista = document.querySelector<HTMLElement>('[data-obsah-lista]');
@@ -97,8 +97,33 @@ const skript = `(function () {
     let cteny: string | null = null;
     let ceka = false;
 
-    // Viditelná část okna: pod hlavičkou webu, nad spodní lištou telefonu.
-    const horniMez = () => hlavicka?.getBoundingClientRect().bottom ?? 0;
+    // Dočtené kapitoly (Doma projdi na stránce hodiny): čas, kdy je kapitola právě čteným oddílem a karta je vidět,
+    // a jestli už byl vidět její konec. Kapitolu, kterou student jen proletí, kapitolaDoctena nepočítá.
+    const uzPrectene = new Set(prectene()[adresa] ?? []);
+    const kapitoly = oddily
+      .filter((o) => o.cislo)
+      .map((o) => ({ ...o, slov: (o.el.textContent ?? '').split(/\s+/).filter(Boolean).length, casMs: 0, konecVidet: false }));
+    let tik = performance.now();
+    function pricti() {
+      const ted = performance.now();
+      // Dlouhá mezera (uspaný počítač, skrytá karta) se nepočítá celá.
+      const dt = Math.min(ted - tik, 5000);
+      tik = ted;
+      if (document.visibilityState !== 'visible') return;
+      const k = kapitoly.find((x) => x.kotva === cteny);
+      if (k) k.casMs += dt;
+      for (const x of kapitoly) {
+        if (uzPrectene.has(x.kotva)) continue;
+        if (kapitolaDoctena(x)) {
+          uzPrectene.add(x.kotva);
+          ulozPrectenou(adresa, x.kotva);
+        }
+      }
+    }
+
+    // Viditelná část okna: pod hlavičkou webu (a lištou hodiny), nad spodní lištou telefonu.
+    const listaHodiny = document.querySelector<HTMLElement>('[data-hodina-lista]');
+    const horniMez = () => Math.max(hlavicka?.getBoundingClientRect().bottom ?? 0, listaHodiny && listaHodiny.offsetHeight > 0 ? listaHodiny.getBoundingClientRect().bottom : 0);
     const dolniMez = () => (spodni && getComputedStyle(spodni).display !== 'none' ? spodni.getBoundingClientRect().top : innerHeight);
     const otevreno = () => tlacitko.getAttribute('aria-expanded') === 'true';
 
@@ -125,8 +150,11 @@ const skript = `(function () {
 
     function prepocitej() {
       ceka = false;
+      // Čas do této chvíle patří oddílu, který se četl dosud.
+      pricti();
       const pod = horniMez() + tlacitko.offsetHeight;
       const dole = dolniMez();
+      for (const k of kapitoly) if (!k.konecVidet && k.el.getBoundingClientRect().bottom <= dole) k.konecVidet = true;
       const novy = ctenyOddil(
         oddily.map((o) => ({ kotva: o.kotva, nahore: o.el.getBoundingClientRect().top })),
         pod + 0.3 * (dole - pod),
@@ -186,6 +214,11 @@ const skript = `(function () {
       zavri();
       naplanuj();
     });
+    // Čas v kapitole běží i bez posouvání (student čte); skrytá karta se nepočítá.
+    if (kapitoly.some((k) => !uzPrectene.has(k.kotva))) setInterval(pricti, 1000);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') tik = performance.now();
+    });
     prepocitej();
   }
 </script>
@@ -203,7 +236,7 @@ const skript = `(function () {
 
   /* Lišta: jen s JavaScriptem. Na telefonu stojí v toku stránky a při čtení drží pod horní lištou. */
   .obsah-lista { display: none; }
-  :global(html[data-obsah-js]) .obsah-lista { display: block; position: sticky; top: var(--hlavicka); z-index: 30; height: var(--dotyk); margin: var(--s-6) calc(-1 * var(--okraj)) 0; }
+  :global(html[data-obsah-js]) .obsah-lista { display: block; position: sticky; top: calc(var(--hlavicka) + var(--hodina)); z-index: 30; height: var(--dotyk); margin: var(--s-6) calc(-1 * var(--okraj)) 0; }
   .obsah-lista__pruh { position: absolute; inset: 0 0 auto; height: var(--dotyk); }
   /* Papír a linky přes celou šířku okna; stín místo přesahu, aby nevzniklo vodorovné posouvání. */
   .obsah-lista__pozadi { position: absolute; inset: 0; background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); }

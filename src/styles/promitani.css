@@ -1,0 +1,38 @@
+/*
+ * Hodina na stránkách atlasu (větev hodiny-v1, H3): místo pro lištu hodiny a režim Promítat pro plátno.
+ * Třídy na <html> nastaví skript v hlavičce Zakladni.astro ještě před vykreslením a pak src/scripts/hodina-lista.ts:
+ *  · s-hodinou: na stránce stojí zastavení aktivní hodiny, pod hlavičkou je lišta hodiny (--hodina);
+ *  · promitani: plátno bez hlavičky, drobečků, patičky a spodních lišt, písmo o polovinu větší přes tokeny
+ *    a čtenářský sloupec přes šířku plátna. U zastavení s kotvou zůstane vidět jen jeho úsek (styl #promitani-usek
+ *    a atribut data-promitane-predek na předcích úseku); obsah je skrytý, dokud skript úsek neoznačí a nenastaví polohu.
+ */
+html.s-hodinou { --hodina: 48px; }
+
+html.promitani {
+  --meritko: 1.5;
+  --hlavicka: 0px;
+  --hodina: 60px;
+  --okraj: clamp(24px, 5vw, 96px);
+  --max-sirka: 1920px;
+  --ctenarsky-sloupec: 1320px;
+  scroll-padding-bottom: 0 !important;
+}
+html.promitani .hlavicka,
+html.promitani .cesta-hlavicka,
+html.promitani .drobecky,
+html.promitani .paticka,
+html.promitani nav.lista,
+html.promitani .cesta-lista,
+html.promitani .obsah-lista,
+html.promitani .obsah-profilu,
+html.promitani [data-cteni],
+html.promitani .preskocit { display: none !important; }
+/* Display, ne visibility: při omezeném pohybu by se obsah objevil až po přechodu (global.css zkracuje přechody všech vlastností). */
+html.promitani:not(.promitani-pripraveno) main { display: none; }
+html.promitani main { padding-bottom: var(--s-7); }
+/* Široké pásy kroku cesty, bloků a odpovědí otázky drží šířku čtenářského sloupce plátna. */
+html.promitani :is(.blok-sloupec, .krok__obsah, .krok__hlava, .oddil--siroky) { max-width: var(--ctenarsky-sloupec); }
+/* Úsek zastavení začíná hned pod lištou. */
+html.promitani [data-promitane] { margin-top: var(--s-5); scroll-margin-top: calc(var(--hodina) + var(--s-4)); }
+/* Hlas na časové ose: roky nad jménem, ne v okraji (sloupec přes plátno by je vystrčil ven z obrazovky). */
+html.promitani .hlas__roky { position: static; width: auto; margin: 0 0 var(--s-1); text-align: left; }

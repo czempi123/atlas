@@ -20,5 +20,6 @@ const obdobi = data.obdobi.map((o) => ({ id: o.id, nazev: o.nazev }));
 
 <style>
   .hlava { padding: var(--s-6) 0 var(--s-5); }
+  @media print { .hlava { display: none; } }
   h1 { margin-bottom: var(--s-4); }
 </style>

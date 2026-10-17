@@ -2,7 +2,10 @@
 // Základní rozvržení všech stránek: hlavička, drobečky, obsah, spodní lišta na telefonu.
 import '../styles/tokens.css';
 import '../styles/global.css';
+import '../styles/promitani.css';
 import Pisma from '../components/rozvrzeni/Pisma.astro';
+import ListaHodiny from '../components/rozvrzeni/ListaHodiny.astro';
+import { KLIC_AKTIVNI } from '../lib/pruchod-hodiny';
 import Hlavicka, { type Sekce } from '../components/rozvrzeni/Hlavicka.astro';
 import SpodniLista from '../components/rozvrzeni/SpodniLista.astro';
 import Drobecky from '../components/rozvrzeni/Drobecky.astro';
@@ -44,11 +47,28 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
         if (r === 'light' || r === 'dark') document.documentElement.dataset.theme = r;
       } catch (e) {}
     </script>
+    <script is:inline define:vars={{ klic: KLIC_AKTIVNI }}>
+      // Hodina otevřená v této kartě (src/lib/pruchod-hodiny.ts): když na stránce stojí některé její zastavení,
+      // drží se místo pro lištu hodiny a při promítání se stránka vykreslí rovnou bez hlavičky a patičky.
+      try {
+        var h = JSON.parse(sessionStorage.getItem(klic) || 'null');
+        if (h && h.verze === 1 && !h.zavreno && Array.isArray(h.polozky)) {
+          var p = location.pathname;
+          if (p.charAt(p.length - 1) !== '/') p += '/';
+          try { p = decodeURI(p); } catch (e) {}
+          if (h.polozky.some(function (z) { return z && z.stranka === p; })) {
+            document.documentElement.classList.add('s-hodinou');
+            if (h.promitani) document.documentElement.classList.add('promitani');
+          }
+        }
+      } catch (e) {}
+    </script>
     <Pisma />
   </head>
   <body>
     <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
     {Astro.slots.has('hlavicka') ? <slot name="hlavicka" /> : <Hlavicka sekce={sekce} zpet={zpet} titulek={kratkyTitulek} />}
+    <ListaHodiny />
     {drobecky && <Drobecky cesta={drobecky} />}
     <main id="obsah" tabindex="-1" data-pagefind-body={hledat ? '' : undefined} class:list={{ aplikace }}>
       <slot />
@@ -70,6 +90,15 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
         addEventListener('focusin', (e) => {
           const prvek = e.target;
           if (!klavesnice || !(prvek instanceof Element)) return;
+          // Lišta hodiny drží pod hlavičkou: prvek, na který přijde fokus při couvání (Shift+Tab), pod ní nezůstane.
+          const horni = document.querySelector('[data-hodina-lista]');
+          if (horni && horni.offsetHeight > 0 && !horni.contains(prvek) && !prvek.closest('.hlavicka, .cesta-hlavicka, .obsah-lista')) {
+            requestAnimationFrame(() => {
+              const r = prvek.getBoundingClientRect();
+              const hrana = horni.getBoundingClientRect().bottom;
+              if (r.top < hrana + 8 && r.bottom > 0) scrollBy({ top: r.top - hrana - 16, behavior: 'instant' });
+            });
+          }
           const lista = [...document.querySelectorAll('.cesta-lista, nav.lista')].find(
             (l) => getComputedStyle(l).position === 'fixed' && l.getBoundingClientRect().height > 0,
           );
@@ -83,6 +112,11 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
           });
         });
       })();
+    </script>
+    <script>
+      // Lišta hodiny a promítání (src/scripts/hodina-lista.ts); bez aktivní hodiny v kartě nedělá nic.
+      import { spustListuHodiny } from '../scripts/hodina-lista';
+      spustListuHodiny();
     </script>
   </body>
 </html>

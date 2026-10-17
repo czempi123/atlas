@@ -12,6 +12,7 @@
     type DruhVyberu, type Skupina, type Uzel,
   } from '../../lib/skladatel';
   import { nezlomitelne } from '../../lib/sazba.js';
+  import { aktivniHodina, vstupDoHodiny } from '../../lib/pruchod-hodiny';
 
   interface Props {
     /** názvy období z dat (src/data/obdobi.yaml); filtr nabídne jen ta, která katalog má */
@@ -161,6 +162,16 @@
       document.execCommand('copy');
     }
     zprava = 'Odkaz pro studenty je zkopírovaný.';
+  }
+
+  /** Promítat hodinu: otevře první zastavení v režimu pro plátno (lišta hodiny a promítání, src/scripts/hodina-lista.ts). */
+  function promitat() {
+    if (!katalog) return;
+    const ids = zastaveni.map((z) => z.id);
+    const h = aktivniHodina({ nazev, zastaveni: ids }, katalog, adresaHodiny({ nazev, zastaveni: ids }), true);
+    const cil = vstupDoHodiny(h, undefined, true);
+    if (cil) location.href = cil;
+    else zprava = 'V hodině není žádné místo, které by v atlasu bylo.';
   }
 
   function zrusFiltr() {
@@ -328,6 +339,14 @@
       <button type="button" class="blok__tl blok__tl--tiche" onclick={() => souborVstup?.click()}>Nahrát soubor</button>
       <input bind:this={souborVstup} class="vizualne-skryte" type="file" accept=".json,application/json" tabindex="-1" aria-hidden="true" onchange={nahraj} />
     </div>
+    {#if zastaveni.length}
+      <div class="blok__akce akce akce--hodina">
+        {#if id && ulozenoKdy}
+          <button type="button" class="blok__tl blok__tl--vedlejsi" onclick={promitat} disabled={!katalog}>Promítat hodinu</button>
+        {/if}
+        <button type="button" class="blok__tl blok__tl--tiche" onclick={() => print()}>Vytisknout přehled</button>
+      </div>
+    {/if}
     <p class="zprava t-ovladani" role="status">{zprava}</p>
 
     {#if zastaveni.length}
@@ -344,6 +363,32 @@
       <p class="nova t-ovladani"><a href="/hodina/nova/">Začít novou hodinu</a></p>
     {/if}
   </section>
+</div>
+
+<!-- Přehled hodiny pro učitele: jen na papíře (Vytisknout přehled), na obrazovce skrytý. -->
+<div class="tisk">
+  <p class="tisk__nad">Přehled hodiny · Atlas myšlení</p>
+  <p class="tisk__nazev">{nazev || 'Hodina bez názvu'}</p>
+  {#if poznamka.trim()}<p class="tisk__poznamka">{poznamka}</p>{/if}
+  <ol class="tisk__seznam">
+    {#each zastaveni as zs, i (zs.id)}
+      {@const n = najdiZastaveni(katalog ?? [], [zs.id])[0]}
+      <li class="tisk__zastaveni">
+        <span class="tisk__cislo">{i + 1}.</span>
+        <div>
+          {#if n.nalezeno}
+            <p class="tisk__kde">{stitekDruhu(n.zastaveni)} · {kdeStoji(n.zastaveni)}</p>
+            <p class="tisk__nazev-zastaveni">{n.zastaveni.nazev}</p>
+            <p class="tisk__adresa">{origin}{n.zastaveni.adresa}</p>
+          {:else}
+            <p class="tisk__nazev-zastaveni">{NENI_V_ATLASU}</p>
+            <p class="tisk__adresa">{zs.id}</p>
+          {/if}
+          {#if zs.poznamka.trim()}<p class="tisk__pozn">Poznámka: {zs.poznamka}</p>{/if}
+        </div>
+      </li>
+    {/each}
+  </ol>
 </div>
 
 <style>
@@ -499,4 +544,24 @@
   .odkaz__radek .blok__tl { flex: none; }
   .nova { margin: var(--s-4) 0 0; }
   .nova a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); }
+  .akce--hodina { margin-top: var(--s-3); }
+
+  /* Tisk: jen přehled hodiny, bez navigace, výběru a tlačítek. */
+  .tisk { display: none; }
+  @media print {
+    :global(.hlavicka), :global(.drobecky), :global(.paticka), :global(nav.lista), :global(.preskocit), :global(.hodina-lista) { display: none !important; }
+    .skladatel { display: none !important; }
+    .tisk { display: block; color: var(--ink); font-family: var(--font-serif); font-size: 11.5pt; line-height: 1.45; }
+    .tisk p { margin: 0; }
+    .tisk__nad { font-family: var(--font-sans); font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+    .tisk__nazev { margin: 4pt 0 6pt !important; font-size: 22pt; line-height: 1.15; }
+    .tisk__poznamka { margin-bottom: 10pt !important; white-space: pre-line; }
+    .tisk__seznam { margin: 10pt 0 0; padding: 0; list-style: none; border-top: 0.75pt solid var(--ink-2); }
+    .tisk__zastaveni { display: grid; grid-template-columns: 22pt 1fr; gap: 4pt; padding: 7pt 0; border-bottom: 0.5pt solid var(--rule); break-inside: avoid; }
+    .tisk__cislo { font-family: var(--font-sans); font-weight: 600; }
+    .tisk__kde { font-family: var(--font-sans); font-size: 9pt; color: var(--ink-2); }
+    .tisk__nazev-zastaveni { font-size: 12.5pt; font-weight: 600; }
+    .tisk__adresa { font-family: var(--font-sans); font-size: 8.5pt; color: var(--ink-2); overflow-wrap: anywhere; }
+    .tisk__pozn { margin-top: 3pt !important; white-space: pre-line; }
+  }
 </style>

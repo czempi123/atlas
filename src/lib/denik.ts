@@ -37,6 +37,21 @@ export interface Denik {
    * je součástí exportu. Staví z něj „Pokračovat ve čtení“ nahoře na profilu.
    */
   cteni?: Record<string, string>;
+  /**
+   * Dočtené kapitoly profilů: adresa stránky → kotvy kapitol, které student dočetl až do konce (kapitolaDoctena).
+   * Nepovinné (starší deníky ho nemají), je součástí exportu. Z něj „Doma projdi“ na stránce hodiny odškrtne kapitoly.
+   */
+  prectene?: Record<string, string[]>;
+  /** Hodiny, které student otevřel z odkazu (nejnovější první, nejvýš deset). Nepovinné; součást exportu. */
+  hodiny?: HodinaVDeniku[];
+}
+
+export interface HodinaVDeniku {
+  /** adresa stránky hodiny (/hodina/?v=1&n=…&z=…) */
+  adresa: string;
+  nazev: string;
+  /** kdy ji student naposledy otevřel (ISO) */
+  kdy: string;
 }
 
 export type DruhBloku = 'odkryj' | 'volba' | 'zmena' | 'spor' | 'roztrid' | 'kdo-zil-driv';
@@ -82,6 +97,14 @@ export function nacti(): Denik {
         if (!objekt(plny.cesty)) plny.cesty = {};
         if (!Array.isArray(plny.aktivita)) plny.aktivita = [];
         if (plny.cteni !== undefined && !objekt(plny.cteni)) delete plny.cteni;
+        if (plny.prectene !== undefined) {
+          if (!objekt(plny.prectene)) delete plny.prectene;
+          else plny.prectene = Object.fromEntries(Object.entries(plny.prectene).filter(([, k]) => Array.isArray(k)).map(([s, k]) => [s, (k as unknown[]).filter((x): x is string => typeof x === 'string')]));
+        }
+        if (plny.hodiny !== undefined) {
+          if (!Array.isArray(plny.hodiny)) delete plny.hodiny;
+          else plny.hodiny = plny.hodiny.filter((h: Partial<HodinaVDeniku> | null) => !!h && typeof h.adresa === 'string' && typeof h.nazev === 'string' && typeof h.kdy === 'string');
+        }
         return plny;
       }
     }
@@ -173,6 +196,59 @@ export function ulozCteni(odkaz: string, kotva: string): void {
 export function cteniStranky(odkaz: string): string | undefined {
   const k = nacti().cteni?.[odkaz];
   return typeof k === 'string' ? k : undefined;
+}
+
+// ─── Dočtené kapitoly (Doma projdi, větev hodiny-v1, H3) ──────────────────────
+
+/** Rychlost, nad kterou už student text jen přelétá (slov za minutu); kapitola pod ní je dočtená. */
+export const PRELETENI_SLOV_ZA_MINUTU = 500;
+/** Nejkratší čas v kapitole, i když je krátká. */
+export const NEJKRATSI_CTENI_MS = 10_000;
+
+/**
+ * Je kapitola dočtená? Student dojel na její konec (spodní hrana kapitoly byla vidět nad spodním okrajem okna)
+ * a strávil v ní aspoň tolik času, kolik by trvalo ji přelétnout rychlostí PRELETENI_SLOV_ZA_MINUTU
+ * (nejméně NEJKRATSI_CTENI_MS). Čas se počítá, jen když je kapitola právě čtený oddíl a karta je vidět.
+ */
+export function kapitolaDoctena(k: { slov: number; casMs: number; konecVidet: boolean }): boolean {
+  if (!k.konecVidet) return false;
+  const potreba = Math.max(NEJKRATSI_CTENI_MS, (Math.max(0, k.slov) / PRELETENI_SLOV_ZA_MINUTU) * 60_000);
+  return k.casMs >= potreba;
+}
+
+/** Deník s další dočtenou kapitolou stránky (bez opakování, v pořadí dočtení). Vrací nový objekt. */
+export function sPrectenou(d: Denik, stranka: string, kotva: string): Denik {
+  const pred = d.prectene?.[stranka] ?? [];
+  if (pred.includes(kotva)) return d;
+  return { ...d, prectene: { ...(d.prectene ?? {}), [stranka]: [...pred, kotva] } };
+}
+
+/** Zapíše dočtenou kapitolu do deníku (jednou). */
+export function ulozPrectenou(stranka: string, kotva: string): void {
+  const d = nacti();
+  const novy = sPrectenou(d, stranka, kotva);
+  if (novy !== d) uloz(novy);
+}
+
+/** Dočtené kapitoly podle adresy profilu (prázdné, když deník pole nemá). */
+export function prectene(d: Denik = nacti()): Record<string, string[]> {
+  return d.prectene ?? {};
+}
+
+// ─── Otevřené hodiny ──────────────────────────────────────────────────────────
+
+/** Nejvýš tolik otevřených hodin si deník pamatuje; nejdéle neotevřená vypadne. */
+export const HODINY_NEJVYS = 10;
+
+/** Deník s otevřenou hodinou nahoře: stejná adresa se přesune nahoru s novým časem a názvem. Vrací nový objekt. */
+export function sHodinou(d: Denik, h: { adresa: string; nazev: string }, kdy: string): Denik {
+  const ostatni = (d.hodiny ?? []).filter((x) => x.adresa !== h.adresa);
+  return { ...d, hodiny: [{ adresa: h.adresa, nazev: h.nazev, kdy }, ...ostatni].slice(0, HODINY_NEJVYS) };
+}
+
+/** Zapíše otevřenou hodinu do deníku. */
+export function zaznamenejHodinu(adresa: string, nazev: string): void {
+  uloz(sHodinou(nacti(), { adresa, nazev }, new Date().toISOString()));
 }
 
 export function prijmiVyzvu(v: Omit<Vyzva, 'prijato'>): void {

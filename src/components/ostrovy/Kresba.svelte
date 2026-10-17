@@ -90,7 +90,7 @@
     border: 1px solid var(--rule);
     border-radius: var(--r-md);
     background: var(--surface);
-    scroll-margin-top: calc(var(--hlavicka) + var(--s-4));
+    scroll-margin-top: calc(var(--hlavicka) + var(--hodina) + var(--s-4));
   }
   @media (min-width: 700px) {
     .kresba { padding: var(--s-4); }
