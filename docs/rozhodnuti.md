@@ -4,6 +4,19 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok M3 (data třetí vlny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Čtrnáct ze šestnácti osob dostalo medailonek; Konfucius a Pýthagorás ne | Nemají žádný vztah k nikomu, kdo v datech je, a bez vztahu medailonek nevznikne; kritérium se kvůli nim nemění |
+| Jedenáct nových vztahů, z toho šest tradovaných (Empedoklés → Gorgiás, Gorgiás → Isokratés, Anaxagorás → Sókratés, Aspasie → Sókratés, Plótínos → Hypatia, Démokritos → Pyrrhón) | Každý má pramen, který jsem otevřel; tam, kde ho podává jen antická tradice nebo jedna literární scéna, je označený `tradovany` (podklady `docs/podklady/medailonky-vlna-3.md`) |
+| Nezapsány: Karneadés → Cicero, Gorgiás → Aspasie, Platón → Isokratés, Plútarchos → Hypatia, polemika mezi současníky proti Pýthagorovi | Karneadés nic nenapsal; IEP říká jen „may have been“; můj pramen Platóna nejmenuje; BEA myslí Plútarcha z Athén; nadpis „Znali se a přeli se“ by tvrdil známost (komentář ve `vztahy.yaml`, celek 7) |
+| Nové „proč“ u Anaximandra, Anaximena a Hypatie; nové „kdo“ u Anaximandra, Anaximena, Aspasie a Cicera | Věta nesmí podávat připisovanou zprávu jako fakt (mapa), obsahovat výhradu („snad“), opakovat atribut (astroláb), tvrdit, co pramen neříká („vzdělaná“), ani končit zkratkou letopočtu |
+| Plótínovo narození je přibližné, Anaxagorův pobyt v Athénách přibližný | SEP rok narození jen vyvozuje; odchod z Athén klade mezi 436 a 430 |
+| Cicero nemá směr Akademie | Přidá se s profilem, aby nepřibyl do výpisu směru bez textu o něm; IEP říká, že se k Akademii hlásil |
+| Žádný atribut nepřibyl | Prameny nenesou předmět, který by seděl na hotovou ikonu; kámen (Anaxagorás) a gnómón (Anaximandros) by potřebovaly novou ikonu a jsou nejisté |
+| Další v pořadí: R (revize větve), pak uzavření | Plán větve `docs/plany/medailonky.md` |
+
 ## 17. 10. 2026: Medailonky, krok M2 (data druhé vlny)
 
 | Rozhodnutí | Důvod |

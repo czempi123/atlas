@@ -74,6 +74,8 @@ PW_BEZ_BUILDU=1 npx playwright test tests/e2e/medailonky.spec.ts tests/e2e/doba-
 
 - **Dvě věty v „proč“**: „Vedl Akademii. Psal o číslech.“ se nevejde; spoj je, nebo vyber to podstatnější. Zkratky „př. n. l.“ a „n. l.“ větu nekončí, test je pozná.
 - **„Proč“ opakuje atribut** (Zénón: „Stoikové mají jméno podle sloupoví“ a atribut „sloupoví“): na stránce stojí obojí pod sebou. „Proč“ říká myšlenku nebo čin, atribut předmět.
+- **Věta končící zkratkou letopočtu** („…konzul roku 63 př. n. l.“): test ji počítá jako nula vět, protože zkratky větu nekončí. Přeformuluj ji tak, aby poslední slovo nebyla zkratka.
+- **Stejné jméno, jiný člověk** (Plútarchos z Athén v BEA o Hypatii, Plútarchos z Chairóneie v datech): vztah zapisuj, až ověříš, o kterého jde.
 - **Rok u místa bez `priblizne`**, když ho má osoba přibližný: test `kontrolaCasu` pak hlásí rok mimo život.
 - **Vztah opačným směrem.** `ucitel`: `od` je učitel, `k` žák. `vliv-textem`: `od` je ten, koho čtou. `polemika`: `od` je ten, kdo polemizoval.
 - **Poznámka u vztahu jako věta.** Píše se malým písmenem bez tečky a sedí na obou stránkách (u polemiky otázka, o kterou šlo: „je člověk měřítkem všech věcí?“).
