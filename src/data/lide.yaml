@@ -178,6 +178,7 @@
   zemrel: { rok: -370, priblizne: true }
   obdobi: 1
   hloubka: profil
+  medailonek: true
   smery: [atomiste]
   otazky: [6]
   linie: [veda]
@@ -463,12 +464,13 @@
   zemrel: { rok: -366, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [kynismus]
   mista:
-    - { misto: athenes, role: pusobeni, zdroj: iep-antisthenes }
-  kdo: Athéňan, nejdřív žák řečníka Gorgia, pak Sókratův druh, který byl u jeho smrti.
+    - { misto: athenes, role: pusobeni, zdroj: dl-vi-1 }
+  kdo: Syn Athéňana a Thrákyně, nejdřív žák řečníka Gorgia, pak Sókratův druh, který byl u jeho smrti.
   proc: Ze Sókratova příkladu udělal skromný a tvrdý způsob života, na který navázali kynikové.
-  zdroje: [iep-antisthenes]
+  zdroje: [iep-antisthenes, dl-vi-1]
 
 - id: chairefon
   jmeno: Chairefón
@@ -477,6 +479,7 @@
   zemrel: { rok: -399, nejpozdeji: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: athenes, role: pusobeni, zdroj: platon-obrana }
     - { misto: delfy, role: pobyt, zdroj: platon-obrana }
@@ -491,6 +494,7 @@
   zemrel: { rok: -399, nejdrive: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: athenes, role: pusobeni, zdroj: platon-obrana }
   kdo: Sókratův vrstevník a přítel ze stejného athénského obvodu.
@@ -546,6 +550,7 @@
   zemrel: { rok: -314, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [akademie]
   mista:
     - { misto: chalkedon, role: narozeni, zdroj: sep-xenocrates }
@@ -697,7 +702,7 @@
     - { misto: kition, role: narozeni, zdroj: britannica-zeno-citium }
     - { misto: athenes, role: pusobeni, od: -312, priblizne: true, zdroj: britannica-zeno-citium }
   kdo: Myslitel z Kitia na Kypru, zakladatel stoické školy v Athénách.
-  proc: Stoikové mají jméno podle malovaného sloupoví, Stoa Poikilé, kde učil.
+  proc: Učil, že cílem života je žít v souladu sám se sebou, podle jednoho rozumu, protože kdo žije v rozporu, je nešťastný.
   atribut:
     ikona: stoa
     nazev: sloupoví
@@ -712,6 +717,7 @@
   zemrel: { rok: -207, priblizne: true }
   obdobi: 2
   hloubka: profil
+  medailonek: true
   smery: [stoicismus]
   otazky: [4]
   linie: [stoicismus]
@@ -772,12 +778,15 @@
   zemrel: { rok: 120, priblizne: true }
   obdobi: 2
   hloubka: medailonek
+  medailonek: true
   otazky: [3]
   mista:
     - { misto: chaironeia, role: narozeni, zdroj: sep-plutarch }
     - { misto: chaironeia, role: pusobeni, zdroj: sep-plutarch }
+    - { misto: delfy, role: pusobeni, zdroj: sep-plutarch }
+    - { misto: athenes, role: studium, od: 66, priblizne: true, zdroj: sep-plutarch }
   kdo: Řecký spisovatel a platonik z Chairóneie, kněz v Delfách.
-  proc: Psal po dvojicích životopisy řeckých a římských státníků a přel se s Epikúrovým učením.
+  proc: Napsal Paralelní životopisy, dvojice řeckých a římských státníků, i polemiky proti stoikům a epikurejcům.
   atribut:
     ikona: tripod
     nazev: trojnožka
