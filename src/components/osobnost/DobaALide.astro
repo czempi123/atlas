@@ -3,8 +3,12 @@
 // Mini osa se současníky, výřez mapy, učitelé a žáci, známí, vliv přes texty a kdo navazoval.
 // Společný profil předá další osoby (`dalsi`): vztahy obou se sloučí, vztah mezi nimi se nevypíše
 // (řekne ho úvodní věta) a u každého člověka stojí, ke komu ze dvojice vztah patří („učitel Kratéta“).
+// Jméno člověka, který má vlastní stránku, je odkaz na ni (adresaOsoby: Hipparchia vede na společný profil);
+// lidé bez stránky a osoby, o kterých stránka je, zůstávají prostým textem.
 // Použití v MDX: <DobaALide osoba={props.osoba} dalsi={props.dalsi}> úvodní věty </DobaALide>
+import { getCollection } from 'astro:content';
 import type { TOsoba, TVztah } from '../../lib/schema';
+import { adresaOsoby } from '../../lib/adresa-osoby';
 import { vztahyOsoby, kdoNavazoval } from '../../lib/data';
 import { zivot } from '../../lib/casy';
 import { roleVztahu, skupinyVztahu } from '../../lib/vztahy';
@@ -17,6 +21,8 @@ const { osoba, dalsi = [] } = Astro.props;
 const osoby = [osoba, ...dalsi];
 const dvojice = osoby.length > 1;
 const naStrance = new Set(osoby.map((o) => o.id));
+const adresa = adresaOsoby(await getCollection('osobnosti'));
+const odkaz = (id: string) => (naStrance.has(id) ? undefined : adresa(id));
 const vztahy = osoby.flatMap((ja) =>
   vztahyOsoby(ja.id)
     .filter((v) => !naStrance.has(v.druhy.id))
@@ -63,7 +69,7 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
             <li>
               <Mince osoba={v.druhy} varianta="tint" velikost={40} />
               <span class="lide__text">
-                <span class="lide__jmeno">{v.druhy.jmeno}</span>
+                <span class="lide__jmeno">{odkaz(v.druhy.id) ? <a class="jmeno-odkaz" href={odkaz(v.druhy.id)}>{v.druhy.jmeno}</a> : v.druhy.jmeno}</span>
                 <span class="t-popisek">
                   <span class={`cara cara--${TYP_CARY[v.vztah.typ]}`} aria-hidden="true"></span>
                   {role(v)}{v.vztah.poznamka ? ` · ${v.vztah.poznamka}` : ''} · {zivot(v.druhy)}
@@ -81,7 +87,7 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
       <h3 class="t-ovladani-l">Kdo navazoval</h3>
       <ul>
         {retezy.map((r) => (
-          <li>{r.lide.map((o, i) => <>{i > 0 && <span class:list={['sipka', { 'sipka--tradice': r.tradovany[i - 1] }]} title={r.tradovany[i - 1] ? 'učitel a žák podle tradice' : 'učitel a žák'}>{r.tradovany[i - 1] ? '⇢' : '→'}</span>}<span class:list={{ ja: naStrance.has(o.id) }}>{o.jmeno}</span></>)}</li>
+          <li>{r.lide.map((o, i) => <>{i > 0 && <span class:list={['sipka', { 'sipka--tradice': r.tradovany[i - 1] }]} title={r.tradovany[i - 1] ? 'učitel a žák podle tradice' : 'učitel a žák'}>{r.tradovany[i - 1] ? '⇢' : '→'}</span>}{odkaz(o.id) ? <a class="jmeno-odkaz" href={odkaz(o.id)}>{o.jmeno}</a> : <span class:list={{ ja: naStrance.has(o.id) }}>{o.jmeno}</span>}</>)}</li>
         ))}
       </ul>
       {retezy.some((r) => r.tradovany.some(Boolean)) && <p class="t-popisek legenda">Čárkovaná šipka ⇢: učitel a žák podle antické tradice.</p>}
@@ -113,6 +119,17 @@ const TYP_CARY: Record<TVztah['typ'], string> = { ucitel: 'plna', 'znali-se': 't
   .navazovali li { display: flex; flex-wrap: wrap; align-items: baseline; row-gap: var(--s-1); padding: var(--s-2) 0; border-bottom: 1px solid var(--rule); font-size: 19px; }
   .sipka { margin: 0 var(--s-2); color: var(--pc); font-family: var(--font-sans); }
   .ja { font-weight: 600; }
+  /* Odkaz na stránku člověka: tenké podtržení v barvě období, text zůstává inkoustový, takže je tišší
+     než nadpis. Inline-block s 2px nahoře a dole dá cíl dotyku aspoň 24 px (19 px × 1,3). */
+  .jmeno-odkaz {
+    display: inline-block;
+    padding-block: 2px;
+    text-decoration-line: underline;
+    text-decoration-color: var(--pc);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  .jmeno-odkaz:hover { text-decoration-thickness: 2px; }
   .legenda { margin-top: var(--s-2); }
   @media (min-width: 900px) {
     .doba__mrizka { grid-template-columns: 7fr 5fr; align-items: start; }
