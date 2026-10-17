@@ -3,7 +3,7 @@
 // a položky Kam dál. Nic se nepíše ručně: co v datech chybí, na stránce není (a test medailonek nepustí).
 import type { TOsoba, TVztah } from './schema';
 import { rok as rokText } from './casy';
-import { roleVztahu, sporNaDalku } from './vztahy';
+import { sporNaDalku, type Smer } from './vztahy';
 
 // ─── Věty „kdo“ a „proč“ ──────────────────────────────────────────────────────
 
@@ -77,7 +77,26 @@ export interface PolozkaKamDal { href?: string; nadtitulek: string; text: string
 export interface CilStranky { href: string; druh: string; text: string }
 
 const PORADI_VZTAHU: TVztah['typ'][] = ['ucitel', 'znali-se', 'polemika', 'vliv-textem'];
-const velke = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
+/**
+ * Nadtitulek karty Kam dál. Karta stojí bez nadpisu skupiny a jméno pod nadtitulkem čte student jako podmět,
+ * takže nadtitulek říká, kdo je ve vztahu činný (na stránce Cicerona „Koho četl · Platón“, ne „Znal ho z textů“).
+ * `ja` je osoba stránky, `druhy` osoba karty; rod jako v kartě člověka v Mapě a čase.
+ */
+export function roleNaKarte(v: Pick<TVztah, 'typ'>, smer: Smer, naDalku: boolean, ja: { zena?: boolean }, druhy: { zena?: boolean }): string {
+  const t = (o: { zena?: boolean }, muz: string, zena: string) => (o.zena ? zena : muz);
+  switch (v.typ) {
+    case 'ucitel': return smer === 'od' ? t(druhy, 'Žák', 'Žákyně') : t(druhy, 'Učitel', 'Učitelka');
+    case 'znali-se': return 'Znali se';
+    case 'vliv-textem':
+      return smer === 'od'
+        ? `${t(druhy, 'Četl', 'Četla')} ${t(ja, 'ho', 'ji')} a ${t(druhy, 'navázal', 'navázala')}`
+        : `Koho ${t(ja, 'četl', 'četla')}`;
+    case 'polemika':
+      if (naDalku) return smer === 'od' ? `S kým se ${t(ja, 'přel', 'přela')} na dálku` : `${t(druhy, 'Přel', 'Přela')} se s ${t(ja, 'jeho', 'jejím')} učením`;
+      return smer === 'od' ? `S kým se ${t(ja, 'přel', 'přela')}` : `${t(druhy, 'Polemizoval', 'Polemizovala')} s ${t(ja, 'ním', 'ní')}`;
+  }
+}
 
 /**
  * Kam dál z medailonku, nejvýš tři položky: až dva lidé se stránkou (učitelé a žáci první, pak známí, spory, četba;
@@ -108,7 +127,7 @@ export function kamDalMedailonku(args: {
   for (const x of lide) {
     if (polozky.length >= 2 || videno.has(x.stranka!.href)) continue;
     videno.add(x.stranka!.href);
-    const role = velke(roleVztahu(x.v, x.smer, sporNaDalku(x.v, ja, x.druhy)));
+    const role = roleNaKarte(x.v, x.smer, sporNaDalku(x.v, ja, x.druhy), ja, x.druhy);
     polozky.push({ href: x.stranka!.href, nadtitulek: `${x.stranka!.druh} · ${role}`, text: x.stranka!.text });
   }
   const m = rokNaMape(ja);

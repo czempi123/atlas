@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
 import { nactiData, type SurovaData } from '../../src/lib/kontroly';
 import { adresaOsoby } from '../../src/lib/adresa-osoby';
-import { chybiMedailonku, kamDalMedailonku, pocetVet, posun, rokNaMape } from '../../src/lib/medailonek';
+import { chybiMedailonku, kamDalMedailonku, pocetVet, posun, roleNaKarte, rokNaMape } from '../../src/lib/medailonek';
 import type { TOsoba } from '../../src/lib/schema';
 
 const koren = join(import.meta.dirname, '../..');
@@ -103,5 +103,34 @@ describe('Kam dál z medailonku', () => {
       nazevMista: () => 'Athény', obdobi: { id: 1, nazev: 'Počátky a klasické Řecko' },
     });
     expect(jen.map((p) => p.nadtitulek)).toEqual(['Mapa a čas', 'Lidé a směry']);
+  });
+});
+
+describe('Kam dál z medailonku: nadtitulek říká, kdo je ve vztahu činný', () => {
+  // Karta stojí bez nadpisu skupiny a jméno pod nadtitulkem čte student jako podmět (revize větve, nález 1).
+  const podleId = (id: string) => data.lide.find((o) => o.id === id)!;
+  const karta = (stranka: string, druhy: string) =>
+    kamDalMedailonku({
+      osoba: podleId(stranka), vztahy: data.vztahy, osobaPodleId: podleId,
+      cil: (id) => (id === druhy ? { href: `/osobnost/${id}/`, druh: 'Portrét', text: podleId(id).jmeno } : undefined),
+      nazevMista: () => 'Athény', obdobi: { id: 2, nazev: 'Helenismus a Řím' },
+    })[0].nadtitulek;
+  it('Cicero četl Platóna a přel se na dálku s Epikúrem', () => {
+    expect(karta('cicero', 'platon')).toBe('Portrét · Koho četl');
+    expect(karta('cicero', 'epikuros')).toBe('Portrét · S kým se přel na dálku');
+    expect(karta('epikuros', 'cicero')).toBe('Portrét · Přel se s jeho učením');
+  });
+  it('Hypatia četla Plótína; na Plótínově stránce s rodem obou', () => {
+    expect(karta('hypatia', 'plotinos')).toBe('Portrét · Koho četla');
+    expect(karta('plotinos', 'hypatia')).toBe('Portrét · Četla ho a navázala');
+  });
+  it('Aristofanés polemizoval se Sókratem, ne naopak', () => {
+    expect(karta('aristofanes', 'sokrates')).toBe('Portrét · S kým se přel');
+    expect(karta('sokrates', 'aristofanes')).toBe('Portrét · Polemizoval s ním');
+  });
+  it('učitel a žák s rodem osoby karty', () => {
+    expect(roleNaKarte({ typ: 'ucitel' }, 'od', false, {}, { zena: true })).toBe('Žákyně');
+    expect(roleNaKarte({ typ: 'ucitel' }, 'k', false, { zena: true }, {})).toBe('Učitel');
+    expect(roleNaKarte({ typ: 'znali-se' }, 'od', false, {}, {})).toBe('Znali se');
   });
 });
