@@ -4,6 +4,19 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Hodiny v1, krok H1 (katalog zastavení a kotvy)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Pět bodů plánu `hodiny-v1` platí, jak byly navržené | Autor nechal odpovědi prázdné; prázdná odpověď znamená souhlas |
+| Katalog zastavení se skládá při sestavení (`katalogZastaveni` v `src/lib/hodiny.ts`, `/hodina/katalog.json`) z obsahu a dat; názvy bere ze stejných polí jako stránka a nic se v něm nepíše ručně. Kotvy proti `dist/` hlídá `scripts/hodiny-katalog.mjs` | Zadání H1; ručně psaný seznam by se rozešel s obsahem při první změně |
+| Id zastavení má tvar `předpona:stránka[/část]`: `k:` cesta a krok, `o:` profil, kapitola a oddíl, `h:` otázka a hlas, `b:` blok, `p:` příběh. Celá stránka má předponu bez části (`k:<cesta>`, `o:<profil>`, `h:<otázka>`); autor to může v Co rozhodnout po H1 změnit | Plán dával id jen částem; stejná předpona pro stránku i její části drží, kam zastavení patří |
+| V katalogu nejsou Moje stanovisko, Zkus to žít uvnitř kroku, Kam dál, Prameny, Návrat a medailonky; oddíl Doba a lidé v něm je | Stanovisko a výzva v kroku jsou části většího celku, Návrat nabízí jen deník; mini osa se současníky se do hodiny hodí |
+| Názvy a kotvy oddílů profilu jsou v `src/lib/oddily.ts`, názvy kreseb v `src/lib/kresby.ts`, výchozí otázka Kdo žil dřív? v `otazkaKdoZil`; komponenty i katalog berou totéž | Dřív žily jen uvnitř komponent a katalog by je musel opsat |
+| Závěr cesty (`ZaverCesty`) nese id bloku na kořeni v obou podobách, před hydratací i po ní | Jediné zastavení bez kotvy; bez ní by odkaz z hodiny skončil na začátku kroku |
+| „Doma projdi“: krok nebo kapitola je v hodině, když v ní je sama nebo cokoli na ní; celý profil pokryje všechny kapitoly, přehled cesty kroky ne; stránky otázek se nepočítají | Odkaz na blok otevře celou stránku kroku, takže student krok v hodině viděl |
+| Adresa hodiny nechává `:`, `/` a `,` v id nezakódované; nejvýš 60 zastavení a název do 120 znaků | Čitelný odkaz; zakódovanou adresu z prohlížeče funkce přečte taky |
+
 ## 17. 10. 2026: Větev hodiny-v1, plán
 
 | Rozhodnutí | Důvod |
