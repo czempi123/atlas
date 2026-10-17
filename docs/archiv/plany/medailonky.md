@@ -10,7 +10,7 @@ Každý člověk na mapě má dostat vlastní stránku (rozhodnutí z P4, 30. 9.
 | M3 | Data třetí vlny (16 osob) | totéž | hotovo 17. 10. 2026 (14 medailonků, Konfucius a Pýthagorás bez vztahu); zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-3.md` |
 | R | Revize větve (vzorek dat proti pramenům, stránky, odkazy) | Opus 5.5 · high se skillem `atlas-revize` | hotovo 17. 10. 2026, verdikt „po opravách“ (`docs/revize/medailonky-2026-10-17.md`); zadání je v `docs/archiv/zadani/medailonky.md` |
 | O | Opravy po revizi (Kam dál, tradované vztahy a rod v Době a lidech, rozhodnutí autora) | Opus 5.5 · high se skillem `atlas-komponenta` | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md` |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | — | čeká |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md` |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/medailonky.md`. Po každé vlně může autor větev sloučit dřív (medailonky jsou samostatné stránky); o tom rozhoduje on.
 
@@ -138,20 +138,19 @@ Co chybí (podrobně v inventuře): většině chybí jen ověření a lepší �
 - **Společný profil Kratéta a Hipparchie** má nadpisy skupin dál v mužském rodě, protože nemají jeden podmět; stojí tam jen Učitelé a Žáci, kterých se rod nadpisu netýká. Popisky řádků už rod znají („Hipparchia: …“).
 - **Poučení** do `docs/pouceni.md` přibylo jedno: slovo, které přidá komponenta (tady „vypráví se“), nesmí být i v datech.
 
-**Další krok.** Uzavření větve po autorově schválení (zadání níže).
+**Další krok.** Uzavření větve po autorově schválení.
 
-## Uzavření větve
+## Uzavření větve (17. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Sloučení a úklid, žádný nový obsah. Pouští se po opravách (krok O) a po autorově schválení; autor může větev uzavřít i dřív (po kterékoli vlně) a zbylé vlny nechat na novou větev.
+Autor 17. 10. 2026 větev schválil. Před sloučením prošlo celé `npm test` napoprvé (602 jednotkových, 478 v prohlížeči). Větev je sloučená do hlavní větve bez konfliktů a bez přepisování historie (slučovací commit `294aa1c`; hlavní větev se od založení větve nehnula). Po sloučení prošlo sestavení, `node scripts/doba-odkazy-vypis.mjs` skončil „Chyb: 0“ a hlavní větev je na GitHubu.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Větev medailonky schvaluji: sluč ji do main a pošli main na GitHub.
+**Stav po větvi** (`node scripts/medailonky-inventura.mjs`): v datech je 50 osob, 13 z nich má profil nebo portrét a ze zbylých 37 má **34 medailonek** (Plútarchos, Kleanthés, Chrýsippos, Zénón z Kitia, Antisthenés, Cicero, Xenokratés, Chairefón, Alkibiadés, Démokritos, Kritón, Anaxagorás, Eudoxos, Aristippos, Aristofanés, Musonius Rufus, Plótínos, Theofrastos, Aspasie, Filón Alexandrijský, Xenofanés, Archytás, Speusippos, Xenofón, Zénón z Eleje, Karneadés, Gorgiás, Hypatia, Isokratés, Anaximandros, Anaximenés, Empedoklés, Pyrrhón, Thalés).
 
-1. Zkontroluj, že ve větvi nic nečeká (git status), a pusť celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně.
-2. Sluč medailonky do main (bez přepisování historie), znovu sestav web a pusť node scripts/doba-odkazy-vypis.mjs (musí skončit „Chyb: 0“) a node scripts/medailonky-inventura.mjs (stav po větvi).
-3. Pošli main na GitHub.
-4. Do plánu větve zapiš oddíl „Uzavření větve“ (kolik osob má medailonek, kdo zůstal bez něj a proč, co je další v pořadí) a přesuň ho do docs/archiv/plany/medailonky.md; provedená zadání zůstávají v docs/archiv/zadani/medailonky.md. V docs/plan.md uprav řádek větve v rozcestníku (soubor v archivu, stav) a u P9 stav. Rozhodnutí zapiš do docs/rozhodnuti.md.
-5. Z projektu Claude smaž docs/plany/medailonky.md a aktualizuj tam docs/plan.md. Restartuj náhled npm run dev.
+**Bez medailonku zůstali tři:**
 
-Pak mi napiš, co je sloučeno a co je další v pořadí.
-```
+- **Lucretius** (vlna 1): prameny neuvádějí žádné místo jeho života, takže by neměl bod na mapě ani výřez mapy na stránce; místo se nevymýšlí.
+- **Konfucius a Pýthagorás** (vlna 3): v datech nemají žádný doložený vztah k jiné osobě atlasu, takže by Doba a lidé i Kam dál zůstaly prázdné. Konfucius patří do okna „Mezitím jinde“, kde vztahy k řeckým filozofům ze své podstaty chybí; Pýthagorás stránku dostane, až v datech přibude doložený vztah.
+
+U čtrnácti medailonků inventura hlásí nejasný směr a u osmnácti chybí atribut obrázku, takže se neukáže deska s portrétem; obojí stránku nezastaví a doplní se, až osoby dostanou profil nebo obrázek.
+
+**Další v pořadí:** `hodiny-v1` (příprava hodiny, `docs/plan.md` › Doma i ve třídě) → cesty 34 a 33 → souhrnná revize antiky (P11) a zkouška se studenty. Plán větve `hodiny-v1` vznikne, až na ni přijde řada.

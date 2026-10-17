@@ -4,6 +4,14 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Větev medailonky uzavřena
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor větev `medailonky` (P9) schválil; je sloučená do hlavní větve slučovacím commitem bez přepisování historie a hlavní větev je na GitHubu. Plán je v `docs/archiv/plany/medailonky.md`, zadání v `docs/archiv/zadani/medailonky.md` | Autor: „Větev medailonky schvaluji: sluč ji do main a pošli main na GitHub.“ |
+| Medailonek má 34 osob. Lucretius, Konfucius a Pýthagorás zůstávají bez stránky, dokud data nedoplní místo (Lucretius) nebo doložený vztah (Konfucius, Pýthagorás) | Medailonek se skládá jen z dat; bez místa nebo vztahu by měl prázdné oddíly a místo ani vztah se nevymýšlí |
+| Další v pořadí je `hodiny-v1`, pak cesty 34 a 33 a souhrnná revize antiky (P11) se zkouškou se studenty | Pořadí z `docs/plan.md` beze změny |
+
 ## 17. 10. 2026: Medailonky, krok O (opravy po revizi)
 
 | Rozhodnutí | Důvod |

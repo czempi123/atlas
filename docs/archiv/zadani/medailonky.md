@@ -143,3 +143,19 @@ Ke každé opravě najdi nejdřív dotčené testy (grep v tests/) a uprav je v 
 
 Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav O a oddíl „Po O“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a navrhni uzavření větve (oddíl Uzavření větve).
 ```
+
+## Uzavření větve
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Sloučení a úklid, žádný nový obsah. Pouští se po opravách (krok O) a po autorově schválení; autor může větev uzavřít i dřív (po kterékoli vlně) a zbylé vlny nechat na novou větev.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Větev medailonky schvaluji: sluč ji do main a pošli main na GitHub.
+
+1. Zkontroluj, že ve větvi nic nečeká (git status), a pusť celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně.
+2. Sluč medailonky do main (bez přepisování historie), znovu sestav web a pusť node scripts/doba-odkazy-vypis.mjs (musí skončit „Chyb: 0“) a node scripts/medailonky-inventura.mjs (stav po větvi).
+3. Pošli main na GitHub.
+4. Do plánu větve zapiš oddíl „Uzavření větve“ (kolik osob má medailonek, kdo zůstal bez něj a proč, co je další v pořadí) a přesuň ho do docs/archiv/plany/medailonky.md; provedená zadání zůstávají v docs/archiv/zadani/medailonky.md. V docs/plan.md uprav řádek větve v rozcestníku (soubor v archivu, stav) a u P9 stav. Rozhodnutí zapiš do docs/rozhodnuti.md.
+5. Z projektu Claude smaž docs/plany/medailonky.md a aktualizuj tam docs/plan.md. Restartuj náhled npm run dev.
+
+Pak mi napiš, co je sloučeno a co je další v pořadí.
+```
