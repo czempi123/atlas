@@ -10,17 +10,17 @@
 - { od: sokrates, k: chairefon, typ: znali-se, poznamka: "přítel od mládí", zdroj: platon-obrana }
 - { od: sokrates, k: kriton, typ: znali-se, poznamka: "vrstevník a přítel", zdroj: platon-obrana }
 - { od: sokrates, k: alkibiades, typ: znali-se, poznamka: "spolu u Potidaie a Délia", zdroj: britannica-alcibiades }
-- { od: aristofanes, k: sokrates, typ: polemika, poznamka: "zesměšnil ho v Oblacích", zdroj: sep-socrates }
+- { od: aristofanes, k: sokrates, typ: polemika, poznamka: "Aristofanés ho zesměšnil v Oblacích", zdroj: sep-socrates }
 - { od: sokrates, k: protagoras, typ: znali-se, tradovany: true, poznamka: "Platón líčí jejich setkání v Kalliově domě", zdroj: platon-protagoras }
 
 # Akademie a Lykeion
 - { od: platon, k: aristoteles, typ: ucitel, zdroj: sep-aristotle }
-- { od: platon, k: speusippos, typ: ucitel, poznamka: "synovec a nástupce v čele Akademie", zdroj: sep-speusippus }
+- { od: platon, k: speusippos, typ: ucitel, poznamka: "Platón byl jeho strýc; Speusippos po něm vedl Akademii", zdroj: sep-speusippus }
 - { od: platon, k: xenokrates, typ: ucitel, zdroj: sep-xenocrates }
 - { od: platon, k: archytas, typ: znali-se, poznamka: "Archytás ho roku 361 př. n. l. vysvobodil ze Syrákús", zdroj: sep-archytas }
 - { od: platon, k: eudoxos, typ: znali-se, poznamka: "Eudoxos poslouchal Platónovy přednášky", zdroj: mactutor-eudoxus }
 - { od: archytas, k: eudoxos, typ: ucitel, zdroj: mactutor-eudoxus }
-- { od: aristoteles, k: theofrastos, typ: znali-se, poznamka: "spolupracovník a nástupce v čele Lykeia", zdroj: sep-theophrastus }
+- { od: aristoteles, k: theofrastos, typ: znali-se, poznamka: "Theofrastos s ním pracoval a po něm vedl Lykeion", zdroj: sep-theophrastus }
 - { od: aristoteles, k: platon, typ: polemika, poznamka: "spor o ideje", zdroj: aristoteles-metafyzika-ideje }
 - { od: aristoteles, k: xenokrates, typ: znali-se, poznamka: "spolužáci z Akademie; vládce Hermeiás je oba pozval do Assu", zdroj: strabon-xiii }
 # Spor na dálku: Sókratés zemřel patnáct let před Aristotelovým narozením, Prótagorás ještě dřív. Doba a lidé
@@ -35,7 +35,7 @@
 # Předsókratici
 - { od: thales, k: anaximandros, typ: ucitel, tradovany: true, zdroj: iep-thales }
 - { od: anaximandros, k: anaximenes, typ: ucitel, tradovany: true, zdroj: iep-anaximenes }
-- { od: parmenides, k: zenon-z-eleje, typ: ucitel, tradovany: true, poznamka: "mladší druh", zdroj: sep-zeno-elea }
+- { od: parmenides, k: zenon-z-eleje, typ: ucitel, tradovany: true, poznamka: "Zénón byl jeho mladší druh", zdroj: sep-zeno-elea }
 # Celek 7. Vztah Hérakleitos ↔ Parmenidés se nezapisuje: jestli jeden o druhém věděl, nevíme (podklady, oddíl
 # Reagoval jeden na druhého?). Nezapisuje se ani Hérakleitova polemika s Pýthagorou a Xenofanem (zlomek B40): žili
 # zároveň s ním, stránka by ji dala pod „Znali se a přeli se“, a o tom, že se znali, žádný pramen nemluví.
@@ -56,7 +56,7 @@
 - { od: diogenes, k: krates, typ: ucitel, zdroj: dl-vi-85 }
 - { od: krates, k: hipparchia, typ: znali-se, poznamka: "manželé", zdroj: dl-vi-85 }
 - { od: krates, k: zenon-z-kitia, typ: ucitel, zdroj: dl-vii-2 }
-- { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "vypráví se, že Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: iep-cynics }
+- { od: xenofon, k: zenon-z-kitia, typ: vliv-textem, tradovany: true, poznamka: "Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata", zdroj: dl-vii-2 }
 - { od: zenon-z-kitia, k: kleanthes, typ: ucitel, zdroj: britannica-cleanthes }
 - { od: kleanthes, k: chrysippos, typ: ucitel, zdroj: iep-chrysippus }
 - { od: karneades, k: chrysippos, typ: polemika, poznamka: "je-li všechno dáno předchozími příčinami, není nic v naší moci", zdroj: cicero-de-fato-perseus }
@@ -72,3 +72,22 @@
 - { od: platon, k: plutarchos, typ: vliv-textem, zdroj: sep-plutarch }
 # Spor na dálku: Plútarchos psal přes tři sta padesát let po Epikúrovi (cesta 8, krok 6).
 - { od: plutarchos, k: epikuros, typ: polemika, poznamka: "je důvod bát se toho, že nebudeme?", zdroj: plutarchos-non-posse }
+
+# Medailonky M3 (17. 10. 2026): vztahy, bez kterých by osoby třetí vlny neměly na stránce co ukázat.
+# Empedoklés, Gorgiás a Isokratés: žáky podává antická tradice (IEP Gorgias; SEP Empedocles A 1 = P 24).
+- { od: empedokles, k: gorgias, typ: ucitel, tradovany: true, zdroj: iep-gorgias }
+- { od: gorgias, k: isokrates, typ: ucitel, tradovany: true, zdroj: iep-gorgias }
+- { od: empedokles, k: lucretius, typ: vliv-textem, poznamka: "chválí ho v básni O přírodě", zdroj: sep-empedocles }
+# Anaxagorás a Sókratés: setkání s jeho knihou líčí jen Platón (Faidón 97b–98b); Aspasie a Sókratés: Platón a Xenofón.
+- { od: anaxagoras, k: sokrates, typ: vliv-textem, tradovany: true, poznamka: "Sókratés četl jeho knihu a čekal od rozumu víc", zdroj: platon-faidon }
+- { od: aspasie, k: sokrates, typ: znali-se, tradovany: true, poznamka: "Sókratés se na ni u Platóna i Xenofónta odvolává", zdroj: xenofon-vzpominky }
+# Platón jako zdroj pro tři pozdější myslitele (SEP Plotinus, SEP Philo, IEP Cicero).
+- { od: platon, k: plotinos, typ: vliv-textem, poznamka: "Platón je hlavním zdrojem Plótínova myšlení", zdroj: sep-plotinus }
+- { od: platon, k: filon-alexandrijsky, typ: vliv-textem, poznamka: "Timaios stojí za Filónovým výkladem stvoření světa", zdroj: sep-philo }
+- { od: platon, k: cicero, typ: vliv-textem, poznamka: "filozofické dialogy psal podle Platónových a Aristotelových vzorů", zdroj: iep-cicero }
+# Cicero proti epikurejcům: spor na dálku (Epikúros zemřel dvě stě let před Ciceronovým narozením).
+- { od: cicero, k: epikuros, typ: polemika, poznamka: "starají se bohové o lidi?", zdroj: iep-cicero }
+# Hypatia a Plótínos: jediné starověké svědectví (Sókratés Scholastikos, 5. století), proto tradované.
+- { od: plotinos, k: hypatia, typ: vliv-textem, tradovany: true, poznamka: "vedla školu, která se odvozovala od Platóna a Plótína", zdroj: sokrates-scholastikos-vii-15 }
+# Pyrrhón: Démokrita měl nejraději podle přítele Fílóna z Athén (Diogenés Laertios IX, 67).
+- { od: demokritos, k: pyrrhon, typ: vliv-textem, tradovany: true, poznamka: "podle Diogena Laertia ho měl Pyrrhón nejraději", zdroj: dl-ix-67 }

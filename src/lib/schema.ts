@@ -78,7 +78,14 @@ export const Osoba = z
       .strict()
       .optional(),
     obdobi: z.number().int().min(1).max(8),
+    /** plánovaná hloubka zpracování (medailonek, profil, portrét); stránku dává až profil v MDX nebo `medailonek: true` */
     hloubka: Hloubka,
+    /**
+     * Data jsou úplná a ověřená a osoba dostane stránku medailonku /osobnost/<id>/, generovanou jen z dat
+     * (src/components/osobnost/StrankaMedailonku.astro). Kritéria hlídá tests/data/medailonky.test.ts;
+     * až osoba dostane profil v MDX, příznak se smaže. Postup vyplňování: skill atlas-data.
+     */
+    medailonek: z.literal(true).optional(),
     tradice: Tradice.default('zapadni'),
     smery: z.array(Id).default([]),
     otazky: z.array(z.number().int().min(1).max(10)).default([]),

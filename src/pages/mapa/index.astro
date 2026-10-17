@@ -2,13 +2,12 @@
 // Mapa a čas: interaktivní ostrov (mapa, posuvník roku, řeka životů, karta člověka).
 // Stav nese adresa: /mapa/?rok=-360&osoba=platon. Podklad mapy se předpočítá při sestavení
 // (src/pages/mapa/podklad/[soubor].json.ts), data se sem vloží jako kompaktní výtah.
-import { getCollection } from 'astro:content';
 import Zakladni from '../../layouts/Zakladni.astro';
 import MapaACas from '../../components/mapa/MapaACas.svelte';
 import { vstupMapy } from '../../lib/mapa-vstup-build';
-import { adresaOsoby } from '../../lib/adresa-osoby';
+import { adresaStranekOsob } from '../../lib/stranky-osob';
 
-const vstup = vstupMapy(adresaOsoby(await getCollection('osobnosti')));
+const vstup = vstupMapy(await adresaStranekOsob());
 ---
 <Zakladni
   titulek="Mapa a čas"

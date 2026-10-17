@@ -176,7 +176,7 @@
 
     <div class="tlacitka">
       {#if osoba.stranka}
-        <a class="tlacitko tlacitko--hlavni" href={osoba.stranka}>Otevřít portrét</a>
+        <a class="tlacitko tlacitko--hlavni" href={osoba.stranka}>Otevřít stránku</a>
       {:else}
         <a class="tlacitko" href="/lide/#{osoba.id}">Najít v Lidech a směrech</a>
       {/if}

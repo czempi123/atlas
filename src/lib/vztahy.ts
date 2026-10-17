@@ -54,26 +54,42 @@ export function sporNaDalku(v: Pick<TVztah, 'typ'>, a: Zivot, b: Zivot): boolean
   return v.typ === 'polemika' && !mohliSePrit(a, b);
 }
 
-/** Popisek u druhého člověka ve vztahu. */
-export function roleVztahu(v: Pick<TVztah, 'typ'>, smer: Smer, naDalku = false): string {
+/** Kdo je ve vztahu kdo, kvůli rodu popisku: `ja` je osoba stránky, `druhy` člověk v řádku. Bez údaje mužský rod. */
+export interface RodVztahu { ja?: { zena?: boolean }; druhy?: { zena?: boolean } }
+const tvar = (o: { zena?: boolean } | undefined, muz: string, zena: string) => (o?.zena ? zena : muz);
+
+/**
+ * Popisek u druhého člověka ve vztahu (řádek pod nadpisem skupiny v Době a lidech). Rod podle toho, kdo je podmět,
+ * stejně jako v kartě člověka: u vlivu přes texty čtenář, u polemiky kritik („Hypatia · navázala na jeho texty“).
+ */
+export function roleVztahu(v: Pick<TVztah, 'typ'>, smer: Smer, naDalku = false, { ja, druhy }: RodVztahu = {}): string {
   switch (v.typ) {
-    case 'ucitel': return smer === 'od' ? 'žák' : 'učitel';
+    case 'ucitel': return smer === 'od' ? tvar(druhy, 'žák', 'žákyně') : tvar(druhy, 'učitel', 'učitelka');
     case 'znali-se': return 'znali se';
-    case 'vliv-textem': return smer === 'od' ? 'navázal na jeho texty' : 'znal ho z textů';
-    case 'polemika': return naDalku ? 'přel se s jeho učením' : 'polemizoval s ním';
+    case 'vliv-textem':
+      return smer === 'od'
+        ? `${tvar(druhy, 'navázal', 'navázala')} na ${tvar(ja, 'jeho', 'její')} texty`
+        : `${tvar(ja, 'znal', 'znala')} ${tvar(druhy, 'ho', 'ji')} z textů`;
+    case 'polemika': {
+      const [kritik, cil] = smer === 'od' ? [ja, druhy] : [druhy, ja];
+      return naDalku
+        ? `${tvar(kritik, 'přel', 'přela')} se s ${tvar(cil, 'jeho', 'jejím')} učením`
+        : `${tvar(kritik, 'polemizoval', 'polemizovala')} s ${tvar(cil, 'ním', 'ní')}`;
+    }
   }
 }
 
-/** Neprázdné skupiny v pořadí, v jakém stojí na stránce. */
-export function skupinyVztahu<T, V extends VztahOsoby<T> = VztahOsoby<T>>(vztahy: V[]): { nazev: string; lide: V[] }[] {
+/** Neprázdné skupiny v pořadí, v jakém stojí na stránce; nadpisy v rodě osoby stránky (`zena`). */
+export function skupinyVztahu<T, V extends VztahOsoby<T> = VztahOsoby<T>>(vztahy: V[], zena = false): { nazev: string; lide: V[] }[] {
   const typ = (x: V) => x.vztah.typ;
+  const t = (muz: string, z: string) => (zena ? z : muz);
   return [
     { nazev: 'Učitelé', lide: vztahy.filter((x) => typ(x) === 'ucitel' && x.smer === 'k') },
     { nazev: 'Žáci', lide: vztahy.filter((x) => typ(x) === 'ucitel' && x.smer === 'od') },
     { nazev: 'Znali se a přeli se', lide: vztahy.filter((x) => typ(x) === 'znali-se' || (typ(x) === 'polemika' && !x.naDalku)) },
-    { nazev: 'S kým se přel na dálku', lide: vztahy.filter((x) => typ(x) === 'polemika' && x.naDalku && x.smer === 'od') },
-    { nazev: 'Kdo se s ním přel později', lide: vztahy.filter((x) => typ(x) === 'polemika' && x.naDalku && x.smer === 'k') },
-    { nazev: 'Četli ho a navázali', lide: vztahy.filter((x) => typ(x) === 'vliv-textem' && x.smer === 'od') },
-    { nazev: 'Koho četl', lide: vztahy.filter((x) => typ(x) === 'vliv-textem' && x.smer === 'k') },
+    { nazev: `S kým se ${t('přel', 'přela')} na dálku`, lide: vztahy.filter((x) => typ(x) === 'polemika' && x.naDalku && x.smer === 'od') },
+    { nazev: `Kdo se s ${t('ním', 'ní')} přel později`, lide: vztahy.filter((x) => typ(x) === 'polemika' && x.naDalku && x.smer === 'k') },
+    { nazev: `Četli ${t('ho', 'ji')} a navázali`, lide: vztahy.filter((x) => typ(x) === 'vliv-textem' && x.smer === 'od') },
+    { nazev: `Koho ${t('četl', 'četla')}`, lide: vztahy.filter((x) => typ(x) === 'vliv-textem' && x.smer === 'k') },
   ].filter((s) => s.lide.length > 0);
 }

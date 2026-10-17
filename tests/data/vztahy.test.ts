@@ -114,6 +114,34 @@ describe('roleVztahu', () => {
     expect(roleVztahu({ typ: 'ucitel' }, 'od')).toBe('žák');
     expect(roleVztahu({ typ: 'ucitel' }, 'k')).toBe('učitel');
   });
+  it('rod podle toho, kdo je podmět: čtenář u vlivu přes texty, kritik u polemiky', () => {
+    const zena = { zena: true }, muz = {};
+    expect(roleVztahu({ typ: 'vliv-textem' }, 'k', false, { ja: zena, druhy: muz })).toBe('znala ho z textů');
+    expect(roleVztahu({ typ: 'vliv-textem' }, 'od', false, { ja: muz, druhy: zena })).toBe('navázala na jeho texty');
+    expect(roleVztahu({ typ: 'vliv-textem' }, 'od', false, { ja: zena, druhy: muz })).toBe('navázal na její texty');
+    expect(roleVztahu({ typ: 'polemika' }, 'od', true, { ja: zena, druhy: muz })).toBe('přela se s jeho učením');
+    expect(roleVztahu({ typ: 'polemika' }, 'k', true, { ja: zena, druhy: muz })).toBe('přel se s jejím učením');
+    expect(roleVztahu({ typ: 'polemika' }, 'k', false, { ja: zena, druhy: muz })).toBe('polemizoval s ní');
+    expect(roleVztahu({ typ: 'ucitel' }, 'od', false, { ja: muz, druhy: zena })).toBe('žákyně');
+    expect(roleVztahu({ typ: 'ucitel' }, 'k', false, { ja: muz, druhy: zena })).toBe('učitelka');
+  });
+  it('Hypatia: nadpisy a popisky v ženském rodě na její stránce i na stránce Plótína', () => {
+    const hypatia = osoba('hypatia');
+    expect(hypatia.zena).toBe(true);
+    const s = skupinyVztahu(vztahyOsoby('hypatia'), hypatia.zena);
+    const cetla = s.find((x) => x.nazev === 'Koho četla');
+    expect(cetla?.lide.map((l) => l.druhy.id)).toContain('plotinos');
+    expect(s.some((x) => x.nazev === 'Koho četl')).toBe(false);
+    const plotinos = cetla!.lide.find((l) => l.druhy.id === 'plotinos')!;
+    expect(roleVztahu(plotinos.vztah, plotinos.smer, plotinos.naDalku, { ja: hypatia, druhy: plotinos.druhy })).toBe('znala ho z textů');
+    const naPlotinovi = vztahyOsoby('plotinos').find((x) => x.druhy.id === 'hypatia')!;
+    expect(roleVztahu(naPlotinovi.vztah, naPlotinovi.smer, naPlotinovi.naDalku, { ja: osoba('plotinos'), druhy: naPlotinovi.druhy })).toBe('navázala na jeho texty');
+  });
+  it('nadpisy skupin v ženském rodě', () => {
+    const dalku = (smer: 'od' | 'k', druhy: string) => ({ ...v('polemika', smer, druhy), naDalku: true });
+    const s = skupinyVztahu([dalku('od', 'a'), dalku('k', 'b'), v('vliv-textem', 'od', 'c'), v('vliv-textem', 'k', 'd')], true);
+    expect(s.map((x) => x.nazev)).toEqual(['S kým se přela na dálku', 'Kdo se s ní přel později', 'Četli ji a navázali', 'Koho četla']);
+  });
 });
 
 describe('legenda čar mezi životy', () => {

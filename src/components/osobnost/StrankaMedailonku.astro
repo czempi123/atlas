@@ -1,0 +1,154 @@
+---
+// Stránka medailonku /osobnost/<id>/ pro osobu s `medailonek: true` v lide.yaml. Celá se skládá z dat, ručně se nepíše nic:
+// hlavička (jméno, roky, místo, období, kdo a proč, cesty a otázky; deska jen s obrazem nebo atributem) →
+// Doba a lidé (vztahy, mini osa, mini mapa) → Kam dál (lidé se stránkou, Mapa a čas, Lidé a směry) → Prameny.
+// Je to profil v malém: stejné komponenty a tokeny jako StrankaProfilu.astro, jen bez kapitol, myšlenek a Zkus to žít.
+// Kritéria, kdy smí osoba medailonek dostat, hlídá tests/data/medailonky.test.ts (chybiMedailonku v src/lib/medailonek.ts).
+import { getCollection } from 'astro:content';
+import Zakladni from '../../layouts/Zakladni.astro';
+import Deska from '../ui/Deska.astro';
+import Mince from '../ui/Mince.astro';
+import Prameny from './Prameny.astro';
+import VstupyOsoby from './VstupyOsoby.astro';
+import DobaALide from './DobaALide.astro';
+import KamDal from './KamDal.astro';
+import type { TOsoba } from '../../lib/schema';
+import { osoba as najdiOsobu, obdobiPodleId, mistaPodleId, data } from '../../lib/data';
+import { zivot } from '../../lib/casy';
+import { nezlomitelne } from '../../lib/sazba.js';
+import { adresaStranekOsob, medailonky } from '../../lib/stranky-osob';
+import { kamDalMedailonku, type CilStranky } from '../../lib/medailonek';
+
+interface Props { osoba: TOsoba }
+const { osoba } = Astro.props;
+const obdobi = obdobiPodleId.get(osoba.obdobi)!;
+const smery = new Map((await getCollection('smery')).map((s) => [s.id, s.data.nazev]));
+// Nadtitulek: směr (nebo období, když člověk ke škole nepatřil) a druh stránky.
+const nadtitulek = [...(osoba.smery.length ? osoba.smery.map((s) => smery.get(s) ?? s) : [obdobi.nazev]), 'medailonek'].join(' · ');
+// Místo v hlavičce jako u profilu: rodiště, jinak poslední místo působení.
+const rodiste = osoba.mista.find((m) => m.role === 'narozeni') ?? osoba.mista.findLast((m) => m.role === 'pusobeni');
+const misto = rodiste ? mistaPodleId.get(rodiste.misto)?.nazev : undefined;
+const zena = !!osoba.zena;
+
+// Kam dál: karty lidí se stránkou nesou u profilu jeho pointu, u medailonku jen jméno.
+const adresa = await adresaStranekOsob();
+const profily = await getCollection('osobnosti');
+const cil = (id: string): CilStranky | undefined => {
+  const href = adresa(id);
+  if (!href) return undefined;
+  if (medailonky.includes(id)) return { href, druh: 'Medailonek', text: najdiOsobu(id).jmeno };
+  const p = profily.find((s) => href === `/osobnost/${s.id}/`)!;
+  const druh = najdiOsobu(p.data.osoba).hloubka === 'portret' ? 'Portrét' : 'Profil';
+  return { href, druh, text: `${p.data.titulek}: ${p.data.pointa.charAt(0).toLowerCase()}${p.data.pointa.slice(1).replace(/\.$/, '')}` };
+};
+const kamDal = kamDalMedailonku({
+  osoba,
+  vztahy: data.vztahy,
+  osobaPodleId: najdiOsobu,
+  cil,
+  nazevMista: (id) => mistaPodleId.get(id)?.nazev,
+  obdobi,
+});
+
+const vztahy = data.vztahy.filter((v) => v.od === osoba.id || v.k === osoba.id);
+const prameny = [
+  ...osoba.zdroje,
+  ...osoba.mista.map((m) => m.zdroj),
+  ...(osoba.atribut ? [osoba.atribut.zdroj] : []),
+  ...vztahy.map((v) => v.zdroj),
+];
+const adresaStranky = `/osobnost/${osoba.id}/`;
+const deska = !!(osoba.obrazek || osoba.atribut);
+---
+<Zakladni
+  titulek={osoba.jmeno}
+  popis={`${osoba.jmeno} (${zivot(osoba)}): ${osoba.kdo}`}
+  sekce="lide"
+  zpet={{ href: '/lide/', text: 'Lidé a směry' }}
+  drobecky={[
+    { text: 'Lidé a směry', href: '/lide/' },
+    { text: obdobi.nazev, href: `/lide/#obdobi-${obdobi.id}` },
+    { text: osoba.jmeno },
+  ]}
+>
+  <article class={`osobnost medailonek stranka obdobi-${osoba.obdobi}`} data-navsteva={adresaStranky} data-nazev={osoba.jmeno}>
+    <header class:list={['medailonek__hlavicka', { 'medailonek__hlavicka--deska': deska }]}>
+      <div class="medailonek__titulek">
+        <p class="t-nadtitulek nadtitulek">{nadtitulek}</p>
+        <h1 class="t-display-2">{osoba.jmeno}</h1>
+        <p class="data t-ovladani">
+          <span class="t-letopocet">{zivot(osoba)}</span>
+          {misto && <> · {misto}</>}
+          {' · '}<a href={`/lide/#obdobi-${obdobi.id}`}>období {obdobi.id}</a>
+        </p>
+        {/* Kdo a proč: dvě věty z dat. Na telefonu stojí hned pod jménem, aby byly na první obrazovce. */}
+        <dl class="jadro">
+          <div>
+            <dt class="t-nadtitulek">{zena ? 'Kdo byla' : 'Kdo byl'}</dt>
+            <dd class="jadro__kdo">{nezlomitelne(osoba.kdo)}</dd>
+          </div>
+          <div>
+            <dt class="t-nadtitulek">{zena ? 'Proč si ji pamatujeme' : 'Proč si ho pamatujeme'}</dt>
+            <dd class="jadro__proc">{nezlomitelne(osoba.proc)}</dd>
+          </div>
+        </dl>
+        <VstupyOsoby osoba={osoba} cast="cesty" />
+        <VstupyOsoby osoba={osoba} cast="otazky" />
+      </div>
+      {/* Deska jen s obrazem nebo atributem: prázdná mince by vypadala jako chybějící obrázek (mince nikdy nenese iniciálu). */}
+      {deska && <div class="medailonek__deska">
+        {/* Čtverec místo 4 : 5 jako u profilu: vedle jména a dvou vět by vysoká deska nechala vlevo prázdné místo. */}
+        <Deska osoba={osoba} pomer={osoba.obrazek ? undefined : '1 / 1'}>
+          {osoba.atribut && (
+            <span class="proc">
+              {osoba.obrazek && <Mince osoba={osoba} varianta="ring" velikost={40} />}
+              <span><strong>Proč {osoba.atribut.nazev}?</strong> {nezlomitelne(osoba.atribut.proc)}</span>
+            </span>
+          )}
+        </Deska>
+      </div>}
+    </header>
+
+    <DobaALide osoba={osoba} />
+
+    <KamDal odkazy={kamDal} />
+
+    <div class="ctenarsky">
+      <Prameny prameny={prameny} obrazky={osoba.obrazek ? [osoba.obrazek] : []} />
+    </div>
+  </article>
+</Zakladni>
+
+<script>
+  import { zaznamenejNavstevu } from '../../lib/denik';
+  const a = document.querySelector<HTMLElement>('[data-navsteva]');
+  if (a) zaznamenejNavstevu(a.dataset.navsteva!, a.dataset.nazev!);
+</script>
+
+<style>
+  .medailonek__hlavicka { display: grid; gap: var(--s-6); padding-top: var(--s-5); }
+  .nadtitulek { margin: 0 0 var(--s-3); color: var(--pc); }
+  h1 { margin-bottom: var(--s-4); }
+  .data { color: var(--ink-2); margin: 0; }
+  .data a { color: inherit; }
+  .jadro { display: grid; gap: var(--s-4); margin: var(--s-6) 0 0; max-width: var(--ctenarsky-sloupec); }
+  .jadro dt { margin-bottom: var(--s-1); color: var(--muted); }
+  .jadro dd { margin: 0; }
+  /* „Kdo“ nese stránku jako perex, „proč“ je o stupeň tišší, ale pořád čtecí písmo. */
+  .jadro__kdo { font-size: var(--fs-perex); line-height: var(--lh-perex); }
+  .jadro__proc { font-size: var(--fs-text); line-height: 1.55; }
+  .medailonek__titulek :global(.vstupy-osoby--otazky) { margin-top: var(--s-3); }
+  .medailonek__deska { max-width: 420px; }
+  .proc { display: flex; gap: var(--s-3); align-items: flex-start; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+  .proc strong { color: var(--ink); font-weight: 600; }
+  .proc :global(.mince) { flex: none; }
+  /* Na telefonu je deska bez obrazu jen mince s ornamentem: nízká, ať nepřebije jméno a dvě věty nad ní. */
+  @media (max-width: 899px) {
+    .medailonek__deska :global(.deska__plocha) { aspect-ratio: 2 / 1 !important; }
+  }
+  @media (min-width: 900px) {
+    .medailonek__hlavicka--deska { grid-template-columns: 1fr 300px; }
+    .medailonek__hlavicka { align-items: start; gap: 0 var(--s-8); padding-top: var(--s-7); }
+    .medailonek__deska { justify-self: end; width: 100%; }
+  }
+</style>

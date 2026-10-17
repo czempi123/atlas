@@ -4,6 +4,80 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok O (opravy po revizi)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všechny čtyři odpovědi k nálezům 5, 6, 9 a 10 prázdné: platí návrhy revize (nové „proč“ Eudoxa, Démokrita a Anaxagora, „Otevřít stránku“) | Pravidlo: prázdná odpověď znamená souhlas |
+| Nadtitulek karty Kam dál u medailonku říká, kdo je ve vztahu činný („Koho četl“, „Četla ho a navázala“, „S kým se přel na dálku“, „Přel se s jeho učením“, „S kým se přel“, „Polemizoval s ním“), s rodem obou lidí; funkce `roleNaKarte` v `src/lib/medailonek.ts`. Řádky Doby a lidí si dál berou `roleVztahu`, protože pod nadpisem skupiny se čtou správně | Karta stojí bez nadpisu skupiny a jméno pod nadtitulkem čte student jako podmět (nález 1) |
+| Řádek Doby a lidí u tradovaného vztahu končí „ · vypráví se“ (stejné slovo jako karta v Mapě a čase a legenda, konstanta `LEGENDA_TRADOVANY`); platí i na schválených profilech (Sókratés, Platón, Prótagorás, Diogenés, Parmenidés) a na 17 medailoncích | Rozhodnutí M3 počítalo s tím, že stránka tradovaný vztah označí (nález 2) |
+| `roleVztahu` zná rod podle toho, kdo je podmět (čtenář u vlivu přes texty, kritik u polemiky), a nadpisy skupin mají rod osoby stránky („Koho četla“, „Kdo se s ní přel později“, „Četli ji a navázali“). Společný profil Kratéta a Hipparchie má nadpisy beze změny (mužský rod), popisky řádků už s rodem | Nález 3; u dvojice nemají nadpisy jednoho podmětu a dnes tam žádná dotčená skupina nestojí |
+| Poznámka vztahu Xenofón → Zénón z Kitia bez úvodního „vypráví se, že“ | Slovo teď přidává popisek tradovaného vztahu; jinak by se zdvojilo |
+| Tlačítko karty v Mapě a čase je „Otevřít stránku“ pro portrét, profil i medailonek | Nález 9; atlas hloubky viditelně rozlišuje |
+| Další v pořadí: uzavření větve po autorově schválení | Plán větve `docs/plany/medailonky.md` |
+
+## 17. 10. 2026: Medailonky, krok R (revize větve)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všech deset řádků Pro autora z vlny 3 prázdných: platí doporučení (Konfucius a Pýthagorás bez stránky, polemika s Pýthagorou se nezapisuje, Hypatia–Plótínos a tři vztahy z literárních scén jako tradované, Cicero bez směru, Plótínovo narození přibližné, nové věty Anaximandra a Aspasie, devět medailonků bez desky, Lucretius bez stránky) | Pravidlo: prázdná odpověď znamená souhlas |
+| Verdikt revize: po opravách (`docs/revize/medailonky-2026-10-17.md`); větev se uzavře až po kroku O | Kam dál na osmi medailoncích obrací vztah, Doba a lidé neoznačuje tradované vztahy a u Hypatie nesedí rod; jsou to opravy v kódu, které mění i popisky na schválených profilech |
+| Předpoklad z M3, že stránka označí tradovaný vztah slovem „vypráví se“, neplatí: dělá to jen karta v Mapě a čase. Oprava je v kroku O (řádky Doby a lidí dostanou „ · vypráví se“) | Řádky skupin příznak `tradovany` nečtou; souhlas autora s tradovanými vztahy z M3 na tom stál |
+| Opraveno v revizi: Anaximandrovo „kdo“ („Thalétův krajan“), „roku 415 n. l.“ u Hypatie, čtyři poznámky vztahů čitelné z obou stran (Speusippos, Theofrastos, Zénón z Eleje, Aristofanés), pramen vztahu Xenofón → Zénón z Kitia (`dl-vii-2`), Britannica u Aristippa | IEP o deseti letech nemluví; poznámka se čte na obou stránkách vztahu; IEP o kynicích příběh se ztroskotáním nemá; Britannica potvrzuje rok úmrtí asi 355 |
+| Navrženo autorovi: nové „proč“ Eudoxa (teorie poměrů), Démokrita (zvyk a atomy) a Anaxagora (za co ho obžalovali), „Otevřít stránku“ na kartě v Mapě a čase | Věta má říkat, proč si člověka pamatujeme, a neopakovat atribut; atlas dnes hloubky stránek viditelně rozlišuje |
+| „Abdéra“ v datech a „z Abdér“ ve větě, „Akragás“ a „Akragantu“ zůstávají | Ustálené české tvary a správné skloňování, ne nesoulad |
+| Další v pořadí: O (opravy po revizi), pak uzavření | Plán větve `docs/plany/medailonky.md` |
+
+## 17. 10. 2026: Medailonky, krok M3 (data třetí vlny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Čtrnáct ze šestnácti osob dostalo medailonek; Konfucius a Pýthagorás ne | Nemají žádný vztah k nikomu, kdo v datech je, a bez vztahu medailonek nevznikne; kritérium se kvůli nim nemění |
+| Jedenáct nových vztahů, z toho šest tradovaných (Empedoklés → Gorgiás, Gorgiás → Isokratés, Anaxagorás → Sókratés, Aspasie → Sókratés, Plótínos → Hypatia, Démokritos → Pyrrhón) | Každý má pramen, který jsem otevřel; tam, kde ho podává jen antická tradice nebo jedna literární scéna, je označený `tradovany` (podklady `docs/podklady/medailonky-vlna-3.md`) |
+| Nezapsány: Karneadés → Cicero, Gorgiás → Aspasie, Platón → Isokratés, Plútarchos → Hypatia, polemika mezi současníky proti Pýthagorovi | Karneadés nic nenapsal; IEP říká jen „may have been“; můj pramen Platóna nejmenuje; BEA myslí Plútarcha z Athén; nadpis „Znali se a přeli se“ by tvrdil známost (komentář ve `vztahy.yaml`, celek 7) |
+| Nové „proč“ u Anaximandra, Anaximena a Hypatie; nové „kdo“ u Anaximandra, Anaximena, Aspasie a Cicera | Věta nesmí podávat připisovanou zprávu jako fakt (mapa), obsahovat výhradu („snad“), opakovat atribut (astroláb), tvrdit, co pramen neříká („vzdělaná“), ani končit zkratkou letopočtu |
+| Plótínovo narození je přibližné, Anaxagorův pobyt v Athénách přibližný | SEP rok narození jen vyvozuje; odchod z Athén klade mezi 436 a 430 |
+| Cicero nemá směr Akademie | Přidá se s profilem, aby nepřibyl do výpisu směru bez textu o něm; IEP říká, že se k Akademii hlásil |
+| Žádný atribut nepřibyl | Prameny nenesou předmět, který by seděl na hotovou ikonu; kámen (Anaxagorás) a gnómón (Anaximandros) by potřebovaly novou ikonu a jsou nejisté |
+| Další v pořadí: R (revize větve), pak uzavření | Plán větve `docs/plany/medailonky.md` |
+
+## 17. 10. 2026: Medailonky, krok M2 (data druhé vlny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Všech jedenáct osob druhé vlny dostalo medailonek; Zénón z Eleje s hloubkou `profil`, profil později | Data prošla kritérii a ověřením proti pramenům; stejný postup jako u Chrýsippa v M1 |
+| Roky Eudoxa jako `rozmezi` (408–390, 355–340) při základním roce z MacTutoru | MacTutor (408–355) a SEP v hesle Archytas (ca. 390–340) se rozcházejí o osmnáct let; rozmezí ukáže rozpor, aniž by atlas vybíral |
+| Věta „proč“ nesmí opakovat ani vztah, ani atribut; přepsáno u osmi osob | Na stránce stojí obojí pod sebou |
+| Alkibiadovo „proč“ říká jeho vlastní čin (výprava na Sicílii, přeběh ke Spartě), ne ochranu Sókrata u Délia | Symposion 221a: Alkibiadés jel na koni a Sókrata nechránil, jen slíbil, že s ním zůstane |
+| Medailonek bez atributu zůstává bez desky (pět osob), atribut se nevymýšlí | Prameny nenesou předmět, který by seděl na hotovou ikonu |
+| Britannica údaje z dřívějšího ověření zůstávají, u Aristofana je podložen souhrn | Britannica `curl` nepustí; Wikipedii mezi prameny nezapisujeme |
+
+## 17. 10. 2026: Medailonky, krok M1 (data první vlny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Sedm osob první vlny dostalo medailonek: Plútarchos, Chrýsippos, Antisthenés, Xenokratés, Chairefón, Démokritos, Kritón. Podklady jsou v `docs/podklady/medailonky-vlna-1.md` | Data prošla kritérii (`tests/data/medailonky.test.ts`) a byla ověřená proti pramenům, které jsem otevřel |
+| Lucretius medailonek nedostal | SEP nezná jeho rodiště ani místo působení a test místo vyžaduje; místo z odhadu (Řím) by byl údaj bez pramene |
+| Chairefón dostal medailonek, i když jeho rok narození (asi 470) nemá pramen v datech; Wikipedie mezi prameny nepřibyla | Rok je přibližný a test prošel; skill uznává SEP, IEP a Britannicu; otázka pro autora je v podkladech |
+| Plútarchos nemá směr; studium v Athénách je od roku 66, přibližně | SEP: příslušnost k Akademii je sporná; rok je odhad z jeho vlastního svědectví (O delfském E 385B) |
+| U Antisthena „kdo“ říká, že byl synem Athéňana a Thrákyně; místo Athény je z Diogena Laertia VI (nový pramen `dl-vi-1`) | IEP: byl `nothos` bez athénského občanství, samotné „Athéňan“ je nepřesné; IEP místo neuvádí |
+| Nové „proč“ u Zénóna z Kitia (cíl života: soulad) a Plútarcha | Stará věta Zénóna opakovala atribut sloupoví, stará věta Plútarcha vztah k Epikúrovi; na stránce stojí pod sebou |
+| Přehled cesty píše u odkazu na medailonek „Jméno: medailonek“, ne „celý příběh“ | Dvě věty z dat nejsou celý příběh; změnil se jen popisek v `src/pages/cesta/[cesta]/index.astro` |
+| Odpovědi na tři otázky z M0 platí tak, jak byly navrženy (medailonek bez atributu má hlavičku bez desky, karta v Mapě a čase u medailonku říká „Otevřít portrét“, Kam dál má nejvýš tři položky) | Autor je v zadání M1 nechal prázdné, což znamená souhlas |
+| Test Doba a lidé u Sókrata je obecný: odkaz mají právě ti, kdo mají stránku (čte se z `lide.yaml`) | Další vlny nemusí přepisovat jmenné výjimky v testu |
+| Další v pořadí: M2 (druhá vlna, 11 osob) | Plán větve `docs/plany/medailonky.md` |
+
+## 17. 10. 2026: Medailonky, krok M0 (inventura, skill atlas-data, šablona, plán)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Medailonek je stránka `/osobnost/<id>/` složená jen z dat (`StrankaMedailonku.astro`): jméno, roky, místo, období, věty kdo a proč, cesty a otázky, deska s atributem, Doba a lidé, Kam dál, Prameny. Ručně se nepíše nic. | Zadání P9; medailonek „vzniká z dat“ už v `docs/plan.md` (Šablona osobnosti ve třech hloubkách). |
+| Stránku zapíná příznak `medailonek: true` v `lide.yaml`, ne automaticky splněná kritéria. Kritéria (roky, místo narození či působení, jedna věta kdo a proč do 25 slov bez tykání, aspoň jeden vztah) hlídá `tests/data/medailonky.test.ts`. | Formálně by prošlo 23 osob z 35 i s neověřenými větami; stránka má vzniknout až po ověření dat. |
+| Profil a medailonek sdílí jednu trasu `src/pages/osobnost/[id].astro`, která jen rozhoduje mezi `StrankaProfilu.astro` a `StrankaMedailonku.astro`. Osoba s profilem nesmí mít příznak; sestavení se zastaví. Adresu všude skládá `adresaStranekOsob()` (`src/lib/stranky-osob.ts`). | Dvě dynamické trasy na téže adrese Astro neumí; jedno místo pro adresu znamená, že odkazy na nový medailonek přibudou všude samy. |
+| Medailonek bez atributu a bez obrazu nemá desku; věty kdo a proč stojí v hlavičce pod jménem. Kam dál má nejvýš tři položky (lidé se stránkou, Mapa a čas, do tří Lidé a směry). | Prázdná mince vypadala jako chybějící obrázek (iniciála je zakázaná); na telefonu jsou obě věty na první obrazovce; Kam dál má na notebooku tři sloupce. |
+| První dva medailonky: Kleanthés a Zénón z Kitia (nejúplnější data), data beze změny. Zbylých 35 osob ve třech vlnách podle toho, kde jejich jméno už stojí bez odkazu: 8, 11 a 16 osob (`docs/plany/medailonky.md`). | Zadání M0: nejdřív ti, na které už vedou jména bez odkazu. |
+| Skill `atlas-data` vznikl (`skills/atlas-data/`); vlny vyplňuje Sonnet 5.5 · medium, sporné prameny Opus 5.5 · high se skillem `atlas-overeni`. | Katalog promptů (P9); skill je psaný tak, aby hromadné vyplňování nepotřebovalo další vysvětlování. |
+
 ## 17. 10. 2026: Větev doba-odkazy uzavřena
 
 | Rozhodnutí | Důvod |

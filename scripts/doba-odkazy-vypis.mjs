@@ -15,9 +15,11 @@ for (const f of readdirSync('src/content/osobnosti').filter((f) => f.endsWith('.
   const dalsi = (fm.match(/^dalsi:\s*\[([^\]]*)\]/m)?.[1] ?? '').split(',').map((s) => s.trim()).filter(Boolean);
   for (const o of [osoba, ...dalsi]) adresa.set(o, { url: `/osobnost/${slug}/`, slug });
 }
+// Medailonky (medailonek: true v lide.yaml) mají stránku /osobnost/<id>/ a jejich Doba a lidé se kontroluje taky.
+const medailonky = seznam.filter((o) => o.medailonek).map((o) => o.id);
+for (const id of medailonky) adresa.set(id, { url: `/osobnost/${id}/`, slug: id });
 let chyby = 0;
-for (const f of readdirSync('src/content/osobnosti').filter((f) => f.endsWith('.mdx'))) {
-  const slug = f.replace(/\.mdx$/, '');
+for (const slug of [...readdirSync('src/content/osobnosti').filter((f) => f.endsWith('.mdx')).map((f) => f.replace(/\.mdx$/, '')), ...medailonky]) {
   const html = readFileSync(`dist/osobnost/${slug}/index.html`, 'utf8');
   // Jen seznamy vztahů a řetěz Kdo navazoval; mini osa a mini mapa zůstávají bez odkazů.
   const zacatek = html.indexOf('class="doba__vztahy');

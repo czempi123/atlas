@@ -23,6 +23,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Co kresba označí za „náš obraz“, ověř u autora pokusu: spojenec na čtvrté židli je Aschův (1951), ne náš. A „kolo 1“ v tabulce studie může být první kritické kolo, ne první vůbec.
 - Prosba o pomoc není předání rozhodnutí: rodiče, kteří Kratéta prosili, ať jí to rozmluví, mu rozhodnutí „nesvěřili“. Spojovací věta, která to tvrdí, dělá z rodičů ty, kdo rozhodují přes hlavu dítěte.
 - Výtka proti předvádění („kdo dělá opak toho, co se čeká, řídí se pořád tím, co se čeká“) zasáhne i toho, kdo se od rodiny liší tím, kým je: zužuj ji na to, kvůli čemu výtka padla („jen proto, aby se vymezil“).
+- Heslo SEP nebo IEP stahuj na Macu (`curl -sL -A "Mozilla/5.0"`, Python odstraní značky, `grep` v textu): WebFetch vrací celou stránku a zaplní kontext (heslo o Plútarchovi má přes sto tisíc znaků). Britannica `curl` nepustí (vrátí pár znaků), Perseus Hopper ano (`perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258:book=6:chapter=1`), text knihy Diogena Laertia je tak lepší než XML z GitHubu.
+- Medailonek dostane jen to, co nese pramen z `zdroje`: když pramen osobě žádné místo nedává (Lucretius v SEP), medailonek nevznikne a místo se neodhaduje.
 
 ## Bloky
 
@@ -83,6 +85,12 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Nový hlas přidá otázku do hlavičky profilu každého myslitele, který na stránce mluví: testy vstupů (`otazka.spec.ts`, `platon.spec.ts`) drží přesné seznamy i počet tlačítek otázek. Skutečné hlavičky si po sestavení vypiš z `dist/` a seznamy uprav podle nich.
 - Další hlas přidá tlačítko do hlavičky profilu: od pěti otázek výš si hlavičku vyfoť na telefonu, deska a první odstavec nesmějí spadnout pod první obrazovku.
 - Delší atribut je na telefonu o řádek víc: nové znění atributu přeměř testem hlavičky (odstavec nad lištou) dřív, než ho přijmeš jako hotové.
+- Popisek vztahu psaný pod nadpisem skupiny („znal ho z textů“ pod „Koho četl“) nepřenášej tam, kde jméno stojí za ním bez nadpisu: v kartě Kam dál čte student jméno jako podmět („Znal ho z textů · Platón“ na stránce Cicerona). Nadtitulek karty pojmenuje, kdo je ve vztahu činný (medailonky, revize R).
+- Popisky vztahů a nadpisy skupin musí znát rod obou lidí („Hypatia navázal“, „Koho četl“ u Hypatie); vzor je `tvar()` v `KartaCloveka.svelte`.
+- Co má stránka ukázat (třeba „vypráví se“ u tradovaného vztahu), ověř ve vykreslené stránce, ne v kartě Mapy a času: karta příznak čte, řádky Doby a lidí ne.
+- Slovo, které k vztahu přidává komponenta („ · vypráví se“ u tradovaného vztahu), nepiš i do poznámky v datech: na stránce se zdvojí („vypráví se · vypráví se, že…“). Poznámka tradovaného vztahu začíná rovnou dějem (medailonky, O).
+- Rozdíl dvou přibližných letopočtů z pramene není údaj z pramene: „o deset let mladší“ z hlaviček „c. 620“ a „c. 610“ pramen netvrdí.
+- Test, který tvrdí, že konkrétní člověk odkaz nebo stránku nemá („Zénón z Kitia odkaz nemá“), spadne, jakmile mu data stránku dají. Kde jde o pravidlo, vybírej člověka bez stránky z dat (`medailonek` a kolekce `osobnosti`); kde jde o konkrétní stránku, uprav test v témže commitu jako data (medailonky, M0).
 
 ## Technika
 
@@ -98,3 +106,10 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Text, který skládá JavaScript (popis pod kresbou), plugin pro nezlomitelné mezery nevidí: doplňuje je rám `Kresba.svelte`. Vzor v testu, který začíná `^`, proto píše za jednopísmennou předložkou `\s`.
 - Zkratka `animation` bez jména animace (jméno přijde zvlášť pro každý prvek) se při sestavení zminifikuje na `animation: none`: piš rozepsané vlastnosti (`animation-duration` a další).
 - `scripts/kontrola-fokus.mjs` ohlásí stránce klávesu sám (stránka dorovnává jen po fokusu z klávesnice): pole pod lištou, které hlásí, už není planý poplach.
+- V zsh nepiš `echo =====` (zsh to bere jako příkaz) ani proměnnou s hranatou závorkou v řetězci (`$s[`, glob). Víc kroků nad daty piš jako krátký skript v Pythonu (`python3 - <<'EOF'`). `sed -i` na macOS chce příponu (`sed -i ''`); soubory s hranatými závorkami v cestě (`[cesta]`) upravuj Pythonem.
+- Test, který čte seznam odkazů podle jmen (`otazka.spec.ts`, `cesta8.spec.ts`, hledání v `prohlidka.spec.ts`), padá s každým novým medailonkem: po vlně pusť celé `npm test` a uprav jen ty, které padnou kvůli novému odkazu. Test Mapy a času nebere `MEDAILONKY[0]`: první osoba v datech nemusí v daném roce žít.
+- Adresa hesla IEP nemusí odpovídat jménu (`iep.utm.edu/musonius/`, ne `musonius-rufus`); zapsaný pramen s neexistující adresou se při ověření opraví. Britannica `curl` nepustí, souhrn pod `britannica.com/summary/<jméno>` jde otevřít přes vyhledávání. V zsh na macOS `sed -i` chce příponu: úpravy textu dělej Pythonem.
+- Kdo píše věty `kdo` a `proč` z dat, ať nejdřív porovná „proč“ s vztahy a atributem osoby: na stránce stojí pod sebou a opakování je vidět hned (v M2 u osmi osob z jedenácti).
+- Věta „kdo“ nebo „proč“, která končí zkratkou „př. n. l.“, se v testu počítá jako věta bez konce (nula vět): přeformuluj ji tak, aby poslední slovo nebyla zkratka letopočtu („který byl roku 63 př. n. l. konzulem“).
+- Při hledání vztahu pro osobu, která žádný nemá, hlídej stejná jména: Plútarchos v BEA o Hypatii je Plútarchos z Athén, ne Plútarchos z Chairóneie z dat. Platónova nebo Xenofóntova scéna je vždy `tradovany`; vztah, který pramen opatřuje „may have been“, se nezapisuje.
+- Souhrn Britannicy pod `britannica.com/summary/<jméno>` občas vrací 404 (Aspasia, Hypatia); plný článek `britannica.com/biography/<jméno>` jde otevřít přes WebFetch.

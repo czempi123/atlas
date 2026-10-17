@@ -12,7 +12,7 @@ import CestaKarta from '../../components/cesta/CestaKarta.astro';
 import Prameny from '../../components/osobnost/Prameny.astro';
 import { osoba as najdiOsobu, osoby, citatyPodleId, pramenyPodleId } from '../../lib/data';
 import { maStranku, seradHlasy, chybyHlasu, klicOtazky } from '../../lib/otazky';
-import { adresaOsoby } from '../../lib/adresa-osoby';
+import { adresaStranekOsob } from '../../lib/stranky-osob';
 
 export async function getStaticPaths() {
   const vse = await getCollection('otazky');
@@ -29,7 +29,7 @@ const { Content } = await render(zaznam);
 const hlasy = seradHlasy(o.hlasy, osoby).map((h) => ({ ...h, osoba: najdiOsobu(h.osoba) }));
 const POCET = ['', 'jeden', 'dva', 'tři', 'čtyři', 'pět', 'šest', 'sedm', 'osm', 'devět', 'deset'];
 const kolik = POCET[hlasy.length] ?? String(hlasy.length);
-const adresaProfilu = adresaOsoby(await getCollection('osobnosti'));
+const adresaProfilu = await adresaStranekOsob();
 const cesty = (await getCollection('cesty')).filter((c) => c.data.otazka === o.cislo).sort((a, b) => a.data.cislo - b.data.cislo);
 
 const citatyNaStrance = [

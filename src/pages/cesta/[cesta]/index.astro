@@ -7,7 +7,7 @@ import Mince from '../../../components/ui/Mince.astro';
 import { osoba } from '../../../lib/data';
 import { krokyCesty, adresaKroku } from '../../../lib/cesty';
 import { adresaOtazky } from '../../../lib/otazky';
-import { adresaOsoby } from '../../../lib/adresa-osoby';
+import { adresaStranekOsob, medailonky } from '../../../lib/stranky-osob';
 import { nezlomitelne } from '../../../lib/sazba.js';
 
 export async function getStaticPaths() {
@@ -24,15 +24,16 @@ const { Content } = await render(cesta);
 const c = cesta.data;
 const lide = c.filozofove.map(osoba);
 // Odkaz na stránku osobnosti jen tam, kde stránka je (Lucretius v cestě 8 ji nemá); Hipparchia vede na společný profil.
-const adresa = adresaOsoby(await getCollection('osobnosti'));
+const adresa = await adresaStranekOsob();
 // Kam dál: jeden odkaz na stránku, i když na ní stojí dva filozofové cesty („Kratés a Hipparchia: celý příběh“).
-const profilyCesty: { href: string; jmena: string }[] = [];
+// Medailonek je stránka z dat (dvě věty), ne „celý příběh“: odkaz to říká.
+const profilyCesty: { href: string; jmena: string; medailonek: boolean }[] = [];
 for (const o of lide) {
   const href = adresa(o.id);
   if (!href) continue;
   const p = profilyCesty.find((x) => x.href === href);
   if (p) p.jmena += ` a ${o.jmeno}`;
-  else profilyCesty.push({ href, jmena: o.jmeno });
+  else profilyCesty.push({ href, jmena: o.jmeno, medailonek: medailonky.includes(o.id) });
 }
 const otazky = await getCollection('otazky');
 const otazka = otazky.find((o) => o.data.cislo === c.otazka);
@@ -65,7 +66,7 @@ const seznam = kroky.map((k) => ({ n: k.krok, nazev: k.nazev, href: adresaKroku(
     <section class="ctenarsky kam-dal" id="hotovo" aria-labelledby="kam-dal-nadpis">
       <h2 class="t-h3" id="kam-dal-nadpis">Kam dál</h2>
       <ul>
-        {profilyCesty.map((p) => <li><a href={p.href}>{p.jmena}: celý příběh</a></li>)}
+        {profilyCesty.map((p) => <li><a href={p.href}>{p.jmena}: {p.medailonek ? 'medailonek' : 'celý příběh'}</a></li>)}
         {c.mapa && <li><a href={`/mapa/?rok=${c.mapa.rok}&osoba=${c.mapa.osoba}`}>Mapa a čas: {c.mapa.text}</a></li>}
         {otazka && <li><a href={odkazOtazky}>Velká otázka {otazka.data.cislo}: {otazka.data.otazka}</a></li>}
       </ul>
