@@ -345,7 +345,7 @@
   mista:
     - { misto: miletos, role: narozeni, zdroj: britannica-aspasia }
     - { misto: athenes, role: pusobeni, od: -445, do: -429, priblizne: true, zdroj: britannica-aspasia }
-  kdo: Vzdělaná žena z Milétu, družka athénského státníka Perikla.
+  kdo: Žena z Milétu, která žila s athénským státníkem Periklem.
   proc: Sókratův žák Aischinés o ní napsal dialog, který nese její jméno.
   zdroje: [britannica-aspasia, xenofon-vzpominky, platon-menexenos]
 
