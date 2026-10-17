@@ -6,6 +6,7 @@
   import { nacti, exportuj, stavBloku, ulozStavBloku, type Denik } from '../../lib/denik';
   import { nabidkaNavratu, platnyStavNavratu, type NavratDeniku } from '../../lib/navrat';
   import Navrat from './Navrat.svelte';
+  import MojeHodiny from '../hodina/MojeHodiny.svelte';
 
   interface Props {
     /** návraty všech cest (obsah z YAML); který a kdy nabídnout, rozhodne nabidkaNavratu */
@@ -116,6 +117,7 @@
       </ul>
     {/if}
   {/if}
+  <MojeHodiny />
   <button type="button" class="export" onclick={exportuj}>Stáhnout deník do souboru</button>
 {/if}
 

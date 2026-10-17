@@ -5,7 +5,8 @@
 //   notebook: node scripts/snimky-listy.mjs /osobnost/platon/ platon 1440 dark 2 3200 0.55
 // Proměnné: ZAKLAD (běžící web; výchozí náhled sestaveného webu: npx astro preview --port 4323),
 // OD (od které výšky stránky), VEN (složka pro výstup; výchozí „Claude outputs/snimky“, mimo git),
-// PRESKOCIT (klíč stránky otázky, třeba otazka-co-je-skutecne: ukáže hlasy bez prvního názoru).
+// PRESKOCIT (klíč stránky otázky, třeba otazka-co-je-skutecne: ukáže hlasy bez prvního názoru),
+// ULOZISTE (soubor .json s hodnotami pro localStorage), AKCE (výraz v JavaScriptu, který se ve stránce vyhodnotí po načtení).
 import { chromium } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 
@@ -23,15 +24,30 @@ if (process.env.PRESKOCIT) {
     localStorage.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: { [klic]: { preskoceno: true } }, aktivita: [], cesty: {} }));
   }, process.env.PRESKOCIT);
 }
+// ULOZISTE=<soubor.json> s obsahem { "klíč": hodnota } zapíše hodnoty do localStorage před načtením stránky
+// (uložené hodiny pro skladatele a deník, rozpracovaný deník…). Hodnota, která není řetězec, se uloží jako JSON.
+if (process.env.ULOZISTE) {
+  const { readFileSync } = await import('node:fs');
+  const zaznamy = JSON.parse(readFileSync(process.env.ULOZISTE, 'utf8'));
+  await page.addInitScript((z) => {
+    for (const [k, v] of Object.entries(z)) localStorage.setItem(k, typeof v === 'string' ? v : JSON.stringify(v));
+  }, zaznamy);
+}
 await page.goto(ZAKLAD + cesta);
 await page.evaluate(() => document.fonts.ready);
+// AKCE=<výraz v JavaScriptu> se po načtení vyhodnotí ve stránce (třeba otevře skupinu ve skladateli hodiny).
+if (process.env.AKCE) {
+  await page.waitForTimeout(600);
+  await page.evaluate(process.env.AKCE);
+  await page.waitForTimeout(300);
+}
 await page.evaluate(async () => {
   for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); }
   window.scrollTo(0, 0);
 });
 await page.waitForTimeout(400);
 // Pevné lišty by na výřezech visely uprostřed stránky.
-await page.addStyleTag({ content: 'nav.lista { position: static !important; } header.hlavicka { position: static !important; } .obsah-lista { display: none !important; }' });
+await page.addStyleTag({ content: 'nav.lista { position: static !important; } header.hlavicka { position: static !important; } .obsah-lista { display: none !important; } .skladatel .hodina, .skladatel .pocitadlo { position: static !important; max-height: none !important; }' });
 const celkem = await page.evaluate(() => document.documentElement.scrollHeight);
 const naList = sloupcu * vyska;
 const od = Number(process.env.OD ?? 0);

@@ -1,0 +1,24 @@
+---
+// Připravit hodinu (větev hodiny-v1, krok H2): učitel z katalogu zastavení (/hodina/katalog.json) složí hodinu,
+// seřadí ji, připíše si poznámky, uloží ji v prohlížeči nebo do souboru a pošle studentům odkaz bez poznámek.
+// Uloženou hodinu otevře k úpravě /hodina/nova/?hodina=<id>. Stránka nepatří do hledání.
+import Zakladni from '../../layouts/Zakladni.astro';
+import Skladatel from '../../components/hodina/Skladatel.svelte';
+import { data } from '../../lib/data';
+
+const obdobi = data.obdobi.map((o) => ({ id: o.id, nazev: o.nazev }));
+---
+<Zakladni titulek="Připravit hodinu" popis="Složení hodiny z míst v atlasu: kroky cest, bloky, kapitoly a hlasy." drobecky={[{ text: 'Pro učitele' }, { text: 'Připravit hodinu' }]} kratkyTitulek="Připravit hodinu" hledat={false}>
+  <div class="stranka">
+    <header class="hlava ctenarsky">
+      <h1 class="t-h1">Připravit hodinu</h1>
+      <p class="t-perex">Vyber z atlasu kroky cest, bloky, kapitoly a hlasy, seřaď je a připiš si poznámky. Studentům pošli odkaz; poznámky zůstanou jen u tebe.</p>
+    </header>
+    <Skladatel client:load obdobi={obdobi} />
+  </div>
+</Zakladni>
+
+<style>
+  .hlava { padding: var(--s-6) 0 var(--s-5); }
+  h1 { margin-bottom: var(--s-4); }
+</style>

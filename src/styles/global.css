@@ -208,6 +208,7 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
 .blok__tl--vedlejsi:disabled { cursor: not-allowed; border-color: var(--rule); background: transparent; color: var(--muted); }
 .blok__tl--tiche { min-height: 44px; border: 1px solid var(--rule); background: transparent; color: var(--ink); font-size: var(--fs-ovladani); font-weight: 500; }
 .blok__tl--tiche:hover { border-color: var(--muted); }
+.blok__tl--tiche:disabled { cursor: not-allowed; border-style: dashed; border-color: var(--rule); color: var(--muted); }
 /* Zpětná vazba a odkrytý obsah: tint období, titulek v inkoustu. */
 .blok__zpetna {
   margin-top: var(--s-5);
