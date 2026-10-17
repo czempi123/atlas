@@ -92,6 +92,7 @@
   zemrel: { rok: -546, priblizne: true }
   obdobi: 1
   hloubka: profil
+  medailonek: true
   smery: [miletska-skola]
   otazky: [6]
   linie: [veda]
@@ -243,11 +244,12 @@
   zemrel: { rok: -546, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [miletska-skola]
   mista:
     - { misto: miletos, role: narozeni, zdroj: iep-anaximander }
-  kdo: Myslitel z Milétu, o generaci mladší než Thalés.
-  proc: Počátkem všeho mu bylo neomezené (apeiron) a nakreslil první mapu světa.
+  kdo: Myslitel z Milétu, o deset let mladší než Thalés.
+  proc: Jako první řecký myslitel napsal spis prózou a počátkem všeho mu bylo neomezené (apeiron).
   zdroje: [iep-anaximander]
 
 - id: anaximenes
@@ -257,11 +259,12 @@
   aktivni: { od: -550, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [miletska-skola]
   mista:
     - { misto: miletos, role: narozeni, zdroj: iep-anaximenes }
-  kdo: Myslitel z Milétu, druh a snad i žák Anaximandrův.
-  proc: Za počátek všeho pokládal vzduch.
+  kdo: Myslitel z Milétu, třetí z milétských filozofů.
+  proc: Za počátek všeho pokládal vzduch a proměny látek vysvětloval jeho zřeďováním a zhušťováním.
   zdroje: [iep-anaximenes]
 
 - id: xenofanes
@@ -289,11 +292,12 @@
   zemrel: { rok: -430, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: akragas, role: narozeni, zdroj: sep-empedocles }
   kdo: Myslitel a básník ze sicilského Akragantu.
   proc: Učil, že svět tvoří čtyři kořeny (země, voda, vzduch, oheň), které spojuje Láska a rozděluje Svár.
-  zdroje: [sep-empedocles, britannica-empedocles]
+  zdroje: [sep-empedocles, britannica-empedocles, iep-gorgias]
 
 - id: anaxagoras
   jmeno: Anaxagorás
@@ -302,15 +306,16 @@
   zemrel: { rok: -428, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   linie: [veda]
   mista:
     - { misto: klazomenai, role: narozeni, zdroj: sep-anaxagoras }
-    - { misto: athenes, role: pusobeni, do: -436, zdroj: sep-anaxagoras }
+    - { misto: athenes, role: pusobeni, do: -436, priblizne: true, zdroj: sep-anaxagoras }
     - { misto: lampsakos, role: exil, zdroj: sep-anaxagoras }
     - { misto: lampsakos, role: smrt, rok: -428, priblizne: true, zdroj: sep-anaxagoras }
   kdo: Myslitel z Klazomen, přítel athénského státníka Perikla.
   proc: Tvrdil, že svět uspořádal rozum (nús) a že Slunce je rozžhavený kámen; za to ho v Athénách obžalovali.
-  zdroje: [sep-anaxagoras]
+  zdroje: [sep-anaxagoras, platon-faidon]
 
 - id: gorgias
   jmeno: Gorgiás
@@ -319,6 +324,7 @@
   zemrel: { rok: -375, priblizne: true }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   smery: [sofiste]
   mista:
     - { misto: leontinoi, role: narozeni, zdroj: iep-gorgias }
@@ -335,12 +341,13 @@
   aktivni: { od: -445, do: -429 }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: miletos, role: narozeni, zdroj: britannica-aspasia }
     - { misto: athenes, role: pusobeni, od: -445, do: -429, priblizne: true, zdroj: britannica-aspasia }
   kdo: Vzdělaná žena z Milétu, družka athénského státníka Perikla.
   proc: Sókratův žák Aischinés o ní napsal dialog, který nese její jméno.
-  zdroje: [britannica-aspasia]
+  zdroje: [britannica-aspasia, xenofon-vzpominky, platon-menexenos]
 
 - id: konfucius
   jmeno: Konfucius
@@ -405,6 +412,7 @@
   zemrel: { rok: -338 }
   obdobi: 1
   hloubka: medailonek
+  medailonek: true
   mista:
     - { misto: athenes, role: narozeni, rok: -436, zdroj: britannica-isocrates }
     - { misto: athenes, role: smrt, rok: -338, zdroj: britannica-isocrates }
@@ -415,7 +423,7 @@
     nazev: svitek
     proc: Učil řečnictví.
     zdroj: britannica-isocrates
-  zdroje: [britannica-isocrates, isokrates-antidosis, isokrates-helena]
+  zdroje: [britannica-isocrates, isokrates-antidosis, isokrates-helena, iep-gorgias]
 
 - id: eudoxos
   jmeno: Eudoxos
@@ -749,6 +757,7 @@
   zemrel: { rok: -272, priblizne: true, rozmezi: [-275, -270] }
   obdobi: 2
   hloubka: profil
+  medailonek: true
   smery: [skepticismus]
   otazky: [7]
   mista:
@@ -760,7 +769,7 @@
     nazev: prasátko
     proc: "Vypráví se, že za bouře na lodi ukázal na prasátko, které klidně žralo: takový klid má mít moudrý."
     zdroj: dl-ix-68
-  zdroje: [sep-pyrrho, dl-ix-68, dl-ix-61]
+  zdroje: [sep-pyrrho, dl-ix-68, dl-ix-61, dl-ix-67]
 
 - id: lucretius
   jmeno: Lucretius
@@ -810,11 +819,12 @@
   zemrel: { rok: -43 }
   obdobi: 2
   hloubka: profil
+  medailonek: true
   otazky: [8]
   linie: [spolecnost]
   mista:
     - { misto: rim, role: pusobeni, zdroj: iep-cicero }
-  kdo: Římský řečník a politik, konzul roku 63 př. n. l.
+  kdo: Římský řečník a politik, který byl roku 63 př. n. l. konzulem.
   proc: Řeckou filozofii převyprávěl latinsky a zpřístupnil ji Římanům.
   atribut:
     ikona: podium
@@ -831,27 +841,29 @@
   zemrel: { rok: 415 }
   obdobi: 2
   hloubka: profil
+  medailonek: true
   smery: [novoplatonismus]
   linie: [veda]
   mista:
     - { misto: alexandrie, role: pusobeni, zdroj: bea-hypatia }
     - { misto: alexandrie, role: smrt, rok: 415, zdroj: bea-hypatia }
   kdo: Matematička, astronomka a filozofka z Alexandrie, dcera matematika Theóna.
-  proc: Učila filozofii a matematiku a zemřela rukou rozvášněného davu.
+  proc: Stála v čele alexandrijské novoplatonské školy a roku 415 ji zabil rozzuřený dav.
   atribut:
     ikona: astrolabe
     nazev: astroláb
     proc: Učila astronomii a matematiku; její žák Synésios s její pomocí navrhl astroláb.
     zdroj: synesius-astrolab
-  zdroje: [bea-hypatia, synesius-astrolab]
+  zdroje: [bea-hypatia, synesius-astrolab, sokrates-scholastikos-vii-15]
 
 - id: plotinos
   jmeno: Plótínos
   jmeno2: Plótína
-  narozen: { rok: 204 }
+  narozen: { rok: 204, priblizne: true }
   zemrel: { rok: 270 }
   obdobi: 2
   hloubka: profil
+  medailonek: true
   smery: [novoplatonismus]
   otazky: [6, 9]
   mista:
@@ -977,6 +989,7 @@
   zemrel: { rok: -129, priblizne: true }
   obdobi: 2
   hloubka: medailonek
+  medailonek: true
   smery: [akademie, skepticismus]
   mista:
     - { misto: kyrene, role: narozeni, zdroj: sep-carneades }
@@ -993,6 +1006,7 @@
   zemrel: { rok: 50, priblizne: true, rozmezi: [45, 50] }
   obdobi: 2
   hloubka: medailonek
+  medailonek: true
   tradice: zidovska
   otazky: [9]
   linie: [vira-a-rozum]

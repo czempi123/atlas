@@ -72,3 +72,22 @@
 - { od: platon, k: plutarchos, typ: vliv-textem, zdroj: sep-plutarch }
 # Spor na dálku: Plútarchos psal přes tři sta padesát let po Epikúrovi (cesta 8, krok 6).
 - { od: plutarchos, k: epikuros, typ: polemika, poznamka: "je důvod bát se toho, že nebudeme?", zdroj: plutarchos-non-posse }
+
+# Medailonky M3 (17. 10. 2026): vztahy, bez kterých by osoby třetí vlny neměly na stránce co ukázat.
+# Empedoklés, Gorgiás a Isokratés: žáky podává antická tradice (IEP Gorgias; SEP Empedocles A 1 = P 24).
+- { od: empedokles, k: gorgias, typ: ucitel, tradovany: true, zdroj: iep-gorgias }
+- { od: gorgias, k: isokrates, typ: ucitel, tradovany: true, zdroj: iep-gorgias }
+- { od: empedokles, k: lucretius, typ: vliv-textem, poznamka: "chválí ho v básni O přírodě", zdroj: sep-empedocles }
+# Anaxagorás a Sókratés: setkání s jeho knihou líčí jen Platón (Faidón 97b–98b); Aspasie a Sókratés: Platón a Xenofón.
+- { od: anaxagoras, k: sokrates, typ: vliv-textem, tradovany: true, poznamka: "Sókratés četl jeho knihu a čekal od rozumu víc", zdroj: platon-faidon }
+- { od: aspasie, k: sokrates, typ: znali-se, tradovany: true, poznamka: "Sókratés se na ni u Platóna i Xenofónta odvolává", zdroj: xenofon-vzpominky }
+# Platón jako zdroj pro tři pozdější myslitele (SEP Plotinus, SEP Philo, IEP Cicero).
+- { od: platon, k: plotinos, typ: vliv-textem, poznamka: "Platón je hlavním zdrojem Plótínova myšlení", zdroj: sep-plotinus }
+- { od: platon, k: filon-alexandrijsky, typ: vliv-textem, poznamka: "Timaios stojí za Filónovým výkladem stvoření světa", zdroj: sep-philo }
+- { od: platon, k: cicero, typ: vliv-textem, poznamka: "filozofické dialogy psal podle Platónových a Aristotelových vzorů", zdroj: iep-cicero }
+# Cicero proti epikurejcům: spor na dálku (Epikúros zemřel dvě stě let před Ciceronovým narozením).
+- { od: cicero, k: epikuros, typ: polemika, poznamka: "starají se bohové o lidi?", zdroj: iep-cicero }
+# Hypatia a Plótínos: jediné starověké svědectví (Sókratés Scholastikos, 5. století), proto tradované.
+- { od: plotinos, k: hypatia, typ: vliv-textem, tradovany: true, poznamka: "vedla školu, která se odvozovala od Platóna a Plótína", zdroj: sokrates-scholastikos-vii-15 }
+# Pyrrhón: Démokrita měl nejraději podle přítele Fílóna z Athén (Diogenés Laertios IX, 67).
+- { od: demokritos, k: pyrrhon, typ: vliv-textem, tradovany: true, poznamka: "podle Diogena Laertia ho měl Pyrrhón nejraději", zdroj: dl-ix-67 }
