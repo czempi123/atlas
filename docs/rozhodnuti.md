@@ -4,6 +4,18 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok R (revize větve)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Autor nechal všech deset řádků Pro autora z vlny 3 prázdných: platí doporučení (Konfucius a Pýthagorás bez stránky, polemika s Pýthagorou se nezapisuje, Hypatia–Plótínos a tři vztahy z literárních scén jako tradované, Cicero bez směru, Plótínovo narození přibližné, nové věty Anaximandra a Aspasie, devět medailonků bez desky, Lucretius bez stránky) | Pravidlo: prázdná odpověď znamená souhlas |
+| Verdikt revize: po opravách (`docs/revize/medailonky-2026-10-17.md`); větev se uzavře až po kroku O | Kam dál na osmi medailoncích obrací vztah, Doba a lidé neoznačuje tradované vztahy a u Hypatie nesedí rod; jsou to opravy v kódu, které mění i popisky na schválených profilech |
+| Předpoklad z M3, že stránka označí tradovaný vztah slovem „vypráví se“, neplatí: dělá to jen karta v Mapě a čase. Oprava je v kroku O (řádky Doby a lidí dostanou „ · vypráví se“) | Řádky skupin příznak `tradovany` nečtou; souhlas autora s tradovanými vztahy z M3 na tom stál |
+| Opraveno v revizi: Anaximandrovo „kdo“ („Thalétův krajan“), „roku 415 n. l.“ u Hypatie, čtyři poznámky vztahů čitelné z obou stran (Speusippos, Theofrastos, Zénón z Eleje, Aristofanés), pramen vztahu Xenofón → Zénón z Kitia (`dl-vii-2`), Britannica u Aristippa | IEP o deseti letech nemluví; poznámka se čte na obou stránkách vztahu; IEP o kynicích příběh se ztroskotáním nemá; Britannica potvrzuje rok úmrtí asi 355 |
+| Navrženo autorovi: nové „proč“ Eudoxa (teorie poměrů), Démokrita (zvyk a atomy) a Anaxagora (za co ho obžalovali), „Otevřít stránku“ na kartě v Mapě a čase | Věta má říkat, proč si člověka pamatujeme, a neopakovat atribut; atlas dnes hloubky stránek viditelně rozlišuje |
+| „Abdéra“ v datech a „z Abdér“ ve větě, „Akragás“ a „Akragantu“ zůstávají | Ustálené české tvary a správné skloňování, ne nesoulad |
+| Další v pořadí: O (opravy po revizi), pak uzavření | Plán větve `docs/plany/medailonky.md` |
+
 ## 17. 10. 2026: Medailonky, krok M3 (data třetí vlny)
 
 | Rozhodnutí | Důvod |

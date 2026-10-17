@@ -8,7 +8,8 @@ Každý člověk na mapě má dostat vlastní stránku (rozhodnutí z P4, 30. 9.
 | M1 | Data první vlny (8 osob) a jejich medailonky | Sonnet 5.5 · medium se skillem `atlas-data`; sporné prameny Opus 5.5 · high se skillem `atlas-overeni` | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-1.md` |
 | M2 | Data druhé vlny (11 osob) | totéž | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-2.md` |
 | M3 | Data třetí vlny (16 osob) | totéž | hotovo 17. 10. 2026 (14 medailonků, Konfucius a Pýthagorás bez vztahu); zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-3.md` |
-| R | Revize větve (vzorek dat proti pramenům, stránky, odkazy) | Opus 5.5 · high se skillem `atlas-revize` | čeká; zadání je níže (R) |
+| R | Revize větve (vzorek dat proti pramenům, stránky, odkazy) | Opus 5.5 · high se skillem `atlas-revize` | hotovo 17. 10. 2026, verdikt „po opravách“ (`docs/revize/medailonky-2026-10-17.md`); zadání je v `docs/archiv/zadani/medailonky.md` |
+| O | Opravy po revizi (Kam dál, tradované vztahy a rod v Době a lidech, rozhodnutí autora) | Opus 5.5 · high se skillem `atlas-komponenta` | čeká; zadání je níže (O) |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | — | čeká |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/medailonky.md`. Po každé vlně může autor větev sloučit dřív (medailonky jsou samostatné stránky); o tom rozhoduje on.
@@ -105,33 +106,48 @@ Co chybí (podrobně v inventuře): většině chybí jen ověření a lepší �
 - **Cicero nemá směr:** IEP říká, že se hlásil k Akademii, ale směr přidám až s profilem, aby nepřibyl do výpisu směru bez textu o něm.
 - **Postup:** hesla SEP a IEP stažena na Macu, Britannica přes WebFetch (souhrn Aspasie a Hypatie vrací 404, u Aspasie jsem otevřel plný článek, Hypatii nahradilo BEA); IEP nemá hesla Hypatia, Isocrates ani Pythagoras na zkoušených adresách.
 
-**Další krok.** R: revize větve (zadání níže).
+**Další krok.** R: revize větve (zadání je v `docs/archiv/zadani/medailonky.md`).
 
-## R: revize větve
+## Po R (17. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-revize`; ověřování pramenů podle `atlas-overeni`. Revize čte větev očima lidí, kteří ji budou číst: studenta, který klepne na jméno v Době a lidech, učitele dějepisu, který zkontroluje datum, filozofa, který se podívá na „proč“, a uživatele na telefonu. Neopravuje obsah, jen ohlásí a opraví drobnosti; zásadní nálezy seřadí podle dopadu s návrhem opravy.
+**Verdikt: po opravách** (`docs/revize/medailonky-2026-10-17.md`). Data drží: ve vzorku čtrnácti osob (Hypatia, Anaxagorás, Aspasie, Pyrrhón, Anaximandros, Plótínos; Eudoxos, Alkibiadés, Musonius Rufus, Xenofón; Antisthenés, Chairefón, Plútarchos, Zénón z Kitia) sedí roky, místa i vztahy s prameny. Neprojde text, který se skládá z dat: Kam dál na osmi medailoncích obrací vztah („Znal ho z textů · Platón“ u Cicerona), Doba a lidé neoznačuje tradované vztahy (rozhodnutí M3 počítalo s tím, že je označí slovem „vypráví se“) a u Hypatie nesedí rod („Hypatia navázal“, „Koho četl“).
 
-Co necháš prázdné, bere se jako souhlas s návrhem.
+**Opraveno rovnou** (data, dva commity): Anaximandrovo „kdo“ („o deset let mladší“ heslo IEP neříká; teď „Thalétův krajan“), „roku 415 n. l.“ u Hypatie, čtyři poznámky vztahů, které medailonek poprvé ukázal z druhé strany (Speusippos, Theofrastos, Zénón z Eleje, Aristofanés), pramen vztahu Xenofón → Zénón z Kitia (`dl-vii-2` místo `iep-cynics`, které příběh nemá) a Britannica u Aristippa (potvrzuje rok úmrtí asi 355; otevřený řádek z M2 je uzavřený). Pracovní skripty revize jsou v `scripts/revize-*.mjs`.
+
+**Ověřeno bez nálezu:** věty všech 34 medailonků strojově (jedna věta do 25 slov, bez tykání, výhrad a strojových obratů, druhý pád, zkratky letopočtů, přibližné roky a rozmezí), tvary jmen míst ve větách (Akragás a „Akragantu“ je správné skloňování), `kontrola-fokus.mjs` na 390 i 1440 px, axe ve světlém i tmavém režimu (136 průchodů), `doba-odkazy-vypis.mjs` (Chyb: 0), Lidé a směry, Mapa a čas (karta, kamera, místa), mini mapy, šest stránek jako student na telefonu, přehled cesty 8, deska bez atributu, zápisy M0 až M3 proti datům. Celé `npm test` prošlo; spadl jen známý test „cesta: průchod, Kam dál z bloku…“, který při samostatném běhu prošel.
+
+**Co jsem zvažoval.** Opravy v kódu (nálezy 1 až 3) jsem v revizi neprováděl: mění popisky, které vidí i schválené profily (Platón, Aristotelés, Diogenés), a sahají do testů, takže patří do vlastního kroku O. Poznámky vztahů jsem opravil hned, protože jde o data a pravidlo z `docs/pouceni.md` (poznámka se čte na obou stránkách) je jednoznačné. Popisek „polemizoval s ním“ v řádcích Doby a lidí jsem nechal: jeho podmět je vždy ten, kdo polemizoval, a po nové poznámce u Aristofana to sedí na obou stranách; chybný je jen v Kam dál, kde stojí bez nadpisu skupiny.
+
+**Další krok.** O: opravy po revizi (zadání níže), pak uzavření větve.
+
+## O: opravy po revizi
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skilly `atlas-komponenta` (popisky v komponentách a testy) a `atlas-data` (věty v datech). Tři opravy v kódu podle revize a věty, o kterých rozhodne autor. Co necháš prázdné, bere se jako souhlas s návrhem revize.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíly Po M0 až Po M3), postup ve skillech atlas-revize (skills/atlas-revize/) a atlas-data (skills/atlas-data/).
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíl Po R), nálezy v docs/revize/medailonky-2026-10-17.md, postup ve skillech atlas-komponenta a atlas-data.
 
-Moje odpovědi k otázkám z vlny 3 (docs/podklady/medailonky-vlna-3.md, oddíl Pro autora; prázdné = souhlas s doporučením):
+Moje odpovědi k nálezům revize (prázdné = souhlas s návrhem):
+- Nález 5, Eudoxovo „proč“ podle teorie poměrů:
+- Nález 6, Démokritovo „proč“ podle Diogena Laertia IX, 45 a 72:
+- Nález 9, „Otevřít stránku“ místo „Otevřít portrét“:
+- Nález 10, Anaxagorovo „proč“ („za tvrzení, že Slunce je rozžhavený kámen“):
 
-Krok R: revize větve medailonky (34 medailonků).
+Krok O: opravy po revizi větve medailonky.
 
-1. Data proti pramenům (vzorek): z M0 a M1 vyber 4 osoby, z M2 4 a z M3 6, přednostně ty s tradovaným vztahem nebo přepsaným „proč“ (Hypatia, Anaxagorás, Aspasie, Pyrrhón, Anaximandros, Plótínos; Eudoxos, Alkibiadés, Musonius Rufus, Xenofón; Antisthenés, Chairefón, Plútarchos, Zénón z Kitia). U každé znovu otevři pramen pro roky, místa, vztahy a obě věty (SEP a IEP stáhni na Macu přes curl a grep, ne WebFetch; Britannica přes WebFetch, souhrn je na britannica.com/summary/<jméno>, jinak plný článek) a hlas nález s pramenem a místem v něm.
-2. Všechny medailonky strojově: věty „kdo“ a „proč“ (jedna věta, do 25 slov, bez tykání a výhrad, „proč“ neopakuje atribut ani vztah, žádné znaky strojového textu podle docs/styl.md), jména a druhý pád, zkratky letopočtů, přibližné roky a rozmezí, všechny vztahy s tradovany proti tomu, co jejich pramen opravdu říká. Najdi nesoulad mezi tvarem jména v mista.yaml a ve větách (třeba Akragás a Akragantu) a rozhodni, zda je to chyba.
-3. Stránky: scripts/kontrola-fokus.mjs na všech medailoncích (390 i 1440 px), axe tak, jak ho dělají testy, node scripts/doba-odkazy-vypis.mjs, Lidé a směry (každý medailonek má vstup), Mapa a čas (karta, kamera, nová místa), mini mapa. Šest stránek (po dvou z každé vlny) přečti jako student na telefonu: dá se na ně dojít z Doby a lidé, vyhledávání a Kam dál a nevede nikam slepá cesta?
-4. Soulad: přehled cesty („Jméno: medailonek“), popisek karty v Mapě a čase („Otevřít portrét“), deska bez atributu, zápisy v docs/rozhodnuti.md proti stavu dat.
-5. Výstup: docs/revize/medailonky-<datum>.md (nálezy podle dopadu, každý s návrhem opravy a s tím, co je drobnost a co rozhodnutí pro mě; verdikt „schváleno“ nebo „po opravách“). Drobnosti oprav rovnou, commituj česky po skupinách, nic neposílej na GitHub a nic nesluč.
+1. Kam dál medailonků (nález 1): nadtitulek karty podle toho, kdo je ve vztahu činný, s rodem jako v KartaCloveka.svelte (učitel/učitelka, žák/žákyně, znali se, „Četl ho a navázal“, „Koho četl“, „S kým se přel na dálku“, „Přel se s jeho učením“, „Polemizoval s ním“, „S kým se přel“). Test v tests/data/medailonky.test.ts na Cicerona, Hypatii a Aristofana.
+2. Tradované vztahy v Době a lidech (nález 2): za popisek role „ · vypráví se“, když je vztah tradovaný, stejně jako karta v Mapě a čase; poznámku vztahu Xenofón → Zénón z Kitia zkrať na „Zénón po ztroskotání četl v Athénách Xenofóntovy Vzpomínky na Sókrata“.
+3. Rod v Době a lidech (nález 3): roleVztahu a nadpisy skupin s rodem („navázala na jeho texty“, „Koho četla“, „Kdo se s ní přel později“); test v tests/data/vztahy.test.ts s Hypatií.
+4. Věty v datech a popisek karty podle mých odpovědí výše.
 
-Kontrola: celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ nebo přehled cesty v cesta.spec.ts, nebo test v obsah.spec.ts, pusť ten soubor znovu samostatně. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav R a oddíl „Po R“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš verdikt, nálezy podle dopadu a co mám rozhodnout. Při kladném verdiktu navrhni uzavření větve (zadání je níže, oddíl Uzavření větve).
+Ke každé opravě najdi nejdřív dotčené testy (grep v tests/) a uprav je v tomtéž commitu. Na konci node scripts/doba-odkazy-vypis.mjs (Chyb: 0), scripts/kontrola-fokus.mjs na medailoncích Cicerona, Hypatie, Plótína a Aristofana a snímky Doby a lidí a Kam dál u Hypatie, Plótína a Aristofana na 390 px do Claude outputs/medailonky/opravy/. Celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ v cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky po skupinách, nic neposílej na GitHub a nic nesluč.
+
+Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav O a oddíl „Po O“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md a restartuj náhled npm run dev. Pak mi napiš, co se změnilo, a navrhni uzavření větve (oddíl Uzavření větve).
 ```
 
 ## Uzavření větve
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Sloučení a úklid, žádný nový obsah. Pouští se po revizi (krok R) a po autorově schválení; autor může větev uzavřít i dřív (po kterékoli vlně) a zbylé vlny nechat na novou větev.
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Sloučení a úklid, žádný nový obsah. Pouští se po opravách (krok O) a po autorově schválení; autor může větev uzavřít i dřív (po kterékoli vlně) a zbylé vlny nechat na novou větev.
 
 ```text
 Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Větev medailonky schvaluji: sluč ji do main a pošli main na GitHub.

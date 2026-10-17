@@ -85,6 +85,10 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Nový hlas přidá otázku do hlavičky profilu každého myslitele, který na stránce mluví: testy vstupů (`otazka.spec.ts`, `platon.spec.ts`) drží přesné seznamy i počet tlačítek otázek. Skutečné hlavičky si po sestavení vypiš z `dist/` a seznamy uprav podle nich.
 - Další hlas přidá tlačítko do hlavičky profilu: od pěti otázek výš si hlavičku vyfoť na telefonu, deska a první odstavec nesmějí spadnout pod první obrazovku.
 - Delší atribut je na telefonu o řádek víc: nové znění atributu přeměř testem hlavičky (odstavec nad lištou) dřív, než ho přijmeš jako hotové.
+- Popisek vztahu psaný pod nadpisem skupiny („znal ho z textů“ pod „Koho četl“) nepřenášej tam, kde jméno stojí za ním bez nadpisu: v kartě Kam dál čte student jméno jako podmět („Znal ho z textů · Platón“ na stránce Cicerona). Nadtitulek karty pojmenuje, kdo je ve vztahu činný (medailonky, revize R).
+- Popisky vztahů a nadpisy skupin musí znát rod obou lidí („Hypatia navázal“, „Koho četl“ u Hypatie); vzor je `tvar()` v `KartaCloveka.svelte`.
+- Co má stránka ukázat (třeba „vypráví se“ u tradovaného vztahu), ověř ve vykreslené stránce, ne v kartě Mapy a času: karta příznak čte, řádky Doby a lidí ne.
+- Rozdíl dvou přibližných letopočtů z pramene není údaj z pramene: „o deset let mladší“ z hlaviček „c. 620“ a „c. 610“ pramen netvrdí.
 - Test, který tvrdí, že konkrétní člověk odkaz nebo stránku nemá („Zénón z Kitia odkaz nemá“), spadne, jakmile mu data stránku dají. Kde jde o pravidlo, vybírej člověka bez stránky z dat (`medailonek` a kolekce `osobnosti`); kde jde o konkrétní stránku, uprav test v témže commitu jako data (medailonky, M0).
 
 ## Technika

@@ -96,3 +96,25 @@ Snímky: medailonek každé nové osoby na 390 px (světlý) a dvou z nich na 14
 
 Kontrola: celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts nebo test v obsah.spec.ts, pusť ten soubor znovu samostatně. Testy, které čtou seznamy odkazů podle jmen (otazka.spec.ts, cesta8.spec.ts, hledání v prohlidka.spec.ts), mohou padnout s novým medailonkem: uprav jen ty, které padnou kvůli novému odkazu. Commituj česky po osobách nebo malých skupinách, nic neposílej na GitHub. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav a oddíl „Po M3“ (kolik osob dostalo medailonek, kdo ne a proč, co zůstalo otevřené, zbývající Lucretius bez místa), rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš, kdo dostal medailonek, kdo ne a proč, a co mám rozhodnout. Pak navrhni další krok (R, revize větve).
 ```
+
+## R: revize větve
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-revize`; ověřování pramenů podle `atlas-overeni`. Revize čte větev očima lidí, kteří ji budou číst: studenta, který klepne na jméno v Době a lidech, učitele dějepisu, který zkontroluje datum, filozofa, který se podívá na „proč“, a uživatele na telefonu. Neopravuje obsah, jen ohlásí a opraví drobnosti; zásadní nálezy seřadí podle dopadu s návrhem opravy.
+
+Co necháš prázdné, bere se jako souhlas s návrhem.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíly Po M0 až Po M3), postup ve skillech atlas-revize (skills/atlas-revize/) a atlas-data (skills/atlas-data/).
+
+Moje odpovědi k otázkám z vlny 3 (docs/podklady/medailonky-vlna-3.md, oddíl Pro autora; prázdné = souhlas s doporučením):
+
+Krok R: revize větve medailonky (34 medailonků).
+
+1. Data proti pramenům (vzorek): z M0 a M1 vyber 4 osoby, z M2 4 a z M3 6, přednostně ty s tradovaným vztahem nebo přepsaným „proč“ (Hypatia, Anaxagorás, Aspasie, Pyrrhón, Anaximandros, Plótínos; Eudoxos, Alkibiadés, Musonius Rufus, Xenofón; Antisthenés, Chairefón, Plútarchos, Zénón z Kitia). U každé znovu otevři pramen pro roky, místa, vztahy a obě věty (SEP a IEP stáhni na Macu přes curl a grep, ne WebFetch; Britannica přes WebFetch, souhrn je na britannica.com/summary/<jméno>, jinak plný článek) a hlas nález s pramenem a místem v něm.
+2. Všechny medailonky strojově: věty „kdo“ a „proč“ (jedna věta, do 25 slov, bez tykání a výhrad, „proč“ neopakuje atribut ani vztah, žádné znaky strojového textu podle docs/styl.md), jména a druhý pád, zkratky letopočtů, přibližné roky a rozmezí, všechny vztahy s tradovany proti tomu, co jejich pramen opravdu říká. Najdi nesoulad mezi tvarem jména v mista.yaml a ve větách (třeba Akragás a Akragantu) a rozhodni, zda je to chyba.
+3. Stránky: scripts/kontrola-fokus.mjs na všech medailoncích (390 i 1440 px), axe tak, jak ho dělají testy, node scripts/doba-odkazy-vypis.mjs, Lidé a směry (každý medailonek má vstup), Mapa a čas (karta, kamera, nová místa), mini mapa. Šest stránek (po dvou z každé vlny) přečti jako student na telefonu: dá se na ně dojít z Doby a lidé, vyhledávání a Kam dál a nevede nikam slepá cesta?
+4. Soulad: přehled cesty („Jméno: medailonek“), popisek karty v Mapě a čase („Otevřít portrét“), deska bez atributu, zápisy v docs/rozhodnuti.md proti stavu dat.
+5. Výstup: docs/revize/medailonky-<datum>.md (nálezy podle dopadu, každý s návrhem opravy a s tím, co je drobnost a co rozhodnutí pro mě; verdikt „schváleno“ nebo „po opravách“). Drobnosti oprav rovnou, commituj česky po skupinách, nic neposílej na GitHub a nic nesluč.
+
+Kontrola: celé npm test na pozadí s výstupem do souboru (příkaz na Mac musí skončit do minuty); když spadne jen test „cesta: průchod, Kam dál z bloku…“ nebo přehled cesty v cesta.spec.ts, nebo test v obsah.spec.ts, pusť ten soubor znovu samostatně. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav R a oddíl „Po R“, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš verdikt, nálezy podle dopadu a co mám rozhodnout. Při kladném verdiktu navrhni uzavření větve (zadání je níže, oddíl Uzavření větve).
+```
