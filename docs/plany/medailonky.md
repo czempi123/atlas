@@ -5,8 +5,8 @@ Každý člověk na mapě má dostat vlastní stránku (rozhodnutí z P4, 30. 9.
 | Krok | Co | Model | Stav |
 | --- | --- | --- | --- |
 | M0 | Inventura, skill `atlas-data`, šablona medailonku na dvou osobách, plán | Opus 5.5 · high | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md` |
-| M1 | Data první vlny (8 osob) a jejich medailonky | Sonnet 5.5 · medium se skillem `atlas-data`; sporné prameny Opus 5.5 · high se skillem `atlas-overeni` | čeká |
-| M2 | Data druhé vlny (11 osob) | totéž | čeká; zadání vznikne po M1 |
+| M1 | Data první vlny (8 osob) a jejich medailonky | Sonnet 5.5 · medium se skillem `atlas-data`; sporné prameny Opus 5.5 · high se skillem `atlas-overeni` | hotovo 17. 10. 2026; zadání je v `docs/archiv/zadani/medailonky.md`, podklady v `docs/podklady/medailonky-vlna-1.md` |
+| M2 | Data druhé vlny (11 osob) | totéž | čeká; zadání je níže (M2) |
 | M3 | Data třetí vlny (16 osob) | totéž | čeká; zadání vznikne po M2 |
 | R | Revize větve (vzorek dat proti pramenům, stránky, odkazy) | Opus 5.5 · high se skillem `atlas-revize` | čeká |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | — | čeká |
@@ -47,31 +47,49 @@ Co chybí (podrobně v inventuře): většině chybí jen ověření a lepší �
 - **Vlny podle viditelnosti, ne podle období.** Nejdřív ti, na které už studenti narážejí jako na jméno bez odkazu; období se v každé vlně míchají, ale data jsou nezávislá, takže to práci nekomplikuje.
 - **Hloubka `profil` u lidí bez stránky** (Démokritos, Chrýsippos, Lucretius…): dostanou medailonek hned a profil později v celku; až profil vznikne, příznak se smaže (sestavení na to upozorní).
 
-## M1: data první vlny
+## Po M1 (17. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Sonnet 5.5 · medium** se skillem `atlas-data` (uložený v účtu Claude); kde skill říká „přepni na atlas-overeni“, ten úsek dělej **Opus 5.5 · high**: buď v témže chatu přepnutím modelu, nebo zapiš otázku do podkladů vlny a nech ji na konec. Osm osob s hotovými prameny je mechanická práce podle vzoru; vyšší úsilí by přidalo čas, ne kvalitu.
+**Výsledek.** Sedm osob dostalo `medailonek: true`: Plútarchos, Chrýsippos, Antisthenés, Xenokratés, Chairefón, Démokritos, Kritón. Lucretius ne: v pramenech (SEP, S. Trépanier 2023) není jeho rodiště ani místo působení a test místo vyžaduje; místo z odhadu (Řím) jsem nepřidal. V datech je 50 lidí, 13 má profil nebo portrét, 9 medailonek (Kleanthés a Zénón z Kitia z M0, sedm z M1), zbývá **28** (Lucretius a 27 z vln 2 a 3).
+
+**Co se změnilo v datech.** Většina osob měla data hotová a v M1 se ověřila proti pramenům (otevřené SEP a IEP, Platónova Obrana a Fáidón, Diogenés Laertios VI, 1): Chrýsippos, Xenokratés, Démokritos, Kritón a Chairefón zůstali beze změny. Změny: Plútarchos (místa Delfy a Athény se studiem kolem roku 66; nové „proč“ místo věty, která opakovala polemiku s Epikúrem), Antisthenés („kdo“ upřesněno: syn Athéňana a Thrákyně, athénské občanství neměl; místo Athény teď z Diogena Laertia, nový pramen `dl-vi-1`), Zénón z Kitia (nové „proč“ o cíli života podle SEP, 4.1; staré opakovalo atribut sloupoví). U osmi stávajících pramenů přibyla poznámka s datem a tím, co z nich beru. Vše je v `docs/podklady/medailonky-vlna-1.md`, včetně pěti otázek pro autora (každá s doporučením).
+
+**Změna mimo data.** Přehled cesty píše u odkazu na stránku člověka „Jméno: celý příběh“. Plútarchos (cesta 8) má jen medailonek, proto odkaz teď říká „Plútarchos: medailonek“ (`src/pages/cesta/[cesta]/index.astro`). Žádný jiný text ani komponenta se nezměnily.
+
+**Testy a kontroly.** `tests/data` prošly. Celé `npm test` po zapnutí medailonků spadlo na devíti místech: sedm kvůli novým odkazům a medailonkům (Doba a lidé u Diogena a na společném profilu, hlasy otázek 4 a 6, přehled cesty 8, hledání „Chairefón“ najde teď jeho stránku, test Mapy a času bral první medailonek v datech, Démokritos ale v roce −280 už nežil), dvě (`cesta.spec.ts`, `obsah.spec.ts`) jen při zátěži. Po opravě testů a popisku prošlo celé `npm test` (452 testů). `tests/e2e/doba-odkazy.spec.ts` má nově obecný test (Sókratés: odkaz mají jen lidé se stránkou), takže se po dalších vlnách přepisovat nemusí. `node scripts/doba-odkazy-vypis.mjs`: Chyb: 0. `scripts/kontrola-fokus.mjs`: sedm medailonků na 390 i 1440 px v pořádku. Snímky v `Claude outputs/medailonky/vlna-1/` (sedm medailonků na 390 px, Plútarchos a Démokritos na 1440 px ve světlém i tmavém režimu, Doba a lidé u Sókrata a Epikúra).
+
+**Co jsem zvažoval.**
+
+- Chairefón dostal příznak, ač jeho rok narození (asi 470) nemá pramen v datech: Obrana ho nedává, Wikipedii (c. 470/460) jsem do pramenů nezapsal, protože skill uznává SEP, IEP a Britannicu. Rok je přibližný, test prošel; otázka je v podkladech.
+- Plútarchos nemá směr (SEP: příslušnost k Akademii je sporná). Rok 66 u studia je odhad z jeho vlastního svědectví, proto přibližný.
+- Pireus u Antisthena nepřibyl (leží u Athén a na mini mapě by překrýval popisky).
+- Atributy: žádný nový. Antisthenés, Xenokratés, Chairefón a Kritón zůstávají bez desky (chybí ikony; pro Antisthena by šel dvojitý plášť s holí a mošnou).
+- Commity: data jsou v jednom commitu (`lide.yaml` a `zdroje.yaml` se prolínají), testy a popisek ve druhém.
+- Postup se osvědčil: heslo SEP nebo IEP stáhnout na Macu (`curl`, text, `grep`), ne WebFetchem; Britannica `curl` nepustí, Perseus ano (poučení v `docs/pouceni.md`).
+
+**Další krok.** M2: druhá vlna (11 osob), zadání níže. Podklady M1 mají v oddílu Pro autora pět řádků; autor je může projít kdykoli, žádný neblokuje M2.
+
+## M2: data druhé vlny
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Sonnet 5.5 · medium** se skillem `atlas-data`; sporné úseky Opus 5.5 · high se skillem `atlas-overeni` (přepnutím modelu v témže chatu, nebo otázka do podkladů). Po M1 se ukázalo, že většině osob data stačí a práce je hlavně v ověření proti pramenům; skutečné opravy „proč“ čekají u Eudoxa, Xenofónta a Musonia Rufa.
 
 Co necháš prázdné, bere se jako souhlas s návrhem.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíl Po M0), postup ve skillu atlas-data (kopie ve skills/atlas-data/).
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíly Po M0 a Po M1), postup ve skillu atlas-data (kopie ve skills/atlas-data/).
 
-Moje odpovědi (prázdné = souhlas s návrhem):
-- Medailonek bez atributu má hlavičku bez desky: 
-- Karta v Mapě a čase smí u medailonku dál říkat „Otevřít portrét“: 
-- Kam dál má nejvýš tři položky: 
+Moje odpovědi k otázkám z vlny 1 (docs/podklady/medailonky-vlna-1.md, oddíl Pro autora; prázdné = souhlas s doporučením):
 
-Krok M1: data první vlny. Osoby: Plútarchos, Lucretius, Chrýsippos, Antisthenés, Xenokratés, Chairefón, Démokritos, Kritón.
+Krok M2: data druhé vlny. Osoby: Alkibiadés, Eudoxos, Aristippos, Aristofanés, Musonius Rufus, Theofrastos, Xenofanés, Archytás, Speusippos, Xenofón, Zénón z Eleje.
 
-1. Pusť node scripts/medailonky-inventura.mjs a u každé osoby vlny projdi Chybí a Poznámky.
-2. U každé osoby podle skillu atlas-data ověř a doplň roky, místa s rolí, směr (jen patřil-li ke škole), vztahy se zdrojem a věty kdo a proč (jedna živá věta, bez tykání, styl podle docs/styl.md; „proč“ nesmí opakovat atribut ani vztah). Atribut doplň, jen když ho prameny nesou a ikona už je v docs/design/atributy-ikony.json; jinak ho nech na později a zapiš do podkladů. Lucretius nemá žádné místo: doplň ho z pramene, nebo ho nech bez medailonku a zapiš proč. U Zénóna z Kitia (medailonek z M0) přepiš „proč“, které opakuje atribut sloupoví.
-3. Každý nový údaj má pramen, který jsi otevřel; nový pramen zapiš do zdroje.yaml s datem overeno a poznámkou, co z něj bereš. Sporné (jiné roky o víc než deset let, vztah jen z jednoho antického svědectví, tradovaný příběh do „proč“) dělej Opus 5.5 · high se skillem atlas-overeni, nebo to zapiš jako otázku pro mě. Nové osoby nepřidávej; data lidí s profilem nebo portrétem neměň.
+1. Pusť node scripts/medailonky-inventura.mjs a u každé osoby vlny projdi Chybí a Poznámky. Většině chybí jen ověření; skutečné opravy „proč“ čekají u Eudoxa a Xenofónta (opakuje atribut) a u Musonia Rufa (opakuje jen vztah k Epiktétovi).
+2. U každé osoby podle skillu atlas-data ověř a doplň roky, místa s rolí, směr (jen patřil-li ke škole; Alkibiadés a Aristofanés ho nemají), vztahy se zdrojem a věty kdo a proč (jedna živá věta, bez tykání, styl podle docs/styl.md; „proč“ nesmí opakovat atribut ani vztah). Atribut doplň, jen když ho prameny nesou a ikona už je v docs/design/atributy-ikony.json; jinak ho nech na později a zapiš do podkladů. Zénón z Eleje má hloubku profil, ale stránku zatím nemá: medailonek dostane stejně a profil později.
+3. Každý nový údaj má pramen, který jsi otevřel; nový pramen zapiš do zdroje.yaml s datem overeno a poznámkou, co z něj bereš. Heslo SEP nebo IEP stáhni na Macu (curl, text, grep), ne nástrojem WebFetch (ten vrací celou stránku); Britannica curl nepustí, Perseus (perseus.tufts.edu/hopper) ano. Sporné (jiné roky o víc než deset let, vztah jen z jednoho antického svědectví, tradovaný příběh do „proč“) dělej Opus 5.5 · high se skillem atlas-overeni, nebo to zapiš jako otázku pro mě. Nové osoby nepřidávej; data lidí s profilem nebo portrétem neměň. Wikipedii mezi prameny nezapisuj: údaj, který jiný pramen nenese, zapiš jako otevřený.
 4. Osobě, která projde tests/data/medailonky.test.ts, přidej medailonek: true. Kdo neprojde, zůstane bez příznaku a v podkladech má důvod.
-5. Podklady vlny zapiš do docs/podklady/medailonky-vlna-1.md podle šablony ve skillu (co se změnilo, z jakého pramene, co zůstalo otevřené, otázky pro mě s doporučením a prázdným řádkem na odpověď).
+5. Podklady vlny zapiš do docs/podklady/medailonky-vlna-2.md podle šablony ve skillu (co se změnilo, z jakého pramene, co zůstalo otevřené, otázky pro mě s doporučením a prázdným řádkem na odpověď).
 
-Snímky: medailonek každé nové osoby na 390 px (světlý) a dvou z nich na 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs) a Doba a lidé u Sókrata a Epikúra (scripts/snimky-prvek.mjs '.doba'), do Claude outputs/medailonky/vlna-1/. scripts/kontrola-fokus.mjs na nových medailoncích. node scripts/doba-odkazy-vypis.mjs po npm run build musí skončit „Chyb: 0“.
+Snímky: medailonek každé nové osoby na 390 px (světlý) a dvou z nich na 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs) a Doba a lidé u Platóna a Aristotela (scripts/snimky-prvek.mjs '.doba'), do Claude outputs/medailonky/vlna-2/. scripts/kontrola-fokus.mjs na nových medailoncích. node scripts/doba-odkazy-vypis.mjs po npm run build musí skončit „Chyb: 0“.
 
-Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky po osobách nebo malých skupinách, nic neposílej na GitHub. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav a oddíl „Po M1“ (kolik osob dostalo medailonek, co zůstalo otevřené) a plné zadání M2 (druhá vlna, stejná struktura), rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš, kdo dostal medailonek, kdo ne a proč, a co mám rozhodnout.
+Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts nebo test v obsah.spec.ts, pusť ten soubor znovu samostatně. Testy, které čtou seznamy odkazů podle jmen (otazka.spec.ts, cesta8.spec.ts, hledání v prohlidka.spec.ts), padnou s každým novým medailonkem: uprav jen ty, které padnou kvůli novému odkazu. Commituj česky po osobách nebo malých skupinách, nic neposílej na GitHub. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav a oddíl „Po M2“ (kolik osob dostalo medailonek, co zůstalo otevřené) a plné zadání M3 (třetí vlna: Cicero, Karneadés, Anaxagorás, Gorgiás, Konfucius, Plótínos, Pýthagorás, Aspasie, Filón Alexandrijský, Hypatia, Isokratés, Anaximandros, Anaximenés, Empedoklés, Pyrrhón, Thalés; stejná struktura; upozorni v něm, že 11 osob nemá žádný vztah, a bez vztahu medailonek nevznikne, takže se vztah hledá v pramenech a nová osoba se nepřidává), rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš, kdo dostal medailonek, kdo ne a proč, a co mám rozhodnout.
 ```
 
 ## Uzavření větve

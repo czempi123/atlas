@@ -4,6 +4,21 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Medailonky, krok M1 (data první vlny)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Sedm osob první vlny dostalo medailonek: Plútarchos, Chrýsippos, Antisthenés, Xenokratés, Chairefón, Démokritos, Kritón. Podklady jsou v `docs/podklady/medailonky-vlna-1.md` | Data prošla kritérii (`tests/data/medailonky.test.ts`) a byla ověřená proti pramenům, které jsem otevřel |
+| Lucretius medailonek nedostal | SEP nezná jeho rodiště ani místo působení a test místo vyžaduje; místo z odhadu (Řím) by byl údaj bez pramene |
+| Chairefón dostal medailonek, i když jeho rok narození (asi 470) nemá pramen v datech; Wikipedie mezi prameny nepřibyla | Rok je přibližný a test prošel; skill uznává SEP, IEP a Britannicu; otázka pro autora je v podkladech |
+| Plútarchos nemá směr; studium v Athénách je od roku 66, přibližně | SEP: příslušnost k Akademii je sporná; rok je odhad z jeho vlastního svědectví (O delfském E 385B) |
+| U Antisthena „kdo“ říká, že byl synem Athéňana a Thrákyně; místo Athény je z Diogena Laertia VI (nový pramen `dl-vi-1`) | IEP: byl `nothos` bez athénského občanství, samotné „Athéňan“ je nepřesné; IEP místo neuvádí |
+| Nové „proč“ u Zénóna z Kitia (cíl života: soulad) a Plútarcha | Stará věta Zénóna opakovala atribut sloupoví, stará věta Plútarcha vztah k Epikúrovi; na stránce stojí pod sebou |
+| Přehled cesty píše u odkazu na medailonek „Jméno: medailonek“, ne „celý příběh“ | Dvě věty z dat nejsou celý příběh; změnil se jen popisek v `src/pages/cesta/[cesta]/index.astro` |
+| Odpovědi na tři otázky z M0 platí tak, jak byly navrženy (medailonek bez atributu má hlavičku bez desky, karta v Mapě a čase u medailonku říká „Otevřít portrét“, Kam dál má nejvýš tři položky) | Autor je v zadání M1 nechal prázdné, což znamená souhlas |
+| Test Doba a lidé u Sókrata je obecný: odkaz mají právě ti, kdo mají stránku (čte se z `lide.yaml`) | Další vlny nemusí přepisovat jmenné výjimky v testu |
+| Další v pořadí: M2 (druhá vlna, 11 osob) | Plán větve `docs/plany/medailonky.md` |
+
 ## 17. 10. 2026: Medailonky, krok M0 (inventura, skill atlas-data, šablona, plán)
 
 | Rozhodnutí | Důvod |

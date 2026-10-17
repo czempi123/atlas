@@ -21,3 +21,28 @@ Snímky: medailonek obou osob na 390 a 1440 px ve světlém i tmavém režimu a 
 
 Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky, nic neposílej na GitHub. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md a restartuj náhled npm run dev. Pak mi napiš, co vzniklo, kolik osob je ve kterých vlnách a co je potřeba rozhodnout.
 ```
+
+## M1: data první vlny
+
+Autor zadání poslal 17. 10. 2026 (Sonnet 5.5 · medium se skillem `atlas-data`).
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi medailonky. Plán je v docs/plany/medailonky.md (tabulka a oddíl Po M0), postup ve skillu atlas-data (kopie ve skills/atlas-data/).
+
+Moje odpovědi (prázdné = souhlas s návrhem):
+- Medailonek bez atributu má hlavičku bez desky: 
+- Karta v Mapě a čase smí u medailonku dál říkat „Otevřít portrét“: 
+- Kam dál má nejvýš tři položky: 
+
+Krok M1: data první vlny. Osoby: Plútarchos, Lucretius, Chrýsippos, Antisthenés, Xenokratés, Chairefón, Démokritos, Kritón.
+
+1. Pusť node scripts/medailonky-inventura.mjs a u každé osoby vlny projdi Chybí a Poznámky.
+2. U každé osoby podle skillu atlas-data ověř a doplň roky, místa s rolí, směr (jen patřil-li ke škole), vztahy se zdrojem a věty kdo a proč (jedna živá věta, bez tykání, styl podle docs/styl.md; „proč“ nesmí opakovat atribut ani vztah). Atribut doplň, jen když ho prameny nesou a ikona už je v docs/design/atributy-ikony.json; jinak ho nech na později a zapiš do podkladů. Lucretius nemá žádné místo: doplň ho z pramene, nebo ho nech bez medailonku a zapiš proč. U Zénóna z Kitia (medailonek z M0) přepiš „proč“, které opakuje atribut sloupoví.
+3. Každý nový údaj má pramen, který jsi otevřel; nový pramen zapiš do zdroje.yaml s datem overeno a poznámkou, co z něj bereš. Sporné (jiné roky o víc než deset let, vztah jen z jednoho antického svědectví, tradovaný příběh do „proč“) dělej Opus 5.5 · high se skillem atlas-overeni, nebo to zapiš jako otázku pro mě. Nové osoby nepřidávej; data lidí s profilem nebo portrétem neměň.
+4. Osobě, která projde tests/data/medailonky.test.ts, přidej medailonek: true. Kdo neprojde, zůstane bez příznaku a v podkladech má důvod.
+5. Podklady vlny zapiš do docs/podklady/medailonky-vlna-1.md podle šablony ve skillu (co se změnilo, z jakého pramene, co zůstalo otevřené, otázky pro mě s doporučením a prázdným řádkem na odpověď).
+
+Snímky: medailonek každé nové osoby na 390 px (světlý) a dvou z nich na 1440 px ve světlém i tmavém režimu (scripts/snimky-listy.mjs) a Doba a lidé u Sókrata a Epikúra (scripts/snimky-prvek.mjs '.doba'), do Claude outputs/medailonky/vlna-1/. scripts/kontrola-fokus.mjs na nových medailoncích. node scripts/doba-odkazy-vypis.mjs po npm run build musí skončit „Chyb: 0“.
+
+Kontrola: celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně. Commituj česky po osobách nebo malých skupinách, nic neposílej na GitHub. Na konci toto zadání přesuň do docs/archiv/zadani/medailonky.md, do plánu větve zapiš stav a oddíl „Po M1“ (kolik osob dostalo medailonek, co zůstalo otevřené) a plné zadání M2 (druhá vlna, stejná struktura), rozhodnutí zapiš do docs/rozhodnuti.md, do docs/pouceni.md připiš poučení jen když nějaké vzniklo, plán větve nahraj do projektu Claude jako docs/plany/medailonky.md, aktualizuj tam docs/plan.md, když se změnil, a restartuj náhled npm run dev. Pak mi napiš, kdo dostal medailonek, kdo ne a proč, a co mám rozhodnout.
+```

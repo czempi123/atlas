@@ -23,6 +23,8 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Co kresba označí za „náš obraz“, ověř u autora pokusu: spojenec na čtvrté židli je Aschův (1951), ne náš. A „kolo 1“ v tabulce studie může být první kritické kolo, ne první vůbec.
 - Prosba o pomoc není předání rozhodnutí: rodiče, kteří Kratéta prosili, ať jí to rozmluví, mu rozhodnutí „nesvěřili“. Spojovací věta, která to tvrdí, dělá z rodičů ty, kdo rozhodují přes hlavu dítěte.
 - Výtka proti předvádění („kdo dělá opak toho, co se čeká, řídí se pořád tím, co se čeká“) zasáhne i toho, kdo se od rodiny liší tím, kým je: zužuj ji na to, kvůli čemu výtka padla („jen proto, aby se vymezil“).
+- Heslo SEP nebo IEP stahuj na Macu (`curl -sL -A "Mozilla/5.0"`, Python odstraní značky, `grep` v textu): WebFetch vrací celou stránku a zaplní kontext (heslo o Plútarchovi má přes sto tisíc znaků). Britannica `curl` nepustí (vrátí pár znaků), Perseus Hopper ano (`perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258:book=6:chapter=1`), text knihy Diogena Laertia je tak lepší než XML z GitHubu.
+- Medailonek dostane jen to, co nese pramen z `zdroje`: když pramen osobě žádné místo nedává (Lucretius v SEP), medailonek nevznikne a místo se neodhaduje.
 
 ## Bloky
 
@@ -99,3 +101,5 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Text, který skládá JavaScript (popis pod kresbou), plugin pro nezlomitelné mezery nevidí: doplňuje je rám `Kresba.svelte`. Vzor v testu, který začíná `^`, proto píše za jednopísmennou předložkou `\s`.
 - Zkratka `animation` bez jména animace (jméno přijde zvlášť pro každý prvek) se při sestavení zminifikuje na `animation: none`: piš rozepsané vlastnosti (`animation-duration` a další).
 - `scripts/kontrola-fokus.mjs` ohlásí stránce klávesu sám (stránka dorovnává jen po fokusu z klávesnice): pole pod lištou, které hlásí, už není planý poplach.
+- V zsh nepiš `echo =====` (zsh to bere jako příkaz) ani proměnnou s hranatou závorkou v řetězci (`$s[`, glob). Víc kroků nad daty piš jako krátký skript v Pythonu (`python3 - <<'EOF'`). `sed -i` na macOS chce příponu (`sed -i ''`); soubory s hranatými závorkami v cestě (`[cesta]`) upravuj Pythonem.
+- Test, který čte seznam odkazů podle jmen (`otazka.spec.ts`, `cesta8.spec.ts`, hledání v `prohlidka.spec.ts`), padá s každým novým medailonkem: po vlně pusť celé `npm test` a uprav jen ty, které padnou kvůli novému odkazu. Test Mapy a času nebere `MEDAILONKY[0]`: první osoba v datech nemusí v daném roce žít.
