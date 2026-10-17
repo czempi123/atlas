@@ -4,6 +4,12 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 17. 10. 2026: Hodiny v1, promítání na plátně
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| H3 dostane režim Promítat: ze stránky hodiny (a ze skladatele) se hodina promítá bez hlavičky a patičky, s větším písmem, jen s úsekem zastavení a s ovládáním klikačem (šipky, PageUp/PageDown, F, Esc). Odkrývání na pokyn, QR kód a jeden podnět na obrazovku zůstávají Režimu třídy | Autor: hodina má být „použitelná na plátně jako prezentace“. Stránky atlasu jsou psané na čtení zblízka a lišta hodiny by šla ovládat jen myší; klikač posílá šipky nebo PageUp/PageDown |
+
 ## 17. 10. 2026: Hodiny v1, krok H2 (skladatel hodiny)
 
 | Rozhodnutí | Důvod |
