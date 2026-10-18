@@ -4,6 +4,14 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 18. 10. 2026: Hodiny v1, krok H4 (podoba zastavení na plátně)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Větev dostane krok H4 před revizí R: u bloku a kresby si učitel vybere podobu na plátně (celý blok, jen otázka a možnosti, otevřená otázka bez karet A–D, jen kresba). Podoba platí jen pro promítání, student doma vidí stránku celou | Autor: „hodit na plátno takovou horu textu je pořád trochu zavádějící“; chce si „natahat hlavně ty interaktivní prvky“ a celou stránku nechat jako možnost |
+| Otevřená otázka skrývá karty A–D; zpětnou vazbu učitel ovládá už dnes tím, kdy klikne. Studenti hlasují rukou nebo si karty otevřou v telefonu přes odkaz hodiny a kdo si něco vybral, rozvede proč | Autor: „myslím ty karty A–D… třídní ankety a pak se o tom bavit“ |
+| Počty hlasů na plátně H4 nedělá | Statický web bez serveru hlasy z telefonů nesečte; patří k Režimu třídy |
+
 ## 17. 10. 2026: Hodiny v1, krok H3 (hodina pro studenta, lišta, promítání, tisk)
 
 | Rozhodnutí | Důvod |
