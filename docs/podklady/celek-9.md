@@ -2,7 +2,7 @@
 
 Ověřeno 18. 10. 2026 (P6). Celek: cesta 34 „Kam mi mizí čas?“ (Seneca, Marcus Aurelius), hlavní otázka 1 „Jak mám žít?“. Studentský text v tomto kroku nevzniká. Pracoval jsem bez mezikroku schvalování; co smí rozhodnout jen autor, je na konci.
 
-**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — hotovo · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
+**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — hotovo · h) Obrázky — hotovo · i) Otevřené otázky — rozpracováno
 
 **Jak se ověřovalo.** Primární texty jsem četl sám v plném znění, stažené na autorově Macu mimo repozitář (`/tmp/celek9`). Latinsky z The Latin Library: O krátkosti života celé (kap. 1–20), O duševním klidu 3–5, O volném čase 3–5. Latinsky z PerseusDL (`phi1017/phi015`, Gummere): Dopisy Luciliovi 1. Latinsky z PerseusDL (`phi1351/phi005`, Fisher): Tacitovy Letopisy I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60. Řecky z PerseusDL (`tlg0562/tlg001`, Leopold): Marcus II, 4; II, 5; II, 14; III, 10; III, 14; IV, 3; IV, 17; IV, 24; IV, 32; IV, 48; V, 1; VI, 12; VII, 69; VIII, 8; VIII, 9; VIII, 36; X, 15; XII, 1 a místní údaje na konci knih I a II. Heslo SEP „Seneca“ (K. Vogt) a IEP „Seneca“ jsem stáhl na Mac a hledal v nich sám. Zprávu OECD PISA in Focus 124 (2024) jsem četl v plném textu (PDF převedené na text). Článek M. Griffinové „De Brevitate Vitae“ (JRS 52, 1962) a úvod G. D. Williamse k vydání De otio a De brevitate vitae (Cambridge 2003) znám **jen z úryvků ve vyhledávači**; tiskovou zprávu WHO Europe ke zprávě HBSC (25. 9. 2024) jen z vyhledávače a ze stránky HBSC. Wikipedie sloužila jen jako rozcestník (datace spisu).
 
@@ -283,3 +283,35 @@ Jeden den, kdykoli sáhneš po telefonu bez důvodu, se nejdřív v duchu zeptej
 - Carnuntum a Granua (portrét Marca) jen jako „na tažení u Dunaje“.
 - Ranní příprava (II, 1; V, 1), pohled shora a večerní ohlédnutí patří Stoickému týdnu.
 - „Žij každý den jako poslední“ (VII, 69; Dopisy 101, 10) nepoužívat jako heslo: student po ztrátě to čte jinak a cesta o smrti nemluví.
+
+## Návrh dat (pro P8)
+
+Nic není zapsáno do `src/data`; zapíše P8 spolu s obsahem. Žádné nové osoby, místa ani vztahy.
+
+```yaml
+# zdroje.yaml: rozšířit existující pramen
+- { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-10-18, poznamka: "Paulinovi (1, 1; 18, 1); nemáme málo času (1, 3–4); život je dlouhý, když ho umíš použít (2, 1); nikdo nepatří sám sobě (2, 4); pozemek a život (3, 1); spočítej si léta (3, 2–3); jako byste žili navždy, v padesáti se stáhnu (3, 4–5); žít mi nedovolí (7, 6–8); nežil dlouho, jen byl (7, 10); čas není vidět (8, 1–2); nikdo ti léta nevrátí (8, 5); čekání ztrácí dnešek (9, 1); zaneprázdněné volno (12, 2); rozhovor s mudrci (14, 1–2); rodiny duchů (15, 3); Paulinus a obilí, ne lenivý klid (18–19); cizím krokem, spočítej, kolik je tvoje (20, 1); Turranius (20, 4)." }
+# nové prameny
+- { id: seneca-ep-1, druh: pramen, nazev: "Dopisy Luciliovi 1 a 17", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-18, poznamka: "Vezmi si sebe zpátky, tři způsoby ztráty času, dělat něco jiného (1, 1); obejmi každou hodinu, zatímco se odkládá (1, 2); jen čas je náš (1, 3); co ztrácím, proč a jak (1, 4). Bohatství překáží filozofii, dobrovolná chudoba, k filozofii i bez zásob (17, 3–8)." }
+- { id: seneca-tranquillitate-otium, druh: pramen, nazev: "O duševním klidu 3–4 a 13; O volném čase 3", autor: Seneca, dilo: "De tranquillitate animi, De otio (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.tranq.shtml", overeno: 2026-10-18, poznamka: "Athénodóros radí ustoupit z fóra (3); Seneca: utekl příliš rychle, kdo nemůže sloužit jako občan, ať slouží jako člověk, mísit volno s prací (4, 1–8); Démokritos, dělej málo, vztaženo na zbytečné (13, 1). O volném čase (sen.otio.shtml): Epikúros a Zénón o vstupu do veřejných věcí (3, 2–3); prospět mnohým, několika, nejbližším, sobě (3, 5)." }
+- { id: tacitus-annales-paulinus, druh: pramen, nazev: "Letopisy I, 7; XI, 31; XIII, 53; XV, 18 a 45", autor: Tacitus, dilo: "Annales, lat. C. D. Fisher (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml", overeno: 2026-10-18, poznamka: "Turranius správcem obilí roku 14 (I, 7) a 48 (XI, 31); Pompeius Paulinus velí v Germánii (XIII, 53, rok 58) a je mezi třemi konzuláry nad příjmy (XV, 18, rok 62); pověst o druhé žádosti o odchod a předstírané nemoci (XV, 45, rok 64). Jestli jde o adresáta O krátkosti života, je sporné." }
+- { id: oecd-pisa-screen-time, druh: data, nazev: "Managing screen time (PISA in Focus 124)", autor: OECD, dilo: "PISA in Focus 2024/124, data PISA 2022", url: "https://www.oecd.org/en/publications/managing-screen-time_7c225af4-en.html", overeno: 2026-10-18, poznamka: "Dotazník patnáctiletých; 54 % se podle sebe snadno nechá rozptýlit (průměr OECD); méně rozptýlení u těch, kdo vypínají upozornění, nemají zařízení otevřené a necítí tlak odpovídat; do hodiny sítí denně lepší výsledek v matematice než vůbec; tři čtvrtiny přes hodinu denně na sítích ve všední den. Souvislosti, ne pokus." }
+- { id: meta-10k-2025, druh: data, nazev: "Form 10-K za rok 2025, oddíl Revenue", autor: "Meta Platforms, Inc.", dilo: "výroční zpráva pro SEC", url: "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm", overeno: 2026-10-18, poznamka: "Příjmy 200 966 mil. USD, z toho reklama 196 175 mil. USD; růst reklamy díky většímu počtu zobrazených reklam a vyšší ceně za reklamu. Tabulka viděna ve výsledku vyhledávání, stránka zprávy neotevřena." }
+```
+
+Citáty (`zdroje.yaml`, sekce citátů) zapíše P8 jen pro místa, která cesta opravdu použije, s ids z tabulek b a c. Pro každý: `osoba`, `autor`, `dilo`, `misto`, `cesky`, `original`, `preklad: { druh: vlastni, podle: "latinský text (The Latin Library)" }` nebo `"řecký text (Leopold)"`, `zdroj`.
+
+## h) Obrázky (hotovo)
+
+Nic není staženo.
+
+**Doporučení: vstup cesty bez obrázku.** Obrazem cesty je kresba Přesýpací hodiny v kroku 3; vstup stojí na scéně s obilím. Stejně rozhodl autor u cesty 8 (dopis bez obrázku). Podobizna Seneky (berlínská herma) i Marca jsou na jejich stránkách a v hlavičce cesty se ukážou samy jako filozofové cesty.
+
+**Kdyby autor obrázek chtěl** (nic jsem nestáhl a snímky jsem neviděl):
+
+| Kandidát | Co zobrazuje | Instituce | Licence | Odkaz | Stav |
+| --- | --- | --- | --- | --- | --- |
+| A. Nástěnná malba z vily v Boscoreale (03.14.2) | Fragment fresky ze sloupořadí vily P. Fannia Synistora, kolem 50–40 př. n. l.; muzeum ho štítkuje „sluneční hodiny“ a „glóbus“. Asi sto let před Senekovým spisem. | The Metropolitan Museum of Art | Public Domain (Open Access), ověřeno v API (`isPublicDomain: true`) | https://www.metmuseum.org/art/collection/search/247006 | Snímek jsem neviděl; jestli jsou sluneční hodiny na fragmentu poznat, posoudí autor. |
+| B. Mozaika s měřiči obilí z Ostie | Měření obilí v přístavu, kudy šlo obilí do Říma: přesně Paulinova práce. | Ostia antica (in situ) | **Neověřeno**: fotografie by musela být z Wikimedia Commons, kterou nástroje neotevřou; licenci by potvrdil autor sám. | — | Jen nápad; bez licence nepoužít. |
+
+Popisek k A, kdyby ho autor chtěl: „Nástěnná malba z římské vily, asi sto let před Senekou. Mezi tím, co si majitel nechal namalovat, jsou i sluneční hodiny.“ (Až po prohlédnutí snímku.)
