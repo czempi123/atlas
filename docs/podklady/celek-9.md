@@ -2,7 +2,7 @@
 
 Ověřeno 18. 10. 2026 (P6). Celek: cesta 34 „Kam mi mizí čas?“ (Seneca, Marcus Aurelius), hlavní otázka 1 „Jak mám žít?“. Studentský text v tomto kroku nevzniká. Pracoval jsem bez mezikroku schvalování; co smí rozhodnout jen autor, je na konci.
 
-**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — rozpracováno · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
+**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — hotovo · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
 
 **Jak se ověřovalo.** Primární texty jsem četl sám v plném znění, stažené na autorově Macu mimo repozitář (`/tmp/celek9`). Latinsky z The Latin Library: O krátkosti života celé (kap. 1–20), O duševním klidu 3–5, O volném čase 3–5. Latinsky z PerseusDL (`phi1017/phi015`, Gummere): Dopisy Luciliovi 1. Latinsky z PerseusDL (`phi1351/phi005`, Fisher): Tacitovy Letopisy I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60. Řecky z PerseusDL (`tlg0562/tlg001`, Leopold): Marcus II, 4; II, 5; II, 14; III, 10; III, 14; IV, 3; IV, 17; IV, 24; IV, 32; IV, 48; V, 1; VI, 12; VII, 69; VIII, 8; VIII, 9; VIII, 36; X, 15; XII, 1 a místní údaje na konci knih I a II. Heslo SEP „Seneca“ (K. Vogt) a IEP „Seneca“ jsem stáhl na Mac a hledal v nich sám. Zprávu OECD PISA in Focus 124 (2024) jsem četl v plném textu (PDF převedené na text). Článek M. Griffinové „De Brevitate Vitae“ (JRS 52, 1962) a úvod G. D. Williamse k vydání De otio a De brevitate vitae (Cambridge 2003) znám **jen z úryvků ve vyhledávači**; tiskovou zprávu WHO Europe ke zprávě HBSC (25. 9. 2024) jen z vyhledávače a ze stránky HBSC. Wikipedie sloužila jen jako rozcestník (datace spisu).
 
@@ -216,3 +216,70 @@ Seneca píše starému úředníkovi a Marcus sobě jako císaři. Šestnáctile
 - **„Představ si…“ (vymyšlená situace):** Večer si sedneš, že se půl hodiny podíváš na telefon a pak se pustíš do věci, na které ti záleží (kreslení, kytara, trénink, kniha). Když telefon odložíš, je za deset minut půlnoc. Druhý den se zkus rozpomenout, co jsi za ty dvě hodiny viděl. A kdo o každé z nich rozhodl: ty, kamarád, který psal, nebo něco, co ti nabídlo další video?
 - **Proč ne jen „spočítej si čas u obrazovky“:** většina telefonů to číslo ukáže sama; Senekova otázka je jiná. Nejde o počet hodin, ale o to, kdo je naplánoval.
 - **Druhý případ, bez telefonu** (aby cesta nestála jen na obrazovce): rozvrh po škole plný kroužků, které vybrali rodiče, a brigáda; Seneca by se ptal, které z toho je tvoje, ne kolik toho je. Pozor na rodiny, kde kroužek je dar a brigáda nutnost: zpětná vazba nesmí rodiče soudit (námitka 3).
+
+## g) Návrh cesty (hotovo)
+
+Osm kroků, asi 20 minut (přesný čas spočítá P8 skriptem `node scripts/slova-cesta.mjs`). Slug návrh: `kam-mi-mizi-cas`. V datech cesty: `obdobi: 2`, `otazka: 1`, `filozofove: [seneca, marcus-aurelius]` (oba z katalogu). Žádná nová osoba; Paulinus a Turranius zůstávají v textu bez odkazu (jako Lucilius a Paulina v celku 6).
+
+### Osnova
+
+| Krok | Název (pracovní) | Co se v něm děje | Blok | Opora |
+| --- | --- | --- | --- | --- |
+| 1 | Chléb pro celé město | Scéna: Paulinus a obilí, Řím, kterému po Caligulovi zbylo jídlo na týden; Seneca mu píše, že nemá málo času, jen ho promarnil. Před citátem vlastní pokus. | **Volba s důvodem** „Máš dost času na to, na čem ti záleží?“: Nemám, mám moc povinností · Mám, ale nějak mi mizí · Mám dost · Nevím, nikdy jsem to nepočítal. Pak citát b1. | a1–a4, b1 |
+| 2 | Plot kolem pozemku | Kolo nebo telefon si hlídáš, čas rozdáváš (b4). Pak Senekovy tři způsoby, jak čas zmizí (b21). | **Roztřiď** s koši z Dopisu 1, 1: „Vzali mi ho · Vzal si ho nenápadně · Protekl mi sám · Byl opravdu můj“; karty z obyčejného týdne (trénink, který mám rád; hodina čekání u lékaře; nekonečné video; zpráva od kamarádky, která potřebovala pomoct; školní úkol; hádka, která se táhla; spánek), s vlastní kartou. Zpětná vazba u spánku a školy řekne, že tyhle hodiny Seneca nepočítá jako ztracené. | b4, b21; pravidla Roztřiď z `docs/pouceni.md` |
+| 3 | Spočítej si týden | Senekova výzva starému muži (b5, zkráceně) převedená na týden šestnáctiletého. | **Kresba s pohybem „Přesýpací hodiny“** (viz níže), pak citát b5 nebo b11. | b5, b10, b11 |
+| 4 | Pohřeb za živa | Turranius (b19) a otázka, proč někdo nechce volno; zaneprázdnění jsou i ti úspěšní (b3, b8) a i volno může být zaneprázdněné (b13). | **Odkryj** „Proč by si někdo, komu dali volno, nechal vystrojit pohřeb?“; modelové odpovědi (zvyk, kdo jsem bez práce, ticho ho děsí) a pak Senekova otázka. | b3, b8, b13, b19 |
+| 5 | Kdo rozhodl? | Dnešní případ „Představ si…“ (oddíl f): večer, který měl trvat půl hodiny. Údaje f1 a f2 v jedné až dvou větách. Pointa z 20, 1. | **Změň jednu věc**: tatáž hodina na telefonu; podmínky: psala kamarádka, které je smutno · aplikace nabídla další video · rozhodl ses pustit si film · hodinu ti zadal učitel. Otázka: Čí byla ta hodina? Možnosti dávají smysl v každé podmínce (`docs/pouceni.md`). Pak citát b18. | b18, b22, f1, f2 |
+| 6 | Odejít, nebo ustoupit do sebe? | Seneca radí Paulinovi odejít; Marcus odejít nemůže a hledá volno uvnitř (II, 5; IV, 3; VIII, 8). Scéna řekne námitku proti oběma (oddíl d). Za blokem obrat: Seneca sám odejít nesměl (a7–a8). | **Spor** Seneca × Marcus Aurelius (oddíl d, Volby pro blok Spor). | d, a7–a8, c2, c6, c10, c11, c12 |
+| 7 | Bez volna | Námitky z oddílu e: volno je pro bohaté; čas pro blízké; čas s přáteli v telefonu. Odpověď Marca (VIII, 8: číst nemůžeš, ale…) a Seneky (Dopisy 17, 3; O volném čase 3, 5). Nový případ jiného druhu než krok 5: student, který každé odpoledne hlídá mladší sourozence. | **Odkryj** „Je ten čas jeho?“, modelové odpovědi Seneky a Marca; bez soudu nad rodinou. | e, c8, c10 |
+| 8 | Tvoje pravidlo | Kdo dá za pravdu komu: každá možnost Volby z kroku 1 a každá poloha Sporu dostane spojence (`docs/pouceni.md`, Celek). Panel Na začátku × Teď. | **Závěr cesty** (vlastní pravidlo „Můj čas je můj, když…“) a **Zkus to žít**. | závěr, Návrat, Zkus to žít níže |
+
+Kroky 7 a 8 jsou dva, ne jeden (poučení z cesty 2: zastánci odpovědí a nový případ se nesejdou pod jedním nadpisem).
+
+### Kresba s pohybem „Přesýpací hodiny“ (krok 3)
+
+**Proč tahle.** Přesýpací hodiny jsou atribut Seneky (`lide.yaml`), takže kresba spojí cestu s portrétem. A převádí na obraz jádro spisu: čas teče potichu (b11) a není vidět (b10), dokud ho někdo nespočítá (b5).
+
+**Co student dělá.** Nahoře jsou hodiny s pískem jednoho běžného dne ve všední den (24 dílků, zrnko za hodinu nebo shluk zrnek za hodinu). Student nastaví posuvníky nebo klepnutím na dílky, kolik hodin jde na spánek, školu, cestu, jídlo a povinnosti doma, telefon a věci, na kterých mu záleží. Pak hodiny spustí: písek padá a každá hodina se dole usadí v barvě podle toho, **kdo o ní rozhodl** (já · škola a rodina · někdo jiný · nevím, protekla). Na konci text pod kresbou řekne, kolik hodin dole je „já“ a kolik „nevím“. Seneca by se ptal na ten poslední pruh.
+
+**Pravidla z `docs/pouceni.md` a skillu `atlas-komponenta`:** pohyb jde zastavit; při omezeném pohybu hodiny stojí a text pod nimi říká totéž slovy; v kresbě není nic, co není v modelu (žádné ozdoby, ciferníky ani logo aplikace); na telefonu má jednotka vyjít asi na pixel; školu a spánek kresba nebarví jako ztrátu (námitka 3). Kresbu ukázat autorovi dřív, než se popíše jako hotová. Kresba je jiná než pohár v cestě 6 (tam student dolévá, tady počítá, kdo rozhodl), ale ovládání „nalij, podívej se“ se nesmí opakovat stejně.
+
+**Varianta B: Loď ve vichru (b9).** Dvě lodě, stejné hodiny na palubě: jedna pluje k cíli, druhou honí vítr dokola u přístavu. Přepínač „kdo drží kormidlo: ty / vítr“. Hezčí obraz, ale slabší pro vlastní pokus (student jen dívá). Doporučuji A; B nechat jako obraz ve větě kroku 4.
+
+### Závěrečné pravidlo
+
+Otázka bloku Závěr cesty: „Kdy je tvůj čas opravdu tvůj?“ Modelová pravidla (aby jich bylo víc a žádné nebylo „správné“):
+
+- „Když vím, kdo o té hodině rozhodl, a souhlasím s tím.“ (Seneca, 20, 1)
+- „Když dělám jednu věc a nedělám u ní něco jiného.“ (Dopisy 1, 1; Marcus II, 5)
+- „Když vím, komu a proč ho dávám.“ (O volném čase 3, 5; pravidlo z celku 8 pro pečující studenty)
+- „Když se u věci zeptám, jestli je nutná.“ (Marcus IV, 24)
+
+### Návrat (tři případy do deníku, bez pramenů a čísel)
+
+Jiného druhu než případy v cestě (večer s telefonem, hlídání sourozenců), aby student zkusil vlastní pravidlo jinde:
+
+1. **Stěhování.** Kamarádka tě poprosí, jestli bys jí v sobotu celé odpoledne pomohl se stěhováním. Měl jsi v plánu jet na kolo. Kdyby sis zvolil stěhování, byla by ta sobota tvoje?
+2. **Děda v důchodu.** Děda odešel do důchodu a do měsíce si našel tři nové povinnosti. Říká, že bez práce by se zbláznil. Zaneprázdněný, nebo svůj?
+3. **Videohovor do noci.** S partou ze tábora si voláte každý večer do půlnoci. Je to den ztracený, nebo ten nejlepší?
+
+### Zkus to žít: „Proč teď?“
+
+Jeden den, kdykoli sáhneš po telefonu bez důvodu, se nejdřív v duchu zeptej: Je to teď nutné? A kdo o tom právě rozhodl, já, nebo něco jiného? Telefon pak klidně odemkni. Večer si nic zapisovat nemusíš. (Podle Marca IV, 24: u každé věci se ptej, jestli je nutná. Odlišné od večerního ohlédnutí ze Stoického týdne: probíhá během dne, ne zpětně.) Pro pečujícího studenta platí i menší míra: „klidně jen jedno odpoledne“.
+
+### Vazby na hotové stránky
+
+- **Portrét Seneky:** v kapitole, kde stojí scéna ve vile a atribut přesýpacích hodin, jedna věta s odkazem na cestu 34 (P8 vybere místo; portrét se času dotýká jen jednou). Do Kam dál portrétu cesta přibude sama, pokud ji generuje data (P8 ověří).
+- **Portrét Marca:** v kapitole o zápiscích, kde je ústraní (IV, 3), odkaz na krok 6 cesty 34.
+- **Stránka otázky 1:** stoický hlas **už má** (Seneca, O blaženém životě 26: bohatství; `src/content/otazky/jak-zit.mdx`). Hlas Hipparchie navíc už nese myšlenku „kdo určil, kam má tvůj čas patřit“. Nový hlas proto **nenavrhuji**; cesta 34 se k otázce připojí přes data cesty (`otazka: 1`). Viz Otevřené otázky.
+- **Cesta 7 (Hipparchia):** krok „Nejdřív ty“ a hlas na otázce 1 mluví o tom, kdo rozhoduje o mém životě (zvyk, rodina, očekávání). Cesta 34 to nesmí opakovat: mluví o hodinách a pozornosti, ne o životních volbách. Ve 8. kroku jako spojenec studenta, kterému jde víc o „čí život“ než o „čí hodiny“, smí stát odkaz na cestu 7.
+- **Cesta 5:** b12 („plánuješ, co je v rukou štěstěny“) jen s odkazem na Epiktétovo dělení.
+- **Cesta 8:** „umíráme každý den“ (Dopisy 24, 20) a Dopisy 1, 2 *quicquid aetatis retro est, mors tenet* zůstávají cestě 8; cesta 34 o smrti nemluví víc než jednou větou (b11).
+
+### Překryvy, kterým se cesta vyhne
+
+- Atribut Seneky (b1) zazní v cestě jednou.
+- Scénu žádosti u Nerona vypráví portrét Seneky (Tacitus XIV, 53–56); cesta ji podá jinak a kratší (jen „chtěl svůj čas zpátky“, a8), aby stála i bez portrétu.
+- Carnuntum a Granua (portrét Marca) jen jako „na tažení u Dunaje“.
+- Ranní příprava (II, 1; V, 1), pohled shora a večerní ohlédnutí patří Stoickému týdnu.
+- „Žij každý den jako poslední“ (VII, 69; Dopisy 101, 10) nepoužívat jako heslo: student po ztrátě to čte jinak a cesta o smrti nemluví.
