@@ -2,7 +2,7 @@
 
 Ověřeno 18. 10. 2026 (P6). Celek: cesta 34 „Kam mi mizí čas?“ (Seneca, Marcus Aurelius), hlavní otázka 1 „Jak mám žít?“. Studentský text v tomto kroku nevzniká. Pracoval jsem bez mezikroku schvalování; co smí rozhodnout jen autor, je na konci.
 
-**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — rozpracováno · f) Dnešní případ — rozpracováno · g) Návrh cesty — rozpracováno · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
+**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — rozpracováno · g) Návrh cesty — rozpracováno · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
 
 **Jak se ověřovalo.** Primární texty jsem četl sám v plném znění, stažené na autorově Macu mimo repozitář (`/tmp/celek9`). Latinsky z The Latin Library: O krátkosti života celé (kap. 1–20), O duševním klidu 3–5, O volném čase 3–5. Latinsky z PerseusDL (`phi1017/phi015`, Gummere): Dopisy Luciliovi 1. Latinsky z PerseusDL (`phi1351/phi005`, Fisher): Tacitovy Letopisy I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60. Řecky z PerseusDL (`tlg0562/tlg001`, Leopold): Marcus II, 4; II, 5; II, 14; III, 10; III, 14; IV, 3; IV, 17; IV, 24; IV, 32; IV, 48; V, 1; VI, 12; VII, 69; VIII, 8; VIII, 9; VIII, 36; X, 15; XII, 1 a místní údaje na konci knih I a II. Heslo SEP „Seneca“ (K. Vogt) a IEP „Seneca“ jsem stáhl na Mac a hledal v nich sám. Zprávu OECD PISA in Focus 124 (2024) jsem četl v plném textu (PDF převedené na text). Článek M. Griffinové „De Brevitate Vitae“ (JRS 52, 1962) a úvod G. D. Williamse k vydání De otio a De brevitate vitae (Cambridge 2003) znám **jen z úryvků ve vyhledávači**; tiskovou zprávu WHO Europe ke zprávě HBSC (25. 9. 2024) jen z vyhledávače a ze stránky HBSC. Wikipedie sloužila jen jako rozcestník (datace spisu).
 
@@ -165,3 +165,33 @@ Seneca nakonec od dvora odejít nesměl. Tacitus mu do úst vkládá prosbu, kte
 - Otázka bloku: „Kde vzít čas pro sebe: odejít, nebo ho hledat uvnitř toho, co tě zaměstnává?“
 - Pět poloh škály (vzor `cesta2-seneca-plutarchos.yaml`): od „odejít, jakmile to jde“ přes „mísit obojí“ (tu hájí sám Seneca v O duševním klidu; zpětná vazba to řekne, aby prostřední poloha nebyla bez zastánce) po „zůstat a udělat si volno uvnitř“.
 - Krajní polohy nesmějí být krajnější než citát strany (`docs/pouceni.md`): Seneca neříká „opusť všechno“; Marcus neříká „nikdy neodcházej“.
+
+## e) Nejsilnější námitka (hotovo)
+
+### Námitka 1: volný čas je výsada bohatých
+
+**V nejsilnější verzi.** Senekovo „vezmi si čas pro sebe“ předpokládá, že je komu ho vzít. Kdo pracuje na dvě směny, stará se o nemocného rodiče nebo o mladší sourozence, nemá před sebou Paulinovu volbu „úřad, nebo filozofie“. A radí to jeden z nejbohatších mužů Říma.
+
+**Co je doloženo o Senekovi.** Byl velmi bohatý z císařových darů; číslo 300 milionů sesterciů je výčitka nepřítele, ne účetnictví (celek 6, Život 17; Tacitus XIII, 42). Výčitku, že káže jinak, než žije, slyšel za života a odpovídá na ni v O blaženém životě; tuto odpověď už nese hlas Seneky na stránce otázky 1 (`vita-beata-26`). Cesta ji neopakuje.
+
+**Co by Seneca odpověděl (z jeho textů):**
+
+1. **Filozofie bohatství nepotřebuje, spíš jí překáží.** „Mnohým zabránilo filozofovat bohatství; chudoba je volná a bez starostí“ (Dopisy 17, 3: *Multis ad philosophandum obstitere divitiae; paupertas expedita est, secura est*). „Až budu mít dost, dám se celý filozofii“ je výmluva: „k filozofii se dá dojít i bez zásob na cestu“ (17, 5 a 7: *licet ad philosophiam etiam sine viatico pervenire*). — doložený text, vlastní převod. Pozor: Dopis 17, 9 má větu o odchodu ze života; do cesty ne.
+2. **Čas, který dáváš blízkým, není ztracený, když víš komu a proč.** Měřítkem v O krátkosti života není, kolik času dáš druhým, ale kdo o něm rozhodl (20, 1: „chodí cizím krokem“). A v O volném čase: prospět se má mnoha lidem, a když to nejde, aspoň nejbližším (3, 5: *si minus, proximis*). Kdo se stará o nemocného rodiče, dělá podle Seneky přesně to, co člověk má. — výklad, ze dvou míst; **zpětná vazba nesmí pečujícímu studentovi říct, že jeho čas „je jeho, jen když…“** (`docs/pouceni.md`, celek 8): piš „když víš, komu a proč ho dáváš“.
+3. **I bez volna se dá dělat, oč jde.** Tohle neříká Seneca, ale Marcus: „Číst nemůžeš. Ale…“ (VIII, 8). Pro studenta bez volna je to silnější odpověď než Senekova a cesta ji má dát jemu, ne Senekovi.
+
+**Kde je Senekova odpověď slabá.** Chudoba, kterou chválí, je „dobrovolná chudoba“ (17, 5: *paupertas voluntaria*): chudoba člověka, který si ji může zvolit. Chudý, který nemá čas, protože musí vydělávat, nemá co zvolit. A rada Paulinovi (18, 4) „nebudou chybět lidé přesní a pracovití“ přesouvá práci na jiné: někdo to obilí převážet musí. Tohle cesta řekne a nechá otevřené; spojencem studenta, který to tak vidí, je Marcus (zůstat a dělat svou práci dobře) a ze současníků atlasu nikdo dalšího nepotřebuje.
+
+### Námitka 2: čas s přáteli v telefonu není promarněný
+
+**V nejsilnější verzi.** Většina času na telefonu je čas s lidmi: zprávy, společná hra, video, o kterém se pak mluví. Seneca sám prožil poslední roky tím, že psal příteli dopisy (celek 6), a o dopisech píše, že mají být jako rozhovor, „kdybychom spolu seděli nebo se procházeli“ (Dopisy 75, 1; citát `seneca-ep-75-1` v datech). Odsoudit telefon jako žrouta času je odsoudit přátelství.
+
+**Co by Seneca odpověděl.** Nic proti přátelství: v jeho měřítku je čas ztracený, když ho bere někdo, kdo tě „nemá v přátelství, ale ve výbavě“ (7, 7: *qui vos non in amicitiam sed in apparatu habet*), a když člověk dělá „něco jiného“, než co právě dělá (Dopisy 1, 1: *aliud agentibus*). Rozhovor s přítelem, kterému dávám pozornost, je podle tohoto měřítka můj čas. Čas, kdy mě aplikace volá zpátky a já nevím proč, není.
+
+**Kde je jeho odpověď slabá.** Hranice „kdo rozhodl“ se uvnitř jednoho večera na telefonu těžko hledá: tutéž hodinu tvoří odpověď kamarádce i deset minut, které jsem nechtěl. Seneca má jen hrubé měřítko (spočítej si to), ne nástroj. Tady pomůže Marcova otázka u každé věci: „Je tohle nutné?“ (IV, 24). Ani ta ale neřekne, co je „nutné“ v přátelství.
+
+**Data, která námitku podpírají** (oddíl f): podle PISA 2022 dosahují patnáctiletí, kteří na sociálních sítích tráví do hodiny denně, v matematice **lepších** výsledků než ti, kdo tam netráví čas vůbec. Cesta tím nesmí dokazovat, že telefon je dobrý; jen že „žádný čas na sítích“ není samo o sobě měřítko.
+
+### Námitka 3 (pro autora): není to celé jen pro dospělé?
+
+Seneca píše starému úředníkovi a Marcus sobě jako císaři. Šestnáctiletý nemá úřad ani dvůr; většinu jeho času rozvrhují škola a rodiče, a to oprávněně. Odpověď cesty: měřítko „kdo rozhodl“ neznamená „rozhoduj o všem sám“. Znamená vědět, která hodina je čí: školní je školy, a to je v pořádku; která je opravdu moje, a kdo mi ji bere. Seneca to rozlišení výslovně má: koho volají povinnosti, ten má dělat „nespočet věcí“ (O duševním klidu 13, 1), zbytečné má škrtat. **Zpětná vazba nesmí hodiny ve škole ani doma počítat jako „ztracené“.**
