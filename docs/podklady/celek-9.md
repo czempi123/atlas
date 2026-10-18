@@ -2,7 +2,7 @@
 
 Ověřeno 18. 10. 2026 (P6). Celek: cesta 34 „Kam mi mizí čas?“ (Seneca, Marcus Aurelius), hlavní otázka 1 „Jak mám žít?“. Studentský text v tomto kroku nevzniká. Pracoval jsem bez mezikroku schvalování; co smí rozhodnout jen autor, je na konci.
 
-**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — rozpracováno · e) Námitka — rozpracováno · f) Dnešní případ — rozpracováno · g) Návrh cesty — rozpracováno · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
+**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — rozpracováno · f) Dnešní případ — rozpracováno · g) Návrh cesty — rozpracováno · h) Obrázky — rozpracováno · i) Otevřené otázky — rozpracováno
 
 **Jak se ověřovalo.** Primární texty jsem četl sám v plném znění, stažené na autorově Macu mimo repozitář (`/tmp/celek9`). Latinsky z The Latin Library: O krátkosti života celé (kap. 1–20), O duševním klidu 3–5, O volném čase 3–5. Latinsky z PerseusDL (`phi1017/phi015`, Gummere): Dopisy Luciliovi 1. Latinsky z PerseusDL (`phi1351/phi005`, Fisher): Tacitovy Letopisy I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60. Řecky z PerseusDL (`tlg0562/tlg001`, Leopold): Marcus II, 4; II, 5; II, 14; III, 10; III, 14; IV, 3; IV, 17; IV, 24; IV, 32; IV, 48; V, 1; VI, 12; VII, 69; VIII, 8; VIII, 9; VIII, 36; X, 15; XII, 1 a místní údaje na konci knih I a II. Heslo SEP „Seneca“ (K. Vogt) a IEP „Seneca“ jsem stáhl na Mac a hledal v nich sám. Zprávu OECD PISA in Focus 124 (2024) jsem četl v plném textu (PDF převedené na text). Článek M. Griffinové „De Brevitate Vitae“ (JRS 52, 1962) a úvod G. D. Williamse k vydání De otio a De brevitate vitae (Cambridge 2003) znám **jen z úryvků ve vyhledávači**; tiskovou zprávu WHO Europe ke zprávě HBSC (25. 9. 2024) jen z vyhledávače a ze stránky HBSC. Wikipedie sloužila jen jako rozcestník (datace spisu).
 
@@ -128,3 +128,40 @@ Překlad, který atlas u Marca používá: **vlastní převod z řeckého textu 
 | c14 | Každý den jako poslední. | τὸ πᾶσαν ἡμέραν ὡς τελευταίαν διεξάγειν καὶ μήτε σφύζειν μήτε ναρκᾶν μήτε ὑποκρίνεσθαι | „Dokonalý charakter má to, že každý den prožije jako poslední: bez horečného spěchu, bez otupělosti, bez přetvářky.“ | VII, 69 | `hovory-vii-69` | Rezerva. „Jako poslední“ tu znamená bez spěchu a bez otupělosti, ne „užij si“. Proti dnešnímu „žij, jako by zítra nebylo“. |
 
 **Co Marcus o vlastním čase opravdu říká.** Odejít nemůže a ví to (VIII, 9; VI, 12). Ústraní zná jako touhu (IV, 3) a čtení jako odkládanou věc (III, 14; VIII, 8). Jeho odpověď není „najdi si volno“, ale tři kroky: uprostřed povinností si udělej volno od ostatních představ (II, 5), u každé věci se zeptej, jestli je nutná (IV, 24), a vracej se k filozofii jako domů (VI, 12). Kdy přesně který zápis vznikl, nevíme, a žádný se nesmí spojovat s konkrétní událostí (celek 3).
+
+## d) Spor: odejít, nebo ustoupit do sebe? (hotovo)
+
+### Je to poctivé čtení obou?
+
+Napůl. Plán celku staví Seneku na stranu „odejít“ a Marca na stranu „zůstat a ustoupit do sebe“. Texty to dovolují jen se třemi výhradami, které musí scéna Sporu i zpětná vazba držet:
+
+1. **O krátkosti života je rada jednomu člověku.** Seneca radí Paulinovi, který podle něj už dal obci „větší a lepší část života“ (18, 1) a mohl by úřad předat: „nebudou chybět lidé přesní a pracovití“ (18, 4). Nejde o zásadu „všichni pryč z veřejného života“. A volno, ke kterému zve, není odpočinek: „nevolám tě k lenivému klidu“ (18, 2), čeká tam práce „větší než všechno, co jsi dosud dělal“ (18, 2) a otázky o přírodě a bohu (19, 1).
+2. **Seneca sám jinde radí neutíkat hned.** V O duševním klidu (3–4) vypráví radu stoika Athénodóra, že v době plné udavačů je lepší ustoupit z fóra a prospívat druhým v soukromí. A odporuje mu: „Athénodóros se mi zdá příliš rychle utekl.“ Ustupovat se má pomalu a se zbraní v ruce; kdo nemůže sloužit jako občan, ať slouží jako člověk (4, 3: *officia civis amisit: hominis exerceat*); „nejlepší je mísit volno s prací“ (4, 8: *longe itaque optimum est miscere otium rebus*). V O volném čase (3, 2–3) rozlišuje stoiky a epikurejce: Epikúros říká, že moudrý se do veřejných věcí nepustí, ledaže se něco stane; Zénón, že se do nich pustí, ledaže mu něco zabrání. A to „něco“ je u stoika široké: obec zkažená, člověk bez vlivu nebo nemocný. Prospět se má mnoha lidem, když to nejde, aspoň několika, když ani to, nejbližším, a když ani to, sobě (3, 5).
+3. **Marcus po ústraní touží.** „I ty po tom obvykle nejvíc toužíš“ (IV, 3). Číst nemá kdy (VIII, 8) a čtení odkládá na stáří (III, 14). Neodchází, protože nemůže a protože to pokládá za svou práci (V, 1: vstává „k práci člověka“; VI, 44 v portrétu: jako Antoninus má za obec Řím). Jeho „ústraní do sebe“ je odpověď člověka, kterému odchod není nabídnut.
+
+Spor tedy není „Seneca × Marcus“ jako dvě školy. Je to otázka, kterou si oba kladou a odpovídají na ni každý podle toho, kde stojí: **Mám si čas vzít zpátky tím, že odejdu, nebo se dá získat i uvnitř toho, co mě zaměstnává?** Oba přitom souhlasí v tom hlavním: čas je jediné, co je opravdu naše (b24; c3), a odkládat „na potom“ je největší ztráta (b12; c1; c5).
+
+### Nejsilnější verze každé strany (jedna věta)
+
+- **Seneca (odejdi, když můžeš):** „Kdo zůstane v provozu, který si bere všechen jeho čas, nezíská ho zpátky žádnou vnitřní technikou: ten provoz ho bude pořád volat k sobě, a tak si musíš udělat místo, kde tvůj čas nikdo jiný nespravuje.“ (podle 7, 7; 18, 1–4; 20, 1)
+- **Marcus (zůstaň a vezmi si volno uvnitř):** „Odejít může jen ten, komu to okolnosti dovolí, kdežto volno od zbytečných věcí a představ si můžeš vzít kdykoli a kdekoli, i uprostřed tažení, a právě tam ho potřebuješ nejvíc.“ (podle II, 5; IV, 3; IV, 24; VIII, 8)
+
+### Jak strany odpovídají na nejsilnější námitku druhé
+
+Pravidlo z `docs/pouceni.md`: obě strany odpoví na námitku druhé; na telefonu čte student první stranu celou, proto první strana neodpovídá na něco, co ještě nezaznělo (námitku řekne scéna).
+
+- **Námitka proti Senekovi** (řekne ji scéna): odejít může jen ten, komu to někdo dovolí, a kdo to nemůže, zůstane bez rady. **Senekova odpověď z textu:** když se odejít nedá, má se „mísit volno s prací“ a sloužit tam, kde to jde (O duševním klidu 4, 3–8). **Kde je slabá:** O krátkosti života tuhle mírnější radu nemá; Paulinovi říká jen „vezmi si čas pro sebe“.
+- **Námitka proti Marcovi:** „ústraní v sobě“ je pohodlná rada pro toho, kdo zůstává; uprostřed provozu, který tě pořád volá, se do sebe neuchýlíš. **Marcova odpověď z textu:** ústraní má být krátké a pořád opakované (IV, 3: *συνεχῶς οὖν δίδου σεαυτῷ*), a hlavně se má škrtat, co není nutné (IV, 24). **Kde je slabá:** Marcus sám přiznává, že číst nemá kdy (VIII, 8). Čas na filozofii, jak ji míní Seneca, mu chybí.
+
+### Obrat pro závěr kroku
+
+Seneca nakonec od dvora odejít nesměl. Tacitus mu do úst vkládá prosbu, která zní jako z jeho vlastního spisu: čas, který věnuje zahradám a vilám, chce vrátit své mysli (XIV, 54). Nero odmítl (a7–a8). Muž, který radil Paulinovi odejít, tak dožil v podobné situaci jako Marcus: uvnitř moci, ze které nesměl pryč, a psal přitom dopisy o tom, jak si vzít sebe zpátky (Dopisy 1, 1). Jak se v té situaci choval, nevíme; víme, že poslední tři roky psal (celek 6, Život 20).
+
+**Formulace pro cestu:** „Tacitus vypráví, že Seneca prosil Nerona, aby ho pustil. Prý chtěl svůj čas zpátky. Nero ho nepustil.“ Žádné „ironií osudu“, žádné „sám neuměl žít, co radil“: to je soud, který si student udělá sám, nebo ne.
+
+### Volby pro blok Spor
+
+- Strany: Seneca · Marcus Aurelius (oba mají portrét, žádný medailonek není potřeba).
+- Otázka bloku: „Kde vzít čas pro sebe: odejít, nebo ho hledat uvnitř toho, co tě zaměstnává?“
+- Pět poloh škály (vzor `cesta2-seneca-plutarchos.yaml`): od „odejít, jakmile to jde“ přes „mísit obojí“ (tu hájí sám Seneca v O duševním klidu; zpětná vazba to řekne, aby prostřední poloha nebyla bez zastánce) po „zůstat a udělat si volno uvnitř“.
+- Krajní polohy nesmějí být krajnější než citát strany (`docs/pouceni.md`): Seneca neříká „opusť všechno“; Marcus neříká „nikdy neodcházej“.
