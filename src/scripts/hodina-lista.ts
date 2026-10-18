@@ -14,6 +14,7 @@ import {
   nactiAktivni, ulozAktivni, aktualniZastaveni, sousedniZastaveni, poradiZastaveni, cestaStranky, krokPromitani, polohaPrichodu,
   klavesaPatriPrvku, type AktivniHodina, type Plocha, type PolozkaHodiny,
 } from '../lib/pruchod-hodiny';
+import { ztisStranku, zrusTicho } from '../lib/denik';
 
 /** Mezera mezi lištou a začátkem úseku na plátně. */
 const OKRAJ_USEKU = 16;
@@ -109,7 +110,9 @@ export function spustListuHodiny(): void {
     return {
       poloha: scrollY + h,
       vyska: innerHeight - h,
-      horni: r.top + scrollY - OKRAJ_USEKU,
+      // Výš než na h (stránka úplně nahoře) se stránka neposune; úsek začínající těsně pod lištou (celá stránka)
+      // by jinak couvání nepustil na předchozí zastavení.
+      horni: Math.max(h, r.top + scrollY - OKRAJ_USEKU),
       dolni: r.bottom + scrollY + OKRAJ_USEKU,
       nejvys: document.documentElement.scrollHeight - innerHeight + h,
     };
@@ -176,6 +179,7 @@ export function spustListuHodiny(): void {
         if (el) el.scrollIntoView({ block: 'start' });
         else scrollTo({ top: 0 });
         prehled.focus({ preventScroll: true });
+        addEventListener('pagehide', zrusTicho, { once: true });
       }
       return;
     }
@@ -235,6 +239,7 @@ export function spustListuHodiny(): void {
   function ukoncitPromitani() {
     if (!hodina) return;
     ulozAktivni({ ...hodina, promitani: false, celaObrazovka: false, poPromitani: true });
+    ztisStranku(location.pathname);
     odchazim = true;
     celaObrazovka(false);
     try { history.scrollRestoration = 'manual'; } catch { /* nepodporováno */ }

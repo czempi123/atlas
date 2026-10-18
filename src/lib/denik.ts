@@ -101,6 +101,31 @@ let promitaniVPameti: Denik | null = null;
  */
 export const TEXT_DENIKU_SKRIPT = `(function () { try { var t = sessionStorage.getItem('${KLIC_PROMITANI}'); if (t !== null) return t; } catch (e) {} return localStorage.getItem('${KLIC}'); })()`;
 
+/**
+ * Tichá stránka: po konci promítání se stránka zastavení načte znovu (src/scripts/hodina-lista.ts) a to není
+ * návštěva studenta. Automatické záznamy (otevřený krok, navštívená stránka, místo čtení, dočtená kapitola)
+ * se pro tuto adresu nezapíší; co učitel udělá v bloku sám, ano. Platí do odchodu ze stránky.
+ */
+export const KLIC_TICHO = 'atlas-denik-ticho';
+
+export function ztisStranku(cesta: string): void {
+  try { sessionStorage.setItem(KLIC_TICHO, cesta); } catch { /* úložiště nedostupné */ }
+}
+
+export function zrusTicho(): void {
+  try { sessionStorage.removeItem(KLIC_TICHO); } catch { /* úložiště nedostupné */ }
+}
+
+function tichaStranka(): boolean {
+  try {
+    const t = sessionStorage.getItem(KLIC_TICHO);
+    if (t === null) return false;
+    if (t === location.pathname) return true;
+    sessionStorage.removeItem(KLIC_TICHO);
+  } catch { /* úložiště nebo location nedostupné */ }
+  return false;
+}
+
 /** Běží promítání (v kartě je deník promítání)? */
 export function vPromitani(): boolean {
   try {
@@ -227,6 +252,7 @@ export function dokonceniCesty(pred: Partial<PostupCesty> | undefined, navstiven
 
 /** Zaznamená otevřený krok cesty; když tím student prošel všechny kroky, zapíše jednou čas dokončení. */
 export function zaznamenejKrok(slug: string, krok: number, nazev: string, pocet: number): void {
+  if (tichaStranka()) return;
   const d = nacti();
   const p = d.cesty[slug];
   const navstivene = [...new Set([...(p?.navstivene ?? []), krok])].sort((a, b) => a - b);
@@ -241,6 +267,7 @@ const CTENI_NEJVYS = 30;
 
 /** Zapamatuje naposledy čtený oddíl stránky (jen kotvu). Volá se při změně oddílu, ne při každém posunu. */
 export function ulozCteni(odkaz: string, kotva: string): void {
+  if (tichaStranka()) return;
   const d = nacti();
   if (d.cteni?.[odkaz] === kotva) return;
   const { [odkaz]: _stare, ...ostatni } = d.cteni ?? {};
@@ -282,6 +309,7 @@ export function sPrectenou(d: Denik, stranka: string, kotva: string): Denik {
 
 /** Zapíše dočtenou kapitolu do deníku (jednou). */
 export function ulozPrectenou(stranka: string, kotva: string): void {
+  if (tichaStranka()) return;
   const d = nacti();
   const novy = sPrectenou(d, stranka, kotva);
   if (novy !== d) uloz(novy);
@@ -315,6 +343,7 @@ export function prijmiVyzvu(v: Omit<Vyzva, 'prijato'>): void {
 }
 
 export function zaznamenejNavstevu(odkaz: string, nazev: string): void {
+  if (tichaStranka()) return;
   const d = nacti();
   d.navstivene = [{ odkaz, nazev, kdy: new Date().toISOString() }, ...d.navstivene.filter((x) => x.odkaz !== odkaz)].slice(0, 20);
   uloz(d);

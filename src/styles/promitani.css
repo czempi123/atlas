@@ -65,11 +65,28 @@ html.promitani [data-podoba="kresba"] {
   flex-direction: column;
   align-items: center;
   max-width: none;
-  height: calc(100dvh - var(--hodina) - 2 * var(--s-7));
+  /* Celá plocha pod lištou bez mezer kolem: kresba je to hlavní, co třída vidí. */
+  margin-block: var(--s-3) 0;
+  height: calc(100dvh - var(--hodina) - var(--s-3) - var(--s-4));
 }
 html.promitani [data-podoba="kresba"] > * { flex: none; }
-html.promitani [data-podoba="kresba"] [data-cast="hlava"] { align-self: stretch; }
+html.promitani [data-podoba="kresba"] [data-cast="hlava"] { align-self: stretch; margin-bottom: 0; }
 html.promitani [data-podoba="kresba"] [data-cast="platno"] { flex: 1 1 0; min-height: 0; width: 100%; height: auto; }
+/* Široké plátno (projektor 4 : 3 až 16 : 9): kresba vlevo přes celou výšku, přepínač a ovládání vpravo.
+   Široká kresba (data-siroka, víc než 1,8 : 1) zůstane nad ovládáním: vedle by se zmenšila. */
+@media (min-aspect-ratio: 4/3) {
+  html.promitani [data-podoba="kresba"]:not([data-siroka]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 32%);
+    grid-template-rows: auto repeat(6, min-content) 1fr;
+    column-gap: var(--s-6);
+    row-gap: var(--s-3);
+    align-items: start;
+  }
+  html.promitani [data-podoba="kresba"]:not([data-siroka]) [data-cast="hlava"] { grid-column: 1 / -1; grid-row: 1; }
+  html.promitani [data-podoba="kresba"]:not([data-siroka]) [data-cast="platno"] { grid-column: 1; grid-row: 2 / -1; align-self: stretch; height: 100%; }
+  html.promitani [data-podoba="kresba"]:not([data-siroka]) > :not([data-cast="hlava"], [data-cast="platno"]) { grid-column: 2; justify-self: start; margin: 0; }
+}
 html.promitani [data-podoba="kresba"] [data-cast="popis"] {
   position: absolute !important;
   width: 1px; height: 1px;
