@@ -4,6 +4,14 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 18. 10. 2026: Hodiny v1, revize R
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Pět bodů Co rozhodnout po H4 platí, jak byly navržené | Autor nechal odpovědi prázdné; prázdná odpověď znamená souhlas |
+| Revize větve: verdikt po opravách, záznam `docs/revize/hodiny-v1-2026-10-18.md`; opravy jsou krok O, čtyři otázky v plánu větve › Co rozhodnout po R | Jeden důležitý nález (lišta po odbočce mimo hodinu zmizí) a sedm drobných |
+| `scripts/kontrola-fokus.mjs` a `scripts/revize-axe.mjs` znají proměnnou `HODINA` (adresa stránky hodiny), aby kontrolované stránky měly lištu hodiny; průchody učitele a studenta drží `scripts/revize-hodiny*.mjs` | Lišta hodiny je jen v kartě, kde je hodina aktivní; bez toho kontrola fokusu lištu neviděla |
+
 ## 18. 10. 2026: Hodiny v1, krok H4 (podoba zastavení na plátně)
 
 | Rozhodnutí | Důvod |

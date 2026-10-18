@@ -8,8 +8,8 @@ Učitel si z atlasu složí hodinu: vybere kroky cest, bloky, kapitoly profilů 
 | H2 | Skladatel hodiny `/hodina/nova/`: výběr z katalogu, pořadí, poznámky, uložení, soubor, odkaz ke sdílení | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 17. 10. 2026; viz Po H2 |
 | H3 | Hodina pro studenta: stránka hodiny, lišta hodiny při průchodu, „Doma projdi“ podle deníku, režim Promítat pro plátno, tisk přehledu pro učitele | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 17. 10. 2026; viz Po H3 |
 | H4 | Podoba zastavení na plátně: u bloku a kresby volba, kolik z něj promítnout (celý, jen otázka a možnosti, otevřená otázka bez karet A–D, jen kresba); třídní anketa rukou nebo s telefony; čisté bloky při promítání | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 18. 10. 2026; viz Po H4 |
-| R | Revize větve očima učitele, studenta a uživatele telefonu | Opus 5.5 · high se skillem `atlas-revize` | čeká; zadání níže |
-| O | Opravy po revizi | Opus 5.5 · high | čeká |
+| R | Revize větve očima učitele, studenta a uživatele telefonu | Opus 5.5 · high se skillem `atlas-revize` | hotovo 18. 10. 2026; viz Po R |
+| O | Opravy po revizi | Opus 5.5 · high se skillem `atlas-komponenta` | čeká; zadání níže |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/hodiny-v1.md`.
@@ -228,22 +228,50 @@ Snímky: `Claude outputs/hodiny/podoba-*` (promítání Volby jen s možnostmi, 
 
 ## Co rozhodnout po H4 (prázdná odpověď znamená souhlas s návrhem)
 
+Autor nechal všech pět odpovědí prázdných, takže platí návrh (R, 18. 10. 2026).
+
 1. **Podoby podle komponenty** podle tabulky v `docs/design.md` (Roztřiď bez otevřené otázky, Závěr cesty jen celý). Odpověď:
 2. **V „jen otázka a možnosti“ je skryté i pole na důvod** a další vlastní psaní; důvody zazní ve třídě nahlas. Odpověď:
 3. **Kresba na plátně vedle ovládání** (široká pod ním). Odpověď:
 4. **Konec promítání stránku načte znovu** a ta je do odchodu tichá (nezapíše otevřený krok ani návštěvu). Odpověď:
 5. **Otevření stránky hodiny se zapíše do oddílu Hodiny i učiteli**, který z ní pak promítá; jinak by stránka hodiny zápis musela odložit až na první krok studenta. Odpověď:
 
-## Zadání R: revize větve
+## Po R
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-revize`. Revize čte větev očima lidí, kteří ji budou používat: učitele, který skládá a promítá hodinu, studenta, který dostane odkaz a doma prochází zbytek, a uživatele telefonu. Neopravuje funkce, jen ohlásí a opraví drobnosti; zásadní nálezy seřadí podle dopadu s návrhem opravy.
+Hotovo 18. 10. 2026. Záznam revize je `docs/revize/hodiny-v1-2026-10-18.md`, verdikt **po opravách**: jeden důležitý nález (lišta po odbočce mimo hodinu zmizí) a sedm drobných, z toho jeden opravený rovnou (Esc v celé obrazovce v popisu promítání v `docs/design.md`). Revize prošla dvě skutečné hodiny k celkům 1 a 6 (osm zastavení, všechny podoby na plátně kromě široké kresby, ta ze snímků H4) očima učitele, studenta a uživatele telefonu; jak, říká záznam revize.
+
+| Co | Kde |
+| --- | --- |
+| Průchody učitele a studenta na sestaveném webu: `node scripts/revize-hodiny.mjs <ucitel\|platno\|cisto\|telefony\|student>`, příchod na kotvu `scripts/revize-hodiny-kotva.mjs`, okrajové průchody `scripts/revize-hodiny-okraje.mjs`; snímky a záznamy v `Claude outputs/hodiny/revize/` | `scripts/` |
+| `scripts/kontrola-fokus.mjs` a `scripts/revize-axe.mjs` znají proměnnou `HODINA` (adresa stránky hodiny): stránky pak mají lištu hodiny | `scripts/` |
+| Mřížka snímků s názvy souborů: `node scripts/snimky-mrizka.mjs <vystup.jpg> <sloupcu> <sirka> <soubory…>` | `scripts/snimky-mrizka.mjs` |
+
+Celé `npm test` po revizi: Vitest 691 z 691, Playwright 526 z 526. `node scripts/hodiny-katalog.mjs`: Chyb: 0. Kontrola fokusu a axe s lištou hodiny bez nálezu.
+
+**Co jsem zvažoval.**
+
+- *Lišta mimo hodinu:* rozhodnutí z H3 („Odkaz na kotvu uvnitř stránky aktuální zastavení přepíše“) mluví o kotvě na téže stránce; odbočku na jinou stránku žádné rozhodnutí neřeší. Na telefonu je velké „Další krok“ v liště kroku nejvýraznější tlačítko, takže odbočka nebude výjimka. Navrhuji lištu ve stavu mimo hodinu; jen lepší stránka hodiny by studenta nevrátila, dokud by ji sám nenašel v deníku.
+- *Štítky bloků:* učitel podle druhu vybírá a filtruje, student podle něj nic nedělá; proto návrh měnit štítek jen u studenta.
+- *Mrtvý stisk:* 4 px na Zrcadle času jsou zaokrouhlení výšky karty; hranice „méně než jeden řádek na plátně“ (asi 32 px) by pokryla i podobné případy jinde a nic by nepřeskočila.
+- *Plynulý posun:* je to chování celého atlasu (`scroll-behavior: smooth`); nález se týká jen skoku z lišty hodiny, Kam dál a obsah profilu nechávám.
+- *Dočtené kapitoly:* hranice z H3 drží (proletění nic, čtení po obrazovkách ano); dvě minuty na začátku a skok na konec se počítají jako dočtení, s tím rozhodnutí počítalo.
+
+## Co rozhodnout po R (prázdná odpověď znamená souhlas s doporučením)
+
+1. **Lišta mimo hodinu:** na stránce, která v hodině není, ukázat lištu ve stavu „mimo hodinu“ s cestou zpět na poslední zastavení a dál na další (doporučuji), nebo nechat, jak je. Odpověď:
+2. **Štítky bloků u studenta:** na stránce hodiny pro studenta nadtitulek bloku, jak stojí na stránce („Nejdřív sám“, „Tvůj tah“), ve skladateli a v tisku dál druh bloku (doporučuji); nebo u studenta štítek u bloků vynechat. Odpověď:
+3. **Promítat hodinu u studenta:** nechat, jak je, dokud atlas není na webu (doporučuji), nebo na telefonu jen jako tichý odkaz. Odpověď:
+4. **Tisk přehledu s odkazem pro studenty** pod názvem hodiny. Odpověď:
+
+## Zadání O: opravy po revizi
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-komponenta` (xhigh při zaseknutí).
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi hodiny-v1. Plán je v docs/plany/hodiny-v1.md (tabulka, Co větev staví, oddíly Po H1 až Po H4 a Co rozhodnout po H3 a po H4; moje odpovědi tam mají přednost před návrhem), postup ve skillu atlas-revize (skills/atlas-revize/). Krok R: revize větve hodiny-v1.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi hodiny-v1. Krok O: opravy po revizi. Plán je v docs/plany/hodiny-v1.md (Po R a Co rozhodnout po R; moje odpovědi mají přednost, prázdná odpověď znamená souhlas s doporučením), nálezy v docs/revize/hodiny-v1-2026-10-18.md, postup ve skillu atlas-komponenta. Čti jen to, co oprava potřebuje.
 
-1. Učitel: na náhledu (npm run dev, nebo sestavený web přes npx astro preview --port 4323) slož ve skladateli dvě skutečné hodiny k celkům 1 a 6 (pět až osm zastavení různých druhů, s poznámkami), ulož je, stáhni a nahraj soubor, zkopíruj odkaz pro studenty, vytiskni přehled (emulateMedia print, i z tmavého režimu; podoby v něm „na plátně: …“), nastav u bloků a kreseb různé podoby na plátně (celý blok, jen otázka a možnosti nebo odkrytí, otevřená otázka, jen kresba; aspoň Volba, Odkryj, Spor, Roztřiď, Kdo žil dřív? a jedna běžná a jedna široká kresba) a obě hodiny promítni na 1280 × 720 a 1920 × 1080 jen klávesami (šipky, PageDown, mezerník, F, Esc) tam i zpět. Hlídej: dá se hodina složit bez návodu, sedí štítky a „kde stojí“ s tím, co je na stránce, je text na plátně čitelný z dálky, neztratí se řádek při posunu, nepřekáží nic, co na plátno nepatří, a dají se bloky ovládat, když třída hlasuje; v každé podobě zůstane jen to, co do ní patří (tabulka v docs/design.md › Podoba na plátně), u otevřené otázky Ukázat možnosti tlačítkem i klávesou M a po návratu na zastavení zase skryté, otázka čitelná z dálky; u otevřené otázky zkus třídu s telefony (druhá karta na 390 px s odkazem hodiny). Čisté bloky: s plným deníkem na tom počítači (zvolené karty, odkryté bloky, Tvůj první názor) promítni hodinu, na plátně nesmí být nic z deníku; volba třídy drží při návratu o zastavení; po Esc a po Ukončit promítání porovnej celý localStorage atlas-denik s tím před promítáním (smí přibýt jen otevřená hodina, když jsi promítal ze stránky hodiny).
-2. Student: otevři odkazy obou hodin v čisté kartě na telefonu (390 × 844) i notebooku, projdi je lištou a pak doma podle Doma projdi; zkus zastavení, které v atlasu není, zavřenou lištu, novou kartu, návrat z deníku a odkaz na kotvu uvnitř stránky (Kam dál z bloku). Přečti všechny texty, které větev přidala (stránka hodiny, lišta, Doma projdi, deník, tisk, zprávy skladatele), podle docs/styl.md: zní jako pokyn studentovi, ne jako popis rozhraní? Ověř, že se poznámky učitele studentovi nikde neukážou (stránka, lišta, deník, export deníku).
-3. Telefon a klávesnice: scripts/kontrola-fokus.mjs na stránce hodiny, kroku s lištou a profilu s lištou i lištou Obsah (390 i 1440 px); axe tak, jak ho dělají testy; lišta hodiny proti hlavičce kroku, liště kroku, spodní liště a liště Obsah při posunu i po skoku na kotvu; omezený pohyb; čtečka (názvy tlačítek lišty na telefonu, kde jsou jen ikony).
-4. Data a soulad: node scripts/hodiny-katalog.mjs po npm run build (Chyb: 0), katalog proti stránkám (názvy, štítky, kotvy), značky data-cast v komponentách bloků proti tabulce podob, podoba v odkazu, v souboru a ve starší hodině bez podoby, dočtené kapitoly v deníku (dočte se kapitola, kterou student opravdu čte, a ne ta, kterou proletí?), zápisy v docs/rozhodnuti.md a popis v docs/design.md proti stavu kódu.
-5. Výstup: docs/revize/hodiny-v1-<datum>.md (nálezy podle dopadu, každý s návrhem opravy a s tím, co je drobnost a co rozhodnutí pro mě; verdikt „schváleno“ nebo „po opravách“). Drobnosti oprav rovnou, celé npm test na pozadí s výstupem do souboru, commituj česky po skupinách, nic neposílej na GitHub a nic nesluč. Do plánu větve zapiš stav R, oddíl „Po R“ a zadání O; zadání R přesuň do docs/archiv/zadani/hodiny-v1.md; plán nahraj do projektu Claude jako docs/plany/hodiny-v1.md. Pak mi napiš, co jsi našel a co je potřeba rozhodnout.
+1. Lišta mimo hodinu (nález 1, podle mé odpovědi 1): na stránce bez zastavení aktivní hodiny lišta ve stavu mimo hodinu („Hodina: Delfy · mimo hodinu“, Předchozí na poslední navštívené zastavení, Další na zastavení za ním, Přehled hodiny, Zavřít); poslední navštívené zastavení drží aktivní hodina v sessionStorage. Při promítání beze změny. Ověř odbočku přes Kam dál z bloku i přes Další krok v liště kroku na 390 a 1440 px a skript scripts/revize-hodiny-okraje.mjs.
+2. Štítky bloků u studenta (nález 2, podle odpovědi 2), hledání ve skladateli se štítkem druhu (nález 3, jednotkový test pro „spor smrt“ a „hlas seneca“), mrtvý stisk na plátně (nález 4: zbytek úseku pod jeden řádek je konec úseku, i při couvání; jednotkový test v pruchod-hodiny.test.ts), Roztřiď na plátně (nález 5: Dát sem pod popis koše; snímek 1280 × 720 a 1920 × 1080), příchod z lišty bez plynulého posunu (nález 6), Promítat hodinu u studenta (nález 7, podle odpovědi 3) a tisk s odkazem pro studenty (nález 8, podle odpovědi 4).
+3. Studentské věty a popisky hlídají testy: než text změníš, najdi ho v tests/ a uprav test v tomtéž commitu. Po npm run build node scripts/hodiny-katalog.mjs (Chyb: 0), scripts/kontrola-fokus.mjs a scripts/revize-axe.mjs s proměnnou HODINA na stránce hodiny, kroku a profilu; snímky změn do Claude outputs/hodiny/ a prohlédni je. Celé npm test na pozadí s výstupem do souboru.
+4. Commituj česky po skupinách, nic neposílej na GitHub a nic nesluč. Rozhodnutí zapiš do docs/rozhodnuti.md, popis do docs/design.md, poučení do docs/pouceni.md jen když vzniklo. Do plánu větve zapiš stav O, oddíl „Po O“ a zadání Uzavření (Opus 5.5 · medium: schválení, sloučení do hlavní větve a hlavní větev na GitHub jen na můj pokyn); zadání O přesuň do docs/archiv/zadani/hodiny-v1.md; plán nahraj do projektu Claude jako docs/plany/hodiny-v1.md a restartuj náhled npm run dev. Pak mi napiš, co je opravené a co je potřeba rozhodnout.
 ```
