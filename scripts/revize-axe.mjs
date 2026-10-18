@@ -12,6 +12,8 @@ for (const cesta of process.argv.slice(2)) {
     for (const rezim of ['light', 'dark']) {
       const context = await browser.newContext({ viewport: { width: sirka, height: 900 }, colorScheme: rezim, reducedMotion: 'reduce' });
       const page = await context.newPage();
+      // HODINA=<adresa stránky hodiny>: nejdřív ji otevře, aby byla hodina v kartě aktivní a stránka měla lištu hodiny.
+      if (process.env.HODINA) { await page.goto(process.env.HODINA.startsWith('http') ? process.env.HODINA : ZAKLAD + process.env.HODINA); await page.waitForTimeout(500); }
       await page.goto(ZAKLAD + cesta);
       await page.evaluate(() => document.fonts.ready);
       const vyska = await page.evaluate(() => document.documentElement.scrollHeight);
