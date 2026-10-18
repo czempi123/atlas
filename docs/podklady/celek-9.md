@@ -2,7 +2,7 @@
 
 Ověřeno 18. 10. 2026 (P6). Celek: cesta 34 „Kam mi mizí čas?“ (Seneca, Marcus Aurelius), hlavní otázka 1 „Jak mám žít?“. Studentský text v tomto kroku nevzniká. Pracoval jsem bez mezikroku schvalování; co smí rozhodnout jen autor, je na konci.
 
-**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — hotovo · h) Obrázky — hotovo · i) Otevřené otázky — rozpracováno
+**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — hotovo · h) Obrázky — hotovo · i) Otevřené otázky — hotovo
 
 **Jak se ověřovalo.** Primární texty jsem četl sám v plném znění, stažené na autorově Macu mimo repozitář (`/tmp/celek9`). Latinsky z The Latin Library: O krátkosti života celé (kap. 1–20), O duševním klidu 3–5, O volném čase 3–5. Latinsky z PerseusDL (`phi1017/phi015`, Gummere): Dopisy Luciliovi 1. Latinsky z PerseusDL (`phi1351/phi005`, Fisher): Tacitovy Letopisy I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60. Řecky z PerseusDL (`tlg0562/tlg001`, Leopold): Marcus II, 4; II, 5; II, 14; III, 10; III, 14; IV, 3; IV, 17; IV, 24; IV, 32; IV, 48; V, 1; VI, 12; VII, 69; VIII, 8; VIII, 9; VIII, 36; X, 15; XII, 1 a místní údaje na konci knih I a II. Heslo SEP „Seneca“ (K. Vogt) a IEP „Seneca“ jsem stáhl na Mac a hledal v nich sám. Zprávu OECD PISA in Focus 124 (2024) jsem četl v plném textu (PDF převedené na text). Článek M. Griffinové „De Brevitate Vitae“ (JRS 52, 1962) a úvod G. D. Williamse k vydání De otio a De brevitate vitae (Cambridge 2003) znám **jen z úryvků ve vyhledávači**; tiskovou zprávu WHO Europe ke zprávě HBSC (25. 9. 2024) jen z vyhledávače a ze stránky HBSC. Wikipedie sloužila jen jako rozcestník (datace spisu).
 
@@ -315,3 +315,44 @@ Nic není staženo.
 | B. Mozaika s měřiči obilí z Ostie | Měření obilí v přístavu, kudy šlo obilí do Říma: přesně Paulinova práce. | Ostia antica (in situ) | **Neověřeno**: fotografie by musela být z Wikimedia Commons, kterou nástroje neotevřou; licenci by potvrdil autor sám. | — | Jen nápad; bez licence nepoužít. |
 
 Popisek k A, kdyby ho autor chtěl: „Nástěnná malba z římské vily, asi sto let před Senekou. Mezi tím, co si majitel nechal namalovat, jsou i sluneční hodiny.“ (Až po prohlédnutí snímku.)
+
+## Rozpory a rozhodnutí
+
+- **Datace O krátkosti života: kolem 49, nebo 55?** Většina badatelů kolem roku 49, Griffinová 55; obojí stojí na výkladu jedné zmínky (13, 8) a na tom, kdy Paulinus úřad držel (48–55). **Rozhodnutí:** do studentského textu bez roku („dlouho předtím, než sám u dvora uvízl“ jde i s rokem 55, Seneca odešel až 62). Plná literatura (Griffin 1962, Williams 2003) jen z úryvků; kdyby P8 rok chtěla, dočíst Williamsův úvod.
+- **Kdo byl Paulinus.** Tchán, nebo švagr; a je konzulár Pompeius Paulinus z Tacita týž muž? **Rozhodnutí:** jen „přítel Paulinus“; netvrdit příbuzenství ani to, jestli radu poslechl.
+- **Turranius × Turannius.** Rukopisy O krátkosti života mají *Turannius*, Tacitus *Turranius*; ztotožnění je běžné a Griffinová ho podle úryvku bere jako Paulinova předchůdce. **Rozhodnutí:** ve studentském textu bez jména („starý správce obilí“). Příběh je tradovaný: vypráví ho jen Seneca.
+- **Seneca 64 (XV, 45).** Tacitus to uvádí jako pověst. **Rozhodnutí:** jako v celku 6 vynechat; obrat Sporu stojí na roce 62.
+- **Spor jako dvě rady, ne dvě školy.** Plán celku stavěl Seneku na stranu „odejít“. Texty (O duševním klidu 4; O volném čase 3) ukazují, že Seneca jinde radí mísit obojí. **Rozhodnutí:** Spor zůstává, ale prostřední poloha škály dostane Seneku z O duševním klidu jako zastánce a scéna řekne, že O krátkosti života je rada jednomu člověku.
+- **Telefon jako případ, ne téma.** **Rozhodnutí:** jeden krok z osmi (krok 5) a zmínka v kroku 7; kresba v kroku 3 počítá celý den, nejen obrazovku.
+- **Čísla.** Pro studentský text jsou připravené dva údaje (f1, f2), ale cesta se obejde i bez čísel. **Doporučení:** f1 slovy bez procent, f2 s jedním číslem („skoro všechny příjmy“). Česká data neověřena.
+- **Démokritos u Marca.** Marcus větu „dělej málo“ uvádí bez jména (φησίν); Seneca ji jmenovitě připisuje Démokritovi (O duševním klidu 13, 1). **Rozhodnutí:** ve studentském textu „říká se“; Démokritos je v datech, ale jeho jméno by v kroku nic neneslo.
+
+## i) Otevřené otázky pro autora (hotovo)
+
+Prázdná odpověď znamená souhlas s doporučením.
+
+1. **Kresba v kroku 3: Přesýpací hodiny (A), nebo Loď ve vichru (B)?** Doporučuji A: navazuje na atribut Seneky a student v ní sám počítá, kdo o hodinách rozhodl; B zůstane obrazem ve větě kroku 4.
+   Odpověď:
+2. **Obrázek na vstup cesty:** doporučuji žádný (jako u cesty 8). Kdybys chtěl fresku z Boscoreale (Met 03.14.2, Public Domain), stáhnu ji až po tvém souhlasu a po prohlédnutí, jestli jsou hodiny poznat.
+   Odpověď:
+3. **Stránka otázky 1: nový hlas?** Doporučuji ne. Seneca tam už mluví (bohatství) a Hipparchia nese myšlenku „kdo určil, kam má tvůj čas patřit“. Alternativa: hlas Marca s otázkou „Je tohle nutné?“ (IV, 24); přidal by otázku 1 do hlavičky jeho portrétu a stránce šestý hlas.
+   Odpověď:
+4. **Turranius ve studentském textu:** doporučuji příběh ano, jméno ne („starý správce obilí“).
+   Odpověď:
+5. **Čísla v kroku 5:** doporučuji f1 slovy (bez procent) a f2 s jednou větou o příjmech z reklamy. Alternativa: žádná čísla.
+   Odpověď:
+6. **Zkus to žít „Proč teď?“** (otázka před odemčením telefonu, jeden den): doporučuji. Alternativa z plánu celku: jeden den zapisovat, kdo rozhodl o každé hodině (blízko večernímu ohlédnutí, proto ji nedoporučuji).
+   Odpověď:
+7. **Slug cesty `kam-mi-mizi-cas`** a pracovní názvy kroků z Osnovy: P8 je smí změnit podle textu.
+   Odpověď:
+
+**Mohou počkat:** české překlady (O krátkosti života, Dopisy, Hovory k sobě) jsem neměl v ruce; kdybys některý měl doma, srovnání citátů, které cesta opravdu použije, by stálo za to před revizí P10. Úvod G. D. Williamse (Cambridge 2003) dočíst jen tehdy, kdyby P8 chtěla datum spisu.
+
+## Pro skill atlas-overeni
+
+Návrh doplňků, skill sám jsem neměnil.
+
+- The Latin Library má i O duševním klidu (`sen.tranq.shtml`) a O volném čase (`sen.otio.shtml`); text je ve formátu s *u* místo *v*.
+- Výroční zprávy amerických firem (Form 10-K) jsou na sec.gov a pro údaje o příjmech jsou primární zdroj.
+- Zprávy OECD z řady PISA in Focus jdou stáhnout jako PDF na `oecd.org/content/dam/oecd/en/publications/reports/<rok>/<měsíc>/<slug>/<id>-en.pdf`; na Macu je převede `pypdf` (`python3 -m pip install --user pypdf`), `pdftotext` tam není.
+- Do tabulky zkreslených výroků: „Život je dlouhý, když víš, jak ho žít“ (*uti* = použít, O krátkosti života 2, 1); „Jako s příběhem, tak se životem…“ (pravé, Dopisy 77, 20, ale z dopisu o dobrovolné smrti); „Každý den počítej jako samostatný život“ (Dopisy 101, 10, ne O krátkosti života).
