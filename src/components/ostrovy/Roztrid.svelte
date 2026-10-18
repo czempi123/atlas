@@ -164,12 +164,12 @@
 <section class="blok roztrid obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
   <BlokHlava nadtitulek={blok.nadtitulek ?? 'Roztřiď'} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
-    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena">{@html o}</p>{/each}
+    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{@html radek(blok.otazka)}</h3>
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{@html radek(blok.otazka)}</h3>
 
   {#if !hotovo}
-    <div class="stul">
+    <div class="stul" data-cast="moznosti">
       {#if aktivni}
         <p class="stul__postup t-popisek">Zbývá {hromadka.length} z {karty.length}</p>
         <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -195,7 +195,7 @@
       {/if}
     </div>
 
-    <ul class={['kose', blok.kose.length > 3 && 'kose--ctyri']} style={`--kosu: ${blok.kose.length}`}>
+    <ul data-cast="moznosti" class={['kose', blok.kose.length > 3 && 'kose--ctyri']} style={`--kosu: ${blok.kose.length}`}>
       {#each blok.kose as k (k.id)}
         <li class={['kos', nad === k.id && 'kos--nad']} data-kos={k.id}>
           <div class="kos__hlava">
@@ -228,7 +228,7 @@
     <p class="vizualne-skryte" aria-live="polite">{hlaseni}</p>
 
     {#if smiPridat && blok.vlastni}
-      <form class="vlastni" onsubmit={pridej}>
+      <form class="vlastni" data-cast="duvod" onsubmit={pridej}>
         <label class="blok__popis" for={`${id}-vlastni`}>{blok.vlastni.vyzva} <span class="nepovinne">Nepovinné</span></label>
         <div class="vlastni__radek">
           <input class="vlastni__pole" id={`${id}-vlastni`} type="text" maxlength={DELKA_KARTY} bind:value={nova} autocomplete="off" />
@@ -237,9 +237,9 @@
       </form>
     {/if}
 
-    <button class="blok__tl blok__tl--hlavni roztrid__hotovo" type="button" onclick={porovnej} disabled={hromadka.length > 0}>Mám roztříděno</button>
+    <button class="blok__tl blok__tl--hlavni roztrid__hotovo" data-cast="akce" type="button" onclick={porovnej} disabled={hromadka.length > 0}>Mám roztříděno</button>
   {:else}
-    <div class="blok__zpetna" role="region" aria-label="Tvoje třídění" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
+    <div class="blok__zpetna" data-cast="zpetna" role="region" aria-label="Tvoje třídění" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
       <div class={['vysledky', blok.kose.length > 3 && 'vysledky--ctyri']} style={`--kosu: ${blok.kose.length}`}>
         {#each blok.kose as k (k.id)}
           {@const vKosi = kartyVKosi(karty, umisteni, k.id)}
@@ -273,8 +273,8 @@
       {/if}
     </div>
     <BlokDal {dal} />
-    <div class="blok__akce">
-      <p class="blok__ulozeno">Tvoje třídění je uložené v deníku.</p>
+    <div class="blok__akce" data-cast="akce">
+      <p class="blok__ulozeno" data-cast="ulozeno">Tvoje třídění je uložené v deníku.</p>
       <button class="blok__tl blok__tl--tiche" type="button" onclick={znovu}>Začít znovu</button>
     </div>
   {/if}

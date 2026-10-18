@@ -254,6 +254,68 @@ export function katalogZastaveni(v: VstupKatalogu): Zastaveni[] {
   return vse;
 }
 
+// ─── Podoba na plátně (krok H4) ───────────────────────────────────────────────
+
+/**
+ * Jak se blok nebo kresba ukáže při promítání: celý blok (výchozí), jen otázka a možnosti (bez scény, Kam dál
+ * a vlastního psaní), otevřená otázka (jen nadtitulek a otázka; karty ukáže až Ukázat možnosti), jen kresba
+ * (plátno a ovládání, text pod kresbou jen pro čtečky). Doma a s lištou student vidí stránku vždy celou.
+ * Které části bloku podoba skrývá, říkají značky data-cast v komponentách a src/styles/promitani.css.
+ */
+export type Podoba = 'cely' | 'moznosti' | 'otevrena' | 'kresba';
+
+/** Krátká značka podoby v odkazu za id zastavení (b:cesta1-jak-zjistit~o). Celý blok značku nemá. */
+export const ZNACKY_PODOB = { moznosti: 'm', otevrena: 'o', kresba: 'k' } as const satisfies Record<Exclude<Podoba, 'cely'>, string>;
+const PODOBA_ZE_ZNACKY: Record<string, Podoba> = Object.fromEntries(Object.entries(ZNACKY_PODOB).map(([p, z]) => [z, p as Podoba]));
+
+const VSECHNY_PODOBY: readonly Podoba[] = ['cely', 'moznosti', 'otevrena', 'kresba'];
+const S_OTAZKOU: Podoba[] = ['cely', 'moznosti', 'otevrena'];
+/** Podoby podle komponenty bloku (docs/design.md › Podoba na plátně). Kresby mají celou a jen kresbu. */
+const PODOBY_BLOKU: Record<string, Podoba[]> = {
+  Volba: S_OTAZKOU,
+  Odkryj: S_OTAZKOU,
+  NejdrivSam: S_OTAZKOU,
+  Spor: S_OTAZKOU,
+  ZmenJednuVec: S_OTAZKOU,
+  KdoZilDriv: S_OTAZKOU,
+  // Roztřiď bez karet nemá co ukázat; Závěr cesty je jen otázka a pole na vlastní pravidlo.
+  Roztrid: ['cely', 'moznosti'],
+  ZaverCesty: ['cely'],
+};
+
+/** Podoby, které má zastavení: blok podle komponenty, kresba celá nebo jen kresba, ostatní zastavení jen celé. */
+export function podobyZastaveni(z: { druh: DruhZastaveni; typ?: string }): Podoba[] {
+  if (z.druh !== 'blok' || !z.typ) return ['cely'];
+  if (z.typ in NAZVY_KRESEB) return ['cely', 'kresba'];
+  return PODOBY_BLOKU[z.typ] ?? ['cely'];
+}
+
+/** Název podoby ve skladateli a v tisku. U Odkryj jsou „možnosti“ skrytá část, proto „odkrytí“. */
+export function nazevPodoby(p: Podoba, typ?: string): string {
+  if (p === 'moznosti' && (typ === 'Odkryj' || typ === 'NejdrivSam')) return 'Jen otázka a odkrytí';
+  return { cely: 'Celý blok', moznosti: 'Jen otázka a možnosti', otevrena: 'Otevřená otázka', kresba: 'Jen kresba' }[p];
+}
+
+/** Podoba, jak se na plátně opravdu ukáže: podoba, kterou zastavení nemá (nebo žádná), je celý blok. */
+export function ucinnaPodoba(z: { druh: DruhZastaveni; typ?: string }, p: Podoba | undefined): Podoba {
+  return p && podobyZastaveni(z).includes(p) ? p : 'cely';
+}
+
+/** Podoba z neznámého vstupu (soubor, úložiště); celý blok a cokoli neplatného je undefined. */
+export function platnaPodoba(x: unknown): Exclude<Podoba, 'cely'> | undefined {
+  return typeof x === 'string' && x !== 'cely' && (VSECHNY_PODOBY as readonly string[]).includes(x) ? (x as Exclude<Podoba, 'cely'>) : undefined;
+}
+
+/** Id s podobou z odkazu: „b:x~o“ → id a podoba; bez značky nebo s neznámou značkou celý blok (podoba undefined). */
+export function rozeberZastaveniOdkazu(s: string): { id: string; podoba?: Exclude<Podoba, 'cely'> } {
+  const [id, znacka] = s.trim().split('~');
+  const p = znacka !== undefined ? platnaPodoba(PODOBA_ZE_ZNACKY[znacka]) : undefined;
+  return p ? { id, podoba: p } : { id };
+}
+
+/** Zastavení do odkazu: id a za vlnovkou značka podoby, celý blok jen id. */
+export const zastaveniDoOdkazu = (id: string, p?: Podoba): string => (p && p !== 'cely' ? `${id}~${ZNACKY_PODOB[p]}` : id);
+
 // ─── Hodina ───────────────────────────────────────────────────────────────────
 
 export const VERZE_HODINY = 1;
@@ -272,44 +334,79 @@ export interface UlozenaHodina {
   nazev: string;
   /** poznámka k celé hodině */
   poznamka: string;
-  zastaveni: { id: string; poznamka: string }[];
+  /** `podoba` jen u bloku a kresby, které se na plátně neukážou celé (chybí = celý blok; starší hodiny ji nemají) */
+  zastaveni: ZastaveniHodiny[];
   /** datum poslední změny (ISO) */
   zmeneno: string;
 }
 
-/** Co nese odkaz pro studenty: název a pořadí zastavení, nic víc. */
+export interface ZastaveniHodiny {
+  id: string;
+  poznamka: string;
+  podoba?: Exclude<Podoba, 'cely'>;
+}
+
+/** Co nese odkaz pro studenty: název, pořadí zastavení a podoba na plátně (promítá se i ze stránky hodiny), nic víc. */
 export interface HodinaProStudenty {
   nazev: string;
+  /** id zastavení bez značky podoby */
   zastaveni: string[];
+  /** podoba podle id, jen u zastavení, která nejsou celá */
+  podoby?: Record<string, Exclude<Podoba, 'cely'>>;
 }
 
 const nazevHodiny = (s: unknown) => (typeof s === 'string' ? s.replace(/\s+/g, ' ').trim().slice(0, NEJDELSI_NAZEV) : '');
 const bezOpakovani = (ids: string[]) => [...new Set(ids)].slice(0, NEJVIC_ZASTAVENI);
 
-/** Adresa hodiny pro studenty: /hodina/?v=1&n=<název>&z=<id>,<id>… Poznámky učitele do ní nikdy nejdou. */
-export function adresaHodiny(h: { nazev: string; zastaveni: (string | { id: string })[] }, zaklad = '/hodina/'): string {
-  const ids = bezOpakovani(h.zastaveni.map((z) => (typeof z === 'string' ? z : z.id)).filter((id) => ID_ZASTAVENI.test(id)));
+/**
+ * Adresa hodiny pro studenty: /hodina/?v=1&n=<název>&z=<id>,<id>~o… Podoba na plátně jde za id jako značka
+ * (ZNACKY_PODOB); poznámky učitele do adresy nikdy nejdou.
+ */
+export function adresaHodiny(
+  h: { nazev: string; zastaveni: (string | { id: string; podoba?: Podoba })[]; podoby?: Record<string, Podoba> },
+  zaklad = '/hodina/',
+): string {
+  const podoby = new Map<string, Podoba | undefined>();
+  for (const z of h.zastaveni) {
+    const id = typeof z === 'string' ? z : z.id;
+    if (ID_ZASTAVENI.test(id) && !podoby.has(id)) podoby.set(id, typeof z === 'string' ? h.podoby?.[id] : z.podoba);
+  }
+  const ids = [...podoby.keys()].slice(0, NEJVIC_ZASTAVENI);
   const casti = [`v=${VERZE_HODINY}`];
   const nazev = nazevHodiny(h.nazev);
   if (nazev) casti.push(`n=${encodeURIComponent(nazev)}`);
-  casti.push(`z=${ids.join(',')}`);
+  casti.push(`z=${ids.map((id) => zastaveniDoOdkazu(id, podoby.get(id))).join(',')}`);
   return `${zaklad}?${casti.join('&')}`;
 }
 
 /**
  * Hodina z adresy (celé adresy, nebo jen části za ?). Neznámá verze vrátí null. Řetězec, který nemá tvar id,
- * se zahodí; id, které v atlasu není, zůstane a ukáže se jako „Tohle místo už v atlasu není“.
+ * se zahodí; id, které v atlasu není, zůstane a ukáže se jako „Tohle místo už v atlasu není“. Značka podoby
+ * za id (~o) se přečte do `podoby`; bez značky, nebo s neznámou, je zastavení celé.
  */
 export function hodinaZAdresy(odkaz: string): HodinaProStudenty | null {
   const hledani = odkaz.includes('?') ? odkaz.slice(odkaz.indexOf('?') + 1).split('#')[0] : odkaz;
   const p = new URLSearchParams(hledani);
   if (p.get('v') !== String(VERZE_HODINY)) return null;
-  const ids = (p.get('z') ?? '').split(',').map((s) => s.trim()).filter((id) => ID_ZASTAVENI.test(id));
-  return { nazev: nazevHodiny(p.get('n')), zastaveni: bezOpakovani(ids) };
+  const casti = (p.get('z') ?? '').split(',').map(rozeberZastaveniOdkazu).filter((z) => ID_ZASTAVENI.test(z.id));
+  const zastaveni = bezOpakovani(casti.map((z) => z.id));
+  const podoby: Record<string, Exclude<Podoba, 'cely'>> = {};
+  const videne = new Set<string>();
+  for (const z of casti) {
+    if (videne.has(z.id)) continue; // opakované zastavení: platí první výskyt i se svou podobou
+    videne.add(z.id);
+    if (z.podoba && zastaveni.includes(z.id)) podoby[z.id] = z.podoba;
+  }
+  const nazev = nazevHodiny(p.get('n'));
+  return Object.keys(podoby).length ? { nazev, zastaveni, podoby } : { nazev, zastaveni };
 }
 
-/** Uložená hodina bez poznámek: to, co se smí sdílet. */
-export const hodinaProStudenty = (h: UlozenaHodina): HodinaProStudenty => ({ nazev: h.nazev, zastaveni: h.zastaveni.map((z) => z.id) });
+/** Uložená hodina bez poznámek: to, co se smí sdílet (název, pořadí, podoby na plátně). */
+export function hodinaProStudenty(h: UlozenaHodina): HodinaProStudenty {
+  const podoby = Object.fromEntries(h.zastaveni.filter((z) => z.podoba).map((z) => [z.id, z.podoba!]));
+  const zastaveni = h.zastaveni.map((z) => z.id);
+  return Object.keys(podoby).length ? { nazev: h.nazev, zastaveni, podoby } : { nazev: h.nazev, zastaveni };
+}
 
 /** Hodina ze souboru .json (import), nebo null, když soubor hodinou není. Poznámky a zastavení se pročistí. */
 export function hodinaZeSouboru(text: string): UlozenaHodina | null {
@@ -324,10 +421,13 @@ export function hodinaZeSouboru(text: string): UlozenaHodina | null {
   if (h.verze !== VERZE_HODINY || typeof h.id !== 'string' || !Array.isArray(h.zastaveni)) return null;
   const videne = new Set<string>();
   const zastaveni = h.zastaveni
-    .filter((z): z is { id: string; poznamka: string } => !!z && typeof z.id === 'string' && ID_ZASTAVENI.test(z.id))
+    .filter((z): z is ZastaveniHodiny => !!z && typeof z.id === 'string' && ID_ZASTAVENI.test(z.id))
     .filter((z) => !videne.has(z.id) && !!videne.add(z.id))
     .slice(0, NEJVIC_ZASTAVENI)
-    .map((z) => ({ id: z.id, poznamka: typeof z.poznamka === 'string' ? z.poznamka : '' }));
+    .map((z): ZastaveniHodiny => {
+      const podoba = platnaPodoba(z.podoba);
+      return { id: z.id, poznamka: typeof z.poznamka === 'string' ? z.poznamka : '', ...(podoba ? { podoba } : {}) };
+    });
   return {
     verze: VERZE_HODINY,
     id: h.id,

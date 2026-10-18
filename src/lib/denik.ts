@@ -81,14 +81,66 @@ export interface PostupCesty {
   dokonceno?: string;
 }
 
-const KLIC = 'atlas-denik';
+export const KLIC_DENIKU = 'atlas-denik';
+const KLIC = KLIC_DENIKU;
+/**
+ * Deník promítání (větev hodiny-v1, krok H4) v sessionStorage: dokud v kartě existuje, nacti a uloz pracují
+ * s ním místo s deníkem studenta. Promítat hodinu ho vždy založí prázdný (zalozDenikPromitani), konec
+ * promítání a každý vstup do hodiny bez promítání ho smaže (zrusDenikPromitani; obojí volá src/lib/pruchod-hodiny.ts).
+ * Bloky, Pokračuj, postup cest a dočtené kapitoly tak na plátně začínají od nuly a do deníku nezapíšou nic.
+ */
+export const KLIC_PROMITANI = 'atlas-denik-promitani';
 const prazdny = (): Denik => ({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: {}, aktivita: [], cesty: {} });
 let vPameti: Denik | null = null;
+/** Deník promítání v paměti stránky (když sessionStorage chybí); zároveň znamená, že promítání běží. */
+let promitaniVPameti: Denik | null = null;
+
+/**
+ * Výraz pro skripty před vykreslením (Domů, profil, stránka otázky): text deníku, jak ho čte nacti(),
+ * při promítání tedy deník promítání. Vkládá se do textu skriptu.
+ */
+export const TEXT_DENIKU_SKRIPT = `(function () { try { var t = sessionStorage.getItem('${KLIC_PROMITANI}'); if (t !== null) return t; } catch (e) {} return localStorage.getItem('${KLIC}'); })()`;
+
+/** Běží promítání (v kartě je deník promítání)? */
+export function vPromitani(): boolean {
+  try {
+    if (sessionStorage.getItem(KLIC_PROMITANI) !== null) return true;
+  } catch { /* úložiště nedostupné */ }
+  return promitaniVPameti !== null;
+}
+
+/** Založí prázdný deník promítání (Promítat hodinu). Starý se zahodí. */
+export function zalozDenikPromitani(): void {
+  promitaniVPameti = prazdny();
+  try { sessionStorage.setItem(KLIC_PROMITANI, JSON.stringify(promitaniVPameti)); } catch { /* jen v paměti stránky */ }
+}
+
+/** Smaže deník promítání (konec promítání, vstup do hodiny bez promítání). Deník studenta se nemění. */
+export function zrusDenikPromitani(): void {
+  promitaniVPameti = null;
+  try { sessionStorage.removeItem(KLIC_PROMITANI); } catch { /* úložiště nedostupné */ }
+}
 
 export function nacti(): Denik {
+  if (vPromitani()) {
+    try {
+      const d = rozeber(sessionStorage.getItem(KLIC_PROMITANI));
+      if (d) return d;
+    } catch { /* úložiště nedostupné */ }
+    return promitaniVPameti ?? prazdny();
+  }
   try {
-    const t = localStorage.getItem(KLIC);
+    const d = rozeber(localStorage.getItem(KLIC));
+    if (d) return d;
+  } catch { /* úložiště nedostupné */ }
+  return vPameti ?? prazdny();
+}
+
+/** Deník z textu úložiště s doplněnými a pročištěnými poli, nebo null. */
+function rozeber(t: string | null): Denik | null {
+  {
     if (t) {
+      // Poškozený text vyhodí výjimku; nacti ji chytí jako nedostupné úložiště.
       const d = JSON.parse(t);
       if (d && d.verze === 1) {
         const plny = { ...prazdny(), ...d };
@@ -108,13 +160,18 @@ export function nacti(): Denik {
         return plny;
       }
     }
-  } catch { /* úložiště nedostupné */ }
-  return vPameti ?? prazdny();
+  }
+  return null;
 }
 
 export function uloz(d: Denik): void {
-  vPameti = d;
-  try { localStorage.setItem(KLIC, JSON.stringify(d)); } catch { /* zůstane v paměti */ }
+  if (vPromitani()) {
+    promitaniVPameti = d;
+    try { sessionStorage.setItem(KLIC_PROMITANI, JSON.stringify(d)); } catch { /* zůstane v paměti stránky */ }
+  } else {
+    vPameti = d;
+    try { localStorage.setItem(KLIC, JSON.stringify(d)); } catch { /* zůstane v paměti */ }
+  }
   if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('atlas-denik'));
 }
 
@@ -275,4 +332,5 @@ export function exportuj(): void {
 /** Jen pro testy: zapomene deník držený v paměti (když localStorage chybí). */
 export function _zapomenPamet(): void {
   vPameti = null;
+  promitaniVPameti = null;
 }

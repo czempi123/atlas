@@ -6,6 +6,10 @@
 //  · Promítání: u zastavení s kotvou jen jeho úsek; šipky, PageDown/PageUp a mezerník posouvají o obrazovku
 //    a na konci úseku přejdou na další zastavení (zpátky na konec předchozího); F celá obrazovka; Esc konec.
 //    Klávesy nesahají do polí, posuvníků a přepínačů bloků (klavesaPatriPrvku).
+//  · Podoba na plátně (krok H4): úsek bloku nebo kresby dostane data-podoba a styly v src/styles/promitani.css
+//    skryjí části podle značek data-cast. U otevřené otázky Ukázat možnosti (a klávesa M) přepne úsek na
+//    „jen otázka a možnosti“, dokud učitel nepřejde jinam; při návratu na zastavení jsou karty zase skryté.
+//  · Ukončit promítání (i Esc) stránku načte znovu: bloky pak ukážou deník studenta, ne stav z promítání.
 import {
   nactiAktivni, ulozAktivni, aktualniZastaveni, sousedniZastaveni, poradiZastaveni, cestaStranky, krokPromitani, polohaPrichodu,
   klavesaPatriPrvku, type AktivniHodina, type Plocha, type PolozkaHodiny,
@@ -26,12 +30,15 @@ export function spustListuHodiny(): void {
   const obrazovka = lista.querySelector<HTMLButtonElement>('[data-hl-obrazovka]')!;
   const zavrit = lista.querySelector<HTMLButtonElement>('[data-hl-zavrit]')!;
   const ukoncit = lista.querySelector<HTMLButtonElement>('[data-hl-ukoncit]')!;
+  const moznosti = lista.querySelector<HTMLButtonElement>('[data-hl-moznosti]')!;
   const main = document.querySelector<HTMLElement>('main')!;
 
   let hodina: AktivniHodina | null = null;
   let aktualni: number | null = null;
   let odchazim = false;
   let styl: HTMLStyleElement | null = null;
+  /** Ukázané možnosti otevřené otázky; platí jen pro právě promítané zastavení. */
+  let ukazane = false;
 
   const promitani = () => !!hodina && hodina.promitani && aktualni !== null;
   const hlavicka = document.querySelector<HTMLElement>('.hlavicka, .cesta-hlavicka');
@@ -56,10 +63,21 @@ export function spustListuHodiny(): void {
   function odznacUsek() {
     styl?.remove();
     styl = null;
-    for (const el of document.querySelectorAll('[data-promitane-predek], [data-promitane]')) {
+    for (const el of document.querySelectorAll('[data-promitane-predek], [data-promitane], [data-podoba]')) {
       el.removeAttribute('data-promitane-predek');
       el.removeAttribute('data-promitane');
+      el.removeAttribute('data-podoba');
     }
+    delete lista!.dataset.otevrena;
+  }
+
+  /** Podoba úseku na plátně: otevřená otázka s ukázanými možnostmi se ukáže jako „jen otázka a možnosti“. */
+  function nastavPodobu(el: HTMLElement, p: PolozkaHodiny) {
+    if (!p.podoba) return;
+    const otevrena = p.podoba === 'otevrena';
+    el.setAttribute('data-podoba', otevrena && ukazane ? 'moznosti' : p.podoba);
+    if (otevrena) lista!.dataset.otevrena = '';
+    moznosti.setAttribute('aria-pressed', String(otevrena && ukazane));
   }
 
   /** Na plátně zůstane vidět jen úsek zastavení s kotvou; jeho předci zůstanou, všechno ostatní v obsahu se skryje. */
@@ -74,6 +92,7 @@ export function spustListuHodiny(): void {
     const sel = el.id ? `#${CSS.escape(el.id)}` : kotva ? `[data-oddil-kotva="${CSS.escape(kotva)}"]` : '';
     if (!sel) return;
     el.setAttribute('data-promitane', '');
+    nastavPodobu(el, p);
     for (let a = el.parentElement; a && a !== main; a = a.parentElement) a.setAttribute('data-promitane-predek', '');
     styl = document.createElement('style');
     styl.id = 'promitani-usek';
@@ -125,12 +144,18 @@ export function spustListuHodiny(): void {
   /** Přečte aktivní hodinu, najde aktuální zastavení a podle toho ukáže lištu, nebo plátno. */
   async function obnov(umistit: boolean) {
     hodina = nactiAktivni();
+    ukazane = false;
     aktualni = hodina && !hodina.zavreno ? aktualniZastaveni(hodina.polozky, location.pathname, location.hash, hodina.posledni) : null;
     const s = aktualni !== null;
     html.classList.toggle('s-hodinou', s);
     html.classList.toggle('promitani', promitani());
     zmerHlavicku();
     if (!s) {
+      if (hodina?.poPromitani) {
+        const { poPromitani: _pryc, ...bez } = hodina;
+        ulozAktivni(bez);
+        try { history.scrollRestoration = 'auto'; } catch { /* nepodporováno */ }
+      }
       odznacUsek();
       html.classList.remove('promitani-pripraveno');
       delete lista!.dataset.pripraveno;
@@ -140,6 +165,18 @@ export function spustListuHodiny(): void {
     if (!promitani()) {
       odznacUsek();
       html.classList.remove('promitani-pripraveno');
+      if (hodina!.poPromitani) {
+        // Stránka se po konci promítání načetla znovu: zastavení na svém místě, fokus na Přehled hodiny.
+        const { poPromitani: _pryc, ...bez } = hodina!;
+        hodina = bez;
+        ulozAktivni(hodina);
+        try { history.scrollRestoration = 'auto'; } catch { /* nepodporováno */ }
+        const p = polozka();
+        const el = p?.kotva ? document.getElementById(p.kotva) : null;
+        if (el) el.scrollIntoView({ block: 'start' });
+        else scrollTo({ top: 0 });
+        prehled.focus({ preventScroll: true });
+      }
       return;
     }
     oznacUsek(polozka()!);
@@ -191,17 +228,28 @@ export function spustListuHodiny(): void {
     else if (!zapnout && document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
   }
 
+  /**
+   * Konec promítání: deník promítání se smaže (ulozAktivni bez promítání) a stránka se načte znovu, aby bloky
+   * ukázaly deník studenta, ne volby třídy. Po načtení se stránka otevře na zastavení a fokus dostane Přehled hodiny.
+   */
   function ukoncitPromitani() {
     if (!hodina) return;
-    const p = polozka();
-    ulozAktivni({ ...hodina, promitani: false, celaObrazovka: false });
+    ulozAktivni({ ...hodina, promitani: false, celaObrazovka: false, poPromitani: true });
+    odchazim = true;
     celaObrazovka(false);
-    void obnov(false).then(() => {
-      // Normální stránka se otevře tam, kde stálo zastavení.
-      const el = p?.kotva ? document.getElementById(p.kotva) : null;
-      if (el) el.scrollIntoView({ block: 'start' });
-      prehled.focus({ preventScroll: true });
-    });
+    try { history.scrollRestoration = 'manual'; } catch { /* nepodporováno */ }
+    location.reload();
+  }
+
+  /** Ukázat možnosti u otevřené otázky (tlačítko i klávesa M); znovu je skryje. */
+  function prepniMoznosti() {
+    const p = polozka();
+    if (!promitani() || p?.podoba !== 'otevrena') return;
+    const el = usek(p);
+    if (!el || el === main) return;
+    ukazane = !ukazane;
+    nastavPodobu(el, p);
+    posunNa(polohaPrichodu(plocha(), 'zacatek'));
   }
 
   /** Patří klávesa prvku s fokusem (pole, posuvník, přepínač bloku, tlačítko u mezerníku)? */
@@ -235,6 +283,7 @@ export function spustListuHodiny(): void {
     main.focus({ preventScroll: true });
   });
   ukoncit.addEventListener('click', ukoncitPromitani);
+  moznosti.addEventListener('click', prepniMoznosti);
   obrazovka.addEventListener('click', () => celaObrazovka(!document.fullscreenElement));
   document.addEventListener('fullscreenchange', () => {
     obrazovka.setAttribute('aria-pressed', String(!!document.fullscreenElement));
@@ -277,6 +326,12 @@ export function spustListuHodiny(): void {
       return;
     }
     obnovObrazovku();
+    if ((k === 'm' || k === 'M') && !e.shiftKey) {
+      if (polozka()?.podoba !== 'otevrena' || patriPrvku('m')) return;
+      e.preventDefault();
+      prepniMoznosti();
+      return;
+    }
     const vpred = k === 'ArrowRight' || k === 'PageDown' || (k === ' ' && !e.shiftKey);
     const vzad = k === 'ArrowLeft' || k === 'PageUp' || (k === ' ' && e.shiftKey);
     if (!vpred && !vzad) return;

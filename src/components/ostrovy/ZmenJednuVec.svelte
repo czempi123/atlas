@@ -88,7 +88,7 @@
 </script>
 
 {#snippet moznosti(jmeno: string, zamceno: boolean, getter: () => string | null, setter: (v: string) => void, popisek: string)}
-  <div class="moznosti" role="radiogroup" aria-label={popisek}>
+  <div class="moznosti" data-cast="moznosti" role="radiogroup" aria-label={popisek}>
     {#each blok.moznosti as m (m.id)}
       <label class={['moznost', getter() === m.id && 'moznost--vybrana']}>
         <input
@@ -109,17 +109,17 @@
 <section class="blok zmena obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
   <BlokHlava nadtitulek={blok.nadtitulek ?? 'Myšlenkový pokus'} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
-    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena">{@html o}</p>{/each}
+    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{@html radek(blok.otazka)}</h3>
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{@html radek(blok.otazka)}</h3>
 
   {#if !zaklad}
     {@render moznosti(`${id}-zaklad`, false, () => navrhZaklad, (v) => (navrhZaklad = v), 'Tvoje rozhodnutí')}
-    <button class="blok__tl blok__tl--hlavni" type="button" onclick={rozhodni} disabled={!navrhZaklad}>Rozhodnuto</button>
+    <button class="blok__tl blok__tl--hlavni" data-cast="akce" type="button" onclick={rozhodni} disabled={!navrhZaklad}>Rozhodnuto</button>
   {:else}
-    <p class="rozhodnuti"><span class="t-popisek">Tvoje rozhodnutí:</span> <strong>{veta(textMoznosti(zaklad))}</strong></p>
+    <p class="rozhodnuti" data-cast="moznosti"><span class="t-popisek">Tvoje rozhodnutí:</span> <strong>{veta(textMoznosti(zaklad))}</strong></p>
 
-    <fieldset class="prepinac">
+    <fieldset class="prepinac" data-cast="moznosti">
       <legend class="t-ovladani-l">Změň jednu věc</legend>
       <div class="podminky" bind:this={prepinace}>
         {#each blok.podminky as p (p.id)}
@@ -133,7 +133,7 @@
     </fieldset>
 
     {#if podminka}
-      <div class="zmenena" in:odkryti>
+      <div class="zmenena" data-cast="moznosti" in:odkryti>
         {#each odstavce(podminka.zmena) as o, i (i)}<p>{@html o}</p>{/each}
         <p class="znovu-otazka t-ovladani-l">{@html radek(blok.otazka)}</p>
         {#key aktivni}
@@ -146,7 +146,7 @@
 
       {#if odpovedTed}
         {@const posun = posunZmeny(zaklad, odpovedTed)}
-        <div class="blok__zpetna" role="region" aria-label="Posun odpovědi" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
+        <div class="blok__zpetna" data-cast="zpetna" role="region" aria-label="Posun odpovědi" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
           <p class="posun t-ovladani">
             <span class="posun__cast"><span class="t-popisek">Předtím</span> {veta(textMoznosti(zaklad))}</span>
             <span class="posun__sipka" aria-hidden="true">→</span>
@@ -157,11 +157,11 @@
         </div>
       {/if}
     {:else}
-      <p class="t-popisek napoveda">Vyber jednu změnu a rozhodni se znovu.</p>
+      <p class="t-popisek napoveda" data-cast="moznosti">Vyber jednu změnu a rozhodni se znovu.</p>
     {/if}
 
     {#if nejakaOdpoved && blok.coUdelal && filozof}
-      <div class="co-udelal" in:odkryti>
+      <div class="co-udelal" data-cast="zpetna" in:odkryti>
         <BlokFilozof {filozof} nadpis={blok.coUdelal.nadpis}>
           {#each odstavce(blok.coUdelal.text) as o, i (i)}<p>{@html o}</p>{/each}
         </BlokFilozof>
@@ -169,8 +169,8 @@
     {/if}
     {#if nejakaOdpoved}<BlokDal {dal} />{/if}
 
-    <div class="blok__akce">
-      {#if nejakaOdpoved}<p class="blok__ulozeno">Tvoje rozhodnutí jsou uložená v deníku.</p>{/if}
+    <div class="blok__akce" data-cast="akce">
+      {#if nejakaOdpoved}<p class="blok__ulozeno" data-cast="ulozeno">Tvoje rozhodnutí jsou uložená v deníku.</p>{/if}
       <button class="blok__tl blok__tl--tiche" type="button" onclick={znovu}>Začít znovu</button>
     </div>
   {/if}

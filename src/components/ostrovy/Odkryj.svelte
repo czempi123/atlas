@@ -86,10 +86,11 @@
 
 <section class={['blok', 'odkryj', obdobi && `obdobi-${obdobi}`]} id={id} aria-labelledby={`${id}-otazka`}>
   <BlokHlava {nadtitulek} lide={filozof ? [filozof] : []} />
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{nezlomitelne(otazka)}</h3>
-  <label class="vizualne-skryte" for={`${id}-pole`}>Tvoje odpověď</label>
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{nezlomitelne(otazka)}</h3>
+  <label class="vizualne-skryte" for={`${id}-pole`} data-cast="duvod">Tvoje odpověď</label>
   <textarea
     class="blok__pole"
+    data-cast="duvod"
     id={`${id}-pole`}
     rows="3"
     bind:value={odpoved}
@@ -98,15 +99,15 @@
     disabled={odkryto && !upravuji}
   ></textarea>
   {#if !odkryto}
-    <button class="blok__tl blok__tl--hlavni" type="button" onclick={porovnej}>{tlacitko}</button>
+    <button class="blok__tl blok__tl--hlavni" data-cast="akce" type="button" onclick={porovnej}>{tlacitko}</button>
   {:else if upravuji}
-    <div class="blok__akce">
+    <div class="blok__akce" data-cast="duvod">
       <button class="blok__tl blok__tl--hlavni" type="button" onclick={ulozUpravu}>Uložit do deníku</button>
     </div>
   {/if}
 
   {#if odkryto}
-    <div class="blok__zpetna odkryto" role="region" aria-label="Srovnání" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
+    <div class="blok__zpetna odkryto" data-cast="zpetna" role="region" aria-label="Srovnání" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
       {#if children}{@render children()}{/if}
 
       {#if modelove.length}
@@ -136,10 +137,10 @@
       {/if}
     </div>
     <BlokDal {dal} />
-    <div class="blok__akce">
-      {#if ulozeno}<p class="blok__ulozeno">Tvoje odpověď je uložená v deníku.</p>{/if}
+    <div class="blok__akce" data-cast="akce">
+      {#if ulozeno}<p class="blok__ulozeno" data-cast="ulozeno">Tvoje odpověď je uložená v deníku.</p>{/if}
       {#if !upravuji}
-        <button class="blok__tl blok__tl--tiche" type="button" onclick={() => (upravuji = true)}>
+        <button class="blok__tl blok__tl--tiche" data-cast="duvod" type="button" onclick={() => (upravuji = true)}>
           {odpoved.trim() ? 'Upravit odpověď' : 'Připsat odpověď'}
         </button>
       {/if}

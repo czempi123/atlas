@@ -3,7 +3,8 @@
 // v sessionStorage: hodina platí jen pro kartu, ve které ji student otevřel, a po zavření karty zmizí.
 // Lištu a promítání na stránkách obsluhuje src/scripts/hodina-lista.ts; třídy na <html> nastavuje
 // před vykreslením skript v src/layouts/Zakladni.astro, který čte tentýž klíč.
-import { najdiZastaveni, type DruhZastaveni, type HodinaProStudenty, type Zastaveni } from './hodiny';
+import { najdiZastaveni, platnaPodoba, ucinnaPodoba, type DruhZastaveni, type HodinaProStudenty, type Podoba, type Zastaveni } from './hodiny';
+import { zalozDenikPromitani, zrusDenikPromitani } from './denik';
 
 /** Klíč v sessionStorage (čte ho i skript v hlavičce Zakladni.astro). */
 export const KLIC_AKTIVNI = 'atlas-hodina-aktivni';
@@ -16,6 +17,8 @@ export interface PolozkaHodiny {
   stranka: string | null;
   kotva: string | null;
   adresa: string | null;
+  /** podoba na plátně u bloku a kresby, které se neukážou celé (src/lib/hodiny.ts › Podoba na plátně) */
+  podoba?: Exclude<Podoba, 'cely'>;
 }
 
 export interface AktivniHodina {
@@ -33,15 +36,21 @@ export interface AktivniHodina {
   zavreno: boolean;
   /** učitel při promítání zapnul celou obrazovku; po přechodu na jinou stránku se zapne znovu první klávesou */
   celaObrazovka: boolean;
+  /** promítání právě skončilo a stránka se načetla znovu: fokus patří Přehledu hodiny (jednorázové) */
+  poPromitani?: boolean;
 }
 
-/** Aktivní hodina z hodiny pro studenty a katalogu: zastavení s adresami, neznámá bez adresy. */
+/**
+ * Aktivní hodina z hodiny pro studenty a katalogu: zastavení s adresami, neznámá bez adresy. Podoba na plátně
+ * zůstane jen u zastavení, které ji má (ucinnaPodoba); jinak je zastavení celé.
+ */
 export function aktivniHodina(h: HodinaProStudenty, katalog: Zastaveni[], adresa: string, promitani = false): AktivniHodina {
-  const polozky = najdiZastaveni(katalog, h.zastaveni).map((n): PolozkaHodiny =>
-    n.nalezeno
-      ? { id: n.id, druh: n.zastaveni.druh, nazev: n.zastaveni.nazev, stranka: n.zastaveni.stranka, kotva: n.zastaveni.kotva, adresa: n.zastaveni.adresa }
-      : { id: n.id, druh: null, nazev: n.text, stranka: null, kotva: null, adresa: null },
-  );
+  const polozky = najdiZastaveni(katalog, h.zastaveni).map((n): PolozkaHodiny => {
+    if (!n.nalezeno) return { id: n.id, druh: null, nazev: n.text, stranka: null, kotva: null, adresa: null };
+    const z = n.zastaveni;
+    const podoba = platnaPodoba(ucinnaPodoba(z, h.podoby?.[n.id]));
+    return { id: n.id, druh: z.druh, nazev: z.nazev, stranka: z.stranka, kotva: z.kotva, adresa: z.adresa, ...(podoba ? { podoba } : {}) };
+  });
   return { verze: 1, adresa, nazev: h.nazev, polozky, posledni: null, prichod: 'zacatek', promitani, zavreno: false, celaObrazovka: false };
 }
 
@@ -54,6 +63,11 @@ export function platnaAktivni(x: unknown): AktivniHodina | null {
     (p): p is PolozkaHodiny => !!p && typeof p.id === 'string' && (p.stranka === null || typeof p.stranka === 'string') && (p.adresa === null || typeof p.adresa === 'string'),
   );
   if (polozky.length !== h.polozky.length) return null;
+  for (const p of polozky) {
+    const podoba = platnaPodoba(p.podoba);
+    if (podoba) p.podoba = podoba;
+    else delete p.podoba;
+  }
   return {
     verze: 1,
     adresa: h.adresa,
@@ -64,6 +78,7 @@ export function platnaAktivni(x: unknown): AktivniHodina | null {
     promitani: h.promitani === true,
     zavreno: h.zavreno === true,
     celaObrazovka: h.celaObrazovka === true,
+    ...(h.poPromitani === true ? { poPromitani: true } : {}),
   };
 }
 
@@ -77,7 +92,12 @@ export function nactiAktivni(): AktivniHodina | null {
   return vPameti;
 }
 
+/**
+ * Uloží aktivní hodinu karty. Hodina bez promítání (nebo žádná) zároveň smaže deník promítání: promítání tím
+ * skončilo a bloky dál pracují s deníkem studenta.
+ */
 export function ulozAktivni(h: AktivniHodina | null): void {
+  if (!h?.promitani) zrusDenikPromitani();
   vPameti = h;
   try {
     if (h) sessionStorage.setItem(KLIC_AKTIVNI, JSON.stringify(h));
@@ -137,12 +157,15 @@ export const prvniZastaveni = (polozky: PolozkaHodiny[]): number | null => souse
 
 /**
  * Uloží hodinu jako aktivní pro tuto kartu s tím, že student jde na zastavení j (nebo na první), a vrátí jeho adresu.
- * S `promitani` se zastavení otevře v režimu pro plátno.
+ * S `promitani` se zastavení otevře v režimu pro plátno a bloky začnou v prázdném deníku promítání
+ * (každé Promítat hodinu od nuly); bez něj se případný deník promítání smaže.
  */
 export function vstupDoHodiny(h: AktivniHodina, j: number | null = prvniZastaveni(h.polozky), promitani = h.promitani): string | null {
   const p = j !== null ? h.polozky[j] : undefined;
   if (!p?.adresa) return null;
-  ulozAktivni({ ...h, posledni: j, prichod: 'zacatek', promitani, zavreno: false, celaObrazovka: false });
+  if (promitani) zalozDenikPromitani();
+  const { poPromitani: _pryc, ...bez } = h;
+  ulozAktivni({ ...bez, posledni: j, prichod: 'zacatek', promitani, zavreno: false, celaObrazovka: false });
   return p.adresa;
 }
 

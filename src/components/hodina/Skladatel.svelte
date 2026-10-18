@@ -2,10 +2,14 @@
   // Skladatel hodiny (/hodina/nova/): vlevo výběr z katalogu zastavení po stránkách, vpravo hodina
   // (na telefonu pod sebou, s počtem zvolených zastavení přilepeným nahoře nad výběrem).
   // Hodina se ukládá v prohlížeči (src/lib/hodiny-uloziste.ts) a do souboru; odkaz pro studenty nese jen
-  // název a pořadí zastavení (adresaHodiny), poznámky nikdy. Logika výběru je v src/lib/skladatel.ts.
+  // název, pořadí a podobu zastavení na plátně (adresaHodiny), poznámky nikdy. Logika výběru je v src/lib/skladatel.ts.
+  // U bloku a kresby učitel vybere podobu na plátně (krok H4, src/lib/hodiny.ts › Podoba na plátně).
   // Použití: <Skladatel client:load obdobi={[{ id: 1, nazev: 'Počátky a klasické Řecko' }, …]} />
   import { onMount, tick } from 'svelte';
-  import { NENI_V_ATLASU, VERZE_HODINY, adresaHodiny, hodinaZeSouboru, najdiZastaveni, type UlozenaHodina, type Zastaveni } from '../../lib/hodiny';
+  import {
+    NENI_V_ATLASU, VERZE_HODINY, adresaHodiny, hodinaZeSouboru, najdiZastaveni, nazevPodoby, platnaPodoba, podobyZastaveni, ucinnaPodoba,
+    type Podoba, type UlozenaHodina, type Zastaveni, type ZastaveniHodiny,
+  } from '../../lib/hodiny';
   import { nactiHodinu, noveIdHodiny, stahniHodinu, ulozHodinu } from '../../lib/hodiny-uloziste';
   import {
     DRUHY_VYBERU, druhStranky, filtrujKatalog, kdeStoji, pocetZastaveni, posun, prazdnyFiltr, stitekDruhu, stromKatalogu,
@@ -41,14 +45,16 @@
   let id = $state<string | undefined>();
   let nazev = $state('');
   let poznamka = $state('');
-  let zastaveni = $state<{ id: string; poznamka: string }[]>([]);
+  let zastaveni = $state<ZastaveniHodiny[]>([]);
   let ulozenoKdy = $state<string | null>(null);
   let neulozeno = $state(false);
   let zprava = $state('');
   let origin = $state('');
   let vHodine = $derived(new Set(zastaveni.map((z) => z.id)));
   let podleId = $derived(new Map((katalog ?? []).map((z) => [z.id, z])));
-  let odkaz = $derived(origin + adresaHodiny({ nazev, zastaveni }));
+  /** Zastavení s podobou, kterou opravdu mají (podoba, kterou zastavení nemá, by do odkazu jen přidala značku). */
+  let sPodobou = $derived(zastaveni.map((z) => ({ id: z.id, podoba: podobaZastaveni(z) })));
+  let odkaz = $derived(origin + adresaHodiny({ nazev, zastaveni: sPodobou }));
   let souborVstup = $state<HTMLInputElement>();
   let odkazVstup = $state<HTMLInputElement>();
 
@@ -85,6 +91,21 @@
 
   const zmena = () => (neulozeno = true);
   const nazevZastaveni = (zid: string) => podleId.get(zid)?.nazev ?? NENI_V_ATLASU;
+  /** Podoba na plátně, jak se ukáže: u zastavení, které ji nemá (nebo které atlas nezná), celý blok. */
+  function podobaZastaveni(z: ZastaveniHodiny): Podoba {
+    const k = podleId.get(z.id);
+    return k ? ucinnaPodoba(k, z.podoba) : (z.podoba ?? 'cely');
+  }
+  const malym = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+
+  function zmenPodobu(i: number, hodnota: string) {
+    const p = platnaPodoba(hodnota);
+    const { podoba: _stara, ...bez } = zastaveni[i];
+    zastaveni[i] = p ? { ...bez, podoba: p } : bez;
+    const k = podleId.get(zastaveni[i].id);
+    zprava = `${nazevZastaveni(zastaveni[i].id)}: na plátně ${malym(nazevPodoby(p ?? 'cely', k?.typ))}.`;
+    zmena();
+  }
 
   function prepni(z: Zastaveni) {
     if (vHodine.has(z.id)) {
@@ -168,7 +189,8 @@
   function promitat() {
     if (!katalog) return;
     const ids = zastaveni.map((z) => z.id);
-    const h = aktivniHodina({ nazev, zastaveni: ids }, katalog, adresaHodiny({ nazev, zastaveni: ids }), true);
+    const podoby = Object.fromEntries(zastaveni.flatMap((z) => (z.podoba ? [[z.id, z.podoba]] : [])));
+    const h = aktivniHodina({ nazev, zastaveni: ids, podoby }, katalog, adresaHodiny({ nazev, zastaveni: sPodobou }), true);
     const cil = vstupDoHodiny(h, undefined, true);
     if (cil) location.href = cil;
     else zprava = 'V hodině není žádné místo, které by v atlasu bylo.';
@@ -315,6 +337,15 @@
                 <a class="zvolene__nazev" href={n.zastaveni.adresa} target="_blank" rel="noopener"><span class="vizualne-skryte">{i + 1}.</span>{nezlomitelne(n.zastaveni.nazev)}<span class="vizualne-skryte">otevře se v nové kartě</span><span class="sipka" aria-hidden="true">↗</span></a>
                 <label class="vizualne-skryte" for="poznamka-{i}">Poznámka k zastavení {i + 1}: {n.zastaveni.nazev}</label>
                 <textarea id="poznamka-{i}" class="vstup vstup--poznamka" rows="2" placeholder="Poznámka" bind:value={zs.poznamka} oninput={zmena}></textarea>
+                {@const podoby = podobyZastaveni(n.zastaveni)}
+                {#if podoby.length > 1}
+                  <div class="podoba">
+                    <label class="podoba__popis" for="podoba-{i}">Na plátně<span class="vizualne-skryte">, zastavení {i + 1}</span>:</label>
+                    <select id="podoba-{i}" class="vstup vstup--podoba" value={podobaZastaveni(zs)} onchange={(e) => zmenPodobu(i, e.currentTarget.value)}>
+                      {#each podoby as p (p)}<option value={p}>{nazevPodoby(p, n.zastaveni.typ)}</option>{/each}
+                    </select>
+                  </div>
+                {/if}
               {:else}
                 <p class="zvolene__nazev zvolene__nazev--chybi">{NENI_V_ATLASU}</p>
                 <p class="zvolene__kde">{zs.id}</p>
@@ -379,6 +410,7 @@
           {#if n.nalezeno}
             <p class="tisk__kde">{stitekDruhu(n.zastaveni)} · {kdeStoji(n.zastaveni)}</p>
             <p class="tisk__nazev-zastaveni">{n.zastaveni.nazev}</p>
+            {#if podobaZastaveni(zs) !== 'cely'}<p class="tisk__podoba">na plátně: {malym(nazevPodoby(podobaZastaveni(zs), n.zastaveni.typ))}</p>{/if}
             <p class="tisk__adresa">{origin}{n.zastaveni.adresa}</p>
           {:else}
             <p class="tisk__nazev-zastaveni">{NENI_V_ATLASU}</p>
@@ -530,6 +562,9 @@
   .zvolene__nazev:hover { text-decoration: underline; }
   .zvolene__nazev--chybi { color: var(--ink-2); font-style: italic; font-weight: 500; }
   .vstup--poznamka { min-height: 44px; font-size: var(--fs-ovladani); resize: vertical; }
+  .podoba { display: flex; flex-wrap: wrap; align-items: center; column-gap: var(--s-2); row-gap: var(--s-1); margin-top: var(--s-2); }
+  .podoba__popis { font-family: var(--font-sans); font-size: var(--fs-ovladani); color: var(--ink-2); }
+  .vstup--podoba { display: inline-block; flex: 1 1 12em; width: auto; min-width: 0; font-size: var(--fs-ovladani); }
   .zvolene__akce { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-2); }
   .zvolene__akce .tl-maly { min-width: 0; }
 
@@ -561,6 +596,7 @@
     .tisk__cislo { font-family: var(--font-sans); font-weight: 600; }
     .tisk__kde { font-family: var(--font-sans); font-size: 9pt; color: var(--ink-2); }
     .tisk__nazev-zastaveni { font-size: 12.5pt; font-weight: 600; }
+    .tisk__podoba { font-family: var(--font-sans); font-size: 9.5pt; font-weight: 600; }
     .tisk__adresa { font-family: var(--font-sans); font-size: 8.5pt; color: var(--ink-2); overflow-wrap: anywhere; }
     .tisk__pozn { margin-top: 3pt !important; white-space: pre-line; }
   }

@@ -10,6 +10,7 @@
 // před vykreslením složí „Pokračovat ve čtení“ v hlavičce profilu (prvek [data-cteni]). Stránka se sama neposouvá.
 // Použití: <ObsahProfilu adresa="/osobnost/sokrates/"> …obsah stránky pod hlavičkou profilu… </ObsahProfilu>
 import { oddilyZeStranky, kamPokracovat } from '../../lib/obsah';
+import { TEXT_DENIKU_SKRIPT } from '../../lib/denik';
 
 interface Props { adresa: string }
 const { adresa } = Astro.props;
@@ -22,7 +23,7 @@ const doSkriptu = (x: unknown) => JSON.stringify(x).replace(/</g, '\\u003c');
 const skript = `(function () {
   document.documentElement.setAttribute('data-obsah-js', '');
   try {
-    var d = JSON.parse(localStorage.getItem('atlas-denik') || 'null');
+    var d = JSON.parse(${TEXT_DENIKU_SKRIPT} || 'null');
     var kotva = d && d.verze === 1 && d.cteni && typeof d.cteni === 'object' ? d.cteni[${doSkriptu(adresa)}] : null;
     var o = (${kamPokracovat.toString()})(${doSkriptu(oddily)}, kotva);
     var p = document.querySelector('[data-cteni]');

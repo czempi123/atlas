@@ -11,6 +11,7 @@ import Pokracuj from '../components/ostrovy/Pokracuj.svelte';
 import { osoba } from '../lib/data';
 import { zacatekDomu, type CestaDomu } from '../lib/pokracuj';
 import { nezlomitelne } from '../lib/sazba.js';
+import { TEXT_DENIKU_SKRIPT } from '../lib/denik';
 
 // První cesta atlasu: tlačítko vede rovnou na její krok 1, údaj pod ním se skládá z dat cesty.
 const PRVNI = 'kdy-mam-dobry-duvod-verit';
@@ -28,7 +29,7 @@ const filozofove = prvni.data.filozofove.map(osoba);
 const doSkriptu = (x: unknown) => JSON.stringify(x).replace(/</g, '\\u003c');
 const skript = `(function () {
   try {
-    var d = JSON.parse(localStorage.getItem('atlas-denik') || 'null');
+    var d = JSON.parse(${TEXT_DENIKU_SKRIPT} || 'null');
     if (!d || d.verze !== 1) return;
     var z = (${zacatekDomu.toString()})(d, ${doSkriptu(cesty)}, ${doSkriptu(PRVNI)});
     var k = document.querySelector('[data-zacatek]');
