@@ -4,8 +4,8 @@ Celek 9 staví cestu 34 z katalogu (`docs/architektura.md`): Seneca a jeho spis 
 
 | Krok | Co | Model | Stav |
 | --- | --- | --- | --- |
-| P6 | Podklady: prameny, příběh, spor Seneca × Marcus, nejsilnější námitka, dnešní případ, návrh kroků cesty | Opus 5.5 · high s vyhledáváním | čeká; zadání níže |
-| P8 | Cesta 34 se závěrem a Návratem, kresba, hlas nebo doplnění otázky 1, případné odkazy z portrétů Seneky a Marca | Opus 5.5 · high se skillem `atlas-cesta` (xhigh při zaseknutí) | čeká na P6 a na sloučení `hodiny-v1` |
+| P6 | Podklady: prameny, příběh, spor Seneca × Marcus, nejsilnější námitka, dnešní případ, návrh kroků cesty | Opus 5.5 · high s vyhledáváním | hotovo 18. 10. 2026 (`docs/podklady/celek-9.md`); viz Po P6 |
+| P8 | Cesta 34 se závěrem a Návratem, kresba, hlas nebo doplnění otázky 1, případné odkazy z portrétů Seneky a Marca | Opus 5.5 · high se skillem `atlas-cesta` (xhigh při zaseknutí) | čeká na sloučení `hodiny-v1`; zadání níže |
 | P10 | Revize celku | Opus 5.5 · high se skillem `atlas-revize` | čeká |
 | O | Opravy po revizi | Opus 5.5 · high | čeká |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
@@ -56,27 +56,55 @@ Volný čas na filozofii je výsada bohatých. Kdo pracuje na dvě směny nebo s
 - **Cesta 33 jako celek 10:** Stockdale v datech není. Buď výjimka z pravidla o nových osobách (v architektuře je jako medailonek), nebo jeho příběh jen v textu cesty. Rozhodne plán celku 10.
 - **Stoický týden** (sedm cvičení, spouští se po cestách 5, 33 a 34) až po obou stoických cestách, jako vlastní větev.
 
-## Zadání P6: podklady
+## Po P6
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** s vyhledáváním. Krok je stavěný tak, aby přežil přerušení: podkladový list se píše a commituje po oddílech a stejné zadání po resetu kreditů pokračuje tam, kde práce skončila.
+Hotovo 18. 10. 2026. Podkladový list je `docs/podklady/celek-9.md` (oddíly a až i, každý commitnutý zvlášť). O krátkosti života jsem četl celé latinsky, k tomu Dopisy 1 a 17, O duševním klidu 3–5 a 13, O volném čase 3–5, Tacita (I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60) a čtrnáct Marcových kapitol řecky. Všechny převody jsou vlastní; české překlady jsem neměl v ruce. Paulinovu totožnost a dataci spisu znám jen z úryvků odborné literatury (Griffinová 1962, Williams 2003), proto je studentský text nepotřebuje.
+
+**Co jsem našel navíc proti plánu.**
+
+- *Turranius* (O krátkosti života 20, 4): stařec přes devadesát, který si po odchodu z úřadu dal vystrojit pohřeb, dokud mu práci nevrátili. Byl to podle Griffinové Paulinův předchůdce ve stejném úřadě; Tacitus ho v úřadě dokládá roku 14 i 48. Nejsilnější scéna celku (krok 4).
+- *Zaneprázdněné volno* (12, 2): Seneca mezi zaneprázdněné počítá i lidi, kteří mají volno a vyplní ho zaneprázdněností. Telefon tím do cesty patří jako případ bez kázání.
+- *Pointa* (20, 1): nejubožejší jsou ti, kdo „chodí cizím krokem“; kdo chce vědět, jak krátký je jeho život, ať spočítá, jak velká část z něj je jeho. To je „kdo rozhodl“ přímo od Seneky.
+- *Marcus VIII, 8*: „Číst nemůžeš. Ale…“ Nejlepší odpověď na námitku, že volno je pro bohaté, a dává ji Marcus, ne Seneca.
+- *Démokritos*: Marcus (IV, 24) i Seneca (O duševním klidu 13, 1) citují tutéž větu „dělej málo“ a oba ji vztahují na zbytečné věci. Místo, kde se oba stoici shodnou.
+
+**Co jsem zvažoval.**
+
+- *Spor:* plán stavěl Seneku na stranu „odejít“. Seneca jinde (O duševním klidu 4) radí neutíkat hned a „mísit volno s prací“; Marcus po ústraní sám touží (IV, 3). Spor jsem nechal, ale jako dvě rady dvěma lidem, ne dvě školy: prostřední poloha škály dostane Seneku z O duševním klidu za zastánce.
+- *Obrat:* Senekova žádost u Nerona roku 62 ano (Tacitus mu do úst vkládá, že chce svůj čas zpátky); pověst o druhé žádosti roku 64 ne, jako v celku 6.
+- *Paulinus:* „neposlechl a dál sloužil“ by byla silná pointa, ale stojí na nejisté totožnosti s konzulárem z Tacita. Nepoužito.
+- *Čísla:* dva údaje obstály (PISA 2022 o vypnutých upozorněních a tlaku odpovídat; příjmy Mety z reklamy podle výroční zprávy). Českou studii se srovnatelnou metodou jsem neověřil a HBSC 2022 jen z tiskové zprávy (věk 11–15, měří závislost, ne čas). Cesta se obejde i bez procent.
+- *Kresba:* Přesýpací hodiny (atribut Seneky) s pískem jednoho dne, který se usazuje podle toho, kdo o hodině rozhodl. Loď ve vichru (7, 10) jako druhá možnost.
+- *Otázka 1:* stoický hlas už má (Seneca o bohatství) a Hipparchia tam nese „kdo určil, kam má tvůj čas patřit“. Nový hlas nenavrhuji.
+- *Cesta 7:* je blízko („čí život vlastně žiju“). Cesta 34 mluví o hodinách a pozornosti, ne o životních volbách; v posledním kroku na cestu 7 odkáže.
+
+## Co rozhodnout po P6 (prázdná odpověď znamená souhlas s doporučením)
+
+Otázky s doporučením jsou v podkladovém listu, oddíl i): kresba (Přesýpací hodiny), obrázek na vstup (žádný), nový hlas na otázce 1 (ne), Turranius bez jména, čísla v kroku 5 (slovy a jedna věta o reklamě), Zkus to žít „Proč teď?“, slug `kam-mi-mizi-cas`. Odpovědi piš tam.
+
+## Zadání P8: cesta 34
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-cesta` (xhigh při zaseknutí; kresba se skillem `atlas-komponenta`). **Začne až po sloučení `hodiny-v1` do hlavní větve a hlavní větve do `celek-9`** (viz Souběh s hodiny-v1). Krok je stavěný tak, aby přežil přerušení: kroky cesty se commitují po jednom.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok P6 celku 9 „Kam mi mizí čas?“ (cesta 34). Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Co celek staví a Souběh s hodiny-v1), postup ve skillu atlas-overeni (skills/atlas-overeni/). Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit).
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok P8 celku 9 „Kam mi mizí čas?“: cesta 34. Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Po P6, Co rozhodnout po P6 a Souběh s hodiny-v1), podklady v docs/podklady/celek-9.md (moje odpovědi v oddíle i) mají přednost před doporučením; prázdná odpověď znamená souhlas), postup ve skillu atlas-cesta, kresba se skillem atlas-komponenta. Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit); z podkladového listu čti oddíly a), b) a c) jen v řádcích, které cesta použije.
 
-0. Začátek, nebo pokračování.
-   - Když větev celek-9 neexistuje: zkontroluj, že ve větvi hodiny-v1 nejsou necommitnuté změny (jinak nic nepřepínej a napiš mi). Založ celek-9 z hlavní větve (ne z hodiny-v1), ulož plán z projektu beze změny do docs/plany/celek-9.md, v docs/plan.md přidej řádek celek-9 do tabulky Plány větví a uprav odstavec Další větve v pořadí, commitni.
-   - Když větev existuje (pokračuješ po přerušení): přepni se do ní a přečti docs/podklady/celek-9.md. Oddíly mají v nadpisu stav (hotovo / rozpracováno); pokračuj prvním, který není hotový, a hotové znovu neověřuj.
+0. Kontrola souběhu (nic nepiš, dokud neprojde):
+   - git switch celek-9 a git status bez necommitnutých změn.
+   - git merge-base --is-ancestor hodiny-v1 main (hodiny-v1 je v hlavní větvi). Když to neprojde, nic nedělej a napiš mi, že hodiny-v1 ještě není sloučená.
+   - git merge-base --is-ancestor main celek-9 (hlavní větev je v celek-9). Když to neprojde, sluč hlavní větev do celek-9 (git merge main); konflikt v tabulce Plány větví v docs/plan.md vyřeš tak, že zůstanou oba řádky (hodiny-v1 i celek-9). Jiný konflikt neřeš a napiš mi.
+   - Ověř, že v celek-9 jsou věci z hodiny-v1: soubor src/lib/kresby.ts, skript scripts/hodiny-katalog.mjs a značky data-cast v src/components/ostrovy/Volba.svelte. Restartuj náhled (npx astro dev stop, pak nohup npm run dev > /tmp/atlas-dev.log 2>&1 &).
+   - Pokračuješ po přerušení? Hotové kroky cesty jsou v src/content/cesty/kam-mi-mizi-cas/ a v git logu; pokračuj prvním, který chybí.
 
-1. Podkladový list docs/podklady/celek-9.md podle šablony skillu. Piš ho po oddílech a po každém oddílu commitni (česky). Nejdřív se podívej do podkladů celků 3 a 6 v docs/podklady/ (Marcus, Seneca): co je tam ověřené, znovu neověřuj, jen odkaž. Oddíly:
-   a) Příběh: komu a kdy Seneca psal O krátkosti života (Paulinus, jeho úřad, datace spisu a její nejistota); Senecovy žádosti, aby ho Nero propustil ze dvora (Tacitus, Letopisy 14 a 15), a jak dopadly; kde a za jakých okolností psal Marcus Hovory k sobě (z celku 3).
-   b) Seneca: hlavní místa O krátkosti života a prvního dopisu Luciliovi (čas jako jediné, co je opravdu naše; zaneprázdnění; výzva spočítat si léta; žít, nebo jen být; rozhovor s mudrci všech dob). U každého místa latinský text a české znění s překladatelem a vydáním, nebo vlastní překlad výslovně označený jako vlastní. Seneca patří k nejčastěji podvrhovaným autorům na internetu: každý citát ověř v latině.
-   c) Marcus: místa o čase a přítomnosti (třeba 2.5, 2.14, 4.3, 4.17, 4.32; číslování ověř) v překladu, který atlas už používá.
-   d) Spor Seneca × Marcus: odejít z úřadu do klidu (otium), nebo zůstat a ustoupit do sebe? Je to poctivé čtení obou? Kde Seneca sám rozlišuje (O klidu duše, O volném čase)? Nejsilnější verze každé strany jednou větou.
-   e) Nejsilnější námitka: volný čas jako výsada bohatých (Senecovo bohatství a výtky současníků, Tacitus 13.42) a čas s přáteli v telefonu, který není promarněný. Co by Seneca odpověděl a kde je jeho odpověď slabá.
-   f) Dnešní případ pro studenta 15–19 let: čas u obrazovky a pozornost jako zboží. Najdi nejvýš dva spolehlivé údaje (nejlépe české nebo evropské výzkumy dospívajících, s rokem a metodou); když žádný nesedí, cesta se obejde bez čísel. Pointa cesty není „odlož mobil“, ale „kdo rozhodl, kam můj čas jde“.
-   g) Návrh cesty: osnova 7–8 kroků s bloky z knihovny ke každému kroku, námět na kresbu nebo animaci (mám rád pohyblivé kresby jako jeskyně v cestě 3), závěrečné pravidlo, tři případy pro Návrat, Zkus to žít (odlišné od večerního ohlédnutí ze Stoického týdne), vazby na portréty Seneky a Marca a na stránku otázky 1 (zjisti v src/content, jestli otázka 1 má stoický hlas; když nemá, navrhni hlas Seneky). Žádné nové osoby v datech.
-   h) Obrázky: potřebuje cesta nový obraz pro vstup? Návrh s licencí; stahuj až s mým souhlasem.
-   i) Otevřené otázky pro mě, každá s doporučením a řádkem „Odpověď:“ (prázdná odpověď znamená souhlas s doporučením).
+1. Data: prameny a citáty podle podkladů (Návrh dat; ids z tabulek b a c), jen ta místa, která cesta opravdu použije. Tentýž citát nejvýš dvakrát v celku; atribut Seneky (O krátkosti života 1, 3) v cestě jen jednou. Žádné nové osoby, místa ani vztahy.
 
-2. Do plánu větve zapiš stav P6, oddíl „Po P6“ (co jsi zvažoval) a zadání P8 (Opus 5.5 · high se skillem atlas-cesta). Do zadání P8 napiš, že začne až po sloučení hodiny-v1 do hlavní větve a hlavní větve do celek-9, jak to ověřit, a že nové bloky a kresby potřebují značky data-cast podle docs/design.md › Podoba na plátně. Zadání P6 přesuň do docs/archiv/zadani/celek-9.md. Plán větve a docs/plan.md nahraj do projektu Claude (docs/plany/celek-9.md, docs/plan.md). Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš, co jsi našel a co je potřeba rozhodnout.
+2. Cesta 34 podle Osnovy v podkladech (oddíl g): přehled cesty (obdobi 2, otazka 1, filozofove seneca a marcus-aurelius) a osm kroků, každý jako MDX s bloky z knihovny (Volba, Roztřiď, Odkryj, Změň jednu věc, Spor Seneca × Marcus Aurelius, Závěr cesty se Zkus to žít) a s daty bloků v YAML. Drž oddíly d) a e) podkladů (Spor jako dvě rady, obrat s Tacitem jako Tacitovo podání, námitky se spojenci) a docs/pouceni.md (Bloky, Celek, Student, kterého se téma bolestně týká: pečující student, student po ztrátě, rodiny). Krok 5 o telefonu bez kázání; školu ani spánek nepočítej jako ztracený čas. Návrat se třemi případy z podkladů. Každý krok commitni zvlášť.
+
+3. Kresba Přesýpací hodiny (krok 3) na rámu Kresba.svelte podle podkladů (oddíl g) a skillu atlas-komponenta: pohyb jde zastavit, při omezeném pohybu stojí a text pod ní říká totéž slovy, v kresbě nic mimo model, jednotka na telefonu asi pixel. Než ji popíšeš jako hotovou, ukaž mi snímky (scripts/snimky-prvek.mjs) v obou režimech na 390 a 1440 px.
+
+4. Podoba na plátně (hodiny-v1, H4): nové bloky a kresba potřebují značky data-cast podle docs/design.md › Komponenty › Podoba na plátně (hlava, otázka, možnosti; u kresby rám a ovládání), jinak se v otevřené otázce nebo v „jen kresba“ ukáže špatně. Název nové kresby přidej do NAZVY_KRESEB v src/lib/kresby.ts. Po npm run build pusť node scripts/hodiny-katalog.mjs (musí skončit „Chyb: 0“) a zkontroluj, že katalog zastavení má všech osm kroků, nové bloky a kresbu se správnými názvy.
+
+5. Vazby: v portrétu Seneky (místo, kde je atribut a čas) a v portrétu Marca (ústraní, IV, 3) po jedné větě s odkazem na cestu; stránka otázky 1 podle mé odpovědi v podkladech (doporučení: bez nového hlasu). Pak celé npm test na pozadí s výstupem do souboru (nová cesta mění hlavičky filozofů, počty na Domů a v dílně: uprav jen testy, které padnou kvůli nové cestě), snímky cesty (scripts/snimky-cesta.mjs) na 390 a 1440 px v obou režimech, čas cesty skriptem scripts/slova-cesta.mjs.
+
+6. Do plánu větve zapiš stav P8, oddíl „Po P8“ (co jsi zvažoval, co je potřeba rozhodnout) a zadání P10 (Opus 5.5 · high se skillem atlas-revize). Zadání P8 přesuň do docs/archiv/zadani/celek-9.md, rozhodnutí zapiš do docs/rozhodnuti.md. Plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč (kromě hlavní větve do celek-9 v bodě 0). Pak mi krátce napiš, co je hotové a co rozhodnout.
 ```
