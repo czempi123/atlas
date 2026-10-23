@@ -1,0 +1,124 @@
+---
+// Lišta hodiny (větev hodiny-v1, H3): „Hodina: Delfy · 3 ze 7“ s Předchozí, Další, Přehled hodiny a Zavřít.
+// Stojí pod hlavičkou na každé stránce atlasu, kde je některé zastavení hodiny otevřené v této kartě
+// (sessionStorage, src/lib/pruchod-hodiny.ts). Bez aktivní hodiny se neukazuje. Místo pro ni drží třída
+// s-hodinou na <html> od prvního vykreslení (skript v hlavičce Zakladni.astro), vyplní a ovládá ji
+// src/scripts/hodina-lista.ts. Při promítání je jediná lišta na stránce: bez slova „Hodina“, s tlačítky
+// Celá obrazovka a Ukončit promítání místo Zavřít. Na telefonu jsou tlačítka jen ikony (text čte čtečka).
+// U zastavení v podobě Otevřená otázka (krok H4) má navíc Ukázat možnosti (klávesa M): ukáže karty bloku,
+// dokud učitel nepřejde jinam. Na stránce mimo hodinu (krok O) stojí „Hodina: Delfy · mimo hodinu“ a Předchozí
+// je „Zpět na 2 z 8“ (poslední navštívené zastavení); atribut data-mimo.
+import Ikona from '../ui/Ikona.astro';
+---
+<nav class="hodina-lista" aria-label="Hodina" data-hodina-lista data-pagefind-ignore>
+  <div class="hodina-lista__vnitrek stranka">
+    <p class="hodina-lista__titulek">
+      <span class="hodina-lista__slovo">Hodina: </span><span class="hodina-lista__nazev" data-hl-nazev></span><span class="hodina-lista__pocet"> · <span data-hl-pocet></span></span>
+    </p>
+    <div class="hodina-lista__akce">
+      <a class="hl-tl" data-hl-predchozi><Ikona id="zpet" velikost={20} /><span class="hl-text">Předchozí</span></a>
+      <a class="hl-tl hl-tl--dalsi" data-hl-dalsi><span class="hl-text">Další</span><Ikona id="dal" velikost={20} /></a>
+      <a class="hl-tl hl-tl--ikona-na-platne" data-hl-prehled href="/hodina/">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+        <span class="hl-text">Přehled hodiny</span>
+      </a>
+      <button type="button" class="hl-tl hl-moznosti" data-hl-moznosti aria-pressed="false" aria-keyshortcuts="M">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+        <span class="hl-text">Ukázat možnosti</span>
+      </button>
+      <button type="button" class="hl-tl hl-promitani hl-tl--ikona-na-platne" data-hl-obrazovka aria-pressed="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <span class="hl-text">Celá obrazovka</span>
+      </button>
+      <button type="button" class="hl-tl hl-normalni" data-hl-zavrit><Ikona id="zavrit" velikost={20} /><span class="hl-text">Zavřít</span></button>
+      <button type="button" class="hl-tl hl-promitani" data-hl-ukoncit><Ikona id="zavrit" velikost={20} /><span class="hl-text">Ukončit promítání</span></button>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .hodina-lista { display: none; }
+  :global(html.s-hodinou) .hodina-lista {
+    display: block;
+    position: sticky;
+    /* Skutečnou výšku hlavičky (hlavička kroku cesty bývá vyšší) změří skript; do té doby výška z tokenu. */
+    top: var(--hlavicka-skutecna, var(--hlavicka));
+    z-index: 39;
+    height: var(--hodina);
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+  }
+  /* Dokud skript lištu nevyplní, drží jen místo (nic neproblikne). Display, ne visibility: při omezeném pohybu
+     global.css zkracuje přechody všech vlastností a visibility by se objevila až po několika snímcích. */
+  .hodina-lista:not([data-pripraveno]) .hodina-lista__vnitrek { display: none; }
+  .hodina-lista__vnitrek { display: flex; align-items: center; gap: var(--s-2); height: 100%; }
+  /* Zkrátí se jen název hodiny; slovo „Hodina“ a pořadí zůstanou vidět celé. */
+  .hodina-lista__titulek {
+    display: flex;
+    align-items: baseline;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    white-space: nowrap;
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    line-height: 1.2;
+    color: var(--ink-2);
+  }
+  .hodina-lista__nazev { min-width: 0; overflow: hidden; text-overflow: ellipsis; color: var(--ink); font-weight: 600; }
+  .hodina-lista__slovo,
+  .hodina-lista__pocet { flex: none; white-space: pre; }
+  .hodina-lista__pocet { font-variant-numeric: tabular-nums lining-nums; }
+  .hodina-lista__akce { display: flex; flex: none; align-items: center; gap: var(--s-1); }
+  .hl-tl {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-1);
+    min-width: var(--dotyk);
+    min-height: var(--dotyk);
+    padding: 0 var(--s-2);
+    border: 0;
+    border-radius: var(--r-sm);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: var(--fs-ovladani);
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .hl-tl svg { flex: none; }
+  .hl-tl:hover { background: var(--sunk); }
+  .hl-tl--dalsi { border: 1.5px solid var(--ink); }
+  /* Na kraji hodiny: odkaz bez adresy, čárkovaný a tlumený (ne jen barvou). */
+  .hl-tl[aria-disabled='true'] { color: var(--muted); cursor: not-allowed; }
+  .hl-tl--dalsi[aria-disabled='true'] { border-style: dashed; border-color: var(--rule); }
+  .hl-tl[aria-disabled='true']:hover { background: transparent; }
+  .hl-promitani,
+  .hl-moznosti { display: none; }
+  /* Ukázané možnosti: tlačítko vypadá stisknuté (plné), ne jen jinou barvou textu. */
+  .hl-moznosti[aria-pressed='true'] { background: var(--ink); color: var(--paper); }
+  .hl-moznosti[aria-pressed='true']:hover { background: var(--ink-2); }
+  /* Telefon: ikony; text zůstává čtečkám (stejně jako .vizualne-skryte). */
+  @media (max-width: 699px) {
+    .hl-text { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .hodina-lista__slovo { display: none; }
+  }
+  @media (min-width: 700px) {
+    .hodina-lista__akce { gap: var(--s-2); }
+    .hl-tl { padding: 0 var(--s-3); }
+  }
+  /* Promítání: lišta je nahoře sama, bez slova „Hodina“, s celou obrazovkou a koncem promítání. */
+  :global(html.promitani) .hodina-lista__slovo { display: none; }
+  :global(html.promitani) .hl-normalni { display: none; }
+  :global(html.promitani) .hl-promitani { display: inline-flex; }
+  :global(html.promitani) .hodina-lista[data-otevrena] .hl-moznosti { display: inline-flex; border: 1.5px solid var(--ink); }
+  :global(html.promitani) .hodina-lista__titulek { font-size: var(--fs-ovladani-l); }
+  /* Plátno užší než 1600 px: Přehled hodiny a Celá obrazovka jen ikonou (text čte čtečka), ať je vidět pořadí. */
+  @media (max-width: 1599px) {
+    :global(html.promitani) .hl-tl--ikona-na-platne .hl-text { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  }
+  @media print { .hodina-lista { display: none !important; } }
+</style>

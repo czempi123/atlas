@@ -1,0 +1,16 @@
+---
+// Hodina pro studenta (větev hodiny-v1, krok H3): /hodina/?v=1&n=<název>&z=<id>,<id>… z odkazu, který poslal učitel.
+// Zastavení v pořadí, Začít hodinu, Promítat hodinu a „Doma projdi“ podle deníku; hodinu skládá ostrov HodinaStudent.
+// Stránka nepatří do hledání a nemá v sobě nic, co by šlo najít bez odkazu.
+import Zakladni from '../../layouts/Zakladni.astro';
+import HodinaStudent from '../../components/hodina/HodinaStudent.svelte';
+---
+<Zakladni titulek="Hodina" popis="Hodina z míst v atlasu: kroky cest, bloky, kapitoly a hlasy v pořadí, jak je učitel složil." kratkyTitulek="Hodina" hledat={false}>
+  <div class="stranka ctenarsky hodina">
+    <HodinaStudent client:load />
+  </div>
+</Zakladni>
+
+<style>
+  .hodina { padding-bottom: var(--s-6); }
+</style>

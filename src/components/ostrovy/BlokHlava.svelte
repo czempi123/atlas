@@ -7,7 +7,7 @@
   let { nadtitulek, lide = [] }: Props = $props();
 </script>
 
-<div class="blok__hlava">
+<div class="blok__hlava" data-cast="hlava">
   <p class="t-nadtitulek blok__nadtitulek">{nadtitulek}</p>
   {#if lide.length}
     <span class="blok__mince" aria-hidden="true">

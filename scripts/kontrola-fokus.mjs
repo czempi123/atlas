@@ -3,7 +3,7 @@
 // když stránka přetéká do šířky nebo když konzole hlásí chybu.
 // node scripts/kontrola-fokus.mjs <cesta> [<cesta> …]
 //   node scripts/kontrola-fokus.mjs /osobnost/platon/ /cesta/je-to-co-vidim-cela-skutecnost/1/
-// Proměnné: ZAKLAD (běžící web; výchozí náhled sestaveného webu: npx astro preview --port 4323),
+// Proměnné: HODINA (adresa stránky hodiny; stránky pak mají lištu hodiny), ZAKLAD (běžící web; výchozí náhled sestaveného webu: npx astro preview --port 4323),
 // SIRKY (výchozí „390,1440“).
 import { chromium } from '@playwright/test';
 
@@ -20,6 +20,8 @@ for (const sirka of SIRKY) {
     const chyby = [];
     page.on('console', (m) => m.type() === 'error' && chyby.push(m.text()));
     page.on('pageerror', (e) => chyby.push(String(e)));
+    // HODINA=<adresa stránky hodiny>: nejdřív ji otevře, aby byla hodina v kartě aktivní a stránka měla lištu hodiny.
+    if (process.env.HODINA) { await page.goto(process.env.HODINA.startsWith('http') ? process.env.HODINA : ZAKLAD + process.env.HODINA); await page.waitForTimeout(500); }
     await page.goto(ZAKLAD + cesta);
     await page.evaluate(() => document.fonts.ready);
     // Ostrovy se hydratují, až jsou vidět: projdi stránku shora dolů.

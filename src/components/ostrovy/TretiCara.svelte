@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Třetí čára: kresba k Aschovu pokusu (cesta 7, krok 6). Nahoře karta se vzorem a karta se třemi čarami,
   // dole osm židlí. Bubliny s odpověďmi se rozsvěcují jedna po druhé a řada se zastaví na předposlední židli,
   // kde sedí student (otazník). Pohled „Se spojencem“ změní jednu věc: čtvrtý v řadě řekne správnou čáru.
@@ -27,7 +28,7 @@
   };
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Podívej se" nazev="Třetí čára" pohledy={POHLEDY_CARY} bind:pohled {popis} viewBox="0 0 {PLATNO.sirka} {PLATNO.vyska}">
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.TretiCara} nazev={NAZVY_KRESEB.TretiCara} pohledy={POHLEDY_CARY} bind:pohled {popis} viewBox="0 0 {PLATNO.sirka} {PLATNO.vyska}">
   {#snippet kresba()}
     <rect class="k-stin" width={PLATNO.sirka} height={PLATNO.vyska} />
 

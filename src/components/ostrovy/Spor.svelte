@@ -5,6 +5,7 @@
   // druhé strany (kdo stojí uprostřed, vybírá z obou) a odpověď na něj; ukládá se sama do téhož zápisu.
   // Použití v MDX (obsah v src/content/bloky/platon-diogenes-skutecnost.yaml):
   // <Spor id="platon-diogenes-skutecnost" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import {
@@ -181,7 +182,7 @@
 </script>
 
 {#snippet skala(jmeno: string, zamceno: boolean, popisek: string, sipka: boolean)}
-  <fieldset class="skala">
+  <fieldset class="skala" data-cast="moznosti">
     <legend class="vizualne-skryte">{popisek}</legend>
     <div class="skala__konce" aria-hidden="true">
       <span class="obdobi-{lide[0].obdobi}"><Mince ikona={lide[0].ikona} obdobi={lide[0].obdobi} varianta="tint" velikost={32} />{nadpisy[0]}</span>
@@ -216,12 +217,12 @@
 {/snippet}
 
 <section class="blok spor obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <p class="t-nadtitulek blok__nadtitulek">{blok.nadtitulek ?? 'Spor'}</p>
+  <p class="t-nadtitulek blok__nadtitulek" data-cast="hlava">{blok.nadtitulek ?? VYCHOZI_NADTITULKY.Spor}</p>
   {#if blok.scena}
-    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena">{@html o}</p>{/each}
+    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{@html radek(blok.otazka)}</h3>
-  <div class="postoje">
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{@html radek(blok.otazka)}</h3>
+  <div class="postoje" data-cast="moznosti">
     {#each blok.strany as s, i (i)}
       <p class="postoj obdobi-{lide[i].obdobi}"><span class="t-nadtitulek">{nadpisy[i]}</span> {@html radek(s.postoj)}</p>
     {/each}
@@ -229,9 +230,9 @@
 
   {#if prvni === null}
     {@render skala(`${id}-prvni`, false, 'Kde stojíš ty?', false)}
-    <button class="blok__tl blok__tl--hlavni" type="button" onclick={postavSe} disabled={navrh === null}>Tady stojím</button>
+    <button class="blok__tl blok__tl--hlavni" data-cast="akce" type="button" onclick={postavSe} disabled={navrh === null}>Tady stojím</button>
   {:else}
-    <div class="argumenty" role="region" aria-label="Argumenty obou stran" tabindex="-1" bind:this={argumenty} in:odkryti>
+    <div class="argumenty" data-cast="zpetna" role="region" aria-label="Argumenty obou stran" tabindex="-1" bind:this={argumenty} in:odkryti>
       <p class="zacatek t-ovladani">Začal jsi: <strong>{popisPolohy(prvni, A, B)}</strong>. Teď si přečti, co říkají oba.</p>
       <div class="strany">
         {#each blok.strany as s, i (i)}
@@ -249,20 +250,20 @@
     </div>
 
     {#if konecna === null}
-      <h4 class="t-ovladani-l posunout">Chceš se posunout?</h4>
+      <h4 class="t-ovladani-l posunout" data-cast="moznosti">Chceš se posunout?</h4>
       {@render skala(`${id}-konecna`, false, 'Kde stojíš teď?', true)}
-      <label class="blok__popis" for={`${id}-duvod`}>Co tě posunulo, nebo co tě udrželo? <span class="nepovinne">Nepovinné</span></label>
-      <textarea class="blok__pole blok__pole--kratke" id={`${id}-duvod`} rows="2" bind:value={duvod} onchange={ulozStav} placeholder="Stačí pár slov…"></textarea>
-      <button class="blok__tl blok__tl--hlavni" type="button" onclick={zapis} disabled={navrh === null}>Zapsat konečnou polohu</button>
+      <label class="blok__popis" for={`${id}-duvod`} data-cast="duvod">Co tě posunulo, nebo co tě udrželo? <span class="nepovinne">Nepovinné</span></label>
+      <textarea class="blok__pole blok__pole--kratke" data-cast="duvod" id={`${id}-duvod`} rows="2" bind:value={duvod} onchange={ulozStav} placeholder="Stačí pár slov…"></textarea>
+      <button class="blok__tl blok__tl--hlavni" data-cast="akce" type="button" onclick={zapis} disabled={navrh === null}>Zapsat konečnou polohu</button>
     {:else}
       {@render skala(`${id}-hotovo`, true, 'Tvoje konečná poloha', true)}
-      <div class="blok__zpetna" role="region" aria-label="Tvůj posun" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
+      <div class="blok__zpetna" data-cast="zpetna" role="region" aria-label="Tvůj posun" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
         <p class="blok__zpetna-titulek">Začal jsi: {popisPolohy(prvni, A, B)}. Teď: {popisPolohy(konecna, A, B)}.</p>
         <p>{zpetnaSporu(prvni, konecna, A, B)}</p>
         {#if duvod.trim()}<p class="duvod"><span class="t-popisek">Tvůj důvod:</span> {duvod}</p>{/if}
       </div>
       <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-      <details class="reflexe" bind:open={otevrena} onkeydown={klavesaReflexe}>
+      <details class="reflexe" data-cast="duvod" bind:open={otevrena} onkeydown={klavesaReflexe}>
         <summary bind:this={souhrn}><span class="reflexe__otazka">{otazkaReflexe(konecna)}</span><span class="nepovinne">Nepovinné</span></summary>
         <div class="reflexe__telo">
           <fieldset class="reflexe__vyber">
@@ -305,12 +306,12 @@
             placeholder="Stačí pár slov…"
             aria-describedby={`${id}-reflexe-stav`}
           ></textarea>
-          <p class="blok__ulozeno reflexe__stav" id={`${id}-reflexe-stav`} aria-live="polite">{reflexeUlozena ? 'Uloženo v deníku.' : 'Ukládá se samo do deníku.'}</p>
+          <p class="blok__ulozeno reflexe__stav" data-cast="ulozeno" id={`${id}-reflexe-stav`} aria-live="polite">{reflexeUlozena ? 'Uloženo v deníku.' : 'Ukládá se samo do deníku.'}</p>
         </div>
       </details>
       <BlokDal {dal} />
-      <div class="blok__akce">
-        <p class="blok__ulozeno">První i konečná poloha jsou uložené v deníku.</p>
+      <div class="blok__akce" data-cast="akce">
+        <p class="blok__ulozeno" data-cast="ulozeno">První i konečná poloha jsou uložené v deníku.</p>
         <button class="blok__tl blok__tl--tiche" type="button" onclick={znovu}>Začít znovu</button>
       </div>
     {/if}

@@ -1,7 +1,8 @@
 // Deník: zápisy a stav bloků se ukládají do localStorage, vydrží „obnovení“ (nové načtení)
 // a bez úložiště fungují aspoň v paměti.
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { nacti, ulozZapis, najdiZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku, zaznamenejKrok, dokonceniCesty, ulozCteni, cteniStranky, _zapomenPamet } from '../../src/lib/denik';
+import { nacti, ulozZapis, najdiZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku, zaznamenejKrok, dokonceniCesty, ulozCteni, cteniStranky, _zapomenPamet,
+  kapitolaDoctena, sPrectenou, ulozPrectenou, prectene, PRELETENI_SLOV_ZA_MINUTU, NEJKRATSI_CTENI_MS, sHodinou, zaznamenejHodinu, HODINY_NEJVYS } from '../../src/lib/denik';
 
 class Uloziste {
   data = new Map<string, string>();
@@ -176,5 +177,92 @@ describe('deník: naposledy čtený oddíl profilu', () => {
     _zapomenPamet();
     ulozCteni('/osobnost/sokrates/', 'soud');
     expect(cteniStranky('/osobnost/sokrates/')).toBe('soud');
+  });
+});
+
+describe('deník: dočtené kapitoly (prectene)', () => {
+  let u: Uloziste;
+  beforeEach(() => { u = new Uloziste(); g.localStorage = u; _zapomenPamet(); });
+  afterEach(() => { delete g.localStorage; });
+  const ulozeno = () => JSON.parse(u.getItem('atlas-denik')!);
+
+  it('dočtená je kapitola, jejíž konec byl vidět a student v ní strávil aspoň čas přelétnutí', () => {
+    // 1000 slov při 500 slovech za minutu = 2 minuty.
+    expect(kapitolaDoctena({ slov: 1000, casMs: 120_000, konecVidet: true })).toBe(true);
+    expect(kapitolaDoctena({ slov: 1000, casMs: 119_000, konecVidet: true })).toBe(false);
+    expect(kapitolaDoctena({ slov: 1000, casMs: 600_000, konecVidet: false })).toBe(false);
+    // Krátká kapitola chce aspoň deset vteřin, prázdná taky.
+    expect(kapitolaDoctena({ slov: 30, casMs: 9_000, konecVidet: true })).toBe(false);
+    expect(kapitolaDoctena({ slov: 30, casMs: NEJKRATSI_CTENI_MS, konecVidet: true })).toBe(true);
+    expect(kapitolaDoctena({ slov: 0, casMs: NEJKRATSI_CTENI_MS, konecVidet: true })).toBe(true);
+    expect(PRELETENI_SLOV_ZA_MINUTU).toBe(500);
+  });
+  it('kotvy kapitol u adresy profilu, bez opakování; verze 1 a pole v uložených datech (tedy i v exportu)', () => {
+    ulozPrectenou('/osobnost/sokrates/', 'soud');
+    ulozPrectenou('/osobnost/sokrates/', 'delfy');
+    ulozPrectenou('/osobnost/sokrates/', 'soud');
+    ulozPrectenou('/osobnost/seneca/', 'vyhnanstvi');
+    _zapomenPamet();
+    expect(prectene()).toEqual({ '/osobnost/sokrates/': ['soud', 'delfy'], '/osobnost/seneca/': ['vyhnanstvi'] });
+    expect(ulozeno().verze).toBe(1);
+    expect(ulozeno().prectene['/osobnost/sokrates/']).toEqual(['soud', 'delfy']);
+  });
+  it('sPrectenou nemění původní deník a stejnou kapitolu vrátí beze změny', () => {
+    const d = nacti();
+    const s = sPrectenou(d, '/osobnost/sokrates/', 'soud');
+    expect(d.prectene).toBeUndefined();
+    expect(sPrectenou(s, '/osobnost/sokrates/', 'soud')).toBe(s);
+  });
+  it('starší deník bez pole se načte beze změny; rozbité pole deník nerozbije', () => {
+    u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], cteni: { '/osobnost/sokrates/': 'soud' } }));
+    expect(nacti().prectene).toBeUndefined();
+    expect(prectene()).toEqual({});
+    expect(nacti().cteni).toEqual({ '/osobnost/sokrates/': 'soud' });
+    for (const spatne of ['text', [1], 5, null]) {
+      u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], prectene: spatne }));
+      expect(prectene()).toEqual({});
+      ulozPrectenou('/a/', 'k');
+      expect(prectene()).toEqual({ '/a/': ['k'] });
+    }
+    u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], prectene: { '/a/': 'k', '/b/': ['x', 3] } }));
+    expect(prectene()).toEqual({ '/b/': ['x'] });
+  });
+});
+
+describe('deník: otevřené hodiny', () => {
+  let u: Uloziste;
+  beforeEach(() => { u = new Uloziste(); g.localStorage = u; _zapomenPamet(); });
+  afterEach(() => { delete g.localStorage; });
+
+  it('nejnovější nahoře; stejná adresa se přesune nahoru s novým časem a názvem', () => {
+    let d = nacti();
+    d = sHodinou(d, { adresa: '/hodina/?a', nazev: 'A' }, '2026-10-01T10:00:00Z');
+    d = sHodinou(d, { adresa: '/hodina/?b', nazev: 'B' }, '2026-10-02T10:00:00Z');
+    d = sHodinou(d, { adresa: '/hodina/?a', nazev: 'A2' }, '2026-10-03T10:00:00Z');
+    expect(d.hodiny).toEqual([
+      { adresa: '/hodina/?a', nazev: 'A2', kdy: '2026-10-03T10:00:00Z' },
+      { adresa: '/hodina/?b', nazev: 'B', kdy: '2026-10-02T10:00:00Z' },
+    ]);
+  });
+  it('nejvýš deset; nejdéle neotevřená vypadne', () => {
+    let d = nacti();
+    for (let i = 0; i < 12; i++) d = sHodinou(d, { adresa: `/hodina/?${i}`, nazev: `H${i}` }, `2026-10-${String(i + 1).padStart(2, '0')}T10:00:00Z`);
+    expect(d.hodiny).toHaveLength(HODINY_NEJVYS);
+    expect(d.hodiny![0].nazev).toBe('H11');
+    expect(d.hodiny!.map((h) => h.nazev)).not.toContain('H1');
+    expect(d.hodiny!.at(-1)!.nazev).toBe('H2');
+  });
+  it('zápis do úložiště: verze 1, pole v exportu; starší deník se načte, rozbité položky vypadnou', () => {
+    zaznamenejHodinu('/hodina/?v=1&n=Delfy&z=k:a/1', 'Delfy');
+    _zapomenPamet();
+    const ulozeno = JSON.parse(u.getItem('atlas-denik')!);
+    expect(ulozeno.verze).toBe(1);
+    expect(ulozeno.hodiny[0]).toMatchObject({ adresa: '/hodina/?v=1&n=Delfy&z=k:a/1', nazev: 'Delfy' });
+    u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [] }));
+    expect(nacti().hodiny).toBeUndefined();
+    u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], hodiny: [{ adresa: '/hodina/?a', nazev: 'A', kdy: 'x' }, { adresa: 5 }, null] }));
+    expect(nacti().hodiny).toEqual([{ adresa: '/hodina/?a', nazev: 'A', kdy: 'x' }]);
+    u.setItem('atlas-denik', JSON.stringify({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], hodiny: 'x' }));
+    expect(nacti().hodiny).toBeUndefined();
   });
 });

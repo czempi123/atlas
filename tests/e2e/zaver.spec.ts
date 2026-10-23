@@ -164,9 +164,10 @@ test('závěr cesty jen klávesnicí na telefonu: pravidlo, nepovinná otázka a
   const lista = await page.locator('.cesta-lista').boundingBox();
   expect(b!.y + b!.height).toBeLessThanOrEqual(lista!.y);
   await page.keyboard.type('Lajky jsem dal do prázdných už tehdy.');
-  await page.keyboard.press('Tab');
-  await page.keyboard.press('Tab');
-  await expect(page.getByRole('link', { name: 'Dokončit cestu' })).toBeFocused();
+  // Mezi polem a lištou kroku stojí ještě odkazy pod blokem a v patičce („Pro učitele: připravit hodinu“).
+  const dokoncit = page.getByRole('link', { name: 'Dokončit cestu' });
+  for (let i = 0; i < 6 && !(await dokoncit.evaluate((el) => el === document.activeElement)); i++) await page.keyboard.press('Tab');
+  await expect(dokoncit).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(`${C6}#hotovo`);
   expect((await zapisy(page, 'cesta6-moje-pravidlo'))[0].odpoved).toBe('Dost je, když mi nic nechybí.');

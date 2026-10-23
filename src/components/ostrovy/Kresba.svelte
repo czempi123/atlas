@@ -36,6 +36,11 @@
     maPohyb?: boolean;
   }
   let { id, obdobi = 1, nadtitulek = 'Podívej se', nazev, pohledy, pohled = $bindable(), popis, kresba, ovladani, viewBox = '0 0 340 240', maPohyb = true }: Props = $props();
+  /** Široká kresba (víc než 1,8 : 1): na plátně v podobě Jen kresba zůstane ovládání pod ní, ne vedle (src/styles/promitani.css). */
+  let siroka = $derived.by(() => {
+    const [, , w, h] = viewBox.split(/[\s,]+/).map(Number);
+    return w > 0 && h > 0 && w / h > 1.8;
+  });
 
   /** smí se kresba hýbat (student nemá zapnutý omezený pohyb) */
   let smiPohyb = $state(false);
@@ -49,8 +54,8 @@
   let nazevPohledu = $derived(pohledy.find((p) => p.id === pohled)?.nazev ?? nazev);
 </script>
 
-<figure class="kresba obdobi-{obdobi}" class:kresba--pohyb={smiPohyb} class:kresba--bezi={bezi} {id}>
-  <figcaption class="kresba__hlava">
+<figure class="kresba obdobi-{obdobi}" class:kresba--pohyb={smiPohyb} class:kresba--bezi={bezi} {id} data-siroka={siroka ? '' : undefined}>
+  <figcaption class="kresba__hlava" data-cast="hlava">
     <p class="t-nadtitulek kresba__nadtitulek">{nadtitulek}</p>
     <p class="t-h3 kresba__nazev" id="{id}-nazev">{nazev}</p>
   </figcaption>
@@ -66,14 +71,14 @@
     </div>
   {/if}
 
-  <svg class="kresba__platno" {viewBox} role="img" aria-label={nazevPohledu} aria-describedby="{id}-popis">
+  <svg class="kresba__platno" data-cast="platno" {viewBox} role="img" aria-label={nazevPohledu} aria-describedby="{id}-popis">
     {@render kresba()}
   </svg>
 
   {#if ovladani}{@render ovladani()}{/if}
 
   <!-- Text přichází z JavaScriptu kresby, plugin pro MDX ho nevidí: nezlomitelné mezery doplní rám. -->
-  <p class="kresba__popis" id="{id}-popis" aria-live="polite">{nezlomitelne(popis)}</p>
+  <p class="kresba__popis" data-cast="popis" id="{id}-popis" aria-live="polite">{nezlomitelne(popis)}</p>
 
   {#if smiPohyb && maPohyb}
     <button type="button" class="blok__tl blok__tl--tiche kresba__pohyb" onclick={() => (bezi = !bezi)}>
@@ -90,7 +95,7 @@
     border: 1px solid var(--rule);
     border-radius: var(--r-md);
     background: var(--surface);
-    scroll-margin-top: calc(var(--hlavicka) + var(--s-4));
+    scroll-margin-top: calc(var(--hlavicka) + var(--hodina) + var(--s-4));
   }
   @media (min-width: 700px) {
     .kresba { padding: var(--s-4); }

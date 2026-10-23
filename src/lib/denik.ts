@@ -37,6 +37,21 @@ export interface Denik {
    * je součástí exportu. Staví z něj „Pokračovat ve čtení“ nahoře na profilu.
    */
   cteni?: Record<string, string>;
+  /**
+   * Dočtené kapitoly profilů: adresa stránky → kotvy kapitol, které student dočetl až do konce (kapitolaDoctena).
+   * Nepovinné (starší deníky ho nemají), je součástí exportu. Z něj „Doma projdi“ na stránce hodiny odškrtne kapitoly.
+   */
+  prectene?: Record<string, string[]>;
+  /** Hodiny, které student otevřel z odkazu (nejnovější první, nejvýš deset). Nepovinné; součást exportu. */
+  hodiny?: HodinaVDeniku[];
+}
+
+export interface HodinaVDeniku {
+  /** adresa stránky hodiny (/hodina/?v=1&n=…&z=…) */
+  adresa: string;
+  nazev: string;
+  /** kdy ji student naposledy otevřel (ISO) */
+  kdy: string;
 }
 
 export type DruhBloku = 'odkryj' | 'volba' | 'zmena' | 'spor' | 'roztrid' | 'kdo-zil-driv';
@@ -66,14 +81,91 @@ export interface PostupCesty {
   dokonceno?: string;
 }
 
-const KLIC = 'atlas-denik';
+export const KLIC_DENIKU = 'atlas-denik';
+const KLIC = KLIC_DENIKU;
+/**
+ * Deník promítání (větev hodiny-v1, krok H4) v sessionStorage: dokud v kartě existuje, nacti a uloz pracují
+ * s ním místo s deníkem studenta. Promítat hodinu ho vždy založí prázdný (zalozDenikPromitani), konec
+ * promítání a každý vstup do hodiny bez promítání ho smaže (zrusDenikPromitani; obojí volá src/lib/pruchod-hodiny.ts).
+ * Bloky, Pokračuj, postup cest a dočtené kapitoly tak na plátně začínají od nuly a do deníku nezapíšou nic.
+ */
+export const KLIC_PROMITANI = 'atlas-denik-promitani';
 const prazdny = (): Denik => ({ verze: 1, zapisy: [], vyzvy: [], navstivene: [], bloky: {}, aktivita: [], cesty: {} });
 let vPameti: Denik | null = null;
+/** Deník promítání v paměti stránky (když sessionStorage chybí); zároveň znamená, že promítání běží. */
+let promitaniVPameti: Denik | null = null;
+
+/**
+ * Výraz pro skripty před vykreslením (Domů, profil, stránka otázky): text deníku, jak ho čte nacti(),
+ * při promítání tedy deník promítání. Vkládá se do textu skriptu.
+ */
+export const TEXT_DENIKU_SKRIPT = `(function () { try { var t = sessionStorage.getItem('${KLIC_PROMITANI}'); if (t !== null) return t; } catch (e) {} return localStorage.getItem('${KLIC}'); })()`;
+
+/**
+ * Tichá stránka: po konci promítání se stránka zastavení načte znovu (src/scripts/hodina-lista.ts) a to není
+ * návštěva studenta. Automatické záznamy (otevřený krok, navštívená stránka, místo čtení, dočtená kapitola)
+ * se pro tuto adresu nezapíší; co učitel udělá v bloku sám, ano. Platí do odchodu ze stránky.
+ */
+export const KLIC_TICHO = 'atlas-denik-ticho';
+
+export function ztisStranku(cesta: string): void {
+  try { sessionStorage.setItem(KLIC_TICHO, cesta); } catch { /* úložiště nedostupné */ }
+}
+
+export function zrusTicho(): void {
+  try { sessionStorage.removeItem(KLIC_TICHO); } catch { /* úložiště nedostupné */ }
+}
+
+function tichaStranka(): boolean {
+  try {
+    const t = sessionStorage.getItem(KLIC_TICHO);
+    if (t === null) return false;
+    if (t === location.pathname) return true;
+    sessionStorage.removeItem(KLIC_TICHO);
+  } catch { /* úložiště nebo location nedostupné */ }
+  return false;
+}
+
+/** Běží promítání (v kartě je deník promítání)? */
+export function vPromitani(): boolean {
+  try {
+    if (sessionStorage.getItem(KLIC_PROMITANI) !== null) return true;
+  } catch { /* úložiště nedostupné */ }
+  return promitaniVPameti !== null;
+}
+
+/** Založí prázdný deník promítání (Promítat hodinu). Starý se zahodí. */
+export function zalozDenikPromitani(): void {
+  promitaniVPameti = prazdny();
+  try { sessionStorage.setItem(KLIC_PROMITANI, JSON.stringify(promitaniVPameti)); } catch { /* jen v paměti stránky */ }
+}
+
+/** Smaže deník promítání (konec promítání, vstup do hodiny bez promítání). Deník studenta se nemění. */
+export function zrusDenikPromitani(): void {
+  promitaniVPameti = null;
+  try { sessionStorage.removeItem(KLIC_PROMITANI); } catch { /* úložiště nedostupné */ }
+}
 
 export function nacti(): Denik {
+  if (vPromitani()) {
+    try {
+      const d = rozeber(sessionStorage.getItem(KLIC_PROMITANI));
+      if (d) return d;
+    } catch { /* úložiště nedostupné */ }
+    return promitaniVPameti ?? prazdny();
+  }
   try {
-    const t = localStorage.getItem(KLIC);
+    const d = rozeber(localStorage.getItem(KLIC));
+    if (d) return d;
+  } catch { /* úložiště nedostupné */ }
+  return vPameti ?? prazdny();
+}
+
+/** Deník z textu úložiště s doplněnými a pročištěnými poli, nebo null. */
+function rozeber(t: string | null): Denik | null {
+  {
     if (t) {
+      // Poškozený text vyhodí výjimku; nacti ji chytí jako nedostupné úložiště.
       const d = JSON.parse(t);
       if (d && d.verze === 1) {
         const plny = { ...prazdny(), ...d };
@@ -82,16 +174,29 @@ export function nacti(): Denik {
         if (!objekt(plny.cesty)) plny.cesty = {};
         if (!Array.isArray(plny.aktivita)) plny.aktivita = [];
         if (plny.cteni !== undefined && !objekt(plny.cteni)) delete plny.cteni;
+        if (plny.prectene !== undefined) {
+          if (!objekt(plny.prectene)) delete plny.prectene;
+          else plny.prectene = Object.fromEntries(Object.entries(plny.prectene).filter(([, k]) => Array.isArray(k)).map(([s, k]) => [s, (k as unknown[]).filter((x): x is string => typeof x === 'string')]));
+        }
+        if (plny.hodiny !== undefined) {
+          if (!Array.isArray(plny.hodiny)) delete plny.hodiny;
+          else plny.hodiny = plny.hodiny.filter((h: Partial<HodinaVDeniku> | null) => !!h && typeof h.adresa === 'string' && typeof h.nazev === 'string' && typeof h.kdy === 'string');
+        }
         return plny;
       }
     }
-  } catch { /* úložiště nedostupné */ }
-  return vPameti ?? prazdny();
+  }
+  return null;
 }
 
 export function uloz(d: Denik): void {
-  vPameti = d;
-  try { localStorage.setItem(KLIC, JSON.stringify(d)); } catch { /* zůstane v paměti */ }
+  if (vPromitani()) {
+    promitaniVPameti = d;
+    try { sessionStorage.setItem(KLIC_PROMITANI, JSON.stringify(d)); } catch { /* zůstane v paměti stránky */ }
+  } else {
+    vPameti = d;
+    try { localStorage.setItem(KLIC, JSON.stringify(d)); } catch { /* zůstane v paměti */ }
+  }
   if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('atlas-denik'));
 }
 
@@ -147,6 +252,7 @@ export function dokonceniCesty(pred: Partial<PostupCesty> | undefined, navstiven
 
 /** Zaznamená otevřený krok cesty; když tím student prošel všechny kroky, zapíše jednou čas dokončení. */
 export function zaznamenejKrok(slug: string, krok: number, nazev: string, pocet: number): void {
+  if (tichaStranka()) return;
   const d = nacti();
   const p = d.cesty[slug];
   const navstivene = [...new Set([...(p?.navstivene ?? []), krok])].sort((a, b) => a - b);
@@ -161,6 +267,7 @@ const CTENI_NEJVYS = 30;
 
 /** Zapamatuje naposledy čtený oddíl stránky (jen kotvu). Volá se při změně oddílu, ne při každém posunu. */
 export function ulozCteni(odkaz: string, kotva: string): void {
+  if (tichaStranka()) return;
   const d = nacti();
   if (d.cteni?.[odkaz] === kotva) return;
   const { [odkaz]: _stare, ...ostatni } = d.cteni ?? {};
@@ -175,6 +282,60 @@ export function cteniStranky(odkaz: string): string | undefined {
   return typeof k === 'string' ? k : undefined;
 }
 
+// ─── Dočtené kapitoly (Doma projdi, větev hodiny-v1, H3) ──────────────────────
+
+/** Rychlost, nad kterou už student text jen přelétá (slov za minutu); kapitola pod ní je dočtená. */
+export const PRELETENI_SLOV_ZA_MINUTU = 500;
+/** Nejkratší čas v kapitole, i když je krátká. */
+export const NEJKRATSI_CTENI_MS = 10_000;
+
+/**
+ * Je kapitola dočtená? Student dojel na její konec (spodní hrana kapitoly byla vidět nad spodním okrajem okna)
+ * a strávil v ní aspoň tolik času, kolik by trvalo ji přelétnout rychlostí PRELETENI_SLOV_ZA_MINUTU
+ * (nejméně NEJKRATSI_CTENI_MS). Čas se počítá, jen když je kapitola právě čtený oddíl a karta je vidět.
+ */
+export function kapitolaDoctena(k: { slov: number; casMs: number; konecVidet: boolean }): boolean {
+  if (!k.konecVidet) return false;
+  const potreba = Math.max(NEJKRATSI_CTENI_MS, (Math.max(0, k.slov) / PRELETENI_SLOV_ZA_MINUTU) * 60_000);
+  return k.casMs >= potreba;
+}
+
+/** Deník s další dočtenou kapitolou stránky (bez opakování, v pořadí dočtení). Vrací nový objekt. */
+export function sPrectenou(d: Denik, stranka: string, kotva: string): Denik {
+  const pred = d.prectene?.[stranka] ?? [];
+  if (pred.includes(kotva)) return d;
+  return { ...d, prectene: { ...(d.prectene ?? {}), [stranka]: [...pred, kotva] } };
+}
+
+/** Zapíše dočtenou kapitolu do deníku (jednou). */
+export function ulozPrectenou(stranka: string, kotva: string): void {
+  if (tichaStranka()) return;
+  const d = nacti();
+  const novy = sPrectenou(d, stranka, kotva);
+  if (novy !== d) uloz(novy);
+}
+
+/** Dočtené kapitoly podle adresy profilu (prázdné, když deník pole nemá). */
+export function prectene(d: Denik = nacti()): Record<string, string[]> {
+  return d.prectene ?? {};
+}
+
+// ─── Otevřené hodiny ──────────────────────────────────────────────────────────
+
+/** Nejvýš tolik otevřených hodin si deník pamatuje; nejdéle neotevřená vypadne. */
+export const HODINY_NEJVYS = 10;
+
+/** Deník s otevřenou hodinou nahoře: stejná adresa se přesune nahoru s novým časem a názvem. Vrací nový objekt. */
+export function sHodinou(d: Denik, h: { adresa: string; nazev: string }, kdy: string): Denik {
+  const ostatni = (d.hodiny ?? []).filter((x) => x.adresa !== h.adresa);
+  return { ...d, hodiny: [{ adresa: h.adresa, nazev: h.nazev, kdy }, ...ostatni].slice(0, HODINY_NEJVYS) };
+}
+
+/** Zapíše otevřenou hodinu do deníku. */
+export function zaznamenejHodinu(adresa: string, nazev: string): void {
+  uloz(sHodinou(nacti(), { adresa, nazev }, new Date().toISOString()));
+}
+
 export function prijmiVyzvu(v: Omit<Vyzva, 'prijato'>): void {
   const d = nacti();
   if (!d.vyzvy.some((x) => x.id === v.id)) d.vyzvy.push({ ...v, prijato: new Date().toISOString() });
@@ -182,6 +343,7 @@ export function prijmiVyzvu(v: Omit<Vyzva, 'prijato'>): void {
 }
 
 export function zaznamenejNavstevu(odkaz: string, nazev: string): void {
+  if (tichaStranka()) return;
   const d = nacti();
   d.navstivene = [{ odkaz, nazev, kdy: new Date().toISOString() }, ...d.navstivene.filter((x) => x.odkaz !== odkaz)].slice(0, 20);
   uloz(d);
@@ -199,4 +361,5 @@ export function exportuj(): void {
 /** Jen pro testy: zapomene deník držený v paměti (když localStorage chybí). */
 export function _zapomenPamet(): void {
   vPameti = null;
+  promitaniVPameti = null;
 }

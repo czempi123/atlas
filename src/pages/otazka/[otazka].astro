@@ -13,6 +13,7 @@ import Prameny from '../../components/osobnost/Prameny.astro';
 import { osoba as najdiOsobu, osoby, citatyPodleId, pramenyPodleId } from '../../lib/data';
 import { maStranku, seradHlasy, chybyHlasu, klicOtazky } from '../../lib/otazky';
 import { adresaStranekOsob } from '../../lib/stranky-osob';
+import { KLIC_DENIKU, KLIC_PROMITANI } from '../../lib/denik';
 
 export async function getStaticPaths() {
   const vse = await getCollection('otazky');
@@ -55,12 +56,15 @@ const klic = klicOtazky(slug);
     </header>
     <div class="ctenarsky uvod"><Content /></div>
 
-    <script is:inline define:vars={{ prvni: klic.prvni, stav: klic.stav }}>
+    <script is:inline define:vars={{ prvni: klic.prvni, stav: klic.stav, klicPromitani: KLIC_PROMITANI, klicDeniku: KLIC_DENIKU }}>
       // Než student odpoví nebo přeskočí, zbytek stránky skryjeme (bez JavaScriptu zůstane vidět).
       (function () {
         var hotovo = false;
         try {
-          var d = JSON.parse(localStorage.getItem('atlas-denik') || 'null');
+          // Při promítání deník promítání (src/lib/denik.ts): na plátně se stránka chová jako u prázdného deníku.
+          var t = null;
+          try { t = sessionStorage.getItem(klicPromitani); } catch (e) { /* úložiště nedostupné */ }
+          var d = JSON.parse((t !== null ? t : localStorage.getItem(klicDeniku)) || 'null');
           hotovo = !!d && ((d.zapisy || []).some(function (z) { return z.id === prvni; }) || !!(d.bloky && d.bloky[stav] && d.bloky[stav].preskoceno));
         } catch (e) { /* úložiště nedostupné */ }
         if (!hotovo) document.documentElement.setAttribute('data-otazka-zavreno', '');

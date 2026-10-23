@@ -62,3 +62,35 @@ test('klepnutí myší stránku neposune', async ({ page }) => {
   await page.waitForTimeout(150);
   expect(await page.evaluate(() => scrollY)).toBe(pred);
 });
+
+// Lišta hodiny (hodiny-v1, H3) drží pod hlavičkou: prvek s fokusem nesmí zůstat pod ní ani pod lištou kroku,
+// tabulátorem dopředu ani pozpátku (Shift+Tab).
+test('fokus z klávesnice nezůstane pod lištou hodiny ani pod lištou kroku, tam i zpátky', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/hodina/?v=1&n=Delfy&z=k:je-to-co-vidim-cela-skutecnost/4');
+  await page.locator('ol.zastaveni > li').first().waitFor();
+  await page.goto('/cesta/je-to-co-vidim-cela-skutecnost/4/');
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('[data-hodina-lista]')).toBeVisible();
+  const presah = () =>
+    page.evaluate(() => {
+      const e = document.activeElement as HTMLElement | null;
+      if (!e || e === document.body || e.closest('[data-hodina-lista], .cesta-hlavicka, .cesta-lista, .preskocit')) return 0;
+      const horni = document.querySelector('[data-hodina-lista]')!.getBoundingClientRect().bottom;
+      const dolni = document.querySelector('.cesta-lista')!.getBoundingClientRect().top;
+      const r = e.getBoundingClientRect();
+      // Prvek vyšší než volné místo stačí vidět od horního okraje.
+      return r.height > dolni - horni ? horni - r.top : Math.max(horni - r.top, r.bottom - dolni);
+    });
+  for (let i = 0; i < 30; i++) {
+    await page.keyboard.press('Tab');
+    await page.waitForTimeout(100);
+    expect(await presah(), `prvek ${i + 1} tabulátorem dopředu`).toBeLessThanOrEqual(1);
+  }
+  for (let i = 0; i < 30; i++) {
+    await page.keyboard.press('Shift+Tab');
+    await page.waitForTimeout(100);
+    expect(await presah(), `prvek ${i + 1} tabulátorem zpátky`).toBeLessThanOrEqual(1);
+  }
+});
