@@ -117,7 +117,7 @@ prameny:
   - { id: lafer-sousa-2015, druh: monografie, nazev: "Striking individual differences in color perception uncovered by ‘the dress’ photograph", autor: "Rosa Lafer-Sousa, Katherine L. Hermann, Bevil R. Conway", dilo: "Current Biology 25 (2015)", url: "https://doi.org/10.1016/j.cub.2015.04.053", overeno: 2026-10-01, poznamka: "1401 lidí: 57 % modročerné, 30 % bílozlaté, 11 % modrohnědé; vysvětlení odhadem osvětlení. Čteno v PDF na webu Wellesley College." }
   - { id: buzzfeed-saty-2015, druh: data, nazev: "The Dress Is Blue And Black, Says The Girl Who Saw It In Person", autor: "Claudia Koerner", dilo: BuzzFeed News (26. 2. 2015), url: "https://www.buzzfeednews.com/article/claudiakoerner/the-dress-is-blue-and-black-says-the-girl-who-saw-it-in-pers", overeno: 2026-10-01, poznamka: "Fotku pořídila matka nevěsty, na Tumblr ji dala Caitlin McNeillová; na svatbě byly šaty modročerné." }
   - { id: nbc-saty-2015, druh: data, nazev: "Blue and Black? White and Gold? For Dressmaker, It's All Green", dilo: NBC News (27. 2. 2015), url: "https://www.nbcnews.com/business/business-news/blue-black-white-gold-dressmaker-its-all-green-n314096", overeno: 2026-10-01, poznamka: "Ian Johnson (Roman Originals): šaty jsou modročerné; nárůst prodeje." }
-  - { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života 1, 3", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-09-29, poznamka: "Non exiguum temporis habemus, sed multum perdidimus." }
+  - { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-10-18, poznamka: "Čteno celé latinsky 18. 10. 2026 (celek 9). Paulinovi (1, 1; 18, 1); nemáme málo času, jen jsme ho hodně promarnili (1, 3–4); život je dlouhý, když ho umíš použít (2, 1); nikdo nepatří sám sobě (2, 4); pozemek a život (3, 1); spočítej si léta (3, 2–3); jako byste žili navždy, v padesáti se stáhnu (3, 4–5); žít mi nedovolí (7, 6–8); nežil dlouho, jen byl (7, 10); čas není vidět (8, 1–2); nikdo ti léta nevrátí (8, 5); čekání ztrácí dnešek (9, 1); zaneprázdněné volno (12, 2); rozhovor s mudrci (14, 1–2); Paulinus a obilí, Řím po Caligulově smrti, ne lenivý klid (18–19); cizím krokem, spočítej, kolik je tvoje (20, 1); Turranius (20, 4; rukopisy Turannius)." }
 
   # Celek 2 „Jak mám žít?“ (docs/podklady/celek-2-jak-zit.md): řecké a latinské texty z PerseusDL a First1KGreek.
   - { id: dl-x-1, druh: pramen, nazev: "Životy filozofů X, 1–26", autor: Diogenés Laertios, dilo: "Vitae philosophorum, řecky a angl. R. D. Hicks (PerseusDL)", url: "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0004/tlg001/tlg0004.tlg001.perseus-grc2.xml", overeno: 2026-10-01, poznamka: "Epikúros: Samos, v 18 letech do Athén, Kolofón (1); k filozofii ve 14 letech, učitelé a Hésiodův chaos (2); otrok Mys (3, 10); pomluvy (3–8), obhajoba (9–10); přátelé žijí v zahradě, 80 min (10); voda a trocha vína, majetek nedávají dohromady, jak žádala Pýthagorova zásada „přátelé mají všechno společné“ (κοινὰ τὰ φίλων), chléb a voda, hrnek sýra (11); narozen 341, škola od 32 let, zemřel 271/270 v 72 letech (14–15); závěť a propuštění otroků (16–21); Metrodóros, Polyainos, Hermarchos, Leonteus a Themista (22–25); asi 300 svitků (26)." }
@@ -376,6 +376,12 @@ prameny:
   - { id: platon-menexenos, druh: pramen, nazev: "Menexenos 235e–236b", autor: Platón, dilo: "Menexenus, angl. B. Jowett (Project Gutenberg 1682)", url: "https://www.gutenberg.org/cache/epub/1682/pg1682.txt", overeno: 2026-10-17, poznamka: "Sókratés říká, že má vynikající učitelku řečnictví, Aspasii, která vychovala mnoho řečníků včetně Perikla, že ho učila a hrozila, že ho uhodí, když zapomínal. Je to ironie a řeč je smyšlená (Jowett: satira na řečníky)." }
   - { id: xenofon-vzpominky, druh: pramen, nazev: "Vzpomínky na Sókrata II, 6, 36 a Hospodář III, 14", autor: Xenofón, dilo: "Memorabilia a Oeconomicus, angl. H. G. Dakyns (Project Gutenberg 1177 a 1173)", url: "https://www.gutenberg.org/cache/epub/1177/pg1177.txt", overeno: 2026-10-17, poznamka: "Vzpomínky II, 6, 36: Sókratés se odvolává na Aspasii a říká, že to má z jejích vlastních úst (o dobrých dohazovačích). Hospodář III, 14: Sókratés radí Kritobúlovi, aby se u Aspasie poučil o vedení domácnosti." }
   - { id: sokrates-scholastikos-vii-15, druh: pramen, nazev: "Církevní dějiny VII, 15 (Hypatia)", autor: Sókratés Scholastikos, dilo: "Historia ecclesiastica, angl. (Nicene and Post-Nicene Fathers, New Advent)", url: "https://www.newadvent.org/fathers/26017.htm", overeno: 2026-10-17, poznamka: "Hypatia, dcera filozofa Theóna, převzala školu Platónovu a Plótínovu a vykládala zásady filozofie posluchačům, z nichž mnozí přicházeli zdaleka. Jediné starověké svědectví, na kterém stojí vztah k Plótínovi; text z 5. století." }
+
+  # Celek 9 „Kam mi mizí čas?“ (docs/podklady/celek-9.md, P6 18. 10. 2026; zapsáno v P8 23. 10. 2026).
+  - { id: seneca-ep-1, druh: pramen, nazev: "Dopisy Luciliovi 1 a 17", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-18, poznamka: "Vezmi si sebe zpátky, čas nám berou, kradou a protéká (1, 1); dělat něco jiného (1, 1); obejmi každou hodinu, zatímco se odkládá, život uteče (1, 2); jen čas je náš (1, 3); co ztrácím, proč a jak (1, 4). Bohatství mnohým zabránilo filozofovat, chudoba je volná; k filozofii se dá dojít i bez zásob na cestu (17, 3–8; 17, 9 o odchodu ze života do studentského textu ne)." }
+  - { id: seneca-tranquillitate-otium, druh: pramen, nazev: "O duševním klidu 3–4 a 13; O volném čase 3", autor: Seneca, dilo: "De tranquillitate animi, De otio (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.tranq.shtml", overeno: 2026-10-18, poznamka: "Athénodóros radí ustoupit z fóra (3); Seneca: utekl příliš rychle, kdo nemůže sloužit jako občan, ať slouží jako člověk, nejlepší je mísit volno s prací (4, 1–8); Démokritos, dělej málo, vztaženo na zbytečné (13, 1). O volném čase (sen.otio.shtml): Epikúros a Zénón o vstupu do veřejných věcí (3, 2–3); prospět mnohým, několika, nejbližším, sobě (3, 5)." }
+  - { id: oecd-pisa-screen-time, druh: data, nazev: "Managing screen time (PISA in Focus 124)", autor: OECD, dilo: "PISA in Focus 2024/124, data PISA 2022", url: "https://www.oecd.org/en/publications/managing-screen-time_7c225af4-en.html", overeno: 2026-10-18, poznamka: "Dotazník patnáctiletých; 54 % se podle sebe snadno nechá rozptýlit (průměr OECD); méně rozptýlení u těch, kdo vypínají upozornění, nemají zařízení otevřené a necítí tlak odpovídat; do hodiny sítí denně lepší výsledek v matematice než vůbec; tři čtvrtiny přes hodinu denně na sítích ve všední den. Souvislosti, ne pokus." }
+  - { id: meta-10k-2025, druh: data, nazev: "Form 10-K za rok 2025, oddíl Revenue", autor: "Meta Platforms, Inc.", dilo: "výroční zpráva pro SEC", url: "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm", overeno: 2026-10-18, poznamka: "Příjmy 200 966 mil. USD, z toho reklama 196 175 mil. USD; růst reklamy díky většímu počtu zobrazených reklam a vyšší ceně za reklamu. Tabulka viděna ve výsledku vyhledávání, stránka zprávy neotevřena." }
 
 citaty:
   - id: obrana-38a
@@ -3944,6 +3950,95 @@ citaty:
       druh: vlastni
       podle: "řecký text (H. Schenkl) a anglický překlad G. Longa; προαίρεσις = vůle, jako v celku 3"
     zdroj: epiktetos-rozpravy
+  # Celek 9 „Kam mi mizí čas?“: vlastní převody z docs/podklady/celek-9.md, tabulky b a c.
+  - id: brevitate-1-3
+    osoba: seneca
+    autor: Seneca
+    dilo: O krátkosti života
+    misto: "1, 3"
+    cesky: "Nemáme málo času, jen jsme ho hodně promarnili."
+    original: "Non exiguum temporis habemus, sed multum perdidimus."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library)"
+    zdroj: seneca-brevitate
+  - id: brevitate-3-2
+    osoba: seneca
+    autor: Seneca
+    dilo: O krátkosti života
+    misto: "3, 2"
+    cesky: "Spočítej si svůj věk. Odečti, kolik z toho času ti vzal věřitel, kolik mocný příznivec, kolik klient … kolik obíhání města kvůli povinnostem. Přidej nemoci, které jsme si způsobili sami, a co leželo ladem: uvidíš, že máš míň let, než napočítáš."
+    original: "ad computationem aetatem tuam revoca. Duc quantum ex isto tempore creditor, […] quantum rex, quantum cliens abstulerit, […] quantum officiosa per urbem discursatio; adice morbos quos manu fecimus, adice quod et sine usu iacuit: videbis te pauciores annos habere quam numeras."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); zkráceno, vynechány milenka, hádky s manželkou a trestání otroků; rex = mocný příznivec"
+    zdroj: seneca-brevitate
+  - id: brevitate-20-4
+    osoba: seneca
+    autor: Seneca
+    dilo: O krátkosti života
+    misto: "20, 4"
+    cesky: "Tak moc to těší, umřít zaneprázdněný?"
+    original: "Adeone iuvat occupatum mori?"
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library); occupatus = zaneprázdněný"
+    zdroj: seneca-brevitate
+  - id: brevitate-20-1
+    osoba: seneca
+    autor: Seneca
+    dilo: O krátkosti života
+    misto: "20, 1"
+    cesky: "Nejubožejší jsou ti, kdo … spí podle cizího spánku a chodí cizím krokem. Kdo z nich chce vědět, jak krátký je jeho život, ať si spočítá, jak velká část z něj je jeho."
+    original: "eorum tamen miserrima, qui […] ad alienum dormiunt somnum, ad alienum ambulant gradum […] Hi si volent scire quam brevis ipsorum vita sit, cogitent ex quota parte sua sit."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library)"
+    zdroj: seneca-brevitate
+  - id: brevitate-18-1
+    osoba: seneca
+    autor: Seneca
+    dilo: O krátkosti života
+    misto: "18, 1"
+    cesky: "Větší část života, a jistě ta lepší, patřila obci. Vezmi si trochu svého času i pro sebe."
+    original: "Maior pars aetatis, certe melior rei publicae datast: aliquid temporis tui sume etiam tibi."
+    preklad:
+      druh: vlastni
+      podle: "latinský text (The Latin Library)"
+    zdroj: seneca-brevitate
+  - id: hovory-iv-3-ustrani
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: "IV, 3"
+    cesky: "Lidé hledají ústraní na venkově, u moře, v horách. I ty po tom obvykle nejvíc toužíš. … Můžeš se přece kdykoli, kdy chceš, uchýlit do sebe."
+    original: "Ἀναχωρήσεις αὑτοῖς ζητοῦσιν ἀγροικίας καὶ αἰγιαλοὺς καὶ ὄρη, εἴωθας δὲ καὶ σὺ τὰ τοιαῦτα μάλιστα ποθεῖν […] ἐξόν, ἧς ἂν ὥρας ἐθελήσῃς, εἰς ἑαυτὸν ἀναχωρεῖν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); začátek kapitoly, závěr je citát hovory-iv-3"
+    zdroj: marcus-hovory
+  - id: hovory-viii-8
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: "VIII, 8"
+    cesky: "Číst nemůžeš. Ale držet na uzdě pýchu můžeš. Být silnější než slast a bolest můžeš. Být nad slávičkou můžeš. Nezlobit se na necitelné a nevděčné, a dokonce se o ně starat, můžeš."
+    original: "Ἀναγινώσκειν οὐκ ἔξεστιν. ἀλλὰ ὕβριν ἀνείργειν ἔξεστιν· ἀλλὰ ἡδονῶν καὶ πόνων καθυπερτερεῖν ἔξεστιν· ἀλλὰ τοῦ δοξαρίου ὑπεράνω εἶναι ἔξεστιν· ἀλλὰ ἀναισθήτοις καὶ ἀχαρίστοις μὴ θυμοῦσθαι, προσέτι κήδεσθαι αὐτῶν ἔξεστιν."
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); δοξάριον = zdrobnělina, slávička"
+    zdroj: marcus-hovory
+  - id: hovory-iv-24
+    osoba: marcus-aurelius
+    autor: Marcus Aurelius
+    dilo: Hovory k sobě
+    misto: "IV, 24"
+    cesky: "‚Dělej málo, chceš-li mít klidnou mysl,‘ říká se. Není lepší dělat to nutné? … Většina toho, co říkáme a děláme, nutná není. Kdo to odstraní, bude mít víc volna a míň zmatku. Proto se u každé věci ptej: Nepatří tohle k tomu, co nutné není?"
+    original: "Ὀλίγα πρῆσσε, φησίν, εἰ μέλλεις εὐθυμήσειν. μήποτε ἄμεινον τἀναγκαῖα πράσσειν […] τὰ πλεῖστα γὰρ ὧν λέγομεν καὶ πράσσομεν οὐκ ἀναγκαῖα ὄντα ἐάν τις περιέλῃ, εὐσχολώτερος καὶ ἀταρακτότερος ἔσται. ὅθεν δεῖ καὶ παρ’ ἕκαστα ἑαυτὸν ὑπομιμνῄσκειν· μήτι τοῦτο τῶν οὐκ ἀναγκαίων;"
+    preklad:
+      druh: vlastni
+      podle: "řecký text (J. H. Leopold); citovaná věta je Démokritův zlomek (DK 68 B3), Marcus ji uvozuje jen φησίν"
+    zdroj: marcus-hovory
 
 obrazky:
   - id: sokrates-louvre
