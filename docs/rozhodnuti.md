@@ -4,6 +4,13 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 23. 10. 2026: Větev hodiny-v1 uzavřená
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Větev `hodiny-v1` (příprava hodiny) je schválená, sloučená do hlavní větve (`72e0e0b`) a hlavní větev je na GitHubu; plán v `docs/archiv/plany/hodiny-v1.md` | Autor: „Větev hodiny-v1 (příprava hodiny) schvaluji, vše po opravách (O) je v pořádku“ |
+| Další v pořadí je celek 9 „Kam mi mizí čas?“, krok P8 (cesta 34 a doplnění otázky 1); P8 začne sloučením hlavní větve do `celek-9` | Zápis cesty čekal na sloučení hodin (plán celku 9); větev `celek-9` vznikla dřív a hodiny v ní zatím nejsou |
+
 ## 23. 10. 2026: Hodiny v1, krok O (opravy po revizi)
 
 | Rozhodnutí | Důvod |

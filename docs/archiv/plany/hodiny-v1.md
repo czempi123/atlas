@@ -10,9 +10,9 @@ Učitel si z atlasu složí hodinu: vybere kroky cest, bloky, kapitoly profilů 
 | H4 | Podoba zastavení na plátně: u bloku a kresby volba, kolik z něj promítnout (celý, jen otázka a možnosti, otevřená otázka bez karet A–D, jen kresba); třídní anketa rukou nebo s telefony; čisté bloky při promítání | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 18. 10. 2026; viz Po H4 |
 | R | Revize větve očima učitele, studenta a uživatele telefonu | Opus 5.5 · high se skillem `atlas-revize` | hotovo 18. 10. 2026; viz Po R |
 | O | Opravy po revizi | Opus 5.5 · high se skillem `atlas-komponenta` | hotovo 23. 10. 2026; viz Po O |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká na schválení; zadání níže |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | hotovo 23. 10. 2026; viz Uzavření větve |
 
-Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/hodiny-v1.md`.
+Stav a zadání dalších kroků se zapisují sem. Provedená zadání jsou v plném znění v `docs/archiv/zadani/hodiny-v1.md`. **Větev je uzavřená 23. 10. 2026**; plán je od té doby v archivu (`docs/archiv/plany/hodiny-v1.md`) a čte se jen na pokyn.
 
 ## Co větev staví
 
@@ -288,22 +288,22 @@ Celé `npm test` po opravách: Vitest 695 z 695, Playwright 531 z 531. `node scr
 - *Výchozí nadtitulky na jednom místě:* opsat je do katalogu by bylo kratší, ale první změna v komponentě by je rozešla. Proto `src/lib/nadtitulky.ts` a kontrola proti sestaveným stránkám.
 - *Hranice 32 px:* zbytek přesně jeden řádek se ještě ukáže zvlášť; krok, po kterém by zbylo míň, dojede rovnou na konec, takže se nic nepřeskočí.
 
-## Co rozhodnout po O (prázdná odpověď znamená souhlas s doporučením)
+## Co rozhodnout po O
 
-1. **Schválení větve:** projdi hodinu v náhledu (odbočka z kroku přes Další krok, lišta mimo hodinu, stránka hodiny se štítky ze stránky, tisk přehledu, Roztřiď na plátně). Když je vše v pořádku, pusť zadání Uzavření níže (doporučuji); jinak napiš, co změnit. Odpověď:
+Autor 23. 10. 2026 větev schválil a pustil uzavření.
 
-## Zadání Uzavření
+## Uzavření větve (23. 10. 2026)
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Sloučení a úklid, žádný nový obsah. Pouští se jen na autorův pokyn, po schválení větve.
+Autor 23. 10. 2026 větev schválil („vše po opravách (O) je v pořádku“). Při kontrole před sloučením chyběl poslední commit kroku O: plán po O, rozhodnutí, design, poučení a zadání O v archivu byly zapsané, ale necommitnuté, a v oddílu Po O stály místo výsledků testů zástupné značky. Celé `npm test` prošlo napoprvé (Vitest 695 z 695, Playwright 531 z 531); výsledky jsou doplněné v Po O a dokumentace je commitnutá. Větev je sloučená do hlavní větve bez konfliktů a bez přepisování historie (slučovací commit `72e0e0b`; hlavní větev se od založení větve nehnula). Po sloučení prošlo sestavení, `node scripts/hodiny-katalog.mjs` i `node scripts/doba-odkazy-vypis.mjs` skončily „Chyb: 0“ a hlavní větev je na GitHubu.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Větev hodiny-v1 schvaluji: sluč ji do main a pošli main na GitHub.
+**Stav po větvi.** Učitel si na `/hodina/nova/` (vstup v patičce a v deníku, Moje hodiny) složí hodinu z katalogu **335 zastavení na 89 stránkách** (8 přehledů cest, 63 kroků, 120 bloků a kreseb, 12 příběhů, 12 profilů, 48 kapitol, 36 oddílů, 6 stránek otázek, 30 hlasů), seřadí je, připíše poznámky, uloží, stáhne jako soubor, vytiskne přehled s odkazem pro studenty a promítne na plátně; u bloku a kresby zvolí podobu na plátně a každé promítání začíná s čistými bloky. Student otevře hodinu odkazem, prochází ji s lištou hodiny (i se stavem mimo hodinu po odbočce), doma dostane „Doma projdi“ s odškrtnutými kroky a dočtenými kapitolami a hodinu najde v deníku.
 
-1. Zkontroluj, že ve větvi nic nečeká (git status), a pusť celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně.
-2. Sluč hodiny-v1 do main (bez přepisování historie), znovu sestav web (npm run build) a pusť node scripts/hodiny-katalog.mjs (musí skončit „Chyb: 0“).
-3. Pošli main na GitHub. Jiné větve neposílej.
-4. Do plánu větve zapiš oddíl „Uzavření větve“ (co větev přinesla, co zůstává na později, co je další v pořadí: celek 9, P8 cesta 34, vychází z main s hodinami) a přesuň plán do docs/archiv/plany/hodiny-v1.md; provedená zadání zůstávají v docs/archiv/zadani/hodiny-v1.md. V docs/plan.md uprav řádek větve v rozcestníku (soubor v archivu, stav) a odstavec Další větve v pořadí. Rozhodnutí zapiš do docs/rozhodnuti.md.
-5. Z projektu Claude smaž docs/plany/hodiny-v1.md a aktualizuj tam docs/plan.md. Restartuj náhled npm run dev.
+**Co zůstává na později** (oddíl Co zůstává na později výše):
 
-Pak mi napiš, co je sloučeno a co je další v pořadí.
-```
+- tlačítko „Do hodiny“ přímo u bloku nebo kroku při procházení atlasu;
+- Režim třídy (odkrývání na pokyn, QR kód, jeden podnět na obrazovku), který naváže na lištu hodiny;
+- třídní anketa s počty hlasů na plátně, až atlas dostane server nebo sdílení v místní síti;
+- hotové vzorové hodiny k celkům 1 až 8, až po zkoušce se studenty;
+- Promítat hodinu u studenta a odkaz pro studenty poslouží naplno, až bude atlas na webu.
+
+**Další v pořadí:** celek 9 „Kam mi mizí čas?“ (větev `celek-9`, plán `docs/plany/celek-9.md`), krok P8: cesta 34 se Senekou a Markem Aureliem a doplnění otázky 1. P8 začne sloučením hlavní větve (s hodinami) do `celek-9`. Pak cesta 33 a souhrnná revize antiky (P11) se zkouškou se studenty.

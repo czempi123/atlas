@@ -1,6 +1,6 @@
 # Provedená zadání větve hodiny-v1
 
-Zadání kroků, které už proběhly, v plném znění. Plán větve se stavem po každém kroku je v `docs/plany/hodiny-v1.md`.
+Zadání kroků, které už proběhly, v plném znění. Větev je uzavřená 23. 10. 2026; plán větve se stavem po každém kroku je v `docs/archiv/plany/hodiny-v1.md`.
 
 ## H1: katalog zastavení a kotvy
 
@@ -111,4 +111,20 @@ Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Termi
 2. Štítky bloků u studenta (nález 2, podle odpovědi 2), hledání ve skladateli se štítkem druhu (nález 3, jednotkový test pro „spor smrt“ a „hlas seneca“), mrtvý stisk na plátně (nález 4: zbytek úseku pod jeden řádek je konec úseku, i při couvání; jednotkový test v pruchod-hodiny.test.ts), Roztřiď na plátně (nález 5: Dát sem pod popis koše; snímek 1280 × 720 a 1920 × 1080), příchod z lišty bez plynulého posunu (nález 6), Promítat hodinu u studenta (nález 7, podle odpovědi 3) a tisk s odkazem pro studenty (nález 8, podle odpovědi 4).
 3. Studentské věty a popisky hlídají testy: než text změníš, najdi ho v tests/ a uprav test v tomtéž commitu. Po npm run build node scripts/hodiny-katalog.mjs (Chyb: 0), scripts/kontrola-fokus.mjs a scripts/revize-axe.mjs s proměnnou HODINA na stránce hodiny, kroku a profilu; snímky změn do Claude outputs/hodiny/ a prohlédni je. Celé npm test na pozadí s výstupem do souboru.
 4. Commituj česky po skupinách, nic neposílej na GitHub a nic nesluč. Rozhodnutí zapiš do docs/rozhodnuti.md, popis do docs/design.md, poučení do docs/pouceni.md jen když vzniklo. Do plánu větve zapiš stav O, oddíl „Po O“ a zadání Uzavření (Opus 5.5 · medium: schválení, sloučení do hlavní větve a hlavní větev na GitHub jen na můj pokyn); zadání O přesuň do docs/archiv/zadani/hodiny-v1.md; plán nahraj do projektu Claude jako docs/plany/hodiny-v1.md a restartuj náhled npm run dev. Pak mi napiš, co je opravené a co je potřeba rozhodnout.
+```
+
+## Uzavření: schválení, sloučení a GitHub
+
+Autor zadání poslal 23. 10. 2026 (Opus 5.5 · medium).
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Větev hodiny-v1 (příprava hodiny) schvaluji, vše po opravách (O) je v pořádku. Krok Uzavření: sloučení do hlavní větve a hlavní větev na GitHub. Plán je v docs/plany/hodiny-v1.md (oddíl Po O). Čti jen to, co uzavření potřebuje.
+
+1. Ověř, že ve větvi hodiny-v1 je všechno commitnuté a plán má stav O „hotovo“ a oddíl „Po O“. Pokud ne, doplň je podle posledních commitů a napiš mi, co chybělo.
+2. Celé npm test na pozadí s výstupem do /tmp/atlas-test-hodiny.log. Když spadne jen „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor samostatně; jiná chyba znamená stop a zprávu mně.
+3. Slouč hodiny-v1 do hlavní větve bez přepisování historie (slučovací commit). Po sloučení npm run build, node scripts/hodiny-katalog.mjs (Chyb: 0) a node scripts/doba-odkazy-vypis.mjs (Chyb: 0).
+4. Dokumentace: do plánu větve oddíl „Uzavření větve (datum)“ se slučovacím commitem, výsledky testů a stavem po větvi (počet zastavení v katalogu, co zůstává na později: Do hodiny u bloku, Režim třídy, třídní anketa s počty, vzorové hodiny), řádek Uzavření v tabulce na „hotovo“. Plán přesuň do docs/archiv/plany/hodiny-v1.md, zadání Uzavření do docs/archiv/zadani/hodiny-v1.md. Do docs/rozhodnuti.md zápis o uzavření (nejnovější nahoře). V docs/plan.md uprav řádek větve na archiv a jako další v pořadí uveď celek 9 (P8: cesta 34 „Kam mi mizí čas?“, plán docs/plany/celek-9.md) s poznámkou, že P8 začne sloučením hlavní větve do celek-9. Commituj česky.
+5. Hlavní větev pošli na GitHub. Větev celek-9 neměň.
+6. Projekt Claude: nahraj docs/plan.md a smaž docs/plany/hodiny-v1.md z projektu (je v archivu). Ověř, že nahrané plan.md má stejnou velikost jako soubor v repozitáři.
+7. Restartuj náhled npm run dev. Pak mi krátce napiš, co je sloučené, co prošlo a co je další krok.
 ```
