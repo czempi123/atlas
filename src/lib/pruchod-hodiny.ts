@@ -209,19 +209,29 @@ export function polohaPrichodu(p: Omit<Plocha, 'poloha'>, kam: 'zacatek' | 'kone
 export type KrokPromitani = { poloha: number } | { prejdi: 'dalsi' | 'predchozi' };
 
 /**
+ * Zbytek úseku menší než jeden řádek na plátně (px): posun jen o něj by na plátně nebyl vidět a učitel by nevěděl,
+ * jestli stisk prošel. Takový zbytek je konec úseku (při couvání začátek).
+ */
+export const ZBYTEK_USEKU = 32;
+
+/**
  * Jeden krok promítání (šipka, PageDown, mezerník): uvnitř zastavení posun o obrazovku bez kousku předchozí,
  * nejvýš na konec úseku; na konci (při couvání na začátku) přechod na další, nebo předchozí zastavení.
+ * Zbytek pod ZBYTEK_USEKU se nepočítá: krok, po kterém by zbyl, dojede rovnou na konec, a z místa, odkud zbývá,
+ * jde další stisk na další zastavení. Totéž obráceně při couvání.
  */
 export function krokPromitani(p: Plocha, smer: 1 | -1): KrokPromitani {
   const krok = Math.max(1, p.vyska - prekryv(p.vyska));
   const zacatek = Math.max(0, Math.min(p.horni, p.nejvys));
   const konec = polohaPrichodu(p, 'konec');
   if (smer === 1) {
-    if (p.poloha >= konec - 2) return { prejdi: 'dalsi' };
-    return { poloha: Math.min(Math.max(p.poloha, zacatek) + krok, konec) };
+    if (konec - p.poloha < ZBYTEK_USEKU) return { prejdi: 'dalsi' };
+    const cil = Math.max(p.poloha, zacatek) + krok;
+    return { poloha: konec - cil < ZBYTEK_USEKU ? konec : cil };
   }
-  if (p.poloha <= zacatek + 2) return { prejdi: 'predchozi' };
-  return { poloha: Math.max(Math.min(p.poloha, konec) - krok, zacatek) };
+  if (p.poloha - zacatek < ZBYTEK_USEKU) return { prejdi: 'predchozi' };
+  const cil = Math.min(p.poloha, konec) - krok;
+  return { poloha: cil - zacatek < ZBYTEK_USEKU ? zacatek : cil };
 }
 
 /**

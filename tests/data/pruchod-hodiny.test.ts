@@ -4,7 +4,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import type { Zastaveni } from '../../src/lib/hodiny';
 import {
   aktivniHodina, platnaAktivni, nactiAktivni, ulozAktivni, _zapomenPamet, cestaStranky, zastaveniNaStrance, aktualniZastaveni,
-  sousedniZastaveni, poradiZastaveni, krokPromitani, polohaPrichodu, prekryv, klavesaPatriPrvku, KLIC_AKTIVNI, type Plocha,
+  sousedniZastaveni, poradiZastaveni, krokPromitani, polohaPrichodu, prekryv, klavesaPatriPrvku, KLIC_AKTIVNI, ZBYTEK_USEKU, type Plocha,
 } from '../../src/lib/pruchod-hodiny';
 
 const zast = (id: string, stranka: string, kotva: string | null, druh: Zastaveni['druh']): Zastaveni => ({
@@ -125,6 +125,23 @@ describe('promítání: krok', () => {
     const kratky = { horni: 1000, dolni: 1300 };
     expect(krokPromitani(plocha(1000, kratky), 1)).toEqual({ prejdi: 'dalsi' });
     expect(krokPromitani(plocha(1000, kratky), -1)).toEqual({ prejdi: 'predchozi' });
+  });
+  it('zbytek úseku pod jeden řádek je konec úseku: žádný mrtvý stisk (Zrcadlo času o 4 px vyšší než plocha)', () => {
+    expect(ZBYTEK_USEKU).toBe(32);
+    const vyssi = { horni: 1000, dolni: 1000 + 672 + 4 };
+    expect(krokPromitani(plocha(1000, vyssi), 1)).toEqual({ prejdi: 'dalsi' });
+    // Při couvání se přijde na konec úseku (1004) a další stisk jde rovnou na předchozí zastavení.
+    expect(polohaPrichodu(plocha(0, vyssi), 'konec')).toBe(1004);
+    expect(krokPromitani(plocha(1004, vyssi), -1)).toEqual({ prejdi: 'predchozi' });
+    // Krok, po kterém by zbylo 20 px, dojede na konec; zpátky stejně na začátek.
+    const zbude20 = { horni: 1000, dolni: 1000 + krok + 20 + 672 };
+    expect(krokPromitani(plocha(1000, zbude20), 1)).toEqual({ poloha: 1000 + krok + 20 });
+    expect(krokPromitani(plocha(1000 + krok + 20, zbude20), 1)).toEqual({ prejdi: 'dalsi' });
+    expect(krokPromitani(plocha(1000 + krok + 20, zbude20), -1)).toEqual({ poloha: 1000 });
+    // Zbytek přesně jeden řádek se ještě ukáže zvlášť.
+    const radek = { horni: 1000, dolni: 1000 + krok + 32 + 672 };
+    expect(krokPromitani(plocha(1000, radek), 1)).toEqual({ poloha: 1000 + krok });
+    expect(krokPromitani(plocha(1000 + krok, radek), 1)).toEqual({ poloha: 1000 + krok + 32 });
   });
   it('úsek na konci stránky: konec je tam, kam se stránka ještě posune', () => {
     expect(krokPromitani(plocha(1600, { nejvys: 1600 }), 1)).toEqual({ prejdi: 'dalsi' });
