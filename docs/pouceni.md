@@ -71,6 +71,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Stupňování v citátu („čím šťastnější, tím víc“, „nejvíc stojí za to žít“) čti i obráceně: je to totéž srovnání šťastných s nešťastnými, jen schované u autority.
 - Úvodní obraz kapitoly nestav na most nad řekou: stejnou myšlenku unese břeh. A Roztřiď o tom, „co není“, nemá vlastní kartu: student po ztrátě by do ní napsal člověka.
 - Celek 7: citát, který soudí dvě věci (tělo a strach ze smrti), dostane otázku ke každé z nich. A otázka bloku za případem, ze kterého podle textu „nic neplyne“, se neptá, co si z něj student vezme.
+- Celek 9: popis prázdného volna („leží v posteli, je na obtíž sám sobě“) čte student, kterému je zle, jako popis sebe; obraz z pramene, který o nemoci není (sbírka bronzů, zápasy, holič), řekne totéž.
 
 ## Co se skládá z dat
 
@@ -99,6 +100,7 @@ Co se v hotových celcích nepovedlo a nemá se opakovat. Výtah ze záznamů re
 - Po přidání stránky, bloku nebo změně dat restartuj běžící `npm run dev`. Starý náhled ukáže stránku bez obsahu a odkazy na kotvy nikam nevedou.
 - Playwright před každým během maže `test-results/`. Pracovní skripty patří do `scripts/`, snímky pro autora do `Claude outputs/`.
 - Kresba s pohybem: pohyb jde zastavit, při omezeném pohybu kresba stojí a text pod ní říká totéž slovy. V kresbě, která tvrdí „vyměnilo se všechno“, nesmí zůstat nic, co vyměnit nejde (stěžeň, vesla): co není součást modelu, do obrazu nepatří. Na telefonu má jednotka kresby vyjít asi na pixel, jinak popisky nejdou přečíst. Novou kresbu stav na rámu `Kresba.svelte`; pasti (animace pod `.kresba--pohyb`, `transform` v SVG) má skill `atlas-komponenta`. Dojem z barvy nevznikne z barevného pozadí: chce věci známé barvy ve stejném světle (šaty v cestě 1). Kresbu, která má vyvolat dojem, ukaž autorovi dřív, než ji popíšeš jako hotovou.
+- Kresba, jejíž obsah vzniká teprve pohybem (písek, který se usazuje), ukáže po zastavení výsledek, ne zamrzlý okamžik: kdo pohyb zastaví hned po načtení, by jinak obsah nikdy neviděl; zkoušej Zastavit pohyb hned a pak posuň ovládání (celek 9, P10).
 - Chromium nevyfotí najednou stránku vyšší než asi 16 000 px; dlouhé stránky foť po částech (`scripts/snimky-listy.mjs`).
 - Prvek s fokusem z klávesnice zůstane pod pevnou lištou, když leží ve viditelné části okna: prohlížeč stránku neposune a `scroll-padding` to nespraví. Dorovnává to základní rozvržení. Při revizi zkoušej skutečným tabulátorem na dvou výškách okna a skriptem `scripts/kontrola-fokus.mjs`.
 - Studentské věty hlídají testy přesným zněním. Než opravíš větu, najdi ji v `tests/` (`grep -rn`) a test uprav v tomtéž commitu. Věta s jednopísmennou předložkou má v sestavené stránce nezlomitelnou mezeru: `toContainText` ji snese, `textContent.includes` ne. Výpis nezkracuj: průchod cesty bez odkrytí hlídá věty každého kroku až na konci souboru (`cesta8.spec.ts:314`).

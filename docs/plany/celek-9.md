@@ -6,8 +6,8 @@ Celek 9 staví cestu 34 z katalogu (`docs/architektura.md`): Seneca a jeho spis 
 | --- | --- | --- | --- |
 | P6 | Podklady: prameny, příběh, spor Seneca × Marcus, nejsilnější námitka, dnešní případ, návrh kroků cesty | Opus 5.5 · high s vyhledáváním | hotovo 18. 10. 2026 (`docs/podklady/celek-9.md`); viz Po P6 |
 | P8 | Cesta 34 se závěrem a Návratem, kresba, hlas nebo doplnění otázky 1, případné odkazy z portrétů Seneky a Marca | Opus 5.5 · high se skillem `atlas-cesta` (xhigh při zaseknutí) | hotovo 23. 10. 2026; viz Po P8 |
-| P10 | Revize celku | Opus 5.5 · high se skillem `atlas-revize` | zadání níže |
-| O | Opravy po revizi | Opus 5.5 · high | čeká |
+| P10 | Revize celku | Opus 5.5 · high se skillem `atlas-revize` | hotovo 23. 10. 2026, verdikt „po opravách“ (`docs/revize/celek-9-2026-10-23.md`); viz Po P10 |
+| O | Opravy po revizi | Opus 5.5 · high | zadání níže |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
 
 P7 v celku není: nová osoba nepřibývá a drobné úpravy hotových portrétů (odkaz na cestu, věta v Kam dál) udělá P8, pokud je podklady doporučí.
@@ -111,20 +111,39 @@ Hotovo 23. 10. 2026. Cesta 34 `kam-mi-mizi-cas` má přehled a osm kroků (každ
 3. **Délka:** cesta má 28 minut, víc než 15–20 z architektury (cesta 8 má 32). Doporučuji nechat (délka se kvůli délce nekrátí).
    Odpověď:
 
-## Zadání P10: revize celku
+## Po P10
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-revize`.
+Hotovo 23. 10. 2026. Záznam revize je `docs/revize/celek-9-2026-10-23.md`: verdikt **po opravách**, blokující nález žádný, šest důležitých a čtyři drobné, každý s hotovým zněním. Pět drobností je opravených rovnou (`58ecf8b`): Kde jsme kroku 1 bez data, pochvala na začátku zpětné vazby „Nevím“, pořadí modelových odpovědí v Odkryj kroku 4, otázka u filmu podle volby studenta a „Jeden z dopisů“ v portrétu Seneky. Testy prošly před opravami celé (vitest 711, Playwright 537) a po nich `vitest`, `cesta34` a `seneca`. Plátno, katalog hodin (Chyb 0) a klávesnice (24 stránek) bez nálezu. Snímky jsou v `Claude outputs/celek9-revize/`.
+
+**Nejdůležitější nálezy.**
+
+- *Krok 4:* „líná zaneprázdněnost“ stojí na lidech, kteří leží v posteli a jsou na obtíž sami sobě; student, kterému je zle, se v tom pozná. Oprava bere Senekovy vlastní příklady (sbírka bronzů, zápasy, holič).
+- *Kresba:* Zastavit pohyb hned po načtení nechá písek nahoře a posuvníky pak v baňce nic nemění. Oprava: zastavené hodiny ukážou výsledek kola.
+- *Krok 8:* student, pro kterého je volno výsada bohatých, nemá spojence a „tutéž výčitku“ Seneca neslyšel. Oprava: Aristotelés (prostředky z hlasu na otázce 1 a Politika VII, 9 o volnu), Senekova výčitka jako jiná výčitka.
+- *Roztřiď:* kamarádka v koši ztrát dostane „věděl jsi komu a proč“; vlastní karta se ptá, co bylo „v tvých rukou“.
+- *Vstup a přehled:* Paulinus a obilí třikrát za minutu a výzva z 20, 1 připsaná Paulinovi.
+
+## Co rozhodnout po P10 (prázdná odpověď znamená souhlas s doporučením)
+
+1. **Zastavené Přesýpací hodiny ukážou výsledek kola** (písek dole po vrstvách), ne okamžik, kdy student pohyb zastavil. Je to odchylka od pravidla rámu kresby. Doporučuji ano.
+   Odpověď:
+2. **Spojenec pro námitku „volno je pro bohaté“:** Aristotelés s Politikou VII, 9 i s jeho závěrem, že řemeslník a obchodník nemá být v nejlepší obci občanem. Doporučuji ano. Alternativa: jen věta o prostředcích z jeho hlasu na otázce 1, bez Politiky a bez nového pramene.
+   Odpověď:
+3. **Vstup cesty bez Paulina** (nález 6): Paulinus a obilí zůstanou v kroku 1 a v portrétu Seneky. Doporučuji ano.
+   Odpověď:
+
+## Zadání O: opravy po revizi
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.**
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok P10 celku 9 „Kam mi mizí čas?“: revize celku se skillem atlas-revize. Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Po P8 a Co rozhodnout po P8; moje odpovědi tam mají přednost, prázdná odpověď znamená souhlas), podklady v docs/podklady/celek-9.md. Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit); z podkladového listu jen oddíly a řádky, proti kterým kontroluješ.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok O celku 9 „Kam mi mizí čas?“: opravy po revizi. Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Po P10 a Co rozhodnout po P10; moje odpovědi tam mají přednost, prázdná odpověď znamená souhlas), nálezy s hotovým zněním v docs/revize/celek-9-2026-10-23.md. Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit).
 
 0. git switch celek-9 a git status bez necommitnutých změn. Restartuj náhled (npx astro dev stop, pak nohup npm run dev > /tmp/atlas-dev.log 2>&1 &).
 
-1. Reviduj celek: cesta 34 (src/content/cesty/kam-mi-mizi-cas.mdx a kam-mi-mizi-cas/, bloky src/content/bloky/cesta34-*.yaml včetně Návratu), kresba Přesýpací hodiny (src/components/ostrovy/PresypaciHodiny.svelte, src/lib/presypaci.ts), nové prameny a citáty celku 9 v src/data/zdroje.yaml, věty s odkazem v portrétech Seneky a Marca a všechno, co se skládá z dat (hlavičky Seneky a Marca, Lidé, stránka otázky 1, Domů, katalog hodin). Všech šest pohledů ze skillu. Každé historické tvrzení a citát proti podkladům (oddíly a až f) a proti docs/pouceni.md, hlavně Bloky, Celek a Student, kterého se téma bolestně týká: pečující student, student po ztrátě, student z rodiny, kde na volno nejsou peníze, student, kterému je zle.
+1. Zapracuj všech deset nálezů podle záznamu revize a mých odpovědí; každý nález zvlášť commitni. Než změníš studentskou větu, najdi ji v tests/ (grep -rn) a test uprav v tomtéž commitu. Nález 1: příklady ze 12, 2–3 ověř v latinském textu (The Latin Library). Nález 3: Politiku VII, 9 (1328b37–1329a2) ověř v řeckém textu (PerseusDL, Ross) a pramen aristoteles-politika-vii zapiš do src/data/zdroje.yaml; když se pramen od navrženého znění liší, drž se pramene. Nález 2: zapiš pravidlo i do docs/design.md u kresby a přidej test zastavení hned po načtení.
 
-2. V prohlížeči projdi cestu na 390 a 1440 px v obou režimech, s odkrytím i bez (scripts/snimky-cesta.mjs), jednou jen klávesnicí (scripts/kontrola-fokus.mjs) a kresbu i s pohybem, jeho zastavením a omezeným pohybem (scripts/snimky-prvek.mjs). Ověř podoby na plátně (hodiny-v1): krok, bloky a kresbu v otevřené otázce, jen otázce a možnostech a jen kresbě.
+2. Ověř: npm run build, node scripts/hodiny-katalog.mjs, dotčené testy, kresbu zastavenou hned po načtení i s posunutým posuvníkem (scripts/snimky-prvek.mjs s klepnutím na Zastavit pohyb) na 390 a 1440 px v obou režimech, krok 4 a 8 snímkem (scripts/snimky-cesta.mjs), čas cesty (scripts/slova-cesta.mjs; štítek uprav, když se změní). Celé npm test jednou na konci na pozadí s výstupem do souboru.
 
-3. Záznam revize zapiš do docs/revize/celek-9-<datum>.md: nálezy seřazené podle dopadu, u každého návrh opravy, na konci verdikt. Zjevné drobnosti (překlep, sazba) oprav rovnou a commitni; ostatní nech na krok O.
-
-4. Do plánu větve zapiš stav P10, oddíl „Po P10“ (co rozhodnout) a zadání O (Opus 5.5 · high). Zadání P10 přesuň do docs/archiv/zadani/celek-9.md, nové poučení zapiš jednou větou do docs/pouceni.md, rozhodnutí do docs/rozhodnuti.md. Plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš verdikt a co rozhodnout.
+3. Do plánu větve zapiš stav O, oddíl „Po O“ a co rozhodnout před uzavřením. Zadání O přesuň do docs/archiv/zadani/celek-9.md, rozhodnutí do docs/rozhodnuti.md, plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš, co je hotové a co rozhodnout.
 ```
