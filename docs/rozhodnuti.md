@@ -4,6 +4,16 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 23. 10. 2026: Celek 9, krok O (opravy po revizi)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Tři body Co rozhodnout po P10 platí, jak byly doporučené | Autor nechal odpovědi prázdné; prázdná odpověď znamená souhlas |
+| Zastavené Přesýpací hodiny ukážou výsledek kola (písek dole po vrstvách), i když student pohyb zastaví hned po načtení; Pustit pohyb začne nové kolo. Odchylka od pravidla rámu „zastavená zůstane stát“, zapsaná v `docs/design.md` u kresby | Obsah kresby vzniká teprve pohybem; zamrzlý okamžik by ho studentovi nikdy neukázal a odporoval by textu pod kresbou |
+| Spojencem studenta, pro kterého je volno výsada bohatých, je v kroku 8 Aristotelés s Politikou VII, 9 i s jejím závěrem; věta jmenuje řemeslo, obchod i práci na poli | Pramen (Ross, 1328b37–1329a2) vylučuje z občanství nejlepší obce i rolníky a důvod volna stojí právě u nich; navržené znění je vynechávalo |
+| Vstup a přehled cesty 34 jsou bez Paulina a bez Dunaje; Paulinus a obilí zůstávají v kroku 1 a v portrétu Seneky | Vstup opakoval totéž třikrát a připisoval Paulinovi výzvu z 20, 1; IV, 3 se k místu vázat nedá |
+| Posuvník a vrstva kresby „Někdo, něco“ (dřív „Někdo jiný“) | Hodiny, o kterých rozhodl telefon, v kresbě neměly jméno |
+
 ## 23. 10. 2026: Celek 9, revize P10
 
 | Rozhodnutí | Důvod |

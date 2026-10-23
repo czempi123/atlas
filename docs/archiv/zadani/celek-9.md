@@ -71,3 +71,19 @@ Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Termi
 
 4. Do plánu větve zapiš stav P10, oddíl „Po P10“ (co rozhodnout) a zadání O (Opus 5.5 · high). Zadání P10 přesuň do docs/archiv/zadani/celek-9.md, nové poučení zapiš jednou větou do docs/pouceni.md, rozhodnutí do docs/rozhodnuti.md. Plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš verdikt a co rozhodnout.
 ```
+
+## Zadání O: opravy po revizi (provedeno 23. 10. 2026)
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.**
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok O celku 9 „Kam mi mizí čas?“: opravy po revizi. Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Po P10 a Co rozhodnout po P10; moje odpovědi tam mají přednost, prázdná odpověď znamená souhlas), nálezy s hotovým zněním v docs/revize/celek-9-2026-10-23.md. Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit).
+
+0. git switch celek-9 a git status bez necommitnutých změn. Restartuj náhled (npx astro dev stop, pak nohup npm run dev > /tmp/atlas-dev.log 2>&1 &).
+
+1. Zapracuj všech deset nálezů podle záznamu revize a mých odpovědí; každý nález zvlášť commitni. Než změníš studentskou větu, najdi ji v tests/ (grep -rn) a test uprav v tomtéž commitu. Nález 1: příklady ze 12, 2–3 ověř v latinském textu (The Latin Library). Nález 3: Politiku VII, 9 (1328b37–1329a2) ověř v řeckém textu (PerseusDL, Ross) a pramen aristoteles-politika-vii zapiš do src/data/zdroje.yaml; když se pramen od navrženého znění liší, drž se pramene. Nález 2: zapiš pravidlo i do docs/design.md u kresby a přidej test zastavení hned po načtení.
+
+2. Ověř: npm run build, node scripts/hodiny-katalog.mjs, dotčené testy, kresbu zastavenou hned po načtení i s posunutým posuvníkem (scripts/snimky-prvek.mjs s klepnutím na Zastavit pohyb) na 390 a 1440 px v obou režimech, krok 4 a 8 snímkem (scripts/snimky-cesta.mjs), čas cesty (scripts/slova-cesta.mjs; štítek uprav, když se změní). Celé npm test jednou na konci na pozadí s výstupem do souboru.
+
+3. Do plánu větve zapiš stav O, oddíl „Po O“ a co rozhodnout před uzavřením. Zadání O přesuň do docs/archiv/zadani/celek-9.md, rozhodnutí do docs/rozhodnuti.md, plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš, co je hotové a co rozhodnout.
+```

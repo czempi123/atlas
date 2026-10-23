@@ -7,7 +7,7 @@ Celek 9 staví cestu 34 z katalogu (`docs/architektura.md`): Seneca a jeho spis 
 | P6 | Podklady: prameny, příběh, spor Seneca × Marcus, nejsilnější námitka, dnešní případ, návrh kroků cesty | Opus 5.5 · high s vyhledáváním | hotovo 18. 10. 2026 (`docs/podklady/celek-9.md`); viz Po P6 |
 | P8 | Cesta 34 se závěrem a Návratem, kresba, hlas nebo doplnění otázky 1, případné odkazy z portrétů Seneky a Marca | Opus 5.5 · high se skillem `atlas-cesta` (xhigh při zaseknutí) | hotovo 23. 10. 2026; viz Po P8 |
 | P10 | Revize celku | Opus 5.5 · high se skillem `atlas-revize` | hotovo 23. 10. 2026, verdikt „po opravách“ (`docs/revize/celek-9-2026-10-23.md`); viz Po P10 |
-| O | Opravy po revizi | Opus 5.5 · high | zadání níže |
+| O | Opravy po revizi | Opus 5.5 · high | hotovo 23. 10. 2026; viz Po O |
 | Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
 
 P7 v celku není: nová osoba nepřibývá a drobné úpravy hotových portrétů (odkaz na cestu, věta v Kam dál) udělá P8, pokud je podklady doporučí.
@@ -132,18 +132,20 @@ Hotovo 23. 10. 2026. Záznam revize je `docs/revize/celek-9-2026-10-23.md`: verd
 3. **Vstup cesty bez Paulina** (nález 6): Paulinus a obilí zůstanou v kroku 1 a v portrétu Seneky. Doporučuji ano.
    Odpověď:
 
-## Zadání O: opravy po revizi
+## Po O
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high.**
+Hotovo 23. 10. 2026. Všech deset nálezů je zapracovaných, každý v samostatném commitu (`e48b12b` až `acc044d`); tvé odpovědi po P10 byly prázdné, platí tedy doporučení. Zadání O je v `docs/archiv/zadani/celek-9.md`.
 
-```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok O celku 9 „Kam mi mizí čas?“: opravy po revizi. Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Po P10 a Co rozhodnout po P10; moje odpovědi tam mají přednost, prázdná odpověď znamená souhlas), nálezy s hotovým zněním v docs/revize/celek-9-2026-10-23.md. Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit).
+- *Krok 4* (nález 1): líná zaneprázdněnost stojí na Senekových příkladech ze 12, 2–3, ověřených v latinském textu (The Latin Library): sbírka korintských bronzů, zápasy chlapců v palestře, hodiny u holiče. „Celé dny“ z návrhu jsem změnil na „většinu dní“ (*maiorem dierum partem*) a úvod na „lidi, jejichž volno je samo zaneprázdněné“ (*quorundam otium occupatum est*).
+- *Kresba* (nález 2): zastavené hodiny ukážou výsledek kola i hned po načtení a posuvníky mění vrstvy v baňce; Pustit pohyb začne nové kolo. Pravidlo je v `docs/design.md` u kresby, test v `cesta34.spec.ts`.
+- *Krok 8* (nález 3): spojencem studenta s námitkou o volnu je Aristotelés. Politiku VII, 9 jsem ověřil řecky (Perseus, Ross 1957) a pramen se od navrženého znění liší: z občanství nejlepší obce vylučuje řemeslníky, obchodníky **i rolníky** a důvod („volno je potřeba ke vzniku ctnosti i k jednání v obci“) stojí právě u rolníků. Věta proto říká „kdo se živí řemeslem, obchodem nebo prací na poli“. Nový pramen `aristoteles-politika-vii` v `zdroje.yaml`, bez citátu.
+- *Roztřiď* (nálezy 4 a 5), *vstup a přehled bez Paulina* (6), *Spor* (7), *otázka s telefonem* (8), *posuvník „Někdo, něco“* (9) a *Marcus v kroku 8* (10) podle hotového znění z revize.
 
-0. git switch celek-9 a git status bez necommitnutých změn. Restartuj náhled (npx astro dev stop, pak nohup npm run dev > /tmp/atlas-dev.log 2>&1 &).
+**Ověření.** `npm run build` prošlo, katalog hodin 98 stránek a Chyb 0, `cesta34.spec.ts` a `seneca.spec.ts` 12 testů, `presypaci.test.ts` a `data.test.ts`. Kresbu jsem vyfotil zastavenou hned po načtení a se Spánkem posunutým na 4 h na 390 a 1440 px v obou režimech (`Claude outputs/celek9-O/hodiny-390.jpg`, `hodiny-1440.jpg`): písek leží dole po vrstvách, horní baňka je prázdná a posuvník vrstvy mění. Kroky 4 a 8 snímkem (`kam-mi-mizi-cas-390-light-odkryt-*.jpg`, `-1440-dark-odkryt-*.jpg`). Čas cesty 3209 slov, 21,4 + 6,5 = 27,9 minuty; štítek 28 platí. Celé `npm test` na konci prošlo: vitest 711, Playwright 537.
 
-1. Zapracuj všech deset nálezů podle záznamu revize a mých odpovědí; každý nález zvlášť commitni. Než změníš studentskou větu, najdi ji v tests/ (grep -rn) a test uprav v tomtéž commitu. Nález 1: příklady ze 12, 2–3 ověř v latinském textu (The Latin Library). Nález 3: Politiku VII, 9 (1328b37–1329a2) ověř v řeckém textu (PerseusDL, Ross) a pramen aristoteles-politika-vii zapiš do src/data/zdroje.yaml; když se pramen od navrženého znění liší, drž se pramene. Nález 2: zapiš pravidlo i do docs/design.md u kresby a přidej test zastavení hned po načtení.
+## Co rozhodnout před uzavřením (prázdná odpověď znamená souhlas s doporučením)
 
-2. Ověř: npm run build, node scripts/hodiny-katalog.mjs, dotčené testy, kresbu zastavenou hned po načtení i s posunutým posuvníkem (scripts/snimky-prvek.mjs s klepnutím na Zastavit pohyb) na 390 a 1440 px v obou režimech, krok 4 a 8 snímkem (scripts/snimky-cesta.mjs), čas cesty (scripts/slova-cesta.mjs; štítek uprav, když se změní). Celé npm test jednou na konci na pozadí s výstupem do souboru.
-
-3. Do plánu větve zapiš stav O, oddíl „Po O“ a co rozhodnout před uzavřením. Zadání O přesuň do docs/archiv/zadani/celek-9.md, rozhodnutí do docs/rozhodnuti.md, plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš, co je hotové a co rozhodnout.
-```
+1. **Schválení celku 9:** přečti si cestu jako student (asi 28 minut) a celek schval; pak se větev sloučí do hlavní větve a hlavní větev pošle na GitHub. Doporučuji schválit.
+   Odpověď:
+2. **Zastavený pohyb u ostatních kreseb** (doporučení revize mimo celek): zkontrolovat, jestli i jiná kresba ukazuje obsah teprve pohybem, v souhrnné revizi antiky (P11), ne ve vlastní větvi. Doporučuji ano.
+   Odpověď:
