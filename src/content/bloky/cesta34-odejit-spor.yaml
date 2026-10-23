@@ -1,0 +1,43 @@
+# Spor · cesta 34 „Kam mi mizí čas?“, krok 6: Seneca × Marcus Aurelius „Odejít, nebo hledat čas uvnitř?“
+# Podklad: docs/podklady/celek-9.md › d) Spor (poctivé čtení obou, nejsilnější verze, odpovědi na námitky).
+# Spor jsou dvě rady dvěma lidem, ne dvě školy: Seneca radí Paulinovi (O krátkosti života 18–19), jinde radí mísit
+# volno s prací (O duševním klidu 4; O volném čase 3); Marcus po ústraní sám touží (IV, 3) a číst nemá kdy (VIII, 8).
+# Námitky obou řekne scéna, aby první strana na telefonu neodpovídala na něco, co ještě nezaznělo. Třetí argument
+# každé strany odpovídá na námitku ze scény. Postoje nejsou krajnější než citáty: Seneca neříká „opusť všechno“,
+# Marcus neříká „nikdy neodcházej“. Že se nepotkali, říká scéna.
+druh: spor
+obdobi: 2
+nadtitulek: Spor
+scena: >-
+  Seneca radí Paulinovi úřad opustit. Odejít ale může jen ten, komu to někdo dovolí.
+  Marcus Aurelius si radí hledat volno uvnitř toho, co dělá. Jenže ústraní v sobě se snadno radí tomu, kdo stejně zůstává.
+
+
+  Ti dva se nepotkali, dělí je víc než sto let. Kdo z nich má pravdu, rozhodni sám.
+otazka: Kde vzít čas pro sebe, když tě něco zaměstnává?
+strany:
+  - osoba: seneca
+    postoj: Odejít, když to jde.
+    argumenty:
+      - >-
+        Kdo zůstane v provozu, který si bere všechen jeho čas, nezíská ho zpátky žádným trikem uvnitř.
+        Každý, kdo si tě volá k sobě, tě bere tobě. Musíš si udělat místo, kde tvůj čas nespravuje nikdo jiný.
+      - >-
+        Paulinus už dal obci větší a lepší část života. Přesní a pracovití lidé se najdou i bez něj.
+        Volno přitom není lenošení: čeká v něm práce větší než všechno, co dosud dělal.
+      - >-
+        Komu odejít nedovolí, nemá utíkat hned: nejlepší je mísit volno s prací.
+        A kdo nemůže sloužit jako občan, ať slouží jako člověk.
+  - osoba: marcus-aurelius
+    postoj: Hledat volno uvnitř.
+    argumenty:
+      - >-
+        Odejít může jen ten, komu to okolnosti dovolí. Volno od zbytečných věcí a představ si můžeš vzít kdykoli a kdekoli,
+        i na tažení. A právě tam ho potřebuješ nejvíc.
+      - >-
+        Na život u dvora si podle Marca nemá stěžovat nikdo, ani on sám. Když se mu ráno nechtělo z postele,
+        připomněl si, že vstává k práci člověka.
+      - >-
+        Proti ústraní v sobě stojí námitka, že uprostřed provozu, který tě pořád volá, se do sebe neuchýlíš.
+        Marcus si radí ústraní krátké a pořád opakované. A hlavně škrtat, co nutné není: kdo to udělá, bude mít víc volna a míň zmatku.
+zdroje: [seneca-brevitate, seneca-tranquillitate-otium, marcus-hovory]

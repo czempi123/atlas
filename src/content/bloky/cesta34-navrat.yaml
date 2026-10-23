@@ -1,0 +1,22 @@
+# Návrat · cesta 34 „Kam mi mizí čas?“: sobota, o kterou prosí kamarádka.
+# Podklad: docs/podklady/celek-9.md › g) Návrat, případ 1 (Stěhování). Blok má jeden případ na cestu; ze tří
+# případů v podkladech je vybraný ten, který je nejdál od nových případů cesty (večer s telefonem, hlídání
+# sourozenců): děda v důchodu by opakoval starého správce z kroku 4, videohovor do noci telefon z kroku 5.
+# Jde posoudit každým pravidlem (kdo rozhodl, komu a proč, jedna věc, je to nutné?) a nenapovídá, co je správně.
+# Bez pramenů a čísel; věty v přítomném a budoucím čase, ať rod neřeší.
+druh: navrat
+obdobi: 2
+cesta: kam-mi-mizi-cas
+pravidlo: cesta34-moje-pravidlo
+nazev: Stěhování v sobotu
+scena: >-
+  Představ si, že tě kamarádka poprosí, jestli jí v sobotu pomůžeš se stěhováním. Celé odpoledne krabice, schody
+  a nakonec skládání skříně.
+
+
+  Na sobotu máš domluvenou cestu na kole s partou. Kamarádka píše, že to chápe a že si najde někoho jiného.
+  Držíš telefon a rozmýšlíš, co jí odepíšeš.
+po:
+  ano: Co tvoje pravidlo říká udělat se sobotou, a čí bude ta sobota potom?
+  upravim: Co mu chybí pro chvíli, kdy o tvůj čas prosí někdo, na kom ti záleží?
+  nevim: "Na čem to vázne: na tom, kdo o sobotě rozhoduje, nebo na tom, komu ji dáš?"

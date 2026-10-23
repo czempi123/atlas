@@ -1,0 +1,15 @@
+---
+// Přesýpací hodiny: kresba k Senekově výzvě „spočítej si léta“ (cesta 34, krok 3). Písek jednoho dne se usazuje
+// po vrstvách podle toho, kdo o hodině rozhodl. Nic se neukládá a kresba nenabízí Kam dál.
+// Použití v MDX: <PresypaciHodiny id="presypaci-hodiny" />
+import Ostrov from '../ostrovy/PresypaciHodiny.svelte';
+
+interface Props {
+  /** kotva kresby */
+  id?: string;
+  /** barva období (1–8) */
+  obdobi?: number;
+}
+const { id = 'presypaci-hodiny', obdobi = 2 } = Astro.props;
+---
+<Ostrov client:visible id={id} obdobi={obdobi} />

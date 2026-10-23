@@ -1,0 +1,83 @@
+# Roztřiď · cesta 34 „Kam mi mizí čas?“, krok 2: kdo mi tu hodinu vzal (Dopisy 1, 1: eripiuntur, subducuntur, effluunt).
+# Podklad: docs/podklady/celek-9.md › b) b4, b21 a g) Osnova (krok 2); e) Námitka 3 (škola a spánek nejsou ztráta).
+# Koše odpovídají na otázku stejným tvarem („Vzal si ji někdo · Vzalo ji něco nenápadně · Nikdo, protekla · Nikdo,
+# byla moje“). Čtvrtý koš je náš: hodina, o které vím, komu a proč jsem ji dal (pravidlo z celku 8 pro pečující
+# studenty). Dvě věci v jedné kartě: cesta autobusem (škola) a hudba (moje volba). Spánek a úkol zpětná vazba nepočítá
+# jako ztracený čas a netvrdí, že tak to viděl Seneca. Vlastní karta: ptá se, proč je v koši a co bylo v čích rukou.
+druh: roztrid
+obdobi: 2
+nadtitulek: Tvůj tah
+scena: Tady je sedm hodin z obyčejného týdne.
+otazka: Kdo ti tu hodinu vzal?
+kose:
+  - id: vzal
+    nazev: Vzal si ji někdo
+    popis: Řekl si o ni nahlas a dostal ji.
+  - id: nenapadne
+    nazev: Vzalo ji něco nenápadně
+    popis: Ani jsem si nevšiml, že mi ji něco bere.
+  - id: protekla
+    nazev: Nikdo, protekla
+    popis: Nikdo ji nevzal, jen mi proklouzla.
+  - id: moje
+    nazev: Nikdo, byla moje
+    popis: Vím, komu a proč jsem ji dal.
+karty:
+  - id: trenink
+    text: Trénink, na který se celý týden těším
+    zpetna: >-
+      Na trénink se těšíš a chodíš na něj rád. Kdyby ho zrušili, chyběla by ti ta hodina?
+    kdyz:
+      vzal: >-
+        Dal jsi ho mezi hodiny, které ti někdo vzal. Kdo o něm rozhodl: ty, nebo trenér?
+        A těšil by ses na něj, kdyby to bylo jinak?
+  - id: lekar
+    text: Hodina čekání u lékaře
+    zpetna: >-
+      Čekání si nikdo nevybral a nikdo ti ho nevzal schválně. Patří taková hodina vůbec někomu?
+      A co jsi s ní mohl dělat ty?
+  - id: videa
+    text: Video za videem, když jsem chtěl jít spát
+    zpetna: >-
+      Každé další video si o pozornost řeklo samo. Kdo rozhodl o tom posledním: ty, nebo telefon?
+    kdyz:
+      moje: >-
+        Dal jsi ho k hodinám, které byly tvoje. Možná sis ten večer opravdu přál.
+        Věděl bys ráno říct, co jsi viděl?
+  - id: kamaradka
+    text: Zpráva od kamarádky, která potřebovala pomoct
+    zpetna: >-
+      Tuhle hodinu jsi dal někomu, kdo tě potřeboval. Rozhodl jsi o ní ty, nebo zpráva, která přišla? A dal bys ji znovu?
+    kdyz:
+      vzal: >-
+        Dal jsi ji k hodinám, které si někdo vzal. Řekla si o ni, to ano. Dal bys jí ji znovu?
+  - id: ukol
+    text: Úkol do matiky
+    zpetna: >-
+      Úkol ti zadala škola a ztracený čas to není. Ptát se dá jinak: dělal jsi u něj jen ten úkol,
+      nebo napůl ještě něco jiného?
+  - id: autobus
+    text: Cesta autobusem do školy se sluchátky v uších
+    zpetna: >-
+      Jsou v ní dvě věci. Cestu ti určila škola, hudbu sis vybral sám. Komu z nich ta půlhodina patřila víc?
+  - id: spanek
+    text: Spánek
+    zpetna: >-
+      Spánek potřebuje tělo a ztracený čas to není. Kdy jdeš spát, o tom ale rozhoduje i něco jiného než únava.
+      Kdo o tom rozhodl včera?
+vlastni:
+  pocet: 1
+  vyzva: Přidej hodinu ze svého týdne
+  zpetna: >-
+    Tuhle hodinu jsi přidal sám. Proč jsi ji dal právě do tohoto koše?
+    A kdo o ní rozhodl?
+srovnani:
+  osoba: seneca
+  nadpis: Jak by třídil Seneca
+  text: >-
+    Seneca by se u každé karty ptal, kdo o té hodině rozhodl. Pozemek nikomu nedáš, protože víš, že je tvůj.
+    U hodiny to tak jasné není, a tak ji člověk pustí snadno.
+
+
+    Projdi koš Nikdo, protekla. Je v něm něco, o čem bys dnes rozhodl jinak? A je v koši Vzal si ji někdo hodina, kterou bys dal znovu?
+zdroje: [seneca-brevitate, seneca-ep-1]

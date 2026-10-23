@@ -1,0 +1,31 @@
+# Volba s důvodem · cesta 34 „Kam mi mizí čas?“, krok 1: začátek cesty (pole `zacatek` v přehledu cesty).
+# Podklad: docs/podklady/celek-9.md › g) Osnova (krok 1) a e) Námitka 3. Otázka je na studenta, ale ne na selhání,
+# proto smí mít pole na důvod. Povinnosti (škola, domov, péče o sourozence) žádná zpětná vazba nepočítá jako ztrátu.
+# Atribut Seneky (1, 3) tu nezazní: stojí jednou, jako citát na začátku kroku 2. Zastánci všech čtyř možností
+# jsou v kroku 8.
+druh: volba
+obdobi: 2
+nadtitulek: Tvůj tah
+otazka: Máš dost času na to, na čem ti záleží?
+moznosti:
+  - text: Nemám. Mám moc povinností.
+    tah: počítat povinnosti
+    zpetna: >-
+      Opíráš se o to, co po tobě chce škola, domov nebo práce. Spousta z toho je opravdu nutná a ztracený čas to není.
+      Zkus ale jeden obyčejný den rozdělit na povinnosti a na všechno ostatní. Kolik hodin zbylo a kam šly?
+  - text: Mám, ale nějak mi mizí.
+    tah: hledat, kam čas mizí
+    zpetna: >-
+      Čas máš, a přesto ho na konci dne nemáš. Nikdo ti ho nebere nahlas a nikdo ti za něj nepošle účet.
+      Dokázal bys říct, kdy přesně ti včera zmizel a kdo o tom rozhodl?
+  - text: Mám dost.
+    tah: věřit svému dni
+    zpetna: >-
+      To o sobě umí říct málokdo a může to znamenat, že víš, co s časem děláš.
+      Zkus proti sobě jednu otázku: na čem ti záleží tolik, že bys tomu dal víc času, kdyby ho bylo víc?
+  - text: Nevím. Nikdy jsem to nepočítal.
+    tah: přiznat, že to nevím
+    zpetna: >-
+      Kolik máš peněz, víš skoro na korunu. Kolik máš hodin pro sebe, ti nikdo neřekne.
+      Jak bys to spočítal, kdybys chtěl: podle hodin, nebo podle toho, kdo o nich rozhodl?
+zdroje: [seneca-brevitate]

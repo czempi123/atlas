@@ -280,7 +280,7 @@ test('Návrat cesty 7 v deníku: Císařovy nové šaty i s koncem, bez pramenů
   await axe(page);
 });
 
-test('otázka 1: pátý hlas Hipparchie mluví o tom, kdo o čase rozhoduje, a cesty 4, 6 a 7', async ({ page }) => {
+test('otázka 1: pátý hlas Hipparchie mluví o tom, kdo o čase rozhoduje, a cesty 4, 6, 7 a 34', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/otazka/jak-zit/');
@@ -302,7 +302,7 @@ test('otázka 1: pátý hlas Hipparchie mluví o tom, kdo o čase rozhoduje, a c
   const hlas = page.locator('#hlas-hipparchia');
   await expect(hlas.locator('.citat')).toContainText('Jsem to já, Theodóre.');
   await expect(hlas.locator('.hlas__jmeno a')).toHaveAttribute('href', '/osobnost/krates-a-hipparchia/');
-  await expect(page.locator('.cesta-karta')).toHaveCount(3);
+  await expect(page.locator('.cesta-karta')).toHaveCount(4);
   await expect(page.locator(`.cesta-karta[href="${CESTA7}"]`)).toHaveCount(1);
   await axe(page);
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
@@ -316,5 +316,5 @@ test('cesta 7 je dosažitelná z profilů, z Lidí, z přehledu otázek a z Dom�
   await expect(page.locator('#krates .karta__cesta')).toHaveText('Cesta 7: Čí život vlastně žiju?');
   await expect(page.locator('#hipparchia .karta__cesta')).toHaveText('Cesta 7: Čí život vlastně žiju?');
   await page.goto('/otazky/');
-  await expect(page.locator('#jak-zit .cesta')).toHaveCount(3);
+  await expect(page.locator('#jak-zit .cesta')).toHaveCount(4);
 });

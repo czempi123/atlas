@@ -1,0 +1,358 @@
+# Podklady: Kam mi mizí čas?
+
+Ověřeno 18. 10. 2026 (P6). Celek: cesta 34 „Kam mi mizí čas?“ (Seneca, Marcus Aurelius), hlavní otázka 1 „Jak mám žít?“. Studentský text v tomto kroku nevzniká. Pracoval jsem bez mezikroku schvalování; co smí rozhodnout jen autor, je na konci.
+
+**Stav oddílů** (pro pokračování po přerušení): a) Příběh — hotovo · b) Seneca — hotovo · c) Marcus — hotovo · d) Spor — hotovo · e) Námitka — hotovo · f) Dnešní případ — hotovo · g) Návrh cesty — hotovo · h) Obrázky — hotovo · i) Otevřené otázky — hotovo
+
+**Jak se ověřovalo.** Primární texty jsem četl sám v plném znění, stažené na autorově Macu mimo repozitář (`/tmp/celek9`). Latinsky z The Latin Library: O krátkosti života celé (kap. 1–20), O duševním klidu 3–5, O volném čase 3–5. Latinsky z PerseusDL (`phi1017/phi015`, Gummere): Dopisy Luciliovi 1. Latinsky z PerseusDL (`phi1351/phi005`, Fisher): Tacitovy Letopisy I, 7; XI, 31; XIII, 53; XIV, 53–56; XV, 18; XV, 45; XV, 60. Řecky z PerseusDL (`tlg0562/tlg001`, Leopold): Marcus II, 4; II, 5; II, 14; III, 10; III, 14; IV, 3; IV, 17; IV, 24; IV, 32; IV, 48; V, 1; VI, 12; VII, 69; VIII, 8; VIII, 9; VIII, 36; X, 15; XII, 1 a místní údaje na konci knih I a II. Heslo SEP „Seneca“ (K. Vogt) a IEP „Seneca“ jsem stáhl na Mac a hledal v nich sám. Zprávu OECD PISA in Focus 124 (2024) jsem četl v plném textu (PDF převedené na text). Článek M. Griffinové „De Brevitate Vitae“ (JRS 52, 1962) a úvod G. D. Williamse k vydání De otio a De brevitate vitae (Cambridge 2003) znám **jen z úryvků ve vyhledávači**; tiskovou zprávu WHO Europe ke zprávě HBSC (25. 9. 2024) jen z vyhledávače a ze stránky HBSC. Wikipedie sloužila jen jako rozcestník (datace spisu).
+
+**Co jsem neotevřel.** Publikované české překlady (O krátkosti života, Dopisy, Hovory k sobě) jsem neměl v ruce; všechny převody jsou **vlastní**. Plnou zprávu HBSC 2024 o sociálních sítích a hraní her jsem nečetl. Dopisy 24, 49, 73 a 104 v celku nepoužívám a znovu jsem je nečetl (ověřené místo z Dopisu 24 je v podkladech celku 6).
+
+**Z podkladů celků 3 a 6 beru bez nového ověření:** Senekův život, žádost o propuštění roku 62 (Tacitus XIV, 53–56; Suetonius, Nero 35), Suilliovu výčitku (XIII, 42), bohatství a jak o něm psát, pravidla pro Tacitovy řeči (celek 6, oddíl Tvrzení: Seneca); kde a jak psal Marcus Hovory k sobě, místní údaje a varování „ne v noci“ (celek 3, Nejsilnější příběhy 1 a tabulka Život 8–9); citáty `hovory-iv-3`, `hovory-iv-17`, `hovory-ii-14` (vlastní převody z Leopolda, v datech). V tomto listu je u nich jen odkaz.
+
+**Čeho se drží celý celek.** Tři věci. První: O krátkosti života není kázání proti lenochům. Seneca mezi „zaneprázdněné“ (*occupati*) počítá i úspěšné a pracovité, kterým lidé závidí (2, 4; 7, 6–7), a i ty, kdo mají volno, ale vyplní ho zaneprázdněností (12, 2: *quorundam otium occupatum est*). Telefon proto do cesty patří jako „zaneprázdněné volno“, ne jako hřích. Druhá: měřítkem není, kolik hodin člověk ztratil, ale **čí ty hodiny byly**: „ať si spočítají, jak velká část života je jejich“ (20, 1). Třetí: Seneca a Marcus nejsou dva tábory. Seneca sám jinde radí neutíkat z veřejného života hned, ale „mísit volno s prací“ (O duševním klidu 4, 8), a Marcus sám po ústraní touží (IV, 3). Spor je mezi dvěma radami dvěma různým lidem, ne mezi dvěma školami.
+
+**Jak převádím klíčová slova.** *occupatus* = „zaneprázdněný“ (ne „pracovitý“ ani „zaměstnaný“); *otium* = „volno“ nebo „klid“, podle místa (ne „lenost“ ani „odpočinek“: Seneca výslovně odmítá „lenivý a nečinný klid“, 18, 2); *vacare sibi* = „mít čas pro sebe“; *se sibi vindicare* = „vzít si sebe zpátky“ (vindicatio je římský právní úkon, kterým vlastník žádá vydání své věci); *vivere* × *esse* = „žít“ × „být“; ἀναχώρησις = „ústraní“; σχολή = „volná chvíle“ (je to i řecké slovo pro školu); εὐσχολώτερος = „víc času na sebe“ (doslova „s víc volna“).
+
+## Nejsilnější příběhy
+
+1. **Muž, na kterém závisí chléb celého Říma.** Seneca píše spis o krátkosti života Paulinovi, který řídí zásobování Říma obilím: dohlíží, aby obilí dorazilo nepoškozené, nevlhlo, nezahřívalo se a sedělo na míru i váhu (19, 1). Seneca mu připomene, jak blízko byl Řím hladu: když zemřel císař Caligula, zbývalo obilí prý na sedm nebo osm dní (18, 5). A pak mu napíše: „Větší část života, a jistě ta lepší, patřila obci. Vezmi si trochu svého času i pro sebe“ (18, 1). — typ: **doložený text** (adresát a úřad z textu; kdo přesně Paulinus byl, viz Tvrzení a) — zdroj: O krátkosti života 18–19 — doporučená formulace: „Seneca psal příteli Paulinovi, který měl na starosti, aby měl Řím co jíst.“ **Vstup cesty.**
+2. **Stařec, který si dal vystrojit pohřeb.** Turranius byl přes devadesát let ve stejném úřadě jako Paulinus. Když mu císař (Caligula) sám od sebe dal volno, starý muž si lehl na lůžko a poručil domácím, ať ho oplakávají jako mrtvého. Domácnost truchlila nad pánovým volnem, dokud mu práci nevrátili. Seneca se ptá: „Tak moc to těší, umřít zaneprázdněný?“ — typ: **tradovaný** (Seneca je jediný, kdo to vypráví; že Turranius úřad opravdu zastával ještě roku 48, potvrzuje nezávisle Tacitus XI, 31) — zdroj: O krátkosti života 20, 4; Tacitus, Letopisy I, 7 a XI, 31 — doporučená formulace: „Seneca vypráví o starém Turraniovi…“ **Silná scéna pro krok o tom, čí čas je; jméno Turranius do studentského textu nejvýš jednou.** Pozor: rukopisy mají *Turannius*, Tacitus *Turranius*; v atlasu jen „starý správce obilí“, jméno není potřeba.
+3. **Spočítej si léta.** Seneca si v duchu zastaví starého muže a vyzve ho: spočítej, kolik z tvých sta let ti vzal věřitel, kolik milenka, kolik mocný příznivec, kolik klient, kolik hádky s manželkou, kolik trestání otroků, kolik obíhání města kvůli povinnostem; přidej nemoci, které sis způsobil sám, a čas, který ležel ladem. „Uvidíš, že máš míň let, než napočítáš“ (3, 2–3). — typ: **doložený text** — zdroj: 3, 2–3 — doporučená formulace: přímo; výčet zkrátit (věřitel, mocný příznivec, hádky, obíhání města). **Jádro kresby** (viz Návrh cesty).
+4. **Majetek si hlídáme, čas rozdáváme.** Nikdo nedovolí, aby mu kdo obsadil pozemek; kvůli sporu o kousek meze se sahá po kamenech a zbraních. Do vlastního života ale lidi pustíme kohokoli, a ještě je zveme. Nikdo nechce dělit své peníze, ale život rozdá kdekomu (3, 1). — typ: **doložený text** — zdroj: 3, 1 — doporučená formulace: přímo. **Nejlepší první věta o čase pro šestnáctiletého:** přirovnání k věcem, které si hlídá (telefon, kolo, heslo).
+5. **„Žít mi nedovolí.“** Úspěšní lidé obklopení klienty a soudními pře si podle Seneky občas povzdechnou: *Vivere mihi non licet* (7, 6). Seneca odpoví: jak by ti dovolili? „Všichni, kdo si tě volají k sobě, tě berou tobě“ (7, 7). A úředník, který po čestném úřadu toužil, se hned ptá, kdy už ten rok skončí (7, 8). — typ: **doložený text** — zdroj: 7, 6–8 — doporučená formulace: přímo.
+6. **Loď ve vichru.** Šediny a vrásky ještě neznamenají, že někdo žil dlouho. „Nežil dlouho, jen dlouho byl.“ Jako když loď hned u přístavu chytí bouře a větry ji honí dokola po týchž vlnách: „Nedoplul daleko, jen se s ním dlouho házelo“ (7, 10). — typ: **doložený text** — zdroj: 7, 10 — doporučená formulace: přímo. **Obraz pro pohyblivou kresbu** (Návrh cesty, varianta B).
+7. **Dva stoici, dva dvory.** Roku 62 prosí Seneca Nerona, ať ho pustí a vezme si zpátky jeho majetek; Tacitus mu do úst vkládá, že čas, který teď věnuje zahradám a vilám, chce vrátit své mysli (XIV, 54). Nero odmítne. O dva roky později se podle pověsti, kterou Tacitus zapisuje jako pověst, Seneca znovu ptal na odchod na venkov, a když to nešlo, předstíral nemoc a nevycházel z pokoje (XV, 45). Marcus o sto let později na odchod nemyslí. Píše si na tažení: „Číst nemůžeš. Ale pýchu držet na uzdě můžeš“ (VIII, 8). — typ: Seneca 62 **tradovaný z blízkého pramene, řeč složil Tacitus**; Seneca 64 **pověst**; Marcus **doložený text** — zdroj: Tacitus XIV, 53–56; XV, 45; Marcus VIII, 8 — doporučená formulace: oddíl Spor. **Nese Spor a jeho obrat:** muž, který radil odejít, sám odejít nesměl.
+
+## a) Příběh (hotovo)
+
+### Komu a kdy Seneca psal
+
+| # | Tvrzení | Typ | Zdroj a místo | Doporučená formulace pro studenty |
+| --- | --- | --- | --- | --- |
+| a1 | Spis je věnovaný Paulinovi (*Ad Paulinum*); Seneca ho oslovuje jménem na začátku i v závěru („nejdražší Pauline“). | doložený text | O krátkosti života 1, 1; 18, 1 | „Seneca ho napsal příteli Paulinovi.“ |
+| a2 | Paulinus spravuje zásobování Říma obilím: „spravuješ účty celého světa“ (18, 3), obilí má dorazit bez podvodu a bez nedbalosti, nesmí zvlhnout a zahřát se, musí sedět míra a váha (19, 1); „máš co dělat s lidským žaludkem“ (18, 5). Úřad se jmenoval *praefectus annonae*. | doložený text (úřad z obsahu; název úřadu v textu není) | 18, 3–5; 19, 1; úryvky z Griffinové (1962) a Williamse (2003) | „Měl na starosti, aby měl Řím co jíst.“ Název úřadu do studentského textu ne. |
+| a3 | Kdo Paulinus byl: nejspíš Pompeius Paulinus, z jezdeckého stavu. Senekova žena se jmenovala Pompeia Paulina (Tacitus XV, 60); Paulinus byl nejspíš její otec, podle jiných bratr. | **výklad** (badatelé; Griffinová podle úryvku: „likely that Seneca is writing to her father“) | Tacitus XV, 60; Griffin 1962 (úryvek); starší vydání Duffa (archive.org, úryvek: „father or brother“) | **Do studentského textu ne.** Nejvýš „přítel Paulinus“. Tchána netvrdit. |
+| a4 | Datace: po smrti Caliguly (roku 41; spis ji zmiňuje, 18, 5). Paulinus mohl úřad zastávat v letech 48–55; většina badatelů dává přednost tomuto období a datuje spis kolem roku 49, tedy krátce po Senekově návratu z vyhnanství; Griffinová navrhla rok 55. Spor stojí na jedné zmínce o posvátné hranici města (13, 8), kterou Claudius rozšířil roku 49. | **sporné** (datace); obsah zmínky doložený text | 13, 8; 18, 5; Wikipedie jako rozcestník; Griffin 1962 a Williams 2003 jen z úryvků | „Napsal ho po návratu z vyhnanství, v letech, kdy začínal vychovávat Nerona“ jde jen tehdy, když P8 zvolí datování kolem 49–55; bezpečnější **bez roku**: „Napsal ho dlouho předtím, než sám u dvora uvízl.“ |
+| a5 | Turranius, starý správce obilí, zastával úřad už roku 14 (Tacitus I, 7) a ještě roku 48 (XI, 31). Paulinus byl nejspíš jeho nástupce (Griffinová podle úryvku: „must succeed Turranius in 48 or 49“). | doložený fakt (Tacitus); nástupnictví výklad | Tacitus, Letopisy I, 7; XI, 31; Griffin 1962 (úryvek) | Do studentského textu jen příběh (Nejsilnější příběhy 2), nástupnictví ne. Do listu pro učitele: Seneca vypráví Paulinovi o jeho předchůdci. |
+| a6 | Jestli Paulinus radu poslechl, nevíme. Pompeius Paulinus velel roku 58 vojsku v Germánii (XIII, 53) a roku 62 byl jedním ze tří bývalých konzulů nad státními příjmy (XV, 18); je-li to týž muž, neposlechl. Griffinová (podle úryvku) to ale spíš odděluje: konzul by byl syn. | **sporné** | Tacitus XIII, 53; XV, 18; Griffin 1962 (úryvek) | **Nepoužít.** Pointa „Paulinus nikdy neodešel“ by stála na nejisté totožnosti. |
+
+### Senekovy žádosti o propuštění
+
+| # | Tvrzení | Typ | Zdroj a místo | Doporučená formulace pro studenty |
+| --- | --- | --- | --- | --- |
+| a7 | Roku 62 po Burrově smrti žádá Seneca Nerona, ať ho propustí a vezme si jeho majetek. Nero odmítne a obejme ho. | tradovaný z blízkého pramene; řeči složil Tacitus | celek 6, Nejsilnější příběhy 7 a tabulka Život 19; Tacitus XIV, 53–56; Suetonius, Nero 35 | „Tacitus vypráví, že…“ Řeč nikdy jako Senekova slova. |
+| a8 | V Tacitově řeči chce Seneca čas, který teď patří zahradám a vilám, „vrátit své mysli“ (*quod temporis hortorum aut villarum curae seponitur in animum revocabo*) a říká, že staří přátelé smějí žádat o klid (*quietem reposcere*). | **stylizovaná řeč** (Tacitus) | Tacitus XIV, 54 | Jen jako Tacitovo podání: „Tacitus mu vkládá do úst prosbu, která zní jako z jeho vlastního spisu: chce zpátky svůj čas.“ Silné pro obrat ve Sporu; necitovat v uvozovkách jako Seneku. |
+| a9 | Roku 64 se podle pověsti znovu ptal na odchod „na vzdálený venkov“; když to nešlo, předstíral nemoc a nevycházel z pokoje. Tacitus to uvádí slovem *ferebatur* („říkalo se“) a spojuje s tím, že se chtěl vyhnout podílu na vykrádání chrámů. | **pověst** (Tacitus sám odstupuje) | Tacitus XV, 45 | Celek 6 doporučil vynechat. Pro cestu stačí 62; rok 64 nejvýš „Prý to zkoušel ještě jednou.“ Doporučuji vynechat. |
+| a10 | Jak to dopadlo: Seneca přestal přijímat návštěvy a žil stranou, odejít nesměl; roku 65 ho Nero donutil zemřít. V poslední den se právě vrátil z Kampánie do vily čtyři míle od Říma a vojákovi řekl, že se od Pisona omlouval „zdravím a láskou ke klidu“ (*amorem quietis*). | tradovaný z blízkého pramene | Tacitus XIV, 56; XV, 60 | Smrt nevyprávět (patří portrétu a celku 6). Cesta řekne jen: „Odejít mu nedovolil. Žil pak stranou, ale Neronův dvůr ho nepustil až do smrti.“ Slovo „láska ke klidu“ jen jednou, když vůbec. |
+
+### Kde a jak psal Marcus
+
+Ověřeno v celku 3 (Nejsilnější příběhy 1, tabulka Život 7–9). Platí: psal řecky, sám pro sebe, aspoň zčásti na tažení u Dunaje; u knih stojí „u Kvádů na Granui“ a „v Carnuntu“ (místní údaje jsem dnes v Leopoldově textu znovu viděl na konci knih I a II). Ne „v noci“: o noci prameny mlčí. Portrét Marca tuto scénu má (kapitola o zápiscích); cesta ji neopakuje, stačí „na tažení u Dunaje“.
+
+Co přidává tento celek: Marcus si v zápiscích sám přiznává, že ho to táhne pryč. „Lidé hledají ústraní na venkově, u moře, v horách. **I ty po tom obvykle nejvíc toužíš**“ (IV, 3; druhou větu portrét nemá). A jinde si vyčítá, že si poznámky a výpisky z knih odkládá „na stáří“ a že je stejně číst nebude (III, 14). Muž, který odejít nemůže, ví, jaké je chtít odejít. To je poctivé čtení, které Spor potřebuje.
+
+## b) Seneca: O krátkosti života a první dopis Luciliovi (hotovo)
+
+Všechna místa jsem četl latinsky v celém spisu (The Latin Library; číslování kapitol a odstavců podle tamního textu, které odpovídá běžným vydáním) a v Dopisech podle Gummereho (PerseusDL, číslování odstavců z TEI). Převody jsou **vlastní**. Navržená id jsou ve tvaru, jaký mají citáty v `src/data/zdroje.yaml`; pramen `seneca-brevitate` v datech už je (zatím jen s místem 1, 3), P8 mu doplní místa do `nazev` a `poznamka`. Pro první dopis navrhuji nový pramen `seneca-ep-1` (PerseusDL, `phi1017.phi015.perseus-lat2`).
+
+### Hlavní místa
+
+| # | Myšlenka | Latinsky | Vlastní převod | Místo | Navržené id |
+| --- | --- | --- | --- | --- | --- |
+| b1 | Čas nemáme krátký, krátký si ho děláme. | *Non exiguum temporis habemus, sed multum perdidimus.* … *non accipimus brevem vitam sed fecimus, nec inopes eius sed prodigi sumus.* | „Nemáme málo času, jen jsme ho hodně promarnili.“ … „Krátký život nedostáváme, děláme si ho; nechybí nám, rozhazujeme ho.“ | 1, 3–4 | `brevitate-1-3` (atribut Seneky už stojí na první větě; viz Překryvy) |
+| b2 | Život je dlouhý, když ho umíš použít. | *vita, si uti scias, longa est* | „Život je dlouhý, když ho umíš použít.“ | 2, 1 | `brevitate-2-1` |
+| b3 | Zaneprázdnění jsou i ti, kterým se závidí; nikdo nepatří sám sobě. | *Aspice illos ad quorum felicitatem concurritur: bonis suis effocantur.* … *nemo se sibi vindicat, alius in alium consumitur.* … *ille illius cultor est, hic illius; suus nemo est.* | „Podívej se na ty, za jejichž štěstím se všichni ženou: dusí se vlastními dobry.“ … „Nikdo si nebere sebe zpátky, jeden se spotřebuje pro druhého.“ … „Ten patří tomu, ten zas onomu; sám sobě nikdo.“ | 2, 4 | `brevitate-2-4` (jen poslední dvě věty) |
+| b4 | Pozemek si hlídáme, život rozdáváme. | *praedia sua occupari a nullo patiuntur … in vitam suam incedere alios sinunt … nemo invenitur qui pecuniam suam dividere velit, vitam unusquisque quam multis distribuit!* | „Nikomu nedovolí obsadit svůj pozemek … do vlastního života nechají vstoupit kohokoli … Nenajdeš nikoho, kdo by chtěl dělit své peníze, ale život rozdá každý mezi kolik lidí!“ | 3, 1 | `brevitate-3-1` |
+| b5 | Spočítej si léta. | *ad computationem aetatem tuam revoca. Duc quantum ex isto tempore creditor, quantum amica, quantum rex, quantum cliens abstulerit, quantum lis uxoria, quantum servorum coercitio, quantum officiosa per urbem discursatio; adice morbos quos manu fecimus, adice quod et sine usu iacuit: videbis te pauciores annos habere quam numeras.* | „Spočítej si svůj věk. Odečti, kolik z toho času ti vzal věřitel, kolik milenka, kolik mocný příznivec, kolik klient, kolik hádky s manželkou, kolik trestání otroků, kolik obíhání města kvůli povinnostem. Přidej nemoci, které jsme si způsobili sami, a co leželo ladem: uvidíš, že máš míň let, než napočítáš.“ | 3, 2 | `brevitate-3-2` (do studentského textu zkrácená podoba bez milenky, otroků a manželky, viz Citlivá místa ve Výrocích níže) |
+| b6 | Žijeme, jako bychom žili navždy. | *Tamquam semper victuri vivitis … Omnia tamquam mortales timetis, omnia tamquam immortales concupiscitis.* | „Žijete, jako byste měli žít navždy … Všeho se bojíte jako smrtelníci, všechno chcete jako nesmrtelní.“ | 3, 4 | `brevitate-3-4` |
+| b7 | Odklad na padesátku. | *„A quinquagesimo anno in otium secedam, sexagesimus me annus ab officiis dimittet.“ … Quam serum est tunc vivere incipere cum desinendum est!* | „‚V padesáti se stáhnu do klidu, v šedesáti mě pustí povinnosti.‘ … Jak pozdě je začít žít, když je čas přestat!“ | 3, 5 | `brevitate-3-5`. **Pro studenta převést:** „Až dodělám školu…“, „Až budu mít maturitu…“ |
+| b8 | Úspěšní si stěžují, že nesmějí žít. | *„Vivere mihi non licet.“ Quidni non liceat? Omnes illi qui te sibi advocant tibi abducunt.* | „‚Žít mi nedovolí.‘ Jak by ti dovolili? Všichni, kdo si tě volají k sobě, tě berou tobě.“ | 7, 6–7 | `brevitate-7-7` |
+| b9 | Být, nebo žít; loď v bouři. | *non ille diu vixit, sed diu fuit. … Non ille multum navigavit, sed multum iactatus est.* | „Nežil dlouho, jen dlouho byl. … Nedoplul daleko, jen se s ním dlouho házelo.“ | 7, 10 | `brevitate-7-10` |
+| b10 | Čas není vidět, proto ho nikdo neváží. | *Re omnium pretiosissima luditur; fallit autem illos, quia res incorporalis est, quia sub oculos non venit ideoque vilissima aestimatur.* … *nemo aestimat tempus; utuntur illo laxius quasi gratuito.* | „S nejcennější věcí ze všech se hraje. Klame je to, že je nehmotná a není vidět, a proto se má za nejlacinější.“ … „Čas nikdo neocení; zachází se s ním volně, jako by byl zadarmo.“ | 8, 1–2 | `brevitate-8-1` |
+| b11 | Nikdo ti léta nevrátí. | *Nemo restituet annos, nemo iterum te tibi reddet. … nihil tumultuabitur, nihil admonebit velocitatis suae: tacita labetur.* | „Nikdo ti léta nevrátí, nikdo tě tobě znovu nedá. … Nebude dělat hluk, nepřipomene ti, jak je rychlý: poteče potichu.“ | 8, 5 | `brevitate-8-5` |
+| b12 | Čekání na zítřek bere dnešek. | *Maximum vivendi impedimentum est exspectatio, quae pendet ex crastino, perdit hodiernum. Quod in manu fortunae positum est disponis, quod in tua, dimittis. … protinus vive.* | „Největší překážka života je čekání: visí na zítřku a ztrácí dnešek. Plánuješ, co je v rukou štěstěny, a pouštíš, co je v tvých. … Žij hned.“ | 9, 1 | `brevitate-9-1`. Prostřední věta je skoro Epiktétovo dělení (cesta 5): jedna věta s odkazem. |
+| b13 | I volno může být zaneprázdněné. | *Quorundam otium occupatum est: in villa aut in lecto suo, in media solitudine, quamvis ab omnibus recesserint, sibi ipsi molesti sunt: quorum non otiosa vita dicenda est sed desidiosa occupatio.* | „Někteří mají i volno zaneprázdněné: na venkově, v posteli, v naprosté samotě, i když se ode všech vzdálili, jsou na obtíž sami sobě. Jejich život se nedá nazvat volným, je to líná zaneprázdněnost.“ | 12, 2 | `brevitate-12-2`. **Klíč k telefonu:** Seneca dál vyjmenuje sběratele bronzů, diváky zápasů a hodiny u holiče (12, 2–3); dnešní obdoba se nabízí sama a cesta ji nemusí vyslovit. |
+| b14 | Rozhovor s mudrci všech dob. | *Soli omnium otiosi sunt qui sapientiae vacant, soli vivunt … Disputare cum Socrate licet, dubitare cum Carneade, cum Epicuro quiescere, hominis naturam cum Stoicis vincere, cum Cynicis excedere.* | „Volno mají jen ti, kdo mají čas na moudrost; jen ti žijí … Můžeš se přít se Sókratem, pochybovat s Karneadem, odpočívat s Epikúrem, s kyniky vystoupit z lidských zvyklostí.“ (*hominis naturam cum Stoicis vincere* převádím volně „se stoiky přemáhat lidskou slabost“.) | 14, 1–2 | `brevitate-14-2`. **Silné pro atlas:** Sókratés, Epikúros a kynici jsou v atlasu postavy, které student už potkal. |
+| b15 | Rodiče si nevybereš, rodinu myslí ano. | *Solemus dicere non fuisse in nostra potestate quos sortiremur parentes … bonis vero ad suum arbitrium nasci licet. Nobilissimorum ingeniorum familiae sunt: elige in quam adscisci velis.* | „Říkáme, že nebylo v naší moci, jaké rodiče dostaneme … Narodit se k dobrým ale smíš podle své vůle. Nejvznešenější duchové mají své rodiny: vyber si, do které se chceš dát přijmout.“ | 15, 3 | `brevitate-15-3`. Pozor u studenta s těžkým rodinným zázemím: věta nesmí znít jako „na rodině nezáleží“. |
+| b16 | Paulinovi: vezmi si trochu času pro sebe. | *Maior pars aetatis, certe melior rei publicae datast: aliquid temporis tui sume etiam tibi.* | „Větší část života, a jistě ta lepší, patřila obci. Vezmi si trochu svého času i pro sebe.“ | 18, 1 | `brevitate-18-1` |
+| b17 | Ne lenivý klid. | *Nec te ad segnem aut inertem quietem voco, non ut somno et caris turbae voluptatibus quicquid est in te indolis vividae mergas.* | „Nevolám tě k lenivému a nečinnému klidu, abys to živé, co v tobě je, utopil ve spánku a v zábavách, které má dav rád.“ | 18, 2 | `brevitate-18-2`. **Nutné ke Sporu:** volno u Seneky není odpočinek. |
+| b18 | Nejubožejší jsou ti, kdo nežijí ani své zaneprázdnění. | *eorum tamen miserrima, qui ne suis quidem laborant occupationibus, ad alienum dormiunt somnum, ad alienum ambulant gradum, amare et odisse, res omnium liberrimas, iubentur. Hi si volent scire quam brevis ipsorum vita sit, cogitent ex quota parte sua sit.* | „Nejubožejší jsou ti, kdo se nedřou ani pro své vlastní zaneprázdnění: spí podle cizího spánku, chodí cizím krokem, a milovat a nenávidět, to nejsvobodnější ze všeho, mají nařízeno. Kdo z nich chce vědět, jak krátký je jeho život, ať si spočítá, jak velká část z něj je jeho.“ | 20, 1 | `brevitate-20-1`. **Pointa cesty.** |
+| b19 | Turranius. | *Turannius fuit exactae diligentiae senex, qui post annum nonagesimum, cum vacationem procurationis ab C. Caesare ultro accepisset, componi se in lecto et velut exanimem a circumstante familia plangi iussit. … Adeone iuvat occupatum mori?* | „Turranius byl stařec přesný a pečlivý. Když mu po devadesátce dal císař Gaius sám od sebe volno od úřadu, dal se uložit na lůžko a poručil domácím, ať ho kolem oplakávají jako mrtvého. … Tak moc to těší, umřít zaneprázdněný?“ | 20, 4 | `brevitate-20-4`. Gaius = Caligula; ve studentském textu „císař“. |
+| b20 | Zákon tě pustí dřív než ty sám. | *difficilius homines a se otium impetrant quam a lege* | „Lidé si volno vyprosí hůř sami od sebe než od zákona.“ | 20, 5 | `brevitate-20-5`. Rezerva. |
+| b21 | První dopis: vezmi si sebe zpátky. | *Ita fac, mi Lucili; vindica te tibi, et tempus, quod adhuc aut auferebatur aut subripiebatur aut excidebat, collige et serva. … quaedam tempora eripiuntur nobis, quaedam subducuntur, quaedam effluunt.* | „Udělej to tak, můj Lucilie: vezmi si sebe zpátky. A čas, který ti dosud buď brali, nebo kradli, nebo ti vypadával z rukou, posbírej a opatruj. … Něco času nám vyrvou, něco nenápadně vezmou, něco proteče.“ | Dopisy 1, 1 | `seneca-ep-1-1`. **Tři způsoby ztráty** jsou hotové koše pro Roztřiď: vzali mi ho · ukradli mi ho, aniž jsem si všiml · protekl mi sám. |
+| b22 | Žít něco jiného. | *maxima pars vitae elabitur male agentibus, magna nihil agentibus, tota vita aliud agentibus.* | „Největší část života proklouzne těm, kdo dělají špatně, velká těm, kdo nedělají nic, a celý život těm, kdo dělají něco jiného.“ | Dopisy 1, 1 | `seneca-ep-1-1b`. *aliud agere* = dělat něco jiného, než co právě dělám; dnes by se řeklo „být duchem jinde“. |
+| b23 | Odklad. | *Fac ergo, mi Lucili, quod facere te scribis, omnes horas complectere. Sic fiet, ut minus ex crastino pendeas, si hodierno manum inieceris. Dum differtur, vita transcurrit.* | „Dělej tedy, co píšeš, že děláš: obejmi každou hodinu. Když se chopíš dneška, budeš míň viset na zítřku. Zatímco se odkládá, život uteče.“ | Dopisy 1, 2 | `seneca-ep-1-2` |
+| b24 | Jediné, co je opravdu naše. | *Omnia, Lucili, aliena sunt, tempus tantum nostrum est. In huius rei unius fugacis ac lubricae possessionem natura nos misit, ex qua expellit quicumque vult.* | „Všechno, Lucilie, je cizí, jen čas je náš. Do vlastnictví té jediné věci, prchavé a kluzké, nás uvedla příroda, a vyhnat nás z něj může kdokoli, kdo chce.“ | Dopisy 1, 3 | `seneca-ep-1-3`. Druhá věta je silná: vlastnictví, ze kterého tě vyžene kdokoli. |
+| b25 | Seneca o sobě: nežiju to dokonale. | *Interrogabis fortasse, quid ego faciam, qui tibi ista praecipio. Fatebor ingenue: quod apud luxuriosum sed diligentem evenit, ratio mihi constat inpensae. Non possum dicere nihil perdere, sed quid perdam et quare et quemadmodum, dicam.* | „Zeptáš se možná, co dělám já, který ti tohle radím. Přiznám se upřímně: jako u rozhazovačného, ale pečlivého hospodáře mi aspoň účty za výdaje sedí. Nemůžu říct, že nic neztrácím, ale co ztrácím, proč a jak, to ti povím.“ | Dopisy 1, 4 | `seneca-ep-1-4`. **Spojenec studenta, který to nezvládá:** ani Seneca neříká, že nic neztrácí, jen že ví kde. |
+
+### Co z toho cesta potřebuje
+
+Nosná místa jsou b4 (pozemek), b5 (spočítej si léta), b13 (zaneprázdněné volno), b18 (čí je tvůj život), b21 (tři způsoby ztráty), b24 (jen čas je náš) a b25 (ani Seneca to nezvládá). Ostatní jsou rezerva. Čtyři citáty za sebou student přeskakuje (`docs/pouceni.md`): na krok nejvýš jeden citát v bloku Citát, ostatní převyprávět.
+
+### Výroky, které se mu připisují (čas)
+
+| Rozšířená podoba | Skutečnost | Co použít |
+| --- | --- | --- |
+| „Nemáme málo času, ale hodně ho promarníme“ | Pravé (1, 3). V češtině koluje i jako „není to tak, že bychom měli málo času…“; latinsky je to věta bez úvodu. | b1 |
+| „Život je dlouhý, když víš, jak ho žít“ | Pravé, ale *uti* je „použít“, ne „žít“ (2, 1). | b2 |
+| „Zatímco odkládáme, život utíká“ | Pravé (Dopisy 1, 2, *dum differtur, vita transcurrit*); podmět je neosobní, „zatímco se odkládá“. | b23 |
+| „Začni žít hned a každý den počítej jako samostatný život“ | Pravé, ale z Dopisu 101, 10 (*singulos dies singulas vitas puta*), ne z O krátkosti života. Dopis začíná náhlou smrtí přítele. | Rezerva; s místem 101, 10. |
+| „Jako s příběhem, tak se životem: nezáleží na tom, jak dlouhý je, ale jak dobrý“ | Pravé (Dopisy 77, 20), ale dopis je celý o dobrovolné smrti (celek 6). | **Nepoužít.** |
+| „Čas léčí, co rozum nedokázal“ | Senekovi se připisuje; nehledal jsem a neověřil. | Nepoužít. |
+| „Štěstí je, když se připravenost potká s příležitostí“ | U Seneky není (celek 6). | Nepoužít. |
+
+**Citlivá místa ve výčtu 3, 2.** Seznam zlodějů času obsahuje milenku, hádky s manželkou a trestání otroků. Do studentského textu zkrácenou podobu: věřitel, mocný příznivec, klient, spory, obíhání města, nemoci, čas ladem. Že Seneca mezi zloději času počítá i trestání otroků, je pro učitele (navazuje na portrét Seneky, myšlenku Otroci jsou lidé).
+
+**Překryvy s hotovým atlasem.** Atribut Seneky (přesýpací hodiny) už stojí na b1 (`lide.yaml`, pramen `seneca-brevitate`). Celek 6 rozhodl, že se věta z atributu v portrétu neopakuje víc než jednou. V cestě 34 smí b1 zaznít jednou jako citát (vstup nebo krok 2) a podruhé nikde. „Umíráme každý den“ (Dopisy 24, 20; celek 6) a *quicquid aetatis retro est, mors tenet* (Dopisy 1, 2) jsou totéž; cesta 8 už má první, cesta 34 druhé nepoužije.
+
+## c) Marcus: čas a přítomnost (hotovo)
+
+Překlad, který atlas u Marca používá: **vlastní převod z řeckého textu J. H. Leopolda** (Teubner 1908, PerseusDL `tlg0562.tlg001.perseus-grc2`), pramen `marcus-hovory`. Tak to drží i tento celek. Číslování kapitol podle Leopolda; všechna místa ze zadání (II, 5; II, 14; IV, 3; IV, 17; IV, 32) **sedí**. Tři z nich už jsou v datech jako citáty (`hovory-iv-3`, `hovory-ii-14`, `hovory-iv-17`); hotové stránky z nich používají jen `hovory-iv-3` (portrét Marca). Navržená nová id ve tvaru `hovory-<kniha>-<kapitola>`.
+
+| # | Myšlenka | Řecky (výňatek) | Vlastní převod | Místo | Id | Poznámka pro cestu |
+| --- | --- | --- | --- | --- | --- | --- |
+| c1 | Jak dlouho to odkládáš. | Μέμνησο ἐκ πόσου ταῦτα ἀναβάλλῃ … ὅτι ὅρος ἐστί σοι περιγεγραμμένος τοῦ χρόνου, ᾧ ἐὰν εἰς τὸ ἀπαιθριάσαι μὴ χρήσῃ, οἰχήσεται οἰχήσῃ καὶ αὖθις οὐκ ἐξέσται. | „Vzpomeň si, jak dlouho už tohle odkládáš … Máš vyměřený kus času. Když ho nepoužiješ k tomu, aby se ti v hlavě vyjasnilo, odejde, odejdeš i ty, a podruhé to nepůjde.“ | II, 4 | `hovory-ii-4` | Marcova verze Senekova odkladu (b7, b23). ἀπαιθριάσαι = doslova „vyjasnit se jako obloha“; v Leopoldově textu stojí οἰχήσεται οἰχήσῃ, převádím jako dvě slovesa. |
+| c2 | Každou věc, jako by byla poslední; volno uprostřed práce. | Πάσης ὥρας φρόντιζε … τὸ ἐν χερσὶ … πράσσειν καὶ σχολὴν σαυτῷ ἀπὸ πασῶν τῶν ἄλλων φαντασιῶν πορίζειν. ποριεῖς δέ, ἂν ὡς ἐσχάτην τοῦ βίου ἑκάστην πρᾶξιν ἐνεργῇς … | „Každou hodinu se starej, abys to, co máš v rukou, dělal … a abys si od všech ostatních představ udělal volno. Uděláš si ho, když budeš každou věc dělat, jako by byla v životě poslední …“ | II, 5 | `hovory-ii-5` | **Klíč ke Sporu:** σχολή (volno) si Marcus nebere odchodem, ale tím, že dělá jednu věc. „Jako by byla poslední“ u studenta po ztrátě opatrně: v cestě převyprávět jako „celou pozorností“, citát jen s celou větou. |
+| c3 | Ztrácíme jen přítomnost. | οὐδεὶς ἄλλον ἀποβάλλει βίον ἢ τοῦτον ὃν ζῇ … τὸ γὰρ παρόν ἐστι μόνον, οὗ στερίσκεσθαι μέλλει | (v datech) „Nikdo neztrácí jiný život než ten, který právě žije, a nežije jiný než ten, který ztrácí.“ … „Přijít může jen o přítomnost.“ | II, 14 | `hovory-ii-14` | Rezerva; kapitola je o smrti (dlouhý a krátký život ztrácí stejně). Do cesty o čase jen první věta. |
+| c4 | Žije se jen teď. | μόνον ζῇ ἕκαστος τὸ παρὸν τοῦτο, τὸ ἀκαριαῖον· τὰ δὲ ἄλλα ἢ βεβίωται ἢ ἐν ἀδήλῳ | „Každý žije jen tuhle přítomnou chvilku. Ostatní je buď prožité, nebo nejisté.“ | III, 10 | `hovory-iii-10` | Blízko Senekovi 10, 2 (tři časy). Jeden z nich stačí. |
+| c5 | Výpisky na stáří. | Μηκέτι πλανῶ· οὔτε γὰρ τὰ ὑπομνημάτιά σου μέλλεις ἀναγινώσκειν οὔτε … τὰς ἐκ τῶν συγγραμμάτων ἐκλογάς, ἃς εἰς τὸ γῆρας σαυτῷ ἀπετίθεσο. σπεῦδε οὖν εἰς τέλος καὶ τὰς κενὰς ἐλπίδας ἀφεὶς σαυτῷ βοήθει … ἕως ἔξεστιν. | „Už nebloudi. Své poznámky stejně číst nebudeš, ani … výpisky z knih, které sis odkládal na stáří. Pospěš si tedy k cíli, zahoď prázdné naděje a pomoz si sám … dokud to jde.“ | III, 14 | `hovory-iii-14` | **Silné:** císař, který si odkládá čtení „na stáří“, je Senekův muž, co se chce stáhnout „v padesáti“ (b7). „K cíli“ (εἰς τέλος) neznamená ke smrti, ale k tomu, oč jde. |
+| c6 | Ústraní v sobě. | Ἀναχωρήσεις αὑτοῖς ζητοῦσιν ἀγροικίας καὶ αἰγιαλοὺς καὶ ὄρη, εἴωθας δὲ καὶ σὺ τὰ τοιαῦτα μάλιστα ποθεῖν … ἐξόν, ἧς ἂν ὥρας ἐθελήσῃς, εἰς ἑαυτὸν ἀναχωρεῖν … συνεχῶς οὖν δίδου σεαυτῷ ταύτην τὴν ἀναχώρησιν καὶ ἀνανέου σεαυτόν | „Lidé hledají ústraní na venkově, u moře, v horách. I ty po tom obvykle nejvíc toužíš. … Můžeš se přece kdykoli, kdy chceš, uchýlit do sebe … Dopřávej si tedy to ústraní pořád a obnovuj se.“ | IV, 3 | `hovory-iv-3` (v datech jen závěr „Svět je změna…“); **nové id `hovory-iv-3-ustrani`** pro začátek kapitoly | Portrét má tuto myšlenku parafrází a citát se závěrem. Cesta potřebuje začátek kapitoly, proto nové id (pravidlo z celku 6: jiná podoba citátu = vlastní id). „I ty po tom toužíš“ portrét nemá. |
+| c7 | Ne jako bys měl žít deset tisíc let. | Μὴ ὡς μύρια μέλλων ἔτη ζῆν … ἕως ζῇς, ἕως ἔξεστιν, ἀγαθὸς γενοῦ. | (v datech) „Nežij, jako bys měl žít deset tisíc let. Nevyhnutelné nad tebou visí. Dokud žiješ, dokud to jde, staň se dobrým.“ | IV, 17 | `hovory-iv-17` | Totéž, co Seneca b6 („jako byste měli žít navždy“). Ve Spor nebo závěru jako místo, kde se oba shodnou. |
+| c8 | Dělej málo, ale to nutné. | „Ὀλίγα πρῆσσε, φησίν, εἰ μέλλεις εὐθυμήσειν.“ μήποτε ἄμεινον τἀναγκαῖα πράσσειν … τὰ πλεῖστα γὰρ ὧν λέγομεν καὶ πράσσομεν οὐκ ἀναγκαῖα ὄντα ἐάν τις περιέλῃ, εὐσχολώτερος καὶ ἀταρακτότερος ἔσται. ὅθεν δεῖ καὶ παρ’ ἕκαστα ἑαυτὸν ὑπομιμνῄσκειν· μήτι τοῦτο τῶν οὐκ ἀναγκαίων; δεῖ δὲ μὴ μόνον πράξεις τὰς μὴ ἀναγκαίας περιαιρεῖν, ἀλλὰ καὶ φαντασίας | „‚Dělej málo, chceš-li mít klidnou mysl,‘ říká se. Není lepší dělat to nutné …? Většina toho, co říkáme a děláme, nutná není. Kdo to odstraní, bude mít víc volna a míň zmatku. Proto se u každé věci ptej: Nepatří tohle k tomu, co nutné není? A odstraňovat je třeba nejen zbytečné činy, ale i zbytečné představy.“ | IV, 24 | `hovory-iv-24` | **Marcův nástroj pro studenta:** jedna otázka u každé věci. Citovaná věta je Démokritův zlomek (DK 68 B3; ověřeno jen to, že ji Marcus uvozuje φησίν, „říká“; jméno v textu není). Ve studentském textu „říká se“, ne Démokritos. **Shoda se Senekou:** Seneca cituje tutéž větu jménem Démokrita a vykládá ji stejně, jako „zbytečné věci“; co je nutné, toho je třeba dělat nespočet (O duševním klidu 13, 1: *Qui tranquille volet vivere nec privatim agat multa nec publice … ad supervacua scilicet referentem*). **Zkus to žít** (viz Návrh cesty). |
+| c9 | Jak to bylo za Vespasiana. | Ἐπινόησον … τοὺς ἐπὶ Οὐεσπασιανοῦ καιρούς, ὄψει τὰ αὐτὰ πάντα· γαμοῦντας, παιδοτροφοῦντας, νοσοῦντας, ἀποθνῄσκοντας, πολεμοῦντας, ἑορτάζοντας, ἐμπορευομένους … οὐκοῦν ἐκεῖνος μὲν ὁ τούτων βίος οὐκέτι οὐδαμοῦ. | „Představ si dobu Vespasianovu: uvidíš všechno to samé. Lidé se žení, vychovávají děti, stůňou, umírají, válčí, slaví, obchodují … A ten jejich život už nikde není.“ | IV, 32 | `hovory-iv-32` | Myšlenka je o pomíjivosti a o smrti; pro cestu o čase **nedoporučuji** (blízko celku 6 a Stoickému týdnu, pohled shora). |
+| c10 | Číst nemůžeš. Ale… | Ἀναγινώσκειν οὐκ ἔξεστιν. ἀλλὰ ὕβριν ἀνείργειν ἔξεστιν· ἀλλὰ ἡδονῶν καὶ πόνων καθυπερτερεῖν ἔξεστιν· ἀλλὰ τοῦ δοξαρίου ὑπεράνω εἶναι ἔξεστιν· ἀλλὰ ἀναισθήτοις καὶ ἀχαρίστοις μὴ θυμοῦσθαι, προσέτι κήδεσθαι αὐτῶν ἔξεστιν. | „Číst nemůžeš. Ale držet na uzdě pýchu můžeš. Být silnější než slast a bolest můžeš. Být nad slávičkou můžeš. Nezlobit se na necitelné a nevděčné, a dokonce se o ně starat, můžeš.“ | VIII, 8 | `hovory-viii-8` | **Nejsilnější Marcovo místo pro celek.** Odpověď na námitku „volno je pro bohaté“: kdo nemá čas na knihy, má pořád čas na to, oč v knihách jde. δοξάριον = zdrobnělina, „slávička“, „ta trocha pověsti“. |
+| c11 | Nestěžuj si na dvůr. | Μηκέτι σου μηδεὶς ἀκούσῃ καταμεμφομένου τὸν ἐν αὐλῇ βίον μηδὲ σὺ σεαυτοῦ. | „Ať už tě nikdo neslyší nadávat na život u dvora. Ani ty sám.“ | VIII, 9 | `hovory-viii-9` | Ve Sporu u Marca (strana „zůstat“). |
+| c12 | Macecha a matka. | Εἰ μητρυιάν τε ἅμα εἶχες καὶ μητέρα, ἐκείνην τ’ ἂν ἐθεράπευες καὶ ὅμως ἡ ἐπάνοδός σοι πρὸς τὴν μητέρα συνεχὴς ἐγίνετο. τοῦτό σοι νῦν ἐστιν ἡ αὐλὴ καὶ ἡ φιλοσοφία· ὧδε πολλάκις ἐπάνιθι καὶ προσαναπαύου ταύτῃ, δι’ ἣν καὶ τὰ ἐκεῖ σοι ἀνεκτὰ φαίνεται καὶ σὺ ἐν αὐτοῖς ἀνεκτός. | „Kdybys měl zároveň macechu i matku, o macechu by ses staral, a přesto by ses pořád vracel k matce. To je teď pro tebe dvůr a filozofie. Vracej se k ní často a odpočívej u ní: díky ní snášíš to tam a tam snášejí tebe.“ | VI, 12 | `hovory-vi-12` | **Druhý pilíř Marcovy strany ve Sporu.** Obraz macechy u studenta z nové rodiny: věta mluví o povinnosti a domově, ne o zlé maceše; v textu ji neprodlužovat. |
+| c13 | Neber na sebe celý život najednou. | Μή σε συγχείτω ἡ τοῦ ὅλου βίου φαντασία … ἀλλὰ καθ’ ἕκαστον τῶν παρόντων ἐπερώτα σεαυτόν· τί τοῦ ἔργου τὸ ἀφόρητον καὶ ἀνύποιστον; … ὅτι οὔτε τὸ μέλλον οὔτε τὸ παρῳχηκὸς βαρεῖ σε, ἀλλ’ ἀεὶ τὸ παρόν | „Ať tě nezmate představa celého života … U každé věci, která je zrovna před tebou, se zeptej: Co je na tom nesnesitelné? … Netíží tě budoucnost ani minulost, vždycky jen přítomnost.“ | VIII, 36 | `hovory-viii-36` | Rezerva pro studenta, kterého plán týdne zavaluje; blízko cestě 5. |
+| c14 | Každý den jako poslední. | τὸ πᾶσαν ἡμέραν ὡς τελευταίαν διεξάγειν καὶ μήτε σφύζειν μήτε ναρκᾶν μήτε ὑποκρίνεσθαι | „Dokonalý charakter má to, že každý den prožije jako poslední: bez horečného spěchu, bez otupělosti, bez přetvářky.“ | VII, 69 | `hovory-vii-69` | Rezerva. „Jako poslední“ tu znamená bez spěchu a bez otupělosti, ne „užij si“. Proti dnešnímu „žij, jako by zítra nebylo“. |
+
+**Co Marcus o vlastním čase opravdu říká.** Odejít nemůže a ví to (VIII, 9; VI, 12). Ústraní zná jako touhu (IV, 3) a čtení jako odkládanou věc (III, 14; VIII, 8). Jeho odpověď není „najdi si volno“, ale tři kroky: uprostřed povinností si udělej volno od ostatních představ (II, 5), u každé věci se zeptej, jestli je nutná (IV, 24), a vracej se k filozofii jako domů (VI, 12). Kdy přesně který zápis vznikl, nevíme, a žádný se nesmí spojovat s konkrétní událostí (celek 3).
+
+## d) Spor: odejít, nebo ustoupit do sebe? (hotovo)
+
+### Je to poctivé čtení obou?
+
+Napůl. Plán celku staví Seneku na stranu „odejít“ a Marca na stranu „zůstat a ustoupit do sebe“. Texty to dovolují jen se třemi výhradami, které musí scéna Sporu i zpětná vazba držet:
+
+1. **O krátkosti života je rada jednomu člověku.** Seneca radí Paulinovi, který podle něj už dal obci „větší a lepší část života“ (18, 1) a mohl by úřad předat: „nebudou chybět lidé přesní a pracovití“ (18, 4). Nejde o zásadu „všichni pryč z veřejného života“. A volno, ke kterému zve, není odpočinek: „nevolám tě k lenivému klidu“ (18, 2), čeká tam práce „větší než všechno, co jsi dosud dělal“ (18, 2) a otázky o přírodě a bohu (19, 1).
+2. **Seneca sám jinde radí neutíkat hned.** V O duševním klidu (3–4) vypráví radu stoika Athénodóra, že v době plné udavačů je lepší ustoupit z fóra a prospívat druhým v soukromí. A odporuje mu: „Athénodóros se mi zdá příliš rychle utekl.“ Ustupovat se má pomalu a se zbraní v ruce; kdo nemůže sloužit jako občan, ať slouží jako člověk (4, 3: *officia civis amisit: hominis exerceat*); „nejlepší je mísit volno s prací“ (4, 8: *longe itaque optimum est miscere otium rebus*). V O volném čase (3, 2–3) rozlišuje stoiky a epikurejce: Epikúros říká, že moudrý se do veřejných věcí nepustí, ledaže se něco stane; Zénón, že se do nich pustí, ledaže mu něco zabrání. A to „něco“ je u stoika široké: obec zkažená, člověk bez vlivu nebo nemocný. Prospět se má mnoha lidem, když to nejde, aspoň několika, když ani to, nejbližším, a když ani to, sobě (3, 5).
+3. **Marcus po ústraní touží.** „I ty po tom obvykle nejvíc toužíš“ (IV, 3). Číst nemá kdy (VIII, 8) a čtení odkládá na stáří (III, 14). Neodchází, protože nemůže a protože to pokládá za svou práci (V, 1: vstává „k práci člověka“; VI, 44 v portrétu: jako Antoninus má za obec Řím). Jeho „ústraní do sebe“ je odpověď člověka, kterému odchod není nabídnut.
+
+Spor tedy není „Seneca × Marcus“ jako dvě školy. Je to otázka, kterou si oba kladou a odpovídají na ni každý podle toho, kde stojí: **Mám si čas vzít zpátky tím, že odejdu, nebo se dá získat i uvnitř toho, co mě zaměstnává?** Oba přitom souhlasí v tom hlavním: čas je jediné, co je opravdu naše (b24; c3), a odkládat „na potom“ je největší ztráta (b12; c1; c5).
+
+### Nejsilnější verze každé strany (jedna věta)
+
+- **Seneca (odejdi, když můžeš):** „Kdo zůstane v provozu, který si bere všechen jeho čas, nezíská ho zpátky žádnou vnitřní technikou: ten provoz ho bude pořád volat k sobě, a tak si musíš udělat místo, kde tvůj čas nikdo jiný nespravuje.“ (podle 7, 7; 18, 1–4; 20, 1)
+- **Marcus (zůstaň a vezmi si volno uvnitř):** „Odejít může jen ten, komu to okolnosti dovolí, kdežto volno od zbytečných věcí a představ si můžeš vzít kdykoli a kdekoli, i uprostřed tažení, a právě tam ho potřebuješ nejvíc.“ (podle II, 5; IV, 3; IV, 24; VIII, 8)
+
+### Jak strany odpovídají na nejsilnější námitku druhé
+
+Pravidlo z `docs/pouceni.md`: obě strany odpoví na námitku druhé; na telefonu čte student první stranu celou, proto první strana neodpovídá na něco, co ještě nezaznělo (námitku řekne scéna).
+
+- **Námitka proti Senekovi** (řekne ji scéna): odejít může jen ten, komu to někdo dovolí, a kdo to nemůže, zůstane bez rady. **Senekova odpověď z textu:** když se odejít nedá, má se „mísit volno s prací“ a sloužit tam, kde to jde (O duševním klidu 4, 3–8). **Kde je slabá:** O krátkosti života tuhle mírnější radu nemá; Paulinovi říká jen „vezmi si čas pro sebe“.
+- **Námitka proti Marcovi:** „ústraní v sobě“ je pohodlná rada pro toho, kdo zůstává; uprostřed provozu, který tě pořád volá, se do sebe neuchýlíš. **Marcova odpověď z textu:** ústraní má být krátké a pořád opakované (IV, 3: *συνεχῶς οὖν δίδου σεαυτῷ*), a hlavně se má škrtat, co není nutné (IV, 24). **Kde je slabá:** Marcus sám přiznává, že číst nemá kdy (VIII, 8). Čas na filozofii, jak ji míní Seneca, mu chybí.
+
+### Obrat pro závěr kroku
+
+Seneca nakonec od dvora odejít nesměl. Tacitus mu do úst vkládá prosbu, která zní jako z jeho vlastního spisu: čas, který věnuje zahradám a vilám, chce vrátit své mysli (XIV, 54). Nero odmítl (a7–a8). Muž, který radil Paulinovi odejít, tak dožil v podobné situaci jako Marcus: uvnitř moci, ze které nesměl pryč, a psal přitom dopisy o tom, jak si vzít sebe zpátky (Dopisy 1, 1). Jak se v té situaci choval, nevíme; víme, že poslední tři roky psal (celek 6, Život 20).
+
+**Formulace pro cestu:** „Tacitus vypráví, že Seneca prosil Nerona, aby ho pustil. Prý chtěl svůj čas zpátky. Nero ho nepustil.“ Žádné „ironií osudu“, žádné „sám neuměl žít, co radil“: to je soud, který si student udělá sám, nebo ne.
+
+### Volby pro blok Spor
+
+- Strany: Seneca · Marcus Aurelius (oba mají portrét, žádný medailonek není potřeba).
+- Otázka bloku: „Kde vzít čas pro sebe: odejít, nebo ho hledat uvnitř toho, co tě zaměstnává?“
+- Pět poloh škály (vzor `cesta2-seneca-plutarchos.yaml`): od „odejít, jakmile to jde“ přes „mísit obojí“ (tu hájí sám Seneca v O duševním klidu; zpětná vazba to řekne, aby prostřední poloha nebyla bez zastánce) po „zůstat a udělat si volno uvnitř“.
+- Krajní polohy nesmějí být krajnější než citát strany (`docs/pouceni.md`): Seneca neříká „opusť všechno“; Marcus neříká „nikdy neodcházej“.
+
+## e) Nejsilnější námitka (hotovo)
+
+### Námitka 1: volný čas je výsada bohatých
+
+**V nejsilnější verzi.** Senekovo „vezmi si čas pro sebe“ předpokládá, že je komu ho vzít. Kdo pracuje na dvě směny, stará se o nemocného rodiče nebo o mladší sourozence, nemá před sebou Paulinovu volbu „úřad, nebo filozofie“. A radí to jeden z nejbohatších mužů Říma.
+
+**Co je doloženo o Senekovi.** Byl velmi bohatý z císařových darů; číslo 300 milionů sesterciů je výčitka nepřítele, ne účetnictví (celek 6, Život 17; Tacitus XIII, 42). Výčitku, že káže jinak, než žije, slyšel za života a odpovídá na ni v O blaženém životě; tuto odpověď už nese hlas Seneky na stránce otázky 1 (`vita-beata-26`). Cesta ji neopakuje.
+
+**Co by Seneca odpověděl (z jeho textů):**
+
+1. **Filozofie bohatství nepotřebuje, spíš jí překáží.** „Mnohým zabránilo filozofovat bohatství; chudoba je volná a bez starostí“ (Dopisy 17, 3: *Multis ad philosophandum obstitere divitiae; paupertas expedita est, secura est*). „Až budu mít dost, dám se celý filozofii“ je výmluva: „k filozofii se dá dojít i bez zásob na cestu“ (17, 5 a 7: *licet ad philosophiam etiam sine viatico pervenire*). — doložený text, vlastní převod. Pozor: Dopis 17, 9 má větu o odchodu ze života; do cesty ne.
+2. **Čas, který dáváš blízkým, není ztracený, když víš komu a proč.** Měřítkem v O krátkosti života není, kolik času dáš druhým, ale kdo o něm rozhodl (20, 1: „chodí cizím krokem“). A v O volném čase: prospět se má mnoha lidem, a když to nejde, aspoň nejbližším (3, 5: *si minus, proximis*). Kdo se stará o nemocného rodiče, dělá podle Seneky přesně to, co člověk má. — výklad, ze dvou míst; **zpětná vazba nesmí pečujícímu studentovi říct, že jeho čas „je jeho, jen když…“** (`docs/pouceni.md`, celek 8): piš „když víš, komu a proč ho dáváš“.
+3. **I bez volna se dá dělat, oč jde.** Tohle neříká Seneca, ale Marcus: „Číst nemůžeš. Ale…“ (VIII, 8). Pro studenta bez volna je to silnější odpověď než Senekova a cesta ji má dát jemu, ne Senekovi.
+
+**Kde je Senekova odpověď slabá.** Chudoba, kterou chválí, je „dobrovolná chudoba“ (17, 5: *paupertas voluntaria*): chudoba člověka, který si ji může zvolit. Chudý, který nemá čas, protože musí vydělávat, nemá co zvolit. A rada Paulinovi (18, 4) „nebudou chybět lidé přesní a pracovití“ přesouvá práci na jiné: někdo to obilí převážet musí. Tohle cesta řekne a nechá otevřené; spojencem studenta, který to tak vidí, je Marcus (zůstat a dělat svou práci dobře) a ze současníků atlasu nikdo dalšího nepotřebuje.
+
+### Námitka 2: čas s přáteli v telefonu není promarněný
+
+**V nejsilnější verzi.** Většina času na telefonu je čas s lidmi: zprávy, společná hra, video, o kterém se pak mluví. Seneca sám prožil poslední roky tím, že psal příteli dopisy (celek 6), a o dopisech píše, že mají být jako rozhovor, „kdybychom spolu seděli nebo se procházeli“ (Dopisy 75, 1; citát `seneca-ep-75-1` v datech). Odsoudit telefon jako žrouta času je odsoudit přátelství.
+
+**Co by Seneca odpověděl.** Nic proti přátelství: v jeho měřítku je čas ztracený, když ho bere někdo, kdo tě „nemá v přátelství, ale ve výbavě“ (7, 7: *qui vos non in amicitiam sed in apparatu habet*), a když člověk dělá „něco jiného“, než co právě dělá (Dopisy 1, 1: *aliud agentibus*). Rozhovor s přítelem, kterému dávám pozornost, je podle tohoto měřítka můj čas. Čas, kdy mě aplikace volá zpátky a já nevím proč, není.
+
+**Kde je jeho odpověď slabá.** Hranice „kdo rozhodl“ se uvnitř jednoho večera na telefonu těžko hledá: tutéž hodinu tvoří odpověď kamarádce i deset minut, které jsem nechtěl. Seneca má jen hrubé měřítko (spočítej si to), ne nástroj. Tady pomůže Marcova otázka u každé věci: „Je tohle nutné?“ (IV, 24). Ani ta ale neřekne, co je „nutné“ v přátelství.
+
+**Data, která námitku podpírají** (oddíl f): podle PISA 2022 dosahují patnáctiletí, kteří na sociálních sítích tráví do hodiny denně, v matematice **lepších** výsledků než ti, kdo tam netráví čas vůbec. Cesta tím nesmí dokazovat, že telefon je dobrý; jen že „žádný čas na sítích“ není samo o sobě měřítko.
+
+### Námitka 3 (pro autora): není to celé jen pro dospělé?
+
+Seneca píše starému úředníkovi a Marcus sobě jako císaři. Šestnáctiletý nemá úřad ani dvůr; většinu jeho času rozvrhují škola a rodiče, a to oprávněně. Odpověď cesty: měřítko „kdo rozhodl“ neznamená „rozhoduj o všem sám“. Znamená vědět, která hodina je čí: školní je školy, a to je v pořádku; která je opravdu moje, a kdo mi ji bere. Seneca to rozlišení výslovně má: koho volají povinnosti, ten má dělat „nespočet věcí“ (O duševním klidu 13, 1), zbytečné má škrtat. **Zpětná vazba nesmí hodiny ve škole ani doma počítat jako „ztracené“.**
+
+## f) Dnešní případ: čas u obrazovky a pozornost jako zboží (hotovo)
+
+**Pointa případu.** Ne „odlož mobil“, ale Senekova otázka z 20, 1: kdo rozhodl, kam moje hodina šla. U telefonu je odpověď zajímavá tím, že část rozhodnutí je opravdu jinde: aplikace, jejíž příjmy rostou s tím, kolik reklam uvidím, má na mém čase zájem. To je Senekův „mocný přítel, který tě nemá v přátelství, ale ve výbavě“ (7, 7) a jeho „nenápadně vzatý čas“ (Dopisy 1, 1: *subducuntur*). Zároveň platí námitka 2: čas s přáteli na telefonu promarněný být nemusí.
+
+### Dva údaje, které obstojí
+
+| # | Údaj | Kdo, kdy, jak | Co z něj smí studentský text říct | Co neříct |
+| --- | --- | --- | --- | --- |
+| f1 | Patnáctiletí, kteří si během hodiny vypínají upozornění ze sociálních sítí a aplikací, nemají zařízení otevřené a necítí tlak být online a odpovídat na zprávy, uvádějí, že je zařízení rozptyluje méně. V průměru zemí OECD 54 % patnáctiletých souhlasí, že se snadno nechá rozptýlit, častěji ti, kdo na sociálních sítích tráví přes hodinu denně ve všední den. Zároveň: kdo na sítích tráví do hodiny denně, má v matematice lepší výsledky než ten, kdo tam netráví čas vůbec. | OECD, PISA in Focus č. 124 „Managing screen time“ (květen 2024), data PISA 2022; dotazník patnáctiletých žáků, údaje podle jejich vlastních odpovědí; souvislosti, ne pokus. **Četl jsem celý text** (PDF stažené na Mac). Česká hodnota: Česko je v grafech, číslo jsem z PDF nedostal; v textu stojí jen, že v Česku méně než 20 % žáků netráví ve škole na zařízeních pro zábavu žádný čas. | „Ve velkém mezinárodním šetření říkali patnáctiletí, kteří si vypínají upozornění a necítí tlak hned odpovídat, že je telefon ruší méně.“ Číslo 54 % jen s „v průměru zemí OECD“. | Že vypnutá upozornění rozptýlení **snižují** (je to souvislost, ne pokus). Že telefon zhoršuje známky. |
+| f2 | Meta (Facebook, Instagram, WhatsApp) měla v roce 2025 příjmy 200,97 miliardy dolarů, z toho 196,18 miliardy z reklamy (asi 98 %). Růst reklamních příjmů firma vysvětluje tím, že víc reklam zobrazila a dostala za ně víc zaplaceno. | Výroční zpráva Meta Platforms pro americkou komisi pro cenné papíry (Form 10-K za rok 2025, oddíl Revenue), sec.gov. Viděl jsem tabulku příjmů ve výsledku vyhledávání, který stránku zprávy citoval; samotnou stránku jsem neotevřel. | „Firma, které patří Instagram i WhatsApp, má skoro všechny příjmy z reklamy. Vydělá tím víc, čím víc reklam uvidíš.“ | Že „prodávají tvůj čas“ (tak to zpráva neříká); že aplikace jsou „navržené k závislosti“ (to by chtělo jiný zdroj). |
+
+**Rezerva (neověřená v plném textu):** WHO Europe, studie HBSC 2022 (zpráva 2024; dotazník asi 280 000 dětí ve věku 11, 13 a 15 let ze 44 zemí): 11 % dospívajících splňuje znaky problémového užívání sociálních sítí (2018: 7 %), 36 % je s přáteli online „pořád“. Znám jen z tiskové zprávy WHO a ze stránky HBSC (přes vyhledávač). Pro cestu se nehodí: věk 11–15 je pod publikem atlasu a „problémové užívání“ je měřítko závislosti, ne času.
+
+**Česká data.** Českou studii dospívajících se srovnatelnou metodou jsem v rámci kroku neověřil (PISA 2022 má českou národní zprávu ČŠI; tabulky o rozptýlení jsem v ní nehledal). Doporučení: cesta se obejde bez českého čísla. Údaj f1 se dá ve studentském textu podat i úplně bez čísla.
+
+### Případ pro studenta (návrh, rozhodne P8)
+
+- **„Představ si…“ (vymyšlená situace):** Večer si sedneš, že se půl hodiny podíváš na telefon a pak se pustíš do věci, na které ti záleží (kreslení, kytara, trénink, kniha). Když telefon odložíš, je za deset minut půlnoc. Druhý den se zkus rozpomenout, co jsi za ty dvě hodiny viděl. A kdo o každé z nich rozhodl: ty, kamarád, který psal, nebo něco, co ti nabídlo další video?
+- **Proč ne jen „spočítej si čas u obrazovky“:** většina telefonů to číslo ukáže sama; Senekova otázka je jiná. Nejde o počet hodin, ale o to, kdo je naplánoval.
+- **Druhý případ, bez telefonu** (aby cesta nestála jen na obrazovce): rozvrh po škole plný kroužků, které vybrali rodiče, a brigáda; Seneca by se ptal, které z toho je tvoje, ne kolik toho je. Pozor na rodiny, kde kroužek je dar a brigáda nutnost: zpětná vazba nesmí rodiče soudit (námitka 3).
+
+## g) Návrh cesty (hotovo)
+
+Osm kroků, asi 20 minut (přesný čas spočítá P8 skriptem `node scripts/slova-cesta.mjs`). Slug návrh: `kam-mi-mizi-cas`. V datech cesty: `obdobi: 2`, `otazka: 1`, `filozofove: [seneca, marcus-aurelius]` (oba z katalogu). Žádná nová osoba; Paulinus a Turranius zůstávají v textu bez odkazu (jako Lucilius a Paulina v celku 6).
+
+### Osnova
+
+| Krok | Název (pracovní) | Co se v něm děje | Blok | Opora |
+| --- | --- | --- | --- | --- |
+| 1 | Chléb pro celé město | Scéna: Paulinus a obilí, Řím, kterému po Caligulovi zbylo jídlo na týden; Seneca mu píše, že nemá málo času, jen ho promarnil. Před citátem vlastní pokus. | **Volba s důvodem** „Máš dost času na to, na čem ti záleží?“: Nemám, mám moc povinností · Mám, ale nějak mi mizí · Mám dost · Nevím, nikdy jsem to nepočítal. Pak citát b1. | a1–a4, b1 |
+| 2 | Plot kolem pozemku | Kolo nebo telefon si hlídáš, čas rozdáváš (b4). Pak Senekovy tři způsoby, jak čas zmizí (b21). | **Roztřiď** s koši z Dopisu 1, 1: „Vzali mi ho · Vzal si ho nenápadně · Protekl mi sám · Byl opravdu můj“; karty z obyčejného týdne (trénink, který mám rád; hodina čekání u lékaře; nekonečné video; zpráva od kamarádky, která potřebovala pomoct; školní úkol; hádka, která se táhla; spánek), s vlastní kartou. Zpětná vazba u spánku a školy řekne, že tyhle hodiny Seneca nepočítá jako ztracené. | b4, b21; pravidla Roztřiď z `docs/pouceni.md` |
+| 3 | Spočítej si týden | Senekova výzva starému muži (b5, zkráceně) převedená na týden šestnáctiletého. | **Kresba s pohybem „Přesýpací hodiny“** (viz níže), pak citát b5 nebo b11. | b5, b10, b11 |
+| 4 | Pohřeb za živa | Turranius (b19) a otázka, proč někdo nechce volno; zaneprázdnění jsou i ti úspěšní (b3, b8) a i volno může být zaneprázdněné (b13). | **Odkryj** „Proč by si někdo, komu dali volno, nechal vystrojit pohřeb?“; modelové odpovědi (zvyk, kdo jsem bez práce, ticho ho děsí) a pak Senekova otázka. | b3, b8, b13, b19 |
+| 5 | Kdo rozhodl? | Dnešní případ „Představ si…“ (oddíl f): večer, který měl trvat půl hodiny. Údaje f1 a f2 v jedné až dvou větách. Pointa z 20, 1. | **Změň jednu věc**: tatáž hodina na telefonu; podmínky: psala kamarádka, které je smutno · aplikace nabídla další video · rozhodl ses pustit si film · hodinu ti zadal učitel. Otázka: Čí byla ta hodina? Možnosti dávají smysl v každé podmínce (`docs/pouceni.md`). Pak citát b18. | b18, b22, f1, f2 |
+| 6 | Odejít, nebo ustoupit do sebe? | Seneca radí Paulinovi odejít; Marcus odejít nemůže a hledá volno uvnitř (II, 5; IV, 3; VIII, 8). Scéna řekne námitku proti oběma (oddíl d). Za blokem obrat: Seneca sám odejít nesměl (a7–a8). | **Spor** Seneca × Marcus Aurelius (oddíl d, Volby pro blok Spor). | d, a7–a8, c2, c6, c10, c11, c12 |
+| 7 | Bez volna | Námitky z oddílu e: volno je pro bohaté; čas pro blízké; čas s přáteli v telefonu. Odpověď Marca (VIII, 8: číst nemůžeš, ale…) a Seneky (Dopisy 17, 3; O volném čase 3, 5). Nový případ jiného druhu než krok 5: student, který každé odpoledne hlídá mladší sourozence. | **Odkryj** „Je ten čas jeho?“, modelové odpovědi Seneky a Marca; bez soudu nad rodinou. | e, c8, c10 |
+| 8 | Tvoje pravidlo | Kdo dá za pravdu komu: každá možnost Volby z kroku 1 a každá poloha Sporu dostane spojence (`docs/pouceni.md`, Celek). Panel Na začátku × Teď. | **Závěr cesty** (vlastní pravidlo „Můj čas je můj, když…“) a **Zkus to žít**. | závěr, Návrat, Zkus to žít níže |
+
+Kroky 7 a 8 jsou dva, ne jeden (poučení z cesty 2: zastánci odpovědí a nový případ se nesejdou pod jedním nadpisem).
+
+### Kresba s pohybem „Přesýpací hodiny“ (krok 3)
+
+**Proč tahle.** Přesýpací hodiny jsou atribut Seneky (`lide.yaml`), takže kresba spojí cestu s portrétem. A převádí na obraz jádro spisu: čas teče potichu (b11) a není vidět (b10), dokud ho někdo nespočítá (b5).
+
+**Co student dělá.** Nahoře jsou hodiny s pískem jednoho běžného dne ve všední den (24 dílků, zrnko za hodinu nebo shluk zrnek za hodinu). Student nastaví posuvníky nebo klepnutím na dílky, kolik hodin jde na spánek, školu, cestu, jídlo a povinnosti doma, telefon a věci, na kterých mu záleží. Pak hodiny spustí: písek padá a každá hodina se dole usadí v barvě podle toho, **kdo o ní rozhodl** (já · škola a rodina · někdo jiný · nevím, protekla). Na konci text pod kresbou řekne, kolik hodin dole je „já“ a kolik „nevím“. Seneca by se ptal na ten poslední pruh.
+
+**Pravidla z `docs/pouceni.md` a skillu `atlas-komponenta`:** pohyb jde zastavit; při omezeném pohybu hodiny stojí a text pod nimi říká totéž slovy; v kresbě není nic, co není v modelu (žádné ozdoby, ciferníky ani logo aplikace); na telefonu má jednotka vyjít asi na pixel; školu a spánek kresba nebarví jako ztrátu (námitka 3). Kresbu ukázat autorovi dřív, než se popíše jako hotová. Kresba je jiná než pohár v cestě 6 (tam student dolévá, tady počítá, kdo rozhodl), ale ovládání „nalij, podívej se“ se nesmí opakovat stejně.
+
+**Varianta B: Loď ve vichru (b9).** Dvě lodě, stejné hodiny na palubě: jedna pluje k cíli, druhou honí vítr dokola u přístavu. Přepínač „kdo drží kormidlo: ty / vítr“. Hezčí obraz, ale slabší pro vlastní pokus (student jen dívá). Doporučuji A; B nechat jako obraz ve větě kroku 4.
+
+### Závěrečné pravidlo
+
+Otázka bloku Závěr cesty: „Kdy je tvůj čas opravdu tvůj?“ Modelová pravidla (aby jich bylo víc a žádné nebylo „správné“):
+
+- „Když vím, kdo o té hodině rozhodl, a souhlasím s tím.“ (Seneca, 20, 1)
+- „Když dělám jednu věc a nedělám u ní něco jiného.“ (Dopisy 1, 1; Marcus II, 5)
+- „Když vím, komu a proč ho dávám.“ (O volném čase 3, 5; pravidlo z celku 8 pro pečující studenty)
+- „Když se u věci zeptám, jestli je nutná.“ (Marcus IV, 24)
+
+### Návrat (tři případy do deníku, bez pramenů a čísel)
+
+Jiného druhu než případy v cestě (večer s telefonem, hlídání sourozenců), aby student zkusil vlastní pravidlo jinde:
+
+1. **Stěhování.** Kamarádka tě poprosí, jestli bys jí v sobotu celé odpoledne pomohl se stěhováním. Měl jsi v plánu jet na kolo. Kdyby sis zvolil stěhování, byla by ta sobota tvoje?
+2. **Děda v důchodu.** Děda odešel do důchodu a do měsíce si našel tři nové povinnosti. Říká, že bez práce by se zbláznil. Zaneprázdněný, nebo svůj?
+3. **Videohovor do noci.** S partou ze tábora si voláte každý večer do půlnoci. Je to den ztracený, nebo ten nejlepší?
+
+### Zkus to žít: „Proč teď?“
+
+Jeden den, kdykoli sáhneš po telefonu bez důvodu, se nejdřív v duchu zeptej: Je to teď nutné? A kdo o tom právě rozhodl, já, nebo něco jiného? Telefon pak klidně odemkni. Večer si nic zapisovat nemusíš. (Podle Marca IV, 24: u každé věci se ptej, jestli je nutná. Odlišné od večerního ohlédnutí ze Stoického týdne: probíhá během dne, ne zpětně.) Pro pečujícího studenta platí i menší míra: „klidně jen jedno odpoledne“.
+
+### Vazby na hotové stránky
+
+- **Portrét Seneky:** v kapitole, kde stojí scéna ve vile a atribut přesýpacích hodin, jedna věta s odkazem na cestu 34 (P8 vybere místo; portrét se času dotýká jen jednou). Do Kam dál portrétu cesta přibude sama, pokud ji generuje data (P8 ověří).
+- **Portrét Marca:** v kapitole o zápiscích, kde je ústraní (IV, 3), odkaz na krok 6 cesty 34.
+- **Stránka otázky 1:** stoický hlas **už má** (Seneca, O blaženém životě 26: bohatství; `src/content/otazky/jak-zit.mdx`). Hlas Hipparchie navíc už nese myšlenku „kdo určil, kam má tvůj čas patřit“. Nový hlas proto **nenavrhuji**; cesta 34 se k otázce připojí přes data cesty (`otazka: 1`). Viz Otevřené otázky.
+- **Cesta 7 (Hipparchia):** krok „Nejdřív ty“ a hlas na otázce 1 mluví o tom, kdo rozhoduje o mém životě (zvyk, rodina, očekávání). Cesta 34 to nesmí opakovat: mluví o hodinách a pozornosti, ne o životních volbách. Ve 8. kroku jako spojenec studenta, kterému jde víc o „čí život“ než o „čí hodiny“, smí stát odkaz na cestu 7.
+- **Cesta 5:** b12 („plánuješ, co je v rukou štěstěny“) jen s odkazem na Epiktétovo dělení.
+- **Cesta 8:** „umíráme každý den“ (Dopisy 24, 20) a Dopisy 1, 2 *quicquid aetatis retro est, mors tenet* zůstávají cestě 8; cesta 34 o smrti nemluví víc než jednou větou (b11).
+
+### Překryvy, kterým se cesta vyhne
+
+- Atribut Seneky (b1) zazní v cestě jednou.
+- Scénu žádosti u Nerona vypráví portrét Seneky (Tacitus XIV, 53–56); cesta ji podá jinak a kratší (jen „chtěl svůj čas zpátky“, a8), aby stála i bez portrétu.
+- Carnuntum a Granua (portrét Marca) jen jako „na tažení u Dunaje“.
+- Ranní příprava (II, 1; V, 1), pohled shora a večerní ohlédnutí patří Stoickému týdnu.
+- „Žij každý den jako poslední“ (VII, 69; Dopisy 101, 10) nepoužívat jako heslo: student po ztrátě to čte jinak a cesta o smrti nemluví.
+
+## Návrh dat (pro P8)
+
+Nic není zapsáno do `src/data`; zapíše P8 spolu s obsahem. Žádné nové osoby, místa ani vztahy.
+
+```yaml
+# zdroje.yaml: rozšířit existující pramen
+- { id: seneca-brevitate, druh: pramen, nazev: "O krátkosti života", autor: Seneca, dilo: "De brevitate vitae (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.brevita.shtml", overeno: 2026-10-18, poznamka: "Paulinovi (1, 1; 18, 1); nemáme málo času (1, 3–4); život je dlouhý, když ho umíš použít (2, 1); nikdo nepatří sám sobě (2, 4); pozemek a život (3, 1); spočítej si léta (3, 2–3); jako byste žili navždy, v padesáti se stáhnu (3, 4–5); žít mi nedovolí (7, 6–8); nežil dlouho, jen byl (7, 10); čas není vidět (8, 1–2); nikdo ti léta nevrátí (8, 5); čekání ztrácí dnešek (9, 1); zaneprázdněné volno (12, 2); rozhovor s mudrci (14, 1–2); rodiny duchů (15, 3); Paulinus a obilí, ne lenivý klid (18–19); cizím krokem, spočítej, kolik je tvoje (20, 1); Turranius (20, 4)." }
+# nové prameny
+- { id: seneca-ep-1, druh: pramen, nazev: "Dopisy Luciliovi 1 a 17", autor: Seneca, dilo: "Epistulae morales, lat. R. M. Gummere (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1017/phi015/phi1017.phi015.perseus-lat2.xml", overeno: 2026-10-18, poznamka: "Vezmi si sebe zpátky, tři způsoby ztráty času, dělat něco jiného (1, 1); obejmi každou hodinu, zatímco se odkládá (1, 2); jen čas je náš (1, 3); co ztrácím, proč a jak (1, 4). Bohatství překáží filozofii, dobrovolná chudoba, k filozofii i bez zásob (17, 3–8)." }
+- { id: seneca-tranquillitate-otium, druh: pramen, nazev: "O duševním klidu 3–4 a 13; O volném čase 3", autor: Seneca, dilo: "De tranquillitate animi, De otio (The Latin Library)", url: "https://www.thelatinlibrary.com/sen/sen.tranq.shtml", overeno: 2026-10-18, poznamka: "Athénodóros radí ustoupit z fóra (3); Seneca: utekl příliš rychle, kdo nemůže sloužit jako občan, ať slouží jako člověk, mísit volno s prací (4, 1–8); Démokritos, dělej málo, vztaženo na zbytečné (13, 1). O volném čase (sen.otio.shtml): Epikúros a Zénón o vstupu do veřejných věcí (3, 2–3); prospět mnohým, několika, nejbližším, sobě (3, 5)." }
+- { id: tacitus-annales-paulinus, druh: pramen, nazev: "Letopisy I, 7; XI, 31; XIII, 53; XV, 18 a 45", autor: Tacitus, dilo: "Annales, lat. C. D. Fisher (PerseusDL)", url: "https://github.com/PerseusDL/canonical-latinLit/blob/master/data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml", overeno: 2026-10-18, poznamka: "Turranius správcem obilí roku 14 (I, 7) a 48 (XI, 31); Pompeius Paulinus velí v Germánii (XIII, 53, rok 58) a je mezi třemi konzuláry nad příjmy (XV, 18, rok 62); pověst o druhé žádosti o odchod a předstírané nemoci (XV, 45, rok 64). Jestli jde o adresáta O krátkosti života, je sporné." }
+- { id: oecd-pisa-screen-time, druh: data, nazev: "Managing screen time (PISA in Focus 124)", autor: OECD, dilo: "PISA in Focus 2024/124, data PISA 2022", url: "https://www.oecd.org/en/publications/managing-screen-time_7c225af4-en.html", overeno: 2026-10-18, poznamka: "Dotazník patnáctiletých; 54 % se podle sebe snadno nechá rozptýlit (průměr OECD); méně rozptýlení u těch, kdo vypínají upozornění, nemají zařízení otevřené a necítí tlak odpovídat; do hodiny sítí denně lepší výsledek v matematice než vůbec; tři čtvrtiny přes hodinu denně na sítích ve všední den. Souvislosti, ne pokus." }
+- { id: meta-10k-2025, druh: data, nazev: "Form 10-K za rok 2025, oddíl Revenue", autor: "Meta Platforms, Inc.", dilo: "výroční zpráva pro SEC", url: "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm", overeno: 2026-10-18, poznamka: "Příjmy 200 966 mil. USD, z toho reklama 196 175 mil. USD; růst reklamy díky většímu počtu zobrazených reklam a vyšší ceně za reklamu. Tabulka viděna ve výsledku vyhledávání, stránka zprávy neotevřena." }
+```
+
+Citáty (`zdroje.yaml`, sekce citátů) zapíše P8 jen pro místa, která cesta opravdu použije, s ids z tabulek b a c. Pro každý: `osoba`, `autor`, `dilo`, `misto`, `cesky`, `original`, `preklad: { druh: vlastni, podle: "latinský text (The Latin Library)" }` nebo `"řecký text (Leopold)"`, `zdroj`.
+
+## h) Obrázky (hotovo)
+
+Nic není staženo.
+
+**Doporučení: vstup cesty bez obrázku.** Obrazem cesty je kresba Přesýpací hodiny v kroku 3; vstup stojí na scéně s obilím. Stejně rozhodl autor u cesty 8 (dopis bez obrázku). Podobizna Seneky (berlínská herma) i Marca jsou na jejich stránkách a v hlavičce cesty se ukážou samy jako filozofové cesty.
+
+**Kdyby autor obrázek chtěl** (nic jsem nestáhl a snímky jsem neviděl):
+
+| Kandidát | Co zobrazuje | Instituce | Licence | Odkaz | Stav |
+| --- | --- | --- | --- | --- | --- |
+| A. Nástěnná malba z vily v Boscoreale (03.14.2) | Fragment fresky ze sloupořadí vily P. Fannia Synistora, kolem 50–40 př. n. l.; muzeum ho štítkuje „sluneční hodiny“ a „glóbus“. Asi sto let před Senekovým spisem. | The Metropolitan Museum of Art | Public Domain (Open Access), ověřeno v API (`isPublicDomain: true`) | https://www.metmuseum.org/art/collection/search/247006 | Snímek jsem neviděl; jestli jsou sluneční hodiny na fragmentu poznat, posoudí autor. |
+| B. Mozaika s měřiči obilí z Ostie | Měření obilí v přístavu, kudy šlo obilí do Říma: přesně Paulinova práce. | Ostia antica (in situ) | **Neověřeno**: fotografie by musela být z Wikimedia Commons, kterou nástroje neotevřou; licenci by potvrdil autor sám. | — | Jen nápad; bez licence nepoužít. |
+
+Popisek k A, kdyby ho autor chtěl: „Nástěnná malba z římské vily, asi sto let před Senekou. Mezi tím, co si majitel nechal namalovat, jsou i sluneční hodiny.“ (Až po prohlédnutí snímku.)
+
+## Rozpory a rozhodnutí
+
+- **Datace O krátkosti života: kolem 49, nebo 55?** Většina badatelů kolem roku 49, Griffinová 55; obojí stojí na výkladu jedné zmínky (13, 8) a na tom, kdy Paulinus úřad držel (48–55). **Rozhodnutí:** do studentského textu bez roku („dlouho předtím, než sám u dvora uvízl“ jde i s rokem 55, Seneca odešel až 62). Plná literatura (Griffin 1962, Williams 2003) jen z úryvků; kdyby P8 rok chtěla, dočíst Williamsův úvod.
+- **Kdo byl Paulinus.** Tchán, nebo švagr; a je konzulár Pompeius Paulinus z Tacita týž muž? **Rozhodnutí:** jen „přítel Paulinus“; netvrdit příbuzenství ani to, jestli radu poslechl.
+- **Turranius × Turannius.** Rukopisy O krátkosti života mají *Turannius*, Tacitus *Turranius*; ztotožnění je běžné a Griffinová ho podle úryvku bere jako Paulinova předchůdce. **Rozhodnutí:** ve studentském textu bez jména („starý správce obilí“). Příběh je tradovaný: vypráví ho jen Seneca.
+- **Seneca 64 (XV, 45).** Tacitus to uvádí jako pověst. **Rozhodnutí:** jako v celku 6 vynechat; obrat Sporu stojí na roce 62.
+- **Spor jako dvě rady, ne dvě školy.** Plán celku stavěl Seneku na stranu „odejít“. Texty (O duševním klidu 4; O volném čase 3) ukazují, že Seneca jinde radí mísit obojí. **Rozhodnutí:** Spor zůstává, ale prostřední poloha škály dostane Seneku z O duševním klidu jako zastánce a scéna řekne, že O krátkosti života je rada jednomu člověku.
+- **Telefon jako případ, ne téma.** **Rozhodnutí:** jeden krok z osmi (krok 5) a zmínka v kroku 7; kresba v kroku 3 počítá celý den, nejen obrazovku.
+- **Čísla.** Pro studentský text jsou připravené dva údaje (f1, f2), ale cesta se obejde i bez čísel. **Doporučení:** f1 slovy bez procent, f2 s jedním číslem („skoro všechny příjmy“). Česká data neověřena.
+- **Démokritos u Marca.** Marcus větu „dělej málo“ uvádí bez jména (φησίν); Seneca ji jmenovitě připisuje Démokritovi (O duševním klidu 13, 1). **Rozhodnutí:** ve studentském textu „říká se“; Démokritos je v datech, ale jeho jméno by v kroku nic neneslo.
+
+## i) Otevřené otázky pro autora (hotovo)
+
+Prázdná odpověď znamená souhlas s doporučením.
+
+1. **Kresba v kroku 3: Přesýpací hodiny (A), nebo Loď ve vichru (B)?** Doporučuji A: navazuje na atribut Seneky a student v ní sám počítá, kdo o hodinách rozhodl; B zůstane obrazem ve větě kroku 4.
+   Odpověď:
+2. **Obrázek na vstup cesty:** doporučuji žádný (jako u cesty 8). Kdybys chtěl fresku z Boscoreale (Met 03.14.2, Public Domain), stáhnu ji až po tvém souhlasu a po prohlédnutí, jestli jsou hodiny poznat.
+   Odpověď:
+3. **Stránka otázky 1: nový hlas?** Doporučuji ne. Seneca tam už mluví (bohatství) a Hipparchia nese myšlenku „kdo určil, kam má tvůj čas patřit“. Alternativa: hlas Marca s otázkou „Je tohle nutné?“ (IV, 24); přidal by otázku 1 do hlavičky jeho portrétu a stránce šestý hlas.
+   Odpověď:
+4. **Turranius ve studentském textu:** doporučuji příběh ano, jméno ne („starý správce obilí“).
+   Odpověď:
+5. **Čísla v kroku 5:** doporučuji f1 slovy (bez procent) a f2 s jednou větou o příjmech z reklamy. Alternativa: žádná čísla.
+   Odpověď:
+6. **Zkus to žít „Proč teď?“** (otázka před odemčením telefonu, jeden den): doporučuji. Alternativa z plánu celku: jeden den zapisovat, kdo rozhodl o každé hodině (blízko večernímu ohlédnutí, proto ji nedoporučuji).
+   Odpověď:
+7. **Slug cesty `kam-mi-mizi-cas`** a pracovní názvy kroků z Osnovy: P8 je smí změnit podle textu.
+   Odpověď:
+
+**Mohou počkat:** české překlady (O krátkosti života, Dopisy, Hovory k sobě) jsem neměl v ruce; kdybys některý měl doma, srovnání citátů, které cesta opravdu použije, by stálo za to před revizí P10. Úvod G. D. Williamse (Cambridge 2003) dočíst jen tehdy, kdyby P8 chtěla datum spisu.
+
+## Pro skill atlas-overeni
+
+Návrh doplňků, skill sám jsem neměnil.
+
+- The Latin Library má i O duševním klidu (`sen.tranq.shtml`) a O volném čase (`sen.otio.shtml`); text je ve formátu s *u* místo *v*.
+- Výroční zprávy amerických firem (Form 10-K) jsou na sec.gov a pro údaje o příjmech jsou primární zdroj.
+- Zprávy OECD z řady PISA in Focus jdou stáhnout jako PDF na `oecd.org/content/dam/oecd/en/publications/reports/<rok>/<měsíc>/<slug>/<id>-en.pdf`; na Macu je převede `pypdf` (`python3 -m pip install --user pypdf`), `pdftotext` tam není.
+- Do tabulky zkreslených výroků: „Život je dlouhý, když víš, jak ho žít“ (*uti* = použít, O krátkosti života 2, 1); „Jako s příběhem, tak se životem…“ (pravé, Dopisy 77, 20, ale z dopisu o dobrovolné smrti); „Každý den počítej jako samostatný život“ (Dopisy 101, 10, ne O krátkosti života).
