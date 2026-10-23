@@ -4,6 +4,14 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 23. 10. 2026: Celek 9 uzavřený
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Celek 9 „Kam mi mizí čas?“ je schválený, větev `celek-9` sloučená do hlavní větve (`390437e`) a hlavní větev je na GitHubu; plán v `docs/archiv/plany/celek-9.md` | Autor: „Ok tak schvaluju“ |
+| Kontrola zastaveného pohybu u ostatních kreseb patří do souhrnné revize antiky (P11), ne do vlastní větve | Autor nechal odpověď prázdnou; prázdná odpověď znamená souhlas |
+| Další v pořadí je cesta 33 jako celek 10, pak P11 a zkouška se studenty | Pořadí z `docs/plan.md` |
+
 ## 23. 10. 2026: Celek 9, krok O (opravy po revizi)
 
 | Rozhodnutí | Důvod |

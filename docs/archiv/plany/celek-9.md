@@ -8,7 +8,7 @@ Celek 9 staví cestu 34 z katalogu (`docs/architektura.md`): Seneca a jeho spis 
 | P8 | Cesta 34 se závěrem a Návratem, kresba, hlas nebo doplnění otázky 1, případné odkazy z portrétů Seneky a Marca | Opus 5.5 · high se skillem `atlas-cesta` (xhigh při zaseknutí) | hotovo 23. 10. 2026; viz Po P8 |
 | P10 | Revize celku | Opus 5.5 · high se skillem `atlas-revize` | hotovo 23. 10. 2026, verdikt „po opravách“ (`docs/revize/celek-9-2026-10-23.md`); viz Po P10 |
 | O | Opravy po revizi | Opus 5.5 · high | hotovo 23. 10. 2026; viz Po O |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | hotovo 23. 10. 2026: schváleno, sloučeno (`390437e`) a na GitHubu |
 
 P7 v celku není: nová osoba nepřibývá a drobné úpravy hotových portrétů (odkaz na cestu, věta v Kam dál) udělá P8, pokud je podklady doporučí.
 
@@ -146,6 +146,6 @@ Hotovo 23. 10. 2026. Všech deset nálezů je zapracovaných, každý v samostat
 ## Co rozhodnout před uzavřením (prázdná odpověď znamená souhlas s doporučením)
 
 1. **Schválení celku 9:** přečti si cestu jako student (asi 28 minut) a celek schval; pak se větev sloučí do hlavní větve a hlavní větev pošle na GitHub. Doporučuji schválit.
-   Odpověď:
+   Odpověď: „Ok tak schvaluju“ (23. 10. 2026)
 2. **Zastavený pohyb u ostatních kreseb** (doporučení revize mimo celek): zkontrolovat, jestli i jiná kresba ukazuje obsah teprve pohybem, v souhrnné revizi antiky (P11), ne ve vlastní větvi. Doporučuji ano.
    Odpověď:
