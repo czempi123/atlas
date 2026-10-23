@@ -17,7 +17,7 @@ export const SKUPINY: { id: Skupina; nazev: string; legenda: string }[] = [
   { id: 'spanek', nazev: 'Spánek', legenda: 'spánek' },
   { id: 'skola', nazev: 'Škola a rodina', legenda: 'škola a rodina' },
   { id: 'ja', nazev: 'Tvoje volba', legenda: 'tvoje volba' },
-  { id: 'jiny', nazev: 'Někdo jiný', legenda: 'někdo jiný' },
+  { id: 'jiny', nazev: 'Někdo, něco', legenda: 'někdo, něco' },
 ];
 export const LEGENDA_PROTEKLA = 'protekla';
 
@@ -96,5 +96,5 @@ export const PAD = 0.7;
 export const KOLO = 13.5;
 export const startZrnka = (i: number) => Math.round((ZACATEK + i * ODSTUP) * 100) / 100;
 
-/** Kosočtverec (zrnko „někdo jiný“): jiný tvar, aby se vrstvy nelišily jen tónem. */
+/** Kosočtverec (zrnko „někdo, něco“): jiný tvar, aby se vrstvy nelišily jen tónem. */
 export const kosoctverec = (x: number, y: number, r = ZRNO + 0.6) => `M${x},${y - r} L${x + r},${y} L${x},${y + r} L${x - r},${y} Z`;

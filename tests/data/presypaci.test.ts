@@ -18,7 +18,7 @@ describe('přesýpací hodiny: den', () => {
     expect(nastav(VYCHOZI_DEN, 'skola', 6.6).skola).toBe(7);
   });
 
-  it('vrstvy jdou zdola v pořadí spánek, škola a rodina, tvoje volba, někdo jiný, protekla', () => {
+  it('vrstvy jdou zdola v pořadí spánek, škola a rodina, tvoje volba, někdo nebo něco, protekla', () => {
     expect(SKUPINY.map((g) => g.id)).toEqual(['spanek', 'skola', 'ja', 'jiny']);
     const vrstvy = DOLE.map((_, i) => vrstva(VYCHOZI_DEN, i));
     expect(vrstvy.slice(0, 8).every((v) => v === 'spanek')).toBe(true);
