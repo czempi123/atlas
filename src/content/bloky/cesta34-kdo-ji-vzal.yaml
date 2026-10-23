@@ -47,7 +47,7 @@ karty:
   - id: kamaradka
     text: Zpráva od kamarádky, která potřebovala pomoct
     zpetna: >-
-      Tuhle hodinu jsi dal někomu, kdo tě potřeboval, a věděl jsi komu a proč. Je to ztráta, když o tom rozhodneš sám?
+      Tuhle hodinu jsi dal někomu, kdo tě potřeboval. Rozhodl jsi o ní ty, nebo zpráva, která přišla? A dal bys ji znovu?
     kdyz:
       vzal: >-
         Dal jsi ji k hodinám, které si někdo vzal. Řekla si o ni, to ano. Dal bys jí ji znovu?
