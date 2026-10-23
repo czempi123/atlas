@@ -10,7 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   background: var(--paper);
-  scroll-padding-top: calc(var(--hlavicka) + var(--s-4));
+  scroll-padding-top: calc(var(--hlavicka) + var(--hodina) + var(--s-4));
 }
 
 /* Pevná spodní lišta (telefon, krok cesty) nesmí zakrýt prvek, na který přijde fokus z klávesnice. */
@@ -20,10 +20,13 @@ html {
 html:has(.cesta-lista) { scroll-padding-bottom: calc(var(--spodni-lista) + env(safe-area-inset-bottom, 0px) + var(--s-4)); }
 
 /* Profil s lištou Obsah (drží pod hlavičkou): skok na kotvu ani prvek s fokusem pod ni nesmí zajet. */
-html[data-obsah-js] { scroll-padding-top: calc(var(--hlavicka) + var(--dotyk) + var(--s-4)); }
+html[data-obsah-js] { scroll-padding-top: calc(var(--hlavicka) + var(--hodina) + var(--dotyk) + var(--s-4)); }
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
+  /* Příchod na zastavení hodiny z lišty nebo ze stránky hodiny: na kotvu rovnou, bez jízdy přes celou stránku
+     (třídu dá skript v hlavičce Zakladni.astro a po načtení ji sundá src/scripts/hodina-lista.ts). */
+  html.skok-na-zastaveni { scroll-behavior: auto; }
 }
 
 body {
@@ -149,7 +152,7 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
   border: 1px solid var(--rule);
   border-radius: var(--r-md);
   background: var(--surface);
-  scroll-margin-top: calc(var(--hlavicka) + var(--s-4));
+  scroll-margin-top: calc(var(--hlavicka) + var(--hodina) + var(--s-4));
 }
 .blok > :last-child { margin-bottom: 0; }
 .blok__nadtitulek { margin: 0 0 var(--s-2); color: var(--pc, var(--ink)); }
@@ -208,6 +211,7 @@ h1 em, h2 em, .t-display-1 em, .t-display-2 em { font-style: italic; }
 .blok__tl--vedlejsi:disabled { cursor: not-allowed; border-color: var(--rule); background: transparent; color: var(--muted); }
 .blok__tl--tiche { min-height: 44px; border: 1px solid var(--rule); background: transparent; color: var(--ink); font-size: var(--fs-ovladani); font-weight: 500; }
 .blok__tl--tiche:hover { border-color: var(--muted); }
+.blok__tl--tiche:disabled { cursor: not-allowed; border-style: dashed; border-color: var(--rule); color: var(--muted); }
 /* Zpětná vazba a odkrytý obsah: tint období, titulek v inkoustu. */
 .blok__zpetna {
   margin-top: var(--s-5);

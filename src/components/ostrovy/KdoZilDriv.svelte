@@ -5,11 +5,12 @@
   // Odhad se jen popíše vedle skutečnosti; nic se neboduje. Do deníku nejde, stav vydrží obnovení.
   // Použití v MDX: <KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
   //                <KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import {
     faktaDvojice, hodnotPoradi, hodnotVzdalenost, platnyStavKdoZil, osaDvou,
-    osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy,
+    osaOdhadu, odhadZPolohy, popisOdhadu, naProcenta, znackyOsy, otazkaKdoZil,
     type OdhadPoradi,
   } from '../../lib/bloky';
   import { let_, zAstro, type OsobaMapy } from '../../lib/cas-mapy';
@@ -35,8 +36,7 @@
   const fakta = faktaDvojice(a, b)!;
   const osa = osaDvou(a, b)!;
   const tahOsa = osaOdhadu(a, b)!;
-  const nazevOtazky =
-    otazka ?? (druh === 'poradi' ? `Kdo žil dřív: ${a.jmeno}, nebo ${b.jmeno}?` : `Jak daleko od sebe žili ${a.jmeno} a ${b.jmeno}?`);
+  const nazevOtazky = otazka ?? otazkaKdoZil(a.jmeno, b.jmeno, druh);
 
   let poradi = $state<OdhadPoradi | null>(null);
   let start = $state(tahOsa.vychozi);
@@ -160,13 +160,13 @@
 
 <section class="blok kdo-zil obdobi-{a.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
   <BlokHlava
-    nadtitulek="Kdo žil dřív?"
+    nadtitulek={VYCHOZI_NADTITULKY.KdoZilDriv}
     lide={[{ jmeno: a.jmeno, obdobi: a.obdobi, ikona: a.ikona }, { jmeno: b.jmeno, obdobi: b.obdobi, ikona: b.ikona }]}
   />
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{nazevOtazky}</h3>
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{nazevOtazky}</h3>
 
   {#if druh === 'poradi'}
-    <div class="volby" role="radiogroup" aria-labelledby={`${id}-otazka`}>
+    <div class="volby" data-cast="moznosti" role="radiogroup" aria-labelledby={`${id}-otazka`}>
       {#each volbyPoradi as v (v.hodnota)}
         <label class={['volba', poradi === v.hodnota && 'volba--vybrana']}>
           <input class="vizualne-skryte" type="radio" name={`${id}-poradi`} value={v.hodnota} bind:group={poradi} onchange={ulozStav} disabled={odkryto} />
@@ -175,8 +175,8 @@
       {/each}
     </div>
   {:else}
-    {#if !odkryto}<p class="pokyn t-ovladani">Přetáhni život, který patří jménu {b.jmeno}, tam, kde podle tebe žil.</p>{/if}
-    <div class={['tah', odkryto && 'tah--odkryto']}>
+    {#if !odkryto}<p class="pokyn t-ovladani" data-cast="moznosti">Přetáhni život, který patří jménu {b.jmeno}, tam, kde podle tebe žil.</p>{/if}
+    <div data-cast="moznosti" class={['tah', odkryto && 'tah--odkryto']}>
       <div class="tah__plocha">
         {#each znacky as z (z)}<span class="tah__mrizka" style={`left:${pct(z)}%`} aria-hidden="true"></span>{/each}
         {#if prekryv && !odkryto}
@@ -226,16 +226,16 @@
       </div>
     </div>
     {#if !odkryto}
-      <p class="tah__odhad t-ovladani" aria-hidden="true">
+      <p class="tah__odhad t-ovladani" data-cast="moznosti" aria-hidden="true">
         {#if pohnuto}Tvůj odhad: <strong>{popisOdhadu(odhadVzd)}</strong>{:else}Ještě jsi s ním nepohnul.{/if}
       </p>
     {/if}
   {/if}
 
   {#if !odkryto}
-    <button class="blok__tl blok__tl--hlavni" type="button" onclick={odhal} disabled={!hotovyOdhad}>Odhalit</button>
+    <button class="blok__tl blok__tl--hlavni" data-cast="akce" type="button" onclick={odhal} disabled={!hotovyOdhad}>Odhalit</button>
   {:else}
-    <div class="blok__zpetna" role="region" aria-label="Odhalení" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
+    <div class="blok__zpetna" data-cast="zpetna" role="region" aria-label="Odhalení" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
       <p class="blok__zpetna-titulek">{fakta.vzdalenost.text}</p>
       <p>{vyhodnoceni.replace(fakta.vzdalenost.text, '').replace(/ {2,}/g, ' ').trim()}</p>
       {#if fakta.vetaOVeku}<p>{fakta.vetaOVeku}</p>{/if}
@@ -257,7 +257,7 @@
       {/if}
     </div>
     <BlokDal {dal} vedlejsi={{ href: fakta.odkazMapy, text: `Ukázat na mapě v roce ${rokText(fakta.rokMapy)}` }} />
-    <div class="blok__akce">
+    <div class="blok__akce" data-cast="akce">
       <button class="blok__tl blok__tl--tiche" type="button" onclick={znovu}>Zkusit znovu</button>
     </div>
   {/if}

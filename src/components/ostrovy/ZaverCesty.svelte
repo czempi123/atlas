@@ -49,7 +49,7 @@
 </script>
 
 {#if zacatek && casti.length}
-  <section class="blok zaver obdobi-{obdobi}" aria-label="Na začátku a teď">
+  <section class="blok zaver obdobi-{obdobi}" {id} aria-label="Na začátku a teď">
     <div class="sloupce">
       <div class="zacatek">
         <h3 class="blok__zpetna-titulek">Na začátku</h3>
@@ -77,7 +77,7 @@
     {/if}
   </section>
 {:else}
-  <div class="ctenarsky samo"><MojeStanovisko rozbalene {id} {otazka} {odkaz} /></div>
+  <div class="ctenarsky samo" {id}><MojeStanovisko rozbalene {id} {otazka} {odkaz} /></div>
 {/if}
 
 <style>

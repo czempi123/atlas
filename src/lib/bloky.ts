@@ -654,3 +654,10 @@ export function chybyBloku(
   for (const z of blok.zdroje) if (!prameny.has(z)) chyby.push(`Blok „${id}“: pramen „${z}“ není v zdroje.yaml.`);
   return chyby;
 }
+
+// ─── Kdo žil dřív? ────────────────────────────────────────────────────────────
+
+/** Výchozí otázka bloku Kdo žil dřív? (nadpis bloku, zápis aktivity, název zastavení v katalogu hodin). */
+export function otazkaKdoZil(a: string, b: string, druh: 'poradi' | 'vzdalenost'): string {
+  return druh === 'poradi' ? `Kdo žil dřív: ${a}, nebo ${b}?` : `Jak daleko od sebe žili ${a} a ${b}?`;
+}

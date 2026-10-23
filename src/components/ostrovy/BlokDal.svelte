@@ -8,7 +8,7 @@
 </script>
 
 {#if dal || vedlejsi}
-  <nav class="blok__dal" aria-label="Kam dál" in:odkryti>
+  <nav class="blok__dal" aria-label="Kam dál" data-cast="dal" in:odkryti>
     {#if dal}
       <a class="blok__tl blok__tl--hlavni" href={dal.href}>
         <span>{dal.text}</span>

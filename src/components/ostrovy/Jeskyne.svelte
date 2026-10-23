@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Jeskyně: vlastní kresba Platónovy jeskyně ve dvou pohledech. „Pohled vězňů“ ukazuje stěnu, po které
   // přecházejí stíny nesených věcí (student sedí mezi vězni); „Pohled z boku“ ukazuje oheň, zídku, nosiče,
   // vězně a stěnu. Rám, přepínač, text pod kresbou a zastavení pohybu dává Kresba.svelte.
@@ -29,7 +30,7 @@
   const zidka = stinNaStene(OHEN, { x: 131, y: 150 }, STENA)!;
 </script>
 
-<Kresba {id} {obdobi} nazev="Dva pohledy do jeskyně" pohledy={POHLEDY} bind:pohled popis={POPISY[pohled as Pohled]}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.Jeskyne} nazev={NAZVY_KRESEB.Jeskyne} pohledy={POHLEDY} bind:pohled popis={POPISY[pohled as Pohled]}>
   {#snippet kresba()}
     <defs>
       <radialGradient id="{id}-sero" cx="50%" cy="36%" r="78%">

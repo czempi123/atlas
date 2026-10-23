@@ -4,6 +4,7 @@
   // Blok s `bezDuvodu: true` pole „Proč právě tohle?“ nemá (cesta 4, krok 2).
   // Použití v MDX (obsah v src/content/bloky/cesta1-jak-zjistit.yaml):
   // <Volba id="cesta1-jak-zjistit" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import { zpetnaVolby, zapisVolby, platnyStavVolby, pismeno, odstavce, radek } from '../../lib/bloky';
@@ -62,13 +63,13 @@
 </script>
 
 <section class="blok volba obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <BlokHlava nadtitulek={blok.nadtitulek ?? 'Co uděláš?'} lide={filozof ? [filozof] : []} />
+  <BlokHlava nadtitulek={blok.nadtitulek ?? VYCHOZI_NADTITULKY.Volba} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
-    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena">{@html o}</p>{/each}
+    {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}
-  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`}>{@html radek(blok.otazka)}</h3>
+  <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{@html radek(blok.otazka)}</h3>
 
-  <div class="moznosti" role="radiogroup" aria-labelledby={`${id}-otazka`}>
+  <div class="moznosti" data-cast="moznosti" role="radiogroup" aria-labelledby={`${id}-otazka`}>
     {#each blok.moznosti as m, i (i)}
       <label class={['karta', vyber === i && 'karta--vybrana', potvrzeno && 'karta--zamcena', potvrzeno && vyber !== i && 'karta--skryta']}>
         <input
@@ -88,16 +89,16 @@
 
   {#if !potvrzeno}
     {#if !blok.bezDuvodu}
-      <label class="blok__popis" for={`${id}-proc`}>Proč právě tohle? <span class="nepovinne">Nepovinné</span></label>
-      <textarea class="blok__pole blok__pole--kratke" id={`${id}-proc`} rows="2" bind:value={proc} onchange={ulozRozpracovane} placeholder="Stačí pár slov…"></textarea>
+      <label class="blok__popis" for={`${id}-proc`} data-cast="duvod">Proč právě tohle? <span class="nepovinne">Nepovinné</span></label>
+      <textarea class="blok__pole blok__pole--kratke" data-cast="duvod" id={`${id}-proc`} rows="2" bind:value={proc} onchange={ulozRozpracovane} placeholder="Stačí pár slov…"></textarea>
     {/if}
-    <button class="blok__tl blok__tl--hlavni" type="button" onclick={potvrd} disabled={vyber === null}>Tohle je můj tah</button>
+    <button class="blok__tl blok__tl--hlavni" data-cast="akce" type="button" onclick={potvrd} disabled={vyber === null}>Tohle je můj tah</button>
   {:else if proc.trim()}
-    <p class="tvuj-duvod"><span class="t-popisek">Tvůj důvod:</span> {proc}</p>
+    <p class="tvuj-duvod" data-cast="duvod"><span class="t-popisek">Tvůj důvod:</span> {proc}</p>
   {/if}
 
   {#if zpetna}
-    <div class="blok__zpetna" role="region" aria-label="Zpětná vazba" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
+    <div class="blok__zpetna" data-cast="zpetna" role="region" aria-label="Zpětná vazba" aria-live="polite" tabindex="-1" bind:this={oblast} in:odkryti>
       <p class="blok__zpetna-titulek">{zpetna.titulek}</p>
       {#each odstavce(zpetna.text) as o, i (i)}<p>{@html o}</p>{/each}
       {#if zpetna.coUdelal && filozof}
@@ -106,7 +107,7 @@
         </BlokFilozof>
       {/if}
     </div>
-    <details class="ostatni">
+    <details class="ostatni" data-cast="zpetna">
       <summary>Co kdybys zvolil jinak?</summary>
       <ul>
         {#each blok.moznosti as m, i (i)}
@@ -120,8 +121,8 @@
       </ul>
     </details>
     <BlokDal {dal} />
-    <div class="blok__akce">
-      <p class="blok__ulozeno">Tvůj tah je uložený v deníku.</p>
+    <div class="blok__akce" data-cast="akce">
+      <p class="blok__ulozeno" data-cast="ulozeno">Tvůj tah je uložený v deníku.</p>
       <button class="blok__tl blok__tl--tiche" type="button" onclick={znovu}>Začít znovu</button>
     </div>
   {/if}
