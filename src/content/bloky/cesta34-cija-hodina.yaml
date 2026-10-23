@@ -1,0 +1,57 @@
+# Změň jednu věc · cesta 34 „Kam mi mizí čas?“, krok 5: dvě hodiny s telefonem a otázka, čí byly (20, 1).
+# Podklad: docs/podklady/celek-9.md › f) Dnešní případ, e) Námitka 2 (čas s přáteli v telefonu není promarněný)
+# a g) Osnova (krok 5). Bez kázání: žádná možnost ani zpětná vazba neříká, že telefon je ztráta. Podmínka „hodinu
+# ti zadal učitel“ z osnovy vypadla (blok má nejvýš tři podmínky a školu cesta za ztrátu nepočítá).
+# Oddíl pod blokem je domněnka, proto nadpis „Co by na to řekli“. Možnosti dávají smysl v každé podmínce;
+# posun/stejne neusuzují z možnosti, kterou student zvolil.
+druh: zmena
+obdobi: 2
+nadtitulek: Změň jednu věc
+scena: >-
+  Představ si večer. Chtěl ses na telefon podívat na chvilku a pak se pustit do něčeho, na čem ti záleží.
+  Když ho odložíš, jsou to dvě hodiny.
+otazka: Čí byly ty dvě hodiny?
+moznosti:
+  - { id: moje, text: "Moje. Rozhodnutí bylo moje." }
+  - { id: napul, text: "Napůl moje." }
+  - { id: cizi, text: "Ne moje. Rozhodl někdo nebo něco jiného." }
+podminky:
+  - id: kamaradka
+    prepinac: Psala kamarádka
+    zmena: >-
+      Teď si představ, že jste si většinu té doby psali s kamarádkou, které bylo smutno. Odepisovat ti nikdo nenařídil.
+    posun: >-
+      Odpověď se změnila, když na druhé straně byl někdo, kdo tě potřeboval. Rozhoduje tedy, komu ta hodina šla.
+      A kdo rozhodl, že to budou zrovna dvě hodiny?
+    stejne: >-
+      Ani smutná kamarádka tvou odpověď nezměnila. Podle čeho tedy soudíš: podle toho, kdo byl na druhé straně,
+      nebo podle toho, kdo rozhodl, jak dlouho to bude?
+  - id: videa
+    prepinac: Další video
+    zmena: >-
+      Teď si představ, že to byla videa. Každé další se pustilo samo, dřív než sis stihl rozmyslet, jestli ho chceš.
+    posun: >-
+      Odpověď se změnila, když další video vybíral telefon. Rozhodlo tedy, kdo zmáčkl další.
+      Změnilo by se něco, kdyby se ti ta videa opravdu líbila?
+    stejne: >-
+      Ani video, které se pustí samo, tvou odpověď nezměnilo. Kdo o hodině rozhodne, když ji nikdo nezastaví?
+  - id: film
+    prepinac: Vybraný film
+    zmena: >-
+      Teď si představ, že to byl film, na který ses těšil celý týden.
+    posun: >-
+      Odpověď se změnila, když byl film vybraný předem. Rozhodlo tedy, jestli o té hodině padlo rozhodnutí dopředu.
+      Byla by tvoje, i kdyby film byl špatný?
+    stejne: >-
+      Ani film, na který ses těšil, tvou odpověď nezměnil. Záleží ti tedy na něčem jiném než na tom, kdo vybíral. Na čem?
+coUdelal:
+  osoba: seneca
+  nadpis: Co by na to řekli
+  text: >-
+    Seneca by se u každé podmínky ptal na totéž: kdo o té hodině rozhodl. Přátelství mu ztracený čas nebylo.
+    Ztracený je podle něj čas, který si bere někdo, kdo tě nemá jako přítele, ale jako výbavu.
+    A čas, kdy děláš něco jiného, než co právě děláš.
+
+
+    Marcus Aurelius by se ptal jednodušeji: bylo to teď nutné? Ani tahle otázka ale neřekne, co je nutné v přátelství.
+zdroje: [seneca-brevitate, seneca-ep-1, marcus-hovory, oecd-pisa-screen-time, meta-10k-2025]
