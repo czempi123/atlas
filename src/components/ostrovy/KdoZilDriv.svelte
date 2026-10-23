@@ -5,6 +5,7 @@
   // Odhad se jen popíše vedle skutečnosti; nic se neboduje. Do deníku nejde, stav vydrží obnovení.
   // Použití v MDX: <KdoZilDriv a="sokrates" b="diogenes" druh="poradi" />
   //                <KdoZilDriv a="platon" b="diogenes" druh="vzdalenost" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import {
@@ -159,7 +160,7 @@
 
 <section class="blok kdo-zil obdobi-{a.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
   <BlokHlava
-    nadtitulek="Kdo žil dřív?"
+    nadtitulek={VYCHOZI_NADTITULKY.KdoZilDriv}
     lide={[{ jmeno: a.jmeno, obdobi: a.obdobi, ikona: a.ikona }, { jmeno: b.jmeno, obdobi: b.obdobi, ikona: b.ikona }]}
   />
   <h3 class="t-h3 blok__otazka" id={`${id}-otazka`} data-cast="otazka">{nazevOtazky}</h3>

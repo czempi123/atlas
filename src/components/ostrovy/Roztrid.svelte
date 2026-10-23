@@ -4,6 +4,7 @@
   // Po roztřídění dostane ke kartám zpětnou vazbu a srovnání; nic se neboduje a žádný koš není „správně“.
   // Použití v MDX (obsah v src/content/bloky/cesta6-tri-kose.yaml):
   // <Roztrid id="cesta6-tri-kose" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import {
@@ -162,7 +163,7 @@
 </script>
 
 <section class="blok roztrid obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <BlokHlava nadtitulek={blok.nadtitulek ?? 'Roztřiď'} lide={filozof ? [filozof] : []} />
+  <BlokHlava nadtitulek={blok.nadtitulek ?? VYCHOZI_NADTITULKY.Roztrid} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
     {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}

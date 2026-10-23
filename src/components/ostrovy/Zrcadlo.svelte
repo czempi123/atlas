@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NAZVY_KRESEB } from '../../lib/kresby';
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Zrcadlo času: kresba k Lucretiovu argumentu (cesta 8, krok 4). Osa času, uprostřed život, vlevo čas před
   // narozením s letopočty z dějepisu, vpravo čas po smrti bez letopočtů. Pohled „Zrcadlo“: tlačítko přiloží
   // k životu zrcadlo a čas po smrti se překlopí na čas před narozením; kryjí se. Pohled „Námitka“: posuvníkem
@@ -33,7 +33,7 @@
   const CIZI_X = useckyNamitky(VYCHOZI_POSUN - 1).cizi!.x;
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZVY_KRESEB.Zrcadlo} pohledy={POHLEDY_ZRCADLA} bind:pohled {popis} viewBox="0 0 {PLATNO.sirka} {PLATNO.vyska}" maPohyb={false}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.Zrcadlo} nazev={NAZVY_KRESEB.Zrcadlo} pohledy={POHLEDY_ZRCADLA} bind:pohled {popis} viewBox="0 0 {PLATNO.sirka} {PLATNO.vyska}" maPohyb={false}>
   {#snippet kresba()}
     <rect class="k-stin" width={PLATNO.sirka} height={PLATNO.vyska} />
 

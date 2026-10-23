@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NAZVY_KRESEB } from '../../lib/kresby';
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Stejné šaty, jiné světlo: kresba k šatům z roku 2015 (cesta 1, krok 6). Postava v šatech stojí v místnosti
   // s obrazem, lampou, kočkou a vázou. Šaty mají pořád stejné dvě barvy, modrou a hnědou, jako body té fotky.
   // Posuvník mění světlo v místnosti a s ním barvy všeho ostatního. V chladném světle se šaty shodují s bílým
@@ -33,7 +33,7 @@
   const LISTY = 'M272,150 C262,128 250,120 242,96 C262,104 270,122 274,146 Z M274,150 C276,120 284,104 300,88 C298,112 290,132 278,150 Z M273,150 C270,126 272,104 276,82 C282,106 280,128 277,150 Z';
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={STUPNE_SVETLA[stupen].popis} maPohyb={false}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.Saty} nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={STUPNE_SVETLA[stupen].popis} maPohyb={false}>
   {#snippet kresba()}
     <defs>
       <clipPath id="{id}-strih"><path d={STRIH} /></clipPath>

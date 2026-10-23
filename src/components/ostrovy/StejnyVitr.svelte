@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NAZVY_KRESEB } from '../../lib/kresby';
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Stejný vítr: kresba k větru z Theaitéta (profil Prótagora, kapitola 01). Dva lidé stojí v jednom větru,
   // jednomu je zima, druhému ne. Student mění jen to, co má kdo za sebou (čekání na místě, nebo chůzi);
   // proudy větru a šály obou se při tom hýbou pořád stejně. Text pod kresbou neříká, kdo má pravdu.
@@ -73,7 +73,7 @@
   </g>
 {/snippet}
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={popisVetru(stav)}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.StejnyVitr} nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={popisVetru(stav)}>
   {#snippet kresba()}
     <rect class="k-stin" width="340" height="240" />
     <rect class="k-tma" y="206" width="340" height="34" />

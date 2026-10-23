@@ -78,6 +78,19 @@ describe('katalog zastavení z obsahu a dat', () => {
     expect(naStrance).toEqual([...naStrance].sort((a, b) => a - b));
   });
 
+  it('blok nese nadtitulek, jak stojí na stránce: z YAML, z MDX, výchozí komponenty, u kresby z NADTITULKY_KRESEB', () => {
+    expect(z('b:cesta1-jak-zjistit').nadtitulek).toBe('Tvůj tah');
+    expect(z('b:cesta1-podle-ceho-poznas').nadtitulek).toBe('Nejdřív sám');
+    expect(z('b:sokrates-co-je-odvaha').nadtitulek).toBe('Než budeš číst dál');
+    expect(z('b:sokrates-kdo-je-moudry')).toMatchObject({ typ: 'NejdrivSam', nadtitulek: 'Než budeš číst dál' });
+    expect(z('b:kdo-sokrates-platon-vzdalenost').nadtitulek).toBe('Kdo žil dřív?');
+    expect(z('b:lod-po-prknech').nadtitulek).toBe('Zkus si to');
+    // Závěr cesty nadtitulek nemá; ostatní části (kroky, kapitoly, hlasy) taky ne.
+    expect(z('b:cesta1-moje-pravidlo').nadtitulek).toBeUndefined();
+    expect(z('o:sokrates/soud').nadtitulek).toBeUndefined();
+    for (const x of katalog) if (x.druh === 'blok' && x.typ !== 'ZaverCesty') expect(x.nadtitulek, x.id).toBeTruthy();
+  });
+
   it('společný profil má název stránky z titulku a jiné titulky Myšlenek', () => {
     expect(z('o:krates-a-hipparchia')).toMatchObject({ osoba: 'krates', stranka: '/osobnost/krates-a-hipparchia/' });
     expect(z('o:krates-a-hipparchia/myslenky').nazev).toBe('Tři velké myšlenky');

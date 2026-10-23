@@ -4,6 +4,7 @@
   // Použití v MDX (přes obal src/components/bloky/Odkryj.astro):
   // <Odkryj id="sokrates-kdo-je-moudry" otazka="Koho považuješ za moudrého?" tlacitko="Porovnat se Sókratem"
   //   modelove={[{ text: '…', komentar: '…' }]} sebekontrola={['…']}>Srovnání s filozofem…</Odkryj>
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick, type Snippet } from 'svelte';
   import { najdiZapis, ulozZapis, stavBloku, ulozStavBloku } from '../../lib/denik';
   import { platnyStavOdkryj, radek } from '../../lib/bloky';
@@ -30,7 +31,7 @@
     dal?: Dal;
     children?: Snippet;
   }
-  let { id, nadtitulek = 'Než budeš číst dál', otazka, tlacitko = 'Odkrýt', odkaz, modelove = [], sebekontrola = [], obdobi, filozof, dal, children }: Props = $props();
+  let { id, nadtitulek = VYCHOZI_NADTITULKY.Odkryj, otazka, tlacitko = 'Odkrýt', odkaz, modelove = [], sebekontrola = [], obdobi, filozof, dal, children }: Props = $props();
 
   let odpoved = $state('');
   let odkryto = $state(false);

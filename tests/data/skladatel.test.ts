@@ -1,7 +1,7 @@
 // Skladatel hodiny: strom katalogu po stránkách, hledání bez diakritiky, filtry období a druhu, štítky a přeřazení.
 import { describe, it, expect } from 'vitest';
 import type { Zastaveni } from '../../src/lib/hodiny';
-import { stromKatalogu, filtrujKatalog, prazdnyFiltr, proHledani, stitekDruhu, kdeStoji, druhStranky, posun, pocetZastaveni } from '../../src/lib/skladatel';
+import { stromKatalogu, filtrujKatalog, prazdnyFiltr, proHledani, stitekDruhu, stitekStudenta, kdeStoji, druhStranky, posun, pocetZastaveni } from '../../src/lib/skladatel';
 
 const z = (p: Partial<Zastaveni> & Pick<Zastaveni, 'id' | 'druh' | 'nazev'>): Zastaveni => ({
   kde: '', stranka: '/', kotva: null, adresa: '/', obdobi: 1, rodic: null, poradi: 0, ...p,
@@ -12,13 +12,21 @@ const katalog: Zastaveni[] = [
   z({ id: `k:${C}/2`, druh: 'krok', nazev: 'Jak bys to zjišťoval ty?', kde: 'Kdy mám dobrý důvod věřit?', krok: 2, rodic: `k:${C}`, cesta: C }),
   z({ id: `k:${C}/1`, druh: 'krok', nazev: 'Odpověď z Delf', kde: 'Kdy mám dobrý důvod věřit?', krok: 1, rodic: `k:${C}`, cesta: C }),
   z({ id: 'p:odpoved-z-delf', druh: 'pribeh', nazev: 'Nikdo není moudřejší.', kde: 'Kdy mám dobrý důvod věřit?', krok: 1, rodic: `k:${C}/1`, poradi: 1, cesta: C }),
-  z({ id: 'b:cesta1-jak-zjistit', druh: 'blok', typ: 'Volba', nazev: 'Jak bys to zjišťoval?', kde: 'Kdy mám dobrý důvod věřit?', krok: 2, rodic: `k:${C}/2`, poradi: 1, cesta: C }),
+  z({ id: 'b:cesta1-jak-zjistit', druh: 'blok', typ: 'Volba', nadtitulek: 'Tvůj tah', nazev: 'Jak bys to zjišťoval?', kde: 'Kdy mám dobrý důvod věřit?', krok: 2, rodic: `k:${C}/2`, poradi: 1, cesta: C }),
   z({ id: 'o:epiktetos', druh: 'profil', nazev: 'Epiktétos', kde: 'Epiktétos', obdobi: 2 }),
   z({ id: 'o:epiktetos/zkus-to-zit', druh: 'oddil', nazev: 'Zkus to žít', kde: 'Epiktétos', obdobi: 2, rodic: 'o:epiktetos', poradi: 3 }),
   z({ id: 'o:epiktetos/otrok', druh: 'kapitola', cislo: '01', nazev: 'Otrok z Hierapole', kde: 'Epiktétos', obdobi: 2, rodic: 'o:epiktetos', poradi: 1 }),
-  z({ id: 'b:lod-po-prknech', druh: 'blok', typ: 'Lod', nazev: 'Loď po prknech', kde: 'Epiktétos', obdobi: 2, rodic: 'o:epiktetos/otrok', poradi: 2 }),
+  z({ id: 'b:lod-po-prknech', druh: 'blok', typ: 'Lod', nadtitulek: 'Zkus si to', nazev: 'Loď po prknech', kde: 'Epiktétos', obdobi: 2, rodic: 'o:epiktetos/otrok', poradi: 2 }),
   z({ id: 'h:jak-zit', druh: 'otazka', nazev: 'Jak mám žít?', kde: 'Jak mám žít?', obdobi: null, otazka: 'jak-zit' }),
   z({ id: 'h:jak-zit/epikuros', druh: 'hlas', nazev: 'Epikúros', kde: 'Jak mám žít?', obdobi: 2, rodic: 'h:jak-zit', poradi: 1, otazka: 'jak-zit' }),
+];
+/** Cesta o smrti a Senekův hlas: jen pro hledání podle štítku druhu. */
+const smrt: Zastaveni[] = [
+  z({ id: 'k:proc-se-bat-smrti', druh: 'cesta', nazev: 'Proč se bát smrti?', kde: 'Proč se bát smrti?', obdobi: 2, cesta: 'proc-se-bat-smrti' }),
+  z({ id: 'k:proc-se-bat-smrti/4', druh: 'krok', nazev: 'Epikúros proti Platónovi', kde: 'Proč se bát smrti?', obdobi: 2, krok: 4, rodic: 'k:proc-se-bat-smrti', cesta: 'proc-se-bat-smrti' }),
+  z({ id: 'b:cesta8-spor', druh: 'blok', typ: 'Spor', nadtitulek: 'Spor', nazev: 'Je smrt zlo?', kde: 'Proč se bát smrti?', obdobi: 2, krok: 4, rodic: 'k:proc-se-bat-smrti/4', poradi: 1, cesta: 'proc-se-bat-smrti' }),
+  z({ id: 'b:cesta8-volba', druh: 'blok', typ: 'Volba', nadtitulek: 'Tvůj tah', nazev: 'Co bys řekl příteli?', kde: 'Proč se bát smrti?', obdobi: 2, krok: 4, rodic: 'k:proc-se-bat-smrti/4', poradi: 2, cesta: 'proc-se-bat-smrti' }),
+  z({ id: 'h:jak-zit/seneca', druh: 'hlas', nazev: 'Seneca', kde: 'Jak mám žít?', obdobi: 2, rodic: 'h:jak-zit', poradi: 2, otazka: 'jak-zit' }),
 ];
 
 describe('strom katalogu', () => {
@@ -50,6 +58,15 @@ describe('hledání a filtry', () => {
     expect([...f({ hledat: 'epiktetos lod' }).shoda]).toEqual(['b:lod-po-prknech']);
     expect([...f({ hledat: 'epiktetos', druh: 'kapitola' }).shoda]).toEqual(['o:epiktetos/otrok']);
   });
+  it('hledá i ve štítku druhu, který učitel u řádku vidí: „spor smrt“, „hlas seneca“, „kresba“', () => {
+    const g = (hledat: string) => [...filtrujKatalog([...katalog, ...smrt], { hledat, obdobi: null, druh: null }).shoda];
+    expect(g('spor smrt')).toEqual(['b:cesta8-spor']);
+    expect(g('hlas seneca')).toEqual(['h:jak-zit/seneca']);
+    expect(g('volba smrt')).toEqual(['b:cesta8-volba']);
+    expect(g('kresba')).toEqual(['b:lod-po-prknech']);
+    // Štítek předků se nepočítá: „krok smrt“ najde jen krok, ne bloky v něm.
+    expect(g('krok smrt')).toEqual(['k:proc-se-bat-smrti/4']);
+  });
   it('filtr období: stránka otázky se ukáže jen přes hlas z toho období', () => {
     const v = f({ obdobi: 2 });
     expect(v.shoda.has('h:jak-zit')).toBe(false);
@@ -77,6 +94,13 @@ describe('popisky', () => {
     expect(stitekDruhu(najdi('o:epiktetos/otrok'))).toBe('Kapitola 01');
     expect(stitekDruhu(najdi('h:jak-zit/epikuros'))).toBe('Hlas');
     expect(stitekDruhu(najdi(`k:${C}`))).toBe('Přehled cesty');
+  });
+  it('štítek pro studenta: u bloku a kresby nadtitulek ze stránky, jinak druh', () => {
+    expect(stitekStudenta(najdi('b:cesta1-jak-zjistit'))).toBe('Tvůj tah');
+    expect(stitekStudenta(najdi('b:lod-po-prknech'))).toBe('Zkus si to');
+    expect(stitekStudenta(najdi(`k:${C}/2`))).toBe('Krok 2');
+    expect(stitekStudenta(najdi('h:jak-zit/epikuros'))).toBe('Hlas');
+    expect(stitekStudenta({ ...najdi('b:cesta1-jak-zjistit'), nadtitulek: undefined })).toBe('Volba s důvodem');
   });
   it('kde zastavení stojí', () => {
     expect(kdeStoji(najdi('b:cesta1-jak-zjistit'))).toBe('Kdy mám dobrý důvod věřit? · krok 2');

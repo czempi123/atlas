@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NAZVY_KRESEB } from '../../lib/kresby';
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Dvě půlky: kresba k Epiktétovu dělení (cesta 5, krok 3). Tři karty z koše Zčásti; každou jde roztrhnout
   // na půlku, která je moje dílo, a na půlku, o které rozhoduje někdo nebo něco jiného. U pravé půlky pak student
   // zkouší, co všechno se může stát. Levá se nemění. Přepínač rámu vybírá kartu; co už je roztržené, zůstane.
@@ -42,7 +42,7 @@
   }
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZVY_KRESEB.DvePulky} pohledy={POHLEDY} bind:pohled popis={popisKarty(k, roztrzena, index)} maPohyb={false}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.DvePulky} nazev={NAZVY_KRESEB.DvePulky} pohledy={POHLEDY} bind:pohled popis={popisKarty(k, roztrzena, index)} maPohyb={false}>
   {#snippet kresba()}
     <rect class="k-tma" width="340" height="240" />
     <text class="k-popisek" x="170" y="32" text-anchor="middle">{k.titulek}</text>

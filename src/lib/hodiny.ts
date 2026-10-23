@@ -6,7 +6,8 @@ import type { TOsoba } from './schema';
 import { interval } from './casy';
 import { seradHlasy } from './otazky';
 import { otazkaKdoZil } from './bloky';
-import { NAZVY_KRESEB } from './kresby';
+import { NAZVY_KRESEB, NADTITULKY_KRESEB } from './kresby';
+import { VYCHOZI_NADTITULKY } from './nadtitulky';
 import { ODDILY } from './oddily';
 
 // ─── Zastavení ────────────────────────────────────────────────────────────────
@@ -43,6 +44,8 @@ export interface Zastaveni {
   otazka?: string;
   /** komponenta bloku, jak se píše v MDX (Volba, Odkryj, Lod…) */
   typ?: string;
+  /** nadtitulek bloku, jak stojí na stránce nad ním („Tvůj tah“, „Zkus si to“); závěr cesty a jiné části ho nemají */
+  nadtitulek?: string;
   /** číslo kapitoly („01“) */
   cislo?: string;
   /** zastavení, do kterého tohle patří (krok, kapitola, stránka); stránka sama žádné */
@@ -73,7 +76,7 @@ export interface VstupKatalogu {
   }[];
   otazky: { id: string; data: { cislo: number; otazka: string; hlasy?: { osoba: string }[] } }[];
   /** bloky z YAML (src/content/bloky): Volba, Roztřiď, Změň jednu věc, Spor */
-  bloky: { id: string; data: { otazka?: string } }[];
+  bloky: { id: string; data: { otazka?: string; nadtitulek?: string } }[];
   osoby: Map<string, OsobaKatalogu>;
 }
 
@@ -110,6 +113,9 @@ export function znackyMdx(body: string): Znacka[] {
 /** Název bez značek kurzívy (*…*) a zalomení řádků. */
 const cisty = (s: string) => s.replace(/\*/g, '').replace(/\s+/g, ' ').trim();
 
+/** Pole nadtitulku jen tam, kde nějaký je (katalog v JSON nenese prázdná pole). */
+const sNadtitulkem = (n: string | undefined): { nadtitulek?: string } => (n ? { nadtitulek: cisty(n) } : {});
+
 // ─── Katalog ──────────────────────────────────────────────────────────────────
 
 const adresa = (stranka: string, kotva: string | null) => (kotva ? `${stranka}#${kotva}` : stranka);
@@ -123,6 +129,8 @@ const adresa = (stranka: string, kotva: string | null) => (kotva ? `${stranka}#$
 export function katalogZastaveni(v: VstupKatalogu): Zastaveni[] {
   const vse: Zastaveni[] = [];
   const otazkaBloku = new Map(v.bloky.map((b) => [b.id, b.data.otazka]));
+  const nadtitulekBloku = new Map(v.bloky.map((b) => [b.id, b.data.nadtitulek]));
+  const vychozi = (jmeno: string): string | undefined => VYCHOZI_NADTITULKY[jmeno as keyof typeof VYCHOZI_NADTITULKY];
   const jmeno = (id: string) => {
     const o = v.osoby.get(id);
     if (!o) throw new Error(`Katalog hodin: osoba „${id}“ není v lide.yaml.`);
@@ -130,7 +138,7 @@ export function katalogZastaveni(v: VstupKatalogu): Zastaveni[] {
   };
 
   /** Blok nebo příběh ze značky; null pro značku, která zastavením není. */
-  const castZeZnacky = (z: Znacka, stranka: string): Pick<Zastaveni, 'id' | 'druh' | 'nazev' | 'kotva' | 'typ'> | null => {
+  const castZeZnacky = (z: Znacka, stranka: string): Pick<Zastaveni, 'id' | 'druh' | 'nazev' | 'kotva' | 'typ' | 'nadtitulek'> | null => {
     const a = z.atributy;
     if (z.jmeno === 'Pribeh') {
       if (!a.id) return null;
@@ -141,22 +149,23 @@ export function katalogZastaveni(v: VstupKatalogu): Zastaveni[] {
     if (BLOKY_Z_YAML.has(z.jmeno)) {
       const otazka = otazkaBloku.get(a.id);
       if (!otazka) throw new Error(`Katalog hodin: blok „${a.id}“ (${z.jmeno}) na ${stranka} nemá v src/content/bloky otázku.`);
-      return { id: `b:${a.id}`, druh: 'blok', nazev: cisty(otazka), kotva: a.id, typ: z.jmeno };
+      return { id: `b:${a.id}`, druh: 'blok', nazev: cisty(otazka), kotva: a.id, typ: z.jmeno, ...sNadtitulkem(nadtitulekBloku.get(a.id) ?? vychozi(z.jmeno)) };
     }
     if (BLOKY_S_OTAZKOU.has(z.jmeno)) {
       if (!a.id || !a.otazka) throw new Error(`Katalog hodin: blok ${z.jmeno} na ${stranka} potřebuje id a otázku.`);
-      return { id: `b:${a.id}`, druh: 'blok', nazev: cisty(a.otazka), kotva: a.id, typ: z.jmeno };
+      return { id: `b:${a.id}`, druh: 'blok', nazev: cisty(a.otazka), kotva: a.id, typ: z.jmeno, ...sNadtitulkem(a.nadtitulek ?? vychozi(z.jmeno)) };
     }
     if (z.jmeno === 'KdoZilDriv') {
       // Výchozí id a otázku skládá blok stejně (src/components/bloky/KdoZilDriv.astro).
       const druh = a.druh === 'vzdalenost' ? 'vzdalenost' : 'poradi';
       const id = a.id ?? `kdo-${a.a}-${a.b}-${druh}`;
       const nazev = a.otazka ?? otazkaKdoZil(jmeno(a.a).jmeno, jmeno(a.b).jmeno, druh);
-      return { id: `b:${id}`, druh: 'blok', nazev: cisty(nazev), kotva: id, typ: z.jmeno };
+      return { id: `b:${id}`, druh: 'blok', nazev: cisty(nazev), kotva: id, typ: z.jmeno, nadtitulek: VYCHOZI_NADTITULKY.KdoZilDriv };
     }
     if (z.jmeno in NAZVY_KRESEB) {
       if (!a.id) throw new Error(`Katalog hodin: kresba ${z.jmeno} na ${stranka} nemá id.`);
-      return { id: `b:${a.id}`, druh: 'blok', nazev: NAZVY_KRESEB[z.jmeno as keyof typeof NAZVY_KRESEB], kotva: a.id, typ: z.jmeno };
+      const k = z.jmeno as keyof typeof NAZVY_KRESEB;
+      return { id: `b:${a.id}`, druh: 'blok', nazev: NAZVY_KRESEB[k], kotva: a.id, typ: z.jmeno, nadtitulek: NADTITULKY_KRESEB[k] };
     }
     return null;
   };

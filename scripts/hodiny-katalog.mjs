@@ -1,5 +1,6 @@
 // Kontrola katalogu zastavení (příprava hodiny) proti sestavenému webu: každá stránka z katalogu v dist/ existuje
-// a každá kotva na ní stojí jako id prvku, a to jednou. Vypíše počty zastavení podle druhu a skončí „Chyb: N“.
+// a každá kotva na ní stojí jako id prvku, a to jednou; nadtitulek bloku (štítek u studenta na stránce hodiny)
+// je první nadtitulek za kotvou. Vypíše počty zastavení podle druhu a skončí „Chyb: N“.
 // Spuštění po `npm run build`: node scripts/hodiny-katalog.mjs
 import { readFileSync, existsSync } from 'node:fs';
 
@@ -42,10 +43,18 @@ for (const z of zastaveni) {
   const kolik = [...h.matchAll(new RegExp(`\\sid="${z.kotva.replace(/[-/]/g, '\\$&')}"`, 'g'))].length;
   if (kolik === 0) chyba(`${z.id}: kotva #${z.kotva} na ${z.stranka} chybí`);
   if (kolik > 1) chyba(`${z.id}: kotva #${z.kotva} je na ${z.stranka} ${kolik}×`);
+  if (kolik === 1 && z.nadtitulek) {
+    const od = h.search(new RegExp(`\\sid="${z.kotva.replace(/[-/]/g, '\\$&')}"`));
+    const m = h.slice(od, od + 6000).match(/class="[^"]*\bt-nadtitulek\b[^"]*"[^>]*>([^<]*)</);
+    const naStrance = m ? m[1].replace(/&nbsp;|\u00a0/g, ' ').replace(/&#39;/g, "'").trim() : null;
+    if (naStrance !== z.nadtitulek) chyba(`${z.id}: nadtitulek v katalogu „${z.nadtitulek}“, na stránce „${naStrance ?? '—'}“`);
+    else pocty.nadtitulky = (pocty.nadtitulky ?? 0) + 1;
+  }
 }
 
 console.log(`Zastavení v katalogu: ${zastaveni.length}`);
 for (const d of DRUHY) console.log(`  ${d.padEnd(9)} ${pocty[d]}`);
+console.log(`Nadtitulků bloků ověřeno: ${pocty.nadtitulky ?? 0}`);
 console.log(`Stránek: ${stranky.size}`);
 console.log(`Chyb: ${chyby}`);
 process.exit(chyby ? 1 : 0);

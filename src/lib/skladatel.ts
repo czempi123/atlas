@@ -81,8 +81,9 @@ export const prazdnyFiltr = (f: Filtr): boolean => !proHledani(f.hledat) && f.ob
 
 /**
  * Shody filtru: zastavení je z vybraného období a vybraného druhu a každé hledané slovo (bez ohledu na
- * diakritiku a velikost písmen) stojí v jeho názvu nebo v názvu stránky, kroku či kapitoly, do které patří.
- * „Epiktétos“ tak najde profil i s kapitolami, „Sókratés soud“ kapitolu Soud. Stránka otázky období nemá:
+ * diakritiku a velikost písmen) stojí v jeho štítku druhu, v jeho názvu nebo v názvu stránky, kroku či kapitoly,
+ * do které patří. „Epiktétos“ tak najde profil i s kapitolami, „Sókratés soud“ kapitolu Soud, „spor smrt“
+ * Spor v cestě o smrti a „hlas seneca“ Senekovy hlasy u otázek. Stránka otázky období nemá:
  * s filtrem období se ukáže jen přes své hlasy. Předci shod jsou vidět jako souvislost.
  */
 export function filtrujKatalog(katalog: Zastaveni[], f: Filtr): VysledekFiltru {
@@ -101,7 +102,7 @@ export function filtrujKatalog(katalog: Zastaveni[], f: Filtr): VysledekFiltru {
     if (druhy && !druhy.includes(z.druh)) continue;
     const cesta = predci(z);
     if (slova.length) {
-      const text = proHledani(cesta.map((r) => r.nazev).join(' '));
+      const text = proHledani([stitekDruhu(z), ...cesta.map((r) => r.nazev)].join(' '));
       if (!slova.every((s) => text.includes(s))) continue;
     }
     shoda.add(z.id);
@@ -134,6 +135,14 @@ export function stitekDruhu(z: Zastaveni): string {
     case 'pribeh': return 'Příběh';
     case 'blok': return z.typ && z.typ in NAZVY_KRESEB ? 'Kresba' : (TYPY_BLOKU[z.typ ?? ''] ?? 'Blok');
   }
+}
+
+/**
+ * Štítek zastavení pro studenta na stránce hodiny: u bloku a kresby nadtitulek, jak stojí na stránce nad ním
+ * („Tvůj tah“, „Zkus si to“); jinak štítek druhu. Učitel ve skladateli a v tisku vidí druh bloku, podle něj vybírá.
+ */
+export function stitekStudenta(z: Zastaveni): string {
+  return z.druh === 'blok' && z.nadtitulek ? z.nadtitulek : stitekDruhu(z);
 }
 
 /** Kde zastavení stojí, jak se ukáže v hodině: „Kdy mám dobrý důvod věřit? · krok 3“, „Sókratés“, otázka u hlasu. */

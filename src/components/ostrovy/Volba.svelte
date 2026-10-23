@@ -4,6 +4,7 @@
   // Blok s `bezDuvodu: true` pole „Proč právě tohle?“ nemá (cesta 4, krok 2).
   // Použití v MDX (obsah v src/content/bloky/cesta1-jak-zjistit.yaml):
   // <Volba id="cesta1-jak-zjistit" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import { zpetnaVolby, zapisVolby, platnyStavVolby, pismeno, odstavce, radek } from '../../lib/bloky';
@@ -62,7 +63,7 @@
 </script>
 
 <section class="blok volba obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <BlokHlava nadtitulek={blok.nadtitulek ?? 'Co uděláš?'} lide={filozof ? [filozof] : []} />
+  <BlokHlava nadtitulek={blok.nadtitulek ?? VYCHOZI_NADTITULKY.Volba} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
     {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}

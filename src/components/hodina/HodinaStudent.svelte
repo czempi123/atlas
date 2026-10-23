@@ -1,6 +1,6 @@
 <script lang="ts">
   // Stránka hodiny pro studenta (/hodina/?v=1&n=…&z=…, větev hodiny-v1, H3): název, zastavení v pořadí
-  // (štítek druhu, kde stojí, název jako odkaz na místo v atlasu), Začít hodinu, Promítat hodinu a „Doma projdi“.
+  // (u bloku nadtitulek jako na stránce, jinak štítek druhu; kde stojí; název jako odkaz na místo v atlasu), Začít hodinu, Promítat hodinu a „Doma projdi“.
   // Hodinu čte z adresy (hodinaZAdresy), katalog z /hodina/katalog.json. Otevřená hodina se stane aktivní pro tuto
   // kartu (lišta hodiny na stránkách atlasu, src/lib/pruchod-hodiny.ts) a zapíše se do deníku (oddíl Hodiny).
   // Poznámky učitele tu nikdy nejsou: odkaz je nenese a úložiště hodin učitele se tu nečte.
@@ -9,7 +9,7 @@
   import { hodinaZAdresy, najdiZastaveni, domaProjdi, type NalezeneZastaveni, type SkupinaDoma, type Zastaveni } from '../../lib/hodiny';
   import { aktivniHodina, ulozAktivni, vstupDoHodiny, prvniZastaveni, type AktivniHodina } from '../../lib/pruchod-hodiny';
   import { nacti, prectene, zaznamenejHodinu } from '../../lib/denik';
-  import { druhStranky, kdeStoji, pocetZastaveni, stitekDruhu } from '../../lib/skladatel';
+  import { druhStranky, kdeStoji, pocetZastaveni, stitekStudenta } from '../../lib/skladatel';
   import { nezlomitelne } from '../../lib/sazba.js';
 
   let stav = $state<'nacitam' | 'neplatna' | 'chyba' | 'hotovo'>('nacitam');
@@ -89,7 +89,7 @@
         <span class="cislo" aria-hidden="true">{i + 1}</span>
         <div class="obsah">
           {#if n.nalezeno}
-            <p class="kde">{stitekDruhu(n.zastaveni)} · {nezlomitelne(kdeStoji(n.zastaveni))}</p>
+            <p class="kde">{stitekStudenta(n.zastaveni)} · {nezlomitelne(kdeStoji(n.zastaveni))}</p>
             <a class="nazev" href={n.zastaveni.adresa} onclick={() => jdu(i)}><span class="vizualne-skryte">{i + 1}.</span>{nezlomitelne(n.zastaveni.nazev)}</a>
           {:else}
             <p class="nazev nazev--chybi"><span class="vizualne-skryte">{i + 1}.</span>{n.text}</p>
@@ -112,7 +112,7 @@
           <ul class="skupina__polozky">
             {#each g.polozky as p (p.zastaveni.id)}
               <li class:hotovo={p.proslo}>
-                <a href={p.zastaveni.adresa}><span class="polozka__stitek">{stitekDruhu(p.zastaveni)}</span> {nezlomitelne(p.zastaveni.nazev)}</a>
+                <a href={p.zastaveni.adresa}><span class="polozka__stitek">{stitekStudenta(p.zastaveni)}</span> {nezlomitelne(p.zastaveni.nazev)}</a>
                 {#if p.proslo}
                   <span class="znacka"><span aria-hidden="true">✓ </span>{p.zastaveni.druh === 'kapitola' ? 'dočteno' : 'prošel jsi'}</span>
                 {/if}

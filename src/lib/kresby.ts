@@ -15,3 +15,18 @@ export const NAZVY_KRESEB = {
 } as const;
 
 export type Kresba = keyof typeof NAZVY_KRESEB;
+
+/** Nadtitulek nad kresbou (rám Kresba.svelte) i štítek zastavení u studenta na stránce hodiny. */
+export const NADTITULKY_KRESEB = {
+  DvePulky: 'Zkus si to',
+  Jeskyne: 'Podívej se',
+  JeskyneVen: 'Podívej se',
+  KdeJeStred: 'Zkus si to',
+  KolikJeDost: 'Zkus si to',
+  Lod: 'Zkus si to',
+  Saty: 'Zkus si to',
+  StejnyVitr: 'Zkus si to',
+  TretiCara: 'Podívej se',
+  ZdvojCtverec: 'Zkus si to',
+  Zrcadlo: 'Zkus si to',
+} as const satisfies Record<Kresba, string>;

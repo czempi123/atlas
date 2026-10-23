@@ -5,6 +5,7 @@
   // druhé strany (kdo stojí uprostřed, vybírá z obou) a odpověď na něj; ukládá se sama do téhož zápisu.
   // Použití v MDX (obsah v src/content/bloky/platon-diogenes-skutecnost.yaml):
   // <Spor id="platon-diogenes-skutecnost" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import {
@@ -216,7 +217,7 @@
 {/snippet}
 
 <section class="blok spor obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <p class="t-nadtitulek blok__nadtitulek" data-cast="hlava">{blok.nadtitulek ?? 'Spor'}</p>
+  <p class="t-nadtitulek blok__nadtitulek" data-cast="hlava">{blok.nadtitulek ?? VYCHOZI_NADTITULKY.Spor}</p>
   {#if blok.scena}
     {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}

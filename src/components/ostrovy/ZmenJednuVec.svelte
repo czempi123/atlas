@@ -3,6 +3,7 @@
   // rozhodne znovu a vidí, jak se jeho odpověď posunula. Zpětná vazba se ptá na důvod posunu.
   // Použití v MDX (obsah v src/content/bloky/utek-z-vezeni.yaml):
   // <ZmenJednuVec id="utek-z-vezeni" />
+  import { VYCHOZI_NADTITULKY } from '../../lib/nadtitulky';
   import { onMount, tick } from 'svelte';
   import { ulozZapis, smazZapis, stavBloku, ulozStavBloku, smazStavBloku } from '../../lib/denik';
   import { posunZmeny, zapisZmeny, platnyStavZmeny, odstavce, radek, veta } from '../../lib/bloky';
@@ -107,7 +108,7 @@
 {/snippet}
 
 <section class="blok zmena obdobi-{blok.obdobi}" id={id} aria-labelledby={`${id}-otazka`}>
-  <BlokHlava nadtitulek={blok.nadtitulek ?? 'Myšlenkový pokus'} lide={filozof ? [filozof] : []} />
+  <BlokHlava nadtitulek={blok.nadtitulek ?? VYCHOZI_NADTITULKY.ZmenJednuVec} lide={filozof ? [filozof] : []} />
   {#if blok.scena}
     {#each odstavce(blok.scena) as o, i (i)}<p class="blok__scena" data-cast="scena">{@html o}</p>{/each}
   {/if}

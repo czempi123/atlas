@@ -15,7 +15,10 @@ export const GET: APIRoute = async () => {
     getCollection('bloky'),
   ]);
   // Návrat otázku nemá (nabízí ho jen deník, v katalogu není).
-  const otazkyBloku = bloky.map((b) => ({ id: b.id, data: { otazka: 'otazka' in b.data ? b.data.otazka : undefined } }));
+  const otazkyBloku = bloky.map((b) => ({
+    id: b.id,
+    data: { otazka: 'otazka' in b.data ? b.data.otazka : undefined, nadtitulek: 'nadtitulek' in b.data ? b.data.nadtitulek : undefined },
+  }));
   const zastaveni = katalogZastaveni({ cesty, kroky, osobnosti, otazky, bloky: otazkyBloku, osoby });
   return new Response(JSON.stringify({ verze: VERZE_HODINY, zastaveni }), { headers: { 'Content-Type': 'application/json' } });
 };

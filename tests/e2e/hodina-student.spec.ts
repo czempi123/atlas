@@ -92,7 +92,8 @@ test('otevřít hodinu z odkazu: název, zastavení v pořadí, neznámé bez od
   await expect(polozky).toHaveCount(5);
   await expect(polozky.nth(0).locator('.kde')).toHaveText(/^Krok 2 · Kdy mám dobrý důvod věřit\?$/);
   await expect(polozky.nth(0).getByRole('link')).toHaveAttribute('href', KROK2);
-  await expect(polozky.nth(1).locator('.kde')).toContainText('Volba s důvodem');
+  // U bloku stojí nadtitulek jako na stránce („Tvůj tah“), ne druh bloku z dílny.
+  await expect(polozky.nth(1).locator('.kde')).toHaveText(/^Tvůj tah · Kdy mám dobrý důvod věřit\? · krok\s2$/);
   await expect(polozky.nth(1).getByRole('link')).toHaveAttribute('href', `${KROK2}#cesta1-jak-zjistit`);
   await expect(polozky.nth(2)).toContainText(NENI);
   await expect(polozky.nth(2).locator('a')).toHaveCount(0);

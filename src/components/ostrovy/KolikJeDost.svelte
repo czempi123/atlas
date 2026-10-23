@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NAZVY_KRESEB } from '../../lib/kresby';
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Kdy je dost?: kresba k Epikúrovu stropu slasti (cesta 6, krok 3). Student dolévá vodu do poháru. Hladina
   // ukazuje, kolik žízně je pryč, ne kolik vody vypil. U čáry „dost“ žízeň zmizela: další voda ani máta hladinu
   // výš nedostanou, voda jen jinak chutná. Rám dává Kresba.svelte; nic tu neběží samo, proto kresba nemá
@@ -48,7 +48,7 @@
   }
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={popisPoharu(stav)} maPohyb={false}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.KolikJeDost} nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={popisPoharu(stav)} maPohyb={false}>
   {#snippet kresba()}
     <defs>
       <clipPath id="{id}-vnitrek"><path d={VNITREK} /></clipPath>

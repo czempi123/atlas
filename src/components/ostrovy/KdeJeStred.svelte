@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { NAZVY_KRESEB } from '../../lib/kresby';
+  import { NAZVY_KRESEB, NADTITULKY_KRESEB } from '../../lib/kresby';
   // Kde je střed?: kresba k Aristotelovu středu „vzhledem k nám“ (cesta 4, krok 6). V řece někdo volá o pomoc,
   // na břehu stojí člověk. Student mění, kdo to je (plavčík, dobrý plavec, neplavec) a jaká je voda (klidná, rozvodněná).
   // Na čáře pod scénou stojí slabá značka v půli a výrazný bod „střed“: značka se nehýbe, bod se posouvá
@@ -35,7 +35,7 @@
   let jmeno = $derived(LIDE_NA_BREHU.find((c) => c.id === stav.kdo)!.nazev);
 </script>
 
-<Kresba {id} {obdobi} nadtitulek="Zkus si to" nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={popisStredu(stav)}>
+<Kresba {id} {obdobi} nadtitulek={NADTITULKY_KRESEB.KdeJeStred} nazev={NAZEV} pohledy={POHLEDY} bind:pohled popis={popisStredu(stav)}>
   {#snippet kresba()}
     <rect class="k-stin" width="340" height="240" />
 
