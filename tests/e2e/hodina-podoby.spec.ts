@@ -295,6 +295,33 @@ for (const [w, h] of [[1280, 720], [1920, 1080]] as const) {
   }
 }
 
+for (const [w, h] of [[1280, 720], [1920, 1080]] as const) {
+  test(`Roztřiď na plátně ${w} × ${h}: Dát sem pod popisem koše přes jeho šířku, název koše na jednom řádku; snímek`, async ({ page }) => {
+    await page.setViewportSize({ width: w, height: h });
+    await promitat(page, odkaz('Smrt', ['b:cesta8-ctyri-kose~m']));
+    const kose = page.locator('#cesta8-ctyri-kose .kos');
+    await expect(kose).toHaveCount(4);
+    // Koše vedle sebe: tlačítka Dát sem ve stejné výšce, i když je popis jednoho kratší.
+    const vysky = await page.locator('#cesta8-ctyri-kose .kos__sem').evaluateAll((v) => v.map((x) => Math.round(x.getBoundingClientRect().top)));
+    expect(new Set(vysky).size, vysky.join(', ')).toBe(1);
+    for (let i = 0; i < 4; i++) {
+      const kos = kose.nth(i);
+      const nazev = (await kos.locator('.kos__nazev').boundingBox())!;
+      const popis = (await kos.locator('.kos__popis').boundingBox())!;
+      const sem = (await kos.locator('.kos__sem').boundingBox())!;
+      const hlava = (await kos.locator('.kos__hlava').boundingBox())!;
+      expect(sem.y).toBeGreaterThanOrEqual(popis.y + popis.height - 1);
+      expect(Math.abs(sem.width - hlava.width)).toBeLessThanOrEqual(1);
+      // Název koše („Na to, o co přijde“) se neláme: jeden řádek.
+      const radek = await kos.locator('.kos__nazev').evaluate((el) => parseFloat(getComputedStyle(el).lineHeight));
+      expect(nazev.height).toBeLessThan(radek * 1.5);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
+    await page.screenshot({ path: `${SNIMKY}/roztrid-platno-${w}x${h}.png` });
+    await axe(page);
+  });
+}
+
 test('student s lištou (bez promítání) vidí blok celý; podoba se na stránce hodiny neukazuje', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(PODOBY);

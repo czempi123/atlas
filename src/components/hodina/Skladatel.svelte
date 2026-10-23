@@ -55,6 +55,10 @@
   /** Zastavení s podobou, kterou opravdu mají (podoba, kterou zastavení nemá, by do odkazu jen přidala značku). */
   let sPodobou = $derived(zastaveni.map((z) => ({ id: z.id, podoba: podobaZastaveni(z) })));
   let odkaz = $derived(origin + adresaHodiny({ nazev, zastaveni: sPodobou }));
+  /** Odkaz na papíře: diakritika v názvu čitelně, mezera jako %20 (opsaná mezera by z adresy udělala hledání). */
+  let odkazNaPapir = $derived.by(() => {
+    try { return decodeURI(odkaz).replace(/ /g, '%20'); } catch { return odkaz; }
+  });
   let souborVstup = $state<HTMLInputElement>();
   let odkazVstup = $state<HTMLInputElement>();
 
@@ -400,6 +404,7 @@
 <div class="tisk">
   <p class="tisk__nad">Přehled hodiny · Atlas myšlení</p>
   <p class="tisk__nazev">{nazev || 'Hodina bez názvu'}</p>
+  <p class="tisk__odkaz">Odkaz pro studenty: {odkazNaPapir}</p>
   {#if poznamka.trim()}<p class="tisk__poznamka">{poznamka}</p>{/if}
   <ol class="tisk__seznam">
     {#each zastaveni as zs, i (zs.id)}
@@ -590,6 +595,7 @@
     .tisk p { margin: 0; }
     .tisk__nad { font-family: var(--font-sans); font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
     .tisk__nazev { margin: 4pt 0 6pt !important; font-size: 22pt; line-height: 1.15; }
+    .tisk__odkaz { margin-bottom: 8pt !important; font-family: var(--font-sans); font-size: 9pt; color: var(--ink-2); overflow-wrap: anywhere; }
     .tisk__poznamka { margin-bottom: 10pt !important; white-space: pre-line; }
     .tisk__seznam { margin: 10pt 0 0; padding: 0; list-style: none; border-top: 0.75pt solid var(--ink-2); }
     .tisk__zastaveni { display: grid; grid-template-columns: 22pt 1fr; gap: 4pt; padding: 7pt 0; border-bottom: 0.5pt solid var(--rule); break-inside: avoid; }

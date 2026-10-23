@@ -477,6 +477,10 @@ for (const sirka of [390, 1440] as const) {
       for (const sel of ['header.hlavicka', 'footer', '.skladatel', 'section.vyber', 'nav.lista', 'h1']) await expect(page.locator(sel).first()).toBeHidden();
       expect(await page.locator('button, input, select, textarea').evaluateAll((v) => v.filter((x) => x.getClientRects().length > 0).length)).toBe(0);
       await expect(tisk.locator('.tisk__nazev')).toHaveText('Delfy');
+      // Pod názvem celý odkaz pro studenty (s doménou), bez poznámek učitele.
+      const odkazTisk = tisk.locator('.tisk__odkaz');
+      await expect(odkazTisk).toHaveText(/^Odkaz pro studenty: http:\/\/localhost:\d+\/hodina\/\?v=1&n=Delfy&z=k:kdy-mam-dobry-duvod-verit\/1,b:cesta1-jak-zjistit,k:zrusena-cesta\/2,o:sokrates\/soud,h:jak-zit\/epikuros$/);
+      await expect(odkazTisk).not.toContainText(TAJNE);
       await expect(tisk).toContainText(`${TAJNE} k hodině`);
       const zastaveni = tisk.locator('.tisk__zastaveni');
       await expect(zastaveni).toHaveCount(5);
