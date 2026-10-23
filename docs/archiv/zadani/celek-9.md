@@ -26,3 +26,30 @@ Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Termi
 
 2. Do plánu větve zapiš stav P6, oddíl „Po P6“ (co jsi zvažoval) a zadání P8 (Opus 5.5 · high se skillem atlas-cesta). Do zadání P8 napiš, že začne až po sloučení hodiny-v1 do hlavní větve a hlavní větve do celek-9, jak to ověřit, a že nové bloky a kresby potřebují značky data-cast podle docs/design.md › Podoba na plátně. Zadání P6 přesuň do docs/archiv/zadani/celek-9.md. Plán větve a docs/plan.md nahraj do projektu Claude (docs/plany/celek-9.md, docs/plan.md). Nic neposílej na GitHub a nic nesluč. Pak mi krátce napiš, co jsi našel a co je potřeba rozhodnout.
 ```
+
+## Zadání P8: cesta 34 (provedeno 23. 10. 2026)
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-cesta` (xhigh při zaseknutí; kresba se skillem `atlas-komponenta`). **Začne až po sloučení `hodiny-v1` do hlavní větve a hlavní větve do `celek-9`** (viz Souběh s hodiny-v1). Krok je stavěný tak, aby přežil přerušení: kroky cesty se commitují po jednom.
+
+```text
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Krok P8 celku 9 „Kam mi mizí čas?“: cesta 34. Plán celku je v projektu Claude jako docs/plany/celek-9.md (oddíly Po P6, Co rozhodnout po P6 a Souběh s hodiny-v1), podklady v docs/podklady/celek-9.md (moje odpovědi v oddíle i) mají přednost před doporučením; prázdná odpověď znamená souhlas), postup ve skillu atlas-cesta, kresba se skillem atlas-komponenta. Čti jen to, co krok potřebuje (CLAUDE.md › Co číst a jak šetřit); z podkladového listu čti oddíly a), b) a c) jen v řádcích, které cesta použije.
+
+0. Kontrola souběhu (nic nepiš, dokud neprojde):
+   - git switch celek-9 a git status bez necommitnutých změn.
+   - git merge-base --is-ancestor hodiny-v1 main (hodiny-v1 je v hlavní větvi). Když to neprojde, nic nedělej a napiš mi, že hodiny-v1 ještě není sloučená.
+   - git merge-base --is-ancestor main celek-9 (hlavní větev je v celek-9). Když to neprojde, sluč hlavní větev do celek-9 (git merge main); konflikt v tabulce Plány větví v docs/plan.md vyřeš tak, že zůstanou oba řádky (hodiny-v1 i celek-9). Jiný konflikt neřeš a napiš mi.
+   - Ověř, že v celek-9 jsou věci z hodiny-v1: soubor src/lib/kresby.ts, skript scripts/hodiny-katalog.mjs a značky data-cast v src/components/ostrovy/Volba.svelte. Restartuj náhled (npx astro dev stop, pak nohup npm run dev > /tmp/atlas-dev.log 2>&1 &).
+   - Pokračuješ po přerušení? Hotové kroky cesty jsou v src/content/cesty/kam-mi-mizi-cas/ a v git logu; pokračuj prvním, který chybí.
+
+1. Data: prameny a citáty podle podkladů (Návrh dat; ids z tabulek b a c), jen ta místa, která cesta opravdu použije. Tentýž citát nejvýš dvakrát v celku; atribut Seneky (O krátkosti života 1, 3) v cestě jen jednou. Žádné nové osoby, místa ani vztahy.
+
+2. Cesta 34 podle Osnovy v podkladech (oddíl g): přehled cesty (obdobi 2, otazka 1, filozofove seneca a marcus-aurelius) a osm kroků, každý jako MDX s bloky z knihovny (Volba, Roztřiď, Odkryj, Změň jednu věc, Spor Seneca × Marcus Aurelius, Závěr cesty se Zkus to žít) a s daty bloků v YAML. Drž oddíly d) a e) podkladů (Spor jako dvě rady, obrat s Tacitem jako Tacitovo podání, námitky se spojenci) a docs/pouceni.md (Bloky, Celek, Student, kterého se téma bolestně týká: pečující student, student po ztrátě, rodiny). Krok 5 o telefonu bez kázání; školu ani spánek nepočítej jako ztracený čas. Návrat se třemi případy z podkladů. Každý krok commitni zvlášť.
+
+3. Kresba Přesýpací hodiny (krok 3) na rámu Kresba.svelte podle podkladů (oddíl g) a skillu atlas-komponenta: pohyb jde zastavit, při omezeném pohybu stojí a text pod ní říká totéž slovy, v kresbě nic mimo model, jednotka na telefonu asi pixel. Než ji popíšeš jako hotovou, ukaž mi snímky (scripts/snimky-prvek.mjs) v obou režimech na 390 a 1440 px.
+
+4. Podoba na plátně (hodiny-v1, H4): nové bloky a kresba potřebují značky data-cast podle docs/design.md › Komponenty › Podoba na plátně (hlava, otázka, možnosti; u kresby rám a ovládání), jinak se v otevřené otázce nebo v „jen kresba“ ukáže špatně. Název nové kresby přidej do NAZVY_KRESEB v src/lib/kresby.ts. Po npm run build pusť node scripts/hodiny-katalog.mjs (musí skončit „Chyb: 0“) a zkontroluj, že katalog zastavení má všech osm kroků, nové bloky a kresbu se správnými názvy.
+
+5. Vazby: v portrétu Seneky (místo, kde je atribut a čas) a v portrétu Marca (ústraní, IV, 3) po jedné větě s odkazem na cestu; stránka otázky 1 podle mé odpovědi v podkladech (doporučení: bez nového hlasu). Pak celé npm test na pozadí s výstupem do souboru (nová cesta mění hlavičky filozofů, počty na Domů a v dílně: uprav jen testy, které padnou kvůli nové cestě), snímky cesty (scripts/snimky-cesta.mjs) na 390 a 1440 px v obou režimech, čas cesty skriptem scripts/slova-cesta.mjs.
+
+6. Do plánu větve zapiš stav P8, oddíl „Po P8“ (co jsi zvažoval, co je potřeba rozhodnout) a zadání P10 (Opus 5.5 · high se skillem atlas-revize). Zadání P8 přesuň do docs/archiv/zadani/celek-9.md, rozhodnutí zapiš do docs/rozhodnuti.md. Plán větve a docs/plan.md nahraj do projektu Claude. Nic neposílej na GitHub a nic nesluč (kromě hlavní větve do celek-9 v bodě 0). Pak mi krátce napiš, co je hotové a co rozhodnout.
+```

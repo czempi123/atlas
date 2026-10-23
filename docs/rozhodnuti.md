@@ -4,6 +4,16 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 23. 10. 2026: Celek 9, krok P8 (cesta 34)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Odpovědi v podkladech celku 9 (oddíl i) platí, jak byly doporučené: kresba Přesýpací hodiny, vstup bez obrázku, otázka 1 bez nového hlasu, starý správce obilí bez jména, čísla v kroku 5 slovy, Zkus to žít „Proč teď?“, slug `kam-mi-mizi-cas` | Autor nechal odpovědi prázdné; prázdná odpověď znamená souhlas |
+| Kresba Přesýpací hodiny rozděluje hodiny dne podle toho, kdo o nich rozhodl (spánek, škola a rodina, tvoje volba, někdo jiný), ne podle činností; co student nerozdělí, „proteklo“ | Přiřadit činnosti „kdo rozhodl“ by za studenta musela kresba; telefon je jednou kamarádka, jindy další video |
+| Návrat cesty 34 má jeden případ, Stěhování v sobotu; další dva případy z podkladů zůstávají v podkladech | Blok Návrat má jeden případ na cestu; děda v důchodu by opakoval starého správce, videohovor telefon z kroku 5 |
+| Spor Seneca × Marcus jsou dvě rady dvěma lidem; prostřední poloha má za zastánce Seneku z O duševním klidu; pod Sporem jen žádost roku 62 jako Tacitovo podání | Podklady, oddíl d; pověst o roce 64 vynechána jako v celku 6 |
+| Cesta 34 má na štítku 28 minut | Spočítáno skriptem `slova-cesta.mjs`; délka se kvůli délce nekrátí |
+
 ## 23. 10. 2026: Větev hodiny-v1 uzavřená
 
 | Rozhodnutí | Důvod |
