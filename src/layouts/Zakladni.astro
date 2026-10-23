@@ -50,15 +50,24 @@ const plnyTitulek = titulek === 'Atlas myšlení' ? titulek : `${titulek} · Atl
     <script is:inline define:vars={{ klic: KLIC_AKTIVNI }}>
       // Hodina otevřená v této kartě (src/lib/pruchod-hodiny.ts): když na stránce stojí některé její zastavení,
       // drží se místo pro lištu hodiny a při promítání se stránka vykreslí rovnou bez hlavičky a patičky.
+      // Stránka mimo hodinu má lištu taky, když student už na některém zastavení byl (zastaveniMimoHodinu).
+      // Příchod z lišty nebo ze stránky hodiny skočí na kotvu bez plynulého posunu (třída skok-na-zastaveni).
       try {
         var h = JSON.parse(sessionStorage.getItem(klic) || 'null');
-        if (h && h.verze === 1 && !h.zavreno && Array.isArray(h.polozky)) {
+        if (h && h.verze === 1 && Array.isArray(h.polozky)) {
+          var t = document.documentElement.classList;
+          if (h.skok === true) t.add('skok-na-zastaveni');
           var p = location.pathname;
           if (p.charAt(p.length - 1) !== '/') p += '/';
           try { p = decodeURI(p); } catch (e) {}
-          if (h.polozky.some(function (z) { return z && z.stranka === p; })) {
-            document.documentElement.classList.add('s-hodinou');
-            if (h.promitani) document.documentElement.classList.add('promitani');
+          var posledni = typeof h.posledni === 'number' ? h.polozky[h.posledni] : null;
+          if (h.zavreno) {
+            // Student lištu v této kartě zavřel.
+          } else if (h.polozky.some(function (z) { return z && z.stranka === p; })) {
+            t.add('s-hodinou');
+            if (h.promitani) t.add('promitani');
+          } else if (!h.promitani && posledni && posledni.adresa && p.indexOf('/hodina/') !== 0) {
+            t.add('s-hodinou');
           }
         }
       } catch (e) {}

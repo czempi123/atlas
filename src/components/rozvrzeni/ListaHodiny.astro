@@ -6,7 +6,8 @@
 // src/scripts/hodina-lista.ts. Při promítání je jediná lišta na stránce: bez slova „Hodina“, s tlačítky
 // Celá obrazovka a Ukončit promítání místo Zavřít. Na telefonu jsou tlačítka jen ikony (text čte čtečka).
 // U zastavení v podobě Otevřená otázka (krok H4) má navíc Ukázat možnosti (klávesa M): ukáže karty bloku,
-// dokud učitel nepřejde jinam.
+// dokud učitel nepřejde jinam. Na stránce mimo hodinu (krok O) stojí „Hodina: Delfy · mimo hodinu“ a Předchozí
+// je „Zpět na 2 z 8“ (poslední navštívené zastavení); atribut data-mimo.
 import Ikona from '../ui/Ikona.astro';
 ---
 <nav class="hodina-lista" aria-label="Hodina" data-hodina-lista data-pagefind-ignore>

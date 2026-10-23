@@ -24,6 +24,9 @@ html[data-obsah-js] { scroll-padding-top: calc(var(--hlavicka) + var(--hodina) +
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
+  /* Příchod na zastavení hodiny z lišty nebo ze stránky hodiny: na kotvu rovnou, bez jízdy přes celou stránku
+     (třídu dá skript v hlavičce Zakladni.astro a po načtení ji sundá src/scripts/hodina-lista.ts). */
+  html.skok-na-zastaveni { scroll-behavior: auto; }
 }
 
 body {

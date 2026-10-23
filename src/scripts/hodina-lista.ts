@@ -3,6 +3,10 @@
 // je aktuální, kam vede Další, krok promítání) je v src/lib/pruchod-hodiny.ts.
 //  · Lišta: „Hodina: Delfy · 3 ze 7“, Předchozí a Další na sousední zastavení (neznámá přeskočí), Přehled hodiny,
 //    Zavřít (v této kartě se lišta už neukáže, dokud student hodinu znovu neotevře).
+//  · Mimo hodinu (krok O): stránka bez zastavení hodiny, na kterou student odbočil (Kam dál, Další krok cesty),
+//    má lištu „Hodina: Delfy · mimo hodinu“: Předchozí („Zpět na 2 z 8“) na poslední navštívené zastavení,
+//    Další na zastavení za ním. Při promítání se mimo hodinu nechodí, lišta tam není.
+//  · Příchod z lišty nebo ze stránky hodiny skočí na kotvu bez plynulého posunu (třída skok-na-zastaveni).
 //  · Promítání: u zastavení s kotvou jen jeho úsek; šipky, PageDown/PageUp a mezerník posouvají o obrazovku
 //    a na konci úseku přejdou na další zastavení (zpátky na konec předchozího); F celá obrazovka; Esc konec.
 //    Klávesy nesahají do polí, posuvníků a přepínačů bloků (klavesaPatriPrvku).
@@ -12,7 +16,7 @@
 //  · Ukončit promítání (i Esc) stránku načte znovu: bloky pak ukážou deník studenta, ne stav z promítání.
 import {
   nactiAktivni, ulozAktivni, aktualniZastaveni, sousedniZastaveni, poradiZastaveni, cestaStranky, krokPromitani, polohaPrichodu,
-  klavesaPatriPrvku, type AktivniHodina, type Plocha, type PolozkaHodiny,
+  klavesaPatriPrvku, zastaveniMimoHodinu, type AktivniHodina, type Plocha, type PolozkaHodiny,
 } from '../lib/pruchod-hodiny';
 import { ztisStranku, zrusTicho } from '../lib/denik';
 
@@ -26,6 +30,7 @@ export function spustListuHodiny(): void {
   const nazev = lista.querySelector<HTMLElement>('[data-hl-nazev]')!;
   const pocet = lista.querySelector<HTMLElement>('[data-hl-pocet]')!;
   const predchozi = lista.querySelector<HTMLAnchorElement>('[data-hl-predchozi]')!;
+  const textPredchozi = predchozi.querySelector<HTMLElement>('.hl-text')!;
   const dalsi = lista.querySelector<HTMLAnchorElement>('[data-hl-dalsi]')!;
   const prehled = lista.querySelector<HTMLAnchorElement>('[data-hl-prehled]')!;
   const obrazovka = lista.querySelector<HTMLButtonElement>('[data-hl-obrazovka]')!;
@@ -36,6 +41,8 @@ export function spustListuHodiny(): void {
 
   let hodina: AktivniHodina | null = null;
   let aktualni: number | null = null;
+  /** stránka mimo hodinu: poslední navštívené zastavení, ke kterému lišta vede zpátky */
+  let mimo: number | null = null;
   let odchazim = false;
   let styl: HTMLStyleElement | null = null;
   /** Ukázané možnosti otevřené otázky; platí jen pro právě promítané zastavení. */
@@ -134,11 +141,14 @@ export function spustListuHodiny(): void {
 
   function vyplnListu() {
     const h = hodina!;
-    const i = aktualni!;
+    const mimoHodinu = aktualni === null;
+    const i = mimoHodinu ? mimo! : aktualni!;
     nazev.textContent = h.nazev || 'Hodina';
-    pocet.textContent = poradiZastaveni(i + 1, h.polozky.length);
-    nastavOdkaz(predchozi, sousedniZastaveni(h.polozky, i, -1));
+    pocet.textContent = mimoHodinu ? 'mimo hodinu' : poradiZastaveni(i + 1, h.polozky.length);
+    nastavOdkaz(predchozi, mimoHodinu ? i : sousedniZastaveni(h.polozky, i, -1));
+    textPredchozi.textContent = mimoHodinu ? `Zpět na ${poradiZastaveni(i + 1, h.polozky.length)}` : 'Předchozí';
     nastavOdkaz(dalsi, sousedniZastaveni(h.polozky, i, 1));
+    lista!.toggleAttribute('data-mimo', mimoHodinu);
     prehled.href = h.adresa;
     obrazovka.setAttribute('aria-pressed', String(!!document.fullscreenElement));
     lista!.dataset.pripraveno = '';
@@ -149,7 +159,19 @@ export function spustListuHodiny(): void {
     hodina = nactiAktivni();
     ukazane = false;
     aktualni = hodina && !hodina.zavreno ? aktualniZastaveni(hodina.polozky, location.pathname, location.hash, hodina.posledni) : null;
-    const s = aktualni !== null;
+    mimo = hodina && aktualni === null ? zastaveniMimoHodinu(hodina, location.pathname) : null;
+    // Zastavení, na jehož stránce student stojí, je poslední navštívené, ať sem přišel jakkoli.
+    if (hodina && aktualni !== null && hodina.posledni !== aktualni) {
+      hodina = { ...hodina, posledni: aktualni };
+      ulozAktivni(hodina);
+    }
+    if (hodina?.skok) {
+      const { skok: _pryc, ...bez } = hodina;
+      hodina = bez;
+      ulozAktivni(hodina);
+      pustSkok();
+    }
+    const s = aktualni !== null || mimo !== null;
     html.classList.toggle('s-hodinou', s);
     html.classList.toggle('promitani', promitani());
     zmerHlavicku();
@@ -165,6 +187,12 @@ export function spustListuHodiny(): void {
       return;
     }
     vyplnListu();
+    if (aktualni === null) {
+      // Mimo hodinu: jen lišta, stránka zůstane, jak je.
+      odznacUsek();
+      html.classList.remove('promitani-pripraveno');
+      return;
+    }
     if (!promitani()) {
       odznacUsek();
       html.classList.remove('promitani-pripraveno');
@@ -197,20 +225,28 @@ export function spustListuHodiny(): void {
     if (kam !== 'zacatek') ulozAktivni({ ...hodina!, prichod: 'zacatek' });
   }
 
-  /** Přechod na zastavení j: na téže stránce bez nového načtení, jinak na jeho adresu. */
+  /** Třída skok-na-zastaveni drží okamžitý skok na kotvu, dokud se stránka nenačte; pak platí plynulý posun atlasu. */
+  function pustSkok() {
+    const pust = () => requestAnimationFrame(() => requestAnimationFrame(() => html.classList.remove('skok-na-zastaveni')));
+    if (document.readyState === 'complete') pust();
+    else addEventListener('load', pust, { once: true });
+  }
+
+  /** Přechod na zastavení j: na téže stránce bez nového načtení, jinak na jeho adresu (na kotvu bez plynulého posunu). */
   function jdiNa(j: number, prichod: 'zacatek' | 'konec') {
     const p = hodina?.polozky[j];
     if (!hodina || !p?.adresa || !p.stranka) return;
-    ulozAktivni({ ...hodina, posledni: j, prichod });
     if (cestaStranky(p.stranka) === cestaStranky(location.pathname)) {
+      ulozAktivni({ ...hodina, posledni: j, prichod });
       history.pushState(null, '', p.adresa);
       void obnov(true).then(() => {
         if (promitani()) return;
         const el = p.kotva ? document.getElementById(p.kotva) : null;
-        if (el) el.scrollIntoView({ block: 'start' });
-        else scrollTo({ top: 0 });
+        if (el) el.scrollIntoView({ block: 'start', behavior: 'instant' });
+        else scrollTo({ top: 0, behavior: 'instant' });
       });
     } else {
+      ulozAktivni({ ...hodina, posledni: j, prichod, skok: true });
       odchazim = true;
       location.href = p.adresa;
     }

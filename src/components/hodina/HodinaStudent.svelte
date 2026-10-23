@@ -7,7 +7,7 @@
   // Použití: <HodinaStudent client:load />
   import { onMount } from 'svelte';
   import { hodinaZAdresy, najdiZastaveni, domaProjdi, type NalezeneZastaveni, type SkupinaDoma, type Zastaveni } from '../../lib/hodiny';
-  import { aktivniHodina, ulozAktivni, vstupDoHodiny, prvniZastaveni, type AktivniHodina } from '../../lib/pruchod-hodiny';
+  import { aktivniHodina, nactiAktivni, ulozAktivni, vstupDoHodiny, prvniZastaveni, type AktivniHodina } from '../../lib/pruchod-hodiny';
   import { nacti, prectene, zaznamenejHodinu } from '../../lib/denik';
   import { druhStranky, kdeStoji, pocetZastaveni, stitekStudenta } from '../../lib/skladatel';
   import { nezlomitelne } from '../../lib/sazba.js';
@@ -33,6 +33,9 @@
         const adresa = location.pathname + location.search;
         zastaveni = najdiZastaveni(k.zastaveni, h.zastaveni);
         aktivni = aktivniHodina(h, k.zastaveni, adresa, false);
+        // Návrat na přehled téže hodiny (z lišty): poslední navštívené zastavení zůstane, lišta mimo hodinu k němu vede dál.
+        const drive = nactiAktivni();
+        if (drive && drive.adresa === adresa && drive.polozky.length === aktivni.polozky.length) aktivni.posledni = drive.posledni;
         ulozAktivni(aktivni);
         zaznamenejHodinu(adresa, h.nazev);
         const d = nacti();

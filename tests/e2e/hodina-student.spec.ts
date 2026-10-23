@@ -170,16 +170,136 @@ test('lišta hodiny: průchod tam a zpět jen klávesnicí, neznámé zastavení
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Delfy');
 });
 
-test('na stránce otevřené mimo lištu platí zastavení podle kotvy; na stránce bez zastavení lišta není', async ({ page }) => {
+test('na stránce otevřené mimo lištu platí zastavení podle kotvy; stránka bez zastavení má lištu mimo hodinu', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await otevritHodinu(page);
-  await page.goto(`${KROK2}#cesta1-jak-zjistit`);
-  await pripravit(page);
-  await expect(titulek(page)).toHaveText(poradi(2, 5));
+  // Dokud student na žádném zastavení nebyl, stránka mimo hodinu lištu nemá.
   await page.goto('/osobnost/platon/');
   await pripravit(page);
   await expect(lista(page)).toBeHidden();
   expect(await page.evaluate(() => document.documentElement.classList.contains('s-hodinou'))).toBe(false);
+  await page.goto(`${KROK2}#cesta1-jak-zjistit`);
+  await pripravit(page);
+  await expect(titulek(page)).toHaveText(poradi(2, 5));
+  // Stránka bez zastavení: Předchozí vede zpátky na poslední zastavení, Další na zastavení za ním (3 v atlasu není).
+  await page.goto('/osobnost/platon/');
+  await pripravit(page);
+  await expect(lista(page)).toBeVisible();
+  await expect(titulek(page)).toHaveText('Hodina: Delfy · mimo hodinu');
+  const zpet = lista(page).locator('[data-hl-predchozi]');
+  await expect(zpet).toHaveAccessibleName(/^Zpět na 2\sz\s5$/);
+  await expect(zpet).toHaveAttribute('href', `${KROK2}#cesta1-jak-zjistit`);
+  await expect(lista(page).locator('[data-hl-dalsi]')).toHaveAttribute('href', '/osobnost/sokrates/#soud');
+  await expect(lista(page).locator('[data-hl-prehled]')).toHaveAttribute('href', STUDENT);
+  await axe(page);
+  // Přehled hodiny: tam lišta není a poslední zastavení zůstane, takže lišta mimo hodinu vede dál zpátky.
+  await lista(page).locator('[data-hl-prehled]').click();
+  await page.waitForURL('**/hodina/?**');
+  await pripravit(page);
+  await expect(lista(page)).toBeHidden();
+  await page.goto('/osobnost/platon/');
+  await pripravit(page);
+  await expect(lista(page).locator('[data-hl-predchozi]')).toHaveAttribute('href', `${KROK2}#cesta1-jak-zjistit`);
+  // Skladatel hodiny lištu nemá.
+  await page.goto('/hodina/nova/');
+  await pripravit(page);
+  await expect(lista(page)).toBeHidden();
+});
+
+for (const [sirka, vyska] of [[390, 844], [1440, 900]] as const) {
+  test(`odbočka mimo hodinu na ${sirka} px: Další krok v liště kroku i Kam dál z bloku, lišta mimo hodinu vede zpátky`, async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.setViewportSize({ width: sirka, height: vyska });
+    await otevritHodinu(page);
+    await page.getByRole('link', { name: 'Začít hodinu' }).click();
+    await page.waitForURL(`**${KROK2}`);
+    await pripravit(page);
+    await expect(titulek(page)).toHaveText(poradi(1, 5));
+
+    // Velké Další krok v liště kroku cesty: krok 3 v hodině není.
+    await page.locator('.cesta-lista').getByRole('link', { name: /Další krok/ }).click();
+    await page.waitForURL('**/cesta/kdy-mam-dobry-duvod-verit/3/');
+    await pripravit(page);
+    await expect(lista(page)).toBeVisible();
+    await expect(page.locator('[data-hl-nazev]')).toHaveText('Delfy');
+    await expect(page.locator('[data-hl-pocet]')).toHaveText('mimo hodinu');
+    const zpet = lista(page).locator('[data-hl-predchozi]');
+    await expect(zpet).toHaveAccessibleName(/^Zpět na 1\sz\s5$/);
+    await expect(zpet).toHaveAttribute('href', KROK2);
+    await expect(lista(page).locator('[data-hl-dalsi]')).toHaveAttribute('href', `${KROK2}#cesta1-jak-zjistit`);
+    // Lišta hodiny se netluče s hlavičkou kroku a s lištou kroku dole.
+    const h = (await page.locator('.cesta-hlavicka').boundingBox())!;
+    const l = (await lista(page).boundingBox())!;
+    const c = (await page.locator('.cesta-lista').boundingBox())!;
+    expect(l.y).toBeGreaterThanOrEqual(h.y + h.height - 1);
+    expect(l.y + l.height).toBeLessThanOrEqual(c.y);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({ path: `${SNIMKY}/mimo-hodinu-${sirka}.png` });
+    await axe(page);
+
+    // Zpátky na zastavení 1, Další na zastavení 2 (blok), a z bloku Kam dál zase mimo hodinu.
+    await zpet.click();
+    await page.waitForURL(`**${KROK2}`);
+    await pripravit(page);
+    await expect(titulek(page)).toHaveText(poradi(1, 5));
+    await lista(page).locator('[data-hl-dalsi]').click();
+    await page.waitForURL(`**${KROK2}#cesta1-jak-zjistit`);
+    await pripravit(page);
+    await expect(titulek(page)).toHaveText(poradi(2, 5));
+    const volba = page.locator('#cesta1-jak-zjistit');
+    await volba.getByText('Najdu lidi').click();
+    await volba.getByRole('button', { name: 'Tohle je můj tah' }).click();
+    await volba.getByRole('navigation', { name: 'Kam dál' }).getByRole('link', { name: 'Další krok: Politik, básníci, řemeslníci' }).click();
+    await page.waitForURL('**/cesta/kdy-mam-dobry-duvod-verit/3/');
+    await pripravit(page);
+    await expect(page.locator('[data-hl-pocet]')).toHaveText('mimo hodinu');
+    await expect(zpet).toHaveAccessibleName(/^Zpět na 2\sz\s5$/);
+    await expect(zpet).toHaveAttribute('href', `${KROK2}#cesta1-jak-zjistit`);
+    await expect(lista(page).locator('[data-hl-dalsi]')).toHaveAttribute('href', '/osobnost/sokrates/#soud');
+    // Další mimo hodinu jde na zastavení za posledním (4 z 5, kapitola Soud).
+    await lista(page).locator('[data-hl-dalsi]').click();
+    await page.waitForURL('**/osobnost/sokrates/#soud');
+    await pripravit(page);
+    await expect(titulek(page)).toHaveText(poradi(4, 5));
+    // Zavřít mimo hodinu: lišta zmizí i tady.
+    await page.goto('/osobnost/platon/');
+    await pripravit(page);
+    await lista(page).getByRole('button', { name: 'Zavřít' }).click();
+    await expect(lista(page)).toBeHidden();
+    await page.reload();
+    await pripravit(page);
+    await expect(lista(page)).toBeHidden();
+  });
+}
+
+test('příchod z lišty na zastavení daleko v profilu: na kotvu rovnou, bez jízdy přes stránku', async ({ page }) => {
+  // Plynulý posun atlasu zapnutý (bez omezeného pohybu): právě ten by stránku vezl od začátku dolů.
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  for (const [sirka, vyska] of [[390, 844], [1440, 900]] as const) {
+    await page.setViewportSize({ width: sirka, height: vyska });
+    await otevritHodinu(page, odkaz('Seneca', ['k:kdy-mam-dobry-duvod-verit/2', 'o:seneca/doba-a-lide']));
+    await page.getByRole('link', { name: 'Začít hodinu' }).click();
+    await page.waitForURL(`**${KROK2}`);
+    await pripravit(page);
+    await lista(page).locator('[data-hl-dalsi]').click();
+    await page.waitForURL('**/osobnost/seneca/#doba-a-lide');
+    // Hned po načtení stojí stránka u oddílu a dál se nehýbe.
+    const polohy = await page.evaluate(async () => {
+      const vysledek: number[] = [];
+      for (let i = 0; i < 12; i++) {
+        vysledek.push(Math.round(scrollY));
+        await new Promise((r) => requestAnimationFrame(r));
+      }
+      return vysledek;
+    });
+    expect(new Set(polohy).size, polohy.join(', ')).toBe(1);
+    expect(polohy[0]).toBeGreaterThan(5000);
+    const oddil = await page.locator('#doba-a-lide').boundingBox();
+    expect(oddil!.y).toBeLessThan(vyska / 2);
+    // Po načtení zase platí plynulý posun atlasu.
+    await expect.poll(() => page.evaluate(() => document.documentElement.classList.contains('skok-na-zastaveni'))).toBe(false);
+    expect(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe('smooth');
+  }
 });
 
 test('zavřená lišta se v kartě neukáže, dokud student hodinu znovu neotevře', async ({ page }) => {

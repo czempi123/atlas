@@ -27,7 +27,11 @@ export interface AktivniHodina {
   adresa: string;
   nazev: string;
   polozky: PolozkaHodiny[];
-  /** zastavení, na které student šel z lišty nebo ze stránky hodiny (index); platí, jen když stojí na otevřené stránce */
+  /**
+   * poslední navštívené zastavení (index): na které student šel z lišty nebo ze stránky hodiny, nebo na jehož
+   * stránce naposled stál. Na stránce s více zastaveními říká, které je aktuální; na stránce mimo hodinu k němu
+   * vede lišta zpátky.
+   */
   posledni: number | null;
   /** promítání: kam na zastavení přijít (předchozí zastavení se ukáže od konce) */
   prichod: 'zacatek' | 'konec';
@@ -38,6 +42,11 @@ export interface AktivniHodina {
   celaObrazovka: boolean;
   /** promítání právě skončilo a stránka se načetla znovu: fokus patří Přehledu hodiny (jednorázové) */
   poPromitani?: boolean;
+  /**
+   * přechod na zastavení z lišty nebo ze stránky hodiny: stránka na kotvu skočí bez plynulého posunu (jednorázové;
+   * skript v hlavičce Zakladni.astro podle něj dá <html> třídu skok-na-zastaveni)
+   */
+  skok?: boolean;
 }
 
 /**
@@ -79,6 +88,7 @@ export function platnaAktivni(x: unknown): AktivniHodina | null {
     zavreno: h.zavreno === true,
     celaObrazovka: h.celaObrazovka === true,
     ...(h.poPromitani === true ? { poPromitani: true } : {}),
+    ...(h.skok === true ? { skok: true } : {}),
   };
 }
 
@@ -146,6 +156,20 @@ export function aktualniZastaveni(polozky: PolozkaHodiny[], cesta: string, kotva
   return tady[0];
 }
 
+/**
+ * Stránka mimo hodinu: na stránce žádné zastavení aktivní hodiny nestojí, hodina ale v kartě běží (není zavřená
+ * ani promítaná) a student už na některém zastavení byl. Vrátí index posledního navštíveného zastavení, ke kterému
+ * lišta ve stavu „mimo hodinu“ vede zpátky; jinak null. Stránky hodin (/hodina/…) lištu nemají: přehled hodiny
+ * je cesta zpátky sám. Skript v hlavičce Zakladni.astro rozhoduje stejně.
+ */
+export function zastaveniMimoHodinu(h: AktivniHodina, cesta: string): number | null {
+  if (h.zavreno || h.promitani) return null;
+  const c = cestaStranky(cesta);
+  if (c.startsWith('/hodina/') || zastaveniNaStrance(h.polozky, c).length) return null;
+  const i = h.posledni;
+  return i !== null && h.polozky[i]?.adresa ? i : null;
+}
+
 /** Sousední zastavení ve směru `smer`, které v atlasu je (neznámá se přeskočí), nebo null na kraji hodiny. */
 export function sousedniZastaveni(polozky: PolozkaHodiny[], i: number, smer: -1 | 1): number | null {
   for (let j = i + smer; j >= 0 && j < polozky.length; j += smer) if (polozky[j].adresa) return j;
@@ -165,7 +189,7 @@ export function vstupDoHodiny(h: AktivniHodina, j: number | null = prvniZastaven
   if (!p?.adresa) return null;
   if (promitani) zalozDenikPromitani();
   const { poPromitani: _pryc, ...bez } = h;
-  ulozAktivni({ ...bez, posledni: j, prichod: 'zacatek', promitani, zavreno: false, celaObrazovka: false });
+  ulozAktivni({ ...bez, posledni: j, prichod: 'zacatek', promitani, zavreno: false, celaObrazovka: false, skok: true });
   return p.adresa;
 }
 
