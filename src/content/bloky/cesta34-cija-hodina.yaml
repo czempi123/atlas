@@ -10,7 +10,7 @@ nadtitulek: Změň jednu věc
 scena: >-
   Představ si večer. Chtěl ses na telefon podívat na chvilku a pak se pustit do něčeho, na čem ti záleží.
   Když ho odložíš, jsou to dvě hodiny.
-otazka: Čí byly ty dvě hodiny?
+otazka: Čí byly ty dvě hodiny s telefonem?
 moznosti:
   - { id: moje, text: "Moje. Rozhodnutí bylo moje." }
   - { id: napul, text: "Napůl moje." }
