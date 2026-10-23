@@ -1,7 +1,7 @@
 // Cesta 34 „Kam mi mizí čas?“ a kresba „Přesýpací hodiny“ (krok 3). Přehled má osm kroků a filozofy Seneku
 // a Marca Aurelia; kroky se otevřou a poslední má Závěr cesty. Kresba: při omezeném pohybu leží všech 24 zrnek
 // dole a horní baňka je prázdná; posuvníky nepustí víc než 24 hodin a text pod kresbou říká totéž co ona.
-// S pohybem jde zastavit. Obě šířky ve světlém i tmavém režimu s axe. Logiku hlídá tests/data/presypaci.test.ts.
+// S pohybem jde zastavit a zastavená ukáže výsledek kola i hned po načtení. Obě šířky ve světlém i tmavém režimu s axe. Logiku hlídá tests/data/presypaci.test.ts.
 import { test, expect, type Locator, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { HODIN, VYCHOZI_DEN, popisDne } from '../../src/lib/presypaci';
@@ -86,14 +86,29 @@ for (const { sirka, vyska } of [{ sirka: 390, vyska: 844 }, { sirka: 1440, vyska
   }
 }
 
-test('přesýpací hodiny: pohyb běží a jde zastavit', async ({ page }) => {
+test('přesýpací hodiny: pohyb běží a jde zastavit; zastavené ukážou výsledek kola', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   const kresba = await priprav(page);
-  const stav = () => kresba.locator('.pad').first().evaluate((e) => getComputedStyle(e).animationPlayState);
+  const jmeno = () => kresba.locator('.pad').first().evaluate((e) => getComputedStyle(e).animationName);
   await expect(kresba.getByRole('button', { name: 'Zastavit pohyb' })).toBeVisible();
-  expect(await kresba.locator('.pad').first().evaluate((e) => getComputedStyle(e).animationName)).toContain('presypani-pad');
-  expect(await stav()).toBe('running');
+  expect(await jmeno()).toContain('presypani-pad');
+  expect(await kresba.locator('.pad').first().evaluate((e) => getComputedStyle(e).animationPlayState)).toBe('running');
+
+  // Zastaveno hned po načtení: písek leží dole po vrstvách a horní baňka je prázdná (docs/design.md › Přesýpací hodiny).
   await kresba.getByRole('button', { name: 'Zastavit pohyb' }).click();
   await expect(kresba.getByRole('button', { name: 'Pustit pohyb' })).toBeVisible();
-  expect(await stav()).toBe('paused');
+  expect(await jmeno()).toBe('none');
+  expect(await kresba.locator('.pad').evaluateAll((z) => z.every((e) => getComputedStyle(e).opacity === '1' && getComputedStyle(e).transform === 'none'))).toBe(true);
+  expect(await kresba.locator('.horni').evaluateAll((z) => z.every((e) => getComputedStyle(e).opacity === '0'))).toBe(true);
+
+  // Posuvník mění vrstvy v zastavené baňce, ne jen čísla v legendě.
+  const vrstvy = () => kresba.locator('.pad').evaluateAll((z) => z.map((e) => e.firstElementChild?.getAttribute('class') ?? ''));
+  const pred = await vrstvy();
+  await kresba.getByRole('slider', { name: 'Tvoje volba' }).fill('6');
+  await expect.poll(vrstvy).not.toEqual(pred);
+  expect(await kresba.locator('.pad').evaluateAll((z) => z.every((e) => getComputedStyle(e).opacity === '1'))).toBe(true);
+
+  // Pustit pohyb začne nové kolo.
+  await kresba.getByRole('button', { name: 'Pustit pohyb' }).click();
+  expect(await jmeno()).toContain('presypani-pad');
 });

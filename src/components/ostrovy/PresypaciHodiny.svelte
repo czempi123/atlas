@@ -148,6 +148,12 @@
     animation-iteration-count: 1;
     animation-fill-mode: none;
   }
+  /* Zastavený pohyb ukazuje výsledek kola: písek dole po vrstvách, horní baňka prázdná, i když student pohyb
+     zastavil hned po načtení. Odchylka od rámu (zastavená kresba jinak stojí tam, kde je; docs/design.md).
+     Pustit pohyb začne nové kolo. */
+  :global(.kresba--pohyb:not(.kresba--bezi)) .horni,
+  :global(.kresba--pohyb:not(.kresba--bezi)) .pad,
+  :global(.kresba--pohyb:not(.kresba--bezi)) .kolo { animation-name: none; }
   @keyframes presypani-horni {
     from { opacity: 1; }
     to { opacity: 0; }
