@@ -4,6 +4,22 @@ Zásadní rozhodnutí projektu, nejnovější nahoře. Každé má datum, rozhod
 
 Starší záznamy (29. 9. – 3. 10. 2026: základ projektu a celky 1 až 3) jsou v `docs/archiv/rozhodnuti-2026-09-29-az-2026-10-03.md`. Co z nich platí pořád, drží `CLAUDE.md`, `docs/styl.md`, `docs/design.md`, `docs/pouceni.md` a skilly.
 
+## 23. 10. 2026: Hodiny v1, krok O (opravy po revizi)
+
+| Rozhodnutí | Důvod |
+| --- | --- |
+| Čtyři body Co rozhodnout po R platí, jak byly doporučené | Autor nechal odpovědi prázdné; prázdná odpověď znamená souhlas |
+| Na stránce bez zastavení aktivní hodiny je lišta ve stavu mimo hodinu: „Hodina: Delfy · mimo hodinu“, Předchozí „Zpět na 2 z 8“ na poslední navštívené zastavení, Další na zastavení za ním, Přehled hodiny, Zavřít. Poslední navštívené zastavení je to, na jehož stránce student naposled stál, ať přišel jakkoli; drží ho aktivní hodina v `sessionStorage` (`posledni`) | Nejvýraznější tlačítko kroku (Další krok) i Kam dál z bloku vedou mimo hodinu; bez lišty by se student vrátil jen tlačítkem Zpět prohlížeče |
+| Lištu mimo hodinu nemá stránka, dokud student na žádném zastavení nebyl, stránky `/hodina/…` (přehled hodiny a skladatel) a promítání | Přehled hodiny je cesta zpátky sám; na plátně se mimo hodinu nechodí |
+| Návrat na přehled téže hodiny poslední navštívené zastavení nezapomene | Jinak by Přehled hodiny z lišty mimo hodinu lištu na dalších stránkách vypnul |
+| Student na stránce hodiny vidí u bloku a kresby nadtitulek, jak stojí na stránce („Tvůj tah“, „Nejdřív sám“, „Zkus si to“); skladatel a tisk dál druh bloku. Katalog nese pole `nadtitulek`; výchozí nadtitulky komponent jsou na jednom místě (`src/lib/nadtitulky.ts`, `NADTITULKY_KRESEB` v `src/lib/kresby.ts`) a `scripts/hodiny-katalog.mjs` je ověří proti sestaveným stránkám | Učitel podle druhu vybírá, student podle něj nic nedělá; text komponenty a katalog se nesmějí rozejít |
+| Hledání ve skladateli bere i štítek druhu zastavení („spor smrt“, „hlas seneca“), ne štítky předků | Učitel štítek u řádku vidí; štítek předka („Krok 4“) by k hledanému slovu přidal všechno v kroku |
+| Na plátně je zbytek úseku menší než 32 px (asi jeden řádek) konec úseku: krok, po kterém by zbyl, dojede rovnou na konec, a z místa, odkud zbývá, jde stisk na další zastavení; obráceně při couvání | Posun o pár pixelů není na plátně vidět a učitel s klikačem neví, jestli stisk prošel |
+| Roztřiď na plátně má Dát sem pod popisem koše přes jeho šířku, tlačítka v koších vedle sebe ve stejné výšce | Čtyři úzké koše lámaly název a popis po dvou slovech a Mám roztříděno bylo až na druhé obrazovce |
+| Příchod na zastavení z lišty nebo ze stránky hodiny skočí na kotvu bez plynulého posunu (jednorázový příznak `skok` v aktivní hodině, třída `skok-na-zastaveni` na `<html>` do načtení stránky); Kam dál a obsah profilu se nemění | Na profilu Seneky stránka asi sekundu jela od začátku dolů přes všechny kapitoly |
+| Promítat hodinu u studenta zůstává, jak je, dokud atlas není na webu | Doporučení revize; vrátit se k tomu s Režimem třídy |
+| Tisk přehledu má pod názvem „Odkaz pro studenty: …“ s doménou; diakritika v názvu čitelně, mezera jako `%20` | Učitel s vytištěným přehledem má co napsat na tabuli; opsaná mezera by z adresy udělala hledání |
+
 ## 18. 10. 2026: Hodiny v1, revize R
 
 | Rozhodnutí | Důvod |

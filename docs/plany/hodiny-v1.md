@@ -9,8 +9,8 @@ Učitel si z atlasu složí hodinu: vybere kroky cest, bloky, kapitoly profilů 
 | H3 | Hodina pro studenta: stránka hodiny, lišta hodiny při průchodu, „Doma projdi“ podle deníku, režim Promítat pro plátno, tisk přehledu pro učitele | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 17. 10. 2026; viz Po H3 |
 | H4 | Podoba zastavení na plátně: u bloku a kresby volba, kolik z něj promítnout (celý, jen otázka a možnosti, otevřená otázka bez karet A–D, jen kresba); třídní anketa rukou nebo s telefony; čisté bloky při promítání | Opus 5.5 · high se skillem `atlas-komponenta` (xhigh při zaseknutí) | hotovo 18. 10. 2026; viz Po H4 |
 | R | Revize větve očima učitele, studenta a uživatele telefonu | Opus 5.5 · high se skillem `atlas-revize` | hotovo 18. 10. 2026; viz Po R |
-| O | Opravy po revizi | Opus 5.5 · high se skillem `atlas-komponenta` | čeká; zadání níže |
-| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká |
+| O | Opravy po revizi | Opus 5.5 · high se skillem `atlas-komponenta` | hotovo 23. 10. 2026; viz Po O |
+| Uzavření | Schválení autorem, sloučení do hlavní větve, hlavní větev na GitHub | Opus 5.5 · medium | čeká na schválení; zadání níže |
 
 Stav a zadání dalších kroků se zapisují sem. Provedená zadání se v plném znění přesouvají do `docs/archiv/zadani/hodiny-v1.md`.
 
@@ -263,15 +263,47 @@ Celé `npm test` po revizi: Vitest 691 z 691, Playwright 526 z 526. `node script
 3. **Promítat hodinu u studenta:** nechat, jak je, dokud atlas není na webu (doporučuji), nebo na telefonu jen jako tichý odkaz. Odpověď:
 4. **Tisk přehledu s odkazem pro studenty** pod názvem hodiny. Odpověď:
 
-## Zadání O: opravy po revizi
+## Po O
 
-V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · high** se skillem `atlas-komponenta` (xhigh při zaseknutí).
+Hotovo 23. 10. 2026. Všech osm nálezů revize je vyřízených podle doporučení (odpovědi po R zůstaly prázdné); zapsané v `docs/rozhodnuti.md` (23. 10. 2026), popis v `docs/design.md` (Skladatel hodiny, Stránka hodiny pro studenta, Lišta hodiny › Mimo hodinu a Příchod na zastavení, Promítání).
+
+| Nález | Co se změnilo |
+| --- | --- |
+| 1 Lišta mimo hodinu | Na stránce bez zastavení hodiny lišta „Hodina: Delfy · mimo hodinu“: Předchozí „Zpět na 2 z 8“ na poslední navštívené zastavení, Další na zastavení za ním, Přehled hodiny, Zavřít. Poslední navštívené je zastavení, na jehož stránce student naposled stál, ať přišel jakkoli (`posledni` v `sessionStorage`). Bez lišty: stránky `/hodina/…`, stránky před prvním zastavením, promítání. Ověřeno přes Další krok v liště kroku i Kam dál z bloku na 390 a 1440 px (e2e) a `scripts/revize-hodiny-okraje.mjs` na obou šířkách |
+| 2 Štítky u studenta | Stránka hodiny ukazuje u bloku a kresby nadtitulek ze stránky („Tvůj tah“, „Nejdřív sám“, „Zkus si to“); skladatel a tisk dál druh. Katalog nese `nadtitulek`, výchozí nadtitulky jsou v `src/lib/nadtitulky.ts` a `NADTITULKY_KRESEB`, komponenty z nich čtou a `scripts/hodiny-katalog.mjs` je ověří proti stránkám (112 bloků, osm závěrů cesty nadtitulek nemá) |
+| 3 Hledání | Hledá se i ve štítku druhu („spor smrt“, „hlas seneca“, „kresba“); jednotkové testy |
+| 4 Mrtvý stisk | Zbytek úseku pod 32 px je konec úseku, i při couvání (`ZBYTEK_USEKU`); jednotkový test se Zrcadlem času o 4 px vyšším než plocha |
+| 5 Roztřiď na plátně | Dát sem pod popisem koše přes jeho šířku, ve všech koších ve stejné výšce; Mám roztříděno je na 1280 × 720 na první obrazovce (snímky `Claude outputs/hodiny/roztrid-platno-*.png`) |
+| 6 Plynulý posun | Příchod z lišty a ze stránky hodiny skočí na kotvu okamžitě (třída `skok-na-zastaveni` do načtení stránky); e2e na profilu Seneky měří, že se stránka po načtení nehýbe |
+| 7 Promítat u studenta | Beze změny, jak doporučila revize; k tomu s Režimem třídy |
+| 8 Tisk | Pod názvem „Odkaz pro studenty: …“ s doménou |
+
+Celé `npm test` po opravách: Vitest 695 z 695, Playwright 531 z 531. `node scripts/hodiny-katalog.mjs`: Chyb: 0. `scripts/kontrola-fokus.mjs` a `scripts/revize-axe.mjs` s proměnnou `HODINA` na stránce hodiny, kroku 2 cesty 1 a profilu Sókrata: bez nálezu. Snímky změn v `Claude outputs/hodiny/` (`mimo-hodinu-390.png`, `mimo-hodinu-1440.png`, `roztrid-platno-1280x720.png`, `roztrid-platno-1920x1080.png`, `tisk-*.png`).
+
+**Co jsem zvažoval.**
+
+- *Kdy je zastavení „poslední navštívené“:* jen přechod z lišty by nestačil. Student, který z odbočky klepne v kroku na Předchozí a vrátí se na zastavení sám, by pak měl lištu mimo hodinu ukazující zpátky na dřívější místo. Proto platí stránka, na které naposled stál.
+- *Lišta mimo hodinu i na Domů a v deníku:* nechal jsem ji na všech stránkách atlasu kromě `/hodina/…`. Kdo hodinu nechce, zavře ji jedním klepnutím, a kdo z Domů odbočil omylem, má cestu zpátky.
+- *Přehled hodiny a poslední zastavení:* otevření stránky hodiny dosud hodinu v kartě založilo znovu a poslední zastavení zapomnělo; teď si ho u téže hodiny nechá, jinak by Přehled hodiny z lišty lištu mimo hodinu na dalších stránkách vypnul.
+- *Výchozí nadtitulky na jednom místě:* opsat je do katalogu by bylo kratší, ale první změna v komponentě by je rozešla. Proto `src/lib/nadtitulky.ts` a kontrola proti sestaveným stránkám.
+- *Hranice 32 px:* zbytek přesně jeden řádek se ještě ukáže zvlášť; krok, po kterém by zbylo míň, dojede rovnou na konec, takže se nic nepřeskočí.
+
+## Co rozhodnout po O (prázdná odpověď znamená souhlas s doporučením)
+
+1. **Schválení větve:** projdi hodinu v náhledu (odbočka z kroku přes Další krok, lišta mimo hodinu, stránka hodiny se štítky ze stránky, tisk přehledu, Roztřiď na plátně). Když je vše v pořádku, pusť zadání Uzavření níže (doporučuji); jinak napiš, co změnit. Odpověď:
+
+## Zadání Uzavření
+
+V Coworku v novém chatu projektu, s připojenou složkou Atlas a zapnutým Desktop Commanderem. **Opus 5.5 · medium.** Sloučení a úklid, žádný nový obsah. Pouští se jen na autorův pokyn, po schválení větve.
 
 ```text
-Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Pokračuj ve větvi hodiny-v1. Krok O: opravy po revizi. Plán je v docs/plany/hodiny-v1.md (Po R a Co rozhodnout po R; moje odpovědi mají přednost, prázdná odpověď znamená souhlas s doporučením), nálezy v docs/revize/hodiny-v1-2026-10-18.md, postup ve skillu atlas-komponenta. Čti jen to, co oprava potřebuje.
+Pracuješ v repozitáři atlas na mém Macu (/Users/vojtechczempka/Atlas). Terminál máš přes Desktop Commander: pracuj přímo v repozitáři, ne v kopii. Větev hodiny-v1 schvaluji: sluč ji do main a pošli main na GitHub.
 
-1. Lišta mimo hodinu (nález 1, podle mé odpovědi 1): na stránce bez zastavení aktivní hodiny lišta ve stavu mimo hodinu („Hodina: Delfy · mimo hodinu“, Předchozí na poslední navštívené zastavení, Další na zastavení za ním, Přehled hodiny, Zavřít); poslední navštívené zastavení drží aktivní hodina v sessionStorage. Při promítání beze změny. Ověř odbočku přes Kam dál z bloku i přes Další krok v liště kroku na 390 a 1440 px a skript scripts/revize-hodiny-okraje.mjs.
-2. Štítky bloků u studenta (nález 2, podle odpovědi 2), hledání ve skladateli se štítkem druhu (nález 3, jednotkový test pro „spor smrt“ a „hlas seneca“), mrtvý stisk na plátně (nález 4: zbytek úseku pod jeden řádek je konec úseku, i při couvání; jednotkový test v pruchod-hodiny.test.ts), Roztřiď na plátně (nález 5: Dát sem pod popis koše; snímek 1280 × 720 a 1920 × 1080), příchod z lišty bez plynulého posunu (nález 6), Promítat hodinu u studenta (nález 7, podle odpovědi 3) a tisk s odkazem pro studenty (nález 8, podle odpovědi 4).
-3. Studentské věty a popisky hlídají testy: než text změníš, najdi ho v tests/ a uprav test v tomtéž commitu. Po npm run build node scripts/hodiny-katalog.mjs (Chyb: 0), scripts/kontrola-fokus.mjs a scripts/revize-axe.mjs s proměnnou HODINA na stránce hodiny, kroku a profilu; snímky změn do Claude outputs/hodiny/ a prohlédni je. Celé npm test na pozadí s výstupem do souboru.
-4. Commituj česky po skupinách, nic neposílej na GitHub a nic nesluč. Rozhodnutí zapiš do docs/rozhodnuti.md, popis do docs/design.md, poučení do docs/pouceni.md jen když vzniklo. Do plánu větve zapiš stav O, oddíl „Po O“ a zadání Uzavření (Opus 5.5 · medium: schválení, sloučení do hlavní větve a hlavní větev na GitHub jen na můj pokyn); zadání O přesuň do docs/archiv/zadani/hodiny-v1.md; plán nahraj do projektu Claude jako docs/plany/hodiny-v1.md a restartuj náhled npm run dev. Pak mi napiš, co je opravené a co je potřeba rozhodnout.
+1. Zkontroluj, že ve větvi nic nečeká (git status), a pusť celé npm test na pozadí s výstupem do souboru; když spadne jen test „cesta: průchod, Kam dál z bloku…“ v tests/e2e/cesta.spec.ts, pusť ten soubor znovu samostatně.
+2. Sluč hodiny-v1 do main (bez přepisování historie), znovu sestav web (npm run build) a pusť node scripts/hodiny-katalog.mjs (musí skončit „Chyb: 0“).
+3. Pošli main na GitHub. Jiné větve neposílej.
+4. Do plánu větve zapiš oddíl „Uzavření větve“ (co větev přinesla, co zůstává na později, co je další v pořadí: celek 9, P8 cesta 34, vychází z main s hodinami) a přesuň plán do docs/archiv/plany/hodiny-v1.md; provedená zadání zůstávají v docs/archiv/zadani/hodiny-v1.md. V docs/plan.md uprav řádek větve v rozcestníku (soubor v archivu, stav) a odstavec Další větve v pořadí. Rozhodnutí zapiš do docs/rozhodnuti.md.
+5. Z projektu Claude smaž docs/plany/hodiny-v1.md a aktualizuj tam docs/plan.md. Restartuj náhled npm run dev.
+
+Pak mi napiš, co je sloučeno a co je další v pořadí.
 ```
